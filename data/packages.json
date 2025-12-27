@@ -392,7 +392,7 @@
       "regression",
       "linear models"
     ],
-    "best_for": "OLS regression, basic econometrics, data manipulation"
+    "best_for": "ML-based prediction, cross-validation, feature engineering"
   },
   {
     "name": "Statsmodels",
@@ -406,7 +406,7 @@
       "regression",
       "linear models"
     ],
-    "best_for": "OLS regression, basic econometrics, data manipulation"
+    "best_for": "Statistical inference with interpretable coefficients"
   },
   {
     "name": "FactorAnalyzer",
@@ -420,7 +420,7 @@
       "machine learning",
       "dimensionality"
     ],
-    "best_for": "Feature extraction, PCA, high-dimensional data"
+    "best_for": "EFA/CFA with rotation for latent construct extraction"
   },
   {
     "name": "openTSNE",
@@ -434,7 +434,7 @@
       "machine learning",
       "dimensionality"
     ],
-    "best_for": "Feature extraction, PCA, high-dimensional data"
+    "best_for": "Large-scale t-SNE with partial fitting capability"
   },
   {
     "name": "umap-learn",
@@ -448,7 +448,7 @@
       "machine learning",
       "dimensionality"
     ],
-    "best_for": "Feature extraction, PCA, high-dimensional data"
+    "best_for": "Fast visualization preserving both local and global structure"
   },
   {
     "name": "Biogeme",
@@ -462,7 +462,7 @@
       "discrete choice",
       "logit"
     ],
-    "best_for": "Logit/probit models, consumer choice, demand estimation"
+    "best_for": "Complex nested logit and mixed logit specifications"
   },
   {
     "name": "PyBLP",
@@ -476,7 +476,7 @@
       "discrete choice",
       "logit"
     ],
-    "best_for": "Logit/probit models, consumer choice, demand estimation"
+    "best_for": "BLP demand estimation with price endogeneity"
   },
   {
     "name": "PyLogit",
@@ -490,7 +490,7 @@
       "discrete choice",
       "logit"
     ],
-    "best_for": "Logit/probit models, consumer choice, demand estimation"
+    "best_for": "Flexible conditional logit with panel data support"
   },
   {
     "name": "XLogit",
@@ -504,7 +504,7 @@
       "discrete choice",
       "logit"
     ],
-    "best_for": "Logit/probit models, consumer choice, demand estimation"
+    "best_for": "GPU-accelerated large-scale mixed logit estimation"
   },
   {
     "name": "torch-choice",
@@ -518,7 +518,7 @@
       "discrete choice",
       "logit"
     ],
-    "best_for": "Logit/probit models, consumer choice, demand estimation"
+    "best_for": "Neural network extensions to choice models"
   },
   {
     "name": "DoubleML",
@@ -532,7 +532,7 @@
       "machine learning",
       "causal inference"
     ],
-    "best_for": "High-dimensional controls, ML-based causal inference"
+    "best_for": "Canonical DML implementation with rigorous inference"
   },
   {
     "name": "EconML",
@@ -546,7 +546,7 @@
       "machine learning",
       "causal inference"
     ],
-    "best_for": "High-dimensional controls, ML-based causal inference"
+    "best_for": "Production CATE estimation with multiple methods"
   },
   {
     "name": "pydoublelasso",
@@ -560,7 +560,7 @@
       "machine learning",
       "causal inference"
     ],
-    "best_for": "High-dimensional controls, ML-based causal inference"
+    "best_for": "Double-post-selection Lasso for high-dimensional controls"
   },
   {
     "name": "pyhtelasso",
@@ -574,7 +574,7 @@
       "machine learning",
       "causal inference"
     ],
-    "best_for": "High-dimensional controls, ML-based causal inference"
+    "best_for": "Testing for treatment effect heterogeneity in RCTs"
   },
   {
     "name": "py-econometrics `gmm`",
@@ -588,7 +588,7 @@
       "IV",
       "GMM"
     ],
-    "best_for": "Endogeneity correction, 2SLS, moment estimation"
+    "best_for": "Custom GMM with user-defined moment conditions"
   },
   {
     "name": "Lifetimes",
@@ -602,7 +602,7 @@
       "marketing",
       "analytics"
     ],
-    "best_for": "Marketing ROI, media mix optimization, attribution"
+    "best_for": "Customer lifetime value prediction with BG/NBD models"
   },
   {
     "name": "MaMiMo",
@@ -616,7 +616,7 @@
       "marketing",
       "analytics"
     ],
-    "best_for": "Marketing ROI, media mix optimization, attribution"
+    "best_for": "Quick MMM prototyping with sklearn compatibility"
   },
   {
     "name": "PyMC Marketing",
@@ -631,7 +631,7 @@
       "analytics",
       "Bayesian"
     ],
-    "best_for": "Marketing ROI, media mix optimization, attribution"
+    "best_for": "Full Bayesian MMM with CLV and attribution"
   },
   {
     "name": "mmm_stan",
@@ -646,7 +646,7 @@
       "analytics",
       "Bayesian"
     ],
-    "best_for": "Marketing ROI, media mix optimization, attribution"
+    "best_for": "Learning MMM internals with transparent Stan code"
   },
   {
     "name": "Gensim",
@@ -660,7 +660,7 @@
       "NLP",
       "text analysis"
     ],
-    "best_for": "Text analysis, sentiment analysis, document classification"
+    "best_for": "Topic modeling (LDA) and word embeddings on large corpora"
   },
   {
     "name": "Transformers",
@@ -674,7 +674,7 @@
       "NLP",
       "text analysis"
     ],
-    "best_for": "Text analysis, sentiment analysis, document classification"
+    "best_for": "State-of-the-art NLP with pre-trained transformer models"
   },
   {
     "name": "spaCy",
@@ -688,7 +688,7 @@
       "NLP",
       "text analysis"
     ],
-    "best_for": "Text analysis, sentiment analysis, document classification"
+    "best_for": "Fast NLP pipelines for NER and entity extraction"
   },
   {
     "name": "JAX",
@@ -702,7 +702,7 @@
       "optimization",
       "computation"
     ],
-    "best_for": "Solving optimization problems, numerical methods"
+    "best_for": "GPU-accelerated autodiff with functional composition"
   },
   {
     "name": "PyTorch",
@@ -717,7 +717,7 @@
       "computation",
       "machine learning"
     ],
-    "best_for": "Solving optimization problems, numerical methods"
+    "best_for": "Deep learning and neural network estimation"
   },
   {
     "name": "FixedEffectModelPyHDFE",
@@ -731,7 +731,7 @@
       "panel data",
       "fixed effects"
     ],
-    "best_for": "Longitudinal analysis, controlling for unobserved heterogeneity"
+    "best_for": "Millions of fixed effects (reghdfe-style absorption)"
   },
   {
     "name": "Linearmodels",
@@ -745,7 +745,7 @@
       "panel data",
       "fixed effects"
     ],
-    "best_for": "Longitudinal analysis, controlling for unobserved heterogeneity"
+    "best_for": "Traditional panel econometrics with broad estimator coverage"
   },
   {
     "name": "PyFixest",
@@ -759,7 +759,7 @@
       "panel data",
       "fixed effects"
     ],
-    "best_for": "Longitudinal analysis, controlling for unobserved heterogeneity"
+    "best_for": "Fast fixest-style estimation with formula interface"
   },
   {
     "name": "duckreg",
@@ -773,7 +773,7 @@
       "panel data",
       "fixed effects"
     ],
-    "best_for": "Longitudinal analysis, controlling for unobserved heterogeneity"
+    "best_for": "Out-of-core regression on datasets too large for memory"
   },
   {
     "name": "pydynpd",
@@ -787,7 +787,7 @@
       "panel data",
       "fixed effects"
     ],
-    "best_for": "Longitudinal analysis, controlling for unobserved heterogeneity"
+    "best_for": "Dynamic panels with Arellano-Bond/Blundell-Bond GMM"
   },
   {
     "name": "ADOpy",
@@ -802,7 +802,7 @@
       "experiments",
       "Bayesian"
     ],
-    "best_for": "Sample size calculation, experimental design, power analysis"
+    "best_for": "Bayesian adaptive experiment design in real-time"
   },
   {
     "name": "Adaptive",
@@ -816,7 +816,7 @@
       "power analysis",
       "experiments"
     ],
-    "best_for": "Sample size calculation, experimental design, power analysis"
+    "best_for": "Active learning with adaptive function sampling"
   },
   {
     "name": "DoEgen",
@@ -830,7 +830,7 @@
       "power analysis",
       "experiments"
     ],
-    "best_for": "Sample size calculation, experimental design, power analysis"
+    "best_for": "Optimizing mixed factor-level experimental designs"
   },
   {
     "name": "pyDOE2",
@@ -844,7 +844,7 @@
       "power analysis",
       "experiments"
     ],
-    "best_for": "Sample size calculation, experimental design, power analysis"
+    "best_for": "Classical factorial and response surface designs"
   },
   {
     "name": "CausalImpact",
@@ -860,7 +860,7 @@
       "RDD",
       "Bayesian"
     ],
-    "best_for": "Policy evaluation, natural experiments, quasi-experiments"
+    "best_for": "Time series intervention effects with Bayesian STS"
   },
   {
     "name": "Differences",
@@ -875,7 +875,7 @@
       "synthetic control",
       "RDD"
     ],
-    "best_for": "Policy evaluation, natural experiments, quasi-experiments"
+    "best_for": "Modern staggered DiD (Callaway-Sant'Anna, Sun-Abraham)"
   },
   {
     "name": "SyntheticControlMethods",
@@ -890,7 +890,7 @@
       "synthetic control",
       "RDD"
     ],
-    "best_for": "Policy evaluation, natural experiments, quasi-experiments"
+    "best_for": "Classic Abadie-Hainmueller synthetic control"
   },
   {
     "name": "csdid",
@@ -905,7 +905,7 @@
       "synthetic control",
       "RDD"
     ],
-    "best_for": "Policy evaluation, natural experiments, quasi-experiments"
+    "best_for": "Exact R `did` package replication in Python"
   },
   {
     "name": "mlsynth",
@@ -920,7 +920,7 @@
       "synthetic control",
       "RDD"
     ],
-    "best_for": "Policy evaluation, natural experiments, quasi-experiments"
+    "best_for": "Advanced SC variants (forward DiD, cluster SC, proximal)"
   },
   {
     "name": "pycinc",
@@ -936,7 +936,7 @@
       "RDD",
       "causal inference"
     ],
-    "best_for": "Policy evaluation, natural experiments, quasi-experiments"
+    "best_for": "Distributional treatment effects (Changes-in-Changes)"
   },
   {
     "name": "pyleebounds",
@@ -952,7 +952,7 @@
       "RDD",
       "causal inference"
     ],
-    "best_for": "Policy evaluation, natural experiments, quasi-experiments"
+    "best_for": "Bounds under sample selection (Lee 2009)"
   },
   {
     "name": "rdd",
@@ -967,7 +967,7 @@
       "synthetic control",
       "RDD"
     ],
-    "best_for": "Policy evaluation, natural experiments, quasi-experiments"
+    "best_for": "Quick sharp RDD with Imbens-Kalyanaraman bandwidth"
   },
   {
     "name": "rdrobust",
@@ -982,7 +982,7 @@
       "synthetic control",
       "RDD"
     ],
-    "best_for": "Policy evaluation, natural experiments, quasi-experiments"
+    "best_for": "Rigorous RDD with robust bias-corrected inference"
   },
   {
     "name": "pyqreg",
@@ -996,7 +996,7 @@
       "quantile",
       "regression"
     ],
-    "best_for": "Heterogeneous effects, distributional analysis"
+    "best_for": "Fast conditional quantile regression with clustered SEs"
   },
   {
     "name": "pyrifreg",
@@ -1010,7 +1010,7 @@
       "quantile",
       "regression"
     ],
-    "best_for": "Heterogeneous effects, distributional analysis"
+    "best_for": "Unconditional quantile effects (RIF regression)"
   },
   {
     "name": "quantile-forest",
@@ -1024,7 +1024,7 @@
       "quantile",
       "regression"
     ],
-    "best_for": "Heterogeneous effects, distributional analysis"
+    "best_for": "Non-parametric quantile prediction with random forests"
   },
   {
     "name": "(PySAL Core)",
@@ -1038,7 +1038,7 @@
       "spatial",
       "geography"
     ],
-    "best_for": "Geographic data, spatial autocorrelation, regional analysis"
+    "best_for": "Broad spatial ecosystem (weights, visualization, analysis)"
   },
   {
     "name": "PySAL (spreg)",
@@ -1052,7 +1052,7 @@
       "spatial",
       "geography"
     ],
-    "best_for": "Geographic data, spatial autocorrelation, regional analysis"
+    "best_for": "Spatial lag/error models with IV and diagnostics"
   },
   {
     "name": "Awesome Quant",
@@ -1066,7 +1066,7 @@
       "bootstrap",
       "standard errors"
     ],
-    "best_for": "Robust inference, clustered SEs, result presentation"
+    "best_for": "Curated list of quantitative finance resources"
   },
   {
     "name": "Beyond Jupyter (TransferLab)",
@@ -1080,7 +1080,7 @@
       "bootstrap",
       "standard errors"
     ],
-    "best_for": "Robust inference, clustered SEs, result presentation"
+    "best_for": "Learning production-quality ML code design"
   },
   {
     "name": "Causal Inference for the Brave and True",
@@ -1094,7 +1094,7 @@
       "bootstrap",
       "standard errors"
     ],
-    "best_for": "Robust inference, clustered SEs, result presentation"
+    "best_for": "Learning causal inference with Python examples"
   },
   {
     "name": "Coding for Economists",
@@ -1108,7 +1108,7 @@
       "bootstrap",
       "standard errors"
     ],
-    "best_for": "Robust inference, clustered SEs, result presentation"
+    "best_for": "Practical Python for economic research"
   },
   {
     "name": "Deep Learning Specialization (Coursera)",
@@ -1123,7 +1123,7 @@
       "standard errors",
       "machine learning"
     ],
-    "best_for": "Robust inference, clustered SEs, result presentation"
+    "best_for": "Intermediate deep learning course series"
   },
   {
     "name": "Machine Learning Specialization (Coursera)",
@@ -1137,7 +1137,7 @@
       "bootstrap",
       "standard errors"
     ],
-    "best_for": "Robust inference, clustered SEs, result presentation"
+    "best_for": "Beginner-friendly ML fundamentals course"
   },
   {
     "name": "Python for Econometrics",
@@ -1151,7 +1151,7 @@
       "bootstrap",
       "standard errors"
     ],
-    "best_for": "Robust inference, clustered SEs, result presentation"
+    "best_for": "Comprehensive Python/econometrics introduction"
   },
   {
     "name": "QuantEcon Lectures",
@@ -1165,7 +1165,7 @@
       "bootstrap",
       "standard errors"
     ],
-    "best_for": "Robust inference, clustered SEs, result presentation"
+    "best_for": "Quantitative economic modeling lectures"
   },
   {
     "name": "SciPy Bootstrap",
@@ -1179,7 +1179,7 @@
       "bootstrap",
       "standard errors"
     ],
-    "best_for": "Robust inference, clustered SEs, result presentation"
+    "best_for": "Standard bootstrap confidence intervals"
   },
   {
     "name": "Stargazer",
@@ -1193,7 +1193,7 @@
       "bootstrap",
       "standard errors"
     ],
-    "best_for": "Robust inference, clustered SEs, result presentation"
+    "best_for": "Publication-quality regression tables (LaTeX/HTML)"
   },
   {
     "name": "The Missing Semester of Your CS Education (MIT)",
@@ -1207,7 +1207,7 @@
       "bootstrap",
       "standard errors"
     ],
-    "best_for": "Robust inference, clustered SEs, result presentation"
+    "best_for": "Essential developer tools (command line, Git, etc.)"
   },
   {
     "name": "wildboottest",
@@ -1221,7 +1221,7 @@
       "bootstrap",
       "standard errors"
     ],
-    "best_for": "Robust inference, clustered SEs, result presentation"
+    "best_for": "Wild cluster bootstrap for few-cluster inference"
   },
   {
     "name": "FilterPy",
@@ -1235,7 +1235,7 @@
       "volatility",
       "state space"
     ],
-    "best_for": "GARCH, stochastic volatility, Kalman filtering"
+    "best_for": "Learning Kalman filters with pedagogical implementation"
   },
   {
     "name": "Metran",
@@ -1249,7 +1249,7 @@
       "volatility",
       "state space"
     ],
-    "best_for": "GARCH, stochastic volatility, Kalman filtering"
+    "best_for": "Dynamic Factor Models with state-space methods"
   },
   {
     "name": "PyKalman",
@@ -1263,7 +1263,7 @@
       "volatility",
       "state space"
     ],
-    "best_for": "GARCH, stochastic volatility, Kalman filtering"
+    "best_for": "Kalman filtering with missing values and EM estimation"
   },
   {
     "name": "PyMC Statespace",
@@ -1278,7 +1278,7 @@
       "state space",
       "Bayesian"
     ],
-    "best_for": "GARCH, stochastic volatility, Kalman filtering"
+    "best_for": "Bayesian state-space with MCMC parameter estimation"
   },
   {
     "name": "stochvol",
@@ -1293,7 +1293,7 @@
       "state space",
       "Bayesian"
     ],
-    "best_for": "GARCH, stochastic volatility, Kalman filtering"
+    "best_for": "Bayesian stochastic volatility models"
   },
   {
     "name": "Pingouin",
@@ -1307,7 +1307,7 @@
       "inference",
       "hypothesis testing"
     ],
-    "best_for": "Hypothesis tests, confidence intervals, multiple testing"
+    "best_for": "Easy ANOVA, t-tests, correlations with pandas"
   },
   {
     "name": "PyWhy-Stats",
@@ -1321,7 +1321,7 @@
       "inference",
       "hypothesis testing"
     ],
-    "best_for": "Hypothesis tests, confidence intervals, multiple testing"
+    "best_for": "Independence tests for causal applications"
   },
   {
     "name": "Scipy.stats",
@@ -1335,7 +1335,7 @@
       "inference",
       "hypothesis testing"
     ],
-    "best_for": "Hypothesis tests, confidence intervals, multiple testing"
+    "best_for": "Foundational distributions and hypothesis tests"
   },
   {
     "name": "hypothetical",
@@ -1349,7 +1349,7 @@
       "inference",
       "hypothesis testing"
     ],
-    "best_for": "Hypothesis tests, confidence intervals, multiple testing"
+    "best_for": "Comprehensive hypothesis testing library"
   },
   {
     "name": "lifelines",
@@ -1363,7 +1363,7 @@
       "inference",
       "hypothesis testing"
     ],
-    "best_for": "Hypothesis tests, confidence intervals, multiple testing"
+    "best_for": "Survival analysis with Cox regression and AFT models"
   },
   {
     "name": "Dolo",
@@ -1377,7 +1377,7 @@
       "structural",
       "estimation"
     ],
-    "best_for": "Structural models, GMM estimation, BLP-style demand"
+    "best_for": "DSGE/OLG models with YAML-based specification"
   },
   {
     "name": "HARK",
@@ -1391,7 +1391,7 @@
       "structural",
       "estimation"
     ],
-    "best_for": "Structural models, GMM estimation, BLP-style demand"
+    "best_for": "Heterogeneous agent consumption-saving models"
   },
   {
     "name": "QuantEcon.py",
@@ -1405,7 +1405,7 @@
       "structural",
       "estimation"
     ],
-    "best_for": "Structural models, GMM estimation, BLP-style demand"
+    "best_for": "Dynamic programming, Markov chains, game theory"
   },
   {
     "name": "respy",
@@ -1419,7 +1419,7 @@
       "structural",
       "estimation"
     ],
-    "best_for": "Structural models, GMM estimation, BLP-style demand"
+    "best_for": "Dynamic discrete choice (labor/education) estimation"
   },
   {
     "name": "SDV (Synthetic Data Vault)",
@@ -1433,7 +1433,7 @@
       "synthetic data",
       "simulation"
     ],
-    "best_for": "Privacy-preserving data, simulation, augmentation"
+    "best_for": "Comprehensive synthetic tabular/relational data"
   },
   {
     "name": "Synthpop",
@@ -1447,7 +1447,7 @@
       "synthetic data",
       "simulation"
     ],
-    "best_for": "Privacy-preserving data, simulation, augmentation"
+    "best_for": "Synthetic survey populations from sample data"
   },
   {
     "name": "ARCH",
@@ -1461,7 +1461,7 @@
       "time series",
       "econometrics"
     ],
-    "best_for": "ARIMA, cointegration, VAR models"
+    "best_for": "GARCH/ARCH volatility modeling and forecasting"
   },
   {
     "name": "Kats",
@@ -1475,7 +1475,7 @@
       "time series",
       "econometrics"
     ],
-    "best_for": "ARIMA, cointegration, VAR models"
+    "best_for": "Anomaly detection, change points, and feature extraction"
   },
   {
     "name": "LocalProjections",
@@ -1489,7 +1489,7 @@
       "time series",
       "econometrics"
     ],
-    "best_for": "ARIMA, cointegration, VAR models"
+    "best_for": "Local projections impulse responses"
   },
   {
     "name": "MLForecast",
@@ -1504,7 +1504,7 @@
       "time series",
       "machine learning"
     ],
-    "best_for": "Prediction, demand forecasting, trend analysis"
+    "best_for": "ML-based forecasting with LightGBM/XGBoost"
   },
   {
     "name": "NeuralForecast",
@@ -1519,7 +1519,7 @@
       "time series",
       "machine learning"
     ],
-    "best_for": "Prediction, demand forecasting, trend analysis"
+    "best_for": "Deep learning forecasting (N-BEATS, Transformers)"
   },
   {
     "name": "Prophet",
@@ -1533,7 +1533,7 @@
       "forecasting",
       "time series"
     ],
-    "best_for": "Prediction, demand forecasting, trend analysis"
+    "best_for": "Business forecasting with trend and seasonality"
   },
   {
     "name": "StatsForecast",
@@ -1547,7 +1547,7 @@
       "forecasting",
       "time series"
     ],
-    "best_for": "Prediction, demand forecasting, trend analysis"
+    "best_for": "High-performance statistical forecasting (ETS, ARIMA)"
   },
   {
     "name": "pmdarima",
@@ -1561,7 +1561,7 @@
       "forecasting",
       "time series"
     ],
-    "best_for": "Prediction, demand forecasting, trend analysis"
+    "best_for": "Auto-ARIMA with automatic parameter selection"
   },
   {
     "name": "sktime",
@@ -1576,7 +1576,7 @@
       "time series",
       "machine learning"
     ],
-    "best_for": "Prediction, demand forecasting, trend analysis"
+    "best_for": "Unified sklearn-style time series framework"
   },
   {
     "name": "CatBoost",
@@ -1590,7 +1590,7 @@
       "machine learning",
       "prediction"
     ],
-    "best_for": "Random forests, gradient boosting, prediction tasks"
+    "best_for": "Categorical features with minimal preprocessing"
   },
   {
     "name": "LightGBM",
@@ -1604,7 +1604,7 @@
       "machine learning",
       "prediction"
     ],
-    "best_for": "Random forests, gradient boosting, prediction tasks"
+    "best_for": "Speed and memory efficiency on large datasets"
   },
   {
     "name": "NGBoost",
@@ -1618,7 +1618,7 @@
       "machine learning",
       "prediction"
     ],
-    "best_for": "Random forests, gradient boosting, prediction tasks"
+    "best_for": "Probabilistic predictions with uncertainty estimates"
   },
   {
     "name": "Scikit-learn Ens.",
@@ -1632,7 +1632,7 @@
       "machine learning",
       "prediction"
     ],
-    "best_for": "Random forests, gradient boosting, prediction tasks"
+    "best_for": "General-purpose random forests in sklearn ecosystem"
   },
   {
     "name": "XGBoost",
@@ -1646,7 +1646,7 @@
       "machine learning",
       "prediction"
     ],
-    "best_for": "Random forests, gradient boosting, prediction tasks"
+    "best_for": "Optimized gradient boosting, competition winner"
   },
   {
     "name": "cuML (RAPIDS)",
@@ -1660,6 +1660,6 @@
       "machine learning",
       "prediction"
     ],
-    "best_for": "Random forests, gradient boosting, prediction tasks"
+    "best_for": "GPU-accelerated random forests for massive scale"
   }
 ]
