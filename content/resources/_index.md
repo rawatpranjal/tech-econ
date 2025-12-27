@@ -1,4 +1,4 @@
 ---
-title: "Learning Resources"
-description: "Curated learning resources for economists - coding, machine learning, statistics, causal inference, and experimentation"
+title: "Resources for Tech Economists"
+description: "Curated resources to level up as a tech economist - no boring tomes, just practical guides, industry blogs, and hands-on tutorials"
 ---

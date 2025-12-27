@@ -1,184 +1,247 @@
 [
   {
-    "name": "QuantEcon Lectures",
-    "description": "High-quality lecture series on quantitative economic modeling, computational tools, and economics using Python/Julia.",
-    "category": "Coding & Programming",
-    "url": "https://quantecon.org/lectures/",
-    "type": "Lectures"
+    "name": "Netflix Tech Blog - Experimentation",
+    "description": "How Netflix runs experiments at scale. Real case studies on A/B testing, quasi-experiments, and metric design from their experimentation team.",
+    "category": "Industry Blogs",
+    "url": "https://netflixtechblog.com/tagged/experimentation",
+    "type": "Blog"
   },
   {
-    "name": "Python for Econometrics",
-    "description": "Comprehensive introductory notes covering fundamentals, core libraries, and applied econometrics in Python.",
-    "category": "Coding & Programming",
-    "url": "https://www.kevinsheppard.com/teaching/python/notes/",
-    "type": "Course Notes"
+    "name": "Uber Engineering - Economics",
+    "description": "Surge pricing, marketplace design, causal inference at scale. See how economists tackle real problems at Uber.",
+    "category": "Industry Blogs",
+    "url": "https://www.uber.com/blog/houston/engineering/",
+    "type": "Blog"
   },
   {
-    "name": "Coding for Economists",
-    "description": "Practical guidance on applying Python to contemporary econometric research and data workflows.",
-    "category": "Coding & Programming",
-    "url": "https://aeturrell.github.io/coding-for-economists/",
-    "type": "Online Book"
+    "name": "Airbnb Engineering - Data Science",
+    "description": "Experimentation platform design, interference in experiments, and applied causal inference from Airbnb's data science team.",
+    "category": "Industry Blogs",
+    "url": "https://medium.com/airbnb-engineering/data/home",
+    "type": "Blog"
   },
   {
-    "name": "The Missing Semester of Your CS Education",
-    "description": "MIT course covering developer essentials: command-line tools, version control, debugging, and more.",
-    "category": "Coding & Programming",
-    "url": "https://missing.csail.mit.edu/",
-    "type": "Course"
+    "name": "Spotify R&D - Machine Learning",
+    "description": "Recommendation systems, search, and personalization. How Spotify applies ML to audio and user behavior.",
+    "category": "Industry Blogs",
+    "url": "https://research.atspotify.com/",
+    "type": "Blog"
   },
   {
-    "name": "Beyond Jupyter",
-    "description": "Software design principles for ML: modularity, abstraction, and reproducibility beyond ad hoc Jupyter workflows.",
-    "category": "Coding & Programming",
-    "url": "https://transferlab.ai/trainings/beyond-jupyter/",
-    "type": "Tutorial"
+    "name": "DoorDash Engineering",
+    "description": "Marketplace economics, delivery optimization, and experimentation. Great posts on real-time pricing and logistics.",
+    "category": "Industry Blogs",
+    "url": "https://doordash.engineering/category/data-science-and-machine-learning/",
+    "type": "Blog"
   },
   {
-    "name": "Machine Learning Specialization",
-    "description": "Beginner-friendly 3-course series by Andrew Ng covering core ML methods: regression, classification, clustering, trees, neural networks.",
-    "category": "Machine Learning",
-    "url": "https://www.coursera.org/specializations/machine-learning-introduction",
-    "type": "Course"
+    "name": "Lyft Engineering",
+    "description": "Rideshare economics, causal inference, and marketplace experiments. Practical posts from Lyft's economics and data science teams.",
+    "category": "Industry Blogs",
+    "url": "https://eng.lyft.com/tagged/data-science",
+    "type": "Blog"
   },
   {
-    "name": "Deep Learning Specialization",
-    "description": "Advanced neural network training covering CNNs, RNNs, and practical deep learning with TensorFlow.",
-    "category": "Machine Learning",
-    "url": "https://www.coursera.org/specializations/deep-learning",
-    "type": "Course"
-  },
-  {
-    "name": "Introduction to Statistical Learning",
-    "description": "Classic textbook on statistical learning methods with applications in R and Python. Free online.",
-    "category": "Statistics",
-    "url": "https://www.statlearning.com/",
-    "type": "Textbook"
-  },
-  {
-    "name": "Mostly Harmless Econometrics",
-    "description": "Essential guide to empirical methods in economics, covering regression, IV, panel data, and more.",
-    "category": "Statistics",
-    "url": "https://www.mostlyharmlesseconometrics.com/",
-    "type": "Textbook"
+    "name": "Stitch Fix Algorithms Blog",
+    "description": "Demand forecasting, inventory optimization, and personalization. Unique blend of fashion retail + serious data science.",
+    "category": "Industry Blogs",
+    "url": "https://multithreaded.stitchfix.com/algorithms/blog/",
+    "type": "Blog"
   },
   {
     "name": "Causal Inference for the Brave and True",
-    "description": "Modern introduction to causal inference methods (DiD, IV, RDD, Synthetic Control, ML-based) with Python code examples.",
+    "description": "The best free intro to causal inference. DiD, IV, RDD, synthetic control — all with Python code you can run. No fluff.",
     "category": "Causal Inference",
     "url": "https://matheusfacure.github.io/python-causality-handbook/",
     "type": "Online Book"
   },
   {
-    "name": "The Effect: An Introduction to Research Design",
-    "description": "Modern causal inference textbook covering identification, DAGs, and research design strategies.",
+    "name": "The Effect",
+    "description": "Nick Huntington-Klein's modern causal inference book. Clear writing, great DAG explanations, and free online.",
     "category": "Causal Inference",
     "url": "https://theeffectbook.net/",
     "type": "Online Book"
   },
   {
     "name": "Causal Inference: The Mixtape",
-    "description": "Scott Cunningham's guide to causal inference with code examples in Stata, R, and Python.",
+    "description": "Scott Cunningham's guide — reads like a conversation, not a textbook. Code in Stata, R, and Python.",
     "category": "Causal Inference",
     "url": "https://mixtape.scunning.com/",
     "type": "Online Book"
   },
   {
-    "name": "Trustworthy Online Controlled Experiments",
-    "description": "Comprehensive guide to A/B testing and experimentation from Microsoft researchers.",
-    "category": "Experimentation",
-    "url": "https://www.cambridge.org/core/books/trustworthy-online-controlled-experiments/",
-    "type": "Textbook"
+    "name": "EconML Documentation",
+    "description": "Microsoft's library for ML-based causal inference. Tutorials on heterogeneous treatment effects, double ML, and more.",
+    "category": "Causal Inference",
+    "url": "https://econml.azurewebsites.net/",
+    "type": "Docs + Tutorials"
   },
   {
-    "name": "Experimentation Platform Guide",
-    "description": "Practical guide to building experimentation platforms and running A/B tests at scale.",
+    "name": "DoWhy Library",
+    "description": "Microsoft's causal inference library. Great for understanding causal graphs and robustness checks.",
+    "category": "Causal Inference",
+    "url": "https://www.pywhy.org/dowhy/",
+    "type": "Docs + Tutorials"
+  },
+  {
+    "name": "Causal ML Book (Chernozhukov et al.)",
+    "description": "Applied Causal Inference Powered by ML and AI. Double/debiased ML, heterogeneous effects, and modern methods from the pioneers.",
+    "category": "Causal Inference",
+    "url": "https://causalml-book.org/",
+    "type": "Online Book"
+  },
+  {
+    "name": "Causal Inference (Wager)",
+    "description": "Stefan Wager's Stanford course notes. Rigorous treatment of causal forests, AIPW, and ML for causal inference.",
+    "category": "Causal Inference",
+    "url": "https://web.stanford.edu/~swager/stats361.pdf",
+    "type": "Course Notes"
+  },
+  {
+    "name": "A Practitioner's Guide to DiD",
+    "description": "Jonathan Roth et al.'s comprehensive guide to modern difference-in-differences. Staggered timing, pre-trends, and new estimators.",
+    "category": "Causal Inference",
+    "url": "https://arxiv.org/abs/2201.01194",
+    "type": "Paper"
+  },
+  {
+    "name": "Eppo's Experimentation Guides",
+    "description": "Practical guides on experiment design, stats engines, CUPED, and common pitfalls. Written by practitioners.",
+    "category": "Experimentation",
+    "url": "https://www.geteppo.com/blog",
+    "type": "Guides"
+  },
+  {
+    "name": "Statsig Resources",
+    "description": "Deep dives on sequential testing, variance reduction, and experiment analysis. Free stats engine docs.",
+    "category": "Experimentation",
+    "url": "https://docs.statsig.com/",
+    "type": "Docs + Guides"
+  },
+  {
+    "name": "Ronny Kohavi's Experimentation Talks",
+    "description": "The godfather of online experimentation. His talks distill decades of A/B testing wisdom from Microsoft and Amazon.",
     "category": "Experimentation",
     "url": "https://www.exp-platform.com/",
-    "type": "Guide"
+    "type": "Talks + Papers"
   },
   {
-    "name": "Convex Optimization",
-    "description": "Boyd and Vandenberghe's classic textbook on convex optimization theory and algorithms. Free online.",
-    "category": "Optimization",
-    "url": "https://web.stanford.edu/~boyd/cvxbook/",
-    "type": "Textbook"
+    "name": "Evan Miller's A/B Testing Tools",
+    "description": "Sample size calculators, stats explainers, and practical A/B testing guides. Bookmark-worthy tools.",
+    "category": "Experimentation",
+    "url": "https://www.evanmiller.org/ab-testing/",
+    "type": "Tools + Guides"
   },
   {
-    "name": "Numerical Optimization",
-    "description": "Nocedal and Wright's comprehensive guide to numerical optimization methods.",
-    "category": "Optimization",
-    "url": "https://link.springer.com/book/10.1007/978-0-387-40065-5",
-    "type": "Textbook"
+    "name": "QuantEcon Lectures",
+    "description": "High-quality computational economics in Python and Julia. Dynamic programming, time series, asset pricing — all with code.",
+    "category": "Coding",
+    "url": "https://quantecon.org/lectures/",
+    "type": "Lectures"
   },
   {
-    "name": "Algorithms for Optimization",
-    "description": "Modern textbook covering optimization algorithms with Julia code examples. Free PDF available.",
-    "category": "Optimization",
-    "url": "https://algorithmsbook.com/optimization/",
+    "name": "Coding for Economists",
+    "description": "Arthur Turrell's practical guide. Python basics through advanced workflows — built specifically for econ researchers.",
+    "category": "Coding",
+    "url": "https://aeturrell.github.io/coding-for-economists/",
+    "type": "Online Book"
+  },
+  {
+    "name": "The Missing Semester (MIT)",
+    "description": "Command line, Git, debugging, shell scripting. The CS skills they don't teach in econ PhD programs but you absolutely need.",
+    "category": "Coding",
+    "url": "https://missing.csail.mit.edu/",
+    "type": "Course"
+  },
+  {
+    "name": "Python for Econometrics",
+    "description": "Kevin Sheppard's notes on Python for financial econometrics. NumPy, pandas, statsmodels — the practical toolkit.",
+    "category": "Coding",
+    "url": "https://www.kevinsheppard.com/teaching/python/notes/",
+    "type": "Course Notes"
+  },
+  {
+    "name": "fast.ai Practical Deep Learning",
+    "description": "Learn deep learning top-down with working code. No PhD required. The most accessible serious ML course online.",
+    "category": "ML & Data Science",
+    "url": "https://course.fast.ai/",
+    "type": "Course"
+  },
+  {
+    "name": "Google ML Crash Course",
+    "description": "Free, fast intro to ML fundamentals from Google. Great refresher on the basics with TensorFlow examples.",
+    "category": "ML & Data Science",
+    "url": "https://developers.google.com/machine-learning/crash-course",
+    "type": "Course"
+  },
+  {
+    "name": "Kaggle Learn",
+    "description": "Bite-sized ML tutorials you can finish in an afternoon. Python, pandas, ML basics, feature engineering.",
+    "category": "ML & Data Science",
+    "url": "https://www.kaggle.com/learn",
+    "type": "Tutorials"
+  },
+  {
+    "name": "Introduction to Statistical Learning",
+    "description": "The friendly ML/stats book. Free online with Python and R code. Less intimidating than ESL, still rigorous.",
+    "category": "ML & Data Science",
+    "url": "https://www.statlearning.com/",
     "type": "Textbook"
   },
   {
     "name": "Forecasting: Principles and Practice",
-    "description": "Hyndman and Athanasopoulos's comprehensive guide to time series forecasting with R. Free online.",
-    "category": "Forecasting",
+    "description": "Rob Hyndman's free book on time series forecasting. ARIMA, ETS, hierarchical forecasting — with R code.",
+    "category": "ML & Data Science",
     "url": "https://otexts.com/fpp3/",
     "type": "Online Book"
   },
   {
-    "name": "Time Series Analysis and Its Applications",
-    "description": "Shumway and Stoffer's textbook on time series methods with R examples.",
-    "category": "Forecasting",
-    "url": "https://www.stat.pitt.edu/stoffer/tsa4/",
-    "type": "Textbook"
+    "name": "Casual Inference Podcast",
+    "description": "Lucy D'Agostino McGowan and Ellie Murray chat about causal inference. Accessible, fun, and educational.",
+    "category": "Podcasts & Talks",
+    "url": "https://casualinfer.libsyn.com/",
+    "type": "Podcast"
   },
   {
-    "name": "Applied Time Series Econometrics",
-    "description": "Lütkepohl's guide to VAR models, cointegration, and structural time series analysis.",
-    "category": "Forecasting",
-    "url": "https://www.cambridge.org/core/books/applied-time-series-econometrics/",
-    "type": "Textbook"
+    "name": "Not So Standard Deviations",
+    "description": "Roger Peng and Hilary Parker on data science in the real world. Great for understanding the craft.",
+    "category": "Podcasts & Talks",
+    "url": "https://nssdeviations.com/",
+    "type": "Podcast"
   },
   {
-    "name": "Structural Estimation in Economics",
-    "description": "Overview of structural estimation methods including MLE, GMM, and simulation-based estimation.",
-    "category": "Structural Estimation",
-    "url": "https://eml.berkeley.edu/~train/distant.html",
-    "type": "Course Notes"
+    "name": "Freakonomics Radio",
+    "description": "Economics applied to everything. Not technical, but great for economic intuition and communication.",
+    "category": "Podcasts & Talks",
+    "url": "https://freakonomics.com/podcasts/",
+    "type": "Podcast"
   },
   {
-    "name": "Discrete Choice Methods with Simulation",
-    "description": "Kenneth Train's comprehensive guide to discrete choice modeling. Free PDF available.",
-    "category": "Structural Estimation",
-    "url": "https://eml.berkeley.edu/books/choice2.html",
-    "type": "Textbook"
+    "name": "Susan Athey - ML + Causal Inference Talks",
+    "description": "Leading researcher bridging ML and economics. Her talks on causal forests and policy evaluation are essential.",
+    "category": "Podcasts & Talks",
+    "url": "https://www.youtube.com/results?search_query=susan+athey+causal+inference",
+    "type": "Talks"
   },
   {
-    "name": "Industrial Organization: A Structural Approach",
-    "description": "Berry and Reiss's chapter on structural IO methods including demand estimation and entry models.",
-    "category": "Structural Estimation",
-    "url": "https://www.nber.org/papers/w10620",
-    "type": "Paper"
+    "name": "Tech Econ Job Market Guide",
+    "description": "How to land a tech economist role. Resume tips, interview prep, and what companies actually look for.",
+    "category": "Career",
+    "url": "https://www.techtecheconomist.com/",
+    "type": "Guide"
   },
   {
-    "name": "Auction Theory",
-    "description": "Vijay Krishna's comprehensive textbook on auction theory covering single-item and multi-item auctions, mechanism design, and optimal auctions.",
-    "category": "Economic Theory",
-    "url": "https://www.sciencedirect.com/book/9780123745071/auction-theory",
-    "type": "Textbook"
+    "name": "Econ Twitter / X",
+    "description": "Follow tech economists, see what they're reading, join the conversation. Start with @caaborwn, @nickchk, @gaborcsardi.",
+    "category": "Career",
+    "url": "https://twitter.com/search?q=tech%20economist",
+    "type": "Community"
   },
   {
-    "name": "Microeconomic Theory",
-    "description": "Mas-Colell, Whinston, and Green's classic graduate microeconomics textbook covering consumer theory, producer theory, and game theory.",
-    "category": "Economic Theory",
-    "url": "https://global.oup.com/academic/product/microeconomic-theory-9780195073409",
-    "type": "Textbook"
-  },
-  {
-    "name": "Game Theory",
-    "description": "Fudenberg and Tirole's rigorous treatment of game theory including strategic form games, extensive form games, and repeated games.",
-    "category": "Economic Theory",
-    "url": "https://mitpress.mit.edu/9780262061414/game-theory/",
-    "type": "Textbook"
+    "name": "Data Science Interview Prep",
+    "description": "Ace the Loop's guide to stats, ML, and product sense interviews. Good for economist → tech transitions.",
+    "category": "Career",
+    "url": "https://www.acetl.com/",
+    "type": "Guide"
   }
 ]
