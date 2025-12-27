@@ -14,13 +14,6 @@
     "type": "Course Notes"
   },
   {
-    "name": "Causal Inference for the Brave and True",
-    "description": "Modern introduction to causal inference methods (DiD, IV, RDD, Synthetic Control, ML-based) with Python code examples.",
-    "category": "Causal Inference",
-    "url": "https://matheusfacure.github.io/python-causality-handbook/",
-    "type": "Online Book"
-  },
-  {
     "name": "Coding for Economists",
     "description": "Practical guidance on applying Python to contemporary econometric research and data workflows.",
     "category": "Coding & Programming",
@@ -33,6 +26,13 @@
     "category": "Coding & Programming",
     "url": "https://missing.csail.mit.edu/",
     "type": "Course"
+  },
+  {
+    "name": "Beyond Jupyter",
+    "description": "Software design principles for ML: modularity, abstraction, and reproducibility beyond ad hoc Jupyter workflows.",
+    "category": "Coding & Programming",
+    "url": "https://transferlab.ai/trainings/beyond-jupyter/",
+    "type": "Tutorial"
   },
   {
     "name": "Machine Learning Specialization",
@@ -49,13 +49,6 @@
     "type": "Course"
   },
   {
-    "name": "Beyond Jupyter",
-    "description": "Software design principles for ML: modularity, abstraction, and reproducibility beyond ad hoc Jupyter workflows.",
-    "category": "Coding & Programming",
-    "url": "https://transferlab.ai/trainings/beyond-jupyter/",
-    "type": "Tutorial"
-  },
-  {
     "name": "Introduction to Statistical Learning",
     "description": "Classic textbook on statistical learning methods with applications in R and Python. Free online.",
     "category": "Statistics",
@@ -70,6 +63,13 @@
     "type": "Textbook"
   },
   {
+    "name": "Causal Inference for the Brave and True",
+    "description": "Modern introduction to causal inference methods (DiD, IV, RDD, Synthetic Control, ML-based) with Python code examples.",
+    "category": "Causal Inference",
+    "url": "https://matheusfacure.github.io/python-causality-handbook/",
+    "type": "Online Book"
+  },
+  {
     "name": "The Effect: An Introduction to Research Design",
     "description": "Modern causal inference textbook covering identification, DAGs, and research design strategies.",
     "category": "Causal Inference",
@@ -77,10 +77,108 @@
     "type": "Online Book"
   },
   {
+    "name": "Causal Inference: The Mixtape",
+    "description": "Scott Cunningham's guide to causal inference with code examples in Stata, R, and Python.",
+    "category": "Causal Inference",
+    "url": "https://mixtape.scunning.com/",
+    "type": "Online Book"
+  },
+  {
     "name": "Trustworthy Online Controlled Experiments",
     "description": "Comprehensive guide to A/B testing and experimentation from Microsoft researchers.",
     "category": "Experimentation",
     "url": "https://www.cambridge.org/core/books/trustworthy-online-controlled-experiments/",
+    "type": "Textbook"
+  },
+  {
+    "name": "Experimentation Platform Guide",
+    "description": "Practical guide to building experimentation platforms and running A/B tests at scale.",
+    "category": "Experimentation",
+    "url": "https://www.exp-platform.com/",
+    "type": "Guide"
+  },
+  {
+    "name": "Convex Optimization",
+    "description": "Boyd and Vandenberghe's classic textbook on convex optimization theory and algorithms. Free online.",
+    "category": "Optimization",
+    "url": "https://web.stanford.edu/~boyd/cvxbook/",
+    "type": "Textbook"
+  },
+  {
+    "name": "Numerical Optimization",
+    "description": "Nocedal and Wright's comprehensive guide to numerical optimization methods.",
+    "category": "Optimization",
+    "url": "https://link.springer.com/book/10.1007/978-0-387-40065-5",
+    "type": "Textbook"
+  },
+  {
+    "name": "Algorithms for Optimization",
+    "description": "Modern textbook covering optimization algorithms with Julia code examples. Free PDF available.",
+    "category": "Optimization",
+    "url": "https://algorithmsbook.com/optimization/",
+    "type": "Textbook"
+  },
+  {
+    "name": "Forecasting: Principles and Practice",
+    "description": "Hyndman and Athanasopoulos's comprehensive guide to time series forecasting with R. Free online.",
+    "category": "Forecasting",
+    "url": "https://otexts.com/fpp3/",
+    "type": "Online Book"
+  },
+  {
+    "name": "Time Series Analysis and Its Applications",
+    "description": "Shumway and Stoffer's textbook on time series methods with R examples.",
+    "category": "Forecasting",
+    "url": "https://www.stat.pitt.edu/stoffer/tsa4/",
+    "type": "Textbook"
+  },
+  {
+    "name": "Applied Time Series Econometrics",
+    "description": "Lütkepohl's guide to VAR models, cointegration, and structural time series analysis.",
+    "category": "Forecasting",
+    "url": "https://www.cambridge.org/core/books/applied-time-series-econometrics/",
+    "type": "Textbook"
+  },
+  {
+    "name": "Structural Estimation in Economics",
+    "description": "Overview of structural estimation methods including MLE, GMM, and simulation-based estimation.",
+    "category": "Structural Estimation",
+    "url": "https://eml.berkeley.edu/~train/distant.html",
+    "type": "Course Notes"
+  },
+  {
+    "name": "Discrete Choice Methods with Simulation",
+    "description": "Kenneth Train's comprehensive guide to discrete choice modeling. Free PDF available.",
+    "category": "Structural Estimation",
+    "url": "https://eml.berkeley.edu/books/choice2.html",
+    "type": "Textbook"
+  },
+  {
+    "name": "Industrial Organization: A Structural Approach",
+    "description": "Berry and Reiss's chapter on structural IO methods including demand estimation and entry models.",
+    "category": "Structural Estimation",
+    "url": "https://www.nber.org/papers/w10620",
+    "type": "Paper"
+  },
+  {
+    "name": "Auction Theory",
+    "description": "Vijay Krishna's comprehensive textbook on auction theory covering single-item and multi-item auctions, mechanism design, and optimal auctions.",
+    "category": "Economic Theory",
+    "url": "https://www.sciencedirect.com/book/9780123745071/auction-theory",
+    "type": "Textbook"
+  },
+  {
+    "name": "Microeconomic Theory",
+    "description": "Mas-Colell, Whinston, and Green's classic graduate microeconomics textbook covering consumer theory, producer theory, and game theory.",
+    "category": "Economic Theory",
+    "url": "https://global.oup.com/academic/product/microeconomic-theory-9780195073409",
+    "type": "Textbook"
+  },
+  {
+    "name": "Game Theory",
+    "description": "Fudenberg and Tirole's rigorous treatment of game theory including strategic form games, extensive form games, and repeated games.",
+    "category": "Economic Theory",
+    "url": "https://mitpress.mit.edu/9780262061414/game-theory/",
     "type": "Textbook"
   }
 ]
