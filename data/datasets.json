@@ -93,20 +93,6 @@
     ]
   },
   {
-    "name": "JD.com (2011-2014)",
-    "description": "~2M users, >100k products, 60M+ reviews across 15/987 categories",
-    "category": "E-Commerce",
-    "url": "https://www.yongfeng.me/dataset/",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "reviews",
-      "products",
-      "China",
-      "large-scale"
-    ]
-  },
-  {
     "name": "JD.com 2020 (MSOM-20)",
     "description": "2.5M customers (457k purchasers) and 31,868 SKUs from JD.com",
     "category": "E-Commerce",
@@ -132,20 +118,6 @@
       "clicks",
       "large-scale",
       "Alibaba"
-    ]
-  },
-  {
-    "name": "Alibaba Mobile (6GB)",
-    "description": "Mobile e-commerce behavior including clicks, purchases, and user profiles",
-    "category": "E-Commerce",
-    "url": "https://www.yongfeng.me/dataset/",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "mobile",
-      "user behavior",
-      "clicks",
-      "purchases"
     ]
   },
   {
@@ -1438,19 +1410,6 @@
     ]
   },
   {
-    "name": "Alibaba Advertising",
-    "description": "Advertising dataset (sponsored search or display ads) from Alibaba",
-    "category": "Advertising",
-    "url": "https://tianchi.aliyun.com/dataset/148347",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "advertising",
-      "Alibaba",
-      "sponsored"
-    ]
-  },
-  {
     "name": "Adform Display",
     "description": "Display advertising dataset with impressions and clicks",
     "category": "Advertising",
@@ -1553,20 +1512,6 @@
       "last-mile",
       "delivery",
       "Cainiao",
-      "MSOM"
-    ]
-  },
-  {
-    "name": "JD.com Logistics (MSOM20)",
-    "description": "JD.com Logistics data for e-commerce fulfillment",
-    "category": "Logistics & Supply Chain",
-    "url": "https://connect.informs.org/msom/events/datadriven2020",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "logistics",
-      "fulfillment",
-      "JD.com",
       "MSOM"
     ]
   },

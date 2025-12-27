@@ -174,5 +174,40 @@
     "url": "https://freakonomics.com/podcasts/",
     "type": "Podcast",
     "image_url": "https://image.simplecastcdn.com/images/2be48404-a43c-4fa8-a32c-760a3216272e/fab1584e-8ea9-4efa-9650-5e595861b2cd/3000x3000/image.jpg"
+  },
+  {
+    "name": "Nathan Lambert",
+    "description": "Interconnects. The primary chronicler of RLHF. For tech economists, RLHF is mechanism design applied to AI: eliciting preferences and training reward models.",
+    "category": "Causal Inference & ML",
+    "url": "https://www.interconnects.ai/",
+    "type": "Blog"
+  },
+  {
+    "name": "Andrej Karpathy",
+    "description": "Neural nets from scratch, LLMs as operating systems. Explains the intuition of optimization landscapes, not just how to write code.",
+    "category": "Causal Inference & ML",
+    "url": "https://karpathy.ai/",
+    "type": "Blog"
+  },
+  {
+    "name": "Lilian Weng",
+    "description": "Lil'Log. OpenAI Safety Systems lead. The single best technical summaries on DL, agents, and RL. Often cited as primary sources in papers.",
+    "category": "Causal Inference & ML",
+    "url": "https://lilianweng.github.io/",
+    "type": "Blog"
+  },
+  {
+    "name": "Sebastian Raschka",
+    "description": "Ahead of AI. PyTorch, LLM training, efficient finetuning (LoRA). Bridges academic papers and 'will this run on my GPU?' practicality.",
+    "category": "Causal Inference & ML",
+    "url": "https://magazine.sebastianraschka.com/",
+    "type": "Blog"
+  },
+  {
+    "name": "Tor Lattimore",
+    "description": "DeepMind. The definitive resource on bandit algorithms. Essential for pricing, dynamic allocation, and experimentation without losing money.",
+    "category": "Experimentation & Scaling",
+    "url": "https://tor-lattimore.com/",
+    "type": "Blog"
   }
 ]

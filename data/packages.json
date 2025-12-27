@@ -315,9 +315,9 @@
     "name": "CausalPy",
     "description": "Developed by PyMC Labs, focuses specifically on causal inference in quasi-experimental settings. Specializes in scenarios where randomization is impossible or expensive.",
     "category": "Causal Inference & Matching",
-    "docs_url": "https://www.pymc-marketing.io/",
-    "github_url": "https://github.com/pymc-labs/pymc-marketing",
-    "url": "https://github.com/pymc-labs/pymc-marketing",
+    "docs_url": "https://causalpy.readthedocs.io/",
+    "github_url": "https://github.com/pymc-labs/CausalPy",
+    "url": "https://github.com/pymc-labs/CausalPy",
     "install": "pip install CausalPy",
     "tags": [
       "causal inference",
@@ -1074,35 +1074,6 @@
     "best_for": "Learning production-quality ML code design"
   },
   {
-    "name": "Coding for Economists",
-    "description": "Practical guide by A. Turrell on using Python for modern econometric research, data analysis, and workflows.",
-    "category": "Standard Errors, Bootstrapping & Reporting",
-    "docs_url": "https://aeturrell.github.io/coding-for-economists/",
-    "github_url": null,
-    "url": "https://aeturrell.github.io/coding-for-economists/",
-    "install": "",
-    "tags": [
-      "bootstrap",
-      "standard errors"
-    ],
-    "best_for": "Practical Python for economic research"
-  },
-  {
-    "name": "Deep Learning Specialization (Coursera)",
-    "description": "Intermediate 5-course series by Andrew Ng covering deep neural networks, CNNs, RNNs, transformers, and real-world DL applications using TensorFlow.",
-    "category": "Standard Errors, Bootstrapping & Reporting",
-    "docs_url": "https://www.coursera.org/specializations/deep-learning",
-    "github_url": null,
-    "url": "https://www.coursera.org/specializations/deep-learning",
-    "install": "",
-    "tags": [
-      "bootstrap",
-      "standard errors",
-      "machine learning"
-    ],
-    "best_for": "Intermediate deep learning course series"
-  },
-  {
     "name": "Machine Learning Specialization (Coursera)",
     "description": "Beginner-friendly 3-course series by Andrew Ng covering core ML methods (regression, classification, clustering, trees, NN) with hands-on projects.",
     "category": "Standard Errors, Bootstrapping & Reporting",
@@ -1117,40 +1088,12 @@
     "best_for": "Beginner-friendly ML fundamentals course"
   },
   {
-    "name": "Python for Econometrics",
-    "description": "Comprehensive intro notes by Kevin Sheppard covering Python basics, core libraries, and econometrics applications.",
-    "category": "Standard Errors, Bootstrapping & Reporting",
-    "docs_url": "https://www.kevinsheppard.com/teaching/python/notes/",
-    "github_url": "https://github.com/bashtage/python-for-econometrics-statistics-data-analysis",
-    "url": "https://www.kevinsheppard.com/teaching/python/",
-    "install": "",
-    "tags": [
-      "bootstrap",
-      "standard errors"
-    ],
-    "best_for": "Comprehensive Python/econometrics introduction"
-  },
-  {
-    "name": "QuantEcon Lectures",
-    "description": "High-quality lecture series on quantitative economic modeling, computational tools, and economics using Python/Julia.",
-    "category": "Standard Errors, Bootstrapping & Reporting",
-    "docs_url": "https://quantecon.org/lectures/",
-    "github_url": null,
-    "url": "https://quantecon.org/lectures/",
-    "install": "",
-    "tags": [
-      "bootstrap",
-      "standard errors"
-    ],
-    "best_for": "Quantitative economic modeling lectures"
-  },
-  {
     "name": "SciPy Bootstrap",
     "description": "(`scipy.stats.bootstrap`) Computes bootstrap confidence intervals for various statistics using percentile, BCa methods.",
     "category": "Standard Errors, Bootstrapping & Reporting",
     "docs_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html",
     "github_url": "https://github.com/scipy/scipy",
-    "url": "https://github.com/scipy/scipy",
+    "url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html",
     "install": "pip install scipy",
     "tags": [
       "bootstrap",
@@ -1171,20 +1114,6 @@
       "standard errors"
     ],
     "best_for": "Publication-quality regression tables (LaTeX/HTML)"
-  },
-  {
-    "name": "The Missing Semester of Your CS Education (MIT)",
-    "description": "Teaches essential developer tools often skipped in formal education\u2014command line, Git, Vim, scripting, debugging, etc.",
-    "category": "Standard Errors, Bootstrapping & Reporting",
-    "docs_url": "https://missing.csail.mit.edu/",
-    "github_url": null,
-    "url": "https://missing.csail.mit.edu/",
-    "install": "",
-    "tags": [
-      "bootstrap",
-      "standard errors"
-    ],
-    "best_for": "Essential developer tools (command line, Git, etc.)"
   },
   {
     "name": "wildboottest",
@@ -1291,7 +1220,7 @@
     "category": "Statistical Inference & Hypothesis Testing",
     "docs_url": "https://docs.scipy.org/doc/scipy/reference/stats.html",
     "github_url": "https://github.com/scipy/scipy",
-    "url": "https://github.com/scipy/scipy",
+    "url": "https://docs.scipy.org/doc/scipy/reference/stats.html",
     "install": "pip install scipy",
     "tags": [
       "inference",
@@ -1589,7 +1518,7 @@
     "category": "Tree & Ensemble Methods for Prediction",
     "docs_url": "https://scikit-learn.org/stable/modules/ensemble.html#random-forests",
     "github_url": "https://github.com/scikit-learn/scikit-learn",
-    "url": "https://github.com/scikit-learn/scikit-learn",
+    "url": "https://scikit-learn.org/stable/modules/ensemble.html#random-forests",
     "install": "pip install scikit-learn",
     "tags": [
       "machine learning",
