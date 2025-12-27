@@ -1,0 +1,86 @@
+[
+  {
+    "name": "QuantEcon Lectures",
+    "description": "High-quality lecture series on quantitative economic modeling, computational tools, and economics using Python/Julia.",
+    "category": "Coding & Programming",
+    "url": "https://quantecon.org/lectures/",
+    "type": "Lectures"
+  },
+  {
+    "name": "Python for Econometrics",
+    "description": "Comprehensive introductory notes covering fundamentals, core libraries, and applied econometrics in Python.",
+    "category": "Coding & Programming",
+    "url": "https://www.kevinsheppard.com/teaching/python/notes/",
+    "type": "Course Notes"
+  },
+  {
+    "name": "Causal Inference for the Brave and True",
+    "description": "Modern introduction to causal inference methods (DiD, IV, RDD, Synthetic Control, ML-based) with Python code examples.",
+    "category": "Causal Inference",
+    "url": "https://matheusfacure.github.io/python-causality-handbook/",
+    "type": "Online Book"
+  },
+  {
+    "name": "Coding for Economists",
+    "description": "Practical guidance on applying Python to contemporary econometric research and data workflows.",
+    "category": "Coding & Programming",
+    "url": "https://aeturrell.github.io/coding-for-economists/",
+    "type": "Online Book"
+  },
+  {
+    "name": "The Missing Semester of Your CS Education",
+    "description": "MIT course covering developer essentials: command-line tools, version control, debugging, and more.",
+    "category": "Coding & Programming",
+    "url": "https://missing.csail.mit.edu/",
+    "type": "Course"
+  },
+  {
+    "name": "Machine Learning Specialization",
+    "description": "Beginner-friendly 3-course series by Andrew Ng covering core ML methods: regression, classification, clustering, trees, neural networks.",
+    "category": "Machine Learning",
+    "url": "https://www.coursera.org/specializations/machine-learning-introduction",
+    "type": "Course"
+  },
+  {
+    "name": "Deep Learning Specialization",
+    "description": "Advanced neural network training covering CNNs, RNNs, and practical deep learning with TensorFlow.",
+    "category": "Machine Learning",
+    "url": "https://www.coursera.org/specializations/deep-learning",
+    "type": "Course"
+  },
+  {
+    "name": "Beyond Jupyter",
+    "description": "Software design principles for ML: modularity, abstraction, and reproducibility beyond ad hoc Jupyter workflows.",
+    "category": "Coding & Programming",
+    "url": "https://transferlab.ai/trainings/beyond-jupyter/",
+    "type": "Tutorial"
+  },
+  {
+    "name": "Introduction to Statistical Learning",
+    "description": "Classic textbook on statistical learning methods with applications in R and Python. Free online.",
+    "category": "Statistics",
+    "url": "https://www.statlearning.com/",
+    "type": "Textbook"
+  },
+  {
+    "name": "Mostly Harmless Econometrics",
+    "description": "Essential guide to empirical methods in economics, covering regression, IV, panel data, and more.",
+    "category": "Statistics",
+    "url": "https://www.mostlyharmlesseconometrics.com/",
+    "type": "Textbook"
+  },
+  {
+    "name": "The Effect: An Introduction to Research Design",
+    "description": "Modern causal inference textbook covering identification, DAGs, and research design strategies.",
+    "category": "Causal Inference",
+    "url": "https://theeffectbook.net/",
+    "type": "Online Book"
+  },
+  {
+    "name": "Trustworthy Online Controlled Experiments",
+    "description": "Comprehensive guide to A/B testing and experimentation from Microsoft researchers.",
+    "category": "Experimentation",
+    "url": "https://www.cambridge.org/core/books/trustworthy-online-controlled-experiments/",
+    "type": "Textbook"
+  }
+]

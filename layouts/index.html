@@ -4,7 +4,10 @@
     <header class="header">
         <h1>{{ .Site.Title }}</h1>
         <p class="subtitle">{{ .Site.Params.description }}</p>
-        <a href="https://github.com/rawatpranjal/metrics-packages/issues/new?template=submit-package.yml" class="btn-suggest" target="_blank">Submit a Package</a>
+        <div class="header-links">
+            <a href="{{ "resources/" | relURL }}" class="btn-resources">Learning Resources</a>
+            <a href="https://github.com/rawatpranjal/metrics-packages/issues/new?template=submit-package.yml" class="btn-suggest" target="_blank">Submit a Package</a>
+        </div>
     </header>
 
     <!-- Enhanced Search Bar -->
@@ -71,6 +74,9 @@
                         </h3>
                     </div>
                     <p class="package-desc">{{ .description }}</p>
+                    {{ if .best_for }}
+                    <p class="best-for"><strong>Best for:</strong> {{ .best_for }}</p>
+                    {{ end }}
                     {{ if .tags }}
                     <div class="tag-container">
                         {{ range .tags }}
@@ -114,6 +120,7 @@
                 <tr>
                     <th>Package</th>
                     <th>Description</th>
+                    <th>Best For</th>
                     <th>Category</th>
                     <th>Links</th>
                     <th>Install</th>
@@ -126,6 +133,7 @@
                         <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
                     </td>
                     <td class="pkg-desc">{{ .description }}</td>
+                    <td class="pkg-best-for">{{ .best_for }}</td>
                     <td class="pkg-cat"><span class="category-badge-sm">{{ .category }}</span></td>
                     <td class="pkg-links">
                         {{ if .docs_url }}<a href="{{ .docs_url }}" target="_blank">Docs</a>{{ end }}

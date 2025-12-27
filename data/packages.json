@@ -1,7 +1,7 @@
 [
   {
     "name": "BayesianBandits",
-    "description": "Minimal Thompson Sampling implementation for teams wanting a simple, focused bandit solution. Unlike MABWiser (full-featured) or ContextualBandits (research-oriented), this prioritizes ease of integration with support for contextual, restless, and delayed reward scenarios. Best for: production A/B testing where you want Bayesian exploration without complexity.",
+    "description": "Lightweight microframework for Bayesian bandits (Thompson Sampling) with support for contextual/restless/delayed rewards.",
     "category": "Adaptive Experimentation & Bandits",
     "docs_url": "https://rukulkarni.com/projects/bayesianbandits/",
     "github_url": "https://github.com/IntelyCare/bayesianbandits",
@@ -11,11 +11,12 @@
       "A/B testing",
       "experimentation",
       "Bayesian"
-    ]
+    ],
+    "best_for": "Production A/B testing with simple Thompson Sampling setup"
   },
   {
     "name": "ContextualBandits",
-    "description": "Research-oriented library with the widest algorithm variety (LinUCB, Thompson Sampling, Offset Tree, Doubly-Robust). Accepts any scikit-learn classifier as a black-box oracle. Unlike MABWiser (production focus), this prioritizes flexibility for comparing algorithms. Best for: researchers benchmarking methods or prototyping new approaches.",
+    "description": "Implements a wide range of contextual bandit algorithms (linear, tree-based, neural) and off-policy evaluation methods.",
     "category": "Adaptive Experimentation & Bandits",
     "docs_url": "https://contextual-bandits.readthedocs.io/",
     "github_url": "https://github.com/david-cortes/contextualbandits",
@@ -25,11 +26,12 @@
       "A/B testing",
       "experimentation",
       "machine learning"
-    ]
+    ],
+    "best_for": "Researchers comparing bandit algorithms or prototyping new approaches"
   },
   {
     "name": "MABWiser",
-    "description": "Production-grade bandit library from Fidelity with scikit-learn API and built-in parallelization. Supports context-free, parametric, and non-parametric contextual bandits. Unlike research-focused alternatives, emphasizes reliability, testing, and real-world deployment. Best for: production recommender systems and optimization requiring both speed and algorithmic flexibility.",
+    "description": "Production-ready, scikit-learn style library for contextual & stochastic bandits with parallelism and simulation tools.",
     "category": "Adaptive Experimentation & Bandits",
     "docs_url": "https://fidelity.github.io/mabwiser/",
     "github_url": "https://github.com/fidelity/mabwiser",
@@ -38,11 +40,12 @@
     "tags": [
       "A/B testing",
       "experimentation"
-    ]
+    ],
+    "best_for": "Production recommender systems needing speed and algorithmic flexibility"
   },
   {
     "name": "Open Bandit Pipeline (OBP)",
-    "description": "Specialized framework for offline policy evaluation—estimating how new policies would perform using only logged data. Implements IPS, Doubly Robust, and Self-Normalized estimators. Uniquely includes real-world Open Bandit Dataset from ZOZO's e-commerce platform. Best for: safely evaluating bandit policies before deployment without live A/B tests.",
+    "description": "Framework for **offline evaluation (OPE)** of bandit policies using logged data. Implements IPS, DR, DM estimators.",
     "category": "Adaptive Experimentation & Bandits",
     "docs_url": "https://zr-obp.readthedocs.io/en/latest/",
     "github_url": "https://github.com/st-tech/zr-obp",
@@ -51,11 +54,12 @@
     "tags": [
       "A/B testing",
       "experimentation"
-    ]
+    ],
+    "best_for": "Evaluating bandit policies offline before deployment"
   },
   {
     "name": "PyXAB",
-    "description": "Solves X-armed bandit problems where action spaces are continuous or structured (unlike discrete-arm libraries). Implements Zooming, StoSOO, HCT, and GPO algorithms for black-box optimization. Best for: hyperparameter tuning and online optimization where you need to search continuous parameter spaces efficiently.",
+    "description": "Library for advanced bandit problems: X-armed bandits (continuous/structured action spaces) and online optimization.",
     "category": "Adaptive Experimentation & Bandits",
     "docs_url": "https://pyxab.readthedocs.io/en/latest/",
     "github_url": "https://github.com/huanzhang12/pyxab",
@@ -64,11 +68,12 @@
     "tags": [
       "A/B testing",
       "experimentation"
-    ]
+    ],
+    "best_for": "Hyperparameter tuning over continuous parameter spaces"
   },
   {
     "name": "SMPyBandits",
-    "description": "Most comprehensive bandit research framework with 65+ algorithms including UCB variants, kl-UCB, Thompson Sampling, and multi-player algorithms (MusicalChair, MEGA). Supports stochastic, adversarial, Bayesian, and Markovian environments. Best for: academic research requiring extensive algorithm comparisons with publication-quality visualizations.",
+    "description": "Comprehensive research framework for single/multi-player MAB algorithms (stochastic, adversarial, contextual).",
     "category": "Adaptive Experimentation & Bandits",
     "docs_url": "https://smpybandits.github.io/",
     "github_url": "https://github.com/SMPyBandits/SMPyBandits",
@@ -77,11 +82,12 @@
     "tags": [
       "A/B testing",
       "experimentation"
-    ]
+    ],
+    "best_for": "Academic research comparing many bandit algorithms"
   },
   {
     "name": "Bambi",
-    "description": "High-level Bayesian modeling with R-style formula syntax (y ~ x1 + x2) built on PyMC. Unlike raw PyMC (more flexible but verbose), Bambi makes standard models trivial to specify. Best for: economists/social scientists who want Bayesian GLMs and mixed-effects models without learning probabilistic programming.",
+    "description": "High-level interface for building Bayesian GLMMs, built on top of PyMC. Uses formula syntax similar to R's `lme4`.",
     "category": "Bayesian Econometrics",
     "docs_url": "https://bambinos.github.io/bambi/",
     "github_url": "https://github.com/bambinos/bambi",
@@ -90,11 +96,12 @@
     "tags": [
       "Bayesian",
       "inference"
-    ]
+    ],
+    "best_for": "Bayesian GLMs with R-style formula syntax (y ~ x)"
   },
   {
     "name": "LightweightMMM",
-    "description": "Google's Bayesian Marketing Mix Modeling library built on NumPyro/JAX. Estimates channel attribution with uncertainty quantification. Supports Adstock, Hill-Adstock, and Carryover models plus hierarchical geographic breakdowns. Best for: marketing teams needing production-ready MMM with budget optimization and ROI estimation.",
+    "description": "Bayesian Marketing Mix Modeling (see Marketing Mix Models section).",
     "category": "Bayesian Econometrics",
     "docs_url": null,
     "github_url": "https://github.com/google/lightweight_mmm",
@@ -103,11 +110,12 @@
     "tags": [
       "Bayesian",
       "inference"
-    ]
+    ],
+    "best_for": "Marketing mix modeling with uncertainty quantification"
   },
   {
     "name": "NumPyro",
-    "description": "Lightweight probabilistic programming on JAX with GPU/TPU acceleration and JIT compilation. Faster than PyMC for large models due to hardware acceleration. Unlike PyMC (larger ecosystem, more tutorials), NumPyro prioritizes speed and functional programming style. Best for: performance-critical inference, GPU-accelerated MCMC, or JAX-based workflows.",
+    "description": "Probabilistic programming library built on JAX for scalable Bayesian inference, often faster than PyMC.",
     "category": "Bayesian Econometrics",
     "docs_url": "https://num.pyro.ai/",
     "github_url": "https://github.com/pyro-ppl/numpyro",
@@ -116,11 +124,12 @@
     "tags": [
       "Bayesian",
       "inference"
-    ]
+    ],
+    "best_for": "GPU-accelerated Bayesian inference with JAX"
   },
   {
     "name": "PyMC",
-    "description": "The most popular Python Bayesian library with intuitive syntax and NUTS sampler for complex models. Rich ecosystem (Bambi, CausalPy, PyMC-Marketing) and extensive documentation. Unlike NumPyro (faster but steeper learning curve), PyMC prioritizes accessibility and community support. Best for: most Bayesian modeling needs—the default choice unless you need GPU acceleration.",
+    "description": "Flexible probabilistic programming library for Bayesian modeling and inference using MCMC algorithms (NUTS).",
     "category": "Bayesian Econometrics",
     "docs_url": "https://www.pymc.io/",
     "github_url": "https://github.com/pymc-devs/pymc",
@@ -129,11 +138,12 @@
     "tags": [
       "Bayesian",
       "inference"
-    ]
+    ],
+    "best_for": "General Bayesian modeling with rich ecosystem and tutorials"
   },
   {
     "name": "Ananke",
-    "description": "Focused on causal identification theory—determining when causal effects can be estimated from DAGs. Implements ID algorithm and frontdoor/backdoor criteria. Unlike discovery tools (causal-learn, CDT), Ananke assumes you have a DAG and asks 'can I estimate this effect?' Best for: researchers working on identification problems in structural causal models.",
+    "description": "Causal inference using graphical models (DAGs), including identification theory and effect estimation.",
     "category": "Causal Discovery & Graphical Models",
     "docs_url": "https://ananke.readthedocs.io/",
     "github_url": "[https://github.com/py-why/Ananke](https://github.com/ghosthamlet/ananke",
@@ -142,11 +152,12 @@
     "tags": [
       "causal inference",
       "graphs"
-    ]
+    ],
+    "best_for": "Causal identification theory - checking if effects can be estimated"
   },
   {
     "name": "Causal Discovery Toolbox (CDT)",
-    "description": "Comprehensive discovery toolkit with graph inference (PC, GES, LiNGAM, CAM) and pairwise methods (ANM, IGCI). Integrates R packages (bnlearn, pcalg) in unified Python API with GPU support. Unlike causal-learn (Tetrad focus), CDT emphasizes pairwise methods and hardware flexibility. Best for: researchers needing diverse algorithms with CPU/GPU computation.",
+    "description": "Implements algorithms for causal discovery (recovering causal graph structure) from observational data.",
     "category": "Causal Discovery & Graphical Models",
     "docs_url": "https://fentechsolutions.github.io/CausalDiscoveryToolbox/html/index.html",
     "github_url": "https://github.com/FenTechSolutions/CausalDiscoveryToolbox",
@@ -155,11 +166,12 @@
     "tags": [
       "causal inference",
       "graphs"
-    ]
+    ],
+    "best_for": "Comparing many discovery algorithms with GPU support"
   },
   {
     "name": "CausalNex",
-    "description": "McKinsey/QuantumBlack toolkit combining Bayesian Networks with domain expertise. Unique focus on integrating expert knowledge into structure learning, plus do-calculus for intervention analysis. Unlike pure-ML tools, designed for business practitioners who know their domain. Best for: applied causal analysis where you want to encode domain knowledge alongside data-driven discovery.",
+    "description": "Uses Bayesian Networks for causal reasoning, combining ML with expert knowledge to model relationships.",
     "category": "Causal Discovery & Graphical Models",
     "docs_url": null,
     "github_url": "https://github.com/microsoft/causalnex",
@@ -169,11 +181,12 @@
       "causal inference",
       "graphs",
       "Bayesian"
-    ]
+    ],
+    "best_for": "Combining domain expertise with data-driven Bayesian networks"
   },
   {
     "name": "LiNGAM",
-    "description": "Exploits non-Gaussianity to identify causal directions—unique capability unavailable with Gaussian assumptions. Implements ICA-LiNGAM, DirectLiNGAM, VAR-LiNGAM for time series, and variants for latent confounders. Unlike constraint-based methods (PC), identifies unique causal orderings. Best for: discovering causal structure when your data is non-Gaussian (most real-world data).",
+    "description": "Specialized package for learning non-Gaussian linear causal models, implementing various versions of the LiNGAM algorithm including ICA-based methods.",
     "category": "Causal Discovery & Graphical Models",
     "docs_url": "https://lingam.readthedocs.io/",
     "github_url": "https://github.com/cdt15/lingam",
@@ -182,11 +195,12 @@
     "tags": [
       "causal inference",
       "graphs"
-    ]
+    ],
+    "best_for": "Discovering causal direction with non-Gaussian data"
   },
   {
     "name": "Tigramite",
-    "description": "Purpose-built for time series causal discovery with PCMCI, PCMCIplus, and LPCMCI algorithms. Handles lagged relationships, autocorrelation, and contemporaneous effects. Multiple conditional independence tests (ParCorr, CMIknn). Unlike cross-sectional methods, explicitly models temporal structure. Best for: discovering causal relationships in panel/time series data where timing matters.",
+    "description": "Specialized package for causal inference in time series data implementing PCMCI, PCMCIplus, LPCMCI algorithms with conditional independence tests.",
     "category": "Causal Discovery & Graphical Models",
     "docs_url": "https://tigramite.readthedocs.io/",
     "github_url": "https://github.com/jakobrunge/tigramite",
@@ -195,11 +209,12 @@
     "tags": [
       "causal inference",
       "graphs"
-    ]
+    ],
+    "best_for": "Time series causal discovery with lagged relationships"
   },
   {
     "name": "causal-learn",
-    "description": "Python translation of CMU's Tetrad with constraint-based, score-based, and functional causal model methods. Most comprehensive pure-Python option for classical algorithms plus utilities (independence tests, graph operations). Unlike CDT (more pairwise focus), emphasizes Tetrad's proven algorithms. Best for: researchers wanting Tetrad's methods in native Python with good documentation.",
+    "description": "Comprehensive Python package serving as Python translation and extension of Java-based Tetrad toolkit for causal discovery algorithms.",
     "category": "Causal Discovery & Graphical Models",
     "docs_url": "https://causal-learn.readthedocs.io/",
     "github_url": "https://github.com/py-why/causal-learn",
@@ -208,11 +223,12 @@
     "tags": [
       "causal inference",
       "graphs"
-    ]
+    ],
+    "best_for": "Classical Tetrad algorithms in native Python"
   },
   {
     "name": "gCastle",
-    "description": "Huawei's gradient-based causal discovery toolchain with NOTEARS, GOLEM, and neural approaches (CausalVAE, GAE). GPU-accelerated for scalability. Unlike constraint-based methods (PC, FCI), frames structure learning as continuous optimization. Best for: large-scale discovery problems where gradient methods outperform combinatorial search.",
+    "description": "Huawei Noah's Ark Lab end-to-end causal structure learning toolchain emphasizing gradient-based methods with GPU acceleration (NOTEARS, GOLEM).",
     "category": "Causal Discovery & Graphical Models",
     "docs_url": "https://gcastle.readthedocs.io/",
     "github_url": "https://github.com/huawei-noah/trustworthyAI",
@@ -221,11 +237,12 @@
     "tags": [
       "causal inference",
       "graphs"
-    ]
+    ],
+    "best_for": "Large-scale discovery with gradient-based methods (NOTEARS)"
   },
   {
     "name": "py-tetrad",
-    "description": "Direct Python interface to CMU's Tetrad Java library via JPype—access to ALL Tetrad algorithms, not just translated ones. Unlike causal-learn (native Python subset), provides complete Tetrad functionality including latest research methods. Best for: users needing Tetrad's full algorithm library or specific methods not yet ported to causal-learn.",
+    "description": "Python interface to Tetrad Java library using JPype, providing direct access to Tetrad's causal discovery algorithms with efficient data translation.",
     "category": "Causal Discovery & Graphical Models",
     "docs_url": null,
     "github_url": "https://github.com/py-why/py-tetrad",
@@ -234,11 +251,12 @@
     "tags": [
       "causal inference",
       "graphs"
-    ]
+    ],
+    "best_for": "Direct access to full Tetrad Java library via Python"
   },
   {
     "name": "CausalInference",
-    "description": "Classic econometric toolkit for propensity score methods: matching, IPW, subclassification, and blocking. Includes covariate balance diagnostics and trimming. Unlike ML-heavy alternatives (CausalML, EconML), focuses on transparent, well-understood methods. Best for: researchers wanting traditional program evaluation methods with clear statistical foundations.",
+    "description": "Implements classical causal inference methods like propensity score matching, inverse probability weighting, stratification.",
     "category": "Causal Inference & Matching",
     "docs_url": "https://causalinferenceinpython.org",
     "github_url": "https://github.com/laurencium/causalinference",
@@ -247,11 +265,12 @@
     "tags": [
       "causal inference",
       "matching"
-    ]
+    ],
+    "best_for": "Traditional propensity score methods with clear statistical foundations"
   },
   {
     "name": "CausalLib",
-    "description": "Scikit-learn-style API where you plug ANY ML model into causal meta-algorithms (IPW, standardization). Supports fit/predict workflow and out-of-bag estimation for honest inference. Unlike fixed-algorithm packages, maximizes flexibility in model choice. Best for: practitioners who want to use their preferred ML models within a principled causal framework.",
+    "description": "IBM-developed package that provides a scikit-learn-inspired API for causal inference with meta-algorithms supporting arbitrary machine learning models.",
     "category": "Causal Inference & Matching",
     "docs_url": "https://causallib.readthedocs.io/",
     "github_url": "https://github.com/IBM/causallib",
@@ -260,11 +279,12 @@
     "tags": [
       "causal inference",
       "matching"
-    ]
+    ],
+    "best_for": "Plugging any sklearn model into causal meta-algorithms"
   },
   {
     "name": "CausalML",
-    "description": "Uber's library for heterogeneous treatment effects and uplift modeling. Implements meta-learners (T/S/X/R-learner), causal forests, TMLE, and deep learning approaches. Unlike EconML (more DML focus), emphasizes marketing applications and individual-level targeting. Best for: identifying which customers respond to interventions, personalized treatment assignment.",
+    "description": "Focuses on uplift modeling and heterogeneous treatment effect estimation using machine learning techniques.",
     "category": "Causal Inference & Matching",
     "docs_url": "https://causalml.readthedocs.io/",
     "github_url": "https://github.com/uber/causalml",
@@ -273,11 +293,12 @@
     "tags": [
       "causal inference",
       "matching"
-    ]
+    ],
+    "best_for": "Uplift modeling for personalized marketing interventions"
   },
   {
     "name": "CausalMatch",
-    "description": "ByteDance's matching library with Propensity Score Matching (PSM) and Coarsened Exact Matching (CEM). Allows any ML model for propensity estimation. Unlike traditional matching packages, designed for large-scale production matching at tech company scale. Best for: large-scale observational studies where you need fast, flexible matching.",
+    "description": "Implements Propensity Score Matching (PSM) and Coarsened Exact Matching (CEM) with ML flexibility for propensity score estimation.",
     "category": "Causal Inference & Matching",
     "docs_url": "https://github.com/bytedance/CausalMatch",
     "github_url": null,
@@ -286,11 +307,12 @@
     "tags": [
       "causal inference",
       "matching"
-    ]
+    ],
+    "best_for": "Large-scale PSM/CEM matching at tech company scale"
   },
   {
     "name": "CausalPlayground",
-    "description": "Synthetic data generator for causal research—create datasets with known ground-truth causal structures. Fine-grained control over structural causal models for benchmarking algorithms. Unlike real datasets (unknown truth), enables rigorous method validation. Best for: developing and testing causal discovery/inference algorithms where you need ground truth.",
+    "description": "Python library for causal research that addresses the scarcity of real-world datasets with known causal relations. Provides fine-grained control over structural causal models.",
     "category": "Causal Inference & Matching",
     "docs_url": "https://causal-playground.readthedocs.io/",
     "github_url": "https://github.com/causal-playground/causal-playground",
@@ -299,11 +321,12 @@
     "tags": [
       "causal inference",
       "matching"
-    ]
+    ],
+    "best_for": "Generating synthetic causal datasets with known ground truth"
   },
   {
     "name": "CausalPy",
-    "description": "PyMC Labs' Bayesian toolkit for quasi-experiments: synthetic control, DiD, regression discontinuity, interrupted time series, and IV regression. Provides uncertainty quantification via Bayesian methods. Unlike frequentist packages, gives full posterior distributions. Best for: policy evaluation when you need Bayesian credible intervals, not just point estimates.",
+    "description": "Developed by PyMC Labs, focuses specifically on causal inference in quasi-experimental settings. Specializes in scenarios where randomization is impossible or expensive.",
     "category": "Causal Inference & Matching",
     "docs_url": "https://www.pymc-marketing.io/",
     "github_url": "https://github.com/pymc-labs/pymc-marketing",
@@ -312,11 +335,12 @@
     "tags": [
       "causal inference",
       "matching"
-    ]
+    ],
+    "best_for": "Bayesian quasi-experiments (DiD, SC, RDD) with uncertainty"
   },
   {
     "name": "DoWhy",
-    "description": "Microsoft's end-to-end causal framework combining graphical models and potential outcomes. Unique 4-step workflow: Model (define DAG) → Identify (check estimability) → Estimate (compute effects) → Refute (validate assumptions). Unlike single-method packages, enforces disciplined causal reasoning. Best for: rigorous causal analysis where you want explicit assumption documentation and robustness checks.",
+    "description": "End-to-end framework for causal inference based on causal graphs (DAGs) and potential outcomes. Covers identification, estimation, refutation.",
     "category": "Causal Inference & Matching",
     "docs_url": "https://www.pywhy.org/dowhy/",
     "github_url": "https://github.com/py-why/dowhy",
@@ -325,11 +349,12 @@
     "tags": [
       "causal inference",
       "matching"
-    ]
+    ],
+    "best_for": "End-to-end causal workflow with explicit assumption documentation"
   },
   {
     "name": "fastmatch",
-    "description": "High-performance k-nearest-neighbor matching using Facebook's FAISS library. Optimized for millions of observations where traditional matching is too slow. Unlike standard matching implementations, designed for big data scale. Best for: propensity score or covariate matching on massive datasets where speed is critical.",
+    "description": "Fast k-nearest-neighbor matching for large datasets using Facebook's FAISS library.",
     "category": "Causal Inference & Matching",
     "docs_url": "https://github.com/py-econometrics/fastmatch",
     "github_url": null,
@@ -338,11 +363,12 @@
     "tags": [
       "causal inference",
       "matching"
-    ]
+    ],
+    "best_for": "Fast KNN matching on millions of observations"
   },
   {
     "name": "scikit-uplift",
-    "description": "Sklearn-compatible uplift modeling with AUUC, Qini metrics, and visualization tools. Works with any sklearn estimator (XGBoost, LightGBM, etc.). Unlike CausalML (more comprehensive), prioritizes simplicity and sklearn integration. Best for: marketing teams wanting straightforward uplift modeling that fits into existing sklearn pipelines.",
+    "description": "Focuses on uplift modeling and estimating heterogeneous treatment effects using various ML-based methods.",
     "category": "Causal Inference & Matching",
     "docs_url": "https://scikit-uplift.readthedocs.io/en/latest/",
     "github_url": "https://github.com/maks-sh/scikit-uplift",
@@ -351,11 +377,12 @@
     "tags": [
       "causal inference",
       "matching"
-    ]
+    ],
+    "best_for": "Simple sklearn-style uplift modeling with AUUC metrics"
   },
   {
     "name": "Scikit-learn",
-    "description": "The foundational ML library: regression (Ridge, Lasso, ElasticNet), classification, clustering, model selection, and pipelines. Industry standard with consistent API across all algorithms. Unlike statsmodels (inference focus), prioritizes prediction and cross-validation. Best for: ML-based prediction tasks, feature engineering, and model selection workflows.",
+    "description": "Foundational ML library with regression models (incl. regularized), model selection, cross-validation, evaluation metrics.",
     "category": "Core Libraries & Linear Models",
     "docs_url": "https://scikit-learn.org/",
     "github_url": "https://github.com/scikit-learn/scikit-learn",
@@ -364,11 +391,12 @@
     "tags": [
       "regression",
       "linear models"
-    ]
+    ],
+    "best_for": "OLS regression, basic econometrics, data manipulation"
   },
   {
     "name": "Statsmodels",
-    "description": "The core econometrics library: OLS, GLM, time series (ARIMA, VAR), panel data, and comprehensive hypothesis testing. Provides R-style summary tables with standard errors, t-stats, and diagnostics. Unlike sklearn (prediction focus), emphasizes statistical inference. Best for: traditional econometric analysis where you need interpretable coefficients and test statistics.",
+    "description": "Comprehensive library for estimating statistical models (OLS, GLM, etc.), conducting tests, and data exploration. Core tool.",
     "category": "Core Libraries & Linear Models",
     "docs_url": "https://www.statsmodels.org/",
     "github_url": "https://github.com/statsmodels/statsmodels",
@@ -377,11 +405,12 @@
     "tags": [
       "regression",
       "linear models"
-    ]
+    ],
+    "best_for": "OLS regression, basic econometrics, data manipulation"
   },
   {
     "name": "FactorAnalyzer",
-    "description": "Dedicated to factor analysis: EFA with multiple rotation methods (varimax, promax, oblimin) and CFA for testing measurement models. Includes adequacy tests (KMO, Bartlett's). Unlike general dimensionality tools (PCA), specifically designed for latent variable extraction. Best for: psychometrics, survey analysis, and constructing latent constructs from observed variables.",
+    "description": "Specialized library for Exploratory (EFA) and Confirmatory (CFA) Factor Analysis with rotation options for interpretability.",
     "category": "Dimensionality Reduction",
     "docs_url": "https://factor-analyzer.readthedocs.io/en/latest/",
     "github_url": "https://github.com/EducationalTestingService/factor_analyzer",
@@ -390,11 +419,12 @@
     "tags": [
       "machine learning",
       "dimensionality"
-    ]
+    ],
+    "best_for": "Feature extraction, PCA, high-dimensional data"
   },
   {
     "name": "openTSNE",
-    "description": "Fast, parallel t-SNE optimized for large datasets (millions of points). Supports partial fitting and embedding new points without retraining. Unlike sklearn's t-SNE (slower, no incremental learning), designed for production-scale visualization. Best for: visualizing high-dimensional data clusters when UMAP's assumptions don't fit.",
+    "description": "Optimized, parallel implementation of t-distributed Stochastic Neighbor Embedding (t-SNE) for large datasets.",
     "category": "Dimensionality Reduction",
     "docs_url": "https://opentsne.readthedocs.io/en/stable/",
     "github_url": "https://github.com/pavlin-policar/openTSNE",
@@ -403,11 +433,12 @@
     "tags": [
       "machine learning",
       "dimensionality"
-    ]
+    ],
+    "best_for": "Feature extraction, PCA, high-dimensional data"
   },
   {
     "name": "umap-learn",
-    "description": "Modern alternative to t-SNE: faster, preserves more global structure, and supports supervised dimensionality reduction. Works with sparse data and integrates with sklearn pipelines. Unlike t-SNE (local structure only), balances local and global relationships. Best for: visualization and preprocessing when you need both speed and structure preservation.",
+    "description": "Fast and scalable implementation of Uniform Manifold Approximation and Projection (UMAP) for non-linear reduction.",
     "category": "Dimensionality Reduction",
     "docs_url": "https://umap-learn.readthedocs.io/en/latest/",
     "github_url": "https://github.com/lmcinnes/umap",
@@ -416,11 +447,12 @@
     "tags": [
       "machine learning",
       "dimensionality"
-    ]
+    ],
+    "best_for": "Feature extraction, PCA, high-dimensional data"
   },
   {
     "name": "Biogeme",
-    "description": "Academic gold-standard for discrete choice: nested logit, mixed logit, latent class models, and complex nesting structures. Extensive model specification flexibility from Swiss transport research. Unlike simpler packages, handles the most complex utility specifications. Best for: transport economics, detailed choice modeling research requiring maximum flexibility.",
+    "description": "Maximum likelihood estimation of parametric models, with strong support for complex discrete choice models.",
     "category": "Discrete Choice Models",
     "docs_url": "https://biogeme.epfl.ch/index.html",
     "github_url": "https://github.com/michelbierlaire/biogeme",
@@ -429,11 +461,12 @@
     "tags": [
       "discrete choice",
       "logit"
-    ]
+    ],
+    "best_for": "Logit/probit models, consumer choice, demand estimation"
   },
   {
     "name": "PyBLP",
-    "description": "Implements the famous Berry-Levinsohn-Pakes (BLP) demand estimator for differentiated products markets. Handles endogeneity via instruments, random coefficients, and market-level data. The standard for IO economists studying market structure. Best for: industrial organization research estimating demand with market-level price endogeneity.",
+    "description": "Tools for estimating demand for differentiated products using the Berry-Levinsohn-Pakes (BLP) method.",
     "category": "Discrete Choice Models",
     "docs_url": "https://pyblp.readthedocs.io/",
     "github_url": "https://github.com/jeffgortmaker/pyblp",
@@ -442,11 +475,12 @@
     "tags": [
       "discrete choice",
       "logit"
-    ]
+    ],
+    "best_for": "Logit/probit models, consumer choice, demand estimation"
   },
   {
     "name": "PyLogit",
-    "description": "Flexible conditional and multinomial logit with choice-specific coefficients and panel data support. Handles asymmetric substitution patterns and nested structures. Unlike XLogit (speed focus), emphasizes model flexibility and data preparation utilities. Best for: choice modeling with complex substitution patterns or panel data structures.",
+    "description": "Flexible implementation of conditional/multinomial logit models with utilities for data preparation.",
     "category": "Discrete Choice Models",
     "docs_url": null,
     "github_url": "https://github.com/timothyb0912/pylogit",
@@ -455,11 +489,12 @@
     "tags": [
       "discrete choice",
       "logit"
-    ]
+    ],
+    "best_for": "Logit/probit models, consumer choice, demand estimation"
   },
   {
     "name": "XLogit",
-    "description": "GPU-accelerated mixed logit estimation—orders of magnitude faster than CPU alternatives. Implements simulated maximum likelihood with Halton draws. Unlike Biogeme (flexibility focus), optimized purely for speed. Best for: large-scale mixed logit estimation where computation time is the bottleneck.",
+    "description": "Fast estimation of Multinomial Logit and Mixed Logit models, optimized for performance.",
     "category": "Discrete Choice Models",
     "docs_url": "https://xlogit.readthedocs.io/",
     "github_url": "https://github.com/arteagac/xlogit",
@@ -468,11 +503,12 @@
     "tags": [
       "discrete choice",
       "logit"
-    ]
+    ],
+    "best_for": "Logit/probit models, consumer choice, demand estimation"
   },
   {
     "name": "torch-choice",
-    "description": "Stanford GSB's PyTorch-based choice modeling with neural network components. GPU acceleration and automatic differentiation for custom utility functions. Unlike traditional packages, enables deep learning extensions to choice models. Best for: researchers exploring neural network approaches to choice modeling or needing custom GPU-accelerated estimation.",
+    "description": "PyTorch framework for flexible estimation of complex discrete choice models, leveraging GPU acceleration.",
     "category": "Discrete Choice Models",
     "docs_url": "https://gsbdbi.github.io/torch-choice/",
     "github_url": "https://github.com/gsbDBI/torch-choice",
@@ -481,11 +517,12 @@
     "tags": [
       "discrete choice",
       "logit"
-    ]
+    ],
+    "best_for": "Logit/probit models, consumer choice, demand estimation"
   },
   {
     "name": "DoubleML",
-    "description": "Reference implementation of Chernozhukov et al.'s double/debiased ML for ATE, LATE, and partially linear models. Cross-fitting with arbitrary ML learners. Unlike EconML (broader scope), focuses specifically on DML theory with rigorous inference. Best for: researchers implementing DML papers who want the canonical framework.",
+    "description": "Implements the double/debiased ML framework (Chernozhukov et al.) for estimating causal parameters (ATE, LATE, POM) with ML nuisances.",
     "category": "Double/Debiased Machine Learning (DML)",
     "docs_url": "https://docs.doubleml.org/",
     "github_url": "https://github.com/DoubleML/doubleml-for-py",
@@ -494,11 +531,12 @@
     "tags": [
       "machine learning",
       "causal inference"
-    ]
+    ],
+    "best_for": "High-dimensional controls, ML-based causal inference"
   },
   {
     "name": "EconML",
-    "description": "Microsoft's comprehensive toolkit for heterogeneous treatment effects: DML, causal forests, meta-learners (T/S/X/DR), and orthogonal ML. Integrates with DoWhy for end-to-end workflows. Unlike DoubleML (theory focus), provides broader algorithm coverage. Best for: practitioners needing production-ready CATE estimation with multiple method options.",
+    "description": "Microsoft toolkit for estimating heterogeneous treatment effects using DML, causal forests, meta-learners, and orthogonal ML methods.",
     "category": "Double/Debiased Machine Learning (DML)",
     "docs_url": "https://econml.azurewebsites.net/",
     "github_url": "https://github.com/py-why/EconML",
@@ -507,11 +545,12 @@
     "tags": [
       "machine learning",
       "causal inference"
-    ]
+    ],
+    "best_for": "High-dimensional controls, ML-based causal inference"
   },
   {
     "name": "pydoublelasso",
-    "description": "Implements Belloni-Chernozhukov-Hansen double-post-selection Lasso for high-dimensional treatment effects. Uses Lasso to select controls, then estimates effects on selected variables. Unlike general DML, specifically implements the 2014 BCH procedure. Best for: high-dimensional settings with many potential controls.",
+    "description": "Double\u2011post\u00a0Lasso estimator for high\u2011dimensional treatment effects (Belloni\u2011Chernozhukov\u2011Hansen\u202f2014).",
     "category": "Double/Debiased Machine Learning (DML)",
     "docs_url": "https://pypi.org/project/pydoublelasso/",
     "github_url": null,
@@ -520,11 +559,12 @@
     "tags": [
       "machine learning",
       "causal inference"
-    ]
+    ],
+    "best_for": "High-dimensional controls, ML-based causal inference"
   },
   {
     "name": "pyhtelasso",
-    "description": "Detects heterogeneous treatment effects in experiments using debiased Lasso. Tests whether effects vary across subgroups defined by covariates. Unlike CATE estimators (estimate effects), focuses on testing for heterogeneity. Best for: RCT analysis testing whether effects differ across subgroups.",
+    "description": "Debiased\u2011Lasso detector of heterogeneous treatment effects in randomized experiments.",
     "category": "Double/Debiased Machine Learning (DML)",
     "docs_url": "https://pypi.org/project/pyhtelasso/",
     "github_url": null,
@@ -533,11 +573,12 @@
     "tags": [
       "machine learning",
       "causal inference"
-    ]
+    ],
+    "best_for": "High-dimensional controls, ML-based causal inference"
   },
   {
     "name": "py-econometrics `gmm`",
-    "description": "Flexible GMM estimation with user-defined moment conditions. Specify your own moment functions for custom estimators beyond built-in IV/2SLS. Unlike linearmodels (pre-built estimators), lets you define arbitrary moment conditions. Best for: structural estimation and custom GMM applications where standard packages don't have your estimator.",
+    "description": "Lightweight package for setting up and estimating custom GMM models based on user-defined moment conditions.",
     "category": "Instrumental Variables (IV) & GMM",
     "docs_url": "https://github.com/py-econometrics/gmm",
     "github_url": null,
@@ -546,7 +587,8 @@
     "tags": [
       "IV",
       "GMM"
-    ]
+    ],
+    "best_for": "Endogeneity correction, 2SLS, moment estimation"
   },
   {
     "name": "Lifetimes",
@@ -559,7 +601,8 @@
     "tags": [
       "marketing",
       "analytics"
-    ]
+    ],
+    "best_for": "Marketing ROI, media mix optimization, attribution"
   },
   {
     "name": "MaMiMo",
@@ -572,7 +615,8 @@
     "tags": [
       "marketing",
       "analytics"
-    ]
+    ],
+    "best_for": "Marketing ROI, media mix optimization, attribution"
   },
   {
     "name": "PyMC Marketing",
@@ -586,7 +630,8 @@
       "marketing",
       "analytics",
       "Bayesian"
-    ]
+    ],
+    "best_for": "Marketing ROI, media mix optimization, attribution"
   },
   {
     "name": "mmm_stan",
@@ -600,7 +645,8 @@
       "marketing",
       "analytics",
       "Bayesian"
-    ]
+    ],
+    "best_for": "Marketing ROI, media mix optimization, attribution"
   },
   {
     "name": "Gensim",
@@ -613,7 +659,8 @@
     "tags": [
       "NLP",
       "text analysis"
-    ]
+    ],
+    "best_for": "Text analysis, sentiment analysis, document classification"
   },
   {
     "name": "Transformers",
@@ -626,7 +673,8 @@
     "tags": [
       "NLP",
       "text analysis"
-    ]
+    ],
+    "best_for": "Text analysis, sentiment analysis, document classification"
   },
   {
     "name": "spaCy",
@@ -639,7 +687,8 @@
     "tags": [
       "NLP",
       "text analysis"
-    ]
+    ],
+    "best_for": "Text analysis, sentiment analysis, document classification"
   },
   {
     "name": "JAX",
@@ -652,7 +701,8 @@
     "tags": [
       "optimization",
       "computation"
-    ]
+    ],
+    "best_for": "Solving optimization problems, numerical methods"
   },
   {
     "name": "PyTorch",
@@ -666,7 +716,8 @@
       "optimization",
       "computation",
       "machine learning"
-    ]
+    ],
+    "best_for": "Solving optimization problems, numerical methods"
   },
   {
     "name": "FixedEffectModelPyHDFE",
@@ -679,7 +730,8 @@
     "tags": [
       "panel data",
       "fixed effects"
-    ]
+    ],
+    "best_for": "Longitudinal analysis, controlling for unobserved heterogeneity"
   },
   {
     "name": "Linearmodels",
@@ -692,7 +744,8 @@
     "tags": [
       "panel data",
       "fixed effects"
-    ]
+    ],
+    "best_for": "Longitudinal analysis, controlling for unobserved heterogeneity"
   },
   {
     "name": "PyFixest",
@@ -705,7 +758,8 @@
     "tags": [
       "panel data",
       "fixed effects"
-    ]
+    ],
+    "best_for": "Longitudinal analysis, controlling for unobserved heterogeneity"
   },
   {
     "name": "duckreg",
@@ -718,7 +772,8 @@
     "tags": [
       "panel data",
       "fixed effects"
-    ]
+    ],
+    "best_for": "Longitudinal analysis, controlling for unobserved heterogeneity"
   },
   {
     "name": "pydynpd",
@@ -731,7 +786,8 @@
     "tags": [
       "panel data",
       "fixed effects"
-    ]
+    ],
+    "best_for": "Longitudinal analysis, controlling for unobserved heterogeneity"
   },
   {
     "name": "ADOpy",
@@ -745,7 +801,8 @@
       "power analysis",
       "experiments",
       "Bayesian"
-    ]
+    ],
+    "best_for": "Sample size calculation, experimental design, power analysis"
   },
   {
     "name": "Adaptive",
@@ -758,7 +815,8 @@
     "tags": [
       "power analysis",
       "experiments"
-    ]
+    ],
+    "best_for": "Sample size calculation, experimental design, power analysis"
   },
   {
     "name": "DoEgen",
@@ -771,7 +829,8 @@
     "tags": [
       "power analysis",
       "experiments"
-    ]
+    ],
+    "best_for": "Sample size calculation, experimental design, power analysis"
   },
   {
     "name": "pyDOE2",
@@ -784,7 +843,8 @@
     "tags": [
       "power analysis",
       "experiments"
-    ]
+    ],
+    "best_for": "Sample size calculation, experimental design, power analysis"
   },
   {
     "name": "CausalImpact",
@@ -799,7 +859,8 @@
       "synthetic control",
       "RDD",
       "Bayesian"
-    ]
+    ],
+    "best_for": "Policy evaluation, natural experiments, quasi-experiments"
   },
   {
     "name": "Differences",
@@ -813,7 +874,8 @@
       "DiD",
       "synthetic control",
       "RDD"
-    ]
+    ],
+    "best_for": "Policy evaluation, natural experiments, quasi-experiments"
   },
   {
     "name": "SyntheticControlMethods",
@@ -827,7 +889,8 @@
       "DiD",
       "synthetic control",
       "RDD"
-    ]
+    ],
+    "best_for": "Policy evaluation, natural experiments, quasi-experiments"
   },
   {
     "name": "csdid",
@@ -841,7 +904,8 @@
       "DiD",
       "synthetic control",
       "RDD"
-    ]
+    ],
+    "best_for": "Policy evaluation, natural experiments, quasi-experiments"
   },
   {
     "name": "mlsynth",
@@ -855,7 +919,8 @@
       "DiD",
       "synthetic control",
       "RDD"
-    ]
+    ],
+    "best_for": "Policy evaluation, natural experiments, quasi-experiments"
   },
   {
     "name": "pycinc",
@@ -870,7 +935,8 @@
       "synthetic control",
       "RDD",
       "causal inference"
-    ]
+    ],
+    "best_for": "Policy evaluation, natural experiments, quasi-experiments"
   },
   {
     "name": "pyleebounds",
@@ -885,7 +951,8 @@
       "synthetic control",
       "RDD",
       "causal inference"
-    ]
+    ],
+    "best_for": "Policy evaluation, natural experiments, quasi-experiments"
   },
   {
     "name": "rdd",
@@ -899,7 +966,8 @@
       "DiD",
       "synthetic control",
       "RDD"
-    ]
+    ],
+    "best_for": "Policy evaluation, natural experiments, quasi-experiments"
   },
   {
     "name": "rdrobust",
@@ -913,7 +981,8 @@
       "DiD",
       "synthetic control",
       "RDD"
-    ]
+    ],
+    "best_for": "Policy evaluation, natural experiments, quasi-experiments"
   },
   {
     "name": "pyqreg",
@@ -926,7 +995,8 @@
     "tags": [
       "quantile",
       "regression"
-    ]
+    ],
+    "best_for": "Heterogeneous effects, distributional analysis"
   },
   {
     "name": "pyrifreg",
@@ -939,7 +1009,8 @@
     "tags": [
       "quantile",
       "regression"
-    ]
+    ],
+    "best_for": "Heterogeneous effects, distributional analysis"
   },
   {
     "name": "quantile-forest",
@@ -952,7 +1023,8 @@
     "tags": [
       "quantile",
       "regression"
-    ]
+    ],
+    "best_for": "Heterogeneous effects, distributional analysis"
   },
   {
     "name": "(PySAL Core)",
@@ -965,7 +1037,8 @@
     "tags": [
       "spatial",
       "geography"
-    ]
+    ],
+    "best_for": "Geographic data, spatial autocorrelation, regional analysis"
   },
   {
     "name": "PySAL (spreg)",
@@ -978,7 +1051,8 @@
     "tags": [
       "spatial",
       "geography"
-    ]
+    ],
+    "best_for": "Geographic data, spatial autocorrelation, regional analysis"
   },
   {
     "name": "Awesome Quant",
@@ -991,7 +1065,8 @@
     "tags": [
       "bootstrap",
       "standard errors"
-    ]
+    ],
+    "best_for": "Robust inference, clustered SEs, result presentation"
   },
   {
     "name": "Beyond Jupyter (TransferLab)",
@@ -1004,7 +1079,8 @@
     "tags": [
       "bootstrap",
       "standard errors"
-    ]
+    ],
+    "best_for": "Robust inference, clustered SEs, result presentation"
   },
   {
     "name": "Causal Inference for the Brave and True",
@@ -1017,7 +1093,8 @@
     "tags": [
       "bootstrap",
       "standard errors"
-    ]
+    ],
+    "best_for": "Robust inference, clustered SEs, result presentation"
   },
   {
     "name": "Coding for Economists",
@@ -1030,7 +1107,8 @@
     "tags": [
       "bootstrap",
       "standard errors"
-    ]
+    ],
+    "best_for": "Robust inference, clustered SEs, result presentation"
   },
   {
     "name": "Deep Learning Specialization (Coursera)",
@@ -1044,7 +1122,8 @@
       "bootstrap",
       "standard errors",
       "machine learning"
-    ]
+    ],
+    "best_for": "Robust inference, clustered SEs, result presentation"
   },
   {
     "name": "Machine Learning Specialization (Coursera)",
@@ -1057,7 +1136,8 @@
     "tags": [
       "bootstrap",
       "standard errors"
-    ]
+    ],
+    "best_for": "Robust inference, clustered SEs, result presentation"
   },
   {
     "name": "Python for Econometrics",
@@ -1070,7 +1150,8 @@
     "tags": [
       "bootstrap",
       "standard errors"
-    ]
+    ],
+    "best_for": "Robust inference, clustered SEs, result presentation"
   },
   {
     "name": "QuantEcon Lectures",
@@ -1083,7 +1164,8 @@
     "tags": [
       "bootstrap",
       "standard errors"
-    ]
+    ],
+    "best_for": "Robust inference, clustered SEs, result presentation"
   },
   {
     "name": "SciPy Bootstrap",
@@ -1096,7 +1178,8 @@
     "tags": [
       "bootstrap",
       "standard errors"
-    ]
+    ],
+    "best_for": "Robust inference, clustered SEs, result presentation"
   },
   {
     "name": "Stargazer",
@@ -1109,7 +1192,8 @@
     "tags": [
       "bootstrap",
       "standard errors"
-    ]
+    ],
+    "best_for": "Robust inference, clustered SEs, result presentation"
   },
   {
     "name": "The Missing Semester of Your CS Education (MIT)",
@@ -1122,7 +1206,8 @@
     "tags": [
       "bootstrap",
       "standard errors"
-    ]
+    ],
+    "best_for": "Robust inference, clustered SEs, result presentation"
   },
   {
     "name": "wildboottest",
@@ -1135,7 +1220,8 @@
     "tags": [
       "bootstrap",
       "standard errors"
-    ]
+    ],
+    "best_for": "Robust inference, clustered SEs, result presentation"
   },
   {
     "name": "FilterPy",
@@ -1148,7 +1234,8 @@
     "tags": [
       "volatility",
       "state space"
-    ]
+    ],
+    "best_for": "GARCH, stochastic volatility, Kalman filtering"
   },
   {
     "name": "Metran",
@@ -1161,7 +1248,8 @@
     "tags": [
       "volatility",
       "state space"
-    ]
+    ],
+    "best_for": "GARCH, stochastic volatility, Kalman filtering"
   },
   {
     "name": "PyKalman",
@@ -1174,7 +1262,8 @@
     "tags": [
       "volatility",
       "state space"
-    ]
+    ],
+    "best_for": "GARCH, stochastic volatility, Kalman filtering"
   },
   {
     "name": "PyMC Statespace",
@@ -1188,7 +1277,8 @@
       "volatility",
       "state space",
       "Bayesian"
-    ]
+    ],
+    "best_for": "GARCH, stochastic volatility, Kalman filtering"
   },
   {
     "name": "stochvol",
@@ -1202,7 +1292,8 @@
       "volatility",
       "state space",
       "Bayesian"
-    ]
+    ],
+    "best_for": "GARCH, stochastic volatility, Kalman filtering"
   },
   {
     "name": "Pingouin",
@@ -1215,7 +1306,8 @@
     "tags": [
       "inference",
       "hypothesis testing"
-    ]
+    ],
+    "best_for": "Hypothesis tests, confidence intervals, multiple testing"
   },
   {
     "name": "PyWhy-Stats",
@@ -1228,7 +1320,8 @@
     "tags": [
       "inference",
       "hypothesis testing"
-    ]
+    ],
+    "best_for": "Hypothesis tests, confidence intervals, multiple testing"
   },
   {
     "name": "Scipy.stats",
@@ -1241,7 +1334,8 @@
     "tags": [
       "inference",
       "hypothesis testing"
-    ]
+    ],
+    "best_for": "Hypothesis tests, confidence intervals, multiple testing"
   },
   {
     "name": "hypothetical",
@@ -1254,7 +1348,8 @@
     "tags": [
       "inference",
       "hypothesis testing"
-    ]
+    ],
+    "best_for": "Hypothesis tests, confidence intervals, multiple testing"
   },
   {
     "name": "lifelines",
@@ -1267,7 +1362,8 @@
     "tags": [
       "inference",
       "hypothesis testing"
-    ]
+    ],
+    "best_for": "Hypothesis tests, confidence intervals, multiple testing"
   },
   {
     "name": "Dolo",
@@ -1280,7 +1376,8 @@
     "tags": [
       "structural",
       "estimation"
-    ]
+    ],
+    "best_for": "Structural models, GMM estimation, BLP-style demand"
   },
   {
     "name": "HARK",
@@ -1293,7 +1390,8 @@
     "tags": [
       "structural",
       "estimation"
-    ]
+    ],
+    "best_for": "Structural models, GMM estimation, BLP-style demand"
   },
   {
     "name": "QuantEcon.py",
@@ -1306,7 +1404,8 @@
     "tags": [
       "structural",
       "estimation"
-    ]
+    ],
+    "best_for": "Structural models, GMM estimation, BLP-style demand"
   },
   {
     "name": "respy",
@@ -1319,7 +1418,8 @@
     "tags": [
       "structural",
       "estimation"
-    ]
+    ],
+    "best_for": "Structural models, GMM estimation, BLP-style demand"
   },
   {
     "name": "SDV (Synthetic Data Vault)",
@@ -1332,7 +1432,8 @@
     "tags": [
       "synthetic data",
       "simulation"
-    ]
+    ],
+    "best_for": "Privacy-preserving data, simulation, augmentation"
   },
   {
     "name": "Synthpop",
@@ -1345,7 +1446,8 @@
     "tags": [
       "synthetic data",
       "simulation"
-    ]
+    ],
+    "best_for": "Privacy-preserving data, simulation, augmentation"
   },
   {
     "name": "ARCH",
@@ -1358,7 +1460,8 @@
     "tags": [
       "time series",
       "econometrics"
-    ]
+    ],
+    "best_for": "ARIMA, cointegration, VAR models"
   },
   {
     "name": "Kats",
@@ -1371,7 +1474,8 @@
     "tags": [
       "time series",
       "econometrics"
-    ]
+    ],
+    "best_for": "ARIMA, cointegration, VAR models"
   },
   {
     "name": "LocalProjections",
@@ -1384,7 +1488,8 @@
     "tags": [
       "time series",
       "econometrics"
-    ]
+    ],
+    "best_for": "ARIMA, cointegration, VAR models"
   },
   {
     "name": "MLForecast",
@@ -1398,7 +1503,8 @@
       "forecasting",
       "time series",
       "machine learning"
-    ]
+    ],
+    "best_for": "Prediction, demand forecasting, trend analysis"
   },
   {
     "name": "NeuralForecast",
@@ -1412,7 +1518,8 @@
       "forecasting",
       "time series",
       "machine learning"
-    ]
+    ],
+    "best_for": "Prediction, demand forecasting, trend analysis"
   },
   {
     "name": "Prophet",
@@ -1425,7 +1532,8 @@
     "tags": [
       "forecasting",
       "time series"
-    ]
+    ],
+    "best_for": "Prediction, demand forecasting, trend analysis"
   },
   {
     "name": "StatsForecast",
@@ -1438,7 +1546,8 @@
     "tags": [
       "forecasting",
       "time series"
-    ]
+    ],
+    "best_for": "Prediction, demand forecasting, trend analysis"
   },
   {
     "name": "pmdarima",
@@ -1451,7 +1560,8 @@
     "tags": [
       "forecasting",
       "time series"
-    ]
+    ],
+    "best_for": "Prediction, demand forecasting, trend analysis"
   },
   {
     "name": "sktime",
@@ -1465,7 +1575,8 @@
       "forecasting",
       "time series",
       "machine learning"
-    ]
+    ],
+    "best_for": "Prediction, demand forecasting, trend analysis"
   },
   {
     "name": "CatBoost",
@@ -1478,7 +1589,8 @@
     "tags": [
       "machine learning",
       "prediction"
-    ]
+    ],
+    "best_for": "Random forests, gradient boosting, prediction tasks"
   },
   {
     "name": "LightGBM",
@@ -1491,7 +1603,8 @@
     "tags": [
       "machine learning",
       "prediction"
-    ]
+    ],
+    "best_for": "Random forests, gradient boosting, prediction tasks"
   },
   {
     "name": "NGBoost",
@@ -1504,7 +1617,8 @@
     "tags": [
       "machine learning",
       "prediction"
-    ]
+    ],
+    "best_for": "Random forests, gradient boosting, prediction tasks"
   },
   {
     "name": "Scikit-learn Ens.",
@@ -1517,7 +1631,8 @@
     "tags": [
       "machine learning",
       "prediction"
-    ]
+    ],
+    "best_for": "Random forests, gradient boosting, prediction tasks"
   },
   {
     "name": "XGBoost",
@@ -1530,7 +1645,8 @@
     "tags": [
       "machine learning",
       "prediction"
-    ]
+    ],
+    "best_for": "Random forests, gradient boosting, prediction tasks"
   },
   {
     "name": "cuML (RAPIDS)",
@@ -1543,6 +1659,7 @@
     "tags": [
       "machine learning",
       "prediction"
-    ]
+    ],
+    "best_for": "Random forests, gradient boosting, prediction tasks"
   }
 ]

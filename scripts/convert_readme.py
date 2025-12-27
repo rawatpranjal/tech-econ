@@ -89,6 +89,35 @@ CATEGORY_TAG_MAP: dict[str, list[str]] = {
     "Tree & Ensemble Methods for Prediction": ["machine learning", "prediction"],
 }
 
+# Category to "Best For" mapping - describes ideal use cases
+CATEGORY_BEST_FOR: dict[str, str] = {
+    "Adaptive Experimentation & Bandits": "Online A/B testing, multi-armed bandits, adaptive allocation",
+    "Bayesian Econometrics": "Uncertainty quantification, prior-informed inference, probabilistic modeling",
+    "Causal Discovery & Graphical Models": "Learning causal structure from data, DAG estimation",
+    "Causal Inference & Matching": "Estimating treatment effects, propensity score matching, observational studies",
+    "Core Libraries & Linear Models": "OLS regression, basic econometrics, data manipulation",
+    "Dimensionality Reduction": "Feature extraction, PCA, high-dimensional data",
+    "Discrete Choice Models": "Logit/probit models, consumer choice, demand estimation",
+    "Double/Debiased Machine Learning (DML)": "High-dimensional controls, ML-based causal inference",
+    "Instrumental Variables (IV) & GMM": "Endogeneity correction, 2SLS, moment estimation",
+    "Marketing Mix Models (MMM) & Business Analytics": "Marketing ROI, media mix optimization, attribution",
+    "Natural Language Processing for Economics": "Text analysis, sentiment analysis, document classification",
+    "Numerical Optimization & Computational Tools": "Solving optimization problems, numerical methods",
+    "Panel Data & Fixed Effects": "Longitudinal analysis, controlling for unobserved heterogeneity",
+    "Power Simulation & Design of Experiments": "Sample size calculation, experimental design, power analysis",
+    "Program Evaluation Methods (DiD, SC, RDD)": "Policy evaluation, natural experiments, quasi-experiments",
+    "Quantile Regression & Distributional Methods": "Heterogeneous effects, distributional analysis",
+    "Spatial Econometrics": "Geographic data, spatial autocorrelation, regional analysis",
+    "Standard Errors, Bootstrapping & Reporting": "Robust inference, clustered SEs, result presentation",
+    "State Space & Volatility Models": "GARCH, stochastic volatility, Kalman filtering",
+    "Statistical Inference & Hypothesis Testing": "Hypothesis tests, confidence intervals, multiple testing",
+    "Structural Econometrics & Estimation": "Structural models, GMM estimation, BLP-style demand",
+    "Synthetic Data Generation": "Privacy-preserving data, simulation, augmentation",
+    "Time Series Econometrics": "ARIMA, cointegration, VAR models",
+    "Time Series Forecasting": "Prediction, demand forecasting, trend analysis",
+    "Tree & Ensemble Methods for Prediction": "Random forests, gradient boosting, prediction tasks",
+}
+
 # Keywords in descriptions that map to additional tags
 KEYWORD_TAGS: dict[str, str] = {
     "propensity": "matching",
@@ -229,7 +258,7 @@ def main() -> None:
     print("Parsing packages...")
     packages = parse_readme(content)
 
-    # Remove duplicates by name and add tags
+    # Remove duplicates by name and add tags + best_for
     seen = set()
     unique_packages = []
     for pkg in packages:
@@ -237,6 +266,8 @@ def main() -> None:
             seen.add(pkg['name'])
             # Generate use-case tags for each package
             pkg['tags'] = generate_tags(pkg['category'], pkg['description'])
+            # Add "best for" field from category mapping
+            pkg['best_for'] = CATEGORY_BEST_FOR.get(pkg['category'], "")
             unique_packages.append(pkg)
 
     # Sort by category then name

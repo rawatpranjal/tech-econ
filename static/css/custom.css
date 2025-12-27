@@ -64,6 +64,119 @@ a:hover {
     text-decoration: none;
 }
 
+/* Header Links */
+.header-links {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-resources {
+    display: inline-block;
+    background: white;
+    color: #0066cc;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 500;
+    border: 1px solid #0066cc;
+    transition: all 0.2s;
+}
+
+.btn-resources:hover {
+    background: #0066cc;
+    color: white;
+    text-decoration: none;
+}
+
+/* Best For Field */
+.best-for {
+    font-size: 0.85rem;
+    color: #555;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    border-left: 3px solid #0066cc;
+}
+
+.best-for strong {
+    color: #333;
+}
+
+.pkg-best-for {
+    font-size: 0.85rem;
+    color: #555;
+    max-width: 200px;
+}
+
+/* Resources Page */
+.resources-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.resource-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    border: 1px solid #e8e8e8;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.resource-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+}
+
+.resource-card .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+.resource-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.resource-name a {
+    color: #1a1a1a;
+}
+
+.resource-name a:hover {
+    color: #0066cc;
+}
+
+.resource-type {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    background: #e8f4ff;
+    color: #0066cc;
+    border-radius: 4px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.resource-desc {
+    color: #555;
+    font-size: 0.9rem;
+    margin: 0 0 1rem 0;
+    flex-grow: 1;
+    line-height: 1.5;
+}
+
+.resource-count {
+    color: #666;
+    font-size: 0.95rem;
+}
+
 /* Enhanced Search Container */
 .search-container {
     max-width: 700px;

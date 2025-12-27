@@ -1,0 +1,118 @@
+{{ define "main" }}
+<div class="container">
+    <!-- Header -->
+    <header class="header">
+        <h1>Learning Resources</h1>
+        <p class="subtitle">Curated educational resources for economists</p>
+        <div class="header-links">
+            <a href="{{ "/" | relURL }}" class="btn-resources">Back to Packages</a>
+        </div>
+    </header>
+
+    <!-- Category Filter Buttons -->
+    <div class="category-filters">
+        <div class="filter-scroll-container">
+            <button class="category-btn active" data-category="all">All</button>
+            {{ $categories := slice }}
+            {{ range .Site.Data.resources }}
+                {{ if not (in $categories .category) }}
+                    {{ $categories = $categories | append .category }}
+                {{ end }}
+            {{ end }}
+            {{ range $cat := sort $categories }}
+            <button class="category-btn" data-category="{{ $cat }}">{{ $cat }}</button>
+            {{ end }}
+        </div>
+    </div>
+
+    <!-- Resource Count -->
+    <div class="controls">
+        <div class="resource-count">
+            <span id="result-count">{{ len .Site.Data.resources }} resources</span>
+        </div>
+    </div>
+
+    <!-- Resources Grid -->
+    <div id="resources-view" class="resources-grid">
+        {{ range $cat := $categories }}
+        <div class="category-section" data-section-category="{{ $cat }}">
+            <h2 class="category-title">{{ $cat }}</h2>
+            <div class="cards-row">
+                {{ range $.Site.Data.resources }}
+                {{ if eq .category $cat }}
+                <div class="resource-card"
+                     data-name="{{ .name | lower }}"
+                     data-description="{{ .description | lower }}"
+                     data-category="{{ .category }}">
+                    <div class="card-header">
+                        <h3 class="resource-name">
+                            <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
+                        </h3>
+                        <span class="resource-type">{{ .type }}</span>
+                    </div>
+                    <p class="resource-desc">{{ .description }}</p>
+                    <div class="card-footer">
+                        <span class="category-badge">{{ .category }}</span>
+                        <a href="{{ .url }}" target="_blank" class="link-btn">Visit</a>
+                    </div>
+                </div>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Part of the <a href="{{ "/" | relURL }}">Econometrics Package Directory</a></p>
+    </footer>
+</div>
+
+<script>
+// Simple category filter for resources page
+document.addEventListener('DOMContentLoaded', function() {
+    const categoryBtns = document.querySelectorAll('.category-btn');
+    const cards = document.querySelectorAll('.resource-card');
+    const sections = document.querySelectorAll('.category-section');
+    const resultCount = document.getElementById('result-count');
+    const totalResources = cards.length;
+
+    categoryBtns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            categoryBtns.forEach(function(b) { b.classList.remove('active'); });
+            this.classList.add('active');
+
+            const category = this.dataset.category;
+            let visibleCount = 0;
+
+            cards.forEach(function(card) {
+                const cardCategory = card.dataset.category;
+                const isVisible = category === 'all' || cardCategory === category;
+
+                if (isVisible) {
+                    card.classList.remove('hidden');
+                    card.classList.add('visible');
+                    visibleCount++;
+                } else {
+                    card.classList.add('hidden');
+                    card.classList.remove('visible');
+                }
+            });
+
+            // Update section visibility
+            sections.forEach(function(section) {
+                const sectionCat = section.dataset.sectionCategory;
+                if (category === 'all' || sectionCat === category) {
+                    section.classList.remove('section-hidden');
+                } else {
+                    section.classList.add('section-hidden');
+                }
+            });
+
+            resultCount.textContent = visibleCount + ' resources';
+        });
+    });
+});
+</script>
+{{ end }}
