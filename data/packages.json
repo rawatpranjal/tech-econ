@@ -1825,5 +1825,498 @@
       "resources"
     ],
     "best_for": "Comprehensive economics resource directory"
+  },
+  {
+    "name": "mcf (Modified Causal Forest)",
+    "description": "Comprehensive Python implementation for heterogeneous treatment effect estimation. Handles binary/multiple discrete treatments with optimal policy learning via Policy Trees.",
+    "category": "Causal Inference & Matching",
+    "docs_url": "https://mcf-docs.readthedocs.io/",
+    "github_url": "https://github.com/MCFpy/mcf",
+    "url": "https://github.com/MCFpy/mcf",
+    "install": "pip install mcf",
+    "tags": [
+      "causal inference",
+      "treatment effects",
+      "policy learning"
+    ],
+    "best_for": "CATE estimation with policy tree optimization"
+  },
+  {
+    "name": "CATENets",
+    "description": "JAX-accelerated neural network CATE estimators implementing SNet, FlexTENet, TARNet, CFRNet, and DragonNet architectures.",
+    "category": "Causal Inference & Matching",
+    "docs_url": null,
+    "github_url": "https://github.com/AliciaCurth/CATENets",
+    "url": "https://github.com/AliciaCurth/CATENets",
+    "install": "pip install catenets",
+    "tags": [
+      "causal inference",
+      "deep learning",
+      "JAX"
+    ],
+    "best_for": "GPU-accelerated neural CATE estimation"
+  },
+  {
+    "name": "NetworkCausalTree",
+    "description": "Estimates both direct treatment effects and spillover effects under clustered network interference (Bargagli-Stoffi et al. 2025).",
+    "category": "Causal Inference & Matching",
+    "docs_url": null,
+    "github_url": "https://github.com/fbargaglistoffi/NetworkCausalTree",
+    "url": "https://github.com/fbargaglistoffi/NetworkCausalTree",
+    "install": "pip install networkcausaltree",
+    "tags": [
+      "causal inference",
+      "networks",
+      "spillovers"
+    ],
+    "best_for": "Treatment effects with network interference"
+  },
+  {
+    "name": "PySensemakr",
+    "description": "Implements Cinelli-Hazlett framework for assessing robustness to unobserved confounding. Computes confounder strength needed to invalidate results.",
+    "category": "Causal Inference & Matching",
+    "docs_url": "https://github.com/carloscinelli/PySensemakr",
+    "github_url": "https://github.com/carloscinelli/PySensemakr",
+    "url": "https://github.com/carloscinelli/PySensemakr",
+    "install": "pip install pysensemakr",
+    "tags": [
+      "causal inference",
+      "sensitivity analysis",
+      "robustness"
+    ],
+    "best_for": "Sensitivity analysis with publication-ready contour plots"
+  },
+  {
+    "name": "gcimpute",
+    "description": "Gaussian copula imputation for mixed variable types with streaming capability (Journal of Statistical Software 2024).",
+    "category": "Statistical Inference & Hypothesis Testing",
+    "docs_url": null,
+    "github_url": "https://github.com/udellgroup/gcimpute",
+    "url": "https://github.com/udellgroup/gcimpute",
+    "install": "pip install gcimpute",
+    "tags": [
+      "missing data",
+      "imputation"
+    ],
+    "best_for": "Mixed-type missing data imputation with copulas"
+  },
+  {
+    "name": "miceforest",
+    "description": "LightGBM-accelerated multiple imputation by chained equations. Fast MICE for large datasets.",
+    "category": "Statistical Inference & Hypothesis Testing",
+    "docs_url": "https://miceforest.readthedocs.io/",
+    "github_url": "https://github.com/AnotherSamWilson/miceforest",
+    "url": "https://github.com/AnotherSamWilson/miceforest",
+    "install": "pip install miceforest",
+    "tags": [
+      "missing data",
+      "imputation",
+      "machine learning"
+    ],
+    "best_for": "Fast MICE imputation with LightGBM"
+  },
+  {
+    "name": "tea-tasting",
+    "description": "Calculate A/B test statistics directly within data warehouses (BigQuery, ClickHouse, Snowflake, Spark) via Ibis interface. Supports CUPED/CUPAC.",
+    "category": "Power Simulation & Design of Experiments",
+    "docs_url": "https://tea-tasting.readthedocs.io/",
+    "github_url": "https://github.com/e10v/tea-tasting",
+    "url": "https://github.com/e10v/tea-tasting",
+    "install": "pip install tea-tasting",
+    "tags": [
+      "A/B testing",
+      "experimentation",
+      "data warehouses"
+    ],
+    "best_for": "In-warehouse A/B test analysis with variance reduction"
+  },
+  {
+    "name": "Ambrosia",
+    "description": "End-to-end A/B testing from MobileTeleSystems with PySpark support. Covers experiment design, multi-group splitting, matching, and inference.",
+    "category": "Power Simulation & Design of Experiments",
+    "docs_url": null,
+    "github_url": "https://github.com/MobileTeleSystems/Ambrosia",
+    "url": "https://github.com/MobileTeleSystems/Ambrosia",
+    "install": "pip install ambrosia",
+    "tags": [
+      "A/B testing",
+      "experimentation",
+      "Spark"
+    ],
+    "best_for": "End-to-end A/B testing with PySpark"
+  },
+  {
+    "name": "savvi",
+    "description": "Safe Anytime Valid Inference using e-processes and confidence sequences (Ramdas et al. 2023). Valid inference at any stopping time.",
+    "category": "Statistical Inference & Hypothesis Testing",
+    "docs_url": null,
+    "github_url": "https://github.com/spotify/savvi",
+    "url": "https://github.com/spotify/savvi",
+    "install": "pip install savvi",
+    "tags": [
+      "sequential testing",
+      "A/B testing",
+      "anytime valid"
+    ],
+    "best_for": "Always-valid sequential inference for experiments"
+  },
+  {
+    "name": "expectation",
+    "description": "E-values and game-theoretic probability for sequential testing. Enables early signal detection with proper error control.",
+    "category": "Statistical Inference & Hypothesis Testing",
+    "docs_url": null,
+    "github_url": "https://github.com/zalando/expectation",
+    "url": "https://github.com/zalando/expectation",
+    "install": "pip install expectation",
+    "tags": [
+      "sequential testing",
+      "e-values",
+      "hypothesis testing"
+    ],
+    "best_for": "E-value based sequential hypothesis testing"
+  },
+  {
+    "name": "GeoLift",
+    "description": "Meta's end-to-end synthetic control for geo experiments with multi-cell testing and power calculations.",
+    "category": "Geo-Experiments & Lift Measurement",
+    "docs_url": "https://facebookincubator.github.io/GeoLift/",
+    "github_url": "https://github.com/facebookincubator/GeoLift",
+    "url": "https://github.com/facebookincubator/GeoLift",
+    "install": "pip install geolift",
+    "tags": [
+      "geo-experiments",
+      "synthetic control",
+      "incrementality"
+    ],
+    "best_for": "Meta's geo-level incrementality measurement"
+  },
+  {
+    "name": "trimmed_match",
+    "description": "Google's robust analysis for paired geo experiments using trimmed statistics. Handles outliers in geo-level data.",
+    "category": "Geo-Experiments & Lift Measurement",
+    "docs_url": null,
+    "github_url": "https://github.com/google/trimmed_match",
+    "url": "https://github.com/google/trimmed_match",
+    "install": "pip install trimmed-match",
+    "tags": [
+      "geo-experiments",
+      "robust statistics",
+      "incrementality"
+    ],
+    "best_for": "Robust paired geo experiment analysis"
+  },
+  {
+    "name": "matched_markets",
+    "description": "Google's time-based regression with greedy search for optimal geo experiment groups.",
+    "category": "Geo-Experiments & Lift Measurement",
+    "docs_url": null,
+    "github_url": "https://github.com/google/matched_markets",
+    "url": "https://github.com/google/matched_markets",
+    "install": "pip install matched-markets",
+    "tags": [
+      "geo-experiments",
+      "market matching",
+      "incrementality"
+    ],
+    "best_for": "Optimal geo experiment group selection"
+  },
+  {
+    "name": "matching",
+    "description": "Implements Stable Marriage, Hospital-Resident, Student-Allocation, and Stable Roommates using Gale-Shapley (JOSS paper).",
+    "category": "Matching & Market Design",
+    "docs_url": "https://matching.readthedocs.io/",
+    "github_url": "https://github.com/daffidwilde/matching",
+    "url": "https://github.com/daffidwilde/matching",
+    "install": "pip install matching",
+    "tags": [
+      "matching",
+      "market design",
+      "Gale-Shapley"
+    ],
+    "best_for": "Classic two-sided matching algorithms"
+  },
+  {
+    "name": "algmatch",
+    "description": "Student-Project Allocation with lecturer preferences. Extends matching to three-sided markets.",
+    "category": "Matching & Market Design",
+    "docs_url": null,
+    "github_url": "https://github.com/daffidwilde/algmatch",
+    "url": "https://github.com/daffidwilde/algmatch",
+    "install": "pip install algmatch",
+    "tags": [
+      "matching",
+      "market design",
+      "allocation"
+    ],
+    "best_for": "Student-project-lecturer allocation"
+  },
+  {
+    "name": "kep_solver",
+    "description": "Kidney exchange optimization with hierarchical objectives. Production-ready for kidney paired donation.",
+    "category": "Matching & Market Design",
+    "docs_url": null,
+    "github_url": "https://github.com/jamestrimble/kep_solver",
+    "url": "https://github.com/jamestrimble/kep_solver",
+    "install": "pip install kep-solver",
+    "tags": [
+      "matching",
+      "market design",
+      "kidney exchange"
+    ],
+    "best_for": "Kidney exchange program optimization"
+  },
+  {
+    "name": "scarfmatch",
+    "description": "Matching with couples using Scarf's algorithm. Essential for NRMP-style medical residency matching.",
+    "category": "Matching & Market Design",
+    "docs_url": null,
+    "github_url": "https://github.com/NiklasPhawornsak/scarfmatch",
+    "url": "https://github.com/NiklasPhawornsak/scarfmatch",
+    "install": "pip install scarfmatch",
+    "tags": [
+      "matching",
+      "market design",
+      "couples"
+    ],
+    "best_for": "Residency matching with couples"
+  },
+  {
+    "name": "Nashpy",
+    "description": "Computation of Nash equilibria for 2-player games. Support enumeration and Lemke-Howson algorithm.",
+    "category": "Game Theory & Mechanism Design",
+    "docs_url": "https://nashpy.readthedocs.io/",
+    "github_url": "https://github.com/drvinceknight/Nashpy",
+    "url": "https://github.com/drvinceknight/Nashpy",
+    "install": "pip install nashpy",
+    "tags": [
+      "game theory",
+      "Nash equilibrium"
+    ],
+    "best_for": "2-player Nash equilibrium computation"
+  },
+  {
+    "name": "pygambit",
+    "description": "N-player extensive form games with Alan Turing Institute support. Computes Nash, perfect, and sequential equilibria.",
+    "category": "Game Theory & Mechanism Design",
+    "docs_url": "https://gambitproject.readthedocs.io/",
+    "github_url": "https://github.com/gambitproject/gambit",
+    "url": "https://github.com/gambitproject/gambit",
+    "install": "pip install pygambit",
+    "tags": [
+      "game theory",
+      "extensive form",
+      "equilibrium"
+    ],
+    "best_for": "N-player extensive form game solving"
+  },
+  {
+    "name": "OpenSpiel",
+    "description": "DeepMind's 70+ game environments with multi-agent RL algorithms including Alpha-Rank, Neural Fictitious Self-Play, and CFR variants.",
+    "category": "Game Theory & Mechanism Design",
+    "docs_url": "https://openspiel.readthedocs.io/",
+    "github_url": "https://github.com/deepmind/open_spiel",
+    "url": "https://github.com/deepmind/open_spiel",
+    "install": "pip install open_spiel",
+    "tags": [
+      "game theory",
+      "reinforcement learning",
+      "multi-agent"
+    ],
+    "best_for": "Multi-agent RL and game-theoretic algorithms"
+  },
+  {
+    "name": "fairpy",
+    "description": "Fair division algorithms from academic papers. Implements cake-cutting and item allocation procedures.",
+    "category": "Fair Division & Allocation",
+    "docs_url": "https://fairpy.readthedocs.io/",
+    "github_url": "https://github.com/erelsgl/fairpy",
+    "url": "https://github.com/erelsgl/fairpy",
+    "install": "pip install fairpy",
+    "tags": [
+      "fair division",
+      "allocation",
+      "mechanism design"
+    ],
+    "best_for": "Fair division and cake-cutting algorithms"
+  },
+  {
+    "name": "fairpyx",
+    "description": "Course-seat allocation with capacity constraints. Practical fair division for university course assignment.",
+    "category": "Fair Division & Allocation",
+    "docs_url": null,
+    "github_url": "https://github.com/ariel-research/fairpyx",
+    "url": "https://github.com/ariel-research/fairpyx",
+    "install": "pip install fairpyx",
+    "tags": [
+      "fair division",
+      "course allocation",
+      "mechanism design"
+    ],
+    "best_for": "Course-seat allocation with constraints"
+  },
+  {
+    "name": "UpliftML",
+    "description": "Booking.com's enterprise uplift modeling via PySpark and H2O. Six meta-learners plus Uplift Random Forest with ROI-constrained optimization.",
+    "category": "Uplift Modeling",
+    "docs_url": null,
+    "github_url": "https://github.com/bookingcom/upliftml",
+    "url": "https://github.com/bookingcom/upliftml",
+    "install": "pip install upliftml",
+    "tags": [
+      "uplift modeling",
+      "treatment effects",
+      "marketing"
+    ],
+    "best_for": "Enterprise-scale uplift with ROI optimization"
+  },
+  {
+    "name": "pylift",
+    "description": "Wayfair's uplift modeling wrapping sklearn for speed with rigorous Qini curve evaluation.",
+    "category": "Uplift Modeling",
+    "docs_url": "https://pylift.readthedocs.io/",
+    "github_url": "https://github.com/wayfair/pylift",
+    "url": "https://github.com/wayfair/pylift",
+    "install": "pip install pylift",
+    "tags": [
+      "uplift modeling",
+      "treatment effects",
+      "marketing"
+    ],
+    "best_for": "Fast uplift with Qini curve evaluation"
+  },
+  {
+    "name": "CausalLift",
+    "description": "Uplift modeling for observational (non-RCT) data using inverse probability weighting.",
+    "category": "Uplift Modeling",
+    "docs_url": "https://causallift.readthedocs.io/",
+    "github_url": "https://github.com/Minyus/causallift",
+    "url": "https://github.com/Minyus/causallift",
+    "install": "pip install causallift",
+    "tags": [
+      "uplift modeling",
+      "observational data",
+      "IPW"
+    ],
+    "best_for": "Uplift from observational data with IPW"
+  },
+  {
+    "name": "ziln_cltv",
+    "description": "Google's Zero-Inflated Lognormal loss for heavily-tailed LTV distributions. Outputs both predicted LTV and churn probability.",
+    "category": "Marketing Mix Models (MMM) & Business Analytics",
+    "docs_url": null,
+    "github_url": "https://github.com/google/lifetime_value",
+    "url": "https://github.com/google/lifetime_value",
+    "install": "pip install lifetime-value",
+    "tags": [
+      "LTV",
+      "customer analytics",
+      "churn"
+    ],
+    "best_for": "Customer LTV with zero-inflated distributions"
+  },
+  {
+    "name": "pydtr",
+    "description": "Dynamic treatment regimes using Iterative Q-Learning. Scikit-learn compatible for multi-stage optimal treatment sequencing.",
+    "category": "Causal Inference & Matching",
+    "docs_url": null,
+    "github_url": "https://github.com/fullfact/pydtr",
+    "url": "https://github.com/fullfact/pydtr",
+    "install": "pip install pydtr",
+    "tags": [
+      "dynamic treatment",
+      "reinforcement learning",
+      "causal inference"
+    ],
+    "best_for": "Multi-stage dynamic treatment regimes"
+  },
+  {
+    "name": "gegravity",
+    "description": "General equilibrium structural gravity modeling for trade policy analysis. Only Python package for Anderson-van Wincoop GE gravity.",
+    "category": "Structural Econometrics & Estimation",
+    "docs_url": "https://gegravity.readthedocs.io/",
+    "github_url": "https://github.com/USITC-Gravity-Group/gegravity",
+    "url": "https://github.com/USITC-Gravity-Group/gegravity",
+    "install": "pip install gegravity",
+    "tags": [
+      "trade",
+      "gravity models",
+      "structural"
+    ],
+    "best_for": "GE structural gravity for trade policy"
+  },
+  {
+    "name": "KECENI",
+    "description": "Doubly robust, non-parametric estimation of node-wise counterfactual means under network interference (arXiv 2024).",
+    "category": "Causal Inference & Matching",
+    "docs_url": null,
+    "github_url": "https://github.com/mayscortez/keceni",
+    "url": "https://github.com/mayscortez/keceni",
+    "install": "pip install keceni",
+    "tags": [
+      "networks",
+      "spillovers",
+      "causal inference"
+    ],
+    "best_for": "Network interference with node heterogeneity"
+  },
+  {
+    "name": "CausalNLP",
+    "description": "Causal inference for text data. Estimate treatment effects from unstructured text using NLP.",
+    "category": "Natural Language Processing for Economics",
+    "docs_url": null,
+    "github_url": "https://github.com/amaiya/causalnlp",
+    "url": "https://github.com/amaiya/causalnlp",
+    "install": "pip install causalnlp",
+    "tags": [
+      "NLP",
+      "causal inference",
+      "text"
+    ],
+    "best_for": "Causal effects from text data"
+  },
+  {
+    "name": "clusterbootstraps",
+    "description": "Wild cluster bootstrap and pairs cluster bootstrap implementations for clustered standard errors.",
+    "category": "Standard Errors, Bootstrapping & Reporting",
+    "docs_url": null,
+    "github_url": "https://github.com/jmonteroers/clusterbootstraps",
+    "url": "https://github.com/jmonteroers/clusterbootstraps",
+    "install": "pip install clusterbootstraps",
+    "tags": [
+      "bootstrap",
+      "clustered errors",
+      "inference"
+    ],
+    "best_for": "Alternative cluster bootstrap implementations"
+  },
+  {
+    "name": "MCD",
+    "description": "Mixture of Causal Graphs discovery for heterogeneous time series (ICML 2024). Finds time-varying causal structures.",
+    "category": "Causal Discovery & Graphical Models",
+    "docs_url": null,
+    "github_url": "https://github.com/causal-disentanglement/mcd",
+    "url": "https://github.com/causal-disentanglement/mcd",
+    "install": "pip install mcd",
+    "tags": [
+      "causal discovery",
+      "time series",
+      "heterogeneous"
+    ],
+    "best_for": "Time-varying causal structure discovery"
+  },
+  {
+    "name": "SDCI",
+    "description": "State-dependent causal inference for conditionally stationary processes (ICML 2025). Handles regime-switching causal graphs.",
+    "category": "Causal Discovery & Graphical Models",
+    "docs_url": null,
+    "github_url": "https://github.com/causal-disentanglement/sdci",
+    "url": "https://github.com/causal-disentanglement/sdci",
+    "install": "pip install sdci",
+    "tags": [
+      "causal discovery",
+      "time series",
+      "regime switching"
+    ],
+    "best_for": "State-dependent causal discovery"
   }
 ]
