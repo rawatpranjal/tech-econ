@@ -7,7 +7,7 @@
       {"name": "Coding for Economists", "why": "Built specifically for econ researchers", "url": "https://aeturrell.github.io/coding-for-economists/"},
       {"name": "The Missing Semester (MIT)", "why": "Git, shell, debugging — skills they don't teach in PhD programs", "url": "https://missing.csail.mit.edu/"},
       {"name": "Python for Econometrics", "why": "NumPy, pandas, statsmodels from Kevin Sheppard", "url": "https://www.kevinsheppard.com/teaching/python/"},
-      {"name": "Beyond Jupyter", "why": "Level up from notebooks to production code", "url": "https://github.com/aai-institute/beyond-jupyter"}
+      {"name": "Python Data Science Handbook", "why": "Free reference for NumPy, Pandas, Matplotlib", "url": "https://jakevdp.github.io/PythonDataScienceHandbook/"}
     ],
     "packages": [
       {"name": "pandas", "why": "Data manipulation and analysis"},
@@ -22,8 +22,9 @@
     "description": "Hypothesis testing, inference, and distributions — the foundation for empirical work",
     "icon": "chart",
     "resources": [
-      {"name": "Think Stats", "why": "Probability and statistics with Python", "url": "https://greenteapress.com/thinkstats2/"},
-      {"name": "Statistical Rethinking", "why": "The book that changed how many think about inference", "url": "https://xcelab.net/rm/statistical-rethinking/"},
+      {"name": "StatQuest (Josh Starmer)", "why": "Visual intuition for stats — the 'Bill Nye of Statistics'", "url": "https://www.youtube.com/@statquest"},
+      {"name": "Seeing Theory (Brown)", "why": "Beautiful interactive visualizations for building intuition", "url": "https://seeing-theory.brown.edu/"},
+      {"name": "Think Stats", "why": "Programming-first approach with real datasets", "url": "https://greenteapress.com/thinkstats2/"},
       {"name": "Scipy.stats Documentation", "why": "Reference for distributions and tests", "url": "https://docs.scipy.org/doc/scipy/reference/stats.html"}
     ],
     "packages": [
@@ -40,9 +41,10 @@
     "icon": "brain",
     "resources": [
       {"name": "Introduction to Statistical Learning", "why": "Free, runnable Python code, intuition first", "url": "https://www.statlearning.com/"},
+      {"name": "Google ML Crash Course", "why": "130+ interactive exercises, refreshed 2024", "url": "https://developers.google.com/machine-learning/crash-course"},
+      {"name": "Hands-On Machine Learning (Géron)", "why": "Production-focused, complements ISLR's statistical focus", "url": "https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/"},
       {"name": "fast.ai Practical Deep Learning", "why": "Code first, theory second", "url": "https://course.fast.ai/"},
-      {"name": "The Elements of Statistical Learning", "why": "The more rigorous sibling of ISLR", "url": "https://hastie.su.domains/ElemStatLearn/"},
-      {"name": "Andrew Ng's ML Specialization", "why": "The classic introduction, now updated", "url": "https://www.coursera.org/specializations/machine-learning-introduction"},
+      {"name": "Andrew Ng's ML Specialization", "why": "The classic introduction, rebuilt 2022 with Python", "url": "https://www.coursera.org/specializations/machine-learning-introduction"},
       {"name": "Andrew Ng's Deep Learning Specialization", "why": "CNNs, RNNs, and transformers from the master", "url": "https://www.coursera.org/specializations/deep-learning"}
     ],
     "packages": [
@@ -75,7 +77,9 @@
     "description": "Metrics, experimentation, and business thinking — bridge economics and product decisions",
     "icon": "flask",
     "resources": [
+      {"name": "Trustworthy Online Controlled Experiments (Kohavi)", "why": "THE definitive book — praised by Jeff Dean and Adam D'Angelo", "url": "https://www.amazon.com/Trustworthy-Online-Controlled-Experiments-Practical/dp/1108724264"},
       {"name": "Eppo's Experimentation Guides", "why": "Practical, written by practitioners", "url": "https://www.geteppo.com/blog"},
+      {"name": "GrowthBook Documentation", "why": "Free, open-source, structured learning path", "url": "https://docs.growthbook.io/"},
       {"name": "Evan Miller: How Not To Run an A/B Test", "why": "Short, lethal, career-saving", "url": "https://www.evanmiller.org/how-not-to-run-an-ab-test.html"},
       {"name": "Netflix Tech Blog - Experimentation", "why": "Real case studies at scale", "url": "https://netflixtechblog.com/tagged/experimentation"}
     ],
