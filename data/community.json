@@ -54,13 +54,22 @@
     "dates": "April (annually)"
   },
   {
-    "name": "ICML",
-    "description": "International Conference on Machine Learning. One of the three premier ML conferences alongside NeurIPS and ICLR. Strong focus on statistical learning theory and optimization.",
+    "name": "Global Antitrust Economics Conference",
+    "description": "Hosted at NYU Stern. Leading competition authorities discuss digital markets enforcement, algorithmic collusion, and antitrust in the AI economy.",
     "category": "Conferences",
-    "url": "https://icml.cc/",
+    "url": "https://www.concurrences.com/",
     "type": "Annual Conference",
-    "location": "Vancouver, Canada (2025)",
-    "dates": "July (annually)"
+    "location": "New York, NY",
+    "dates": "November (annually)"
+  },
+  {
+    "name": "IIOC (Industrial Organization Conference)",
+    "description": "International Industrial Organization Conference. Research on antitrust policy, regulatory policy, competition, algorithmic pricing, and market power.",
+    "category": "Conferences",
+    "url": "https://www.indorgsociety.org/conference",
+    "type": "Annual Conference",
+    "location": "Various US cities",
+    "dates": "April (annually)"
   },
   {
     "name": "INFORMS Analytics+ Conference",
@@ -81,13 +90,13 @@
     "dates": "October (annually)"
   },
   {
-    "name": "KDD",
-    "description": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining. Major venue for applied ML and data science with industry participation.",
+    "name": "MIT Platform Strategy Summit",
+    "description": "Summit on platform economics, digital markets, and antitrust. Covers AI's effects on innovation, labor, and policy implications for tech platforms.",
     "category": "Conferences",
-    "url": "https://kdd.org/",
-    "type": "Annual Conference",
-    "location": "Various",
-    "dates": "August (annually)"
+    "url": "https://ide.mit.edu/events/2025-mit-platform-strategy-summit/",
+    "type": "Annual Summit",
+    "location": "Cambridge, MA",
+    "dates": "July (annually)"
   },
   {
     "name": "ML in Economics Summer Conference",
@@ -108,22 +117,49 @@
     "dates": "September (annually)"
   },
   {
-    "name": "NeurIPS",
-    "description": "Neural Information Processing Systems. Premier machine learning conference with growing economics/causal inference tracks. Essential for ML-focused economists.",
+    "name": "NABE Tech Economics Conference",
+    "description": "NABE's conference for tech economists. Covers causal inference, AI, and experiments in action. Practitioners from major tech companies share insights.",
     "category": "Conferences",
-    "url": "https://neurips.cc/",
+    "url": "https://www.nabe.com/",
     "type": "Annual Conference",
-    "location": "Various",
-    "dates": "December (annually)"
+    "location": "Seattle, WA (2025)",
+    "dates": "November (annually)"
   },
   {
-    "name": "RecSys",
-    "description": "ACM Conference on Recommender Systems. Premier forum for recommendation algorithms, evaluation metrics, and applications in e-commerce and content platforms.",
+    "name": "NBER Summer Institute: Digital Economics",
+    "description": "NBER session on Digital Economics and AI. Research on digital surveillance, AI labor effects, and human-AI collaboration. Top academic economists.",
     "category": "Conferences",
-    "url": "https://recsys.acm.org/",
+    "url": "https://www.nber.org/conferences/si-2025-digital-economics-and-artificial-intelligence",
     "type": "Annual Conference",
-    "location": "Prague, Czech Republic (2025)",
+    "location": "Cambridge, MA",
+    "dates": "July (annually)"
+  },
+  {
+    "name": "Northwestern Antitrust Conference",
+    "description": "Annual conference on antitrust economics and competition policy. Covers digital acquisitions, buyer/seller power, and exclusive dealing research.",
+    "category": "Conferences",
+    "url": "https://www.law.northwestern.edu/research-faculty/clbe/events/antitrust/",
+    "type": "Annual Conference",
+    "location": "Chicago, IL",
     "dates": "September (annually)"
+  },
+  {
+    "name": "Stanford SITE",
+    "description": "Stanford Institute for Theoretical Economics summer sessions. Includes Empirical Market Design and Market Failures tracks relevant to tech economists.",
+    "category": "Conferences",
+    "url": "https://economics.stanford.edu/site/site-2025",
+    "type": "Summer Institute",
+    "location": "Stanford, CA",
+    "dates": "June-September (annually)"
+  },
+  {
+    "name": "Stigler Center Antitrust Conference",
+    "description": "Chicago Booth conference on economic concentration and competition. Covers digital platforms, media markets, and antitrust policy.",
+    "category": "Conferences",
+    "url": "https://www.chicagobooth.edu/research/stigler/events",
+    "type": "Annual Conference",
+    "location": "Chicago, IL",
+    "dates": "April (annually)"
   },
   {
     "name": "The Web Conference (WWW)",
@@ -167,6 +203,15 @@
     "category": "Online",
     "url": "https://www.getdbt.com/community/",
     "type": "Slack Community",
+    "location": "Online",
+    "dates": "Ongoing"
+  },
+  {
+    "name": "Economics Discord",
+    "description": "Discord community (3,500+ members) run by economics professors and practitioners. Discussions on economic research, econometrics, and policy.",
+    "category": "Online",
+    "url": "https://discord.com/invite/economics",
+    "type": "Discord Server",
     "location": "Online",
     "dates": "Ongoing"
   },
