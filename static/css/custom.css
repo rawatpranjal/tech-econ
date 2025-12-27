@@ -704,9 +704,11 @@ a:hover {
 }
 
 .package-logo {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
+    width: 24px;
+    height: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    border-radius: 4px;
     flex-shrink: 0;
     object-fit: cover;
     background: #f0f0f0;
