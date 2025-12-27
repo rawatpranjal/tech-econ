@@ -1,0 +1,120 @@
+{{ define "main" }}
+<div class="container">
+    <!-- Header -->
+    <header class="header">
+        <h1>{{ .Site.Title }}</h1>
+        <p class="subtitle">{{ .Site.Params.description }}</p>
+        {{ if .Site.Params.formUrl }}
+        <a href="{{ .Site.Params.formUrl }}" class="btn-suggest" target="_blank">Suggest a Package</a>
+        {{ end }}
+    </header>
+
+    <!-- Search -->
+    <div class="search-wrapper">
+        <div id="search"></div>
+    </div>
+
+    <!-- View Toggle -->
+    <div class="controls">
+        <div class="view-toggle">
+            <button id="btn-cards" class="toggle-btn active">Cards</button>
+            <button id="btn-table" class="toggle-btn">Table</button>
+        </div>
+        <div class="package-count">
+            <span id="count">{{ len .Site.Data.packages }}</span> packages
+        </div>
+    </div>
+
+    <!-- Cards View -->
+    <div id="cards-view" class="package-grid" data-pagefind-body>
+        {{ $categories := slice }}
+        {{ range .Site.Data.packages }}
+            {{ if not (in $categories .category) }}
+                {{ $categories = $categories | append .category }}
+            {{ end }}
+        {{ end }}
+
+        {{ range $cat := $categories }}
+        <div class="category-section">
+            <h2 class="category-title">{{ $cat }}</h2>
+            <div class="cards-row">
+                {{ range $.Site.Data.packages }}
+                {{ if eq .category $cat }}
+                <div class="package-card">
+                    <div class="card-header">
+                        <h3 class="package-name">
+                            <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
+                        </h3>
+                    </div>
+                    <p class="package-desc">{{ .description }}</p>
+                    <div class="card-footer">
+                        <span class="category-badge">{{ .category }}</span>
+                        <div class="card-links">
+                            {{ if .docs_url }}
+                            <a href="{{ .docs_url }}" target="_blank" class="link-btn" title="Documentation">Docs</a>
+                            {{ end }}
+                            {{ if .github_url }}
+                            <a href="{{ .github_url }}" target="_blank" class="link-btn" title="GitHub">GitHub</a>
+                            {{ end }}
+                        </div>
+                    </div>
+                    <!-- Hidden text for search -->
+                    <span hidden>{{ .category }} {{ .install }}</span>
+                </div>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+
+    <!-- Table View -->
+    <div id="table-view" class="package-table-wrapper" style="display: none;">
+        <table class="package-table">
+            <thead>
+                <tr>
+                    <th>Package</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Links</th>
+                    <th>Install</th>
+                </tr>
+            </thead>
+            <tbody data-pagefind-body>
+                {{ range .Site.Data.packages }}
+                <tr>
+                    <td class="pkg-name">
+                        <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
+                    </td>
+                    <td class="pkg-desc">{{ .description }}</td>
+                    <td class="pkg-cat"><span class="category-badge-sm">{{ .category }}</span></td>
+                    <td class="pkg-links">
+                        {{ if .docs_url }}<a href="{{ .docs_url }}" target="_blank">Docs</a>{{ end }}
+                        {{ if and .docs_url .github_url }} | {{ end }}
+                        {{ if .github_url }}<a href="{{ .github_url }}" target="_blank">GitHub</a>{{ end }}
+                    </td>
+                    <td class="pkg-install"><code>{{ .install }}</code></td>
+                </tr>
+                {{ end }}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Data sourced from <a href="https://github.com/rawatpranjal/econometrics-in-python" target="_blank">econometrics-in-python</a></p>
+    </footer>
+</div>
+
+<script>
+    // Initialize Pagefind
+    window.addEventListener('DOMContentLoaded', () => {
+        new PagefindUI({
+            element: "#search",
+            showSubResults: false,
+            showImages: false,
+            excerptLength: 0
+        });
+    });
+</script>
+{{ end }}

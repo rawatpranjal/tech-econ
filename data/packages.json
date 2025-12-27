@@ -1,0 +1,1055 @@
+[
+  {
+    "name": "BayesianBandits",
+    "description": "Lightweight microframework for Bayesian bandits (Thompson Sampling) with support for contextual/restless/delayed rewards.",
+    "category": "Adaptive Experimentation & Bandits",
+    "docs_url": "https://rukulkarni.com/projects/bayesianbandits/",
+    "github_url": "https://github.com/IntelyCare/bayesianbandits",
+    "url": "https://github.com/IntelyCare/bayesianbandits",
+    "install": "pip install bayesianbandits"
+  },
+  {
+    "name": "ContextualBandits",
+    "description": "Implements a wide range of contextual bandit algorithms (linear, tree-based, neural) and off-policy evaluation methods.",
+    "category": "Adaptive Experimentation & Bandits",
+    "docs_url": "https://contextual-bandits.readthedocs.io/",
+    "github_url": "https://github.com/david-cortes/contextualbandits",
+    "url": "https://github.com/david-cortes/contextualbandits",
+    "install": "pip install contextualbandits"
+  },
+  {
+    "name": "MABWiser",
+    "description": "Production-ready, scikit-learn style library for contextual & stochastic bandits with parallelism and simulation tools.",
+    "category": "Adaptive Experimentation & Bandits",
+    "docs_url": "https://fidelity.github.io/mabwiser/",
+    "github_url": "https://github.com/fidelity/mabwiser",
+    "url": "https://github.com/fidelity/mabwiser",
+    "install": "pip install mabwiser"
+  },
+  {
+    "name": "Open Bandit Pipeline (OBP)",
+    "description": "Framework for **offline evaluation (OPE)** of bandit policies using logged data. Implements IPS, DR, DM estimators.",
+    "category": "Adaptive Experimentation & Bandits",
+    "docs_url": "https://zr-obp.readthedocs.io/en/latest/",
+    "github_url": "https://github.com/st-tech/zr-obp",
+    "url": "https://github.com/st-tech/zr-obp",
+    "install": "pip install obp"
+  },
+  {
+    "name": "PyXAB",
+    "description": "Library for advanced bandit problems: X-armed bandits (continuous/structured action spaces) and online optimization.",
+    "category": "Adaptive Experimentation & Bandits",
+    "docs_url": "https://pyxab.readthedocs.io/en/latest/",
+    "github_url": "https://github.com/huanzhang12/pyxab",
+    "url": "https://github.com/huanzhang12/pyxab",
+    "install": "pip install pyxab"
+  },
+  {
+    "name": "SMPyBandits",
+    "description": "Comprehensive research framework for single/multi-player MAB algorithms (stochastic, adversarial, contextual).",
+    "category": "Adaptive Experimentation & Bandits",
+    "docs_url": "https://smpybandits.github.io/",
+    "github_url": "https://github.com/SMPyBandits/SMPyBandits",
+    "url": "https://github.com/SMPyBandits/SMPyBandits",
+    "install": "pip install SMPyBandits"
+  },
+  {
+    "name": "Bambi",
+    "description": "High-level interface for building Bayesian GLMMs, built on top of PyMC. Uses formula syntax similar to R's `lme4`.",
+    "category": "Bayesian Econometrics",
+    "docs_url": "https://bambinos.github.io/bambi/",
+    "github_url": "https://github.com/bambinos/bambi",
+    "url": "https://github.com/bambinos/bambi",
+    "install": "pip install bambi"
+  },
+  {
+    "name": "LightweightMMM",
+    "description": "Bayesian Marketing Mix Modeling (see Marketing Mix Models section).",
+    "category": "Bayesian Econometrics",
+    "docs_url": null,
+    "github_url": "https://github.com/google/lightweight_mmm",
+    "url": "https://github.com/google/lightweight_mmm",
+    "install": "pip install lightweight_mmm"
+  },
+  {
+    "name": "NumPyro",
+    "description": "Probabilistic programming library built on JAX for scalable Bayesian inference, often faster than PyMC.",
+    "category": "Bayesian Econometrics",
+    "docs_url": "https://num.pyro.ai/",
+    "github_url": "https://github.com/pyro-ppl/numpyro",
+    "url": "https://github.com/pyro-ppl/numpyro",
+    "install": "pip install numpyro"
+  },
+  {
+    "name": "PyMC",
+    "description": "Flexible probabilistic programming library for Bayesian modeling and inference using MCMC algorithms (NUTS).",
+    "category": "Bayesian Econometrics",
+    "docs_url": "https://www.pymc.io/",
+    "github_url": "https://github.com/pymc-devs/pymc",
+    "url": "https://github.com/pymc-devs/pymc",
+    "install": "pip install pymc"
+  },
+  {
+    "name": "Ananke",
+    "description": "Causal inference using graphical models (DAGs), including identification theory and effect estimation.",
+    "category": "Causal Discovery & Graphical Models",
+    "docs_url": "https://ananke.readthedocs.io/",
+    "github_url": "[https://github.com/py-why/Ananke](https://github.com/ghosthamlet/ananke",
+    "url": "[https://github.com/py-why/Ananke](https://github.com/ghosthamlet/ananke",
+    "install": "pip install ananke-causal"
+  },
+  {
+    "name": "Causal Discovery Toolbox (CDT)",
+    "description": "Implements algorithms for causal discovery (recovering causal graph structure) from observational data.",
+    "category": "Causal Discovery & Graphical Models",
+    "docs_url": "https://fentechsolutions.github.io/CausalDiscoveryToolbox/html/index.html",
+    "github_url": "https://github.com/FenTechSolutions/CausalDiscoveryToolbox",
+    "url": "https://github.com/FenTechSolutions/CausalDiscoveryToolbox",
+    "install": "pip install cdt"
+  },
+  {
+    "name": "CausalNex",
+    "description": "Uses Bayesian Networks for causal reasoning, combining ML with expert knowledge to model relationships.",
+    "category": "Causal Discovery & Graphical Models",
+    "docs_url": null,
+    "github_url": "https://github.com/microsoft/causalnex",
+    "url": "https://github.com/microsoft/causalnex",
+    "install": "pip install causalnex"
+  },
+  {
+    "name": "LiNGAM",
+    "description": "Specialized package for learning non-Gaussian linear causal models, implementing various versions of the LiNGAM algorithm including ICA-based methods.",
+    "category": "Causal Discovery & Graphical Models",
+    "docs_url": "https://lingam.readthedocs.io/",
+    "github_url": "https://github.com/cdt15/lingam",
+    "url": "https://github.com/cdt15/lingam",
+    "install": "pip install lingam"
+  },
+  {
+    "name": "Tigramite",
+    "description": "Specialized package for causal inference in time series data implementing PCMCI, PCMCIplus, LPCMCI algorithms with conditional independence tests.",
+    "category": "Causal Discovery & Graphical Models",
+    "docs_url": "https://tigramite.readthedocs.io/",
+    "github_url": "https://github.com/jakobrunge/tigramite",
+    "url": "https://github.com/jakobrunge/tigramite",
+    "install": "pip install tigramite"
+  },
+  {
+    "name": "causal-learn",
+    "description": "Comprehensive Python package serving as Python translation and extension of Java-based Tetrad toolkit for causal discovery algorithms.",
+    "category": "Causal Discovery & Graphical Models",
+    "docs_url": "https://causal-learn.readthedocs.io/",
+    "github_url": "https://github.com/py-why/causal-learn",
+    "url": "https://github.com/py-why/causal-learn",
+    "install": "pip install causal-learn"
+  },
+  {
+    "name": "gCastle",
+    "description": "Huawei Noah's Ark Lab end-to-end causal structure learning toolchain emphasizing gradient-based methods with GPU acceleration (NOTEARS, GOLEM).",
+    "category": "Causal Discovery & Graphical Models",
+    "docs_url": "https://gcastle.readthedocs.io/",
+    "github_url": "https://github.com/huawei-noah/trustworthyAI",
+    "url": "https://github.com/huawei-noah/trustworthyAI",
+    "install": "pip install gcastle"
+  },
+  {
+    "name": "py-tetrad",
+    "description": "Python interface to Tetrad Java library using JPype, providing direct access to Tetrad's causal discovery algorithms with efficient data translation.",
+    "category": "Causal Discovery & Graphical Models",
+    "docs_url": null,
+    "github_url": "https://github.com/py-why/py-tetrad",
+    "url": "https://github.com/py-why/py-tetrad",
+    "install": "Available on GitHub (installation via git clone)"
+  },
+  {
+    "name": "CausalInference",
+    "description": "Implements classical causal inference methods like propensity score matching, inverse probability weighting, stratification.",
+    "category": "Causal Inference & Matching",
+    "docs_url": "https://causalinferenceinpython.org",
+    "github_url": "https://github.com/laurencium/causalinference",
+    "url": "https://github.com/laurencium/causalinference",
+    "install": "pip install CausalInference"
+  },
+  {
+    "name": "CausalLib",
+    "description": "IBM-developed package that provides a scikit-learn-inspired API for causal inference with meta-algorithms supporting arbitrary machine learning models.",
+    "category": "Causal Inference & Matching",
+    "docs_url": "https://causallib.readthedocs.io/",
+    "github_url": "https://github.com/IBM/causallib",
+    "url": "https://github.com/IBM/causallib",
+    "install": "pip install causallib"
+  },
+  {
+    "name": "CausalML",
+    "description": "Focuses on uplift modeling and heterogeneous treatment effect estimation using machine learning techniques.",
+    "category": "Causal Inference & Matching",
+    "docs_url": "https://causalml.readthedocs.io/",
+    "github_url": "https://github.com/uber/causalml",
+    "url": "https://github.com/uber/causalml",
+    "install": "pip install causalml"
+  },
+  {
+    "name": "CausalMatch",
+    "description": "Implements Propensity Score Matching (PSM) and Coarsened Exact Matching (CEM) with ML flexibility for propensity score estimation.",
+    "category": "Causal Inference & Matching",
+    "docs_url": "https://github.com/bytedance/CausalMatch",
+    "github_url": null,
+    "url": "https://github.com/bytedance/CausalMatch",
+    "install": "pip install causalmatch"
+  },
+  {
+    "name": "CausalPlayground",
+    "description": "Python library for causal research that addresses the scarcity of real-world datasets with known causal relations. Provides fine-grained control over structural causal models.",
+    "category": "Causal Inference & Matching",
+    "docs_url": "https://causal-playground.readthedocs.io/",
+    "github_url": "https://github.com/causal-playground/causal-playground",
+    "url": "https://github.com/causal-playground/causal-playground",
+    "install": "pip install causal-playground"
+  },
+  {
+    "name": "CausalPy",
+    "description": "Developed by PyMC Labs, focuses specifically on causal inference in quasi-experimental settings. Specializes in scenarios where randomization is impossible or expensive.",
+    "category": "Causal Inference & Matching",
+    "docs_url": "https://www.pymc-marketing.io/",
+    "github_url": "https://github.com/pymc-labs/pymc-marketing",
+    "url": "https://github.com/pymc-labs/pymc-marketing",
+    "install": "pip install CausalPy"
+  },
+  {
+    "name": "DoWhy",
+    "description": "End-to-end framework for causal inference based on causal graphs (DAGs) and potential outcomes. Covers identification, estimation, refutation.",
+    "category": "Causal Inference & Matching",
+    "docs_url": "https://www.pywhy.org/dowhy/",
+    "github_url": "https://github.com/py-why/dowhy",
+    "url": "https://github.com/py-why/dowhy",
+    "install": "pip install dowhy"
+  },
+  {
+    "name": "fastmatch",
+    "description": "Fast k-nearest-neighbor matching for large datasets using Facebook's FAISS library.",
+    "category": "Causal Inference & Matching",
+    "docs_url": "https://github.com/py-econometrics/fastmatch",
+    "github_url": null,
+    "url": "https://github.com/py-econometrics/fastmatch",
+    "install": "pip install fastmatch"
+  },
+  {
+    "name": "scikit-uplift",
+    "description": "Focuses on uplift modeling and estimating heterogeneous treatment effects using various ML-based methods.",
+    "category": "Causal Inference & Matching",
+    "docs_url": "https://scikit-uplift.readthedocs.io/en/latest/",
+    "github_url": "https://github.com/maks-sh/scikit-uplift",
+    "url": "https://github.com/maks-sh/scikit-uplift",
+    "install": "pip install scikit-uplift"
+  },
+  {
+    "name": "Scikit-learn",
+    "description": "Foundational ML library with regression models (incl. regularized), model selection, cross-validation, evaluation metrics.",
+    "category": "Core Libraries & Linear Models",
+    "docs_url": "https://scikit-learn.org/",
+    "github_url": "https://github.com/scikit-learn/scikit-learn",
+    "url": "https://github.com/scikit-learn/scikit-learn",
+    "install": "pip install scikit-learn"
+  },
+  {
+    "name": "Statsmodels",
+    "description": "Comprehensive library for estimating statistical models (OLS, GLM, etc.), conducting tests, and data exploration. Core tool.",
+    "category": "Core Libraries & Linear Models",
+    "docs_url": "https://www.statsmodels.org/",
+    "github_url": "https://github.com/statsmodels/statsmodels",
+    "url": "https://github.com/statsmodels/statsmodels",
+    "install": "pip install statsmodels"
+  },
+  {
+    "name": "FactorAnalyzer",
+    "description": "Specialized library for Exploratory (EFA) and Confirmatory (CFA) Factor Analysis with rotation options for interpretability.",
+    "category": "Dimensionality Reduction",
+    "docs_url": "https://factor-analyzer.readthedocs.io/en/latest/",
+    "github_url": "https://github.com/EducationalTestingService/factor_analyzer",
+    "url": "https://github.com/EducationalTestingService/factor_analyzer",
+    "install": "pip install factor_analyzer"
+  },
+  {
+    "name": "openTSNE",
+    "description": "Optimized, parallel implementation of t-distributed Stochastic Neighbor Embedding (t-SNE) for large datasets.",
+    "category": "Dimensionality Reduction",
+    "docs_url": "https://opentsne.readthedocs.io/en/stable/",
+    "github_url": "https://github.com/pavlin-policar/openTSNE",
+    "url": "https://github.com/pavlin-policar/openTSNE",
+    "install": "pip install opentsne"
+  },
+  {
+    "name": "umap-learn",
+    "description": "Fast and scalable implementation of Uniform Manifold Approximation and Projection (UMAP) for non-linear reduction.",
+    "category": "Dimensionality Reduction",
+    "docs_url": "https://umap-learn.readthedocs.io/en/latest/",
+    "github_url": "https://github.com/lmcinnes/umap",
+    "url": "https://github.com/lmcinnes/umap",
+    "install": "pip install umap-learn"
+  },
+  {
+    "name": "Biogeme",
+    "description": "Maximum likelihood estimation of parametric models, with strong support for complex discrete choice models.",
+    "category": "Discrete Choice Models",
+    "docs_url": "https://biogeme.epfl.ch/index.html",
+    "github_url": "https://github.com/michelbierlaire/biogeme",
+    "url": "https://github.com/michelbierlaire/biogeme",
+    "install": "pip install biogeme"
+  },
+  {
+    "name": "PyBLP",
+    "description": "Tools for estimating demand for differentiated products using the Berry-Levinsohn-Pakes (BLP) method.",
+    "category": "Discrete Choice Models",
+    "docs_url": "https://pyblp.readthedocs.io/",
+    "github_url": "https://github.com/jeffgortmaker/pyblp",
+    "url": "https://github.com/jeffgortmaker/pyblp",
+    "install": "pip install pyblp"
+  },
+  {
+    "name": "PyLogit",
+    "description": "Flexible implementation of conditional/multinomial logit models with utilities for data preparation.",
+    "category": "Discrete Choice Models",
+    "docs_url": null,
+    "github_url": "https://github.com/timothyb0912/pylogit",
+    "url": "https://github.com/timothyb0912/pylogit",
+    "install": "pip install pylogit"
+  },
+  {
+    "name": "XLogit",
+    "description": "Fast estimation of Multinomial Logit and Mixed Logit models, optimized for performance.",
+    "category": "Discrete Choice Models",
+    "docs_url": "https://xlogit.readthedocs.io/",
+    "github_url": "https://github.com/arteagac/xlogit",
+    "url": "https://github.com/arteagac/xlogit",
+    "install": "pip install xlogit"
+  },
+  {
+    "name": "torch-choice",
+    "description": "PyTorch framework for flexible estimation of complex discrete choice models, leveraging GPU acceleration.",
+    "category": "Discrete Choice Models",
+    "docs_url": "https://gsbdbi.github.io/torch-choice/",
+    "github_url": "https://github.com/gsbDBI/torch-choice",
+    "url": "https://github.com/gsbDBI/torch-choice",
+    "install": "pip install torch-choice"
+  },
+  {
+    "name": "DoubleML",
+    "description": "Implements the double/debiased ML framework (Chernozhukov et al.) for estimating causal parameters (ATE, LATE, POM) with ML nuisances.",
+    "category": "Double/Debiased Machine Learning (DML)",
+    "docs_url": "https://docs.doubleml.org/",
+    "github_url": "https://github.com/DoubleML/doubleml-for-py",
+    "url": "https://github.com/DoubleML/doubleml-for-py",
+    "install": "pip install DoubleML"
+  },
+  {
+    "name": "EconML",
+    "description": "Microsoft toolkit for estimating heterogeneous treatment effects using DML, causal forests, meta-learners, and orthogonal ML methods.",
+    "category": "Double/Debiased Machine Learning (DML)",
+    "docs_url": "https://econml.azurewebsites.net/",
+    "github_url": "https://github.com/py-why/EconML",
+    "url": "https://github.com/py-why/EconML",
+    "install": "pip install econml"
+  },
+  {
+    "name": "pydoublelasso",
+    "description": "Double\u2011post\u00a0Lasso estimator for high\u2011dimensional treatment effects (Belloni\u2011Chernozhukov\u2011Hansen\u202f2014).",
+    "category": "Double/Debiased Machine Learning (DML)",
+    "docs_url": "https://pypi.org/project/pydoublelasso/",
+    "github_url": null,
+    "url": "https://pypi.org/project/pydoublelasso/",
+    "install": "pip install pydoublelasso"
+  },
+  {
+    "name": "pyhtelasso",
+    "description": "Debiased\u2011Lasso detector of heterogeneous treatment effects in randomized experiments.",
+    "category": "Double/Debiased Machine Learning (DML)",
+    "docs_url": "https://pypi.org/project/pyhtelasso/",
+    "github_url": null,
+    "url": "https://pypi.org/project/pyhtelasso/",
+    "install": "pip install pyhtelasso"
+  },
+  {
+    "name": "py-econometrics `gmm`",
+    "description": "Lightweight package for setting up and estimating custom GMM models based on user-defined moment conditions.",
+    "category": "Instrumental Variables (IV) & GMM",
+    "docs_url": "https://github.com/py-econometrics/gmm",
+    "github_url": null,
+    "url": "https://github.com/py-econometrics/gmm",
+    "install": "pip install gmm"
+  },
+  {
+    "name": "Lifetimes",
+    "description": "Analyze customer lifetime value (CLV) using probabilistic models (BG/NBD, Pareto/NBD) to predict purchases.",
+    "category": "Marketing Mix Models (MMM) & Business Analytics",
+    "docs_url": "https://lifetimes.readthedocs.io/en/latest/",
+    "github_url": "https://github.com/CamDavidsonPilon/lifetimes",
+    "url": "https://github.com/CamDavidsonPilon/lifetimes",
+    "install": "pip install lifetimes"
+  },
+  {
+    "name": "MaMiMo",
+    "description": "Lightweight Python library focused specifically on Marketing Mix Modeling implementation.",
+    "category": "Marketing Mix Models (MMM) & Business Analytics",
+    "docs_url": null,
+    "github_url": "https://github.com/Garve/mamimo",
+    "url": "https://github.com/Garve/mamimo",
+    "install": "pip install mamimo"
+  },
+  {
+    "name": "PyMC Marketing",
+    "description": "Collection of Bayesian marketing models built with PyMC, including MMM, CLV, and attribution.",
+    "category": "Marketing Mix Models (MMM) & Business Analytics",
+    "docs_url": "https://www.pymc-marketing.io/",
+    "github_url": "https://github.com/pymc-labs/pymc-marketing",
+    "url": "https://github.com/pymc-labs/pymc-marketing",
+    "install": "pip install pymc-marketing"
+  },
+  {
+    "name": "mmm_stan",
+    "description": "Python/STAN implementation of Bayesian Marketing Mix Models.",
+    "category": "Marketing Mix Models (MMM) & Business Analytics",
+    "docs_url": null,
+    "github_url": "https://github.com/sibylhe/mmm_stan",
+    "url": "https://github.com/sibylhe/mmm_stan",
+    "install": "GitHub Repository"
+  },
+  {
+    "name": "Gensim",
+    "description": "Library focused on topic modeling (LDA, LSI) and document similarity analysis.",
+    "category": "Natural Language Processing for Economics",
+    "docs_url": "https://radimrehurek.com/gensim/",
+    "github_url": "https://github.com/RaRe-Technologies/gensim",
+    "url": "https://github.com/RaRe-Technologies/gensim",
+    "install": "pip install gensim"
+  },
+  {
+    "name": "Transformers",
+    "description": "Access to thousands of pre-trained models for NLP tasks like text classification, summarization, embeddings, etc.",
+    "category": "Natural Language Processing for Economics",
+    "docs_url": "https://huggingface.co/transformers/",
+    "github_url": "https://github.com/huggingface/transformers",
+    "url": "https://github.com/huggingface/transformers",
+    "install": "pip install transformers"
+  },
+  {
+    "name": "spaCy",
+    "description": "Industrial-strength NLP library for efficient text processing pipelines (NER, POS tagging, etc.).",
+    "category": "Natural Language Processing for Economics",
+    "docs_url": "https://spacy.io/",
+    "github_url": "https://github.com/explosion/spaCy",
+    "url": "https://github.com/explosion/spaCy",
+    "install": "pip install spacy"
+  },
+  {
+    "name": "JAX",
+    "description": "High-performance numerical computing with autograd and XLA compilation on CPU/GPU/TPU.",
+    "category": "Numerical Optimization & Computational Tools",
+    "docs_url": "https://jax.readthedocs.io/",
+    "github_url": "https://github.com/google/jax",
+    "url": "https://github.com/google/jax",
+    "install": "pip install jax"
+  },
+  {
+    "name": "PyTorch",
+    "description": "Popular deep learning framework with flexible automatic differentiation.",
+    "category": "Numerical Optimization & Computational Tools",
+    "docs_url": "https://pytorch.org/",
+    "github_url": "https://github.com/pytorch/pytorch",
+    "url": "https://github.com/pytorch/pytorch",
+    "install": "(See PyTorch website)"
+  },
+  {
+    "name": "FixedEffectModelPyHDFE",
+    "description": "Solves linear models with high-dimensional fixed effects, supporting robust variance calculation and IV.",
+    "category": "Panel Data & Fixed Effects",
+    "docs_url": "https://pypi.org/project/FixedEffectModelPyHDFE/",
+    "github_url": null,
+    "url": "https://pypi.org/project/FixedEffectModelPyHDFE/",
+    "install": "pip install FixedEffectModelPyHDFE"
+  },
+  {
+    "name": "Linearmodels",
+    "description": "Estimation of fixed, random, pooled OLS models for panel data. Also Fama-MacBeth and between/first-difference estimators.",
+    "category": "Panel Data & Fixed Effects",
+    "docs_url": "https://bashtage.github.io/linearmodels/",
+    "github_url": "https://github.com/bashtage/linearmodels",
+    "url": "https://github.com/bashtage/linearmodels",
+    "install": "pip install linearmodels"
+  },
+  {
+    "name": "PyFixest",
+    "description": "Fast estimation of linear models with multiple high-dimensional fixed effects (like R's `fixest`). Supports OLS, IV, Poisson, robust/cluster SEs.",
+    "category": "Panel Data & Fixed Effects",
+    "docs_url": "https://github.com/py-econometrics/pyfixest",
+    "github_url": null,
+    "url": "https://github.com/py-econometrics/pyfixest",
+    "install": "pip install pyfixest"
+  },
+  {
+    "name": "duckreg",
+    "description": "Out-of-core regression (OLS/IV) for very large datasets using DuckDB aggregation. Handles data that doesn't fit in memory.",
+    "category": "Panel Data & Fixed Effects",
+    "docs_url": "https://github.com/py-econometrics/duckreg",
+    "github_url": null,
+    "url": "https://github.com/py-econometrics/duckreg",
+    "install": "pip install duckreg"
+  },
+  {
+    "name": "pydynpd",
+    "description": "Estimation of dynamic panel data models using Arellano-Bond (Difference GMM) and Blundell-Bond (System GMM). Includes Windmeijer correction & tests.",
+    "category": "Panel Data & Fixed Effects",
+    "docs_url": "https://doi.org/10.21105/joss.04416",
+    "github_url": "https://github.com/dazhwu/pydynpd",
+    "url": "https://github.com/dazhwu/pydynpd",
+    "install": "pip install pydynpd"
+  },
+  {
+    "name": "ADOpy",
+    "description": "Bayesian Adaptive Design Optimization (ADO) for tuning experiments in real-time, with models for psychometric tasks.",
+    "category": "Power Simulation & Design of Experiments",
+    "docs_url": "https://adopy.readthedocs.io/en/latest/",
+    "github_url": "https://github.com/adopy/adopy",
+    "url": "https://github.com/adopy/adopy",
+    "install": "pip install adopy"
+  },
+  {
+    "name": "Adaptive",
+    "description": "Parallel active learning library for adaptive function sampling/evaluation, with live plotting for monitoring.",
+    "category": "Power Simulation & Design of Experiments",
+    "docs_url": "https://adaptive.readthedocs.io/en/latest/",
+    "github_url": "https://github.com/python-adaptive/adaptive",
+    "url": "https://github.com/python-adaptive/adaptive",
+    "install": "pip install adaptive"
+  },
+  {
+    "name": "DoEgen",
+    "description": "Automates generation and optimization of designs, especially for mixed factor-level experiments; computes efficiency metrics.",
+    "category": "Power Simulation & Design of Experiments",
+    "docs_url": null,
+    "github_url": "https://github.com/sebhaan/DoEgen",
+    "url": "https://github.com/sebhaan/DoEgen",
+    "install": "pip install DoEgen"
+  },
+  {
+    "name": "pyDOE2",
+    "description": "Implements classical Design of Experiments: factorial (full/fractional), response surface (Box-Behnken, CCD), Latin Hypercube.",
+    "category": "Power Simulation & Design of Experiments",
+    "docs_url": "https://pythonhosted.org/pyDOE2/",
+    "github_url": "https://github.com/clicumu/pyDOE2",
+    "url": "https://github.com/clicumu/pyDOE2",
+    "install": "pip install pyDOE2"
+  },
+  {
+    "name": "CausalImpact",
+    "description": "Python port of Google's R package for estimating causal effects of interventions on time series using Bayesian structural time-series models.",
+    "category": "Program Evaluation Methods (DiD, SC, RDD)",
+    "docs_url": "https://google.github.io/CausalImpact/CausalImpact/CausalImpact.html",
+    "github_url": "https://github.com/tcassou/causal_impact",
+    "url": "https://github.com/tcassou/causal_impact",
+    "install": "pip install causalimpact"
+  },
+  {
+    "name": "Differences",
+    "description": "Implements modern difference-in-differences methods for staggered adoption designs (e.g., Callaway & Sant'Anna).",
+    "category": "Program Evaluation Methods (DiD, SC, RDD)",
+    "docs_url": "https://bernardodionisi.github.io/differences/",
+    "github_url": "https://github.com/bernardodionisi/differences",
+    "url": "https://github.com/bernardodionisi/differences",
+    "install": "pip install differences"
+  },
+  {
+    "name": "SyntheticControlMethods",
+    "description": "Implementation of synthetic control methods for comparative case studies when panel data is available.",
+    "category": "Program Evaluation Methods (DiD, SC, RDD)",
+    "docs_url": null,
+    "github_url": "https://github.com/OscarEngelbrektson/SyntheticControlMethods",
+    "url": "https://github.com/OscarEngelbrektson/SyntheticControlMethods",
+    "install": "pip install SyntheticControlMethods"
+  },
+  {
+    "name": "csdid",
+    "description": "Python adaptation of the R `did` package. Implements multi-period DiD with staggered treatment timing (Callaway & Sant\u2019Anna).",
+    "category": "Program Evaluation Methods (DiD, SC, RDD)",
+    "docs_url": null,
+    "github_url": "https://github.com/d2cml-ai/csdid",
+    "url": "https://github.com/d2cml-ai/csdid",
+    "install": "pip install csdid"
+  },
+  {
+    "name": "mlsynth",
+    "description": "Implements advanced synthetic control methods: forward DiD, cluster SC, factor models, and proximal SC. Designed for single-treated-unit settings.",
+    "category": "Program Evaluation Methods (DiD, SC, RDD)",
+    "docs_url": "https://mlsynth.readthedocs.io/en/latest/",
+    "github_url": "https://github.com/jaredjgreathouse/mlsynth",
+    "url": "https://github.com/jaredjgreathouse/mlsynth",
+    "install": "pip install mlsynth"
+  },
+  {
+    "name": "pycinc",
+    "description": "Changes\u2011in\u2011Changes (CiC) estimator for distributional treatment effects (Athey\u00a0&\u00a0Imbens\u202f2006).",
+    "category": "Program Evaluation Methods (DiD, SC, RDD)",
+    "docs_url": "https://pypi.org/project/pycinc/",
+    "github_url": null,
+    "url": "https://pypi.org/project/pycinc/",
+    "install": "pip install pycinc"
+  },
+  {
+    "name": "pyleebounds",
+    "description": "Lee\u00a0(2009) sample\u2011selection bounds for treatment effects; trims treated distribution to match selection rates.",
+    "category": "Program Evaluation Methods (DiD, SC, RDD)",
+    "docs_url": "https://pypi.org/project/pyleebounds/",
+    "github_url": null,
+    "url": "https://pypi.org/project/pyleebounds/",
+    "install": "pip install pyleebounds"
+  },
+  {
+    "name": "rdd",
+    "description": "Toolkit for sharp RDD analysis, including bandwidth calculation and estimation, integrating with pandas.",
+    "category": "Program Evaluation Methods (DiD, SC, RDD)",
+    "docs_url": null,
+    "github_url": "https://github.com/evan-magnusson/rdd",
+    "url": "https://github.com/evan-magnusson/rdd",
+    "install": "pip install rdd"
+  },
+  {
+    "name": "rdrobust",
+    "description": "Comprehensive tools for Regression Discontinuity Designs (RDD), including optimal bandwidth selection, estimation, inference.",
+    "category": "Program Evaluation Methods (DiD, SC, RDD)",
+    "docs_url": "https://pypi.org/project/rdrobust/",
+    "github_url": "https://github.com/rdpackages/rdrobust",
+    "url": "https://github.com/rdpackages/rdrobust",
+    "install": "pip install rdrobust"
+  },
+  {
+    "name": "pyqreg",
+    "description": "Fast quantile regression solver using interior point methods, supporting robust and clustered standard errors.",
+    "category": "Quantile Regression & Distributional Methods",
+    "docs_url": "https://github.com/mozjay0619/pyqreg",
+    "github_url": null,
+    "url": "https://github.com/mozjay0619/pyqreg",
+    "install": "pip install pyqreg"
+  },
+  {
+    "name": "pyrifreg",
+    "description": "Recentered Influence\u2011Function (RIF) regression for unconditional quantile & distributional effects (Firpo\u202fet\u202fal.,\u202f2008).",
+    "category": "Quantile Regression & Distributional Methods",
+    "docs_url": "https://github.com/vyasenov/pyrifreg",
+    "github_url": null,
+    "url": "https://github.com/vyasenov/pyrifreg",
+    "install": "pip install pyrifreg"
+  },
+  {
+    "name": "quantile-forest",
+    "description": "Scikit-learn compatible implementation of Quantile Regression Forests for non-parametric estimation.",
+    "category": "Quantile Regression & Distributional Methods",
+    "docs_url": "https://zillow.github.io/quantile-forest/",
+    "github_url": "https://github.com/zillow/quantile-forest",
+    "url": "https://github.com/zillow/quantile-forest",
+    "install": "pip install quantile-forest"
+  },
+  {
+    "name": "(PySAL Core)",
+    "description": "The broader PySAL ecosystem contains many tools for spatial data handling, weights, visualization, and analysis.",
+    "category": "Spatial Econometrics",
+    "docs_url": "https://pysal.org/",
+    "github_url": "https://github.com/pysal/pysal",
+    "url": "https://github.com/pysal/pysal",
+    "install": "pip install pysal"
+  },
+  {
+    "name": "PySAL (spreg)",
+    "description": "The spatial regression `spreg` module of PySAL. Implements spatial lag, error, IV models, and diagnostics.",
+    "category": "Spatial Econometrics",
+    "docs_url": "https://pysal.org/spreg/",
+    "github_url": "https://github.com/pysal/spreg",
+    "url": "https://github.com/pysal/spreg",
+    "install": "pip install spreg"
+  },
+  {
+    "name": "Awesome Quant",
+    "description": "Curated list of quantitative finance libraries and resources (many statistical/TS tools overlap with econometrics).",
+    "category": "Standard Errors, Bootstrapping & Reporting",
+    "docs_url": "https://wilsonfreitas.github.io/awesome-quant/",
+    "github_url": null,
+    "url": "https://wilsonfreitas.github.io/awesome-quant/",
+    "install": ""
+  },
+  {
+    "name": "Beyond Jupyter (TransferLab)",
+    "description": "Teaches software design principles for ML\u2014modularity, abstraction, and reproducibility\u2014going beyond ad hoc Jupyter workflows. Focus on maintainable, production-quality ML code.",
+    "category": "Standard Errors, Bootstrapping & Reporting",
+    "docs_url": "https://transferlab.ai/trainings/beyond-jupyter/",
+    "github_url": null,
+    "url": "https://transferlab.ai/trainings/beyond-jupyter/",
+    "install": ""
+  },
+  {
+    "name": "Causal Inference for the Brave and True",
+    "description": "Modern introduction to causal inference methods (DiD, IV, RDD, Synth, ML-based) with Python code examples.",
+    "category": "Standard Errors, Bootstrapping & Reporting",
+    "docs_url": "https://matheusfacure.github.io/python-causality-handbook/",
+    "github_url": null,
+    "url": "https://matheusfacure.github.io/python-causality-handbook/",
+    "install": ""
+  },
+  {
+    "name": "Coding for Economists",
+    "description": "Practical guide by A. Turrell on using Python for modern econometric research, data analysis, and workflows.",
+    "category": "Standard Errors, Bootstrapping & Reporting",
+    "docs_url": "https://aeturrell.github.io/coding-for-economists/",
+    "github_url": null,
+    "url": "https://aeturrell.github.io/coding-for-economists/",
+    "install": ""
+  },
+  {
+    "name": "Deep Learning Specialization (Coursera)",
+    "description": "Intermediate 5-course series by Andrew Ng covering deep neural networks, CNNs, RNNs, transformers, and real-world DL applications using TensorFlow.",
+    "category": "Standard Errors, Bootstrapping & Reporting",
+    "docs_url": "https://www.coursera.org/specializations/deep-learning",
+    "github_url": null,
+    "url": "https://www.coursera.org/specializations/deep-learning",
+    "install": ""
+  },
+  {
+    "name": "Machine Learning Specialization (Coursera)",
+    "description": "Beginner-friendly 3-course series by Andrew Ng covering core ML methods (regression, classification, clustering, trees, NN) with hands-on projects.",
+    "category": "Standard Errors, Bootstrapping & Reporting",
+    "docs_url": "https://www.coursera.org/specializations/machine-learning-introduction/",
+    "github_url": null,
+    "url": "https://www.coursera.org/specializations/machine-learning-introduction/",
+    "install": ""
+  },
+  {
+    "name": "Python for Econometrics",
+    "description": "Comprehensive intro notes by Kevin Sheppard covering Python basics, core libraries, and econometrics applications.",
+    "category": "Standard Errors, Bootstrapping & Reporting",
+    "docs_url": "https://www.kevinsheppard.com/files/teaching/python/notes/python_introduction_2023.pdf",
+    "github_url": null,
+    "url": "https://www.kevinsheppard.com/files/teaching/python/notes/python_introduction_2023.pdf",
+    "install": ""
+  },
+  {
+    "name": "QuantEcon Lectures",
+    "description": "High-quality lecture series on quantitative economic modeling, computational tools, and economics using Python/Julia.",
+    "category": "Standard Errors, Bootstrapping & Reporting",
+    "docs_url": "https://quantecon.org/lectures/",
+    "github_url": null,
+    "url": "https://quantecon.org/lectures/",
+    "install": ""
+  },
+  {
+    "name": "SciPy Bootstrap",
+    "description": "(`scipy.stats.bootstrap`) Computes bootstrap confidence intervals for various statistics using percentile, BCa methods.",
+    "category": "Standard Errors, Bootstrapping & Reporting",
+    "docs_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html",
+    "github_url": "https://github.com/scipy/scipy",
+    "url": "https://github.com/scipy/scipy",
+    "install": "pip install scipy"
+  },
+  {
+    "name": "Stargazer",
+    "description": "Python port of R's stargazer for creating publication-quality regression tables (HTML, LaTeX) from `statsmodels` & `linearmodels` results.",
+    "category": "Standard Errors, Bootstrapping & Reporting",
+    "docs_url": null,
+    "github_url": "https://github.com/StatsReporting/stargazer",
+    "url": "https://github.com/StatsReporting/stargazer",
+    "install": "pip install stargazer"
+  },
+  {
+    "name": "The Missing Semester of Your CS Education (MIT)",
+    "description": "Teaches essential developer tools often skipped in formal education\u2014command line, Git, Vim, scripting, debugging, etc.",
+    "category": "Standard Errors, Bootstrapping & Reporting",
+    "docs_url": "https://missing.csail.mit.edu/",
+    "github_url": null,
+    "url": "https://missing.csail.mit.edu/",
+    "install": ""
+  },
+  {
+    "name": "wildboottest",
+    "description": "Fast implementation of various wild cluster bootstrap algorithms (WCR, WCU) for robust inference, especially with few clusters.",
+    "category": "Standard Errors, Bootstrapping & Reporting",
+    "docs_url": "https://py-econometrics.github.io/wildboottest/",
+    "github_url": "https://github.com/py-econometrics/wildboottest",
+    "url": "https://github.com/py-econometrics/wildboottest",
+    "install": "pip install wildboottest"
+  },
+  {
+    "name": "FilterPy",
+    "description": "Focuses on Kalman filters (standard, EKF, UKF) and smoothers with a clear, pedagogical implementation style.",
+    "category": "State Space & Volatility Models",
+    "docs_url": "https://filterpy.readthedocs.io/en/latest/",
+    "github_url": "https://github.com/rlabbe/filterpy",
+    "url": "https://github.com/rlabbe/filterpy",
+    "install": "pip install filterpy"
+  },
+  {
+    "name": "Metran",
+    "description": "Specialized package for estimating Dynamic Factor Models (DFM) using state-space methods and Kalman filtering.",
+    "category": "State Space & Volatility Models",
+    "docs_url": null,
+    "github_url": "https://github.com/pastas/metran",
+    "url": "https://github.com/pastas/metran",
+    "install": "pip install metran"
+  },
+  {
+    "name": "PyKalman",
+    "description": "Implements Kalman filter, smoother, and EM algorithm for parameter estimation, including support for missing values and UKF.",
+    "category": "State Space & Volatility Models",
+    "docs_url": "https://pypi.org/project/pykalman/",
+    "github_url": "https://github.com/pykalman/pykalman",
+    "url": "https://github.com/pykalman/pykalman",
+    "install": "pip install pykalman"
+  },
+  {
+    "name": "PyMC Statespace",
+    "description": "(See Bayesian) Bayesian state-space modeling using PyMC, integrating Kalman filtering within MCMC for parameter estimation.",
+    "category": "State Space & Volatility Models",
+    "docs_url": "https://pymc-statespace.readthedocs.io/en/latest/",
+    "github_url": "https://github.com/pymc-devs/pymc-statespace",
+    "url": "https://github.com/pymc-devs/pymc-statespace",
+    "install": "pip install pymc-statespace"
+  },
+  {
+    "name": "stochvol",
+    "description": "Efficient Bayesian estimation of stochastic volatility (SV) models using MCMC.",
+    "category": "State Space & Volatility Models",
+    "docs_url": "https://stochvol.readthedocs.io/en/latest/",
+    "github_url": "https://github.com/rektory/stochvol",
+    "url": "https://github.com/rektory/stochvol",
+    "install": "pip install stochvol"
+  },
+  {
+    "name": "Pingouin",
+    "description": "User-friendly interface for common statistical tests (ANOVA, ANCOVA, t-tests, correlations, chi\u00b2, reliability) built on pandas & scipy.",
+    "category": "Statistical Inference & Hypothesis Testing",
+    "docs_url": "https://pingouin-stats.org/",
+    "github_url": "https://github.com/raphaelvallat/pingouin",
+    "url": "https://github.com/raphaelvallat/pingouin",
+    "install": "pip install pingouin"
+  },
+  {
+    "name": "PyWhy-Stats",
+    "description": "Part of the PyWhy ecosystem providing statistical methods specifically for causal applications, including various independence tests and power-divergence methods.",
+    "category": "Statistical Inference & Hypothesis Testing",
+    "docs_url": "https://pywhy-stats.readthedocs.io/",
+    "github_url": "https://github.com/py-why/pywhy-stats",
+    "url": "https://github.com/py-why/pywhy-stats",
+    "install": "pip install pywhy-stats"
+  },
+  {
+    "name": "Scipy.stats",
+    "description": "Foundational module within SciPy for a wide range of statistical functions, distributions, and hypothesis tests (t-tests, ANOVA, chi\u00b2, KS, etc.).",
+    "category": "Statistical Inference & Hypothesis Testing",
+    "docs_url": "https://docs.scipy.org/doc/scipy/reference/stats.html",
+    "github_url": "https://github.com/scipy/scipy",
+    "url": "https://github.com/scipy/scipy",
+    "install": "pip install scipy"
+  },
+  {
+    "name": "hypothetical",
+    "description": "Library focused on hypothesis testing: ANOVA/MANOVA, t-tests, chi-square, Fisher's exact, nonparametric tests (Mann-Whitney, Kruskal-Wallis, etc.).",
+    "category": "Statistical Inference & Hypothesis Testing",
+    "docs_url": null,
+    "github_url": "https://github.com/aschleg/hypothetical",
+    "url": "https://github.com/aschleg/hypothetical",
+    "install": "pip install hypothetical"
+  },
+  {
+    "name": "lifelines",
+    "description": "Comprehensive library for survival analysis: Kaplan-Meier, Nelson-Aalen, Cox regression, AFT models, handling censored data.",
+    "category": "Statistical Inference & Hypothesis Testing",
+    "docs_url": "https://lifelines.readthedocs.io/en/latest/",
+    "github_url": "https://github.com/CamDavidsonPilon/lifelines",
+    "url": "https://github.com/CamDavidsonPilon/lifelines",
+    "install": "pip install lifelines"
+  },
+  {
+    "name": "Dolo",
+    "description": "Framework for describing and solving economic models (DSGE, OLG, etc.) using a declarative YAML-based format.",
+    "category": "Structural Econometrics & Estimation",
+    "docs_url": "https://dolo.readthedocs.io/en/latest/",
+    "github_url": "https://github.com/EconForge/dolo",
+    "url": "https://github.com/EconForge/dolo",
+    "install": "pip install dolo"
+  },
+  {
+    "name": "HARK",
+    "description": "Toolkit for solving, simulating, and estimating models with heterogeneous agents (e.g., consumption-saving).",
+    "category": "Structural Econometrics & Estimation",
+    "docs_url": "https://hark.readthedocs.io/en/latest/",
+    "github_url": "https://github.com/econ-ark/HARK",
+    "url": "https://github.com/econ-ark/HARK",
+    "install": "pip install econ-ark"
+  },
+  {
+    "name": "QuantEcon.py",
+    "description": "Core library for quantitative economics: dynamic programming, Markov chains, game theory, numerical methods.",
+    "category": "Structural Econometrics & Estimation",
+    "docs_url": "https://quantecon.org/python-lectures/",
+    "github_url": "https://github.com/QuantEcon/QuantEcon.py",
+    "url": "https://github.com/QuantEcon/QuantEcon.py",
+    "install": "pip install quantecon"
+  },
+  {
+    "name": "respy",
+    "description": "Simulation and estimation of finite-horizon dynamic discrete choice (DDC) models (e.g., labor/education choice).",
+    "category": "Structural Econometrics & Estimation",
+    "docs_url": "https://respy.readthedocs.io/en/latest/",
+    "github_url": "https://github.com/OpenSourceEconomics/respy",
+    "url": "https://github.com/OpenSourceEconomics/respy",
+    "install": "pip install respy"
+  },
+  {
+    "name": "SDV (Synthetic Data Vault)",
+    "description": "Comprehensive library for generating synthetic tabular, relational, and time series data using various models.",
+    "category": "Synthetic Data Generation",
+    "docs_url": "https://sdv.dev/",
+    "github_url": "https://github.com/sdv-dev/SDV",
+    "url": "https://github.com/sdv-dev/SDV",
+    "install": "pip install sdv"
+  },
+  {
+    "name": "Synthpop",
+    "description": "Port of the R package for generating synthetic populations based on sample survey data.",
+    "category": "Synthetic Data Generation",
+    "docs_url": null,
+    "github_url": "https://github.com/alan-turing-institute/synthpop",
+    "url": "https://github.com/alan-turing-institute/synthpop",
+    "install": "pip install synthpop"
+  },
+  {
+    "name": "ARCH",
+    "description": "Specialized library for modeling and forecasting conditional volatility using ARCH, GARCH, EGARCH, and related models.",
+    "category": "Time Series Econometrics",
+    "docs_url": "https://arch.readthedocs.io/",
+    "github_url": "https://github.com/bashtage/arch",
+    "url": "https://github.com/bashtage/arch",
+    "install": "pip install arch"
+  },
+  {
+    "name": "Kats",
+    "description": "Broad toolkit for time series analysis, including multivariate analysis, detection (outliers, change points, trends), feature extraction.",
+    "category": "Time Series Econometrics",
+    "docs_url": "https://facebookresearch.github.io/Kats/",
+    "github_url": "https://github.com/facebookresearch/Kats",
+    "url": "https://github.com/facebookresearch/Kats",
+    "install": "pip install kats"
+  },
+  {
+    "name": "LocalProjections",
+    "description": "Community implementations of Jord\u00e0 (2005) Local Projections for estimating impulse responses without VAR assumptions.",
+    "category": "Time Series Econometrics",
+    "docs_url": null,
+    "github_url": "https://github.com/elenev/localprojections",
+    "url": "https://github.com/elenev/localprojections",
+    "install": "Install from source"
+  },
+  {
+    "name": "MLForecast",
+    "description": "Scalable time series forecasting using machine learning models (e.g., LightGBM, XGBoost) as regressors.",
+    "category": "Time Series Forecasting",
+    "docs_url": "https://nixtla.github.io/mlforecast/",
+    "github_url": "https://github.com/Nixtla/mlforecast",
+    "url": "https://github.com/Nixtla/mlforecast",
+    "install": "pip install mlforecast"
+  },
+  {
+    "name": "NeuralForecast",
+    "description": "Deep learning models (N-BEATS, N-HiTS, Transformers, RNNs) for time series forecasting, built on PyTorch Lightning.",
+    "category": "Time Series Forecasting",
+    "docs_url": "https://nixtla.github.io/neuralforecast/",
+    "github_url": "https://github.com/Nixtla/neuralforecast",
+    "url": "https://github.com/Nixtla/neuralforecast",
+    "install": "pip install neuralforecast"
+  },
+  {
+    "name": "Prophet",
+    "description": "Forecasting procedure for time series with strong seasonality and trend components, developed by Facebook.",
+    "category": "Time Series Forecasting",
+    "docs_url": "https://facebook.github.io/prophet/",
+    "github_url": "https://github.com/facebook/prophet",
+    "url": "https://github.com/facebook/prophet",
+    "install": "pip install prophet"
+  },
+  {
+    "name": "StatsForecast",
+    "description": "Fast, scalable implementations of popular statistical forecasting models (ETS, ARIMA, Theta, etc.) optimized for performance.",
+    "category": "Time Series Forecasting",
+    "docs_url": "https://nixtla.github.io/statsforecast/",
+    "github_url": "https://github.com/Nixtla/statsforecast",
+    "url": "https://github.com/Nixtla/statsforecast",
+    "install": "pip install statsforecast"
+  },
+  {
+    "name": "pmdarima",
+    "description": "ARIMA modeling with automatic parameter selection (auto-ARIMA), similar to R's `forecast::auto.arima`.",
+    "category": "Time Series Forecasting",
+    "docs_url": "https://alkaline-ml.com/pmdarima/",
+    "github_url": "https://github.com/alkaline-ml/pmdarima",
+    "url": "https://github.com/alkaline-ml/pmdarima",
+    "install": "pip install pmdarima"
+  },
+  {
+    "name": "sktime",
+    "description": "Unified framework for various time series tasks, including forecasting with classical, ML, and deep learning models.",
+    "category": "Time Series Forecasting",
+    "docs_url": "https://www.sktime.net/en/latest/",
+    "github_url": "https://github.com/sktime/sktime",
+    "url": "https://github.com/sktime/sktime",
+    "install": "pip install sktime"
+  },
+  {
+    "name": "CatBoost",
+    "description": "Gradient boosting library excelling with categorical features (minimal preprocessing needed). Robust against overfitting.",
+    "category": "Tree & Ensemble Methods for Prediction",
+    "docs_url": "https://catboost.ai/docs/",
+    "github_url": "https://github.com/catboost/catboost",
+    "url": "https://github.com/catboost/catboost",
+    "install": "pip install catboost"
+  },
+  {
+    "name": "LightGBM",
+    "description": "Fast, distributed gradient boosting (also supports RF). Known for speed, low memory usage, and handling large datasets.",
+    "category": "Tree & Ensemble Methods for Prediction",
+    "docs_url": "https://lightgbm.readthedocs.io/",
+    "github_url": "https://github.com/microsoft/LightGBM",
+    "url": "https://github.com/microsoft/LightGBM",
+    "install": "pip install lightgbm"
+  },
+  {
+    "name": "NGBoost",
+    "description": "Extends gradient boosting to probabilistic prediction, providing uncertainty estimates alongside point predictions. Built on scikit-learn.",
+    "category": "Tree & Ensemble Methods for Prediction",
+    "docs_url": "https://stanfordmlgroup.github.io/ngboost/",
+    "github_url": "https://github.com/stanfordmlgroup/ngboost",
+    "url": "https://github.com/stanfordmlgroup/ngboost",
+    "install": "pip install ngboost"
+  },
+  {
+    "name": "Scikit-learn Ens.",
+    "description": "(`RandomForestClassifier`/`Regressor`) Widely-used, versatile implementation of Random Forests. Easy API and parallel processing support.",
+    "category": "Tree & Ensemble Methods for Prediction",
+    "docs_url": "https://scikit-learn.org/stable/modules/ensemble.html#random-forests",
+    "github_url": "https://github.com/scikit-learn/scikit-learn",
+    "url": "https://github.com/scikit-learn/scikit-learn",
+    "install": "pip install scikit-learn"
+  },
+  {
+    "name": "XGBoost",
+    "description": "High-performance, optimized gradient boosting library (also supports RF). Known for speed, efficiency, and winning competitions.",
+    "category": "Tree & Ensemble Methods for Prediction",
+    "docs_url": "https://xgboost.readthedocs.io/",
+    "github_url": "https://github.com/dmlc/xgboost",
+    "url": "https://github.com/dmlc/xgboost",
+    "install": "pip install xgboost"
+  },
+  {
+    "name": "cuML (RAPIDS)",
+    "description": "GPU-accelerated implementation of Random Forests for significant speedups on large datasets. Scikit-learn compatible API.",
+    "category": "Tree & Ensemble Methods for Prediction",
+    "docs_url": "https://docs.rapids.ai/api/cuml/stable/",
+    "github_url": "https://github.com/rapidsai/cuml",
+    "url": "https://github.com/rapidsai/cuml",
+    "install": "conda install ... (See RAPIDS docs)"
+  }
+]

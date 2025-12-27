@@ -1,0 +1,16 @@
+baseURL = 'https://rawatpranjal.github.io/metrics-packages/'
+languageCode = 'en-us'
+title = 'Econometrics Package Directory'
+
+[params]
+  description = "A searchable directory of Python packages for econometrics, causal inference, and time series analysis"
+  author = "Pranjal Rawat"
+  formUrl = ""  # Add your Google Form URL here
+
+[build]
+  writeStats = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

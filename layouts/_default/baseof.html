@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Site.Params.description }}">
+
+    <!-- Pagefind CSS -->
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/custom.css">
+</head>
+<body>
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <!-- Pagefind JS -->
+    <script src="/pagefind/pagefind-ui.js"></script>
+    <script src="/js/toggle.js"></script>
+</body>
+</html>
