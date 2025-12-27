@@ -1,3 +1,28 @@
+/* CSS Custom Properties for Theming */
+:root {
+    --bg-primary: #f8f9fa;
+    --bg-secondary: white;
+    --bg-card: white;
+    --text-primary: #1a1a1a;
+    --text-secondary: #555;
+    --text-muted: #666;
+    --border-color: #e5e5e5;
+    --accent: #0066cc;
+    --accent-bg: #e8f4ff;
+}
+
+[data-theme="dark"] {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --bg-card: #252525;
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-muted: #888;
+    --border-color: #333;
+    --accent: #4da6ff;
+    --accent-bg: #1a3a5c;
+}
+
 /* Reset & Base */
 *, *::before, *::after {
     box-sizing: border-box;
@@ -6,8 +31,8 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     line-height: 1.6;
-    color: #1a1a1a;
-    background: #f8f9fa;
+    color: var(--text-primary);
+    background: var(--bg-primary);
     margin: 0;
     padding: 0;
 }
@@ -126,6 +151,38 @@ body::before {
     font-style: italic;
     line-height: 1.45;
     pointer-events: none;
+}
+
+.sidebar-updated {
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.4);
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    margin-top: 0.5rem;
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    font-family: inherit;
+}
+
+.theme-toggle:hover {
+    color: white;
+}
+
+.theme-toggle svg {
+    flex-shrink: 0;
 }
 
 .sidebar-footer-link {
@@ -831,6 +888,25 @@ a:hover {
     text-decoration: none;
 }
 
+.github-stars-badge {
+    display: inline-flex;
+    align-items: center;
+}
+
+.github-stars-badge img {
+    height: 18px;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.github-stars-badge:hover img {
+    opacity: 1;
+}
+
+.pkg-stars img {
+    height: 18px;
+}
+
 /* Table View */
 .package-table-wrapper {
     overflow-x: auto;
@@ -1135,6 +1211,59 @@ a:hover {
     line-height: 1.5;
 }
 
+/* Staff Picks Section */
+.staff-picks {
+    margin-bottom: 3rem;
+}
+
+.staff-picks-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 0.25rem 0;
+}
+
+.staff-picks-subtitle {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0 0 1rem 0;
+}
+
+.staff-picks-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.staff-pick-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.75rem 1rem;
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.staff-pick-card:hover {
+    border-color: #0066cc;
+    box-shadow: 0 2px 8px rgba(0,102,204,0.1);
+    text-decoration: none;
+}
+
+.staff-pick-name {
+    font-weight: 600;
+    color: #1a1a1a;
+    font-size: 0.95rem;
+}
+
+.staff-pick-desc {
+    font-size: 0.8rem;
+    color: #666;
+}
+
 /* Homepage Footer */
 .homepage-footer {
     text-align: center;
@@ -1404,6 +1533,73 @@ a:hover {
     .quick-links-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+}
+
+/* ========================================
+   ABOUT PAGE STYLES
+   ======================================== */
+
+.about-page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+.about-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 2rem 0;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-section h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 0.75rem 0;
+}
+
+.about-section p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.about-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.about-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.about-link:hover {
+    border-color: #0066cc;
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.about-link svg {
+    flex-shrink: 0;
 }
 
 /* Calendar Grid View */
@@ -1815,4 +2011,111 @@ a:hover {
     .global-search-footer {
         display: none;
     }
+}
+
+/* ========================================
+   DARK MODE OVERRIDES
+   ======================================== */
+
+[data-theme="dark"] body::before {
+    opacity: 0.15;
+}
+
+[data-theme="dark"] .package-card,
+[data-theme="dark"] .section-card,
+[data-theme="dark"] .resource-card,
+[data-theme="dark"] .roadmap-card,
+[data-theme="dark"] .staff-pick-card,
+[data-theme="dark"] .quick-link-card,
+[data-theme="dark"] .about-link {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .package-table,
+[data-theme="dark"] .package-table th {
+    background: var(--bg-card);
+}
+
+[data-theme="dark"] .package-table th,
+[data-theme="dark"] .package-table td {
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .search-input,
+[data-theme="dark"] .category-select {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .toggle-btn {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .toggle-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+[data-theme="dark"] .category-badge,
+[data-theme="dark"] .category-badge-sm {
+    background: var(--accent-bg);
+    color: var(--accent);
+}
+
+[data-theme="dark"] .use-case-tag {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .package-name a,
+[data-theme="dark"] .resource-name a,
+[data-theme="dark"] .staff-pick-name {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .package-desc,
+[data-theme="dark"] .resource-desc,
+[data-theme="dark"] .staff-pick-desc {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .hero-title,
+[data-theme="dark"] .section-card h3,
+[data-theme="dark"] .roadmap-title {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .hero-tagline,
+[data-theme="dark"] .hero-subtitle,
+[data-theme="dark"] .section-card p {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .category-title {
+    color: var(--text-primary);
+    border-color: var(--accent);
+}
+
+[data-theme="dark"] .global-search-container {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .global-search-input {
+    background: var(--bg-card);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .global-search-result {
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .global-search-result:hover,
+[data-theme="dark"] .global-search-result.selected {
+    background: var(--bg-card);
 }

@@ -294,7 +294,8 @@
       "causal inference",
       "matching"
     ],
-    "best_for": "Uber's production CATE/ITE with T-learner, X-learner, SHAP"
+    "best_for": "Uber's production CATE/ITE with T-learner, X-learner, SHAP",
+    "staffPick": true
   },
   {
     "name": "CausalMatch",
@@ -336,7 +337,8 @@
       "causal inference",
       "matching"
     ],
-    "best_for": "End-to-end workflow with refutation tests and assumption checking"
+    "best_for": "End-to-end workflow with refutation tests and assumption checking",
+    "staffPick": true
   },
   {
     "name": "fastmatch",
@@ -378,7 +380,8 @@
       "regression",
       "linear models"
     ],
-    "best_for": "ML-based prediction, cross-validation, feature engineering"
+    "best_for": "ML-based prediction, cross-validation, feature engineering",
+    "staffPick": true
   },
   {
     "name": "Statsmodels",
@@ -392,7 +395,8 @@
       "regression",
       "linear models"
     ],
-    "best_for": "Statistical inference with interpretable coefficients"
+    "best_for": "Statistical inference with interpretable coefficients",
+    "staffPick": true
   },
   {
     "name": "FactorAnalyzer",
@@ -532,7 +536,8 @@
       "machine learning",
       "causal inference"
     ],
-    "best_for": "Microsoft's causal forests with valid confidence intervals"
+    "best_for": "Microsoft's causal forests with valid confidence intervals",
+    "staffPick": true
   },
   {
     "name": "pydoublelasso",
@@ -1575,7 +1580,8 @@
       "machine learning",
       "prediction"
     ],
-    "best_for": "Histogram + leaf-wise growth for speed and low memory"
+    "best_for": "Histogram + leaf-wise growth for speed and low memory",
+    "staffPick": true
   },
   {
     "name": "NGBoost",
@@ -1617,7 +1623,8 @@
       "machine learning",
       "prediction"
     ],
-    "best_for": "Optimized gradient boosting, competition winner"
+    "best_for": "Optimized gradient boosting, competition winner",
+    "staffPick": true
   },
   {
     "name": "cuML (RAPIDS)",

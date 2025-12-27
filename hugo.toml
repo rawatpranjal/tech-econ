@@ -14,3 +14,12 @@ title = 'tech-econ'
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+
+# RSS Feed
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+
+[outputFormats.RSS]
+  mediaType = "application/rss+xml"
+  baseName = "feed"

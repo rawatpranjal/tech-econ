@@ -2,14 +2,14 @@
   {
     "name": "Susan Athey: Tech Economists & Causation",
     "description": "World of DaaS podcast. How she 'invented' the Tech Economist role at Microsoft. The difference between prediction and 'what if' questions.",
-    "category": "Chief Economist Interviews",
+    "category": "Causal Inference & ML",
     "url": "https://www.youtube.com/watch?v=q4hWBep5RIc",
     "type": "Podcast"
   },
   {
     "name": "Susan Athey: Tech Economists Wanted",
     "description": "AEA Research Highlights. Why companies like Airbnb need economists to solve marketplace design problems.",
-    "category": "Chief Economist Interviews",
+    "category": "Strategy & Digital Platforms",
     "url": "https://www.aeaweb.org/research/athey-luca-interview-tech-economics",
     "type": "Interview",
     "image_url": "https://gsb-faculty.stanford.edu/susan-athey/files/2025/08/Stanford_Susan_Athey-1048x1280.jpg"
@@ -17,14 +17,29 @@
   {
     "name": "Susan Athey: Economics & AI",
     "description": "Stanford GSB Fireside Chat on the intersection of economics and artificial intelligence.",
-    "category": "Chief Economist Interviews",
+    "category": "Causal Inference & ML",
     "url": "https://www.youtube.com/watch?v=lNsl76AD1kE",
     "type": "Video"
   },
   {
+    "name": "Susan Athey: Economics of Transformative AI",
+    "description": "NBER lecture on how AI is transforming economic research and industry applications.",
+    "category": "Strategy & Digital Platforms",
+    "url": "https://www.youtube.com/watch?v=ifdSUKrJxqM",
+    "type": "Video"
+  },
+  {
+    "name": "Steve Tadelis: Causal Inference in Tech",
+    "description": "UC Berkeley / ex-eBay. Deep dive into causal inference methods used in tech companies.",
+    "category": "Causal Inference & ML",
+    "url": "https://www.youtube.com/watch?v=0l4cAWWMAKQ",
+    "type": "Video",
+    "image_url": "https://haas.berkeley.edu/wp-content/uploads/Tadelis-Steve-2022.jpg"
+  },
+  {
     "name": "Hal Varian: Googlenomics Q&A",
     "description": "AEI podcast. The 'Adam Smith of Googlenomics' on auction design and why productivity metrics fail in the digital age.",
-    "category": "Chief Economist Interviews",
+    "category": "Market Design & Auctions",
     "url": "https://www.aei.org/economics/googlenomics-a-long-read-qa-with-chief-economist-hal-varian/",
     "type": "Interview",
     "image_url": "https://digitaleconomy.stanford.edu/wp-content/uploads/2021/10/halvarian-80.jpg"
@@ -32,14 +47,14 @@
   {
     "name": "Hal Varian: Chief Economist at Google",
     "description": "Room for Discussion. Why every company needs a chief economist for forecasting, pricing, and market design.",
-    "category": "Chief Economist Interviews",
+    "category": "Market Design & Auctions",
     "url": "https://www.youtube.com/watch?v=d3CtB_gVV18",
     "type": "Video"
   },
   {
     "name": "Hal Varian: Doing Economics at Google",
     "description": "CEPR interview on search economics, ad auctions, and forecasting with Google Trends.",
-    "category": "Chief Economist Interviews",
+    "category": "Market Design & Auctions",
     "url": "https://cepr.org/multimedia/doing-economics-google",
     "type": "Interview",
     "image_url": "https://digitaleconomy.stanford.edu/wp-content/uploads/2021/10/halvarian-80.jpg"
@@ -47,7 +62,7 @@
   {
     "name": "John List: Scale, Uber & The Voltage Effect",
     "description": "EconTalk. Former Chief Economist at Uber and Lyft shares war stories on field experiments and driver incentives.",
-    "category": "Chief Economist Interviews",
+    "category": "Experimentation & Scaling",
     "url": "https://www.econtalk.org/john-list-on-scale-uber-and-the-voltage-effect/",
     "type": "Podcast",
     "image_url": "https://economics.uchicago.edu/sites/default/files/2025-08/john_list_photo_3.jpeg"
@@ -55,15 +70,23 @@
   {
     "name": "John List: Scaling Proven Ideas",
     "description": "How to scale ideas at Uber, Lyft, and Walmart. Why most interventions fail when you try to grow them.",
-    "category": "Chief Economist Interviews",
+    "category": "Experimentation & Scaling",
     "url": "https://mikemalatesta.com/podcast/john-list-scaling-proven-ideas-for-uber-lyft-walmart-260/",
     "type": "Podcast",
     "image_url": "https://economics.uchicago.edu/sites/default/files/2025-08/john_list_photo_3.jpeg"
   },
   {
+    "name": "John List: Market Design in Ride-Sharing",
+    "description": "How ride-sharing platforms design markets for drivers and riders. Insights from Uber and Lyft.",
+    "category": "Market Design & Auctions",
+    "url": "https://www.youtube.com/watch?v=CF7FQnD-2jg",
+    "type": "Video",
+    "image_url": "https://economics.uchicago.edu/sites/default/files/2025-08/john_list_photo_3.jpeg"
+  },
+  {
     "name": "Kyle Kretschman: Economics at Spotify",
     "description": "Causal Inference Podcast. A rare look at a working tech economist role — running experimentation teams at a streaming giant.",
-    "category": "Chief Economist Interviews",
+    "category": "Experimentation & Scaling",
     "url": "https://causalinf.substack.com/p/s1e27-interview-with-kyle-kretschman",
     "type": "Podcast",
     "image_url": "https://lifeandletters.la.utexas.edu/wp-content/uploads/2022/12/Kyle_headshot-1-1200x800.jpg"
@@ -71,10 +94,69 @@
   {
     "name": "Pat Bajari: Building Tech Economics at Amazon",
     "description": "Keystone interview. How Amazon's Chief Economist built tech-economics from scratch with 400+ PhD economists.",
-    "category": "Chief Economist Interviews",
+    "category": "Strategy & Digital Platforms",
     "url": "https://www.keystone.ai/news-publications/patrick-bajari-qa",
     "type": "Interview",
     "image_url": "https://patbajari.ai/wp-content/uploads/2024/02/image-4-1.png"
+  },
+  {
+    "name": "Preston McAfee: Auction Design & Tech Economics",
+    "description": "Chief Economist at Yahoo, Google, Microsoft. Golden Goose Award winner. Deep interview on auction theory, ad markets, and mechanism design.",
+    "category": "Market Design & Auctions",
+    "url": "https://www.richmondfed.org/publications/research/econ_focus/2018/q4/interview",
+    "type": "Interview",
+    "image_url": "https://mc4f.ee/Bin/PubPhoto.jpg"
+  },
+  {
+    "name": "Carl Shapiro: Regulating Large Digital Platforms",
+    "description": "BATES Seminar. UC Berkeley economist on antitrust, competition policy, and regulating Big Tech.",
+    "category": "Strategy & Digital Platforms",
+    "url": "https://myusf.usfca.edu/arts-sciences/economics/msae/BATES",
+    "type": "Video",
+    "image_url": "https://haas.berkeley.edu/wp-content/uploads/Shapiro_Carl_2019.jpg"
+  },
+  {
+    "name": "Ignacio Martinez: Bayesian Frameworks for Business Decisions",
+    "description": "BATES Seminar. Google economist on applying Bayesian methods to real-world business problems.",
+    "category": "Strategy & Digital Platforms",
+    "url": "https://myusf.usfca.edu/arts-sciences/economics/msae/BATES",
+    "type": "Video"
+  },
+  {
+    "name": "Sean Taylor: When Do We Need Causal Inference?",
+    "description": "Former Lyft/Facebook DS lead. This talk saves you from over-engineering. Know when correlation is enough.",
+    "category": "Causal Inference & ML",
+    "url": "https://www.youtube.com/watch?v=2dv7NrYExzo",
+    "type": "Video"
+  },
+  {
+    "name": "ML for Pricing & Auctions (ICML)",
+    "description": "Design the mechanism, don't just bid in it. RegretNet and deep learning for auction design.",
+    "category": "Market Design & Auctions",
+    "url": "https://www.youtube.com/watch?v=gsPWQqVhb74",
+    "type": "Video"
+  },
+  {
+    "name": "Ronny Kohavi: Experimentation Wisdom",
+    "description": "The godfather of online experimentation. Decades of A/B testing wisdom from Microsoft and Amazon.",
+    "category": "Causal Inference & ML",
+    "url": "https://www.exp-platform.com/",
+    "type": "Talks + Papers",
+    "image_url": "https://robotics.stanford.edu/~ronnyk/RonnyKSmall.jpg"
+  },
+  {
+    "name": "Alexey Stysin: Auction Mechanism Design",
+    "description": "Data Science Tech Lead at Topsort, former Yandex. 7+ years building VCG auctions, ML for click prediction, and revenue optimization for search ads.",
+    "category": "Market Design & Auctions",
+    "url": "https://www.youtube.com/@AlexeyStysin",
+    "type": "YouTube Channel"
+  },
+  {
+    "name": "Nikhil Devanur: Lagrangian Duality in Mechanism Design",
+    "description": "Microsoft Research. How to design revenue-maximizing auctions using duality — simple auctions, budget smoothing, and optimal mechanisms.",
+    "category": "Market Design & Auctions",
+    "url": "https://mediaspace.gatech.edu/media/Nikhil+Devanur+-+Lagrangian+Duality+in+Mechanism+Design/1_oj4qzj8x",
+    "type": "Video"
   },
   {
     "name": "Casual Inference Podcast",
@@ -92,7 +174,7 @@
     "type": "Podcast",
     "image_url": "https://image.simplecastcdn.com/images/4ca709a1-1918-43a4-9035-1176b5aa9f2b/b8c673f8-58e7-4d4a-ab02-f83c2fd463c4/3000x3000/econtalknewbluecover1400.jpg"
   },
-    {
+  {
     "name": "Not So Standard Deviations",
     "description": "Roger Peng and Hilary Parker on data science in the real world. Great for understanding the craft.",
     "category": "Podcast Series",
@@ -109,48 +191,26 @@
     "image_url": "https://image.simplecastcdn.com/images/2be48404-a43c-4fa8-a32c-760a3216272e/fab1584e-8ea9-4efa-9650-5e595861b2cd/3000x3000/image.jpg"
   },
   {
-    "name": "Sean Taylor: When Do We Need Causal Inference?",
-    "description": "Former Lyft/Facebook DS lead. This talk saves you from over-engineering. Know when correlation is enough.",
-    "category": "Method Talks",
-    "url": "https://www.youtube.com/watch?v=2dv7NrYExzo",
-    "type": "Video"
+    "name": "Bay Area Tech Economics Seminar (BATES)",
+    "description": "Hosted by USF/Stanford/Berkeley. Features speakers from Netflix, Google, Meta, and Uber on applied tech economics.",
+    "category": "Conference Series",
+    "url": "https://myusf.usfca.edu/arts-sciences/economics/msae/BATES",
+    "type": "Seminar Series",
+    "image_url": "https://myusf.usfca.edu/sites/default/files/users/cjwolfe/msae_home_banner.jpg"
   },
   {
-    "name": "ML for Pricing & Auctions (ICML)",
-    "description": "Design the mechanism, don't just bid in it. RegretNet and deep learning for auction design.",
-    "category": "Method Talks",
-    "url": "https://www.youtube.com/watch?v=gsPWQqVhb74",
-    "type": "Video"
+    "name": "NABE Tech Economics Conference (TEC)",
+    "description": "Annual conference from the National Association for Business Economics. Industry economists from Netflix, Amazon, Google present applied research.",
+    "category": "Conference Series",
+    "url": "https://nabe.com/TEC",
+    "type": "Conference"
   },
   {
-    "name": "Ronny Kohavi: Experimentation Wisdom",
-    "description": "The godfather of online experimentation. Decades of A/B testing wisdom from Microsoft and Amazon.",
-    "category": "Method Talks",
-    "url": "https://www.exp-platform.com/",
-    "type": "Talks + Papers",
-    "image_url": "https://robotics.stanford.edu/~ronnyk/RonnyKSmall.jpg"
-  },
-  {
-    "name": "Alexey Stysin: Auction Mechanism Design",
-    "description": "Data Science Tech Lead at Topsort, former Yandex. 7+ years building VCG auctions, ML for click prediction, and revenue optimization for search ads.",
-    "category": "Method Talks",
-    "url": "https://www.youtube.com/@AlexeyStysin",
-    "type": "YouTube Channel"
-  },
-  {
-    "name": "Nikhil Devanur: Lagrangian Duality in Mechanism Design",
-    "description": "Microsoft Research. How to design revenue-maximizing auctions using duality — simple auctions, budget smoothing, and optimal mechanisms.",
-    "category": "Method Talks",
-    "url": "https://mediaspace.gatech.edu/media/Nikhil+Devanur+-+Lagrangian+Duality+in+Mechanism+Design/1_oj4qzj8x",
-    "type": "Video"
-  },
-  {
-    "name": "Preston McAfee: Auction Design & Tech Economics",
-    "description": "Chief Economist at Yahoo, Google, Microsoft. Golden Goose Award winner. Deep interview on auction theory, ad markets, and mechanism design.",
-    "category": "Chief Economist Interviews",
-    "url": "https://www.richmondfed.org/publications/research/econ_focus/2018/q4/interview",
-    "type": "Interview",
-    "image_url": "https://mc4f.ee/Bin/PubPhoto.jpg"
+    "name": "CODE @ MIT",
+    "description": "Conference on Digital Experimentation. Leading researchers and practitioners discuss A/B testing, causal inference, and experimentation at scale.",
+    "category": "Conference Series",
+    "url": "https://ide.mit.edu/events/2023-conference-on-digital-experimentation-code/",
+    "type": "Conference"
   },
   {
     "name": "Matteo Courthoud",

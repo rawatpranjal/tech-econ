@@ -3,10 +3,10 @@
     <!-- Hero Section -->
     <header class="hero">
         <h1 class="hero-title">tech-econ</h1>
-        <p class="hero-tagline">A curated directory for tech economists</p>
+        <p class="hero-tagline">Real tools for applied economists in tech.</p>
         <p class="hero-subtitle">
             Browse {{ len .Site.Data.packages }} packages, {{ len .Site.Data.datasets }} datasets, and {{ len .Site.Data.resources }} learning resources.<br>
-            <span class="hero-note">This is a reference database—explore what you need, skip the rest.</span>
+            <span class="hero-note">A reference database—explore what you need, skip the rest.</span>
         </p>
     </header>
 
@@ -23,6 +23,22 @@
                 <p>Check out our curated roadmaps and essential picks to get started.</p>
             </div>
             <a href="{{ "start/" | relURL }}" class="cta-button">Getting Started</a>
+        </div>
+    </div>
+
+    <!-- Staff Picks Section -->
+    <div class="staff-picks">
+        <h2 class="staff-picks-title">Staff Picks</h2>
+        <p class="staff-picks-subtitle">Essential tools to get started</p>
+        <div class="staff-picks-grid">
+            {{ range .Site.Data.packages }}
+            {{ if .staffPick }}
+            <a href="{{ .url }}" target="_blank" class="staff-pick-card">
+                <span class="staff-pick-name">{{ .name }}</span>
+                <span class="staff-pick-desc">{{ .best_for }}</span>
+            </a>
+            {{ end }}
+            {{ end }}
         </div>
     </div>
 

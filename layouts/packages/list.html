@@ -87,6 +87,12 @@
                     <div class="card-footer">
                         <span class="category-badge">{{ .category }}</span>
                         <div class="card-links">
+                            {{ if .github_url }}
+                            {{ $repo := replaceRE "https://github.com/([^/]+/[^/]+).*" "$1" .github_url }}
+                            <a href="{{ .github_url }}" target="_blank" class="github-stars-badge" title="GitHub Stars">
+                                <img src="https://img.shields.io/github/stars/{{ $repo }}?style=flat&logo=github&label=&color=555" alt="GitHub stars" loading="lazy">
+                            </a>
+                            {{ end }}
                             {{ if .docs_url }}
                             <a href="{{ .docs_url }}" target="_blank" class="link-btn" title="Documentation">Docs</a>
                             {{ end }}
@@ -122,6 +128,7 @@
                     <th>Description</th>
                     <th>Best For</th>
                     <th>Category</th>
+                    <th>Stars</th>
                     <th>Links</th>
                     <th>Install</th>
                 </tr>
@@ -135,6 +142,14 @@
                     <td class="pkg-desc">{{ .description }}</td>
                     <td class="pkg-best-for">{{ .best_for }}</td>
                     <td class="pkg-cat"><span class="category-badge-sm">{{ .category }}</span></td>
+                    <td class="pkg-stars">
+                        {{ if .github_url }}
+                        {{ $repo := replaceRE "https://github.com/([^/]+/[^/]+).*" "$1" .github_url }}
+                        <a href="{{ .github_url }}" target="_blank">
+                            <img src="https://img.shields.io/github/stars/{{ $repo }}?style=flat&logo=github&label=&color=555" alt="stars" loading="lazy">
+                        </a>
+                        {{ end }}
+                    </td>
                     <td class="pkg-links">
                         {{ if .docs_url }}<a href="{{ .docs_url }}" target="_blank">Docs</a>{{ end }}
                         {{ if and .docs_url .github_url }} | {{ end }}
