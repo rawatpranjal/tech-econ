@@ -124,7 +124,7 @@
   {
     "name": "Ronny Kohavi: Experimentation Wisdom",
     "description": "The godfather of online experimentation. Decades of A/B testing wisdom from Microsoft and Amazon.",
-    "category": "Causal Inference & ML",
+    "category": "Experimentation & Scaling",
     "url": "https://www.exp-platform.com/",
     "type": "Talks + Papers",
     "image_url": "https://robotics.stanford.edu/~ronnyk/RonnyKSmall.jpg"
@@ -146,7 +146,7 @@
   {
     "name": "Casual Inference Podcast",
     "description": "Lucy D'Agostino McGowan & Ellie Murray. Highly technical discussions on A/B testing, DAGs, and causal methods.",
-    "category": "Podcast Series",
+    "category": "Causal Inference & ML",
     "url": "https://casualinfer.libsyn.com/",
     "type": "Podcast",
     "image_url": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45052660/990c92903f5e9579.png"
@@ -154,7 +154,7 @@
   {
     "name": "EconTalk",
     "description": "Russ Roberts. The gold standard for long-form economic interviews. John List, Hal Varian, and more.",
-    "category": "Podcast Series",
+    "category": "Strategy & Digital Platforms",
     "url": "https://www.econtalk.org/",
     "type": "Podcast",
     "image_url": "https://image.simplecastcdn.com/images/4ca709a1-1918-43a4-9035-1176b5aa9f2b/b8c673f8-58e7-4d4a-ab02-f83c2fd463c4/3000x3000/econtalknewbluecover1400.jpg"
@@ -162,7 +162,7 @@
   {
     "name": "Not So Standard Deviations",
     "description": "Roger Peng and Hilary Parker on data science in the real world. Great for understanding the craft.",
-    "category": "Podcast Series",
+    "category": "Experimentation & Scaling",
     "url": "https://nssdeviations.com/",
     "type": "Podcast",
     "image_url": "https://static.libsyn.com/p/assets/b/c/9/a/bc9a42000b1233fe/NSSD_Logo_Square.001.png"
@@ -170,73 +170,9 @@
   {
     "name": "Freakonomics Radio",
     "description": "Economics applied to everything. Great for economic intuition and learning to communicate data insights.",
-    "category": "Podcast Series",
+    "category": "Strategy & Digital Platforms",
     "url": "https://freakonomics.com/podcasts/",
     "type": "Podcast",
     "image_url": "https://image.simplecastcdn.com/images/2be48404-a43c-4fa8-a32c-760a3216272e/fab1584e-8ea9-4efa-9650-5e595861b2cd/3000x3000/image.jpg"
-  },
-  {
-    "name": "Bay Area Tech Economics Seminar (BATES)",
-    "description": "Hosted by USF/Stanford/Berkeley. Features speakers from Netflix, Google, Meta, and Uber on applied tech economics.",
-    "category": "Conference Series",
-    "url": "https://myusf.usfca.edu/arts-sciences/economics/msae/BATES",
-    "type": "Seminar Series",
-    "image_url": "https://myusf.usfca.edu/sites/default/files/users/cjwolfe/msae_home_banner.jpg"
-  },
-  {
-    "name": "NABE Tech Economics Conference (TEC)",
-    "description": "Annual conference from the National Association for Business Economics. Industry economists from Netflix, Amazon, Google present applied research.",
-    "category": "Conference Series",
-    "url": "https://nabe.com/TEC",
-    "type": "Conference"
-  },
-  {
-    "name": "CODE @ MIT",
-    "description": "Conference on Digital Experimentation. Leading researchers and practitioners discuss A/B testing, causal inference, and experimentation at scale.",
-    "category": "Conference Series",
-    "url": "https://ide.mit.edu/events/2023-conference-on-digital-experimentation-code/",
-    "type": "Conference"
-  },
-  {
-    "name": "Matteo Courthoud",
-    "description": "Zalando Applied Scientist. Weekly posts on causal inference with code — CUPED, causal forests, AIPW, and more.",
-    "category": "Personal Blogs",
-    "url": "https://matteocourthoud.github.io/",
-    "type": "Blog"
-  },
-  {
-    "name": "Apoorva Lal",
-    "description": "Amazon/Netflix economist. Causal inference notes, pyfixest maintainer, clean Python implementations of econometric methods.",
-    "category": "Personal Blogs",
-    "url": "https://apoorvalal.github.io/",
-    "type": "Blog"
-  },
-  {
-    "name": "Nick Huntington-Klein",
-    "description": "'The Effect' author. Animated causal inference plots, Library of Statistical Techniques founder.",
-    "category": "Personal Blogs",
-    "url": "https://nickchk.com/",
-    "type": "Blog"
-  },
-  {
-    "name": "Scott Cunningham",
-    "description": "'Causal Inference: The Mixtape' author. Substack on causal inference, Mixtape Sessions workshops.",
-    "category": "Personal Blogs",
-    "url": "https://causalinf.substack.com/",
-    "type": "Blog"
-  },
-  {
-    "name": "Andrew Gelman",
-    "description": "Columbia statistician. 20 years of blogging on Bayesian stats, causal inference, and social science methodology.",
-    "category": "Personal Blogs",
-    "url": "https://statmodeling.substack.com/",
-    "type": "Blog"
-  },
-  {
-    "name": "James Brand",
-    "description": "Microsoft economist. Demand estimation, cloud pricing, Julia packages for IO.",
-    "category": "Personal Blogs",
-    "url": "https://www.jamesbrandecon.com/",
-    "type": "Blog"
   }
 ]
