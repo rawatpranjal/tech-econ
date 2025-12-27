@@ -3083,5 +3083,518 @@
       "Hugging Face",
       "community"
     ]
+  },
+  {
+    "name": "DiDi GAIA Open Data",
+    "description": "Billions of GPS points from ride trajectories, driver behavior, and urban mobility patterns in China",
+    "category": "Transportation & Mobility",
+    "url": "https://gaia.didichuxing.com",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["GPS", "rideshare", "China", "mobility"]
+  },
+  {
+    "name": "Grab GPS Traces",
+    "description": "Millions of GPS traces from Southeast Asian ride-hailing platform",
+    "category": "Transportation & Mobility",
+    "url": "https://engineering.grab.com/grab-posisi",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["GPS", "rideshare", "Southeast Asia"]
+  },
+  {
+    "name": "Redfin Housing Market Data",
+    "description": "Home prices, sales, inventory, listings by metro/city/zip. Weekly MLS updates for all US markets",
+    "category": "Real Estate",
+    "url": "https://www.redfin.com/news/data-center",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["housing", "real estate", "MLS", "prices"]
+  },
+  {
+    "name": "Zillow Research Data",
+    "description": "ZHVI (home values), ZORI (rents), inventory, market heat indices for all US markets",
+    "category": "Real Estate",
+    "url": "https://www.zillow.com/research/data",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["housing", "rents", "real estate", "Zillow"]
+  },
+  {
+    "name": "UK Land Registry Price Paid",
+    "description": "4.3GB of UK property transactions spanning decades. Messy government data for housing economics",
+    "category": "Real Estate",
+    "url": "https://www.gov.uk/government/collections/price-paid-data",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["UK", "housing", "property", "government"]
+  },
+  {
+    "name": "iPinYou RTB Dataset",
+    "description": "Billions of bid requests with complete auction logs: bid IDs, timestamps, user agents, regions, bid/paying prices, conversions",
+    "category": "Advertising",
+    "url": "https://contest.ipinyou.com/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["RTB", "advertising", "auctions", "bidding"]
+  },
+  {
+    "name": "Criteo Terabyte",
+    "description": "342GB, 45M samples with 13 integer features and 26 hashed categorical features for CTR prediction",
+    "category": "Advertising",
+    "url": "https://labs.criteo.com/2013/12/download-terabyte-click-logs/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["CTR", "advertising", "large-scale", "benchmark"]
+  },
+  {
+    "name": "Avazu CTR Dataset",
+    "description": "40M samples for mobile ad click-through rate prediction",
+    "category": "Advertising",
+    "url": "https://www.kaggle.com/c/avazu-ctr-prediction",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["CTR", "mobile", "advertising", "Kaggle"]
+  },
+  {
+    "name": "Tencent Social Ads",
+    "description": "100M+ impressions for social ad CTR prediction from WeChat/QQ ecosystem",
+    "category": "Advertising",
+    "url": "https://algo.qq.com/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["CTR", "social", "WeChat", "Tencent"]
+  },
+  {
+    "name": "Adform Display Ads",
+    "description": "64M impressions for display advertising with impressions and clicks",
+    "category": "Advertising",
+    "url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/TADBY7",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["display", "advertising", "impressions"]
+  },
+  {
+    "name": "FCC Spectrum Auctions",
+    "description": "87+ auctions since 1994 with round-by-round bidding records. Nobel Prize research basis for auction theory",
+    "category": "Auctions & Marketplaces",
+    "url": "https://www.fcc.gov/auctions",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["auctions", "spectrum", "government", "mechanism design"]
+  },
+  {
+    "name": "EU TED Procurement",
+    "description": "800K notices/year covering €815B+ in public procurement across 27 EU states",
+    "category": "Auctions & Marketplaces",
+    "url": "https://ted.europa.eu/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["procurement", "EU", "government", "auctions"]
+  },
+  {
+    "name": "USASpending Federal Awards",
+    "description": "400+ variables per transaction for contracts, grants, loans since FY2001. Updated within 5 days",
+    "category": "Auctions & Marketplaces",
+    "url": "https://www.usaspending.gov/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["government", "contracts", "grants", "federal"]
+  },
+  {
+    "name": "Open e-commerce 1.0",
+    "description": "1.85M Amazon purchases from 5,027 US consumers (2018-2022) linked to demographics (age, gender, income, education)",
+    "category": "E-Commerce",
+    "url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/YGLYDY",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["Amazon", "demographics", "purchases", "linked data"]
+  },
+  {
+    "name": "OTTO Session Data",
+    "description": "12M German e-commerce sessions with click → cart → order sequences. RecSys 2022 competition",
+    "category": "E-Commerce",
+    "url": "https://github.com/otto-de/recsys-dataset",
+    "docs_url": null,
+    "github_url": "https://github.com/otto-de/recsys-dataset",
+    "tags": ["sessions", "recommendations", "Germany", "RecSys"]
+  },
+  {
+    "name": "RecSys Challenge 2025 (Synerise)",
+    "description": "1M users with 6 months of real e-commerce behavior logs, 5 event types",
+    "category": "E-Commerce",
+    "url": "https://www.recsyschallenge.com/2025/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["RecSys", "behavior", "competition", "2025"]
+  },
+  {
+    "name": "RecSys Challenge 2024 (EB-NeRD)",
+    "description": "2.3M users, 380M+ impressions for news recommendation from Ekstra Bladet",
+    "category": "E-Commerce",
+    "url": "https://recsys.eb.dk/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["RecSys", "news", "recommendations", "2024"]
+  },
+  {
+    "name": "Amazon ShopBench (KDD 2024)",
+    "description": "57 tasks, 20K questions for LLM shopping assistant benchmark",
+    "category": "E-Commerce",
+    "url": "https://github.com/amazon-science/shopbench",
+    "docs_url": null,
+    "github_url": "https://github.com/amazon-science/shopbench",
+    "tags": ["LLM", "shopping", "benchmark", "Amazon"]
+  },
+  {
+    "name": "Coveo Shopping SIGIR",
+    "description": "30M+ browsing events with query and image vectors for e-commerce search",
+    "category": "E-Commerce",
+    "url": "https://github.com/coveooss/SIGIR-ecom-data-challenge",
+    "docs_url": null,
+    "github_url": "https://github.com/coveooss/SIGIR-ecom-data-challenge",
+    "tags": ["search", "browsing", "vectors", "SIGIR"]
+  },
+  {
+    "name": "ASOS Digital Experiments",
+    "description": "99 real A/B experiments with 24,153 time-granular snapshots for adaptive stopping research",
+    "category": "E-Commerce",
+    "url": "https://osf.io/64jsb/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["A/B testing", "experiments", "adaptive", "fashion"]
+  },
+  {
+    "name": "Upworthy Headlines",
+    "description": "32,487 headline/image A/B experiments with 538M assignments",
+    "category": "E-Commerce",
+    "url": "https://github.com/jboaf/Upworthy_Headline_Experiments",
+    "docs_url": null,
+    "github_url": "https://github.com/jboaf/Upworthy_Headline_Experiments",
+    "tags": ["A/B testing", "headlines", "media", "experiments"]
+  },
+  {
+    "name": "Instacart Market Basket",
+    "description": "3M+ orders from 200K+ users with product sequences, reorder flags, temporal patterns",
+    "category": "Grocery & Supermarkets",
+    "url": "https://www.instacart.com/datasets/grocery-shopping-2017",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["grocery", "orders", "sequences", "Instacart"]
+  },
+  {
+    "name": "Favorita Ecuador Grocery",
+    "description": "125M rows of unit sales with store/item metadata and oil prices for demand forecasting",
+    "category": "Grocery & Supermarkets",
+    "url": "https://www.kaggle.com/c/favorita-grocery-sales-forecasting",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["grocery", "forecasting", "Ecuador", "Kaggle"]
+  },
+  {
+    "name": "LastFM-1B",
+    "description": "1 billion listening events for long-term music listening history analysis",
+    "category": "Entertainment & Media",
+    "url": "http://www.cp.jku.at/datasets/LFM-1b/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["music", "listening", "LastFM", "large-scale"]
+  },
+  {
+    "name": "YouTube User Watch History",
+    "description": "1.8M videos from 243 users over 1.5 years for recommendation engine and caching research",
+    "category": "Entertainment & Media",
+    "url": "https://netsg.cs.sfu.ca/youtubedata/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["YouTube", "watch history", "recommendations"]
+  },
+  {
+    "name": "YouTube Engagement Dataset",
+    "description": "5M videos with watch percentage, engagement maps, and Freebase topic labels",
+    "category": "Entertainment & Media",
+    "url": "https://github.com/avalanchesiqi/youtube-engagement",
+    "docs_url": null,
+    "github_url": "https://github.com/avalanchesiqi/youtube-engagement",
+    "tags": ["YouTube", "engagement", "topics"]
+  },
+  {
+    "name": "MicroLens",
+    "description": "1B interactions from 34M users across 1M micro-videos for short-form video recommendation",
+    "category": "Entertainment & Media",
+    "url": "https://github.com/westlake-repl/MicroLens",
+    "docs_url": null,
+    "github_url": "https://github.com/westlake-repl/MicroLens",
+    "tags": ["micro-video", "recommendations", "large-scale"]
+  },
+  {
+    "name": "Twitch Gamers Social Network",
+    "description": "168K nodes with mutual follower relationships and 6 ML tasks (churn, affiliate status, view count)",
+    "category": "Entertainment & Media",
+    "url": "https://snap.stanford.edu/data/twitch-gamers.html",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["Twitch", "social network", "gaming", "SNAP"]
+  },
+  {
+    "name": "KuaiSAR",
+    "description": "5M search events and 14.6M recommendation events from 25K users on Kuaishou short video platform",
+    "category": "Entertainment & Media",
+    "url": "https://kuaisar.github.io/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["search", "recommendations", "short video", "Kuaishou"]
+  },
+  {
+    "name": "YouTube-8M",
+    "description": "8M videos with video-level features for large-scale video understanding",
+    "category": "Entertainment & Media",
+    "url": "https://research.google.com/youtube8m/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["YouTube", "video", "features", "Google"]
+  },
+  {
+    "name": "Meta Content Library",
+    "description": "Full public archive of Facebook/Instagram posts, Pages, groups, events via ICPSR application",
+    "category": "Social & Web",
+    "url": "https://transparency.meta.com/researchtools/meta-content-library",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["Meta", "Facebook", "Instagram", "social media"]
+  },
+  {
+    "name": "Pushshift Reddit Archive",
+    "description": "5.6B comments and 651M posts from full Reddit history since 2005 for social/economic research",
+    "category": "Social & Web",
+    "url": "https://pushshift.io/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["Reddit", "comments", "posts", "social media"]
+  },
+  {
+    "name": "Stack Overflow Data Dump",
+    "description": "Full Q&A archive with annual developer survey (49K+ responses) including salaries and tech adoption",
+    "category": "Social & Web",
+    "url": "https://stackoverflow.com/company/research",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["Stack Overflow", "Q&A", "developers", "salaries"]
+  },
+  {
+    "name": "YFCC100M",
+    "description": "100M media objects (Flickr photos/videos) with metadata, Creative Commons licensed",
+    "category": "Social & Web",
+    "url": "https://webscope.sandbox.yahoo.com/catalog.php?datatype=i&did=67",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["Flickr", "photos", "videos", "Yahoo"]
+  },
+  {
+    "name": "MobileRec",
+    "description": "19.3M user reviews from 700K users across 10K apps in 48 categories from Google Play",
+    "category": "App Stores",
+    "url": "https://dl.acm.org/doi/10.1145/3539618.3591884",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["apps", "reviews", "Google Play", "SIGIR"]
+  },
+  {
+    "name": "Google Play Store Dataset",
+    "description": "2.3M apps with ratings, reviews, categories, sizes, and install counts",
+    "category": "App Stores",
+    "url": "https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["apps", "Google Play", "ratings", "Kaggle"]
+  },
+  {
+    "name": "LendingClub P2P Loans",
+    "description": "2.7M loans (2007-2019) with borrower income, DTI, employment, defaults, and state macro variables",
+    "category": "Financial Services",
+    "url": "https://data.mendeley.com/datasets/w6xk892fgr/1",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["P2P", "lending", "loans", "credit"]
+  },
+  {
+    "name": "Prosper Loan Data",
+    "description": "113K P2P loans with borrower characteristics and outcomes",
+    "category": "Financial Services",
+    "url": "https://www.prosper.com/about-us",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["P2P", "lending", "loans"]
+  },
+  {
+    "name": "Amazon Fraud Benchmark",
+    "description": "9 consolidated datasets for standardized fraud detection evaluation including IEEE-CIS (590K transactions)",
+    "category": "Financial Services",
+    "url": "https://github.com/amazon-science/fraud-dataset-benchmark",
+    "docs_url": null,
+    "github_url": "https://github.com/amazon-science/fraud-dataset-benchmark",
+    "tags": ["fraud", "detection", "benchmark", "Amazon"]
+  },
+  {
+    "name": "PaySim Synthetic",
+    "description": "6M+ mobile money transactions from agent-based model calibrated on African mobile money logs",
+    "category": "Financial Services",
+    "url": "https://www.kaggle.com/datasets/ealaxi/paysim1",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["fraud", "mobile money", "synthetic", "Africa"]
+  },
+  {
+    "name": "LOBSTER",
+    "description": "Millisecond precision reconstructed NASDAQ order books for market microstructure research",
+    "category": "Financial Services",
+    "url": "https://lobsterdata.com/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["order book", "NASDAQ", "market microstructure", "HFT"]
+  },
+  {
+    "name": "ORBITAAL Bitcoin Graph",
+    "description": "13 years (2009-2021) of entity-level Bitcoin transaction networks with BTC/USD values",
+    "category": "Financial Services",
+    "url": "https://www.nature.com/articles/s41597-023-02416-6",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["Bitcoin", "crypto", "graph", "transactions"]
+  },
+  {
+    "name": "Google BigQuery Crypto",
+    "description": "8 blockchains with complete histories and daily updates for cryptocurrency analysis",
+    "category": "Financial Services",
+    "url": "https://cloud.google.com/bigquery/public-data",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["crypto", "blockchain", "BigQuery", "Google"]
+  },
+  {
+    "name": "JobHop (Flanders)",
+    "description": "2.3M occupations and 391K resumes with real-world career trajectories mapped to ESCO codes",
+    "category": "Labor Markets",
+    "url": "https://huggingface.co/datasets/jensjorisdecorte/JobHop",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["careers", "resumes", "occupations", "Belgium"]
+  },
+  {
+    "name": "BLS JOLTS",
+    "description": "Monthly job openings, hires, and separations by industry since 2000",
+    "category": "Labor Markets",
+    "url": "https://www.bls.gov/jlt/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["jobs", "labor", "government", "BLS"]
+  },
+  {
+    "name": "Stack Overflow Developer Survey",
+    "description": "49K+ annual responses with salaries, tech adoption, and developer economics",
+    "category": "Labor Markets",
+    "url": "https://survey.stackoverflow.co/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["developers", "salaries", "survey", "tech"]
+  },
+  {
+    "name": "HateXplain",
+    "description": "20K posts with hate speech labels, human rationales, and 10 target categories",
+    "category": "Content Moderation",
+    "url": "https://github.com/hate-alert/HateXplain",
+    "docs_url": null,
+    "github_url": "https://github.com/hate-alert/HateXplain",
+    "tags": ["hate speech", "explainability", "NLP"]
+  },
+  {
+    "name": "CoAID",
+    "description": "4,251 news articles and 296K claims about COVID-19 healthcare misinformation",
+    "category": "Content Moderation",
+    "url": "https://github.com/cuilimeng/CoAID",
+    "docs_url": null,
+    "github_url": "https://github.com/cuilimeng/CoAID",
+    "tags": ["COVID", "misinformation", "healthcare", "claims"]
+  },
+  {
+    "name": "LIAR",
+    "description": "12.8K fact-checked political statements with speaker metadata",
+    "category": "Content Moderation",
+    "url": "https://sites.cs.ucsb.edu/~william/software.html",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["fact-checking", "politics", "misinformation"]
+  },
+  {
+    "name": "FakeNewsNet",
+    "description": "23K news articles labeled fake/real with social context for misinformation research",
+    "category": "Content Moderation",
+    "url": "https://github.com/KaiDMML/FakeNewsNet",
+    "docs_url": null,
+    "github_url": "https://github.com/KaiDMML/FakeNewsNet",
+    "tags": ["fake news", "misinformation", "social media"]
+  },
+  {
+    "name": "Amazon Last Mile Routing",
+    "description": "9,184 routes across 5 US metros with stop-level coordinates, service times, and driver knowledge",
+    "category": "Logistics & Supply Chain",
+    "url": "https://registry.opendata.aws/amazon-last-mile-challenges/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["routing", "last mile", "Amazon", "logistics"]
+  },
+  {
+    "name": "LaDe (Cainiao)",
+    "description": "10.6M+ packages with 619K trajectories and GPS data from Alibaba logistics",
+    "category": "Logistics & Supply Chain",
+    "url": "https://github.com/chuxiaoyu/LaDE",
+    "docs_url": null,
+    "github_url": "https://github.com/chuxiaoyu/LaDE",
+    "tags": ["packages", "trajectories", "Alibaba", "delivery"]
+  },
+  {
+    "name": "Census Business Dynamics Statistics",
+    "description": "8M establishments with firm age, job creation/destruction data from 1978-2023",
+    "category": "Data Portals",
+    "url": "https://www.census.gov/programs-surveys/bds.html",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["business", "employment", "Census", "government"]
+  },
+  {
+    "name": "SEC EDGAR Filings",
+    "description": "21M+ filings since 1994 including 10-Ks, 8-Ks, proxy statements, and structured XBRL",
+    "category": "Data Portals",
+    "url": "https://www.sec.gov/edgar",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["SEC", "filings", "financial", "government"]
+  },
+  {
+    "name": "PatentsView",
+    "description": "13M+ patent applications with inventor gender, prosecution history, and citation networks through 2023",
+    "category": "Data Portals",
+    "url": "https://patentsview.org/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["patents", "USPTO", "innovation", "citations"]
+  },
+  {
+    "name": "CMS Hospital Price Transparency",
+    "description": "Machine-readable pricing files from 6,000+ hospitals required since Jan 2021",
+    "category": "Healthcare",
+    "url": "https://www.cms.gov/hospital-price-transparency",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["healthcare", "pricing", "hospitals", "CMS"]
+  },
+  {
+    "name": "Patreon Creator Data",
+    "description": "279K+ active creators with membership tiers and patron counts",
+    "category": "Creator Economy",
+    "url": "https://graphtreon.com/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["Patreon", "creators", "subscriptions"]
   }
 ]
