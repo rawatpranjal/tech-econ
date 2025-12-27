@@ -1516,20 +1516,6 @@
     ]
   },
   {
-    "name": "Dmall Fresh Food (MSOM21)",
-    "description": "Dmall Fresh Food Delivery dataset from MSOM 2021",
-    "category": "Food & Delivery",
-    "url": "https://pubsonline.informs.org/page/msom/data-driven-challenge",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "fresh food",
-      "delivery",
-      "grocery",
-      "MSOM"
-    ]
-  },
-  {
     "name": "BTS Airline On-Time Performance",
     "description": "All US flights since 1987. Delays, cancellations, fares, capacity. Revenue management research goldmine",
     "category": "Transportation & Mobility",
@@ -2167,23 +2153,6 @@
       "government data",
       "real-world",
       "time series"
-    ]
-  },
-  {
-    "name": "Stack Overflow SQL Database (2024)",
-    "description": "202GB SQL Server database dump of all Q&A since 2008, available for PostgreSQL. Real messy developer data",
-    "category": "Social & Web",
-    "url": "https://archive.org/details/stackexchange",
-    "docs_url": "https://www.brentozar.com/archive/2015/10/how-to-download-the-stack-overflow-database-via-bittorrent/",
-    "github_url": "https://github.com/BrentOzarULTD/soddi",
-    "tags": [
-      "database dump",
-      "SQL Server",
-      "PostgreSQL",
-      "large-scale",
-      "Q&A",
-      "real-world",
-      "messy data"
     ]
   },
   {
