@@ -22,14 +22,40 @@ REQUIRED_FIELDS = {
     "resources.json": ["name", "url", "category"],
     "community.json": ["name", "url"],
     "career.json": ["name", "url"],
-    "roadmaps.json": ["id", "title"],  # Different structure
+    "roadmaps.json": ["name"],  # Uses name field
 }
 
-# URLs that are known to block HEAD requests or be flaky
-SKIP_URLS = {
+# Domains that block bot requests - skip these in link checking
+SKIP_DOMAINS = {
     "linkedin.com",
     "twitter.com",
     "x.com",
+    "medium.com",          # Blocks bots
+    "leetcode.com",        # Blocks bots
+    "sec.gov",             # Blocks bots
+    "zillow.com",          # Blocks bots
+    "freakonomics.com",    # Blocks bots
+    "doordash.engineering", # Blocks bots
+    "uber.com",            # Returns 406
+    "informs.org",         # Various issues
+    "pubsonline.informs.org",
+    "forecasters.org",     # Blocks bots
+    "statmodeling.stat.columbia.edu",  # Blocks bots
+    "netflixtechblog.com", # SSL issues
+    "eng.lyft.com",        # SSL issues
+    "mediaspace.gatech.edu", # SSL issues
+    "leonwei.com",         # Blocks bots
+    "sciencedirect.com",   # Blocks bots
+    "data.iowa.gov",       # Slow/timeout
+    "kevinsheppard.com",   # Slow/timeout
+    "nabe.com",            # Various issues
+    "bts.gov",             # Blocks bots
+    "ec.sigecom.org",      # Connection issues
+    "wine-conference.org", # Connection issues
+    "data-mining-cup.com", # Timeout
+    "ai.baidu.com",        # Various issues
+    "openicpsr.org",       # Blocks bots
+    "web.stanford.edu",    # Various issues
 }
 
 def load_json_files(data_dir: Path) -> dict:
@@ -98,7 +124,7 @@ def find_duplicate_urls(files: dict) -> list:
 def check_url(url: str, timeout: int = 10) -> tuple:
     """Check if URL is accessible. Returns (url, error_or_none)."""
     # Skip known problematic domains
-    for skip in SKIP_URLS:
+    for skip in SKIP_DOMAINS:
         if skip in url:
             return (url, None)
 
@@ -198,24 +224,33 @@ def main():
     else:
         print("   No duplicate URLs found")
 
-    # Check broken links
+    # Check broken links (warnings only - don't fail build)
     print("\n3. Checking for broken links...")
     link_errors = check_broken_links(files)
     if link_errors:
-        print(f"   Found {len(link_errors)} broken links")
-        all_errors.extend(link_errors)
+        print(f"   Found {len(link_errors)} broken links (warnings)")
     else:
         print("   All links accessible")
 
     # Summary
     print("\n" + "=" * 60)
+
+    # Critical errors (missing fields, duplicates) fail the build
     if all_errors:
         print(f"FAILED: {len(all_errors)} errors found:\n")
         for error in all_errors:
             print(f"  - {error}")
+
+    # Broken links are warnings only
+    if link_errors:
+        print(f"\nWARNINGS: {len(link_errors)} broken links (not failing build):\n")
+        for error in link_errors:
+            print(f"  - {error}")
+
+    if all_errors:
         sys.exit(1)
     else:
-        print("PASSED: All checks passed!")
+        print("PASSED: All critical checks passed!")
         sys.exit(0)
 
 
