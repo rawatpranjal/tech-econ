@@ -1,0 +1,84 @@
+{{ define "main" }}
+<div class="about-page">
+    <header class="about-header">
+        <h1>Feedback</h1>
+    </header>
+
+    <div class="about-content">
+        <section class="about-section">
+            <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
+                Have suggestions, found a bug, or want to share your thoughts? Let us know!
+            </p>
+
+            <form action="https://formspree.io/f/xaqyorzo" method="POST" class="feedback-form">
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Your feedback..." rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">Send Feedback</button>
+            </form>
+        </section>
+    </div>
+</div>
+
+<style>
+.feedback-form {
+    max-width: 500px;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0066cc;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-button {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    background: #0066cc;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submit-button:hover {
+    background: #0052a3;
+}
+</style>
+{{ end }}

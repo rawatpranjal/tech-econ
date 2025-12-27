@@ -1,0 +1,99 @@
+{{ define "main" }}
+<div class="about-page">
+    <header class="about-header">
+        <h1>Submit a Package</h1>
+    </header>
+
+    <div class="about-content">
+        <section class="about-section">
+            <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
+                Know a Python package for econometrics or data science that should be listed? Submit it here!
+            </p>
+
+            <form action="https://formspree.io/f/mqekqrob" method="POST" class="feedback-form">
+                <div class="form-group">
+                    <label for="package_name">Package Name *</label>
+                    <input type="text" id="package_name" name="package_name" placeholder="e.g., statsmodels" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="url">GitHub or PyPI URL *</label>
+                    <input type="url" id="url" name="url" placeholder="https://github.com/..." required>
+                </div>
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <input type="text" id="category" name="category" placeholder="e.g., Causal Inference, Time Series">
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Brief Description</label>
+                    <textarea id="description" name="description" placeholder="What does this package do?" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Your Email (optional)</label>
+                    <input type="email" id="email" name="email" placeholder="your@email.com">
+                </div>
+
+                <button type="submit" class="submit-button">Submit Package</button>
+            </form>
+        </section>
+    </div>
+</div>
+
+<style>
+.feedback-form {
+    max-width: 500px;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0066cc;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.submit-button {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    background: #0066cc;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.submit-button:hover {
+    background: #0052a3;
+}
+</style>
+{{ end }}
