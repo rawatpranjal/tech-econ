@@ -1,56 +1,54 @@
 {{ define "main" }}
+<!-- Search Index Data for Fuse.js -->
+<script id="search-data" type="application/json">
+[{{ range $i, $pkg := .Site.Data.packages }}{{ if $i }},{{ end }}{"name":"{{ .name }}","description":"{{ .description | htmlEscape }}","category":"{{ .category }}","tags":"{{ delimit .tags "," }}","best_for":"{{ .best_for | htmlEscape }}"}{{ end }}]
+</script>
+
 <div class="container">
-    <!-- Header -->
-    <header class="header">
-        <h1>{{ .Site.Title }}</h1>
-        <p class="subtitle">{{ .Site.Params.description }}</p>
-        <a href="https://github.com/rawatpranjal/metrics-packages/issues/new?template=submit-package.yml" class="btn-suggest" target="_blank">Submit a Package</a>
-    </header>
-
-    <!-- Enhanced Search Bar -->
-    <div class="search-container">
-        <div class="search-input-wrapper">
-            <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.35-4.35"></path>
-            </svg>
-            <input type="text"
-                   id="package-search"
-                   class="search-input"
-                   placeholder="Search packages by name, description, or use case..."
-                   autocomplete="off">
-            <button id="clear-search" class="clear-btn" type="button" aria-label="Clear search">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M18 6L6 18M6 6l12 12"></path>
+    <!-- Search and Filters Row -->
+    <div class="search-filters-row">
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
                 </svg>
-            </button>
+                <input type="text"
+                       id="package-search"
+                       class="search-input"
+                       placeholder="Search packages..."
+                       autocomplete="off">
+                <button id="clear-search" class="clear-btn" type="button" aria-label="Clear search">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 6L6 18M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
-        <div id="result-count" class="result-count">{{ len .Site.Data.packages }} packages</div>
-    </div>
 
-    <!-- Category Filter Buttons -->
-    <div class="category-filters">
-        <div class="filter-scroll-container">
-            <button class="category-btn active" data-category="all">All</button>
-            {{ $categories := slice }}
-            {{ range .Site.Data.packages }}
-                {{ if not (in $categories .category) }}
-                    {{ $categories = $categories | append .category }}
-                {{ end }}
+        <!-- Category Dropdown -->
+        {{ $categories := slice }}
+        {{ range .Site.Data.packages }}
+            {{ if not (in $categories .category) }}
+                {{ $categories = $categories | append .category }}
             {{ end }}
+        {{ end }}
+        <select id="category-select" class="category-select">
+            <option value="all">All Categories</option>
             {{ range $cat := sort $categories }}
-            <button class="category-btn" data-category="{{ $cat }}">{{ $cat }}</button>
+            <option value="{{ $cat }}">{{ $cat }}</option>
             {{ end }}
-        </div>
-    </div>
+        </select>
 
-    <!-- View Toggle -->
-    <div class="controls">
+        <!-- View Toggle -->
         <div class="view-toggle">
             <button id="btn-cards" class="toggle-btn active">Cards</button>
             <button id="btn-table" class="toggle-btn">Table</button>
         </div>
     </div>
+
+    <div id="result-count" class="result-count">{{ len .Site.Data.packages }} packages</div>
 
     <!-- Cards View -->
     <div id="cards-view" class="package-grid">
