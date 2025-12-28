@@ -9,6 +9,7 @@
 {{ $videos := where .Site.Data.talks "type" "in" (slice "Video" "YouTube Channel" "Interview" "Video Series" "Talks + Papers") }}
 {{ $podcasts := where .Site.Data.talks "type" "in" (slice "Podcast" "Podcast Series") }}
 {{ $blogs := where .Site.Data.community "category" "Blogs" }}
+{{ $industryBlogsFromResources := where .Site.Data.resources "category" "Industry Blogs" }}
 {{ $books := .Site.Data.books }}
 
 <div class="container">
@@ -21,7 +22,7 @@
             Podcasts <span class="tab-count">{{ len $podcasts }}</span>
         </button>
         <button class="main-tab" data-tab="blogs">
-            Blogs <span class="tab-count">{{ len $blogs }}</span>
+            Blogs <span class="tab-count">{{ add (len $blogs) (len $industryBlogsFromResources) }}</span>
         </button>
         <button class="main-tab" data-tab="books">
             Books <span class="tab-count">{{ len $books }}</span>
@@ -169,9 +170,6 @@
 
     <!-- ========== BLOGS TAB ========== -->
     <div id="tab-blogs" class="tab-content">
-        {{ $personalBlogs := where $blogs "type" "Personal Blog" }}
-        {{ $industryBlogs := where $blogs "type" "Industry Blog" }}
-
         <div class="search-filters-row">
             <div class="search-container">
                 <div class="search-input-wrapper">
@@ -184,19 +182,19 @@
             </div>
             <select id="blogs-category" class="category-select">
                 <option value="all">All Blogs</option>
-                <option value="Personal Blog">Personal Blogs</option>
-                <option value="Industry Blog">Industry Blogs</option>
+                <option value="Personal">Personal Blogs</option>
+                <option value="Industry">Industry Blogs</option>
             </select>
         </div>
 
-        <div id="blogs-count" class="result-count">{{ len $blogs }} blogs</div>
+        <div id="blogs-count" class="result-count">{{ add (len $blogs) (len $industryBlogsFromResources) }} blogs</div>
 
         <div class="resources-grid">
-            <div class="category-section" data-section-category="Personal Blog">
+            <div class="category-section" data-section-category="Personal">
                 <h2 class="category-title">Personal Blogs</h2>
                 <div class="cards-row">
-                    {{ range $personalBlogs }}
-                    <div class="resource-card" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="Personal Blog">
+                    {{ range $blogs }}
+                    <div class="resource-card" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="Personal">
                         <div class="card-header">
                             <img class="resource-favicon" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
                             <h3 class="resource-name">
@@ -212,11 +210,11 @@
                     {{ end }}
                 </div>
             </div>
-            <div class="category-section" data-section-category="Industry Blog">
+            <div class="category-section" data-section-category="Industry">
                 <h2 class="category-title">Industry Blogs</h2>
                 <div class="cards-row">
-                    {{ range $industryBlogs }}
-                    <div class="resource-card" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="Industry Blog">
+                    {{ range $industryBlogsFromResources }}
+                    <div class="resource-card" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="Industry">
                         <div class="card-header">
                             <img class="resource-favicon" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
                             <h3 class="resource-name">
