@@ -25,78 +25,6 @@
   // Stats endpoint URL
   var STATS_ENDPOINT = 'https://tech-econ-analytics.rawat-pranjal010.workers.dev/stats';
 
-  // State
-  var useLiveData = false;
-  var lastLiveData = null;
-
-  // Demo data for when no real data exists
-  var DEMO_DATA = {
-    updated: Date.now(),
-    totalEvents: 0,
-    summary: {
-      pageviews: 1247,
-      sessions: 328,
-      searches: 89,
-      clicks: 412,
-      avgTimeOnPage: 145
-    },
-    topSearches: [
-      { name: 'causal inference', count: 23 },
-      { name: 'machine learning', count: 18 },
-      { name: 'econometrics', count: 15 },
-      { name: 'python packages', count: 12 },
-      { name: 'time series', count: 11 },
-      { name: 'panel data', count: 9 },
-      { name: 'regression', count: 8 },
-      { name: 'statistics', count: 7 }
-    ],
-    topPages: [
-      { name: '/', count: 412 },
-      { name: '/packages/', count: 287 },
-      { name: '/datasets/', count: 198 },
-      { name: '/learning/', count: 156 },
-      { name: '/start/', count: 94 }
-    ],
-    topClicks: {
-      packages: [
-        { name: 'DoWhy', count: 34 },
-        { name: 'statsmodels', count: 28 },
-        { name: 'scikit-learn', count: 25 }
-      ],
-      datasets: [
-        { name: 'UCI ML Repository', count: 19 },
-        { name: 'Kaggle Datasets', count: 15 }
-      ],
-      learning: [
-        { name: 'Causal Inference Book', count: 22 },
-        { name: 'ML Course', count: 18 }
-      ]
-    },
-    dailyPageviews: (function() {
-      var data = {};
-      for (var i = 6; i >= 0; i--) {
-        var d = new Date();
-        d.setDate(d.getDate() - i);
-        var key = d.toISOString().split('T')[0];
-        data[key] = Math.floor(Math.random() * 100) + 120;
-      }
-      return data;
-    })(),
-    countries: [
-      { name: 'US', count: 145 },
-      { name: 'IN', count: 67 },
-      { name: 'GB', count: 42 },
-      { name: 'DE', count: 31 },
-      { name: 'CA', count: 23 }
-    ],
-    performance: {
-      lcp: { avg: 1850, samples: 234 },
-      fid: { avg: 45, samples: 189 },
-      cls: { avg: 0.08, samples: 234 }
-    },
-    isDemo: true
-  };
-
   function loadAnalytics() {
     fetch(STATS_ENDPOINT)
       .then(function(response) {
@@ -104,32 +32,13 @@
         return response.json();
       })
       .then(function(data) {
-        lastLiveData = data;
-        // Use demo data if no real data yet AND toggle is off
-        if (data.totalEvents === 0 && !useLiveData) {
-          data = DEMO_DATA;
-        }
         renderDashboard(data);
       })
       .catch(function(err) {
         console.error('Analytics error:', err);
-        // Fall back to demo data on error
-        renderDashboard(DEMO_DATA);
+        showError('Unable to load analytics data. Please try again later.');
       });
   }
-
-  // Toggle between demo and live data
-  window.toggleDataSource = function() {
-    var checkbox = document.getElementById('use-live-data');
-    useLiveData = checkbox.checked;
-    if (useLiveData && lastLiveData) {
-      renderDashboard(lastLiveData);
-    } else if (!useLiveData && lastLiveData && lastLiveData.totalEvents === 0) {
-      renderDashboard(DEMO_DATA);
-    } else {
-      loadAnalytics();
-    }
-  };
 
   function showError(message) {
     document.getElementById('analytics-loading').style.display = 'none';
@@ -172,10 +81,8 @@
     renderCountries(data.countries || []);
 
     // Last updated
-    var updateText = data.isDemo
-      ? 'Showing demo data (real data will appear as users visit)'
-      : 'Last updated: ' + new Date(data.updated).toLocaleString();
-    document.getElementById('last-updated').textContent = updateText;
+    document.getElementById('last-updated').textContent =
+      'Last updated: ' + new Date(data.updated).toLocaleString();
   }
 
   function renderPageviewsChart(dailyData) {

@@ -129,10 +129,6 @@
         <div class="analytics-footer">
             <span id="last-updated">Last updated: -</span>
             <div class="footer-controls">
-                <label class="data-toggle">
-                    <input type="checkbox" id="use-live-data" onchange="toggleDataSource()">
-                    <span class="toggle-label">Live Data</span>
-                </label>
                 <button id="refresh-btn" onclick="refreshAnalytics()">Refresh</button>
             </div>
         </div>
@@ -478,23 +474,6 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-}
-
-.data-toggle {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-}
-
-.data-toggle input {
-    width: 18px;
-    height: 18px;
-    accent-color: var(--accent-color);
-}
-
-.toggle-label {
-    font-size: 0.85rem;
 }
 
 #refresh-btn {
