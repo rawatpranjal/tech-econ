@@ -1201,10 +1201,234 @@
   },
   {
     "name": "StatsForecast: Intermittent/Sparse Data Tutorial",
-    "description": "Demand is often intermittent (lots of zeros) \u2014 learn baselines built for that",
-    "category": "Optimization",
+    "description": "Demand is often intermittent (lots of zeros) — learn baselines built for that",
+    "category": "Forecasting",
     "url": "https://nixtlaverse.nixtla.io/statsforecast/docs/tutorials/intermittentdata.html",
     "type": "Documentation",
+    "level": "Medium"
+  },
+  {
+    "name": "Forecasting: Principles and Practice, Python Edition",
+    "description": "THE definitive resource — Hyndman's book adapted with Nixtlaverse Python code. Updated December 2025.",
+    "category": "Forecasting",
+    "url": "https://otexts.com/fpppy/",
+    "type": "Online Book",
+    "level": "Medium"
+  },
+  {
+    "name": "MIT OCW 14.384: Time Series Analysis",
+    "description": "Graduate-level course with 26 lectures. ARMA, VAR, unit roots, cointegration, state-space, Kalman filters.",
+    "category": "Forecasting",
+    "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/",
+    "type": "Course",
+    "level": "Hard"
+  },
+  {
+    "name": "Penn State STAT 510: Applied Time Series Analysis",
+    "description": "Free graduate course with 14 lessons. ARIMA, seasonal models, spectral analysis, VAR, ARCH/GARCH.",
+    "category": "Forecasting",
+    "url": "https://online.stat.psu.edu/stat510/",
+    "type": "Course",
+    "level": "Hard"
+  },
+  {
+    "name": "statsforecast Documentation (Nixtla)",
+    "description": "AutoARIMA 19x faster than pmdarima. AutoETS, AutoTheta, MSTL, GARCH, Croston with distributed computing.",
+    "category": "Forecasting",
+    "url": "https://nixtlaverse.nixtla.io/statsforecast/index.html",
+    "type": "Documentation",
+    "level": "Medium"
+  },
+  {
+    "name": "mlforecast Documentation (Nixtla)",
+    "description": "ML-based forecasting with scikit-learn compatible interface. Lag features, rolling means, LightGBM/XGBoost.",
+    "category": "Forecasting",
+    "url": "https://nixtlaverse.nixtla.io/mlforecast/index.html",
+    "type": "Documentation",
+    "level": "Medium"
+  },
+  {
+    "name": "Prophet Official Documentation",
+    "description": "Meta's additive model for business seasonality. Component plots, holidays, custom seasonality.",
+    "category": "Forecasting",
+    "url": "https://facebook.github.io/prophet/docs/quick_start.html",
+    "type": "Documentation",
+    "level": "Easy"
+  },
+  {
+    "name": "Prophet Critique: Sean J. Taylor Retrospective",
+    "description": "Honest assessment from Prophet co-creator: 'I do actually feel a bit of shame about the project.' Must-read.",
+    "category": "Forecasting",
+    "url": "https://medium.com/@seanjtaylor/a-personal-retrospective-on-prophet-f223c2378985",
+    "type": "Blog",
+    "level": "Easy"
+  },
+  {
+    "name": "Uber: Forecasting at Uber—An Introduction",
+    "description": "ARIMA, Holt-Winters, exponential smoothing, Theta (M3 winner). Insights from M4 winner Slawek Smyl.",
+    "category": "Forecasting",
+    "url": "https://www.uber.com/blog/forecasting-introduction/",
+    "type": "Blog",
+    "level": "Medium"
+  },
+  {
+    "name": "DoorDash: ELITE Ensemble Learning for Time Series",
+    "description": "ELITE framework balancing accuracy vs. computational efficiency. Uses Ray for distributed forecasting.",
+    "category": "Forecasting",
+    "url": "https://doordash.engineering/2023/06/20/how-doordash-built-an-ensemble-learning-model-for-time-series-forecasting/",
+    "type": "Blog",
+    "level": "Medium"
+  },
+  {
+    "name": "Amazon Science: Chronos Foundation Model",
+    "description": "State-of-the-art foundation model using T5 architecture. Zero-shot forecasting via token quantization.",
+    "category": "Forecasting",
+    "url": "https://www.amazon.science/blog/adapting-language-model-architectures-for-time-series-forecasting",
+    "type": "Blog",
+    "level": "Hard"
+  },
+  {
+    "name": "Amazon Science: AutoGluon-TimeSeries",
+    "description": "AutoML for forecasting in 3 lines of code. Outperforms best-in-hindsight on 29 benchmark datasets.",
+    "category": "Forecasting",
+    "url": "https://www.amazon.science/publications/autogluon-timeseries-automl-for-probabilistic-time-series-forecasting",
+    "type": "Paper",
+    "level": "Medium"
+  },
+  {
+    "name": "Instacart: Predicting Availability of 200M Grocery Items",
+    "description": "XGBoost with 130 features scoring 200M+ items every 60 minutes. 15x items with 1/5 resources.",
+    "category": "Forecasting",
+    "url": "https://tech.instacart.com/predicting-real-time-availability-of-200-million-grocery-items-in-us-canada-stores-61f43a16eafe",
+    "type": "Blog",
+    "level": "Medium"
+  },
+  {
+    "name": "sktime: Unified Framework for ML with Time Series",
+    "description": "Published at NeurIPS. Unified scikit-learn-like API for forecasting, pipelines, cross-validation.",
+    "category": "Forecasting",
+    "url": "https://www.sktime.net/en/latest/examples/01_forecasting.html",
+    "type": "Documentation",
+    "level": "Medium"
+  },
+  {
+    "name": "scikit-learn: Lagged Features for Time Series",
+    "description": "Official example using Polars for feature engineering with HistGradientBoostingRegressor.",
+    "category": "Forecasting",
+    "url": "https://scikit-learn.org/stable/auto_examples/applications/plot_time_series_lagged_features.html",
+    "type": "Tutorial",
+    "level": "Medium"
+  },
+  {
+    "name": "MIT 15.053: Optimization Methods in Management Science",
+    "description": "Undergraduate course on LP with geometry and visualization before algebra. Interactive spreadsheet exercises.",
+    "category": "Optimization",
+    "url": "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/",
+    "type": "Course",
+    "level": "Easy"
+  },
+  {
+    "name": "QuantEcon: Linear Programming Introduction",
+    "description": "Python notebooks from Nobel Laureate Sargent. LP with economics applications using SciPy and OR-Tools.",
+    "category": "Optimization",
+    "url": "https://intro.quantecon.org/lp_intro.html",
+    "type": "Tutorial",
+    "level": "Easy"
+  },
+  {
+    "name": "Stanford CS229 Convex Optimization Overview",
+    "description": "Zico Kolter's ML course supplement. Convex sets and functions with geometric intuition — ideal pre-Boyd prep.",
+    "category": "Optimization",
+    "url": "https://see.stanford.edu/materials/aimlcs229/cs229-cvxopt.pdf",
+    "type": "Lecture Notes",
+    "level": "Medium"
+  },
+  {
+    "name": "Real Python: Linear Programming with Python",
+    "description": "Comprehensive tutorial covering visualization, feasible regions, SciPy, PuLP, and mixed-integer programming.",
+    "category": "Optimization",
+    "url": "https://realpython.com/linear-programming-python/",
+    "type": "Tutorial",
+    "level": "Easy"
+  },
+  {
+    "name": "SciPy Lecture Notes: Mathematical Optimization",
+    "description": "Academic tutorial with visual explanations. Gradient descent, BFGS, Nelder-Mead with convergence visualizations.",
+    "category": "Optimization",
+    "url": "https://scipy-lectures.org/advanced/mathematical_optimization/",
+    "type": "Tutorial",
+    "level": "Medium"
+  },
+  {
+    "name": "PuLP Official Documentation",
+    "description": "Complete LP/MIP documentation with case studies: blending problem, Sudoku, transportation. Multiple solver support.",
+    "category": "Optimization",
+    "url": "https://coin-or.github.io/pulp/",
+    "type": "Documentation",
+    "level": "Easy"
+  },
+  {
+    "name": "Google OR-Tools Python Guide",
+    "description": "Official documentation with setup and examples. CP-SAT solver won MiniZinc Challenge 2013-2024.",
+    "category": "Optimization",
+    "url": "https://developers.google.com/optimization/introduction/python",
+    "type": "Documentation",
+    "level": "Medium"
+  },
+  {
+    "name": "DoorDash: Next-Generation Dasher Dispatch Optimization",
+    "description": "Rare solver benchmarking transparency — compares CBC, XPress, CPLEX, Gurobi (34x faster than CBC).",
+    "category": "Optimization",
+    "url": "https://careersatdoordash.com/blog/next-generation-optimization-for-dasher-dispatch-at-doordash/",
+    "type": "Blog",
+    "level": "Medium"
+  },
+  {
+    "name": "Uber: Dynamic Pricing and Matching in Ride-Hailing",
+    "description": "Academic rigor with industry application. Joint optimization of pricing and matching.",
+    "category": "Optimization",
+    "url": "https://www.uber.com/blog/research/dynamic-pricing-and-matching-in-ride-hailing-platforms/",
+    "type": "Blog",
+    "level": "Hard"
+  },
+  {
+    "name": "MIT 6.046J Lecture 15: Linear Programming",
+    "description": "Video intro from algorithmic perspective. LP formulation, reductions, and simplex method.",
+    "category": "Optimization",
+    "url": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/resources/lecture-15-linear-programming-lp-reductions-simplex/",
+    "type": "Lectures",
+    "level": "Medium"
+  },
+  {
+    "name": "MIT 6.079: Introduction to Convex Optimization",
+    "description": "Boyd's MIT course version with better self-study structure. Complete notes, problem sets, applications.",
+    "category": "Optimization",
+    "url": "https://ocw.mit.edu/courses/6-079-introduction-to-convex-optimization-fall-2009/",
+    "type": "Course",
+    "level": "Hard"
+  },
+  {
+    "name": "GILP: Geometric Interpretation of Linear Programs (Cornell)",
+    "description": "Academic-grade visualization (ACM SIGCSE 2023). Shows feasible regions, simplex iterations, branch-and-bound.",
+    "category": "Optimization",
+    "url": "https://gilp.henryrobbins.com/",
+    "type": "Tool",
+    "level": "Easy"
+  },
+  {
+    "name": "Amazon Science: Operations Research and Optimization",
+    "description": "Portal to Amazon's OR research on inventory planning, last-mile delivery, and fulfillment at massive scale.",
+    "category": "Optimization",
+    "url": "https://www.amazon.science/research-areas/operations-research-and-optimization",
+    "type": "Research Portal",
+    "level": "Hard"
+  },
+  {
+    "name": "Instacart: Delivering Optimal Shopping Experiences (Gurobi)",
+    "description": "Why Instacart chose commercial solvers. Reliability and innovation speed from Gurobi.",
+    "category": "Optimization",
+    "url": "https://www.gurobi.com/case_studies/instacart-delivering-optimal-shopping-experiences/",
+    "type": "Case Study",
     "level": "Medium"
   },
   {

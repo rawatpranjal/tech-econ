@@ -510,40 +510,70 @@
   },
   {
     "name": "Learn Optimization (OR)",
-    "description": "Linear programming, convex optimization, and combinatorial methods \u2014 solve pricing, scheduling, and allocation problems",
+    "description": "Linear programming, convex optimization, and combinatorial methods — solve pricing, scheduling, and allocation problems",
     "icon": "trending",
     "resources": [
       {
+        "name": "MIT 15.053: Optimization Methods",
+        "why": "Beginner-friendly LP — geometry and visualization before algebra",
+        "url": "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/"
+      },
+      {
+        "name": "QuantEcon: Linear Programming",
+        "why": "Python notebooks from Nobel Laureate Sargent — economics applications",
+        "url": "https://intro.quantecon.org/lp_intro.html"
+      },
+      {
+        "name": "Stanford CS229 Convex Overview",
+        "why": "The ideal pre-Boyd prep — intuition before rigor",
+        "url": "https://see.stanford.edu/materials/aimlcs229/cs229-cvxopt.pdf"
+      },
+      {
         "name": "Convex Optimization (Boyd & Vandenberghe)",
-        "why": "The bible \u2014 free online, universally cited",
+        "why": "The bible — free online, universally cited",
         "url": "https://web.stanford.edu/~boyd/cvxbook/"
       },
       {
         "name": "Stanford EE364A (YouTube)",
-        "why": "Boyd's legendary lectures \u2014 the gold standard",
+        "why": "Boyd's legendary lectures — the gold standard",
         "url": "https://www.youtube.com/playlist?list=PL3940DD956CDF0622"
       },
       {
-        "name": "Discrete Optimization (Coursera)",
-        "why": "Van Hentenryck's course \u2014 actually makes you implement",
-        "url": "https://www.coursera.org/learn/solving-algorithms-discrete-optimization"
+        "name": "CVXPY Short Course",
+        "why": "Hands-on convex optimization in Python — from Boyd's group",
+        "url": "https://www.cvxgrp.org/cvx_short_course/docs/index.html"
       },
       {
-        "name": "CVXPY Short Course",
-        "why": "Hands-on convex optimization in Python",
-        "url": "https://web.stanford.edu/~boyd/papers/cvx_short_course.html"
+        "name": "Real Python: Linear Programming",
+        "why": "SciPy and PuLP with clear explanations — includes MIP",
+        "url": "https://realpython.com/linear-programming-python/"
+      },
+      {
+        "name": "DoorDash: ML + Optimization for Dispatch",
+        "why": "Real-world DeepRed system — ML estimation + MIP matching",
+        "url": "https://doordash.engineering/2021/08/17/using-ml-and-optimization-to-solve-doordashs-dispatch-problem/"
+      },
+      {
+        "name": "Discrete Optimization (Coursera)",
+        "why": "Van Hentenryck's course — actually makes you implement",
+        "url": "https://www.coursera.org/learn/solving-algorithms-discrete-optimization"
       }
     ],
     "packages": [
       {
         "name": "cvxpy",
-        "why": "Write math as code \u2014 the standard for convex problems",
+        "why": "Write math as code — the standard for convex problems",
         "url": "https://www.cvxpy.org/"
       },
       {
         "name": "scipy.optimize",
-        "why": "Built into SciPy \u2014 start here for basics",
+        "why": "Built into SciPy — start here for basics",
         "url": "https://docs.scipy.org/doc/scipy/reference/optimize.html"
+      },
+      {
+        "name": "PuLP",
+        "why": "Beginner-friendly LP/MIP — supports multiple solvers",
+        "url": "https://coin-or.github.io/pulp/"
       },
       {
         "name": "OR-Tools",
@@ -552,7 +582,7 @@
       },
       {
         "name": "Gurobi",
-        "why": "Best-in-class solver \u2014 free for academics",
+        "why": "Best-in-class solver — free for academics",
         "url": "https://www.gurobi.com/"
       }
     ],
@@ -602,10 +632,90 @@
       },
       {
         "name": "openai-agents",
-        "why": "OpenAI's lightweight SDK \u2014 fast prototyping",
+        "why": "OpenAI's lightweight SDK — fast prototyping",
         "url": "https://github.com/openai/openai-agents-python"
       }
     ],
     "order": 11
+  },
+  {
+    "name": "Learn Forecasting",
+    "description": "Time series analysis, demand forecasting, and prediction — ARIMA, Prophet, and modern ML methods for business planning",
+    "icon": "chart",
+    "resources": [
+      {
+        "name": "Forecasting: Principles and Practice (Python)",
+        "why": "THE definitive resource — Hyndman's book with Nixtla Python code",
+        "url": "https://otexts.com/fpppy/"
+      },
+      {
+        "name": "MIT 14.384: Time Series Analysis",
+        "why": "Graduate-level — ARMA, VAR, cointegration, Kalman filters",
+        "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/"
+      },
+      {
+        "name": "statsforecast Documentation",
+        "why": "Nixtla's AutoARIMA — 19x faster than pmdarima",
+        "url": "https://nixtlaverse.nixtla.io/statsforecast/index.html"
+      },
+      {
+        "name": "Prophet Critique (Sean Taylor)",
+        "why": "Must-read from Prophet co-creator — honest limitations",
+        "url": "https://medium.com/@seanjtaylor/a-personal-retrospective-on-prophet-f223c2378985"
+      },
+      {
+        "name": "Uber: Forecasting Introduction",
+        "why": "ARIMA, Holt-Winters, Theta — insights from M4 winner Smyl",
+        "url": "https://www.uber.com/blog/forecasting-introduction/"
+      },
+      {
+        "name": "DoorDash: ELITE Ensemble Learning",
+        "why": "Accuracy vs compute tradeoffs — Ray for distributed forecasting",
+        "url": "https://doordash.engineering/2023/06/20/how-doordash-built-an-ensemble-learning-model-for-time-series-forecasting/"
+      },
+      {
+        "name": "Amazon: Chronos Foundation Model",
+        "why": "Zero-shot forecasting with T5 architecture — state of the art",
+        "url": "https://www.amazon.science/blog/adapting-language-model-architectures-for-time-series-forecasting"
+      },
+      {
+        "name": "sktime: Unified Framework",
+        "why": "scikit-learn API for time series — NeurIPS paper",
+        "url": "https://www.sktime.net/en/latest/examples/01_forecasting.html"
+      },
+      {
+        "name": "Penn State STAT 510",
+        "why": "Free graduate course — ARIMA, spectral analysis, ARCH/GARCH",
+        "url": "https://online.stat.psu.edu/stat510/"
+      }
+    ],
+    "packages": [
+      {
+        "name": "statsforecast",
+        "why": "Nixtla's fast AutoARIMA, AutoETS, AutoTheta",
+        "url": "https://nixtlaverse.nixtla.io/statsforecast/"
+      },
+      {
+        "name": "prophet",
+        "why": "Meta's additive model — good for business seasonality",
+        "url": "https://facebook.github.io/prophet/"
+      },
+      {
+        "name": "statsmodels",
+        "why": "SARIMAX, VAR, state space — classical econometrics",
+        "url": "https://www.statsmodels.org/stable/tsa.html"
+      },
+      {
+        "name": "sktime",
+        "why": "Unified scikit-learn API for time series",
+        "url": "https://www.sktime.net/"
+      },
+      {
+        "name": "mlforecast",
+        "why": "Nixtla's ML-based forecasting — LightGBM, XGBoost",
+        "url": "https://nixtlaverse.nixtla.io/mlforecast/"
+      }
+    ],
+    "order": 12
   }
 ]
