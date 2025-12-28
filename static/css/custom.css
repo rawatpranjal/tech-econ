@@ -187,27 +187,19 @@ body::before {
 .sidebar-footer-meta {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: space-between;
+    gap: 0.4rem;
     margin-top: 0.75rem;
     padding-top: 0.75rem;
     border-top: 1px solid rgba(255,255,255,0.08);
-    flex-wrap: wrap;
 }
 
-/* Updated Badge - Pill Style */
-.sidebar-updated {
-    font-size: 0.65rem;
-    padding: 0.2rem 0.5rem;
-    background: rgba(255,255,255,0.05);
-    border-radius: 12px;
-    color: rgba(255,255,255,0.4);
-    white-space: nowrap;
-}
-
+/* Updated & Visitors - plain text style */
+.sidebar-updated,
 .sidebar-visitors {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     color: rgba(255,255,255,0.35);
-    margin-left: auto;
+    white-space: nowrap;
 }
 
 /* Theme Toggle Button - Pill Style */

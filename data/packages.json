@@ -541,7 +541,7 @@
   },
   {
     "name": "pydoublelasso",
-    "description": "Double‑post Lasso estimator for high‑dimensional treatment effects (Belloni‑Chernozhukov‑Hansen 2014).",
+    "description": "Double\u2011post\u00a0Lasso estimator for high\u2011dimensional treatment effects (Belloni\u2011Chernozhukov\u2011Hansen\u202f2014).",
     "category": "Double/Debiased Machine Learning (DML)",
     "docs_url": "https://pypi.org/project/pydoublelasso/",
     "github_url": null,
@@ -555,7 +555,7 @@
   },
   {
     "name": "pyhtelasso",
-    "description": "Debiased‑Lasso detector of heterogeneous treatment effects in randomized experiments.",
+    "description": "Debiased\u2011Lasso detector of heterogeneous treatment effects in randomized experiments.",
     "category": "Double/Debiased Machine Learning (DML)",
     "docs_url": "https://pypi.org/project/pyhtelasso/",
     "github_url": null,
@@ -885,7 +885,7 @@
   },
   {
     "name": "csdid",
-    "description": "Python adaptation of the R `did` package. Implements multi-period DiD with staggered treatment timing (Callaway & Sant’Anna).",
+    "description": "Python adaptation of the R `did` package. Implements multi-period DiD with staggered treatment timing (Callaway & Sant\u2019Anna).",
     "category": "Program Evaluation Methods (DiD, SC, RDD)",
     "docs_url": null,
     "github_url": "https://github.com/d2cml-ai/csdid",
@@ -915,7 +915,7 @@
   },
   {
     "name": "pycinc",
-    "description": "Changes‑in‑Changes (CiC) estimator for distributional treatment effects (Athey & Imbens 2006).",
+    "description": "Changes\u2011in\u2011Changes (CiC) estimator for distributional treatment effects (Athey\u00a0&\u00a0Imbens\u202f2006).",
     "category": "Program Evaluation Methods (DiD, SC, RDD)",
     "docs_url": "https://pypi.org/project/pycinc/",
     "github_url": "https://github.com/vyasenov/pycinc",
@@ -931,7 +931,7 @@
   },
   {
     "name": "pyleebounds",
-    "description": "Lee (2009) sample‑selection bounds for treatment effects; trims treated distribution to match selection rates.",
+    "description": "Lee\u00a0(2009) sample\u2011selection bounds for treatment effects; trims treated distribution to match selection rates.",
     "category": "Program Evaluation Methods (DiD, SC, RDD)",
     "docs_url": "https://pypi.org/project/pyleebounds/",
     "github_url": null,
@@ -991,7 +991,7 @@
   },
   {
     "name": "pyrifreg",
-    "description": "Recentered Influence‑Function (RIF) regression for unconditional quantile & distributional effects (Firpo et al., 2008).",
+    "description": "Recentered Influence\u2011Function (RIF) regression for unconditional quantile & distributional effects (Firpo\u202fet\u202fal.,\u202f2008).",
     "category": "Quantile Regression & Distributional Methods",
     "docs_url": "https://github.com/vyasenov/pyrifreg",
     "github_url": "https://github.com/vyasenov/pyrifreg",
@@ -1146,7 +1146,7 @@
   },
   {
     "name": "Pingouin",
-    "description": "User-friendly interface for common statistical tests (ANOVA, ANCOVA, t-tests, correlations, chi², reliability) built on pandas & scipy.",
+    "description": "User-friendly interface for common statistical tests (ANOVA, ANCOVA, t-tests, correlations, chi\u00b2, reliability) built on pandas & scipy.",
     "category": "Statistical Inference & Hypothesis Testing",
     "docs_url": "https://pingouin-stats.org/",
     "github_url": "https://github.com/raphaelvallat/pingouin",
@@ -1174,7 +1174,7 @@
   },
   {
     "name": "Scipy.stats",
-    "description": "Foundational module within SciPy for a wide range of statistical functions, distributions, and hypothesis tests (t-tests, ANOVA, chi², KS, etc.).",
+    "description": "Foundational module within SciPy for a wide range of statistical functions, distributions, and hypothesis tests (t-tests, ANOVA, chi\u00b2, KS, etc.).",
     "category": "Statistical Inference & Hypothesis Testing",
     "docs_url": "https://docs.scipy.org/doc/scipy/reference/stats.html",
     "github_url": "https://github.com/scipy/scipy",
@@ -1328,7 +1328,7 @@
   },
   {
     "name": "LocalProjections",
-    "description": "Community implementations of Jordà (2005) Local Projections for estimating impulse responses without VAR assumptions.",
+    "description": "Community implementations of Jord\u00e0 (2005) Local Projections for estimating impulse responses without VAR assumptions.",
     "category": "Time Series Econometrics",
     "docs_url": null,
     "github_url": "https://github.com/elenev/localprojections",
@@ -1951,7 +1951,7 @@
     "category": "Statistical Inference & Hypothesis Testing",
     "docs_url": null,
     "github_url": "https://github.com/spotify/savvi",
-    "url": "https://github.com/spotify/savvi",
+    "url": "https://pypi.org/project/savvi/",
     "install": "pip install savvi",
     "tags": [
       "sequential testing",
@@ -1966,7 +1966,7 @@
     "category": "Statistical Inference & Hypothesis Testing",
     "docs_url": null,
     "github_url": "https://github.com/zalando/expectation",
-    "url": "https://github.com/zalando/expectation",
+    "url": "https://pypi.org/project/expectation/",
     "install": "pip install expectation",
     "tags": [
       "sequential testing",
@@ -2041,7 +2041,7 @@
     "category": "Matching & Market Design",
     "docs_url": null,
     "github_url": "https://github.com/daffidwilde/algmatch",
-    "url": "https://github.com/daffidwilde/algmatch",
+    "url": "https://pypi.org/project/algmatch/",
     "install": "pip install algmatch",
     "tags": [
       "matching",
@@ -2056,7 +2056,7 @@
     "category": "Matching & Market Design",
     "docs_url": null,
     "github_url": "https://github.com/jamestrimble/kep_solver",
-    "url": "https://github.com/jamestrimble/kep_solver",
+    "url": "https://pypi.org/project/kep_solver/",
     "install": "pip install kep-solver",
     "tags": [
       "matching",
@@ -2071,7 +2071,7 @@
     "category": "Matching & Market Design",
     "docs_url": null,
     "github_url": "https://github.com/NiklasPhawornsak/scarfmatch",
-    "url": "https://github.com/NiklasPhawornsak/scarfmatch",
+    "url": "https://pypi.org/project/scarfmatch/",
     "install": "pip install scarfmatch",
     "tags": [
       "matching",
@@ -2220,7 +2220,7 @@
     "category": "Causal Inference & Matching",
     "docs_url": null,
     "github_url": "https://github.com/fullfact/pydtr",
-    "url": "https://github.com/fullfact/pydtr",
+    "url": "https://pypi.org/project/pydtr/",
     "install": "pip install pydtr",
     "tags": [
       "dynamic treatment",
@@ -2235,7 +2235,7 @@
     "category": "Structural Econometrics & Estimation",
     "docs_url": null,
     "github_url": "https://github.com/USITC-Gravity-Group/gegravity",
-    "url": "https://github.com/USITC-Gravity-Group/gegravity",
+    "url": "https://pypi.org/project/gegravity/",
     "install": "pip install gegravity",
     "tags": [
       "trade",
@@ -2250,7 +2250,7 @@
     "category": "Causal Inference & Matching",
     "docs_url": null,
     "github_url": "https://github.com/mayscortez/keceni",
-    "url": "https://github.com/mayscortez/keceni",
+    "url": "https://pypi.org/project/KECENI/",
     "install": "pip install keceni",
     "tags": [
       "networks",
@@ -2280,7 +2280,7 @@
     "category": "Inference & Reporting Tools",
     "docs_url": null,
     "github_url": "https://github.com/jmonteroers/clusterbootstraps",
-    "url": "https://github.com/jmonteroers/clusterbootstraps",
+    "url": "https://pypi.org/project/clusterbootstraps/",
     "install": "pip install clusterbootstraps",
     "tags": [
       "bootstrap",
@@ -2295,7 +2295,7 @@
     "category": "Causal Discovery & Graphical Models",
     "docs_url": null,
     "github_url": "https://github.com/causal-disentanglement/mcd",
-    "url": "https://github.com/causal-disentanglement/mcd",
+    "url": "https://pypi.org/project/MCD/",
     "install": "pip install mcd",
     "tags": [
       "causal discovery",
@@ -2310,7 +2310,7 @@
     "category": "Causal Discovery & Graphical Models",
     "docs_url": null,
     "github_url": "https://github.com/causal-disentanglement/sdci",
-    "url": "https://github.com/causal-disentanglement/sdci",
+    "url": "https://pypi.org/project/SDCI/",
     "install": "pip install sdci",
     "tags": [
       "causal discovery",
@@ -2340,7 +2340,7 @@
     "category": "Conformal Prediction & Uncertainty",
     "docs_url": "https://torchcp.readthedocs.io/",
     "github_url": "https://github.com/thu-ml/TorchCP",
-    "url": "https://github.com/thu-ml/TorchCP",
+    "url": "https://github.com/ml-stat-Sustech/TorchCP",
     "install": "pip install torchcp",
     "tags": [
       "conformal prediction",
@@ -2505,7 +2505,7 @@
     "category": "Adaptive Experimentation & Bandits",
     "docs_url": "https://github.com/quizlet/abracadabra",
     "github_url": "https://github.com/quizlet/abracadabra",
-    "url": "https://github.com/quizlet/abracadabra",
+    "url": "https://pypi.org/project/abracadabra/",
     "install": "pip install abracadabra",
     "tags": [
       "sequential testing",
