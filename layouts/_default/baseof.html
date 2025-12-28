@@ -13,13 +13,13 @@
 
     <!-- Open Graph / Social Preview -->
     <meta property="og:title" content="{{ if .Title }}{{ .Title }} | {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}">
-    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}Real tools for applied economists in tech. Packages, datasets, and learning resources.{{ end }}">
+    <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}Real tools for applied researchers. Packages, datasets, and learning resources.{{ end }}">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ .Permalink }}">
     <meta property="og:image" content="{{ .Site.BaseURL }}og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ if .Title }}{{ .Title }} | {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}">
-    <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}Real tools for applied economists in tech.{{ end }}">
+    <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}Real tools for applied researchers.{{ end }}">
     <meta name="twitter:image" content="{{ .Site.BaseURL }}og-image.png">
 
     <!-- Structured Data -->
