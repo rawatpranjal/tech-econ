@@ -167,4 +167,24 @@
         <p>Data sourced from <a href="https://github.com/rawatpranjal/econometrics-in-python" target="_blank">econometrics-in-python</a></p>
     </footer>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    new PageSearch({
+        searchInputId: 'package-search',
+        cardSelector: '.package-card',
+        tableRowSelector: '.package-table tbody tr',
+        itemLabel: 'packages'
+    });
+
+    // Tag clicks
+    document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('use-case-tag')) {
+            var searchInput = document.getElementById('package-search');
+            searchInput.value = e.target.dataset.tag;
+            searchInput.dispatchEvent(new Event('input'));
+        }
+    });
+});
+</script>
 {{ end }}

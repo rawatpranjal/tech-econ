@@ -784,34 +784,433 @@
    * Initialize page search if elements exist
    */
   UnifiedSearch.prototype.initPageSearch = function() {
+    // Page search is now handled by PageSearchHandler instances
+    // created via UnifiedSearch.createPageSearch()
+  };
+
+  /**
+   * Create a page search instance
+   * @param {Object} config - Configuration options
+   * @returns {PageSearchHandler}
+   */
+  UnifiedSearch.prototype.createPageSearch = function(config) {
+    var handler = new PageSearchHandler(this, config);
+    this.pageSearchInstances.push(handler);
+    return handler;
+  };
+
+  // ============================================
+  // PageSearchHandler Class
+  // ============================================
+
+  /**
+   * Handles page-level search (categories, filters, card visibility, etc.)
+   *
+   * Usage:
+   *   new PageSearch({ searchInputId: 'talk-search', ... })
+   *   new PageSearch(unifiedSearchInstance, { searchInputId: 'talk-search', ... })
+   */
+  function PageSearchHandler(unifiedSearchOrConfig, config) {
+    // Support backwards-compatible single-argument call: new PageSearch(config)
+    if (config === undefined && typeof unifiedSearchOrConfig === 'object' && !unifiedSearchOrConfig.search) {
+      config = unifiedSearchOrConfig;
+      this.unifiedSearch = global.UnifiedSearch;
+    } else {
+      this.unifiedSearch = unifiedSearchOrConfig;
+    }
+
+    // Merge config with defaults
+    this.config = Object.assign({
+      searchInputId: 'page-search',
+      clearBtnId: 'clear-search',
+      searchDataId: 'search-data',
+      resultCountId: 'result-count',
+      categorySelectId: 'category-select',
+      viewContainerId: null,
+      cardSelector: '.resource-card',
+      sectionSelector: '.category-section',
+      tableRowSelector: null,
+      itemLabel: 'items',
+      extraFilters: []
+    }, config);
+
+    // DOM elements
+    this.searchInput = null;
+    this.clearBtn = null;
+    this.resultCount = null;
+    this.categorySelect = null;
+    this.viewContainer = null;
+    this.cards = null;
+    this.sections = null;
+    this.tableRows = null;
+
+    // State
+    this.data = [];
+    this.originalOrder = [];
+    this.flatContainer = null;
+    this.currentCategory = 'all';
+    this.currentSearch = '';
+    this.debounceTimer = null;
+    this.totalItems = 0;
+    this.extraFilterValues = {};
+
+    this.init();
+  }
+
+  /**
+   * Initialize page search handler
+   */
+  PageSearchHandler.prototype.init = function() {
     var self = this;
 
-    // Look for page search elements
-    var pageConfigs = [
-      { inputId: 'package-search', itemLabel: 'packages' },
-      { inputId: 'talk-search', itemLabel: 'talks' },
-      { inputId: 'dataset-search', itemLabel: 'datasets' },
-      { inputId: 'resource-search', itemLabel: 'resources' },
-      { inputId: 'career-search', itemLabel: 'resources' },
-      { inputId: 'community-search', itemLabel: 'events & communities' }
-    ];
+    // Get DOM elements
+    this.searchInput = document.getElementById(this.config.searchInputId);
+    this.clearBtn = document.getElementById(this.config.clearBtnId);
+    this.resultCount = document.getElementById(this.config.resultCountId);
+    this.categorySelect = document.getElementById(this.config.categorySelectId);
 
-    pageConfigs.forEach(function(config) {
-      var input = document.getElementById(config.inputId);
-      if (input) {
-        self.createPageSearchInstance(config);
+    if (!this.searchInput) {
+      console.warn('[PageSearchHandler] Search input not found:', this.config.searchInputId);
+      return;
+    }
+
+    // Get view container
+    if (this.config.viewContainerId) {
+      this.viewContainer = document.getElementById(this.config.viewContainerId);
+    }
+    if (!this.viewContainer) {
+      this.viewContainer = this.searchInput.closest('.container');
+    }
+
+    // Get cards and sections
+    this.cards = document.querySelectorAll(this.config.cardSelector);
+    this.sections = document.querySelectorAll(this.config.sectionSelector);
+    this.totalItems = this.cards.length;
+
+    // Get table rows if configured
+    if (this.config.tableRowSelector) {
+      this.tableRows = document.querySelectorAll(this.config.tableRowSelector);
+    }
+
+    // Store original order
+    this.originalOrder = Array.from(this.cards);
+
+    // Create flat container for search results
+    this.createFlatContainer();
+
+    // Load data for filtering
+    this.loadData();
+
+    // Event listeners
+    this.searchInput.addEventListener('input', function(e) {
+      clearTimeout(self.debounceTimer);
+      self.debounceTimer = setTimeout(function() {
+        self.currentSearch = e.target.value.trim();
+        self.filterItems();
+        self.toggleClearButton();
+      }, 150);
+    });
+
+    // Focus event to trigger model loading
+    this.searchInput.addEventListener('focus', function() {
+      if (self.unifiedSearch && CONFIG.semanticSearchOnFocus) {
+        self.unifiedSearch.loadModel();
+      }
+    });
+
+    if (this.clearBtn) {
+      this.clearBtn.addEventListener('click', function() {
+        self.clearSearch();
+      });
+    }
+
+    if (this.categorySelect) {
+      this.categorySelect.addEventListener('change', function() {
+        self.currentCategory = this.value;
+        self.filterItems();
+      });
+    }
+
+    // Setup extra filters
+    this.config.extraFilters.forEach(function(filter) {
+      var selectEl = document.getElementById(filter.selectId);
+      if (selectEl) {
+        self.extraFilterValues[filter.dataKey] = 'all';
+        selectEl.addEventListener('change', function() {
+          self.extraFilterValues[filter.dataKey] = this.value;
+          self.filterItems();
+        });
+      }
+    });
+
+    // Initial state
+    this.toggleClearButton();
+    this.updateResultCount(this.totalItems);
+
+    console.log('[PageSearchHandler] Initialized:', this.config.searchInputId, '(' + this.totalItems + ' items)');
+  };
+
+  /**
+   * Create flat container for search results
+   */
+  PageSearchHandler.prototype.createFlatContainer = function() {
+    var firstSection = this.sections[0];
+    if (!firstSection) return;
+
+    this.flatContainer = document.createElement('div');
+    this.flatContainer.className = 'cards-row flat-results';
+    this.flatContainer.style.display = 'none';
+    firstSection.parentNode.insertBefore(this.flatContainer, firstSection);
+  };
+
+  /**
+   * Load search data from inline script
+   */
+  PageSearchHandler.prototype.loadData = function() {
+    var searchDataEl = document.getElementById(this.config.searchDataId);
+    if (searchDataEl) {
+      try {
+        this.data = JSON.parse(searchDataEl.textContent);
+      } catch (e) {
+        console.error('[PageSearchHandler] Failed to parse search data:', e);
+        this.data = [];
+      }
+    }
+  };
+
+  /**
+   * Filter items based on current search and filters
+   */
+  PageSearchHandler.prototype.filterItems = function() {
+    var self = this;
+
+    if (this.currentSearch && this.unifiedSearch) {
+      // Use unified search for searching
+      this.unifiedSearch.search(this.currentSearch, { topK: 200 })
+        .then(function(results) {
+          self.showFlatResults(results);
+        });
+    } else {
+      this.showCategoryLayout();
+    }
+
+    // Filter table rows if configured
+    if (this.tableRows) {
+      this.filterTableRows();
+    }
+  };
+
+  /**
+   * Check if element matches extra filters
+   */
+  PageSearchHandler.prototype.matchesExtraFilters = function(element) {
+    var self = this;
+    var matches = true;
+    Object.keys(this.extraFilterValues).forEach(function(dataKey) {
+      var filterValue = self.extraFilterValues[dataKey];
+      if (filterValue !== 'all') {
+        var elementValue = element.dataset[dataKey] || '';
+        if (elementValue.toLowerCase() !== filterValue.toLowerCase()) {
+          matches = false;
+        }
+      }
+    });
+    return matches;
+  };
+
+  /**
+   * Filter table rows
+   */
+  PageSearchHandler.prototype.filterTableRows = function() {
+    var self = this;
+
+    this.tableRows.forEach(function(row) {
+      var name = row.dataset.name || '';
+      var category = row.dataset.category || '';
+
+      var matchesCategory = self.currentCategory === 'all' || category === self.currentCategory;
+      var matchesExtra = self.matchesExtraFilters(row);
+
+      if (matchesCategory && matchesExtra) {
+        row.style.display = '';
+        row.style.opacity = '1';
+      } else {
+        row.style.display = 'none';
       }
     });
   };
 
   /**
-   * Create page search instance (uses existing PageSearch if available, otherwise creates minimal implementation)
+   * Show flat results sorted by relevance
    */
-  UnifiedSearch.prototype.createPageSearchInstance = function(config) {
-    // For now, just ensure the existing PageSearch works
-    // The unified search provides the backend, PageSearch handles the UI
-    console.log('[UnifiedSearch] Page search active:', config.inputId);
+  PageSearchHandler.prototype.showFlatResults = function(results) {
+    var self = this;
+
+    // Hide category sections
+    this.sections.forEach(function(section) {
+      section.style.display = 'none';
+    });
+
+    // Show flat container
+    if (this.flatContainer) {
+      this.flatContainer.style.display = 'grid';
+    }
+
+    // Build score map from results
+    var scoreMap = new Map();
+    results.forEach(function(result, index) {
+      var key = (result.name || '').toLowerCase();
+      scoreMap.set(key, index);
+    });
+
+    // Sort cards by relevance
+    var cardsArray = Array.from(this.cards);
+    cardsArray.sort(function(a, b) {
+      var nameA = (a.dataset.name || '').toLowerCase();
+      var nameB = (b.dataset.name || '').toLowerCase();
+      var scoreA = scoreMap.has(nameA) ? scoreMap.get(nameA) : 999999;
+      var scoreB = scoreMap.has(nameB) ? scoreMap.get(nameB) : 999999;
+      return scoreA - scoreB;
+    });
+
+    // Filter by category if needed
+    if (this.currentCategory !== 'all') {
+      cardsArray = cardsArray.filter(function(card) {
+        return card.dataset.category === self.currentCategory;
+      });
+    }
+
+    // Filter by extra filters
+    cardsArray = cardsArray.filter(function(card) {
+      return self.matchesExtraFilters(card);
+    });
+
+    // Hide all cards first
+    this.cards.forEach(function(card) {
+      card.classList.add('hidden');
+      card.classList.remove('visible');
+    });
+
+    // Move matching cards to flat container in sorted order
+    var visibleCount = 0;
+    cardsArray.forEach(function(card, index) {
+      var cardName = (card.dataset.name || '').toLowerCase();
+      var isMatch = scoreMap.has(cardName);
+
+      if (isMatch || self.currentSearch.length < 2) {
+        card.classList.remove('hidden');
+        card.classList.add('visible');
+        visibleCount++;
+
+        // Visual indicator for match quality
+        var rank = scoreMap.get(cardName);
+        if (rank !== undefined && rank < 10) {
+          card.style.opacity = '1';
+        } else if (rank !== undefined && rank < 30) {
+          card.style.opacity = '0.9';
+        } else {
+          card.style.opacity = '0.7';
+        }
+
+        self.flatContainer.appendChild(card);
+      }
+    });
+
+    this.updateResultCount(visibleCount);
   };
+
+  /**
+   * Show category layout (no search active)
+   */
+  PageSearchHandler.prototype.showCategoryLayout = function() {
+    var self = this;
+
+    // Reset section visibility
+    this.sections.forEach(function(section) {
+      section.classList.remove('section-hidden');
+      var cat = section.dataset.sectionCategory;
+      var shouldShow = self.currentCategory === 'all' || cat === self.currentCategory;
+      section.style.display = shouldShow ? '' : 'none';
+    });
+
+    // Hide flat container
+    if (this.flatContainer) {
+      this.flatContainer.style.display = 'none';
+    }
+
+    // Restore cards to original positions
+    var visibleCount = 0;
+    this.originalOrder.forEach(function(card) {
+      var cardCategory = card.dataset.category;
+      var matchesCategory = self.currentCategory === 'all' || cardCategory === self.currentCategory;
+      var matchesExtra = self.matchesExtraFilters(card);
+
+      // Find original parent
+      var section = document.querySelector('[data-section-category="' + cardCategory + '"]');
+      if (section) {
+        var cardsRow = section.querySelector('.cards-row');
+        if (cardsRow && card.parentNode !== cardsRow) {
+          cardsRow.appendChild(card);
+        }
+      }
+
+      if (matchesCategory && matchesExtra) {
+        card.classList.remove('hidden');
+        card.classList.add('visible');
+        card.style.opacity = '1';
+        visibleCount++;
+      } else {
+        card.classList.add('hidden');
+        card.classList.remove('visible');
+      }
+    });
+
+    // Update section visibility based on visible cards
+    this.sections.forEach(function(section) {
+      var visibleCards = section.querySelectorAll(self.config.cardSelector + ':not(.hidden)');
+      if (visibleCards.length === 0) {
+        section.classList.add('section-hidden');
+      } else {
+        section.classList.remove('section-hidden');
+      }
+    });
+
+    this.updateResultCount(visibleCount);
+  };
+
+  /**
+   * Update result count display
+   */
+  PageSearchHandler.prototype.updateResultCount = function(count) {
+    if (!this.resultCount) return;
+    var text = count === 1 ? '1 ' + this.config.itemLabel.replace(/s$/, '') : count + ' ' + this.config.itemLabel;
+    if (this.currentSearch) {
+      text += ' (sorted by relevance)';
+    }
+    this.resultCount.textContent = text;
+  };
+
+  /**
+   * Toggle clear button visibility
+   */
+  PageSearchHandler.prototype.toggleClearButton = function() {
+    if (!this.clearBtn) return;
+    this.clearBtn.style.display = this.searchInput.value ? 'flex' : 'none';
+  };
+
+  /**
+   * Clear search
+   */
+  PageSearchHandler.prototype.clearSearch = function() {
+    this.searchInput.value = '';
+    this.currentSearch = '';
+    this.filterItems();
+    this.toggleClearButton();
+    this.searchInput.focus();
+  };
+
+  // Expose PageSearchHandler for direct use
+  global.PageSearch = PageSearchHandler;
 
   // ============================================
   // Utility Functions
