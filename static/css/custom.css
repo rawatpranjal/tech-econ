@@ -1117,6 +1117,14 @@ a:hover {
     margin-bottom: 3rem;
 }
 
+.hero-logo {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
 .hero-title {
     font-size: 3rem;
     font-weight: 700;
