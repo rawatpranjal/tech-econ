@@ -1638,5 +1638,125 @@
     "url": "https://multithreaded.stitchfix.com/blog/2020/08/05/bandits/",
     "type": "Blog",
     "level": "Medium"
+  },
+  {
+    "name": "Booking.com: How to Increase Power with CUPED",
+    "description": "The clearest practical CUPED explanation. Mathematical derivations with pseudo-code, theta calculation, and covariate adjustment. References the original Microsoft paper while making it accessible.",
+    "category": "Experimentation",
+    "url": "https://booking.ai/how-booking-com-increases-the-power-of-online-experiments-with-cuped-995d186fff1d",
+    "type": "Blog",
+    "level": "Hard"
+  },
+  {
+    "name": "Netflix: A Survey of Causal Inference Applications",
+    "description": "DiD, double ML, and Bayesian approaches across content, product, and member experience teams. Based on Netflix's internal Causal Inference Summit.",
+    "category": "Experimentation",
+    "url": "https://netflixtechblog.com/a-survey-of-causal-inference-applications-at-netflix-b62d25175e6f",
+    "type": "Blog",
+    "level": "Hard"
+  },
+  {
+    "name": "Delta Method in Metric Analytics (Microsoft/KDD 2018)",
+    "description": "Comprehensive treatment for deriving variance for complex metrics (ratios, percentiles, quantiles). Parallelizable implementation for distributed systems — essential for production experimentation.",
+    "category": "Experimentation",
+    "url": "https://arxiv.org/pdf/1803.06336",
+    "type": "Paper",
+    "level": "Hard"
+  },
+  {
+    "name": "Design and Analysis of Switchback Experiments (Harvard/MIT)",
+    "description": "Derives optimal switchback design under carryover effects using minimax optimization. Two inference approaches: exact randomization p-values and finite-population CLT. The theoretical foundation for marketplace experimentation.",
+    "category": "Experimentation",
+    "url": "https://arxiv.org/abs/2009.00148",
+    "type": "Paper",
+    "level": "Hard"
+  },
+  {
+    "name": "CausalML: Uplift Modeling Package (Uber)",
+    "description": "Meta-learners (S, T, X, R), uplift trees, CEVAE, DragonNet. 4,100+ GitHub stars, 2M+ PyPI downloads. KDD 2021 tutorial materials. Essential for heterogeneous treatment effects.",
+    "category": "Experimentation",
+    "url": "https://github.com/uber/causalml",
+    "type": "Package",
+    "level": "Medium"
+  },
+  {
+    "name": "PyMC: Bayesian A/B Testing Tutorial",
+    "description": "Full posterior distributions instead of point estimates. Beta-Binomial for conversions, Gamma-Poisson for continuous metrics. Directly answers 'probability B beats A' without frequentist constraints.",
+    "category": "Experimentation",
+    "url": "https://www.pymc.io/projects/examples/en/latest/causal_inference/bayesian_ab_testing_introduction.html",
+    "type": "Tutorial",
+    "level": "Medium"
+  },
+  {
+    "name": "Choosing Your North Star Metric (Lenny/a16z)",
+    "description": "Surveyed 40+ companies (Airbnb, Netflix, Spotify, Slack, Uber) for a taxonomy of 6 NSM categories. Frameworks for choosing based on business model type — the definitive NSM resource.",
+    "category": "Product Analytics",
+    "url": "https://future.com/north-star-metrics/",
+    "type": "Framework",
+    "level": "Medium"
+  },
+  {
+    "name": "A Quantitative Approach to Product-Market Fit (Tribe Capital)",
+    "description": "The foundational text on growth accounting. MAU growth accounting AND revenue growth accounting. Quick Ratio, Gross Retention, Net Churn explained by the team that pioneered it.",
+    "category": "Product Analytics",
+    "url": "https://tribecap.co/a-quantitative-approach-to-product-market-fit/",
+    "type": "Framework",
+    "level": "Hard"
+  },
+  {
+    "name": "Guardrail Metrics for A/B Tests (PostHog)",
+    "description": "Real examples from Airbnb's Experiment Guardrails Framework, Square, Bing, Netflix, eBay. The 3 categories: product-related, company-related, trustworthiness-related. Prevents metric gaming.",
+    "category": "Product Analytics",
+    "url": "https://posthog.com/product-engineers/guardrail-metrics",
+    "type": "Guide",
+    "level": "Medium"
+  },
+  {
+    "name": "Retention (Sequoia Capital Data Science)",
+    "description": "Three archetypal retention curves — Flattening, Declining, Smiling — and what each indicates about product health. Benchmarks by product type. Triangle retention chart visualization.",
+    "category": "Product Analytics",
+    "url": "https://articles.sequoiacap.com/retention",
+    "type": "Framework",
+    "level": "Medium"
+  },
+  {
+    "name": "The Power User Curve (a16z)",
+    "description": "The L30/L28 framework coined by Facebook's growth team. Why Power User Curves beat DAU/MAU: reveals variance, identifies power users, customizable for core actions. Used by a16z to evaluate startups.",
+    "category": "Product Analytics",
+    "url": "https://a16z.com/the-power-user-curve-the-best-way-to-understand-your-most-engaged-users/",
+    "type": "Framework",
+    "level": "Medium"
+  },
+  {
+    "name": "How to Measure Cohort Retention (Lenny's Newsletter)",
+    "description": "The most comprehensive retention measurement guide. SQL implementations, bounded vs unbounded retention definitions, visualization best practices. When to use X-day vs unbounded retention.",
+    "category": "Product Analytics",
+    "url": "https://www.lennysnewsletter.com/p/measuring-cohort-retention",
+    "type": "Tutorial",
+    "level": "Medium"
+  },
+  {
+    "name": "Ultimate Guide: Activation (Aakash Gupta)",
+    "description": "Traces activation history from Facebook's 2008 growth team, including Chamath's '7 friends in 10 days' discovery. The Setup → Aha → Habit framework with data-backed examples.",
+    "category": "Product Analytics",
+    "url": "https://www.news.aakashg.com/p/ultimate-guide-activation",
+    "type": "Guide",
+    "level": "Medium"
+  },
+  {
+    "name": "How Superhuman Built an Engine to Find PMF (First Round)",
+    "description": "Operationalizes Sean Ellis's '40% very disappointed' survey into a systematic process. How Superhuman went from 22% to 58% PMF score using segmentation. Most referenced First Round article.",
+    "category": "Product Analytics",
+    "url": "https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/",
+    "type": "Case Study",
+    "level": "Medium"
+  },
+  {
+    "name": "Slack's 2000 Messages Activation Metric",
+    "description": "Documents Slack's activation discovery — after 2,000 messages sent per team, 93% remain active. How they identified this leading indicator. Conversion rate significantly above 5% SaaS average.",
+    "category": "Product Analytics",
+    "url": "https://www.growth-letter.com/p/inside-slacks-4-billion-growth-system",
+    "type": "Case Study",
+    "level": "Easy"
   }
 ]
