@@ -901,6 +901,12 @@
     // Load data for filtering
     this.loadData();
 
+    // Debug logging
+    console.log('[PageSearch] Initialized:', this.config.searchInputId,
+      '| Cards:', this.cards.length,
+      '| Selector:', this.config.cardSelector,
+      '| Sections:', this.sections.length);
+
     // Event listeners
     this.searchInput.addEventListener('input', function(e) {
       clearTimeout(self.debounceTimer);
@@ -989,14 +995,17 @@
       this.unifiedSearch.search(this.currentSearch, { topK: 200 })
         .then(function(results) {
           self.showFlatResults(results);
+          // Also filter table rows with search results
+          if (self.tableRows) {
+            self.filterTableRows(results);
+          }
         });
     } else {
       this.showCategoryLayout();
-    }
-
-    // Filter table rows if configured
-    if (this.tableRows) {
-      this.filterTableRows();
+      // Filter table rows without search (category/extra filters only)
+      if (this.tableRows) {
+        this.filterTableRows(null);
+      }
     }
   };
 
@@ -1019,21 +1028,38 @@
   };
 
   /**
-   * Filter table rows
+   * Filter table rows (with optional search results)
    */
-  PageSearchHandler.prototype.filterTableRows = function() {
+  PageSearchHandler.prototype.filterTableRows = function(searchResults) {
     var self = this;
 
+    // Build score map from search results if provided
+    var scoreMap = new Map();
+    if (searchResults && searchResults.length > 0) {
+      searchResults.forEach(function(result, index) {
+        var key = (result.name || '').toLowerCase();
+        scoreMap.set(key, index);
+      });
+    }
+
     this.tableRows.forEach(function(row) {
-      var name = row.dataset.name || '';
+      var name = (row.dataset.name || '').toLowerCase();
       var category = row.dataset.category || '';
 
       var matchesCategory = self.currentCategory === 'all' || category === self.currentCategory;
       var matchesExtra = self.matchesExtraFilters(row);
+      // If searching, only show rows that match search results
+      var matchesSearch = !searchResults || scoreMap.has(name);
 
-      if (matchesCategory && matchesExtra) {
+      if (matchesCategory && matchesExtra && matchesSearch) {
         row.style.display = '';
-        row.style.opacity = '1';
+        // Apply opacity based on search rank
+        if (searchResults && scoreMap.has(name)) {
+          var rank = scoreMap.get(name);
+          row.style.opacity = rank < 10 ? '1' : rank < 30 ? '0.9' : '0.7';
+        } else {
+          row.style.opacity = '1';
+        }
       } else {
         row.style.display = 'none';
       }
