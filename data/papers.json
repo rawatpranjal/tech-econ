@@ -4,6 +4,7 @@
       "id": "experimentation",
       "name": "Experimentation",
       "description": "A/B testing, variance reduction, sequential testing, interference",
+      "image_url": "https://source.unsplash.com/400x200/?experiment,laboratory",
       "subtopics": [
         {
           "id": "ab-test-design",
@@ -47,6 +48,7 @@
       "id": "observational-causal-inference",
       "name": "Observational Causal Inference",
       "description": "Matching, DiD, synthetic control, IV, RDD, double ML",
+      "image_url": "https://source.unsplash.com/400x200/?graph,analysis",
       "subtopics": [
         {
           "id": "matching-propensity",
@@ -96,6 +98,7 @@
       "id": "pricing",
       "name": "Pricing",
       "description": "Dynamic pricing, surge, markdown, demand estimation",
+      "image_url": "https://source.unsplash.com/400x200/?price,money",
       "subtopics": [
         {
           "id": "dynamic-pricing",
@@ -133,6 +136,7 @@
       "id": "subscriptions-retention",
       "name": "Subscriptions & Retention",
       "description": "Churn, CLV, engagement, freemium",
+      "image_url": "https://source.unsplash.com/400x200/?subscription,growth",
       "subtopics": [
         {
           "id": "churn-prediction",
@@ -170,6 +174,7 @@
       "id": "advertising",
       "name": "Advertising",
       "description": "Ad auctions, attribution, targeting, brand measurement",
+      "image_url": "https://source.unsplash.com/400x200/?advertising,marketing",
       "subtopics": [
         {
           "id": "ad-auctions",
@@ -207,6 +212,7 @@
       "id": "marketing-growth",
       "name": "Marketing & Growth",
       "description": "Acquisition, referrals, promotions, uplift modeling",
+      "image_url": "https://source.unsplash.com/400x200/?growth,chart",
       "subtopics": [
         {
           "id": "acquisition-referrals",
@@ -244,6 +250,7 @@
       "id": "recommender-systems",
       "name": "Recommender Systems",
       "description": "Collaborative filtering, deep recs, debiasing, cold start",
+      "image_url": "https://source.unsplash.com/400x200/?recommendation,algorithm",
       "subtopics": [
         {
           "id": "collaborative-filtering",
@@ -281,6 +288,7 @@
       "id": "search-ranking",
       "name": "Search & Ranking",
       "description": "Learning to rank, query understanding, position bias",
+      "image_url": "https://source.unsplash.com/400x200/?search,ranking",
       "subtopics": [
         {
           "id": "learning-to-rank",
@@ -318,6 +326,7 @@
       "id": "matching-marketplaces",
       "name": "Matching & Marketplaces",
       "description": "Two-sided markets, matching algorithms, reputation",
+      "image_url": "https://source.unsplash.com/400x200/?marketplace,connection",
       "subtopics": [
         {
           "id": "two-sided-markets",
@@ -355,6 +364,7 @@
       "id": "mechanism-design-auctions",
       "name": "Mechanism Design & Auctions",
       "description": "Auction theory, market design, information design",
+      "image_url": "https://source.unsplash.com/400x200/?auction,gavel",
       "subtopics": [
         {
           "id": "auction-theory",
@@ -392,6 +402,7 @@
       "id": "structural-estimation",
       "name": "Structural Estimation",
       "description": "Demand estimation, entry models, auction estimation",
+      "image_url": "https://source.unsplash.com/400x200/?economics,model",
       "subtopics": [
         {
           "id": "demand-estimation-blp",
@@ -429,6 +440,7 @@
       "id": "choice-models-dynamic-choice",
       "name": "Choice Models & Dynamic Choice",
       "description": "Discrete choice, consideration sets, dynamic decisions",
+      "image_url": "https://source.unsplash.com/400x200/?choice,decision",
       "subtopics": [
         {
           "id": "discrete-choice",
@@ -466,6 +478,7 @@
       "id": "reinforcement-learning",
       "name": "Reinforcement Learning",
       "description": "Bandits, Thompson sampling, off-policy, batch RL",
+      "image_url": "https://source.unsplash.com/400x200/?robot,learning",
       "subtopics": [
         {
           "id": "multi-armed-bandits",
@@ -509,6 +522,7 @@
       "id": "inverse-rl-preference-learning",
       "name": "Inverse RL & Preference Learning",
       "description": "Reward inference, imitation learning, RLHF",
+      "image_url": "https://source.unsplash.com/400x200/?ai,preference",
       "subtopics": [
         {
           "id": "reward-inference",
@@ -540,6 +554,7 @@
       "id": "credit-lending",
       "name": "Credit & Lending",
       "description": "Credit scoring, fair lending, alternative data",
+      "image_url": "https://source.unsplash.com/400x200/?credit,finance",
       "subtopics": [
         {
           "id": "credit-scoring",
@@ -577,6 +592,7 @@
       "id": "trust-safety",
       "name": "Trust & Safety",
       "description": "Fraud detection, spam, content moderation, abuse",
+      "image_url": "https://source.unsplash.com/400x200/?security,shield",
       "subtopics": [
         {
           "id": "fraud-detection",
@@ -614,6 +630,7 @@
       "id": "logistics-operations",
       "name": "Logistics & Operations",
       "description": "Routing, inventory, ETA prediction, capacity planning",
+      "image_url": "https://source.unsplash.com/400x200/?logistics,warehouse",
       "subtopics": [
         {
           "id": "routing-dispatch",
@@ -651,6 +668,7 @@
       "id": "privacy",
       "name": "Privacy",
       "description": "Differential privacy, federated learning, synthetic data",
+      "image_url": "https://source.unsplash.com/400x200/?privacy,lock",
       "subtopics": [
         {
           "id": "differential-privacy",
@@ -688,6 +706,7 @@
       "id": "forecasting",
       "name": "Forecasting",
       "description": "Time series, ML forecasting, hierarchical, probabilistic",
+      "image_url": "https://source.unsplash.com/400x200/?forecast,chart",
       "subtopics": [
         {
           "id": "time-series-foundations",
@@ -725,6 +744,7 @@
       "id": "spatial-geo",
       "name": "Spatial & Geo",
       "description": "Geospatial demand, location choice, mobility patterns",
+      "image_url": "https://source.unsplash.com/400x200/?map,location",
       "subtopics": [
         {
           "id": "geospatial-demand",
@@ -762,6 +782,7 @@
       "id": "clustering-segmentation",
       "name": "Clustering & Segmentation",
       "description": "Customer segmentation, mixture models, deep clustering",
+      "image_url": "https://source.unsplash.com/400x200/?cluster,segment",
       "subtopics": [
         {
           "id": "customer-segmentation",

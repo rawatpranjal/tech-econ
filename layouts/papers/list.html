@@ -32,6 +32,11 @@
             {{ $paperCount = add $paperCount (len .papers) }}
         {{ end }}
         <a href="{{ printf "papers/%s/" .id | relURL }}" class="topic-card" data-aos="fade-up">
+            {{ if .image_url }}
+            <div class="topic-card-image">
+                <img src="{{ .image_url }}" alt="{{ .name }}" loading="lazy">
+            </div>
+            {{ end }}
             <div class="topic-card-content">
                 <h3 class="topic-name">{{ .name }}</h3>
                 <p class="topic-description">{{ .description }}</p>

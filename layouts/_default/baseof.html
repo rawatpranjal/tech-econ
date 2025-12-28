@@ -396,7 +396,7 @@
     {{ if .Site.Params.trackerEndpoint }}
     <script>
       window.TRACKER_CONFIG = {
-        endpoint: {{ .Site.Params.trackerEndpoint | safeJS }},
+        endpoint: "{{ .Site.Params.trackerEndpoint }}",
         enabled: {{ default true .Site.Params.trackerEnabled }},
         debug: {{ default false .Site.Params.trackerDebug }}
       };
