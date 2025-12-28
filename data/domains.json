@@ -5,7 +5,7 @@
     "icon": "dollar",
     "resources": [
       {"name": "Coursera Pricing Strategy Optimization (UVA/BCG)", "why": "Price elasticity, WTP estimation, segmentation — free to audit", "url": "https://www.coursera.org/specializations/uva-darden-bcg-pricing-strategy"},
-      {"name": "Maven: The Art of SaaS Pricing", "why": "Usage-based pricing and Good-Better-Best from Ajit Ghuman", "url": "https://maven.com/saasy/monetization"},
+      {"name": "Chargebee: SaaS Pricing Models Guide", "why": "Usage-based pricing, value metrics, packaging strategies — free", "url": "https://www.chargebee.com/resources/guides/saas-pricing-models-guide/"},
       {"name": "Monetizing Innovation (Ramanujam)", "why": "The industry bible — design products around price, not vice versa", "url": "https://www.simon-kucher.com/en/insights/monetizing-innovation"},
       {"name": "OpenView SaaS Pricing Guide", "why": "Free playbooks on usage-based pricing", "url": "https://openviewpartners.com/blog/saas-pricing-resource-guide/"},
       {"name": "Lenny's Podcast: Madhavan Ramanujam", "why": "90 minutes on WTP conversations and behavioral pricing", "url": "https://www.lennyspodcast.com/the-art-and-science-of-pricing-madhavan-ramanujam-simon-kucher/"}
@@ -81,7 +81,7 @@
     "icon": "star",
     "resources": [
       {"name": "Coursera RecSys Specialization (UMN)", "why": "Comprehensive: collaborative, content-based, matrix factorization", "url": "https://www.coursera.org/specializations/recommender-systems"},
-      {"name": "Recommender Systems: The Textbook (Aggarwal)", "why": "700+ references, classical through advanced", "url": "https://www.springer.com/gp/book/9783319296579"},
+      {"name": "HSE RecSys Course (GitHub)", "why": "Full course materials: collaborative filtering, matrix factorization, A/B testing — free", "url": "https://github.com/anamarina/RecSys_course"},
       {"name": "Netflix Tech Blog: Recommendations", "why": "Production systems and foundation models", "url": "https://netflixtechblog.com/tagged/recommendations"},
       {"name": "Microsoft Recommenders (GitHub)", "why": "Best practices with Jupyter notebooks — free", "url": "https://github.com/recommenders-team/recommenders"},
       {"name": "Deep Learning for Choice Modeling", "why": "Bridges economic choice theory with deep learning", "url": "https://arxiv.org/abs/2208.09325"}
@@ -120,7 +120,7 @@
     "resources": [
       {"name": "MIT MicroMasters: Supply Chain (edX)", "why": "Graduate-level demand forecasting, inventory, network design", "url": "https://www.edx.org/micromasters/mitx-supply-chain-management"},
       {"name": "Google OR-Tools Documentation", "why": "VRP tutorials with Python code", "url": "https://developers.google.com/optimization"},
-      {"name": "The Logic of Logistics (Simchi-Levi)", "why": "State-of-the-art theory", "url": "https://link.springer.com/book/10.1007/978-1-4614-3185-2"},
+      {"name": "Georgia Tech: 10 Rules for Supply Chain Optimization", "why": "H. Donald Ratliff's practical optimization framework — free PDF", "url": "https://www.scl.gatech.edu/sites/default/files/downloads/gtscl-10_rules_supply_chain_logistics_optimization_2.pdf"},
       {"name": "Data Science for Supply Chain (Vandeput)", "why": "Python demand forecasting implementation", "url": "https://supchains.com/"},
       {"name": "DoorDash Engineering", "why": "Real-time optimization for delivery", "url": "https://doordash.engineering/"}
     ],
