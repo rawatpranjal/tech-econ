@@ -225,6 +225,11 @@
             if (authBtn) authBtn.style.display = 'flex';
             if (userMenu) userMenu.style.display = 'none';
         }
+
+        // Update top-right profile button
+        if (window.updateProfileButton) {
+            window.updateProfileButton(currentUser);
+        }
     }
 
     // Update all favorite buttons on page

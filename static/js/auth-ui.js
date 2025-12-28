@@ -6,90 +6,77 @@
 
     // Create and inject auth UI elements
     function createAuthUI() {
-        // Auth button in sidebar
-        const sidebarFooter = document.querySelector('.sidebar-footer');
-        if (sidebarFooter) {
-            const authBtn = document.createElement('a');
-            authBtn.href = '#';
-            authBtn.id = 'auth-btn';
-            authBtn.className = 'sidebar-footer-link';
-            authBtn.innerHTML = `
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                </svg>
-                Sign In
-            `;
-            authBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                TechEconAuth.showModal();
-            });
-            sidebarFooter.insertBefore(authBtn, sidebarFooter.firstChild);
+        // Top-right profile button
+        const profileBtn = document.getElementById('profile-btn');
+        const profileDropdown = document.getElementById('profile-dropdown');
+        const topBar = document.querySelector('.top-bar');
 
-            // User menu (hidden by default)
-            const userMenu = document.createElement('div');
-            userMenu.id = 'user-menu';
-            userMenu.className = 'user-menu';
-            userMenu.style.display = 'none';
-            userMenu.innerHTML = `
-                <div class="user-menu-trigger">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                        <circle cx="12" cy="7" r="4"></circle>
-                    </svg>
-                    <span id="user-email" class="user-email"></span>
-                </div>
-                <div class="user-menu-dropdown">
-                    <a href="/favorites/" class="user-menu-item">
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                        </svg>
-                        My Favorites
-                    </a>
-                    <a href="/playlists/" class="user-menu-item">
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="8" y1="6" x2="21" y2="6"></line>
-                            <line x1="8" y1="12" x2="21" y2="12"></line>
-                            <line x1="8" y1="18" x2="21" y2="18"></line>
-                            <line x1="3" y1="6" x2="3.01" y2="6"></line>
-                            <line x1="3" y1="12" x2="3.01" y2="12"></line>
-                            <line x1="3" y1="18" x2="3.01" y2="18"></line>
-                        </svg>
-                        My Playlists
-                    </a>
-                    <button class="user-menu-item user-menu-signout" id="signout-btn">
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                            <polyline points="16 17 21 12 16 7"></polyline>
-                            <line x1="21" y1="12" x2="9" y2="12"></line>
-                        </svg>
-                        Sign Out
-                    </button>
-                </div>
-            `;
-            sidebarFooter.insertBefore(userMenu, sidebarFooter.firstChild);
-
-            // Toggle dropdown
-            userMenu.querySelector('.user-menu-trigger').addEventListener('click', function() {
-                userMenu.classList.toggle('open');
-            });
-
-            // Sign out
-            document.getElementById('signout-btn').addEventListener('click', async function() {
-                try {
-                    await TechEconAuth.signOut();
-                    showToast('Signed out successfully');
-                } catch (e) {
-                    showToast('Error signing out', 'error');
+        if (profileBtn) {
+            // Click handler - show modal or toggle dropdown
+            profileBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                if (window.TechEconAuth && window.TechEconAuth.isLoggedIn()) {
+                    topBar.classList.toggle('dropdown-open');
+                } else {
+                    window.TechEconAuth.showModal();
                 }
             });
+
+            // Sign out from dropdown
+            const signoutBtn = document.getElementById('profile-signout');
+            if (signoutBtn) {
+                signoutBtn.addEventListener('click', async function() {
+                    try {
+                        await window.TechEconAuth.signOut();
+                        topBar.classList.remove('dropdown-open');
+                        showToast('Signed out successfully');
+                    } catch (e) {
+                        showToast('Error signing out', 'error');
+                    }
+                });
+            }
 
             // Close dropdown when clicking outside
             document.addEventListener('click', function(e) {
-                if (!userMenu.contains(e.target)) {
-                    userMenu.classList.remove('open');
+                if (topBar && !topBar.contains(e.target)) {
+                    topBar.classList.remove('dropdown-open');
                 }
             });
+        }
+
+        // Update profile button state based on auth
+        window.updateProfileButton = function(user) {
+            const profileIcon = document.querySelector('.profile-icon');
+            const profileInitial = document.querySelector('.profile-initial');
+            const profileEmail = document.getElementById('profile-email');
+
+            if (user) {
+                // Logged in - show initial
+                const initial = user.email ? user.email.charAt(0).toUpperCase() : 'U';
+                if (profileIcon) profileIcon.style.display = 'none';
+                if (profileInitial) {
+                    profileInitial.style.display = 'flex';
+                    profileInitial.textContent = initial;
+                }
+                if (profileEmail) profileEmail.textContent = user.email;
+                if (profileBtn) profileBtn.classList.add('logged-in');
+            } else {
+                // Logged out - show icon
+                if (profileIcon) profileIcon.style.display = 'block';
+                if (profileInitial) profileInitial.style.display = 'none';
+                if (profileBtn) profileBtn.classList.remove('logged-in');
+                if (topBar) topBar.classList.remove('dropdown-open');
+            }
+        };
+
+        // Legacy sidebar auth button (keeping for compatibility)
+        const sidebarFooter = document.querySelector('.sidebar-footer');
+        if (sidebarFooter) {
+            // Remove old sidebar auth elements if they exist
+            const oldAuthBtn = document.getElementById('auth-btn');
+            const oldUserMenu = document.getElementById('user-menu');
+            if (oldAuthBtn) oldAuthBtn.remove();
+            if (oldUserMenu) oldUserMenu.remove();
         }
 
         // Create auth modal
