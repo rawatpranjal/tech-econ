@@ -686,13 +686,17 @@ a:hover {
 }
 
 .resource-card.hidden {
-    display: none !important;
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+    position: absolute;
+    visibility: hidden;
 }
 
 .resource-card:not(.hidden) {
-    display: flex !important;
-    opacity: 1 !important;
-    visibility: visible !important;
+    opacity: 1;
+    transform: scale(1);
+    visibility: visible;
 }
 
 /* Category Section Hiding */

@@ -166,8 +166,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize PageSearch with Fuse.js
     new PageSearch({
         searchInputId: 'talk-search',
-        itemLabel: 'talks',
+        cardSelector: '.resource-card',
+        sectionSelector: '.category-section',
         tableRowSelector: '#talks-table tbody tr',
+        itemLabel: 'talks',
         fuseKeys: [
             { name: 'name', weight: 2 },
             { name: 'description', weight: 1 },

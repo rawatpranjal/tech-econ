@@ -90,6 +90,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     new PageSearch({
         searchInputId: 'resource-search',
+        cardSelector: '.resource-card',
+        sectionSelector: '.category-section',
         itemLabel: 'resources',
         fuseKeys: [
             { name: 'name', weight: 2 },
