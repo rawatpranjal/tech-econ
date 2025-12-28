@@ -2586,7 +2586,7 @@ mark {
     right: 0;
     z-index: 2;
     padding: 3rem 1.25rem 1.25rem 1.25rem;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+    background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
 }
 
 .section-card-with-image .card-content h3 {
