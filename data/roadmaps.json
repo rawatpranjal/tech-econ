@@ -152,10 +152,10 @@
       {"name": "CVXPY Short Course", "why": "Hands-on convex optimization in Python", "url": "https://www.cvxpy.org/short_course/index.html"}
     ],
     "packages": [
-      {"name": "cvxpy", "why": "Write math as code — the standard for convex problems"},
-      {"name": "scipy.optimize", "why": "Built into SciPy — start here for basics"},
-      {"name": "OR-Tools", "why": "Google's production-ready combinatorial optimization"},
-      {"name": "Gurobi", "why": "Best-in-class solver — free for academics"}
+      {"name": "cvxpy", "why": "Write math as code — the standard for convex problems", "url": "https://www.cvxpy.org/"},
+      {"name": "scipy.optimize", "why": "Built into SciPy — start here for basics", "url": "https://docs.scipy.org/doc/scipy/reference/optimize.html"},
+      {"name": "OR-Tools", "why": "Google's production-ready combinatorial optimization", "url": "https://developers.google.com/optimization"},
+      {"name": "Gurobi", "why": "Best-in-class solver — free for academics", "url": "https://www.gurobi.com/"}
     ],
     "order": 9
   },
@@ -170,10 +170,10 @@
       {"name": "LangGraph Documentation", "why": "Official docs — the industry standard framework", "url": "https://langchain-ai.github.io/langgraph/"}
     ],
     "packages": [
-      {"name": "langgraph", "why": "Graph-based agent workflows — production standard"},
-      {"name": "langchain", "why": "LLM framework — chains, tools, memory"},
-      {"name": "crewai", "why": "Role-based multi-agent teams — intuitive orchestration"},
-      {"name": "openai-agents", "why": "OpenAI's lightweight SDK — fast prototyping"}
+      {"name": "langgraph", "why": "Graph-based agent workflows — production standard", "url": "https://langchain-ai.github.io/langgraph/"},
+      {"name": "langchain", "why": "LLM framework — chains, tools, memory", "url": "https://python.langchain.com/"},
+      {"name": "crewai", "why": "Role-based multi-agent teams — intuitive orchestration", "url": "https://docs.crewai.com/"},
+      {"name": "openai-agents", "why": "OpenAI's lightweight SDK — fast prototyping", "url": "https://github.com/openai/openai-agents-python"}
     ],
     "order": 10
   }
