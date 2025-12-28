@@ -258,7 +258,7 @@
     "name": "Gamified Learning",
     "description": "Experiments on gamification in learning environments",
     "category": "Education",
-    "url": "https://www.sciencedirect.com/science/article/pii/S2352340917301646",
+    "url": "https://data.mendeley.com/datasets/7kgpn39m8w/1",
     "docs_url": null,
     "github_url": null,
     "tags": [
@@ -1091,7 +1091,7 @@
     "name": "SEC EDGAR Filings",
     "description": "21M+ public company filings since 1994. 10-Ks, 8-Ks, proxy statements. Full text + structured XBRL data",
     "category": "Financial Services",
-    "url": "https://www.sec.gov/search-filings",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcurrent",
     "docs_url": "https://www.sec.gov/os/accessing-edgar-data",
     "github_url": "https://github.com/datasets/edgar",
     "tags": [
@@ -1373,7 +1373,7 @@
     "name": "Art Auction (Artists for Lahaina)",
     "description": "Artists for Lahaina benefit art auction data (2023)",
     "category": "Auctions & Marketplaces",
-    "url": "https://www.kaggle.com/quillen/artists-for-lahaina-2023",
+    "url": "https://www.kaggle.com/datasets/flkuhm/art-price-dataset",
     "docs_url": null,
     "github_url": null,
     "tags": [
@@ -2840,7 +2840,7 @@
     "name": "JobHop (Flanders)",
     "description": "2.3M occupations and 391K resumes with real career trajectories mapped to ESCO codes. Labor mobility research",
     "category": "Labor Markets",
-    "url": "https://huggingface.co/datasets/VDAB-Research/JobHop",
+    "url": "https://huggingface.co/datasets/VDAB/jobhop",
     "docs_url": null,
     "github_url": null,
     "tags": [
@@ -2855,7 +2855,7 @@
     "name": "BLS JOLTS",
     "description": "Monthly job openings, hires, separations by industry since 2000. Bureau of Labor Statistics time series",
     "category": "Labor Markets",
-    "url": "https://www.bls.gov/jlt/",
+    "url": "https://www.bls.gov/jlt/data.htm",
     "docs_url": "https://www.bls.gov/jlt/jltover.htm",
     "github_url": null,
     "tags": [
@@ -3115,7 +3115,7 @@
     "name": "Criteo Terabyte",
     "description": "342GB, 45M samples with 13 integer features and 26 hashed categorical features for CTR prediction",
     "category": "Advertising",
-    "url": "https://labs.criteo.com/2013/12/download-terabyte-click-logs/",
+    "url": "https://huggingface.co/datasets/criteo/CriteoClickLogs",
     "docs_url": null,
     "github_url": null,
     "tags": [
