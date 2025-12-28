@@ -1,0 +1,18 @@
+name = "tech-econ-analytics"
+main = "index.js"
+compatibility_date = "2024-01-01"
+
+# KV Namespace for storing analytics events
+# Run: wrangler kv:namespace create ANALYTICS_EVENTS
+# Then update the id below with your namespace ID
+[[kv_namespaces]]
+binding = "ANALYTICS_EVENTS"
+id = "YOUR_KV_NAMESPACE_ID"
+
+# To deploy:
+# 1. Install wrangler: npm install -g wrangler
+# 2. Login: wrangler login
+# 3. Create KV namespace: wrangler kv:namespace create ANALYTICS_EVENTS
+# 4. Update the id above with the namespace ID from step 3
+# 5. Deploy: wrangler deploy
+# 6. Update hugo.toml trackerEndpoint with your worker URL
