@@ -12,14 +12,6 @@
           "application": "Product experiments, sample size, metrics",
           "papers": [
             {
-              "title": "Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing",
-              "authors": "Ron Kohavi, Diane Tang, Ya Xu",
-              "year": 2020,
-              "tag": "Industry",
-              "description": "The definitive industry textbook on A/B testing covering experiment design, metrics, platforms, and pitfalls.",
-              "url": "https://www.cambridge.org/core/books/trustworthy-online-controlled-experiments/D97B26382EB0EB2DC2019A7A7B518F59"
-            },
-            {
               "title": "Online Controlled Experiments at Large Scale",
               "authors": "Ron Kohavi, Alex Deng, Brian Frasca, et al.",
               "year": 2013,
@@ -2876,31 +2868,180 @@
           "id": "fraud-detection",
           "name": "Fraud Detection",
           "application": "Payments, account takeover, transaction fraud",
-          "papers": []
+          "papers": [
+            {
+              "title": "Isolation Forest",
+              "authors": "Fei Tony Liu, Kai Ming Ting, Zhi-Hua Zhou",
+              "year": 2008,
+              "tag": "Classic",
+              "description": "Tree-based anomaly isolation achieving O(n log n) complexity; the industry standard for fraud detection.",
+              "url": "https://ieeexplore.ieee.org/document/4781136"
+            },
+            {
+              "title": "LOF: Identifying Density-Based Local Outliers",
+              "authors": "Markus M. Breunig, Hans-Peter Kriegel, Raymond T. Ng, Jörg Sander",
+              "year": 2000,
+              "tag": "Classic",
+              "description": "Introduced Local Outlier Factor assigning continuous 'degree of outlierness' for variable-density anomaly detection.",
+              "url": "https://dl.acm.org/doi/10.1145/335191.335388"
+            },
+            {
+              "title": "Anomaly Detection: A Survey",
+              "authors": "Varun Chandola, Arindam Banerjee, Vipin Kumar",
+              "year": 2009,
+              "tag": "Classic",
+              "description": "Comprehensive taxonomy covering classification, nearest-neighbor, clustering, and statistical approaches; 8,000+ citations.",
+              "url": "https://dl.acm.org/doi/10.1145/1541880.1541882"
+            },
+            {
+              "title": "Isolation-Based Anomaly Detection",
+              "authors": "Fei Tony Liu, Kai Ming Ting, Zhi-Hua Zhou",
+              "year": 2012,
+              "tag": "SOTA",
+              "description": "Extended journal version with theoretical analysis; handles high-dimensional masking and swamping effects.",
+              "url": "https://dl.acm.org/doi/10.1145/2133360.2133363"
+            }
+          ]
         },
         {
           "id": "spam-abuse",
           "name": "Spam & Abuse",
           "application": "Fake accounts, bot detection",
-          "papers": []
+          "papers": [
+            {
+              "title": "Online Human-Bot Interactions: Detection, Estimation, and Characterization",
+              "authors": "Onur Varol, Emilio Ferrara, Clayton A. Davis, Filippo Menczer, Alessandro Flammini",
+              "year": 2017,
+              "tag": "Classic",
+              "description": "Foundational Botometer paper; random forest on 1,000+ features estimating 9-15% of Twitter accounts are bots.",
+              "url": "https://ojs.aaai.org/index.php/ICWSM/article/view/14871"
+            },
+            {
+              "title": "The Rise of Social Bots",
+              "authors": "Emilio Ferrara, Onur Varol, Clayton Davis, Filippo Menczer, Alessandro Flammini",
+              "year": 2016,
+              "tag": "Classic",
+              "description": "Seminal paper defining social bots, detection challenges, and policy implications for platform manipulation.",
+              "url": "https://dl.acm.org/doi/10.1145/2818717"
+            },
+            {
+              "title": "Botometer 101: Social Bot Practicum for Computational Social Scientists",
+              "authors": "Kai-Cheng Yang, Emilio Ferrara, Filippo Menczer",
+              "year": 2022,
+              "tag": "SOTA",
+              "description": "Practitioner guide for Botometer v4 with CAP scores, threshold selection, and case study methodology.",
+              "url": "https://link.springer.com/article/10.1007/s42001-022-00177-5"
+            },
+            {
+              "title": "Scalable and Generalizable Social Bot Detection through Data Selection",
+              "authors": "Kai-Cheng Yang, Onur Varol, Pik-Mai Hui, Filippo Menczer",
+              "year": 2020,
+              "tag": "SOTA",
+              "description": "Addresses cross-dataset generalization using ensemble of specialized classifiers.",
+              "url": "https://ojs.aaai.org/index.php/AAAI/article/view/5460"
+            }
+          ]
         },
         {
           "id": "content-moderation",
           "name": "Content Moderation & Toxicity",
           "application": "Hate speech, misinformation",
-          "papers": []
+          "papers": [
+            {
+              "title": "Automated Hate Speech Detection and the Problem of Offensive Language",
+              "authors": "Thomas Davidson, Dana Warmsley, Michael Macy, Ingmar Weber",
+              "year": 2017,
+              "tag": "Classic",
+              "description": "Foundational 3-class dataset (hate/offensive/neither) with 24K labeled tweets; standard benchmark.",
+              "url": "https://arxiv.org/abs/1703.04009"
+            },
+            {
+              "title": "A New Generation of Perspective API: Efficient Multilingual Character-level Transformers",
+              "authors": "Alyssa Lees, Vinh Q. Tran, Yi Tay, Jeffrey Sorensen, Jai Gupta, Donald Metzler, Lucy Vasserman",
+              "year": 2022,
+              "tag": "Industry",
+              "description": "Technical architecture behind Google Jigsaw's Perspective API; handles obfuscation, code-switching, multilingual toxicity.",
+              "url": "https://arxiv.org/abs/2202.11176"
+            },
+            {
+              "title": "Measuring and Mitigating Unintended Bias in Text Classification",
+              "authors": "Lucas Dixon, John Li, Jeffrey Sorensen, Nithum Thain, Lucy Vasserman",
+              "year": 2018,
+              "tag": "Industry",
+              "description": "Develops methods for measuring unintended identity-term bias in toxicity classifiers; foundational for fair ML.",
+              "url": "https://dl.acm.org/doi/10.1145/3278721.3278729"
+            },
+            {
+              "title": "HateXplain: A Benchmark Dataset for Explainable Hate Speech Detection",
+              "authors": "Binny Mathew, Punyajoy Saha, Seid Muhie Yimam, Chris Biemann, Pawan Goyal, Animesh Mukherjee",
+              "year": 2021,
+              "tag": "SOTA",
+              "description": "First benchmark with rationale annotations for explainable hate speech detection across 20K posts.",
+              "url": "https://arxiv.org/abs/2012.10289"
+            }
+          ]
         },
         {
           "id": "claims-insurance",
           "name": "Claims & Insurance Fraud",
           "application": "False claims, anomaly detection",
-          "papers": []
+          "papers": [
+            {
+              "title": "Fraud Detection in Healthcare Claims Using Machine Learning: A Systematic Review",
+              "authors": "Multiple authors",
+              "year": 2025,
+              "tag": "SOTA",
+              "description": "Comprehensive review analyzing ML techniques for health insurance fraud over two decades.",
+              "url": "https://www.sciencedirect.com/science/article/pii/S0933365724003038"
+            },
+            {
+              "title": "Insurance Fraud Detection: A Statistically Validated Network Approach",
+              "authors": "Michele Tumminello, Andrea Consiglio, Pietro Vassallo, Riccardo Cesari, Fabio Farabullini",
+              "year": 2023,
+              "tag": "SOTA",
+              "description": "Network-based approach using statistically validated networks to detect coordinated fraud rings.",
+              "url": "https://onlinelibrary.wiley.com/doi/10.1111/jori.12421"
+            },
+            {
+              "title": "Detecting Insurance Fraud Using Supervised and Unsupervised Machine Learning",
+              "authors": "Jens Debener, Volker Heinke, Johannes Kriebel",
+              "year": 2023,
+              "tag": "SOTA",
+              "description": "Field experiment showing supervised and unsupervised methods are complements, not substitutes.",
+              "url": "https://onlinelibrary.wiley.com/doi/10.1111/jori.12427"
+            }
+          ]
         },
         {
           "id": "account-security",
           "name": "Account Security & Identity",
           "application": "Authentication, verification",
-          "papers": []
+          "papers": [
+            {
+              "title": "Data Breaches, Phishing, or Malware? Understanding the Risks of Stolen Credentials",
+              "authors": "Kurt Thomas, Frank Li, et al.",
+              "year": 2017,
+              "tag": "Industry",
+              "description": "Google study on account hijacking vectors; SMS verification blocks 100% of automated bots and 96% of bulk phishing.",
+              "url": "https://dl.acm.org/doi/10.1145/3133956.3134067"
+            },
+            {
+              "title": "Risk-Based Authentication: Practical Deployments and Research Challenges",
+              "authors": "Stephan Wiefling, Luigi Lo Iacono, Markus Dürmuth",
+              "year": 2021,
+              "tag": "SOTA",
+              "description": "Analyzes RBA deployments at Google, Microsoft, Amazon; develops measurement framework.",
+              "url": "https://riskbasedauthentication.org/publications/"
+            },
+            {
+              "title": "Selective Graph Attention Networks for Account Takeover Detection",
+              "authors": "IEEE Conference",
+              "year": 2019,
+              "tag": "SOTA",
+              "description": "Graph neural networks modeling account-device-transaction relationships for ATO detection.",
+              "url": "https://ieeexplore.ieee.org/document/8637408"
+            }
+          ]
         }
       ]
     },
@@ -2914,31 +3055,180 @@
           "id": "routing-dispatch",
           "name": "Routing & Dispatch",
           "application": "Vehicle routing, driver assignment",
-          "papers": []
+          "papers": [
+            {
+              "title": "The Truck Dispatching Problem",
+              "authors": "George B. Dantzig, John H. Ramser",
+              "year": 1959,
+              "tag": "Classic",
+              "description": "The original VRP paper; introduced linear programming formulation for fleet routing from depot to customers.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.6.1.80"
+            },
+            {
+              "title": "Scheduling of Vehicles from a Central Depot to a Number of Delivery Points",
+              "authors": "G. Clarke, J.W. Wright",
+              "year": 1964,
+              "tag": "Classic",
+              "description": "Introduced the 'savings algorithm'—still the most widely used VRP heuristic in commercial routing software.",
+              "url": "https://www.jstor.org/stable/168156"
+            },
+            {
+              "title": "Dynamic Pricing and Matching in Ride-Hailing Platforms",
+              "authors": "Chiwei Yan, Helin Zhu, Nikita Korolko, Dawn Woodard",
+              "year": 2020,
+              "tag": "Industry",
+              "description": "Uber research on matching algorithms and dynamic pricing; batching and bipartite matching for real-time dispatch.",
+              "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3258234"
+            },
+            {
+              "title": "Fifty Years of Vehicle Routing",
+              "authors": "Gilbert Laporte",
+              "year": 2009,
+              "tag": "SOTA",
+              "description": "Authoritative survey from Dantzig-Ramser through modern metaheuristics.",
+              "url": "https://link.springer.com/article/10.1007/s13676-013-0020-6"
+            }
+          ]
         },
         {
           "id": "inventory-fulfillment",
           "name": "Inventory & Fulfillment",
           "application": "Stock positioning, warehouse optimization",
-          "papers": []
+          "papers": [
+            {
+              "title": "Optimal Policies for a Multi-Echelon Inventory Problem",
+              "authors": "Andrew J. Clark, Herbert E. Scarf",
+              "year": 1960,
+              "tag": "Classic",
+              "description": "Introduced 'echelon inventory' concept; proved optimal base-stock policies for serial supply chains.",
+              "url": "https://pubsonline.informs.org/doi/abs/10.1287/mnsc.6.4.475"
+            },
+            {
+              "title": "Foundations of Stochastic Inventory Theory",
+              "authors": "Evan L. Porteus",
+              "year": 2002,
+              "tag": "Classic",
+              "description": "Definitive textbook on newsvendor, (s,S) policies, and dynamic inventory systems.",
+              "url": "https://www.sup.org/books/title/?id=4627"
+            },
+            {
+              "title": "Optimizing Strategic Safety Stock Placement in Supply Chains",
+              "authors": "Stephen C. Graves, Sean P. Willems",
+              "year": 2000,
+              "tag": "SOTA",
+              "description": "Guaranteed-service model for safety stock optimization; deployed in SAP, Kinaxis, and enterprise software.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/msom.2.1.68.23267"
+            },
+            {
+              "title": "The Evolution of Amazon's Inventory Planning System",
+              "authors": "Salal Humair et al. (Amazon SCOT Team)",
+              "year": 2023,
+              "tag": "Industry",
+              "description": "Amazon's multi-echelon system with Lagrangian decomposition for real-time optimization across 175+ fulfillment centers.",
+              "url": "https://www.amazon.science/latest-news/the-evolution-of-amazons-inventory-planning-system"
+            }
+          ]
         },
         {
           "id": "eta-delivery",
           "name": "ETA & Delivery Prediction",
           "application": "Arrival time estimation",
-          "papers": []
+          "papers": [
+            {
+              "title": "ETA Prediction with Graph Neural Networks in Google Maps",
+              "authors": "Austin Derrow-Pinion, Jennifer She, David Wong, et al.",
+              "year": 2021,
+              "tag": "Industry",
+              "description": "Deployed GNN for Google Maps ETA; reduced negative outcomes by 40%+ in major cities.",
+              "url": "https://arxiv.org/abs/2108.11482"
+            },
+            {
+              "title": "DeepETA: How Uber Predicts Arrival Times Using Deep Learning",
+              "authors": "Xinyu Hu, Olcay Cirit, et al.",
+              "year": 2022,
+              "tag": "Industry",
+              "description": "Uber's production ETA using Transformers for tabular data; highest QPS system at Uber.",
+              "url": "https://www.uber.com/blog/deepeta-how-uber-predicts-arrival-times/"
+            },
+            {
+              "title": "Diffusion Convolutional Recurrent Neural Network (DCRNN)",
+              "authors": "Yaguang Li, Rose Yu, Cyrus Shahabi, Yan Liu",
+              "year": 2018,
+              "tag": "SOTA",
+              "description": "Foundational spatiotemporal traffic forecasting combining graph convolutions with sequence models.",
+              "url": "https://arxiv.org/abs/1707.01926"
+            }
+          ]
         },
         {
           "id": "capacity-planning",
           "name": "Capacity Planning",
           "application": "Demand-supply balancing, staffing",
-          "papers": []
+          "papers": [
+            {
+              "title": "Telephone Call Centers: Tutorial, Review, and Research Prospects",
+              "authors": "Noah Gans, Ger Koole, Avishai Mandelbaum",
+              "year": 2003,
+              "tag": "Classic",
+              "description": "Definitive survey on call center operations; directly applicable to gig economy capacity planning.",
+              "url": "https://faculty.wharton.upenn.edu/wp-content/uploads/2012/04/Gans-Koole-Mandelbaum-CCReview.pdf"
+            },
+            {
+              "title": "Heavy-Traffic Limits for Queues with Many Exponential Servers",
+              "authors": "Shlomo Halfin, Ward Whitt",
+              "year": 1981,
+              "tag": "Classic",
+              "description": "Foundational heavy-traffic theory; introduced QED regime balancing service quality with utilization.",
+              "url": "https://pubsonline.informs.org/doi/abs/10.1287/opre.29.3.567"
+            },
+            {
+              "title": "The Effects of Uber's Surge Pricing: A Case Study",
+              "authors": "Jonathan Hall, Cory Kendrick, Chris Nosko",
+              "year": 2015,
+              "tag": "Industry",
+              "description": "Natural experiment (NYE outage) showing dynamic pricing equilibrates supply/demand in real-time.",
+              "url": "https://www.uber.com/blog/research/the-effects-of-ubers-surge-pricing-a-case-study/"
+            },
+            {
+              "title": "Dynamic Pricing in a Labor Market: Surge Pricing and Flexible Work on the Uber Platform",
+              "authors": "M. Keith Chen, Michael Sheldon",
+              "year": 2016,
+              "tag": "Industry",
+              "description": "Studies driver labor supply response using 25 million Uber trips.",
+              "url": "https://www.anderson.ucla.edu/faculty/keith.chen/papers/SurgeAndFlexibleWork_WorkingPaper.pdf"
+            }
+          ]
         },
         {
           "id": "last-mile",
           "name": "Last-Mile Optimization",
           "application": "Delivery efficiency, batching",
-          "papers": []
+          "papers": [
+            {
+              "title": "Challenges and Opportunities in Crowdsourced Delivery Planning and Operations",
+              "authors": "Martin Savelsbergh, Marlin W. Ulmer",
+              "year": 2022,
+              "tag": "SOTA",
+              "description": "Authoritative survey on DoorDash, Instacart, Uber Eats covering matching, pricing, and gig economy logistics.",
+              "url": "https://link.springer.com/article/10.1007/s10288-021-00500-2"
+            },
+            {
+              "title": "Crowdsourced Delivery: A Review of Platforms and Academic Literature",
+              "authors": "Aliaa Alnaggar, Fatma Gzara, James H. Bookbinder",
+              "year": 2021,
+              "tag": "SOTA",
+              "description": "Comprehensive review classifying platforms by scheduling mechanism.",
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S0305048320306915"
+            },
+            {
+              "title": "Algorithm for Robotic Picking in Amazon Fulfillment Centers",
+              "authors": "Amazon Robotics Team",
+              "year": 2022,
+              "tag": "Industry",
+              "description": "Reduced drive distance by 62% and saved $500M+; demonstrates OR impact at scale.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/inte.2022.1143"
+            }
+          ]
         }
       ]
     },
