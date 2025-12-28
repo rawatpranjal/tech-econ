@@ -79,6 +79,14 @@
                     Home
                 </a>
             </li>
+            <li>
+                <a href="{{ "weekly-highlights/" | relURL }}" class="sidebar-link{{ if eq .Section "weekly-highlights" }} active{{ end }}">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                    </svg>
+                    Weekly Highlight
+                </a>
+            </li>
 
             <li class="sidebar-divider"></li>
 
@@ -165,6 +173,18 @@
                         <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
                     </svg>
                     Datasets
+                </a>
+            </li>
+
+            <li class="sidebar-divider"></li>
+
+            <!-- User -->
+            <li>
+                <a href="{{ "favorites/" | relURL }}" class="sidebar-link{{ if eq .Section "favorites" }} active{{ end }}">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                    Favorites
                 </a>
             </li>
 
@@ -265,8 +285,14 @@
         {{ partial "global-search-index.html" . | safeJS }}
     </script>
 
+    <!-- Supabase Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
     <!-- Custom JS -->
     <script src="{{ "js/theme.js" | relURL }}"></script>
+    <script src="{{ "js/supabase-client.js" | relURL }}"></script>
+    <script src="{{ "js/auth-ui.js" | relURL }}"></script>
+    <script src="{{ "js/favorites-ui.js" | relURL }}"></script>
 
     <!-- Fuse.js for page search -->
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
