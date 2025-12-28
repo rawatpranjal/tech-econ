@@ -77,7 +77,7 @@
     "description": "Metrics, experimentation, and business thinking — bridge economics and product decisions",
     "icon": "flask",
     "resources": [
-      {"name": "Trustworthy Online Controlled Experiments (Kohavi)", "why": "THE definitive book — praised by Jeff Dean and Adam D'Angelo", "url": "https://www.amazon.com/Trustworthy-Online-Controlled-Experiments-Practical/dp/1108724264"},
+      {"name": "Trustworthy Online Controlled Experiments (Kohavi)", "why": "THE definitive book — praised by Jeff Dean and Adam D'Angelo", "url": "https://experimentguide.com/"},
       {"name": "Eppo's Experimentation Guides", "why": "Practical, written by practitioners", "url": "https://www.geteppo.com/blog"},
       {"name": "GrowthBook Documentation", "why": "Free, open-source, structured learning path", "url": "https://docs.growthbook.io/"},
       {"name": "Evan Miller: How Not To Run an A/B Test", "why": "Short, lethal, career-saving", "url": "https://www.evanmiller.org/how-not-to-run-an-ab-test.html"},
@@ -148,8 +148,8 @@
     "resources": [
       {"name": "Convex Optimization (Boyd & Vandenberghe)", "why": "The bible — free online, universally cited", "url": "https://web.stanford.edu/~boyd/cvxbook/"},
       {"name": "Stanford EE364A (YouTube)", "why": "Boyd's legendary lectures — the gold standard", "url": "https://www.youtube.com/playlist?list=PL3940DD956CDF0622"},
-      {"name": "Discrete Optimization (Coursera)", "why": "Van Hentenryck's course — actually makes you implement", "url": "https://www.coursera.org/learn/discrete-optimization"},
-      {"name": "CVXPY Short Course", "why": "Hands-on convex optimization in Python", "url": "https://www.cvxpy.org/short_course/index.html"}
+      {"name": "Discrete Optimization (Coursera)", "why": "Van Hentenryck's course — actually makes you implement", "url": "https://www.coursera.org/learn/solving-algorithms-discrete-optimization"},
+      {"name": "CVXPY Short Course", "why": "Hands-on convex optimization in Python", "url": "https://web.stanford.edu/~boyd/papers/cvx_short_course.html"}
     ],
     "packages": [
       {"name": "cvxpy", "why": "Write math as code — the standard for convex problems", "url": "https://www.cvxpy.org/"},

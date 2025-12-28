@@ -5,8 +5,8 @@
     "icon": "dollar",
     "resources": [
       {"name": "Coursera Pricing Strategy Optimization (UVA/BCG)", "why": "Price elasticity, WTP estimation, segmentation — free to audit", "url": "https://www.coursera.org/specializations/uva-darden-bcg-pricing-strategy"},
-      {"name": "Maven: The Art of SaaS Pricing", "why": "Usage-based pricing and Good-Better-Best from Ajit Ghuman", "url": "https://maven.com/ajit-ghuman/saas-pricing"},
-      {"name": "Monetizing Innovation (Ramanujam)", "why": "The industry bible — design products around price, not vice versa", "url": "https://www.amazon.com/Monetizing-Innovation-Companies-Design-Product/dp/1119240867"},
+      {"name": "Maven: The Art of SaaS Pricing", "why": "Usage-based pricing and Good-Better-Best from Ajit Ghuman", "url": "https://maven.com/saasy/monetization"},
+      {"name": "Monetizing Innovation (Ramanujam)", "why": "The industry bible — design products around price, not vice versa", "url": "https://www.simon-kucher.com/en/insights/monetizing-innovation"},
       {"name": "OpenView SaaS Pricing Guide", "why": "Free playbooks on usage-based pricing", "url": "https://openviewpartners.com/blog/saas-pricing-resource-guide/"},
       {"name": "Lenny's Podcast: Madhavan Ramanujam", "why": "90 minutes on WTP conversations and behavioral pricing", "url": "https://www.lennyspodcast.com/the-art-and-science-of-pricing-madhavan-ramanujam-simon-kucher/"}
     ],
@@ -24,7 +24,7 @@
     "icon": "megaphone",
     "resources": [
       {"name": "Roughgarden: Algorithmic Game Theory (40 lectures)", "why": "Free Stanford lectures — theoretical foundation", "url": "https://timroughgarden.org/videos.html"},
-      {"name": "Twenty Lectures on Algorithmic Game Theory", "why": "Bridges CS and economics with ad case studies", "url": "https://www.amazon.com/Twenty-Lectures-Algorithmic-Game-Theory/dp/131662479X"},
+      {"name": "Twenty Lectures on Algorithmic Game Theory", "why": "Bridges CS and economics with ad case studies", "url": "https://timroughgarden.org/f13/f13.pdf"},
       {"name": "Display Advertising with Real-Time Bidding", "why": "Free comprehensive RTB coverage on arXiv", "url": "https://arxiv.org/abs/1610.03013"},
       {"name": "GSP Auction Paper (Edelman et al., AER 2007)", "why": "Foundational paper on search advertising auctions", "url": "https://www.benedelman.org/publications/gsp-060801.pdf"},
       {"name": "AdKDD Workshop Papers", "why": "Applied research from Google, Meta, Amazon", "url": "https://www.adkdd.org/"}
@@ -62,10 +62,10 @@
     "icon": "shield",
     "resources": [
       {"name": "DataCamp: Fraud Detection in Python", "why": "Supervised/unsupervised ML for imbalanced data", "url": "https://www.datacamp.com/courses/fraud-detection-in-python"},
-      {"name": "365 Data Science: Credit Risk Modeling", "why": "PD, LGD, EAD with Basel compliance", "url": "https://365datascience.com/courses/credit-risk-modeling-python/"},
+      {"name": "365 Data Science: Credit Risk Modeling", "why": "PD, LGD, EAD with Basel compliance", "url": "https://365datascience.com/courses/credit-risk-modeling-in-python/"},
       {"name": "Fight Fraud with ML (Manning, 2024)", "why": "Phishing, card fraud, deepfakes, graph CNNs", "url": "https://www.manning.com/books/fight-fraud-with-machine-learning"},
       {"name": "Stripe ML for Fraud Protection", "why": "How Radar processes $1T+ annually", "url": "https://stripe.com/guides/primer-on-machine-learning-for-fraud-protection"},
-      {"name": "Credit Risk Analytics (Baesens)", "why": "Gold standard for PD/LGD/EAD modeling", "url": "https://www.amazon.com/Credit-Risk-Analytics-Measurement-Applications/dp/1119143985"}
+      {"name": "Credit Risk Analytics (Baesens)", "why": "Gold standard for PD/LGD/EAD modeling", "url": "https://www.bartbaesens.com/book/6/credit-risk-analytics"}
     ],
     "packages": [
       {"name": "PyOD", "why": "50+ anomaly detection algorithms, 26M+ downloads", "url": "https://pyod.readthedocs.io/"},
@@ -120,8 +120,8 @@
     "resources": [
       {"name": "MIT MicroMasters: Supply Chain (edX)", "why": "Graduate-level demand forecasting, inventory, network design", "url": "https://www.edx.org/micromasters/mitx-supply-chain-management"},
       {"name": "Google OR-Tools Documentation", "why": "VRP tutorials with Python code", "url": "https://developers.google.com/optimization"},
-      {"name": "The Logic of Logistics (Simchi-Levi)", "why": "State-of-the-art theory", "url": "https://www.amazon.com/Logic-Logistics-Management-Springer-Business/dp/1461432006"},
-      {"name": "Data Science for Supply Chain (Vandeput)", "why": "Python demand forecasting implementation", "url": "https://www.amazon.com/Data-Science-Supply-Chain-Forecasting/dp/3110671107"},
+      {"name": "The Logic of Logistics (Simchi-Levi)", "why": "State-of-the-art theory", "url": "https://link.springer.com/book/10.1007/978-1-4614-3185-2"},
+      {"name": "Data Science for Supply Chain (Vandeput)", "why": "Python demand forecasting implementation", "url": "https://supchains.com/"},
       {"name": "DoorDash Engineering", "why": "Real-time optimization for delivery", "url": "https://doordash.engineering/"}
     ],
     "packages": [
@@ -138,10 +138,10 @@
     "icon": "coins",
     "resources": [
       {"name": "MIT MicroMasters: Quantitative Finance (edX)", "why": "Stochastic processes, optimization, computational", "url": "https://www.edx.org/micromasters/mitx-finance"},
-      {"name": "ML for Algorithmic Trading (Jansen)", "why": "Comprehensive Python from scikit-learn to RL", "url": "https://www.amazon.com/Machine-Learning-Algorithmic-Trading-alternative/dp/1839217715"},
-      {"name": "Advances in Financial ML (Lopez de Prado)", "why": "Practitioner challenges like backtest overfitting", "url": "https://www.amazon.com/Advances-Financial-Machine-Learning-Marcos/dp/1119482089"},
+      {"name": "ML for Algorithmic Trading (Jansen)", "why": "Comprehensive Python from scikit-learn to RL", "url": "https://github.com/stefan-jansen/machine-learning-for-trading"},
+      {"name": "Advances in Financial ML (Lopez de Prado)", "why": "Practitioner challenges like backtest overfitting", "url": "https://www.quantresearch.org/"},
       {"name": "QuantStart", "why": "Portfolio optimization, backtesting tutorials", "url": "https://www.quantstart.com/"},
-      {"name": "Analysis of Financial Time Series (Tsay)", "why": "Bridges academic econometrics with applications", "url": "https://www.amazon.com/Analysis-Financial-Time-Ruey-Tsay/dp/0470414359"}
+      {"name": "Analysis of Financial Time Series (Tsay)", "why": "Bridges academic econometrics with applications", "url": "https://faculty.chicagobooth.edu/ruey-s-tsay/research/analysis-of-financial-time-series-3rd-edition"}
     ],
     "packages": [
       {"name": "PyPortfolioOpt", "why": "Mean-variance, HRP, efficient frontier", "url": "https://pyportfolioopt.readthedocs.io/"},
@@ -158,8 +158,8 @@
     "resources": [
       {"name": "Reforge: Growth Foundations", "why": "Industry gold standard on retention, engagement, acquisition", "url": "https://www.reforge.com/growth-series"},
       {"name": "DataCamp: A/B Testing in Python", "why": "Experiment design with scipy, statsmodels, pingouin", "url": "https://www.datacamp.com/courses/ab-testing-in-python"},
-      {"name": "Lean Analytics (Croll & Yoskovitz)", "why": "One Metric That Matters framework", "url": "https://www.amazon.com/Lean-Analytics-Better-Startup-Faster/dp/1449335675"},
-      {"name": "The Cold Start Problem (Andrew Chen)", "why": "Network effects and viral growth", "url": "https://www.amazon.com/Cold-Start-Problem-Andrew-Chen/dp/0062969749"},
+      {"name": "Lean Analytics (Croll & Yoskovitz)", "why": "One Metric That Matters framework", "url": "https://leananalyticsbook.com/"},
+      {"name": "The Cold Start Problem (Andrew Chen)", "why": "Network effects and viral growth", "url": "https://www.coldstart.com/"},
       {"name": "Lenny's Podcast: Ronny Kohavi", "why": "Experimentation from Amazon, Microsoft, Airbnb", "url": "https://www.lennyspodcast.com/the-ultimate-guide-to-ab-testing-ronny-kohavi/"}
     ],
     "packages": [
