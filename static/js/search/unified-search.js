@@ -126,6 +126,13 @@
       case 'WORKER_READY':
         this.workerReady = true;
         this.sendSynonymsToWorker();
+        // Send index if it was already loaded before worker was ready
+        if (this.searchIndex && !this.isIndexLoaded) {
+          this.worker.postMessage({
+            type: 'LOAD_INDEX',
+            payload: { indexData: this.searchIndex }
+          });
+        }
         break;
 
       case 'INDEX_LOADED':
@@ -366,15 +373,38 @@
   };
 
   /**
-   * Perform search
+   * Wait for index to be loaded
    */
-  UnifiedSearch.prototype.search = function(query, options) {
+  UnifiedSearch.prototype.waitForIndex = function(timeout) {
     var self = this;
-    options = options || {};
+    timeout = timeout || 5000;
 
-    if (!this.workerReady || !this.isIndexLoaded) {
-      return Promise.resolve([]);
-    }
+    return new Promise(function(resolve, reject) {
+      if (self.isIndexLoaded) {
+        resolve();
+        return;
+      }
+
+      var elapsed = 0;
+      var interval = 100;
+      var check = setInterval(function() {
+        elapsed += interval;
+        if (self.isIndexLoaded) {
+          clearInterval(check);
+          resolve();
+        } else if (elapsed >= timeout) {
+          clearInterval(check);
+          reject(new Error('Index load timeout'));
+        }
+      }, interval);
+    });
+  };
+
+  /**
+   * Perform search (internal)
+   */
+  UnifiedSearch.prototype._doSearch = function(query, options) {
+    var self = this;
 
     return new Promise(function(resolve) {
       var id = ++self.searchId;
@@ -398,6 +428,31 @@
         }
       }, 5000);
     });
+  };
+
+  /**
+   * Perform search
+   */
+  UnifiedSearch.prototype.search = function(query, options) {
+    var self = this;
+    options = options || {};
+
+    // Worker must be ready
+    if (!this.workerReady) {
+      return Promise.resolve([]);
+    }
+
+    // If index not loaded yet, wait for it
+    if (!this.isIndexLoaded) {
+      return this.waitForIndex(3000).then(function() {
+        return self._doSearch(query, options);
+      }).catch(function() {
+        console.warn('[UnifiedSearch] Index not loaded after timeout');
+        return [];
+      });
+    }
+
+    return this._doSearch(query, options);
   };
 
   /**
