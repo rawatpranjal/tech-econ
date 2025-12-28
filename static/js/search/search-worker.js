@@ -24,7 +24,7 @@ var synonyms = null;
 // Configuration
 var CONFIG = {
   DIMENSIONS: 384,
-  MODEL_ID: 'Xenova/all-MiniLM-L6-v2',
+  MODEL_ID: 'Xenova/gte-small',
   RRF_K: 60,  // RRF constant
   KEYWORD_WEIGHT: 1.0,
   SEMANTIC_WEIGHT: 1.0
@@ -255,6 +255,21 @@ function handleSearch(payload, messageId) {
     }
 
     var semanticResults = performSemanticSearch(queryEmbedding, 100);
+
+    // Check if semantic scores are too low (nothing semantically close)
+    var topSemanticScore = semanticResults.length > 0 ? semanticResults[0].score : 0;
+    if (topSemanticScore < 0.3) {
+      // Fall back to keyword-only results
+      postMessage({
+        type: 'SEARCH_RESULTS',
+        id: messageId,
+        payload: {
+          results: keywordResults.slice(0, topK),
+          mode: 'keyword-fallback'
+        }
+      });
+      return;
+    }
 
     // Fuse results using RRF
     var fusedResults = reciprocalRankFusion(keywordResults, semanticResults, topK);

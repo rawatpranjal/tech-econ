@@ -24,7 +24,7 @@ def get_model():
     """Load the sentence-transformers model."""
     try:
         from sentence_transformers import SentenceTransformer
-        return SentenceTransformer('all-MiniLM-L6-v2')
+        return SentenceTransformer('thenlper/gte-small')
     except ImportError:
         print("Error: sentence-transformers not installed")
         print("Install with: pip install sentence-transformers")
@@ -228,7 +228,7 @@ def generate_all_outputs(items: List[Dict[str, Any]], model, output_dir: Path, c
     # 2. Build metadata (items without embeddings, for client-side matching)
     metadata = {
         "version": 2,
-        "model": "all-MiniLM-L6-v2",
+        "model": "gte-small",
         "dimensions": 384,
         "count": len(items),
         "generatedAt": datetime.utcnow().isoformat() + "Z",
@@ -256,7 +256,7 @@ def generate_all_outputs(items: List[Dict[str, Any]], model, output_dir: Path, c
 
     # 4. Legacy JSON format (for backwards compatibility during migration)
     legacy_output = {
-        "model": "all-MiniLM-L6-v2",
+        "model": "gte-small",
         "dimensions": 384,
         "count": len(items),
         "items": []

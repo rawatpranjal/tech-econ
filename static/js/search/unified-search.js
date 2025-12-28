@@ -494,6 +494,7 @@
     this.input = document.getElementById('global-search-input');
     this.resultsContainer = document.getElementById('global-search-results');
     this.emptyState = document.getElementById('global-search-empty');
+    this.loadingState = document.getElementById('global-search-loading');
     this.hint = document.getElementById('global-search-hint');
     this.triggers = document.querySelectorAll('.global-search-trigger');
 
@@ -619,9 +620,13 @@
     // Save to recent searches
     this.addRecentSearch(query);
 
+    // Show loading state
+    this.showLoading();
+
     // Perform search
     this.search(query, { topK: CONFIG.maxTotalResults * 2 })
       .then(function(results) {
+        self.hideLoading();
         self.currentResults = results.slice(0, CONFIG.maxTotalResults);
 
         if (self.currentResults.length === 0) {
@@ -763,6 +768,24 @@
     this.resultsContainer.innerHTML = '';
     this.hint.style.display = 'none';
     this.emptyState.style.display = 'flex';
+    if (this.loadingState) this.loadingState.style.display = 'none';
+  };
+
+  /**
+   * Show loading state
+   */
+  UnifiedSearch.prototype.showLoading = function() {
+    this.resultsContainer.innerHTML = '';
+    this.hint.style.display = 'none';
+    this.emptyState.style.display = 'none';
+    if (this.loadingState) this.loadingState.style.display = 'flex';
+  };
+
+  /**
+   * Hide loading state
+   */
+  UnifiedSearch.prototype.hideLoading = function() {
+    if (this.loadingState) this.loadingState.style.display = 'none';
   };
 
   /**
