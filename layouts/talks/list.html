@@ -270,8 +270,14 @@
                     {{ range $books }}
                     {{ if eq .category $cat }}
                     <div class="resource-card" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="{{ .category }}">
+                        <a href="{{ .url }}" target="_blank" class="book-cover-link">
+                            <img src="https://covers.openlibrary.org/b/isbn/{{ .isbn }}-M.jpg"
+                                 alt="{{ .name }}"
+                                 class="book-cover"
+                                 loading="lazy"
+                                 onerror="this.style.display='none'">
+                        </a>
                         <div class="card-header">
-                            <img class="resource-favicon" src="https://www.google.com/s2/favicons?domain=amazon.com&sz=32" alt="" loading="lazy">
                             <h3 class="resource-name">
                                 <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
                             </h3>

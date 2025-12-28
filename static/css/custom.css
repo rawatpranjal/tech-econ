@@ -2650,6 +2650,20 @@ mark {
     font-style: italic;
 }
 
+/* Book cover images */
+.book-cover-link {
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.book-cover {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    background: var(--bg-hover);
+    border-radius: 4px;
+}
+
 /* ========================================
    SECTION CARDS WITH IMAGES
    ======================================== */
