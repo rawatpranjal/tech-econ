@@ -830,31 +830,180 @@
           "id": "acquisition-referrals",
           "name": "Acquisition & Referrals",
           "application": "CAC, referral programs, viral loops",
-          "papers": []
+          "papers": [
+            {
+              "title": "The Dynamics of Viral Marketing",
+              "authors": "Jure Leskovec, Lada Adamic, Bernardo Huberman",
+              "year": 2007,
+              "tag": "Classic",
+              "description": "Empirical analysis of viral cascades on a retailer's recommendation network; foundational for understanding k-factor and referral mechanics.",
+              "url": "https://www.cs.cmu.edu/~jure/pubs/viral-tweb.pdf"
+            },
+            {
+              "title": "Effects of Word-of-Mouth Versus Traditional Marketing",
+              "authors": "Michael Trusov, Randolph Bucklin, Koen Pauwels",
+              "year": 2009,
+              "tag": "Classic",
+              "description": "VAR model showing WOM elasticity is 20-30x higher than traditional marketing channels.",
+              "url": "https://www.anderson.ucla.edu/documents/areas/fac/marketing/bucklin_effects.pdf"
+            },
+            {
+              "title": "A Multi-Stage Model of Word-of-Mouth Influence",
+              "authors": "Arnaud De Bruyn, Gary Lilien",
+              "year": 2008,
+              "tag": "Classic",
+              "description": "Decomposes viral influence across awareness, interest, and decision stages; practical framework for campaign design.",
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167811608000414"
+            }
+          ]
         },
         {
           "id": "network-effects",
           "name": "Network Effects & Viral Growth",
           "application": "Platform adoption, critical mass",
-          "papers": []
+          "papers": [
+            {
+              "title": "Network Externalities, Competition, and Compatibility",
+              "authors": "Michael Katz, Carl Shapiro",
+              "year": 1985,
+              "tag": "Classic",
+              "description": "Seminal formalization of direct/indirect network effects and compatibility choice; 6,800+ citations.",
+              "url": "https://idv.sinica.edu.tw/kongpin/teaching/io/KatzShapiro1.pdf"
+            },
+            {
+              "title": "A Theory of Interdependent Demand for a Communications Service",
+              "authors": "Jeffrey Rohlfs",
+              "year": 1974,
+              "tag": "Classic",
+              "description": "Original network effects paper introducing critical mass concept for telecommunications.",
+              "url": "https://www.jstor.org/stable/3003378"
+            },
+            {
+              "title": "Systems Competition and Network Effects",
+              "authors": "Michael Katz, Carl Shapiro",
+              "year": 1994,
+              "tag": "Classic",
+              "description": "Accessible synthesis on network effects, installed base dynamics, and platform competition.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/jep.8.2.93"
+            },
+            {
+              "title": "Standardization, Compatibility, and Innovation",
+              "authors": "Joseph Farrell, Garth Saloner",
+              "year": 1985,
+              "tag": "Classic",
+              "description": "Introduces 'excess inertia' and coordination failure; explains why inferior standards persist.",
+              "url": "https://www.jstor.org/stable/2555617"
+            }
+          ]
         },
         {
           "id": "promotions-discounts",
           "name": "Promotions & Discounts",
           "application": "Coupon optimization, price promotions",
-          "papers": []
+          "papers": [
+            {
+              "title": "How Promotions Work",
+              "authors": "Robert Blattberg, Richard Briesch, Edward Fox",
+              "year": 1995,
+              "tag": "Classic",
+              "description": "14 empirical generalizations about promotion effects (brand switching, stockpiling, category expansion); most-cited promotion paper.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mksc.14.3.G122"
+            },
+            {
+              "title": "The Different Faces of Coupon Elasticity",
+              "authors": "V. Kumar, Sunder Swaminathan",
+              "year": 2005,
+              "tag": "SOTA",
+              "description": "Econometric model for coupon effects showing self/cross-coupon elasticities; practical for optimization.",
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S0022435905000023"
+            },
+            {
+              "title": "How Price Promotions Work: A Review",
+              "authors": "Richard Briesch, et al.",
+              "year": 2019,
+              "tag": "SOTA",
+              "description": "Comprehensive update to 1995 generalizations; bridges academic research with practitioner insights.",
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S2452261919300061"
+            }
+          ]
         },
         {
           "id": "marketing-mix",
           "name": "Marketing Mix Modeling",
           "application": "Budget allocation, channel effectiveness",
-          "papers": []
+          "papers": [
+            {
+              "title": "Bayesian Methods for Media Mix Modeling with Carryover and Shape Effects",
+              "authors": "Yuxue Jin, Yueqing Wang, Yunting Sun, David Chan, Jim Koehler",
+              "year": 2017,
+              "tag": "Industry",
+              "description": "Foundational Google paper introducing Bayesian MMM with adstock/saturation curves; basis for LightweightMMM.",
+              "url": "https://research.google/pubs/bayesian-methods-for-media-mix-modeling-with-carryover-and-shape-effects/"
+            },
+            {
+              "title": "Geo-Level Bayesian Hierarchical Media Mix Modeling",
+              "authors": "Yunting Sun, Yueqing Wang, Yuxue Jin, David Chan, Jim Koehler",
+              "year": 2017,
+              "tag": "Industry",
+              "description": "Extends Bayesian MMM to geo-level data; provides tighter credible intervals and reduces targeting bias.",
+              "url": "https://research.google/pubs/pub46000/"
+            },
+            {
+              "title": "Robyn: Continuous & Semi-Automated MMM",
+              "authors": "Julian Runge, et al. (Meta)",
+              "year": 2024,
+              "tag": "Industry",
+              "description": "Technical documentation for Meta's open-source Robyn; covers ridge regression, evolutionary optimization, calibration.",
+              "url": "https://arxiv.org/abs/2403.14674"
+            },
+            {
+              "title": "Media Mix Model Calibration With Bayesian Priors",
+              "authors": "Google Research",
+              "year": 2023,
+              "tag": "SOTA",
+              "description": "Methods for calibrating MMM with experiment results; bridges MMM and incrementality testing.",
+              "url": "https://research.google/pubs/media-mix-model-calibration-with-bayesian-priors/"
+            }
+          ]
         },
         {
           "id": "uplift-modeling",
           "name": "Uplift Modeling",
           "application": "Treatment targeting, persuadables vs. sure things",
-          "papers": []
+          "papers": [
+            {
+              "title": "Differential Response Analysis",
+              "authors": "Nicholas Radcliffe, Patrick Surry",
+              "year": 1999,
+              "tag": "Classic",
+              "description": "Original uplift paper introducing the 'Persuadables' segmentation framework (Persuadables, Sure Things, Lost Causes, Sleeping Dogs).",
+              "url": "https://stochasticsolutions.com/papers.html"
+            },
+            {
+              "title": "Using Control Groups to Target on Predicted Lift",
+              "authors": "Nicholas Radcliffe",
+              "year": 2007,
+              "tag": "Classic",
+              "description": "Introduces Qini curves for uplift model evaluation; practitioner-focused methodology comparison.",
+              "url": "https://www.research.ed.ac.uk/en/publications/using-control-groups-to-target-on-predicted-lift-building-and-ass"
+            },
+            {
+              "title": "Estimation and Inference of Heterogeneous Treatment Effects using Random Forests",
+              "authors": "Stefan Wager, Susan Athey",
+              "year": 2018,
+              "tag": "SOTA",
+              "description": "Causal forests for HTE estimation with valid confidence intervals; foundation for grf package; 2000+ citations.",
+              "url": "https://www.tandfonline.com/doi/full/10.1080/01621459.2017.1319839"
+            },
+            {
+              "title": "Decision Trees for Uplift Modeling",
+              "authors": "Piotr Rzepakowski, Szymon Jaroszewicz",
+              "year": 2012,
+              "tag": "SOTA",
+              "description": "Adapts information theory for uplift decision trees; extends to multiple treatments; widely implemented.",
+              "url": "https://link.springer.com/article/10.1007/s10115-011-0434-0"
+            }
+          ]
         }
       ]
     },
@@ -868,31 +1017,204 @@
           "id": "collaborative-filtering",
           "name": "Collaborative Filtering & Matrix Factorization",
           "application": "User-item interactions, implicit feedback",
-          "papers": []
+          "papers": [
+            {
+              "title": "Matrix Factorization Techniques for Recommender Systems",
+              "authors": "Yehuda Koren, Robert Bell, Chris Volinsky",
+              "year": 2009,
+              "tag": "Classic",
+              "description": "The definitive Netflix Prize paper establishing matrix factorization as the dominant CF paradigm.",
+              "url": "https://ieeexplore.ieee.org/document/5197422"
+            },
+            {
+              "title": "Collaborative Filtering for Implicit Feedback Datasets",
+              "authors": "Yifan Hu, Yehuda Koren, Chris Volinsky",
+              "year": 2008,
+              "tag": "Classic",
+              "description": "Foundational paper for implicit feedback (clicks, views); introduces confidence-weighted MF with ALS optimization.",
+              "url": "https://ieeexplore.ieee.org/document/4781121"
+            },
+            {
+              "title": "BPR: Bayesian Personalized Ranking from Implicit Feedback",
+              "authors": "Steffen Rendle, Christoph Freudenthaler, Zeno Gantner, Lars Schmidt-Thieme",
+              "year": 2009,
+              "tag": "Classic",
+              "description": "Standard pairwise ranking loss for implicit feedback; BPR-OPT criterion ubiquitous in modern training.",
+              "url": "https://arxiv.org/abs/1205.2618"
+            },
+            {
+              "title": "Factorization Meets the Neighborhood",
+              "authors": "Yehuda Koren",
+              "year": 2008,
+              "tag": "Classic",
+              "description": "Combines neighborhood and latent factor models; integrates user/item biases; essential for blending approaches.",
+              "url": "https://dl.acm.org/doi/10.1145/1401890.1401944"
+            }
+          ]
         },
         {
           "id": "deep-recommenders",
           "name": "Deep Recommenders",
           "application": "Two-tower, transformers, sequential recs",
-          "papers": []
+          "papers": [
+            {
+              "title": "Deep Neural Networks for YouTube Recommendations",
+              "authors": "Paul Covington, Jay Adams, Emre Sargin",
+              "year": 2016,
+              "tag": "Industry",
+              "description": "Seminal industry paper establishing two-stage deep learning (candidate generation + ranking) at billion-scale.",
+              "url": "https://research.google/pubs/deep-neural-networks-for-youtube-recommendations/"
+            },
+            {
+              "title": "Embedding-based Retrieval in Facebook Search",
+              "authors": "Jui-Ting Huang, et al.",
+              "year": 2020,
+              "tag": "Industry",
+              "description": "Comprehensive industry paper on two-tower embedding models; covers hard negative mining, ANN indexing, production deployment.",
+              "url": "https://arxiv.org/abs/2006.11632"
+            },
+            {
+              "title": "Self-Attentive Sequential Recommendation (SASRec)",
+              "authors": "Wang-Cheng Kang, Julian McAuley",
+              "year": 2018,
+              "tag": "SOTA",
+              "description": "Applies self-attention to sequential recommendations; the Transformer foundation inspiring BERT4Rec and modern sequential models.",
+              "url": "https://arxiv.org/abs/1808.09781"
+            },
+            {
+              "title": "BERT4Rec: Sequential Recommendation with BERT",
+              "authors": "Fei Sun, et al. (Alibaba)",
+              "year": 2019,
+              "tag": "SOTA",
+              "description": "Adapts BERT's bidirectional self-attention with Cloze task for sequential predictions.",
+              "url": "https://arxiv.org/abs/1904.06690"
+            },
+            {
+              "title": "Neural Collaborative Filtering",
+              "authors": "Xiangnan He, et al.",
+              "year": 2017,
+              "tag": "Classic",
+              "description": "Replaces inner product with neural networks; introduces GMF+MLP framework (NeuMF); highly cited baseline.",
+              "url": "https://arxiv.org/abs/1708.05031"
+            }
+          ]
         },
         {
           "id": "causal-recommendations",
           "name": "Causal Recommendations & Debiasing",
           "application": "Exposure bias, counterfactual evaluation",
-          "papers": []
+          "papers": [
+            {
+              "title": "Recommendations as Treatments: Debiasing Learning and Evaluation",
+              "authors": "Tobias Schnabel, Adith Swaminathan, Ashudeep Singh, Navin Chandak, Thorsten Joachims",
+              "year": 2016,
+              "tag": "Classic",
+              "description": "Foundational paper applying causal inference to recommenders; introduces IPS-based unbiased estimators.",
+              "url": "http://proceedings.mlr.press/v48/schnabel16.pdf"
+            },
+            {
+              "title": "Unbiased Learning-to-Rank with Biased Feedback",
+              "authors": "Thorsten Joachims, Adith Swaminathan, Tobias Schnabel",
+              "year": 2017,
+              "tag": "Classic",
+              "description": "Addresses position bias in click data; propensity-weighted ranking SVM; essential for implicit feedback.",
+              "url": "https://arxiv.org/abs/1608.04468"
+            },
+            {
+              "title": "The Self-Normalized Estimator for Counterfactual Learning",
+              "authors": "Adith Swaminathan, Thorsten Joachims",
+              "year": 2015,
+              "tag": "Classic",
+              "description": "Introduces SNIPS reducing IPS variance without bias; widely used in production.",
+              "url": "https://papers.nips.cc/paper/2015/hash/39027dfad5138c9ca0c474d71db915c3-Abstract.html"
+            },
+            {
+              "title": "Counterfactual Learning and Evaluation for Recommender Systems",
+              "authors": "Yuta Saito, Thorsten Joachims",
+              "year": 2021,
+              "tag": "SOTA",
+              "description": "Comprehensive tutorial covering IPS, SNIPS, Doubly Robust estimators with implementation guidance.",
+              "url": "https://dl.acm.org/doi/10.1145/3460231.3473320"
+            }
+          ]
         },
         {
           "id": "exploration-diversity",
           "name": "Exploration & Diversity",
           "application": "Novelty, serendipity, filter bubbles",
-          "papers": []
+          "papers": [
+            {
+              "title": "Topic Diversification for Recommendation Lists",
+              "authors": "Cai-Nicolas Ziegler, Sean McNee, Joseph Konstan, Georg Lausen",
+              "year": 2005,
+              "tag": "Classic",
+              "description": "Pioneering paper on balancing accuracy with diversity; introduces intra-list diversity metrics.",
+              "url": "https://dl.acm.org/doi/10.1145/1060745.1060754"
+            },
+            {
+              "title": "Exploring the Filter Bubble",
+              "authors": "Tien Nguyen, Pik-Mai Hui, F. Maxwell Harper, Loren Terveen, Joseph Konstan",
+              "year": 2014,
+              "tag": "Classic",
+              "description": "First rigorous longitudinal study measuring filter bubble effects at individual level using MovieLens.",
+              "url": "https://dl.acm.org/doi/10.1145/2566486.2568012"
+            },
+            {
+              "title": "Blockbuster Culture's Next Rise or Fall",
+              "authors": "Daniel Fleder, Kartik Hosanagar",
+              "year": 2009,
+              "tag": "Classic",
+              "description": "Analyzes how recommenders affect aggregate sales diversity (long tail vs. blockbusters).",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.1080.0974"
+            },
+            {
+              "title": "Explore, Exploit, and Explain",
+              "authors": "James McInerney, et al. (Spotify)",
+              "year": 2018,
+              "tag": "Industry",
+              "description": "Spotify's production system combining contextual bandits for exploration with explainable recommendations.",
+              "url": "https://dl.acm.org/doi/10.1145/3240323.3240354"
+            }
+          ]
         },
         {
           "id": "cold-start",
           "name": "Cold Start",
           "application": "New users, new items, hybrid approaches",
-          "papers": []
+          "papers": [
+            {
+              "title": "DropoutNet: Addressing Cold Start in Recommender Systems",
+              "authors": "Maksims Volkovs, Guangwei Yu, Tomi Poutanen",
+              "year": 2017,
+              "tag": "SOTA",
+              "description": "Uses dropout to force reliance on content features when collaborative signals unavailable; practical and widely adopted.",
+              "url": "https://proceedings.neurips.cc/paper/2017/hash/dbd22ba3bd0df8f385bdac3e9f8be207-Abstract.html"
+            },
+            {
+              "title": "A Meta-Learning Perspective on Cold-Start Recommendations",
+              "authors": "Manasi Vartak, et al. (Twitter)",
+              "year": 2017,
+              "tag": "Industry",
+              "description": "Applies meta-learning to item cold-start; learns to adapt quickly from user history.",
+              "url": "https://papers.nips.cc/paper/7266-a-meta-learning-perspective-on-cold-start-recommendations-for-items"
+            },
+            {
+              "title": "Collaborative Deep Learning for Recommender Systems",
+              "authors": "Hao Wang, Naiyan Wang, Dit-Yan Yeung",
+              "year": 2015,
+              "tag": "Classic",
+              "description": "Combines deep learning for content (stacked denoising autoencoders) with CF; influential hybrid approach.",
+              "url": "https://dl.acm.org/doi/10.1145/2783258.2783273"
+            },
+            {
+              "title": "MeLU: Meta-Learned User Preference Estimator",
+              "authors": "Hoyeop Lee, et al.",
+              "year": 2019,
+              "tag": "SOTA",
+              "description": "Applies MAML framework to user cold-start; learns initialization that quickly adapts to new users.",
+              "url": "https://dl.acm.org/doi/10.1145/3292500.3330859"
+            }
+          ]
         }
       ]
     },
@@ -906,31 +1228,204 @@
           "id": "learning-to-rank",
           "name": "Learning to Rank",
           "application": "Pairwise, listwise, LambdaMART",
-          "papers": []
+          "papers": [
+            {
+              "title": "From RankNet to LambdaRank to LambdaMART: An Overview",
+              "authors": "Chris Burges",
+              "year": 2010,
+              "tag": "Classic",
+              "description": "Definitive reference unifying the RankNet family; LambdaMART remains the industry workhorse for gradient-boosted ranking.",
+              "url": "https://www.microsoft.com/en-us/research/publication/from-ranknet-to-lambdarank-to-lambdamart-an-overview/"
+            },
+            {
+              "title": "Learning to Rank using Gradient Descent (RankNet)",
+              "authors": "Chris Burges, et al.",
+              "year": 2005,
+              "tag": "Classic",
+              "description": "Foundational pairwise neural ranking using cross-entropy loss; won ICML Test of Time Award 2015.",
+              "url": "https://www.microsoft.com/en-us/research/publication/learning-to-rank-using-gradient-descent/"
+            },
+            {
+              "title": "Learning to Rank: From Pairwise to Listwise (ListNet)",
+              "authors": "Zhe Cao, Tao Qin, Tie-Yan Liu, Ming-Feng Tsai, Hang Li",
+              "year": 2007,
+              "tag": "Classic",
+              "description": "First listwise method using probability distributions over permutations; influenced all subsequent listwise methods.",
+              "url": "https://dl.acm.org/doi/10.1145/1273496.1273513"
+            },
+            {
+              "title": "Listwise Approach to Learning to Rank (ListMLE)",
+              "authors": "Fen Xia, Tie-Yan Liu, Jue Wang, Wensheng Zhang, Hang Li",
+              "year": 2008,
+              "tag": "Classic",
+              "description": "Foundational listwise LTR with theoretical analysis of listwise loss functions.",
+              "url": "https://icml.cc/Conferences/2008/papers/167.pdf"
+            }
+          ]
         },
         {
           "id": "query-understanding",
           "name": "Query Understanding",
           "application": "Intent classification, query rewriting",
-          "papers": []
+          "papers": [
+            {
+              "title": "Understanding User Goals in Web Search",
+              "authors": "Daniel Rose, Danny Levinson",
+              "year": 2004,
+              "tag": "Classic",
+              "description": "Seminal taxonomy of query intent (navigational, informational, transactional); foundational framework still used today.",
+              "url": "https://dl.acm.org/doi/10.1145/988672.988675"
+            },
+            {
+              "title": "Building Bridges for Web Query Classification",
+              "authors": "Dou Shen, Rong Pan, Jian-Tao Sun, Jeffrey Junfeng Pan, Kangheng Wu, Jie Yin, Qiang Yang",
+              "year": 2006,
+              "tag": "Classic",
+              "description": "Foundational work on mapping queries to topic categories using intermediary data sources.",
+              "url": "https://dl.acm.org/doi/10.1145/1148170.1148196"
+            },
+            {
+              "title": "Deep Search Query Intent Understanding",
+              "authors": "Bo Xiang, et al. (Facebook)",
+              "year": 2020,
+              "tag": "Industry",
+              "description": "Industrial-scale BERT-based intent classification for typeahead and search blending.",
+              "url": "https://arxiv.org/abs/2008.06759"
+            }
+          ]
         },
         {
           "id": "relevance-engagement",
           "name": "Relevance vs. Engagement",
           "application": "Short-term clicks vs. satisfaction",
-          "papers": []
+          "papers": [
+            {
+              "title": "Deep Neural Networks for YouTube Recommendations",
+              "authors": "Paul Covington, Jay Adams, Emre Sargin",
+              "year": 2016,
+              "tag": "Industry",
+              "description": "Landmark paper on watch-time optimization vs. clicks; explains freshness handling at scale.",
+              "url": "https://research.google/pubs/deep-neural-networks-for-youtube-recommendations/"
+            },
+            {
+              "title": "Recommending What Video to Watch Next",
+              "authors": "Zhe Zhao, et al. (Google)",
+              "year": 2019,
+              "tag": "Industry",
+              "description": "Multi-objective ranking balancing engagement with satisfaction using multi-gate mixture-of-experts.",
+              "url": "https://dl.acm.org/doi/10.1145/3298689.3346997"
+            },
+            {
+              "title": "150 Successful ML Models: 6 Lessons at Booking.com",
+              "authors": "Lucas Bernardi, et al.",
+              "year": 2019,
+              "tag": "Industry",
+              "description": "Influential industry paper on balancing business metrics vs. user value in production systems.",
+              "url": "https://dl.acm.org/doi/10.1145/3292500.3330744"
+            },
+            {
+              "title": "Engagement, User Satisfaction, and Divisive Content Amplification",
+              "authors": "Smitha Milli, et al.",
+              "year": 2025,
+              "tag": "SOTA",
+              "description": "Demonstrates empirically that engagement-based ranking underperforms for user satisfaction.",
+              "url": "https://academic.oup.com/pnasnexus/article/4/3/pgaf062/8052060"
+            }
+          ]
         },
         {
           "id": "position-bias",
           "name": "Position Bias & Debiasing",
           "application": "Click models, unbiased LTR",
-          "papers": []
+          "papers": [
+            {
+              "title": "An Experimental Comparison of Click Position-Bias Models",
+              "authors": "Nick Craswell, Onno Zoeter, Michael Taylor, Bill Ramsey",
+              "year": 2008,
+              "tag": "Classic",
+              "description": "Seminal empirical study establishing cascade model as best explanation for user examination behavior.",
+              "url": "https://dl.acm.org/doi/10.1145/1341531.1341545"
+            },
+            {
+              "title": "Unbiased Learning-to-Rank with Biased Feedback",
+              "authors": "Thorsten Joachims, Adith Swaminathan, Tobias Schnabel",
+              "year": 2017,
+              "tag": "Classic",
+              "description": "Foundational counterfactual/IPS framework for unbiased LTR; propensity-weighted ranking SVM.",
+              "url": "https://arxiv.org/abs/1608.04468"
+            },
+            {
+              "title": "Click Models for Web Search",
+              "authors": "Aleksandr Chuklin, Ilya Markov, Maarten de Rijke",
+              "year": 2015,
+              "tag": "Classic",
+              "description": "Comprehensive synthesis covering all major click models (PBM, DCM, DBN, UBM); essential reference.",
+              "url": "https://www.morganclaypool.com/doi/abs/10.2200/S00672ED1V01Y201509ICR046"
+            },
+            {
+              "title": "Unbiased LTR with Unbiased Propensity Estimation (DLA)",
+              "authors": "Qingyao Ai, Keping Bi, Cheng Luo, Jiafeng Guo, W. Bruce Croft",
+              "year": 2018,
+              "tag": "SOTA",
+              "description": "Dual learning algorithm jointly training ranking and propensity models; widely used for production debiasing.",
+              "url": "https://dl.acm.org/doi/10.1145/3209978.3209986"
+            },
+            {
+              "title": "Improving Deep Learning for Airbnb Search",
+              "authors": "Malay Haldar, et al.",
+              "year": 2020,
+              "tag": "Industry",
+              "description": "Practical industry case on position bias correction via dropout at inference; shows major production gains.",
+              "url": "https://arxiv.org/abs/2002.05515"
+            }
+          ]
         },
         {
           "id": "semantic-search",
           "name": "Semantic Search & Embeddings",
           "application": "Dense retrieval, vector search",
-          "papers": []
+          "papers": [
+            {
+              "title": "Dense Passage Retrieval for Open-Domain QA (DPR)",
+              "authors": "Vladimir Karpukhin, et al. (Facebook)",
+              "year": 2020,
+              "tag": "Classic",
+              "description": "Foundational dual-encoder dense retrieval; outperforms BM25 by 9-19%; established the dense retrieval paradigm.",
+              "url": "https://arxiv.org/abs/2004.04906"
+            },
+            {
+              "title": "ColBERT: Efficient Passage Search via Late Interaction",
+              "authors": "Omar Khattab, Matei Zaharia",
+              "year": 2020,
+              "tag": "SOTA",
+              "description": "Introduced late interaction achieving near cross-encoder quality with bi-encoder speed.",
+              "url": "https://arxiv.org/abs/2004.12832"
+            },
+            {
+              "title": "Passage Re-ranking with BERT",
+              "authors": "Rodrigo Nogueira, Kyunghyun Cho",
+              "year": 2019,
+              "tag": "Classic",
+              "description": "Transformative demonstration of BERT for passage re-ranking; 27% improvement on MS MARCO.",
+              "url": "https://arxiv.org/abs/1901.04085"
+            },
+            {
+              "title": "Real-time Personalization using Embeddings at Airbnb",
+              "authors": "Mihajlo Grbovic, Haibin Cheng",
+              "year": 2018,
+              "tag": "Industry",
+              "description": "Best Paper Award. Production embedding system driving 99% of Airbnb conversions.",
+              "url": "https://dl.acm.org/doi/10.1145/3219819.3219885"
+            },
+            {
+              "title": "Sentence-BERT: Sentence Embeddings using Siamese Networks",
+              "authors": "Nils Reimers, Iryna Gurevych",
+              "year": 2019,
+              "tag": "SOTA",
+              "description": "Made BERT practical for dense retrieval with siamese architecture; widely used for semantic similarity.",
+              "url": "https://arxiv.org/abs/1908.10084"
+            }
+          ]
         }
       ]
     },
@@ -944,31 +1439,188 @@
           "id": "two-sided-markets",
           "name": "Two-Sided Markets",
           "application": "Platform economics, chicken-and-egg",
-          "papers": []
+          "papers": [
+            {
+              "title": "Platform Competition in Two-Sided Markets",
+              "authors": "Jean-Charles Rochet, Jean Tirole",
+              "year": 2003,
+              "tag": "Classic",
+              "description": "Foundational theory introducing price structure vs. price level distinction for platforms.",
+              "url": "https://academic.oup.com/jeea/article/1/4/990/2280902"
+            },
+            {
+              "title": "Two-Sided Markets: A Progress Report",
+              "authors": "Jean-Charles Rochet, Jean Tirole",
+              "year": 2006,
+              "tag": "Classic",
+              "description": "Comprehensive survey defining two-sidedness by price structure; multi-homing analysis.",
+              "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1756-2171.2006.tb00036.x"
+            },
+            {
+              "title": "Competition in Two-Sided Markets",
+              "authors": "Mark Armstrong",
+              "year": 2006,
+              "tag": "Classic",
+              "description": "Three canonical models (monopoly, single-homing, competitive bottlenecks); workhorse for policy analysis.",
+              "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1756-2171.2006.tb00037.x"
+            },
+            {
+              "title": "Chicken and Egg: Competition Among Intermediation Service Providers",
+              "authors": "Bernard Caillaud, Bruno Jullien",
+              "year": 2003,
+              "tag": "Classic",
+              "description": "Addresses startup problem and price competition; divide-and-conquer strategies.",
+              "url": "https://www.jstor.org/stable/1593720"
+            }
+          ]
         },
         {
           "id": "search-matching-frictions",
           "name": "Search & Matching Frictions",
           "application": "Job platforms, e-commerce discovery",
-          "papers": []
+          "papers": [
+            {
+              "title": "Nobel Prize Scientific Background: DMP Model",
+              "authors": "Peter Diamond, Dale Mortensen, Christopher Pissarides",
+              "year": 2010,
+              "tag": "Classic",
+              "description": "Comprehensive summary of canonical search-matching theory; matching function, wage bargaining, unemployment dynamics.",
+              "url": "https://www.nobelprize.org/uploads/2018/06/advanced-economicsciences2010.pdf"
+            },
+            {
+              "title": "Equilibrium Unemployment Theory",
+              "authors": "Christopher Pissarides",
+              "year": 2000,
+              "tag": "Classic",
+              "description": "Definitive textbook treatment of DMP model; the practitioner's reference for labor market search.",
+              "url": "https://mitpress.mit.edu/9780262161879/equilibrium-unemployment-theory/"
+            },
+            {
+              "title": "Looking into the Black Box: A Survey of the Matching Function",
+              "authors": "Barbara Petrongolo, Christopher Pissarides",
+              "year": 2001,
+              "tag": "SOTA",
+              "description": "Empirical estimation of aggregate matching functions; bridges theory and data.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/jel.39.2.390"
+            },
+            {
+              "title": "Job Creation and Job Destruction",
+              "authors": "Dale Mortensen, Christopher Pissarides",
+              "year": 1994,
+              "tag": "Classic",
+              "description": "Introduces endogenous job destruction into search framework; stochastic equilibrium model.",
+              "url": "https://academic.oup.com/restud/article/61/3/397/1523034"
+            }
+          ]
         },
         {
           "id": "matching-algorithms",
           "name": "Matching Algorithms",
           "application": "Ride dispatch, labor, dating, kidney exchange",
-          "papers": []
+          "papers": [
+            {
+              "title": "College Admissions and the Stability of Marriage",
+              "authors": "David Gale, Lloyd Shapley",
+              "year": 1962,
+              "tag": "Classic",
+              "description": "Introduces deferred acceptance algorithm and stability concept; foundation of market design.",
+              "url": "https://web.stanford.edu/~alroth/papers/GaleandShapley.revised.IJGT.pdf"
+            },
+            {
+              "title": "Kidney Exchange",
+              "authors": "Alvin Roth, Tayfun Sönmez, M. Utku Ünver",
+              "year": 2004,
+              "tag": "Classic",
+              "description": "Applies mechanism design to organ allocation; created real kidney exchange programs; saves thousands of lives.",
+              "url": "https://www.nber.org/papers/w10002"
+            },
+            {
+              "title": "The Redesign of the Matching Market for American Physicians",
+              "authors": "Alvin Roth, Elliott Peranson",
+              "year": 1999,
+              "tag": "Industry",
+              "description": "Engineering economics: redesigning NRMP; demonstrates stability matters empirically.",
+              "url": "https://web.stanford.edu/~alroth/papers/rothperansonAER.PDF"
+            },
+            {
+              "title": "Matching and Pricing in Ride Hailing: Wild Goose Chases",
+              "authors": "Juan Camilo Castillo, Dan Knoepfle, Glen Weyl",
+              "year": 2024,
+              "tag": "Industry",
+              "description": "Shows ride-hailing prone to matching failures; explains why surge pricing is necessary.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2022.00096"
+            }
+          ]
         },
         {
           "id": "reputation-reviews",
           "name": "Reputation & Reviews",
           "application": "Trust, rating systems, fake reviews",
-          "papers": []
+          "papers": [
+            {
+              "title": "Trust Among Strangers in Internet Transactions",
+              "authors": "Paul Resnick, Richard Zeckhauser",
+              "year": 2002,
+              "tag": "Classic",
+              "description": "First rigorous empirical analysis of online reputation (eBay); documents extreme positive bias.",
+              "url": "https://presnick.people.si.umich.edu/papers/ebayNBER/index.html"
+            },
+            {
+              "title": "The Value of Reputation on eBay: A Controlled Experiment",
+              "authors": "Paul Resnick, Richard Zeckhauser, John Swanson, Kate Lockwood",
+              "year": 2006,
+              "tag": "Classic",
+              "description": "Field experiment proving ~8% reputation premium; gold standard methodology.",
+              "url": "https://link.springer.com/article/10.1007/s10683-006-4309-2"
+            },
+            {
+              "title": "Fake It Till You Make It: Reputation, Competition, and Yelp Review Fraud",
+              "authors": "Michael Luca, Georgios Zervas",
+              "year": 2016,
+              "tag": "SOTA",
+              "description": "Documents incentives for fake reviews; 16% of Yelp reviews suspicious; competition drives fraud.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2015.2304"
+            },
+            {
+              "title": "Reciprocity and Unveiling in Two-Sided Reputation Systems",
+              "authors": "Andrey Fradkin, Elena Grewal, David Holtz",
+              "year": 2021,
+              "tag": "Industry",
+              "description": "Airbnb experiment showing bilateral reviews cause reciprocity/retaliation bias.",
+              "url": "https://pubsonline.informs.org/doi/abs/10.1287/mksc.2020.1260"
+            }
+          ]
         },
         {
           "id": "congestion-rationing",
           "name": "Congestion & Rationing",
           "application": "Waitlists, overbooking, capacity limits",
-          "papers": []
+          "papers": [
+            {
+              "title": "Using Big Data to Estimate Consumer Surplus: The Case of Uber",
+              "authors": "Peter Cohen, Robert Hahn, Jonathan Hall, Steven Levitt, Robert Metcalfe",
+              "year": 2016,
+              "tag": "Industry",
+              "description": "Uses surge pricing variation to estimate demand; $6.8B consumer surplus; RDD methodology.",
+              "url": "https://www.nber.org/papers/w22627"
+            },
+            {
+              "title": "Who Benefits from Surge Pricing?",
+              "authors": "Juan Camilo Castillo",
+              "year": 2025,
+              "tag": "SOTA",
+              "description": "Structural model of surge pricing welfare; riders gain, drivers lose; distributional analysis.",
+              "url": "https://onlinelibrary.wiley.com/doi/10.3982/ECTA19106"
+            },
+            {
+              "title": "Overbooking with Substitutable Inventory Classes",
+              "authors": "Itir Karaesmen, Garrett van Ryzin",
+              "year": 2004,
+              "tag": "SOTA",
+              "description": "Optimal overbooking with multiple fare classes; airline revenue management workhorse.",
+              "url": "https://business.columbia.edu/sites/default/files-efs/pubfiles/3916/overbooking.pdf"
+            }
+          ]
         }
       ]
     },
@@ -982,31 +1634,196 @@
           "id": "auction-theory",
           "name": "Auction Theory Foundations",
           "application": "IPV, revenue equivalence, optimal auctions",
-          "papers": []
+          "papers": [
+            {
+              "title": "Counterspeculation, Auctions, and Competitive Sealed Tenders",
+              "authors": "William Vickrey",
+              "year": 1961,
+              "tag": "Classic",
+              "description": "Introduces second-price sealed-bid (Vickrey) auction; establishes truthful bidding as dominant strategy.",
+              "url": "https://cramton.umd.edu/market-design-papers/vickrey-counterspeculation-auctions-and-competitive-sealed-tenders.pdf"
+            },
+            {
+              "title": "Optimal Auction Design",
+              "authors": "Roger Myerson",
+              "year": 1981,
+              "tag": "Classic",
+              "description": "Characterizes revenue-maximizing auctions; introduces virtual valuations and optimal reserves; Nobel Prize work.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/moor.6.1.58"
+            },
+            {
+              "title": "Optimal Auctions",
+              "authors": "John Riley, William Samuelson",
+              "year": 1981,
+              "tag": "Classic",
+              "description": "Independently proves revenue equivalence theorem; shows optimal reserve prices increase revenue.",
+              "url": "https://www.jstor.org/stable/1803481"
+            },
+            {
+              "title": "A Theory of Auctions and Competitive Bidding",
+              "authors": "Paul Milgrom, Robert Weber",
+              "year": 1982,
+              "tag": "Classic",
+              "description": "Introduces affiliated values and linkage principle; shows English auctions reduce winner's curse.",
+              "url": "https://www.cs.princeton.edu/courses/archive/spr10/cos444/papers/milgrom_weber82.pdf"
+            }
+          ]
         },
         {
           "id": "multi-unit-combinatorial",
           "name": "Multi-unit & Combinatorial Auctions",
           "application": "Spectrum, procurement, ad slots",
-          "papers": []
+          "papers": [
+            {
+              "title": "Putting Auction Theory to Work",
+              "authors": "Paul Milgrom",
+              "year": 2004,
+              "tag": "Industry",
+              "description": "Practitioner's guide to designing real auctions; details SMRA for spectrum auctions; Nobel Prize foundation.",
+              "url": "https://www.cambridge.org/core/books/putting-auction-theory-to-work/B90B5B93ED4C65BC22ACA0DF9D97C3C7"
+            },
+            {
+              "title": "The Lovely but Lonely Vickrey Auction",
+              "authors": "Lawrence Ausubel, Paul Milgrom",
+              "year": 2006,
+              "tag": "SOTA",
+              "description": "Explains why VCG rarely used in practice; introduces practical alternatives for combinatorial settings.",
+              "url": "https://milgrom.people.stanford.edu/wp-content/uploads/2005/12/Lovely-but-Lonely-Vickrey-Auction-072404a.pdf"
+            },
+            {
+              "title": "Combinatorial Auctions",
+              "authors": "Peter Cramton, Yoav Shoham, Richard Steinberg (eds.)",
+              "year": 2006,
+              "tag": "Industry",
+              "description": "Comprehensive treatment of package bidding, winner determination, and spectrum auction design.",
+              "url": "https://mitpress.mit.edu/9780262033428/combinatorial-auctions/"
+            },
+            {
+              "title": "Incentives in Teams",
+              "authors": "Theodore Groves",
+              "year": 1973,
+              "tag": "Classic",
+              "description": "Generalizes incentive-compatible mechanisms with transfers; completes theoretical foundation for VCG.",
+              "url": "https://www.jstor.org/stable/1914085"
+            }
+          ]
         },
         {
           "id": "dynamic-auctions",
           "name": "Dynamic Auctions & Repeated Games",
           "application": "Learning bidders, long-run equilibria",
-          "papers": []
+          "papers": [
+            {
+              "title": "Learning in Repeated Auctions with Budgets",
+              "authors": "Santiago Balseiro, Yonatan Gur",
+              "year": 2019,
+              "tag": "SOTA",
+              "description": "Introduces adaptive pacing strategies for budget-constrained bidders; proves regret bounds; foundational for ad auction budget management.",
+              "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2921446"
+            },
+            {
+              "title": "Repeated Auctions with Budgets in Ad Exchanges",
+              "authors": "Santiago Balseiro, Omar Besbes, Gabriel Weintraub",
+              "year": 2015,
+              "tag": "Industry",
+              "description": "Analyzes fluid approximations for budget-constrained repeated auctions; practical design principles.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2014.2022"
+            },
+            {
+              "title": "Budget Management Strategies in Repeated Auctions",
+              "authors": "Santiago Balseiro, Soo Jin Kim, Mohammad Mahdian, Vahab Mirrokni",
+              "year": 2021,
+              "tag": "Industry",
+              "description": "Compares pacing, throttling, and probabilistic strategies; Google research on platform budget management.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/opre.2020.2017"
+            },
+            {
+              "title": "Auto-bidding Auctions in the Presence of User Costs",
+              "authors": "Gagan Aggarwal, et al. (Google)",
+              "year": 2024,
+              "tag": "Industry",
+              "description": "Analyzes VCG with value-maximizing autobidders; shows cost multipliers improve welfare.",
+              "url": "https://research.google/pubs/autobidding-auctions-in-the-presence-of-user-costs/"
+            }
+          ]
         },
         {
           "id": "market-design",
           "name": "Market Design",
           "application": "School choice, organ allocation, spectrum",
-          "papers": []
+          "papers": [
+            {
+              "title": "College Admissions and the Stability of Marriage",
+              "authors": "David Gale, Lloyd Shapley",
+              "year": 1962,
+              "tag": "Classic",
+              "description": "Introduces deferred acceptance algorithm; proves existence of stable matchings; Nobel Prize foundation.",
+              "url": "https://sites.math.washington.edu/~billey/classes/562.winter.2018/articles/Gale.Shapley.pdf"
+            },
+            {
+              "title": "School Choice: A Mechanism Design Approach",
+              "authors": "Atila Abdulkadiroğlu, Tayfun Sönmez",
+              "year": 2003,
+              "tag": "Classic",
+              "description": "Applies matching theory to school choice; shows Boston mechanism is manipulable; proposes strategy-proof alternatives.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/000282803321455354"
+            },
+            {
+              "title": "Kidney Exchange",
+              "authors": "Alvin Roth, Tayfun Sönmez, M. Utku Ünver",
+              "year": 2004,
+              "tag": "Classic",
+              "description": "Designs kidney exchange clearinghouses using top trading cycles; Nobel Prize application.",
+              "url": "https://www.nber.org/papers/w10002"
+            },
+            {
+              "title": "Changing the Boston School Choice Mechanism",
+              "authors": "Atila Abdulkadiroğlu, Parag Pathak, Alvin Roth, Tayfun Sönmez",
+              "year": 2006,
+              "tag": "SOTA",
+              "description": "Documents Boston's switch to deferred acceptance; empirical evidence on strategic behavior.",
+              "url": "https://www.nber.org/papers/w11965"
+            }
+          ]
         },
         {
           "id": "information-design",
           "name": "Information Design & Signaling",
           "application": "Bayesian persuasion, cheap talk",
-          "papers": []
+          "papers": [
+            {
+              "title": "Strategic Information Transmission",
+              "authors": "Vincent Crawford, Joel Sobel",
+              "year": 1982,
+              "tag": "Classic",
+              "description": "Foundational cheap talk model; shows partition equilibria arise with interest misalignment.",
+              "url": "https://www.jstor.org/stable/1913390"
+            },
+            {
+              "title": "Bayesian Persuasion",
+              "authors": "Emir Kamenica, Matthew Gentzkow",
+              "year": 2011,
+              "tag": "Classic",
+              "description": "Introduces information design framework; characterizes sender-optimal signals via concavification; transformed the field.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/aer.101.6.2590"
+            },
+            {
+              "title": "Competition in Persuasion",
+              "authors": "Matthew Gentzkow, Emir Kamenica",
+              "year": 2017,
+              "tag": "SOTA",
+              "description": "Extends Bayesian persuasion to multiple senders; shows competition increases information revelation.",
+              "url": "https://academic.oup.com/restud/article/84/1/300/2669964"
+            },
+            {
+              "title": "Information Design: A Unified Perspective",
+              "authors": "Dirk Bergemann, Stephen Morris",
+              "year": 2019,
+              "tag": "SOTA",
+              "description": "Comprehensive survey connecting Bayesian persuasion, mechanism design, and correlated equilibrium.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/jel.20181489"
+            }
+          ]
         }
       ]
     },
