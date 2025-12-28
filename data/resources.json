@@ -696,102 +696,6 @@
     "level": "Medium"
   },
   {
-    "name": "Causal Inference (Wager)",
-    "description": "Stefan Wager's Stanford STATS 361 notes. Causal forests, HTE, and prescriptive policy learning \u2014 the exact tools used in tech companies.",
-    "category": "Monographs",
-    "url": "https://web.stanford.edu/~swager/stats361.pdf",
-    "type": "Lecture Notes",
-    "level": "Hard"
-  },
-  {
-    "name": "Advanced Data Analysis (Shalizi)",
-    "description": "Cosma Shalizi's 600-page CMU manuscript. Geometry of regression, DAGs, heavy-tailed distributions. Mercilessly rigorous yet chatty.",
-    "category": "Monographs",
-    "url": "https://www.stat.cmu.edu/~cshalizi/ADAfaEPoV/",
-    "type": "Manuscript",
-    "level": "Hard"
-  },
-  {
-    "name": "Patterns, Predictions, and Actions",
-    "description": "Hardt & Recht's living book grounding ML in decision theory. Why models fail in the real world and how to think about prediction as action.",
-    "category": "Monographs",
-    "url": "https://mlstory.org/",
-    "type": "Online Book",
-    "level": "Hard"
-  },
-  {
-    "name": "Geometric Deep Learning",
-    "description": "Bronstein et al.'s proto-book unifying CNNs, GNNs, and Transformers under symmetry and group theory. The GNN bible.",
-    "category": "Monographs",
-    "url": "https://arxiv.org/abs/2104.13478",
-    "type": "Monograph",
-    "level": "Hard"
-  },
-  {
-    "name": "Probabilistic Modeling Case Studies",
-    "description": "Michael Betancourt's Stan case studies. HMC geometry, divergences, hierarchical modeling \u2014 the Bayesian technical standard.",
-    "category": "Monographs",
-    "url": "https://betanalpha.github.io/writing/",
-    "type": "Case Studies",
-    "level": "Hard"
-  },
-  {
-    "name": "Bandit Algorithms",
-    "description": "Lattimore & Szepesv\u00e1ri's definitive reference. UCB, Thompson Sampling, Contextual Bandits \u2014 experimentation beyond A/B testing.",
-    "category": "Monographs",
-    "url": "https://tor-lattimore.com/downloads/book/book.pdf",
-    "type": "Book",
-    "level": "Hard"
-  },
-  {
-    "name": "RL: Theory and Algorithms",
-    "description": "Agarwal, Jiang, Kakade's working draft. Statistical learning theory of RL \u2014 'How many samples to learn this policy?'",
-    "category": "Monographs",
-    "url": "https://rltheorybook.github.io/",
-    "type": "Draft",
-    "level": "Hard"
-  },
-  {
-    "name": "Causal Inference and ML (Imbens)",
-    "description": "Guido Imbens' Nobel lectures. Matrix completion for synthetic controls, the rigorous foundation for tech metrics.",
-    "category": "Monographs",
-    "url": "https://www.nobelprize.org/uploads/2024/11/imbens-lecture.pdf",
-    "type": "Lecture",
-    "level": "Hard"
-  },
-  {
-    "name": "Double ML (Chernozhukov)",
-    "description": "Belloni & Chernozhukov on Post-Double Selection Lasso. Use ML as controls while getting valid p-values.",
-    "category": "Monographs",
-    "url": "https://arxiv.org/abs/1608.00060",
-    "type": "Paper",
-    "level": "Hard"
-  },
-  {
-    "name": "Econometrics (Hansen)",
-    "description": "Bruce Hansen's modern reference. Asymptotics, cluster-robust SEs, panel data \u2014 the technical backbone.",
-    "category": "Monographs",
-    "url": "https://www.ssc.wisc.edu/~bhansen/econometrics/",
-    "type": "Book",
-    "level": "Hard"
-  },
-  {
-    "name": "Microeconomic Theory (Rubinstein)",
-    "description": "Ariel Rubinstein's free lecture notes. Game theory, rational choice, bargaining \u2014 for mechanism design work.",
-    "category": "Monographs",
-    "url": "https://arielrubinstein.tau.ac.il/books.html",
-    "type": "Lecture Notes",
-    "level": "Hard"
-  },
-  {
-    "name": "Market Design (Roth)",
-    "description": "Alvin Roth's Nobel lecture on matching markets. Stability, unraveling \u2014 essential for marketplace analytics.",
-    "category": "Monographs",
-    "url": "https://www.nobelprize.org/uploads/2018/06/roth-lecture.pdf",
-    "type": "Lecture",
-    "level": "Hard"
-  },
-  {
     "name": "Adam Fishman Newsletter",
     "description": "Ex-Patreon/Reforge. Growth loops, product strategy, and how to structure product analytics.",
     "category": "Strategy & Analytics",
@@ -814,22 +718,6 @@
     "url": "https://measuringu.com/",
     "type": "Blog",
     "level": "Medium"
-  },
-  {
-    "name": "Staff Engineer (Will Larson)",
-    "description": "Technical leadership, glue work, and navigating org complexity. Essential for senior ICs in tech.",
-    "category": "Monographs",
-    "url": "https://staffeng.com/book",
-    "type": "Book",
-    "level": "Hard"
-  },
-  {
-    "name": "Designing Data-Intensive Applications",
-    "description": "Martin Kleppmann's engineering bible. Stream vs batch, distributed systems, and data infrastructure.",
-    "category": "Monographs",
-    "url": "https://dataintensive.net/",
-    "type": "Book",
-    "level": "Hard"
   },
   {
     "name": "Convex Optimization (Boyd & Vandenberghe)",
