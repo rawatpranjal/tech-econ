@@ -94,7 +94,7 @@ body::before {
     font-size: 1.4rem;
     font-weight: 700;
     color: white;
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
 }
 
 .sidebar-header {
@@ -680,6 +680,23 @@ a:hover {
 }
 
 .package-card.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.resource-card {
+    transition: opacity 0.25s ease, transform 0.25s ease, box-shadow 0.2s;
+}
+
+.resource-card.hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+    position: absolute;
+    visibility: hidden;
+}
+
+.resource-card.visible {
     opacity: 1;
     transform: scale(1);
 }
@@ -1649,6 +1666,13 @@ a:hover {
     font-size: 2rem;
     font-weight: 700;
     color: var(--text-primary);
+    margin: 0 0 0.5rem 0;
+}
+
+.about-tagline {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-style: italic;
     margin: 0 0 2rem 0;
 }
 
