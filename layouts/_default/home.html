@@ -27,22 +27,6 @@
         </div>
     </div>
 
-    <!-- Staff Picks Section -->
-    <div class="staff-picks">
-        <h2 class="staff-picks-title">Staff Picks</h2>
-        <p class="staff-picks-subtitle">Essential tools to get started</p>
-        <div class="staff-picks-grid">
-            {{ range .Site.Data.packages }}
-            {{ if .staffPick }}
-            <a href="{{ .url }}" target="_blank" class="staff-pick-card">
-                <span class="staff-pick-name">{{ .name }}</span>
-                <span class="staff-pick-desc">{{ .best_for }}</span>
-            </a>
-            {{ end }}
-            {{ end }}
-        </div>
-    </div>
-
     <!-- Section Cards Grid -->
     <div class="section-grid">
         <a href="{{ "packages/" | relURL }}" class="section-card" data-aos="fade-up">
