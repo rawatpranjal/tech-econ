@@ -100,6 +100,7 @@ body::before {
 .sidebar-header {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .sidebar-nav {
