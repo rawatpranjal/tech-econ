@@ -28,6 +28,24 @@
     vectorSearchFallback: true  // Fall back to Fuse.js if vector search fails
   };
 
+  // Synonym mappings for better search matching
+  var SYNONYMS = {
+    'diff': ['DiD', 'difference-in-differences', 'diff-in-diff'],
+    'did': ['DiD', 'difference-in-differences', 'diff-in-diff'],
+    'difference': ['DiD', 'diff-in-diff'],
+    'rdd': ['regression discontinuity', 'discontinuity design'],
+    'discontinuity': ['RDD', 'regression discontinuity'],
+    'sc': ['synthetic control'],
+    'synthetic': ['synthetic control', 'SC'],
+    'iv': ['instrumental variable', 'instrumental variables'],
+    'instrumental': ['IV', 'instrumental variable'],
+    'ab': ['A/B testing', 'ab testing', 'experimentation'],
+    'cuped': ['variance reduction', 'CUPED'],
+    'variance': ['CUPED', 'variance reduction'],
+    'bandit': ['multi-armed bandit', 'bandits', 'MAB'],
+    'mab': ['multi-armed bandit', 'bandits']
+  };
+
   // Type display configuration
   var TYPE_CONFIG = {
     package: { label: 'Package', icon: 'pkg', color: '#0066cc', href: '/packages/' },
@@ -176,17 +194,36 @@
 
     var results;
 
+    // Expand query with synonyms
+    var expandedQueries = expandQuery(query);
+
     // Try vector search first if available
     if (CONFIG.useVectorSearch && typeof VectorSearch !== 'undefined' && VectorSearch.isLoaded) {
+      // Use expanded queries for better vector search seeding
       results = VectorSearch.search(query, fuse, CONFIG.maxTotalResults);
+
+      // If vector search returns few results, also try expanded Fuse.js
+      if (results.length < 5 && expandedQueries.length > 1) {
+        var fuseExpanded = searchWithExpansion(expandedQueries, CONFIG.maxTotalResults);
+        // Merge results, avoiding duplicates
+        var seen = {};
+        results.forEach(function(r) { seen[r.item.name + r.item.type] = true; });
+        fuseExpanded.forEach(function(r) {
+          var key = r.item.name + r.item.type;
+          if (!seen[key]) {
+            seen[key] = true;
+            results.push(r);
+          }
+        });
+      }
     } else {
-      // Fall back to Fuse.js
-      results = fuse.search(query);
+      // Fall back to Fuse.js with synonym expansion
+      results = searchWithExpansion(expandedQueries, CONFIG.maxTotalResults * 2);
     }
 
     currentResults = results.slice(0, CONFIG.maxTotalResults);
 
-    // Vector search always returns results, but check anyway
+    // Always try to show results
     if (currentResults.length === 0) {
       showEmpty();
       flatResults = [];
@@ -381,6 +418,43 @@
     if (item) {
       closeModal();
     }
+  }
+
+  // Expand query with synonyms
+  function expandQuery(query) {
+    var words = query.toLowerCase().split(/\s+/);
+    var expanded = [query];
+    words.forEach(function(word) {
+      if (SYNONYMS[word]) {
+        SYNONYMS[word].forEach(function(syn) {
+          if (expanded.indexOf(syn) === -1) {
+            expanded.push(syn);
+          }
+        });
+      }
+    });
+    return expanded;
+  }
+
+  // Search with multiple queries and combine results
+  function searchWithExpansion(queries, maxResults) {
+    var seen = {};
+    var combined = [];
+
+    queries.forEach(function(q) {
+      var results = fuse.search(q);
+      results.forEach(function(r) {
+        var key = r.item.name + r.item.type;
+        if (!seen[key]) {
+          seen[key] = true;
+          combined.push(r);
+        }
+      });
+    });
+
+    // Sort by score (lower is better in Fuse.js)
+    combined.sort(function(a, b) { return a.score - b.score; });
+    return combined.slice(0, maxResults);
   }
 
   // Utility functions
