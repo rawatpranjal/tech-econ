@@ -195,6 +195,11 @@
                 <div class="cards-row">
                     {{ range $blogs }}
                     <div class="resource-card" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="Personal">
+                        {{ if .image_url }}
+                        <a href="{{ .url }}" target="_blank" class="blog-thumbnail-link">
+                            <img src="{{ .image_url }}" alt="{{ .name }}" class="blog-thumbnail" loading="lazy">
+                        </a>
+                        {{ end }}
                         <div class="card-header">
                             <img class="resource-favicon" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
                             <h3 class="resource-name">
