@@ -978,28 +978,21 @@
     if (searchDataEl) {
       try {
         this.data = JSON.parse(searchDataEl.textContent);
-        console.log('[PageSearch] Loaded data:', this.data.length, 'items');
       } catch (e) {
         console.error('[PageSearch] Failed to parse search data:', e);
         this.data = [];
       }
-    } else {
-      console.warn('[PageSearch] No search data element:', this.config.searchDataId);
     }
 
     // Initialize Fuse.js for local page search
     if (typeof Fuse !== 'undefined' && this.data.length > 0) {
       var fuseKeys = this.config.fuseKeys || ['name', 'description'];
-      console.log('[PageSearch] Initializing Fuse with keys:', fuseKeys);
       this.fuse = new Fuse(this.data, {
         keys: fuseKeys,
         threshold: 0.4,
         ignoreLocation: true,
         includeScore: true
       });
-      console.log('[PageSearch] Fuse initialized:', !!this.fuse);
-    } else {
-      console.warn('[PageSearch] Cannot init Fuse - Fuse:', typeof Fuse, 'data:', this.data.length);
     }
   };
 
@@ -1009,17 +1002,9 @@
   PageSearchHandler.prototype.filterItems = function() {
     var self = this;
 
-    console.log('[PageSearch] filterItems:', {
-      search: this.currentSearch,
-      hasFuse: !!this.fuse,
-      category: this.currentCategory
-    });
-
     if (this.currentSearch && this.fuse) {
       // Use Fuse.js for local page search
       var fuseResults = this.fuse.search(this.currentSearch);
-      console.log('[PageSearch] Fuse results:', fuseResults.length);
-
       var results = fuseResults.map(function(r) {
         return { name: r.item.name, score: r.score };
       });
@@ -1098,8 +1083,6 @@
   PageSearchHandler.prototype.showFlatResults = function(results) {
     var self = this;
 
-    console.log('[PageSearch] showFlatResults called with', results.length, 'results');
-
     // Hide category sections
     this.sections.forEach(function(section) {
       section.style.display = 'none';
@@ -1116,11 +1099,6 @@
       var key = (result.name || '').toLowerCase();
       scoreMap.set(key, index);
     });
-
-    console.log('[PageSearch] scoreMap size:', scoreMap.size);
-    if (results.length > 0 && results.length <= 5) {
-      console.log('[PageSearch] Result names:', results.map(function(r) { return r.name; }));
-    }
 
     // Sort cards by relevance
     var cardsArray = Array.from(this.cards);
@@ -1152,16 +1130,9 @@
 
     // Move matching cards to flat container in sorted order
     var visibleCount = 0;
-    var checkedFirst = false;
     cardsArray.forEach(function(card, index) {
       var cardName = (card.dataset.name || '').toLowerCase();
       var isMatch = scoreMap.has(cardName);
-
-      // Debug first few cards
-      if (!checkedFirst && index < 3) {
-        console.log('[PageSearch] Card check:', cardName, 'match:', isMatch);
-      }
-      if (index === 2) checkedFirst = true;
 
       if (isMatch || self.currentSearch.length < 2) {
         card.classList.remove('hidden');
