@@ -2618,5 +2618,131 @@
       "treatment effects"
     ],
     "best_for": "Covariate adjustment in experiments"
+  },
+  {
+    "name": "cvxpy",
+    "description": "Domain-specific language for convex optimization problems. Write math as code — the standard for convex problems.",
+    "category": "Optimization",
+    "docs_url": "https://www.cvxpy.org/",
+    "github_url": "https://github.com/cvxpy/cvxpy",
+    "url": "https://www.cvxpy.org/",
+    "install": "pip install cvxpy",
+    "tags": [
+      "convex optimization",
+      "linear programming",
+      "quadratic programming"
+    ],
+    "best_for": "Convex optimization with intuitive syntax"
+  },
+  {
+    "name": "scipy.optimize",
+    "description": "Optimization algorithms built into SciPy. Minimization, root finding, curve fitting, and linear programming.",
+    "category": "Optimization",
+    "docs_url": "https://docs.scipy.org/doc/scipy/reference/optimize.html",
+    "github_url": "https://github.com/scipy/scipy",
+    "url": "https://docs.scipy.org/doc/scipy/reference/optimize.html",
+    "install": "pip install scipy",
+    "tags": [
+      "optimization",
+      "minimization",
+      "root finding"
+    ],
+    "best_for": "General-purpose optimization — start here for basics"
+  },
+  {
+    "name": "ortools",
+    "description": "Google's operations research toolkit. Constraint programming, routing, linear/integer programming, and scheduling.",
+    "category": "Optimization",
+    "docs_url": "https://developers.google.com/optimization",
+    "github_url": "https://github.com/google/or-tools",
+    "url": "https://developers.google.com/optimization",
+    "install": "pip install ortools",
+    "tags": [
+      "OR",
+      "routing",
+      "scheduling",
+      "constraint programming"
+    ],
+    "best_for": "Production-ready combinatorial optimization"
+  },
+  {
+    "name": "gurobipy",
+    "description": "Python interface for Gurobi, the best-in-class commercial solver. LP, QP, MIP, and MIQP.",
+    "category": "Optimization",
+    "docs_url": "https://www.gurobi.com/documentation/",
+    "github_url": null,
+    "url": "https://www.gurobi.com/",
+    "install": "pip install gurobipy",
+    "tags": [
+      "optimization",
+      "solver",
+      "MIP",
+      "commercial"
+    ],
+    "best_for": "Best-in-class solver — free for academics"
+  },
+  {
+    "name": "langgraph",
+    "description": "Framework for building stateful, multi-actor LLM applications. Graph-based agent workflows with persistence.",
+    "category": "Agentic AI",
+    "docs_url": "https://langchain-ai.github.io/langgraph/",
+    "github_url": "https://github.com/langchain-ai/langgraph",
+    "url": "https://langchain-ai.github.io/langgraph/",
+    "install": "pip install langgraph",
+    "tags": [
+      "agents",
+      "LLM",
+      "workflows",
+      "multi-agent"
+    ],
+    "best_for": "Production agent workflows with state management"
+  },
+  {
+    "name": "langchain",
+    "description": "Framework for developing LLM-powered applications. Chains, tools, memory, and retrieval.",
+    "category": "Agentic AI",
+    "docs_url": "https://python.langchain.com/",
+    "github_url": "https://github.com/langchain-ai/langchain",
+    "url": "https://python.langchain.com/",
+    "install": "pip install langchain",
+    "tags": [
+      "LLM",
+      "chains",
+      "tools",
+      "RAG"
+    ],
+    "best_for": "LLM framework — chains, tools, memory"
+  },
+  {
+    "name": "crewai",
+    "description": "Framework for orchestrating role-playing autonomous AI agents. Multi-agent collaboration made intuitive.",
+    "category": "Agentic AI",
+    "docs_url": "https://docs.crewai.com/",
+    "github_url": "https://github.com/crewAIInc/crewAI",
+    "url": "https://www.crewai.com/",
+    "install": "pip install crewai",
+    "tags": [
+      "agents",
+      "multi-agent",
+      "orchestration",
+      "roles"
+    ],
+    "best_for": "Role-based multi-agent teams"
+  },
+  {
+    "name": "openai-agents",
+    "description": "OpenAI's lightweight, production-ready SDK for building agentic AI applications. Fast prototyping.",
+    "category": "Agentic AI",
+    "docs_url": "https://openai.github.io/openai-agents-python/",
+    "github_url": "https://github.com/openai/openai-agents-python",
+    "url": "https://openai.github.io/openai-agents-python/",
+    "install": "pip install openai-agents",
+    "tags": [
+      "agents",
+      "OpenAI",
+      "tools",
+      "lightweight"
+    ],
+    "best_for": "OpenAI's lightweight SDK — fast prototyping"
   }
 ]

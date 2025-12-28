@@ -719,5 +719,61 @@
     "category": "Monographs",
     "url": "https://dataintensive.net/",
     "type": "Book"
+  },
+  {
+    "name": "Convex Optimization (Boyd & Vandenberghe)",
+    "description": "The bible of convex optimization — free online, universally cited. Covers LP, QP, SDP, and more.",
+    "category": "Optimization",
+    "url": "https://web.stanford.edu/~boyd/cvxbook/",
+    "type": "Online Book"
+  },
+  {
+    "name": "Stanford EE364A (YouTube)",
+    "description": "Boyd's legendary lectures on convex optimization. The gold standard for learning optimization theory.",
+    "category": "Optimization",
+    "url": "https://www.youtube.com/playlist?list=PL3940DD956CDF0622",
+    "type": "Lectures"
+  },
+  {
+    "name": "Discrete Optimization (Coursera)",
+    "description": "Van Hentenryck's course on constraint programming, local search, and MIP. Actually makes you implement.",
+    "category": "Optimization",
+    "url": "https://www.coursera.org/learn/discrete-optimization",
+    "type": "Course"
+  },
+  {
+    "name": "CVXPY Short Course",
+    "description": "Hands-on convex optimization in Python. Learn to model and solve real problems with CVXPY.",
+    "category": "Optimization",
+    "url": "https://www.cvxpy.org/short_course/index.html",
+    "type": "Tutorial"
+  },
+  {
+    "name": "Agentic AI (DeepLearning.AI)",
+    "description": "Andrew Ng on the four agentic design patterns — reflection, tool use, planning, multi-agent. Start here.",
+    "category": "Agentic AI",
+    "url": "https://www.deeplearning.ai/short-courses/ai-agentic-design-patterns-with-autogen/",
+    "type": "Course"
+  },
+  {
+    "name": "AI Agents in LangGraph (DeepLearning.AI)",
+    "description": "Build agents from scratch with Harrison Chase. State machines, tool calling, and human-in-the-loop.",
+    "category": "Agentic AI",
+    "url": "https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/",
+    "type": "Course"
+  },
+  {
+    "name": "Building Effective Agents (Anthropic)",
+    "description": "Design patterns from Claude's creators. The best practitioner guide on when and how to build agents.",
+    "category": "Agentic AI",
+    "url": "https://www.anthropic.com/research/building-effective-agents",
+    "type": "Guide"
+  },
+  {
+    "name": "LangGraph Documentation",
+    "description": "Official docs for the industry standard agent framework. Graphs, state, persistence, and deployment.",
+    "category": "Agentic AI",
+    "url": "https://langchain-ai.github.io/langgraph/",
+    "type": "Docs"
   }
 ]

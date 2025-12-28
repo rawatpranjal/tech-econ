@@ -140,5 +140,41 @@
       {"name": "scrapy", "why": "Production web scraping framework"}
     ],
     "order": 8
+  },
+  {
+    "name": "Learn Optimization (OR)",
+    "description": "Linear programming, convex optimization, and combinatorial methods — solve pricing, scheduling, and allocation problems",
+    "icon": "trending",
+    "resources": [
+      {"name": "Convex Optimization (Boyd & Vandenberghe)", "why": "The bible — free online, universally cited", "url": "https://web.stanford.edu/~boyd/cvxbook/"},
+      {"name": "Stanford EE364A (YouTube)", "why": "Boyd's legendary lectures — the gold standard", "url": "https://www.youtube.com/playlist?list=PL3940DD956CDF0622"},
+      {"name": "Discrete Optimization (Coursera)", "why": "Van Hentenryck's course — actually makes you implement", "url": "https://www.coursera.org/learn/discrete-optimization"},
+      {"name": "CVXPY Short Course", "why": "Hands-on convex optimization in Python", "url": "https://www.cvxpy.org/short_course/index.html"}
+    ],
+    "packages": [
+      {"name": "cvxpy", "why": "Write math as code — the standard for convex problems"},
+      {"name": "scipy.optimize", "why": "Built into SciPy — start here for basics"},
+      {"name": "OR-Tools", "why": "Google's production-ready combinatorial optimization"},
+      {"name": "Gurobi", "why": "Best-in-class solver — free for academics"}
+    ],
+    "order": 9
+  },
+  {
+    "name": "Learn Agentic Workflows",
+    "description": "Build AI agents that reason, plan, and execute — tool use, multi-agent systems, and orchestration",
+    "icon": "robot",
+    "resources": [
+      {"name": "Agentic AI (DeepLearning.AI)", "why": "Andrew Ng on the four design patterns — start here", "url": "https://www.deeplearning.ai/short-courses/ai-agentic-design-patterns-with-autogen/"},
+      {"name": "AI Agents in LangGraph (DeepLearning.AI)", "why": "Build agents from scratch with Harrison Chase", "url": "https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/"},
+      {"name": "Building Effective Agents (Anthropic)", "why": "Design patterns from Claude's creators — best practitioner guide", "url": "https://www.anthropic.com/research/building-effective-agents"},
+      {"name": "LangGraph Documentation", "why": "Official docs — the industry standard framework", "url": "https://langchain-ai.github.io/langgraph/"}
+    ],
+    "packages": [
+      {"name": "langgraph", "why": "Graph-based agent workflows — production standard"},
+      {"name": "langchain", "why": "LLM framework — chains, tools, memory"},
+      {"name": "crewai", "why": "Role-based multi-agent teams — intuitive orchestration"},
+      {"name": "openai-agents", "why": "OpenAI's lightweight SDK — fast prototyping"}
+    ],
+    "order": 10
   }
 ]
