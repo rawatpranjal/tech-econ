@@ -4,8 +4,10 @@
 
     // Get theme preference: localStorage > light (default)
     function getThemePreference() {
-        const stored = localStorage.getItem(STORAGE_KEY);
-        if (stored) return stored;
+        try {
+            const stored = localStorage.getItem(STORAGE_KEY);
+            if (stored) return stored;
+        } catch(e) {}
         return 'light';
     }
 
