@@ -34,7 +34,7 @@
         </div>
 
         <!-- Category Dropdown -->
-        {{ $categoryOrder := slice "Conferences" "Blogs" "Online" }}
+        {{ $categoryOrder := slice "Conferences" "Blogs" "Research Labs" "Online" }}
         <select id="category-select" class="category-select">
             <option value="all">All Categories</option>
             {{ range $cat := $categoryOrder }}
@@ -84,6 +84,38 @@
             <div class="cards-row">
                 {{ range .Site.Data.community }}
                 {{ if eq .category "Blogs" }}
+                <div class="resource-card"
+                     data-name="{{ .name | lower }}"
+                     data-description="{{ .description | lower }}"
+                     data-category="{{ .category }}">
+                    <div class="card-header">
+                        <img class="resource-favicon"
+                             src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32"
+                             alt=""
+                             loading="lazy"
+                             onerror="this.style.display='none'">
+                        <h3 class="resource-name">
+                            <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
+                        </h3>
+                        <span class="resource-type">{{ .type }}</span>
+                    </div>
+                    <p class="resource-desc">{{ .description }}</p>
+                    <div class="card-footer">
+                        <span class="category-badge">{{ .category }}</span>
+                        <a href="{{ .url }}" target="_blank" class="link-btn">Visit</a>
+                    </div>
+                </div>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+
+        <!-- Research Labs (always cards) -->
+        <div class="always-available">
+            <h3>Research Labs</h3>
+            <div class="cards-row">
+                {{ range .Site.Data.community }}
+                {{ if eq .category "Research Labs" }}
                 <div class="resource-card"
                      data-name="{{ .name | lower }}"
                      data-description="{{ .description | lower }}"
