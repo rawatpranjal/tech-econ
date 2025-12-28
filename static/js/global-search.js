@@ -30,20 +30,83 @@
 
   // Synonym mappings for better search matching
   var SYNONYMS = {
+    // Diff-in-diff
     'diff': ['DiD', 'difference-in-differences', 'diff-in-diff'],
     'did': ['DiD', 'difference-in-differences', 'diff-in-diff'],
     'difference': ['DiD', 'diff-in-diff'],
+
+    // Regression discontinuity
     'rdd': ['regression discontinuity', 'discontinuity design'],
     'discontinuity': ['RDD', 'regression discontinuity'],
+
+    // Synthetic control
     'sc': ['synthetic control'],
     'synthetic': ['synthetic control', 'SC'],
+
+    // Instrumental variables
     'iv': ['instrumental variable', 'instrumental variables'],
     'instrumental': ['IV', 'instrumental variable'],
+
+    // A/B testing & experimentation
     'ab': ['A/B testing', 'ab testing', 'experimentation'],
+    'experiment': ['A/B testing', 'experimentation', 'RCT'],
+    'rct': ['randomized controlled trial', 'experiment'],
+    'testing': ['A/B testing', 'experimentation'],
+
+    // Variance reduction
     'cuped': ['variance reduction', 'CUPED'],
     'variance': ['CUPED', 'variance reduction'],
+
+    // Bandits
     'bandit': ['multi-armed bandit', 'bandits', 'MAB'],
-    'mab': ['multi-armed bandit', 'bandits']
+    'mab': ['multi-armed bandit', 'bandits'],
+
+    // ML/Causal inference
+    'ml': ['machine learning', 'ML'],
+    'causal': ['causal inference', 'causality', 'treatment effect'],
+    'het': ['heterogeneous treatment effects', 'HTE', 'CATE'],
+    'hte': ['heterogeneous treatment effects', 'CATE'],
+    'cate': ['conditional average treatment effect', 'HTE'],
+    'ate': ['average treatment effect', 'ATE'],
+    'att': ['average treatment effect on treated', 'ATT'],
+    'treatment': ['treatment effect', 'causal'],
+
+    // Propensity/Matching
+    'psm': ['propensity score matching', 'matching'],
+    'propensity': ['propensity score', 'PSM', 'matching'],
+    'matching': ['propensity score matching', 'PSM'],
+
+    // Economics/Demand
+    'demand': ['demand estimation', 'BLP', 'pricing'],
+    'blp': ['Berry Levinsohn Pakes', 'demand estimation'],
+    'pricing': ['dynamic pricing', 'demand estimation'],
+    'elasticity': ['price elasticity', 'demand'],
+
+    // Stats/Methods
+    'bootstrap': ['bootstrapping', 'resampling'],
+    'bayes': ['Bayesian', 'bayesian inference'],
+    'bayesian': ['Bayes', 'bayesian inference'],
+    'regression': ['OLS', 'linear regression'],
+    'ols': ['ordinary least squares', 'regression'],
+
+    // Uplift/Marketing
+    'uplift': ['uplift modeling', 'incremental'],
+    'incremental': ['uplift', 'incrementality'],
+
+    // Panel data
+    'panel': ['panel data', 'fixed effects'],
+    'fe': ['fixed effects', 'panel'],
+    'fixed': ['fixed effects', 'FE'],
+
+    // Double ML
+    'dml': ['double machine learning', 'debiased ML'],
+    'double': ['double machine learning', 'DML'],
+    'debiased': ['double ML', 'DML'],
+
+    // General
+    'package': ['library', 'tool'],
+    'python': ['py', 'Python'],
+    'r': ['R package', 'rstats']
   };
 
   // Type display configuration
