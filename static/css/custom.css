@@ -3713,6 +3713,10 @@ mark {
 }
 
 .card:hover .favorite-btn,
+.resource-card:hover .favorite-btn,
+.package-card:hover .favorite-btn,
+.dataset-card:hover .favorite-btn,
+.talk-card:hover .favorite-btn,
 .favorite-btn:focus {
     opacity: 1;
 }
