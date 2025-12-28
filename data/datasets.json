@@ -3085,33 +3085,6 @@
     ]
   },
   {
-    "name": "Grab GPS Traces",
-    "description": "Millions of GPS traces from Southeast Asian ride-hailing platform",
-    "category": "Transportation & Mobility",
-    "url": "https://engineering.grab.com/grab-posisi",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "GPS",
-      "rideshare",
-      "Southeast Asia"
-    ]
-  },
-  {
-    "name": "iPinYou RTB Dataset",
-    "description": "Billions of bid requests with complete auction logs: bid IDs, timestamps, user agents, regions, bid/paying prices, conversions",
-    "category": "Advertising",
-    "url": "https://github.com/wnzhang/make-ipinyou-data",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "RTB",
-      "advertising",
-      "auctions",
-      "bidding"
-    ]
-  },
-  {
     "name": "Criteo Terabyte",
     "description": "342GB, 45M samples with 13 integer features and 26 hashed categorical features for CTR prediction",
     "category": "Advertising",
@@ -3123,33 +3096,6 @@
       "advertising",
       "large-scale",
       "benchmark"
-    ]
-  },
-  {
-    "name": "Avazu CTR Dataset",
-    "description": "40M samples for mobile ad click-through rate prediction",
-    "category": "Advertising",
-    "url": "https://www.kaggle.com/competitions/avazu-ctr-prediction",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "CTR",
-      "mobile",
-      "advertising",
-      "Kaggle"
-    ]
-  },
-  {
-    "name": "Adform Display Ads",
-    "description": "64M impressions for display advertising with impressions and clicks",
-    "category": "Advertising",
-    "url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/TADBY7",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "display",
-      "advertising",
-      "impressions"
     ]
   },
   {
@@ -3181,34 +3127,6 @@
     ]
   },
   {
-    "name": "Amazon ShopBench (KDD 2024)",
-    "description": "57 tasks, 20K questions for LLM shopping assistant benchmark",
-    "category": "E-Commerce",
-    "url": "https://www.aicrowd.com/challenges/amazon-kdd-cup-2024-multi-task-online-shopping-challenge-for-llms",
-    "docs_url": null,
-    "github_url": "https://github.com/amazon-science/shopbench",
-    "tags": [
-      "LLM",
-      "shopping",
-      "benchmark",
-      "Amazon"
-    ]
-  },
-  {
-    "name": "Coveo Shopping SIGIR",
-    "description": "30M+ browsing events with query and image vectors for e-commerce search",
-    "category": "E-Commerce",
-    "url": "https://github.com/coveooss/SIGIR-ecom-data-challenge",
-    "docs_url": null,
-    "github_url": "https://github.com/coveooss/SIGIR-ecom-data-challenge",
-    "tags": [
-      "search",
-      "browsing",
-      "vectors",
-      "SIGIR"
-    ]
-  },
-  {
     "name": "ASOS Digital Experiments",
     "description": "99 real A/B experiments with 24,153 time-granular snapshots for adaptive stopping research",
     "category": "E-Commerce",
@@ -3223,34 +3141,6 @@
     ]
   },
   {
-    "name": "Upworthy Headlines",
-    "description": "32,487 headline/image A/B experiments with 538M assignments",
-    "category": "E-Commerce",
-    "url": "https://upworthy.natematias.com/",
-    "docs_url": null,
-    "github_url": "https://github.com/jboaf/Upworthy_Headline_Experiments",
-    "tags": [
-      "A/B testing",
-      "headlines",
-      "media",
-      "experiments"
-    ]
-  },
-  {
-    "name": "LendingClub P2P Loans",
-    "description": "2.7M loans (2007-2019) with borrower income, DTI, employment, defaults, and state macro variables",
-    "category": "Financial Services",
-    "url": "https://www.kaggle.com/datasets/wordsforthewise/lending-club",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "P2P",
-      "lending",
-      "loans",
-      "credit"
-    ]
-  },
-  {
     "name": "Prosper Loan Data",
     "description": "113K P2P loans with borrower characteristics and outcomes",
     "category": "Financial Services",
@@ -3261,34 +3151,6 @@
       "P2P",
       "lending",
       "loans"
-    ]
-  },
-  {
-    "name": "Amazon Fraud Benchmark",
-    "description": "9 consolidated datasets for standardized fraud detection evaluation including IEEE-CIS (590K transactions)",
-    "category": "Financial Services",
-    "url": "https://github.com/amazon-science/fraud-dataset-benchmark",
-    "docs_url": null,
-    "github_url": "https://github.com/amazon-science/fraud-dataset-benchmark",
-    "tags": [
-      "fraud",
-      "detection",
-      "benchmark",
-      "Amazon"
-    ]
-  },
-  {
-    "name": "PaySim Synthetic",
-    "description": "6M+ mobile money transactions from agent-based model calibrated on African mobile money logs",
-    "category": "Financial Services",
-    "url": "https://www.kaggle.com/datasets/ealaxi/paysim1",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "fraud",
-      "mobile money",
-      "synthetic",
-      "Africa"
     ]
   },
   {
@@ -3320,20 +3182,6 @@
     ]
   },
   {
-    "name": "CoAID",
-    "description": "4,251 news articles and 296K claims about COVID-19 healthcare misinformation",
-    "category": "Content Moderation",
-    "url": "https://github.com/cuilimeng/CoAID",
-    "docs_url": null,
-    "github_url": "https://github.com/cuilimeng/CoAID",
-    "tags": [
-      "COVID",
-      "misinformation",
-      "healthcare",
-      "claims"
-    ]
-  },
-  {
     "name": "LIAR",
     "description": "12.8K fact-checked political statements with speaker metadata",
     "category": "Content Moderation",
@@ -3344,20 +3192,6 @@
       "fact-checking",
       "politics",
       "misinformation"
-    ]
-  },
-  {
-    "name": "Amazon Last Mile Routing",
-    "description": "9,184 routes across 5 US metros with stop-level coordinates, service times, and driver knowledge",
-    "category": "Logistics & Supply Chain",
-    "url": "https://registry.opendata.aws/amazon-last-mile-challenges/",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "routing",
-      "last mile",
-      "Amazon",
-      "logistics"
     ]
   },
   {
