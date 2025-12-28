@@ -122,58 +122,11 @@
     "type": "Video"
   },
   {
-    "name": "Ronny Kohavi: Experimentation Wisdom",
-    "description": "The godfather of online experimentation. Decades of A/B testing wisdom from Microsoft and Amazon.",
-    "category": "Experimentation & Scaling",
-    "url": "https://www.exp-platform.com/",
-    "type": "Talks + Papers",
-    "image_url": "https://robotics.stanford.edu/~ronnyk/RonnyKSmall.jpg"
-  },
-  {
-    "name": "Alexey Stysin: Auction Mechanism Design",
-    "description": "Data Science Tech Lead at Topsort, former Yandex. 7+ years building VCG auctions, ML for click prediction, and revenue optimization for search ads.",
-    "category": "Market Design & Auctions",
-    "url": "https://www.youtube.com/@AlexeyStysin",
-    "type": "YouTube Channel"
-  },
-  {
     "name": "Nikhil Devanur: Lagrangian Duality in Mechanism Design",
     "description": "Microsoft Research. How to design revenue-maximizing auctions using duality — simple auctions, budget smoothing, and optimal mechanisms.",
     "category": "Market Design & Auctions",
     "url": "https://mediaspace.gatech.edu/media/Nikhil+Devanur+-+Lagrangian+Duality+in+Mechanism+Design/1_oj4qzj8x",
     "type": "Video"
-  },
-  {
-    "name": "Casual Inference Podcast",
-    "description": "Lucy D'Agostino McGowan & Ellie Murray. Highly technical discussions on A/B testing, DAGs, and causal methods.",
-    "category": "Causal Inference & ML",
-    "url": "https://casualinfer.libsyn.com/",
-    "type": "Podcast",
-    "image_url": "https://d3t3ozftmdmh3i.cloudfront.net/staging/podcast_uploaded_nologo/45052660/990c92903f5e9579.png"
-  },
-  {
-    "name": "EconTalk",
-    "description": "Russ Roberts. The gold standard for long-form economic interviews. John List, Hal Varian, and more.",
-    "category": "Strategy & Digital Platforms",
-    "url": "https://www.econtalk.org/",
-    "type": "Podcast",
-    "image_url": "https://image.simplecastcdn.com/images/4ca709a1-1918-43a4-9035-1176b5aa9f2b/b8c673f8-58e7-4d4a-ab02-f83c2fd463c4/3000x3000/econtalknewbluecover1400.jpg"
-  },
-  {
-    "name": "Not So Standard Deviations",
-    "description": "Roger Peng and Hilary Parker on data science in the real world. Great for understanding the craft.",
-    "category": "Experimentation & Scaling",
-    "url": "https://nssdeviations.com/",
-    "type": "Podcast",
-    "image_url": "https://static.libsyn.com/p/assets/b/c/9/a/bc9a42000b1233fe/NSSD_Logo_Square.001.png"
-  },
-  {
-    "name": "Freakonomics Radio",
-    "description": "Economics applied to everything. Great for economic intuition and learning to communicate data insights.",
-    "category": "Strategy & Digital Platforms",
-    "url": "https://freakonomics.com/podcasts/",
-    "type": "Podcast",
-    "image_url": "https://image.simplecastcdn.com/images/2be48404-a43c-4fa8-a32c-760a3216272e/fab1584e-8ea9-4efa-9650-5e595861b2cd/3000x3000/image.jpg"
   },
   {
     "name": "Guido Imbens: Nobel Lecture 2021",
@@ -207,7 +160,7 @@
     "name": "Victor Chernozhukov: Double/Debiased ML",
     "description": "MIT. The foundational Double ML methodology for high-dimensional causal inference. BFI presentation with accompanying DoubleML package.",
     "category": "Causal Inference & ML",
-    "url": "https://bfi.uchicago.edu/event/machine-learning-and-causal-inference/",
+    "url": "https://www.nber.org/research/videos/2013-methods-lecture-victor-chernozhukov-econometrics-high-dimensional-sparse-models",
     "type": "Video"
   },
   {
@@ -225,25 +178,11 @@
     "type": "Podcast"
   },
   {
-    "name": "Glen Weyl: Surge Pricing Solves the Wild Goose Chase",
-    "description": "Microsoft Research with Uber economists. NBER presentation on dynamic pricing in ride-sharing markets.",
-    "category": "Pricing & Behavioral",
-    "url": "https://www.nber.org/conferences/si-2016-industrial-organization",
-    "type": "Video"
-  },
-  {
     "name": "Glen Weyl: Radical Markets",
     "description": "Data as labor, quadratic voting, and mechanism design for platforms. Bridging theory and practice.",
     "category": "Strategy & Digital Platforms",
     "url": "https://www.youtube.com/watch?v=uj86kE_C7RA",
     "type": "Video"
-  },
-  {
-    "name": "CODE@MIT Conference",
-    "description": "Conference on Digital Experimentation. Sponsored by Netflix. Features Athey and practitioners from Meta, Microsoft, Amazon, Google.",
-    "category": "Conference Series",
-    "url": "https://ide.mit.edu/events/2023-conference-on-digital-experimentation-mit-codemit/",
-    "type": "Conference"
   },
   {
     "name": "Erik Brynjolfsson: AI and the Economy",
@@ -309,32 +248,11 @@
     "type": "Podcast"
   },
   {
-    "name": "Capitalisn't Podcast",
-    "description": "Luigi Zingales, Stigler Center. Premier series on tech competition featuring Lina Khan, Carl Shapiro, Tim Wu.",
-    "category": "Antitrust & Competition",
-    "url": "https://www.capitalisnt.com/",
-    "type": "Podcast"
-  },
-  {
-    "name": "Stigler Center Antitrust Conferences",
-    "description": "Full YouTube archives. FTC Chair Lina Khan keynotes, Stigler Committee Report on digital platforms.",
-    "category": "Antitrust & Competition",
-    "url": "https://www.youtube.com/@StiglerCenter",
-    "type": "Conference"
-  },
-  {
     "name": "Fiona Scott Morton: Tech Antitrust Testimony",
     "description": "Yale, former DOJ Chief Economist. C-SPAN congressional testimony and Digital Markets Act analysis.",
     "category": "Antitrust & Competition",
-    "url": "https://www.c-span.org/person/?fionascottmorton",
+    "url": "https://www.c-span.org/program/public-affairs-event/yelp-conference-on-antitrust-law-and-technology-fiona-scott-morton/503495",
     "type": "Video"
-  },
-  {
-    "name": "Carl Shapiro: Consumer Welfare Standard",
-    "description": "Berkeley, former DOJ. Debates antitrust reform on Tech Policy Institute's Two Think Minimum podcast.",
-    "category": "Antitrust & Competition",
-    "url": "https://techpolicyinstitute.org/podcast/",
-    "type": "Podcast"
   },
   {
     "name": "Tim Wu: The Age of Extraction",
@@ -342,41 +260,6 @@
     "category": "Antitrust & Competition",
     "url": "https://www.brookings.edu/articles/tim-wu-on-tech-policy-challenges/",
     "type": "Video"
-  },
-  {
-    "name": "The Mixtape with Scott Cunningham",
-    "description": "Causal inference and tech economist careers. Features Susan Athey, Michael Luca, John List.",
-    "category": "Causal Inference & ML",
-    "url": "https://www.youtube.com/@MixtapeWithScott",
-    "type": "Podcast"
-  },
-  {
-    "name": "Conversations with Tyler",
-    "description": "Tyler Cowen's long-form interviews. Tech economics episodes with Hal Varian, Marc Andreessen, and more.",
-    "category": "Strategy & Digital Platforms",
-    "url": "https://conversationswithtyler.com/",
-    "type": "Podcast"
-  },
-  {
-    "name": "HBS Managing the Future of Work",
-    "description": "Bill Kerr, Joe Fuller. Erik Brynjolfsson on AI, gig economy series, and future of employment.",
-    "category": "AI Economics & Labor",
-    "url": "https://www.hbs.edu/managing-the-future-of-work/podcast/",
-    "type": "Podcast"
-  },
-  {
-    "name": "NBER Economics of AI Conference",
-    "description": "Top academic venue for AI economics. Papers and videos from Acemoglu, Autor, Brynjolfsson.",
-    "category": "AI Economics & Labor",
-    "url": "https://www.nber.org/conferences/economics-artificial-intelligence-spring-2024",
-    "type": "Conference"
-  },
-  {
-    "name": "ACM Economics & Computation (EC)",
-    "description": "Annual conference featuring tech company economists on market design, auctions, and computational economics.",
-    "category": "Market Design & Auctions",
-    "url": "https://ec24.sigecom.org/",
-    "type": "Conference"
   },
   {
     "name": "Jean Tirole: Platform Regulation",
