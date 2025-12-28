@@ -3242,31 +3242,172 @@
           "id": "differential-privacy",
           "name": "Differential Privacy",
           "application": "Noise injection, privacy budgets",
-          "papers": []
+          "papers": [
+            {
+              "title": "Calibrating Noise to Sensitivity in Private Data Analysis",
+              "authors": "Cynthia Dwork, Frank McSherry, Kobbi Nissim, Adam Smith",
+              "year": 2006,
+              "tag": "Classic",
+              "description": "Foundational paper introducing ε-differential privacy, Laplace mechanism, and noise calibration to sensitivity.",
+              "url": "https://link.springer.com/chapter/10.1007/11681878_14"
+            },
+            {
+              "title": "The Algorithmic Foundations of Differential Privacy",
+              "authors": "Cynthia Dwork, Aaron Roth",
+              "year": 2014,
+              "tag": "Classic",
+              "description": "The definitive textbook covering DP techniques, composition, mechanism design, and ML applications.",
+              "url": "https://www.cis.upenn.edu/~aaroth/Papers/privacybook.pdf"
+            },
+            {
+              "title": "RAPPOR: Randomized Aggregatable Privacy-Preserving Ordinal Response",
+              "authors": "Úlfar Erlingsson, Vasyl Pihur, Aleksandra Korolova",
+              "year": 2014,
+              "tag": "Industry",
+              "description": "Google's practical local DP system deployed in Chrome with longitudinal privacy guarantees.",
+              "url": "https://arxiv.org/abs/1407.6981"
+            },
+            {
+              "title": "Deep Learning with Differential Privacy",
+              "authors": "Martín Abadi, Andy Chu, Ian Goodfellow, H. Brendan McMahan, Ilya Mironov, Kunal Talwar, Li Zhang",
+              "year": 2016,
+              "tag": "SOTA",
+              "description": "Introduces DP-SGD algorithm and moments accountant for training neural networks with formal DP guarantees.",
+              "url": "https://arxiv.org/abs/1607.00133"
+            },
+            {
+              "title": "The Composition Theorem for Differential Privacy",
+              "authors": "Peter Kairouz, Sewoong Oh, Pramod Viswanath",
+              "year": 2015,
+              "tag": "Classic",
+              "description": "Proves optimal composition bounds for differential privacy; essential for privacy budget management.",
+              "url": "https://proceedings.mlr.press/v37/kairouz15.pdf"
+            }
+          ]
         },
         {
           "id": "federated-learning",
           "name": "Federated Learning",
           "application": "On-device training, decentralized ML",
-          "papers": []
+          "papers": [
+            {
+              "title": "Communication-Efficient Learning of Deep Networks from Decentralized Data",
+              "authors": "H. Brendan McMahan, Eider Moore, Daniel Ramage, Seth Hampson, Blaise Agüera y Arcas",
+              "year": 2017,
+              "tag": "Classic",
+              "description": "Seminal paper introducing Federated Learning and FedAvg algorithm; enables ML without raw data collection.",
+              "url": "https://arxiv.org/abs/1602.05629"
+            },
+            {
+              "title": "Practical Secure Aggregation for Privacy-Preserving Machine Learning",
+              "authors": "Keith Bonawitz, Vladimir Ivanov, Ben Kreuter, Antonio Marcedone, H. Brendan McMahan, et al.",
+              "year": 2017,
+              "tag": "SOTA",
+              "description": "Cryptographic protocol for aggregating model updates without seeing individual contributions.",
+              "url": "https://arxiv.org/abs/1611.04482"
+            },
+            {
+              "title": "Federated Learning: Strategies for Improving Communication Efficiency",
+              "authors": "Jakub Konečný, H. Brendan McMahan, Felix X. Yu, Peter Richtárik, Ananda Theertha Suresh, Dave Bacon",
+              "year": 2016,
+              "tag": "SOTA",
+              "description": "Introduces structured updates and sketching to reduce communication costs in federated settings.",
+              "url": "https://arxiv.org/abs/1610.05492"
+            }
+          ]
         },
         {
           "id": "privacy-measurement",
           "name": "Privacy-Preserving Measurement",
           "application": "Aggregated attribution, clean rooms",
-          "papers": []
+          "papers": [
+            {
+              "title": "RAPPOR: Randomized Aggregatable Privacy-Preserving Ordinal Response",
+              "authors": "Úlfar Erlingsson, Vasyl Pihur, Aleksandra Korolova",
+              "year": 2014,
+              "tag": "Industry",
+              "description": "Foundation for privacy-preserving telemetry with local DP guarantees for aggregate statistics.",
+              "url": "https://arxiv.org/abs/1407.6981"
+            },
+            {
+              "title": "Scalable Private Learning with PATE",
+              "authors": "Nicolas Papernot, Shuang Song, Ilya Mironov, Ananth Raghunathan, Kunal Talwar, Úlfar Erlingsson",
+              "year": 2018,
+              "tag": "SOTA",
+              "description": "Scaled PATE framework with GNMax aggregation; achieves strong privacy (ε < 1) while maintaining utility.",
+              "url": "https://arxiv.org/abs/1802.08908"
+            },
+            {
+              "title": "Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data (PATE)",
+              "authors": "Nicolas Papernot, Martín Abadi, Úlfar Erlingsson, Ian Goodfellow, Kunal Talwar",
+              "year": 2017,
+              "tag": "SOTA",
+              "description": "Private Aggregation of Teacher Ensembles; enables privacy-preserving ML via knowledge transfer.",
+              "url": "https://research.google/pubs/pub45828/"
+            }
+          ]
         },
         {
           "id": "synthetic-data",
           "name": "Synthetic Data",
           "application": "Data generation, utility-privacy tradeoff",
-          "papers": []
+          "papers": [
+            {
+              "title": "Modeling Tabular Data using Conditional GAN (CTGAN)",
+              "authors": "Lei Xu, Maria Skoularidou, Alfredo Cuesta-Infante, Kalyan Veeramachaneni",
+              "year": 2019,
+              "tag": "SOTA",
+              "description": "State-of-the-art GAN for synthetic tabular data; handles mixed types with mode-specific normalization.",
+              "url": "https://arxiv.org/pdf/1907.00503"
+            },
+            {
+              "title": "Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data (PATE)",
+              "authors": "Nicolas Papernot, Martín Abadi, Úlfar Erlingsson, Ian Goodfellow, Kunal Talwar",
+              "year": 2017,
+              "tag": "SOTA",
+              "description": "PATE enables training on synthetic/unlabeled data with DP guarantees transferred from teacher ensemble.",
+              "url": "https://research.google/pubs/pub45828/"
+            }
+          ]
         },
         {
           "id": "anonymization",
           "name": "Anonymization & De-identification",
           "application": "k-anonymity, re-identification risk",
-          "papers": []
+          "papers": [
+            {
+              "title": "k-Anonymity: A Model for Protecting Privacy",
+              "authors": "Latanya Sweeney",
+              "year": 2002,
+              "tag": "Classic",
+              "description": "Foundational paper introducing k-anonymity; each record indistinguishable from k-1 others on quasi-identifiers.",
+              "url": "https://dl.acm.org/doi/10.1142/S0218488502001648"
+            },
+            {
+              "title": "Robust De-anonymization of Large Sparse Datasets (Netflix)",
+              "authors": "Arvind Narayanan, Vitaly Shmatikov",
+              "year": 2008,
+              "tag": "Classic",
+              "description": "Landmark attack demonstrating re-identification of Netflix users; showed k-anonymity fails on high-dimensional data.",
+              "url": "https://arxiv.org/abs/cs/0610105"
+            },
+            {
+              "title": "ℓ-Diversity: Privacy Beyond k-Anonymity",
+              "authors": "Ashwin Machanavajjhala, Daniel Kifer, Johannes Gehrke, Muthuramakrishnan Venkitasubramaniam",
+              "year": 2007,
+              "tag": "Classic",
+              "description": "Extends k-anonymity by requiring diversity in sensitive attributes; defends against homogeneity attacks.",
+              "url": "https://dl.acm.org/doi/10.1145/1217299.1217302"
+            },
+            {
+              "title": "t-Closeness: Privacy Beyond k-Anonymity and ℓ-Diversity",
+              "authors": "Ninghui Li, Tiancheng Li, Suresh Venkatasubramanian",
+              "year": 2007,
+              "tag": "Classic",
+              "description": "Requires sensitive attribute distribution in each equivalence class be close to overall distribution.",
+              "url": "https://www.cs.purdue.edu/homes/ninghui/papers/t_closeness_icde07.pdf"
+            }
+          ]
         }
       ]
     },

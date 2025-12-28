@@ -1,332 +1,89 @@
 {{ define "main" }}
+{{ $highlights := where .Site.RegularPages "Section" "weekly-highlights" }}
+{{ $latest := index ($highlights.ByDate.Reverse) 0 }}
+
+{{ with $latest }}
 <article class="highlight-article">
     <!-- Hero -->
     <header class="article-hero">
         <div class="article-meta">
-            <span class="article-date">December 28, 2024</span>
-            <span class="article-category">Recommender Systems</span>
+            <span class="article-date">{{ .Date.Format "January 2, 2006" }}</span>
+            <span class="article-category">{{ .Params.category }}</span>
         </div>
-        <h1>Cold Start in Recommendations</h1>
-        <p class="article-subtitle">How to bootstrap personalization when you have no data</p>
+        <h1>{{ .Title }}</h1>
+        <p class="article-subtitle">{{ .Params.description }}</p>
     </header>
 
+    <!-- Archive Link -->
+    <div class="archive-banner">
+        <a href="{{ "weekly-highlights/archive/" | relURL }}">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 3h18v18H3zM21 9H3M9 21V9"/>
+            </svg>
+            Browse all {{ len $highlights }} weekly highlights
+        </a>
+    </div>
+
     <!-- Table of Contents -->
+    {{ if .TableOfContents }}
     <nav class="article-toc">
         <h4>In this article</h4>
-        <ol>
-            <li><a href="#problem">The Problem</a></li>
-            <li><a href="#approaches">Common Approaches</a></li>
-            <li><a href="#code">Try It Yourself</a></li>
-            <li><a href="#applications">Real-World Applications</a></li>
-            <li><a href="#resources">Further Reading</a></li>
-        </ol>
+        {{ .TableOfContents }}
     </nav>
+    {{ end }}
 
-    <!-- Content Sections -->
+    <!-- Content -->
     <div class="article-content">
-
-        <!-- Section: The Problem -->
-        <section id="problem">
-            <h2>The Problem</h2>
-            <p class="lead">Every recommendation system faces an existential crisis at birth: how do you recommend anything when you know nothing about your users?</p>
-
-            <p>This is the <strong>cold start problem</strong>—one of the most fundamental challenges in personalization. It appears in three forms:</p>
-
-            <div class="callout">
-                <h4>Three Types of Cold Start</h4>
-                <ul>
-                    <li><strong>New User:</strong> A user with no interaction history</li>
-                    <li><strong>New Item:</strong> A product/content with no ratings yet</li>
-                    <li><strong>New System:</strong> A platform launching from scratch</li>
-                </ul>
-            </div>
-
-            <p>Companies like Netflix, Spotify, and Amazon have each developed sophisticated solutions. The key insight from <a href="https://a16z.com/author/andrew-chen/" target="_blank">Andrew Chen</a>'s research at Andreessen Horowitz: cold start isn't just a technical problem—it's a network effects problem.</p>
-
-            <p>In his book <a href="https://www.coldstart.com/" target="_blank"><em>The Cold Start Problem</em></a>, Chen describes the "atomic network"—the smallest viable unit of users that makes a product useful. For recommendations, this means having enough data to find meaningful patterns.</p>
-        </section>
-
-        <!-- Section: Approaches -->
-        <section id="approaches">
-            <h2>Common Approaches</h2>
-
-            <h3>1. Content-Based Bootstrapping</h3>
-            <p>Use item features (genre, tags, description) to make initial recommendations without user history. This is how Spotify's "Discover Weekly" handles new users—it analyzes audio features like tempo, energy, and acousticness to find similar songs.</p>
-
-            <p>The advantage: you can recommend new items immediately based on their metadata. The downside: you miss the serendipity that comes from collaborative patterns.</p>
-
-            <h3>2. Hybrid Models</h3>
-            <p>Combine collaborative filtering with content features. <strong>LightFM</strong> is the go-to library for this approach:</p>
-
-            <blockquote>
-                "LightFM can produce good results even for new users or items through its incorporation of side information."
-                <cite>— <a href="https://www.linkedin.com/in/maciejkula/" target="_blank">Maciej Kula</a>, Lyst Engineering</cite>
-            </blockquote>
-
-            <p>The key innovation: LightFM learns embeddings for both users/items AND their features. When a new item arrives, it can immediately be placed in the embedding space based on its features.</p>
-
-            <h3>3. Exploration Strategies</h3>
-            <p>Use multi-armed bandits to actively learn preferences through controlled exploration. Netflix uses this for new profile onboarding—they show a diverse set of titles and use the ratings to quickly learn your taste.</p>
-
-            <p>The explore-exploit tradeoff: show what you think the user likes (exploit) vs. show something new to learn more (explore). Thompson Sampling and UCB are popular algorithms for this balance.</p>
-
-            <h3>4. Transfer Learning</h3>
-            <p>Use knowledge from related domains. If you know a user's music preferences, you might infer something about their podcast preferences. Spotify does this across their audio products.</p>
-        </section>
-
-        <!-- Section: Code -->
-        <section id="code">
-            <h2>Try It Yourself</h2>
-
-            <p>Here's a minimal example using LightFM with the MovieLens dataset. Install with <code>pip install lightfm</code>:</p>
-
-            <pre><code class="language-python">from lightfm import LightFM
-from lightfm.datasets import fetch_movielens
-from lightfm.evaluation import precision_at_k
-
-# Load data with item features (genre tags)
-data = fetch_movielens(min_rating=4.0)
-
-# Create hybrid model - 'warp' loss works well for implicit feedback
-model = LightFM(loss='warp', no_components=64)
-
-# Train on interactions + item features
-# The item_features parameter is what enables cold-start!
-model.fit(data['train'],
-          item_features=data['item_features'],
-          epochs=30,
-          num_threads=4)
-
-# Evaluate
-train_precision = precision_at_k(model, data['train'], k=5).mean()
-test_precision = precision_at_k(model, data['test'], k=5).mean()
-
-print(f"Train Precision@5: {train_precision:.3f}")
-print(f"Test Precision@5: {test_precision:.3f}")</code></pre>
-
-            <div class="code-callout">
-                <strong>Key insight:</strong> The <code>item_features</code> parameter is what enables cold-start recommendations. New items with known features (genres) can get recommendations immediately, even with zero ratings.
-            </div>
-
-            <p>For new users, you can generate recommendations using only item features:</p>
-
-            <pre><code class="language-python">import numpy as np
-
-def recommend_for_new_user(model, item_features, n_items, top_k=10):
-    """
-    Generate recommendations for a brand new user.
-    Uses only item features - no interaction history needed.
-    """
-    # Create a new user ID (doesn't exist in training data)
-    new_user_id = 0
-
-    # Score all items using just their features
-    scores = model.predict(
-        user_ids=new_user_id,
-        item_ids=np.arange(n_items),
-        item_features=item_features
-    )
-
-    # Return top-k items
-    top_items = np.argsort(-scores)[:top_k]
-    return top_items, scores[top_items]
-
-# Get recommendations for a cold-start user
-n_items = data['train'].shape[1]
-recommendations, scores = recommend_for_new_user(
-    model,
-    data['item_features'],
-    n_items,
-    top_k=10
-)
-
-print("Top 10 recommendations for new user:")
-for i, (item_id, score) in enumerate(zip(recommendations, scores)):
-    print(f"  {i+1}. Item {item_id} (score: {score:.3f})")</code></pre>
-
-            <p>You can also handle new items by predicting for existing users:</p>
-
-            <pre><code class="language-python">def recommend_new_item(model, user_ids, new_item_features):
-    """
-    Find users most likely to enjoy a new item.
-    The item has features but no ratings yet.
-    """
-    scores = model.predict(
-        user_ids=user_ids,
-        item_ids=np.zeros(len(user_ids), dtype=np.int32),  # placeholder
-        item_features=new_item_features  # new item's genre features
-    )
-
-    # Return users sorted by predicted preference
-    return user_ids[np.argsort(-scores)]
-
-# Example: Find top users for a new Sci-Fi/Action movie
-# (You'd construct item_features for the new item based on its genres)</code></pre>
-        </section>
-
-        <!-- Section: Applications -->
-        <section id="applications">
-            <h2>Real-World Applications</h2>
-
-            <div class="applications-grid">
-                <div class="application-card">
-                    <h4><a href="https://research.atspotify.com/publications/recommending-podcasts-for-cold-start-users-based-on-music-listening-and-taste/" target="_blank">Spotify</a></h4>
-                    <p>Uses audio features (tempo, energy, acousticness, danceability) to recommend songs to new users before learning their taste. Their "taste profiles" are built from 30-second listening segments.</p>
-                </div>
-
-                <div class="application-card">
-                    <h4><a href="https://www.amazon.science/publications/treating-cold-start-in-product-search-by-priors" target="_blank">Amazon</a></h4>
-                    <p>Leverages product categories, "customers also bought" patterns, and browse history to bootstrap recommendations. New products get initial visibility through category placement.</p>
-                </div>
-
-                <div class="application-card">
-                    <h4><a href="https://netflixtechblog.com/artwork-personalization-c589f074ad76" target="_blank">Netflix</a></h4>
-                    <p>Asks new users to rate ~10 titles during onboarding—a classic exploration strategy. They also use content features like cast, director, and genre for new releases.</p>
-                </div>
-
-                <div class="application-card">
-                    <h4><a href="https://www.uber.com/blog/uber-eats-recommending-marketplace/" target="_blank">Uber Eats</a></h4>
-                    <p>Uses location, time-of-day, and cuisine popularity to recommend restaurants before knowing individual preferences. Your first order strongly shapes future recommendations.</p>
-                </div>
-
-                <div class="application-card">
-                    <h4><a href="https://newsroom.tiktok.com/en-us/how-tiktok-recommends-videos-for-you" target="_blank">TikTok</a></h4>
-                    <p>Their "interest graph" starts with your country and device. The first few videos are diverse; your engagement (watch time, not just likes) rapidly personalizes the feed.</p>
-                </div>
-
-                <div class="application-card">
-                    <h4><a href="https://engineering.linkedin.com/blog/2016/12/personalized-recommendations-in-linkedin-learning" target="_blank">LinkedIn</a></h4>
-                    <p>Uses your job title, company, and connections to recommend jobs and content. Professional signals provide strong cold-start features for B2B recommendations.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section: Resources -->
-        <section id="resources">
-            <h2>Further Reading</h2>
-
-            <div class="resources-section">
-                <h3>Essential Reading</h3>
-                <ul class="resource-list">
-                    <li>
-                        <a href="https://www.coldstart.com/" target="_blank">
-                            <strong>The Cold Start Problem</strong>
-                        </a>
-                        <span class="resource-desc">— Andrew Chen's definitive book on network effects and how startups overcome the chicken-and-egg problem</span>
-                    </li>
-                    <li>
-                        <a href="https://arxiv.org/abs/1507.08439" target="_blank">
-                            <strong>Metadata Embeddings for User and Item Cold-start Recommendations</strong>
-                        </a>
-                        <span class="resource-desc">— The original LightFM paper by Maciej Kula (2015)</span>
-                    </li>
-                    <li>
-                        <a href="https://research.google/pubs/deep-neural-networks-for-youtube-recommendations/" target="_blank">
-                            <strong>Deep Neural Networks for YouTube Recommendations</strong>
-                        </a>
-                        <span class="resource-desc">— How YouTube handles cold start at billion-user scale (RecSys 2016)</span>
-                    </li>
-                </ul>
-
-                <h3>Tools & Libraries</h3>
-                <ul class="resource-list">
-                    <li>
-                        <a href="https://making.lyst.com/lightfm/docs/home.html" target="_blank">
-                            <strong>LightFM</strong>
-                        </a>
-                        <span class="resource-desc">— Hybrid matrix factorization with cold-start support</span>
-                    </li>
-                    <li>
-                        <a href="https://surpriselib.com/" target="_blank">
-                            <strong>Surprise</strong>
-                        </a>
-                        <span class="resource-desc">— scikit-learn style API for collaborative filtering</span>
-                    </li>
-                    <li>
-                        <a href="https://github.com/RUCAIBox/RecBole" target="_blank">
-                            <strong>RecBole</strong>
-                        </a>
-                        <span class="resource-desc">— 94 deep learning recommendation models in PyTorch</span>
-                    </li>
-                    <li>
-                        <a href="https://github.com/recommenders-team/recommenders" target="_blank">
-                            <strong>Microsoft Recommenders</strong>
-                        </a>
-                        <span class="resource-desc">— Production-quality examples and benchmarks</span>
-                    </li>
-                </ul>
-
-                <h3>Courses</h3>
-                <ul class="resource-list">
-                    <li>
-                        <a href="https://developers.google.com/machine-learning/recommendation" target="_blank">
-                            <strong>Google ML Recommendation Course</strong>
-                        </a>
-                        <span class="resource-desc">— Free 4-hour course covering candidate generation through ranking</span>
-                    </li>
-                    <li>
-                        <a href="https://course.fast.ai/Lessons/lesson7.html" target="_blank">
-                            <strong>Fast.ai Lesson 7: Collaborative Filtering</strong>
-                        </a>
-                        <span class="resource-desc">— Jeremy Howard's intuitive deep dive into embeddings</span>
-                    </li>
-                </ul>
-
-                <h3>Key Researchers</h3>
-                <ul class="resource-list">
-                    <li>
-                        <a href="https://a16z.com/author/andrew-chen/" target="_blank">
-                            <strong>Andrew Chen</strong>
-                        </a>
-                        <span class="resource-desc">— General Partner at a16z, author of The Cold Start Problem</span>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/maciejkula/" target="_blank">
-                            <strong>Maciej Kula</strong>
-                        </a>
-                        <span class="resource-desc">— Creator of LightFM, previously ML at Lyst and Spotify</span>
-                    </li>
-                </ul>
-
-                <h3>Datasets for Practice</h3>
-                <ul class="resource-list">
-                    <li>
-                        <a href="https://grouplens.org/datasets/movielens/" target="_blank">
-                            <strong>MovieLens</strong>
-                        </a>
-                        <span class="resource-desc">— Classic benchmark with 25M ratings and rich metadata</span>
-                    </li>
-                    <li>
-                        <a href="https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data" target="_blank">
-                            <strong>Netflix Prize</strong>
-                        </a>
-                        <span class="resource-desc">— 100M+ anonymous movie ratings from 480k users</span>
-                    </li>
-                    <li>
-                        <a href="https://cseweb.ucsd.edu/~jmcauley/datasets/amazon_v2/" target="_blank">
-                            <strong>Amazon Reviews</strong>
-                        </a>
-                        <span class="resource-desc">— 233M reviews with product metadata across categories</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
+        {{ .Content }}
     </div>
 
     <!-- Footer -->
     <footer class="article-footer">
+        {{ if .Params.tags }}
         <div class="article-tags">
-            <span class="tag">Recommendations</span>
-            <span class="tag">Cold Start</span>
-            <span class="tag">LightFM</span>
-            <span class="tag">Python</span>
-            <span class="tag">Network Effects</span>
+            {{ range .Params.tags }}
+            <span class="tag">{{ . }}</span>
+            {{ end }}
         </div>
+        {{ end }}
         <div class="article-nav">
-            <a href="{{ "papers/recommender-systems/" | relURL }}" class="nav-link">
-                Explore more on Recommender Systems →
+            {{ $topic := .Params.category | urlize }}
+            <a href="{{ printf "papers/%s/" $topic | relURL }}" class="nav-link">
+                Explore more on {{ .Params.category }} →
             </a>
         </div>
     </footer>
 </article>
+{{ end }}
+
+<style>
+.archive-banner {
+    max-width: 800px;
+    margin: 1rem auto 2rem;
+    padding: 0 1.5rem;
+}
+
+.archive-banner a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.archive-banner a:hover {
+    border-color: var(--accent);
+    background: var(--bg-hover);
+}
+
+.archive-banner svg {
+    flex-shrink: 0;
+}
+</style>
 {{ end }}

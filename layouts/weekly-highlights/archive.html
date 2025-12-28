@@ -1,0 +1,134 @@
+{{ define "main" }}
+<div class="archive-page">
+    <header class="archive-header">
+        <h1>Weekly Highlights Archive</h1>
+        <p class="archive-subtitle">Browse all past deep-dives into essential topics for tech economists</p>
+        <a href="{{ "weekly-highlights/" | relURL }}" class="back-link">← Back to Latest</a>
+    </header>
+
+    <div class="archive-grid">
+        {{ $highlights := where .Site.RegularPages "Section" "weekly-highlights" }}
+        {{ range $highlights.ByDate.Reverse }}
+        <a href="{{ .Permalink }}" class="archive-card">
+            <div class="archive-card-meta">
+                <span class="archive-date">{{ .Date.Format "January 2, 2006" }}</span>
+                <span class="archive-category">{{ .Params.category }}</span>
+            </div>
+            <h3 class="archive-title">{{ .Title }}</h3>
+            <p class="archive-desc">{{ .Params.description }}</p>
+            {{ if .Params.tags }}
+            <div class="archive-tags">
+                {{ range first 3 .Params.tags }}
+                <span class="tag-small">{{ . }}</span>
+                {{ end }}
+            </div>
+            {{ end }}
+        </a>
+        {{ end }}
+    </div>
+</div>
+
+<style>
+.archive-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.archive-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.archive-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.archive-subtitle {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.back-link {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.archive-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.archive-card:hover {
+    border-color: var(--accent);
+    box-shadow: 0 4px 12px rgba(0,102,204,0.1);
+    transform: translateY(-2px);
+}
+
+.archive-card-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.75rem;
+}
+
+.archive-category {
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.archive-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 0.5rem;
+}
+
+.archive-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0 0 1rem;
+    flex-grow: 1;
+}
+
+.archive-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag-small {
+    background: var(--bg-hover);
+    color: var(--text-muted);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .archive-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+{{ end }}
