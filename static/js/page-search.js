@@ -317,10 +317,13 @@
         if (searchDataEl) {
             try {
                 this.data = JSON.parse(searchDataEl.textContent);
+                console.log('PageSearch [' + this.config.searchInputId + ']: Loaded', this.data.length, 'items');
             } catch (e) {
                 console.error('PageSearch: Failed to parse search data:', e);
                 this.data = [];
             }
+        } else {
+            console.warn('PageSearch: No search data element found:', this.config.searchDataId);
         }
 
         if (typeof Fuse !== 'undefined' && this.data.length > 0) {
@@ -331,6 +334,9 @@
                 includeScore: true,
                 minMatchCharLength: 2
             });
+            console.log('PageSearch [' + this.config.searchInputId + ']: Fuse initialized');
+        } else {
+            console.warn('PageSearch: Fuse NOT initialized. Fuse defined:', typeof Fuse !== 'undefined', 'Data length:', this.data.length);
         }
     };
 
@@ -439,6 +445,14 @@
 
     PageSearch.prototype.showFlatResults = function() {
         var self = this;
+
+        // Safety check - ensure fuse is initialized
+        if (!this.fuse) {
+            console.warn('PageSearch: Fuse not initialized in showFlatResults');
+            return;
+        }
+
+        console.log('PageSearch: Searching for "' + this.currentSearch + '"');
 
         // Hide category sections
         this.sections.forEach(function(section) {
