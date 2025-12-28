@@ -831,7 +831,8 @@
       sectionSelector: '.category-section',
       tableRowSelector: null,
       itemLabel: 'items',
-      extraFilters: []
+      extraFilters: [],
+      fuseKeys: ['name', 'description', 'category']
     }, config);
 
     // DOM elements
@@ -977,19 +978,28 @@
     if (searchDataEl) {
       try {
         this.data = JSON.parse(searchDataEl.textContent);
+        console.log('[PageSearch] Loaded data:', this.data.length, 'items');
       } catch (e) {
-        console.error('[PageSearchHandler] Failed to parse search data:', e);
+        console.error('[PageSearch] Failed to parse search data:', e);
         this.data = [];
       }
+    } else {
+      console.warn('[PageSearch] No search data element:', this.config.searchDataId);
     }
+
     // Initialize Fuse.js for local page search
     if (typeof Fuse !== 'undefined' && this.data.length > 0) {
+      var fuseKeys = this.config.fuseKeys || ['name', 'description'];
+      console.log('[PageSearch] Initializing Fuse with keys:', fuseKeys);
       this.fuse = new Fuse(this.data, {
-        keys: this.config.fuseKeys,
-        threshold: 0.35,
+        keys: fuseKeys,
+        threshold: 0.4,
         ignoreLocation: true,
         includeScore: true
       });
+      console.log('[PageSearch] Fuse initialized:', !!this.fuse);
+    } else {
+      console.warn('[PageSearch] Cannot init Fuse - Fuse:', typeof Fuse, 'data:', this.data.length);
     }
   };
 

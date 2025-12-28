@@ -42,7 +42,7 @@
     "description": "CLV modeling, attribution, and retention analytics — economists' panel data experience transfers directly to cohort analysis",
     "icon": "chart-pie",
     "resources": [
-      {"name": "DataCamp: ML for Marketing in Python", "why": "CLV basics, RFM analysis, segmentation", "url": "https://www.datacamp.com/courses/machine-learning-for-marketing-in-python"},
+      {"name": "PyMC-Marketing CLV Quickstart", "why": "CLV basics, RFM analysis, BG/NBD models — free official docs", "url": "https://www.pymc-marketing.io/en/latest/notebooks/clv/clv_quickstart.html"},
       {"name": "PyMC-Marketing Documentation", "why": "BG/NBD and Gamma-Gamma CLV tutorials", "url": "https://www.pymc-marketing.io/en/stable/"},
       {"name": "Data Analytics for Marketing (Diaz-Berrio)", "why": "Bridges econometrics with marketing ML", "url": "https://www.packtpub.com/product/data-analytics-for-marketing/9781803241609"},
       {"name": "Bruce Hardie's CLV Papers", "why": "Mathematical foundations of CLV models", "url": "https://www.brucehardie.com/"},
@@ -61,7 +61,7 @@
     "description": "Fraud detection, credit risk, and trust & safety ML — causal inference handles adversarial, imbalanced problems",
     "icon": "shield",
     "resources": [
-      {"name": "DataCamp: Fraud Detection in Python", "why": "Supervised/unsupervised ML for imbalanced data", "url": "https://www.datacamp.com/courses/fraud-detection-in-python"},
+      {"name": "GeeksforGeeks: Credit Card Fraud Detection", "why": "Supervised/unsupervised ML for imbalanced data — free tutorial", "url": "https://www.geeksforgeeks.org/ml-credit-card-fraud-detection/"},
       {"name": "365 Data Science: Credit Risk Modeling", "why": "PD, LGD, EAD with Basel compliance", "url": "https://365datascience.com/courses/credit-risk-modeling-in-python/"},
       {"name": "Fight Fraud with ML (Manning, 2024)", "why": "Phishing, card fraud, deepfakes, graph CNNs", "url": "https://www.manning.com/books/fight-fraud-with-machine-learning"},
       {"name": "Stripe ML for Fraud Protection", "why": "How Radar processes $1T+ annually", "url": "https://stripe.com/guides/primer-on-machine-learning-for-fraud-protection"},
@@ -157,7 +157,7 @@
     "icon": "rocket",
     "resources": [
       {"name": "Reforge: Growth Foundations", "why": "Industry gold standard on retention, engagement, acquisition", "url": "https://www.reforge.com/growth-series"},
-      {"name": "DataCamp: A/B Testing in Python", "why": "Experiment design with scipy, statsmodels, pingouin", "url": "https://www.datacamp.com/courses/ab-testing-in-python"},
+      {"name": "KDnuggets: A/B Testing in Python", "why": "Experiment design with scipy, statsmodels — free complete guide", "url": "https://www.kdnuggets.com/a-complete-guide-to-a-b-testing-in-python"},
       {"name": "Lean Analytics (Croll & Yoskovitz)", "why": "One Metric That Matters framework", "url": "https://leananalyticsbook.com/"},
       {"name": "The Cold Start Problem (Andrew Chen)", "why": "Network effects and viral growth", "url": "https://www.coldstart.com/"},
       {"name": "Lenny's Podcast: Ronny Kohavi", "why": "Experimentation from Amazon, Microsoft, Airbnb", "url": "https://www.lennyspodcast.com/the-ultimate-guide-to-ab-testing-ronny-kohavi/"}
