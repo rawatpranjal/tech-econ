@@ -101,6 +101,15 @@
                 </a>
             </li>
             <li>
+                <a href="{{ "career/" | relURL }}" class="sidebar-link{{ if eq .Section "career" }} active{{ end }}">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                    </svg>
+                    Career
+                </a>
+            </li>
+            <li>
                 <a href="{{ "talks/" | relURL }}" class="sidebar-link{{ if eq .Section "talks" }} active{{ end }}">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
