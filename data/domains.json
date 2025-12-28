@@ -175,6 +175,11 @@
         "url": "https://ocw.mit.edu/courses/15-s08-fintech-shaping-the-financial-world-spring-2020/"
       },
       {
+        "name": "Stanford CS224W: GNN for Fraud",
+        "why": "Three-level tutorial from Stanford graph ML course",
+        "url": "https://medium.com/stanford-cs224w/from-one-line-to-fully-customized-a-three-level-introduction-to-graph-ml-fraud-detection-with-89badd2cd2a3"
+      },
+      {
         "name": "Stripe: ML for Fraud Protection",
         "why": "The definitive intro: features, precision-recall tradeoffs, break-even calculations",
         "url": "https://stripe.com/guides/primer-on-machine-learning-for-fraud-protection"
@@ -185,24 +190,64 @@
         "url": "https://fraud-detection-handbook.github.io/fraud-detection-handbook/"
       },
       {
+        "name": "Stripe: How We Built Radar",
+        "why": "XGBoost→DNN migration, 85% training time reduction",
+        "url": "https://stripe.com/blog/how-we-built-it-stripe-radar"
+      },
+      {
         "name": "PayPal: Graph Database for Fraud",
-        "why": "Real-time fraud ring detection using graph analytics",
-        "url": "https://medium.com/paypal-tech/uncovering-unknown-unknowns-using-graphs-for-fraud-detection-95aff8d6c523"
+        "why": "Real-time fraud ring detection",
+        "url": "https://medium.com/paypal-tech/how-paypal-uses-real-time-graph-database-and-graph-analysis-to-fight-fraud-96a2b918619a"
       },
       {
-        "name": "Stanford FinTech Lab: Rob Wang (Block)",
-        "why": "Industry talk on fraud ML tradeoffs from Block's Head of Data Science",
-        "url": "https://www.youtube.com/watch?v=rHSpab1Wi9k"
+        "name": "LinkedIn: Defending Against Abuse at Scale",
+        "why": "4M+ TPS, multi-layer defense architecture",
+        "url": "https://engineering.linkedin.com/blog/2018/12/defending-against-abuse-at-linkedins-scale"
       },
       {
-        "name": "IEEE-CIS Fraud: 1st Place Solution (Chris Deotte)",
-        "why": "Kaggle Grandmaster walkthrough: 262 features, RAPIDS GPU acceleration",
-        "url": "https://www.kaggle.com/c/ieee-fraud-detection/discussion/111284"
+        "name": "Meta: Few-Shot Learner for Harmful Content",
+        "why": "Adapts to new threats in weeks, 100+ languages",
+        "url": "https://about.fb.com/news/2021/12/metas-new-ai-system-tackles-harmful-content/"
+      },
+      {
+        "name": "Netflix: RAD Outlier Detection",
+        "why": "Robust PCA at terabyte scale",
+        "url": "https://netflixtechblog.com/rad-outlier-detection-on-big-data-d6b0ff32fb44"
       },
       {
         "name": "Google Research: Self-Supervised Anomaly Detection",
-        "why": "Contrastive learning and CutPaste algorithm for anomaly detection",
-        "url": "https://ai.googleblog.com/2021/04/self-supervised-learning-for-detecting.html"
+        "why": "Contrastive learning, CutPaste algorithm",
+        "url": "https://ai.googleblog.com/2021/09/discovering-anomalous-data-with-self.html"
+      },
+      {
+        "name": "Stanford FinTech Lab: Rob Wang (Block)",
+        "why": "Industry talk on fraud ML tradeoffs",
+        "url": "https://fintech.stanford.edu/events/aftlab-seminars/rob-wang-square-machine-learning-financial-fraud-detection"
+      },
+      {
+        "name": "KDD ML in Finance Workshop 2021",
+        "why": "Talks from Georgia Tech, Harvard, Feedzai",
+        "url": "https://sites.google.com/view/kdd-mlf-2021/schedule"
+      },
+      {
+        "name": "IEEE-CIS Fraud: 1st Place Solution (Chris Deotte)",
+        "why": "Kaggle Grandmaster, 262 features, RAPIDS GPU",
+        "url": "https://developer.nvidia.com/blog/leveraging-machine-learning-to-detect-fraud-tips-to-developing-a-winning-kaggle-solution/"
+      },
+      {
+        "name": "scikit-learn: Outlier Detection",
+        "why": "Isolation Forest, LOF, One-Class SVM comparison",
+        "url": "https://scikit-learn.org/stable/modules/outlier_detection.html"
+      },
+      {
+        "name": "imbalanced-learn: SMOTE",
+        "why": "The standard for handling 1:10,000 class ratios",
+        "url": "https://imbalanced-learn.org/stable/over_sampling.html"
+      },
+      {
+        "name": "Federal Reserve SR 11-7",
+        "why": "Model risk management standard all US banks follow",
+        "url": "https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm"
       }
     ],
     "packages": [
