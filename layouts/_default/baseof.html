@@ -245,6 +245,13 @@
 
     <!-- Custom JS -->
     <script src="{{ "js/theme.js" | relURL }}"></script>
+
+    <!-- NEW: Unified Search System (MiniSearch + Transformers.js) -->
+    <script src="{{ "js/search/search-synonyms.js" | relURL }}"></script>
+    <script src="{{ "js/search/search-cache.js" | relURL }}"></script>
+    <script src="{{ "js/search/unified-search.js" | relURL }}"></script>
+
+    <!-- Legacy search (kept for page-level DOM handling during transition) -->
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
     <script src="{{ "js/search.js" | relURL }}"></script>
     <script src="{{ "js/page-search.js" | relURL }}"></script>

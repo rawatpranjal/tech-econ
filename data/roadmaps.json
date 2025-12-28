@@ -10,10 +10,10 @@
       {"name": "Python Data Science Handbook", "why": "Free reference for NumPy, Pandas, Matplotlib", "url": "https://jakevdp.github.io/PythonDataScienceHandbook/"}
     ],
     "packages": [
-      {"name": "pandas", "why": "Data manipulation and analysis"},
-      {"name": "numpy", "why": "Numerical computing foundation"},
-      {"name": "matplotlib", "why": "Basic visualization"},
-      {"name": "jupyter", "why": "Interactive notebooks for exploration"}
+      {"name": "pandas", "why": "Data manipulation and analysis", "url": "https://pandas.pydata.org/"},
+      {"name": "numpy", "why": "Numerical computing foundation", "url": "https://numpy.org/"},
+      {"name": "matplotlib", "why": "Basic visualization", "url": "https://matplotlib.org/"},
+      {"name": "jupyter", "why": "Interactive notebooks for exploration", "url": "https://jupyter.org/"}
     ],
     "order": 1
   },
@@ -28,10 +28,10 @@
       {"name": "Scipy.stats Documentation", "why": "Reference for distributions and tests", "url": "https://docs.scipy.org/doc/scipy/reference/stats.html"}
     ],
     "packages": [
-      {"name": "scipy", "why": "Statistical functions and distributions"},
-      {"name": "statsmodels", "why": "OLS, GLM, and classical econometrics"},
-      {"name": "pingouin", "why": "ANOVA, t-tests, and correlations made easy"},
-      {"name": "lifelines", "why": "Survival analysis and hazard models"}
+      {"name": "scipy", "why": "Statistical functions and distributions", "url": "https://scipy.org/"},
+      {"name": "statsmodels", "why": "OLS, GLM, and classical econometrics", "url": "https://www.statsmodels.org/"},
+      {"name": "pingouin", "why": "ANOVA, t-tests, and correlations made easy", "url": "https://pingouin-stats.org/"},
+      {"name": "lifelines", "why": "Survival analysis and hazard models", "url": "https://lifelines.readthedocs.io/"}
     ],
     "order": 2
   },
@@ -48,10 +48,10 @@
       {"name": "Andrew Ng's Deep Learning Specialization", "why": "CNNs, RNNs, and transformers from the master", "url": "https://www.coursera.org/specializations/deep-learning"}
     ],
     "packages": [
-      {"name": "scikit-learn", "why": "The go-to library for classical ML"},
-      {"name": "XGBoost", "why": "Gradient boosting for tabular data"},
-      {"name": "LightGBM", "why": "Fast gradient boosting from Microsoft"},
-      {"name": "CatBoost", "why": "Handles categorical features natively"}
+      {"name": "scikit-learn", "why": "The go-to library for classical ML", "url": "https://scikit-learn.org/"},
+      {"name": "XGBoost", "why": "Gradient boosting for tabular data", "url": "https://xgboost.readthedocs.io/"},
+      {"name": "LightGBM", "why": "Fast gradient boosting from Microsoft", "url": "https://lightgbm.readthedocs.io/"},
+      {"name": "CatBoost", "why": "Handles categorical features natively", "url": "https://catboost.ai/"}
     ],
     "order": 3
   },
@@ -65,10 +65,10 @@
       {"name": "Causal Inference: The Mixtape", "why": "Reads like a conversation, not a textbook", "url": "https://mixtape.scunning.com/"}
     ],
     "packages": [
-      {"name": "DoWhy", "why": "End-to-end causal inference with DAGs"},
-      {"name": "EconML", "why": "Heterogeneous treatment effects from Microsoft"},
-      {"name": "CausalML", "why": "Uber's toolkit for uplift modeling"},
-      {"name": "DoubleML", "why": "Double/debiased machine learning"}
+      {"name": "DoWhy", "why": "End-to-end causal inference with DAGs", "url": "https://www.pywhy.org/dowhy/"},
+      {"name": "EconML", "why": "Heterogeneous treatment effects from Microsoft", "url": "https://econml.azurewebsites.net/"},
+      {"name": "CausalML", "why": "Uber's toolkit for uplift modeling", "url": "https://causalml.readthedocs.io/"},
+      {"name": "DoubleML", "why": "Double/debiased machine learning", "url": "https://docs.doubleml.org/"}
     ],
     "order": 4
   },
@@ -84,9 +84,9 @@
       {"name": "Netflix Tech Blog - Experimentation", "why": "Real case studies at scale", "url": "https://netflixtechblog.com/tagged/experimentation"}
     ],
     "packages": [
-      {"name": "Spotify Confidence", "why": "Production-grade A/B testing"},
-      {"name": "GrowthBook SDK", "why": "Feature flags and experiments"},
-      {"name": "Ax", "why": "Meta's adaptive experimentation platform"}
+      {"name": "Spotify Confidence", "why": "Production-grade A/B testing", "url": "https://github.com/spotify/confidence"},
+      {"name": "GrowthBook SDK", "why": "Feature flags and experiments", "url": "https://docs.growthbook.io/"},
+      {"name": "Ax", "why": "Meta's adaptive experimentation platform", "url": "https://ax.dev/"}
     ],
     "order": 5
   },
@@ -102,9 +102,9 @@
       {"name": "DataLemur", "why": "Real DS interview questions with business context", "url": "https://datalemur.com/"}
     ],
     "packages": [
-      {"name": "duckdb", "why": "Modern SQL on your laptop, reads Parquet"},
-      {"name": "sqlalchemy", "why": "Python's database toolkit"},
-      {"name": "pandasql", "why": "SQL syntax on pandas DataFrames"}
+      {"name": "duckdb", "why": "Modern SQL on your laptop, reads Parquet", "url": "https://duckdb.org/"},
+      {"name": "sqlalchemy", "why": "Python's database toolkit", "url": "https://www.sqlalchemy.org/"},
+      {"name": "pandasql", "why": "SQL syntax on pandas DataFrames", "url": "https://github.com/yhat/pandasql"}
     ],
     "order": 6
   },
@@ -134,10 +134,10 @@
       {"name": "Scrapy Documentation", "why": "Industrial-strength web scraping", "url": "https://docs.scrapy.org/"}
     ],
     "packages": [
-      {"name": "requests", "why": "HTTP for humans — start here"},
-      {"name": "beautifulsoup4", "why": "Parse HTML the simple way"},
-      {"name": "playwright", "why": "Modern browser automation from Microsoft"},
-      {"name": "scrapy", "why": "Production web scraping framework"}
+      {"name": "requests", "why": "HTTP for humans — start here", "url": "https://requests.readthedocs.io/"},
+      {"name": "beautifulsoup4", "why": "Parse HTML the simple way", "url": "https://www.crummy.com/software/BeautifulSoup/"},
+      {"name": "playwright", "why": "Modern browser automation from Microsoft", "url": "https://playwright.dev/python/"},
+      {"name": "scrapy", "why": "Production web scraping framework", "url": "https://scrapy.org/"}
     ],
     "order": 8
   },

@@ -99,7 +99,7 @@
                         <ul>
                             {{ range .packages }}
                             <li>
-                                <strong>{{ .name }}</strong>
+                                {{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener"><strong>{{ .name }}</strong></a>{{ else }}<strong>{{ .name }}</strong>{{ end }}
                                 <span class="why">{{ .why }}</span>
                             </li>
                             {{ end }}
