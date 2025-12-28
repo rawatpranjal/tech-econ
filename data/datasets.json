@@ -868,7 +868,7 @@
     "name": "Iowa Liquor",
     "description": "Monthly Class E liquor sales data with volume and pricing from Iowa",
     "category": "Grocery & Supermarkets",
-    "url": "https://data.iowa.gov/Sales-Distribution/Iowa-Liquor-Sales/m3tr-qhgy/data",
+    "url": "https://data.iowa.gov/Sales-Distribution/Iowa-Liquor-Sales/m3tr-qhgy",
     "docs_url": null,
     "github_url": null,
     "tags": [
@@ -1399,7 +1399,7 @@
     "name": "Ipinyou RTB",
     "description": "Real-time bidding (RTB) dataset for CTR prediction",
     "category": "Advertising",
-    "url": "http://contest.ipinyou.com/",
+    "url": "https://github.com/wnzhang/make-ipinyou-data",
     "docs_url": null,
     "github_url": null,
     "tags": [
@@ -1898,7 +1898,7 @@
     "name": "Baidu AI Datasets",
     "description": "AI, NLP, computer vision, and autonomous driving datasets",
     "category": "Data Portals",
-    "url": "https://ai.baidu.com/broad/download",
+    "url": "https://aistudio.baidu.com/datasetoverview",
     "docs_url": null,
     "github_url": null,
     "tags": [
@@ -1952,7 +1952,7 @@
     "name": "Makridakis Competitions",
     "description": "Time series data for forecasting competitions (M1-M5)",
     "category": "Data Portals",
-    "url": "https://forecasters.org/resources/time-series-data/",
+    "url": "https://www.mcompetitions.unic.ac.cy/the-dataset/",
     "docs_url": null,
     "github_url": null,
     "tags": [
@@ -2017,7 +2017,7 @@
     "name": "Data Mining Cup",
     "description": "Industry-sponsored data mining competitions",
     "category": "Data Portals",
-    "url": "https://www.data-mining-cup.com/reviews/",
+    "url": "https://www.data-mining-cup.com/",
     "docs_url": null,
     "github_url": null,
     "tags": [
@@ -2435,7 +2435,7 @@
     "name": "FCC Spectrum Auctions",
     "description": "87+ auctions (1994-present) with round-by-round bidding data. Complete bid histories, reserve prices, winners. Auction theory empirics",
     "category": "Auctions & Marketplaces",
-    "url": "https://www.fcc.gov/auctions/auction-results",
+    "url": "https://www.fcc.gov/auctions-summary",
     "docs_url": "https://www.fcc.gov/auction/",
     "github_url": null,
     "tags": [
@@ -3101,7 +3101,7 @@
     "name": "iPinYou RTB Dataset",
     "description": "Billions of bid requests with complete auction logs: bid IDs, timestamps, user agents, regions, bid/paying prices, conversions",
     "category": "Advertising",
-    "url": "https://contest.ipinyou.com/",
+    "url": "https://github.com/wnzhang/make-ipinyou-data",
     "docs_url": null,
     "github_url": null,
     "tags": [
