@@ -420,14 +420,43 @@
     "order": 7
   },
   {
-    "name": "Learn LeetCode",
-    "description": "Data structures and algorithms for coding interviews \u2014 learn foundations first, then grind",
+    "name": "Learn Data Structures",
+    "description": "Arrays, linked lists, trees, and graphs \u2014 the building blocks for efficient algorithms",
     "icon": "puzzle",
     "resources": [
       {
-        "name": "Structy",
-        "why": "Designed for true beginners, progressive difficulty ($60/yr)",
-        "url": "https://structy.net/"
+        "name": "Problem Solving with Algorithms & Data Structures (Python)",
+        "why": "Free interactive textbook \u2014 visualizations and runnable code",
+        "url": "https://runestone.academy/ns/books/published/pythonds/index.html"
+      },
+      {
+        "name": "Real Python: Data Structures",
+        "why": "Practical guide with Python-specific implementations",
+        "url": "https://realpython.com/python-data-structures/"
+      },
+      {
+        "name": "USF Data Structure Visualizations",
+        "why": "Interactive animations \u2014 see how trees, heaps, and graphs work",
+        "url": "https://www.cs.usfca.edu/~galles/visualization/Algorithms.html"
+      },
+      {
+        "name": "LeetCode Explore: Data Structures",
+        "why": "Structured practice cards with solutions",
+        "url": "https://leetcode.com/explore/learn/"
+      }
+    ],
+    "packages": [],
+    "order": 8
+  },
+  {
+    "name": "Learn Algorithms",
+    "description": "Sorting, searching, dynamic programming, and graph algorithms \u2014 the patterns that power interviews",
+    "icon": "trending",
+    "resources": [
+      {
+        "name": "freeCodeCamp: Algorithms Course",
+        "why": "8-hour free video course \u2014 clear explanations",
+        "url": "https://www.youtube.com/watch?v=8hly31xKli0"
       },
       {
         "name": "Abdul Bari (YouTube)",
@@ -435,23 +464,52 @@
         "url": "https://www.youtube.com/@abdul_bari"
       },
       {
-        "name": "NeetCode",
-        "why": "Curated roadmap with video explanations",
+        "name": "VisuAlgo",
+        "why": "Animated algorithm visualizations \u2014 sorting, graphs, DP",
+        "url": "https://visualgo.net/"
+      },
+      {
+        "name": "TheAlgorithms/Python",
+        "why": "200+ algorithm implementations in Python \u2014 reference code",
+        "url": "https://github.com/TheAlgorithms/Python"
+      }
+    ],
+    "packages": [],
+    "order": 9
+  },
+  {
+    "name": "Learn LeetCode",
+    "description": "Coding interview practice \u2014 curated problem sets and patterns for FAANG interviews",
+    "icon": "code",
+    "resources": [
+      {
+        "name": "NeetCode Roadmap",
+        "why": "Curated 150 problems with video explanations",
         "url": "https://neetcode.io/"
       },
       {
         "name": "Blind 75 / Grind 75",
-        "why": "The 75 problems you need to master",
+        "why": "The 75 essential problems \u2014 customizable study plan",
         "url": "https://www.techinterviewhandbook.org/grind75"
       },
       {
         "name": "LeetCode Patterns",
         "why": "14 patterns to solve any question",
         "url": "https://seanprashad.com/leetcode-patterns/"
+      },
+      {
+        "name": "HackerRank Interview Prep Kit",
+        "why": "Structured practice by topic \u2014 warmup to hard",
+        "url": "https://www.hackerrank.com/interview/interview-preparation-kit"
+      },
+      {
+        "name": "Structy",
+        "why": "Designed for true beginners, progressive difficulty ($60/yr)",
+        "url": "https://structy.net/"
       }
     ],
     "packages": [],
-    "order": 8
+    "order": 10
   },
   {
     "name": "Learn Automation",
@@ -506,7 +564,7 @@
         "url": "https://scrapy.org/"
       }
     ],
-    "order": 9
+    "order": 11
   },
   {
     "name": "Learn Optimization (OR)",
@@ -586,7 +644,7 @@
         "url": "https://www.gurobi.com/"
       }
     ],
-    "order": 10
+    "order": 12
   },
   {
     "name": "Learn Agentic Workflows",
@@ -636,7 +694,7 @@
         "url": "https://github.com/openai/openai-agents-python"
       }
     ],
-    "order": 11
+    "order": 13
   },
   {
     "name": "Learn Forecasting",
@@ -716,6 +774,6 @@
         "url": "https://nixtlaverse.nixtla.io/mlforecast/"
       }
     ],
-    "order": 12
+    "order": 14
   }
 ]
