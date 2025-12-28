@@ -36,6 +36,7 @@
     initClickTracking();
     initPerformanceTracking();
     initErrorTracking();
+    initEngagementTracking();
 
     // Periodic flush
     setInterval(flush, FLUSH_INTERVAL);
@@ -314,6 +315,75 @@
         msg: truncate(String(e.reason), 200)
       });
     });
+  }
+
+  // ============================================
+  // Engagement Tracking (Time on Page, Scroll)
+  // ============================================
+
+  function initEngagementTracking() {
+    var pageLoadTime = Date.now();
+    var maxScrollDepth = 0;
+    var interactionCount = 0;
+    var isVisible = true;
+    var visibleTime = 0;
+    var lastVisibleStart = pageLoadTime;
+
+    // Track scroll depth
+    window.addEventListener('scroll', function() {
+      var scrollTop = window.scrollY || document.documentElement.scrollTop;
+      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight > 0) {
+        var depth = Math.round((scrollTop / docHeight) * 100);
+        if (depth > maxScrollDepth) {
+          maxScrollDepth = depth;
+        }
+      }
+    }, { passive: true });
+
+    // Track interactions
+    document.addEventListener('click', function() {
+      interactionCount++;
+    });
+
+    // Track visibility changes for accurate time
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden') {
+        if (isVisible) {
+          visibleTime += Date.now() - lastVisibleStart;
+          isVisible = false;
+        }
+        // Send engagement data when leaving
+        sendEngagement();
+      } else {
+        isVisible = true;
+        lastVisibleStart = Date.now();
+      }
+    });
+
+    // Also send on beforeunload as backup
+    window.addEventListener('beforeunload', function() {
+      if (isVisible) {
+        visibleTime += Date.now() - lastVisibleStart;
+      }
+      sendEngagement();
+    });
+
+    function sendEngagement() {
+      var finalTime = visibleTime;
+      if (isVisible) {
+        finalTime += Date.now() - lastVisibleStart;
+      }
+      var timeOnPage = Math.round(finalTime / 1000); // seconds
+
+      if (timeOnPage > 0) {
+        track('engage', {
+          timeOnPage: timeOnPage,
+          scrollDepth: maxScrollDepth,
+          interactions: interactionCount
+        });
+      }
+    }
   }
 
   // ============================================

@@ -1,0 +1,489 @@
+{{ define "main" }}
+<div class="hero hero-analytics">
+    <div class="container">
+        <h1>Interest Meter</h1>
+        <p class="hero-subtitle">What's trending on tech-econ</p>
+    </div>
+</div>
+
+<main class="container analytics-dashboard">
+    <!-- Loading State -->
+    <div id="analytics-loading" class="analytics-loading">
+        <div class="loading-spinner"></div>
+        <p>Loading analytics data...</p>
+    </div>
+
+    <!-- Error State -->
+    <div id="analytics-error" class="analytics-error" style="display: none;">
+        <p>Unable to load analytics. The tracker endpoint may not be configured yet.</p>
+        <button onclick="window.location.reload()">Retry</button>
+    </div>
+
+    <!-- Dashboard Content -->
+    <div id="analytics-content" style="display: none;">
+
+        <!-- Summary Cards -->
+        <section class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-value" id="metric-pageviews">-</div>
+                <div class="metric-label">Page Views</div>
+                <div class="metric-period">Last 7 days</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="metric-sessions">-</div>
+                <div class="metric-label">Unique Sessions</div>
+                <div class="metric-period">Last 7 days</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-value" id="metric-time">-</div>
+                <div class="metric-label">Avg Time on Page</div>
+                <div class="metric-period">Last 7 days</div>
+            </div>
+            <div class="metric-card highlight">
+                <div class="metric-value" id="metric-top-search">-</div>
+                <div class="metric-label">Top Search</div>
+                <div class="metric-period">Most searched term</div>
+            </div>
+        </section>
+
+        <!-- Charts Row -->
+        <section class="charts-section">
+            <div class="chart-card">
+                <h3>Daily Page Views</h3>
+                <canvas id="chart-pageviews"></canvas>
+            </div>
+        </section>
+
+        <!-- Top Content Grid -->
+        <section class="top-content-grid">
+            <div class="top-card">
+                <h3>Top Searches</h3>
+                <ol id="list-searches" class="top-list">
+                    <li class="placeholder">No data yet</li>
+                </ol>
+            </div>
+            <div class="top-card">
+                <h3>Top Pages</h3>
+                <ol id="list-pages" class="top-list">
+                    <li class="placeholder">No data yet</li>
+                </ol>
+            </div>
+            <div class="top-card">
+                <h3>Top Clicked Resources</h3>
+                <div class="top-resources">
+                    <div class="resource-section">
+                        <h4>Packages</h4>
+                        <ol id="list-packages" class="top-list compact">
+                            <li class="placeholder">-</li>
+                        </ol>
+                    </div>
+                    <div class="resource-section">
+                        <h4>Datasets</h4>
+                        <ol id="list-datasets" class="top-list compact">
+                            <li class="placeholder">-</li>
+                        </ol>
+                    </div>
+                    <div class="resource-section">
+                        <h4>Learning</h4>
+                        <ol id="list-learning" class="top-list compact">
+                            <li class="placeholder">-</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Performance Section -->
+        <section class="performance-section">
+            <h3>Core Web Vitals</h3>
+            <div class="vitals-grid">
+                <div class="vital-card" id="vital-lcp">
+                    <div class="vital-metric">LCP</div>
+                    <div class="vital-value">-</div>
+                    <div class="vital-label">Largest Contentful Paint</div>
+                    <div class="vital-target">Target: &lt; 2.5s</div>
+                </div>
+                <div class="vital-card" id="vital-fid">
+                    <div class="vital-metric">FID</div>
+                    <div class="vital-value">-</div>
+                    <div class="vital-label">First Input Delay</div>
+                    <div class="vital-target">Target: &lt; 100ms</div>
+                </div>
+                <div class="vital-card" id="vital-cls">
+                    <div class="vital-metric">CLS</div>
+                    <div class="vital-value">-</div>
+                    <div class="vital-label">Cumulative Layout Shift</div>
+                    <div class="vital-target">Target: &lt; 0.1</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countries Section -->
+        <section class="countries-section">
+            <h3>Visitor Countries</h3>
+            <div id="countries-list" class="countries-grid">
+                <span class="placeholder">No data yet</span>
+            </div>
+        </section>
+
+        <!-- Last Updated -->
+        <div class="analytics-footer">
+            <span id="last-updated">Last updated: -</span>
+            <button id="refresh-btn" onclick="refreshAnalytics()">Refresh</button>
+        </div>
+
+    </div>
+</main>
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+<!-- Analytics Dashboard CSS -->
+<style>
+.hero-analytics {
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-hover) 100%);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-analytics h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero-subtitle {
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+.analytics-dashboard {
+    max-width: 1200px;
+    padding-bottom: 3rem;
+}
+
+.analytics-loading, .analytics-error {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--border-color);
+    border-top-color: var(--accent-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.analytics-error {
+    color: var(--text-muted);
+}
+
+.analytics-error button {
+    margin-top: 1rem;
+    padding: 0.5rem 1.5rem;
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Metrics Grid */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.metric-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.metric-card.highlight {
+    border-color: var(--accent-color);
+    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(59, 130, 246, 0.05) 100%);
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+}
+
+.metric-period {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    opacity: 0.7;
+    margin-top: 0.25rem;
+}
+
+/* Charts */
+.charts-section {
+    margin-bottom: 2rem;
+}
+
+.chart-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.chart-card h3 {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.chart-card canvas {
+    max-height: 300px;
+}
+
+/* Top Content Grid */
+.top-content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.top-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.top-card h3 {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.top-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: item;
+}
+
+.top-list li {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 0.9rem;
+}
+
+.top-list li:last-child {
+    border-bottom: none;
+}
+
+.top-list li::before {
+    counter-increment: item;
+    content: counter(item) ".";
+    min-width: 1.5rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.top-list li .count {
+    margin-left: auto;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+}
+
+.top-list.compact li {
+    padding: 0.35rem 0;
+    font-size: 0.85rem;
+}
+
+.top-list li.placeholder {
+    color: var(--text-muted);
+    opacity: 0.6;
+}
+
+.top-list li.placeholder::before {
+    content: "";
+}
+
+.top-resources {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.resource-section h4 {
+    margin: 0 0 0.5rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+}
+
+/* Performance Section */
+.performance-section {
+    margin-bottom: 2rem;
+}
+
+.performance-section h3 {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.vitals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.vital-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.vital-card.good { border-color: #22c55e; }
+.vital-card.needs-improvement { border-color: #f59e0b; }
+.vital-card.poor { border-color: #ef4444; }
+
+.vital-metric {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+}
+
+.vital-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0.25rem 0;
+}
+
+.vital-card.good .vital-value { color: #22c55e; }
+.vital-card.needs-improvement .vital-value { color: #f59e0b; }
+.vital-card.poor .vital-value { color: #ef4444; }
+
+.vital-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.vital-target {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    opacity: 0.7;
+    margin-top: 0.25rem;
+}
+
+/* Countries */
+.countries-section {
+    margin-bottom: 2rem;
+}
+
+.countries-section h3 {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.countries-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.country-badge {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.country-badge .flag {
+    font-size: 1rem;
+}
+
+.country-badge .count {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+}
+
+/* Footer */
+.analytics-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+#refresh-btn {
+    padding: 0.4rem 1rem;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--text-muted);
+    transition: all 0.2s;
+}
+
+#refresh-btn:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-analytics h1 {
+        font-size: 2rem;
+    }
+
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .metric-value {
+        font-size: 1.75rem;
+    }
+
+    .top-content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<!-- Analytics Dashboard JS -->
+<script src="{{ "js/analytics-dashboard.js" | relURL }}"></script>
+{{ end }}

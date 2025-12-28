@@ -1,6 +1,6 @@
 /**
  * Tech-Econ Analytics Endpoint
- * Cloudflare Worker for receiving and storing analytics events
+ * Cloudflare Worker for receiving and aggregating analytics events
  */
 
 const ALLOWED_ORIGINS = [
@@ -12,59 +12,272 @@ const ALLOWED_ORIGINS = [
 
 export default {
   async fetch(request, env, ctx) {
+    const url = new URL(request.url);
+    const origin = request.headers.get('Origin');
+
     // Handle CORS preflight
     if (request.method === 'OPTIONS') {
       return handleCORS(request);
     }
 
-    // Only accept POST
-    if (request.method !== 'POST') {
-      return new Response('Method not allowed', { status: 405 });
+    // Route: GET /stats - Return aggregated analytics
+    if (request.method === 'GET' && url.pathname === '/stats') {
+      return handleStats(request, env, origin);
     }
 
-    // Verify origin
-    const origin = request.headers.get('Origin');
-    if (!isAllowedOrigin(origin)) {
-      return new Response('Forbidden', { status: 403 });
+    // Route: POST /events - Receive events
+    if (request.method === 'POST' && (url.pathname === '/events' || url.pathname === '/')) {
+      return handleEvents(request, env, ctx, origin);
     }
 
-    try {
-      const payload = await request.json();
-
-      // Validate payload
-      if (!payload.v || !payload.events || !Array.isArray(payload.events)) {
-        return new Response('Invalid payload', { status: 400 });
-      }
-
-      // Enrich events with server-side metadata
-      const enrichedEvents = payload.events.map(event => ({
-        ...event,
-        _received: Date.now(),
-        _country: request.cf?.country || 'unknown'
-      }));
-
-      // Store in KV (non-blocking)
-      const key = `events:${Date.now()}:${crypto.randomUUID()}`;
-      ctx.waitUntil(
-        env.ANALYTICS_EVENTS.put(key, JSON.stringify(enrichedEvents), {
-          expirationTtl: 86400 * 30  // 30 days
-        })
-      );
-
-      return new Response(JSON.stringify({ ok: true }), {
-        status: 200,
-        headers: {
-          'Content-Type': 'application/json',
-          ...corsHeaders(origin)
-        }
-      });
-
-    } catch (err) {
-      console.error('Analytics error:', err);
-      return new Response('Server error', { status: 500 });
-    }
+    return new Response('Not found', { status: 404 });
   }
 };
+
+// ============================================
+// POST /events - Receive and store events
+// ============================================
+
+async function handleEvents(request, env, ctx, origin) {
+  if (!isAllowedOrigin(origin)) {
+    return new Response('Forbidden', { status: 403 });
+  }
+
+  try {
+    const payload = await request.json();
+
+    if (!payload.v || !payload.events || !Array.isArray(payload.events)) {
+      return new Response('Invalid payload', { status: 400 });
+    }
+
+    const enrichedEvents = payload.events.map(event => ({
+      ...event,
+      _received: Date.now(),
+      _country: request.cf?.country || 'unknown'
+    }));
+
+    const key = `events:${Date.now()}:${crypto.randomUUID()}`;
+    ctx.waitUntil(
+      env.ANALYTICS_EVENTS.put(key, JSON.stringify(enrichedEvents), {
+        expirationTtl: 86400 * 30
+      })
+    );
+
+    return new Response(JSON.stringify({ ok: true }), {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        ...corsHeaders(origin)
+      }
+    });
+
+  } catch (err) {
+    console.error('Analytics error:', err);
+    return new Response('Server error', { status: 500 });
+  }
+}
+
+// ============================================
+// GET /stats - Return aggregated statistics
+// ============================================
+
+async function handleStats(request, env, origin) {
+  // Allow stats from allowed origins or no origin (direct access)
+  if (origin && !isAllowedOrigin(origin)) {
+    return new Response('Forbidden', { status: 403 });
+  }
+
+  try {
+    const now = Date.now();
+    const sevenDaysAgo = now - (7 * 24 * 60 * 60 * 1000);
+
+    // Fetch all events from KV
+    const allEvents = [];
+    let cursor = null;
+
+    do {
+      const list = await env.ANALYTICS_EVENTS.list({ prefix: 'events:', cursor, limit: 1000 });
+
+      for (const key of list.keys) {
+        const data = await env.ANALYTICS_EVENTS.get(key.name);
+        if (data) {
+          try {
+            const events = JSON.parse(data);
+            allEvents.push(...events);
+          } catch (e) {}
+        }
+      }
+
+      cursor = list.list_complete ? null : list.cursor;
+    } while (cursor);
+
+    // Filter to recent events
+    const recentEvents = allEvents.filter(e => e.ts >= sevenDaysAgo);
+
+    // Aggregate statistics
+    const stats = aggregateEvents(recentEvents, now);
+
+    return new Response(JSON.stringify(stats), {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'public, max-age=300',
+        ...corsHeaders(origin || '*')
+      }
+    });
+
+  } catch (err) {
+    console.error('Stats error:', err);
+    return new Response(JSON.stringify({ error: 'Failed to fetch stats' }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json' }
+    });
+  }
+}
+
+// ============================================
+// Aggregation Logic
+// ============================================
+
+function aggregateEvents(events, now) {
+  const stats = {
+    updated: now,
+    totalEvents: events.length,
+    summary: {
+      pageviews: 0,
+      sessions: new Set(),
+      searches: 0,
+      clicks: 0,
+      avgTimeOnPage: 0
+    },
+    topSearches: {},
+    topPages: {},
+    topClicks: {
+      packages: {},
+      datasets: {},
+      learning: {},
+      other: {}
+    },
+    dailyPageviews: {},
+    countries: {},
+    performance: {
+      lcp: [],
+      fid: [],
+      cls: []
+    }
+  };
+
+  let totalTimeOnPage = 0;
+  let timeOnPageCount = 0;
+
+  for (const event of events) {
+    // Count sessions
+    if (event.sid) {
+      stats.summary.sessions.add(event.sid);
+    }
+
+    // Count by type
+    switch (event.t) {
+      case 'pageview':
+        stats.summary.pageviews++;
+
+        // Daily pageviews
+        const day = new Date(event.ts).toISOString().split('T')[0];
+        stats.dailyPageviews[day] = (stats.dailyPageviews[day] || 0) + 1;
+
+        // Top pages
+        if (event.d?.path) {
+          stats.topPages[event.d.path] = (stats.topPages[event.d.path] || 0) + 1;
+        }
+        break;
+
+      case 'search':
+        stats.summary.searches++;
+        if (event.d?.q) {
+          const query = event.d.q.toLowerCase().trim();
+          stats.topSearches[query] = (stats.topSearches[query] || 0) + 1;
+        }
+        break;
+
+      case 'click':
+        stats.summary.clicks++;
+        if (event.d?.type === 'card' && event.d?.name) {
+          const section = event.d.section || 'other';
+          const bucket = stats.topClicks[section] || stats.topClicks.other;
+          bucket[event.d.name] = (bucket[event.d.name] || 0) + 1;
+        }
+        break;
+
+      case 'engage':
+        if (event.d?.timeOnPage) {
+          totalTimeOnPage += event.d.timeOnPage;
+          timeOnPageCount++;
+        }
+        break;
+
+      case 'vitals':
+        if (event.d?.metric && event.d?.value !== undefined) {
+          const metric = event.d.metric.toLowerCase();
+          if (stats.performance[metric]) {
+            stats.performance[metric].push(event.d.value);
+          }
+        }
+        break;
+    }
+
+    // Countries
+    if (event._country && event._country !== 'unknown') {
+      stats.countries[event._country] = (stats.countries[event._country] || 0) + 1;
+    }
+  }
+
+  // Calculate averages
+  stats.summary.sessions = stats.summary.sessions.size;
+  stats.summary.avgTimeOnPage = timeOnPageCount > 0
+    ? Math.round(totalTimeOnPage / timeOnPageCount)
+    : 0;
+
+  // Sort and limit top items
+  stats.topSearches = sortAndLimit(stats.topSearches, 20);
+  stats.topPages = sortAndLimit(stats.topPages, 10);
+  stats.topClicks.packages = sortAndLimit(stats.topClicks.packages, 10);
+  stats.topClicks.datasets = sortAndLimit(stats.topClicks.datasets, 10);
+  stats.topClicks.learning = sortAndLimit(stats.topClicks.learning, 10);
+  stats.countries = sortAndLimit(stats.countries, 10);
+
+  // Calculate performance averages
+  for (const metric of ['lcp', 'fid', 'cls']) {
+    const values = stats.performance[metric];
+    if (values.length > 0) {
+      const avg = values.reduce((a, b) => a + b, 0) / values.length;
+      stats.performance[metric] = {
+        avg: Math.round(avg * 100) / 100,
+        samples: values.length
+      };
+    } else {
+      stats.performance[metric] = { avg: null, samples: 0 };
+    }
+  }
+
+  // Sort daily pageviews by date
+  const sortedDaily = Object.entries(stats.dailyPageviews)
+    .sort((a, b) => a[0].localeCompare(b[0]))
+    .slice(-7);
+  stats.dailyPageviews = Object.fromEntries(sortedDaily);
+
+  return stats;
+}
+
+function sortAndLimit(obj, limit) {
+  return Object.entries(obj)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, limit)
+    .map(([name, count]) => ({ name, count }));
+}
+
+// ============================================
+// CORS Helpers
+// ============================================
 
 function isAllowedOrigin(origin) {
   if (!origin) return false;
@@ -81,7 +294,7 @@ function handleCORS(request) {
     status: 204,
     headers: {
       ...corsHeaders(origin),
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
       'Access-Control-Allow-Headers': 'Content-Type',
       'Access-Control-Max-Age': '86400'
     }
@@ -90,7 +303,7 @@ function handleCORS(request) {
 
 function corsHeaders(origin) {
   return {
-    'Access-Control-Allow-Origin': origin,
+    'Access-Control-Allow-Origin': origin || '*',
     'Access-Control-Allow-Credentials': 'false'
   };
 }
