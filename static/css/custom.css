@@ -1207,6 +1207,12 @@ a:hover {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cta-icon:hover {
+    background: rgba(255,255,255,0.25);
 }
 
 .cta-icon svg {
