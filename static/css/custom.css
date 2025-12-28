@@ -447,46 +447,54 @@ a:hover {
     white-space: nowrap;
 }
 
-/* Difficulty Badges */
-.difficulty-badge {
-    font-size: 0.7rem;
-    padding: 0.15rem 0.45rem;
-    border-radius: 4px;
-    font-weight: 600;
-    white-space: nowrap;
-    text-transform: uppercase;
-    letter-spacing: 0.02em;
+/* Difficulty Dots */
+.difficulty-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-left: 0.5rem;
+    flex-shrink: 0;
 }
 
 .difficulty-intro {
-    background: #e8f5e9;
-    color: #2e7d32;
+    background: #2e7d32;
 }
 
-.difficulty-medium {
-    background: #fff3e0;
-    color: #e65100;
+.difficulty-medium,
+.difficulty-intermediate {
+    background: #e65100;
 }
 
 .difficulty-advanced {
-    background: #ffebee;
-    color: #c62828;
+    background: #c62828;
 }
 
-/* Dark mode difficulty badges */
-[data-theme="dark"] .difficulty-intro {
-    background: #1b3a2a;
-    color: #81c784;
+/* Difficulty Legend */
+.learning-meta-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
-[data-theme="dark"] .difficulty-medium {
-    background: #3d2a1a;
-    color: #ffb74d;
+.difficulty-legend {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
 }
 
-[data-theme="dark"] .difficulty-advanced {
-    background: #3d1a1a;
-    color: #ef9a9a;
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.legend-item .difficulty-dot {
+    margin-left: 0;
 }
 
 .resource-desc {

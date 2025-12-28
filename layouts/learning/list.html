@@ -48,7 +48,14 @@
         </select>
     </div>
 
-    <div id="result-count" class="result-count">{{ len .Site.Data.resources }} resources</div>
+    <div class="learning-meta-row">
+        <div id="result-count" class="result-count">{{ len .Site.Data.resources }} resources</div>
+        <div class="difficulty-legend">
+            <span class="legend-item"><span class="difficulty-dot difficulty-intro"></span> Intro</span>
+            <span class="legend-item"><span class="difficulty-dot difficulty-medium"></span> Medium</span>
+            <span class="legend-item"><span class="difficulty-dot difficulty-advanced"></span> Advanced</span>
+        </div>
+    </div>
 
     <!-- Resources Grid -->
     <div id="resources-view" class="resources-grid">
@@ -72,7 +79,7 @@
                             <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
                         </h3>
                         <span class="resource-type">{{ .type }}</span>
-                        {{ if .level }}<span class="difficulty-badge difficulty-{{ .level | lower }}">{{ .level }}</span>{{ end }}
+                        {{ if .level }}<span class="difficulty-dot difficulty-{{ .level | lower }}" title="{{ .level }}"></span>{{ end }}
                     </div>
                     <p class="resource-desc">{{ .description }}</p>
                     <div class="card-footer">
@@ -89,7 +96,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>Curated learning resources for tech economists and data scientists</p>
+        <p>Curated learning resources for practitioners and data scientists</p>
     </footer>
 </div>
 
