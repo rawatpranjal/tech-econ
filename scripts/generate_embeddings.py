@@ -39,7 +39,8 @@ DATA_FILES = [
     "talks.json",
     "career.json",
     "community.json",
-    "roadmaps.json"
+    "roadmaps.json",
+    "books.json"
 ]
 
 # Map file to type
@@ -50,7 +51,8 @@ FILE_TO_TYPE = {
     "talks.json": "talk",
     "career.json": "career",
     "community.json": "community",
-    "roadmaps.json": "roadmap"
+    "roadmaps.json": "roadmap",
+    "books.json": "book"
 }
 
 

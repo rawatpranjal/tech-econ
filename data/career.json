@@ -1,93 +1,212 @@
 [
   {
-    "name": "Amazon Data Science Interview Guide",
-    "description": "Insider guide to Amazon's data science tracks: Forecasting, Causal Analysis, and Empirical IO. Leadership Principles meet econometrics.",
-    "category": "Interview Prep",
-    "url": "https://medium.com/data-science/my-amazon-researcher-interview-186e52e58a27",
-    "type": "Guide"
+    "name": "DataLemur SQL",
+    "description": "Free SQL practice with FAANG questions. Created by ex-Facebook authors of Ace the Data Science Interview.",
+    "category": "SQL & Data",
+    "url": "https://datalemur.com/",
+    "type": "Practice"
   },
   {
-    "name": "Uber Data Scientist Interview",
-    "description": "Focus on two-sided markets and interference. 'If we lower rider prices, what happens to driver supply?'",
-    "category": "Interview Prep",
-    "url": "https://igotanoffer.com/en/advice/uber-data-scientist-interview",
-    "type": "Guide"
+    "name": "StrataScratch",
+    "description": "Company-specific SQL filtering for Airbnb, Uber, Netflix. Real interview questions with solutions.",
+    "category": "SQL & Data",
+    "url": "https://www.stratascratch.com/",
+    "type": "Practice"
   },
   {
-    "name": "Meta Data Scientist Interview",
-    "description": "Focus on experimentation, causal inference, and product analytics at massive scale. A/B testing, network effects, and marketplace experiments.",
-    "category": "Interview Prep",
-    "url": "https://igotanoffer.com/blogs/tech/facebook-data-scientist-interview",
-    "type": "Guide"
+    "name": "Mode Analytics SQL Tutorial",
+    "description": "Free tutorial with real datasets and the famous Yammer case study. Great for building fundamentals.",
+    "category": "SQL & Data",
+    "url": "https://mode.com/sql-tutorial/",
+    "type": "Tutorial"
   },
   {
-    "name": "Evan's Pages: Industry Interview Advice",
-    "description": "Former Amazon researcher with 250+ interviews. Frameworks for behavioral and technical interviews. 'Job interviewing is its own skill\u201499% of people need to practice it.'",
-    "category": "Interview Prep",
-    "url": "https://sites.google.com/view/themostdismalscientist/industry-job-finding-advice",
-    "type": "Guide"
+    "name": "Window Functions Practice",
+    "description": "Interactive quizzes on ROW_NUMBER, RANK, LAG/LEAD. Consistently tested in interviews.",
+    "category": "SQL & Data",
+    "url": "https://www.windowfunctions.com/",
+    "type": "Practice"
   },
   {
-    "name": "Ace the Data Science Interview",
-    "description": "201 real questions from FAANG, startups, and Wall Street. By two ex-Facebook employees. The industry-standard prep resource.",
-    "category": "Interview Prep",
-    "url": "https://www.acethedatascienceinterview.com/",
+    "name": "Interview Query",
+    "description": "Data science interview platform with SQL, Python, and ML questions. Take-home challenges included.",
+    "category": "SQL & Data",
+    "url": "https://www.interviewquery.com/",
+    "type": "Practice"
+  },
+  {
+    "name": "Nick Singh's 40 Stats Questions",
+    "description": "Probability and statistics questions from FAANG and Wall Street. Bayesian puzzles and distributions.",
+    "category": "Stats & Probability",
+    "url": "https://www.nicksingh.com/posts/40-probability-statistics-data-science-interview-questions-asked-by-fang-wall-street",
+    "type": "Questions"
+  },
+  {
+    "name": "StatQuest with Josh Starmer",
+    "description": "Best resource for econ PhDs learning ML. Bias-variance, regularization, ensemble methods explained accessibly.",
+    "category": "ML Fundamentals",
+    "url": "https://www.youtube.com/@statquest",
+    "type": "Video"
+  },
+  {
+    "name": "Trustworthy Online Controlled Experiments",
+    "description": "The industry bible by Kohavi, Tang, Xu. Design, analysis, pitfalls from Microsoft/LinkedIn/Google leaders.",
+    "category": "A/B Testing",
+    "url": "https://www.amazon.com/Trustworthy-Online-Controlled-Experiments-Practical/dp/1108724264",
+    "type": "Book"
+  },
+  {
+    "name": "Understanding CUPED",
+    "description": "Bridges CUPED to DiD and regression. Essential for industry A/B testing interviews.",
+    "category": "A/B Testing",
+    "url": "https://towardsdatascience.com/understanding-cuped-a822523641af",
+    "type": "Article"
+  },
+  {
+    "name": "Netflix: Quasi Experimentation",
+    "description": "When A/B tests aren't feasible and how Netflix handles SUTVA violations.",
+    "category": "A/B Testing",
+    "url": "https://netflixtechblog.com/quasi-experimentation-at-netflix-566b57d2e362",
+    "type": "Blog"
+  },
+  {
+    "name": "Causal Inference: The Mixtape",
+    "description": "Free book by Scott Cunningham. DAGs, DiD, RDD, synthetic control with code. Praised by Imbens and Abadie.",
+    "category": "Causal Inference",
+    "url": "https://mixtape.scunning.com/",
+    "type": "Book"
+  },
+  {
+    "name": "The Effect",
+    "description": "Free causal inference book by Nick Huntington-Klein with animated visualizations.",
+    "category": "Causal Inference",
+    "url": "https://theeffectbook.net/",
     "type": "Book"
   },
   {
     "name": "Scarlet Chen: Econ PhD to Tech",
-    "description": "Stanford PhD turned Google/Shopify DS. Detailed series on job hunting, interviews, and salary negotiation. How she negotiated to $300k+ first year.",
-    "category": "Job Hunting",
-    "url": "https://scarlet-chen.medium.com/my-journey-from-econ-phd-to-tech-part-1-why-leave-academia-f69eb8633d39",
-    "type": "Blog Series"
+    "description": "Stanford PhD to Google/Shopify. Interview experiences at Google, Amazon, Facebook, Uber.",
+    "category": "Causal Inference",
+    "url": "https://scarlet-chen.medium.com/",
+    "type": "Blog"
+  },
+  {
+    "name": "Emma Ding: Product Sense Guide",
+    "description": "Ultimate guide to business case interviews. AARRR framework, metrics, diagnostic approaches.",
+    "category": "Product Sense",
+    "url": "https://towardsdatascience.com/the-ultimate-guide-to-cracking-business-case-interviews-for-data-scientists-part-1-cb768c37edf4",
+    "type": "Guide"
+  },
+  {
+    "name": "Amplitude: North Star Metrics",
+    "description": "Three games framework: Attention, Transaction, Productivity. Real examples from Facebook, Airbnb, Spotify.",
+    "category": "Product Sense",
+    "url": "https://amplitude.com/blog/north-star-metric",
+    "type": "Article"
+  },
+  {
+    "name": "DataLemur Meta DS Guide",
+    "description": "31 leaked Meta interview questions. Product sense and SQL focus.",
+    "category": "Product Sense",
+    "url": "https://datalemur.com/blog/meta-facebook-data-scientist-interview",
+    "type": "Guide"
+  },
+  {
+    "name": "Scarlet Ink: Amazon LP Guide",
+    "description": "Written by ex-Amazon Bar Raiser. Sent by recruiters to candidates. 100+ candidates credit it for getting hired.",
+    "category": "Behavioral",
+    "url": "https://www.scarletink.com/p/interviewing-at-amazon-leadership-principles",
+    "type": "Guide"
+  },
+  {
+    "name": "Amazon Leadership Principles",
+    "description": "Official 16 principles with explanations. Customer Obsession, Ownership, Invent and Simplify, etc.",
+    "category": "Behavioral",
+    "url": "https://www.amazon.jobs/content/en/our-workplace/leadership-principles",
+    "type": "Guide"
+  },
+  {
+    "name": "Interviewing.io Amazon Guide",
+    "description": "Insights from 500+ mock Amazon behavioral interviews. STARI method with Action at 50-60%.",
+    "category": "Behavioral",
+    "url": "https://interviewing.io/guides/amazon-interview",
+    "type": "Guide"
+  },
+  {
+    "name": "IGotAnOffer: Google Behavioral",
+    "description": "Googleyness traits: comfort with ambiguity, bias for action, intellectual humility.",
+    "category": "Behavioral",
+    "url": "https://igotanoffer.com/blogs/tech/google-behavioral-interview",
+    "type": "Guide"
+  },
+  {
+    "name": "Designing Machine Learning Systems",
+    "description": "Essential ML system design book by Chip Huyen. Based on Stanford CS 329S.",
+    "category": "ML System Design",
+    "url": "https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/",
+    "type": "Book"
+  },
+  {
+    "name": "ML System Design Interview (Alex Xu)",
+    "description": "7-step framework with 10 detailed solutions: visual search, video recommendation, ad prediction.",
+    "category": "ML System Design",
+    "url": "https://www.amazon.com/Machine-Learning-System-Design-Interview/dp/1736049127",
+    "type": "Book"
+  },
+  {
+    "name": "ML Interviews GitHub",
+    "description": "7.2k stars. Created by someone with offers from Meta, Google, Amazon, Apple for Applied Scientist.",
+    "category": "ML Fundamentals",
+    "url": "https://github.com/alirezadir/Machine-Learning-Interviews",
+    "type": "Resource"
+  },
+  {
+    "name": "Chip Huyen ML Interviews Book",
+    "description": "200+ knowledge questions organized by difficulty for ML fundamentals.",
+    "category": "ML Fundamentals",
+    "url": "https://huyenchip.com/ml-interviews-book/",
+    "type": "Book"
+  },
+  {
+    "name": "Interview Query Take-Homes",
+    "description": "23 real take-home challenges from Airbnb, Stripe, Uber, DoorDash, Amazon with solutions.",
+    "category": "Take-Home",
+    "url": "https://www.interviewquery.com/p/data-science-take-home-challenges",
+    "type": "Practice"
+  },
+  {
+    "name": "Ace the Data Science Interview",
+    "description": "201 real questions from FAANG, startups, Wall Street. Industry-standard prep resource.",
+    "category": "General Prep",
+    "url": "https://www.acethedatascienceinterview.com/",
+    "type": "Book"
   },
   {
     "name": "Rose Tan: Tech Jobs for Econ PhDs",
-    "description": "Two-part LinkedIn guide on navigating tech's decentralized job market. Networking tips, role types, and what econ PhDs should expect.",
-    "category": "Job Hunting",
+    "description": "LinkedIn guide on navigating tech's job market. Networking tips, role types, expectations.",
+    "category": "General Prep",
     "url": "https://www.linkedin.com/pulse/finding-tech-job-part-1-guide-econ-phds-some-useful-info-rose-tan",
     "type": "Guide"
   },
   {
     "name": "Levels.fyi",
-    "description": "Crowdsourced tech compensation data. Compare salaries across companies, levels, and locations. The industry standard for knowing your market value.",
+    "description": "Crowdsourced tech compensation data. Compare salaries across companies, levels, locations.",
     "category": "Negotiation",
     "url": "https://www.levels.fyi/",
     "type": "Tool"
   },
   {
-    "name": "Layoffs.fyi",
-    "description": "Real-time tracker of tech layoffs. See which companies are cutting, hiring freezes, and market trends. Essential for timing your job search.",
-    "category": "Negotiation",
-    "url": "https://layoffs.fyi/",
-    "type": "Tool"
-  },
-  {
     "name": "Levels.fyi Negotiation Guide",
-    "description": "The industry standard for tech compensation data. Detailed guide on base, equity, bonus structures and how to negotiate each.",
+    "description": "Guide on base, equity, bonus structures and how to negotiate each.",
     "category": "Negotiation",
     "url": "https://www.levels.fyi/blog/ultimate-negotiation-guide.html",
     "type": "Guide"
   },
   {
-    "name": "Candor: Salary Negotiation",
-    "description": "Strategies tech insiders use to negotiate. Competing offers, leveling, and how to avoid leaving money on the table.",
+    "name": "Candor Salary Negotiation",
+    "description": "Strategies tech insiders use. Competing offers, leveling, avoiding leaving money on the table.",
     "category": "Negotiation",
     "url": "https://candor.co/guides/salary-negotiation",
-    "type": "Guide"
-  },
-  {
-    "name": "Exponent: Tech Salary Negotiation",
-    "description": "Comprehensive guide to negotiating base, equity, and bonus. 'The biggest mistake is doing nothing. The other side expects you to negotiate.'",
-    "category": "Negotiation",
-    "url": "https://www.tryexponent.com/blog/tech-salary-negotiation-guide",
-    "type": "Guide"
-  },
-  {
-    "name": "Teamrora: DS Salary Negotiation",
-    "description": "Data scientist-specific negotiation tactics. Understanding equity (RSUs vs options), sign-on bonuses, and level-based compensation bands.",
-    "category": "Negotiation",
-    "url": "https://www.teamrora.com/post/data-scientist-salary-negotiation",
     "type": "Guide"
   }
 ]

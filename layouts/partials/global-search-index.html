@@ -105,4 +105,19 @@
   {{- $index = $index | append $item -}}
 {{- end -}}
 
+{{/* Books */}}
+{{- range $.Site.Data.books -}}
+  {{- $item := dict
+    "id" (printf "book-%s" (.name | urlize))
+    "type" "book"
+    "name" .name
+    "description" .description
+    "category" .category
+    "tags" (slice)
+    "url" .url
+    "best_for" ""
+  -}}
+  {{- $index = $index | append $item -}}
+{{- end -}}
+
 {{- $index | jsonify -}}
