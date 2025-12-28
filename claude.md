@@ -1,0 +1,2 @@
+- always do git push when done. 
+- never ever remove anything. try to find the link or fix it. never remove. content removed is content lost. 
