@@ -900,18 +900,19 @@
   },
   {
     "name": "mlsynth",
-    "description": "Implements advanced synthetic control methods: forward DiD, cluster SC, factor models, and proximal SC. Designed for single-treated-unit settings.",
+    "description": "Machine-Learning Synthetic Control. The most comprehensive SC package with 10+ methods: Forward DiD, Cluster SC, Factor Models, Two-Step SC, Proximal SC, Synthetic Interventions, and more.",
     "category": "Program Evaluation Methods (DiD, SC, RDD)",
     "docs_url": "https://mlsynth.readthedocs.io/en/latest/",
     "github_url": "https://github.com/jgreathouse9/mlsynth",
     "url": "https://github.com/jgreathouse9/mlsynth",
     "install": "pip install mlsynth",
     "tags": [
-      "DiD",
       "synthetic control",
-      "RDD"
+      "causal inference",
+      "program evaluation",
+      "DiD"
     ],
-    "best_for": "Advanced SC variants (forward DiD, cluster SC, proximal)"
+    "best_for": "Largest open-source synthetic control package with multiple estimators"
   },
   {
     "name": "pycinc",
