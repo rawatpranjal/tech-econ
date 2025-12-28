@@ -371,28 +371,33 @@
     "resources": [
       {
         "name": "Introduction to Information Retrieval (Manning)",
-        "why": "Canonical free text at Stanford",
-        "url": "https://nlp.stanford.edu/IR-book/"
+        "why": "The canonical free textbook, Stanford",
+        "url": "https://nlp.stanford.edu/IR-book/information-retrieval-book.html"
       },
       {
-        "name": "Learning to Rank for IR (Tie-Yan Liu)",
-        "why": "Pointwise, pairwise, listwise approaches",
-        "url": "https://www.nowpublishers.com/article/Details/INR-016"
+        "name": "From RankNet to LambdaMART (Burges)",
+        "why": "Definitive paper on learning-to-rank algorithms",
+        "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/MSR-TR-2010-82.pdf"
       },
       {
-        "name": "Elasticsearch Guide",
-        "why": "Official free guide with search examples",
-        "url": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html"
+        "name": "Airbnb: Applying Deep Learning to Search",
+        "why": "GBDT→DNN migration, what failed before it worked",
+        "url": "https://arxiv.org/abs/1810.09591"
       },
       {
-        "name": "Airbnb Engineering: Search",
-        "why": "Embedding retrieval and experimentation",
+        "name": "Airbnb: Embedding-Based Retrieval",
+        "why": "Two-tower architecture, largest ML lift in two years",
         "url": "https://medium.com/airbnb-engineering/embedding-based-retrieval-for-airbnb-search-aabebfc85839"
       },
       {
-        "name": "Joachims: Counterfactual LTR",
-        "why": "Econometric causal inference for ranking",
-        "url": "https://www.cs.cornell.edu/people/tj/"
+        "name": "Joachims: Unbiased Learning-to-Rank",
+        "why": "Foundational paper on position bias correction",
+        "url": "https://arxiv.org/abs/1608.04468"
+      },
+      {
+        "name": "Deep Learning at Airbnb Search (QCon)",
+        "why": "Malay Haldar's practitioner walkthrough",
+        "url": "https://www.infoq.com/presentations/dl-airbnb/"
       }
     ],
     "packages": [
