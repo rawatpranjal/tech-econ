@@ -4,7 +4,7 @@
       "id": "experimentation",
       "name": "Experimentation",
       "description": "A/B testing, variance reduction, sequential testing, interference",
-      "image_url": "https://picsum.photos/seed/experimentation/400/200",
+      "image_url": "/images/topics/experimentation.jpg",
       "subtopics": [
         {
           "id": "ab-test-design",
@@ -190,7 +190,7 @@
       "id": "observational-causal-inference",
       "name": "Observational Causal Inference",
       "description": "Matching, DiD, synthetic control, IV, RDD, double ML",
-      "image_url": "https://picsum.photos/seed/causal-inference/400/200",
+      "image_url": "/images/topics/causal-inference.jpg",
       "subtopics": [
         {
           "id": "matching-propensity",
@@ -391,7 +391,7 @@
       "id": "pricing",
       "name": "Pricing",
       "description": "Dynamic pricing, surge, markdown, demand estimation",
-      "image_url": "https://picsum.photos/seed/pricing/400/200",
+      "image_url": "/images/topics/pricing.jpg",
       "subtopics": [
         {
           "id": "dynamic-pricing",
@@ -538,7 +538,7 @@
       "id": "subscriptions-retention",
       "name": "Subscriptions & Retention",
       "description": "Churn, CLV, engagement, freemium",
-      "image_url": "https://picsum.photos/seed/subscriptions/400/200",
+      "image_url": "/images/topics/subscriptions.jpg",
       "subtopics": [
         {
           "id": "churn-prediction",
@@ -669,7 +669,7 @@
       "id": "advertising",
       "name": "Advertising",
       "description": "Ad auctions, attribution, targeting, brand measurement",
-      "image_url": "https://picsum.photos/seed/advertising/400/200",
+      "image_url": "/images/topics/advertising.jpg",
       "subtopics": [
         {
           "id": "ad-auctions",
@@ -824,7 +824,7 @@
       "id": "marketing-growth",
       "name": "Marketing & Growth",
       "description": "Acquisition, referrals, promotions, uplift modeling",
-      "image_url": "https://picsum.photos/seed/marketing/400/200",
+      "image_url": "/images/topics/marketing.jpg",
       "subtopics": [
         {
           "id": "acquisition-referrals",
@@ -1011,7 +1011,7 @@
       "id": "recommender-systems",
       "name": "Recommender Systems",
       "description": "Collaborative filtering, deep recs, debiasing, cold start",
-      "image_url": "https://picsum.photos/seed/recommender/400/200",
+      "image_url": "/images/topics/recommender.jpg",
       "subtopics": [
         {
           "id": "collaborative-filtering",
@@ -1222,7 +1222,7 @@
       "id": "search-ranking",
       "name": "Search & Ranking",
       "description": "Learning to rank, query understanding, position bias",
-      "image_url": "https://picsum.photos/seed/search/400/200",
+      "image_url": "/images/topics/search.jpg",
       "subtopics": [
         {
           "id": "learning-to-rank",
@@ -1433,7 +1433,7 @@
       "id": "matching-marketplaces",
       "name": "Matching & Marketplaces",
       "description": "Two-sided markets, matching algorithms, reputation",
-      "image_url": "https://picsum.photos/seed/marketplace/400/200",
+      "image_url": "/images/topics/marketplace.jpg",
       "subtopics": [
         {
           "id": "two-sided-markets",
@@ -1628,7 +1628,7 @@
       "id": "mechanism-design-auctions",
       "name": "Mechanism Design & Auctions",
       "description": "Auction theory, market design, information design",
-      "image_url": "https://picsum.photos/seed/auctions/400/200",
+      "image_url": "/images/topics/auctions.jpg",
       "subtopics": [
         {
           "id": "auction-theory",
@@ -1831,7 +1831,7 @@
       "id": "structural-estimation",
       "name": "Structural Estimation",
       "description": "Demand estimation, entry models, auction estimation",
-      "image_url": "https://picsum.photos/seed/economics/400/200",
+      "image_url": "/images/topics/economics.jpg",
       "subtopics": [
         {
           "id": "demand-estimation-blp",
@@ -2066,7 +2066,7 @@
       "id": "choice-models-dynamic-choice",
       "name": "Choice Models & Dynamic Choice",
       "description": "Discrete choice, consideration sets, dynamic decisions",
-      "image_url": "https://picsum.photos/seed/choice/400/200",
+      "image_url": "/images/topics/choice.jpg",
       "subtopics": [
         {
           "id": "discrete-choice",
@@ -2269,7 +2269,7 @@
       "id": "reinforcement-learning",
       "name": "Reinforcement Learning",
       "description": "Bandits, Thompson sampling, off-policy, batch RL",
-      "image_url": "https://picsum.photos/seed/reinforcement/400/200",
+      "image_url": "/images/topics/reinforcement.jpg",
       "subtopics": [
         {
           "id": "multi-armed-bandits",
@@ -2503,7 +2503,7 @@
       "id": "inverse-rl-preference-learning",
       "name": "Inverse RL & Preference Learning",
       "description": "Reward inference, imitation learning, RLHF",
-      "image_url": "https://picsum.photos/seed/preferences/400/200",
+      "image_url": "/images/topics/preferences.jpg",
       "subtopics": [
         {
           "id": "reward-inference",
@@ -2535,7 +2535,7 @@
       "id": "credit-lending",
       "name": "Credit & Lending",
       "description": "Credit scoring, fair lending, alternative data",
-      "image_url": "https://picsum.photos/seed/credit/400/200",
+      "image_url": "/images/topics/credit.jpg",
       "subtopics": [
         {
           "id": "credit-scoring",
@@ -2573,7 +2573,7 @@
       "id": "trust-safety",
       "name": "Trust & Safety",
       "description": "Fraud detection, spam, content moderation, abuse",
-      "image_url": "https://picsum.photos/seed/security/400/200",
+      "image_url": "/images/topics/security.jpg",
       "subtopics": [
         {
           "id": "fraud-detection",
@@ -2611,7 +2611,7 @@
       "id": "logistics-operations",
       "name": "Logistics & Operations",
       "description": "Routing, inventory, ETA prediction, capacity planning",
-      "image_url": "https://picsum.photos/seed/logistics/400/200",
+      "image_url": "/images/topics/logistics.jpg",
       "subtopics": [
         {
           "id": "routing-dispatch",
@@ -2649,7 +2649,7 @@
       "id": "privacy",
       "name": "Privacy",
       "description": "Differential privacy, federated learning, synthetic data",
-      "image_url": "https://picsum.photos/seed/privacy/400/200",
+      "image_url": "/images/topics/privacy.jpg",
       "subtopics": [
         {
           "id": "differential-privacy",
@@ -2687,7 +2687,7 @@
       "id": "forecasting",
       "name": "Forecasting",
       "description": "Time series, ML forecasting, hierarchical, probabilistic",
-      "image_url": "https://picsum.photos/seed/forecasting/400/200",
+      "image_url": "/images/topics/forecasting.jpg",
       "subtopics": [
         {
           "id": "time-series-foundations",
@@ -2725,7 +2725,7 @@
       "id": "spatial-geo",
       "name": "Spatial & Geo",
       "description": "Geospatial demand, location choice, mobility patterns",
-      "image_url": "https://picsum.photos/seed/geospatial/400/200",
+      "image_url": "/images/topics/geospatial.jpg",
       "subtopics": [
         {
           "id": "geospatial-demand",
@@ -2763,7 +2763,7 @@
       "id": "clustering-segmentation",
       "name": "Clustering & Segmentation",
       "description": "Customer segmentation, mixture models, deep clustering",
-      "image_url": "https://picsum.photos/seed/clustering/400/200",
+      "image_url": "/images/topics/clustering.jpg",
       "subtopics": [
         {
           "id": "customer-segmentation",
