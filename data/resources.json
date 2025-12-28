@@ -782,5 +782,485 @@
     "url": "https://tech.walmart.com/",
     "type": "Blog",
     "level": "Intermediate"
+  },
+  {
+    "name": "Coursera Pricing Strategy Optimization (UVA/BCG)",
+    "description": "Price elasticity, WTP estimation, segmentation \u2014 free to audit",
+    "category": "Pricing & Demand",
+    "url": "https://www.coursera.org/specializations/uva-darden-bcg-pricing-strategy",
+    "type": "Course",
+    "level": "Medium"
+  },
+  {
+    "name": "Chargebee: SaaS Pricing Models Guide",
+    "description": "Usage-based pricing, value metrics, packaging strategies \u2014 free",
+    "category": "Pricing & Demand",
+    "url": "https://www.chargebee.com/resources/guides/saas-pricing-models-guide/",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "Monetizing Innovation (Ramanujam)",
+    "description": "The industry bible \u2014 design products around price, not vice versa",
+    "category": "Pricing & Demand",
+    "url": "https://www.simon-kucher.com/en/insights/monetizing-innovation",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "OpenView SaaS Pricing Guide",
+    "description": "Free playbooks on usage-based pricing",
+    "category": "Pricing & Demand",
+    "url": "https://openviewpartners.com/blog/saas-pricing-resource-guide/",
+    "type": "Blog",
+    "level": "Medium"
+  },
+  {
+    "name": "Lenny's Podcast: Madhavan Ramanujam",
+    "description": "90 minutes on WTP conversations and behavioral pricing",
+    "category": "Pricing & Demand",
+    "url": "https://www.lennyspodcast.com/the-art-and-science-of-pricing-madhavan-ramanujam-simon-kucher/",
+    "type": "Podcast",
+    "level": "Medium"
+  },
+  {
+    "name": "Roughgarden: Algorithmic Game Theory (40 lectures)",
+    "description": "Free Stanford lectures \u2014 theoretical foundation",
+    "category": "Auctions & Market Design",
+    "url": "https://timroughgarden.org/videos.html",
+    "type": "Video",
+    "level": "Medium"
+  },
+  {
+    "name": "Twenty Lectures on Algorithmic Game Theory",
+    "description": "Bridges CS and economics with ad case studies",
+    "category": "Auctions & Market Design",
+    "url": "https://timroughgarden.org/f13/f13.pdf",
+    "type": "Video",
+    "level": "Medium"
+  },
+  {
+    "name": "Display Advertising with Real-Time Bidding",
+    "description": "Free comprehensive RTB coverage on arXiv",
+    "category": "Auctions & Market Design",
+    "url": "https://arxiv.org/abs/1610.03013",
+    "type": "Paper",
+    "level": "Medium"
+  },
+  {
+    "name": "GSP Auction Paper (Edelman et al., AER 2007)",
+    "description": "Foundational paper on search advertising auctions",
+    "category": "Auctions & Market Design",
+    "url": "https://www.benedelman.org/publications/gsp-060801.pdf",
+    "type": "Paper",
+    "level": "Medium"
+  },
+  {
+    "name": "AdKDD Workshop Papers",
+    "description": "Applied research from Google, Meta, Amazon",
+    "category": "Auctions & Market Design",
+    "url": "https://www.adkdd.org/",
+    "type": "Paper",
+    "level": "Medium"
+  },
+  {
+    "name": "PyMC-Marketing CLV Quickstart",
+    "description": "CLV basics, RFM analysis, BG/NBD models \u2014 free official docs",
+    "category": "Strategy & Analytics",
+    "url": "https://www.pymc-marketing.io/en/latest/notebooks/clv/clv_quickstart.html",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "PyMC-Marketing Documentation",
+    "description": "BG/NBD and Gamma-Gamma CLV tutorials",
+    "category": "Strategy & Analytics",
+    "url": "https://www.pymc-marketing.io/en/stable/",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "Google Analytics for Marketing",
+    "description": "Free analytics for marketing \u2014 official Google tutorials",
+    "category": "Strategy & Analytics",
+    "url": "https://skillshop.exceedlms.com/student/path/508845-google-analytics-certification",
+    "type": "Course",
+    "level": "Medium"
+  },
+  {
+    "name": "Bruce Hardie's CLV Papers",
+    "description": "Mathematical foundations of CLV models",
+    "category": "Strategy & Analytics",
+    "url": "https://www.brucehardie.com/",
+    "type": "Paper",
+    "level": "Medium"
+  },
+  {
+    "name": "Lyft Engineering: LTV Curves",
+    "description": "Production CLV and Thompson sampling",
+    "category": "Strategy & Analytics",
+    "url": "https://eng.lyft.com/lyft-marketing-automation-b43b7b7537cc",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "MIT 15.S08 FinTech (Gary Gensler)",
+    "description": "12 lectures from former SEC Chair on AI in finance, risk, and compliance \u2014 free",
+    "category": "ML & Data Science",
+    "url": "https://ocw.mit.edu/courses/15-s08-fintech-shaping-the-financial-world-spring-2020/",
+    "type": "Course",
+    "level": "Medium"
+  },
+  {
+    "name": "Stanford CS224W: GNN for Fraud",
+    "description": "Three-level tutorial from Stanford graph ML course",
+    "category": "ML & Data Science",
+    "url": "https://medium.com/stanford-cs224w/from-one-line-to-fully-customized-a-three-level-introduction-to-graph-ml-fraud-detection-with-89badd2cd2a3",
+    "type": "Blog",
+    "level": "Medium"
+  },
+  {
+    "name": "Stripe: ML for Fraud Protection",
+    "description": "The definitive intro: features, precision-recall tradeoffs, break-even calculations",
+    "category": "ML & Data Science",
+    "url": "https://stripe.com/guides/primer-on-machine-learning-for-fraud-protection",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "Fraud Detection Handbook (ULB)",
+    "description": "From the team that created the Kaggle dataset \u2014 rigorous methodology",
+    "category": "ML & Data Science",
+    "url": "https://fraud-detection-handbook.github.io/fraud-detection-handbook/",
+    "type": "Tool",
+    "level": "Medium"
+  },
+  {
+    "name": "Stripe: How We Built Radar",
+    "description": "XGBoost\u2192DNN migration, 85% training time reduction",
+    "category": "ML & Data Science",
+    "url": "https://stripe.com/blog/how-we-built-it-stripe-radar",
+    "type": "Blog",
+    "level": "Medium"
+  },
+  {
+    "name": "PayPal: Graph Database for Fraud",
+    "description": "Real-time fraud ring detection",
+    "category": "ML & Data Science",
+    "url": "https://medium.com/paypal-tech/how-paypal-uses-real-time-graph-database-and-graph-analysis-to-fight-fraud-96a2b918619a",
+    "type": "Blog",
+    "level": "Medium"
+  },
+  {
+    "name": "LinkedIn: Defending Against Abuse at Scale",
+    "description": "4M+ TPS, multi-layer defense architecture",
+    "category": "ML & Data Science",
+    "url": "https://engineering.linkedin.com/blog/2018/12/defending-against-abuse-at-linkedins-scale",
+    "type": "Blog",
+    "level": "Medium"
+  },
+  {
+    "name": "Meta: Few-Shot Learner for Harmful Content",
+    "description": "Adapts to new threats in weeks, 100+ languages",
+    "category": "ML & Data Science",
+    "url": "https://about.fb.com/news/2021/12/metas-new-ai-system-tackles-harmful-content/",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "Netflix: RAD Outlier Detection",
+    "description": "Robust PCA at terabyte scale",
+    "category": "ML & Data Science",
+    "url": "https://netflixtechblog.com/rad-outlier-detection-on-big-data-d6b0ff32fb44",
+    "type": "Blog",
+    "level": "Medium"
+  },
+  {
+    "name": "Google Research: Self-Supervised Anomaly Detection",
+    "description": "Contrastive learning, CutPaste algorithm",
+    "category": "ML & Data Science",
+    "url": "https://ai.googleblog.com/2021/09/discovering-anomalous-data-with-self.html",
+    "type": "Blog",
+    "level": "Medium"
+  },
+  {
+    "name": "Stanford FinTech Lab: Rob Wang (Block)",
+    "description": "Industry talk on fraud ML tradeoffs",
+    "category": "ML & Data Science",
+    "url": "https://fintech.stanford.edu/events/aftlab-seminars/rob-wang-square-machine-learning-financial-fraud-detection",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "KDD ML in Finance Workshop 2021",
+    "description": "Talks from Georgia Tech, Harvard, Feedzai",
+    "category": "ML & Data Science",
+    "url": "https://sites.google.com/view/kdd-mlf-2021/schedule",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "IEEE-CIS Fraud: 1st Place Solution (Chris Deotte)",
+    "description": "Kaggle Grandmaster, 262 features, RAPIDS GPU",
+    "category": "ML & Data Science",
+    "url": "https://developer.nvidia.com/blog/leveraging-machine-learning-to-detect-fraud-tips-to-developing-a-winning-kaggle-solution/",
+    "type": "Blog",
+    "level": "Medium"
+  },
+  {
+    "name": "scikit-learn: Outlier Detection",
+    "description": "Isolation Forest, LOF, One-Class SVM comparison",
+    "category": "ML & Data Science",
+    "url": "https://scikit-learn.org/stable/modules/outlier_detection.html",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "imbalanced-learn: SMOTE",
+    "description": "The standard for handling 1:10,000 class ratios",
+    "category": "ML & Data Science",
+    "url": "https://imbalanced-learn.org/stable/over_sampling.html",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "Federal Reserve SR 11-7",
+    "description": "Model risk management standard all US banks follow",
+    "category": "ML & Data Science",
+    "url": "https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "Google ML Recommendation Course",
+    "description": "Free, 4 hours, candidate generation through re-ranking. Gold standard starter",
+    "category": "ML & Data Science",
+    "url": "https://developers.google.com/machine-learning/recommendation",
+    "type": "Course",
+    "level": "Medium"
+  },
+  {
+    "name": "HSE RecSys Course (GitHub)",
+    "description": "Full course: collaborative filtering, matrix factorization, A/B testing",
+    "category": "ML & Data Science",
+    "url": "https://github.com/hse-econ-data-science/recsys-itmo",
+    "type": "Course",
+    "level": "Medium"
+  },
+  {
+    "name": "Fast.ai Lesson 7: Collaborative Filtering",
+    "description": "Jeremy Howard's accessible deep dive, embeddings explained intuitively",
+    "category": "ML & Data Science",
+    "url": "https://course.fast.ai/Lessons/lesson7.html",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "Microsoft Recommenders Notebooks",
+    "description": "Production-quality examples, scikit-learn style",
+    "category": "ML & Data Science",
+    "url": "https://github.com/recommenders-team/recommenders/tree/main/examples",
+    "type": "Tool",
+    "level": "Medium"
+  },
+  {
+    "name": "StatQuest: Collaborative Filtering",
+    "description": "Josh Starmer's visual, jargon-free explanation",
+    "category": "ML & Data Science",
+    "url": "https://www.youtube.com/watch?v=Fmtorg_dmM0",
+    "type": "Video",
+    "level": "Medium"
+  },
+  {
+    "name": "Ritvikmath: Recommendation Systems",
+    "description": "Clear math intuition without overwhelming notation",
+    "category": "ML & Data Science",
+    "url": "https://www.youtube.com/watch?v=n3RKsY2H-NE",
+    "type": "Video",
+    "level": "Medium"
+  },
+  {
+    "name": "Jeremy Howard's Kaggle Deep Dive",
+    "description": "Matrix factorization from scratch",
+    "category": "ML & Data Science",
+    "url": "https://www.kaggle.com/code/jhoward/collaborative-filtering-deep-dive",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "TFRS Quickstart Colab",
+    "description": "Movie recommender in minutes",
+    "category": "ML & Data Science",
+    "url": "https://colab.research.google.com/github/tensorflow/recommenders/blob/main/docs/examples/quickstart.ipynb",
+    "type": "Tool",
+    "level": "Medium"
+  },
+  {
+    "name": "Spotify Recommendations Explainer",
+    "description": "Plain-language taste profiles",
+    "category": "ML & Data Science",
+    "url": "https://www.spotify.com/us/safetyandprivacy/understanding-recommendations",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "Netflix: How Recommendations Work",
+    "description": "Official non-technical overview",
+    "category": "ML & Data Science",
+    "url": "https://help.netflix.com/en/node/100639",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "IBM Collaborative Filtering",
+    "description": "Authoritative enterprise perspective",
+    "category": "ML & Data Science",
+    "url": "https://www.ibm.com/think/topics/collaborative-filtering",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "Music Tomorrow: Spotify Deep Dive",
+    "description": "Audio features, accessible depth",
+    "category": "ML & Data Science",
+    "url": "https://www.music-tomorrow.com/blog/how-spotify-recommendation-system-works-complete-guide",
+    "type": "Blog",
+    "level": "Medium"
+  },
+  {
+    "name": "Introduction to Information Retrieval (Manning)",
+    "description": "The canonical free textbook, Stanford",
+    "category": "ML & Data Science",
+    "url": "https://nlp.stanford.edu/IR-book/information-retrieval-book.html",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "From RankNet to LambdaMART (Burges)",
+    "description": "Definitive paper on learning-to-rank algorithms",
+    "category": "ML & Data Science",
+    "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/MSR-TR-2010-82.pdf",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "Airbnb: Applying Deep Learning to Search",
+    "description": "GBDT\u2192DNN migration, what failed before it worked",
+    "category": "ML & Data Science",
+    "url": "https://arxiv.org/abs/1810.09591",
+    "type": "Paper",
+    "level": "Medium"
+  },
+  {
+    "name": "Airbnb: Embedding-Based Retrieval",
+    "description": "Two-tower architecture, largest ML lift in two years",
+    "category": "ML & Data Science",
+    "url": "https://medium.com/airbnb-engineering/embedding-based-retrieval-for-airbnb-search-aabebfc85839",
+    "type": "Blog",
+    "level": "Medium"
+  },
+  {
+    "name": "Joachims: Unbiased Learning-to-Rank",
+    "description": "Foundational paper on position bias correction",
+    "category": "ML & Data Science",
+    "url": "https://arxiv.org/abs/1608.04468",
+    "type": "Paper",
+    "level": "Medium"
+  },
+  {
+    "name": "Deep Learning at Airbnb Search (QCon)",
+    "description": "Malay Haldar's practitioner walkthrough",
+    "category": "ML & Data Science",
+    "url": "https://www.infoq.com/presentations/dl-airbnb/",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "Georgia Tech (Ratliff): 10 Rules for Supply Chain Optimization",
+    "description": "Practitioner checklist for scoping, data readiness, constraints, deployment \u2014 free PDF",
+    "category": "Optimization",
+    "url": "https://www.scl.gatech.edu/sites/default/files/downloads/gtscl-10_rules_supply_chain_logistics_optimization_2.pdf",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "Google OR-Tools: VRP + VRPTW Tutorial",
+    "description": "Core logistics vocabulary (depot, fleet, constraints) with working Python baseline",
+    "category": "Optimization",
+    "url": "https://developers.google.com/optimization/routing/vrp",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "DoorDash: ML + Optimization for Dispatch",
+    "description": "Clearest 'real system' explanation: predictions feed optimizer, then simulation closes the loop",
+    "category": "Optimization",
+    "url": "https://careersatdoordash.com/blog/using-ml-and-optimization-to-solve-doordashs-dispatch-problem/",
+    "type": "Blog",
+    "level": "Medium"
+  },
+  {
+    "name": "StatsForecast: Intermittent/Sparse Data Tutorial",
+    "description": "Demand is often intermittent (lots of zeros) \u2014 learn baselines built for that",
+    "category": "Optimization",
+    "url": "https://nixtlaverse.nixtla.io/statsforecast/docs/tutorials/intermittentdata.html",
+    "type": "Documentation",
+    "level": "Medium"
+  },
+  {
+    "name": "The Cold Start Problem (Andrew Chen)",
+    "description": "Atomic Networks and tipping points of two-sided marketplaces \u2014 why growth stalls",
+    "category": "Strategy & Analytics",
+    "url": "https://www.coldstart.com/",
+    "type": "Book",
+    "level": "Medium"
+  },
+  {
+    "name": "Lenny's Newsletter: How Duolingo Reignited User Growth",
+    "description": "Case study on gamification, streaks, and retention mechanics that drove 4.5x growth",
+    "category": "Strategy & Analytics",
+    "url": "https://www.lennysnewsletter.com/p/how-duolingo-reignited-user-growth",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "Causal Inference for the Brave and True",
+    "description": "The best free intro to causal inference \u2014 DiD, IV, RDD with Python code",
+    "category": "Strategy & Analytics",
+    "url": "https://matheusfacure.github.io/python-causality-handbook/landing-page.html",
+    "type": "Tool",
+    "level": "Medium"
+  },
+  {
+    "name": "NFX Network Effects Manual",
+    "description": "Comprehensive framework for 16 types of network effects \u2014 maps to marketplace growth",
+    "category": "Strategy & Analytics",
+    "url": "https://www.nfx.com/post/network-effects-manual",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "Growth Accounting & Backtraced Growth Accounting",
+    "description": "Standard framework for user lifecycle states (New, Retained, Churned, Stale, Resurrected) with weighted backtrace views",
+    "category": "Strategy & Analytics",
+    "url": "https://bytepawn.com/growth-accounting-and-backtraced-growth-accounting.html",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "Guide to Product Metrics",
+    "description": "26 metrics across AARRR framework: activation, retention, LTV, NRR, Quick Ratio, PMF Score explained",
+    "category": "Strategy & Analytics",
+    "url": "https://www.roarkeclinton.com/product-metrics",
+    "type": "Article",
+    "level": "Medium"
+  },
+  {
+    "name": "Measuring Product Health (Sequoia)",
+    "description": "Definitive guide to growth, retention, stickiness & engagement metrics: DAU/MAU, Lness, cohort curves, Quick Ratio",
+    "category": "Strategy & Analytics",
+    "url": "https://articles.sequoiacap.com/measuring-product-health",
+    "type": "Article",
+    "level": "Medium"
   }
 ]
