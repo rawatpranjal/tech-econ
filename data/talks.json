@@ -313,7 +313,7 @@
   },
   {
     "name": "Not So Standard Deviations",
-    "description": "Roger Peng and Hilary Parker on data science in the real world. Great for understanding the craft.",
+    "description": "Roger Peng (UT Austin) and Hilary Parker (Stitch Fix, Etsy). Statistics and data science bridging academia and industry. On indefinite hiatus (May 2025). 190 episode archive.",
     "category": "Experimentation & Scaling",
     "url": "https://nssdeviations.com/",
     "type": "Podcast Series"
@@ -359,6 +359,132 @@
     "description": "Bill Kerr, Joe Fuller. Erik Brynjolfsson on AI, gig economy series, and future of employment.",
     "category": "AI & Labor",
     "url": "https://www.hbs.edu/managing-the-future-of-work/podcast/",
+    "type": "Podcast Series"
+  },
+  {
+    "name": "Experimentation Masters",
+    "description": "Gavin Bryant (First Principles Ventures). Product experimentation at major tech companies. Guests: Lukas Vermeer (Booking.com), Aleksander Fabijan (Microsoft), Michael Luca (HBS).",
+    "category": "Experimentation & Scaling",
+    "url": "https://www.firstprinciples.ventures/experimentation-masters-podcast",
+    "type": "Podcast Series"
+  },
+  {
+    "name": "Experiment Nation",
+    "description": "Rommil Santiago (Optimizely). Conversion rate optimization and experimentation. 171+ episodes, top 10% most-followed on Spotify.",
+    "category": "Experimentation & Scaling",
+    "url": "https://experimentnation.com/",
+    "type": "Podcast Series"
+  },
+  {
+    "name": "The Visible Hand",
+    "description": "Jordi Blanes i Vidal (LSE). Deep dives into academic papers in organizational and labor economics. Walks through empirical methodology in detail. 100+ episodes.",
+    "category": "Causal Inference & ML",
+    "url": "https://www.thevisiblehand.uk/",
+    "type": "Podcast Series"
+  },
+  {
+    "name": "Practical AI",
+    "description": "Daniel Whitenack and Chris Benson. Applied AI implementation with exceptional causal inference episodes. Episode 220 with Paul Hünermund on Double ML and DiD.",
+    "category": "Causal Inference & ML",
+    "url": "https://practicalai.fm/",
+    "type": "Podcast Series"
+  },
+  {
+    "name": "The Pie (UChicago)",
+    "description": "Becker Friedman Institute. Cutting-edge research on industrial organization, platforms, and competition economics with top Chicago economists.",
+    "category": "Strategy & Digital Platforms",
+    "url": "https://bfi.uchicago.edu/podcast/the-pie/",
+    "type": "Podcast Series"
+  },
+  {
+    "name": "a16z Podcast",
+    "description": "Andreessen Horowitz. VC perspective on marketplace economics, network effects, and market design. Prediction markets with Alex Tabarrok and Scott Duke Kominers.",
+    "category": "Strategy & Digital Platforms",
+    "url": "https://a16z.com/podcasts/",
+    "type": "Podcast Series"
+  },
+  {
+    "name": "Odd Lots (Bloomberg)",
+    "description": "Joe Weisenthal and Tracy Alloway. Finance, markets, and economics. Strong coverage of monetary policy and macro trends. 10+ years running.",
+    "category": "Strategy & Digital Platforms",
+    "url": "https://www.bloomberg.com/oddlots",
+    "type": "Podcast Series"
+  },
+  {
+    "name": "Impact Pricing",
+    "description": "Mark Stiving, Ph.D. Pricing strategy, analytics, and revenue optimization. B2B focus with behavioral pricing insights. Weekly episodes.",
+    "category": "Pricing & Behavioral",
+    "url": "https://podcasts.apple.com/us/podcast/impact-pricing/id1449435549",
+    "type": "Podcast Series"
+  },
+  {
+    "name": "Pricing Heroes",
+    "description": "Competera. AI-driven retail pricing optimization, dynamic pricing, and competitive pricing strategies. Guests from major retailers.",
+    "category": "Pricing & Behavioral",
+    "url": "https://podcasts.apple.com/us/podcast/pricing-heroes/id1649346598",
+    "type": "Podcast Series"
+  },
+  {
+    "name": "Retail Pricing Insights",
+    "description": "7Learnings. ML-driven pricing for retail. Guests from MediaMarkt Saturn, Deliveroo, and major retailers.",
+    "category": "Pricing & Behavioral",
+    "url": "https://7learnings.com/retail-pricing-insights-podcast/",
+    "type": "Podcast Series"
+  },
+  {
+    "name": "Super Data Science",
+    "description": "Jon Krohn. ML, AI, and data careers. 900+ episodes. Notable: Sean Taylor (Facebook/Lyft) on causal experimentation, Emre Kiciman (Microsoft) on DoWhy.",
+    "category": "Causal Inference & ML",
+    "url": "https://www.superdatascience.com/podcast",
+    "type": "Podcast Series"
+  },
+  {
+    "name": "TWIML AI",
+    "description": "Sam Charrington. ML/AI research and applications. Susan Athey on ML in economics. Covers ML platforms at Netflix, Uber, Meta. Nearly 10M downloads.",
+    "category": "Causal Inference & ML",
+    "url": "https://twimlai.com/",
+    "type": "Podcast Series"
+  },
+  {
+    "name": "Data Skeptic",
+    "description": "Kyle Polich. Critical thinking approach to data science and ML. Organized in thematic seasons. Recommender Systems season in 2025.",
+    "category": "AI Economics & Labor",
+    "url": "https://dataskeptic.com/",
+    "type": "Podcast Series"
+  },
+  {
+    "name": "DataFramed (DataCamp)",
+    "description": "Adel Nehme and Richie Cotton. How AI and data change business. Guests: Emily Oster (Brown), Bilal Mahmoud (Duolingo, MIT Econ PhD) on A/B testing at scale.",
+    "category": "Experimentation & Scaling",
+    "url": "https://www.datacamp.com/podcast",
+    "type": "Podcast Series"
+  },
+  {
+    "name": "Macro Musings",
+    "description": "David Beckworth (Mercatus Center). Macroeconomic issues with technical depth. Features central bankers and academic researchers. Includes transcripts.",
+    "category": "Strategy & Digital Platforms",
+    "url": "https://www.mercatus.org/macro-musings",
+    "type": "Podcast Series"
+  },
+  {
+    "name": "Economics, Applied (Hoover)",
+    "description": "Steven J. Davis (Stanford, Economic Policy Uncertainty index). Translating research into actionable insights. Guests: Claudia Goldin, Austan Goolsbee.",
+    "category": "Strategy & Digital Platforms",
+    "url": "https://www.hoover.org/podcasts/economics-applied",
+    "type": "Podcast Series"
+  },
+  {
+    "name": "Planet Money (NPR)",
+    "description": "Sarah Gonzalez, Kenny Malone, Jeff Guo. Peabody Award-winning economic storytelling. Used in undergraduate economics courses.",
+    "category": "Strategy & Digital Platforms",
+    "url": "https://www.npr.org/podcasts/510289/planet-money",
+    "type": "Podcast Series"
+  },
+  {
+    "name": "The Brainy Business",
+    "description": "Melina Palmer. Applying behavioral economics to marketing and business decisions. 500+ episodes on nudges, framing, and behavioral interventions.",
+    "category": "Pricing & Behavioral",
+    "url": "https://thebrainybusiness.com/",
     "type": "Podcast Series"
   },
   {
