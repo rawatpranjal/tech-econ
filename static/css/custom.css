@@ -187,11 +187,12 @@ body::before {
 .sidebar-footer-meta {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 0.4rem;
+    justify-content: flex-start;
+    gap: 0.5rem;
     margin-top: 0.75rem;
     padding-top: 0.75rem;
     border-top: 1px solid rgba(255,255,255,0.08);
+    flex-wrap: nowrap;
 }
 
 /* Updated & Visitors - plain text style */
@@ -202,20 +203,25 @@ body::before {
     white-space: nowrap;
 }
 
+.sidebar-visitors {
+    margin-left: auto;
+}
+
 /* Theme Toggle Button - Pill Style */
 .theme-toggle {
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
-    padding: 0.3rem 0.6rem;
+    gap: 0.25rem;
+    padding: 0.25rem 0.5rem;
     background: rgba(255,255,255,0.08);
     border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 16px;
+    border-radius: 12px;
     color: rgba(255,255,255,0.6);
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     cursor: pointer;
     transition: all 0.2s ease;
     font-family: inherit;
+    flex-shrink: 0;
 }
 
 .theme-toggle:hover {
