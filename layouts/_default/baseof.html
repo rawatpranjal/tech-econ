@@ -457,5 +457,13 @@
     </script>
     <script src="{{ "js/tracker.js" | relURL }}" defer></script>
     {{ end }}
+    {{ if .Site.Params.llmEndpoint }}
+    <script>
+      window.LLM_CONFIG = {
+        endpoint: "{{ .Site.Params.llmEndpoint }}",
+        enabled: {{ default false .Site.Params.llmEnabled }}
+      };
+    </script>
+    {{ end }}
 </body>
 </html>

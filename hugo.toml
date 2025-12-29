@@ -12,6 +12,10 @@ title = 'tech-econ'
   trackerEnabled = true
   trackerDebug = false
 
+  # LLM Search Enhancement Configuration
+  llmEndpoint = "https://tech-econ-llm.rawat-pranjal010.workers.dev"
+  llmEnabled = true
+
 [build]
   writeStats = true
 

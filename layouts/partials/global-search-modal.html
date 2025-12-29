@@ -16,6 +16,12 @@
           autocomplete="off"
         />
         <button id="search-syntax-help" class="search-syntax-help-btn" title="Search syntax help" type="button">?</button>
+        <button id="llm-search-toggle" class="llm-search-toggle-btn" title="AI-enhanced search" type="button">
+          <svg class="llm-icon" viewBox="0 0 24 24" width="14" height="14">
+            <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          </svg>
+          <span class="toggle-text">AI</span>
+        </button>
         <div id="search-syntax-tooltip" class="search-syntax-tooltip" style="display: none;">
           <div class="syntax-tooltip-header">Advanced Search Syntax</div>
           <div class="syntax-tooltip-content">
@@ -54,12 +60,24 @@
     <div id="global-search-filters" class="global-search-filters" style="display: none;">
       <!-- Type filter chips rendered by JS -->
     </div>
+    <div id="llm-expanded-terms" class="llm-expanded-terms" style="display: none;">
+      <!-- Expanded query terms rendered by JS -->
+    </div>
     <div class="global-search-body">
       <div id="global-search-results" class="global-search-results">
         <!-- Results rendered here -->
       </div>
       <div id="global-search-empty" class="global-search-empty" style="display: none;">
         <p>No results found</p>
+      </div>
+      <div id="llm-explanation-panel" class="llm-explanation-panel" style="display: none;">
+        <div class="explanation-header">
+          <span class="explanation-title">Why this result?</span>
+          <button id="llm-explanation-close" class="explanation-close" type="button">&times;</button>
+        </div>
+        <div id="llm-explanation-content" class="explanation-content">
+          <!-- Streaming explanation appears here -->
+        </div>
       </div>
       <div id="global-search-loading" class="global-search-loading" style="display: none;">
         <div class="loading-spinner"></div>

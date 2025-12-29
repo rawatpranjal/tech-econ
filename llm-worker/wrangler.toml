@@ -1,0 +1,8 @@
+name = "tech-econ-llm"
+main = "index.js"
+compatibility_date = "2024-01-01"
+workers_dev = true
+
+[vars]
+# Set your Groq API key here (or use wrangler secret put GROQ_API_KEY for production)
+GROQ_API_KEY = ""

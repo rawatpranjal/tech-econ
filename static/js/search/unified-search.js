@@ -23,7 +23,11 @@
     suggestions: ['causal inference', 'experimentation', 'pricing', 'machine learning', 'A/B testing'],
     enableSemanticSearch: true,
     semanticSearchOnFocus: true,  // Start loading model on focus
-    workerPath: '/js/search/search-worker.js'
+    workerPath: '/js/search/search-worker.js',
+    // LLM Enhancement Settings
+    llmSearchKey: 'llm-search-enabled',
+    llmExpandTimeout: 3000,    // 3s timeout for query expansion
+    llmExplainTimeout: 10000   // 10s timeout for explanations
   };
 
   // Type display configuration
@@ -95,6 +99,16 @@
 
     // Page search instances
     this.pageSearchInstances = [];
+
+    // LLM Enhancement state
+    this.llmEnabled = false;
+    this.llmToggleBtn = null;
+    this.llmEndpoint = null;
+    this.llmExpandedTermsContainer = null;
+    this.llmExplanationPanel = null;
+    this.isExpandingQuery = false;
+    this.expandedTerms = [];
+    this.explanationAbortController = null;
   }
 
   /**
@@ -786,6 +800,9 @@
     // Create preview panel for hover previews (desktop only)
     this.createPreviewPanel();
 
+    // Initialize LLM toggle
+    this.initLLMToggle();
+
     this.bindGlobalSearchEvents();
   };
 
@@ -953,6 +970,18 @@
     // Result clicks
     if (this.resultsContainer) {
       this.resultsContainer.addEventListener('click', function(e) {
+        // Handle "Explain" button click (LLM feature)
+        var explainBtn = e.target.closest('.result-explain-btn');
+        if (explainBtn) {
+          e.preventDefault();
+          e.stopPropagation();
+          var index = parseInt(explainBtn.getAttribute('data-index'), 10);
+          if (!isNaN(index) && self.flatResults && self.flatResults[index]) {
+            self.explainResult(self.flatResults[index], self.rawQuery);
+          }
+          return;
+        }
+
         // Handle "More like this" button click
         var moreLikeBtn = e.target.closest('.more-like-this-btn');
         if (moreLikeBtn) {
@@ -1063,11 +1092,17 @@
       this.parsedQuery = null;
       this.rawQuery = '';
       this.hideFilterChips();
+      this.clearExpandedTerms();
+      this.hideExplanationPanel();
       return;
     }
 
     // Store raw query
     this.rawQuery = query;
+
+    // Clear previous expanded terms
+    this.clearExpandedTerms();
+    this.hideExplanationPanel();
 
     // Parse query for advanced syntax (phrases, filters, negations)
     if (typeof QueryParser !== 'undefined') {
@@ -1093,35 +1128,53 @@
       searchQuery = query;
     }
 
-    // Perform search (progressive: keyword results come first)
-    this.search(searchQuery, { topK: CONFIG.maxTotalResults * 2 })
-      .then(function(result) {
-        self.hideLoading();
+    // Helper function to execute search
+    function executeSearch(enhancedQuery) {
+      self.search(enhancedQuery, { topK: CONFIG.maxTotalResults * 2 })
+        .then(function(result) {
+          self.hideLoading();
 
-        // Handle progressive result format
-        var results = result.results || result;
-        var isPartial = result.isPartial || false;
+          // Handle progressive result format
+          var results = result.results || result;
+          var isPartial = result.isPartial || false;
 
-        // Apply query parser filters (phrases, field filters, negations)
-        if (self.parsedQuery && typeof QueryParser !== 'undefined') {
-          results = QueryParser.applyFilters(results, self.parsedQuery);
-        }
+          // Apply query parser filters (phrases, field filters, negations)
+          if (self.parsedQuery && typeof QueryParser !== 'undefined') {
+            results = QueryParser.applyFilters(results, self.parsedQuery);
+          }
 
-        self.currentResults = results.slice(0, CONFIG.maxTotalResults);
+          self.currentResults = results.slice(0, CONFIG.maxTotalResults);
 
-        if (self.currentResults.length === 0) {
+          if (self.currentResults.length === 0) {
+            self.showEmpty();
+            self.flatResults = [];
+          } else {
+            self.renderGlobalResults(self.currentResults, query, isPartial);
+          }
+        })
+        .catch(function(error) {
+          console.error('[UnifiedSearch] Search failed:', error);
+          self.hideLoading();
           self.showEmpty();
           self.flatResults = [];
-        } else {
-          self.renderGlobalResults(self.currentResults, query, isPartial);
-        }
-      })
-      .catch(function(error) {
-        console.error('[UnifiedSearch] Search failed:', error);
-        self.hideLoading();
-        self.showEmpty();
-        self.flatResults = [];
-      });
+        });
+    }
+
+    // If LLM is enabled, expand the query first, then search
+    if (this.llmEnabled && this.llmEndpoint) {
+      this.expandQueryWithLLM(searchQuery)
+        .then(function(expandedTerms) {
+          // Combine original query with expanded terms
+          var enhancedQuery = expandedTerms.length > 0
+            ? searchQuery + ' ' + expandedTerms.join(' ')
+            : searchQuery;
+          console.log('[UnifiedSearch] LLM enhanced query:', enhancedQuery);
+          executeSearch(enhancedQuery);
+        });
+    } else {
+      // Standard search without LLM
+      executeSearch(searchQuery);
+    }
   };
 
   /**
@@ -1212,6 +1265,9 @@
         html += '<span class="result-type-badge" style="background-color:' + typeConfig.color + '">' + typeConfig.label + '</span>';
         html += '<span class="result-category">' + escapeHtml(result.category) + '</span>';
         html += '</div>';
+        html += '<button class="result-explain-btn" data-index="' + globalIndex + '" title="Explain why this result matches">';
+        html += '<svg viewBox="0 0 24 24" width="12" height="12"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>';
+        html += '</button>';
         html += '<button class="more-like-this-btn" data-item-id="' + escapeHtml(result.id) + '" data-item-name="' + escapeHtml(result.name) + '" title="Find similar items">';
         html += '<svg viewBox="0 0 24 24" width="14" height="14"><circle cx="12" cy="12" r="3" fill="currentColor"/><circle cx="5" cy="12" r="2" fill="currentColor" opacity="0.6"/><circle cx="19" cy="12" r="2" fill="currentColor" opacity="0.6"/></svg>';
         html += '</button>';
@@ -2537,6 +2593,312 @@
 
     return escaped;
   }
+
+  // ============================================
+  // LLM Enhancement Methods
+  // ============================================
+
+  /**
+   * Initialize LLM toggle button and load preference
+   */
+  UnifiedSearch.prototype.initLLMToggle = function() {
+    var self = this;
+
+    // Get endpoint from config
+    if (typeof window !== 'undefined' && window.LLM_CONFIG && window.LLM_CONFIG.enabled) {
+      this.llmEndpoint = window.LLM_CONFIG.endpoint;
+    } else {
+      // LLM not configured, hide toggle button
+      var toggleBtn = document.getElementById('llm-search-toggle');
+      if (toggleBtn) {
+        toggleBtn.style.display = 'none';
+      }
+      return;
+    }
+
+    this.llmToggleBtn = document.getElementById('llm-search-toggle');
+    this.llmExpandedTermsContainer = document.getElementById('llm-expanded-terms');
+    this.llmExplanationPanel = document.getElementById('llm-explanation-panel');
+
+    if (!this.llmToggleBtn) return;
+
+    // Load saved preference (following theme.js pattern)
+    try {
+      var saved = localStorage.getItem(CONFIG.llmSearchKey);
+      this.llmEnabled = saved === 'true';
+    } catch(e) {
+      this.llmEnabled = false;
+    }
+
+    this.updateLLMToggleUI();
+
+    // Toggle click handler
+    this.llmToggleBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      e.preventDefault();
+      self.llmEnabled = !self.llmEnabled;
+      try {
+        localStorage.setItem(CONFIG.llmSearchKey, String(self.llmEnabled));
+      } catch(e) {}
+      self.updateLLMToggleUI();
+
+      // Clear expanded terms when toggling off
+      if (!self.llmEnabled) {
+        self.clearExpandedTerms();
+        self.hideExplanationPanel();
+      }
+
+      // Re-run current search with new setting if there's a query
+      if (self.input && self.input.value.trim().length >= 2) {
+        self.performGlobalSearch();
+      }
+    });
+
+    // Explanation panel close button
+    var closeBtn = document.getElementById('llm-explanation-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        self.hideExplanationPanel();
+      });
+    }
+  };
+
+  /**
+   * Update LLM toggle button UI
+   */
+  UnifiedSearch.prototype.updateLLMToggleUI = function() {
+    if (!this.llmToggleBtn) return;
+
+    if (this.llmEnabled) {
+      this.llmToggleBtn.classList.add('active');
+      this.llmToggleBtn.title = 'AI search enabled (click to disable)';
+      if (this.resultsContainer) {
+        this.resultsContainer.classList.add('llm-enabled');
+      }
+    } else {
+      this.llmToggleBtn.classList.remove('active');
+      this.llmToggleBtn.title = 'Enable AI-enhanced search';
+      if (this.resultsContainer) {
+        this.resultsContainer.classList.remove('llm-enabled');
+      }
+    }
+  };
+
+  /**
+   * Expand query using LLM
+   * @param {string} query - The search query
+   * @returns {Promise<Array<string>>} - Array of expanded terms
+   */
+  UnifiedSearch.prototype.expandQueryWithLLM = function(query) {
+    var self = this;
+
+    if (!this.llmEnabled || !this.llmEndpoint) {
+      return Promise.resolve([]);
+    }
+
+    this.isExpandingQuery = true;
+    this.showLLMStatus('Enhancing search...');
+
+    var controller = new AbortController();
+    var timeoutId = setTimeout(function() {
+      controller.abort();
+    }, CONFIG.llmExpandTimeout);
+
+    return fetch(this.llmEndpoint + '/expand', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query: query }),
+      signal: controller.signal
+    })
+    .then(function(response) {
+      clearTimeout(timeoutId);
+      if (!response.ok) throw new Error('LLM expand failed');
+      return response.json();
+    })
+    .then(function(data) {
+      self.isExpandingQuery = false;
+      self.hideLLMStatus();
+      self.expandedTerms = data.expandedTerms || [];
+      if (self.expandedTerms.length > 0) {
+        self.showExpandedTerms(self.expandedTerms);
+      }
+      return self.expandedTerms;
+    })
+    .catch(function(error) {
+      clearTimeout(timeoutId);
+      if (error.name !== 'AbortError') {
+        console.warn('[UnifiedSearch] LLM expand failed:', error);
+      }
+      self.isExpandingQuery = false;
+      self.hideLLMStatus();
+      self.expandedTerms = [];
+      return [];
+    });
+  };
+
+  /**
+   * Get explanation for a result (streaming)
+   * @param {Object} result - The result to explain
+   * @param {string} query - The search query
+   */
+  UnifiedSearch.prototype.explainResult = function(result, query) {
+    var self = this;
+
+    if (!this.llmEnabled || !this.llmEndpoint) return;
+
+    // Abort any previous explanation request
+    if (this.explanationAbortController) {
+      this.explanationAbortController.abort();
+    }
+    this.explanationAbortController = new AbortController();
+
+    var panel = this.llmExplanationPanel;
+    var content = document.getElementById('llm-explanation-content');
+    if (!panel || !content) return;
+
+    panel.style.display = 'block';
+    content.innerHTML = '<span class="streaming-cursor"></span>';
+
+    var timeoutId = setTimeout(function() {
+      self.explanationAbortController.abort();
+    }, CONFIG.llmExplainTimeout);
+
+    fetch(this.llmEndpoint + '/explain', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        query: query,
+        result: {
+          name: result.name,
+          description: result.description,
+          type: result.type,
+          category: result.category
+        }
+      }),
+      signal: this.explanationAbortController.signal
+    })
+    .then(function(response) {
+      clearTimeout(timeoutId);
+      if (!response.ok) throw new Error('Explain failed');
+      return self.handleStreamingResponse(response, content);
+    })
+    .catch(function(error) {
+      clearTimeout(timeoutId);
+      if (error.name !== 'AbortError') {
+        content.innerHTML = '<em>Could not generate explanation.</em>';
+      }
+    });
+  };
+
+  /**
+   * Handle SSE streaming response
+   * @param {Response} response - Fetch response
+   * @param {HTMLElement} container - Container to render into
+   */
+  UnifiedSearch.prototype.handleStreamingResponse = function(response, container) {
+    var reader = response.body.getReader();
+    var decoder = new TextDecoder();
+    var text = '';
+
+    function read() {
+      return reader.read().then(function(result) {
+        if (result.done) {
+          container.innerHTML = text || '<em>No explanation available.</em>';
+          return;
+        }
+
+        var chunk = decoder.decode(result.value, { stream: true });
+        // Parse SSE format: data: {...}
+        var lines = chunk.split('\n');
+        lines.forEach(function(line) {
+          if (line.startsWith('data: ')) {
+            var data = line.slice(6);
+            if (data === '[DONE]') return;
+            try {
+              var parsed = JSON.parse(data);
+              if (parsed.content) {
+                text += parsed.content;
+                container.innerHTML = text + '<span class="streaming-cursor"></span>';
+              } else if (parsed.error) {
+                container.innerHTML = '<em>' + escapeHtml(parsed.error) + '</em>';
+              }
+            } catch(e) {}
+          }
+        });
+
+        return read();
+      });
+    }
+
+    return read();
+  };
+
+  /**
+   * Show LLM status indicator
+   */
+  UnifiedSearch.prototype.showLLMStatus = function(message) {
+    var existingStatus = document.getElementById('llm-status');
+    if (!existingStatus && this.filtersContainer) {
+      existingStatus = document.createElement('span');
+      existingStatus.id = 'llm-status';
+      existingStatus.className = 'llm-status-indicator expanding';
+      this.filtersContainer.parentNode.insertBefore(existingStatus, this.filtersContainer);
+    }
+    if (existingStatus) {
+      existingStatus.textContent = message;
+      existingStatus.style.display = 'inline-flex';
+    }
+  };
+
+  /**
+   * Hide LLM status indicator
+   */
+  UnifiedSearch.prototype.hideLLMStatus = function() {
+    var status = document.getElementById('llm-status');
+    if (status) {
+      status.style.display = 'none';
+    }
+  };
+
+  /**
+   * Show expanded query terms as chips
+   */
+  UnifiedSearch.prototype.showExpandedTerms = function(terms) {
+    if (!terms || terms.length === 0 || !this.llmExpandedTermsContainer) return;
+
+    var html = '<span class="llm-expanded-label">AI added:</span>';
+    html += terms.map(function(term) {
+      return '<span class="llm-expanded-chip">' + escapeHtml(term) + '</span>';
+    }).join('');
+
+    this.llmExpandedTermsContainer.innerHTML = html;
+    this.llmExpandedTermsContainer.style.display = 'flex';
+  };
+
+  /**
+   * Clear expanded terms display
+   */
+  UnifiedSearch.prototype.clearExpandedTerms = function() {
+    if (this.llmExpandedTermsContainer) {
+      this.llmExpandedTermsContainer.innerHTML = '';
+      this.llmExpandedTermsContainer.style.display = 'none';
+    }
+    this.expandedTerms = [];
+  };
+
+  /**
+   * Hide explanation panel
+   */
+  UnifiedSearch.prototype.hideExplanationPanel = function() {
+    if (this.llmExplanationPanel) {
+      this.llmExplanationPanel.style.display = 'none';
+    }
+    if (this.explanationAbortController) {
+      this.explanationAbortController.abort();
+      this.explanationAbortController = null;
+    }
+  };
 
   // ============================================
   // Initialization
