@@ -319,6 +319,27 @@
               "year": 2018,
               "description": "The double ML framework using cross-fitting to obtain valid inference with ML first-stage estimation.",
               "url": "https://academic.oup.com/ectj/article/21/1/C1/5056401"
+            },
+            {
+              "title": "Entropy Balancing for Causal Effects: A Multivariate Reweighting Method to Produce Balanced Samples in Observational Studies",
+              "authors": "Jens Hainmueller",
+              "year": 2012,
+              "description": "Introduced entropy balancing, which achieves exact covariate balance through maximum entropy reweighting—eliminating iterative propensity score model searching.",
+              "url": "https://www.cambridge.org/core/journals/political-analysis/article/entropy-balancing-for-causal-effects-a-multivariate-reweighting-method-to-produce-balanced-samples-in-observational-studies/164B3F1EC3C2F2D0C8B49C0FCAC0F1EC"
+            },
+            {
+              "title": "Doubly Robust Estimation in Missing Data and Causal Inference Models",
+              "authors": "Heejung Bang, James M. Robins",
+              "year": 2005,
+              "description": "Accessible exposition of the augmented IPW estimator, consistent if either propensity score or outcome model is correct—the foundational 'doubly robust' property.",
+              "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1541-0420.2005.00377.x"
+            },
+            {
+              "title": "Semiparametric Efficiency in Multivariate Regression Models with Missing Data",
+              "authors": "James M. Robins, Andrea Rotnitzky",
+              "year": 1995,
+              "description": "Foundational theoretical paper deriving semiparametric efficiency bounds and introducing the AIPW estimator class underlying all modern doubly robust methods.",
+              "url": "https://www.jstor.org/stable/2291135"
             }
           ]
         },
@@ -347,6 +368,27 @@
               "year": 2021,
               "description": "Group-time average treatment effects and aggregation methods for staggered DiD.",
               "url": "https://www.sciencedirect.com/science/article/pii/S0304407620303948"
+            },
+            {
+              "title": "Two-Way Fixed Effects Estimators with Heterogeneous Treatment Effects",
+              "authors": "Clément de Chaisemartin, Xavier D'Haultfœuille",
+              "year": 2020,
+              "description": "Demonstrates TWFE regressions estimate weighted sums of ATEs with potentially negative weights—proposing the DIDM estimator as solution.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20181169"
+            },
+            {
+              "title": "Estimating Dynamic Treatment Effects in Event Studies with Heterogeneous Treatment Effects",
+              "authors": "Liyang Sun, Sarah Abraham",
+              "year": 2021,
+              "description": "Shows TWFE event-study coefficients are contaminated by effects from other periods, proposing an interaction-weighted estimator.",
+              "url": "https://www.sciencedirect.com/science/article/pii/S030440762030378X"
+            },
+            {
+              "title": "A More Credible Approach to Parallel Trends",
+              "authors": "Ashesh Rambachan, Jonathan Roth",
+              "year": 2023,
+              "description": "Formal sensitivity analysis for parallel trends violations—implemented in the widely-used HonestDiD package.",
+              "url": "https://academic.oup.com/restud/article/90/5/2555/7039335"
             }
           ]
         },
@@ -375,6 +417,27 @@
               "year": 2021,
               "description": "Combines synthetic control and DiD for improved inference in panel data settings.",
               "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20190159"
+            },
+            {
+              "title": "Matrix Completion Methods for Causal Panel Data Models",
+              "authors": "Susan Athey, Mohsen Bayati, Nikolay Doudchenko, Guido Imbens, Khashayar Khosravi",
+              "year": 2021,
+              "description": "Bridges matrix completion/ML with synthetic control using nuclear norm regularization—handles staggered adoption and outperforms traditional SC.",
+              "url": "https://www.tandfonline.com/doi/full/10.1080/01621459.2021.1891924"
+            },
+            {
+              "title": "The Augmented Synthetic Control Method",
+              "authors": "Eli Ben-Michael, Avi Feller, Jesse Rothstein",
+              "year": 2021,
+              "description": "Extends synthetic control to settings where perfect pre-treatment fit is infeasible using ridge regression to de-bias estimates.",
+              "url": "https://www.tandfonline.com/doi/full/10.1080/01621459.2021.1929245"
+            },
+            {
+              "title": "Synthetic Control Method: Inference, Sensitivity Analysis and Confidence Sets",
+              "authors": "Sergio Firpo, Vitor Possebom",
+              "year": 2018,
+              "description": "Essential theoretical foundation for statistical inference in SC applications, extending permutation tests and constructing proper confidence sets.",
+              "url": "https://www.degruyter.com/document/doi/10.1515/jci-2016-0026/html"
             }
           ]
         },
@@ -396,6 +459,27 @@
               "year": 1996,
               "description": "Defines the assumptions needed for IV and connects to potential outcomes framework.",
               "url": "https://www.tandfonline.com/doi/abs/10.1080/01621459.1996.10476902"
+            },
+            {
+              "title": "Testing for Weak Instruments in Linear IV Regression",
+              "authors": "James H. Stock, Motohiro Yogo",
+              "year": 2005,
+              "description": "Foundational framework for detecting weak instruments—the origin of the 'first-stage F > 10' rule now required in all IV applications.",
+              "url": "https://www.cambridge.org/core/books/abs/identification-and-inference-for-econometric-models/testing-for-weak-instruments-in-linear-iv-regression/4A6D2D96F83269DBC9B8E7E2D8D02455"
+            },
+            {
+              "title": "Quasi-Experimental Shift-Share Research Designs",
+              "authors": "Kirill Borusyak, Peter Hull, Xavier Jaravel",
+              "year": 2022,
+              "description": "Modern econometric framework for Bartik instruments—identification follows from quasi-random shock assignment rather than exogenous shares.",
+              "url": "https://academic.oup.com/restud/article/89/1/181/6294942"
+            },
+            {
+              "title": "Judging Judge Fixed Effects",
+              "authors": "Brigham R. Frandsen, Lars Lefgren, Emily Leslie",
+              "year": 2023,
+              "description": "Develops nonparametric tests for exclusion and monotonicity in examiner IV designs—essential for criminal justice, disability, and immigration research.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20201860"
             }
           ]
         },
@@ -417,6 +501,27 @@
               "year": 2019,
               "description": "Modern implementation guide with rdrobust software for sharp and fuzzy RDD.",
               "url": "https://cattaneo.princeton.edu/books/Cattaneo-Idrobo-Titiunik_2019_CUP-Vol1.pdf"
+            },
+            {
+              "title": "Manipulation of the Running Variable in the Regression Discontinuity Design: A Density Test",
+              "authors": "Justin McCrary",
+              "year": 2008,
+              "description": "Introduces the canonical density discontinuity test for detecting manipulation at the cutoff—now a required falsification check in all RDD work.",
+              "url": "https://www.sciencedirect.com/science/article/pii/S0304407607001133"
+            },
+            {
+              "title": "Optimal Bandwidth Choice for the Regression Discontinuity Estimator",
+              "authors": "Guido Imbens, Karthik Kalyanaraman",
+              "year": 2012,
+              "description": "Derives the MSE-optimal bandwidth for local linear RD estimation—the first principled approach to bandwidth selection.",
+              "url": "https://academic.oup.com/restud/article/79/3/933/1533189"
+            },
+            {
+              "title": "Robust Nonparametric Confidence Intervals for Regression-Discontinuity Designs",
+              "authors": "Sebastian Calonico, Matias D. Cattaneo, Rocío Titiunik",
+              "year": 2014,
+              "description": "Shows MSE-optimal bandwidths yield invalid conventional CIs and develops bias-corrected robust inference—foundation for the rdrobust package.",
+              "url": "https://onlinelibrary.wiley.com/doi/10.3982/ECTA11757"
             }
           ]
         },
@@ -445,6 +550,27 @@
               "year": 2019,
               "description": "Taxonomy of metalearners (S-learner, T-learner, X-learner) for CATE estimation.",
               "url": "https://www.pnas.org/content/116/10/4156"
+            },
+            {
+              "title": "Quasi-Oracle Estimation of Heterogeneous Treatment Effects",
+              "authors": "Xinkun Nie, Stefan Wager",
+              "year": 2021,
+              "description": "Introduces the R-learner framework achieving quasi-oracle efficiency—matching error bounds of an oracle knowing nuisance components.",
+              "url": "https://academic.oup.com/biomet/article/108/2/299/5911092"
+            },
+            {
+              "title": "Towards Optimal Doubly Robust Estimation of Heterogeneous Causal Effects",
+              "authors": "Edward H. Kennedy",
+              "year": 2023,
+              "description": "Establishes model-free oracle inequalities for the DR-learner—doubly robust CATE estimation achieves faster convergence rates.",
+              "url": "https://projecteuclid.org/journals/electronic-journal-of-statistics/volume-17/issue-2/Towards-optimal-doubly-robust-estimation-of-heterogeneous-causal-effects/10.1214/23-EJS2157.full"
+            },
+            {
+              "title": "Policy Learning With Observational Data",
+              "authors": "Susan Athey, Stefan Wager",
+              "year": 2021,
+              "description": "Theoretical foundations for learning optimal treatment policies from observational data using doubly robust scores.",
+              "url": "https://onlinelibrary.wiley.com/doi/10.3982/ECTA15732"
             }
           ]
         },
@@ -466,6 +592,34 @@
               "year": 2020,
               "description": "Modern sensitivity analysis framework with intuitive benchmarking against observed covariates.",
               "url": "https://www.tandfonline.com/doi/full/10.1111/rssb.12348"
+            },
+            {
+              "title": "Nonparametric Bounds on Treatment Effects",
+              "authors": "Charles F. Manski",
+              "year": 1990,
+              "description": "Foundational paper establishing the partial identification paradigm—showing what can be learned under minimal assumptions when point identification fails.",
+              "url": "https://www.jstor.org/stable/2006592"
+            },
+            {
+              "title": "Training, Wages, and Sample Selection: Estimating Sharp Bounds on Treatment Effects",
+              "authors": "David S. Lee",
+              "year": 2009,
+              "description": "Developed the 'Lee bounds' trimming procedure for handling attrition under monotonicity—now a standard robustness check for differential selection.",
+              "url": "https://academic.oup.com/restud/article/76/3/1071/1590596"
+            },
+            {
+              "title": "Unobservable Selection and Coefficient Stability: Theory and Evidence",
+              "authors": "Emily Oster",
+              "year": 2019,
+              "description": "Shows how to jointly use coefficient movements and R-squared changes to bound omitted variable bias—the workhorse sensitivity analysis.",
+              "url": "https://www.tandfonline.com/doi/full/10.1080/07350015.2016.1227711"
+            },
+            {
+              "title": "Selection on Observed and Unobserved Variables: Assessing the Effectiveness of Catholic Schools",
+              "authors": "Joseph G. Altonji, Todd E. Elder, Christopher R. Taber",
+              "year": 2005,
+              "description": "Pioneered the insight that selection on observables guides selection on unobservables—framework for assessing confounding needed to explain away effects.",
+              "url": "https://www.journals.uchicago.edu/doi/10.1086/426036"
             }
           ]
         }
