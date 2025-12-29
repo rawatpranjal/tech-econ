@@ -3319,5 +3319,185 @@
     ],
     "best_for": "Maximum Likelihood and GMM estimation in Rust",
     "language": "Rust"
+  },
+  {
+    "name": "did",
+    "description": "Implements group-time average treatment effects (ATT(g,t)) for staggered DiD designs with multiple periods and variation in treatment timing. Provides flexible aggregation into event-study plots or overall treatment effect estimates, addressing the well-documented negative weighting issues with conventional TWFE under staggered adoption.",
+    "category": "Causal Inference (DiD)",
+    "docs_url": "https://bcallaway11.github.io/did/",
+    "github_url": "https://github.com/bcallaway11/did",
+    "url": "https://cran.r-project.org/package=did",
+    "install": "install.packages(\"did\")",
+    "tags": [
+      "difference-in-differences",
+      "staggered-adoption",
+      "event-study",
+      "treatment-effects",
+      "panel-data"
+    ],
+    "best_for": "Staggered rollout designs where different units adopt treatment at different times, implementing the Callaway & Sant'Anna (2021) estimator",
+    "language": "R"
+  },
+  {
+    "name": "DRDID",
+    "description": "Implements locally efficient doubly robust DiD estimators that combine inverse probability weighting and outcome regression for improved statistical properties. Handles both panel data and repeated cross-sections in the canonical 2x2 DiD setting with covariates, providing robustness against model misspecification.",
+    "category": "Causal Inference (DiD)",
+    "docs_url": "https://psantanna.com/DRDID/",
+    "github_url": "https://github.com/pedrohcgs/DRDID",
+    "url": "https://cran.r-project.org/package=DRDID",
+    "install": "install.packages(\"DRDID\")",
+    "tags": [
+      "doubly-robust",
+      "difference-in-differences",
+      "inverse-probability-weighting",
+      "ATT",
+      "covariates"
+    ],
+    "best_for": "Two-period DiD with covariates requiring robust estimation against model misspecification, implementing Sant'Anna & Zhao (2020)",
+    "language": "R"
+  },
+  {
+    "name": "staggered",
+    "description": "Provides the efficient estimator for randomized staggered rollout designs, offering optimal weighting schemes for treatment effect estimation. Also implements Callaway & Sant'Anna and Sun & Abraham estimators with design-based Fisher inference for randomized experiments.",
+    "category": "Causal Inference (DiD)",
+    "docs_url": "https://cran.r-project.org/web/packages/staggered/readme/README.html",
+    "github_url": "https://github.com/jonathandroth/staggered",
+    "url": "https://cran.r-project.org/package=staggered",
+    "install": "install.packages(\"staggered\")",
+    "tags": [
+      "staggered-rollout",
+      "randomized-experiments",
+      "efficient-estimation",
+      "event-study",
+      "fisher-inference"
+    ],
+    "best_for": "Randomized experiments with staggered treatment timing where efficiency gains matter, implementing Roth & Sant'Anna (2023)",
+    "language": "R"
+  },
+  {
+    "name": "didimputation",
+    "description": "Implements the imputation-based DiD estimator that first estimates Y(0) counterfactuals from untreated observations using two-way fixed effects, then imputes treatment effects for treated units. Avoids negative weighting problems of conventional TWFE under heterogeneous treatment effects.",
+    "category": "Causal Inference (DiD)",
+    "docs_url": "https://github.com/kylebutts/didimputation",
+    "github_url": "https://github.com/kylebutts/didimputation",
+    "url": "https://cran.r-project.org/package=didimputation",
+    "install": "install.packages(\"didimputation\")",
+    "tags": [
+      "imputation",
+      "two-way-fixed-effects",
+      "event-study",
+      "counterfactual",
+      "robust-estimation"
+    ],
+    "best_for": "Event-study designs where imputation-based correction for TWFE bias is preferred, implementing Borusyak, Jaravel & Spiess (2024)",
+    "language": "R"
+  },
+  {
+    "name": "HonestDiD",
+    "description": "Constructs robust confidence intervals for DiD and event-study designs under violations of parallel trends. Allows researchers to conduct sensitivity analysis by relaxing the parallel trends assumption using smoothness or relative magnitude restrictions on pre-trend violations.",
+    "category": "Causal Inference (DiD)",
+    "docs_url": "https://github.com/asheshrambachan/HonestDiD",
+    "github_url": "https://github.com/asheshrambachan/HonestDiD",
+    "url": "https://cran.r-project.org/package=HonestDiD",
+    "install": "install.packages(\"HonestDiD\")",
+    "tags": [
+      "sensitivity-analysis",
+      "parallel-trends",
+      "robust-inference",
+      "confidence-intervals",
+      "event-study"
+    ],
+    "best_for": "Assessing how treatment effect conclusions change under plausible parallel trends violations, implementing Rambachan & Roth (2023)",
+    "language": "R"
+  },
+  {
+    "name": "fastdid",
+    "description": "High-performance implementation of Callaway & Sant'Anna estimators optimized for large datasets with millions of observations. Reduces computation time from hours to seconds while supporting time-varying covariates and multiple events per unit.",
+    "category": "Causal Inference (DiD)",
+    "docs_url": "https://tsailintung.github.io/fastdid",
+    "github_url": "https://github.com/TsaiLintung/fastdid",
+    "url": "https://cran.r-project.org/package=fastdid",
+    "install": "install.packages(\"fastdid\")",
+    "tags": [
+      "high-performance",
+      "large-scale",
+      "staggered-DiD",
+      "time-varying-covariates",
+      "fast-computation"
+    ],
+    "best_for": "Large-scale applications where standard did package is computationally prohibitive, with support for time-varying covariates",
+    "language": "R"
+  },
+  {
+    "name": "Synth",
+    "description": "The original synthetic control method implementation for comparative case studies. Constructs a weighted combination of comparison units to create a synthetic counterfactual for estimating effects of interventions on a single treated unit, as used in seminal studies of California tobacco program and German reunification.",
+    "category": "Causal Inference (Synthetic Control)",
+    "docs_url": "https://web.stanford.edu/~jhain/",
+    "github_url": "https://github.com/cran/Synth",
+    "url": "https://cran.r-project.org/package=Synth",
+    "install": "install.packages(\"Synth\")",
+    "tags": [
+      "synthetic-control",
+      "comparative-case-studies",
+      "counterfactual",
+      "policy-evaluation",
+      "single-unit-treatment"
+    ],
+    "best_for": "Classic single-treated-unit policy evaluations, implementing Abadie, Diamond & Hainmueller (2010, 2011, 2015)",
+    "language": "R"
+  },
+  {
+    "name": "synthdid",
+    "description": "Implements synthetic difference-in-differences, a hybrid method combining insights from both DiD and synthetic control that reweights and matches pre-treatment trends. Provides improved robustness properties compared to either method alone by combining their strengths.",
+    "category": "Causal Inference (Synthetic Control)",
+    "docs_url": "https://synth-inference.github.io/synthdid/",
+    "github_url": "https://github.com/synth-inference/synthdid",
+    "url": "https://cran.r-project.org/package=synthdid",
+    "install": "install.packages(\"synthdid\")",
+    "tags": [
+      "synthetic-control",
+      "difference-in-differences",
+      "hybrid-estimator",
+      "panel-data",
+      "robust-estimation"
+    ],
+    "best_for": "Settings where neither pure DiD nor pure SC is ideal, implementing Arkhangelsky, Athey, Hirshberg, Imbens & Wager (2021)",
+    "language": "R"
+  },
+  {
+    "name": "gsynth",
+    "description": "Implements generalized synthetic control with interactive fixed effects, extending SCM to multiple treated units with variable treatment timing. Uses factor models to impute counterfactuals, handling unbalanced panels and complex treatment patterns with latent factor structures.",
+    "category": "Causal Inference (Synthetic Control)",
+    "docs_url": "https://yiqingxu.org/packages/gsynth/",
+    "github_url": "https://github.com/xuyiqing/gsynth",
+    "url": "https://cran.r-project.org/package=gsynth",
+    "install": "install.packages(\"gsynth\")",
+    "tags": [
+      "generalized-synthetic-control",
+      "interactive-fixed-effects",
+      "factor-models",
+      "multiple-treated-units",
+      "unbalanced-panels"
+    ],
+    "best_for": "Multiple treated units with staggered treatment timing and latent factor structures, implementing Xu (2017)",
+    "language": "R"
+  },
+  {
+    "name": "augsynth",
+    "description": "Implements the Augmented Synthetic Control Method, which uses an outcome model (ridge regression by default) to correct for bias when pre-treatment fit is imperfect. Uniquely supports staggered adoption across multiple treated units via multisynth() function.",
+    "category": "Causal Inference (Synthetic Control)",
+    "docs_url": "https://github.com/ebenmichael/augsynth/blob/master/vignettes/singlesynth-vignette.md",
+    "github_url": "https://github.com/ebenmichael/augsynth",
+    "url": "https://github.com/ebenmichael/augsynth",
+    "install": "devtools::install_github(\"ebenmichael/augsynth\")",
+    "tags": [
+      "augmented-synthetic-control",
+      "bias-correction",
+      "staggered-adoption",
+      "ridge-regression",
+      "imperfect-fit"
+    ],
+    "best_for": "SC applications with imperfect pre-treatment fit or staggered adoption across units, implementing Ben-Michael, Feller & Rothstein (2021)",
+    "language": "R"
   }
 ]

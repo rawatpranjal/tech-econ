@@ -13719,6 +13719,97 @@
           ]
         }
       ]
+    },
+    {
+      "id": "statistics",
+      "name": "Statistics",
+      "description": "Foundational statistical methods for inference and uncertainty quantification",
+      "image_url": "/images/topics/statistics.webp",
+      "subtopics": [
+        {
+          "id": "bootstrap-resampling",
+          "name": "Bootstrap & Resampling Methods",
+          "application": "Estimate uncertainty for any statistic without closed-form solutions",
+          "papers": [
+            {
+              "title": "Bootstrap Methods: Another Look at the Jackknife",
+              "authors": "Bradley Efron",
+              "year": 1979,
+              "tag": "Classic",
+              "description": "THE paper that created the bootstrap field. Shows that by drawing samples with replacement from observed data, you can estimate the sampling distribution of virtually any statistic—no closed-form solutions required. Won the 2018 International Prize in Statistics.",
+              "url": "https://projecteuclid.org/journals/annals-of-statistics/volume-7/issue-1/Bootstrap-Methods-Another-Look-at-the-Jackknife/10.1214/aos/1176344552.full",
+              "tags": [
+                "Statistics",
+                "Bootstrap & Resampling Methods"
+              ],
+              "citations": 9500
+            },
+            {
+              "title": "Bootstrap Methods for Standard Errors, Confidence Intervals, and Other Measures of Statistical Accuracy",
+              "authors": "Bradley Efron, Robert Tibshirani",
+              "year": 1986,
+              "tag": "Classic",
+              "description": "The paper that made bootstrap accessible to practitioners. Shows how to apply bootstrap to real problems: bias estimation, prediction error, confidence intervals, time series, regression. Covers bootstrap CIs (percentile, BCa), when bootstrap fails, and practical diagnostics.",
+              "url": "https://projecteuclid.org/journals/statistical-science/volume-1/issue-1/Bootstrap-Methods-for-Standard-Errors-Confidence-Intervals-and-Other-Measures/10.1214/ss/1177013815.full",
+              "tags": [
+                "Statistics",
+                "Bootstrap & Resampling Methods"
+              ],
+              "citations": 6100
+            },
+            {
+              "title": "A Scalable Bootstrap for Massive Data",
+              "authors": "Ariel Kleiner, Ameet Talwalkar, Purnamrita Sarkar, Michael I. Jordan",
+              "year": 2014,
+              "tag": "SOTA",
+              "description": "The Bag of Little Bootstraps (BLB) solves the fundamental problem that standard bootstrap requires O(B×n) operations—impossible for terabyte-scale data. BLB takes small subsamples of size n^0.6, runs weighted bootstrap within each, and achieves same statistical efficiency while being trivially parallelizable across Spark/MapReduce.",
+              "url": "https://rss.onlinelibrary.wiley.com/doi/10.1111/rssb.12050",
+              "tags": [
+                "Statistics",
+                "Bootstrap & Resampling Methods"
+              ],
+              "citations": 420
+            },
+            {
+              "title": "Estimating Uncertainty for Massive Data Streams",
+              "authors": "Nicholas Chamandy, Omkar Muralidharan, Amir Najmi, Siddartha Naidu",
+              "year": 2012,
+              "tag": "Industry",
+              "description": "The Poisson bootstrap replaces multinomial resampling with independent Poisson(1) weights for each observation. Enables single-pass streaming computation where you don't need to know n in advance, and each data shard can be processed independently. Built into Google's production analysis primitives.",
+              "url": "https://research.google/pubs/pub41854/",
+              "tags": [
+                "Statistics",
+                "Bootstrap & Resampling Methods"
+              ]
+            },
+            {
+              "title": "Bootstrap-Based Improvements for Inference with Clustered Errors",
+              "authors": "A. Colin Cameron, Jonah B. Gelbach, Douglas L. Miller",
+              "year": 2008,
+              "tag": "Classic",
+              "description": "The wild cluster bootstrap handles clustered/panel data (users within cities, sessions within users, days within experiments) and provides valid inference even with few clusters (5-30) where standard cluster-robust SEs severely over-reject. Essential for diff-in-diff, geographic experiments, and switchback designs.",
+              "url": "https://direct.mit.edu/rest/article/90/3/414/57731/Bootstrap-Based-Improvements-for-Inference-with",
+              "tags": [
+                "Statistics",
+                "Bootstrap & Resampling Methods"
+              ],
+              "citations": 1000
+            },
+            {
+              "title": "Resampling-Free Bootstrap Inference for Quantiles",
+              "authors": "Mårten Schultzberg, Johan Ankargren",
+              "year": 2022,
+              "tag": "Industry",
+              "description": "A Spotify paper that achieves 828x speedup for quantile bootstrap by deriving the analytical distribution of bootstrap quantile indices. Enables bootstrap CIs for medians/percentiles on hundreds of millions of observations in milliseconds. Already deployed in production at Spotify.",
+              "url": "https://arxiv.org/abs/2202.10992",
+              "tags": [
+                "Statistics",
+                "Bootstrap & Resampling Methods"
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
