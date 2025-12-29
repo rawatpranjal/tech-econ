@@ -836,6 +836,114 @@
     "language": "Python"
   },
   {
+    "name": "fixest",
+    "description": "Fast and comprehensive package for estimating econometric models with multiple high-dimensional fixed effects, including OLS, GLM, Poisson, and negative binomial models. Features native support for clustered standard errors (up to four-way), instrumental variables, and modern difference-in-differences estimators including Sun-Abraham for staggered treatments.",
+    "category": "Panel Data & Fixed Effects",
+    "docs_url": "https://lrberge.github.io/fixest/",
+    "github_url": "https://github.com/lrberge/fixest",
+    "url": "https://cran.r-project.org/package=fixest",
+    "install": "install.packages(\"fixest\")",
+    "tags": [
+      "fixed-effects",
+      "panel-data",
+      "clustered-standard-errors",
+      "difference-in-differences",
+      "instrumental-variables"
+    ],
+    "best_for": "Fast, production-ready estimation of linear/GLM models with multiple high-dimensional fixed effects and publication-quality regression tables via etable()",
+    "language": "R"
+  },
+  {
+    "name": "plm",
+    "description": "Comprehensive econometrics package for linear panel models providing fixed effects (within), random effects, between, first-difference, Hausman-Taylor, and nested random effects estimators. Includes GMM, FGLS, and extensive diagnostic tests for serial correlation, cross-sectional dependence, and panel unit roots.",
+    "category": "Panel Data & Fixed Effects",
+    "docs_url": "https://cran.r-project.org/web/packages/plm/vignettes/",
+    "github_url": "https://github.com/ycroissant/plm",
+    "url": "https://cran.r-project.org/package=plm",
+    "install": "install.packages(\"plm\")",
+    "tags": [
+      "panel-data",
+      "econometrics",
+      "fixed-effects",
+      "random-effects",
+      "hausman-test"
+    ],
+    "best_for": "Comprehensive panel data analysis requiring within/between/random effects estimation, Hausman tests, and extensive diagnostic testing",
+    "language": "R"
+  },
+  {
+    "name": "lfe",
+    "description": "Efficiently estimates linear models with multiple high-dimensional fixed effects using the Method of Alternating Projections. Designed for datasets with factors having thousands of levels (hundreds of thousands of dummy variables), with full support for 2SLS instrumental variables and multi-way clustered standard errors.",
+    "category": "Panel Data & Fixed Effects",
+    "docs_url": "https://cran.r-project.org/web/packages/lfe/lfe.pdf",
+    "github_url": "https://github.com/r-econometrics/lfe",
+    "url": "https://cran.r-project.org/package=lfe",
+    "install": "install.packages(\"lfe\")",
+    "tags": [
+      "high-dimensional-fe",
+      "worker-firm",
+      "memory-efficient",
+      "instrumental-variables",
+      "clustered-se"
+    ],
+    "best_for": "AKM-style wage decompositions and matched employer-employee data with hundreds of thousands of worker/firm fixed effects",
+    "language": "R"
+  },
+  {
+    "name": "panelr",
+    "description": "Automates within-between (hybrid) model specification for panel/longitudinal data, combining fixed effects robustness to time-invariant confounding with random effects ability to estimate time-invariant coefficients. Uses lme4 for multilevel estimation with optional Bayesian (brms) and GEE (geepack) backends.",
+    "category": "Panel Data & Fixed Effects",
+    "docs_url": "https://panelr.jacob-long.com/",
+    "github_url": "https://github.com/jacob-long/panelr",
+    "url": "https://cran.r-project.org/package=panelr",
+    "install": "install.packages(\"panelr\")",
+    "tags": [
+      "hybrid-models",
+      "within-between",
+      "panel-data",
+      "longitudinal-analysis",
+      "bell-jones"
+    ],
+    "best_for": "Researchers needing fixed effects-equivalent estimates while retaining time-invariant predictors and random slopes",
+    "language": "R"
+  },
+  {
+    "name": "bife",
+    "description": "Estimates fixed effects binary choice models (logit and probit) with potentially many individual fixed effects using a pseudo-demeaning algorithm. Addresses the incidental parameters problem through analytical bias correction based on Fernández-Val (2009) and computes average partial effects.",
+    "category": "Panel Data & Fixed Effects",
+    "docs_url": "https://cran.r-project.org/web/packages/bife/vignettes/howto.html",
+    "github_url": "https://github.com/amrei-stammann/bife",
+    "url": "https://cran.r-project.org/package=bife",
+    "install": "install.packages(\"bife\")",
+    "tags": [
+      "binary-choice",
+      "fixed-effects",
+      "logit-probit",
+      "bias-correction",
+      "panel-data"
+    ],
+    "best_for": "Fast estimation of fixed effects logit/probit models on large panel data with analytical bias correction for the incidental parameters problem",
+    "language": "R"
+  },
+  {
+    "name": "alpaca",
+    "description": "Fits generalized linear models (Poisson, negative binomial, logit, probit, Gamma) with high-dimensional k-way fixed effects. Partials out factors during log-likelihood optimization and provides robust/multi-way clustered standard errors, fixed effects recovery, and analytical bias corrections for binary choice models.",
+    "category": "Panel Data & Fixed Effects",
+    "docs_url": "https://cran.r-project.org/web/packages/alpaca/vignettes/howto.html",
+    "github_url": "https://github.com/amrei-stammann/alpaca",
+    "url": "https://cran.r-project.org/package=alpaca",
+    "install": "install.packages(\"alpaca\")",
+    "tags": [
+      "glm",
+      "fixed-effects",
+      "poisson-regression",
+      "negative-binomial",
+      "gravity-models"
+    ],
+    "best_for": "Nonlinear panel models (Poisson, logit, probit, negative binomial) with multiple high-dimensional fixed effects, especially structural gravity models for international trade",
+    "language": "R"
+  },
+  {
     "name": "ADOpy",
     "description": "Bayesian Adaptive Design Optimization (ADO) for tuning experiments in real-time, with models for psychometric tasks.",
     "category": "Power Simulation & Design of Experiments",
