@@ -123,6 +123,7 @@
    */
   UnifiedSearch.prototype.handleWorkerMessage = function(message) {
     var type = message.type;
+    console.log('[UnifiedSearch] Worker message:', type, message.payload);
 
     switch (type) {
       case 'WORKER_READY':
@@ -141,6 +142,8 @@
         this.isIndexLoaded = message.payload.success;
         if (this.isIndexLoaded) {
           console.log('[UnifiedSearch] Index loaded:', message.payload.count, 'documents');
+        } else {
+          console.error('[UnifiedSearch] Index load FAILED:', message.payload.error);
         }
         break;
 
@@ -196,6 +199,7 @@
         return response.json();
       })
       .then(function(data) {
+        console.log('[UnifiedSearch] Fetched search index:', data.documents ? data.documents.length : 0, 'documents');
         // Wrap with config (same format as fallback)
         var indexData = {
           version: data.version || 1,
@@ -212,10 +216,13 @@
         };
         self.searchIndex = indexData;
         if (self.workerReady) {
+          console.log('[UnifiedSearch] Sending LOAD_INDEX to worker');
           self.worker.postMessage({
             type: 'LOAD_INDEX',
             payload: { indexData: indexData }
           });
+        } else {
+          console.log('[UnifiedSearch] Worker not ready yet, storing index for later');
         }
       })
       .catch(function(error) {

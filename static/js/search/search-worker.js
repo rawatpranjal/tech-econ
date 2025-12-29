@@ -82,8 +82,10 @@ function handleInit(payload) {
  * Load MiniSearch index
  */
 function handleLoadIndex(payload) {
+  console.log('[SearchWorker] handleLoadIndex called');
   try {
     var indexData = payload.indexData;
+    console.log('[SearchWorker] Loading index with', indexData.documents.length, 'documents');
 
     // Create MiniSearch instance
     miniSearch = new MiniSearch({
@@ -97,8 +99,10 @@ function handleLoadIndex(payload) {
     });
 
     // Add all documents
+    console.log('[SearchWorker] MiniSearch instance created, adding documents...');
     miniSearch.addAll(indexData.documents);
     searchIndex = indexData;
+    console.log('[SearchWorker] Documents added successfully');
 
     postMessage({
       type: 'INDEX_LOADED',
@@ -108,6 +112,7 @@ function handleLoadIndex(payload) {
       }
     });
   } catch (error) {
+    console.error('[SearchWorker] Index load error:', error);
     postMessage({
       type: 'INDEX_LOADED',
       payload: {
@@ -219,12 +224,14 @@ function handleLoadModel() {
  * Perform hybrid search (keyword + semantic)
  */
 function handleSearch(payload, messageId) {
+  console.log('[SearchWorker] handleSearch:', payload.query, 'semantic:', payload.semantic);
   var query = payload.query;
   var topK = payload.topK || 20;
   var useSemanticSearch = payload.semantic !== false && transformersModel && embeddings;
 
   // Start with keyword search
   var keywordResults = performKeywordSearch(query, 100);
+  console.log('[SearchWorker] Keyword search returned', keywordResults.length, 'results');
 
   if (!useSemanticSearch) {
     // Return keyword results only
@@ -319,7 +326,11 @@ function handleKeywordSearch(payload, messageId) {
  * Perform keyword search with MiniSearch
  */
 function performKeywordSearch(query, limit) {
-  if (!miniSearch) return [];
+  if (!miniSearch) {
+    console.error('[SearchWorker] miniSearch is null! Index not loaded.');
+    return [];
+  }
+  console.log('[SearchWorker] performKeywordSearch:', query);
 
   // Expand query with synonyms
   var expandedQueries = expandQuery(query);
