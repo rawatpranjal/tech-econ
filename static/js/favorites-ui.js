@@ -118,7 +118,9 @@
 
     // Initialize favorites page if on that page
     function initFavoritesPage() {
+        console.log('[Favorites] initFavoritesPage called');
         const container = document.getElementById('favorites-list');
+        console.log('[Favorites] Container found:', !!container);
         if (!container) return;
 
         // Load all data for lookups
@@ -192,12 +194,15 @@
         }
 
         function loadFavorites() {
-            if (!window.TechEconFavorites) {
-                container.innerHTML = '<div class="error">Favorites module not loaded</div>';
-                return;
-            }
+            console.log('[Favorites] loadFavorites called');
+            try {
+                if (!window.TechEconFavorites) {
+                    container.innerHTML = '<div class="error">Favorites module not loaded</div>';
+                    return;
+                }
 
-            const favorites = window.TechEconFavorites.get();
+                const favorites = window.TechEconFavorites.get();
+                console.log('[Favorites] Got', favorites.length, 'favorites');
 
             if (favorites.length === 0) {
                 container.innerHTML = `
@@ -267,7 +272,12 @@
                 html += '</div>';
             });
 
-            container.innerHTML = html;
+                container.innerHTML = html;
+                console.log('[Favorites] Rendered successfully');
+            } catch (e) {
+                console.error('[Favorites] Error:', e);
+                container.innerHTML = '<div class="error">Error loading favorites: ' + e.message + '</div>';
+            }
         }
 
         // Remove favorite function
@@ -644,17 +654,19 @@
 
     // Initialize when DOM is ready
     function init() {
+        console.log('[Favorites] init() called');
         let retryCount = 0;
         const maxRetries = 30; // 3 seconds max wait
 
         function tryInit() {
+            console.log('[Favorites] tryInit() attempt', retryCount, 'TechEconFavorites:', !!window.TechEconFavorites);
             // Only require favorites module - playlists is optional
             if (!window.TechEconFavorites) {
                 retryCount++;
                 if (retryCount < maxRetries) {
                     setTimeout(tryInit, 100);
                 } else {
-                    console.error('Favorites module failed to load after timeout');
+                    console.error('[Favorites] Module failed to load after timeout');
                     const container = document.getElementById('favorites-list');
                     if (container) {
                         container.innerHTML = '<div class="error">Failed to load favorites. Please refresh the page.</div>';
@@ -663,6 +675,7 @@
                 return;
             }
 
+            console.log('[Favorites] Calling initFavoriteButtons and initFavoritesPage');
             initFavoriteButtons();
             initFavoritesPage();
 

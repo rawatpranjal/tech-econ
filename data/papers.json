@@ -4603,6 +4603,42 @@
                 "Two-Sided Markets"
               ],
               "citations": 303
+            },
+            {
+              "title": "A Price Theory of Multi-Sided Platforms",
+              "authors": "E. Glen Weyl",
+              "year": 2010,
+              "description": "The theoretical gold standard for platform pricing; introduces Spence distortion showing platforms internalize network effects only for marginal users. Essential for welfare analysis.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/aer.100.4.1642",
+              "tags": [
+                "Matching & Marketplaces",
+                "Two-Sided Markets"
+              ],
+              "citations": 800
+            },
+            {
+              "title": "Pricing and Commitment by Two-Sided Platforms",
+              "authors": "Andrei Hagiu",
+              "year": 2006,
+              "description": "Studies sequential arrival of sides and commitment decisions; key for understanding multi-homing dynamics and platform timing strategies.",
+              "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1756-2171.2006.tb00035.x",
+              "tags": [
+                "Matching & Marketplaces",
+                "Two-Sided Markets"
+              ],
+              "citations": 400
+            },
+            {
+              "title": "Platform Envelopment",
+              "authors": "Thomas Eisenmann, Geoffrey Parker, Marshall Van Alstyne",
+              "year": 2011,
+              "description": "Explains how tech giants expand across adjacent platform markets through bundling; foundational for understanding winner-take-all dynamics.",
+              "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/smj.935",
+              "tags": [
+                "Matching & Marketplaces",
+                "Two-Sided Markets"
+              ],
+              "citations": 600
             }
           ]
         },
@@ -4657,6 +4693,54 @@
                 "Search & Matching Frictions"
               ],
               "citations": 219
+            },
+            {
+              "title": "Inefficient Hiring in Entry-Level Labor Markets",
+              "authors": "Amanda Pallais",
+              "year": 2014,
+              "description": "Field experiment on Upwork (oDesk) demonstrating information frictions cause inefficient unemployment; first rigorous platform labor experiment.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/aer.104.11.3565",
+              "tags": [
+                "Matching & Marketplaces",
+                "Search & Matching Frictions"
+              ],
+              "citations": 400
+            },
+            {
+              "title": "Landing the First Job: The Value of Intermediaries in Online Hiring",
+              "authors": "Christopher Stanton, Catherine Thomas",
+              "year": 2016,
+              "description": "Uses Upwork data to quantify how platform certification helps inexperienced workers overcome reputation gaps and find first jobs.",
+              "url": "https://academic.oup.com/restud/article/83/2/810/2461352",
+              "tags": [
+                "Matching & Marketplaces",
+                "Search & Matching Frictions"
+              ],
+              "citations": 300
+            },
+            {
+              "title": "Monopsony in Online Labor Markets",
+              "authors": "Arindrajit Dube, Jeff Jacobs, Suresh Naidu, Siddharth Suri",
+              "year": 2020,
+              "description": "Amazon Mechanical Turk experiments find substantial monopsony power (labor supply elasticity ~0.1) facing individual requesters.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/aeri.20180150",
+              "tags": [
+                "Matching & Marketplaces",
+                "Search & Matching Frictions"
+              ],
+              "citations": 200
+            },
+            {
+              "title": "Who Benefits from Online Gig Economy Platforms?",
+              "authors": "John Horton, Joseph Golden, Ramesh Johari",
+              "year": 2021,
+              "description": "Upwork analysis showing workers capture surplus because demand-side search frictions reduce direct competition between workers.",
+              "url": "https://www.nber.org/papers/w29031",
+              "tags": [
+                "Matching & Marketplaces",
+                "Search & Matching Frictions"
+              ],
+              "citations": 50
             }
           ]
         },
@@ -4712,6 +4796,30 @@
                 "Matching Algorithms"
               ],
               "citations": 26
+            },
+            {
+              "title": "Clearing Matching Markets Efficiently: Informative Signals and Match Recommendations",
+              "authors": "Itai Ashlagi, Mark Braverman, Yash Kanoria, Peng Shi",
+              "year": 2020,
+              "description": "Shows platforms can facilitate efficient market clearing through targeted recommendations; reduces wasted applications and improves welfare for both sides.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2019.3468",
+              "tags": [
+                "Matching & Marketplaces",
+                "Matching Algorithms"
+              ],
+              "citations": 150
+            },
+            {
+              "title": "Pricing in Ride-Sharing Platforms: A Queueing-Theoretic Approach",
+              "authors": "Siddhartha Banerjee, Ramesh Johari, Carlos Riquelme",
+              "year": 2015,
+              "description": "Foundational queueing model for Uber/Lyft showing dynamic pricing is robust to uncertainty; establishes theoretical foundation for surge pricing.",
+              "url": "https://dl.acm.org/doi/10.1145/2764468.2764527",
+              "tags": [
+                "Matching & Marketplaces",
+                "Matching Algorithms"
+              ],
+              "citations": 240
             }
           ]
         },
@@ -4767,6 +4875,42 @@
                 "Reputation & Reviews"
               ],
               "citations": 20
+            },
+            {
+              "title": "The Limits of Reputation in Platform Markets: An Empirical Analysis and Field Experiment",
+              "authors": "Chris Nosko, Steven Tadelis",
+              "year": 2015,
+              "description": "eBay analysis showing reputation mechanisms suffer from reputational externalities and silent dissatisfaction bias; introduces 'Effective Percent Positive' measure.",
+              "url": "https://www.nber.org/papers/w20830",
+              "tags": [
+                "Matching & Marketplaces",
+                "Reputation & Reviews"
+              ],
+              "citations": 300
+            },
+            {
+              "title": "Promotional Reviews: An Empirical Investigation of Online Review Manipulation",
+              "authors": "Dina Mayzlin, Yaniv Dover, Judith Chevalier",
+              "year": 2014,
+              "description": "First rigorous fake review identification comparing TripAdvisor vs. Expedia; shows independent hotels strategically post fake reviews of competitors.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/aer.104.8.2421",
+              "tags": [
+                "Matching & Marketplaces",
+                "Reputation & Reviews"
+              ],
+              "citations": 600
+            },
+            {
+              "title": "Asymmetric Information, Adverse Selection and Online Disclosure: The Case of eBay Motors",
+              "authors": "Gregory Lewis",
+              "year": 2011,
+              "description": "Classic on voluntary disclosure in online markets; shows sellers reveal private information to reduce adverse selection in used car sales.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/aer.101.4.1535",
+              "tags": [
+                "Matching & Marketplaces",
+                "Reputation & Reviews"
+              ],
+              "citations": 400
             }
           ]
         },

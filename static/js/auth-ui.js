@@ -144,16 +144,22 @@
         let currentTab = 'signin';
 
         backdrop.addEventListener('click', function() {
-            TechEconAuth.hideModal();
+            if (window.TechEconAuth && TechEconAuth.hideModal) {
+                TechEconAuth.hideModal();
+            }
         });
 
         closeBtn.addEventListener('click', function() {
-            TechEconAuth.hideModal();
+            if (window.TechEconAuth && TechEconAuth.hideModal) {
+                TechEconAuth.hideModal();
+            }
         });
 
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape' && modal.classList.contains('open')) {
-                TechEconAuth.hideModal();
+                if (window.TechEconAuth && TechEconAuth.hideModal) {
+                    TechEconAuth.hideModal();
+                }
             }
         });
 
@@ -232,18 +238,22 @@
 
         if (confirmationCloseBtn) {
             confirmationCloseBtn.addEventListener('click', function() {
-                TechEconAuth.hideModal();
+                if (window.TechEconAuth && TechEconAuth.hideModal) {
+                    TechEconAuth.hideModal();
+                }
                 hideSignupConfirmation();
             });
         }
 
         // Also hide confirmation when modal is closed
-        const originalHideModal = TechEconAuth.hideModal;
-        TechEconAuth.hideModal = function() {
-            hideSignupConfirmation();
-            modal.classList.remove('open');
-            document.body.style.overflow = '';
-        };
+        if (window.TechEconAuth && TechEconAuth.hideModal) {
+            const originalHideModal = TechEconAuth.hideModal;
+            TechEconAuth.hideModal = function() {
+                hideSignupConfirmation();
+                modal.classList.remove('open');
+                document.body.style.overflow = '';
+            };
+        }
 
         // Make showSignupConfirmation available
         window.showSignupConfirmation = showSignupConfirmation;

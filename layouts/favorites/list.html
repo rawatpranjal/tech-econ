@@ -123,4 +123,18 @@
     min-height: 300px;
 }
 </style>
+
+<!-- Fallback if JS fails to load -->
+<script>
+setTimeout(function() {
+    var container = document.getElementById('favorites-list');
+    if (container && container.innerHTML.indexOf('Loading') !== -1) {
+        console.error('[Favorites] Fallback triggered - JS did not load favorites');
+        container.innerHTML = '<div class="error" style="padding: 2rem; text-align: center;">' +
+            '<p>Failed to load favorites. Check browser console (F12) for errors.</p>' +
+            '<p style="margin-top: 1rem;"><a href="javascript:location.reload()">Refresh Page</a></p>' +
+            '</div>';
+    }
+}, 5000);
+</script>
 {{ end }}
