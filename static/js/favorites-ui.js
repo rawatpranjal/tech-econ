@@ -425,6 +425,7 @@
             }
 
             const contentClass = viewMode === 'table' ? 'table-view' : 'favorites-grid';
+            const isUncategorized = collection.id === '__uncategorized__';
 
             return `
                 <div class="collection-section ${isExpanded ? 'expanded' : ''}" data-collection-id="${collection.id}">
@@ -437,18 +438,20 @@
                             <span class="collection-section-count">${itemCount} item${itemCount !== 1 ? 's' : ''}</span>
                         </div>
                         <div class="collection-section-actions">
-                            <button class="btn-icon" onclick="event.stopPropagation(); renameCollection('${escapedId}')" title="Rename">
+                            <button class="btn-icon" onclick="event.stopPropagation(); renameCollection('${escapedId}')" title="${isUncategorized ? 'Create collection from these items' : 'Rename'}">
                                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+                                    ${isUncategorized ?
+                                        '<path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/>' :
+                                        '<path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>'
+                                    }
                                 </svg>
                             </button>
-                            <button class="btn-icon btn-danger" onclick="event.stopPropagation(); deleteCollection('${escapedId}')" title="Delete collection">
+                            ${isUncategorized ? '' : `<button class="btn-icon btn-danger" onclick="event.stopPropagation(); deleteCollection('${escapedId}')" title="Delete collection">
                                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
                                     <polyline points="3 6 5 6 21 6"></polyline>
                                     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
                                 </svg>
-                            </button>
+                            </button>`}
                         </div>
                     </div>
                     <div class="collection-section-content">
@@ -608,16 +611,22 @@
 
         // Rename collection - show modal
         window.renameCollection = function(collectionId) {
-            const collection = window.TechEconPlaylists.get(collectionId);
+            const isUncategorized = collectionId === '__uncategorized__';
+            const collection = isUncategorized ? { name: '' } : window.TechEconPlaylists.get(collectionId);
             if (!collection) return;
 
             const modal = document.getElementById('rename-collection-modal');
             const input = document.getElementById('rename-collection-input');
             const idInput = document.getElementById('rename-collection-id');
+            const modalTitle = modal?.querySelector('h3');
+            const confirmBtn = document.getElementById('confirm-rename-btn');
 
             if (modal && input && idInput) {
                 input.value = collection.name;
                 idInput.value = collectionId;
+                if (modalTitle) modalTitle.textContent = isUncategorized ? 'Create Collection' : 'Rename Collection';
+                if (confirmBtn) confirmBtn.textContent = isUncategorized ? 'Create' : 'Rename';
+                input.placeholder = isUncategorized ? 'Collection name' : '';
                 modal.style.display = 'flex';
                 input.focus();
                 input.select();
@@ -828,8 +837,30 @@
                 const newName = input.value.trim();
                 const collectionId = idInput.value;
                 if (newName && collectionId) {
-                    window.TechEconPlaylists.rename(collectionId, newName);
-                    showToast('Collection renamed');
+                    if (collectionId === '__uncategorized__') {
+                        // Create new collection from uncategorized items
+                        const newCollectionId = window.TechEconPlaylists.create(newName);
+                        if (newCollectionId) {
+                            // Get all uncategorized favorites
+                            const favorites = window.TechEconFavorites.get();
+                            const playlists = window.TechEconPlaylists.getAll();
+                            const favoritesInPlaylists = new Set();
+                            playlists.forEach(p => {
+                                p.items.forEach(item => favoritesInPlaylists.add(`${item.type}:${item.id}`));
+                            });
+                            const uncategorized = favorites.filter(fav =>
+                                !favoritesInPlaylists.has(`${fav.type}:${fav.id}`)
+                            );
+                            // Add all uncategorized items to new collection
+                            uncategorized.forEach(fav => {
+                                window.TechEconPlaylists.addItem(newCollectionId, fav.type, fav.id, fav.data);
+                            });
+                            showToast(`Created "${newName}" with ${uncategorized.length} items`);
+                        }
+                    } else {
+                        window.TechEconPlaylists.rename(collectionId, newName);
+                        showToast('Collection renamed');
+                    }
                     closeModal();
                     if (window.reloadFavoritesPage) window.reloadFavoritesPage();
                 }
