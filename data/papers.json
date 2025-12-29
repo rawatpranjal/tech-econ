@@ -12309,6 +12309,109 @@
       "image_url": "/images/topics/geospatial.webp",
       "subtopics": [
         {
+          "id": "real-estate-proptech",
+          "name": "Real Estate & Proptech",
+          "application": "Build automated valuation models and analyze housing market dynamics",
+          "papers": [
+            {
+              "title": "Hedonic Prices and Implicit Markets: Product Differentiation in Pure Competition",
+              "authors": "Sherwin Rosen",
+              "year": 1974,
+              "description": "Theoretical foundation for all hedonic pricing models; every AVM derives from this framework.",
+              "url": "https://www.jstor.org/stable/1830899",
+              "tags": [
+                "Spatial & Geo",
+                "Real Estate & Proptech"
+              ],
+              "citations": 10500
+            },
+            {
+              "title": "The Efficiency of the Market for Single-Family Homes",
+              "authors": "Karl E. Case, Robert J. Shiller",
+              "year": 1989,
+              "description": "Original Case-Shiller methodology establishing weighted repeat-sales indices used in S&P/Case-Shiller and FHFA.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/aer.79.1.125",
+              "tags": [
+                "Spatial & Geo",
+                "Real Estate & Proptech"
+              ],
+              "citations": 2890
+            },
+            {
+              "title": "Housing Dynamics",
+              "authors": "Edward L. Glaeser, Joseph Gyourko",
+              "year": 2006,
+              "description": "Models serial correlation in house prices (momentum at 1-year, mean reversion at 5+ years); explains forecasting difficulty.",
+              "url": "https://www.nber.org/papers/w12787",
+              "tags": [
+                "Spatial & Geo",
+                "Real Estate & Proptech"
+              ],
+              "citations": 567
+            },
+            {
+              "title": "How Much is the View from the Window Worth? Machine Learning-Driven Hedonic Pricing Model",
+              "authors": "Tomasz Potrawa, Anastasija Tetereva",
+              "year": 2022,
+              "description": "25% accuracy improvement by integrating image and text data with interpretable SHAP-based ML for AVMs.",
+              "url": "https://www.sciencedirect.com/science/article/pii/S0148296322000741",
+              "tags": [
+                "Spatial & Geo",
+                "Real Estate & Proptech"
+              ],
+              "citations": 89
+            },
+            {
+              "title": "Why is Intermediating Houses so Difficult? Evidence from iBuyers",
+              "authors": "Greg Buchak, Gregor Matvos, Tomasz Piskorski, Amit Seru",
+              "year": 2020,
+              "description": "Definitive analysis of Opendoor and Zillow Offers; quantifies adverse selection vs. liquidity tradeoffs in iBuying.",
+              "url": "https://www.nber.org/papers/w28252",
+              "tags": [
+                "Spatial & Geo",
+                "Real Estate & Proptech"
+              ],
+              "citations": 234
+            },
+            {
+              "title": "The Effect of Home-Sharing on House Prices and Rents: Evidence from Airbnb",
+              "authors": "Kyle Barron, Edward Kung, Davide Proserpio",
+              "year": 2021,
+              "description": "IV strategy on nationwide Airbnb data; 1% listing increase \u2192 0.018% rent increase via supply reallocation.",
+              "url": "https://pubsonline.informs.org/doi/abs/10.1287/mksc.2020.1227",
+              "tags": [
+                "Spatial & Geo",
+                "Real Estate & Proptech"
+              ],
+              "citations": 456
+            },
+            {
+              "title": "Do Short-Term Rental Platforms Affect Housing Markets? Evidence from Airbnb in Barcelona",
+              "authors": "Miquel-\u00c0ngel Garcia-L\u00f3pez, Jordi Jofre-Monseny, Rodrigo Mart\u00ednez-Mazza, Mariona Seg\u00fa",
+              "year": 2020,
+              "description": "Rigorous event-study finding Airbnb increased Barcelona rents 1.9% and prices 4.6%.",
+              "url": "https://www.sciencedirect.com/science/article/pii/S0094119019300774",
+              "tags": [
+                "Spatial & Geo",
+                "Real Estate & Proptech"
+              ],
+              "citations": 345
+            },
+            {
+              "title": "Housing Market Expectations",
+              "authors": "Theresa Kuchler, Johannes Stroebel",
+              "year": 2022,
+              "description": "Comprehensive survey on household price expectation formation; documents extrapolation and social network effects.",
+              "url": "https://www.nber.org/papers/w29909",
+              "tags": [
+                "Spatial & Geo",
+                "Real Estate & Proptech"
+              ],
+              "citations": 178
+            }
+          ]
+        },
+        {
           "id": "geospatial-demand",
           "name": "Geospatial Demand Modeling",
           "application": "Model demand across geographic areas",
@@ -12362,6 +12465,42 @@
                 "Spatial & Geo",
                 "Geospatial Demand Modeling"
               ]
+            },
+            {
+              "title": "ETA Prediction with Graph Neural Networks in Google Maps",
+              "authors": "Austin Derrow-Pinion et al. (Google/DeepMind)",
+              "year": 2021,
+              "description": "Production GNN that reduced negative ETA outcomes by 40%+ in cities like Sydney; deployed at scale.",
+              "url": "https://dl.acm.org/doi/10.1145/3459637.3481916",
+              "tags": [
+                "Spatial & Geo",
+                "Geospatial Demand Modeling"
+              ],
+              "citations": 456
+            },
+            {
+              "title": "Diffusion Convolutional Recurrent Neural Network: Data-Driven Traffic Forecasting",
+              "authors": "Yaguang Li, Rose Yu, Cyrus Shahabi, Yan Liu",
+              "year": 2018,
+              "description": "Foundational spatiotemporal GNN with 5,000+ citations; models traffic as diffusion on road graphs.",
+              "url": "https://arxiv.org/abs/1707.01926",
+              "tags": [
+                "Spatial & Geo",
+                "Geospatial Demand Modeling"
+              ],
+              "citations": 5200
+            },
+            {
+              "title": "A Review of Self-Exciting Spatio-Temporal Point Processes and Their Applications",
+              "authors": "Alex Reinhart",
+              "year": 2018,
+              "description": "Definitive Hawkes process review for modeling clustered demand in surge pricing and fraud detection.",
+              "url": "https://projecteuclid.org/journals/statistical-science/volume-33/issue-3/A-Review-of-Self-Exciting-Spatio-Temporal-Point-Processes-and/10.1214/17-STS629.full",
+              "tags": [
+                "Spatial & Geo",
+                "Geospatial Demand Modeling"
+              ],
+              "citations": 789
             }
           ]
         },
@@ -12407,6 +12546,42 @@
                 "Spatial & Geo",
                 "Location Choice & Site Selection"
               ]
+            },
+            {
+              "title": "Competitive Location Models: A Review",
+              "authors": "Zvi Drezner, H.A. Eiselt",
+              "year": 2024,
+              "description": "Authoritative review covering Hotelling spatial competition, gravity-based capture models, and location games.",
+              "url": "https://www.sciencedirect.com/science/article/pii/S037722172301003X",
+              "tags": [
+                "Spatial & Geo",
+                "Location Choice & Site Selection"
+              ],
+              "citations": 45
+            },
+            {
+              "title": "Geo-Spotting: Mining Online Location-Based Services for Optimal Retail Store Placement",
+              "authors": "Dmytro Karamshuk, Anastasios Noulas, Salvatore Scellato, Vincenzo Nicosia, Cecilia Mascolo",
+              "year": 2013,
+              "description": "Pioneering ML site selection using Foursquare data with gradient boosted trees; foundational for location analytics.",
+              "url": "https://dl.acm.org/doi/10.1145/2487575.2487616",
+              "tags": [
+                "Spatial & Geo",
+                "Location Choice & Site Selection"
+              ],
+              "citations": 276
+            },
+            {
+              "title": "Facility Location Under Uncertainty: A Review",
+              "authors": "Lawrence V. Snyder",
+              "year": 2006,
+              "description": "Canonical review of stochastic and robust facility location for warehouse network design.",
+              "url": "https://www.tandfonline.com/doi/abs/10.1080/07408170500216480",
+              "tags": [
+                "Spatial & Geo",
+                "Location Choice & Site Selection"
+              ],
+              "citations": 1234
             }
           ]
         },
