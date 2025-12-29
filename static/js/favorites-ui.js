@@ -6,7 +6,7 @@
 
     // Add favorite buttons to all cards
     function initFavoriteButtons() {
-        document.querySelectorAll('.card, .resource-card, .package-card, .dataset-card, .talk-card').forEach(card => {
+        document.querySelectorAll('.card, .resource-card, .package-card, .dataset-card, .talk-card, .paper-card, .roadmap-card').forEach(card => {
             // Skip if already has button
             if (card.querySelector('[data-favorite-btn]')) return;
 
@@ -18,6 +18,10 @@
                 itemType = 'dataset';
             } else if (card.classList.contains('talk-card') || card.closest('.talks-section')) {
                 itemType = 'talk';
+            } else if (card.classList.contains('paper-card')) {
+                itemType = 'paper';
+            } else if (card.classList.contains('roadmap-card')) {
+                itemType = 'roadmap';
             }
 
             // Get item ID from data attribute or link
@@ -109,6 +113,17 @@
 
         // Find item in data by name
         function findItem(type, itemId) {
+            // Papers have a nested structure: topics > subtopics > papers
+            if (type === 'paper') {
+                const topics = allData.paper?.topics || [];
+                for (const topic of topics) {
+                    for (const subtopic of (topic.subtopics || [])) {
+                        const paper = (subtopic.papers || []).find(p => p.title === itemId);
+                        if (paper) return paper;
+                    }
+                }
+                return null;
+            }
             const items = allData[type] || [];
             return items.find(item => item.name === itemId || item.title === itemId);
         }
@@ -204,7 +219,9 @@
                     talk: 'Talks',
                     book: 'Books',
                     career: 'Career Resources',
-                    community: 'Community'
+                    community: 'Community',
+                    paper: 'Papers',
+                    roadmap: 'Learning Paths'
                 };
 
                 Object.keys(grouped).forEach(type => {
