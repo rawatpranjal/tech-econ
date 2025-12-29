@@ -7,7 +7,25 @@
 
 <!-- Search Index Data for Fuse.js -->
 <script id="search-data" type="application/json">
-[{{ range $i, $item := .Site.Data.resources }}{{ if $i }},{{ end }}{"name":"{{ .name }}","description":"{{ .description | htmlEscape }}","category":"{{ .category }}","type":"{{ .type }}"}{{ end }}]
+[{{ range $i, $item := .Site.Data.resources }}{{ if $i }},{{ end }}{"name":"{{ .name }}","description":"{{ .description | htmlEscape }}","domain":"{{ .domain }}","category":"{{ .category }}","type":"{{ .type }}"}{{ end }}]
+</script>
+
+<!-- Domain-Category Mapping for Cascade Filter -->
+<script id="domain-categories" type="application/json">
+{{ $domainCats := dict }}
+{{ range .Site.Data.resources }}
+    {{ $domain := .domain }}
+    {{ $cat := .category }}
+    {{ if not (index $domainCats $domain) }}
+        {{ $domainCats = merge $domainCats (dict $domain (slice $cat)) }}
+    {{ else }}
+        {{ $existing := index $domainCats $domain }}
+        {{ if not (in $existing $cat) }}
+            {{ $domainCats = merge $domainCats (dict $domain ($existing | append $cat)) }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+{{ $domainCats | jsonify }}
 </script>
 
 <div class="container">
@@ -33,6 +51,20 @@
             </div>
         </div>
 
+        <!-- Domain Dropdown -->
+        {{ $domains := slice }}
+        {{ range .Site.Data.resources }}
+            {{ if not (in $domains .domain) }}
+                {{ $domains = $domains | append .domain }}
+            {{ end }}
+        {{ end }}
+        <select id="domain-select" class="domain-select">
+            <option value="all">All Domains</option>
+            {{ range $dom := sort $domains }}
+            <option value="{{ $dom }}">{{ $dom }}</option>
+            {{ end }}
+        </select>
+
         <!-- Category Dropdown -->
         {{ $categories := slice }}
         {{ range .Site.Data.resources }}
@@ -57,37 +89,66 @@
         </div>
     </div>
 
-    <!-- Resources Grid -->
+    <!-- Resources Grid - Grouped by Domain then Category -->
     <div id="resources-view" class="resources-grid">
-        {{ range $cat := $categories }}
-        <div class="category-section" data-section-category="{{ $cat }}">
-            <h2 class="category-title">{{ $cat }}</h2>
-            <div class="cards-row">
+        {{ range $domain := $domains }}
+        <div class="domain-section" data-domain="{{ $domain }}">
+            <button class="domain-header" aria-expanded="true" type="button">
+                <h2 class="domain-title">{{ $domain }}</h2>
+                <span class="domain-count">
+                    {{ $count := 0 }}
+                    {{ range $.Site.Data.resources }}
+                        {{ if eq .domain $domain }}{{ $count = add $count 1 }}{{ end }}
+                    {{ end }}
+                    {{ $count }} resources
+                </span>
+                <svg class="collapse-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+            </button>
+            <div class="domain-content">
+                {{ $domainCategories := slice }}
                 {{ range $.Site.Data.resources }}
-                {{ if eq .category $cat }}
-                <div class="resource-card" data-aos="fade-up"
-                     data-name="{{ .name | lower }}"
-                     data-description="{{ .description | lower }}"
-                     data-category="{{ .category }}">
-                    <div class="card-header">
-                        <img class="resource-favicon"
-                             src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32"
-                             alt=""
-                             loading="lazy"
-                             onerror="this.style.display='none'">
-                        <h3 class="resource-name">
-                            <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
-                        </h3>
-                        <span class="resource-type">{{ .type }}</span>
-                        {{ if .level }}<span class="difficulty-dot difficulty-{{ .level | lower }}" title="{{ .level }}"></span>{{ end }}
-                    </div>
-                    <p class="resource-desc">{{ .description }}</p>
-                    <div class="card-footer">
-                        <span class="category-badge">{{ .category }}</span>
-                        <a href="{{ .url }}" target="_blank" class="link-btn">Visit</a>
+                    {{ if eq .domain $domain }}
+                        {{ if not (in $domainCategories .category) }}
+                            {{ $domainCategories = $domainCategories | append .category }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+
+                {{ range $cat := sort $domainCategories }}
+                <div class="category-section" data-section-category="{{ $cat }}" data-domain="{{ $domain }}">
+                    <h3 class="category-title">{{ $cat }}</h3>
+                    <div class="cards-row">
+                        {{ range $.Site.Data.resources }}
+                        {{ if and (eq .domain $domain) (eq .category $cat) }}
+                        <div class="resource-card" data-aos="fade-up"
+                             data-name="{{ .name | lower }}"
+                             data-description="{{ .description | lower }}"
+                             data-category="{{ .category }}"
+                             data-domain="{{ .domain }}">
+                            <div class="card-header">
+                                <img class="resource-favicon"
+                                     src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32"
+                                     alt=""
+                                     loading="lazy"
+                                     onerror="this.style.display='none'">
+                                <h3 class="resource-name">
+                                    <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
+                                </h3>
+                                <span class="resource-type">{{ .type }}</span>
+                                {{ if .level }}<span class="difficulty-dot difficulty-{{ .level | lower }}" title="{{ .level }}"></span>{{ end }}
+                            </div>
+                            <p class="resource-desc">{{ .description }}</p>
+                            <div class="card-footer">
+                                <span class="category-badge">{{ .category }}</span>
+                                <a href="{{ .url }}" target="_blank" class="link-btn">Visit</a>
+                            </div>
+                        </div>
+                        {{ end }}
+                        {{ end }}
                     </div>
                 </div>
-                {{ end }}
                 {{ end }}
             </div>
         </div>
@@ -102,15 +163,100 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize collapsible domain sections
+    document.querySelectorAll('.domain-header').forEach(function(header) {
+        header.addEventListener('click', function() {
+            var content = this.nextElementSibling;
+            var isExpanded = this.getAttribute('aria-expanded') === 'true';
+
+            this.setAttribute('aria-expanded', !isExpanded);
+            content.style.display = isExpanded ? 'none' : 'block';
+            this.querySelector('.collapse-icon').classList.toggle('rotated', isExpanded);
+        });
+    });
+
+    // Domain-Category cascade filter
+    var domainSelect = document.getElementById('domain-select');
+    var categorySelect = document.getElementById('category-select');
+    var domainCategoriesData = JSON.parse(document.getElementById('domain-categories').textContent);
+    var allCategoryOptions = Array.from(categorySelect.options).slice(1).map(function(opt) {
+        return { value: opt.value, text: opt.text };
+    });
+
+    domainSelect.addEventListener('change', function() {
+        var selectedDomain = this.value;
+
+        // Reset category dropdown
+        categorySelect.innerHTML = '<option value="all">All Categories</option>';
+
+        if (selectedDomain === 'all') {
+            // Restore all categories
+            allCategoryOptions.forEach(function(opt) {
+                var option = document.createElement('option');
+                option.value = opt.value;
+                option.text = opt.text;
+                categorySelect.appendChild(option);
+            });
+        } else {
+            // Filter categories for selected domain
+            var domainCategories = domainCategoriesData[selectedDomain] || [];
+            allCategoryOptions.forEach(function(opt) {
+                if (domainCategories.indexOf(opt.value) !== -1) {
+                    var option = document.createElement('option');
+                    option.value = opt.value;
+                    option.text = opt.text;
+                    categorySelect.appendChild(option);
+                }
+            });
+        }
+
+        // Filter domain sections
+        filterResources();
+    });
+
+    categorySelect.addEventListener('change', filterResources);
+
+    function filterResources() {
+        var selectedDomain = domainSelect.value;
+        var selectedCategory = categorySelect.value;
+        var visibleCount = 0;
+
+        // Show/hide domain sections
+        document.querySelectorAll('.domain-section').forEach(function(section) {
+            var domainName = section.dataset.domain;
+            var shouldShowDomain = selectedDomain === 'all' || domainName === selectedDomain;
+            section.style.display = shouldShowDomain ? '' : 'none';
+
+            if (shouldShowDomain) {
+                // Show/hide category sections within domain
+                section.querySelectorAll('.category-section').forEach(function(catSection) {
+                    var catName = catSection.dataset.sectionCategory;
+                    var shouldShowCat = selectedCategory === 'all' || catName === selectedCategory;
+                    catSection.style.display = shouldShowCat ? '' : 'none';
+
+                    if (shouldShowCat) {
+                        visibleCount += catSection.querySelectorAll('.resource-card').length;
+                    }
+                });
+            }
+        });
+
+        // Update result count
+        document.getElementById('result-count').textContent = visibleCount + ' resources';
+    }
+
+    // Initialize PageSearch for fuzzy search
     new PageSearch({
         searchInputId: 'resource-search',
         cardSelector: '.resource-card',
         sectionSelector: '.category-section',
+        domainSectionSelector: '.domain-section',
         itemLabel: 'resources',
         fuseKeys: [
             { name: 'name', weight: 2 },
             { name: 'description', weight: 1 },
             { name: 'type', weight: 0.8 },
+            { name: 'domain', weight: 0.5 },
             { name: 'category', weight: 0.5 }
         ]
     });

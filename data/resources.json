@@ -2,2641 +2,2861 @@
   {
     "name": "Causal Inference for the Brave and True",
     "description": "The best free intro to causal inference. DiD, IV, RDD, synthetic control \u2014 all with Python code you can run. No fluff.",
-    "category": "Causal Inference",
+    "category": "Causal Inference Fundamentals",
     "url": "https://matheusfacure.github.io/python-causality-handbook/",
     "type": "Online Book",
     "level": "Easy",
     "tags": [
       "Causal Inference",
       "Online Book"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "The Effect",
     "description": "DAGs that don't suck. Nick HK explains causality like he's at a whiteboard, not a lectern. Free, modern, and actually enjoyable to read.",
-    "category": "Causal Inference",
+    "category": "Causal Inference Fundamentals",
     "url": "https://theeffectbook.net/",
     "type": "Online Book",
     "level": "Medium",
     "tags": [
       "Causal Inference",
       "Online Book"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Causal Inference: The Mixtape",
     "description": "Scott Cunningham's guide \u2014 reads like a conversation, not a textbook. Code in Stata, R, and Python.",
-    "category": "Causal Inference",
+    "category": "Causal Inference Fundamentals",
     "url": "https://mixtape.scunning.com/",
     "type": "Online Book",
     "level": "Medium",
     "tags": [
       "Causal Inference",
       "Online Book"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "CausalML (Uber) Documentation",
     "description": "Synthetic data tutorials that feel like a game. Generate fake users, apply treatment, challenge yourself to recover the effect using Random Forest.",
-    "category": "Causal Inference",
+    "category": "Causal Inference Fundamentals",
     "url": "https://causalml.readthedocs.io/en/latest/examples/causal_trees_with_synthetic_data.html",
     "type": "Tutorial",
     "level": "Medium",
     "tags": [
       "Causal Inference",
       "Tutorial"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "EconML Documentation",
     "description": "Microsoft's library for ML-based causal inference. Tutorials on heterogeneous treatment effects, double ML, and more.",
-    "category": "Causal Inference",
+    "category": "Causal ML Libraries",
     "url": "https://econml.azurewebsites.net/",
     "type": "Docs + Tutorials",
     "level": "Hard",
     "tags": [
       "Causal Inference",
       "Docs + Tutorials"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "DoWhy Library",
     "description": "Microsoft's causal inference library. Great for understanding causal graphs and robustness checks.",
-    "category": "Causal Inference",
+    "category": "Causal ML Libraries",
     "url": "https://www.pywhy.org/dowhy/",
     "type": "Docs + Tutorials",
     "level": "Medium",
     "tags": [
       "Causal Inference",
       "Docs + Tutorials"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Causal ML Book (Chernozhukov et al.)",
     "description": "Applied Causal Inference Powered by ML and AI. Double/debiased ML, heterogeneous effects, and modern methods from the pioneers.",
-    "category": "Causal Inference",
+    "category": "Causal Inference Fundamentals",
     "url": "https://causalml-book.org/",
     "type": "Online Book",
     "level": "Medium",
     "tags": [
       "Causal Inference",
       "Online Book"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "DoWhy User Guide",
     "description": "Microsoft's causal inference library. Graph-based causal inference, discovery algorithms, and Python implementations. Free official docs.",
-    "category": "Causal Inference",
+    "category": "Causal ML Libraries",
     "url": "https://www.pywhy.org/dowhy/main/user_guide/index.html",
     "type": "Docs + Tutorials",
     "level": "Medium",
     "tags": [
       "Causal Inference",
       "Docs + Tutorials"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "PyMC Labs Blog",
     "description": "Bayesian causal inference done right. MCMC, probabilistic programming, and causal models from the PyMC team.",
-    "category": "Causal Inference",
+    "category": "Bayesian Statistics",
     "url": "https://www.pymc-labs.com/blog-posts/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Causal Inference",
       "Blog"
-    ]
+    ],
+    "domain": "Statistics & Probability"
   },
   {
     "name": "CausalPy",
     "description": "Synthetic controls that feel like scikit-learn. Built on PyMC, perfect for quasi-experiments when you can't randomize.",
-    "category": "Causal Inference",
+    "category": "Causal ML Libraries",
     "url": "https://causalpy.readthedocs.io/",
     "type": "Docs + Tutorials",
     "level": "Medium",
     "tags": [
       "Causal Inference",
       "Docs + Tutorials"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Andrew Gelman's Blog",
     "description": "Stats, causal inference, experiment pitfalls. Frank, often funny, always insightful. The most-read stats blog for good reason.",
-    "category": "Causal Inference",
+    "category": "Causal Inference Fundamentals",
     "url": "https://andrewgelman.com/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Causal Inference",
       "Blog"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Applied Econometrics Notes (Lal)",
     "description": "Applied econometrics notes and code by Apoorva Lal covering modern causal inference methods.",
-    "category": "Causal Inference",
+    "category": "Causal Inference Fundamentals",
     "url": "https://apoorvalal.github.io/notebook/",
     "type": "Course Notes",
     "level": "Medium",
     "tags": [
       "Causal Inference",
       "Course Notes"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "A Practitioner's Guide to DiD",
     "description": "Jonathan Roth et al.'s comprehensive guide to modern difference-in-differences. Staggered timing, pre-trends, and new estimators.",
-    "category": "Causal Inference",
+    "category": "Difference-in-Differences",
     "url": "https://arxiv.org/abs/2201.01194",
     "type": "Paper",
     "level": "Hard",
     "tags": [
       "Causal Inference",
       "Paper"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Causal RL Bridges",
     "description": "Educational resource on the synergies between causal inference and reinforcement learning. Includes code examples for optimal control using causal agents.",
-    "category": "Causal Inference",
+    "category": "RL Fundamentals",
     "url": "https://www.causal-rl-bridges.com/",
     "type": "Tutorial",
     "level": "Medium",
     "tags": [
       "Causal Inference",
       "Tutorial"
-    ]
+    ],
+    "domain": "RL & Bandits"
   },
   {
     "name": "Eppo's Experimentation Guides",
     "description": "Practical guides on experiment design, stats engines, CUPED, and common pitfalls. Written by practitioners.",
-    "category": "Experimentation",
+    "category": "CUPED & Variance Reduction",
     "url": "https://www.geteppo.com/blog",
     "type": "Guides",
     "level": "Easy",
     "tags": [
       "Experimentation",
       "Guides"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "A/B Testing on Social Networks",
     "description": "Simulates a social graph in Python to prove why network effects ruin experiments, then shows cluster-based fixes.",
-    "category": "Experimentation",
+    "category": "A/B Testing Fundamentals",
     "url": "https://bytepawn.com/ab-testing-on-social-networks.html",
     "type": "Tutorial",
     "level": "Medium",
     "tags": [
       "Experimentation",
       "Tutorial"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "DoorDash: Switchback Tests",
     "description": "Why treating one user affects another in marketplaces. Clear diagrams explaining interference as a living organism, not a static dataset.",
-    "category": "Experimentation",
+    "category": "Switchback & Interference",
     "url": "https://careersatdoordash.com/blog/switchback-tests-and-randomized-experimentation-under-network-effects-at-doordash/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Experimentation",
       "Blog"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Understanding Switchback Experiments (2024)",
     "description": "A modern take on SUTVA violations. Why you randomize time, not users, in marketplaces. The 30-minute window trick explained.",
-    "category": "Experimentation",
+    "category": "Switchback & Interference",
     "url": "https://towardsdatascience.com/what-is-switchback-testing-for-decision-models-e26d2007325a/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Experimentation",
       "Blog"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Uber: Making Experiment Evaluation 100x Faster",
     "description": "When your p-value calculation has billions of rows. The engineering reality of running causal inference at Uber scale.",
-    "category": "Experimentation",
+    "category": "A/B Testing Fundamentals",
     "url": "https://www.uber.com/blog/making-ubers-experiment-evaluation-engine-100x-faster/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Experimentation",
       "Blog"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Nextmv: Switchback Testing",
     "description": "Documentation that reads like a tutorial. Exact logic to split time into windows and washout periods for network A/B tests in Python.",
-    "category": "Experimentation",
+    "category": "A/B Testing Fundamentals",
     "url": "https://www.nextmv.io/docs/using-nextmv/experiments/switchback",
     "type": "Guide",
     "level": "Medium",
     "tags": [
       "Experimentation",
       "Guide"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Matteo Courthoud: Understanding CUPED",
     "description": "The most accessible yet rigorous CUPED explanation. Derives the math showing variance reduction is proportional to (1-\u03c1\u00b2), compares with autoregression and difference-in-differences. Perfect for economists.",
-    "category": "Experimentation",
+    "category": "Difference-in-Differences",
     "url": "https://matteocourthoud.github.io/post/cuped/",
     "type": "Tutorial",
     "level": "Easy",
     "tags": [
       "Experimentation",
       "Tutorial"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Bytepawn: CUPED in Python",
     "description": "Short, punchy script simulating 1,000 experiments to prove variance actually goes down. Very satisfying to run.",
-    "category": "Experimentation",
+    "category": "CUPED & Variance Reduction",
     "url": "https://bytepawn.com/reducing-variance-in-ab-testing-with-cuped.html",
     "type": "Tutorial",
     "level": "Medium",
     "tags": [
       "Experimentation",
       "Tutorial"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Statsig Resources",
     "description": "Deep dives on sequential testing, variance reduction, and experiment analysis. Free stats engine docs.",
-    "category": "Experimentation",
+    "category": "CUPED & Variance Reduction",
     "url": "https://docs.statsig.com/",
     "type": "Docs + Guides",
     "level": "Medium",
     "tags": [
       "Experimentation",
       "Docs + Guides"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Evan Miller's A/B Testing Tools",
     "description": "Best-in-class visual, interactive calculators for sample size, chi-squared tests, sequential sampling. Cited in Udacity's Google A/B testing course. Helps practitioners understand 'under the hood' statistics while planning experiments.",
-    "category": "Experimentation",
+    "category": "A/B Testing Fundamentals",
     "url": "https://www.evanmiller.org/ab-testing/",
     "type": "Tools + Guides",
     "level": "Medium",
     "tags": [
       "Experimentation",
       "Tools + Guides"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Evan Miller: How Not To Run an A/B Test",
     "description": "The article that taught the industry why peeking at p-values is a sin. Short, lethal, career-saving.",
-    "category": "Experimentation",
+    "category": "A/B Testing Fundamentals",
     "url": "https://www.evanmiller.org/how-not-to-run-an-ab-test.html",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Experimentation",
       "Blog"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "QuantEcon Lectures",
     "description": "High-quality computational economics in Python and Julia. Dynamic programming, time series, asset pricing \u2014 all with code.",
-    "category": "Coding",
+    "category": "Time Series Fundamentals",
     "url": "https://quantecon.org/lectures/",
     "type": "Lectures",
     "level": "Medium",
     "tags": [
       "Coding",
       "Lectures"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "Coding for Economists",
     "description": "Arthur Turrell's practical guide. Python basics through advanced workflows \u2014 built specifically for econ researchers.",
-    "category": "Coding",
+    "category": "Python for Economists",
     "url": "https://aeturrell.github.io/coding-for-economists/",
     "type": "Online Book",
     "level": "Easy",
     "tags": [
       "Coding",
       "Online Book"
-    ]
+    ],
+    "domain": "Programming & Tools"
   },
   {
     "name": "The Missing Semester (MIT)",
     "description": "Command line, Git, debugging, shell scripting. The CS skills they don't teach in econ PhD programs but you absolutely need.",
-    "category": "Coding",
+    "category": "Software Engineering Basics",
     "url": "https://missing.csail.mit.edu/",
     "type": "Course",
     "level": "Easy",
     "tags": [
       "Coding",
       "Course"
-    ]
+    ],
+    "domain": "Programming & Tools"
   },
   {
     "name": "Beyond Jupyter",
     "description": "Software design principles for ML applications. Go from messy notebooks to maintainable, modular code with OOP essentials and refactoring guides.",
-    "category": "Coding",
+    "category": "Software Engineering Basics",
     "url": "https://github.com/aai-institute/beyond-jupyter",
     "type": "Tutorial",
     "level": "Medium",
     "tags": [
       "Coding",
       "Tutorial"
-    ]
+    ],
+    "domain": "Programming & Tools"
   },
   {
     "name": "fast.ai Practical Deep Learning",
     "description": "Train a model in 10 minutes. Understand why it works later. Jeremy Howard's famous 'code first, theory second' approach to deep learning.",
-    "category": "ML & Data Science",
+    "category": "Deep Learning",
     "url": "https://course.fast.ai/",
     "type": "Course",
     "level": "Easy",
     "tags": [
       "ML & Data Science",
       "Course"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Introduction to Statistical Learning",
     "description": "The 'I actually finished this one' ML book. Free with runnable Python code. Math when you need it, intuition first.",
-    "category": "ML & Data Science",
+    "category": "ML Fundamentals",
     "url": "https://www.statlearning.com/",
     "type": "Online Book",
     "level": "Easy",
     "tags": [
       "ML & Data Science",
       "Online Book"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "The Elements of Statistical Learning",
     "description": "The more rigorous sibling of ISLR. Hastie, Tibshirani, and Friedman's classic on statistical learning theory. Free PDF from Stanford.",
-    "category": "ML & Data Science",
+    "category": "ML Fundamentals",
     "url": "https://hastie.su.domains/ElemStatLearn/",
     "type": "Online Book",
     "level": "Hard",
     "tags": [
       "ML & Data Science",
       "Online Book"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Forecasting: Principles and Practice",
     "description": "Rob Hyndman's free book on time series forecasting. ARIMA, ETS, hierarchical forecasting \u2014 with R code.",
-    "category": "ML & Data Science",
+    "category": "Time Series Fundamentals",
     "url": "https://otexts.com/fpp3/",
     "type": "Online Book",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Online Book"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "Reinforcement Learning: An Introduction",
     "description": "Sutton & Barto's classic. The definitive RL textbook, free from the authors.",
-    "category": "ML & Data Science",
+    "category": "RL Fundamentals",
     "url": "http://incompleteideas.net/book/the-book-2nd.html",
     "type": "Online Book",
     "level": "Easy",
     "tags": [
       "ML & Data Science",
       "Online Book"
-    ]
+    ],
+    "domain": "RL & Bandits"
   },
   {
     "name": "OpenAI Spinning Up",
     "description": "OpenAI's intro to deep RL. Clear explanations of policy gradients, Q-learning, and working code.",
-    "category": "ML & Data Science",
+    "category": "RL Fundamentals",
     "url": "https://spinningup.openai.com/",
     "type": "Tutorial",
     "level": "Easy",
     "tags": [
       "ML & Data Science",
       "Tutorial"
-    ]
+    ],
+    "domain": "RL & Bandits"
   },
   {
     "name": "David Silver RL Course",
     "description": "DeepMind's David Silver teaches RL from scratch. The lectures that trained a generation of RL researchers.",
-    "category": "ML & Data Science",
+    "category": "RL Fundamentals",
     "url": "https://www.davidsilver.uk/teaching/",
     "type": "Lectures",
     "level": "Easy",
     "tags": [
       "ML & Data Science",
       "Lectures"
-    ]
+    ],
+    "domain": "RL & Bandits"
   },
   {
     "name": "Machine Learning Specialization",
     "description": "Andrew Ng's foundational ML course on Coursera. Covers supervised/unsupervised learning, neural networks, and best practices.",
-    "category": "ML & Data Science",
+    "category": "ML Fundamentals",
     "url": "https://www.coursera.org/specializations/machine-learning-introduction",
     "type": "Course",
     "level": "Easy",
     "tags": [
       "ML & Data Science",
       "Course"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Deep Learning Specialization",
     "description": "Andrew Ng's deep learning sequence. CNNs, RNNs, transformers, and practical AI project structuring.",
-    "category": "ML & Data Science",
+    "category": "ML Fundamentals",
     "url": "https://www.coursera.org/specializations/deep-learning",
     "type": "Course",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Course"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "The Theory and Practice of Revenue Management",
     "description": "Talluri & van Ryzin's comprehensive textbook. Dynamic pricing, capacity allocation, overbooking \u2014 the bible of RM.",
-    "category": "Pricing & Demand",
+    "category": "Revenue Management Theory",
     "url": "http://ndl.ethernet.edu.et/bitstream/123456789/21707/1/306.pdf",
     "type": "Online Book",
     "level": "Hard",
     "tags": [
       "Pricing & Demand",
       "Online Book"
-    ]
+    ],
+    "domain": "Pricing & Market Design"
   },
   {
     "name": "Dynamic Pricing with Contextual Bandits",
     "description": "Exploration-exploitation trade-off using a restaurant menu example. Simulate greedy vs Thompson Sampling to see which makes more money.",
-    "category": "Pricing & Demand",
+    "category": "Bandit Algorithms",
     "url": "https://towardsdatascience.com/dynamic-pricing-with-contextual-bandits-learning-by-doing-b88e49f55894/",
     "type": "Tutorial",
     "level": "Medium",
     "tags": [
       "Pricing & Demand",
       "Tutorial"
-    ]
+    ],
+    "domain": "RL & Bandits"
   },
   {
     "name": "Stanford: Thompson Sampling Tutorial",
     "description": "Don't let 'Stanford' scare you. The accompanying Python code is the industry standard for bandit algorithms from scratch.",
-    "category": "Pricing & Demand",
+    "category": "Bandit Algorithms",
     "url": "https://web.stanford.edu/~bvr/pubs/TS_Tutorial.pdf",
     "type": "Paper + Code",
     "level": "Hard",
     "tags": [
       "Pricing & Demand",
       "Paper + Code"
-    ]
+    ],
+    "domain": "RL & Bandits"
   },
   {
     "name": "Stitch Fix: Algorithms Tour",
     "description": "The single best piece of data journalism in tech. Interactive, animated tour of how they combine styles, logistics, and feedback loops.",
-    "category": "Pricing & Demand",
+    "category": "Supply Chain Optimization",
     "url": "https://algorithms-tour.stitchfix.com/",
     "type": "Interactive",
     "level": "Easy",
     "tags": [
       "Pricing & Demand",
       "Interactive"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "Empirical IO: Coding BLP",
     "description": "Matteo Courthoud's code-first walkthrough of the BLP demand model. The 'Brave and True' for structural economics.",
-    "category": "Pricing & Demand",
+    "category": "Causal Inference Fundamentals",
     "url": "https://matteocourthoud.github.io/course/empirical-io/12_blp_1995/",
     "type": "Tutorial",
     "level": "Medium",
     "tags": [
       "Pricing & Demand",
       "Tutorial"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "PyBLP: Demand Estimation",
     "description": "QuantEcon tutorial on estimating demand curves with Python. Turns PhD-level IO into a solvable Problem().solve().",
-    "category": "Pricing & Demand",
+    "category": "Demand Estimation",
     "url": "https://quantecon.org/2019/06/17/demand-curve-estimation.html",
     "type": "Tutorial",
     "level": "Medium",
     "tags": [
       "Pricing & Demand",
       "Tutorial"
-    ]
+    ],
+    "domain": "Pricing & Market Design"
   },
   {
     "name": "QuantEcon: First-Price & Second-Price Auctions",
     "description": "Python simulations proving Revenue Equivalence. Code to solve BNE when closed-form solutions don't exist.",
-    "category": "Auctions & Market Design",
+    "category": "Auction Theory",
     "url": "https://python.quantecon.org/two_auctions.html",
     "type": "Tutorial",
     "level": "Medium",
     "tags": [
       "Auctions & Market Design",
       "Tutorial"
-    ]
+    ],
+    "domain": "Pricing & Market Design"
   },
   {
     "name": "MatchingMarkets.py",
     "description": "Gale-Shapley stable matching in Python. How to match riders to drivers, students to schools, organs to patients.",
-    "category": "Auctions & Market Design",
+    "category": "Time Series Fundamentals",
     "url": "https://github.com/QuantEcon/MatchingMarkets.py",
     "type": "Code",
     "level": "Medium",
     "tags": [
       "Auctions & Market Design",
       "Code"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "Auctions in Ad Tech (Sanjiv Das)",
     "description": "GSP auctions, quality scores, AdRank \u2014 how Google/Meta ad auctions actually work. Chapter 21.",
-    "category": "Auctions & Market Design",
+    "category": "Ad Auctions & RTB",
     "url": "https://srdas.github.io/MLBook/Auctions.html",
     "type": "Online Book",
     "level": "Medium",
     "tags": [
       "Auctions & Market Design",
       "Online Book"
-    ]
+    ],
+    "domain": "Pricing & Market Design"
   },
   {
     "name": "CS269I: Incentives in Computer Science",
     "description": "Roughgarden's famous course. Why Bitcoin is an auction, how selfish routing breaks the internet, and Price of Anarchy \u2014 explained for coders.",
-    "category": "Auctions & Market Design",
+    "category": "Algorithmic Game Theory",
     "url": "https://timroughgarden.org/f16/f16.html",
     "type": "Course Notes",
     "level": "Medium",
     "tags": [
       "Auctions & Market Design",
       "Course Notes"
-    ]
+    ],
+    "domain": "Pricing & Market Design"
   },
   {
     "name": "Susan Athey: ML & Causal Inference Course",
     "description": "Stanford GSB's ML and Causal Inference short course. Videos, slides, and tutorials on causal forests, treatment effects, and policy evaluation.",
-    "category": "Causal Inference",
+    "category": "Causal Inference Fundamentals",
     "url": "https://www.gsb.stanford.edu/faculty-research/labs-initiatives/sil/research/methods/ai-machine-learning/short-course",
     "type": "Course",
     "level": "Medium",
     "tags": [
       "Causal Inference",
       "Course"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Michael Ostrovsky: Market Design Course",
     "description": "Stanford GSB's market design expert. Course materials on auctions, matching markets, and platform dynamics. Advised Airbnb, LinkedIn, Google.",
-    "category": "Auctions & Market Design",
+    "category": "Time Series Fundamentals",
     "url": "https://web.stanford.edu/~ost/",
     "type": "Course Notes",
     "level": "Medium",
     "tags": [
       "Auctions & Market Design",
       "Course Notes"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "Netflix Tech Blog - Experimentation",
     "description": "Multiple posts covering platform architecture, sequential testing implementation, confidence intervals for non-normal distributions, and contextual bandits. Demonstrates how a world-class experimentation platform enables science at scale.",
-    "category": "Industry Blogs",
+    "category": "Sequential Testing",
     "url": "https://netflixtechblog.com/tagged/experimentation",
     "type": "Blog",
     "level": "Hard",
     "tags": [
       "Industry Blogs",
       "Blog"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Uber Engineering",
     "description": "Surge pricing, marketplace design, causal inference at scale. See how researchers tackle real problems at Uber.",
-    "category": "Industry Blogs",
+    "category": "Marketplace Dynamics",
     "url": "https://www.uber.com/blog/engineering/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Industry Blogs",
       "Blog"
-    ]
+    ],
+    "domain": "Strategy & Business"
   },
   {
     "name": "Airbnb Engineering - Data Science",
     "description": "Experimentation platform design, interference in experiments, and applied causal inference from Airbnb's data science team.",
-    "category": "Industry Blogs",
+    "category": "Switchback & Interference",
     "url": "https://medium.com/airbnb-engineering/tagged/data-science",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Industry Blogs",
       "Blog"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Spotify R&D",
     "description": "How do you recommend songs to 500M users? Personalization, search, and ML at audio scale.",
-    "category": "Industry Blogs",
+    "category": "Innovation & R&D",
     "url": "https://research.atspotify.com/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Industry Blogs",
       "Blog"
-    ]
+    ],
+    "domain": "Strategy & Business"
   },
   {
     "name": "DoorDash Engineering",
     "description": "marketplace analytics, delivery optimization, and experimentation. Great posts on real-time pricing and logistics.",
-    "category": "Industry Blogs",
+    "category": "Supply Chain Optimization",
     "url": "https://doordash.engineering/category/data-science-and-machine-learning/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Industry Blogs",
       "Blog"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "Lyft Engineering",
     "description": "Rideshare economics, causal inference, and marketplace experiments. Practical posts from Lyft's economics and data science teams.",
-    "category": "Industry Blogs",
+    "category": "Switchback & Interference",
     "url": "https://eng.lyft.com/tagged/data-science",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Industry Blogs",
       "Blog"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Lyft: Causal Forecasting at Scale",
     "description": "How Lyft combines causal inference with forecasting for pricing. The bridge between 'what happened' and 'what will happen'.",
-    "category": "Industry Blogs",
+    "category": "Forecasting at Scale",
     "url": "https://eng.lyft.com/causal-forecasting-at-lyft-part-1-14cca6ff3d6d",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Industry Blogs",
       "Blog"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "Digitopoly (Joshua Gans)",
     "description": "platform dynamics and digital strategy from a leading IO researcher. Network effects, two-sided markets, and antitrust.",
-    "category": "Strategy & Analytics",
+    "category": "Switchback & Interference",
     "url": "https://digitopoly.org/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Strategy & Analytics",
       "Blog"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Stratechery (Ben Thompson)",
     "description": "The gold standard for tech strategy analysis. Aggregation theory, platform dynamics, and business model breakdowns.",
-    "category": "Strategy & Analytics",
+    "category": "Tech Strategy",
     "url": "https://stratechery.com/",
     "type": "Blog",
     "level": "Hard",
     "tags": [
       "Strategy & Analytics",
       "Blog"
-    ]
+    ],
+    "domain": "Strategy & Business"
   },
   {
     "name": "The Operating System (John Brewton)",
     "description": "The firm as a mechanism design problem. How zero marginal costs and network effects rewrote the economics of tech companies.",
-    "category": "Strategy & Analytics",
+    "category": "Switchback & Interference",
     "url": "https://www.operatingbyjohnbrewton.com/",
     "type": "Substack",
     "level": "Medium",
     "tags": [
       "Strategy & Analytics",
       "Substack"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Lyft: Quantifying Efficiency in Ridesharing",
     "description": "Efficiency isn't speed\u2014it's an economic equilibrium. A masterclass in defining the objective function for marketplace optimization.",
-    "category": "Industry Blogs",
+    "category": "Marketplace Dynamics",
     "url": "https://eng.lyft.com/quantifying-efficiency-in-ridesharing-marketplaces-affd53043db2",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Industry Blogs",
       "Blog"
-    ]
+    ],
+    "domain": "Strategy & Business"
   },
   {
     "name": "Noahpinion (Noah Smith)",
     "description": "applied analytics, AI, innovation, growth. Deep dives with data, accessible to non-specialists. The researcher's tech newsletter.",
-    "category": "Strategy & Analytics",
+    "category": "Innovation & R&D",
     "url": "https://noahpinion.substack.com/",
     "type": "Substack",
     "level": "Medium",
     "tags": [
       "Strategy & Analytics",
       "Substack"
-    ]
+    ],
+    "domain": "Strategy & Business"
   },
   {
     "name": "New Things Under the Sun (Matt Clancy)",
     "description": "innovation research research summaries. Academic findings on R&D, productivity, and science \u2014 in plain language.",
-    "category": "Strategy & Analytics",
+    "category": "Innovation & R&D",
     "url": "https://www.newthingsunderthesun.com/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Strategy & Analytics",
       "Blog"
-    ]
+    ],
+    "domain": "Strategy & Business"
   },
   {
     "name": "Platform Papers",
     "description": "Platform competition and network effects. Academics summarizing their own research on marketplaces and big tech.",
-    "category": "Strategy & Analytics",
+    "category": "Switchback & Interference",
     "url": "https://platformpapers.substack.com/",
     "type": "Substack",
     "level": "Hard",
     "tags": [
       "Strategy & Analytics",
       "Substack"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Marginal Revolution (Tyler Cowen)",
     "description": "The econ blog. Tech, innovation, markets \u2014 prolific, eclectic, and influential. A daily must-read.",
-    "category": "Strategy & Analytics",
+    "category": "Time Series Fundamentals",
     "url": "https://marginalrevolution.com/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Strategy & Analytics",
       "Blog"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "Ben Evans Newsletter",
     "description": "Tech market trends and strategic analysis. What's happening in tech and why it matters.",
-    "category": "Strategy & Analytics",
+    "category": "Tech Strategy",
     "url": "https://www.ben-evans.com/newsletter",
     "type": "Newsletter",
     "level": "Medium",
     "tags": [
       "Strategy & Analytics",
       "Newsletter"
-    ]
+    ],
+    "domain": "Strategy & Business"
   },
   {
     "name": "Stitch Fix Algorithms Blog",
     "description": "Demand forecasting, inventory optimization, and personalization. Unique blend of fashion retail + serious data science.",
-    "category": "Industry Blogs",
+    "category": "Supply Chain Optimization",
     "url": "https://multithreaded.stitchfix.com/algorithms/blog/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Industry Blogs",
       "Blog"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "Meta Engineering - Data Science",
     "description": "Large-scale experimentation, ML infrastructure, and data discovery at Facebook scale. Posts on causal inference and data tools.",
-    "category": "Industry Blogs",
+    "category": "Enterprise & Social",
     "url": "https://engineering.fb.com/category/data-infrastructure/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Industry Blogs",
       "Blog"
-    ]
+    ],
+    "domain": "Industry Case Studies"
   },
   {
     "name": "LinkedIn Engineering - Experimentation",
     "description": "41K concurrent A/B tests on 700M members. Network effects, inclusive product testing, and experimentation infrastructure.",
-    "category": "Industry Blogs",
+    "category": "A/B Testing Fundamentals",
     "url": "https://www.linkedin.com/blog/engineering/ab-testing-experimentation",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Industry Blogs",
       "Blog"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Pinterest Engineering - Data Science",
     "description": "Visual discovery engine, recommendation systems, and ML at scale. Feature engineering and personalization.",
-    "category": "Industry Blogs",
+    "category": "Recommendation Systems",
     "url": "https://medium.com/pinterest-engineering/tagged/data-science",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Industry Blogs",
       "Blog"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Instacart Tech Blog",
     "description": "Marketplace balancing, delivery optimization, demand forecasting. Making on-demand grocery profitable.",
-    "category": "Industry Blogs",
+    "category": "Marketplace Dynamics",
     "url": "https://tech.instacart.com/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Industry Blogs",
       "Blog"
-    ]
+    ],
+    "domain": "Strategy & Business"
   },
   {
     "name": "Stripe Engineering",
     "description": "Payment economics, fraud detection ML, financial data infrastructure. Building economic infrastructure for the internet.",
-    "category": "Industry Blogs",
+    "category": "Fraud & Trust/Safety",
     "url": "https://stripe.com/blog/engineering",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Industry Blogs",
       "Blog"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Booking.com Tech Blog",
     "description": "Travel marketplace experimentation at massive scale. A/B testing, recommender systems, and pricing optimization.",
-    "category": "Industry Blogs",
+    "category": "A/B Testing Fundamentals",
     "url": "https://blog.booking.com/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Industry Blogs",
       "Blog"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Amazon Science",
     "description": "Research from Amazon's scientists. Causal inference, supply chain optimization, pricing, and forecasting.",
-    "category": "Industry Blogs",
+    "category": "Supply Chain Optimization",
     "url": "https://www.amazon.science/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Industry Blogs",
       "Blog"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "Mode SQL Tutorial",
     "description": "Interactive SQL lessons from basic to advanced. Great for learning JOINs, window functions, and subqueries with a real database.",
-    "category": "SQL",
+    "category": "SQL Fundamentals",
     "url": "https://mode.com/sql-tutorial/",
     "type": "Tutorial",
     "level": "Medium",
     "tags": [
       "SQL",
       "Tutorial"
-    ]
+    ],
+    "domain": "Programming & Tools"
   },
   {
     "name": "SQLBolt",
     "description": "Learn SQL with interactive exercises. No setup required \u2014 run queries right in the browser. Perfect for beginners.",
-    "category": "SQL",
+    "category": "SQL Fundamentals",
     "url": "https://sqlbolt.com/",
     "type": "Interactive Course",
     "level": "Easy",
     "tags": [
       "SQL",
       "Interactive Course"
-    ]
+    ],
+    "domain": "Programming & Tools"
   },
   {
     "name": "LeetCode SQL 50",
     "description": "50 essential SQL problems to master for interviews. CTEs, window functions, and common patterns used at FAANG.",
-    "category": "SQL",
+    "category": "SQL Fundamentals",
     "url": "https://leetcode.com/studyplan/top-sql-50/",
     "type": "Practice Problems",
     "level": "Medium",
     "tags": [
       "SQL",
       "Practice Problems"
-    ]
+    ],
+    "domain": "Programming & Tools"
   },
   {
     "name": "DuckDB Documentation",
     "description": "Modern in-process SQL database. Runs on your laptop, reads Parquet directly, and is perfect for analytics. The new pandas killer.",
-    "category": "SQL",
+    "category": "SQL Fundamentals",
     "url": "https://duckdb.org/docs/",
     "type": "Docs",
     "level": "Medium",
     "tags": [
       "SQL",
       "Docs"
-    ]
+    ],
+    "domain": "Programming & Tools"
   },
   {
     "name": "NeetCode",
     "description": "Curated LeetCode roadmap organized by pattern. Video explanations that actually make sense. The modern way to prep for coding interviews.",
-    "category": "LeetCode",
+    "category": "SQL Practice",
     "url": "https://neetcode.io/",
     "type": "Course + Practice",
     "level": "Medium",
     "tags": [
       "LeetCode",
       "Course + Practice"
-    ]
+    ],
+    "domain": "Programming & Tools"
   },
   {
     "name": "Blind 75",
     "description": "The 75 most important LeetCode problems. Arrays, strings, trees, graphs, DP \u2014 if you can solve these, you can handle any interview.",
-    "category": "LeetCode",
+    "category": "SQL Practice",
     "url": "https://www.techinterviewhandbook.org/grind75",
     "type": "Problem Set",
     "level": "Medium",
     "tags": [
       "LeetCode",
       "Problem Set"
-    ]
+    ],
+    "domain": "Programming & Tools"
   },
   {
     "name": "LeetCode Patterns",
     "description": "14 patterns to solve any coding interview question. Two pointers, sliding window, BFS/DFS, and more \u2014 with Python templates.",
-    "category": "LeetCode",
+    "category": "SQL Practice",
     "url": "https://seanprashad.com/leetcode-patterns/",
     "type": "Study Guide",
     "level": "Medium",
     "tags": [
       "LeetCode",
       "Study Guide"
-    ]
+    ],
+    "domain": "Programming & Tools"
   },
   {
     "name": "Automate the Boring Stuff with Python",
     "description": "The best free Python book for non-programmers. Web scraping, Excel automation, file management \u2014 practical skills for data work.",
-    "category": "Automation",
+    "category": "Web Scraping & Automation",
     "url": "https://automatetheboringstuff.com/",
     "type": "Online Book",
     "level": "Easy",
     "tags": [
       "Automation",
       "Online Book"
-    ]
+    ],
+    "domain": "Programming & Tools"
   },
   {
     "name": "Scrapy Documentation",
     "description": "The industrial-strength web scraping framework for Python. Build spiders, handle anti-bot measures, and scale to millions of pages.",
-    "category": "Automation",
+    "category": "Web Scraping & Automation",
     "url": "https://docs.scrapy.org/",
     "type": "Docs",
     "level": "Medium",
     "tags": [
       "Automation",
       "Docs"
-    ]
+    ],
+    "domain": "Programming & Tools"
   },
   {
     "name": "Real Python: Web Scraping",
     "description": "Practical guide to scraping with BeautifulSoup and requests. Parse HTML, handle pagination, and extract structured data.",
-    "category": "Automation",
+    "category": "Web Scraping & Automation",
     "url": "https://realpython.com/beautiful-soup-web-scraper-python/",
     "type": "Tutorial",
     "level": "Easy",
     "tags": [
       "Automation",
       "Tutorial"
-    ]
+    ],
+    "domain": "Programming & Tools"
   },
   {
     "name": "Python for Econometrics",
     "description": "Kevin Sheppard's comprehensive intro for researchers. NumPy, pandas, statsmodels, and econometric applications.",
-    "category": "Coding",
+    "category": "Python for Economists",
     "url": "https://bashtage.github.io/kevinsheppard.com/teaching/python/notes/",
     "type": "Online Book",
     "level": "Easy",
     "tags": [
       "Coding",
       "Online Book"
-    ]
+    ],
+    "domain": "Programming & Tools"
   },
   {
     "name": "Think Stats",
     "description": "Introduction to probability and statistics with Python. Exploratory data analysis, hypothesis testing, and Bayesian methods.",
-    "category": "Statistics",
+    "category": "A/B Testing Fundamentals",
     "url": "https://greenteapress.com/thinkstats2/",
     "type": "Online Book",
     "level": "Easy",
     "tags": [
       "Statistics",
       "Online Book"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Statistical Rethinking",
     "description": "Richard McElreath's Bayesian approach to statistics. PyMC3 translations available. The book that changed how many think about inference.",
-    "category": "Statistics",
+    "category": "Bayesian Statistics",
     "url": "https://xcelab.net/rm/statistical-rethinking/",
     "type": "Book + Lectures",
     "level": "Medium",
     "tags": [
       "Statistics",
       "Book + Lectures"
-    ]
+    ],
+    "domain": "Statistics & Probability"
   },
   {
     "name": "Adam Fishman Newsletter",
     "description": "Ex-Patreon/Reforge. Growth loops, product strategy, and how to structure product analytics.",
-    "category": "Strategy & Analytics",
+    "category": "Product Strategy",
     "url": "https://www.fishmanafnewsletter.com/",
     "type": "Newsletter",
     "level": "Medium",
     "tags": [
       "Strategy & Analytics",
       "Newsletter"
-    ]
+    ],
+    "domain": "Product & Growth"
   },
   {
     "name": "Sequoia: Data-Informed Product Building",
     "description": "Metric hierarchies, North Star metrics, and building data-informed products. The definitive framework for product metrics.",
-    "category": "Experimentation",
+    "category": "North Star & Goal Setting",
     "url": "https://medium.com/sequoia-capital/data-informed-product-building-1e509a5c4112",
     "type": "Guide",
     "level": "Medium",
     "tags": [
       "Experimentation",
       "Guide"
-    ]
+    ],
+    "domain": "Product & Growth"
   },
   {
     "name": "MeasuringU",
     "description": "Survey science, conjoint analysis, and quantitative UX research. Statistical rigor for product research.",
-    "category": "Statistics",
+    "category": "Survey & Measurement",
     "url": "https://measuringu.com/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Statistics",
       "Blog"
-    ]
+    ],
+    "domain": "Statistics & Probability"
   },
   {
     "name": "Convex Optimization (Boyd & Vandenberghe)",
     "description": "The bible of convex optimization \u2014 free online, universally cited. Covers LP, QP, SDP, and more.",
-    "category": "Optimization",
+    "category": "Convex Optimization",
     "url": "https://web.stanford.edu/~boyd/cvxbook/",
     "type": "Online Book",
     "level": "Hard",
     "tags": [
       "Optimization",
       "Online Book"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "Stanford EE364A (YouTube)",
     "description": "Boyd's legendary lectures on convex optimization. The gold standard for learning optimization theory.",
-    "category": "Optimization",
+    "category": "Convex Optimization",
     "url": "https://www.youtube.com/playlist?list=PL3940DD956CDF0622",
     "type": "Lectures",
     "level": "Hard",
     "tags": [
       "Optimization",
       "Lectures"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "Modeling Discrete Optimization (Coursera)",
     "description": "University of Melbourne's course on constraint programming, local search, and MIP. Covers MiniZinc modeling language.",
-    "category": "Optimization",
+    "category": "Optimization Fundamentals",
     "url": "https://www.coursera.org/learn/basic-modeling",
     "type": "Course",
     "level": "Medium",
     "tags": [
       "Optimization",
       "Course"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "CVXPY Short Course",
     "description": "Hands-on convex optimization in Python. Learn to model and solve real problems with CVXPY.",
-    "category": "Optimization",
+    "category": "Convex Optimization",
     "url": "https://www.cvxgrp.org/cvx_short_course/docs/index.html",
     "type": "Tutorial",
     "level": "Medium",
     "tags": [
       "Optimization",
       "Tutorial"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "Agentic AI (DeepLearning.AI)",
     "description": "Andrew Ng on the four agentic design patterns \u2014 reflection, tool use, planning, multi-agent. Start here.",
-    "category": "Agentic AI",
+    "category": "ML Fundamentals",
     "url": "https://www.deeplearning.ai/short-courses/ai-agentic-design-patterns-with-autogen/",
     "type": "Course",
     "level": "Medium",
     "tags": [
       "Agentic AI",
       "Course"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "AI Agents in LangGraph (DeepLearning.AI)",
     "description": "Build agents from scratch with Harrison Chase. State machines, tool calling, and human-in-the-loop.",
-    "category": "Agentic AI",
+    "category": "Agentic AI Fundamentals",
     "url": "https://www.deeplearning.ai/short-courses/ai-agents-in-langgraph/",
     "type": "Course",
     "level": "Easy",
     "tags": [
       "Agentic AI",
       "Course"
-    ]
+    ],
+    "domain": "AI & Agents"
   },
   {
     "name": "Building Effective Agents (Anthropic)",
     "description": "Design patterns from Claude's creators. The best practitioner guide on when and how to build agents.",
-    "category": "Agentic AI",
+    "category": "Agentic AI Fundamentals",
     "url": "https://www.anthropic.com/research/building-effective-agents",
     "type": "Guide",
     "level": "Medium",
     "tags": [
       "Agentic AI",
       "Guide"
-    ]
+    ],
+    "domain": "AI & Agents"
   },
   {
     "name": "Walmart Global Tech",
     "description": "AI-driven retail tech, supply chain optimization, agentic AI, and developer experience. Posts on LLMs for product catalogs, delivery optimization, and cross-lingual search.",
-    "category": "Industry Blogs",
+    "category": "Supply Chain Optimization",
     "url": "https://tech.walmart.com/",
     "type": "Blog",
     "level": "Intermediate",
     "tags": [
       "Industry Blogs",
       "Blog"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "Coursera Pricing Strategy Optimization (UVA/BCG)",
     "description": "Price elasticity, WTP estimation, segmentation \u2014 free to audit",
-    "category": "Pricing & Demand",
+    "category": "Pricing Strategy",
     "url": "https://www.coursera.org/specializations/uva-darden-bcg-pricing-strategy",
     "type": "Course",
     "level": "Medium",
     "tags": [
       "Pricing & Demand",
       "Course"
-    ]
+    ],
+    "domain": "Pricing & Market Design"
   },
   {
     "name": "Chargebee: SaaS Pricing Models Guide",
     "description": "Usage-based pricing, value metrics, packaging strategies \u2014 free",
-    "category": "Pricing & Demand",
+    "category": "Pricing Strategy",
     "url": "https://www.chargebee.com/resources/guides/saas-pricing-models-guide/",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "Pricing & Demand",
       "Article"
-    ]
+    ],
+    "domain": "Pricing & Market Design"
   },
   {
     "name": "Monetizing Innovation (Ramanujam)",
     "description": "The industry bible \u2014 design products around price, not vice versa",
-    "category": "Pricing & Demand",
+    "category": "Pricing Strategy",
     "url": "https://www.simon-kucher.com/en/insights/monetizing-innovation",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "Pricing & Demand",
       "Article"
-    ]
+    ],
+    "domain": "Pricing & Market Design"
   },
   {
     "name": "OpenView SaaS Pricing Guide",
     "description": "Free playbooks on usage-based pricing",
-    "category": "Pricing & Demand",
+    "category": "Pricing Strategy",
     "url": "https://openviewpartners.com/blog/saas-pricing-resource-guide/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Pricing & Demand",
       "Blog"
-    ]
+    ],
+    "domain": "Pricing & Market Design"
   },
   {
     "name": "Lenny's Podcast: Madhavan Ramanujam",
     "description": "90 minutes on WTP conversations and behavioral pricing",
-    "category": "Pricing & Demand",
+    "category": "Pricing Strategy",
     "url": "https://www.lennyspodcast.com/the-art-and-science-of-pricing-madhavan-ramanujam-simon-kucher/",
     "type": "Podcast",
     "level": "Medium",
     "tags": [
       "Pricing & Demand",
       "Podcast"
-    ]
+    ],
+    "domain": "Pricing & Market Design"
   },
   {
     "name": "Roughgarden: Algorithmic Game Theory (40 lectures)",
     "description": "Free Stanford lectures \u2014 theoretical foundation",
-    "category": "Auctions & Market Design",
+    "category": "Algorithmic Game Theory",
     "url": "https://timroughgarden.org/videos.html",
     "type": "Video",
     "level": "Medium",
     "tags": [
       "Auctions & Market Design",
       "Video"
-    ]
+    ],
+    "domain": "Pricing & Market Design"
   },
   {
     "name": "Twenty Lectures on Algorithmic Game Theory",
     "description": "Bridges CS and economics with ad case studies",
-    "category": "Auctions & Market Design",
+    "category": "Algorithmic Game Theory",
     "url": "https://timroughgarden.org/f13/f13.pdf",
     "type": "Video",
     "level": "Medium",
     "tags": [
       "Auctions & Market Design",
       "Video"
-    ]
+    ],
+    "domain": "Pricing & Market Design"
   },
   {
     "name": "Display Advertising with Real-Time Bidding",
     "description": "Free comprehensive RTB coverage on arXiv",
-    "category": "Auctions & Market Design",
+    "category": "Ad Auctions & RTB",
     "url": "https://arxiv.org/abs/1610.03013",
     "type": "Paper",
     "level": "Medium",
     "tags": [
       "Auctions & Market Design",
       "Paper"
-    ]
+    ],
+    "domain": "Pricing & Market Design"
   },
   {
     "name": "GSP Auction Paper (Edelman et al., AER 2007)",
     "description": "Foundational paper on search advertising auctions",
-    "category": "Auctions & Market Design",
+    "category": "Ad Auctions & RTB",
     "url": "https://www.benedelman.org/publications/gsp-060801.pdf",
     "type": "Paper",
     "level": "Medium",
     "tags": [
       "Auctions & Market Design",
       "Paper"
-    ]
+    ],
+    "domain": "Pricing & Market Design"
   },
   {
     "name": "AdKDD Workshop Papers",
     "description": "Applied research from Google, Meta, Amazon",
-    "category": "Auctions & Market Design",
+    "category": "Ad Auctions & RTB",
     "url": "https://www.adkdd.org/",
     "type": "Paper",
     "level": "Medium",
     "tags": [
       "Auctions & Market Design",
       "Paper"
-    ]
+    ],
+    "domain": "Pricing & Market Design"
   },
   {
     "name": "PyMC-Marketing CLV Quickstart",
     "description": "CLV basics, RFM analysis, BG/NBD models \u2014 free official docs",
-    "category": "Strategy & Analytics",
+    "category": "Bayesian Statistics",
     "url": "https://www.pymc-marketing.io/en/latest/notebooks/clv/clv_quickstart.html",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "Strategy & Analytics",
       "Article"
-    ]
+    ],
+    "domain": "Statistics & Probability"
   },
   {
     "name": "PyMC-Marketing Documentation",
     "description": "BG/NBD and Gamma-Gamma CLV tutorials",
-    "category": "Strategy & Analytics",
+    "category": "Bayesian Statistics",
     "url": "https://www.pymc-marketing.io/en/stable/",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "Strategy & Analytics",
       "Article"
-    ]
+    ],
+    "domain": "Statistics & Probability"
   },
   {
     "name": "Google Analytics for Marketing",
     "description": "Free analytics for marketing \u2014 official Google tutorials",
-    "category": "Strategy & Analytics",
+    "category": "Tech Strategy",
     "url": "https://skillshop.exceedlms.com/student/path/508845-google-analytics-certification",
     "type": "Course",
     "level": "Medium",
     "tags": [
       "Strategy & Analytics",
       "Course"
-    ]
+    ],
+    "domain": "Strategy & Business"
   },
   {
     "name": "Bruce Hardie's CLV Papers",
     "description": "Mathematical foundations of CLV models",
-    "category": "Strategy & Analytics",
+    "category": "Customer Lifetime Value",
     "url": "https://www.brucehardie.com/",
     "type": "Paper",
     "level": "Medium",
     "tags": [
       "Strategy & Analytics",
       "Paper"
-    ]
+    ],
+    "domain": "Product & Growth"
   },
   {
     "name": "Lyft Engineering: LTV Curves",
     "description": "Production CLV and Thompson sampling",
-    "category": "Strategy & Analytics",
+    "category": "Bandit Algorithms",
     "url": "https://eng.lyft.com/lyft-marketing-automation-b43b7b7537cc",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "Strategy & Analytics",
       "Article"
-    ]
+    ],
+    "domain": "RL & Bandits"
   },
   {
     "name": "MIT 15.S08 FinTech (Gary Gensler)",
     "description": "12 lectures from former SEC Chair on AI in finance, risk, and compliance \u2014 free",
-    "category": "ML & Data Science",
+    "category": "Fintech & Payments",
     "url": "https://ocw.mit.edu/courses/15-s08-fintech-shaping-the-financial-world-spring-2020/",
     "type": "Course",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Course"
-    ]
+    ],
+    "domain": "Industry Case Studies"
   },
   {
     "name": "Stanford CS224W: GNN for Fraud",
     "description": "Three-level tutorial from Stanford graph ML course",
-    "category": "ML & Data Science",
+    "category": "ML Fundamentals",
     "url": "https://medium.com/stanford-cs224w/from-one-line-to-fully-customized-a-three-level-introduction-to-graph-ml-fraud-detection-with-89badd2cd2a3",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Blog"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Stripe: ML for Fraud Protection",
     "description": "The definitive intro: features, precision-recall tradeoffs, break-even calculations",
-    "category": "ML & Data Science",
+    "category": "Fraud & Trust/Safety",
     "url": "https://stripe.com/guides/primer-on-machine-learning-for-fraud-protection",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Article"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Fraud Detection Handbook (ULB)",
     "description": "From the team that created the Kaggle dataset \u2014 rigorous methodology",
-    "category": "ML & Data Science",
+    "category": "Fraud & Trust/Safety",
     "url": "https://fraud-detection-handbook.github.io/fraud-detection-handbook/",
     "type": "Tool",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Tool"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Stripe: How We Built Radar",
     "description": "XGBoost\u2192DNN migration, 85% training time reduction",
-    "category": "ML & Data Science",
+    "category": "Fintech & Payments",
     "url": "https://stripe.com/blog/how-we-built-it-stripe-radar",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Blog"
-    ]
+    ],
+    "domain": "Industry Case Studies"
   },
   {
     "name": "PayPal: Graph Database for Fraud",
     "description": "Real-time fraud ring detection",
-    "category": "ML & Data Science",
+    "category": "Fraud & Trust/Safety",
     "url": "https://medium.com/paypal-tech/how-paypal-uses-real-time-graph-database-and-graph-analysis-to-fight-fraud-96a2b918619a",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Blog"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "LinkedIn: Defending Against Abuse at Scale",
     "description": "4M+ TPS, multi-layer defense architecture",
-    "category": "ML & Data Science",
+    "category": "Fraud & Trust/Safety",
     "url": "https://engineering.linkedin.com/blog/2018/12/defending-against-abuse-at-linkedins-scale",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Blog"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Meta: Few-Shot Learner for Harmful Content",
     "description": "Adapts to new threats in weeks, 100+ languages",
-    "category": "ML & Data Science",
+    "category": "Enterprise & Social",
     "url": "https://about.fb.com/news/2021/12/metas-new-ai-system-tackles-harmful-content/",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Article"
-    ]
+    ],
+    "domain": "Industry Case Studies"
   },
   {
     "name": "Netflix: RAD Outlier Detection",
     "description": "Robust PCA at terabyte scale",
-    "category": "ML & Data Science",
+    "category": "Fraud & Trust/Safety",
     "url": "https://netflixtechblog.com/rad-outlier-detection-on-big-data-d6b0ff32fb44",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Blog"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Google Research: Self-Supervised Anomaly Detection",
     "description": "Contrastive learning, CutPaste algorithm",
-    "category": "ML & Data Science",
+    "category": "Fraud & Trust/Safety",
     "url": "https://ai.googleblog.com/2021/09/discovering-anomalous-data-with-self.html",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Blog"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Stanford FinTech Lab: Rob Wang (Block)",
     "description": "Industry talk on fraud ML tradeoffs",
-    "category": "ML & Data Science",
+    "category": "Fraud & Trust/Safety",
     "url": "https://fintech.stanford.edu/events/aftlab-seminars/rob-wang-square-machine-learning-financial-fraud-detection",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Article"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "KDD ML in Finance Workshop 2021",
     "description": "Talks from Georgia Tech, Harvard, Feedzai",
-    "category": "ML & Data Science",
+    "category": "ML Fundamentals",
     "url": "https://sites.google.com/view/kdd-mlf-2021/schedule",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Article"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "IEEE-CIS Fraud: 1st Place Solution (Chris Deotte)",
     "description": "Kaggle Grandmaster, 262 features, RAPIDS GPU",
-    "category": "ML & Data Science",
+    "category": "Fraud & Trust/Safety",
     "url": "https://developer.nvidia.com/blog/leveraging-machine-learning-to-detect-fraud-tips-to-developing-a-winning-kaggle-solution/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Blog"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "scikit-learn: Outlier Detection",
     "description": "Isolation Forest, LOF, One-Class SVM comparison",
-    "category": "ML & Data Science",
+    "category": "Fraud & Trust/Safety",
     "url": "https://scikit-learn.org/stable/modules/outlier_detection.html",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Article"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "imbalanced-learn: SMOTE",
     "description": "The standard for handling 1:10,000 class ratios",
-    "category": "ML & Data Science",
+    "category": "Imbalanced Data",
     "url": "https://imbalanced-learn.org/stable/over_sampling.html",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Article"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Federal Reserve SR 11-7",
     "description": "Model risk management standard all US banks follow",
-    "category": "ML & Data Science",
+    "category": "ML Fundamentals",
     "url": "https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Article"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Google ML Recommendation Course",
     "description": "Free, 4 hours, candidate generation through re-ranking. Gold standard starter",
-    "category": "ML & Data Science",
+    "category": "Difference-in-Differences",
     "url": "https://developers.google.com/machine-learning/recommendation",
     "type": "Course",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Course"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "HSE RecSys Course (GitHub)",
     "description": "Full course: collaborative filtering, matrix factorization, A/B testing",
-    "category": "ML & Data Science",
+    "category": "A/B Testing Fundamentals",
     "url": "https://github.com/hse-econ-data-science/recsys-itmo",
     "type": "Course",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Course"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Fast.ai Lesson 7: Collaborative Filtering",
     "description": "Jeremy Howard's accessible deep dive, embeddings explained intuitively",
-    "category": "ML & Data Science",
+    "category": "Deep Learning",
     "url": "https://course.fast.ai/Lessons/lesson7.html",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Article"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Microsoft Recommenders Notebooks",
     "description": "Production-quality examples, scikit-learn style",
-    "category": "ML & Data Science",
+    "category": "ML Fundamentals",
     "url": "https://github.com/recommenders-team/recommenders/tree/main/examples",
     "type": "Tool",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Tool"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "StatQuest: Collaborative Filtering",
     "description": "Josh Starmer's visual, jargon-free explanation",
-    "category": "ML & Data Science",
+    "category": "Recommendation Systems",
     "url": "https://www.youtube.com/watch?v=Fmtorg_dmM0",
     "type": "Video",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Video"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Ritvikmath: Recommendation Systems",
     "description": "Clear math intuition without overwhelming notation",
-    "category": "ML & Data Science",
+    "category": "Recommendation Systems",
     "url": "https://www.youtube.com/watch?v=n3RKsY2H-NE",
     "type": "Video",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Video"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Jeremy Howard's Kaggle Deep Dive",
     "description": "Matrix factorization from scratch",
-    "category": "ML & Data Science",
+    "category": "Recommendation Systems",
     "url": "https://www.kaggle.com/code/jhoward/collaborative-filtering-deep-dive",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Article"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "TFRS Quickstart Colab",
     "description": "Movie recommender in minutes",
-    "category": "ML & Data Science",
+    "category": "ML Fundamentals",
     "url": "https://colab.research.google.com/github/tensorflow/recommenders/blob/main/docs/examples/quickstart.ipynb",
     "type": "Tool",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Tool"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Spotify Recommendations Explainer",
     "description": "Plain-language taste profiles",
-    "category": "ML & Data Science",
+    "category": "Recommendation Systems",
     "url": "https://www.spotify.com/us/safetyandprivacy/understanding-recommendations",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Article"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Netflix: How Recommendations Work",
     "description": "Official non-technical overview",
-    "category": "ML & Data Science",
+    "category": "Recommendation Systems",
     "url": "https://help.netflix.com/en/node/100639",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Article"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "IBM Collaborative Filtering",
     "description": "Authoritative enterprise perspective",
-    "category": "ML & Data Science",
+    "category": "Recommendation Systems",
     "url": "https://www.ibm.com/think/topics/collaborative-filtering",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Article"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Music Tomorrow: Spotify Deep Dive",
     "description": "Audio features, accessible depth",
-    "category": "ML & Data Science",
+    "category": "Consumer Tech Blogs",
     "url": "https://www.music-tomorrow.com/blog/how-spotify-recommendation-system-works-complete-guide",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Blog"
-    ]
+    ],
+    "domain": "Industry Case Studies"
   },
   {
     "name": "Introduction to Information Retrieval (Manning)",
     "description": "The canonical free textbook, Stanford",
-    "category": "ML & Data Science",
+    "category": "ML Fundamentals",
     "url": "https://nlp.stanford.edu/IR-book/information-retrieval-book.html",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Article"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "From RankNet to LambdaMART (Burges)",
     "description": "Definitive paper on learning-to-rank algorithms",
-    "category": "ML & Data Science",
+    "category": "Learning to Rank",
     "url": "https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/MSR-TR-2010-82.pdf",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Article"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Airbnb: Applying Deep Learning to Search",
     "description": "GBDT\u2192DNN migration, what failed before it worked",
-    "category": "ML & Data Science",
+    "category": "Deep Learning",
     "url": "https://arxiv.org/abs/1810.09591",
     "type": "Paper",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Paper"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Airbnb: Embedding-Based Retrieval",
     "description": "Two-tower architecture, largest ML lift in two years",
-    "category": "ML & Data Science",
+    "category": "Embeddings & Representation",
     "url": "https://medium.com/airbnb-engineering/embedding-based-retrieval-for-airbnb-search-aabebfc85839",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Blog"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Joachims: Unbiased Learning-to-Rank",
     "description": "Foundational paper on position bias correction",
-    "category": "ML & Data Science",
+    "category": "ML Fundamentals",
     "url": "https://arxiv.org/abs/1608.04468",
     "type": "Paper",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Paper"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Deep Learning at Airbnb Search (QCon)",
     "description": "Malay Haldar's practitioner walkthrough",
-    "category": "ML & Data Science",
+    "category": "Deep Learning",
     "url": "https://www.infoq.com/presentations/dl-airbnb/",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "ML & Data Science",
       "Article"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Georgia Tech (Ratliff): 10 Rules for Supply Chain Optimization",
     "description": "Practitioner checklist for scoping, data readiness, constraints, deployment \u2014 free PDF",
-    "category": "Optimization",
+    "category": "Supply Chain Optimization",
     "url": "https://www.scl.gatech.edu/sites/default/files/downloads/gtscl-10_rules_supply_chain_logistics_optimization_2.pdf",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "Optimization",
       "Article"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "Google OR-Tools: VRP + VRPTW Tutorial",
     "description": "Core logistics vocabulary (depot, fleet, constraints) with working Python baseline",
-    "category": "Optimization",
+    "category": "Solvers & Tools",
     "url": "https://developers.google.com/optimization/routing/vrp",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "Optimization",
       "Article"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "DoorDash: ML + Optimization for Dispatch",
     "description": "Clearest 'real system' explanation: predictions feed optimizer, then simulation closes the loop",
-    "category": "Optimization",
+    "category": "Vehicle Routing & Logistics",
     "url": "https://careersatdoordash.com/blog/using-ml-and-optimization-to-solve-doordashs-dispatch-problem/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Optimization",
       "Blog"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "StatsForecast: Intermittent/Sparse Data Tutorial",
     "description": "Demand is often intermittent (lots of zeros) \u2014 learn baselines built for that",
-    "category": "Forecasting",
+    "category": "Forecasting Libraries",
     "url": "https://nixtlaverse.nixtla.io/statsforecast/docs/tutorials/intermittentdata.html",
     "type": "Documentation",
     "level": "Medium",
     "tags": [
       "Forecasting",
       "Documentation"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "Forecasting: Principles and Practice, Python Edition",
     "description": "THE definitive resource \u2014 Hyndman's book adapted with Nixtlaverse Python code. Updated December 2025.",
-    "category": "Forecasting",
+    "category": "Time Series Fundamentals",
     "url": "https://otexts.com/fpppy/",
     "type": "Online Book",
     "level": "Medium",
     "tags": [
       "Forecasting",
       "Online Book"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "MIT OCW 14.384: Time Series Analysis",
     "description": "Graduate-level course with 26 lectures. ARMA, VAR, unit roots, cointegration, state-space, Kalman filters.",
-    "category": "Forecasting",
+    "category": "Time Series Fundamentals",
     "url": "https://ocw.mit.edu/courses/14-384-time-series-analysis-fall-2013/",
     "type": "Course",
     "level": "Hard",
     "tags": [
       "Forecasting",
       "Course"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "Penn State STAT 510: Applied Time Series Analysis",
     "description": "Free graduate course with 14 lessons. ARIMA, seasonal models, spectral analysis, VAR, ARCH/GARCH.",
-    "category": "Forecasting",
+    "category": "Time Series Fundamentals",
     "url": "https://online.stat.psu.edu/stat510/",
     "type": "Course",
     "level": "Hard",
     "tags": [
       "Forecasting",
       "Course"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "statsforecast Documentation (Nixtla)",
     "description": "AutoARIMA 19x faster than pmdarima. AutoETS, AutoTheta, MSTL, GARCH, Croston with distributed computing.",
-    "category": "Forecasting",
+    "category": "Time Series Fundamentals",
     "url": "https://nixtlaverse.nixtla.io/statsforecast/index.html",
     "type": "Documentation",
     "level": "Medium",
     "tags": [
       "Forecasting",
       "Documentation"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "mlforecast Documentation (Nixtla)",
     "description": "ML-based forecasting with scikit-learn compatible interface. Lag features, rolling means, LightGBM/XGBoost.",
-    "category": "Forecasting",
+    "category": "Forecasting Libraries",
     "url": "https://nixtlaverse.nixtla.io/mlforecast/index.html",
     "type": "Documentation",
     "level": "Medium",
     "tags": [
       "Forecasting",
       "Documentation"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "Prophet Official Documentation",
     "description": "Meta's additive model for business seasonality. Component plots, holidays, custom seasonality.",
-    "category": "Forecasting",
+    "category": "Prophet & Additive Models",
     "url": "https://facebook.github.io/prophet/docs/quick_start.html",
     "type": "Documentation",
     "level": "Easy",
     "tags": [
       "Forecasting",
       "Documentation"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "Prophet Critique: Sean J. Taylor Retrospective",
     "description": "Honest assessment from Prophet co-creator: 'I do actually feel a bit of shame about the project.' Must-read.",
-    "category": "Forecasting",
+    "category": "Prophet & Additive Models",
     "url": "https://medium.com/@seanjtaylor/a-personal-retrospective-on-prophet-f223c2378985",
     "type": "Blog",
     "level": "Easy",
     "tags": [
       "Forecasting",
       "Blog"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "Uber: Forecasting at Uber\u2014An Introduction",
     "description": "ARIMA, Holt-Winters, exponential smoothing, Theta (M3 winner). Insights from M4 winner Slawek Smyl.",
-    "category": "Forecasting",
+    "category": "Time Series Fundamentals",
     "url": "https://www.uber.com/blog/forecasting-introduction/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Forecasting",
       "Blog"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "DoorDash: ELITE Ensemble Learning for Time Series",
     "description": "ELITE framework balancing accuracy vs. computational efficiency. Uses Ray for distributed forecasting.",
-    "category": "Forecasting",
+    "category": "Time Series Fundamentals",
     "url": "https://doordash.engineering/2023/06/20/how-doordash-built-an-ensemble-learning-model-for-time-series-forecasting/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Forecasting",
       "Blog"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "Amazon Science: Chronos Foundation Model",
     "description": "State-of-the-art foundation model using T5 architecture. Zero-shot forecasting via token quantization.",
-    "category": "Forecasting",
+    "category": "Forecasting at Scale",
     "url": "https://www.amazon.science/blog/adapting-language-model-architectures-for-time-series-forecasting",
     "type": "Blog",
     "level": "Hard",
     "tags": [
       "Forecasting",
       "Blog"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "Amazon Science: AutoGluon-TimeSeries",
     "description": "AutoML for forecasting in 3 lines of code. Outperforms best-in-hindsight on 29 benchmark datasets.",
-    "category": "Forecasting",
+    "category": "Time Series Fundamentals",
     "url": "https://www.amazon.science/publications/autogluon-timeseries-automl-for-probabilistic-time-series-forecasting",
     "type": "Paper",
     "level": "Medium",
     "tags": [
       "Forecasting",
       "Paper"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "Instacart: Predicting Availability of 200M Grocery Items",
     "description": "XGBoost with 130 features scoring 200M+ items every 60 minutes. 15x items with 1/5 resources.",
-    "category": "Forecasting",
+    "category": "Marketplace Tech Blogs",
     "url": "https://tech.instacart.com/predicting-real-time-availability-of-200-million-grocery-items-in-us-canada-stores-61f43a16eafe",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Forecasting",
       "Blog"
-    ]
+    ],
+    "domain": "Industry Case Studies"
   },
   {
     "name": "sktime: Unified Framework for ML with Time Series",
     "description": "Published at NeurIPS. Unified scikit-learn-like API for forecasting, pipelines, cross-validation.",
-    "category": "Forecasting",
+    "category": "Time Series Fundamentals",
     "url": "https://www.sktime.net/en/latest/examples/01_forecasting.html",
     "type": "Documentation",
     "level": "Medium",
     "tags": [
       "Forecasting",
       "Documentation"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "scikit-learn: Lagged Features for Time Series",
     "description": "Official example using Polars for feature engineering with HistGradientBoostingRegressor.",
-    "category": "Forecasting",
+    "category": "Time Series Fundamentals",
     "url": "https://scikit-learn.org/stable/auto_examples/applications/plot_time_series_lagged_features.html",
     "type": "Tutorial",
     "level": "Medium",
     "tags": [
       "Forecasting",
       "Tutorial"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "MIT 15.053: Optimization Methods in Management Science",
     "description": "Undergraduate course on LP with geometry and visualization before algebra. Interactive spreadsheet exercises.",
-    "category": "Optimization",
+    "category": "Optimization Fundamentals",
     "url": "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/",
     "type": "Course",
     "level": "Easy",
     "tags": [
       "Optimization",
       "Course"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "QuantEcon: Linear Programming Introduction",
     "description": "Python notebooks from Nobel Laureate Sargent. LP with economics applications using SciPy and OR-Tools.",
-    "category": "Optimization",
+    "category": "Linear Programming Intro",
     "url": "https://intro.quantecon.org/lp_intro.html",
     "type": "Tutorial",
     "level": "Easy",
     "tags": [
       "Optimization",
       "Tutorial"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "Stanford CS229 Convex Optimization Overview",
     "description": "Zico Kolter's ML course supplement. Convex sets and functions with geometric intuition \u2014 ideal pre-Boyd prep.",
-    "category": "Optimization",
+    "category": "ML Fundamentals",
     "url": "https://see.stanford.edu/materials/aimlcs229/cs229-cvxopt.pdf",
     "type": "Lecture Notes",
     "level": "Medium",
     "tags": [
       "Optimization",
       "Lecture Notes"
-    ]
+    ],
+    "domain": "Machine Learning"
   },
   {
     "name": "Real Python: Linear Programming with Python",
     "description": "Comprehensive tutorial covering visualization, feasible regions, SciPy, PuLP, and mixed-integer programming.",
-    "category": "Optimization",
+    "category": "Linear Programming Intro",
     "url": "https://realpython.com/linear-programming-python/",
     "type": "Tutorial",
     "level": "Easy",
     "tags": [
       "Optimization",
       "Tutorial"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "SciPy Lecture Notes: Mathematical Optimization",
     "description": "Academic tutorial with visual explanations. Gradient descent, BFGS, Nelder-Mead with convergence visualizations.",
-    "category": "Optimization",
+    "category": "Optimization Fundamentals",
     "url": "https://scipy-lectures.org/advanced/mathematical_optimization/",
     "type": "Tutorial",
     "level": "Medium",
     "tags": [
       "Optimization",
       "Tutorial"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "PuLP Official Documentation",
     "description": "Complete LP/MIP documentation with case studies: blending problem, Sudoku, transportation. Multiple solver support.",
-    "category": "Optimization",
+    "category": "Solvers & Tools",
     "url": "https://coin-or.github.io/pulp/",
     "type": "Documentation",
     "level": "Easy",
     "tags": [
       "Optimization",
       "Documentation"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "Google OR-Tools Python Guide",
     "description": "Official documentation with setup and examples. CP-SAT solver won MiniZinc Challenge 2013-2024.",
-    "category": "Optimization",
+    "category": "Solvers & Tools",
     "url": "https://developers.google.com/optimization/introduction/python",
     "type": "Documentation",
     "level": "Medium",
     "tags": [
       "Optimization",
       "Documentation"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "DoorDash: Next-Generation Dasher Dispatch Optimization",
     "description": "Rare solver benchmarking transparency \u2014 compares CBC, XPress, CPLEX, Gurobi (34x faster than CBC).",
-    "category": "Optimization",
+    "category": "Solvers & Tools",
     "url": "https://careersatdoordash.com/blog/next-generation-optimization-for-dasher-dispatch-at-doordash/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Optimization",
       "Blog"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "Uber: Dynamic Pricing and Matching in Ride-Hailing",
     "description": "Academic rigor with industry application. Joint optimization of pricing and matching.",
-    "category": "Optimization",
+    "category": "Marketplace Tech Blogs",
     "url": "https://www.uber.com/blog/research/dynamic-pricing-and-matching-in-ride-hailing-platforms/",
     "type": "Blog",
     "level": "Hard",
     "tags": [
       "Optimization",
       "Blog"
-    ]
+    ],
+    "domain": "Industry Case Studies"
   },
   {
     "name": "MIT 6.046J Lecture 15: Linear Programming",
     "description": "Video intro from algorithmic perspective. LP formulation, reductions, and simplex method.",
-    "category": "Optimization",
+    "category": "Linear Programming Intro",
     "url": "https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/resources/lecture-15-linear-programming-lp-reductions-simplex/",
     "type": "Lectures",
     "level": "Medium",
     "tags": [
       "Optimization",
       "Lectures"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "MIT 6.079: Introduction to Convex Optimization",
     "description": "Boyd's MIT course version with better self-study structure. Complete notes, problem sets, applications.",
-    "category": "Optimization",
+    "category": "Time Series Fundamentals",
     "url": "https://ocw.mit.edu/courses/6-079-introduction-to-convex-optimization-fall-2009/",
     "type": "Course",
     "level": "Hard",
     "tags": [
       "Optimization",
       "Course"
-    ]
+    ],
+    "domain": "Forecasting & Time Series"
   },
   {
     "name": "GILP: Geometric Interpretation of Linear Programs (Cornell)",
     "description": "Academic-grade visualization (ACM SIGCSE 2023). Shows feasible regions, simplex iterations, branch-and-bound.",
-    "category": "Optimization",
+    "category": "Linear Programming Intro",
     "url": "https://gilp.henryrobbins.com/",
     "type": "Tool",
     "level": "Easy",
     "tags": [
       "Optimization",
       "Tool"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "Amazon Science: Operations Research and Optimization",
     "description": "Portal to Amazon's OR research on inventory planning, last-mile delivery, and fulfillment at massive scale.",
-    "category": "Optimization",
+    "category": "Supply Chain Optimization",
     "url": "https://www.amazon.science/research-areas/operations-research-and-optimization",
     "type": "Research Portal",
     "level": "Hard",
     "tags": [
       "Optimization",
       "Research Portal"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "Instacart: Delivering Optimal Shopping Experiences (Gurobi)",
     "description": "Why Instacart chose commercial solvers. Reliability and innovation speed from Gurobi.",
-    "category": "Optimization",
+    "category": "Solvers & Tools",
     "url": "https://www.gurobi.com/case_studies/instacart-delivering-optimal-shopping-experiences/",
     "type": "Case Study",
     "level": "Medium",
     "tags": [
       "Optimization",
       "Case Study"
-    ]
+    ],
+    "domain": "Optimization & Operations"
   },
   {
     "name": "The Cold Start Problem (Andrew Chen)",
     "description": "Atomic Networks and tipping points of two-sided marketplaces \u2014 why growth stalls",
-    "category": "Strategy & Analytics",
+    "category": "Platform Economics",
     "url": "https://www.coldstart.com/",
     "type": "Book",
     "level": "Medium",
     "tags": [
       "Strategy & Analytics",
       "Book"
-    ]
+    ],
+    "domain": "Strategy & Business"
   },
   {
     "name": "Lenny's Newsletter: How Duolingo Reignited User Growth",
     "description": "Case study on gamification, streaks, and retention mechanics that drove 4.5x growth",
-    "category": "Strategy & Analytics",
+    "category": "Retention & Engagement",
     "url": "https://www.lennysnewsletter.com/p/how-duolingo-reignited-user-growth",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "Strategy & Analytics",
       "Article"
-    ]
+    ],
+    "domain": "Product & Growth"
   },
   {
     "name": "Causal Inference for the Brave and True",
     "description": "The best free intro to causal inference \u2014 DiD, IV, RDD with Python code",
-    "category": "Strategy & Analytics",
+    "category": "Causal Inference Fundamentals",
     "url": "https://matheusfacure.github.io/python-causality-handbook/landing-page.html",
     "type": "Tool",
     "level": "Medium",
     "tags": [
       "Strategy & Analytics",
       "Tool"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "NFX Network Effects Manual",
     "description": "Comprehensive framework for 16 types of network effects \u2014 maps to marketplace growth",
-    "category": "Strategy & Analytics",
+    "category": "Switchback & Interference",
     "url": "https://www.nfx.com/post/network-effects-manual",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "Strategy & Analytics",
       "Article"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Growth Accounting & Backtraced Growth Accounting",
     "description": "Standard framework for user lifecycle states (New, Retained, Churned, Stale, Resurrected) with weighted backtrace views",
-    "category": "Strategy & Analytics",
+    "category": "Retention & Engagement",
     "url": "https://bytepawn.com/growth-accounting-and-backtraced-growth-accounting.html",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "Strategy & Analytics",
       "Article"
-    ]
+    ],
+    "domain": "Product & Growth"
   },
   {
     "name": "Guide to Product Metrics",
     "description": "26 metrics across AARRR framework: activation, retention, LTV, NRR, Quick Ratio, PMF Score explained",
-    "category": "Strategy & Analytics",
+    "category": "Retention & Engagement",
     "url": "https://www.roarkeclinton.com/product-metrics",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "Strategy & Analytics",
       "Article"
-    ]
+    ],
+    "domain": "Product & Growth"
   },
   {
     "name": "Measuring Product Health (Sequoia)",
     "description": "Definitive guide to growth, retention, stickiness & engagement metrics: DAU/MAU, Lness, cohort curves, Quick Ratio",
-    "category": "Strategy & Analytics",
+    "category": "Retention & Engagement",
     "url": "https://articles.sequoiacap.com/measuring-product-health",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "Strategy & Analytics",
       "Article"
-    ]
+    ],
+    "domain": "Product & Growth"
   },
   {
     "name": "Ken Norton: How to Hire a Product Manager",
     "description": "Former Google PM (14+ years) who led Docs, Calendar, Mobile Maps. This essay defines what a PM does by revealing hiring criteria \u2014 the map of competencies to develop.",
-    "category": "Product Sense",
+    "category": "Product Management Fundamentals",
     "url": "https://www.bringthedonuts.com/essays/productmanager.html",
     "type": "Essay",
     "level": "Easy",
     "tags": [
       "Product Sense",
       "Essay"
-    ]
+    ],
+    "domain": "Product & Growth"
   },
   {
     "name": "SVPG: Product Management Start Here",
     "description": "Silicon Valley Product Group's curated entry point distinguishing 'empowered product teams' from 'feature teams' \u2014 exposes why most PM work is 'product management theater'.",
-    "category": "Product Sense",
+    "category": "Product Management Fundamentals",
     "url": "https://www.svpg.com/product-management-start-here/",
     "type": "Knowledge Base",
     "level": "Easy",
     "tags": [
       "Product Sense",
       "Knowledge Base"
-    ]
+    ],
+    "domain": "Product & Growth"
   },
   {
     "name": "Shreyas Doshi: LNO Framework",
     "description": "Former PM leader at Stripe, Twitter, Google. The LNO Framework (Leverage, Neutral, Overhead tasks) is a breakthrough prioritization model \u2014 distinguishes good from exceptional PM thinking.",
-    "category": "Product Sense",
+    "category": "Bayesian Experimentation",
     "url": "https://shreyasdoshi.com/",
     "type": "Essays",
     "level": "Medium",
     "tags": [
       "Product Sense",
       "Essays"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Intercom: RICE Prioritization Framework",
     "description": "The RICE framework (Reach, Impact, Confidence, Effort) originated here and is now industry standard \u2014 provides quantitative structure for prioritization.",
-    "category": "Product Sense",
+    "category": "Bayesian Experimentation",
     "url": "https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/",
     "type": "Blog",
     "level": "Easy",
     "tags": [
       "Product Sense",
       "Blog"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Intercom: On Product Management (Free Book)",
     "description": "Beautifully designed, practical product content from Intercom's product team led by Des Traynor. Free downloadable PDF covering PM fundamentals.",
-    "category": "Product Sense",
+    "category": "Product Management Fundamentals",
     "url": "https://www.intercom.com/resources/books/intercom-product-management",
     "type": "Online Book",
     "level": "Easy",
     "tags": [
       "Product Sense",
       "Online Book"
-    ]
+    ],
+    "domain": "Product & Growth"
   },
   {
     "name": "Gibson Biddle: DHM Product Strategy Framework",
     "description": "Former VP Product at Netflix (2005-2010). A 13-essay series walking through exactly how Netflix built its product strategy using DHM (Delight, Hard-to-copy, Margin-enhancing).",
-    "category": "Product Sense",
+    "category": "Product Strategy",
     "url": "https://gibsonbiddle.medium.com/intro-to-product-strategy-60bdf72b17e3",
     "type": "Essay Series",
     "level": "Medium",
     "tags": [
       "Product Sense",
       "Essay Series"
-    ]
+    ],
+    "domain": "Product & Growth"
   },
   {
     "name": "Teresa Torres: Opportunity Solution Trees",
     "description": "Product discovery coach who has trained 17,000+ PMs. The Opportunity Solution Tree framework connects business outcomes \u2192 customer opportunities \u2192 solutions \u2192 experiments.",
-    "category": "Product Sense",
+    "category": "Prioritization Frameworks",
     "url": "https://www.producttalk.org/opportunity-solution-trees/",
     "type": "Blog + Book",
     "level": "Medium",
     "tags": [
       "Product Sense",
       "Blog + Book"
-    ]
+    ],
+    "domain": "Product & Growth"
   },
   {
     "name": "Marty Cagan: INSPIRED",
     "description": "THE definitive book on modern product management from SVPG founder. Explains empowered teams, product discovery vs. delivery, and how Amazon, Google, Netflix actually operate.",
-    "category": "Product Sense",
+    "category": "Product Management Fundamentals",
     "url": "https://www.svpg.com/books/inspired-how-to-create-tech-products-customers-love-2nd-edition/",
     "type": "Book",
     "level": "Easy",
     "tags": [
       "Product Sense",
       "Book"
-    ]
+    ],
+    "domain": "Product & Growth"
   },
   {
     "name": "Atlassian: How to Write Product Requirements",
     "description": "Practical guide to writing PRDs in an agile environment from the makers of Jira and Confluence. Includes templates and explains modern, lightweight documentation.",
-    "category": "Product Sense",
+    "category": "Product Analytics",
     "url": "https://www.atlassian.com/agile/product-management/requirements",
     "type": "Guide",
     "level": "Easy",
     "tags": [
       "Product Sense",
       "Guide"
-    ]
+    ],
+    "domain": "Product & Growth"
   },
   {
     "name": "Amplitude: Product Lessons with Shreyas Doshi",
     "description": "Deep conversation on 'The Fundamental Framework of Product Work' (Impact, Execution, Optics levels) \u2014 demonstrates how metrics connect to strategy at sophisticated level.",
-    "category": "Product Sense",
+    "category": "Uplift Modeling & CATE",
     "url": "https://amplitude.com/blog/shreyas-doshi-product-lessons",
     "type": "Interview",
     "level": "Medium",
     "tags": [
       "Product Sense",
       "Interview"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Lenny's Newsletter & Podcast",
     "description": "Former Airbnb PM, #1 business newsletter on Substack with 700k+ subscribers. The most comprehensive ongoing resource for developing 'product sense' with concrete, tactical frameworks.",
-    "category": "Product Sense",
+    "category": "Marketplace Tech Blogs",
     "url": "https://www.lennysnewsletter.com/",
     "type": "Newsletter + Podcast",
     "level": "Easy",
     "tags": [
       "Product Sense",
       "Newsletter + Podcast"
-    ]
+    ],
+    "domain": "Industry Case Studies"
   },
   {
     "name": "Spotify: Choosing a Sequential Testing Framework",
     "description": "Practical comparison of Group Sequential Tests (GST), mSPRT, GAVI, and corrected-alpha approaches with simulation results. Clarifies when to use each method.",
-    "category": "Experimentation",
+    "category": "Sequential Testing",
     "url": "https://engineering.atspotify.com/2023/03/choosing-sequential-testing-framework-comparisons-and-discussions/",
     "type": "Blog",
     "level": "Hard",
     "tags": [
       "Experimentation",
       "Blog"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Always Valid Inference: Continuous Monitoring of A/B Tests",
     "description": "Foundational paper on always-valid p-values and confidence intervals from Stanford/Optimizely. Solves the 'peeking problem' that invalidates most industry A/B tests.",
-    "category": "Experimentation",
+    "category": "A/B Testing Fundamentals",
     "url": "https://arxiv.org/abs/1512.04922",
     "type": "Paper",
     "level": "Hard",
     "tags": [
       "Experimentation",
       "Paper"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Airbnb: Variance Reduction Using In-Experiment Data (KDD 2023)",
     "description": "Extends CUPED to use in-experiment data for variance reduction. Addresses delayed outcomes and sparse signals in marketplace experimentation with real booking flow examples.",
-    "category": "Experimentation",
+    "category": "CUPED & Variance Reduction",
     "url": "https://alexdeng.github.io/public/files/kdd2023-inexp.pdf",
     "type": "Paper",
     "level": "Hard",
     "tags": [
       "Experimentation",
       "Paper"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Uber: Supercharging A/B Testing at Uber",
     "description": "Rebuilding experimentation from ground-up: logging architecture, statistics engine for A/B/N tests, metric recommendation, and flicker detection for 1,000+ concurrent experiments.",
-    "category": "Experimentation",
+    "category": "A/B Testing Fundamentals",
     "url": "https://www.uber.com/blog/supercharging-a-b-testing-at-uber/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Experimentation",
       "Blog"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "LinkedIn: A/B Testing Platform Technical Paper",
     "description": "41,000+ simultaneous A/B tests on 700M+ members. Addresses network-specific challenges: viewer/viewee experiments, email experiments with selection bias, interaction effects.",
-    "category": "Experimentation",
+    "category": "A/B Testing Fundamentals",
     "url": "https://engineering.linkedin.com/ab-testing/introduction-technical-paper-linkedins-ab-testing-platform",
     "type": "Paper",
     "level": "Hard",
     "tags": [
       "Experimentation",
       "Paper"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Reducing Interference Bias in Marketplace Experiments (Holtz et al.)",
     "description": "Empirical evidence that standard experiments can overstate treatment effects by up to 100% in marketplace settings. Provides practical cluster randomization solutions.",
-    "category": "Experimentation",
+    "category": "Switchback & Interference",
     "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2020.01157",
     "type": "Paper",
     "level": "Hard",
     "tags": [
       "Experimentation",
       "Paper"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "150 Successful ML Models at Booking.com (KDD 2019)",
     "description": "Reveals that model performance \u2260 business performance. Demonstrates why RCTs are critical for validating ML models in production with framework for hypothesis-driven iteration.",
-    "category": "Experimentation",
+    "category": "E-commerce & Retail",
     "url": "https://dl.acm.org/doi/10.1145/3292500.3330744",
     "type": "Paper",
     "level": "Medium",
     "tags": [
       "Experimentation",
       "Paper"
-    ]
+    ],
+    "domain": "Industry Case Studies"
   },
   {
     "name": "Stitch Fix: Multi-Armed Bandits Integration",
     "description": "How to integrate Thompson Sampling and \u03b5-greedy bandits into an existing A/B testing platform. Covers deterministic allocation via hashing and practical tradeoffs.",
-    "category": "Experimentation",
+    "category": "A/B Testing Fundamentals",
     "url": "https://multithreaded.stitchfix.com/blog/2020/08/05/bandits/",
     "type": "Blog",
     "level": "Medium",
     "tags": [
       "Experimentation",
       "Blog"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Booking.com: How to Increase Power with CUPED",
     "description": "The clearest practical CUPED explanation. Mathematical derivations with pseudo-code, theta calculation, and covariate adjustment. References the original Microsoft paper while making it accessible.",
-    "category": "Experimentation",
+    "category": "CUPED & Variance Reduction",
     "url": "https://booking.ai/how-booking-com-increases-the-power-of-online-experiments-with-cuped-995d186fff1d",
     "type": "Blog",
     "level": "Hard",
     "tags": [
       "Experimentation",
       "Blog"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Netflix: A Survey of Causal Inference Applications",
     "description": "DiD, double ML, and Bayesian approaches across content, product, and member experience teams. Based on Netflix's internal Causal Inference Summit.",
-    "category": "Experimentation",
+    "category": "Difference-in-Differences",
     "url": "https://netflixtechblog.com/a-survey-of-causal-inference-applications-at-netflix-b62d25175e6f",
     "type": "Blog",
     "level": "Hard",
     "tags": [
       "Experimentation",
       "Blog"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Delta Method in Metric Analytics (Microsoft/KDD 2018)",
     "description": "Comprehensive treatment for deriving variance for complex metrics (ratios, percentiles, quantiles). Parallelizable implementation for distributed systems \u2014 essential for production experimentation.",
-    "category": "Experimentation",
+    "category": "Causal Inference Fundamentals",
     "url": "https://arxiv.org/pdf/1803.06336",
     "type": "Paper",
     "level": "Hard",
     "tags": [
       "Experimentation",
       "Paper"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Design and Analysis of Switchback Experiments (Harvard/MIT)",
     "description": "Derives optimal switchback design under carryover effects using minimax optimization. Two inference approaches: exact randomization p-values and finite-population CLT. The theoretical foundation for marketplace experimentation.",
-    "category": "Experimentation",
+    "category": "A/B Testing Fundamentals",
     "url": "https://arxiv.org/abs/2009.00148",
     "type": "Paper",
     "level": "Hard",
     "tags": [
       "Experimentation",
       "Paper"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "CausalML: Uplift Modeling Package (Uber)",
     "description": "Meta-learners (S, T, X, R), uplift trees, CEVAE, DragonNet. 4,100+ GitHub stars, 2M+ PyPI downloads. KDD 2021 tutorial materials. Essential for heterogeneous treatment effects.",
-    "category": "Experimentation",
+    "category": "Causal ML Libraries",
     "url": "https://github.com/uber/causalml",
     "type": "Package",
     "level": "Medium",
     "tags": [
       "Experimentation",
       "Package"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "PyMC: Bayesian A/B Testing Tutorial",
     "description": "Full posterior distributions instead of point estimates. Beta-Binomial for conversions, Gamma-Poisson for continuous metrics. Directly answers 'probability B beats A' without frequentist constraints.",
-    "category": "Experimentation",
+    "category": "A/B Testing Fundamentals",
     "url": "https://www.pymc.io/projects/examples/en/latest/causal_inference/bayesian_ab_testing_introduction.html",
     "type": "Tutorial",
     "level": "Medium",
     "tags": [
       "Experimentation",
       "Tutorial"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Choosing Your North Star Metric (Lenny/a16z)",
     "description": "Surveyed 40+ companies (Airbnb, Netflix, Spotify, Slack, Uber) for a taxonomy of 6 NSM categories. Frameworks for choosing based on business model type \u2014 the definitive NSM resource.",
-    "category": "Product Analytics",
+    "category": "Uplift Modeling & CATE",
     "url": "https://future.com/north-star-metrics/",
     "type": "Framework",
     "level": "Medium",
     "tags": [
       "Product Analytics",
       "Framework"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "A Quantitative Approach to Product-Market Fit (Tribe Capital)",
     "description": "The foundational text on growth accounting. MAU growth accounting AND revenue growth accounting. Quick Ratio, Gross Retention, Net Churn explained by the team that pioneered it.",
-    "category": "Product Analytics",
+    "category": "Retention & Engagement",
     "url": "https://tribecap.co/a-quantitative-approach-to-product-market-fit/",
     "type": "Framework",
     "level": "Hard",
     "tags": [
       "Product Analytics",
       "Framework"
-    ]
+    ],
+    "domain": "Product & Growth"
   },
   {
     "name": "Guardrail Metrics for A/B Tests (PostHog)",
     "description": "Real examples from Airbnb's Experiment Guardrails Framework, Square, Bing, Netflix, eBay. The 3 categories: product-related, company-related, trustworthiness-related. Prevents metric gaming.",
-    "category": "Product Analytics",
+    "category": "A/B Testing Fundamentals",
     "url": "https://posthog.com/product-engineers/guardrail-metrics",
     "type": "Guide",
     "level": "Medium",
     "tags": [
       "Product Analytics",
       "Guide"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "Retention (Sequoia Capital Data Science)",
     "description": "Three archetypal retention curves \u2014 Flattening, Declining, Smiling \u2014 and what each indicates about product health. Benchmarks by product type. Triangle retention chart visualization.",
-    "category": "Product Analytics",
+    "category": "Uplift Modeling & CATE",
     "url": "https://articles.sequoiacap.com/retention",
     "type": "Framework",
     "level": "Medium",
     "tags": [
       "Product Analytics",
       "Framework"
-    ]
+    ],
+    "domain": "Causal Inference & Experimentation"
   },
   {
     "name": "The Power User Curve (a16z)",
     "description": "The L30/L28 framework coined by Facebook's growth team. Why Power User Curves beat DAU/MAU: reveals variance, identifies power users, customizable for core actions. Used by a16z to evaluate startups.",
-    "category": "Product Analytics",
+    "category": "Retention & Engagement",
     "url": "https://a16z.com/the-power-user-curve-the-best-way-to-understand-your-most-engaged-users/",
     "type": "Framework",
     "level": "Medium",
     "tags": [
       "Product Analytics",
       "Framework"
-    ]
+    ],
+    "domain": "Product & Growth"
   },
   {
     "name": "How to Measure Cohort Retention (Lenny's Newsletter)",
     "description": "The most comprehensive retention measurement guide. SQL implementations, bounded vs unbounded retention definitions, visualization best practices. When to use X-day vs unbounded retention.",
-    "category": "Product Analytics",
+    "category": "Survey & Measurement",
     "url": "https://www.lennysnewsletter.com/p/measuring-cohort-retention",
     "type": "Tutorial",
     "level": "Medium",
     "tags": [
       "Product Analytics",
       "Tutorial"
-    ]
+    ],
+    "domain": "Statistics & Probability"
   },
   {
     "name": "Ultimate Guide: Activation (Aakash Gupta)",
     "description": "Traces activation history from Facebook's 2008 growth team, including Chamath's '7 friends in 10 days' discovery. The Setup \u2192 Aha \u2192 Habit framework with data-backed examples.",
-    "category": "Product Analytics",
+    "category": "Activation & Onboarding",
     "url": "https://www.news.aakashg.com/p/ultimate-guide-activation",
     "type": "Guide",
     "level": "Medium",
     "tags": [
       "Product Analytics",
       "Guide"
-    ]
+    ],
+    "domain": "Product & Growth"
   },
   {
     "name": "How Superhuman Built an Engine to Find PMF (First Round)",
     "description": "Operationalizes Sean Ellis's '40% very disappointed' survey into a systematic process. How Superhuman went from 22% to 58% PMF score using segmentation. Most referenced First Round article.",
-    "category": "Product Analytics",
+    "category": "Survey & Measurement",
     "url": "https://review.firstround.com/how-superhuman-built-an-engine-to-find-product-market-fit/",
     "type": "Case Study",
     "level": "Medium",
     "tags": [
       "Product Analytics",
       "Case Study"
-    ]
+    ],
+    "domain": "Statistics & Probability"
   },
   {
     "name": "Slack's 2000 Messages Activation Metric",
     "description": "Documents Slack's activation discovery \u2014 after 2,000 messages sent per team, 93% remain active. How they identified this leading indicator. Conversion rate significantly above 5% SaaS average.",
-    "category": "Product Analytics",
+    "category": "Activation & Onboarding",
     "url": "https://www.growth-letter.com/p/inside-slacks-4-billion-growth-system",
     "type": "Case Study",
     "level": "Easy",
     "tags": [
       "Product Analytics",
       "Case Study"
-    ]
+    ],
+    "domain": "Product & Growth"
   }
 ]
