@@ -2871,11 +2871,14 @@ a:hover {
     background: var(--bg-hover);
     border-radius: 4px;
     border-left: 3px solid var(--accent);
-    transition: background 0.2s;
+    transition: background 0.2s, transform 0.15s;
+    position: relative;
+    cursor: pointer;
 }
 
 .month-event:hover {
     background: var(--accent-bg);
+    transform: translateX(2px);
 }
 
 .month-event a {
@@ -2887,9 +2890,141 @@ a:hover {
     color: var(--accent);
 }
 
+/* Subcategory color-coding */
+.month-event.event-experimentation { border-left-color: #10b981; }
+.month-event.event-marketing-science { border-left-color: #8b5cf6; }
+.month-event.event-pricing-revenue { border-left-color: #f59e0b; }
+.month-event.event-platforms-e-commerce { border-left-color: #3b82f6; }
+.month-event.event-statistics-analytics { border-left-color: #6366f1; }
+.month-event.event-healthcare-economics { border-left-color: #ec4899; }
+.month-event.event-labor-finance { border-left-color: #14b8a6; }
+.month-event.event-antitrust { border-left-color: #ef4444; }
+.month-event.event-market-design { border-left-color: #f97316; }
+
+/* Event tooltip */
+.month-event .event-tooltip {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.75rem;
+    min-width: 220px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 100;
+    margin-bottom: 8px;
+}
+
+.month-event:hover .event-tooltip {
+    display: block;
+}
+
+.event-tooltip .tooltip-title {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.event-tooltip .tooltip-meta {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.event-tooltip .tooltip-badge {
+    display: inline-block;
+    font-size: 0.7rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    background: var(--accent-light, rgba(59, 130, 246, 0.15));
+    color: var(--accent);
+    margin-top: 0.4rem;
+}
+
 .month-empty {
     color: var(--text-placeholder);
     font-size: 0.8rem;
+    font-style: italic;
+}
+
+/* Subcategory Legend */
+.subcategory-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: var(--bg-card);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 3px;
+}
+
+.legend-color.experimentation { background: #10b981; }
+.legend-color.marketing-science { background: #8b5cf6; }
+.legend-color.pricing-revenue { background: #f59e0b; }
+.legend-color.platforms-e-commerce { background: #3b82f6; }
+.legend-color.statistics-analytics { background: #6366f1; }
+.legend-color.healthcare-economics { background: #ec4899; }
+.legend-color.labor-finance { background: #14b8a6; }
+.legend-color.antitrust { background: #ef4444; }
+.legend-color.market-design { background: #f97316; }
+
+/* Month View Navigation */
+.month-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.month-nav button {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.month-nav button:hover {
+    background: var(--bg-hover);
+    border-color: var(--accent);
+}
+
+.month-nav h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    min-width: 150px;
+    text-align: center;
+}
+
+#month-view .no-events {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-secondary);
     font-style: italic;
 }
 

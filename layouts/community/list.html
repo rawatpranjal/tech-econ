@@ -2,10 +2,11 @@
 {{ $conferences := where .Site.Data.community "category" "Conferences" }}
 {{ $researchLabs := where .Site.Data.community "category" "Research Labs" }}
 {{ $online := where .Site.Data.community "category" "Online" }}
+{{ $meetups := where .Site.Data.community "category" "Meetups" }}
 <!-- Hero Section -->
 <header class="hero hero-with-image hero-community">
     <h1 class="hero-title">Community & Events</h1>
-    <p class="hero-tagline">{{ len $conferences }} conferences • {{ len $researchLabs }} research labs • {{ len $online }} online communities</p>
+    <p class="hero-tagline">{{ len $conferences }} conferences • {{ len $researchLabs }} research labs • {{ len $online }} online communities • {{ len $meetups }} meetups</p>
 </header>
 
 <!-- Search Index Data for Fuse.js -->
@@ -37,7 +38,7 @@
         </div>
 
         <!-- Category Dropdown -->
-        {{ $categoryOrder := slice "Conferences" "Research Labs" "Online" }}
+        {{ $categoryOrder := slice "Conferences" "Research Labs" "Online" "Meetups" }}
         <select id="category-select" class="category-select">
             <option value="all">All Categories</option>
             {{ range $cat := $categoryOrder }}
@@ -47,15 +48,29 @@
 
         <!-- View Toggle -->
         <div class="view-toggle">
-            <button id="btn-calendar" class="toggle-btn active">Calendar</button>
+            <button id="btn-year" class="toggle-btn active">Year</button>
+            <button id="btn-month" class="toggle-btn">Month</button>
             <button id="btn-cards" class="toggle-btn">Cards</button>
         </div>
     </div>
 
     <div id="result-count" class="result-count">{{ len .Site.Data.community }} events & communities</div>
 
-    <!-- Calendar View (default) -->
-    <div id="calendar-view">
+    <!-- Year View (default) -->
+    <div id="year-view">
+        <!-- Subcategory Legend -->
+        <div class="subcategory-legend">
+            <div class="legend-item"><span class="legend-color experimentation"></span> Experimentation</div>
+            <div class="legend-item"><span class="legend-color marketing-science"></span> Marketing</div>
+            <div class="legend-item"><span class="legend-color pricing-revenue"></span> Pricing</div>
+            <div class="legend-item"><span class="legend-color platforms-e-commerce"></span> Platforms</div>
+            <div class="legend-item"><span class="legend-color statistics-analytics"></span> Statistics</div>
+            <div class="legend-item"><span class="legend-color healthcare-economics"></span> Healthcare</div>
+            <div class="legend-item"><span class="legend-color labor-finance"></span> Labor & Finance</div>
+            <div class="legend-item"><span class="legend-color antitrust"></span> Antitrust</div>
+            <div class="legend-item"><span class="legend-color market-design"></span> Market Design</div>
+        </div>
+
         <div class="calendar-grid">
             {{ $months := slice "January" "February" "March" "April" "May" "June" "July" "August" "September" "October" "November" "December" }}
             {{ range $month := $months }}
@@ -64,11 +79,21 @@
                 <div class="month-events">
                     {{ $hasEvents := false }}
                     {{ range $.Site.Data.community }}
-                    {{ if and (ne .dates "Ongoing") (ne .category "Online") }}
+                    {{ if and (ne .dates "Ongoing") (eq .category "Conferences") }}
                     {{ if or (findRE (printf "^%s" $month) .dates) (findRE (printf "-%s" $month) .dates) }}
                     {{ $hasEvents = true }}
-                    <div class="month-event">
+                    {{ $subcatClass := .subcategory | default "" | urlize }}
+                    <div class="month-event event-{{ $subcatClass }}" data-month="{{ $month }}">
                         <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
+                        <div class="event-tooltip">
+                            <div class="tooltip-title">{{ .name }}</div>
+                            <div class="tooltip-meta">
+                                <span>📍 {{ .location }}</span>
+                                <span>📅 {{ .dates }}</span>
+                                {{ if .attendees }}<span>👥 {{ .attendees }}</span>{{ end }}
+                            </div>
+                            {{ if .subcategory }}<span class="tooltip-badge">{{ .subcategory }}</span>{{ end }}
+                        </div>
                     </div>
                     {{ end }}
                     {{ end }}
@@ -144,6 +169,61 @@
                 {{ end }}
             </div>
         </div>
+
+        <!-- Meetups (always cards, grouped by city) -->
+        <div class="always-available">
+            <h3>Meetups</h3>
+            <div class="cards-row">
+                {{ range .Site.Data.community }}
+                {{ if eq .category "Meetups" }}
+                <div class="resource-card"
+                     data-name="{{ .name | lower }}"
+                     data-description="{{ .description | lower }}"
+                     data-category="{{ .category }}"
+                     data-location="{{ .location | lower }}">
+                    <div class="card-header">
+                        <img class="resource-favicon"
+                             src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32"
+                             alt=""
+                             loading="lazy"
+                             onerror="this.style.display='none'">
+                        <h3 class="resource-name">
+                            <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
+                        </h3>
+                        <span class="resource-type">{{ .type }}</span>
+                    </div>
+                    <p class="resource-desc">{{ .description }}</p>
+                    <div class="resource-meta">
+                        <span class="meta-item">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            {{ .location }}
+                        </span>
+                    </div>
+                    <div class="card-footer">
+                        <span class="category-badge">{{ .type }}</span>
+                        <a href="{{ .url }}" target="_blank" class="link-btn">Visit</a>
+                    </div>
+                </div>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+
+    <!-- Month View (hidden by default) -->
+    <div id="month-view" style="display: none;">
+        <div class="month-nav">
+            <button id="prev-month" aria-label="Previous month">←</button>
+            <h2 id="current-month-title">January</h2>
+            <button id="next-month" aria-label="Next month">→</button>
+        </div>
+        <div id="month-events-container" class="cards-row">
+            <!-- Events for selected month will be shown here -->
+        </div>
+        <p id="no-month-events" class="no-events" style="display: none;">No conferences scheduled for this month.</p>
     </div>
 
     <!-- Cards View (hidden by default) -->
@@ -240,24 +320,114 @@ document.addEventListener('DOMContentLoaded', function() {
         ]
     });
 
-    // View toggle (page-specific)
-    const calendarView = document.getElementById('calendar-view');
+    // View elements
+    const yearView = document.getElementById('year-view');
+    const monthView = document.getElementById('month-view');
     const cardsView = document.getElementById('cards-view');
-    const btnCalendar = document.getElementById('btn-calendar');
+    const btnYear = document.getElementById('btn-year');
+    const btnMonth = document.getElementById('btn-month');
     const btnCards = document.getElementById('btn-cards');
 
-    btnCalendar.addEventListener('click', function() {
-        calendarView.style.display = 'block';
+    // Month navigation
+    const months = ['January', 'February', 'March', 'April', 'May', 'June',
+                    'July', 'August', 'September', 'October', 'November', 'December'];
+    let currentMonthIndex = new Date().getMonth();
+    const monthTitle = document.getElementById('current-month-title');
+    const monthEventsContainer = document.getElementById('month-events-container');
+    const noEventsMsg = document.getElementById('no-month-events');
+
+    // Get all conference data from year view
+    function getConferencesForMonth(monthName) {
+        const events = document.querySelectorAll('#year-view .month-event[data-month="' + monthName + '"]');
+        return Array.from(events);
+    }
+
+    // Update month view with conferences
+    function updateMonthView() {
+        const monthName = months[currentMonthIndex];
+        monthTitle.textContent = monthName;
+        monthEventsContainer.innerHTML = '';
+
+        const events = getConferencesForMonth(monthName);
+
+        if (events.length === 0) {
+            noEventsMsg.style.display = 'block';
+            monthEventsContainer.style.display = 'none';
+        } else {
+            noEventsMsg.style.display = 'none';
+            monthEventsContainer.style.display = 'grid';
+
+            events.forEach(event => {
+                const link = event.querySelector('a');
+                const tooltip = event.querySelector('.event-tooltip');
+                const subcatClass = Array.from(event.classList).find(c => c.startsWith('event-') && c !== 'event-tooltip');
+
+                const card = document.createElement('div');
+                card.className = 'resource-card month-detail-card';
+
+                // Extract tooltip data
+                const title = tooltip ? tooltip.querySelector('.tooltip-title').textContent : link.textContent;
+                const metaSpans = tooltip ? tooltip.querySelectorAll('.tooltip-meta span') : [];
+                const badge = tooltip ? tooltip.querySelector('.tooltip-badge') : null;
+
+                let metaHtml = '';
+                metaSpans.forEach(span => {
+                    metaHtml += '<span class="meta-item">' + span.textContent + '</span>';
+                });
+
+                card.innerHTML = `
+                    <div class="card-header">
+                        <h3 class="resource-name">
+                            <a href="${link.href}" target="_blank" rel="noopener">${title}</a>
+                        </h3>
+                    </div>
+                    <div class="resource-meta">${metaHtml}</div>
+                    <div class="card-footer">
+                        ${badge ? '<span class="subcategory-badge">' + badge.textContent + '</span>' : ''}
+                        <a href="${link.href}" target="_blank" class="link-btn">Visit</a>
+                    </div>
+                `;
+
+                monthEventsContainer.appendChild(card);
+            });
+        }
+    }
+
+    // View toggle handlers
+    function setActiveView(view) {
+        yearView.style.display = 'none';
+        monthView.style.display = 'none';
         cardsView.style.display = 'none';
-        btnCalendar.classList.add('active');
+        btnYear.classList.remove('active');
+        btnMonth.classList.remove('active');
         btnCards.classList.remove('active');
+
+        if (view === 'year') {
+            yearView.style.display = 'block';
+            btnYear.classList.add('active');
+        } else if (view === 'month') {
+            monthView.style.display = 'block';
+            btnMonth.classList.add('active');
+            updateMonthView();
+        } else {
+            cardsView.style.display = 'block';
+            btnCards.classList.add('active');
+        }
+    }
+
+    btnYear.addEventListener('click', () => setActiveView('year'));
+    btnMonth.addEventListener('click', () => setActiveView('month'));
+    btnCards.addEventListener('click', () => setActiveView('cards'));
+
+    // Month navigation
+    document.getElementById('prev-month').addEventListener('click', function() {
+        currentMonthIndex = (currentMonthIndex - 1 + 12) % 12;
+        updateMonthView();
     });
 
-    btnCards.addEventListener('click', function() {
-        calendarView.style.display = 'none';
-        cardsView.style.display = 'block';
-        btnCards.classList.add('active');
-        btnCalendar.classList.remove('active');
+    document.getElementById('next-month').addEventListener('click', function() {
+        currentMonthIndex = (currentMonthIndex + 1) % 12;
+        updateMonthView();
     });
 });
 </script>
