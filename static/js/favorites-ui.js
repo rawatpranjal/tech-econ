@@ -148,19 +148,12 @@
 
         if (createBtn) {
             createBtn.addEventListener('click', function() {
-                const name = prompt('Enter playlist name:');
-                if (name && name.trim()) {
-                    const playlistId = window.TechEconPlaylists.create(name.trim());
-                    if (currentPlaylistItem) {
-                        window.TechEconPlaylists.addItem(
-                            playlistId,
-                            currentPlaylistItem.type,
-                            currentPlaylistItem.id,
-                            currentPlaylistItem.data
-                        );
-                        showToast('Created playlist and added item');
-                    }
-                    hideAddToPlaylistModal();
+                // Store pending item to add after playlist creation
+                window._pendingPlaylistItem = currentPlaylistItem;
+                hideAddToPlaylistModal();
+                // Show the proper create playlist modal
+                if (window.showCreatePlaylistModal) {
+                    window.showCreatePlaylistModal();
                 }
             });
         }
@@ -386,17 +379,79 @@
             `;
         }
 
+        // Render a table row for an item
+        function renderCollectionRow(fav, item, playlistId) {
+            const name = item?.name || item?.title || fav.data?.name || fav.id;
+            const desc = item?.description || fav.data?.description || '';
+            const url = item?.url || item?.link || fav.data?.url || '#';
+            const category = item?.category || item?.type || fav.data?.category || fav.type;
+            const favicon = getFavicon(url);
+            const escapedId = fav.id.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+            const escapedPlaylistId = playlistId ? playlistId.replace(/'/g, "\\'") : '';
+
+            return `
+                <tr class="collection-row" data-type="${fav.type}" data-id="${fav.id}">
+                    <td class="col-name">
+                        ${favicon ? `<img class="resource-favicon-sm" src="${favicon}" alt="" loading="lazy" onerror="this.style.display='none'">` : ''}
+                        <a href="${url}" target="_blank" rel="noopener">${name}</a>
+                    </td>
+                    <td class="col-type"><span class="type-badge type-${fav.type}">${fav.type}</span></td>
+                    <td class="col-category">${category}</td>
+                    <td class="col-actions">
+                        <button class="btn-icon-sm move-to-playlist-btn" title="Move to playlist" data-type="${fav.type}" data-id="${escapedId}" data-current-playlist="${escapedPlaylistId}">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                        <button class="btn-icon-sm btn-danger" onclick="removeFromCollection('${fav.type}', '${escapedId}', '${escapedPlaylistId}')" title="Remove">
+                            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </button>
+                    </td>
+                </tr>
+            `;
+        }
+
         // Render a playlist section
-        function renderPlaylistSection(playlist, items, isExpanded) {
+        function renderPlaylistSection(playlist, items, isExpanded, viewMode) {
             const itemCount = items.length;
             const escapedId = playlist.id.replace(/'/g, "\\'");
 
             let itemsHtml = '';
-            items.forEach(item => {
-                const fav = { type: item.type, id: item.id, data: item.data };
-                const fullItem = findItem(item.type, item.id);
-                itemsHtml += renderCollectionCard(fav, fullItem, playlist.id);
-            });
+            if (viewMode === 'table') {
+                // Table view
+                if (items.length > 0) {
+                    itemsHtml = `
+                        <table class="collection-table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Type</th>
+                                    <th>Category</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                    `;
+                    items.forEach(item => {
+                        const fav = { type: item.type, id: item.id, data: item.data };
+                        const fullItem = findItem(item.type, item.id);
+                        itemsHtml += renderCollectionRow(fav, fullItem, playlist.id);
+                    });
+                    itemsHtml += '</tbody></table>';
+                }
+            } else {
+                // Card view (default)
+                items.forEach(item => {
+                    const fav = { type: item.type, id: item.id, data: item.data };
+                    const fullItem = findItem(item.type, item.id);
+                    itemsHtml += renderCollectionCard(fav, fullItem, playlist.id);
+                });
+            }
+
+            const contentClass = viewMode === 'table' ? 'table-view' : 'favorites-grid';
 
             return `
                 <div class="playlist-section ${isExpanded ? 'expanded' : ''}" data-playlist-id="${playlist.id}">
@@ -424,7 +479,7 @@
                         </div>
                     </div>
                     <div class="playlist-section-content">
-                        <div class="favorites-grid">
+                        <div class="${contentClass}">
                             ${itemsHtml || '<p class="empty-playlist">No items in this playlist</p>'}
                         </div>
                     </div>
@@ -472,11 +527,31 @@
                     !favoritesInPlaylists.has(`${fav.type}:${fav.id}`)
                 );
 
+                // Get current view preference
+                const currentView = localStorage.getItem('collectionView') || 'cards';
+
                 // Build HTML
                 let html = `
                     <div class="collection-actions">
                         <span class="collection-count-label">${favorites.length} saved item${favorites.length !== 1 ? 's' : ''}</span>
                         <div class="action-buttons">
+                            <div class="view-toggle">
+                                <button class="view-toggle-btn ${currentView === 'cards' ? 'active' : ''}" onclick="setCollectionView('cards')" title="Card view">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="7" height="7"></rect>
+                                        <rect x="14" y="3" width="7" height="7"></rect>
+                                        <rect x="3" y="14" width="7" height="7"></rect>
+                                        <rect x="14" y="14" width="7" height="7"></rect>
+                                    </svg>
+                                </button>
+                                <button class="view-toggle-btn ${currentView === 'table' ? 'active' : ''}" onclick="setCollectionView('table')" title="Table view">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                                    </svg>
+                                </button>
+                            </div>
                             <button class="btn btn-primary btn-sm" onclick="showCreatePlaylistModal()">
                                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
                                     <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -498,7 +573,7 @@
 
                 // Render each playlist as a collapsible section
                 playlists.forEach((playlist, index) => {
-                    html += renderPlaylistSection(playlist, playlist.items, index === 0);
+                    html += renderPlaylistSection(playlist, playlist.items, index === 0, currentView);
                 });
 
                 // Render uncategorized section
@@ -508,7 +583,7 @@
                         name: 'Uncategorized',
                         items: uncategorized.map(f => ({ type: f.type, id: f.id, data: f.data }))
                     };
-                    html += renderPlaylistSection(uncategorizedPlaylist, uncategorizedPlaylist.items, playlists.length === 0);
+                    html += renderPlaylistSection(uncategorizedPlaylist, uncategorizedPlaylist.items, playlists.length === 0, currentView);
                 }
 
                 container.innerHTML = html;
@@ -543,6 +618,12 @@
             }
         };
 
+        // Set collection view (cards or table)
+        window.setCollectionView = function(viewMode) {
+            localStorage.setItem('collectionView', viewMode);
+            loadCollection();
+        };
+
         // Show create playlist modal
         window.showCreatePlaylistModal = function() {
             const modal = document.getElementById('create-playlist-modal');
@@ -552,15 +633,21 @@
             }
         };
 
-        // Rename playlist
+        // Rename playlist - show modal
         window.renamePlaylist = function(playlistId) {
             const playlist = window.TechEconPlaylists.get(playlistId);
             if (!playlist) return;
-            const newName = prompt('Enter new name:', playlist.name);
-            if (newName && newName.trim()) {
-                window.TechEconPlaylists.rename(playlistId, newName.trim());
-                showToast('Playlist renamed');
-                loadCollection();
+
+            const modal = document.getElementById('rename-playlist-modal');
+            const input = document.getElementById('rename-playlist-input');
+            const idInput = document.getElementById('rename-playlist-id');
+
+            if (modal && input && idInput) {
+                input.value = playlist.name;
+                idInput.value = playlistId;
+                modal.style.display = 'flex';
+                input.focus();
+                input.select();
             }
         };
 
@@ -692,6 +779,7 @@
         // Initialize modals
         initAddToPlaylistModal();
         initCreatePlaylistModal();
+        initRenamePlaylistModal();
     }
 
     // Initialize create playlist modal
@@ -714,8 +802,18 @@
             createBtn.addEventListener('click', function() {
                 const name = input.value.trim();
                 if (name) {
-                    window.TechEconPlaylists.create(name);
-                    showToast('Playlist created');
+                    const playlistId = window.TechEconPlaylists.create(name);
+
+                    // Check if there's a pending item to add
+                    if (window._pendingPlaylistItem) {
+                        const item = window._pendingPlaylistItem;
+                        window.TechEconPlaylists.addItem(playlistId, item.type, item.id, item.data);
+                        showToast('Created playlist and added item');
+                        window._pendingPlaylistItem = null;
+                    } else {
+                        showToast('Playlist created');
+                    }
+
                     closeModal();
                     if (window.reloadFavoritesPage) window.reloadFavoritesPage();
                 }
@@ -727,6 +825,49 @@
             if (e.key === 'Enter') {
                 e.preventDefault();
                 createBtn.click();
+            }
+        });
+
+        // Close on backdrop click
+        modal.querySelector('.modal-backdrop')?.addEventListener('click', closeModal);
+    }
+
+    // Initialize rename playlist modal
+    function initRenamePlaylistModal() {
+        const modal = document.getElementById('rename-playlist-modal');
+        const input = document.getElementById('rename-playlist-input');
+        const idInput = document.getElementById('rename-playlist-id');
+        const cancelBtn = document.getElementById('cancel-rename-btn');
+        const confirmBtn = document.getElementById('confirm-rename-btn');
+
+        if (!modal || !input) return;
+
+        function closeModal() {
+            modal.style.display = 'none';
+            input.value = '';
+            idInput.value = '';
+        }
+
+        if (cancelBtn) cancelBtn.addEventListener('click', closeModal);
+
+        if (confirmBtn) {
+            confirmBtn.addEventListener('click', function() {
+                const newName = input.value.trim();
+                const playlistId = idInput.value;
+                if (newName && playlistId) {
+                    window.TechEconPlaylists.rename(playlistId, newName);
+                    showToast('Playlist renamed');
+                    closeModal();
+                    if (window.reloadFavoritesPage) window.reloadFavoritesPage();
+                }
+            });
+        }
+
+        // Allow Enter key
+        input.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                confirmBtn.click();
             }
         });
 
