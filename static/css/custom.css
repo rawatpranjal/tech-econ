@@ -2338,45 +2338,57 @@ mark.partial {
    GLOBAL SEARCH STYLES
    ======================================== */
 
-/* Search Trigger in Sidebar */
-.global-search-trigger {
+/* Search Bar in Sidebar (matches homepage style) */
+.sidebar-search {
+    width: calc(100% - 1.5rem);
+    margin: 0.75rem;
+}
+
+.sidebar-search .search-input-wrapper {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    width: calc(100% - 1.5rem);
-    margin: 0.75rem;
-    padding: 0.6rem 0.75rem;
+    padding: 0.5rem 0.75rem;
     background: rgba(255,255,255,0.05);
     border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 6px;
-    color: rgba(255,255,255,0.6);
-    font-size: 0.85rem;
+    border-radius: 8px;
     cursor: pointer;
-    transition: all 0.2s;
-    text-decoration: none;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
 }
 
-.global-search-trigger:hover {
-    background: rgba(255,255,255,0.1);
-    color: white;
-    text-decoration: none;
+.sidebar-search .search-input-wrapper:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.2);
 }
 
-.global-search-trigger svg {
+.sidebar-search .search-icon {
     flex-shrink: 0;
-    opacity: 0.7;
+    color: rgba(255,255,255,0.5);
+    position: static;
 }
 
-.global-search-trigger span {
+.sidebar-search .search-input {
     flex: 1;
-    text-align: left;
+    border: none;
+    background: transparent;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.6);
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    width: auto;
 }
 
-.global-search-trigger kbd {
+.sidebar-search .search-input::placeholder {
+    color: rgba(255,255,255,0.5);
+}
+
+.sidebar-search .search-kbd {
     padding: 0.15rem 0.4rem;
     background: rgba(255,255,255,0.1);
-    border-radius: 3px;
+    border-radius: 4px;
     font-size: 0.7rem;
+    color: rgba(255,255,255,0.5);
     font-family: inherit;
 }
 
@@ -3225,7 +3237,7 @@ mark.partial {
         border-radius: 0;
     }
 
-    .global-search-trigger kbd {
+    .sidebar-search .search-kbd {
         display: none;
     }
 
