@@ -324,56 +324,6 @@
         </div>
     </div>
 
-    <!-- More Resources (Archived) -->
-    {{ $archivedCount := 0 }}
-    {{ range .Site.Data.career }}{{ if .archived }}{{ $archivedCount = add $archivedCount 1 }}{{ end }}{{ end }}
-    {{ if gt $archivedCount 0 }}
-    <div class="archived-toggle">
-        <button id="show-archived" class="archived-toggle-btn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-            </svg>
-            More Resources ({{ $archivedCount }})
-            <svg class="chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-        </button>
-    </div>
-    <div id="archived-section" class="archived-content" style="display: none;">
-        <p class="reference-intro">Additional resources organized by category. These supplement the curated selections above.</p>
-
-        {{ $refCategories := slice "Why Tech" "Role Landscape" "Team Types" "PhD Transition" "Job Boards" "Networking" }}
-        {{ range $cat := $refCategories }}
-        {{ $catCount := 0 }}
-        {{ range $.Site.Data.career }}
-            {{ if and .archived (eq .category $cat) }}
-                {{ $catCount = add $catCount 1 }}
-            {{ end }}
-        {{ end }}
-
-        {{ if gt $catCount 0 }}
-        <section class="reference-category">
-            <h3 class="reference-category-title">{{ $cat }} <span class="count">({{ $catCount }})</span></h3>
-            <div class="reference-grid">
-                {{ range $.Site.Data.career }}
-                {{ if and .archived (eq .category $cat) }}
-                <a href="{{ .url }}" target="_blank" rel="noopener" class="reference-card">
-                    <img class="favicon" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
-                    <div class="reference-content">
-                        <span class="reference-name">{{ .name }}</span>
-                        <p class="reference-desc">{{ .description }}</p>
-                    </div>
-                    <span class="type-badge">{{ .type }}</span>
-                </a>
-                {{ end }}
-                {{ end }}
-            </div>
-        </section>
-        {{ end }}
-        {{ end }}
-    </div>
-    {{ end }}
 </div>
 
 <script>
@@ -464,17 +414,6 @@ document.addEventListener('DOMContentLoaded', function() {
         this.style.display = 'none';
     });
 
-    // Archived toggle
-    const archivedToggle = document.getElementById('show-archived');
-    const archivedSection = document.getElementById('archived-section');
-
-    if (archivedToggle && archivedSection) {
-        archivedToggle.addEventListener('click', function() {
-            const isHidden = archivedSection.style.display === 'none';
-            archivedSection.style.display = isHidden ? 'block' : 'none';
-            this.classList.toggle('expanded', isHidden);
-        });
-    }
 });
 </script>
 {{ end }}

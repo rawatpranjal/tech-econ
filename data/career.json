@@ -16,22 +16,6 @@
     "subtab": ""
   },
   {
-    "name": "Levels.fyi Compensation",
-    "description": "Crowdsourced tech compensation data. Compare salaries across companies, levels, locations. Essential for understanding tech pay.",
-    "stage": "Strategy",
-    "category": "Why Tech",
-    "tier": "essential",
-    "url": "https://www.levels.fyi/",
-    "type": "Tool",
-    "tags": [
-      "salary-data",
-      "essential"
-    ],
-    "section": "negotiation",
-    "tab": "offers",
-    "subtab": "negotiation"
-  },
-  {
     "name": "Amazon Science Blog",
     "description": "How Amazon's economics team works, research culture, and publications. Window into tech economist daily work.",
     "stage": "Strategy",
@@ -1308,22 +1292,7 @@
     "tab": "interview",
     "subtab": "take-home"
   },
-  {
-    "name": "Levels.fyi Negotiation Guide",
-    "description": "Guide on base, equity, bonus structures and how to negotiate each.",
-    "stage": "Offers",
-    "category": "Negotiation",
-    "url": "https://www.levels.fyi/blog/ultimate-negotiation-guide.html",
-    "type": "Guide",
-    "tags": [
-      "equity",
-      "compensation-structure"
-    ],
-    "section": "interview",
-    "tab": "interview",
-    "subtab": "experimentation"
-  },
-  {
+    {
     "name": "Candor Salary Negotiation",
     "description": "Strategies tech insiders use. Competing offers, leveling, avoiding leaving money on the table.",
     "stage": "Offers",
@@ -1477,20 +1446,7 @@
     ],
     "archived": true
   },
-  {
-    "name": "Levels.fyi: Standard Level Definitions",
-    "description": "L3 Entry (0-2 years), L5 Senior 'career level' where you can stay indefinitely, L6+ Staff leads across teams.",
-    "stage": "Strategy",
-    "category": "Role Landscape",
-    "url": "https://www.levels.fyi/standard/",
-    "type": "Tool",
-    "tags": [
-      "levels",
-      "standard"
-    ],
-    "archived": true
-  },
-  {
+    {
     "name": "Design Gurus: FAANG Levels Comparison",
     "description": "Meta E3-E10, Google L3-L10, Amazon SDE I-III. Senior (L5) is 'terminal level' where many plateau.",
     "stage": "Strategy",
