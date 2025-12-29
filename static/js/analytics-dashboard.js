@@ -99,9 +99,24 @@
     // Render lists
     renderList('list-searches', data.topSearches || []);
     renderList('list-pages', data.topPages || []);
-    renderList('list-packages', (data.topClicks?.packages || []).slice(0, 5));
-    renderList('list-datasets', (data.topClicks?.datasets || []).slice(0, 5));
-    renderList('list-learning', (data.topClicks?.learning || []).slice(0, 5));
+
+    // Combine all click buckets into one list
+    var allClicks = [];
+    ['packages', 'datasets', 'learning', 'other'].forEach(function(cat) {
+      var bucket = data.topClicks?.[cat];
+      if (bucket) {
+        if (Array.isArray(bucket)) {
+          allClicks = allClicks.concat(bucket);
+        } else {
+          // Handle object format (other bucket uses object, not array)
+          Object.keys(bucket).forEach(function(name) {
+            allClicks.push({ name: name, count: bucket[name] });
+          });
+        }
+      }
+    });
+    allClicks.sort(function(a, b) { return b.count - a.count; });
+    renderList('list-clicks', allClicks.slice(0, 10));
 
     // Render performance
     renderVitals(data.performance || {});
