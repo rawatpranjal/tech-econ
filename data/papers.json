@@ -8877,6 +8877,42 @@
                 "Credit & Lending",
                 "Credit Scoring & Risk Models"
               ]
+            },
+            {
+              "title": "Benchmarking State-of-the-Art Classification Algorithms for Credit Scoring: An Update of Research",
+              "authors": "Stefan Lessmann, Bart Baesens, Hsin-Vonn Seow, Lyn C. Thomas",
+              "year": 2015,
+              "description": "Definitive benchmark comparing 41 classifiers across 8 datasets; establishes that ensemble methods outperform logistic regression.",
+              "url": "https://www.sciencedirect.com/science/article/pii/S037722171500543X",
+              "tags": [
+                "Credit & Lending",
+                "Credit Scoring & Risk Models"
+              ],
+              "citations": 1400
+            },
+            {
+              "title": "Consumer Credit-Risk Models Via Machine-Learning Algorithms",
+              "authors": "Amir E. Khandani, Adlar J. Kim, Andrew W. Lo",
+              "year": 2010,
+              "description": "First major paper showing transaction data + ML dramatically improves default prediction; estimates 6-25% cost savings.",
+              "url": "https://www.sciencedirect.com/science/article/pii/S0378426610002372",
+              "tags": [
+                "Credit & Lending",
+                "Credit Scoring & Risk Models"
+              ],
+              "citations": 700
+            },
+            {
+              "title": "Risk and Risk Management in the Credit Card Industry",
+              "authors": "Florentin Butaru, Qingqing Chen, Brian Clark, Sanmay Das, Andrew W. Lo, Akhtar Siddique",
+              "year": 2016,
+              "description": "Uses account-level data from 6 major US banks; finds substantial heterogeneity—no single model works for all.",
+              "url": "https://www.sciencedirect.com/science/article/pii/S0378426616300681",
+              "tags": [
+                "Credit & Lending",
+                "Credit Scoring & Risk Models"
+              ],
+              "citations": 245
             }
           ]
         },
@@ -8932,6 +8968,30 @@
                 "Fair Lending & Disparate Impact"
               ],
               "citations": 13
+            },
+            {
+              "title": "Inherent Trade-Offs in the Fair Determination of Risk Scores",
+              "authors": "Jon Kleinberg, Sendhil Mullainathan, Manish Raghavan",
+              "year": 2017,
+              "description": "Proves impossibility of satisfying calibration and error rate parity simultaneously—THE foundational fairness theorem.",
+              "url": "https://arxiv.org/abs/1609.05807",
+              "tags": [
+                "Credit & Lending",
+                "Fair Lending & Disparate Impact"
+              ],
+              "citations": 3000
+            },
+            {
+              "title": "Fair Prediction with Disparate Impact: A Study of Bias in Recidivism Prediction Instruments",
+              "authors": "Alexandra Chouldechova",
+              "year": 2017,
+              "description": "Independently derives impossibility result with explicit disparate impact focus; addressed ProPublica/COMPAS controversy.",
+              "url": "https://www.liebertpub.com/doi/10.1089/big.2016.0047",
+              "tags": [
+                "Credit & Lending",
+                "Fair Lending & Disparate Impact"
+              ],
+              "citations": 2500
             }
           ]
         },
@@ -8987,6 +9047,18 @@
                 "Pricing Credit Products"
               ],
               "citations": 333
+            },
+            {
+              "title": "Time to Default in Credit Scoring Using Survival Analysis: A Benchmark Study",
+              "authors": "Dieter Djeundje, Jonathan Crook",
+              "year": 2018,
+              "description": "Benchmark comparing survival methods for WHEN default occurs—critical for IFRS 9 and lifetime expected credit loss.",
+              "url": "https://www.tandfonline.com/doi/abs/10.1080/01605682.2017.1390527",
+              "tags": [
+                "Credit & Lending",
+                "Pricing Credit Products"
+              ],
+              "citations": 156
             }
           ]
         },
@@ -9096,6 +9168,341 @@
                 "Credit & Lending",
                 "Alternative Data"
               ]
+            },
+            {
+              "title": "On the Rise of FinTechs: Credit Scoring Using Digital Footprints",
+              "authors": "Tobias Berg, Valentin Burg, Ana Gombovi\u0107, Manju Puri",
+              "year": 2020,
+              "description": "Digital footprints (device, email domain, typing) match credit bureau accuracy; foundational fintech credit study.",
+              "url": "https://academic.oup.com/rfs/article/33/7/2845/5568311",
+              "tags": [
+                "Credit & Lending",
+                "Alternative Data"
+              ],
+              "citations": 456
+            }
+          ]
+        },
+        {
+          "id": "fraud-detection-anomaly",
+          "name": "Fraud Detection & Anomaly Detection",
+          "application": "Identify fraudulent transactions and anomalous patterns in credit applications",
+          "papers": [
+            {
+              "title": "SMOTE: Synthetic Minority Over-sampling Technique",
+              "authors": "Nitesh V. Chawla, Kevin W. Bowyer, Lawrence O. Hall, W. Philip Kegelmeyer",
+              "year": 2002,
+              "description": "The foundational imbalanced-learning method used in virtually every fraud detection system.",
+              "url": "https://arxiv.org/abs/1106.1813",
+              "tags": [
+                "Credit & Lending",
+                "Fraud Detection & Anomaly Detection"
+              ],
+              "citations": 24500
+            },
+            {
+              "title": "Statistical Fraud Detection: A Review",
+              "authors": "Richard J. Bolton, David J. Hand",
+              "year": 2002,
+              "description": "Authoritative taxonomy of fraud detection methods; still cited for conceptual foundations.",
+              "url": "https://projecteuclid.org/journals/statistical-science/volume-17/issue-3/Statistical-Fraud-Detection--A-Review/10.1214/ss/1042727940.full",
+              "tags": [
+                "Credit & Lending",
+                "Fraud Detection & Anomaly Detection"
+              ],
+              "citations": 1856
+            },
+            {
+              "title": "Anomaly Detection: A Survey",
+              "authors": "Varun Chandola, Arindam Banerjee, Vipin Kumar",
+              "year": 2009,
+              "description": "Definitive survey covering statistical, ML, and proximity-based anomaly methods.",
+              "url": "https://dl.acm.org/doi/10.1145/1541880.1541882",
+              "tags": [
+                "Credit & Lending",
+                "Fraud Detection & Anomaly Detection"
+              ],
+              "citations": 10750
+            },
+            {
+              "title": "Credit Card Fraud Detection: A Realistic Modeling and a Novel Learning Strategy",
+              "authors": "Andrea Dal Pozzolo, Giacomo Boracchi, Olivier Caelen, Cesare Alippi, Gianluca Bontempi",
+              "year": 2018,
+              "description": "Addresses realistic fraud detection challenges: class imbalance, concept drift, and delayed feedback.",
+              "url": "https://ieeexplore.ieee.org/document/8038008",
+              "tags": [
+                "Credit & Lending",
+                "Fraud Detection & Anomaly Detection"
+              ],
+              "citations": 789
+            },
+            {
+              "title": "Feature Engineering Strategies for Credit Card Fraud Detection",
+              "authors": "Alejandro Correa Bahnsen, Djamila Aouada, Aleksandar Stojanovic, Bj\u00f6rn Ottersten",
+              "year": 2016,
+              "description": "Transaction aggregation features improve fraud detection by 40%; widely adopted in industry.",
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S0957417415008276",
+              "tags": [
+                "Credit & Lending",
+                "Fraud Detection & Anomaly Detection"
+              ],
+              "citations": 456
+            },
+            {
+              "title": "Graph-Based Anomaly Detection and Description: A Survey",
+              "authors": "Leman Akoglu, Hanghang Tong, Danai Koutra",
+              "year": 2015,
+              "description": "Survey on using graph structure to detect fraud rings and coordinated attacks.",
+              "url": "https://link.springer.com/article/10.1007/s10618-014-0365-y",
+              "tags": [
+                "Credit & Lending",
+                "Fraud Detection & Anomaly Detection"
+              ],
+              "citations": 1523
+            },
+            {
+              "title": "APATE: A Novel Approach for Automated Credit Card Transaction Fraud Detection Using Network-Based Extensions",
+              "authors": "V\u00e9ronique Van Vlasselaer, Tina Eliassi-Rad, Leman Akoglu, Monique Snoeck, Bart Baesens",
+              "year": 2015,
+              "description": "Network propagation improves fraud detection by leveraging transaction graph structure.",
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167923615001645",
+              "tags": [
+                "Credit & Lending",
+                "Fraud Detection & Anomaly Detection"
+              ],
+              "citations": 267
+            }
+          ]
+        },
+        {
+          "id": "insurance-actuarial-ml",
+          "name": "Insurance Claims & Actuarial ML",
+          "application": "Apply ML to insurance pricing, claims prediction, and reserving",
+          "papers": [
+            {
+              "title": "Nesting Classical Actuarial Models into Neural Networks",
+              "authors": "J\u00fcrg Schelldorfer, Mario V. W\u00fcthrich",
+              "year": 2019,
+              "description": "Embedding GLMs into neural networks improves insurance pricing while maintaining interpretability.",
+              "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3320525",
+              "tags": [
+                "Credit & Lending",
+                "Insurance Claims & Actuarial ML"
+              ],
+              "citations": 234
+            },
+            {
+              "title": "Data Driven Binning for Insurance Tariffs",
+              "authors": "Roel Henckaerts, Marie-Pier C\u00f4t\u00e9, Antonio Bella, Katrien Antonio",
+              "year": 2018,
+              "description": "Evolutionary trees optimize premium segmentation while respecting regulatory constraints.",
+              "url": "https://www.tandfonline.com/doi/abs/10.1080/03461238.2018.1429300",
+              "tags": [
+                "Credit & Lending",
+                "Insurance Claims & Actuarial ML"
+              ],
+              "citations": 89
+            },
+            {
+              "title": "Detecting Insurance Fraud Using Supervised and Unsupervised Machine Learning",
+              "authors": "Jonas Debener, Johannes Kriebel, Oskar Ko\u017clowski",
+              "year": 2023,
+              "description": "Comprehensive comparison of fraud detection methods for insurance claims.",
+              "url": "https://link.springer.com/article/10.1057/s41270-022-00166-y",
+              "tags": [
+                "Credit & Lending",
+                "Insurance Claims & Actuarial ML"
+              ],
+              "citations": 45
+            },
+            {
+              "title": "Claims Frequency Modeling Using Telematics Car Driving Data",
+              "authors": "Guangyuan Gao, Shengwang Meng, Mario V. W\u00fcthrich",
+              "year": 2019,
+              "description": "Telematics data (speed, braking) improves claims prediction; foundational usage-based insurance paper.",
+              "url": "https://www.tandfonline.com/doi/abs/10.1080/03461238.2018.1523068",
+              "tags": [
+                "Credit & Lending",
+                "Insurance Claims & Actuarial ML"
+              ],
+              "citations": 156
+            },
+            {
+              "title": "Neural Networks Applied to Chain-Ladder Reserving",
+              "authors": "Mario V. W\u00fcthrich",
+              "year": 2018,
+              "description": "Neural networks improve reserve estimation over traditional chain-ladder methods.",
+              "url": "https://www.cambridge.org/core/journals/european-actuarial-journal/article/neural-networks-applied-to-chainladder-reserving/A8B05E22D5F29F0AC35E76D8A76FE946",
+              "tags": [
+                "Credit & Lending",
+                "Insurance Claims & Actuarial ML"
+              ],
+              "citations": 178
+            }
+          ]
+        },
+        {
+          "id": "platform-trust-safety",
+          "name": "Safety & Trust Scoring on Platforms",
+          "application": "Build and analyze reputation and trust systems for marketplace participants",
+          "papers": [
+            {
+              "title": "The Dynamics of Seller Reputation: Evidence from eBay",
+              "authors": "Lu\u00eds Cabral, Ali Horta\u00e7su",
+              "year": 2010,
+              "description": "Foundational empirical study of reputation dynamics and their impact on seller behavior.",
+              "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-6451.2010.00405.x",
+              "tags": [
+                "Credit & Lending",
+                "Safety & Trust Scoring on Platforms"
+              ],
+              "citations": 756
+            },
+            {
+              "title": "The Limits of Reputation in Platform Markets: An Empirical Analysis and Field Experiment",
+              "authors": "Chris Nosko, Steven Tadelis",
+              "year": 2015,
+              "description": "Field experiment showing reputation inflation and limits of feedback systems.",
+              "url": "https://www.nber.org/papers/w20830",
+              "tags": [
+                "Credit & Lending",
+                "Safety & Trust Scoring on Platforms"
+              ],
+              "citations": 423
+            },
+            {
+              "title": "Reputation and Feedback Systems in Online Platform Markets",
+              "authors": "Steven Tadelis",
+              "year": 2016,
+              "description": "Comprehensive survey of reputation system design and effectiveness in platforms.",
+              "url": "https://www.annualreviews.org/doi/abs/10.1146/annurev-economics-080315-015325",
+              "tags": [
+                "Credit & Lending",
+                "Safety & Trust Scoring on Platforms"
+              ],
+              "citations": 387
+            },
+            {
+              "title": "The Value of Reputation Information: Evidence from a Natural Experiment",
+              "authors": "Seth Freedman, Ginger Zhe Jin",
+              "year": 2017,
+              "description": "Natural experiment measuring the causal impact of reputation visibility on market outcomes.",
+              "url": "https://www.nber.org/papers/w23373",
+              "tags": [
+                "Credit & Lending",
+                "Safety & Trust Scoring on Platforms"
+              ],
+              "citations": 234
+            }
+          ]
+        },
+        {
+          "id": "explainability-regulatory",
+          "name": "Explainability & Regulatory ML",
+          "application": "Build interpretable models that satisfy regulatory requirements",
+          "papers": [
+            {
+              "title": "A Unified Approach to Interpreting Model Predictions (SHAP)",
+              "authors": "Scott M. Lundberg, Su-In Lee",
+              "year": 2017,
+              "description": "SHAP values unify feature attribution methods; now standard for credit model explanations.",
+              "url": "https://papers.nips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html",
+              "tags": [
+                "Credit & Lending",
+                "Explainability & Regulatory ML"
+              ],
+              "citations": 18500
+            },
+            {
+              "title": "'Why Should I Trust You?': Explaining the Predictions of Any Classifier (LIME)",
+              "authors": "Marco Tulio Ribeiro, Sameer Singh, Carlos Guestrin",
+              "year": 2016,
+              "description": "Local interpretable explanations for any black-box model; widely used for adverse action notices.",
+              "url": "https://arxiv.org/abs/1602.04938",
+              "tags": [
+                "Credit & Lending",
+                "Explainability & Regulatory ML"
+              ],
+              "citations": 15200
+            },
+            {
+              "title": "Stop Explaining Black Box Machine Learning Models for High Stakes Decisions and Use Interpretable Models Instead",
+              "authors": "Cynthia Rudin",
+              "year": 2019,
+              "description": "Argues interpretable models match black-box accuracy for credit; influential regulatory perspective.",
+              "url": "https://www.nature.com/articles/s42256-019-0048-x",
+              "tags": [
+                "Credit & Lending",
+                "Explainability & Regulatory ML"
+              ],
+              "citations": 3450
+            },
+            {
+              "title": "Intelligible Models for HealthCare: Predicting Pneumonia Risk and Hospital 30-day Readmission (GA\u00b2M)",
+              "authors": "Rich Caruana, Yin Lou, Johannes Gehrke, Paul Koch, Marc Sturm, Noemie Elhadad",
+              "year": 2015,
+              "description": "Generalized additive models with interactions; template for interpretable credit scoring.",
+              "url": "https://dl.acm.org/doi/10.1145/2783258.2788613",
+              "tags": [
+                "Credit & Lending",
+                "Explainability & Regulatory ML"
+              ],
+              "citations": 2340
+            }
+          ]
+        },
+        {
+          "id": "realtime-decisioning",
+          "name": "Real-time Decisioning & Deployment",
+          "application": "Deploy and maintain credit models in production with concept drift handling",
+          "papers": [
+            {
+              "title": "A Survey on Concept Drift Adaptation",
+              "authors": "Jo\u00e3o Gama, Indr\u0117 \u017dliobait\u0117, Albert Bifet, Mykola Pechenizkiy, Abdelhamid Bouchachia",
+              "year": 2014,
+              "description": "Comprehensive survey on detecting and adapting to changing data distributions in credit.",
+              "url": "https://dl.acm.org/doi/10.1145/2523813",
+              "tags": [
+                "Credit & Lending",
+                "Real-time Decisioning & Deployment"
+              ],
+              "citations": 3890
+            },
+            {
+              "title": "Selection Bias in Credit Scorecard Evaluation",
+              "authors": "David J. Hand, Niall M. Adams",
+              "year": 2014,
+              "description": "Identifies sample selection bias in scorecard validation; essential for production monitoring.",
+              "url": "https://www.tandfonline.com/doi/abs/10.1057/jors.2013.55",
+              "tags": [
+                "Credit & Lending",
+                "Real-time Decisioning & Deployment"
+              ],
+              "citations": 89
+            },
+            {
+              "title": "Reject Inference Methods in Credit Scoring: A Systematic Review and New Approaches",
+              "authors": "Adrien Ehrhardt, Christophe Biernacki, Vincent Vandewalle, Philippe Heinrich",
+              "year": 2022,
+              "description": "Reviews and advances reject inference methods for handling missing data from declined applications.",
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S037872062100178X",
+              "tags": [
+                "Credit & Lending",
+                "Real-time Decisioning & Deployment"
+              ],
+              "citations": 67
+            },
+            {
+              "title": "Streaming Active Learning Strategies for Real-Life Credit Card Fraud Detection",
+              "authors": "Fabrizio Carcillo, Yann-A\u00ebl Le Borgne, Olivier Caelen, Gianluca Bontempi",
+              "year": 2018,
+              "description": "Active learning reduces labeling costs for streaming fraud detection systems.",
+              "url": "https://ieeexplore.ieee.org/document/8457256",
+              "tags": [
+                "Credit & Lending",
+                "Real-time Decisioning & Deployment"
+              ],
+              "citations": 234
             }
           ]
         }
