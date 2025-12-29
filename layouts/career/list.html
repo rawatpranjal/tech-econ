@@ -59,6 +59,13 @@
             </svg>
             Interview Prep
         </button>
+        <button class="career-tab" data-tab="offers">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+            Offers
+        </button>
     </div>
 
     <!-- Tab 1: Start Here -->
@@ -291,6 +298,37 @@
         </div>
         {{ end }}
         {{ end }}
+    </div>
+
+    <!-- Tab 5: Offers -->
+    <div id="tab-offers" class="career-tab-content">
+        <!-- Subtabs -->
+        <div class="subtabs">
+            <button class="subtab active" data-subtab="negotiation">Negotiation</button>
+        </div>
+
+        <!-- Negotiation Subtab -->
+        <div id="subtab-negotiation" class="subtab-content active">
+            <section class="curated-section negotiation-section">
+                <div class="section-header">
+                    <h2>Offer Negotiation</h2>
+                    <p>Resources for evaluating and negotiating tech offers. Can mean $50K-$150K difference in first-year compensation.</p>
+                </div>
+                <div class="negotiation-grid">
+                    {{ range .Site.Data.career }}
+                    {{ if and (eq .tab "offers") (eq .subtab "negotiation") }}
+                    <a href="{{ .url }}" target="_blank" rel="noopener" class="negotiation-card">
+                        <img class="favicon" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
+                        <div class="negotiation-content">
+                            <span class="negotiation-name">{{ .name }}</span>
+                            <p class="negotiation-desc">{{ .description }}</p>
+                        </div>
+                    </a>
+                    {{ end }}
+                    {{ end }}
+                </div>
+            </section>
+        </div>
     </div>
 
 </div>

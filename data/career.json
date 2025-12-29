@@ -1185,7 +1185,8 @@
     ],
     "section": "interview",
     "tab": "interview",
-    "subtab": "experimentation"
+    "subtab": "experimentation",
+    "archived": true
   },
   {
     "name": "Understanding CUPED",
@@ -1200,7 +1201,8 @@
     ],
     "section": "interview",
     "tab": "interview",
-    "subtab": "experimentation"
+    "subtab": "experimentation",
+    "archived": true
   },
   {
     "name": "Netflix: Quasi Experimentation",
@@ -1215,7 +1217,8 @@
     ],
     "section": "interview",
     "tab": "interview",
-    "subtab": "experimentation"
+    "subtab": "experimentation",
+    "archived": true
   },
   {
     "name": "Emma Ding: Product Sense Guide",
@@ -1401,19 +1404,76 @@
     "archived": true
   },
   {
-    "name": "Candor Salary Negotiation",
-    "description": "Strategies tech insiders use. Competing offers, leveling, avoiding leaving money on the table.",
+    "name": "Candor Salary Negotiation Guide",
+    "description": "Complete framework for total compensation negotiation: base, equity valuation (public vs startup), signing bonuses, level negotiation. Harvard Career Services recommended. Helped one executive secure $5.4M more.",
     "stage": "Offers",
     "category": "Negotiation",
     "url": "https://candor.co/guides/salary-negotiation",
     "type": "Guide",
     "tags": [
-      "competing-offers",
-      "tactics"
+      "equity",
+      "compensation",
+      "essential"
     ],
-    "section": "interview",
-    "tab": "interview",
-    "subtab": "experimentation"
+    "tab": "offers",
+    "subtab": "negotiation"
+  },
+  {
+    "name": "Haseeb Qureshi: Ten Rules for Negotiating",
+    "description": "Gold standard negotiation guide from ex-poker player who negotiated $250K at Airbnb for first tech job. Game-theory approach: information control, BATNA development, handling exploding offers.",
+    "stage": "Offers",
+    "category": "Negotiation",
+    "url": "https://haseebq.com/my-ten-rules-for-negotiating-a-job-offer/",
+    "type": "Guide",
+    "tags": [
+      "strategy",
+      "essential"
+    ],
+    "tab": "offers",
+    "subtab": "negotiation"
+  },
+  {
+    "name": "Levels.fyi Negotiation Guide",
+    "description": "From platform that helped negotiate $31M+ in raises. Covers total comp breakdown, equity at public vs private companies, leveling systems, location impact. Companion database has 75K+ verified data points.",
+    "stage": "Offers",
+    "category": "Negotiation",
+    "url": "https://www.levels.fyi/blog/ultimate-negotiation-guide.html",
+    "type": "Guide",
+    "tags": [
+      "data",
+      "benchmarking"
+    ],
+    "tab": "offers",
+    "subtab": "negotiation"
+  },
+  {
+    "name": "Interviewing.io Negotiation Series",
+    "description": "Word-for-word scripts from platform with 94% success rate and $50K average gain. Exposes recruiter psychology and information-extraction tactics. Includes Meta-specific playbook.",
+    "stage": "Offers",
+    "category": "Negotiation",
+    "url": "https://interviewing.io/blog/negotiate-salary-recruiter",
+    "type": "Guide",
+    "tags": [
+      "scripts",
+      "recruiter-tactics"
+    ],
+    "tab": "offers",
+    "subtab": "negotiation"
+  },
+  {
+    "name": "Team Rora: Applied Scientist Negotiation",
+    "description": "Only guide specifically for Applied Scientist roles. 400+ FAANG negotiations. Includes exact salary bands (Amazon L5: $170-220K base, $351-588K equity). Sign-ons can reach $100K+ with proper leverage.",
+    "stage": "Offers",
+    "category": "Negotiation",
+    "url": "https://www.teamrora.com/post/applied-scientist-salary-negotiation",
+    "type": "Guide",
+    "tags": [
+      "applied-scientist",
+      "FAANG",
+      "salary-bands"
+    ],
+    "tab": "offers",
+    "subtab": "negotiation"
   },
   {
     "name": "HBR: Why Tech Hires Economists",
@@ -1694,7 +1754,8 @@
     ],
     "section": "interview",
     "tab": "interview",
-    "subtab": "experimentation"
+    "subtab": "experimentation",
+    "archived": true
   },
   {
     "name": "Booking.com: Moving Fast with Experiments",
@@ -1709,7 +1770,8 @@
     ],
     "section": "interview",
     "tab": "interview",
-    "subtab": "experimentation"
+    "subtab": "experimentation",
+    "archived": true
   },
   {
     "name": "Airbnb: Interleaving Experiments",
@@ -1724,7 +1786,8 @@
     ],
     "section": "interview",
     "tab": "interview",
-    "subtab": "experimentation"
+    "subtab": "experimentation",
+    "archived": true
   },
   {
     "name": "Microsoft: Deep Dive Into Variance Reduction",
@@ -1739,7 +1802,8 @@
     ],
     "section": "interview",
     "tab": "interview",
-    "subtab": "experimentation"
+    "subtab": "experimentation",
+    "archived": true
   },
   {
     "name": "Nubank: CUPED Implementation",
@@ -1754,7 +1818,8 @@
     ],
     "section": "interview",
     "tab": "interview",
-    "subtab": "experimentation"
+    "subtab": "experimentation",
+    "archived": true
   },
   {
     "name": "Matteo Courthoud: CUPED Technical Guide",
@@ -1814,7 +1879,8 @@
     ],
     "section": "interview",
     "tab": "interview",
-    "subtab": "experimentation"
+    "subtab": "experimentation",
+    "archived": true
   },
   {
     "name": "Meta: Cluster Experimentation",
@@ -1829,7 +1895,8 @@
     ],
     "section": "interview",
     "tab": "interview",
-    "subtab": "experimentation"
+    "subtab": "experimentation",
+    "archived": true
   },
   {
     "name": "Uber CausalML Package",
@@ -2182,7 +2249,8 @@
     ],
     "section": "interview",
     "tab": "interview",
-    "subtab": "experimentation"
+    "subtab": "experimentation",
+    "archived": true
   },
   {
     "name": "Doing Data Science at Uber",
@@ -2249,7 +2317,8 @@
     ],
     "section": "interview",
     "tab": "interview",
-    "subtab": "experimentation"
+    "subtab": "experimentation",
+    "archived": true
   },
   {
     "name": "Netflix ML Systems (Metaflow)",
@@ -2329,7 +2398,8 @@
       "free",
       "Facebook",
       "A/B-testing"
-    ]
+    ],
+    "archived": true
   },
   {
     "name": "Netflix Tech Blog: Experimentation",
@@ -2343,7 +2413,8 @@
       "free",
       "Netflix",
       "case-studies"
-    ]
+    ],
+    "archived": true
   },
   {
     "name": "khangich/machine-learning-interview",
