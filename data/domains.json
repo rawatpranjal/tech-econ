@@ -32,16 +32,6 @@
     ],
     "packages": [
       {
-        "name": "EconML",
-        "why": "Heterogeneous treatment effects \u2014 built by Microsoft for researchers",
-        "url": "https://econml.azurewebsites.net/"
-      },
-      {
-        "name": "CausalML",
-        "why": "Uber's uplift modeling for price optimization",
-        "url": "https://causalml.readthedocs.io/"
-      },
-      {
         "name": "DoWhy",
         "why": "Causal graph framework with refutation tests",
         "url": "https://www.pywhy.org/dowhy/"
