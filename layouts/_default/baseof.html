@@ -326,13 +326,13 @@
     <script src="{{ "js/favorites-ui.js" | relURL }}" defer></script>
 
     <!-- Fuse.js for page search -->
-    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
 
-    <!-- Unified Search System (MiniSearch + Transformers.js) -->
-    <script src="{{ "js/search/search-synonyms.js" | relURL }}" defer></script>
-    <script src="{{ "js/search/search-cache.js" | relURL }}" defer></script>
-    <script src="{{ "js/search/unified-search.js" | relURL }}" defer></script>
-    <script src="{{ "js/toggle.js" | relURL }}" defer></script>
+    <!-- Unified Search System (MiniSearch + Transformers.js) - no defer to avoid timing issues -->
+    <script src="{{ "js/search/search-synonyms.js" | relURL }}"></script>
+    <script src="{{ "js/search/search-cache.js" | relURL }}"></script>
+    <script src="{{ "js/search/unified-search.js" | relURL }}"></script>
+    <script src="{{ "js/toggle.js" | relURL }}"></script>
 
     <!-- AOS Init - wait for deferred script to load -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
