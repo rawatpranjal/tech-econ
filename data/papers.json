@@ -3,13 +3,13 @@
     {
       "id": "experimentation",
       "name": "Experimentation",
-      "description": "A/B testing, variance reduction, sequential testing, interference",
+      "description": "Learn to run controlled experiments and measure what actually works",
       "image_url": "/images/topics/experimentation.webp",
       "subtopics": [
         {
           "id": "ab-test-design",
           "name": "A/B Test Design & Analysis",
-          "application": "Product experiments, sample size, metrics",
+          "application": "Design experiments that give you clear, trustworthy answers",
           "papers": [
             {
               "title": "Controlled Experiments on the Web: Survey and Practical Guide",
@@ -76,7 +76,7 @@
         {
           "id": "variance-reduction",
           "name": "Variance Reduction",
-          "application": "CUPED, stratification, regression adjustment",
+          "application": "Get faster experiment results with less data",
           "papers": [
             {
               "title": "Improving the Sensitivity of Online Controlled Experiments by Utilizing Pre-Experiment Data (CUPED)",
@@ -154,7 +154,7 @@
         {
           "id": "sequential-adaptive",
           "name": "Sequential & Adaptive Testing",
-          "application": "Always-valid inference, early stopping, peeking",
+          "application": "Know when to stop an experiment early with confidence",
           "papers": [
             {
               "title": "Peeking at A/B Tests: Why It Matters, and What to Do About It",
@@ -232,7 +232,7 @@
         {
           "id": "interference-spillovers",
           "name": "Interference & Spillovers",
-          "application": "Network effects, marketplace cannibalization",
+          "application": "Handle experiments where users affect each other",
           "papers": [
             {
               "title": "Detecting Network Effects: Randomizing Over Randomized Experiments",
@@ -455,7 +455,7 @@
     {
       "id": "observational-causal-inference",
       "name": "Observational Causal Inference",
-      "description": "Matching, DiD, synthetic control, IV, RDD, double ML",
+      "description": "Estimate cause and effect when you can't run an experiment",
       "image_url": "/images/topics/causal-inference.webp",
       "subtopics": [
         {
@@ -540,7 +540,7 @@
         {
           "id": "difference-in-differences",
           "name": "Difference-in-Differences",
-          "application": "Policy changes, feature rollouts, staggered adoption",
+          "application": "Measure impact of changes that roll out over time",
           "papers": [
             {
               "title": "What's Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature",
@@ -618,7 +618,7 @@
         {
           "id": "synthetic-control",
           "name": "Synthetic Control",
-          "application": "Geo lift, market entry, one-treated-unit settings",
+          "application": "Create a comparison group when you only have one treated unit",
           "papers": [
             {
               "title": "Synthetic Control Methods for Comparative Case Studies",
@@ -764,7 +764,7 @@
         {
           "id": "regression-discontinuity",
           "name": "Regression Discontinuity",
-          "application": "Eligibility cutoffs, rating thresholds",
+          "application": "Exploit eligibility cutoffs to measure program effects",
           "papers": [
             {
               "title": "Regression Discontinuity Designs in Economics",
@@ -910,7 +910,7 @@
         {
           "id": "sensitivity-bounds",
           "name": "Sensitivity & Bounds",
-          "application": "Robustness, partial identification",
+          "application": "Stress-test your causal conclusions",
           "papers": [
             {
               "title": "Sensitivity Analysis in Observational Research: Introducing the E-Value",
@@ -991,7 +991,7 @@
     {
       "id": "pricing",
       "name": "Pricing",
-      "description": "Dynamic pricing, surge, markdown, demand estimation",
+      "description": "Set optimal prices that maximize revenue while keeping customers happy",
       "image_url": "/images/topics/pricing.webp",
       "subtopics": [
         {
@@ -1064,7 +1064,7 @@
         {
           "id": "markdown-clearance",
           "name": "Markdown & Clearance",
-          "application": "Retail, fashion, perishables",
+          "application": "Optimize discount timing to clear inventory profitably",
           "papers": [
             {
               "title": "Clearance Pricing and Inventory Policies for Retail Chains",
@@ -1210,7 +1210,7 @@
         {
           "id": "personalized-pricing",
           "name": "Personalized Pricing",
-          "application": "Price discrimination, welfare, fairness",
+          "application": "Customize prices based on customer characteristics",
           "papers": [
             {
               "title": "Personalized Pricing and Consumer Welfare",
@@ -1354,7 +1354,7 @@
         {
           "id": "price-experimentation",
           "name": "Price Experimentation",
-          "application": "Learning demand, explore-exploit, regret bounds",
+          "application": "Learn optimal prices through controlled testing",
           "papers": [
             {
               "title": "Dynamic Pricing Without Knowing the Demand Function: Risk Bounds and Near-Optimal Algorithms",
@@ -1421,7 +1421,7 @@
         {
           "id": "subscription-nonlinear-pricing",
           "name": "Subscription & Nonlinear Pricing",
-          "application": "Two-part tariffs, freemium, menu design",
+          "application": "Design pricing tiers and bundles that work",
           "papers": [
             {
               "title": "A Disneyland Dilemma: Two-Part Tariffs for a Mickey Mouse Monopoly",
@@ -1488,7 +1488,7 @@
         {
           "id": "algorithmic-pricing",
           "name": "Algorithmic Pricing",
-          "application": "Collusion, fairness, regulation",
+          "application": "Automate pricing decisions with algorithms",
           "papers": [
             {
               "title": "Artificial Intelligence, Algorithmic Pricing, and Collusion",
@@ -1555,7 +1555,7 @@
         {
           "id": "rl-for-pricing",
           "name": "RL for Pricing",
-          "application": "Bandits, Thompson sampling, deep RL",
+          "application": "Use reinforcement learning for dynamic price optimization",
           "papers": [
             {
               "title": "A Tutorial on Thompson Sampling",
@@ -1612,7 +1612,7 @@
     {
       "id": "subscriptions-retention",
       "name": "Subscriptions & Retention",
-      "description": "Churn, CLV, engagement, freemium",
+      "description": "Keep customers engaged and reduce churn over time",
       "image_url": "/images/topics/subscriptions.webp",
       "subtopics": [
         {
@@ -1758,7 +1758,7 @@
               "title": "A Behavior Model for Persuasive Design",
               "authors": "B.J. Fogg",
               "year": 2009,
-              "description": "Foundational paper introducing the Fogg Behavior Model: Behavior = Motivation × Ability × Trigger. The academic framework underlying 'Hooked' and most digital habit formation research. Over 4,500 citations; essential conceptual foundation for product designers.",
+              "description": "Foundational paper introducing the Fogg Behavior Model: Behavior = Motivation \u00d7 Ability \u00d7 Trigger. The academic framework underlying 'Hooked' and most digital habit formation research. Over 4,500 citations; essential conceptual foundation for product designers.",
               "url": "https://dl.acm.org/doi/abs/10.1145/1541948.1541999",
               "tags": [
                 "Subscriptions & Retention",
@@ -1766,7 +1766,7 @@
               ]
             },
             {
-              "title": "Does Gamification Work? — A Literature Review of Empirical Studies on Gamification",
+              "title": "Does Gamification Work? \u2014 A Literature Review of Empirical Studies on Gamification",
               "authors": "Juho Hamari, Jonna Koivisto, Harri Sarsa",
               "year": 2014,
               "description": "Seminal literature review establishing empirical evidence framework for gamification effects. Finds gamification provides positive effects on engagement but is highly context-dependent. Over 4,000 citations; the definitive academic synthesis on gamification.",
@@ -1802,7 +1802,7 @@
               "title": "Empirical Support for a Causal Relationship Between Gamification and Learning Outcomes",
               "authors": "Paul Denny, Fiona McDonald, Ruth Empson, Philip Kelly, Andrew Petersen",
               "year": 2018,
-              "description": "Provides causal evidence linking gamification to outcomes mediated by behavioral changes. Validates Landers' theory of gamified learning with empirical evidence—important for understanding mechanism design.",
+              "description": "Provides causal evidence linking gamification to outcomes mediated by behavioral changes. Validates Landers' theory of gamified learning with empirical evidence\u2014important for understanding mechanism design.",
               "url": "https://dl.acm.org/doi/abs/10.1145/3173574.3173885",
               "tags": [
                 "Subscriptions & Retention",
@@ -1818,7 +1818,7 @@
           "papers": [
             {
               "title": "Customer Attrition Analysis for Financial Services Using Proportional Hazard Models",
-              "authors": "Dirk Van den Poel, Bart Larivière",
+              "authors": "Dirk Van den Poel, Bart Larivi\u00e8re",
               "year": 2004,
               "description": "Comprehensive Cox proportional hazards application to customer churn with time-varying covariates. Demonstrates how demographic, environmental, and behavioral variables predict retention. Over 600 citations; foundational for survival analysis in marketing.",
               "url": "https://www.sciencedirect.com/science/article/abs/pii/S0377221703001068",
@@ -1905,7 +1905,7 @@
         {
           "id": "network-effects-retention",
           "name": "Network Effects on Retention",
-          "application": "Social contagion, peer effects, network churn",
+          "application": "Understand how social connections affect retention",
           "papers": [
             {
               "title": "Social Effects on Customer Retention",
@@ -1942,7 +1942,7 @@
             },
             {
               "title": "In Pursuit of Enhanced Customer Retention Management: Review, Key Issues, and Future Directions",
-              "authors": "Eva Ascarza, Scott A. Neslin, Oded Netzer, Zachery Anderson, Peter S. Fader, Sunil Gupta, Bruce G.S. Hardie, Aurélie Lemmens, Barak Libai, David Neal, Foster Provost, Rom Schrift",
+              "authors": "Eva Ascarza, Scott A. Neslin, Oded Netzer, Zachery Anderson, Peter S. Fader, Sunil Gupta, Bruce G.S. Hardie, Aur\u00e9lie Lemmens, Barak Libai, David Neal, Foster Provost, Rom Schrift",
               "year": 2018,
               "description": "Comprehensive review from 12 leading CRM scholars covering social connectivity's role in retention. Synthesizes literature on network externalities in multiplayer gaming, communications, and shared services. Identifies research frontier for network-oriented retention.",
               "url": "https://link.springer.com/article/10.1007/s40547-017-0080-0",
@@ -1958,7 +1958,7 @@
     {
       "id": "advertising",
       "name": "Advertising",
-      "description": "Ad auctions, attribution, targeting, brand measurement",
+      "description": "Measure ad effectiveness and optimize campaign performance",
       "image_url": "/images/topics/advertising.webp",
       "subtopics": [
         {
@@ -2006,7 +2006,7 @@
               "title": "Counterspeculation, Auctions, and Competitive Sealed Tenders",
               "authors": "William Vickrey",
               "year": 1961,
-              "description": "Nobel Prize-winning paper establishing truthful bidding in second-price sealed-bid auctions—the theoretical bedrock for all VCG mechanisms and modern ad auctions. ~8,000 citations.",
+              "description": "Nobel Prize-winning paper establishing truthful bidding in second-price sealed-bid auctions\u2014the theoretical bedrock for all VCG mechanisms and modern ad auctions. ~8,000 citations.",
               "url": "https://www.jstor.org/stable/2977633",
               "tags": [
                 "Advertising",
@@ -2057,7 +2057,7 @@
             },
             {
               "title": "From First-Price Auctions to Incentive-Compatible Auctions",
-              "authors": "Yuan Deng, Sébastien Lahaie, Vahab Mirrokni",
+              "authors": "Yuan Deng, S\u00e9bastien Lahaie, Vahab Mirrokni",
               "year": 2021,
               "description": "Mechanism design for autobidders and the transition to first-price auctions.",
               "url": "https://arxiv.org/abs/2103.07012",
@@ -2104,7 +2104,7 @@
         {
           "id": "attribution-incrementality",
           "name": "Attribution & Incrementality",
-          "application": "Ghost ads, conversion lift, multi-touch",
+          "application": "Measure which ads actually caused conversions",
           "papers": [
             {
               "title": "Measuring Ad Effectiveness Using Geo Experiments",
@@ -2146,7 +2146,7 @@
               "title": "Consumer Heterogeneity and Paid Search Effectiveness: A Large-Scale Field Experiment",
               "authors": "Thomas Blake, Chris Nosko, Steven Tadelis",
               "year": 2015,
-              "description": "Landmark eBay experiment showing paid search ROI vastly overestimated—99.5% of brand keyword traffic substitutes to organic. Demonstrates critical importance of experiments over observational methods. ~800 citations.",
+              "description": "Landmark eBay experiment showing paid search ROI vastly overestimated\u201499.5% of brand keyword traffic substitutes to organic. Demonstrates critical importance of experiments over observational methods. ~800 citations.",
               "url": "https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA12423",
               "tags": [
                 "Advertising",
@@ -2177,9 +2177,9 @@
             },
             {
               "title": "TV Advertising Effectiveness and Profitability: Generalizable Results from 288 Brands",
-              "authors": "Bradley T. Shapiro, Günter J. Hitsch, Anna E. Tuchman",
+              "authors": "Bradley T. Shapiro, G\u00fcnter J. Hitsch, Anna E. Tuchman",
               "year": 2021,
-              "description": "Border-strategy identification across 288 brands finds TV ad elasticity of ~0.025—much lower than prior estimates; 80%+ of brands show negative marginal ROI.",
+              "description": "Border-strategy identification across 288 brands finds TV ad elasticity of ~0.025\u2014much lower than prior estimates; 80%+ of brands show negative marginal ROI.",
               "url": "https://onlinelibrary.wiley.com/doi/abs/10.3982/ECTA17674",
               "tags": [
                 "Advertising",
@@ -2191,7 +2191,7 @@
         {
           "id": "targeting-lookalikes",
           "name": "Targeting & Lookalikes",
-          "application": "Behavioral targeting, audience expansion",
+          "application": "Find the right audiences for your ads",
           "papers": [
             {
               "title": "A Large Scale Benchmark for Uplift Modeling",
@@ -2243,7 +2243,7 @@
               "title": "Personalization in Email Marketing: The Role of Noninformative Advertising Content",
               "authors": "Navdeep S. Sahni, S. Christian Wheeler, Pradeep Chintagunta",
               "year": 2018,
-              "description": "Field experiments showing adding recipient names increases open rates by 20%, sales leads by 31%—even though names are non-informative. Gary Lilien Prize Finalist.",
+              "description": "Field experiments showing adding recipient names increases open rates by 20%, sales leads by 31%\u2014even though names are non-informative. Gary Lilien Prize Finalist.",
               "url": "https://pubsonline.informs.org/doi/abs/10.1287/mksc.2017.1066",
               "tags": [
                 "Advertising",
@@ -2319,7 +2319,7 @@
         {
           "id": "privacy-ad-effectiveness",
           "name": "Privacy & Ad Effectiveness",
-          "application": "GDPR, ATT, cookie deprecation, targeting trade-offs",
+          "application": "Navigate privacy regulations while measuring ads",
           "papers": [
             {
               "title": "Privacy Regulation and Online Advertising",
@@ -2336,7 +2336,7 @@
               "title": "The Effect of Privacy Regulation on the Data Industry: Empirical Evidence from GDPR",
               "authors": "Guy Aridor, Yeon-Koo Che, Tobias Salz",
               "year": 2023,
-              "description": "Shows GDPR's opt-in led to 12.5% drop in tracked consumers, but remaining consumers are more valuable—demonstrating 'privacy externalities' where privacy-conscious consumers make opt-in consumers more predictable.",
+              "description": "Shows GDPR's opt-in led to 12.5% drop in tracked consumers, but remaining consumers are more valuable\u2014demonstrating 'privacy externalities' where privacy-conscious consumers make opt-in consumers more predictable.",
               "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/1756-2171.12453",
               "tags": [
                 "Advertising",
@@ -2347,7 +2347,7 @@
               "title": "Privacy and Market Concentration: Intended and Unintended Consequences of the GDPR",
               "authors": "Garrett A. Johnson, Scott K. Shriver, Samuel G. Goldberg",
               "year": 2023,
-              "description": "Panel data on 27,000+ websites shows GDPR reduced vendor use by 15% but increased market concentration by 17%—large platforms (Google, Facebook) gained share as small vendors dropped.",
+              "description": "Panel data on 27,000+ websites shows GDPR reduced vendor use by 15% but increased market concentration by 17%\u2014large platforms (Google, Facebook) gained share as small vendors dropped.",
               "url": "https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2023.4709",
               "tags": [
                 "Advertising",
@@ -2369,7 +2369,7 @@
               "title": "Economic Consequences of Online Tracking Restrictions",
               "authors": "Klaus M. Miller, Bernd Skiera",
               "year": 2024,
-              "description": "Studies 128M ad impressions over 2.5 years; average cookie lifetime is 279 days with €2.52 value. One-year cookie restrictions would cost €904M annually in Europe. IJRM Best Article Award 2024.",
+              "description": "Studies 128M ad impressions over 2.5 years; average cookie lifetime is 279 days with \u20ac2.52 value. One-year cookie restrictions would cost \u20ac904M annually in Europe. IJRM Best Article Award 2024.",
               "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167811623000691",
               "tags": [
                 "Advertising",
@@ -2432,7 +2432,7 @@
         {
           "id": "attention-viewability",
           "name": "Attention & Viewability",
-          "application": "Ad attention, viewability metrics, two-sided markets",
+          "application": "Measure whether ads are actually seen",
           "papers": [
             {
               "title": "Market Provision of Broadcasting: A Welfare Analysis",
@@ -2460,7 +2460,7 @@
               "title": "Television Advertising and Online Word-of-Mouth: An Empirical Investigation of Social TV Activity",
               "authors": "Beth L. Fossen, David A. Schweidel",
               "year": 2017,
-              "description": "Examines 'Social TV'—joint consumption of TV and social media production. TV advertising impacts online WOM volume for both brands and programs. ~200 citations.",
+              "description": "Examines 'Social TV'\u2014joint consumption of TV and social media production. TV advertising impacts online WOM volume for both brands and programs. ~200 citations.",
               "url": "https://pubsonline.informs.org/doi/abs/10.1287/mksc.2016.1002",
               "tags": [
                 "Advertising",
@@ -2485,13 +2485,13 @@
     {
       "id": "marketing-growth",
       "name": "Marketing & Growth",
-      "description": "Acquisition, referrals, promotions, uplift modeling",
+      "description": "Acquire new users and grow your customer base efficiently",
       "image_url": "/images/topics/marketing.webp",
       "subtopics": [
         {
           "id": "acquisition-referrals",
           "name": "Acquisition & Referrals",
-          "application": "CAC, referral programs, viral loops",
+          "application": "Acquire customers efficiently and build referral loops",
           "papers": [
             {
               "title": "The Dynamics of Viral Marketing",
@@ -2632,7 +2632,7 @@
               "title": "Competition in Two-Sided Markets",
               "authors": "Mark Armstrong",
               "year": 2006,
-              "description": "Introduces competitive bottlenecks—when one side multi-homes, platforms compete fiercely on single-homers. ~4,500 citations.",
+              "description": "Introduces competitive bottlenecks\u2014when one side multi-homes, platforms compete fiercely on single-homers. ~4,500 citations.",
               "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1756-2171.2006.tb00037.x",
               "tags": [
                 "Marketing & Growth",
@@ -2655,7 +2655,7 @@
         {
           "id": "promotions-discounts",
           "name": "Promotions & Discounts",
-          "application": "Coupon optimization, price promotions",
+          "application": "Design promotions that drive incremental value",
           "papers": [
             {
               "title": "How Promotions Work",
@@ -2781,7 +2781,7 @@
             },
             {
               "title": "How Budget Allocation Relates to Productivity in Marketing Spending: An International Comparison",
-              "authors": "Marc Fischer, Sönke Albers, Nils Wagner, Monika Frie",
+              "authors": "Marc Fischer, S\u00f6nke Albers, Nils Wagner, Monika Frie",
               "year": 2011,
               "description": "INFORMS Practice Prize winner; 1-4% profit improvement from optimized allocation vs. heuristics. ~650 citations.",
               "url": "https://pubsonline.informs.org/doi/abs/10.1287/mksc.1110.0665",
@@ -2794,7 +2794,7 @@
               "title": "Effect of Sales Promotion on Purchasing Behavior on Promotional and Non-Promotional Days",
               "authors": "Koen Pauwels, Dominique M. Hanssens, S. Siddarth",
               "year": 2002,
-              "description": "Promotions have virtually no permanent effects—short-term ROI metrics mislead. ~1,200 citations.",
+              "description": "Promotions have virtually no permanent effects\u2014short-term ROI metrics mislead. ~1,200 citations.",
               "url": "https://journals.sagepub.com/doi/abs/10.1509/jmkr.39.4.421.19114",
               "tags": [
                 "Marketing & Growth",
@@ -2806,7 +2806,7 @@
         {
           "id": "uplift-modeling",
           "name": "Uplift Modeling",
-          "application": "Treatment targeting, persuadables vs. sure things",
+          "application": "Target customers who will actually respond to campaigns",
           "papers": [
             {
               "title": "Differential Response Analysis",
@@ -2857,7 +2857,7 @@
             },
             {
               "title": "Metalearners for Estimating Heterogeneous Treatment Effects Using Machine Learning",
-              "authors": "Sören R. Künzel, Jasjeet S. Sekhon, Peter J. Bickel, Bin Yu",
+              "authors": "S\u00f6ren R. K\u00fcnzel, Jasjeet S. Sekhon, Peter J. Bickel, Bin Yu",
               "year": 2019,
               "description": "Introduces S-learner, T-learner, and X-learner; optimal for imbalanced treatment groups. ~1,100 citations.",
               "url": "https://www.pnas.org/doi/abs/10.1073/pnas.1804597116",
@@ -2870,7 +2870,7 @@
               "title": "Double/Debiased Machine Learning for Treatment and Structural Parameters",
               "authors": "Victor Chernozhukov, Denis Chetverikov, Mert Demirer, Esther Duflo, Christian Hansen, Whitney Newey, James Robins",
               "year": 2018,
-              "description": "Foundation for causal ML—Neyman-orthogonal scores + cross-fitting enable root-n consistent inference. ~4,000 citations.",
+              "description": "Foundation for causal ML\u2014Neyman-orthogonal scores + cross-fitting enable root-n consistent inference. ~4,000 citations.",
               "url": "https://academic.oup.com/ectj/article-abstract/21/1/C1/5056401",
               "tags": [
                 "Marketing & Growth",
@@ -3010,7 +3010,7 @@
           "papers": [
             {
               "title": "The Endowed Progress Effect: How Artificial Advancement Increases Effort",
-              "authors": "Joseph C. Nunes, Xavier Drèze",
+              "authors": "Joseph C. Nunes, Xavier Dr\u00e8ze",
               "year": 2006,
               "description": "Artificial progress (pre-stamped cards) significantly increases completion; foundational loyalty psychology. ~1,800 citations.",
               "url": "https://academic.oup.com/jcr/article-abstract/32/4/504/1796392",
@@ -3110,7 +3110,7 @@
     {
       "id": "recommender-systems",
       "name": "Recommender Systems",
-      "description": "Collaborative filtering, deep recs, debiasing, cold start",
+      "description": "Build systems that suggest the right content, products, or matches to users",
       "image_url": "/images/topics/recommender.webp",
       "subtopics": [
         {
@@ -3207,7 +3207,7 @@
         {
           "id": "deep-recommenders",
           "name": "Deep Recommenders",
-          "application": "Two-tower, transformers, sequential recs",
+          "application": "Build neural network-based recommendation models",
           "papers": [
             {
               "title": "Deep Neural Networks for YouTube Recommendations",
@@ -3297,7 +3297,7 @@
               "title": "Deep Interest Network for Click-Through Rate Prediction",
               "authors": "Guorui Zhou, Xiaoqiang Zhu, Chenru Song, Ying Fan, Han Zhu, Xiao Ma, Yanghui Yan, Junqi Jin, Han Li, Kun Gai",
               "year": 2018,
-              "description": "Attention mechanism adaptively learns user interest representations from behavioral history relative to candidate items—solving fixed-length embedding bottleneck. Deployed on Alibaba main traffic.",
+              "description": "Attention mechanism adaptively learns user interest representations from behavioral history relative to candidate items\u2014solving fixed-length embedding bottleneck. Deployed on Alibaba main traffic.",
               "url": "https://arxiv.org/abs/1706.06978",
               "tags": [
                 "Recommender Systems",
@@ -3401,7 +3401,7 @@
         {
           "id": "exploration-diversity",
           "name": "Exploration & Diversity",
-          "application": "Novelty, serendipity, filter bubbles",
+          "application": "Balance showing what users like vs. new discoveries",
           "papers": [
             {
               "title": "Topic Diversification for Recommendation Lists",
@@ -3492,7 +3492,7 @@
         {
           "id": "cold-start",
           "name": "Cold Start",
-          "application": "New users, new items, hybrid approaches",
+          "application": "Recommend to new users or items with no history",
           "papers": [
             {
               "title": "DropoutNet: Addressing Cold Start in Recommender Systems",
@@ -3601,7 +3601,7 @@
               "title": "LightGCN: Simplifying and Powering Graph Convolution Network for Recommendation",
               "authors": "Xiangnan He, Kuan Deng, Xiang Wang, Yan Li, Yongdong Zhang, Meng Wang",
               "year": 2020,
-              "description": "Demonstrates feature transformation and nonlinear activation contribute little to CF; proposes simplified GCN using only neighborhood aggregation—16% improvement over NGCF with simpler architecture.",
+              "description": "Demonstrates feature transformation and nonlinear activation contribute little to CF; proposes simplified GCN using only neighborhood aggregation\u201416% improvement over NGCF with simpler architecture.",
               "url": "https://dl.acm.org/doi/10.1145/3397271.3401063",
               "tags": [
                 "Recommender Systems",
@@ -3791,11 +3791,11 @@
         {
           "id": "evaluation-methodology",
           "name": "Evaluation Methodology",
-          "application": "Offline-online gaps, beyond-accuracy metrics",
+          "application": "Measure recommendation quality beyond clicks",
           "papers": [
             {
               "title": "Offline A/B Testing for Recommender Systems",
-              "authors": "Alexandre Gilotte, Clément Calauzènes, Thomas Nedelec, Alexandre Abraham, Simon Dollé",
+              "authors": "Alexandre Gilotte, Cl\u00e9ment Calauz\u00e8nes, Thomas Nedelec, Alexandre Abraham, Simon Doll\u00e9",
               "year": 2018,
               "description": "Counterfactual estimators for offline evaluation correlating with online A/B tests; addresses bias-variance tradeoffs in off-policy evaluation. Criteo production system enabling faster iteration.",
               "url": "https://dl.acm.org/doi/10.1145/3159652.3159687",
@@ -3836,13 +3836,13 @@
     {
       "id": "search-ranking",
       "name": "Search & Ranking",
-      "description": "Learning to rank, query understanding, position bias",
+      "description": "Help users find exactly what they're looking for",
       "image_url": "/images/topics/search.webp",
       "subtopics": [
         {
           "id": "learning-to-rank",
           "name": "Learning to Rank",
-          "application": "Pairwise, listwise, LambdaMART",
+          "application": "Train models that order search results optimally",
           "papers": [
             {
               "title": "From RankNet to LambdaRank to LambdaMART: An Overview",
@@ -3908,7 +3908,7 @@
         {
           "id": "query-understanding",
           "name": "Query Understanding",
-          "application": "Intent classification, query rewriting",
+          "application": "Figure out what users actually want from their searches",
           "papers": [
             {
               "title": "Understanding User Goals in Web Search",
@@ -4208,7 +4208,7 @@
             },
             {
               "title": "SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking",
-              "authors": "Thibault Formal, Benjamin Piwowarski, Stéphane Clinchant",
+              "authors": "Thibault Formal, Benjamin Piwowarski, St\u00e9phane Clinchant",
               "year": 2021,
               "description": "Learned sparse representations via MLM head with sparsity regularization; bridges gap between dense and sparse retrieval with interpretable term weights.",
               "url": "https://dl.acm.org/doi/10.1145/3404835.3463098",
@@ -4247,7 +4247,7 @@
         {
           "id": "neural-ranking-models",
           "name": "Neural Ranking Models",
-          "application": "Cross-encoders, document expansion, pre-training",
+          "application": "Use deep learning for search relevance",
           "papers": [
             {
               "title": "Multi-Stage Document Ranking with BERT",
@@ -4314,7 +4314,7 @@
         {
           "id": "retrieval-augmented-generation",
           "name": "Retrieval-Augmented Generation",
-          "application": "RAG, generative retrieval, knowledge-intensive NLP",
+          "application": "Combine search with generative AI",
           "papers": [
             {
               "title": "REALM: Retrieval-Augmented Language Model Pre-Training",
@@ -4330,7 +4330,7 @@
             },
             {
               "title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks",
-              "authors": "Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel, Sebastian Riedel, Douwe Kiela",
+              "authors": "Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich K\u00fcttler, Mike Lewis, Wen-tau Yih, Tim Rockt\u00e4schel, Sebastian Riedel, Douwe Kiela",
               "year": 2020,
               "description": "THE paper that coined 'RAG'; combines pre-trained retriever with seq2seq generator for open-domain QA. Foundation for modern RAG systems.",
               "url": "https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html",
@@ -4369,11 +4369,11 @@
         {
           "id": "evaluation-methods-ir",
           "name": "Evaluation Methods for IR",
-          "application": "Metrics, benchmarks, online evaluation",
+          "application": "Measure search quality effectively",
           "papers": [
             {
               "title": "Cumulated Gain-Based Evaluation of IR Techniques",
-              "authors": "Kalervo Järvelin, Jaana Kekäläinen",
+              "authors": "Kalervo J\u00e4rvelin, Jaana Kek\u00e4l\u00e4inen",
               "year": 2002,
               "description": "Introduced DCG and NDCG; most widely used ranking metric enabling graded relevance evaluation.",
               "url": "https://dl.acm.org/doi/10.1145/582415.582418",
@@ -4409,7 +4409,7 @@
             },
             {
               "title": "BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models",
-              "authors": "Nandan Thakur, Nils Reimers, Andreas Rücklé, Abhishek Srivastava, Iryna Gurevych",
+              "authors": "Nandan Thakur, Nils Reimers, Andreas R\u00fcckl\u00e9, Abhishek Srivastava, Iryna Gurevych",
               "year": 2021,
               "description": "18-dataset benchmark testing out-of-distribution generalization; key finding that BM25 remains robust while dense models struggle on domain shift.",
               "url": "https://datasets-benchmarks-proceedings.neurips.cc/paper/2021/hash/65b9eea6e1cc6bb9f0cd2a47751a186f-Abstract-round2.html",
@@ -4436,7 +4436,7 @@
         {
           "id": "personalized-conversational-search",
           "name": "Personalized & Conversational Search",
-          "application": "User modeling, session context, multi-turn",
+          "application": "Adapt search to individual users and context",
           "papers": [
             {
               "title": "Personalizing Search via Automated Analysis of Interests and Activities",
@@ -4503,7 +4503,7 @@
         {
           "id": "result-diversification",
           "name": "Result Diversification",
-          "application": "Novelty, subtopic coverage, intent-aware ranking",
+          "application": "Show varied results that cover different intents",
           "papers": [
             {
               "title": "The Use of MMR, Diversity-Based Reranking for Reordering Documents and Producing Summaries",
@@ -4519,9 +4519,9 @@
             },
             {
               "title": "Novelty and Diversity in Information Retrieval Evaluation",
-              "authors": "Charles L.A. Clarke, Maheedhar Kolla, Gordon V. Cormack, Olga Vechtomova, Azin Ashkan, Stefan Büttcher, Ian MacKinnon",
+              "authors": "Charles L.A. Clarke, Maheedhar Kolla, Gordon V. Cormack, Olga Vechtomova, Azin Ashkan, Stefan B\u00fcttcher, Ian MacKinnon",
               "year": 2008,
-              "description": "Standard evaluation framework for diversity introducing α-nDCG; enabled TREC Web diversity track and systematic diversity research.",
+              "description": "Standard evaluation framework for diversity introducing \u03b1-nDCG; enabled TREC Web diversity track and systematic diversity research.",
               "url": "https://dl.acm.org/doi/10.1145/1390334.1390446",
               "tags": [
                 "Search & Ranking",
@@ -4548,13 +4548,13 @@
     {
       "id": "matching-marketplaces",
       "name": "Matching & Marketplaces",
-      "description": "Two-sided markets, matching algorithms, reputation",
+      "description": "Connect buyers and sellers, riders and drivers, or any two-sided market",
       "image_url": "/images/topics/marketplace.webp",
       "subtopics": [
         {
           "id": "two-sided-markets",
           "name": "Two-Sided Markets",
-          "application": "Platform economics, chicken-and-egg",
+          "application": "Understand platform economics and network effects",
           "papers": [
             {
               "title": "Platform Competition in Two-Sided Markets",
@@ -4645,7 +4645,7 @@
         {
           "id": "search-matching-frictions",
           "name": "Search & Matching Frictions",
-          "application": "Job platforms, e-commerce discovery",
+          "application": "Reduce friction in finding matches on platforms",
           "papers": [
             {
               "title": "Nobel Prize Scientific Background: DMP Model",
@@ -4747,7 +4747,7 @@
         {
           "id": "matching-algorithms",
           "name": "Matching Algorithms",
-          "application": "Ride dispatch, labor, dating, kidney exchange",
+          "application": "Design algorithms that create optimal matches",
           "papers": [
             {
               "title": "College Admissions and the Stability of Marriage",
@@ -4826,7 +4826,7 @@
         {
           "id": "reputation-reviews",
           "name": "Reputation & Reviews",
-          "application": "Trust, rating systems, fake reviews",
+          "application": "Build trust through ratings and review systems",
           "papers": [
             {
               "title": "Trust Among Strangers in Internet Transactions",
@@ -4917,7 +4917,7 @@
         {
           "id": "congestion-rationing",
           "name": "Congestion & Rationing",
-          "application": "Waitlists, overbooking, capacity limits",
+          "application": "Manage scarce capacity fairly and efficiently",
           "papers": [
             {
               "title": "Using Big Data to Estimate Consumer Surplus: The Case of Uber",
@@ -4954,6 +4954,329 @@
                 "Congestion & Rationing"
               ],
               "citations": 183
+            },
+            {
+              "title": "Managing Congestion in Matching Markets",
+              "authors": "Nick Arnosti, Ramesh Johari, Yash Kanoria",
+              "year": 2021,
+              "description": "Shows restricting visibility reduces wasted applications and improves welfare for both sides; directly applicable to Upwork, dating apps, Airbnb.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/msom.2020.0907",
+              "tags": [
+                "Matching & Marketplaces",
+                "Congestion & Rationing"
+              ],
+              "citations": 150
+            },
+            {
+              "title": "Design of Lotteries and Wait-Lists for Affordable Housing Allocation",
+              "authors": "Nick Arnosti, Peng Shi",
+              "year": 2020,
+              "description": "Proves equivalence of independent lotteries and penalty-waitlists; applicable to any platform managing queues for scarce resources.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2019.3311",
+              "tags": [
+                "Matching & Marketplaces",
+                "Congestion & Rationing"
+              ],
+              "citations": 100
+            }
+          ]
+        },
+        {
+          "id": "gig-economy-labor",
+          "name": "Gig Economy & Platform Labor",
+          "application": "Driver economics, flexibility valuation, labor markets",
+          "papers": [
+            {
+              "title": "An Analysis of the Labor Market for Uber's Driver-Partners in the United States",
+              "authors": "Jonathan Hall, Alan Krueger",
+              "year": 2018,
+              "description": "First comprehensive Uber labor market analysis using administrative and survey data; foundational descriptive paper on gig work.",
+              "url": "https://journals.sagepub.com/doi/10.1177/0019793917717222",
+              "tags": [
+                "Matching & Marketplaces",
+                "Gig Economy & Platform Labor"
+              ],
+              "citations": 800
+            },
+            {
+              "title": "The Value of Flexible Work: Evidence from Uber Drivers",
+              "authors": "M. Keith Chen, Judith Chevalier, Peter Rossi, Emily Oehlsen",
+              "year": 2019,
+              "description": "Estimates drivers earn more than twice the surplus they would in rigid arrangements; seminal flexibility valuation paper.",
+              "url": "https://www.journals.uchicago.edu/doi/10.1086/702171",
+              "tags": [
+                "Matching & Marketplaces",
+                "Gig Economy & Platform Labor"
+              ],
+              "citations": 500
+            },
+            {
+              "title": "Uber versus Taxi: A Driver's Eye View",
+              "authors": "Joshua Angrist, Sydnee Caldwell, Jonathan Hall",
+              "year": 2021,
+              "description": "Field experiment showing rideshare drivers strongly prefer proportional commission over fixed taxi leases; finds intertemporal substitution elasticity ~1.2.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/app.20190655",
+              "tags": [
+                "Matching & Marketplaces",
+                "Gig Economy & Platform Labor"
+              ],
+              "citations": 200
+            },
+            {
+              "title": "The Gender Earnings Gap in the Gig Economy: Evidence from over a Million Rideshare Drivers",
+              "authors": "Cody Cook, Rebecca Diamond, Jonathan Hall, John List, Paul Oyer",
+              "year": 2021,
+              "description": "Documents 7% gender gap among Uber drivers entirely explained by experience, preferences, and driving speed\u2014not discrimination.",
+              "url": "https://academic.oup.com/restud/article/88/5/2210/6154047",
+              "tags": [
+                "Matching & Marketplaces",
+                "Gig Economy & Platform Labor"
+              ],
+              "citations": 300
+            },
+            {
+              "title": "Valuing Alternative Work Arrangements",
+              "authors": "Alexandre Mas, Amanda Pallais",
+              "year": 2017,
+              "description": "Field experiment finding average worker WTP 20% of wages to avoid employer-set schedules; explains gig work appeal.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20161500",
+              "tags": [
+                "Matching & Marketplaces",
+                "Gig Economy & Platform Labor"
+              ],
+              "citations": 600
+            },
+            {
+              "title": "The Rise and Nature of Alternative Work Arrangements in the United States, 1995-2015",
+              "authors": "Lawrence Katz, Alan Krueger",
+              "year": 2019,
+              "description": "Documents alternative work growth from 10.7% to 15.8% of workforce; contextualizes gig economy scale and trends.",
+              "url": "https://journals.sagepub.com/doi/10.1177/0019793918820008",
+              "tags": [
+                "Matching & Marketplaces",
+                "Gig Economy & Platform Labor"
+              ],
+              "citations": 700
+            }
+          ]
+        },
+        {
+          "id": "dynamic-pricing-marketplaces",
+          "name": "Dynamic Pricing in Marketplaces",
+          "application": "Surge pricing, algorithmic collusion, revenue management",
+          "papers": [
+            {
+              "title": "The Role of Surge Pricing on a Service Platform with Self-Scheduling Capacity",
+              "authors": "G\u00e9rard Cachon, Kaitlin Daniels, Ruben Lobel",
+              "year": 2017,
+              "description": "Foundational theory showing surge pricing benefits all stakeholders by better utilizing flexible capacity; explains when dynamic pricing is welfare-improving.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/msom.2017.0618",
+              "tags": [
+                "Matching & Marketplaces",
+                "Dynamic Pricing in Marketplaces"
+              ],
+              "citations": 400
+            },
+            {
+              "title": "Artificial Intelligence, Algorithmic Pricing, and Collusion",
+              "authors": "Emilio Calvano, Giacomo Calzolari, Vincenzo Denicol\u00f2, Sergio Pastorello",
+              "year": 2020,
+              "description": "Demonstrates Q-learning algorithms autonomously learn collusive strategies; major antitrust implications for platform pricing.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20190623",
+              "tags": [
+                "Matching & Marketplaces",
+                "Dynamic Pricing in Marketplaces"
+              ],
+              "citations": 1000
+            },
+            {
+              "title": "Algorithmic Pricing and Competition: Empirical Evidence from the German Retail Gasoline Market",
+              "authors": "Stephanie Assad, Robert Clark, Daniel Ershov, Lei Xu",
+              "year": 2024,
+              "description": "First large-scale empirical analysis finding margins increased 28% when both competitors adopted pricing algorithms.",
+              "url": "https://www.journals.uchicago.edu/doi/10.1086/726906",
+              "tags": [
+                "Matching & Marketplaces",
+                "Dynamic Pricing in Marketplaces"
+              ],
+              "citations": 150
+            }
+          ]
+        },
+        {
+          "id": "marketplace-experimentation",
+          "name": "Marketplace Design & Experimentation",
+          "application": "A/B testing interference, platform design, field experiments",
+          "papers": [
+            {
+              "title": "Why Marketplace Experimentation is Harder than it Seems: The Role of Test-Control Interference",
+              "authors": "Thomas Blake, Chris Coey",
+              "year": 2014,
+              "description": "First paper documenting naive A/B testing overstates treatment effects by ~2x due to general equilibrium effects; eBay data, launched this literature.",
+              "url": "https://dl.acm.org/doi/10.1145/2600057.2602837",
+              "tags": [
+                "Matching & Marketplaces",
+                "Marketplace Design & Experimentation"
+              ],
+              "citations": 300
+            },
+            {
+              "title": "The Econometrics of Randomized Experiments",
+              "authors": "Susan Athey, Guido Imbens",
+              "year": 2017,
+              "description": "Comprehensive treatment of experimental design including interference; essential methodology paper for platform economists.",
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S0169721817300076",
+              "tags": [
+                "Matching & Marketplaces",
+                "Marketplace Design & Experimentation"
+              ],
+              "citations": 800
+            },
+            {
+              "title": "Interference, Bias, and Variance in Two-Sided Marketplace Experimentation: Guidance for Platforms",
+              "authors": "Ramesh Johari, Hannah Li, Inessa Liskovich, Gabriel Weintraub",
+              "year": 2022,
+              "description": "Characterizes when to randomize on supply vs. demand side; practical guidance for platforms running experiments.",
+              "url": "https://dl.acm.org/doi/10.1145/3485447.3512063",
+              "tags": [
+                "Matching & Marketplaces",
+                "Marketplace Design & Experimentation"
+              ],
+              "citations": 100
+            },
+            {
+              "title": "Reducing Interference Bias in Online Marketplace Experiments Using Cluster Randomization",
+              "authors": "David Holtz, Ruben Lobel, Inessa Liskovich, Sinan Aral",
+              "year": 2024,
+              "description": "Meta-experiment on Airbnb empirically measuring interference bias magnitude; bridges theory and practice for marketplace experiments.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2023.4748",
+              "tags": [
+                "Matching & Marketplaces",
+                "Marketplace Design & Experimentation"
+              ],
+              "citations": 50
+            },
+            {
+              "title": "Search, Matching, and the Role of Digital Marketplace Design in Enabling Trade: Evidence from Airbnb",
+              "authors": "Andrey Fradkin",
+              "year": 2017,
+              "description": "Shows 42% of booking inquiries rejected by hosts; platform search design critically affects transaction volume and market thickness.",
+              "url": "https://andreyfradkin.com/assets/Fradkin_JMP.pdf",
+              "tags": [
+                "Matching & Marketplaces",
+                "Marketplace Design & Experimentation"
+              ],
+              "citations": 200
+            }
+          ]
+        },
+        {
+          "id": "platform-competition-strategy",
+          "name": "Platform Competition & Strategy",
+          "application": "Entry, self-preferencing, disintermediation",
+          "papers": [
+            {
+              "title": "Responses to Entry in Multi-Sided Markets: The Impact of Craigslist on Local Newspapers",
+              "authors": "Robert Seamans, Feng Zhu",
+              "year": 2014,
+              "description": "Exploits Craigslist's staggered entry; landmark empirical paper on platform competition and displacement effects.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2013.1823",
+              "tags": [
+                "Matching & Marketplaces",
+                "Platform Competition & Strategy"
+              ],
+              "citations": 500
+            },
+            {
+              "title": "Competing with Complementors: An Empirical Look at Amazon.com",
+              "authors": "Feng Zhu, Qihong Liu",
+              "year": 2018,
+              "description": "Amazon Marketplace data showing Amazon targets successful product spaces for entry; essential for self-preferencing debates.",
+              "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/smj.2932",
+              "tags": [
+                "Matching & Marketplaces",
+                "Platform Competition & Strategy"
+              ],
+              "citations": 400
+            },
+            {
+              "title": "The Rise of the Sharing Economy: Estimating the Impact of Airbnb on the Hotel Industry",
+              "authors": "Georgios Zervas, Davide Proserpio, John Byers",
+              "year": 2017,
+              "description": "Estimates 8-10% causal impact on hotel revenue in Austin; shows sharing economy disruption dynamics and incumbent responses.",
+              "url": "https://journals.sagepub.com/doi/10.1509/jmr.15.0204",
+              "tags": [
+                "Matching & Marketplaces",
+                "Platform Competition & Strategy"
+              ],
+              "citations": 800
+            },
+            {
+              "title": "Trust and Disintermediation: Evidence from an Online Freelance Marketplace",
+              "authors": "Grace Gu, Feng Zhu",
+              "year": 2020,
+              "description": "RCT showing enhanced trust increases hiring but also disintermediation when trust is sufficiently high; platform design tradeoff.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2020.3583",
+              "tags": [
+                "Matching & Marketplaces",
+                "Platform Competition & Strategy"
+              ],
+              "citations": 150
+            },
+            {
+              "title": "Technology and Disintermediation in Online Marketplaces",
+              "authors": "Grace Gu",
+              "year": 2024,
+              "description": "Uses China Skype blockade as natural experiment; finds restricting communication reduces disintermediation by 18%.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2023.4872",
+              "tags": [
+                "Matching & Marketplaces",
+                "Platform Competition & Strategy"
+              ],
+              "citations": 30
+            }
+          ]
+        },
+        {
+          "id": "information-design-marketplaces",
+          "name": "Information Design in Marketplaces",
+          "application": "Transparency, search design, disclosure",
+          "papers": [
+            {
+              "title": "Consumer Price Search and Platform Design in Internet Commerce",
+              "authors": "Michael Dinerstein, Liran Einav, Jonathan Levin, Neel Sundaresan",
+              "year": 2018,
+              "description": "Uses eBay browsing data to show narrowing consumer choice sets can paradoxically strengthen seller competition and lower prices.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20171218",
+              "tags": [
+                "Matching & Marketplaces",
+                "Information Design in Marketplaces"
+              ],
+              "citations": 300
+            },
+            {
+              "title": "The Welfare Effects of Peer Entry: The Case of Airbnb and the Accommodation Industry",
+              "authors": "Chiara Farronato, Andrey Fradkin",
+              "year": 2022,
+              "description": "Structural model quantifying welfare: consumer surplus $41/night, host surplus $26/night; benefits concentrated during peak demand.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20180260",
+              "tags": [
+                "Matching & Marketplaces",
+                "Information Design in Marketplaces"
+              ],
+              "citations": 400
+            },
+            {
+              "title": "Peer-to-Peer Markets",
+              "authors": "Liran Einav, Chiara Farronato, Jonathan Levin",
+              "year": 2016,
+              "description": "Comprehensive framework covering search, matching, pricing, and reputation in peer platforms; essential survey paper.",
+              "url": "https://www.annualreviews.org/doi/10.1146/annurev-economics-080315-015334",
+              "tags": [
+                "Matching & Marketplaces",
+                "Information Design in Marketplaces"
+              ],
+              "citations": 500
             }
           ]
         }
@@ -4962,7 +5285,7 @@
     {
       "id": "mechanism-design-auctions",
       "name": "Mechanism Design & Auctions",
-      "description": "Auction theory, market design, information design",
+      "description": "Design rules and incentives that lead to good outcomes",
       "image_url": "/images/topics/auctions.webp",
       "subtopics": [
         {
@@ -5132,7 +5455,7 @@
         {
           "id": "market-design",
           "name": "Market Design",
-          "application": "School choice, organ allocation, spectrum",
+          "application": "Create rules that lead to efficient matching",
           "papers": [
             {
               "title": "College Admissions and the Stability of Marriage",
@@ -5244,13 +5567,13 @@
     {
       "id": "structural-estimation",
       "name": "Structural Estimation",
-      "description": "Demand estimation, entry models, auction estimation",
+      "description": "Recover demand curves and understand competitive dynamics",
       "image_url": "/images/topics/economics.webp",
       "subtopics": [
         {
           "id": "demand-estimation-blp",
           "name": "Demand Estimation (BLP)",
-          "application": "Differentiated products, market shares",
+          "application": "Estimate demand from market-level data",
           "papers": [
             {
               "title": "Estimating Discrete-Choice Models of Product Differentiation",
@@ -5317,7 +5640,7 @@
         {
           "id": "entry-competition",
           "name": "Entry & Competition",
-          "application": "Market structure, firm behavior",
+          "application": "Model how firms compete and enter markets",
           "papers": [
             {
               "title": "Entry and Competition in Concentrated Markets",
@@ -5439,7 +5762,7 @@
         {
           "id": "auction-estimation",
           "name": "Auction Estimation",
-          "application": "Bid inference, unobserved heterogeneity",
+          "application": "Infer bidder values from observed bids",
           "papers": [
             {
               "title": "Optimal Nonparametric Estimation of First-Price Auctions",
@@ -5575,7 +5898,7 @@
     {
       "id": "choice-models-dynamic-choice",
       "name": "Choice Models & Dynamic Choice",
-      "description": "Discrete choice, consideration sets, dynamic decisions",
+      "description": "Model how people make decisions among alternatives",
       "image_url": "/images/topics/choice.webp",
       "subtopics": [
         {
@@ -5690,7 +6013,7 @@
         {
           "id": "dynamic-discrete-choice",
           "name": "Dynamic Discrete Choice",
-          "application": "Durable purchases, renewal, switching",
+          "application": "Model choices that unfold over time",
           "papers": [
             {
               "title": "Optimal Replacement of GMC Bus Engines",
@@ -5745,7 +6068,7 @@
         {
           "id": "intertemporal-substitution",
           "name": "Intertemporal Substitution",
-          "application": "Stockpiling, timing of purchases",
+          "application": "Understand timing of purchases and stockpiling",
           "papers": [
             {
               "title": "Measuring the Implications of Sales and Consumer Inventory Behavior",
@@ -5857,13 +6180,13 @@
     {
       "id": "reinforcement-learning",
       "name": "Reinforcement Learning",
-      "description": "Bandits, Thompson sampling, off-policy, batch RL",
+      "description": "Make sequential decisions that improve outcomes over time",
       "image_url": "/images/topics/reinforcement.webp",
       "subtopics": [
         {
           "id": "multi-armed-bandits",
           "name": "Multi-Armed Bandits",
-          "application": "Content optimization, test allocation",
+          "application": "Balance exploring new options vs. exploiting known winners",
           "papers": [
             {
               "title": "Asymptotically Efficient Adaptive Allocation Rules",
@@ -5906,7 +6229,7 @@
         {
           "id": "contextual-bandits",
           "name": "Contextual Bandits",
-          "application": "Personalized interventions, ad selection",
+          "application": "Personalize decisions based on user context",
           "papers": [
             {
               "title": "A Contextual-Bandit Approach to Personalized News Article Recommendation",
@@ -6016,7 +6339,7 @@
         {
           "id": "off-policy-evaluation",
           "name": "Off-Policy Evaluation",
-          "application": "Counterfactual policy assessment",
+          "application": "Evaluate new policies using historical data",
           "papers": [
             {
               "title": "Doubly Robust Policy Evaluation and Learning",
@@ -6071,7 +6394,7 @@
         {
           "id": "batch-offline-rl",
           "name": "Batch/Offline RL",
-          "application": "Learning from logs, no exploration",
+          "application": "Learn optimal decisions from logged data",
           "papers": [
             {
               "title": "Offline Reinforcement Learning: Tutorial, Review, and Perspectives on Open Problems",
@@ -6125,7 +6448,7 @@
         {
           "id": "rl-bidding-pricing",
           "name": "RL for Bidding & Pricing",
-          "application": "Automated bidding, dynamic pricing agents",
+          "application": "Automate bidding and pricing with RL",
           "papers": [
             {
               "title": "Real-Time Bidding by Reinforcement Learning in Display Advertising",
@@ -6182,7 +6505,7 @@
     {
       "id": "inverse-rl-preference-learning",
       "name": "Inverse RL & Preference Learning",
-      "description": "Reward inference, imitation learning, RLHF",
+      "description": "Learn what people want from their observed behavior",
       "image_url": "/images/topics/preferences.webp",
       "subtopics": [
         {
@@ -6243,7 +6566,7 @@
         {
           "id": "imitation-learning",
           "name": "Imitation Learning",
-          "application": "Learning from demonstrations",
+          "application": "Learn policies from expert demonstrations",
           "papers": [
             {
               "title": "ALVINN: An Autonomous Land Vehicle in a Neural Network",
@@ -6341,7 +6664,7 @@
         {
           "id": "human-feedback-rlhf",
           "name": "Human Feedback & RLHF",
-          "application": "Preference alignment, reward modeling",
+          "application": "Train models to align with human preferences",
           "papers": [
             {
               "title": "Deep Reinforcement Learning from Human Preferences",
@@ -6395,7 +6718,7 @@
     {
       "id": "credit-lending",
       "name": "Credit & Lending",
-      "description": "Credit scoring, fair lending, alternative data",
+      "description": "Assess risk and make fair lending decisions",
       "image_url": "/images/topics/credit.webp",
       "subtopics": [
         {
@@ -6577,7 +6900,7 @@
         {
           "id": "collections-recovery",
           "name": "Collections & Recovery",
-          "application": "Delinquency, workout strategies",
+          "application": "Optimize strategies for collecting overdue payments",
           "papers": [
             {
               "title": "An Empirical Analysis of Personal Bankruptcy and Delinquency",
@@ -6632,7 +6955,7 @@
         {
           "id": "alternative-data",
           "name": "Alternative Data",
-          "application": "Non-traditional signals, thin-file borrowers",
+          "application": "Use non-traditional data for credit decisions",
           "papers": [
             {
               "title": "Behavior Revealed in Mobile Phone Usage Predicts Credit Repayment",
@@ -6688,13 +7011,13 @@
     {
       "id": "trust-safety",
       "name": "Trust & Safety",
-      "description": "Fraud detection, spam, content moderation, abuse",
+      "description": "Detect fraud, spam, and abuse to keep platforms safe",
       "image_url": "/images/topics/security.webp",
       "subtopics": [
         {
           "id": "fraud-detection",
           "name": "Fraud Detection",
-          "application": "Payments, account takeover, transaction fraud",
+          "application": "Catch fraudulent transactions and behaviors",
           "papers": [
             {
               "title": "Isolation Forest",
@@ -6749,7 +7072,7 @@
         {
           "id": "spam-abuse",
           "name": "Spam & Abuse",
-          "application": "Fake accounts, bot detection",
+          "application": "Detect fake accounts and abusive behavior",
           "papers": [
             {
               "title": "Online Human-Bot Interactions: Detection, Estimation, and Characterization",
@@ -6946,13 +7269,13 @@
     {
       "id": "logistics-operations",
       "name": "Logistics & Operations",
-      "description": "Routing, inventory, ETA prediction, capacity planning",
+      "description": "Optimize routing, inventory, and delivery operations",
       "image_url": "/images/topics/logistics.webp",
       "subtopics": [
         {
           "id": "routing-dispatch",
           "name": "Routing & Dispatch",
-          "application": "Vehicle routing, driver assignment",
+          "application": "Optimize routes and assign drivers efficiently",
           "papers": [
             {
               "title": "The Truck Dispatching Problem",
@@ -7007,7 +7330,7 @@
         {
           "id": "inventory-fulfillment",
           "name": "Inventory & Fulfillment",
-          "application": "Stock positioning, warehouse optimization",
+          "application": "Position inventory where it's needed",
           "papers": [
             {
               "title": "Optimal Policies for a Multi-Echelon Inventory Problem",
@@ -7103,7 +7426,7 @@
         {
           "id": "capacity-planning",
           "name": "Capacity Planning",
-          "application": "Demand-supply balancing, staffing",
+          "application": "Balance supply with demand over time",
           "papers": [
             {
               "title": "Telephone Call Centers: Tutorial, Review, and Research Prospects",
@@ -7201,13 +7524,13 @@
     {
       "id": "privacy",
       "name": "Privacy",
-      "description": "Differential privacy, federated learning, synthetic data",
+      "description": "Protect user data while still enabling useful analysis",
       "image_url": "/images/topics/privacy.webp",
       "subtopics": [
         {
           "id": "differential-privacy",
           "name": "Differential Privacy",
-          "application": "Noise injection, privacy budgets",
+          "application": "Add mathematical privacy guarantees to data analysis",
           "papers": [
             {
               "title": "Calibrating Noise to Sensitivity in Private Data Analysis",
@@ -7273,7 +7596,7 @@
         {
           "id": "federated-learning",
           "name": "Federated Learning",
-          "application": "On-device training, decentralized ML",
+          "application": "Train models without centralizing user data",
           "papers": [
             {
               "title": "Communication-Efficient Learning of Deep Networks from Decentralized Data",
@@ -7359,7 +7682,7 @@
         {
           "id": "synthetic-data",
           "name": "Synthetic Data",
-          "application": "Data generation, utility-privacy tradeoff",
+          "application": "Generate fake data that preserves statistical properties",
           "papers": [
             {
               "title": "Modeling Tabular Data using Conditional GAN (CTGAN)",
@@ -7444,13 +7767,13 @@
     {
       "id": "forecasting",
       "name": "Forecasting",
-      "description": "Time series, ML forecasting, hierarchical, probabilistic",
+      "description": "Predict future demand, sales, and trends accurately",
       "image_url": "/images/topics/forecasting.webp",
       "subtopics": [
         {
           "id": "time-series-foundations",
           "name": "Time Series Foundations",
-          "application": "ARIMA, exponential smoothing, state space",
+          "application": "Build classic time series forecasting models",
           "papers": [
             {
               "title": "Time Series Analysis: Forecasting and Control",
@@ -7504,7 +7827,7 @@
         {
           "id": "ml-forecasting",
           "name": "ML for Forecasting",
-          "application": "GBM, neural forecasters, transformers",
+          "application": "Apply machine learning to forecasting problems",
           "papers": [
             {
               "title": "DeepAR: Probabilistic Forecasting with Autoregressive Recurrent Networks",
@@ -7625,7 +7948,7 @@
         {
           "id": "probabilistic-forecasting",
           "name": "Probabilistic Forecasting",
-          "application": "Quantile regression, uncertainty",
+          "application": "Quantify uncertainty in your predictions",
           "papers": [
             {
               "title": "Strictly Proper Scoring Rules, Prediction, and Estimation",
@@ -7725,7 +8048,7 @@
     {
       "id": "spatial-geo",
       "name": "Spatial & Geo",
-      "description": "Geospatial demand, location choice, mobility patterns",
+      "description": "Analyze location data and optimize geographic coverage",
       "image_url": "/images/topics/geospatial.webp",
       "subtopics": [
         {
@@ -7833,7 +8156,7 @@
         {
           "id": "spatial-econometrics",
           "name": "Spatial Econometrics",
-          "application": "Spatial autocorrelation, spillovers",
+          "application": "Account for geographic dependencies in analysis",
           "papers": [
             {
               "title": "Spatial Econometrics: Methods and Models",
@@ -7891,7 +8214,7 @@
         {
           "id": "mapping-geocoding",
           "name": "Mapping & Geocoding",
-          "application": "Address parsing, POI matching",
+          "application": "Convert addresses to coordinates and match locations",
           "papers": [
             {
               "title": "libpostal: International Address Parsing",
@@ -8006,13 +8329,13 @@
     {
       "id": "clustering-segmentation",
       "name": "Clustering & Segmentation",
-      "description": "Customer segmentation, mixture models, deep clustering",
+      "description": "Group similar customers to personalize experiences",
       "image_url": "/images/topics/clustering.webp",
       "subtopics": [
         {
           "id": "customer-segmentation",
           "name": "Customer Segmentation",
-          "application": "Behavioral clusters, personas",
+          "application": "Group customers by behavior for targeting",
           "papers": [
             {
               "title": "RFM Analysis for Customer Segmentation",
@@ -8102,7 +8425,7 @@
         {
           "id": "model-based-clustering",
           "name": "Model-Based Clustering",
-          "application": "Mixture models, latent classes",
+          "application": "Use probabilistic models for clustering",
           "papers": [
             {
               "title": "Finite Mixture Models",
@@ -8194,7 +8517,7 @@
         {
           "id": "segmentation-targeting",
           "name": "Segmentation for Targeting",
-          "application": "Heterogeneity, personalization groups",
+          "application": "Create actionable segments for personalization",
           "papers": [
             {
               "title": "Heterogeneous Treatment Effects and Optimal Targeting",
