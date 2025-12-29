@@ -6125,6 +6125,30 @@
                 "Demand Estimation (BLP)"
               ],
               "citations": 144
+            },
+            {
+              "title": "Valuing New Goods in a Model with Complementarity: Online Newspapers",
+              "authors": "Matthew Gentzkow",
+              "year": 2007,
+              "description": "Extends discrete choice to allow complementarity between products; estimates substitution between print and online news using Washington Post data. Essential for digital goods where products may be complements rather than substitutes.",
+              "url": "https://www.jstor.org/stable/30034408",
+              "tags": [
+                "Structural Estimation",
+                "Demand Estimation (BLP)"
+              ],
+              "citations": 1250
+            },
+            {
+              "title": "Estimating Demand for Mobile Applications in the New Economy",
+              "authors": "Anindya Ghose, Sang Pil Han",
+              "year": 2014,
+              "description": "BLP-style random coefficients nested logit for iOS and Android app stores; estimates $33.6 billion annual consumer surplus from mobile apps and quantifies in-app purchase and advertising effects.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2013.1805",
+              "tags": [
+                "Structural Estimation",
+                "Demand Estimation (BLP)"
+              ],
+              "citations": 580
             }
           ]
         },
@@ -6180,6 +6204,30 @@
                 "Entry & Competition"
               ],
               "citations": 643
+            },
+            {
+              "title": "The Welfare Effects of Peer Entry: The Case of Airbnb and the Accommodation Industry",
+              "authors": "Chiara Farronato, Andrey Fradkin",
+              "year": 2022,
+              "description": "Structural model of competition between 'flexible' peer suppliers (Airbnb) and 'dedicated' sellers (hotels). Finds Airbnb generated $41 consumer surplus per room-night with welfare gains concentrated during capacity-constrained periods.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20180260",
+              "tags": [
+                "Structural Estimation",
+                "Entry & Competition"
+              ],
+              "citations": 420
+            },
+            {
+              "title": "What Happens When Wal-Mart Comes to Town: An Empirical Analysis of the Discount Retailing Industry",
+              "authors": "Panle Jia",
+              "year": 2008,
+              "description": "Develops computational methods for large-scale entry games; tractable approach for markets with many potential entrants relevant to platform expansion analysis.",
+              "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1468-0262.2008.00854.x",
+              "tags": [
+                "Structural Estimation",
+                "Entry & Competition"
+              ],
+              "citations": 890
             }
           ]
         },
@@ -6247,6 +6295,30 @@
                 "Dynamic Structural Models"
               ],
               "citations": 149
+            },
+            {
+              "title": "Changing Their Tune: How Consumers' Adoption of Online Streaming Affects Music Consumption and Discovery",
+              "authors": "Hannes Datta, George Knox, Bart J. Bronnenberg",
+              "year": 2018,
+              "description": "Studies consumption dynamics using individual listening histories across streaming platforms; finds streaming adoption increases quantity and diversity of music consumption.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mksc.2017.1051",
+              "tags": [
+                "Structural Estimation",
+                "Dynamic Structural Models"
+              ],
+              "citations": 320
+            },
+            {
+              "title": "State Dependence and Alternative Explanations for Consumer Inertia",
+              "authors": "Jean-Pierre Dub\u00e9, G\u00fcnter J. Hitsch, Peter E. Rossi",
+              "year": 2010,
+              "description": "Separates structural state dependence from heterogeneity using household scanner data; essential for understanding subscription stickiness and switching costs in digital services.",
+              "url": "https://www.jstor.org/stable/25651509",
+              "tags": [
+                "Structural Estimation",
+                "Dynamic Structural Models"
+              ],
+              "citations": 680
             }
           ]
         },
@@ -6314,6 +6386,30 @@
                 "Auction Estimation"
               ],
               "citations": 34
+            },
+            {
+              "title": "Internet Advertising and the Generalized Second-Price Auction: Selling Billions of Dollars Worth of Keywords",
+              "authors": "Benjamin Edelman, Michael Ostrovsky, Michael Schwarz",
+              "year": 2007,
+              "description": "Foundational analysis of GSP auction mechanism used by Google and Yahoo; characterizes equilibria and proves revenue equivalence under complete information. Required reading for ad auction design.",
+              "url": "https://www.jstor.org/stable/4132849",
+              "tags": [
+                "Structural Estimation",
+                "Auction Estimation"
+              ],
+              "citations": 4800
+            },
+            {
+              "title": "A Structural Model of Sponsored Search Advertising Auctions",
+              "authors": "Susan Athey, Denis Nekipelov",
+              "year": 2010,
+              "description": "Structural econometric methods for estimating bidder valuations in sponsored search auctions; bridges GSP theory with empirical estimation of ad auction data.",
+              "url": "https://www.gsb.stanford.edu/faculty-research/working-papers/structural-model-sponsored-search-advertising-auctions",
+              "tags": [
+                "Structural Estimation",
+                "Auction Estimation"
+              ],
+              "citations": 380
             }
           ]
         },
@@ -6381,6 +6477,329 @@
                 "Production & Cost Estimation"
               ],
               "citations": 83
+            }
+          ]
+        },
+        {
+          "id": "platform-network-effects",
+          "name": "Platform & Network Effects Estimation",
+          "application": "Identify and estimate network effects in platforms",
+          "papers": [
+            {
+              "title": "Two-Sided Markets: A Progress Report",
+              "authors": "Jean-Charles Rochet, Jean Tirole",
+              "year": 2006,
+              "description": "Canonical theoretical framework defining two-sided markets where price structure (not just level) matters; establishes concepts of membership fees, usage fees, and indirect network effects.",
+              "url": "https://www.jstor.org/stable/25046325",
+              "tags": [
+                "Structural Estimation",
+                "Platform & Network Effects Estimation"
+              ],
+              "citations": 3800
+            },
+            {
+              "title": "Competition Between Networks: A Study of the Market for Yellow Pages",
+              "authors": "Marc Rysman",
+              "year": 2004,
+              "description": "First rigorous structural estimation of cross-side network effects in two-sided markets; estimates simultaneous equations for consumer demand, advertiser demand, and publisher pricing.",
+              "url": "https://academic.oup.com/restud/article/71/2/483/1600219",
+              "tags": [
+                "Structural Estimation",
+                "Platform & Network Effects Estimation"
+              ],
+              "citations": 1250
+            },
+            {
+              "title": "A Price Theory of Multi-Sided Platforms",
+              "authors": "E. Glen Weyl",
+              "year": 2010,
+              "description": "General theory of monopoly platform pricing showing platforms internalize only marginal users' externalities (Spence distortion). Essential for understanding market power measurement in platform markets.",
+              "url": "https://www.jstor.org/stable/27871251",
+              "tags": [
+                "Structural Estimation",
+                "Platform & Network Effects Estimation"
+              ],
+              "citations": 1450
+            },
+            {
+              "title": "Identification of Peer Effects Through Social Networks",
+              "authors": "Yann Bramoull\u00e9, Habiba Djebbari, Bernard Fortin",
+              "year": 2009,
+              "description": "Provides necessary and sufficient conditions for identifying peer effects using network structure; shows how intransitive networks solve Manski's reflection problem.",
+              "url": "https://www.sciencedirect.com/science/article/pii/S0304407609000335",
+              "tags": [
+                "Structural Estimation",
+                "Platform & Network Effects Estimation"
+              ],
+              "citations": 2100
+            },
+            {
+              "title": "Distinguishing Influence-Based Contagion from Homophily-Driven Diffusion in Dynamic Networks",
+              "authors": "Sinan Aral, Lev Muchnik, Arun Sundararajan",
+              "year": 2009,
+              "description": "Uses 27.4 million Yahoo users to separate peer influence from selection; shows previous methods overestimate influence by 300-700%. Essential methodology for network effect identification.",
+              "url": "https://www.pnas.org/doi/10.1073/pnas.0908800106",
+              "tags": [
+                "Structural Estimation",
+                "Platform & Network Effects Estimation"
+              ],
+              "citations": 1850
+            },
+            {
+              "title": "Evidence on Learning and Network Externalities in the Diffusion of Home Computers",
+              "authors": "Austan Goolsbee, Peter J. Klenow",
+              "year": 2002,
+              "description": "Early empirical paper distinguishing network externalities from learning spillovers using geographic variation; finds effects tied to email/internet use, supporting communication network hypothesis.",
+              "url": "https://www.jstor.org/stable/3555107",
+              "tags": [
+                "Structural Estimation",
+                "Platform & Network Effects Estimation"
+              ],
+              "citations": 980
+            }
+          ]
+        },
+        {
+          "id": "digital-goods-streaming",
+          "name": "Digital Goods, Streaming & Content Markets",
+          "application": "Structural models for digital content and streaming",
+          "papers": [
+            {
+              "title": "The Welfare Effects of Bundling in Multichannel Television Markets",
+              "authors": "Gregory S. Crawford, Ali Yurukoglu",
+              "year": 2012,
+              "description": "Full industry structural model combining viewership, demand, pricing, bundling, and Nash bargaining between distributors and content providers. Finds unbundling raises negotiated input costs 103%.",
+              "url": "https://www.jstor.org/stable/23287153",
+              "tags": [
+                "Structural Estimation",
+                "Digital Goods, Streaming & Content Markets"
+              ],
+              "citations": 620
+            },
+            {
+              "title": "As Streaming Reaches Flood Stage, Does it Stimulate or Depress Music Sales?",
+              "authors": "Luis Aguiar, Joel Waldfogel",
+              "year": 2018,
+              "description": "Uses Spotify growth to estimate streaming's market impact; finds 137 streams displace 1 track sale but streaming also displaces piracy, making it approximately revenue-neutral.",
+              "url": "https://www.sciencedirect.com/science/article/pii/S016771871730133X",
+              "tags": [
+                "Structural Estimation",
+                "Digital Goods, Streaming & Content Markets"
+              ],
+              "citations": 380
+            },
+            {
+              "title": "Music for a Song: An Empirical Look at Uniform Pricing and Its Alternatives",
+              "authors": "Ben Shiller, Joel Waldfogel",
+              "year": 2011,
+              "description": "Estimates willingness-to-pay for digital songs and simulates revenue under alternative pricing (bundling, two-part tariffs); finds bundling raises revenue 16-33% over uniform pricing.",
+              "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1467-6451.2011.00451.x",
+              "tags": [
+                "Structural Estimation",
+                "Digital Goods, Streaming & Content Markets"
+              ],
+              "citations": 290
+            },
+            {
+              "title": "The Effect of File Sharing on Record Sales: An Empirical Analysis",
+              "authors": "Felix Oberholzer-Gee, Koleman Strumpf",
+              "year": 2007,
+              "description": "Most-cited digital piracy paper using matched file-sharing and sales data; uses German school holidays as instrument. Established the empirical agenda for piracy research.",
+              "url": "https://www.journals.uchicago.edu/doi/10.1086/511995",
+              "tags": [
+                "Structural Estimation",
+                "Digital Goods, Streaming & Content Markets"
+              ],
+              "citations": 1100
+            },
+            {
+              "title": "Piracy and Copyright Enforcement Mechanisms",
+              "authors": "Brett Danaher, Michael D. Smith, Rahul Telang",
+              "year": 2014,
+              "description": "Authoritative synthesis reviewing piracy displacement effects, creative incentives, and enforcement effectiveness. Essential methodological guide for digital content research.",
+              "url": "https://www.journals.uchicago.edu/doi/10.1086/675819",
+              "tags": [
+                "Structural Estimation",
+                "Digital Goods, Streaming & Content Markets"
+              ],
+              "citations": 220
+            }
+          ]
+        },
+        {
+          "id": "ecommerce-online-retail",
+          "name": "E-commerce & Online Retail",
+          "application": "Structural models for online retail and marketplaces",
+          "papers": [
+            {
+              "title": "Consumer Surplus in the Digital Economy: Estimating the Value of Increased Product Variety at Online Booksellers",
+              "authors": "Erik Brynjolfsson, Yu Hu, Michael D. Smith",
+              "year": 2003,
+              "description": "First rigorous estimation of 'Long Tail' welfare gains; shows Amazon variety benefits were 7-10x larger than price competition gains. Foundational paper quantifying why e-commerce matters.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.49.11.1580.20580",
+              "tags": [
+                "Structural Estimation",
+                "E-commerce & Online Retail"
+              ],
+              "citations": 1650
+            },
+            {
+              "title": "Search, Obfuscation, and Price Elasticities on the Internet",
+              "authors": "Glenn Ellison, Sara Fisher Ellison",
+              "year": 2009,
+              "description": "Explains the price dispersion puzzle\u2014why dispersion persists despite low online search costs. Shows retailers strategically make search harder through add-on pricing and complex fees.",
+              "url": "https://onlinelibrary.wiley.com/doi/10.3982/ECTA5708",
+              "tags": [
+                "Structural Estimation",
+                "E-commerce & Online Retail"
+              ],
+              "citations": 890
+            },
+            {
+              "title": "Testing Models of Consumer Search Using Data on Web Browsing and Purchasing Behavior",
+              "authors": "Babi\u0307r De Los Santos, Ali Horta\u00e7su, Matthijs R. Wildenbeest",
+              "year": 2012,
+              "description": "Uses clickstream data to directly observe search sequences; rejects standard sequential search in favor of fixed sample size model. Methodological benchmark for structural search estimation.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/aer.102.6.2955",
+              "tags": [
+                "Structural Estimation",
+                "E-commerce & Online Retail"
+              ],
+              "citations": 520
+            },
+            {
+              "title": "Consumer Price Search and Platform Design in Internet Commerce",
+              "authors": "Michael Dinerstein, Liran Einav, Jonathan Levin, Neel Sundaresan",
+              "year": 2018,
+              "description": "Equilibrium model of search and price competition on eBay; quantifies platform design trade-offs between match quality and price competition using detailed browsing data.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20161492",
+              "tags": [
+                "Structural Estimation",
+                "E-commerce & Online Retail"
+              ],
+              "citations": 280
+            },
+            {
+              "title": "Auctions versus Posted Prices in Online Markets",
+              "authors": "Liran Einav, Chiara Farronato, Jonathan Levin, Neel Sundaresan",
+              "year": 2018,
+              "description": "Explains eBay's shift from auctions to posted prices by estimating demand trade-offs between price discovery and convenience using millions of seller experiments.",
+              "url": "https://www.journals.uchicago.edu/doi/10.1086/696569",
+              "tags": [
+                "Structural Estimation",
+                "E-commerce & Online Retail"
+              ],
+              "citations": 350
+            }
+          ]
+        },
+        {
+          "id": "search-advertising-attention",
+          "name": "Search, Advertising & Attention",
+          "application": "Structural models for search costs and advertising",
+          "papers": [
+            {
+              "title": "Using Price Distributions to Estimate Search Costs",
+              "authors": "Han Hong, Matthew Shum",
+              "year": 2006,
+              "description": "Foundational methodology for backing out search cost distributions from equilibrium prices; underlies virtually all subsequent empirical search estimation.",
+              "url": "https://www.jstor.org/stable/25046317",
+              "tags": [
+                "Structural Estimation",
+                "Search, Advertising & Attention"
+              ],
+              "citations": 580
+            },
+            {
+              "title": "The Power of Rankings: Quantifying the Effect of Rankings on Online Consumer Search and Purchase Decisions",
+              "authors": "Raluca M. Ursu",
+              "year": 2018,
+              "description": "Uses Expedia field experiment to causally identify position effects ($1.92/position); gold-standard paper on ranking effects in digital platforms. Bass Outstanding Dissertation Award winner.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mksc.2017.1072",
+              "tags": [
+                "Structural Estimation",
+                "Search, Advertising & Attention"
+              ],
+              "citations": 420
+            },
+            {
+              "title": "Advertising, Consumer Awareness, and Choice: Evidence from the U.S. Banking Industry",
+              "authors": "Elisabeth Honka, Ali Horta\u00e7su, Maria Ana Vitorino",
+              "year": 2017,
+              "description": "Integrates costly search with endogenous consideration set formation; shows advertising shifts awareness rather than preferences, increasing competition.",
+              "url": "https://www.jstor.org/stable/26248992",
+              "tags": [
+                "Structural Estimation",
+                "Search, Advertising & Attention"
+              ],
+              "citations": 350
+            },
+            {
+              "title": "What Makes Them Click: Empirical Analysis of Consumer Demand for Search Advertising",
+              "authors": "Przemys\u0142aw Je\u017ciorski, Ilya Segal",
+              "year": 2015,
+              "description": "Canonical consumer-side structural model of sponsored search using Bing data; finds 51% more clicks would occur without ad competition. Essential for understanding attention allocation.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/mic.20130153",
+              "tags": [
+                "Structural Estimation",
+                "Search, Advertising & Attention"
+              ],
+              "citations": 180
+            }
+          ]
+        },
+        {
+          "id": "ml-structural-estimation",
+          "name": "Machine Learning & Structural Estimation",
+          "application": "Modern methods bridging ML and structural econometrics",
+          "papers": [
+            {
+              "title": "Double/Debiased Machine Learning for Treatment and Structural Parameters",
+              "authors": "Victor Chernozhukov, Denis Chetverikov, Mert Demirer, Esther Duflo, Christian Hansen, Whitney Newey, James Robins",
+              "year": 2018,
+              "description": "Foundational framework for using ML to estimate nuisance parameters while preserving valid inference on structural parameters through orthogonal scores and cross-fitting.",
+              "url": "https://academic.oup.com/ectj/article/21/1/C1/5056401",
+              "tags": [
+                "Structural Estimation",
+                "Machine Learning & Structural Estimation"
+              ],
+              "citations": 4200
+            },
+            {
+              "title": "Estimation and Inference of Heterogeneous Treatment Effects using Random Forests",
+              "authors": "Stefan Wager, Susan Athey",
+              "year": 2018,
+              "description": "Develops causal forests for heterogeneous treatment effect estimation with valid confidence intervals. Critical for personalization, targeting, and A/B test analysis.",
+              "url": "https://www.tandfonline.com/doi/10.1080/01621459.2017.1319839",
+              "tags": [
+                "Structural Estimation",
+                "Machine Learning & Structural Estimation"
+              ],
+              "citations": 3500
+            },
+            {
+              "title": "Deep IV: A Flexible Approach for Counterfactual Prediction",
+              "authors": "Jason Hartford, Greg Lewis, Kevin Leyton-Brown, Matt Taddy",
+              "year": 2017,
+              "description": "Deep learning framework for instrumental variables; two-stage neural network approach for demand estimation with price endogeneity. Bridges deep learning with core BLP problem.",
+              "url": "https://proceedings.mlr.press/v70/hartford17a.html",
+              "tags": [
+                "Structural Estimation",
+                "Machine Learning & Structural Estimation"
+              ],
+              "citations": 780
+            },
+            {
+              "title": "Deep Neural Networks for Estimation and Inference",
+              "authors": "Max H. Farrell, Tengyuan Liang, Sanjog Misra",
+              "year": 2021,
+              "description": "Rigorous theoretical foundations proving deep nets can be used as first-step estimators in semiparametric inference; provides convergence bounds validating neural networks for causal inference.",
+              "url": "https://onlinelibrary.wiley.com/doi/10.3982/ECTA16901",
+              "tags": [
+                "Structural Estimation",
+                "Machine Learning & Structural Estimation"
+              ],
+              "citations": 420
             }
           ]
         }
