@@ -13,162 +13,6 @@
     "domain": "Statistics"
   },
   {
-    "name": "Causal RL Bridges",
-    "description": "Educational resource on the synergies between causal inference and reinforcement learning. Includes code examples for optimal control using causal agents.",
-    "category": "Bandits & Adaptive",
-    "url": "https://www.causal-rl-bridges.com/",
-    "type": "Tutorial",
-    "level": "Medium",
-    "tags": [
-      "Causal Inference",
-      "Tutorial"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "Eppo's Experimentation Guides",
-    "description": "Practical guides on experiment design, stats engines, CUPED, and common pitfalls. Written by practitioners.",
-    "category": "Variance Reduction",
-    "url": "https://www.geteppo.com/blog",
-    "type": "Guides",
-    "level": "Easy",
-    "tags": [
-      "Experimentation",
-      "Guides"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "A/B Testing on Social Networks",
-    "description": "Simulates a social graph in Python to prove why network effects ruin experiments, then shows cluster-based fixes.",
-    "category": "A/B Testing Fundamentals",
-    "url": "https://bytepawn.com/ab-testing-on-social-networks.html",
-    "type": "Tutorial",
-    "level": "Medium",
-    "tags": [
-      "Experimentation",
-      "Tutorial"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "DoorDash: Switchback Tests",
-    "description": "Why treating one user affects another in marketplaces. Clear diagrams explaining interference as a living organism, not a static dataset.",
-    "category": "Interference & Switchback",
-    "url": "https://careersatdoordash.com/blog/switchback-tests-and-randomized-experimentation-under-network-effects-at-doordash/",
-    "type": "Blog",
-    "level": "Medium",
-    "tags": [
-      "Experimentation",
-      "Blog"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "Understanding Switchback Experiments (2024)",
-    "description": "A modern take on SUTVA violations. Why you randomize time, not users, in marketplaces. The 30-minute window trick explained.",
-    "category": "Interference & Switchback",
-    "url": "https://towardsdatascience.com/what-is-switchback-testing-for-decision-models-e26d2007325a/",
-    "type": "Blog",
-    "level": "Medium",
-    "tags": [
-      "Experimentation",
-      "Blog"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "Uber: Making Experiment Evaluation 100x Faster",
-    "description": "When your p-value calculation has billions of rows. The engineering reality of running causal inference at Uber scale.",
-    "category": "A/B Testing Fundamentals",
-    "url": "https://www.uber.com/blog/making-ubers-experiment-evaluation-engine-100x-faster/",
-    "type": "Blog",
-    "level": "Medium",
-    "tags": [
-      "Experimentation",
-      "Blog"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "Nextmv: Switchback Testing",
-    "description": "Documentation that reads like a tutorial. Exact logic to split time into windows and washout periods for network A/B tests in Python.",
-    "category": "A/B Testing Fundamentals",
-    "url": "https://www.nextmv.io/docs/using-nextmv/experiments/switchback",
-    "type": "Guide",
-    "level": "Medium",
-    "tags": [
-      "Experimentation",
-      "Guide"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "Matteo Courthoud: Understanding CUPED",
-    "description": "The most accessible yet rigorous CUPED explanation. Derives the math showing variance reduction is proportional to (1-\u03c1\u00b2), compares with autoregression and difference-in-differences. Perfect for economists.",
-    "category": "Variance Reduction",
-    "url": "https://matteocourthoud.github.io/post/cuped/",
-    "type": "Tutorial",
-    "level": "Easy",
-    "tags": [
-      "Experimentation",
-      "Tutorial"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "Bytepawn: CUPED in Python",
-    "description": "Short, punchy script simulating 1,000 experiments to prove variance actually goes down. Very satisfying to run.",
-    "category": "Variance Reduction",
-    "url": "https://bytepawn.com/reducing-variance-in-ab-testing-with-cuped.html",
-    "type": "Tutorial",
-    "level": "Medium",
-    "tags": [
-      "Experimentation",
-      "Tutorial"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "Statsig Resources",
-    "description": "Deep dives on sequential testing, variance reduction, and experiment analysis. Free stats engine docs.",
-    "category": "Variance Reduction",
-    "url": "https://docs.statsig.com/",
-    "type": "Docs + Guides",
-    "level": "Medium",
-    "tags": [
-      "Experimentation",
-      "Docs + Guides"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "Evan Miller's A/B Testing Tools",
-    "description": "Best-in-class visual, interactive calculators for sample size, chi-squared tests, sequential sampling. Cited in Udacity's Google A/B testing course. Helps practitioners understand 'under the hood' statistics while planning experiments.",
-    "category": "A/B Testing Fundamentals",
-    "url": "https://www.evanmiller.org/ab-testing/",
-    "type": "Tools + Guides",
-    "level": "Medium",
-    "tags": [
-      "Experimentation",
-      "Tools + Guides"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "Evan Miller: How Not To Run an A/B Test",
-    "description": "The article that taught the industry why peeking at p-values is a sin. Short, lethal, career-saving.",
-    "category": "A/B Testing Fundamentals",
-    "url": "https://www.evanmiller.org/how-not-to-run-an-ab-test.html",
-    "type": "Blog",
-    "level": "Medium",
-    "tags": [
-      "Experimentation",
-      "Blog"
-    ],
-    "domain": "Experimentation"
-  },
-  {
     "name": "QuantEcon Lectures",
     "description": "High-quality computational economics in Python and Julia. Dynamic programming, time series, asset pricing \u2014 all with code.",
     "category": "Fundamentals",
@@ -273,45 +117,6 @@
     "domain": "Forecasting & Time Series"
   },
   {
-    "name": "Reinforcement Learning: An Introduction",
-    "description": "Sutton & Barto's classic. The definitive RL textbook, free from the authors.",
-    "category": "Bandits & Adaptive",
-    "url": "http://incompleteideas.net/book/the-book-2nd.html",
-    "type": "Online Book",
-    "level": "Easy",
-    "tags": [
-      "ML & Data Science",
-      "Online Book"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "OpenAI Spinning Up",
-    "description": "OpenAI's intro to deep RL. Clear explanations of policy gradients, Q-learning, and working code.",
-    "category": "Bandits & Adaptive",
-    "url": "https://spinningup.openai.com/",
-    "type": "Tutorial",
-    "level": "Easy",
-    "tags": [
-      "ML & Data Science",
-      "Tutorial"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "David Silver RL Course",
-    "description": "DeepMind's David Silver teaches RL from scratch. The lectures that trained a generation of RL researchers.",
-    "category": "Bandits & Adaptive",
-    "url": "https://www.davidsilver.uk/teaching/",
-    "type": "Lectures",
-    "level": "Easy",
-    "tags": [
-      "ML & Data Science",
-      "Lectures"
-    ],
-    "domain": "Experimentation"
-  },
-  {
     "name": "Machine Learning Specialization",
     "description": "Andrew Ng's foundational ML course on Coursera. Covers supervised/unsupervised learning, neural networks, and best practices.",
     "category": "Fundamentals",
@@ -349,32 +154,6 @@
       "Online Book"
     ],
     "domain": "Domain Applications"
-  },
-  {
-    "name": "Dynamic Pricing with Contextual Bandits",
-    "description": "Exploration-exploitation trade-off using a restaurant menu example. Simulate greedy vs Thompson Sampling to see which makes more money.",
-    "category": "Bandits & Adaptive",
-    "url": "https://towardsdatascience.com/dynamic-pricing-with-contextual-bandits-learning-by-doing-b88e49f55894/",
-    "type": "Tutorial",
-    "level": "Medium",
-    "tags": [
-      "Pricing & Demand",
-      "Tutorial"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "Stanford: Thompson Sampling Tutorial",
-    "description": "Don't let 'Stanford' scare you. The accompanying Python code is the industry standard for bandit algorithms from scratch.",
-    "category": "Bandits & Adaptive",
-    "url": "https://web.stanford.edu/~bvr/pubs/TS_Tutorial.pdf",
-    "type": "Paper + Code",
-    "level": "Hard",
-    "tags": [
-      "Pricing & Demand",
-      "Paper + Code"
-    ],
-    "domain": "Experimentation"
   },
   {
     "name": "Stitch Fix: Algorithms Tour",
@@ -468,19 +247,6 @@
     "domain": "Forecasting & Time Series"
   },
   {
-    "name": "Netflix Tech Blog - Experimentation",
-    "description": "Multiple posts covering platform architecture, sequential testing implementation, confidence intervals for non-normal distributions, and contextual bandits. Demonstrates how a world-class experimentation platform enables science at scale.",
-    "category": "Sequential Testing",
-    "url": "https://netflixtechblog.com/tagged/experimentation",
-    "type": "Blog",
-    "level": "Hard",
-    "tags": [
-      "Industry Blogs",
-      "Blog"
-    ],
-    "domain": "Experimentation"
-  },
-  {
     "name": "Uber Engineering",
     "description": "Surge pricing, marketplace design, causal inference at scale. See how researchers tackle real problems at Uber.",
     "category": "Marketplace Economics",
@@ -492,19 +258,6 @@
       "Blog"
     ],
     "domain": "Domain Applications"
-  },
-  {
-    "name": "Airbnb Engineering - Data Science",
-    "description": "Experimentation platform design, interference in experiments, and applied causal inference from Airbnb's data science team.",
-    "category": "Interference & Switchback",
-    "url": "https://medium.com/airbnb-engineering/tagged/data-science",
-    "type": "Blog",
-    "level": "Medium",
-    "tags": [
-      "Industry Blogs",
-      "Blog"
-    ],
-    "domain": "Experimentation"
   },
   {
     "name": "Spotify R&D",
@@ -533,19 +286,6 @@
     "domain": "Optimization & Operations Research"
   },
   {
-    "name": "Lyft Engineering",
-    "description": "Rideshare economics, causal inference, and marketplace experiments. Practical posts from Lyft's economics and data science teams.",
-    "category": "Interference & Switchback",
-    "url": "https://eng.lyft.com/tagged/data-science",
-    "type": "Blog",
-    "level": "Medium",
-    "tags": [
-      "Industry Blogs",
-      "Blog"
-    ],
-    "domain": "Experimentation"
-  },
-  {
     "name": "Lyft: Causal Forecasting at Scale",
     "description": "How Lyft combines causal inference with forecasting for pricing. The bridge between 'what happened' and 'what will happen'.",
     "category": "Applied Forecasting",
@@ -559,19 +299,6 @@
     "domain": "Forecasting & Time Series"
   },
   {
-    "name": "Digitopoly (Joshua Gans)",
-    "description": "platform dynamics and digital strategy from a leading IO researcher. Network effects, two-sided markets, and antitrust.",
-    "category": "Interference & Switchback",
-    "url": "https://digitopoly.org/",
-    "type": "Blog",
-    "level": "Medium",
-    "tags": [
-      "Strategy & Analytics",
-      "Blog"
-    ],
-    "domain": "Experimentation"
-  },
-  {
     "name": "Stratechery (Ben Thompson)",
     "description": "The gold standard for tech strategy analysis. Aggregation theory, platform dynamics, and business model breakdowns.",
     "category": "Frameworks & Strategy",
@@ -583,19 +310,6 @@
       "Blog"
     ],
     "domain": "Product Sense"
-  },
-  {
-    "name": "The Operating System (John Brewton)",
-    "description": "The firm as a mechanism design problem. How zero marginal costs and network effects rewrote the economics of tech companies.",
-    "category": "Interference & Switchback",
-    "url": "https://www.operatingbyjohnbrewton.com/",
-    "type": "Substack",
-    "level": "Medium",
-    "tags": [
-      "Strategy & Analytics",
-      "Substack"
-    ],
-    "domain": "Experimentation"
   },
   {
     "name": "Lyft: Quantifying Efficiency in Ridesharing",
@@ -635,19 +349,6 @@
       "Blog"
     ],
     "domain": "Product Sense"
-  },
-  {
-    "name": "Platform Papers",
-    "description": "Platform competition and network effects. Academics summarizing their own research on marketplaces and big tech.",
-    "category": "Interference & Switchback",
-    "url": "https://platformpapers.substack.com/",
-    "type": "Substack",
-    "level": "Hard",
-    "tags": [
-      "Strategy & Analytics",
-      "Substack"
-    ],
-    "domain": "Experimentation"
   },
   {
     "name": "Marginal Revolution (Tyler Cowen)",
@@ -702,19 +403,6 @@
     "domain": "Product Sense"
   },
   {
-    "name": "LinkedIn Engineering - Experimentation",
-    "description": "41K concurrent A/B tests on 700M members. Network effects, inclusive product testing, and experimentation infrastructure.",
-    "category": "A/B Testing Fundamentals",
-    "url": "https://www.linkedin.com/blog/engineering/ab-testing-experimentation",
-    "type": "Blog",
-    "level": "Medium",
-    "tags": [
-      "Industry Blogs",
-      "Blog"
-    ],
-    "domain": "Experimentation"
-  },
-  {
     "name": "Pinterest Engineering - Data Science",
     "description": "Visual discovery engine, recommendation systems, and ML at scale. Feature engineering and personalization.",
     "category": "Recommender Systems",
@@ -752,19 +440,6 @@
       "Blog"
     ],
     "domain": "Domain Applications"
-  },
-  {
-    "name": "Booking.com Tech Blog",
-    "description": "Travel marketplace experimentation at massive scale. A/B testing, recommender systems, and pricing optimization.",
-    "category": "A/B Testing Fundamentals",
-    "url": "https://blog.booking.com/",
-    "type": "Blog",
-    "level": "Medium",
-    "tags": [
-      "Industry Blogs",
-      "Blog"
-    ],
-    "domain": "Experimentation"
   },
   {
     "name": "Amazon Science",
@@ -921,19 +596,6 @@
       "Online Book"
     ],
     "domain": "Programming"
-  },
-  {
-    "name": "Think Stats",
-    "description": "Introduction to probability and statistics with Python. Exploratory data analysis, hypothesis testing, and Bayesian methods.",
-    "category": "A/B Testing Fundamentals",
-    "url": "https://greenteapress.com/thinkstats2/",
-    "type": "Online Book",
-    "level": "Easy",
-    "tags": [
-      "Statistics",
-      "Online Book"
-    ],
-    "domain": "Experimentation"
   },
   {
     "name": "Statistical Rethinking",
@@ -1274,19 +936,6 @@
     "domain": "Domain Applications"
   },
   {
-    "name": "Lyft Engineering: LTV Curves",
-    "description": "Production CLV and Thompson sampling",
-    "category": "Bandits & Adaptive",
-    "url": "https://eng.lyft.com/lyft-marketing-automation-b43b7b7537cc",
-    "type": "Article",
-    "level": "Medium",
-    "tags": [
-      "Strategy & Analytics",
-      "Article"
-    ],
-    "domain": "Experimentation"
-  },
-  {
     "name": "MIT 15.S08 FinTech (Gary Gensler)",
     "description": "12 lectures from former SEC Chair on AI in finance, risk, and compliance \u2014 free",
     "category": "Case Studies",
@@ -1506,19 +1155,6 @@
       "Course"
     ],
     "domain": "Machine Learning"
-  },
-  {
-    "name": "HSE RecSys Course (GitHub)",
-    "description": "Full course: collaborative filtering, matrix factorization, A/B testing",
-    "category": "A/B Testing Fundamentals",
-    "url": "https://github.com/hse-econ-data-science/recsys-itmo",
-    "type": "Course",
-    "level": "Medium",
-    "tags": [
-      "ML & Data Science",
-      "Course"
-    ],
-    "domain": "Experimentation"
   },
   {
     "name": "Fast.ai Lesson 7: Collaborative Filtering",
@@ -2171,19 +1807,6 @@
     "domain": "Domain Applications"
   },
   {
-    "name": "NFX Network Effects Manual",
-    "description": "Comprehensive framework for 16 types of network effects \u2014 maps to marketplace growth",
-    "category": "Interference & Switchback",
-    "url": "https://www.nfx.com/post/network-effects-manual",
-    "type": "Article",
-    "level": "Medium",
-    "tags": [
-      "Strategy & Analytics",
-      "Article"
-    ],
-    "domain": "Experimentation"
-  },
-  {
     "name": "Growth Accounting & Backtraced Growth Accounting",
     "description": "Standard framework for user lifecycle states (New, Retained, Churned, Stale, Resurrected) with weighted backtrace views",
     "category": "Growth & Retention",
@@ -2366,84 +1989,6 @@
     "domain": "Product Sense"
   },
   {
-    "name": "Spotify: Choosing a Sequential Testing Framework",
-    "description": "Practical comparison of Group Sequential Tests (GST), mSPRT, GAVI, and corrected-alpha approaches with simulation results. Clarifies when to use each method.",
-    "category": "Sequential Testing",
-    "url": "https://engineering.atspotify.com/2023/03/choosing-sequential-testing-framework-comparisons-and-discussions/",
-    "type": "Blog",
-    "level": "Hard",
-    "tags": [
-      "Experimentation",
-      "Blog"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "Always Valid Inference: Continuous Monitoring of A/B Tests",
-    "description": "Foundational paper on always-valid p-values and confidence intervals from Stanford/Optimizely. Solves the 'peeking problem' that invalidates most industry A/B tests.",
-    "category": "A/B Testing Fundamentals",
-    "url": "https://arxiv.org/abs/1512.04922",
-    "type": "Paper",
-    "level": "Hard",
-    "tags": [
-      "Experimentation",
-      "Paper"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "Airbnb: Variance Reduction Using In-Experiment Data (KDD 2023)",
-    "description": "Extends CUPED to use in-experiment data for variance reduction. Addresses delayed outcomes and sparse signals in marketplace experimentation with real booking flow examples.",
-    "category": "Variance Reduction",
-    "url": "https://alexdeng.github.io/public/files/kdd2023-inexp.pdf",
-    "type": "Paper",
-    "level": "Hard",
-    "tags": [
-      "Experimentation",
-      "Paper"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "Uber: Supercharging A/B Testing at Uber",
-    "description": "Rebuilding experimentation from ground-up: logging architecture, statistics engine for A/B/N tests, metric recommendation, and flicker detection for 1,000+ concurrent experiments.",
-    "category": "A/B Testing Fundamentals",
-    "url": "https://www.uber.com/blog/supercharging-a-b-testing-at-uber/",
-    "type": "Blog",
-    "level": "Medium",
-    "tags": [
-      "Experimentation",
-      "Blog"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "LinkedIn: A/B Testing Platform Technical Paper",
-    "description": "41,000+ simultaneous A/B tests on 700M+ members. Addresses network-specific challenges: viewer/viewee experiments, email experiments with selection bias, interaction effects.",
-    "category": "A/B Testing Fundamentals",
-    "url": "https://engineering.linkedin.com/ab-testing/introduction-technical-paper-linkedins-ab-testing-platform",
-    "type": "Paper",
-    "level": "Hard",
-    "tags": [
-      "Experimentation",
-      "Paper"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "Reducing Interference Bias in Marketplace Experiments (Holtz et al.)",
-    "description": "Empirical evidence that standard experiments can overstate treatment effects by up to 100% in marketplace settings. Provides practical cluster randomization solutions.",
-    "category": "Interference & Switchback",
-    "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2020.01157",
-    "type": "Paper",
-    "level": "Hard",
-    "tags": [
-      "Experimentation",
-      "Paper"
-    ],
-    "domain": "Experimentation"
-  },
-  {
     "name": "150 Successful ML Models at Booking.com (KDD 2019)",
     "description": "Reveals that model performance \u2260 business performance. Demonstrates why RCTs are critical for validating ML models in production with framework for hypothesis-driven iteration.",
     "category": "Case Studies",
@@ -2457,58 +2002,6 @@
     "domain": "Product Sense"
   },
   {
-    "name": "Stitch Fix: Multi-Armed Bandits Integration",
-    "description": "How to integrate Thompson Sampling and \u03b5-greedy bandits into an existing A/B testing platform. Covers deterministic allocation via hashing and practical tradeoffs.",
-    "category": "A/B Testing Fundamentals",
-    "url": "https://multithreaded.stitchfix.com/blog/2020/08/05/bandits/",
-    "type": "Blog",
-    "level": "Medium",
-    "tags": [
-      "Experimentation",
-      "Blog"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "Booking.com: How to Increase Power with CUPED",
-    "description": "The clearest practical CUPED explanation. Mathematical derivations with pseudo-code, theta calculation, and covariate adjustment. References the original Microsoft paper while making it accessible.",
-    "category": "Variance Reduction",
-    "url": "https://booking.ai/how-booking-com-increases-the-power-of-online-experiments-with-cuped-995d186fff1d",
-    "type": "Blog",
-    "level": "Hard",
-    "tags": [
-      "Experimentation",
-      "Blog"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "Design and Analysis of Switchback Experiments (Harvard/MIT)",
-    "description": "Derives optimal switchback design under carryover effects using minimax optimization. Two inference approaches: exact randomization p-values and finite-population CLT. The theoretical foundation for marketplace experimentation.",
-    "category": "A/B Testing Fundamentals",
-    "url": "https://arxiv.org/abs/2009.00148",
-    "type": "Paper",
-    "level": "Hard",
-    "tags": [
-      "Experimentation",
-      "Paper"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "PyMC: Bayesian A/B Testing Tutorial",
-    "description": "Full posterior distributions instead of point estimates. Beta-Binomial for conversions, Gamma-Poisson for continuous metrics. Directly answers 'probability B beats A' without frequentist constraints.",
-    "category": "A/B Testing Fundamentals",
-    "url": "https://www.pymc.io/projects/examples/en/latest/causal_inference/bayesian_ab_testing_introduction.html",
-    "type": "Tutorial",
-    "level": "Medium",
-    "tags": [
-      "Experimentation",
-      "Tutorial"
-    ],
-    "domain": "Experimentation"
-  },
-  {
     "name": "A Quantitative Approach to Product-Market Fit (Tribe Capital)",
     "description": "The foundational text on growth accounting. MAU growth accounting AND revenue growth accounting. Quick Ratio, Gross Retention, Net Churn explained by the team that pioneered it.",
     "category": "Growth & Retention",
@@ -2520,19 +2013,6 @@
       "Framework"
     ],
     "domain": "Domain Applications"
-  },
-  {
-    "name": "Guardrail Metrics for A/B Tests (PostHog)",
-    "description": "Real examples from Airbnb's Experiment Guardrails Framework, Square, Bing, Netflix, eBay. The 3 categories: product-related, company-related, trustworthiness-related. Prevents metric gaming.",
-    "category": "A/B Testing Fundamentals",
-    "url": "https://posthog.com/product-engineers/guardrail-metrics",
-    "type": "Guide",
-    "level": "Medium",
-    "tags": [
-      "Product Analytics",
-      "Guide"
-    ],
-    "domain": "Experimentation"
   },
   {
     "name": "The Power User Curve (a16z)",
@@ -2682,30 +2162,6 @@
       "ML Fundamentals"
     ],
     "domain": "Machine Learning"
-  },
-  {
-    "name": "Trustworthy Online Controlled Experiments (Kohavi)",
-    "description": "THE 400-page industry bible \u2014 Kohavi (Microsoft), Tang (Google), Xu (LinkedIn)",
-    "category": "A/B Testing Fundamentals",
-    "url": "https://experimentguide.com/",
-    "type": "Resource",
-    "level": "Medium",
-    "tags": [
-      "Experimentation"
-    ],
-    "domain": "Experimentation"
-  },
-  {
-    "name": "Netflix Tech Blog: Experimentation Series",
-    "description": "Platform architecture, sequential testing, contextual bandits at scale",
-    "category": "A/B Testing Fundamentals",
-    "url": "https://netflixtechblog.com/reimagining-experimentation-analysis-at-netflix-71356393af21",
-    "type": "Resource",
-    "level": "Medium",
-    "tags": [
-      "Experimentation"
-    ],
-    "domain": "Experimentation"
   },
   {
     "name": "SELECT Star SQL",
@@ -3198,5 +2654,291 @@
       "Causal ML"
     ],
     "domain": "Causal Inference"
+  },
+  {
+    "name": "Evan Miller's A/B Testing Tools",
+    "description": "Interactive calculators for sample size, chi-squared, sequential sampling, and t-tests. The companion article 'How Not To Run an A/B Test' is the canonical reference on why repeated significance testing inflates false positives.",
+    "category": "A/B Testing Fundamentals",
+    "url": "https://www.evanmiller.org/ab-testing/",
+    "type": "Interactive Tools",
+    "level": "Medium",
+    "tags": [
+      "Experimentation",
+      "Tools"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "GrowthBook's Experimentation Fundamentals",
+    "description": "Complete single-page reference covering hypothesis formation, statistical significance, Type I/II errors, MDE, power analysis, A/A tests, novelty effects, and experiment interactions. Notes that industry success rates are only ~33%.",
+    "category": "A/B Testing Fundamentals",
+    "url": "https://docs.growthbook.io/using/fundamentals",
+    "type": "Tutorial",
+    "level": "Easy",
+    "tags": [
+      "Experimentation",
+      "Tutorial"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "Matteo Courthoud's Experimentation Series",
+    "description": "Connects experimentation to econometric foundations. Covers CUPED (linking to DiD), group sequential testing, Bayesian A/B testing, and clustered standard errors. Every post includes complete Python code.",
+    "category": "A/B Testing Fundamentals",
+    "url": "https://matteocourthoud.github.io/post/",
+    "type": "Tutorial Blog",
+    "level": "Medium",
+    "tags": [
+      "Experimentation",
+      "Tutorial"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "Netflix Tech Blog: What is an A/B Test?",
+    "description": "Multi-part series covering metric selection, sequential testing at scale, quasi-experimentation when SUTVA is violated, and interleaving for recommendation testing. Published at KDD.",
+    "category": "A/B Testing Fundamentals",
+    "url": "https://netflixtechblog.com/what-is-an-a-b-test-b08cc1b57962",
+    "type": "Engineering Blog",
+    "level": "Medium",
+    "tags": [
+      "Experimentation",
+      "Blog"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "Understanding CUPED by Matteo Courthoud",
+    "description": "Mathematical derivation from first principles: optimal covariate formula \u03b8 = Cov(X,Y)/Var(X) and variance reduction Var(\u0176_cuped) = Var(\u0232)(1 - \u03c1\u00b2). Compares with DiD and Frisch-Waugh-Lovell theorem. Full Python code.",
+    "category": "Variance Reduction",
+    "url": "https://matteocourthoud.github.io/post/cuped/",
+    "type": "Tutorial",
+    "level": "Medium",
+    "tags": [
+      "Experimentation",
+      "CUPED"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "Booking.com: Increasing Power with CUPED",
+    "description": "Production-ready Hive SQL and Spark/R implementations for big-data scale. Handles missing pre-experiment data gracefully with real A/B test case study showing faster significance achievement.",
+    "category": "Variance Reduction",
+    "url": "https://booking.ai/how-booking-com-increases-the-power-of-online-experiments-with-cuped-995d186fff1d",
+    "type": "Engineering Blog",
+    "level": "Medium",
+    "tags": [
+      "Experimentation",
+      "CUPED"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "Statsig's CUPED Deep Dive",
+    "description": "Outstanding pedagogy using running/weights example. Demonstrates t-test and OLS regression equivalence, shows standard error reduction from 4.73 to 2.13, covers stratification approaches.",
+    "category": "Variance Reduction",
+    "url": "https://www.statsig.com/blog/cuped",
+    "type": "Tutorial",
+    "level": "Medium",
+    "tags": [
+      "Experimentation",
+      "CUPED"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "Eppo: CUPED++ for Extended Variance Reduction",
+    "description": "CUPED++ extension using multiple pre-experiment metrics as covariates. Addresses 'new users have no pre-data' limitation. Quantifies impact: experiments can conclude 65% faster.",
+    "category": "Variance Reduction",
+    "url": "https://www.geteppo.com/blog/cuped-bending-time-in-experimentation",
+    "type": "Blog",
+    "level": "Medium",
+    "tags": [
+      "Experimentation",
+      "CUPED"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "DoorDash: CUPAC for ML-Enhanced Variance Reduction",
+    "description": "CUPAC (Control Using Predictions As Covariate) - ML-based CUPED extension for when standard CUPED fails. Achieved 25%+ reduction in switchback test duration.",
+    "category": "Variance Reduction",
+    "url": "https://careersatdoordash.com/blog/improving-experimental-power-through-control-using-predictions-as-covariate-cupac/",
+    "type": "Engineering Blog",
+    "level": "Hard",
+    "tags": [
+      "Experimentation",
+      "CUPED"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "Spotify: Choosing a Sequential Testing Framework",
+    "description": "The definitive industry comparison of five frameworks: GST, mSPRT, GAVI, Corrected-Alpha, Bonferroni. Monte Carlo simulations comparing power. Maps methods to companies: GST (Spotify), mSPRT (Optimizely, Uber, Netflix).",
+    "category": "Sequential Testing",
+    "url": "https://engineering.atspotify.com/2023/03/choosing-sequential-testing-framework-comparisons-and-discussions",
+    "type": "Engineering Blog",
+    "level": "Hard",
+    "tags": [
+      "Experimentation",
+      "Sequential Testing"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "Evan Miller: Simple Sequential A/B Testing",
+    "description": "Derives a simple sequential test using gambler's ruin: stop when T-C reaches 2\u221aN. Elegant and implementable with basic arithmetic. Includes interactive calculator.",
+    "category": "Sequential Testing",
+    "url": "https://www.evanmiller.org/sequential-ab-testing.html",
+    "type": "Tutorial",
+    "level": "Medium",
+    "tags": [
+      "Experimentation",
+      "Sequential Testing"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "Matteo Courthoud: Group Sequential Testing",
+    "description": "Pedagogical progression from peeking problem through Bonferroni, Pocock, O'Brien-Fleming to Lan-DeMets alpha-spending. Simulates 10,000 experiments showing Type I error rates. Full Python code.",
+    "category": "Sequential Testing",
+    "url": "https://matteocourthoud.github.io/post/group_sequential_testing/",
+    "type": "Tutorial",
+    "level": "Medium",
+    "tags": [
+      "Experimentation",
+      "Sequential Testing"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "Netflix: Sequential A/B Testing Keeps the World Streaming",
+    "description": "Anytime-valid inference at production scale. Real case study: detecting play-delay issues that would have prevented 60% of devices from streaming. Covers time-uniform confidence bands.",
+    "category": "Sequential Testing",
+    "url": "https://netflixtechblog.com/sequential-a-b-testing-keeps-the-world-streaming-netflix-part-1-continuous-data-cba6c7ed49df",
+    "type": "Engineering Blog",
+    "level": "Hard",
+    "tags": [
+      "Experimentation",
+      "Sequential Testing"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "DoorDash: Switchback Tests Under Network Effects",
+    "description": "Why traditional A/B tests fail in three-sided marketplaces and how switchback testing with region-time randomization solves interference. Uses 30-minute time windows.",
+    "category": "Interference & Switchback",
+    "url": "https://careersatdoordash.com/blog/switchback-tests-and-randomized-experimentation-under-network-effects-at-doordash/",
+    "type": "Engineering Blog",
+    "level": "Medium",
+    "tags": [
+      "Experimentation",
+      "Switchback"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "DoorDash: Statistical Analysis for Switchback Experiments",
+    "description": "Deep methodology comparing OLS, Multi-Level Modeling, and Cluster Robust Standard Errors for switchback analysis. Addresses small independent units problem. Achieved 30% faster iterations.",
+    "category": "Interference & Switchback",
+    "url": "https://doordash.engineering/2019/02/20/experiment-rigor-for-switchback-experiment-analysis/",
+    "type": "Engineering Blog",
+    "level": "Hard",
+    "tags": [
+      "Experimentation",
+      "Switchback"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "Lyft: Experimentation in a Ridesharing Marketplace",
+    "description": "Foundational article on SUTVA violations through potential outcomes framework. The bias-variance tradeoff table for randomization schemes (user to city level) is highly cited.",
+    "category": "Interference & Switchback",
+    "url": "https://eng.lyft.com/experimentation-in-a-ridesharing-marketplace-b39db027a66e",
+    "type": "Engineering Blog",
+    "level": "Medium",
+    "tags": [
+      "Experimentation",
+      "Marketplace"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "Statsig: Switchback Experiments Overview",
+    "description": "Best introductory resource with clear visual diagrams showing traditional A/B vs. switchback designs. Covers burn-in and burn-out periods to prevent cross-contamination.",
+    "category": "Interference & Switchback",
+    "url": "https://www.statsig.com/blog/switchback-experiments",
+    "type": "Tutorial",
+    "level": "Easy",
+    "tags": [
+      "Experimentation",
+      "Switchback"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "Wayfair: Geo Experiments for Incrementality",
+    "description": "Convex optimization for treatment assignment when simple randomization won't work. Covers synthetic control matching and practical constraints like maximum geo share limits.",
+    "category": "Interference & Switchback",
+    "url": "https://www.aboutwayfair.com/careers/tech-blog/how-wayfair-uses-geo-experiments-to-measure-incrementality",
+    "type": "Engineering Blog",
+    "level": "Medium",
+    "tags": [
+      "Experimentation",
+      "Geo Experiments"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "Eugene Yan: Bandits for Recommender Systems",
+    "description": "The definitive practitioner's guide synthesizing implementations from 12+ tech companies (Spotify, Netflix, Yahoo, DoorDash, Twitter, Alibaba, Amazon). Covers \u03b5-greedy, UCB, Thompson Sampling.",
+    "category": "Bandits & Adaptive",
+    "url": "https://eugeneyan.com/writing/bandits/",
+    "type": "Tutorial",
+    "level": "Medium",
+    "tags": [
+      "Experimentation",
+      "Bandits"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "Eppo: Bandit vs. Experiment Testing Decision Guide",
+    "description": "The single best resource for when to use bandits vs. experiments. Covers perishable decisions, impact estimation challenges, why A/B tests win for complex multi-metric decisions.",
+    "category": "Bandits & Adaptive",
+    "url": "https://www.geteppo.com/blog/bandit-or-experiment",
+    "type": "Guide",
+    "level": "Medium",
+    "tags": [
+      "Experimentation",
+      "Bandits"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "Stitch Fix: Multi-Armed Bandits Experimentation Platform",
+    "description": "Inside look at building bandit infrastructure. Covers Thompson Sampling convergence, deterministic allocation via hashing, and reward services architecture with feedback loop diagrams.",
+    "category": "Bandits & Adaptive",
+    "url": "https://multithreaded.stitchfix.com/blog/2020/08/05/bandits/",
+    "type": "Engineering Blog",
+    "level": "Hard",
+    "tags": [
+      "Experimentation",
+      "Bandits"
+    ],
+    "domain": "Experimentation"
+  },
+  {
+    "name": "Eppo: How Netflix, Lyft, and Yahoo Use Contextual Bandits",
+    "description": "Case studies: Netflix artwork personalization, Lyft pricing optimization, Yahoo news with LinUCB. Explains why contextual bandits beat full recommenders for smaller action spaces.",
+    "category": "Bandits & Adaptive",
+    "url": "https://www.geteppo.com/blog/netflix-lyft-yahoo-contextual-bandits",
+    "type": "Case Study",
+    "level": "Medium",
+    "tags": [
+      "Experimentation",
+      "Bandits"
+    ],
+    "domain": "Experimentation"
   }
 ]
