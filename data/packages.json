@@ -3499,5 +3499,203 @@
     ],
     "best_for": "SC applications with imperfect pre-treatment fit or staggered adoption across units, implementing Ben-Michael, Feller & Rothstein (2021)",
     "language": "R"
+  },
+  {
+    "name": "MatchIt",
+    "description": "Comprehensive matching package that selects matched samples of treated and control groups with similar covariate distributions. Provides a unified interface to multiple matching methods including nearest neighbor, optimal pair, optimal full, genetic, exact, coarsened exact (CEM), cardinality matching, and subclassification with propensity score estimation via GLM, GAM, random forest, and BART.",
+    "category": "Causal Inference (Matching)",
+    "docs_url": "https://kosukeimai.github.io/MatchIt/",
+    "github_url": "https://github.com/kosukeimai/MatchIt",
+    "url": "https://cran.r-project.org/package=MatchIt",
+    "install": "install.packages(\"MatchIt\")",
+    "tags": [
+      "propensity-score-matching",
+      "causal-inference",
+      "observational-studies",
+      "covariate-balance",
+      "treatment-effects"
+    ],
+    "best_for": "Preprocessing observational data via matching to reduce confounding before estimating causal treatment effects, implementing Ho et al. (2007, 2011)",
+    "language": "R"
+  },
+  {
+    "name": "WeightIt",
+    "description": "Unified interface for generating balancing weights for causal effect estimation in observational studies. Supports binary, multi-category, and continuous treatments for point and longitudinal/marginal structural models. Methods include inverse probability weighting (IPW), entropy balancing, covariate balancing propensity score (CBPS), energy balancing, stable balancing weights, BART, and SuperLearner.",
+    "category": "Causal Inference (Matching)",
+    "docs_url": "https://ngreifer.github.io/WeightIt/",
+    "github_url": "https://github.com/ngreifer/WeightIt",
+    "url": "https://cran.r-project.org/package=WeightIt",
+    "install": "install.packages(\"WeightIt\")",
+    "tags": [
+      "propensity-score-weighting",
+      "inverse-probability-weighting",
+      "entropy-balancing",
+      "CBPS",
+      "marginal-structural-models"
+    ],
+    "best_for": "Generating balancing weights using modern weighting methods (IPW, entropy balancing, CBPS, etc.) for point or longitudinal treatments",
+    "language": "R"
+  },
+  {
+    "name": "cobalt",
+    "description": "Generates standardized balance tables and plots for covariates after preprocessing via matching, weighting, or subclassification. Provides unified balance assessment across multiple R packages (MatchIt, WeightIt, twang, Matching, optmatch, CBPS, ebal, cem, sbw, designmatch). Supports multi-category, continuous, and longitudinal treatments with clustered and multiply imputed data.",
+    "category": "Causal Inference (Matching)",
+    "docs_url": "https://ngreifer.github.io/cobalt/",
+    "github_url": "https://github.com/ngreifer/cobalt",
+    "url": "https://cran.r-project.org/package=cobalt",
+    "install": "install.packages(\"cobalt\")",
+    "tags": [
+      "covariate-balance",
+      "balance-diagnostics",
+      "love-plot",
+      "standardized-mean-difference",
+      "balance-tables"
+    ],
+    "best_for": "Assessing and visualizing covariate balance before/after matching or weighting to validate causal inference preprocessing",
+    "language": "R"
+  },
+  {
+    "name": "optmatch",
+    "description": "Distance-based bipartite matching using minimum cost network flow algorithms, oriented to matching treatment and control groups in observational studies. Provides optimal full matching and pair matching with support for propensity score distances, Mahalanobis distance, calipers, and exact matching constraints.",
+    "category": "Causal Inference (Matching)",
+    "docs_url": "https://markmfredrickson.github.io/optmatch",
+    "github_url": "https://github.com/markmfredrickson/optmatch",
+    "url": "https://cran.r-project.org/package=optmatch",
+    "install": "install.packages(\"optmatch\")",
+    "tags": [
+      "optimal-matching",
+      "propensity-score",
+      "network-flow",
+      "observational-studies",
+      "full-matching"
+    ],
+    "best_for": "When you need mathematically optimal matching solutions that minimize total matched distance with flexible control:treatment ratios (full matching), implementing Hansen & Klopfer (2006)",
+    "language": "R"
+  },
+  {
+    "name": "CBPS",
+    "description": "Implements Covariate Balancing Propensity Score, which estimates propensity scores by jointly optimizing treatment prediction and covariate balance via generalized method of moments (GMM). Supports binary, multi-valued, and continuous treatments, as well as longitudinal settings for marginal structural models.",
+    "category": "Causal Inference (Matching)",
+    "docs_url": "https://cran.r-project.org/web/packages/CBPS/CBPS.pdf",
+    "github_url": "https://github.com/kosukeimai/CBPS",
+    "url": "https://cran.r-project.org/package=CBPS",
+    "install": "install.packages(\"CBPS\")",
+    "tags": [
+      "propensity-score",
+      "covariate-balance",
+      "GMM",
+      "weighting",
+      "treatment-effects"
+    ],
+    "best_for": "When propensity score model specification is uncertain and you want simultaneous balance optimization, implementing Imai & Ratkovic (2014)",
+    "language": "R"
+  },
+  {
+    "name": "ebal",
+    "description": "Implements entropy balancing, a reweighting method that finds weights for control units such that specified covariate moment conditions (means, variances) are exactly satisfied while staying as close as possible to uniform weights by minimizing Kullback-Leibler divergence. Primarily designed for ATT estimation.",
+    "category": "Causal Inference (Matching)",
+    "docs_url": "https://cran.r-project.org/web/packages/ebal/ebal.pdf",
+    "github_url": null,
+    "url": "https://cran.r-project.org/package=ebal",
+    "install": "install.packages(\"ebal\")",
+    "tags": [
+      "entropy-balancing",
+      "reweighting",
+      "covariate-balance",
+      "observational-studies",
+      "ATT"
+    ],
+    "best_for": "When you need exact covariate balance on specified moments (means, variances) with minimal weight dispersion, implementing Hainmueller (2012)",
+    "language": "R"
+  },
+  {
+    "name": "rdrobust",
+    "description": "Provides tools for data-driven graphical and analytical statistical inference in RD designs: rdrobust() constructs local-polynomial point estimators and robust confidence intervals for average treatment effects at the cutoff in Sharp, Fuzzy, and Kink RD settings; rdbwselect() performs bandwidth selection; rdplot() conducts exploratory data analysis.",
+    "category": "Causal Inference (RDD)",
+    "docs_url": "https://rdpackages.github.io/rdrobust/",
+    "github_url": "https://github.com/rdpackages/rdrobust",
+    "url": "https://cran.r-project.org/package=rdrobust",
+    "install": "install.packages(\"rdrobust\")",
+    "tags": [
+      "regression-discontinuity",
+      "causal-inference",
+      "local-polynomial",
+      "bandwidth-selection",
+      "treatment-effects"
+    ],
+    "best_for": "Standard RD analysis with robust bias-corrected inference and data-driven bandwidth selection, implementing Calonico, Cattaneo & Titiunik (2014)",
+    "language": "R"
+  },
+  {
+    "name": "rddensity",
+    "description": "Implements manipulation testing (density discontinuity testing) procedures using local polynomial density estimators to detect perfect self-selection around a cutoff. Provides rddensity() for hypothesis testing, rdbwdensity() for bandwidth selection, and rdplotdensity() for density plots with confidence bands.",
+    "category": "Causal Inference (RDD)",
+    "docs_url": "https://rdpackages.github.io/rddensity/",
+    "github_url": "https://github.com/rdpackages/rddensity",
+    "url": "https://cran.r-project.org/package=rddensity",
+    "install": "install.packages(\"rddensity\")",
+    "tags": [
+      "manipulation-testing",
+      "density-discontinuity",
+      "McCrary-test",
+      "falsification",
+      "sorting"
+    ],
+    "best_for": "Testing RDD validity by detecting bunching/manipulation around the cutoff (McCrary-type tests), implementing Cattaneo, Jansson & Ma (2020)",
+    "language": "R"
+  },
+  {
+    "name": "rdlocrand",
+    "description": "Provides tools for RD analysis under local randomization: rdrandinf() performs hypothesis testing using randomization inference, rdwinselect() selects a window around the cutoff where randomization likely holds, rdsensitivity() assesses sensitivity to different windows, and rdrbounds() constructs Rosenbaum bounds for unobserved confounders.",
+    "category": "Causal Inference (RDD)",
+    "docs_url": "https://rdpackages.github.io/rdlocrand/",
+    "github_url": "https://github.com/rdpackages/rdlocrand",
+    "url": "https://cran.r-project.org/package=rdlocrand",
+    "install": "install.packages(\"rdlocrand\")",
+    "tags": [
+      "local-randomization",
+      "randomization-inference",
+      "finite-sample",
+      "window-selection",
+      "sensitivity-analysis"
+    ],
+    "best_for": "Finite-sample inference in RDD when local randomization assumption is plausible near the cutoff, implementing Cattaneo, Frandsen & Titiunik (2015)",
+    "language": "R"
+  },
+  {
+    "name": "rdmulti",
+    "description": "Provides tools for RD designs with multiple cutoffs or scores: rdmc() estimates pooled and cutoff-specific effects in multi-cutoff designs, rdmcplot() draws RD plots for multi-cutoff designs, and rdms() estimates effects in cumulative cutoffs or multi-score (geographic/boundary) designs.",
+    "category": "Causal Inference (RDD)",
+    "docs_url": "https://rdpackages.github.io/rdmulti/",
+    "github_url": "https://github.com/rdpackages/rdmulti",
+    "url": "https://cran.r-project.org/package=rdmulti",
+    "install": "install.packages(\"rdmulti\")",
+    "tags": [
+      "multiple-cutoffs",
+      "multi-score",
+      "geographic-RD",
+      "pooled-effects",
+      "extrapolation"
+    ],
+    "best_for": "RDD with multiple cutoffs (e.g., different thresholds across regions) or multiple running variables (geographic boundaries), implementing Cattaneo, Titiunik & Vazquez-Bare (2020)",
+    "language": "R"
+  },
+  {
+    "name": "rdpower",
+    "description": "Provides tools for power, sample size, and minimum detectable effects (MDE) calculations in RD designs using robust bias-corrected local polynomial inference: rdpower() calculates power, rdsampsi() calculates required sample size for desired power, and rdmde() computes minimum detectable effects.",
+    "category": "Causal Inference (RDD)",
+    "docs_url": "https://rdpackages.github.io/rdpower/",
+    "github_url": "https://github.com/rdpackages/rdpower",
+    "url": "https://cran.r-project.org/package=rdpower",
+    "install": "install.packages(\"rdpower\")",
+    "tags": [
+      "power-analysis",
+      "sample-size",
+      "MDE",
+      "study-design",
+      "ex-ante-analysis"
+    ],
+    "best_for": "Planning RDD studies—calculating required sample sizes, statistical power, or minimum detectable effects, implementing Cattaneo, Titiunik & Vazquez-Bare (2019)",
+    "language": "R"
   }
 ]
