@@ -524,10 +524,12 @@
     this.backdrop = this.modal.querySelector('.global-search-backdrop');
     this.input = document.getElementById('global-search-input');
     this.resultsContainer = document.getElementById('global-search-results');
+    this.filtersContainer = document.getElementById('global-search-filters');
     this.emptyState = document.getElementById('global-search-empty');
     this.loadingState = document.getElementById('global-search-loading');
     this.hint = document.getElementById('global-search-hint');
     this.triggers = document.querySelectorAll('.global-search-trigger');
+    this.currentTypeFilter = 'all';  // Filter state
 
     this.bindGlobalSearchEvents();
   };
@@ -691,11 +693,25 @@
 
     // Group by type (no per-category limit)
     var grouped = {};
+    var typeCounts = {};
     results.forEach(function(result) {
       var type = result.type;
       if (!grouped[type]) grouped[type] = [];
       grouped[type].push(result);
+      typeCounts[type] = (typeCounts[type] || 0) + 1;
     });
+
+    // Render type filter chips
+    this.renderTypeFilters(typeCounts, results.length);
+
+    // Filter results if a type is selected
+    var filteredGrouped = grouped;
+    if (this.currentTypeFilter !== 'all') {
+      filteredGrouped = {};
+      if (grouped[this.currentTypeFilter]) {
+        filteredGrouped[this.currentTypeFilter] = grouped[this.currentTypeFilter];
+      }
+    }
 
     var html = '';
     this.flatResults = [];
@@ -705,7 +721,7 @@
     var typeOrder = ['paper', 'package', 'dataset', 'resource', 'book', 'talk', 'career', 'community', 'roadmap', 'domain'];
 
     typeOrder.forEach(function(type) {
-      if (!grouped[type]) return;
+      if (!filteredGrouped[type]) return;
 
       var typeConfig = TYPE_CONFIG[type] || { label: type, icon: 'file', color: '#666' };
 
@@ -714,7 +730,7 @@
       html += '<span class="result-type-label">' + typeConfig.label + 's</span>';
       html += '</div>';
 
-      grouped[type].forEach(function(result) {
+      filteredGrouped[type].forEach(function(result) {
         var isSelected = globalIndex === self.selectedIndex;
         self.flatResults.push(result);
 
@@ -741,12 +757,50 @@
   };
 
   /**
+   * Render type filter chips
+   */
+  UnifiedSearch.prototype.renderTypeFilters = function(typeCounts, totalCount) {
+    var self = this;
+    if (!this.filtersContainer) return;
+
+    var typeOrder = ['paper', 'package', 'dataset', 'resource', 'book', 'talk', 'career', 'community'];
+    var html = '';
+
+    // All filter
+    var allActive = this.currentTypeFilter === 'all' ? ' active' : '';
+    html += '<button class="type-filter-chip' + allActive + '" data-type="all">All (' + totalCount + ')</button>';
+
+    // Type filters (only show types with results)
+    typeOrder.forEach(function(type) {
+      if (!typeCounts[type]) return;
+      var typeConfig = TYPE_CONFIG[type] || { label: type };
+      var isActive = self.currentTypeFilter === type ? ' active' : '';
+      html += '<button class="type-filter-chip' + isActive + '" data-type="' + type + '">';
+      html += typeConfig.label + 's (' + typeCounts[type] + ')';
+      html += '</button>';
+    });
+
+    this.filtersContainer.innerHTML = html;
+    this.filtersContainer.style.display = 'flex';
+
+    // Bind click handlers
+    this.filtersContainer.querySelectorAll('.type-filter-chip').forEach(function(chip) {
+      chip.addEventListener('click', function() {
+        self.currentTypeFilter = this.dataset.type;
+        self.renderGlobalResults(self.currentResults, self.input.value.trim());
+      });
+    });
+  };
+
+  /**
    * Show hint (recent searches + suggestions)
    */
   UnifiedSearch.prototype.showHint = function() {
     var self = this;
     this.emptyState.style.display = 'none';
     this.hint.style.display = 'none';
+    if (this.filtersContainer) this.filtersContainer.style.display = 'none';
+    this.currentTypeFilter = 'all';  // Reset filter
 
     var recent = this.getRecentSearches();
     var html = '';
@@ -810,6 +864,7 @@
     this.hint.style.display = 'none';
     this.emptyState.style.display = 'flex';
     if (this.loadingState) this.loadingState.style.display = 'none';
+    if (this.filtersContainer) this.filtersContainer.style.display = 'none';
   };
 
   /**

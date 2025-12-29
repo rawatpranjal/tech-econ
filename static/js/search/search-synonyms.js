@@ -28,11 +28,14 @@
     'sharp': ['sharp RDD', 'regression discontinuity'],
     'fuzzy': ['fuzzy RDD', 'regression discontinuity'],
 
-    // INSTRUMENTAL VARIABLES (IV)
+    // INSTRUMENTAL VARIABLES (IV) & ENDOGENEITY
     'iv': ['instrumental variable', 'instrumental variables', '2SLS', 'two-stage'],
     'instrumental': ['IV', 'instrumental variable', '2SLS'],
     '2sls': ['two-stage least squares', 'IV', 'instrumental variables'],
     'gmm': ['generalized method of moments', 'GMM', 'moment conditions'],
+    'endogeneity': ['endogenous', 'IV', 'instrumental variable', 'omitted variable', 'reverse causality'],
+    'endogenous': ['endogeneity', 'IV', 'omitted variable bias'],
+    'omitted': ['omitted variable bias', 'endogeneity', 'confounding'],
 
     // TREATMENT EFFECTS
     'ate': ['average treatment effect', 'ATE', 'treatment effect'],
@@ -63,6 +66,12 @@
     'dag': ['directed acyclic graph', 'DAG', 'causal graph'],
     'causal': ['causal inference', 'causality', 'treatment effect'],
     'graph': ['causal graph', 'DAG', 'Bayesian network'],
+    'confounding': ['confounder', 'backdoor', 'selection bias', 'DAG', 'omitted variable'],
+    'confounder': ['confounding', 'backdoor', 'selection bias'],
+    'backdoor': ['backdoor criterion', 'confounding', 'adjustment'],
+    'robustness': ['sensitivity analysis', 'robustness check', 'placebo test'],
+    'sensitivity': ['sensitivity analysis', 'robustness', 'bounds'],
+    'placebo': ['placebo test', 'robustness', 'falsification'],
     'discovery': ['causal discovery', 'structure learning', 'PC algorithm'],
     'pc': ['PC algorithm', 'causal discovery', 'constraint-based'],
     'ges': ['GES algorithm', 'score-based', 'causal discovery'],
@@ -78,6 +87,8 @@
     'randomized': ['RCT', 'randomized experiment', 'A/B testing'],
     'testing': ['A/B testing', 'hypothesis testing', 'experimentation'],
     'online': ['online experiment', 'A/B testing', 'web experiment'],
+    'mvt': ['multivariate testing', 'MVT', 'factorial experiment', 'multi-armed'],
+    'multivariate': ['multivariate testing', 'MVT', 'factorial design'],
 
     // VARIANCE REDUCTION
     'cuped': ['CUPED', 'variance reduction', 'covariate adjustment'],
@@ -111,7 +122,8 @@
     'blundell': ['Blundell-Bond', 'system GMM', 'dynamic panel'],
 
     // DISCRETE CHOICE & DEMAND
-    'logit': ['logit', 'multinomial logit', 'discrete choice'],
+    'logit': ['logit', 'multinomial logit', 'discrete choice', 'probit'],
+    'probit': ['probit', 'logit', 'binary choice', 'discrete choice'],
     'multinomial': ['multinomial logit', 'MNL', 'discrete choice'],
     'mixed': ['mixed logit', 'random coefficients', 'discrete choice'],
     'nested': ['nested logit', 'discrete choice', 'hierarchical'],
@@ -134,6 +146,12 @@
     'ltv': ['lifetime value', 'LTV', 'CLV'],
     'lifetime': ['lifetime value', 'CLV', 'LTV'],
     'roi': ['return on investment', 'ROI', 'incrementality'],
+    'churn': ['churn prediction', 'attrition', 'customer retention', 'user dropout'],
+    'attrition': ['churn', 'customer loss', 'retention'],
+    'retention': ['customer retention', 'churn', 'engagement'],
+    'engagement': ['user engagement', 'retention', 'activation'],
+    'activation': ['user activation', 'engagement', 'onboarding'],
+    'funnel': ['conversion funnel', 'marketing funnel', 'pipeline'],
 
     // GEO-EXPERIMENTS
     'geo': ['geo-experiment', 'geo-lift', 'regional'],
@@ -172,6 +190,12 @@
     'robust': ['robust standard errors', 'heteroskedasticity', 'cluster'],
     'anova': ['ANOVA', 'analysis of variance', 'F-test'],
     'hypothesis': ['hypothesis testing', 'p-value', 'significance'],
+    'poisson': ['Poisson regression', 'count model', 'rate model'],
+    'negbin': ['negative binomial', 'count model', 'overdispersion'],
+    'count': ['count model', 'Poisson', 'negative binomial', 'zero-inflated'],
+    'zeroinflated': ['zero-inflated', 'count model', 'hurdle model'],
+    'outlier': ['outlier detection', 'anomaly', 'extreme value', 'robust'],
+    'anomaly': ['anomaly detection', 'outlier', 'novelty detection'],
 
     // SPATIAL ECONOMETRICS
     'spatial': ['spatial econometrics', 'spatial lag', 'geographic'],
@@ -188,6 +212,16 @@
     'game': ['game theory', 'Nash equilibrium', 'strategic'],
     'nash': ['Nash equilibrium', 'game theory', 'equilibrium'],
     'equilibrium': ['equilibrium', 'Nash', 'game theory'],
+
+    // FAIRNESS & INTERPRETABILITY
+    'fairness': ['algorithmic fairness', 'bias', 'fair ML', 'equitable', 'discrimination'],
+    'bias': ['algorithmic bias', 'fairness', 'discrimination'],
+    'interpretability': ['explainability', 'XAI', 'interpretable ML', 'model explanation'],
+    'explainability': ['interpretability', 'XAI', 'SHAP', 'LIME'],
+    'xai': ['explainable AI', 'interpretability', 'SHAP', 'LIME'],
+    'shap': ['SHAP values', 'Shapley', 'feature importance', 'interpretability'],
+    'lime': ['LIME', 'local interpretable', 'explainability'],
+    'feature': ['feature importance', 'SHAP', 'variable importance'],
 
     // MACHINE LEARNING
     'ml': ['machine learning', 'ML', 'prediction'],
