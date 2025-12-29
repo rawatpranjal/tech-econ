@@ -1,7 +1,7 @@
 [
   {
     "name": "Athey & Luca: Economists in Tech",
-    "description": "JEP article on 'Economists (and Economics) in Tech Companies' - foundational reading on why tech hires economists.",
+    "description": "JEP article 'Economists (and Economics) in Tech Companies' - foundational reading on why tech hires economists. Amazon employs 150+ PhD economists. Focuses on causal inference, market design, incentives. Full PDF: https://gsb-faculty.stanford.edu/susan-athey/files/2022/04/economists_in_tech.pdf",
     "stage": "Strategy",
     "category": "Why Tech",
     "url": "https://www.aeaweb.org/articles?id=10.1257%2Fjep.33.1.209",
@@ -46,57 +46,57 @@
   },
   {
     "name": "Amazon Economist Careers",
-    "description": "Dedicated Economist job family with RFCA (reduced-form), STRUC (structural), FMF (forecasting) tracks. Largest economist employer.",
-    "stage": "Strategy",
-    "category": "Role Landscape",
+    "description": "Dedicated Economist job family with RFCA (reduced-form), STRUC (structural), FMF (forecasting) tracks. Largest economist employer in tech.",
+    "stage": "Discovery",
+    "category": "Company Lists",
     "url": "https://www.amazon.jobs/en/landing_pages/economistjobs",
     "type": "Career Portal",
-    "tags": ["Amazon", "economist-title"]
+    "tags": ["FAANG", "economist-title", "PhD-internship"]
   },
   {
     "name": "Google Research Areas",
     "description": "Economists hired as Quantitative Analyst, Data Scientist, or Research Scientist. No dedicated 'Economist' title but similar work.",
-    "stage": "Strategy",
-    "category": "Role Landscape",
+    "stage": "Discovery",
+    "category": "Company Lists",
     "url": "https://research.google/research-areas/economics-and-electronic-commerce/",
     "type": "Career Portal",
-    "tags": ["Google", "quant-analyst"]
+    "tags": ["FAANG", "quant-analyst", "research"]
   },
   {
     "name": "Meta Core Data Science",
     "description": "Economics team within CDS focused on experimentation, causal inference, pricing, market design. Title: Research Scientist, Economics.",
-    "stage": "Strategy",
-    "category": "Role Landscape",
+    "stage": "Discovery",
+    "category": "Company Lists",
     "url": "https://ai.meta.com/research/",
     "type": "Career Portal",
-    "tags": ["Meta", "CDS"]
+    "tags": ["FAANG", "CDS", "research"]
   },
   {
     "name": "Uber Ubernomics Team",
     "description": "Pioneer of tech economist hiring. Dedicated Economist and Applied Scientist (Econ) roles for pricing, incentives, policy.",
     "stage": "Strategy",
-    "category": "Team Types",
+    "category": "Role Landscape",
     "url": "https://eng.uber.com/",
     "type": "Blog",
-    "tags": ["Uber", "marketplace"]
+    "tags": ["Uber", "marketplace", "company-profile"]
   },
   {
     "name": "Wayfair Economics Group",
     "description": "~15 PhD economists from MIT, Harvard, Northwestern. Explicit 'Economist' title and intern positions. Strong for applied micro.",
     "stage": "Strategy",
-    "category": "Team Types",
+    "category": "Role Landscape",
     "url": "https://www.aboutwayfair.com/careers/tech-blog",
     "type": "Blog",
-    "tags": ["Wayfair", "economist-title"]
+    "tags": ["Wayfair", "economist-title", "company-profile"]
   },
   {
     "name": "LinkedIn Economic Graph",
-    "description": "Studies labor market dynamics using LinkedIn data. Chief Economist Karin Kimbrough. Contact: EconomicGraphResearchProposal@linkedin.com",
+    "description": "Studies labor market dynamics using LinkedIn data. Chief Economist Karin Kimbrough. Public research team with policy impact.",
     "stage": "Strategy",
-    "category": "Team Types",
+    "category": "Role Landscape",
     "url": "https://economicgraph.linkedin.com/",
-    "type": "Career Portal",
-    "tags": ["LinkedIn", "labor-economics"]
+    "type": "Blog",
+    "tags": ["LinkedIn", "labor-economics", "company-profile"]
   },
   {
     "name": "Stripe Economics of AI Fellowship",
@@ -120,10 +120,10 @@
     "name": "Pharma HEOR Teams Overview",
     "description": "Biostatistics, VEO (Value Evidence Outcomes), RWE (Real-World Evidence) teams. 200+ statisticians at Lilly, Pfizer, Roche.",
     "stage": "Strategy",
-    "category": "Team Types",
+    "category": "Role Landscape",
     "url": "https://business.optum.com/en/data-analytics/life-sciences/heor.html",
     "type": "Guide",
-    "tags": ["pharma", "HEOR"]
+    "tags": ["pharma", "HEOR", "role-overview"]
   },
   {
     "name": "Rose Tan: Tech Jobs for Econ PhDs",
@@ -144,22 +144,13 @@
     "tags": ["PhD", "career-advice"]
   },
   {
-    "name": "Industry Experience Preferences",
-    "description": "Netflix prefers candidates with industry experience. Most others hire fresh PhDs. Internships are crucial - 'not possible to do too many'.",
-    "stage": "Strategy",
-    "category": "PhD Transition",
-    "url": "https://jobs.netflix.com/",
-    "type": "Guide",
-    "tags": ["PhD", "internships"]
-  },
-  {
-    "name": "NABE TEC Conference",
-    "description": "Largest causal inference conference for tech economists (~800 participants). Free for job market PhDs. Nov 9-11 Seattle 2025.",
+    "name": "NABE TEC Conference & Job Fair",
+    "description": "Largest causal inference conference for tech economists (~800 participants). Free registration for job market PhDs. Amazon, Google, Netflix, Stripe recruit here. Resume deadline typically Sept-Oct. Essential networking event.",
     "stage": "Discovery",
-    "category": "Job Boards",
+    "category": "Networking",
     "url": "https://www.nabe.com/NABE/NABE/Events/TEC25/TEC2025.aspx",
     "type": "Conference",
-    "tags": ["essential", "networking"]
+    "tags": ["essential", "networking", "job-fair"]
   },
   {
     "name": "AEA JOE Listings",
@@ -316,7 +307,7 @@
   },
   {
     "name": "Spotify Research Scientist",
-    "description": "Research Scientist PhD Internship 10-12 weeks (NYC or London). Explicitly welcomes Economics PhDs. Feb 5, 2026 deadline.",
+    "description": "Research Scientist PhD Internship 10-12 weeks (NYC or London). Explicitly welcomes Economics PhDs. Check for annual deadline (typically early February).",
     "stage": "Discovery",
     "category": "Company Lists",
     "url": "https://www.lifeatspotify.com/jobs",
@@ -324,8 +315,8 @@
     "tags": ["social-media", "econ-PhD-welcome", "PhD-internship"]
   },
   {
-    "name": "Netflix Research",
-    "description": "ML/AI Scientist Intern PhD. Prefers candidates with industry experience. Public Policy Economists (SEAL team) separate track.",
+    "name": "Netflix Careers",
+    "description": "ML/AI Scientist Intern PhD track. Prefers candidates with industry experience (unlike most companies). Public Policy Economists (SEAL team) is a separate track. Internships crucial - 'not possible to do too many.'",
     "stage": "Discovery",
     "category": "Company Lists",
     "url": "https://jobs.netflix.com/",
@@ -442,7 +433,7 @@
   },
   {
     "name": "Eli Lilly Statistics",
-    "description": "12-week Statistics Internship. Global Statistical Sciences (200+ statisticians). Deadline: January 4, 2026.",
+    "description": "12-week Statistics Internship. Global Statistical Sciences (200+ statisticians). Applications typically due early January.",
     "stage": "Discovery",
     "category": "Company Lists",
     "url": "https://careers.lilly.com/us/en/stem",
@@ -451,7 +442,7 @@
   },
   {
     "name": "Pfizer Biostatistics",
-    "description": "12-week program, 15+ positions. Biostatistics (200+ statisticians), HV&E (HEOR). Deadline: January 30, 2026.",
+    "description": "12-week program, 15+ positions. Biostatistics (200+ statisticians), HV&E (HEOR). Applications typically due late January.",
     "stage": "Discovery",
     "category": "Company Lists",
     "url": "https://pfizerstatistics-internprogram-atriumworks.icims.com/",
@@ -460,7 +451,7 @@
   },
   {
     "name": "J&J Statistics",
-    "description": "Statistics & Decision Sciences Intern (8-10 positions, Spring House PA, Titusville NJ). Deadline: February 16, 2026.",
+    "description": "Statistics & Decision Sciences Intern (8-10 positions, Spring House PA, Titusville NJ). Applications typically due mid-February.",
     "stage": "Discovery",
     "category": "Company Lists",
     "url": "https://careers.jnj.com",
@@ -539,16 +530,7 @@
     "type": "Career Portal",
     "tags": ["emerging", "general-intern", "limited-PhD"]
   },
-  {
-    "name": "NABE TEC Job Fair",
-    "description": "Free registration for economics PhDs on the job market. Resume deadline Sep 17 (first batch), Oct 5 (final). Amazon, Google, Netflix, Stripe recruit.",
-    "stage": "Discovery",
-    "category": "Networking",
-    "url": "https://www.nabe.com/NABE/NABE/Events/TEC25/TEC2025.aspx",
-    "type": "Conference",
-    "tags": ["essential", "job-fair"]
-  },
-  {
+    {
     "name": "Takeda-UIC HEOR Fellowship",
     "description": "2-year Health Economics and Outcomes Research fellowship program. Strong for pharma career path.",
     "stage": "Discovery",
@@ -621,8 +603,8 @@
     "tags": ["visual-learning", "beginner-friendly"]
   },
   {
-    "name": "Trustworthy Online Controlled Experiments",
-    "description": "The industry bible by Kohavi, Tang, Xu. Design, analysis, pitfalls from Microsoft/LinkedIn/Google leaders.",
+    "name": "Trustworthy Online Controlled Experiments (Kohavi)",
+    "description": "The industry bible by Kohavi, Tang, Xu (Microsoft/LinkedIn/Google). Design, analysis, pitfalls of A/B testing at scale. Only 1/3 of well-designed experiments improve metrics. Free site: experimentguide.com",
     "stage": "Interview Prep",
     "category": "Experimentation",
     "url": "https://www.amazon.com/Trustworthy-Online-Controlled-Experiments-Practical/dp/1108724264",
@@ -772,15 +754,6 @@
     "url": "https://candor.co/guides/salary-negotiation",
     "type": "Guide",
     "tags": ["competing-offers", "tactics"]
-  },
-  {
-    "name": "Athey & Luca: Full PDF",
-    "description": "Amazon employs 150+ PhD economists. Economists focus on causal inference, market design, incentives vs DS on prediction.",
-    "stage": "Strategy",
-    "category": "Role Landscape",
-    "url": "https://gsb-faculty.stanford.edu/susan-athey/files/2022/04/economists_in_tech.pdf",
-    "type": "Article",
-    "tags": ["foundational", "academic"]
   },
   {
     "name": "HBR: Why Tech Hires Economists",
@@ -965,8 +938,8 @@
   {
     "name": "Netflix: What is an A/B Test?",
     "description": "Multi-part experimentation series. Every product change at Netflix goes through rigorous A/B testing.",
-    "stage": "Strategy",
-    "category": "Team Types",
+    "stage": "Interview Prep",
+    "category": "Experimentation",
     "url": "https://netflixtechblog.com/what-is-an-a-b-test-b08cc1b57962",
     "type": "Blog",
     "tags": ["experimentation", "Netflix"]
@@ -974,8 +947,8 @@
   {
     "name": "Uber: XP Experimentation Platform",
     "description": "1,000+ experiments at any time. Supports A/B/N tests, causal inference, multi-armed bandits.",
-    "stage": "Strategy",
-    "category": "Team Types",
+    "stage": "Interview Prep",
+    "category": "Experimentation",
     "url": "https://www.uber.com/blog/xp/",
     "type": "Blog",
     "tags": ["experimentation", "Uber"]
@@ -983,8 +956,8 @@
   {
     "name": "Booking.com: Moving Fast with Experiments",
     "description": "Automated 'circuit breaker' monitors for errors and aborts releases within seconds.",
-    "stage": "Strategy",
-    "category": "Team Types",
+    "stage": "Interview Prep",
+    "category": "Experimentation",
     "url": "https://medium.com/booking-com-development/moving-fast-breaking-things-and-fixing-them-as-quickly-as-possible-a6c16c5a1185",
     "type": "Blog",
     "tags": ["experimentation", "Booking"]
@@ -992,8 +965,8 @@
   {
     "name": "Airbnb: Interleaving Experiments",
     "description": "50x sensitivity improvement in search ranking by blending control/treatment for direct comparison.",
-    "stage": "Strategy",
-    "category": "Team Types",
+    "stage": "Interview Prep",
+    "category": "Experimentation",
     "url": "https://airbnb.tech/data/beyond-a-b-test-speeding-up-airbnb-search-ranking-experimentation-through-interleaving/",
     "type": "Blog",
     "tags": ["experimentation", "Airbnb"]
@@ -1001,8 +974,8 @@
   {
     "name": "Microsoft: Deep Dive Into Variance Reduction",
     "description": "CUPED introduced 2013; effectively multiplies observed traffic for faster experiments.",
-    "stage": "Strategy",
-    "category": "Team Types",
+    "stage": "Interview Prep",
+    "category": "Experimentation",
     "url": "https://www.microsoft.com/en-us/research/articles/deep-dive-into-variance-reduction/",
     "type": "Article",
     "tags": ["CUPED", "Microsoft"]
@@ -1010,8 +983,8 @@
   {
     "name": "Nubank: CUPED Implementation",
     "description": "40% of metric comparisons had variance reduced by 20%+ after implementing CUPED.",
-    "stage": "Strategy",
-    "category": "Team Types",
+    "stage": "Interview Prep",
+    "category": "Experimentation",
     "url": "https://building.nubank.com/3-lessons-from-implementing-controlled-experiment-using-pre-experiment-data-cuped-at-nubank/",
     "type": "Blog",
     "tags": ["CUPED", "Nubank"]
@@ -1019,8 +992,8 @@
   {
     "name": "Matteo Courthoud: CUPED Technical Guide",
     "description": "CUPED used at Netflix, Booking, Meta, Uber, Airbnb, LinkedIn, DoorDash, Faire.",
-    "stage": "Strategy",
-    "category": "Team Types",
+    "stage": "Interview Prep",
+    "category": "Experimentation",
     "url": "https://matteocourthoud.github.io/post/cuped/",
     "type": "Article",
     "tags": ["CUPED", "technical"]
@@ -1028,8 +1001,8 @@
   {
     "name": "DoorDash: Switchback Experiment Analysis",
     "description": "Three-sided marketplace needs region-time randomization. Achieved 30% faster experimentation.",
-    "stage": "Strategy",
-    "category": "Team Types",
+    "stage": "Interview Prep",
+    "category": "Experimentation",
     "url": "https://careersatdoordash.com/blog/experiment-rigor-for-switchback-experiment-analysis/",
     "type": "Blog",
     "tags": ["switchback", "DoorDash"]
@@ -1037,8 +1010,8 @@
   {
     "name": "LinkedIn: Detecting Interference in A/B Tests",
     "description": "A/B test of A/B tests comparing individual-level vs cluster-based randomization.",
-    "stage": "Strategy",
-    "category": "Team Types",
+    "stage": "Interview Prep",
+    "category": "Experimentation",
     "url": "https://engineering.linkedin.com/blog/2019/06/detecting-interference--an-a-b-test-of-a-b-tests",
     "type": "Blog",
     "tags": ["interference", "LinkedIn"]
@@ -1046,8 +1019,8 @@
   {
     "name": "Lyft: Marketplace Experimentation",
     "description": "Interference-free treatment effect estimators for ridesharing marketplace.",
-    "stage": "Strategy",
-    "category": "Team Types",
+    "stage": "Interview Prep",
+    "category": "Experimentation",
     "url": "https://eng.lyft.com/experimentation-in-a-ridesharing-marketplace-f75a9c4fcf01",
     "type": "Blog",
     "tags": ["experimentation", "Lyft"]
@@ -1055,8 +1028,8 @@
   {
     "name": "Meta: Cluster Experimentation",
     "description": "Even 1% cluster purity provides 3x improvement in reducing test interactions.",
-    "stage": "Strategy",
-    "category": "Team Types",
+    "stage": "Interview Prep",
+    "category": "Experimentation",
     "url": "https://medium.com/@AnalyticsAtMeta/how-meta-tests-products-with-strong-network-effects-96003a056c2c",
     "type": "Blog",
     "tags": ["experimentation", "Meta"]
@@ -1064,8 +1037,8 @@
   {
     "name": "Uber CausalML Package",
     "description": "Open-source uplift modeling and CATE estimation with meta-learners (S, T, X-learner).",
-    "stage": "Strategy",
-    "category": "Team Types",
+    "stage": "Interview Prep",
+    "category": "Experimentation",
     "url": "https://github.com/uber/causalml",
     "type": "Tool",
     "tags": ["causal-ML", "open-source"]
@@ -1143,15 +1116,6 @@
     "tags": ["fraud", "ML"]
   },
   {
-    "name": "Uber: Driver Incentives Team",
-    "description": "Designing personalized driver offers, dynamic earning opportunities, supply positioning.",
-    "stage": "Strategy",
-    "category": "Team Types",
-    "url": "https://www.uber.com/careers/list/144749",
-    "type": "Job Posting",
-    "tags": ["marketplace", "incentives"]
-  },
-  {
     "name": "Lyft: Fleet Team DS",
     "description": "Setting rental rates, understanding price-demand relationships, fleet allocation through time series.",
     "stage": "Strategy",
@@ -1200,7 +1164,7 @@
     "name": "Meta: How DS Lead and Drive Impact",
     "description": "Fully embedded model: DS 1-to-1 with PMs, accountable for product outcomes.",
     "stage": "Strategy",
-    "category": "Team Types",
+    "category": "Role Landscape",
     "url": "https://medium.com/@AnalyticsAtMeta/how-data-scientists-lead-and-drive-impact-at-meta-6b5b896821b2",
     "type": "Blog",
     "tags": ["org-structure", "Meta"]
@@ -1209,7 +1173,7 @@
     "name": "Candor: Meta DS Roles Guide",
     "description": "Core Data Science is distinct R&D team developing novel methods, separate from embedded analytics.",
     "stage": "Strategy",
-    "category": "Team Types",
+    "category": "Role Landscape",
     "url": "https://candor.co/articles/interview-prep/data-science-roles-at-facebook-what-they-are-and-how-to-get-one",
     "type": "Guide",
     "tags": ["Meta", "CDS"]
@@ -1218,7 +1182,7 @@
     "name": "Microsoft: Designing DS Organization",
     "description": "Centralized DS for career paths with peers, scaled processes, end-to-end perspective.",
     "stage": "Strategy",
-    "category": "Team Types",
+    "category": "Role Landscape",
     "url": "https://medium.com/data-science-at-microsoft/designing-a-data-science-organization-ab53a80b1d15",
     "type": "Blog",
     "tags": ["org-structure", "Microsoft"]
@@ -1227,7 +1191,7 @@
     "name": "Shanif Dhanani: Embedded vs Centralized",
     "description": "Hybrid recommended: centralized management with embedded deployment.",
     "stage": "Strategy",
-    "category": "Team Types",
+    "category": "Role Landscape",
     "url": "https://medium.com/@shanif/embedded-vs-centralized-data-science-teams-3035db6803b2",
     "type": "Article",
     "tags": ["org-structure", "hybrid"]
@@ -1236,7 +1200,7 @@
     "name": "dbt Labs: Centralized vs Decentralized",
     "description": "Most companies evolve through multiple organizational models as they scale.",
     "stage": "Strategy",
-    "category": "Team Types",
+    "category": "Role Landscape",
     "url": "https://www.getdbt.com/data-teams/centralized-vs-decentralized/",
     "type": "Guide",
     "tags": ["org-structure", "evolution"]
@@ -1262,8 +1226,8 @@
   {
     "name": "Athey & Imbens: ML Methods for Economists",
     "description": "ML optimizes prediction; economics focuses on causal inference. Bridging both fields.",
-    "stage": "Strategy",
-    "category": "Team Types",
+    "stage": "Interview Prep",
+    "category": "ML Fundamentals",
     "url": "https://www.annualreviews.org/doi/abs/10.1146/annurev-economics-080217-053433",
     "type": "Article",
     "tags": ["ML-economics", "academic"]
@@ -1271,8 +1235,8 @@
   {
     "name": "Susan Athey: ML Short Course",
     "description": "Free Stanford materials bridging ML and economics methods.",
-    "stage": "Strategy",
-    "category": "Team Types",
+    "stage": "Interview Prep",
+    "category": "ML Fundamentals",
     "url": "https://www.gsb.stanford.edu/faculty-research/labs-initiatives/sil/research/methods/ai-machine-learning/short-course",
     "type": "Course",
     "tags": ["ML-economics", "Stanford"]
@@ -1285,15 +1249,6 @@
     "url": "https://towardsdatascience.com/transitioning-to-data-science-from-academia-93299602e4ba/",
     "type": "Guide",
     "tags": ["PhD", "transition"]
-  },
-  {
-    "name": "Trustworthy Online Experiments (Kohavi)",
-    "description": "Definitive A/B testing book from Google/LinkedIn/Microsoft leaders. Only 1/3 of experiments improve metrics.",
-    "stage": "Strategy",
-    "category": "PhD Transition",
-    "url": "https://experimentguide.com/",
-    "type": "Book",
-    "tags": ["essential", "experimentation"]
   },
   {
     "name": "Microsoft Experimentation Platform",
@@ -1343,8 +1298,8 @@
   {
     "name": "Netflix: Experimentation Focus",
     "description": "Experimentation is a major focus of data science across Netflix.",
-    "stage": "Strategy",
-    "category": "Team Types",
+    "stage": "Interview Prep",
+    "category": "Experimentation",
     "url": "https://netflixtechblog.com/experimentation-is-a-major-focus-of-data-science-across-netflix-f67923f8e985",
     "type": "Blog",
     "tags": ["Netflix", "experimentation"]
