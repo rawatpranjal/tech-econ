@@ -193,6 +193,7 @@
         track('click', {
           type: 'card',
           name: card.dataset.name,
+          section: getSection(card),
           category: card.dataset.category || null
         });
       }
