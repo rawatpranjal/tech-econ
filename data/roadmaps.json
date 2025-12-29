@@ -85,56 +85,36 @@
     "icon": "brain",
     "resources": [
       {
-        "name": "Introduction to Statistical Learning",
-        "why": "Free, runnable Python code, intuition first",
-        "url": "https://www.statlearning.com/"
-      },
-      {
-        "name": "Google ML Crash Course",
-        "why": "130+ interactive exercises, refreshed 2024",
-        "url": "https://developers.google.com/machine-learning/crash-course"
-      },
-      {
-        "name": "Hands-On Machine Learning (G\u00e9ron)",
-        "why": "Production-focused, complements ISLR's statistical focus",
-        "url": "https://www.oreilly.com/library/view/hands-on-machine-learning/9781098125967/"
-      },
-      {
-        "name": "fast.ai Practical Deep Learning",
-        "why": "Code first, theory second",
-        "url": "https://course.fast.ai/"
-      },
-      {
         "name": "Andrew Ng's ML Specialization",
-        "why": "The classic introduction, rebuilt 2022 with Python",
+        "why": "THE beginner starting point - visual-first, 4.8M learners",
         "url": "https://www.coursera.org/specializations/machine-learning-introduction"
       },
       {
-        "name": "Andrew Ng's Deep Learning Specialization",
-        "why": "CNNs, RNNs, and transformers from the master",
-        "url": "https://www.coursera.org/specializations/deep-learning"
+        "name": "Google ML Crash Course",
+        "why": "Free interactive exercises from Google",
+        "url": "https://developers.google.com/machine-learning/crash-course"
+      },
+      {
+        "name": "fast.ai Practical Deep Learning",
+        "why": "Code first, teaches math along the way",
+        "url": "https://course.fast.ai/"
+      },
+      {
+        "name": "Introduction to Statistical Learning",
+        "why": "Free textbook with Python code",
+        "url": "https://www.statlearning.com/"
       }
     ],
     "packages": [
       {
         "name": "scikit-learn",
-        "why": "The go-to library for classical ML",
+        "why": "The essential ML library - start here",
         "url": "https://scikit-learn.org/"
       },
       {
         "name": "XGBoost",
-        "why": "Gradient boosting for tabular data",
+        "why": "Industry-standard gradient boosting",
         "url": "https://xgboost.readthedocs.io/"
-      },
-      {
-        "name": "LightGBM",
-        "why": "Fast gradient boosting from Microsoft",
-        "url": "https://lightgbm.readthedocs.io/"
-      },
-      {
-        "name": "CatBoost",
-        "why": "Handles categorical features natively",
-        "url": "https://catboost.ai/"
       }
     ],
     "order": 3
