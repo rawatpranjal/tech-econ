@@ -34,7 +34,10 @@
     talk: { label: 'Talk', icon: 'mic', color: '#e65100', href: '/talks/' },
     career: { label: 'Career', icon: 'job', color: '#c2185b', href: '/career/' },
     community: { label: 'Community', icon: 'people', color: '#00796b', href: '/community/' },
-    roadmap: { label: 'Roadmap', icon: 'map', color: '#1565c0', href: '/start/' }
+    roadmap: { label: 'Roadmap', icon: 'map', color: '#1565c0', href: '/start/' },
+    paper: { label: 'Paper', icon: 'doc', color: '#5c6bc0', href: '/papers/' },
+    book: { label: 'Book', icon: 'book', color: '#8d6e63', href: '/books/' },
+    domain: { label: 'Domain', icon: 'category', color: '#607d8b', href: '/learning/' }
   };
 
   /**
@@ -701,7 +704,7 @@
     var globalIndex = 0;
 
     // Order of types
-    var typeOrder = ['package', 'dataset', 'resource', 'talk', 'career', 'community', 'roadmap'];
+    var typeOrder = ['paper', 'package', 'dataset', 'resource', 'book', 'talk', 'career', 'community', 'roadmap', 'domain'];
 
     typeOrder.forEach(function(type) {
       if (!grouped[type]) return;
