@@ -5,29 +5,24 @@
     "icon": "dollar",
     "resources": [
       {
-        "name": "Coursera Pricing Strategy Optimization (UVA/BCG)",
-        "why": "Price elasticity, WTP estimation, segmentation \u2014 free to audit",
-        "url": "https://www.coursera.org/specializations/uva-darden-bcg-pricing-strategy"
-      },
-      {
         "name": "Chargebee: SaaS Pricing Models Guide",
-        "why": "Usage-based pricing, value metrics, packaging strategies \u2014 free",
+        "why": "7 pricing models with examples — beginner-friendly",
         "url": "https://www.chargebee.com/resources/guides/saas-pricing-models-guide/"
       },
       {
-        "name": "Monetizing Innovation (Ramanujam)",
-        "why": "The industry bible \u2014 design products around price, not vice versa",
-        "url": "https://www.simon-kucher.com/en/insights/monetizing-innovation"
-      },
-      {
         "name": "OpenView SaaS Pricing Guide",
-        "why": "Free playbooks on usage-based pricing",
+        "why": "Comprehensive with 'Start Here' section for newcomers",
         "url": "https://openviewpartners.com/blog/saas-pricing-resource-guide/"
       },
       {
         "name": "Lenny's Podcast: Madhavan Ramanujam",
-        "why": "90 minutes on WTP conversations and behavioral pricing",
+        "why": "Accessible audio on WTP and behavioral pricing",
         "url": "https://www.lennyspodcast.com/the-art-and-science-of-pricing-madhavan-ramanujam-simon-kucher/"
+      },
+      {
+        "name": "Gurobi: Price Optimization with Competing Products",
+        "why": "OR tutorial — predictive model + optimization in Python",
+        "url": "https://www.gurobi.com/jupyter_models/price-optimization/"
       }
     ],
     "packages": [
