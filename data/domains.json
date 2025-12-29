@@ -288,23 +288,13 @@
     "packages": [
       {
         "name": "ortools",
-        "why": "Routing/assignment baselines you can actually run and extend",
+        "why": "Routing/assignment baselines you can run and extend",
         "url": "https://developers.google.com/optimization"
       },
       {
         "name": "statsforecast",
         "why": "Fast statistical forecasting incl. intermittent-demand models",
         "url": "https://nixtlaverse.nixtla.io/statsforecast/"
-      },
-      {
-        "name": "networkx",
-        "why": "Road/fulfillment networks as graphs; shortest paths + graph algorithms",
-        "url": "https://networkx.org/"
-      },
-      {
-        "name": "mlforecast",
-        "why": "Optional: feature engineering + backtesting for ML on many time series",
-        "url": "https://nixtlaverse.nixtla.io/mlforecast/"
       }
     ],
     "order": 7
