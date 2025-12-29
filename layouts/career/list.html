@@ -6,14 +6,12 @@
 </header>
 
 <!-- Stage and Category Definitions -->
-{{ $stageOrder := slice "Strategy" "Discovery" "Interview Prep" "Offers" "On The Job" }}
-{{ $stageIcons := dict "Strategy" "compass" "Discovery" "search" "Interview Prep" "target" "Offers" "dollar" "On The Job" "rocket" }}
+{{ $stageOrder := slice "Strategy" "Discovery" "Interview Prep" }}
+{{ $stageIcons := dict "Strategy" "compass" "Discovery" "search" "Interview Prep" "target" }}
 {{ $stageCategories := dict
     "Strategy" (slice "Why Tech" "Role Landscape" "Team Types" "PhD Transition")
     "Discovery" (slice "Job Boards" "Company Lists" "Networking")
     "Interview Prep" (slice "Process Overview" "SQL & Data" "Python & Coding" "Stats & Probability" "Causal Inference" "Experimentation" "ML Fundamentals" "ML System Design" "Product Sense" "Behavioral" "Take-Home")
-    "Offers" (slice "Negotiation")
-    "On The Job" (slice "First 90 Days" "Stakeholder Management")
 }}
 
 <!-- Search Index Data for Fuse.js -->
