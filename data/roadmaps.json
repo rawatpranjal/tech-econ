@@ -27,24 +27,14 @@
     ],
     "packages": [
       {
-        "name": "pandas",
-        "why": "Data manipulation and analysis",
-        "url": "https://pandas.pydata.org/"
-      },
-      {
-        "name": "numpy",
-        "why": "Numerical computing foundation",
-        "url": "https://numpy.org/"
-      },
-      {
-        "name": "matplotlib",
-        "why": "Basic visualization",
-        "url": "https://matplotlib.org/"
-      },
-      {
         "name": "jupyter",
-        "why": "Interactive notebooks for exploration",
+        "why": "Interactive notebooks - start here",
         "url": "https://jupyter.org/"
+      },
+      {
+        "name": "pandas",
+        "why": "Data manipulation essentials",
+        "url": "https://pandas.pydata.org/"
       }
     ],
     "order": 1
