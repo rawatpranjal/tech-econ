@@ -854,6 +854,167 @@
               "url": "https://pubsonline.informs.org/doi/10.1287/mksc.2018.1129"
             }
           ]
+        },
+        {
+          "id": "price-experimentation",
+          "name": "Price Experimentation",
+          "application": "Learning demand, explore-exploit, regret bounds",
+          "papers": [
+            {
+              "title": "Dynamic Pricing Without Knowing the Demand Function: Risk Bounds and Near-Optimal Algorithms",
+              "authors": "Omar Besbes, Assaf Zeevi",
+              "year": 2009,
+              "description": "Field-defining paper establishing theoretical framework for dynamic pricing with demand learning. Pioneered regret-based analysis with √T regret bounds.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/opre.1090.0764"
+            },
+            {
+              "title": "Simultaneously Learning and Optimizing Using Controlled Variance Pricing",
+              "authors": "Arnoud V. den Boer, Bert Zwart",
+              "year": 2014,
+              "description": "Introduces elegant Controlled Variance Pricing (CVP) policy with 'taboo interval' for exploration. Achieves logarithmic regret while being highly implementable.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2013.1788"
+            },
+            {
+              "title": "Online Network Revenue Management Using Thompson Sampling",
+              "authors": "Kris Ferreira, David Simchi-Levi, He Wang",
+              "year": 2018,
+              "description": "Bridges bandit algorithms and practical pricing by applying Thompson sampling to network revenue management with inventory constraints. Validated at Rue La La.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/opre.2018.1755"
+            },
+            {
+              "title": "Dynamic Pricing and Demand Learning with Limited Price Experimentation",
+              "authors": "Wang Chi Cheung, David Simchi-Levi, He Wang",
+              "year": 2017,
+              "description": "Models settings where sellers can make at most m price changes. Characterizes optimal regret as O(log^m T). Includes real implementation at Groupon.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/opre.2017.1629"
+            },
+            {
+              "title": "Feature-Based Dynamic Pricing",
+              "authors": "Maxime Cohen, Ilan Lobel, Renato Paes Leme",
+              "year": 2020,
+              "description": "Pioneering work on contextual pricing where products have feature vectors. Uses ellipsoid method to achieve O(d² log d) regret. Winner of 2024 Revenue Management Prize.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2019.3485"
+            }
+          ]
+        },
+        {
+          "id": "subscription-nonlinear-pricing",
+          "name": "Subscription & Nonlinear Pricing",
+          "application": "Two-part tariffs, freemium, menu design",
+          "papers": [
+            {
+              "title": "A Disneyland Dilemma: Two-Part Tariffs for a Mickey Mouse Monopoly",
+              "authors": "Walter Y. Oi",
+              "year": 1971,
+              "description": "Foundational paper on two-part tariffs. Should Disneyland charge high admission with free rides, or free entry with high per-ride prices? 600+ citations.",
+              "url": "https://www.jstor.org/stable/1880564"
+            },
+            {
+              "title": "Multiproduct Nonlinear Pricing",
+              "authors": "Mark Armstrong",
+              "year": 1996,
+              "description": "Extends nonlinear pricing theory to multidimensional screening with multiple products. Foundational for product line design.",
+              "url": "https://www.jstor.org/stable/2171924"
+            },
+            {
+              "title": "Nonlinear Pricing with Random Participation",
+              "authors": "Jean-Charles Rochet, Lars A. Stole",
+              "year": 2002,
+              "description": "Landmark paper showing that sufficiently intense competition eliminates quality distortions, yielding efficient 'cost-plus-fee' pricing.",
+              "url": "https://academic.oup.com/restud/article/69/1/277/1584052"
+            },
+            {
+              "title": "Selling to Overconfident Consumers",
+              "authors": "Michael D. Grubb",
+              "year": 2009,
+              "description": "Field-defining paper on behavioral pricing and three-part tariffs. Shows consumer overconfidence explains cell phone plan structures. Uses real cellular billing data.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/aer.99.5.1770"
+            },
+            {
+              "title": "Freemium as Optimal Menu Pricing",
+              "authors": "Susumu Sato",
+              "year": 2019,
+              "description": "Rigorous foundations for freemium models (Spotify, YouTube). Shows optimal menu consists of exactly two services—ad-supported free and ad-free premium.",
+              "url": "https://www.sciencedirect.com/science/article/pii/S0167718718301395"
+            }
+          ]
+        },
+        {
+          "id": "algorithmic-pricing",
+          "name": "Algorithmic Pricing",
+          "application": "Collusion, fairness, regulation",
+          "papers": [
+            {
+              "title": "Artificial Intelligence, Algorithmic Pricing, and Collusion",
+              "authors": "Emilio Calvano, Giacomo Calzolari, Vincenzo Denicolò, Sergio Pastorello",
+              "year": 2020,
+              "description": "Field-defining paper showing Q-learning algorithms autonomously learn supracompetitive prices without communication, sustaining collusion through punishment strategies.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20190623"
+            },
+            {
+              "title": "Autonomous Algorithmic Collusion: Q-learning Under Sequential Pricing",
+              "authors": "Timo Klein",
+              "year": 2021,
+              "description": "Extends Calvano et al. to sequential (Stackelberg) pricing environments, showing Q-learning converges to collusive equilibria even with turn-taking.",
+              "url": "https://onlinelibrary.wiley.com/doi/10.1111/1756-2171.12383"
+            },
+            {
+              "title": "Competition in Pricing Algorithms",
+              "authors": "Zach Y. Brown, Alexander MacKay",
+              "year": 2023,
+              "description": "Shows pricing algorithms generate supracompetitive prices through competitive equilibrium—no collusion required. Uses high-frequency empirical data from online retailers.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/mic.20210027"
+            },
+            {
+              "title": "The Economics of Privacy",
+              "authors": "Alessandro Acquisti, Curtis Taylor, Liad Wagman",
+              "year": 2016,
+              "description": "Definitive JEL survey on privacy economics—essential for understanding personalized pricing and price discrimination enabled by algorithmic data collection.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/jel.54.2.442"
+            },
+            {
+              "title": "Sustainable and Unchallenged Algorithmic Tacit Collusion",
+              "authors": "Ariel Ezrachi, Maurice E. Stucke",
+              "year": 2020,
+              "description": "Leading competition law analysis explaining the legal gap: tacit collusion is harmful but lawful under current antitrust frameworks.",
+              "url": "https://scholarlycommons.law.northwestern.edu/njtip/vol17/iss2/1/"
+            }
+          ]
+        },
+        {
+          "id": "rl-for-pricing",
+          "name": "RL for Pricing",
+          "application": "Bandits, Thompson sampling, deep RL",
+          "papers": [
+            {
+              "title": "A Tutorial on Thompson Sampling",
+              "authors": "Daniel J. Russo, Benjamin Van Roy, Abbas Kazerouni, Ian Osband, Zheng Wen",
+              "year": 2018,
+              "description": "Definitive reference on Thompson sampling covering Bernoulli bandits, product recommendation, assortment optimization, and RL in MDPs.",
+              "url": "https://web.stanford.edu/~bvr/pubs/TS_Tutorial.pdf"
+            },
+            {
+              "title": "Thompson Sampling for Contextual Bandits with Linear Payoffs",
+              "authors": "Shipra Agrawal, Navin Goyal",
+              "year": 2013,
+              "description": "First theoretical regret guarantees for contextual Thompson Sampling. Proves Õ(d√T) regret bounds. Novel martingale-based analysis became the template for subsequent work.",
+              "url": "https://proceedings.mlr.press/v28/agrawal13.html"
+            },
+            {
+              "title": "Dynamic Pricing Under a General Parametric Choice Model",
+              "authors": "Josef Broder, Paat Rusmevichientong",
+              "year": 2012,
+              "description": "Shows Θ(√T) regret for general parametric demand with MLE estimation. Important bridge between econometric demand estimation and online learning theory.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/opre.1120.1057"
+            },
+            {
+              "title": "Reinforcement Learning Applied to Airline Revenue Management",
+              "authors": "Nicolas Bondoux, Anh Quan Nguyen, Thomas Fiig, Rodrigo Acuna-Agost",
+              "year": 2020,
+              "description": "Landmark industry application from Amadeus. Demonstrates deep RL for airline pricing that learns directly from customer interactions without demand forecasting.",
+              "url": "https://link.springer.com/article/10.1057/s41272-020-00228-4"
+            }
+          ]
         }
       ]
     },
