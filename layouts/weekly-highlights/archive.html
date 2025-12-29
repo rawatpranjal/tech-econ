@@ -7,7 +7,7 @@
     </header>
 
     <div class="archive-grid">
-        {{ $highlights := where .Site.RegularPages "Section" "weekly-highlights" }}
+        {{ $highlights := where (where .Site.RegularPages "Section" "weekly-highlights") ".Params.draft" "ne" true }}
         {{ range $highlights.ByDate.Reverse }}
         <a href="{{ .Permalink }}" class="archive-card">
             <div class="archive-card-meta">

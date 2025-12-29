@@ -3825,12 +3825,14 @@ mark {
     border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 1.25rem;
-    transition: box-shadow 0.2s, border-color 0.2s;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
 }
 
 .favorite-card:hover {
     border-color: var(--accent-color);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
 }
 
 .favorite-card .card-header {
