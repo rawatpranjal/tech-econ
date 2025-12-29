@@ -2603,12 +2603,15 @@
    */
   UnifiedSearch.prototype.initLLMToggle = function() {
     var self = this;
+    console.log('[UnifiedSearch] initLLMToggle called, LLM_CONFIG:', window.LLM_CONFIG);
 
     // Get endpoint from config
     if (typeof window !== 'undefined' && window.LLM_CONFIG && window.LLM_CONFIG.enabled) {
       this.llmEndpoint = window.LLM_CONFIG.endpoint;
+      console.log('[UnifiedSearch] LLM enabled, endpoint:', this.llmEndpoint);
     } else {
       // LLM not configured, hide toggle button
+      console.log('[UnifiedSearch] LLM not enabled, hiding button');
       var toggleBtn = document.getElementById('llm-search-toggle');
       if (toggleBtn) {
         toggleBtn.style.display = 'none';
@@ -2619,6 +2622,7 @@
     this.llmToggleBtn = document.getElementById('llm-search-toggle');
     this.llmExpandedTermsContainer = document.getElementById('llm-expanded-terms');
     this.llmExplanationPanel = document.getElementById('llm-explanation-panel');
+    console.log('[UnifiedSearch] Found toggle button:', !!this.llmToggleBtn);
 
     if (!this.llmToggleBtn) return;
 
@@ -2633,10 +2637,13 @@
     this.updateLLMToggleUI();
 
     // Toggle click handler
+    console.log('[UnifiedSearch] Adding click handler to toggle button');
     this.llmToggleBtn.addEventListener('click', function(e) {
+      console.log('[UnifiedSearch] Toggle button clicked!');
       e.stopPropagation();
       e.preventDefault();
       self.llmEnabled = !self.llmEnabled;
+      console.log('[UnifiedSearch] LLM enabled:', self.llmEnabled);
       try {
         localStorage.setItem(CONFIG.llmSearchKey, String(self.llmEnabled));
       } catch(e) {}
