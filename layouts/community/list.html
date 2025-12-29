@@ -275,7 +275,7 @@
 
     <!-- Map Data for JavaScript -->
     <script id="map-data" type="application/json">
-    [{{ $first := true }}{{ range .Site.Data.community }}{{ if and .lat .lng }}{{ if not $first }},{{ end }}{{ $first = false }}{"name":"{{ .name }}","url":"{{ .url }}","lat":{{ .lat }},"lng":{{ .lng }},"category":"{{ .category }}","subcategory":"{{ .subcategory | default "" }}","location":"{{ .location | htmlEscape }}","dates":"{{ .dates }}","attendees":"{{ .attendees | default "" }}","type":"{{ .type }}"}{{ end }}{{ end }}]
+    [{{ $first := true }}{{ range .Site.Data.community }}{{ if and .lat .lng }}{{ if not $first }},{{ end }}{{ $first = false }}{"name":"{{ .name }}","url":"{{ .url }}","lat":{{ .lat }},"lng":{{ .lng }},"category":"{{ .category }}","subcategory":"{{ .subcategory | default "" }}","location":"{{ .location | htmlEscape }}","dates":"{{ .dates }}","start_date":"{{ .start_date | default "" }}","end_date":"{{ .end_date | default "" }}","attendees":"{{ .attendees | default "" }}","description":"{{ .description | htmlEscape | truncate 150 }}","type":"{{ .type }}"}{{ end }}{{ end }}]
     </script>
 
     <!-- Cards View (hidden by default) -->
@@ -411,6 +411,28 @@ document.addEventListener('DOMContentLoaded', function() {
         return subcategoryColors[item.subcategory] || '#6b7280';
     }
 
+    // Format date range nicely (e.g., "Jan 3-5, 2025")
+    function formatDateRange(startDate, endDate) {
+        if (!startDate) return '';
+        const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        const start = new Date(startDate + 'T00:00:00');
+        const end = endDate ? new Date(endDate + 'T00:00:00') : start;
+
+        const startMonth = months[start.getMonth()];
+        const endMonth = months[end.getMonth()];
+        const startDay = start.getDate();
+        const endDay = end.getDate();
+        const year = start.getFullYear();
+
+        if (startDate === endDate) {
+            return `${startMonth} ${startDay}, ${year}`;
+        } else if (startMonth === endMonth) {
+            return `${startMonth} ${startDay}-${endDay}, ${year}`;
+        } else {
+            return `${startMonth} ${startDay} - ${endMonth} ${endDay}, ${year}`;
+        }
+    }
+
     function createCustomIcon(color) {
         return L.divIcon({
             className: 'custom-marker',
@@ -452,32 +474,38 @@ document.addEventListener('DOMContentLoaded', function() {
 
                     const marker = L.marker([item.lat, item.lng], { icon: icon });
 
-                    // Create popup content
+                    // Format dates
+                    const dateDisplay = item.start_date
+                        ? formatDateRange(item.start_date, item.end_date)
+                        : item.dates;
+
+                    // Create rich popup content
                     let popupContent = `
                         <div class="map-popup">
-                            <strong><a href="${item.url}" target="_blank" rel="noopener">${item.name}</a></strong>
+                            <strong class="popup-title">
+                                <a href="${item.url}" target="_blank" rel="noopener">${item.name}</a>
+                            </strong>
+                            ${item.description ? `<p class="popup-desc">${item.description}</p>` : ''}
                             <div class="popup-meta">
-                                <span>${item.location}</span>
-                                ${item.dates ? `<span>${item.dates}</span>` : ''}
-                                ${item.attendees ? `<span>${item.attendees} attendees</span>` : ''}
+                                <span>📍 ${item.location}</span>
+                                ${dateDisplay ? `<span>📅 ${dateDisplay}</span>` : ''}
+                                ${item.attendees ? `<span>👥 ${item.attendees} attendees</span>` : ''}
                             </div>
-                            <span class="popup-badge" style="background-color: ${color}; color: white;">
-                                ${item.subcategory || item.category}
-                            </span>
+                            <div class="popup-footer">
+                                <span class="popup-badge" style="background-color: ${color}; color: white;">
+                                    ${item.subcategory || item.category}
+                                </span>
+                                <a href="${item.url}" target="_blank" rel="noopener" class="popup-link">Visit Website →</a>
+                            </div>
                         </div>
                     `;
 
-                    marker.bindPopup(popupContent);
+                    marker.bindPopup(popupContent, { maxWidth: 300 });
                     markers.addLayer(marker);
                 });
 
                 map.addLayer(markers);
-
-                // Fit bounds to show all markers
-                if (data.length > 0) {
-                    const bounds = markers.getBounds();
-                    map.fitBounds(bounds, { padding: [20, 20] });
-                }
+                // Keep US-focused view (don't fitBounds to include international)
             } catch (e) {
                 console.error('Error loading map data:', e);
             }

@@ -3211,28 +3211,49 @@ a:hover {
 }
 
 .map-popup {
-    min-width: 200px;
+    min-width: 250px;
+    max-width: 300px;
 }
 
-.map-popup strong a {
+.popup-title a {
     color: var(--accent);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 1rem;
+    line-height: 1.3;
 }
 
-.map-popup strong a:hover {
+.popup-title a:hover {
     text-decoration: underline;
 }
 
-.popup-meta {
+.popup-desc {
     margin: 0.5rem 0;
     font-size: 0.8rem;
     color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.popup-meta {
+    margin: 0.75rem 0;
+    font-size: 0.8rem;
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+    padding: 0.5rem;
+    border-radius: 4px;
 }
 
 .popup-meta span {
     display: block;
     margin: 0.25rem 0;
+}
+
+.popup-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.75rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border-color);
 }
 
 .popup-badge {
@@ -3241,7 +3262,17 @@ a:hover {
     border-radius: 4px;
     font-size: 0.7rem;
     font-weight: 500;
-    margin-top: 0.5rem;
+}
+
+.popup-link {
+    font-size: 0.75rem;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.popup-link:hover {
+    text-decoration: underline;
 }
 
 /* Custom marker styling */
