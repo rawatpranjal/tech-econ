@@ -644,21 +644,36 @@
 
     // Initialize when DOM is ready
     function init() {
-        // Ensure modules are loaded before initializing
-        if (!window.TechEconFavorites || !window.TechEconPlaylists) {
-            console.warn('Favorites modules not loaded yet, retrying...');
-            setTimeout(init, 100);
-            return;
+        let retryCount = 0;
+        const maxRetries = 30; // 3 seconds max wait
+
+        function tryInit() {
+            // Only require favorites module - playlists is optional
+            if (!window.TechEconFavorites) {
+                retryCount++;
+                if (retryCount < maxRetries) {
+                    setTimeout(tryInit, 100);
+                } else {
+                    console.error('Favorites module failed to load after timeout');
+                    const container = document.getElementById('favorites-list');
+                    if (container) {
+                        container.innerHTML = '<div class="error">Failed to load favorites. Please refresh the page.</div>';
+                    }
+                }
+                return;
+            }
+
+            initFavoriteButtons();
+            initFavoritesPage();
+
+            // Re-run when new content is added (for infinite scroll, etc)
+            const observer = new MutationObserver(() => {
+                initFavoriteButtons();
+            });
+            observer.observe(document.body, { childList: true, subtree: true });
         }
 
-        initFavoriteButtons();
-        initFavoritesPage();
-
-        // Re-run when new content is added (for infinite scroll, etc)
-        const observer = new MutationObserver(() => {
-            initFavoriteButtons();
-        });
-        observer.observe(document.body, { childList: true, subtree: true });
+        tryInit();
     }
 
     if (document.readyState === 'loading') {
