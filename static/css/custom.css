@@ -1066,7 +1066,53 @@ a:hover {
     font-size: 0.9rem;
 }
 
-/* Curated Sections (Essential Reading, What Teams Do) */
+/* Career Page - Two Tab Layout */
+.career-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0;
+}
+
+.career-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: all 0.2s ease;
+}
+
+.career-tab:hover {
+    color: var(--text-primary);
+}
+
+.career-tab.active {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+
+.career-tab svg {
+    stroke: currentColor;
+}
+
+.career-tab-content {
+    display: none;
+}
+
+.career-tab-content.active {
+    display: block;
+}
+
+/* Curated Sections */
 .curated-section {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -1075,42 +1121,24 @@ a:hover {
     margin-bottom: 1.5rem;
 }
 
-.curated-header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.5rem;
+.section-header {
+    margin-bottom: 1.25rem;
 }
 
-.curated-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-    border-radius: 10px;
-}
-
-.curated-icon svg {
-    stroke: white;
-}
-
-.curated-title {
-    font-size: 1.25rem;
+.section-header h2 {
+    font-size: 1.15rem;
     font-weight: 700;
     color: var(--text-primary);
+    margin: 0 0 0.35rem 0;
+}
+
+.section-header p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
     margin: 0;
 }
 
-.curated-subtitle {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    margin: 0 0 1.25rem 0;
-    padding-left: 52px;
-}
-
-/* Essential Reading List */
+/* Essential Reading */
 .essential-list {
     list-style: none;
     padding: 0;
@@ -1133,20 +1161,19 @@ a:hover {
 
 .essential-item:hover {
     border-color: var(--accent-color);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .essential-number {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 32px;
-    height: 32px;
+    min-width: 28px;
+    height: 28px;
     background: var(--accent-color);
     color: white;
     font-weight: 700;
-    font-size: 0.9rem;
-    border-radius: 8px;
+    font-size: 0.85rem;
+    border-radius: 6px;
     flex-shrink: 0;
 }
 
@@ -1160,40 +1187,81 @@ a:hover {
     align-items: center;
     gap: 0.5rem;
     flex-wrap: wrap;
-    margin-bottom: 0.35rem;
+    margin-bottom: 0.25rem;
 }
 
 .essential-name {
     font-weight: 600;
     color: var(--text-primary);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .essential-name:hover {
     color: var(--accent-color);
-    text-decoration: underline;
 }
 
 .essential-desc {
     color: var(--text-secondary);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     margin: 0;
     line-height: 1.5;
 }
 
-/* Domains Section (What Teams Do) */
-.domains-section .curated-icon {
-    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+/* Shared Styles */
+.favicon {
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
 }
 
-.domains-grid {
+.type-badge {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.4rem;
+    background: var(--bg-tertiary);
+    color: var(--text-muted);
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* Roles Grid */
+.roles-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.role-card {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.role-card:hover {
+    border-color: var(--accent-color);
+    background: var(--bg-hover);
+}
+
+.role-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+/* Work Grid (Type of Work) */
+.work-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1rem;
 }
 
-.domain-card {
+.work-card {
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -1204,69 +1272,243 @@ a:hover {
     transition: all 0.2s ease;
 }
 
-.domain-card:hover {
+.work-card:hover {
     border-color: var(--accent-color);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transform: translateY(-2px);
 }
 
-.domain-badge {
+.work-badge {
     display: inline-block;
-    padding: 0.25rem 0.6rem;
+    padding: 0.2rem 0.5rem;
     background: var(--accent-color);
     color: white;
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     border-radius: 4px;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.6rem;
     width: fit-content;
 }
 
-.domain-content {
+.work-content {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 
-.domain-name {
+.work-name {
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--text-primary);
 }
 
-.domain-desc {
+.work-desc {
     color: var(--text-secondary);
-    font-size: 0.8rem;
-    line-height: 1.45;
+    font-size: 0.75rem;
+    line-height: 1.4;
     margin: 0;
 }
 
-/* Responsive adjustments for curated sections */
+/* Sector Pills */
+.sector-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+}
+
+.sector-pill {
+    padding: 0.35rem 0.75rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    transition: all 0.2s ease;
+}
+
+.sector-pill:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.sector-pill.active {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: white;
+}
+
+/* Companies Grid */
+.companies-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.company-card {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.65rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.15s ease;
+}
+
+.company-card:hover {
+    border-color: var(--accent-color);
+    background: var(--bg-hover);
+}
+
+.company-name {
+    font-size: 0.8rem;
+    color: var(--text-primary);
+    white-space: nowrap;
+}
+
+/* Negotiation Section */
+.negotiation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.negotiation-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.negotiation-card:hover {
+    border-color: var(--accent-color);
+}
+
+.negotiation-content {
+    flex: 1;
+}
+
+.negotiation-name {
+    display: block;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.negotiation-desc {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Interview Categories */
+.interview-category {
+    margin-bottom: 1.5rem;
+}
+
+.interview-category-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 0.75rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.interview-category-title .count {
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.interview-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.interview-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.15s ease;
+}
+
+.interview-card:hover {
+    border-color: var(--accent-color);
+    background: var(--bg-hover);
+}
+
+.interview-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.interview-name {
+    display: block;
+    font-weight: 500;
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
+}
+
+.interview-desc {
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    line-height: 1.4;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
+    .career-tabs {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .career-tab {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+
     .curated-section {
-        padding: 1.25rem;
-    }
-
-    .curated-subtitle {
-        padding-left: 0;
-    }
-
-    .domains-grid {
-        grid-template-columns: 1fr;
+        padding: 1rem;
     }
 
     .essential-item {
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 0.5rem;
     }
 
-    .essential-number {
-        min-width: 28px;
-        height: 28px;
-        font-size: 0.8rem;
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sector-pills {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
     }
 }
 

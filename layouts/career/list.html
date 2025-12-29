@@ -2,22 +2,10 @@
 <!-- Hero Section -->
 <header class="hero hero-with-image hero-career">
     <h1 class="hero-title">Career</h1>
-    <p class="hero-tagline">{{ len .Site.Data.career }} resources for your PhD to Tech journey.</p>
+    {{ $activeCount := 0 }}
+    {{ range .Site.Data.career }}{{ if not .archived }}{{ $activeCount = add $activeCount 1 }}{{ end }}{{ end }}
+    <p class="hero-tagline">{{ $activeCount }} curated resources for your PhD to Tech journey.</p>
 </header>
-
-<!-- Stage and Category Definitions -->
-{{ $stageOrder := slice "Strategy" "Discovery" "Interview Prep" }}
-{{ $stageIcons := dict "Strategy" "compass" "Discovery" "search" "Interview Prep" "target" }}
-{{ $stageCategories := dict
-    "Strategy" (slice "Why Tech" "Role Landscape" "Team Types" "PhD Transition")
-    "Discovery" (slice "Job Boards" "Company Lists" "Networking")
-    "Interview Prep" (slice "Process Overview" "SQL & Data" "Python & Coding" "Stats & Probability" "Causal Inference" "Experimentation" "ML Fundamentals" "ML System Design" "Product Sense" "Behavioral" "Take-Home")
-}}
-
-<!-- Search Index Data for Fuse.js -->
-<script id="search-data" type="application/json">
-[{{ range $i, $item := .Site.Data.career }}{{ if $i }},{{ end }}{"name":"{{ .name }}","description":"{{ .description | htmlEscape }}","category":"{{ .category }}","stage":"{{ .stage }}","type":"{{ .type }}"}{{ end }}]
-</script>
 
 <div class="container">
     <!-- Search Bar -->
@@ -28,11 +16,7 @@
                     <circle cx="11" cy="11" r="8"></circle>
                     <path d="m21 21-4.35-4.35"></path>
                 </svg>
-                <input type="text"
-                       id="career-search"
-                       class="search-input"
-                       placeholder="Search career resources..."
-                       autocomplete="off">
+                <input type="text" id="career-search" class="search-input" placeholder="Search career resources..." autocomplete="off">
                 <button id="clear-search" class="clear-btn" type="button" aria-label="Clear search">
                     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M18 6L6 18M6 6l12 12"></path>
@@ -42,376 +26,249 @@
         </div>
     </div>
 
-    <!-- Stage Tabs -->
-    <div class="stage-tabs-container">
-        <div class="stage-tabs">
-            <button class="stage-tab active" data-stage="all">
-                <span class="stage-tab-label">All</span>
-            </button>
-            {{ range $stage := $stageOrder }}
-            {{ $icon := index $stageIcons $stage }}
-            <button class="stage-tab" data-stage="{{ $stage }}">
-                <span class="stage-icon">
-                    {{ if eq $icon "compass" }}
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
-                    </svg>
-                    {{ else if eq $icon "search" }}
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="m21 21-4.35-4.35"></path>
-                    </svg>
-                    {{ else if eq $icon "target" }}
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <circle cx="12" cy="12" r="6"></circle>
-                        <circle cx="12" cy="12" r="2"></circle>
-                    </svg>
-                    {{ else if eq $icon "dollar" }}
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="12" y1="1" x2="12" y2="23"></line>
-                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                    </svg>
-                    {{ else if eq $icon "rocket" }}
-                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
-                        <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
-                        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
-                        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
-                    </svg>
-                    {{ end }}
-                </span>
-                <span class="stage-tab-label">{{ $stage }}</span>
-            </button>
-            {{ end }}
-        </div>
-
-        <!-- Category Dropdown -->
-        <select id="category-select" class="category-select">
-            <option value="all">All Categories</option>
-            {{ range $stage := $stageOrder }}
-            {{ $cats := index $stageCategories $stage }}
-            {{ range $cat := $cats }}
-            <option value="{{ $cat }}" data-stage="{{ $stage }}">{{ $cat }}</option>
-            {{ end }}
-            {{ end }}
-        </select>
+    <!-- Main Tabs -->
+    <div class="career-tabs">
+        <button class="career-tab active" data-tab="strategy">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+            </svg>
+            Strategy & Discovery
+        </button>
+        <button class="career-tab" data-tab="interview">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+            </svg>
+            Interview Prep
+        </button>
     </div>
 
-    <div id="result-count" class="result-count">{{ len .Site.Data.career }} resources</div>
+    <!-- Tab 1: Strategy & Discovery -->
+    <div id="tab-strategy" class="career-tab-content active">
 
-    <!-- Essential Reading Section -->
-    <section class="curated-section essential-reading-section" id="essential-reading">
-        <div class="curated-header">
-            <span class="curated-icon">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                </svg>
-            </span>
-            <h2 class="curated-title">Start Here: Essential Reading</h2>
-        </div>
-        <p class="curated-subtitle">New to tech careers for economists? Begin with these foundational resources.</p>
-        <ol class="essential-list">
-            {{ $essentialNum := 0 }}
-            {{ range $.Site.Data.career }}
-            {{ if eq .tier "essential" }}
-            {{ $essentialNum = add $essentialNum 1 }}
-            <li class="essential-item" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="{{ .category }}" data-stage="{{ .stage }}">
-                <span class="essential-number">{{ $essentialNum }}</span>
-                <div class="essential-content">
-                    <div class="essential-header">
-                        <img class="resource-favicon"
-                             src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32"
-                             alt=""
-                             loading="lazy"
-                             onerror="this.style.display='none'">
-                        <a href="{{ .url }}" target="_blank" rel="noopener" class="essential-name">{{ .name }}</a>
-                        <span class="resource-type">{{ .type }}</span>
+        <!-- Essential Reading Section -->
+        <section class="curated-section essential-section">
+            <div class="section-header">
+                <h2>Start Here: Essential Reading</h2>
+                <p>New to tech careers for economists? Begin with these foundational resources.</p>
+            </div>
+            <ol class="essential-list">
+                {{ $num := 0 }}
+                {{ range .Site.Data.career }}
+                {{ if and (eq .section "essential") (not .archived) }}
+                {{ $num = add $num 1 }}
+                <li class="essential-item">
+                    <span class="essential-number">{{ $num }}</span>
+                    <div class="essential-content">
+                        <div class="essential-header">
+                            <img class="favicon" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
+                            <a href="{{ .url }}" target="_blank" rel="noopener" class="essential-name">{{ .name }}</a>
+                            <span class="type-badge">{{ .type }}</span>
+                        </div>
+                        <p class="essential-desc">{{ .description }}</p>
                     </div>
-                    <p class="essential-desc">{{ .description }}</p>
-                </div>
-            </li>
-            {{ end }}
-            {{ end }}
-        </ol>
-    </section>
-
-    <!-- What Teams Do Section -->
-    <section class="curated-section domains-section" id="what-teams-do">
-        <div class="curated-header">
-            <span class="curated-icon">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
-                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
-                </svg>
-            </span>
-            <h2 class="curated-title">What Teams Do</h2>
-        </div>
-        <p class="curated-subtitle">One exemplar article per team domain to understand different roles.</p>
-        <div class="domains-grid">
-            {{ $domainOrder := slice "Pricing" "Experimentation" "Ads" "Trust" "Forecasting" "Recommendations" }}
-            {{ $domainIcons := dict
-                "Pricing" "dollar-sign"
-                "Experimentation" "beaker"
-                "Ads" "megaphone"
-                "Trust" "shield"
-                "Forecasting" "trending-up"
-                "Recommendations" "thumbs-up"
-            }}
-            {{ range $domain := $domainOrder }}
-            {{ range $.Site.Data.career }}
-            {{ if eq .domain $domain }}
-            <a href="{{ .url }}" target="_blank" rel="noopener" class="domain-card" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="{{ .category }}" data-stage="{{ .stage }}">
-                <div class="domain-badge">{{ $domain }}</div>
-                <div class="domain-content">
-                    <img class="resource-favicon"
-                         src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32"
-                         alt=""
-                         loading="lazy"
-                         onerror="this.style.display='none'">
-                    <span class="domain-name">{{ .name }}</span>
-                </div>
-                <p class="domain-desc">{{ .description }}</p>
-            </a>
-            {{ end }}
-            {{ end }}
-            {{ end }}
-        </div>
-    </section>
-
-    <!-- Career Grid organized by Stage -->
-    <div id="career-view" class="resources-grid career-stages-grid">
-        {{ range $stage := $stageOrder }}
-        {{ $stageCategories := index $stageCategories $stage }}
-        {{ $icon := index $stageIcons $stage }}
-
-        <!-- Count resources in this stage -->
-        {{ $stageCount := 0 }}
-        {{ range $.Site.Data.career }}
-            {{ if eq .stage $stage }}
-                {{ $stageCount = add $stageCount 1 }}
-            {{ end }}
-        {{ end }}
-
-        <div class="stage-section collapsed" data-stage="{{ $stage }}">
-            <button class="stage-header" aria-expanded="false">
-                <span class="stage-header-left">
-                    <span class="stage-expand-icon">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </span>
-                    <span class="stage-icon stage-icon-{{ $stage | urlize }}">
-                        {{ if eq $icon "compass" }}
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
-                        </svg>
-                        {{ else if eq $icon "search" }}
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                        {{ else if eq $icon "target" }}
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <circle cx="12" cy="12" r="6"></circle>
-                            <circle cx="12" cy="12" r="2"></circle>
-                        </svg>
-                        {{ else if eq $icon "dollar" }}
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="12" y1="1" x2="12" y2="23"></line>
-                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                        </svg>
-                        {{ else if eq $icon "rocket" }}
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path>
-                            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path>
-                            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path>
-                            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path>
-                        </svg>
-                        {{ end }}
-                    </span>
-                    <span class="stage-title">{{ $stage }}</span>
-                </span>
-                <span class="stage-count">{{ $stageCount }} resources</span>
-            </button>
-
-            <div class="stage-content">
-                {{ range $cat := $stageCategories }}
-                <!-- Count resources in this category -->
-                {{ $catCount := 0 }}
-                {{ range $.Site.Data.career }}
-                    {{ if and (eq .stage $stage) (eq .category $cat) }}
-                        {{ $catCount = add $catCount 1 }}
-                    {{ end }}
+                </li>
                 {{ end }}
+                {{ end }}
+            </ol>
+        </section>
 
-                <div class="category-section" data-section-category="{{ $cat }}" data-section-stage="{{ $stage }}">
-                    <h3 class="category-title">{{ $cat }}{{ if gt $catCount 0 }} <span class="category-count">({{ $catCount }})</span>{{ end }}</h3>
-                    <div class="cards-row">
-                        {{ if eq $catCount 0 }}
-                        <div class="coming-soon-placeholder">
-                            <p>Coming soon</p>
-                        </div>
-                        {{ else }}
-                        {{ range $.Site.Data.career }}
-                        {{ if and (eq .stage $stage) (eq .category $cat) }}
-                        <div class="resource-card" data-aos="fade-up"
-                             data-name="{{ .name | lower }}"
-                             data-description="{{ .description | lower }}"
-                             data-category="{{ .category }}"
-                             data-stage="{{ .stage }}">
-                            <div class="card-header">
-                                <img class="resource-favicon"
-                                     src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32"
-                                     alt=""
-                                     loading="lazy"
-                                     onerror="this.style.display='none'">
-                                <h3 class="resource-name">
-                                    <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
-                                </h3>
-                                <span class="resource-type">{{ .type }}</span>
-                            </div>
-                            <p class="resource-desc">{{ .description }}</p>
-                            <div class="card-footer">
-                                <span class="category-badge">{{ .category }}</span>
-                                <a href="{{ .url }}" target="_blank" class="link-btn">Visit</a>
-                            </div>
-                        </div>
-                        {{ end }}
-                        {{ end }}
-                        {{ end }}
-                    </div>
-                </div>
+        <!-- Role Sense Section -->
+        <section class="curated-section roles-section">
+            <div class="section-header">
+                <h2>Understanding Roles</h2>
+                <p>Learn how DS/Economist roles differ across companies and levels.</p>
+            </div>
+            <div class="roles-grid">
+                {{ range .Site.Data.career }}
+                {{ if and (eq .section "roles") (not .archived) }}
+                <a href="{{ .url }}" target="_blank" rel="noopener" class="role-card">
+                    <img class="favicon" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
+                    <span class="role-name">{{ .name }}</span>
+                </a>
+                {{ end }}
                 {{ end }}
             </div>
-        </div>
-        {{ end }}
+        </section>
+
+        <!-- Type of Work Section -->
+        <section class="curated-section work-section">
+            <div class="section-header">
+                <h2>What Teams Do</h2>
+                <p>One exemplar article per domain to understand different team types.</p>
+            </div>
+            <div class="work-grid">
+                {{ $domains := slice "Pricing" "Experimentation" "Ads" "Trust" "Forecasting" "Recommendations" "Growth" "Economist Teams" }}
+                {{ range $domain := $domains }}
+                {{ range $.Site.Data.career }}
+                {{ if and (eq .section "work") (eq .domain $domain) (not .archived) }}
+                <a href="{{ .url }}" target="_blank" rel="noopener" class="work-card">
+                    <div class="work-badge">{{ $domain }}</div>
+                    <div class="work-content">
+                        <img class="favicon" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
+                        <span class="work-name">{{ .name }}</span>
+                    </div>
+                    <p class="work-desc">{{ .description }}</p>
+                </a>
+                {{ end }}
+                {{ end }}
+                {{ end }}
+            </div>
+        </section>
+
+        <!-- Companies by Sector Section -->
+        <section class="curated-section companies-section">
+            <div class="section-header">
+                <h2>Companies Hiring</h2>
+                <p>Career portals organized by sector.</p>
+            </div>
+
+            <!-- Sector Pills -->
+            <div class="sector-pills">
+                <button class="sector-pill active" data-sector="all">All</button>
+                <button class="sector-pill" data-sector="faang">FAANG+</button>
+                <button class="sector-pill" data-sector="marketplace">Marketplaces</button>
+                <button class="sector-pill" data-sector="social">Social & Media</button>
+                <button class="sector-pill" data-sector="fintech">Fintech</button>
+                <button class="sector-pill" data-sector="saas">Enterprise</button>
+                <button class="sector-pill" data-sector="pharma">Pharma</button>
+                <button class="sector-pill" data-sector="ai-gaming">AI & Gaming</button>
+            </div>
+
+            <div class="companies-grid">
+                {{ range .Site.Data.career }}
+                {{ if and (eq .section "companies") (not .archived) }}
+                <a href="{{ .url }}" target="_blank" rel="noopener" class="company-card" data-sector="{{ .sector }}">
+                    <img class="favicon" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
+                    <span class="company-name">{{ .name }}</span>
+                </a>
+                {{ end }}
+                {{ end }}
+            </div>
+        </section>
+
+        <!-- Negotiation Section -->
+        <section class="curated-section negotiation-section">
+            <div class="section-header">
+                <h2>Offer Negotiation</h2>
+                <p>Resources for evaluating and negotiating offers.</p>
+            </div>
+            <div class="negotiation-grid">
+                {{ range .Site.Data.career }}
+                {{ if and (eq .section "negotiation") (not .archived) }}
+                <a href="{{ .url }}" target="_blank" rel="noopener" class="negotiation-card">
+                    <img class="favicon" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
+                    <div class="negotiation-content">
+                        <span class="negotiation-name">{{ .name }}</span>
+                        <p class="negotiation-desc">{{ .description }}</p>
+                    </div>
+                </a>
+                {{ end }}
+                {{ end }}
+            </div>
+        </section>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p>Career resources for tech economists</p>
-    </footer>
+    <!-- Tab 2: Interview Prep -->
+    <div id="tab-interview" class="career-tab-content">
+        {{ $interviewCategories := slice "SQL & Data" "Stats & Probability" "Experimentation" "ML Fundamentals" "ML System Design" "Product Sense" "Behavioral" "Take-Home" }}
+
+        {{ range $cat := $interviewCategories }}
+        {{ $catCount := 0 }}
+        {{ range $.Site.Data.career }}
+            {{ if and (eq .section "interview") (eq .category $cat) (not .archived) }}
+                {{ $catCount = add $catCount 1 }}
+            {{ end }}
+        {{ end }}
+
+        {{ if gt $catCount 0 }}
+        <section class="interview-category">
+            <h3 class="interview-category-title">{{ $cat }} <span class="count">({{ $catCount }})</span></h3>
+            <div class="interview-grid">
+                {{ range $.Site.Data.career }}
+                {{ if and (eq .section "interview") (eq .category $cat) (not .archived) }}
+                <a href="{{ .url }}" target="_blank" rel="noopener" class="interview-card">
+                    <img class="favicon" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
+                    <div class="interview-content">
+                        <span class="interview-name">{{ .name }}</span>
+                        <p class="interview-desc">{{ .description }}</p>
+                    </div>
+                    <span class="type-badge">{{ .type }}</span>
+                </a>
+                {{ end }}
+                {{ end }}
+            </div>
+        </section>
+        {{ end }}
+        {{ end }}
+    </div>
 </div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Stage collapse/expand functionality
-    const stageSections = document.querySelectorAll('.stage-section');
-    const stageHeaders = document.querySelectorAll('.stage-header');
+    // Tab switching
+    const tabs = document.querySelectorAll('.career-tab');
+    const tabContents = document.querySelectorAll('.career-tab-content');
 
-    stageHeaders.forEach(header => {
-        header.addEventListener('click', function() {
-            const section = this.closest('.stage-section');
-            const isCollapsed = section.classList.contains('collapsed');
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            const targetTab = this.dataset.tab;
 
-            if (isCollapsed) {
-                section.classList.remove('collapsed');
-                this.setAttribute('aria-expanded', 'true');
-            } else {
-                section.classList.add('collapsed');
-                this.setAttribute('aria-expanded', 'false');
-            }
+            tabs.forEach(t => t.classList.remove('active'));
+            tabContents.forEach(c => c.classList.remove('active'));
+
+            this.classList.add('active');
+            document.getElementById('tab-' + targetTab).classList.add('active');
         });
     });
 
-    // Stage tab filtering
-    const stageTabs = document.querySelectorAll('.stage-tab');
-    const categorySelect = document.getElementById('category-select');
-    let activeStage = 'all';
+    // Sector filtering
+    const sectorPills = document.querySelectorAll('.sector-pill');
+    const companyCards = document.querySelectorAll('.company-card');
 
-    stageTabs.forEach(tab => {
-        tab.addEventListener('click', function() {
-            // Update active tab
-            stageTabs.forEach(t => t.classList.remove('active'));
+    sectorPills.forEach(pill => {
+        pill.addEventListener('click', function() {
+            const sector = this.dataset.sector;
+
+            sectorPills.forEach(p => p.classList.remove('active'));
             this.classList.add('active');
 
-            activeStage = this.dataset.stage;
-
-            // Filter category dropdown options
-            const options = categorySelect.querySelectorAll('option');
-            options.forEach(opt => {
-                if (opt.value === 'all') {
-                    opt.style.display = '';
-                } else if (activeStage === 'all') {
-                    opt.style.display = '';
+            companyCards.forEach(card => {
+                if (sector === 'all' || card.dataset.sector === sector) {
+                    card.style.display = '';
                 } else {
-                    opt.style.display = opt.dataset.stage === activeStage ? '' : 'none';
+                    card.style.display = 'none';
                 }
             });
-            categorySelect.value = 'all';
-
-            // Show/hide stage sections
-            stageSections.forEach(section => {
-                if (activeStage === 'all') {
-                    section.style.display = '';
-                    section.classList.add('collapsed');
-                    section.querySelector('.stage-header').setAttribute('aria-expanded', 'false');
-                } else if (section.dataset.stage === activeStage) {
-                    section.style.display = '';
-                    section.classList.remove('collapsed');
-                    section.querySelector('.stage-header').setAttribute('aria-expanded', 'true');
-                } else {
-                    section.style.display = 'none';
-                }
-            });
-
-            updateResultCount();
         });
     });
 
-    // Category filtering
-    categorySelect.addEventListener('change', function() {
-        const selectedCategory = this.value;
-        const categorySections = document.querySelectorAll('.category-section');
+    // Search functionality
+    const searchInput = document.getElementById('career-search');
+    const clearBtn = document.getElementById('clear-search');
 
-        categorySections.forEach(section => {
-            const stageSection = section.closest('.stage-section');
+    searchInput.addEventListener('input', function() {
+        const query = this.value.toLowerCase();
 
-            if (selectedCategory === 'all') {
-                section.style.display = '';
-            } else if (section.dataset.sectionCategory === selectedCategory) {
-                section.style.display = '';
-                // Expand the parent stage
-                stageSection.classList.remove('collapsed');
-                stageSection.querySelector('.stage-header').setAttribute('aria-expanded', 'true');
+        // Search in all visible cards across all sections
+        document.querySelectorAll('.essential-item, .role-card, .work-card, .company-card, .negotiation-card, .interview-card').forEach(card => {
+            const text = card.textContent.toLowerCase();
+            if (query === '' || text.includes(query)) {
+                card.style.display = '';
             } else {
-                section.style.display = 'none';
+                card.style.display = 'none';
             }
         });
 
-        updateResultCount();
+        clearBtn.style.display = query ? 'flex' : 'none';
     });
 
-    function updateResultCount() {
-        const visibleCards = document.querySelectorAll('.resource-card:not([style*="display: none"])');
-        let count = 0;
-        visibleCards.forEach(card => {
-            const section = card.closest('.category-section');
-            const stageSection = card.closest('.stage-section');
-            if (section.style.display !== 'none' && stageSection.style.display !== 'none') {
-                count++;
-            }
-        });
-        document.getElementById('result-count').textContent = count + ' resources';
-    }
-
-    // Initialize PageSearch for text search
-    new PageSearch({
-        searchInputId: 'career-search',
-        cardSelector: '.resource-card',
-        sectionSelector: '.category-section',
-        itemLabel: 'resources',
-        fuseKeys: [
-            { name: 'name', weight: 2 },
-            { name: 'description', weight: 1 },
-            { name: 'stage', weight: 0.8 },
-            { name: 'type', weight: 0.8 },
-            { name: 'category', weight: 0.5 }
-        ]
+    clearBtn.addEventListener('click', function() {
+        searchInput.value = '';
+        searchInput.dispatchEvent(new Event('input'));
+        this.style.display = 'none';
     });
 });
 </script>

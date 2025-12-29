@@ -7,7 +7,11 @@
     "tier": "essential",
     "url": "https://www.aeaweb.org/articles?id=10.1257%2Fjep.33.1.209",
     "type": "Article",
-    "tags": ["foundational", "academic"]
+    "tags": [
+      "foundational",
+      "academic"
+    ],
+    "section": "essential"
   },
   {
     "name": "Levels.fyi Compensation",
@@ -17,7 +21,11 @@
     "tier": "essential",
     "url": "https://www.levels.fyi/",
     "type": "Tool",
-    "tags": ["salary-data", "essential"]
+    "tags": [
+      "salary-data",
+      "essential"
+    ],
+    "section": "negotiation"
   },
   {
     "name": "Amazon Science Blog",
@@ -26,7 +34,11 @@
     "category": "Why Tech",
     "url": "https://www.amazon.science",
     "type": "Blog",
-    "tags": ["Amazon", "research-culture"]
+    "tags": [
+      "Amazon",
+      "research-culture"
+    ],
+    "archived": true
   },
   {
     "name": "Scarlet Chen: Econ PhD to Tech",
@@ -36,7 +48,11 @@
     "tier": "essential",
     "url": "https://scarlet-chen.medium.com/",
     "type": "Blog",
-    "tags": ["PhD", "first-hand-experience"]
+    "tags": [
+      "PhD",
+      "first-hand-experience"
+    ],
+    "section": "essential"
   },
   {
     "name": "Ace the Data Science Interview",
@@ -45,7 +61,12 @@
     "category": "Role Landscape",
     "url": "https://www.acethedatascienceinterview.com/",
     "type": "Book",
-    "tags": ["comprehensive", "industry-standard"]
+    "tags": [
+      "comprehensive",
+      "industry-standard"
+    ],
+    "section": "essential",
+    "tier": "essential"
   },
   {
     "name": "Amazon Economist Careers",
@@ -54,7 +75,12 @@
     "category": "Company Lists",
     "url": "https://www.amazon.jobs/en/landing_pages/economistjobs",
     "type": "Career Portal",
-    "tags": ["FAANG", "economist-title", "PhD-internship"]
+    "tags": [
+      "FAANG",
+      "economist-title",
+      "PhD-internship"
+    ],
+    "section": "roles"
   },
   {
     "name": "Google Research Areas",
@@ -63,7 +89,13 @@
     "category": "Company Lists",
     "url": "https://research.google/research-areas/economics-and-electronic-commerce/",
     "type": "Career Portal",
-    "tags": ["FAANG", "quant-analyst", "research"]
+    "tags": [
+      "FAANG",
+      "quant-analyst",
+      "research"
+    ],
+    "section": "companies",
+    "sector": "faang"
   },
   {
     "name": "Meta Core Data Science",
@@ -72,7 +104,13 @@
     "category": "Company Lists",
     "url": "https://ai.meta.com/research/",
     "type": "Career Portal",
-    "tags": ["FAANG", "CDS", "research"]
+    "tags": [
+      "FAANG",
+      "CDS",
+      "research"
+    ],
+    "section": "companies",
+    "sector": "faang"
   },
   {
     "name": "Uber Ubernomics Team",
@@ -81,7 +119,13 @@
     "category": "Role Landscape",
     "url": "https://eng.uber.com/",
     "type": "Blog",
-    "tags": ["Uber", "marketplace", "company-profile"]
+    "tags": [
+      "Uber",
+      "marketplace",
+      "company-profile"
+    ],
+    "section": "work",
+    "domain": "Economist Teams"
   },
   {
     "name": "Wayfair Economics Group",
@@ -90,7 +134,12 @@
     "category": "Role Landscape",
     "url": "https://www.aboutwayfair.com/careers/tech-blog",
     "type": "Blog",
-    "tags": ["Wayfair", "economist-title", "company-profile"]
+    "tags": [
+      "Wayfair",
+      "economist-title",
+      "company-profile"
+    ],
+    "archived": true
   },
   {
     "name": "LinkedIn Economic Graph",
@@ -99,7 +148,12 @@
     "category": "Role Landscape",
     "url": "https://economicgraph.linkedin.com/",
     "type": "Blog",
-    "tags": ["LinkedIn", "labor-economics", "company-profile"]
+    "tags": [
+      "LinkedIn",
+      "labor-economics",
+      "company-profile"
+    ],
+    "archived": true
   },
   {
     "name": "Stripe Economics of AI Fellowship",
@@ -108,7 +162,11 @@
     "category": "Team Types",
     "url": "https://stripe.events/fellowship",
     "type": "Career Portal",
-    "tags": ["Stripe", "fellowship"]
+    "tags": [
+      "Stripe",
+      "fellowship"
+    ],
+    "archived": true
   },
   {
     "name": "Salesforce AI Economist",
@@ -117,7 +175,11 @@
     "category": "Team Types",
     "url": "https://www.salesforceairesearch.com/",
     "type": "Career Portal",
-    "tags": ["Salesforce", "AI-economics"]
+    "tags": [
+      "Salesforce",
+      "AI-economics"
+    ],
+    "archived": true
   },
   {
     "name": "Pharma HEOR Teams Overview",
@@ -126,7 +188,12 @@
     "category": "Role Landscape",
     "url": "https://business.optum.com/en/data-analytics/life-sciences/heor.html",
     "type": "Guide",
-    "tags": ["pharma", "HEOR", "role-overview"]
+    "tags": [
+      "pharma",
+      "HEOR",
+      "role-overview"
+    ],
+    "archived": true
   },
   {
     "name": "Rose Tan: Tech Jobs for Econ PhDs",
@@ -136,7 +203,11 @@
     "tier": "essential",
     "url": "https://www.linkedin.com/pulse/finding-tech-job-part-1-guide-econ-phds-some-useful-info-rose-tan",
     "type": "Guide",
-    "tags": ["PhD", "networking"]
+    "tags": [
+      "PhD",
+      "networking"
+    ],
+    "section": "essential"
   },
   {
     "name": "Key Advice: Title vs Tasks",
@@ -145,7 +216,11 @@
     "category": "PhD Transition",
     "url": "https://scarlet-chen.medium.com/tech-industry-jobs-for-econ-phds-54a276dda80b",
     "type": "Guide",
-    "tags": ["PhD", "career-advice"]
+    "tags": [
+      "PhD",
+      "career-advice"
+    ],
+    "section": "roles"
   },
   {
     "name": "NABE TEC Conference & Job Fair",
@@ -154,7 +229,12 @@
     "category": "Networking",
     "url": "https://www.nabe.com/NABE/NABE/Events/TEC25/TEC2025.aspx",
     "type": "Conference",
-    "tags": ["essential", "networking", "job-fair"]
+    "tags": [
+      "essential",
+      "networking",
+      "job-fair"
+    ],
+    "archived": true
   },
   {
     "name": "AEA JOE Listings",
@@ -163,7 +243,11 @@
     "category": "Job Boards",
     "url": "https://www.aeaweb.org/joe/listings",
     "type": "Job Board",
-    "tags": ["academic", "tech-postings"]
+    "tags": [
+      "academic",
+      "tech-postings"
+    ],
+    "archived": true
   },
   {
     "name": "StatTrak Biostatistics Internships",
@@ -172,7 +256,11 @@
     "category": "Job Boards",
     "url": "https://stattrak.amstat.org/2024/12/01/2025-internships/",
     "type": "Job Board",
-    "tags": ["pharma", "internships"]
+    "tags": [
+      "pharma",
+      "internships"
+    ],
+    "archived": true
   },
   {
     "name": "EuropeanHealthEconomics Jobs",
@@ -181,7 +269,11 @@
     "category": "Job Boards",
     "url": "https://europeanhealtheconomics.com/job/heor/",
     "type": "Job Board",
-    "tags": ["HEOR", "Europe"]
+    "tags": [
+      "HEOR",
+      "Europe"
+    ],
+    "archived": true
   },
   {
     "name": "Amazon PhD Internship",
@@ -190,7 +282,13 @@
     "category": "Company Lists",
     "url": "https://www.amazon.science/careers",
     "type": "Career Portal",
-    "tags": ["FAANG", "economist-title", "PhD-internship"]
+    "tags": [
+      "FAANG",
+      "economist-title",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "faang"
   },
   {
     "name": "Google PhD Programs",
@@ -199,7 +297,13 @@
     "category": "Company Lists",
     "url": "https://careers.google.com",
     "type": "Career Portal",
-    "tags": ["FAANG", "research-intern", "PhD-internship"]
+    "tags": [
+      "FAANG",
+      "research-intern",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "faang"
   },
   {
     "name": "Meta Research Scientist",
@@ -208,7 +312,13 @@
     "category": "Company Lists",
     "url": "https://www.metacareers.com",
     "type": "Career Portal",
-    "tags": ["FAANG", "CDS", "PhD-internship"]
+    "tags": [
+      "FAANG",
+      "CDS",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "faang"
   },
   {
     "name": "Microsoft Research Careers",
@@ -217,7 +327,13 @@
     "category": "Company Lists",
     "url": "https://www.microsoft.com/en-us/research/careers/",
     "type": "Career Portal",
-    "tags": ["FAANG", "academic-style", "PhD-internship"]
+    "tags": [
+      "FAANG",
+      "academic-style",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "faang"
   },
   {
     "name": "Apple ML Research",
@@ -226,7 +342,13 @@
     "category": "Company Lists",
     "url": "https://machinelearning.apple.com/work-with-us",
     "type": "Career Portal",
-    "tags": ["FAANG", "ML-focused", "PhD-internship"]
+    "tags": [
+      "FAANG",
+      "ML-focused",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "faang"
   },
   {
     "name": "Uber Applied Scientist",
@@ -235,7 +357,13 @@
     "category": "Company Lists",
     "url": "https://www.uber.com/us/en/careers/",
     "type": "Career Portal",
-    "tags": ["marketplace", "economist-title", "PhD-internship"]
+    "tags": [
+      "marketplace",
+      "economist-title",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "marketplace"
   },
   {
     "name": "Lyft Economics Team",
@@ -244,7 +372,13 @@
     "category": "Company Lists",
     "url": "https://www.lyft.com/careers/",
     "type": "Career Portal",
-    "tags": ["marketplace", "economist-title", "PhD-internship"]
+    "tags": [
+      "marketplace",
+      "economist-title",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "marketplace"
   },
   {
     "name": "Wayfair Economist Intern",
@@ -253,7 +387,13 @@
     "category": "Company Lists",
     "url": "https://www.aboutwayfair.com/careers/",
     "type": "Career Portal",
-    "tags": ["marketplace", "economist-title", "PhD-internship"]
+    "tags": [
+      "marketplace",
+      "economist-title",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "marketplace"
   },
   {
     "name": "Airbnb Data Science",
@@ -262,7 +402,13 @@
     "category": "Company Lists",
     "url": "https://careers.airbnb.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "causal-inference", "PhD-internship"]
+    "tags": [
+      "marketplace",
+      "causal-inference",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "marketplace"
   },
   {
     "name": "DoorDash Data Science",
@@ -271,7 +417,13 @@
     "category": "Company Lists",
     "url": "https://careers.doordash.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "economists-welcome", "PhD-internship"]
+    "tags": [
+      "marketplace",
+      "economists-welcome",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "marketplace"
   },
   {
     "name": "Instacart ML PhD",
@@ -280,7 +432,13 @@
     "category": "Company Lists",
     "url": "https://instacart.careers/",
     "type": "Career Portal",
-    "tags": ["marketplace", "pricing", "PhD-internship"]
+    "tags": [
+      "marketplace",
+      "pricing",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "marketplace"
   },
   {
     "name": "eBay Data Science",
@@ -289,7 +447,13 @@
     "category": "Company Lists",
     "url": "https://jobs.ebayinc.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "data-science", "PhD-internship"]
+    "tags": [
+      "marketplace",
+      "data-science",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "marketplace"
   },
   {
     "name": "Etsy DSML Research",
@@ -298,7 +462,13 @@
     "category": "Company Lists",
     "url": "https://careers.etsy.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "research", "PhD-internship"]
+    "tags": [
+      "marketplace",
+      "research",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "marketplace"
   },
   {
     "name": "LinkedIn Applied Research",
@@ -307,7 +477,13 @@
     "category": "Company Lists",
     "url": "https://careers.linkedin.com/",
     "type": "Career Portal",
-    "tags": ["social-media", "labor-economics", "PhD-internship"]
+    "tags": [
+      "social-media",
+      "labor-economics",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "social"
   },
   {
     "name": "Spotify Research Scientist",
@@ -316,7 +492,13 @@
     "category": "Company Lists",
     "url": "https://www.lifeatspotify.com/jobs",
     "type": "Career Portal",
-    "tags": ["social-media", "econ-PhD-welcome", "PhD-internship"]
+    "tags": [
+      "social-media",
+      "econ-PhD-welcome",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "social"
   },
   {
     "name": "Netflix Careers",
@@ -325,7 +507,13 @@
     "category": "Company Lists",
     "url": "https://jobs.netflix.com/",
     "type": "Career Portal",
-    "tags": ["social-media", "industry-exp-preferred", "PhD-internship"]
+    "tags": [
+      "social-media",
+      "industry-exp-preferred",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "social"
   },
   {
     "name": "Pinterest Labs",
@@ -334,7 +522,13 @@
     "category": "Company Lists",
     "url": "https://www.pinterestcareers.com/",
     "type": "Career Portal",
-    "tags": ["social-media", "econ-PhD-welcome", "PhD-internship"]
+    "tags": [
+      "social-media",
+      "econ-PhD-welcome",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "social"
   },
   {
     "name": "Discord Data Science",
@@ -343,7 +537,13 @@
     "category": "Company Lists",
     "url": "https://discord.com/careers",
     "type": "Career Portal",
-    "tags": ["social-media", "causal-inference", "PhD-internship"]
+    "tags": [
+      "social-media",
+      "causal-inference",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "social"
   },
   {
     "name": "Snap Research",
@@ -352,7 +552,13 @@
     "category": "Company Lists",
     "url": "https://careers.snap.com/",
     "type": "Career Portal",
-    "tags": ["social-media", "ML-focused", "PhD-internship"]
+    "tags": [
+      "social-media",
+      "ML-focused",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "social"
   },
   {
     "name": "Stripe PhD Internship",
@@ -361,7 +567,13 @@
     "category": "Company Lists",
     "url": "https://stripe.com/jobs/university",
     "type": "Career Portal",
-    "tags": ["fintech", "economist-title", "PhD-internship"]
+    "tags": [
+      "fintech",
+      "economist-title",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "fintech"
   },
   {
     "name": "PayPal PhD Intern",
@@ -370,7 +582,13 @@
     "category": "Company Lists",
     "url": "https://careers.pypl.com",
     "type": "Career Portal",
-    "tags": ["fintech", "risk-analytics", "PhD-internship"]
+    "tags": [
+      "fintech",
+      "risk-analytics",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "fintech"
   },
   {
     "name": "Robinhood Data Scientist",
@@ -379,7 +597,13 @@
     "category": "Company Lists",
     "url": "https://careers.robinhood.com/",
     "type": "Career Portal",
-    "tags": ["fintech", "experimentation", "PhD-internship"]
+    "tags": [
+      "fintech",
+      "experimentation",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "fintech"
   },
   {
     "name": "Affirm Careers",
@@ -388,7 +612,13 @@
     "category": "Company Lists",
     "url": "https://www.affirm.com/careers",
     "type": "Career Portal",
-    "tags": ["fintech", "credit-risk", "limited-PhD"]
+    "tags": [
+      "fintech",
+      "credit-risk",
+      "limited-PhD"
+    ],
+    "section": "companies",
+    "sector": "fintech"
   },
   {
     "name": "Block (Square) Careers",
@@ -397,7 +627,13 @@
     "category": "Company Lists",
     "url": "https://block.xyz/careers/jobs",
     "type": "Career Portal",
-    "tags": ["fintech", "SWE-focused", "limited-PhD"]
+    "tags": [
+      "fintech",
+      "SWE-focused",
+      "limited-PhD"
+    ],
+    "section": "companies",
+    "sector": "fintech"
   },
   {
     "name": "Adobe Research Internship",
@@ -406,7 +642,13 @@
     "category": "Company Lists",
     "url": "https://research.adobe.com/careers/internships/",
     "type": "Career Portal",
-    "tags": ["enterprise", "large-program", "PhD-internship"]
+    "tags": [
+      "enterprise",
+      "large-program",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "saas"
   },
   {
     "name": "Salesforce AI Research",
@@ -415,7 +657,13 @@
     "category": "Company Lists",
     "url": "https://www.salesforce.com/company/careers/university-recruiting/research/",
     "type": "Career Portal",
-    "tags": ["enterprise", "AI-economics", "PhD-internship"]
+    "tags": [
+      "enterprise",
+      "AI-economics",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "saas"
   },
   {
     "name": "Databricks Research",
@@ -424,7 +672,13 @@
     "category": "Company Lists",
     "url": "https://www.databricks.com/company/careers/",
     "type": "Career Portal",
-    "tags": ["enterprise", "econ-PhD-welcome", "PhD-internship"]
+    "tags": [
+      "enterprise",
+      "econ-PhD-welcome",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "saas"
   },
   {
     "name": "Intuit AI Research",
@@ -433,7 +687,13 @@
     "category": "Company Lists",
     "url": "https://jobs.intuit.com/",
     "type": "Career Portal",
-    "tags": ["enterprise", "fintech-AI", "PhD-internship"]
+    "tags": [
+      "enterprise",
+      "fintech-AI",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "saas"
   },
   {
     "name": "Eli Lilly Statistics",
@@ -442,7 +702,13 @@
     "category": "Company Lists",
     "url": "https://careers.lilly.com/us/en/stem",
     "type": "Career Portal",
-    "tags": ["pharma", "biostatistics", "PhD-internship"]
+    "tags": [
+      "pharma",
+      "biostatistics",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "pharma"
   },
   {
     "name": "Pfizer Biostatistics",
@@ -451,7 +717,13 @@
     "category": "Company Lists",
     "url": "https://pfizerstatistics-internprogram-atriumworks.icims.com/",
     "type": "Career Portal",
-    "tags": ["pharma", "biostatistics", "PhD-internship"]
+    "tags": [
+      "pharma",
+      "biostatistics",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "pharma"
   },
   {
     "name": "J&J Statistics",
@@ -460,7 +732,13 @@
     "category": "Company Lists",
     "url": "https://careers.jnj.com",
     "type": "Career Portal",
-    "tags": ["pharma", "biostatistics", "PhD-internship"]
+    "tags": [
+      "pharma",
+      "biostatistics",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "pharma"
   },
   {
     "name": "Moderna Biostatistics",
@@ -469,7 +747,13 @@
     "category": "Company Lists",
     "url": "https://modernatx.com/careers",
     "type": "Career Portal",
-    "tags": ["pharma", "biostatistics", "PhD-internship"]
+    "tags": [
+      "pharma",
+      "biostatistics",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "pharma"
   },
   {
     "name": "Roche Global Biostatistics",
@@ -478,7 +762,13 @@
     "category": "Company Lists",
     "url": "https://careers.roche.com/",
     "type": "Career Portal",
-    "tags": ["pharma", "biostatistics", "PhD-internship"]
+    "tags": [
+      "pharma",
+      "biostatistics",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "pharma"
   },
   {
     "name": "Genentech E4A/HEOR",
@@ -487,7 +777,13 @@
     "category": "Company Lists",
     "url": "https://careers.gene.com/",
     "type": "Career Portal",
-    "tags": ["pharma", "HEOR", "PhD-internship"]
+    "tags": [
+      "pharma",
+      "HEOR",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "pharma"
   },
   {
     "name": "Optum HEOR",
@@ -496,7 +792,13 @@
     "category": "Company Lists",
     "url": "https://www.optum.com/en/careers.html",
     "type": "Career Portal",
-    "tags": ["pharma", "HEOR", "PhD-internship"]
+    "tags": [
+      "pharma",
+      "HEOR",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "pharma"
   },
   {
     "name": "Roblox Virtual Economy",
@@ -505,7 +807,13 @@
     "category": "Company Lists",
     "url": "https://careers.roblox.com",
     "type": "Career Portal",
-    "tags": ["emerging", "econ-PhD-welcome", "PhD-internship"]
+    "tags": [
+      "emerging",
+      "econ-PhD-welcome",
+      "PhD-internship"
+    ],
+    "section": "companies",
+    "sector": "ai-gaming"
   },
   {
     "name": "OpenAI Residency",
@@ -514,7 +822,13 @@
     "category": "Company Lists",
     "url": "https://openai.com/careers/residency-2026-san-francisco/",
     "type": "Career Portal",
-    "tags": ["emerging", "residency", "networking-required"]
+    "tags": [
+      "emerging",
+      "residency",
+      "networking-required"
+    ],
+    "section": "companies",
+    "sector": "ai-gaming"
   },
   {
     "name": "Anthropic Careers",
@@ -523,7 +837,13 @@
     "category": "Company Lists",
     "url": "https://www.anthropic.com/careers",
     "type": "Career Portal",
-    "tags": ["emerging", "no-internship", "networking-required"]
+    "tags": [
+      "emerging",
+      "no-internship",
+      "networking-required"
+    ],
+    "section": "companies",
+    "sector": "ai-gaming"
   },
   {
     "name": "Notion Careers",
@@ -532,16 +852,27 @@
     "category": "Company Lists",
     "url": "https://www.notion.com/careers",
     "type": "Career Portal",
-    "tags": ["emerging", "general-intern", "limited-PhD"]
+    "tags": [
+      "emerging",
+      "general-intern",
+      "limited-PhD"
+    ],
+    "section": "companies",
+    "sector": "ai-gaming"
   },
-    {
+  {
     "name": "Takeda-UIC HEOR Fellowship",
     "description": "2-year Health Economics and Outcomes Research fellowship program. Strong for pharma career path.",
     "stage": "Discovery",
     "category": "Networking",
     "url": "https://jobs.takeda.com/health-economics-and-outcomes-fellowship",
     "type": "Fellowship",
-    "tags": ["pharma", "HEOR", "fellowship"]
+    "tags": [
+      "pharma",
+      "HEOR",
+      "fellowship"
+    ],
+    "archived": true
   },
   {
     "name": "DeepMind Student Researcher",
@@ -550,7 +881,12 @@
     "category": "Networking",
     "url": "https://deepmind.google/student-researcher-program/",
     "type": "Fellowship",
-    "tags": ["research", "Google", "PhD-program"]
+    "tags": [
+      "research",
+      "Google",
+      "PhD-program"
+    ],
+    "archived": true
   },
   {
     "name": "DataLemur SQL",
@@ -559,7 +895,11 @@
     "category": "SQL & Data",
     "url": "https://datalemur.com/",
     "type": "Practice",
-    "tags": ["FAANG", "beginner-friendly"]
+    "tags": [
+      "FAANG",
+      "beginner-friendly"
+    ],
+    "section": "interview"
   },
   {
     "name": "StrataScratch",
@@ -568,7 +908,11 @@
     "category": "SQL & Data",
     "url": "https://www.stratascratch.com/",
     "type": "Practice",
-    "tags": ["company-specific", "real-questions"]
+    "tags": [
+      "company-specific",
+      "real-questions"
+    ],
+    "section": "interview"
   },
   {
     "name": "Window Functions Practice",
@@ -577,7 +921,11 @@
     "category": "SQL & Data",
     "url": "https://www.windowfunctions.com/",
     "type": "Practice",
-    "tags": ["window-functions", "interactive"]
+    "tags": [
+      "window-functions",
+      "interactive"
+    ],
+    "section": "interview"
   },
   {
     "name": "Interview Query",
@@ -586,7 +934,11 @@
     "category": "SQL & Data",
     "url": "https://www.interviewquery.com/",
     "type": "Practice",
-    "tags": ["comprehensive", "take-homes"]
+    "tags": [
+      "comprehensive",
+      "take-homes"
+    ],
+    "section": "interview"
   },
   {
     "name": "Nick Singh's 40 Stats Questions",
@@ -595,7 +947,12 @@
     "category": "Stats & Probability",
     "url": "https://www.nicksingh.com/posts/40-probability-statistics-data-science-interview-questions-asked-by-fang-wall-street",
     "type": "Questions",
-    "tags": ["FAANG", "Wall-Street", "Bayesian"]
+    "tags": [
+      "FAANG",
+      "Wall-Street",
+      "Bayesian"
+    ],
+    "section": "interview"
   },
   {
     "name": "StatQuest with Josh Starmer",
@@ -604,7 +961,11 @@
     "category": "ML Fundamentals",
     "url": "https://www.youtube.com/@statquest",
     "type": "Video",
-    "tags": ["visual-learning", "beginner-friendly"]
+    "tags": [
+      "visual-learning",
+      "beginner-friendly"
+    ],
+    "section": "interview"
   },
   {
     "name": "Trustworthy Online Controlled Experiments (Kohavi)",
@@ -613,7 +974,11 @@
     "category": "Experimentation",
     "url": "https://www.amazon.com/Trustworthy-Online-Controlled-Experiments-Practical/dp/1108724264",
     "type": "Book",
-    "tags": ["essential", "advanced"]
+    "tags": [
+      "essential",
+      "advanced"
+    ],
+    "section": "interview"
   },
   {
     "name": "Understanding CUPED",
@@ -622,7 +987,11 @@
     "category": "Experimentation",
     "url": "https://towardsdatascience.com/understanding-cuped-a822523641af",
     "type": "Article",
-    "tags": ["variance-reduction", "causal-inference"]
+    "tags": [
+      "variance-reduction",
+      "causal-inference"
+    ],
+    "section": "interview"
   },
   {
     "name": "Netflix: Quasi Experimentation",
@@ -631,7 +1000,11 @@
     "category": "Experimentation",
     "url": "https://netflixtechblog.com/quasi-experimentation-at-netflix-566b57d2e362",
     "type": "Blog",
-    "tags": ["Netflix", "quasi-experiments"]
+    "tags": [
+      "Netflix",
+      "quasi-experiments"
+    ],
+    "section": "interview"
   },
   {
     "name": "Emma Ding: Product Sense Guide",
@@ -640,7 +1013,11 @@
     "category": "Product Sense",
     "url": "https://towardsdatascience.com/the-ultimate-guide-to-cracking-business-case-interviews-for-data-scientists-part-1-cb768c37edf4",
     "type": "Guide",
-    "tags": ["AARRR", "metrics-design"]
+    "tags": [
+      "AARRR",
+      "metrics-design"
+    ],
+    "section": "interview"
   },
   {
     "name": "Amplitude: North Star Metrics",
@@ -649,7 +1026,11 @@
     "category": "Product Sense",
     "url": "https://amplitude.com/blog/north-star-metric",
     "type": "Article",
-    "tags": ["frameworks", "real-examples"]
+    "tags": [
+      "frameworks",
+      "real-examples"
+    ],
+    "section": "interview"
   },
   {
     "name": "DataLemur Meta DS Guide",
@@ -658,7 +1039,11 @@
     "category": "Product Sense",
     "url": "https://datalemur.com/blog/meta-facebook-data-scientist-interview",
     "type": "Guide",
-    "tags": ["Meta", "real-questions"]
+    "tags": [
+      "Meta",
+      "real-questions"
+    ],
+    "section": "interview"
   },
   {
     "name": "Scarlet Ink: Amazon LP Guide",
@@ -667,7 +1052,11 @@
     "category": "Behavioral",
     "url": "https://www.scarletink.com/p/interviewing-at-amazon-leadership-principles",
     "type": "Guide",
-    "tags": ["Amazon", "bar-raiser"]
+    "tags": [
+      "Amazon",
+      "bar-raiser"
+    ],
+    "section": "interview"
   },
   {
     "name": "Amazon Leadership Principles",
@@ -676,7 +1065,11 @@
     "category": "Behavioral",
     "url": "https://www.amazon.jobs/content/en/our-workplace/leadership-principles",
     "type": "Guide",
-    "tags": ["Amazon", "official"]
+    "tags": [
+      "Amazon",
+      "official"
+    ],
+    "section": "interview"
   },
   {
     "name": "Interviewing.io Amazon Guide",
@@ -685,7 +1078,11 @@
     "category": "Behavioral",
     "url": "https://interviewing.io/guides/amazon-interview",
     "type": "Guide",
-    "tags": ["Amazon", "STAR-method"]
+    "tags": [
+      "Amazon",
+      "STAR-method"
+    ],
+    "section": "interview"
   },
   {
     "name": "IGotAnOffer: Google Behavioral",
@@ -694,7 +1091,11 @@
     "category": "Behavioral",
     "url": "https://igotanoffer.com/blogs/tech/google-behavioral-interview",
     "type": "Guide",
-    "tags": ["Google", "Googleyness"]
+    "tags": [
+      "Google",
+      "Googleyness"
+    ],
+    "section": "interview"
   },
   {
     "name": "Designing Machine Learning Systems",
@@ -703,7 +1104,11 @@
     "category": "ML System Design",
     "url": "https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/",
     "type": "Book",
-    "tags": ["essential", "Stanford"]
+    "tags": [
+      "essential",
+      "Stanford"
+    ],
+    "section": "interview"
   },
   {
     "name": "ML System Design Interview (Alex Xu)",
@@ -712,7 +1117,11 @@
     "category": "ML System Design",
     "url": "https://www.amazon.com/Machine-Learning-System-Design-Interview/dp/1736049127",
     "type": "Book",
-    "tags": ["frameworks", "solutions"]
+    "tags": [
+      "frameworks",
+      "solutions"
+    ],
+    "section": "interview"
   },
   {
     "name": "ML Interviews GitHub",
@@ -721,7 +1130,11 @@
     "category": "ML Fundamentals",
     "url": "https://github.com/alirezadir/Machine-Learning-Interviews",
     "type": "Resource",
-    "tags": ["comprehensive", "applied-scientist"]
+    "tags": [
+      "comprehensive",
+      "applied-scientist"
+    ],
+    "section": "interview"
   },
   {
     "name": "Chip Huyen ML Interviews Book",
@@ -730,7 +1143,11 @@
     "category": "ML Fundamentals",
     "url": "https://huyenchip.com/ml-interviews-book/",
     "type": "Book",
-    "tags": ["comprehensive", "by-difficulty"]
+    "tags": [
+      "comprehensive",
+      "by-difficulty"
+    ],
+    "section": "interview"
   },
   {
     "name": "Interview Query Take-Homes",
@@ -739,7 +1156,11 @@
     "category": "Take-Home",
     "url": "https://www.interviewquery.com/p/data-science-take-home-challenges",
     "type": "Practice",
-    "tags": ["real-challenges", "with-solutions"]
+    "tags": [
+      "real-challenges",
+      "with-solutions"
+    ],
+    "section": "interview"
   },
   {
     "name": "Levels.fyi Negotiation Guide",
@@ -748,7 +1169,11 @@
     "category": "Negotiation",
     "url": "https://www.levels.fyi/blog/ultimate-negotiation-guide.html",
     "type": "Guide",
-    "tags": ["equity", "compensation-structure"]
+    "tags": [
+      "equity",
+      "compensation-structure"
+    ],
+    "section": "interview"
   },
   {
     "name": "Candor Salary Negotiation",
@@ -757,7 +1182,11 @@
     "category": "Negotiation",
     "url": "https://candor.co/guides/salary-negotiation",
     "type": "Guide",
-    "tags": ["competing-offers", "tactics"]
+    "tags": [
+      "competing-offers",
+      "tactics"
+    ],
+    "section": "interview"
   },
   {
     "name": "HBR: Why Tech Hires Economists",
@@ -767,7 +1196,11 @@
     "tier": "essential",
     "url": "https://hbr.org/2019/02/why-tech-companies-hire-so-many-economists",
     "type": "Article",
-    "tags": ["HBR", "overview"]
+    "tags": [
+      "HBR",
+      "overview"
+    ],
+    "section": "essential"
   },
   {
     "name": "Jed Kolko: Should Your Firm Have an Economist?",
@@ -776,16 +1209,24 @@
     "category": "Role Landscape",
     "url": "https://www.linkedin.com/pulse/should-your-tech-firm-have-economist-jed-kolko",
     "type": "Article",
-    "tags": ["Indeed", "Zillow"]
+    "tags": [
+      "Indeed",
+      "Zillow"
+    ],
+    "archived": true
   },
   {
     "name": "Eugene Yan: DS vs Applied vs Research vs MLE",
-    "description": "Clearest breakdown: DS→documents, Applied Scientist→ML systems, Research Scientist→papers, MLE→infrastructure.",
+    "description": "Clearest breakdown: DS\u2192documents, Applied Scientist\u2192ML systems, Research Scientist\u2192papers, MLE\u2192infrastructure.",
     "stage": "Strategy",
     "category": "Role Landscape",
     "url": "https://eugeneyan.com/writing/data-science-roles/",
     "type": "Guide",
-    "tags": ["role-taxonomy", "practitioner"]
+    "tags": [
+      "role-taxonomy",
+      "practitioner"
+    ],
+    "section": "roles"
   },
   {
     "name": "TDS: Applied vs Research Scientist",
@@ -794,7 +1235,11 @@
     "category": "Role Landscape",
     "url": "https://towardsdatascience.com/whats-the-difference-between-a-data-scientist-research-scientist-and-an-applied-scientist-30c04190c1fa/",
     "type": "Article",
-    "tags": ["role-taxonomy", "applied-scientist"]
+    "tags": [
+      "role-taxonomy",
+      "applied-scientist"
+    ],
+    "archived": true
   },
   {
     "name": "Neptune.ai: MLE vs Data Scientist",
@@ -803,7 +1248,11 @@
     "category": "Role Landscape",
     "url": "https://neptune.ai/blog/ml-engineer-vs-data-scientist",
     "type": "Article",
-    "tags": ["MLE", "role-taxonomy"]
+    "tags": [
+      "MLE",
+      "role-taxonomy"
+    ],
+    "archived": true
   },
   {
     "name": "365 Data Science: DS vs MLE Skills",
@@ -812,7 +1261,11 @@
     "category": "Role Landscape",
     "url": "https://365datascience.com/career-advice/career-guides/data-scientist-vs-machine-learning-engineer/",
     "type": "Article",
-    "tags": ["skills", "data-driven"]
+    "tags": [
+      "skills",
+      "data-driven"
+    ],
+    "archived": true
   },
   {
     "name": "Daliana Liu: Product DS vs Analyst",
@@ -821,7 +1274,11 @@
     "category": "Role Landscape",
     "url": "https://www.dalianaliu.blog/p/is-product-data-scientist-a-glorified",
     "type": "Article",
-    "tags": ["product-DS", "Google"]
+    "tags": [
+      "product-DS",
+      "Google"
+    ],
+    "section": "roles"
   },
   {
     "name": "TDS: Product Analytics Explained",
@@ -830,25 +1287,37 @@
     "category": "Role Landscape",
     "url": "https://towardsdatascience.com/product-analysts-what-is-that-936978e5c215/",
     "type": "Article",
-    "tags": ["product-analytics", "role-taxonomy"]
+    "tags": [
+      "product-analytics",
+      "role-taxonomy"
+    ],
+    "archived": true
   },
   {
     "name": "Greg Rafferty: Hidden Career Ladder",
-    "description": "L3→L4 reliable, L4→L5 strategic (defining vs solving problems), L5→L6 multiplier (scaling through others).",
+    "description": "L3\u2192L4 reliable, L4\u2192L5 strategic (defining vs solving problems), L5\u2192L6 multiplier (scaling through others).",
     "stage": "Strategy",
     "category": "Role Landscape",
     "url": "https://towardsdatascience.com/the-hidden-career-ladder-of-data-science/",
     "type": "Guide",
-    "tags": ["career-ladder", "levels"]
+    "tags": [
+      "career-ladder",
+      "levels"
+    ],
+    "section": "roles"
   },
   {
     "name": "Data Science Leadership: Career Ladder",
-    "description": "Tasks (Junior) → Projects (Mid) → Products (Senior/Principal). Mental model progression.",
+    "description": "Tasks (Junior) \u2192 Projects (Mid) \u2192 Products (Senior/Principal). Mental model progression.",
     "stage": "Strategy",
     "category": "Role Landscape",
     "url": "https://datascienceleadership.com/docs/people-management/career-ladder",
     "type": "Guide",
-    "tags": ["career-ladder", "leadership"]
+    "tags": [
+      "career-ladder",
+      "leadership"
+    ],
+    "archived": true
   },
   {
     "name": "Levels.fyi: Standard Level Definitions",
@@ -857,7 +1326,11 @@
     "category": "Role Landscape",
     "url": "https://www.levels.fyi/standard/",
     "type": "Tool",
-    "tags": ["levels", "standard"]
+    "tags": [
+      "levels",
+      "standard"
+    ],
+    "archived": true
   },
   {
     "name": "Design Gurus: FAANG Levels Comparison",
@@ -866,7 +1339,11 @@
     "category": "Role Landscape",
     "url": "https://www.designgurus.io/blog/understanding-faang-software-engineer-job-levels",
     "type": "Guide",
-    "tags": ["FAANG", "levels"]
+    "tags": [
+      "FAANG",
+      "levels"
+    ],
+    "archived": true
   },
   {
     "name": "Yorgos Askalidis: How to Become Staff DS",
@@ -875,7 +1352,11 @@
     "category": "Role Landscape",
     "url": "https://medium.com/@yaskalidis/how-to-become-a-staff-data-scientist-44b290137035",
     "type": "Guide",
-    "tags": ["staff-level", "career-growth"]
+    "tags": [
+      "staff-level",
+      "career-growth"
+    ],
+    "section": "roles"
   },
   {
     "name": "Meta: Being a Senior IC",
@@ -884,7 +1365,11 @@
     "category": "Role Landscape",
     "url": "https://medium.com/@AnalyticsAtMeta/being-a-senior-ic-59ee705ba3c1",
     "type": "Guide",
-    "tags": ["Meta", "senior-IC"]
+    "tags": [
+      "Meta",
+      "senior-IC"
+    ],
+    "section": "roles"
   },
   {
     "name": "Uber: Driver Surge Pricing Research",
@@ -894,7 +1379,11 @@
     "domain": "Pricing",
     "url": "https://eng.uber.com/research/driver-surge-pricing/",
     "type": "Blog",
-    "tags": ["pricing", "Uber"]
+    "tags": [
+      "pricing",
+      "Uber"
+    ],
+    "section": "work"
   },
   {
     "name": "Uber: Surge Pricing Moves Drivers",
@@ -903,7 +1392,11 @@
     "category": "Team Types",
     "url": "https://eng.uber.com/research/surge-pricing-moves-ubers-driver-partners/",
     "type": "Blog",
-    "tags": ["pricing", "causal-inference"]
+    "tags": [
+      "pricing",
+      "causal-inference"
+    ],
+    "archived": true
   },
   {
     "name": "Airbnb: Learning Market Dynamics for Pricing",
@@ -912,7 +1405,11 @@
     "category": "Team Types",
     "url": "https://medium.com/airbnb-engineering/learning-market-dynamics-for-optimal-pricing-97cffbcc53e3",
     "type": "Blog",
-    "tags": ["pricing", "Airbnb"]
+    "tags": [
+      "pricing",
+      "Airbnb"
+    ],
+    "archived": true
   },
   {
     "name": "Amazon: Science of Price Experiments",
@@ -921,7 +1418,11 @@
     "category": "Team Types",
     "url": "https://www.amazon.science/blog/the-science-of-price-experiments-in-the-amazon-store",
     "type": "Blog",
-    "tags": ["pricing", "Amazon"]
+    "tags": [
+      "pricing",
+      "Amazon"
+    ],
+    "archived": true
   },
   {
     "name": "Lyft: Causal Forecasting",
@@ -930,7 +1431,11 @@
     "category": "Team Types",
     "url": "https://eng.lyft.com/causal-forecasting-at-lyft-part-1-14cca6ff3d6d",
     "type": "Blog",
-    "tags": ["forecasting", "Lyft"]
+    "tags": [
+      "forecasting",
+      "Lyft"
+    ],
+    "archived": true
   },
   {
     "name": "DataRoot Labs: Surge Pricing Algorithms",
@@ -939,7 +1444,11 @@
     "category": "Team Types",
     "url": "https://datarootlabs.com/blog/uber-lift-gett-surge-pricing-algorithms",
     "type": "Article",
-    "tags": ["pricing", "comparison"]
+    "tags": [
+      "pricing",
+      "comparison"
+    ],
+    "archived": true
   },
   {
     "name": "Netflix: What is an A/B Test?",
@@ -948,7 +1457,12 @@
     "category": "Experimentation",
     "url": "https://netflixtechblog.com/what-is-an-a-b-test-b08cc1b57962",
     "type": "Blog",
-    "tags": ["experimentation", "Netflix"]
+    "tags": [
+      "experimentation",
+      "Netflix"
+    ],
+    "section": "work",
+    "domain": "Experimentation"
   },
   {
     "name": "Uber: XP Experimentation Platform",
@@ -957,7 +1471,11 @@
     "category": "Experimentation",
     "url": "https://www.uber.com/blog/xp/",
     "type": "Blog",
-    "tags": ["experimentation", "Uber"]
+    "tags": [
+      "experimentation",
+      "Uber"
+    ],
+    "section": "interview"
   },
   {
     "name": "Booking.com: Moving Fast with Experiments",
@@ -966,7 +1484,11 @@
     "category": "Experimentation",
     "url": "https://medium.com/booking-com-development/moving-fast-breaking-things-and-fixing-them-as-quickly-as-possible-a6c16c5a1185",
     "type": "Blog",
-    "tags": ["experimentation", "Booking"]
+    "tags": [
+      "experimentation",
+      "Booking"
+    ],
+    "section": "interview"
   },
   {
     "name": "Airbnb: Interleaving Experiments",
@@ -975,7 +1497,11 @@
     "category": "Experimentation",
     "url": "https://airbnb.tech/data/beyond-a-b-test-speeding-up-airbnb-search-ranking-experimentation-through-interleaving/",
     "type": "Blog",
-    "tags": ["experimentation", "Airbnb"]
+    "tags": [
+      "experimentation",
+      "Airbnb"
+    ],
+    "section": "interview"
   },
   {
     "name": "Microsoft: Deep Dive Into Variance Reduction",
@@ -984,7 +1510,11 @@
     "category": "Experimentation",
     "url": "https://www.microsoft.com/en-us/research/articles/deep-dive-into-variance-reduction/",
     "type": "Article",
-    "tags": ["CUPED", "Microsoft"]
+    "tags": [
+      "CUPED",
+      "Microsoft"
+    ],
+    "section": "interview"
   },
   {
     "name": "Nubank: CUPED Implementation",
@@ -993,7 +1523,11 @@
     "category": "Experimentation",
     "url": "https://building.nubank.com/3-lessons-from-implementing-controlled-experiment-using-pre-experiment-data-cuped-at-nubank/",
     "type": "Blog",
-    "tags": ["CUPED", "Nubank"]
+    "tags": [
+      "CUPED",
+      "Nubank"
+    ],
+    "section": "interview"
   },
   {
     "name": "Matteo Courthoud: CUPED Technical Guide",
@@ -1002,7 +1536,11 @@
     "category": "Experimentation",
     "url": "https://matteocourthoud.github.io/post/cuped/",
     "type": "Article",
-    "tags": ["CUPED", "technical"]
+    "tags": [
+      "CUPED",
+      "technical"
+    ],
+    "section": "interview"
   },
   {
     "name": "DoorDash: Switchback Experiment Analysis",
@@ -1011,7 +1549,11 @@
     "category": "Experimentation",
     "url": "https://careersatdoordash.com/blog/experiment-rigor-for-switchback-experiment-analysis/",
     "type": "Blog",
-    "tags": ["switchback", "DoorDash"]
+    "tags": [
+      "switchback",
+      "DoorDash"
+    ],
+    "section": "interview"
   },
   {
     "name": "LinkedIn: Detecting Interference in A/B Tests",
@@ -1020,7 +1562,11 @@
     "category": "Experimentation",
     "url": "https://engineering.linkedin.com/blog/2019/06/detecting-interference--an-a-b-test-of-a-b-tests",
     "type": "Blog",
-    "tags": ["interference", "LinkedIn"]
+    "tags": [
+      "interference",
+      "LinkedIn"
+    ],
+    "section": "interview"
   },
   {
     "name": "Lyft: Marketplace Experimentation",
@@ -1029,7 +1575,11 @@
     "category": "Experimentation",
     "url": "https://eng.lyft.com/experimentation-in-a-ridesharing-marketplace-f75a9c4fcf01",
     "type": "Blog",
-    "tags": ["experimentation", "Lyft"]
+    "tags": [
+      "experimentation",
+      "Lyft"
+    ],
+    "section": "interview"
   },
   {
     "name": "Meta: Cluster Experimentation",
@@ -1038,7 +1588,11 @@
     "category": "Experimentation",
     "url": "https://medium.com/@AnalyticsAtMeta/how-meta-tests-products-with-strong-network-effects-96003a056c2c",
     "type": "Blog",
-    "tags": ["experimentation", "Meta"]
+    "tags": [
+      "experimentation",
+      "Meta"
+    ],
+    "section": "interview"
   },
   {
     "name": "Uber CausalML Package",
@@ -1047,7 +1601,11 @@
     "category": "Experimentation",
     "url": "https://github.com/uber/causalml",
     "type": "Tool",
-    "tags": ["causal-ML", "open-source"]
+    "tags": [
+      "causal-ML",
+      "open-source"
+    ],
+    "section": "interview"
   },
   {
     "name": "Tinuiti: Ghost Ads Explained",
@@ -1057,7 +1615,11 @@
     "domain": "Ads",
     "url": "https://tinuiti.com/blog/measurement/ghost-ads/",
     "type": "Article",
-    "tags": ["ads", "incrementality"]
+    "tags": [
+      "ads",
+      "incrementality"
+    ],
+    "archived": true
   },
   {
     "name": "DoorDash: Ghost Ads Implementation",
@@ -1066,7 +1628,12 @@
     "category": "Team Types",
     "url": "https://advertising.doordash.com/en-us/resources/measuring-incrementality-with-ghost-ads-at-doordash",
     "type": "Blog",
-    "tags": ["ads", "DoorDash"]
+    "tags": [
+      "ads",
+      "DoorDash"
+    ],
+    "section": "work",
+    "domain": "Ads"
   },
   {
     "name": "Remerge: Incrementality Tests 101",
@@ -1075,7 +1642,11 @@
     "category": "Team Types",
     "url": "https://www.remerge.io/findings/blog-post/incrementality-tests-101-intent-to-treat-psa-ghost-ads-and-ghost-bids",
     "type": "Article",
-    "tags": ["ads", "incrementality"]
+    "tags": [
+      "ads",
+      "incrementality"
+    ],
+    "archived": true
   },
   {
     "name": "Meta DS: Product Analytics Frameworks",
@@ -1084,7 +1655,12 @@
     "category": "Team Types",
     "url": "https://dev.to/mujtabat/how-product-analytics-shapes-user-experience-funnels-retention-and-experiments-4cfm",
     "type": "Guide",
-    "tags": ["growth", "Meta"]
+    "tags": [
+      "growth",
+      "Meta"
+    ],
+    "section": "work",
+    "domain": "Growth"
   },
   {
     "name": "CXL: Growth Experimentation Culture",
@@ -1094,7 +1670,11 @@
     "domain": "Experimentation",
     "url": "https://cxl.com/blog/growth-experimentation-culture/",
     "type": "Guide",
-    "tags": ["growth", "Spotify"]
+    "tags": [
+      "growth",
+      "Spotify"
+    ],
+    "archived": true
   },
   {
     "name": "Stripe: How We Built Radar",
@@ -1104,7 +1684,11 @@
     "domain": "Trust",
     "url": "https://stripe.com/blog/how-we-built-it-stripe-radar",
     "type": "Blog",
-    "tags": ["fraud", "Stripe"]
+    "tags": [
+      "fraud",
+      "Stripe"
+    ],
+    "section": "work"
   },
   {
     "name": "Stripe: Similarity Clustering for Fraud",
@@ -1113,7 +1697,11 @@
     "category": "Team Types",
     "url": "https://stripe.com/blog/similarity-clustering",
     "type": "Blog",
-    "tags": ["fraud", "Stripe"]
+    "tags": [
+      "fraud",
+      "Stripe"
+    ],
+    "archived": true
   },
   {
     "name": "Stripe: ML for Fraud Primer",
@@ -1122,7 +1710,11 @@
     "category": "Team Types",
     "url": "https://stripe.com/guides/primer-on-machine-learning-for-fraud-protection",
     "type": "Guide",
-    "tags": ["fraud", "ML"]
+    "tags": [
+      "fraud",
+      "ML"
+    ],
+    "archived": true
   },
   {
     "name": "Lyft: Fleet Team DS",
@@ -1131,7 +1723,11 @@
     "category": "Team Types",
     "url": "https://eng.lyft.com/data-science-on-lyfts-fleet-team-141c594f656b",
     "type": "Blog",
-    "tags": ["marketplace", "Lyft"]
+    "tags": [
+      "marketplace",
+      "Lyft"
+    ],
+    "archived": true
   },
   {
     "name": "Uber: Forecasting Introduction",
@@ -1141,7 +1737,11 @@
     "domain": "Forecasting",
     "url": "https://www.uber.com/blog/forecasting-introduction/",
     "type": "Blog",
-    "tags": ["forecasting", "Uber"]
+    "tags": [
+      "forecasting",
+      "Uber"
+    ],
+    "section": "work"
   },
   {
     "name": "Uber Orbit: Bayesian Time Series",
@@ -1150,7 +1750,11 @@
     "category": "Team Types",
     "url": "https://www.uber.com/blog/orbit/",
     "type": "Tool",
-    "tags": ["forecasting", "open-source"]
+    "tags": [
+      "forecasting",
+      "open-source"
+    ],
+    "archived": true
   },
   {
     "name": "Uber: LSTM for Extreme Events",
@@ -1159,7 +1763,11 @@
     "category": "Team Types",
     "url": "https://www.uber.com/blog/neural-networks/",
     "type": "Blog",
-    "tags": ["forecasting", "deep-learning"]
+    "tags": [
+      "forecasting",
+      "deep-learning"
+    ],
+    "archived": true
   },
   {
     "name": "Uber Omphalos: Backtesting Infrastructure",
@@ -1168,7 +1776,11 @@
     "category": "Team Types",
     "url": "https://www.uber.com/blog/omphalos/",
     "type": "Blog",
-    "tags": ["forecasting", "infrastructure"]
+    "tags": [
+      "forecasting",
+      "infrastructure"
+    ],
+    "archived": true
   },
   {
     "name": "Meta: How DS Lead and Drive Impact",
@@ -1177,7 +1789,11 @@
     "category": "Role Landscape",
     "url": "https://medium.com/@AnalyticsAtMeta/how-data-scientists-lead-and-drive-impact-at-meta-6b5b896821b2",
     "type": "Blog",
-    "tags": ["org-structure", "Meta"]
+    "tags": [
+      "org-structure",
+      "Meta"
+    ],
+    "archived": true
   },
   {
     "name": "Candor: Meta DS Roles Guide",
@@ -1186,7 +1802,11 @@
     "category": "Role Landscape",
     "url": "https://candor.co/articles/interview-prep/data-science-roles-at-facebook-what-they-are-and-how-to-get-one",
     "type": "Guide",
-    "tags": ["Meta", "CDS"]
+    "tags": [
+      "Meta",
+      "CDS"
+    ],
+    "archived": true
   },
   {
     "name": "Microsoft: Designing DS Organization",
@@ -1195,7 +1815,11 @@
     "category": "Role Landscape",
     "url": "https://medium.com/data-science-at-microsoft/designing-a-data-science-organization-ab53a80b1d15",
     "type": "Blog",
-    "tags": ["org-structure", "Microsoft"]
+    "tags": [
+      "org-structure",
+      "Microsoft"
+    ],
+    "archived": true
   },
   {
     "name": "Shanif Dhanani: Embedded vs Centralized",
@@ -1204,7 +1828,11 @@
     "category": "Role Landscape",
     "url": "https://medium.com/@shanif/embedded-vs-centralized-data-science-teams-3035db6803b2",
     "type": "Article",
-    "tags": ["org-structure", "hybrid"]
+    "tags": [
+      "org-structure",
+      "hybrid"
+    ],
+    "archived": true
   },
   {
     "name": "dbt Labs: Centralized vs Decentralized",
@@ -1213,7 +1841,11 @@
     "category": "Role Landscape",
     "url": "https://www.getdbt.com/data-teams/centralized-vs-decentralized/",
     "type": "Guide",
-    "tags": ["org-structure", "evolution"]
+    "tags": [
+      "org-structure",
+      "evolution"
+    ],
+    "archived": true
   },
   {
     "name": "Netflix: Foundation Model for Recommendations",
@@ -1222,7 +1854,12 @@
     "category": "Team Types",
     "url": "https://netflixtechblog.com/foundation-model-for-personalized-recommendation-1a0bd8e02d39",
     "type": "Blog",
-    "tags": ["recommendations", "Netflix"]
+    "tags": [
+      "recommendations",
+      "Netflix"
+    ],
+    "section": "work",
+    "domain": "Recommendations"
   },
   {
     "name": "Netflix: Recommendations Research",
@@ -1232,7 +1869,11 @@
     "domain": "Recommendations",
     "url": "https://research.netflix.com/research-area/recommendations",
     "type": "Research",
-    "tags": ["recommendations", "Netflix"]
+    "tags": [
+      "recommendations",
+      "Netflix"
+    ],
+    "archived": true
   },
   {
     "name": "Athey & Imbens: ML Methods for Economists",
@@ -1241,7 +1882,11 @@
     "category": "ML Fundamentals",
     "url": "https://www.annualreviews.org/doi/abs/10.1146/annurev-economics-080217-053433",
     "type": "Article",
-    "tags": ["ML-economics", "academic"]
+    "tags": [
+      "ML-economics",
+      "academic"
+    ],
+    "section": "interview"
   },
   {
     "name": "Susan Athey: ML Short Course",
@@ -1250,7 +1895,11 @@
     "category": "ML Fundamentals",
     "url": "https://www.gsb.stanford.edu/faculty-research/labs-initiatives/sil/research/methods/ai-machine-learning/short-course",
     "type": "Course",
-    "tags": ["ML-economics", "Stanford"]
+    "tags": [
+      "ML-economics",
+      "Stanford"
+    ],
+    "section": "interview"
   },
   {
     "name": "Matt Sosna: Academia to Data Science",
@@ -1259,7 +1908,11 @@
     "category": "PhD Transition",
     "url": "https://towardsdatascience.com/transitioning-to-data-science-from-academia-93299602e4ba/",
     "type": "Guide",
-    "tags": ["PhD", "transition"]
+    "tags": [
+      "PhD",
+      "transition"
+    ],
+    "archived": true
   },
   {
     "name": "Microsoft Experimentation Platform",
@@ -1268,7 +1921,11 @@
     "category": "Experimentation",
     "url": "https://exp-platform.com/",
     "type": "Guide",
-    "tags": ["Microsoft", "infrastructure"]
+    "tags": [
+      "Microsoft",
+      "infrastructure"
+    ],
+    "section": "interview"
   },
   {
     "name": "Doing Data Science at Uber",
@@ -1277,7 +1934,11 @@
     "category": "Role Landscape",
     "url": "https://www.uber.com/blog/data-science-engineering/",
     "type": "Blog",
-    "tags": ["Uber", "role-profile"]
+    "tags": [
+      "Uber",
+      "role-profile"
+    ],
+    "archived": true
   },
   {
     "name": "Building Uber's DS Platforms",
@@ -1286,7 +1947,11 @@
     "category": "Team Types",
     "url": "https://www.uber.com/blog/building-ubers-data-science-platforms/",
     "type": "Blog",
-    "tags": ["Uber", "platforms"]
+    "tags": [
+      "Uber",
+      "platforms"
+    ],
+    "archived": true
   },
   {
     "name": "Uber Data Science Workbench",
@@ -1295,7 +1960,11 @@
     "category": "Team Types",
     "url": "https://www.uber.com/blog/dsw/",
     "type": "Blog",
-    "tags": ["Uber", "tools"]
+    "tags": [
+      "Uber",
+      "tools"
+    ],
+    "archived": true
   },
   {
     "name": "Netflix DS and Engineering Team",
@@ -1304,7 +1973,11 @@
     "category": "Role Landscape",
     "url": "https://jobs.netflix.com/teams/data-science-and-engineering",
     "type": "Career Portal",
-    "tags": ["Netflix", "team-overview"]
+    "tags": [
+      "Netflix",
+      "team-overview"
+    ],
+    "archived": true
   },
   {
     "name": "Netflix: Experimentation Focus",
@@ -1313,7 +1986,11 @@
     "category": "Experimentation",
     "url": "https://netflixtechblog.com/experimentation-is-a-major-focus-of-data-science-across-netflix-f67923f8e985",
     "type": "Blog",
-    "tags": ["Netflix", "experimentation"]
+    "tags": [
+      "Netflix",
+      "experimentation"
+    ],
+    "section": "interview"
   },
   {
     "name": "Netflix ML Systems (Metaflow)",
@@ -1322,7 +1999,11 @@
     "category": "Team Types",
     "url": "https://netflixtechblog.com/supporting-diverse-ml-systems-at-netflix-2d2e6b6d205d",
     "type": "Blog",
-    "tags": ["Netflix", "ML-infrastructure"]
+    "tags": [
+      "Netflix",
+      "ML-infrastructure"
+    ],
+    "archived": true
   },
   {
     "name": "Airbnb Data University",
@@ -1331,7 +2012,11 @@
     "category": "Role Landscape",
     "url": "https://medium.com/airbnb-engineering/how-airbnb-democratizes-data-science-with-data-university-3eccc71e073a",
     "type": "Blog",
-    "tags": ["Airbnb", "training"]
+    "tags": [
+      "Airbnb",
+      "training"
+    ],
+    "archived": true
   },
   {
     "name": "Meta: Building DS Teams at Scale",
@@ -1340,7 +2025,11 @@
     "category": "Team Types",
     "url": "https://engineering.fb.com/2018/06/12/core-infra/building-data-science-teams-to-have-an-impact-at-scale/",
     "type": "Blog",
-    "tags": ["Meta", "org-structure"]
+    "tags": [
+      "Meta",
+      "org-structure"
+    ],
+    "archived": true
   },
   {
     "name": "Google Research Careers",
@@ -1349,6 +2038,10 @@
     "category": "Role Landscape",
     "url": "https://research.google/careers/",
     "type": "Career Portal",
-    "tags": ["Google", "research"]
+    "tags": [
+      "Google",
+      "research"
+    ],
+    "archived": true
   }
 ]
