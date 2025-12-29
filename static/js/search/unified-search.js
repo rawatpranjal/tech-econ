@@ -195,7 +195,21 @@
         if (!response.ok) throw new Error('Failed to load search index');
         return response.json();
       })
-      .then(function(indexData) {
+      .then(function(data) {
+        // Wrap with config (same format as fallback)
+        var indexData = {
+          version: data.version || 1,
+          documents: data.documents,
+          config: {
+            fields: ['name', 'description', 'category', 'tags', 'best_for'],
+            storeFields: ['name', 'description', 'category', 'url', 'type', 'tags', 'best_for'],
+            searchOptions: {
+              boost: { name: 3, tags: 1.5, best_for: 1.2, description: 1, category: 0.8 },
+              fuzzy: 0.2,
+              prefix: true
+            }
+          }
+        };
         self.searchIndex = indexData;
         if (self.workerReady) {
           self.worker.postMessage({
