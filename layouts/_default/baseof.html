@@ -46,9 +46,8 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
 
-    <!-- AOS (Animate on Scroll) - loaded async to avoid render blocking -->
-    <link rel="preload" href="https://unpkg.com/aos@2.3.4/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"></noscript>
+    <!-- AOS (Animate on Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 </head>
 <body>
     <!-- Skip to Content (Accessibility) -->
@@ -317,13 +316,13 @@
     </script>
 
     <!-- Supabase Client -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
     <!-- Custom JS -->
-    <script src="{{ "js/theme.js" | relURL }}" defer></script>
-    <script src="{{ "js/supabase-client.js" | relURL }}" defer></script>
-    <script src="{{ "js/auth-ui.js" | relURL }}" defer></script>
-    <script src="{{ "js/favorites-ui.js" | relURL }}" defer></script>
+    <script src="{{ "js/theme.js" | relURL }}"></script>
+    <script src="{{ "js/supabase-client.js" | relURL }}"></script>
+    <script src="{{ "js/auth-ui.js" | relURL }}"></script>
+    <script src="{{ "js/favorites-ui.js" | relURL }}"></script>
 
     <!-- Fuse.js for page search -->
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.0.0"></script>
@@ -334,19 +333,17 @@
     <script src="{{ "js/search/unified-search.js" | relURL }}"></script>
     <script src="{{ "js/toggle.js" | relURL }}"></script>
 
-    <!-- AOS Init - wait for deferred script to load -->
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+    <!-- AOS Init -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <script>
-        window.addEventListener('load', function() {
-            if (typeof AOS !== 'undefined') {
-                AOS.init({
-                    duration: 600,
-                    easing: 'ease-out-cubic',
-                    once: true,
-                    offset: 50
-                });
-            }
-        });
+        try {
+            AOS.init({
+                duration: 600,
+                easing: 'ease-out-cubic',
+                once: true,
+                offset: 50
+            });
+        } catch(e) {}
     </script>
 
     <!-- Reading Progress Bar -->
