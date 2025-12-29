@@ -101,6 +101,85 @@
 
     <div id="result-count" class="result-count">{{ len .Site.Data.career }} resources</div>
 
+    <!-- Essential Reading Section -->
+    <section class="curated-section essential-reading-section" id="essential-reading">
+        <div class="curated-header">
+            <span class="curated-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+            </span>
+            <h2 class="curated-title">Start Here: Essential Reading</h2>
+        </div>
+        <p class="curated-subtitle">New to tech careers for economists? Begin with these foundational resources.</p>
+        <ol class="essential-list">
+            {{ $essentialNum := 0 }}
+            {{ range $.Site.Data.career }}
+            {{ if eq .tier "essential" }}
+            {{ $essentialNum = add $essentialNum 1 }}
+            <li class="essential-item" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="{{ .category }}" data-stage="{{ .stage }}">
+                <span class="essential-number">{{ $essentialNum }}</span>
+                <div class="essential-content">
+                    <div class="essential-header">
+                        <img class="resource-favicon"
+                             src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32"
+                             alt=""
+                             loading="lazy"
+                             onerror="this.style.display='none'">
+                        <a href="{{ .url }}" target="_blank" rel="noopener" class="essential-name">{{ .name }}</a>
+                        <span class="resource-type">{{ .type }}</span>
+                    </div>
+                    <p class="essential-desc">{{ .description }}</p>
+                </div>
+            </li>
+            {{ end }}
+            {{ end }}
+        </ol>
+    </section>
+
+    <!-- What Teams Do Section -->
+    <section class="curated-section domains-section" id="what-teams-do">
+        <div class="curated-header">
+            <span class="curated-icon">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                </svg>
+            </span>
+            <h2 class="curated-title">What Teams Do</h2>
+        </div>
+        <p class="curated-subtitle">One exemplar article per team domain to understand different roles.</p>
+        <div class="domains-grid">
+            {{ $domainOrder := slice "Pricing" "Experimentation" "Ads" "Trust" "Forecasting" "Recommendations" }}
+            {{ $domainIcons := dict
+                "Pricing" "dollar-sign"
+                "Experimentation" "beaker"
+                "Ads" "megaphone"
+                "Trust" "shield"
+                "Forecasting" "trending-up"
+                "Recommendations" "thumbs-up"
+            }}
+            {{ range $domain := $domainOrder }}
+            {{ range $.Site.Data.career }}
+            {{ if eq .domain $domain }}
+            <a href="{{ .url }}" target="_blank" rel="noopener" class="domain-card" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="{{ .category }}" data-stage="{{ .stage }}">
+                <div class="domain-badge">{{ $domain }}</div>
+                <div class="domain-content">
+                    <img class="resource-favicon"
+                         src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32"
+                         alt=""
+                         loading="lazy"
+                         onerror="this.style.display='none'">
+                    <span class="domain-name">{{ .name }}</span>
+                </div>
+                <p class="domain-desc">{{ .description }}</p>
+            </a>
+            {{ end }}
+            {{ end }}
+            {{ end }}
+        </div>
+    </section>
+
     <!-- Career Grid organized by Stage -->
     <div id="career-view" class="resources-grid career-stages-grid">
         {{ range $stage := $stageOrder }}

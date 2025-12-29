@@ -4,6 +4,7 @@
     "description": "JEP article 'Economists (and Economics) in Tech Companies' - foundational reading on why tech hires economists. Amazon employs 150+ PhD economists. Focuses on causal inference, market design, incentives. Full PDF: https://gsb-faculty.stanford.edu/susan-athey/files/2022/04/economists_in_tech.pdf",
     "stage": "Strategy",
     "category": "Why Tech",
+    "tier": "essential",
     "url": "https://www.aeaweb.org/articles?id=10.1257%2Fjep.33.1.209",
     "type": "Article",
     "tags": ["foundational", "academic"]
@@ -13,6 +14,7 @@
     "description": "Crowdsourced tech compensation data. Compare salaries across companies, levels, locations. Essential for understanding tech pay.",
     "stage": "Strategy",
     "category": "Why Tech",
+    "tier": "essential",
     "url": "https://www.levels.fyi/",
     "type": "Tool",
     "tags": ["salary-data", "essential"]
@@ -31,6 +33,7 @@
     "description": "Stanford PhD to Google/Shopify. Interview experiences at Google, Amazon, Facebook, Uber. 4-part comprehensive guide.",
     "stage": "Strategy",
     "category": "Role Landscape",
+    "tier": "essential",
     "url": "https://scarlet-chen.medium.com/",
     "type": "Blog",
     "tags": ["PhD", "first-hand-experience"]
@@ -130,6 +133,7 @@
     "description": "LinkedIn guide on navigating tech's job market. Networking tips, role types, expectations. Key advice: don't be first economist.",
     "stage": "Strategy",
     "category": "PhD Transition",
+    "tier": "essential",
     "url": "https://www.linkedin.com/pulse/finding-tech-job-part-1-guide-econ-phds-some-useful-info-rose-tan",
     "type": "Guide",
     "tags": ["PhD", "networking"]
@@ -760,6 +764,7 @@
     "description": "5 key areas: ads design, ROI estimation, marketplace incentives, causal inference, equilibrium effects.",
     "stage": "Strategy",
     "category": "Role Landscape",
+    "tier": "essential",
     "url": "https://hbr.org/2019/02/why-tech-companies-hire-so-many-economists",
     "type": "Article",
     "tags": ["HBR", "overview"]
@@ -886,6 +891,7 @@
     "description": "Multiplicative surge isn't incentive-compatible in dynamic settings; structured pricing mechanism proposed.",
     "stage": "Strategy",
     "category": "Team Types",
+    "domain": "Pricing",
     "url": "https://eng.uber.com/research/driver-surge-pricing/",
     "type": "Blog",
     "tags": ["pricing", "Uber"]
@@ -1048,6 +1054,7 @@
     "description": "Google/Amazon 2017: log when ad would show but doesn't, creating cost-free control groups.",
     "stage": "Strategy",
     "category": "Team Types",
+    "domain": "Ads",
     "url": "https://tinuiti.com/blog/measurement/ghost-ads/",
     "type": "Article",
     "tags": ["ads", "incrementality"]
@@ -1084,6 +1091,7 @@
     "description": "Spotify: 75-80% of teams perform experimentation. Discover Weekly validated through experiments.",
     "stage": "Strategy",
     "category": "Team Types",
+    "domain": "Experimentation",
     "url": "https://cxl.com/blog/growth-experimentation-culture/",
     "type": "Guide",
     "tags": ["growth", "Spotify"]
@@ -1093,6 +1101,7 @@
     "description": "1,000+ transaction features in <100ms with only 0.1% false positive rate on billions of payments.",
     "stage": "Strategy",
     "category": "Team Types",
+    "domain": "Trust",
     "url": "https://stripe.com/blog/how-we-built-it-stripe-radar",
     "type": "Blog",
     "tags": ["fraud", "Stripe"]
@@ -1129,6 +1138,7 @@
     "description": "Model-based, statistical (ARIMA, Holt-Winters), and ML approaches for demand forecasting.",
     "stage": "Strategy",
     "category": "Team Types",
+    "domain": "Forecasting",
     "url": "https://www.uber.com/blog/forecasting-introduction/",
     "type": "Blog",
     "tags": ["forecasting", "Uber"]
@@ -1219,6 +1229,7 @@
     "description": "80%+ of content discovered through recommendations, 20 years of refinement by hundreds of engineers.",
     "stage": "Strategy",
     "category": "Team Types",
+    "domain": "Recommendations",
     "url": "https://research.netflix.com/research-area/recommendations",
     "type": "Research",
     "tags": ["recommendations", "Netflix"]
