@@ -16,8 +16,8 @@
   // Configuration
   var CONFIG = {
     debounceMs: 150,
-    maxResultsPerType: 5,
-    maxTotalResults: 20,
+    maxResultsPerType: 10,
+    maxTotalResults: 50,
     recentSearchesKey: 'global-recent-searches',
     maxRecentSearches: 5,
     suggestions: ['causal inference', 'experimentation', 'pricing', 'machine learning', 'A/B testing'],
