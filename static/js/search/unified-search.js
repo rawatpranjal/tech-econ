@@ -648,6 +648,12 @@
         } else {
           self.renderGlobalResults(self.currentResults, query);
         }
+      })
+      .catch(function(error) {
+        console.error('[UnifiedSearch] Search failed:', error);
+        self.hideLoading();
+        self.showEmpty();
+        self.flatResults = [];
       });
   };
 
