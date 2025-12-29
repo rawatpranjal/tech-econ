@@ -144,9 +144,79 @@
         </a>
     </div>
 
+    <!-- Stats Table -->
+    <div class="stats-section" data-aos="fade-up">
+        <h3>What's Inside</h3>
+        <table class="stats-table">
+            <tbody>
+                <tr><td>Python Packages</td><td>{{ len .Site.Data.packages }}</td></tr>
+                <tr><td>Datasets</td><td>{{ len .Site.Data.datasets }}</td></tr>
+                <tr><td>Papers</td><td>{{ $paperCount }} across {{ len .Site.Data.papers.topics }} topics</td></tr>
+                <tr><td>Learning Resources</td><td>{{ len .Site.Data.resources }}</td></tr>
+                <tr><td>Talks & Podcasts</td><td>{{ len .Site.Data.talks }}</td></tr>
+                <tr><td>Books</td><td>{{ len .Site.Data.books }}</td></tr>
+                <tr><td>Career Resources</td><td>{{ len .Site.Data.career }}</td></tr>
+                <tr><td>Community & Events</td><td>{{ len .Site.Data.community }}</td></tr>
+                <tr><td>Getting Started Roadmaps</td><td>{{ len .Site.Data.roadmaps }}</td></tr>
+                <tr class="total"><td><strong>Total</strong></td><td><strong>{{ $total }}</strong></td></tr>
+            </tbody>
+        </table>
+    </div>
+
     <!-- Footer -->
     <footer class="homepage-footer">
         <p>Built for tech economists. <a href="https://github.com/rawatpranjal/tech-econ" target="_blank">Contribute on GitHub</a></p>
     </footer>
 </div>
+
+<style>
+.stats-section {
+    max-width: 500px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.stats-section h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+}
+
+.stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+}
+
+.stats-table td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.stats-table tr:last-child td {
+    border-bottom: none;
+}
+
+.stats-table td:first-child {
+    color: var(--text-muted);
+}
+
+.stats-table td:last-child {
+    text-align: right;
+    color: var(--text-primary);
+    font-variant-numeric: tabular-nums;
+}
+
+.stats-table tr.total {
+    background: var(--bg-hover);
+}
+
+.stats-table tr.total td {
+    color: var(--accent);
+}
+</style>
 {{ end }}
