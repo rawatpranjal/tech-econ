@@ -1755,27 +1755,201 @@
           "application": "Stickiness, frequency, retention loops",
           "papers": [
             {
-              "title": "Hooked: How to Build Habit-Forming Products",
-              "authors": "Nir Eyal",
-              "year": 2014,
-              "description": "The Hook Model framework for designing engaging product experiences.",
-              "url": "https://www.nirandfar.com/hooked/",
+              "title": "A Behavior Model for Persuasive Design",
+              "authors": "B.J. Fogg",
+              "year": 2009,
+              "description": "Foundational paper introducing the Fogg Behavior Model: Behavior = Motivation × Ability × Trigger. The academic framework underlying 'Hooked' and most digital habit formation research. Over 4,500 citations; essential conceptual foundation for product designers.",
+              "url": "https://dl.acm.org/doi/abs/10.1145/1541948.1541999",
               "tags": [
                 "Subscriptions & Retention",
                 "Engagement & Habit Formation"
               ]
             },
             {
-              "title": "Habits: A Repeat Performance",
-              "authors": "Wendy Wood, David Neal",
-              "year": 2007,
-              "description": "Psychology research on habit formation, cues, and behavior change.",
-              "url": "https://journals.sagepub.com/doi/abs/10.1111/j.1467-8721.2006.00435.x",
+              "title": "Does Gamification Work? — A Literature Review of Empirical Studies on Gamification",
+              "authors": "Juho Hamari, Jonna Koivisto, Harri Sarsa",
+              "year": 2014,
+              "description": "Seminal literature review establishing empirical evidence framework for gamification effects. Finds gamification provides positive effects on engagement but is highly context-dependent. Over 4,000 citations; the definitive academic synthesis on gamification.",
+              "url": "https://ieeexplore.ieee.org/document/6758978",
               "tags": [
                 "Subscriptions & Retention",
                 "Engagement & Habit Formation"
-              ],
-              "citations": 524
+              ]
+            },
+            {
+              "title": "Measuring the Impact of Crowdsourcing Features on Mobile App User Engagement and Retention: A Randomized Field Experiment",
+              "authors": "Zhuojun Gu, Ravi Bapna, Jason Chan, Alok Gupta",
+              "year": 2022,
+              "description": "Rigorous RCT examining how user-generated content features affect app engagement. Finds content submission reduces session-ending hazard by 11% and app abandonment by 14%. Methodological gold standard for engagement research.",
+              "url": "https://pubsonline.informs.org/doi/abs/10.1287/mnsc.2021.3960",
+              "tags": [
+                "Subscriptions & Retention",
+                "Engagement & Habit Formation"
+              ]
+            },
+            {
+              "title": "Digital Interventions and Habit Formation in Educational Technology",
+              "authors": "Keshav Agrawal, Susan Athey, Ayush Kanodia, Emil Palikot",
+              "year": 2024,
+              "description": "Large-scale randomized experiment (10,000 learners) showing contest-based interventions increase engagement by 45% and create persistent habit formation effects (75% higher engagement 12 weeks post-intervention). Cutting-edge field experimental evidence from leading economists.",
+              "url": "https://arxiv.org/abs/2310.10850",
+              "tags": [
+                "Subscriptions & Retention",
+                "Engagement & Habit Formation"
+              ]
+            },
+            {
+              "title": "Empirical Support for a Causal Relationship Between Gamification and Learning Outcomes",
+              "authors": "Paul Denny, Fiona McDonald, Ruth Empson, Philip Kelly, Andrew Petersen",
+              "year": 2018,
+              "description": "Provides causal evidence linking gamification to outcomes mediated by behavioral changes. Validates Landers' theory of gamified learning with empirical evidence—important for understanding mechanism design.",
+              "url": "https://dl.acm.org/doi/abs/10.1145/3173574.3173885",
+              "tags": [
+                "Subscriptions & Retention",
+                "Engagement & Habit Formation"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "survival-analysis",
+          "name": "Survival Analysis for Subscriptions",
+          "application": "Hazard models, time-to-event, right-censoring",
+          "papers": [
+            {
+              "title": "Customer Attrition Analysis for Financial Services Using Proportional Hazard Models",
+              "authors": "Dirk Van den Poel, Bart Larivière",
+              "year": 2004,
+              "description": "Comprehensive Cox proportional hazards application to customer churn with time-varying covariates. Demonstrates how demographic, environmental, and behavioral variables predict retention. Over 600 citations; foundational for survival analysis in marketing.",
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S0377221703001068",
+              "tags": [
+                "Subscriptions & Retention",
+                "Survival Analysis for Subscriptions"
+              ]
+            },
+            {
+              "title": "How to Project Customer Retention",
+              "authors": "Peter S. Fader, Bruce G.S. Hardie",
+              "year": 2007,
+              "description": "Develops the shifted-beta-geometric (sBG) probability model for contractual settings. Accounts for customer heterogeneity in retention rates and provides forecasts for tenure, lifetime value, and customer base valuation. Essential methodology for subscription businesses.",
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S1094996806700329",
+              "tags": [
+                "Subscriptions & Retention",
+                "Survival Analysis for Subscriptions"
+              ]
+            },
+            {
+              "title": "A Competing Risks Model Based on Latent Dirichlet Allocation for Predicting Churn Reasons",
+              "authors": "Dorenda Slof, Flavius Frasincar, Veljko Matsiiw",
+              "year": 2021,
+              "description": "Novel competing risks survival model predicting both churn propensity and churn reason. Incorporates text analytics (LDA) from customer service transcripts to distinguish service-provider-driven versus competitor-driven churn. Modern integration of NLP with survival analysis.",
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167923621000543",
+              "tags": [
+                "Subscriptions & Retention",
+                "Survival Analysis for Subscriptions"
+              ]
+            },
+            {
+              "title": "Random Survival Forests with Competing Risks Framework",
+              "authors": "Applied to Subscription Churn",
+              "year": 2021,
+              "description": "Combines machine learning (random forests) with competing risks methodology. Computes distinct risk profiles for different churn causes and identifies relationships between risks and customer behavior for targeted interventions.",
+              "url": "https://www.tandfonline.com/doi/abs/10.1080/01605682.2020.1843982",
+              "tags": [
+                "Subscriptions & Retention",
+                "Survival Analysis for Subscriptions"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "customer-base-analysis",
+          "name": "Customer Base Analysis & Cohort Methods",
+          "application": "Customer equity, firm valuation, cohort analysis",
+          "papers": [
+            {
+              "title": "Manage Marketing by the Customer Equity Test",
+              "authors": "Robert C. Blattberg, John Deighton",
+              "year": 1996,
+              "description": "Introduces the customer equity concept and decision calculus for balancing acquisition versus retention spending. Origins of viewing customers as assets. Over 1,000 citations; bridges practitioner and academic perspectives.",
+              "url": "https://hbr.org/1996/07/manage-marketing-by-the-customer-equity-test",
+              "tags": [
+                "Subscriptions & Retention",
+                "Customer Base Analysis & Cohort Methods"
+              ]
+            },
+            {
+              "title": "Return on Marketing: Using Customer Equity to Focus Marketing Strategy",
+              "authors": "Roland T. Rust, Katherine N. Lemon, Valarie A. Zeithaml",
+              "year": 2004,
+              "description": "Unified strategic framework enabling marketing options to be traded off based on projected financial return, operationalized as change in customer equity. Key contribution linking marketing decisions to shareholder value through customer equity.",
+              "url": "https://journals.sagepub.com/doi/abs/10.1509/jmkg.68.1.109.24030",
+              "tags": [
+                "Subscriptions & Retention",
+                "Customer Base Analysis & Cohort Methods"
+              ]
+            },
+            {
+              "title": "Valuing Customers",
+              "authors": "Sunil Gupta, Donald R. Lehmann, Jennifer Ames Stuart",
+              "year": 2004,
+              "description": "Demonstrates how CLV can value firms including high-growth firms with negative earnings. Shows 1% improvement in retention improves firm value by 3-7%, while margin improvement yields only ~1% increase. Validated on Amazon, eBay, Capital One, E*Trade data.",
+              "url": "https://journals.sagepub.com/doi/abs/10.1509/jmkr.41.1.7.25084",
+              "tags": [
+                "Subscriptions & Retention",
+                "Customer Base Analysis & Cohort Methods"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "network-effects-retention",
+          "name": "Network Effects on Retention",
+          "application": "Social contagion, peer effects, network churn",
+          "papers": [
+            {
+              "title": "Social Effects on Customer Retention",
+              "authors": "Irit Nitzan, Barak Libai",
+              "year": 2011,
+              "description": "Landmark study using data from 1 million cellular customers showing exposure to a defecting neighbor increases churn hazard by 80%. Establishes that social contagion affects retention similarly to adoption. Foundational paper for network effects on churn.",
+              "url": "https://journals.sagepub.com/doi/abs/10.1509/jm.75.6.24",
+              "tags": [
+                "Subscriptions & Retention",
+                "Network Effects on Retention"
+              ]
+            },
+            {
+              "title": "Social Interactions in Customer Churn Decisions: The Impact of Relationship Directionality",
+              "authors": "Michael Haenlein",
+              "year": 2013,
+              "description": "Extends social effects research by analyzing directed networks. Finds that only contacts the customer initiates communication with influence churn decisions. Demonstrates importance of relationship directionality and recency of neighbor churn.",
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S0167811613000487",
+              "tags": [
+                "Subscriptions & Retention",
+                "Network Effects on Retention"
+              ]
+            },
+            {
+              "title": "Exploring Peer Effects Associated with User Retention in a Socially Connected Business",
+              "authors": "Yijun Chen, Nitin Mehta",
+              "year": 2025,
+              "description": "Uses gym membership data to study bidirectional peer effects in usage and churn. When high-centrality users churn, cascade effects increase average un-subscription by 7.2% within 6 months. Provides targeting guidance: short-term strategies should target low-centrality users; long-term should target high-centrality.",
+              "url": "https://pubsonline.informs.org/doi/abs/10.1287/mksc.2023.1459",
+              "tags": [
+                "Subscriptions & Retention",
+                "Network Effects on Retention"
+              ]
+            },
+            {
+              "title": "In Pursuit of Enhanced Customer Retention Management: Review, Key Issues, and Future Directions",
+              "authors": "Eva Ascarza, Scott A. Neslin, Oded Netzer, Zachery Anderson, Peter S. Fader, Sunil Gupta, Bruce G.S. Hardie, Aurélie Lemmens, Barak Libai, David Neal, Foster Provost, Rom Schrift",
+              "year": 2018,
+              "description": "Comprehensive review from 12 leading CRM scholars covering social connectivity's role in retention. Synthesizes literature on network externalities in multiplayer gaming, communications, and shared services. Identifies research frontier for network-oriented retention.",
+              "url": "https://link.springer.com/article/10.1007/s40547-017-0080-0",
+              "tags": [
+                "Subscriptions & Retention",
+                "Network Effects on Retention"
+              ]
             }
           ]
         }
