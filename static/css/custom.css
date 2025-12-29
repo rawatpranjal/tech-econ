@@ -3028,6 +3028,150 @@ a:hover {
     font-style: italic;
 }
 
+/* Calendar Grid Styles (Google Calendar-style) */
+.calendar-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    margin-bottom: 1px;
+    background: var(--border-color);
+}
+
+.calendar-header > div {
+    background: var(--bg-secondary);
+    padding: 0.75rem 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.calendar-days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background: var(--border-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.calendar-day {
+    min-height: 100px;
+    background: var(--bg-primary);
+    padding: 0.5rem;
+    position: relative;
+    transition: background-color 0.15s ease;
+}
+
+.calendar-day:hover {
+    background: var(--bg-hover);
+}
+
+.calendar-day.other-month {
+    background: var(--bg-secondary);
+    opacity: 0.6;
+}
+
+.calendar-day.other-month:hover {
+    opacity: 0.8;
+}
+
+.day-number {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.day-events {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.event-pill {
+    display: block;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: white;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.event-pill:hover {
+    opacity: 0.9;
+    transform: translateX(2px);
+}
+
+.more-events {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    padding: 2px 6px;
+}
+
+/* Calendar Responsive */
+@media (max-width: 900px) {
+    .calendar-day {
+        min-height: 80px;
+        padding: 0.35rem;
+    }
+
+    .event-pill {
+        font-size: 0.65rem;
+        padding: 1px 4px;
+    }
+
+    .day-number {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .calendar-day {
+        min-height: 60px;
+        padding: 0.25rem;
+    }
+
+    .calendar-header > div {
+        padding: 0.5rem 0.25rem;
+        font-size: 0.75rem;
+    }
+
+    .event-pill {
+        font-size: 0.6rem;
+        padding: 1px 3px;
+    }
+
+    .day-number {
+        font-size: 0.7rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .more-events {
+        font-size: 0.55rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .calendar-header > div {
+        font-size: 0.65rem;
+    }
+
+    .calendar-day {
+        min-height: 50px;
+    }
+
+    .day-events {
+        gap: 1px;
+    }
+}
+
 /* Map View Styles */
 #conference-map {
     height: 500px;

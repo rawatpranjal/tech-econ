@@ -214,18 +214,37 @@
         </div>
     </div>
 
-    <!-- Month View (hidden by default) -->
+    <!-- Month View (hidden by default) - Google Calendar style grid -->
     <div id="month-view" style="display: none;">
         <div class="month-nav">
             <button id="prev-month" aria-label="Previous month">←</button>
-            <h2 id="current-month-title">January</h2>
+            <h2 id="current-month-title">January 2025</h2>
             <button id="next-month" aria-label="Next month">→</button>
         </div>
-        <div id="month-events-container" class="cards-row">
-            <!-- Events for selected month will be shown here -->
+
+        <!-- Day of week headers -->
+        <div class="calendar-header">
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
         </div>
+
+        <!-- Calendar days grid (6 rows x 7 cols = 42 cells) -->
+        <div id="calendar-days" class="calendar-days-grid">
+            <!-- Dynamically populated by JavaScript -->
+        </div>
+
         <p id="no-month-events" class="no-events" style="display: none;">No conferences scheduled for this month.</p>
     </div>
+
+    <!-- Conference Data for Calendar JavaScript -->
+    <script id="conference-dates-data" type="application/json">
+    [{{ $first := true }}{{ range .Site.Data.community }}{{ if and (eq .category "Conferences") .start_date }}{{ if not $first }},{{ end }}{{ $first = false }}{"name":"{{ .name }}","url":"{{ .url }}","start_date":"{{ .start_date }}","end_date":"{{ .end_date }}","subcategory":"{{ .subcategory | default "" }}","location":"{{ .location | htmlEscape }}"}{{ end }}{{ end }}]
+    </script>
 
     <!-- Map View (hidden by default) -->
     <div id="map-view" style="display: none;">
@@ -465,69 +484,140 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Month navigation
+    // Calendar state
     const months = ['January', 'February', 'March', 'April', 'May', 'June',
                     'July', 'August', 'September', 'October', 'November', 'December'];
-    let currentMonthIndex = new Date().getMonth();
+    let currentYear = 2025;
+    let currentMonthIndex = 0; // Start at January 2025
     const monthTitle = document.getElementById('current-month-title');
-    const monthEventsContainer = document.getElementById('month-events-container');
+    const calendarDaysContainer = document.getElementById('calendar-days');
     const noEventsMsg = document.getElementById('no-month-events');
 
-    // Get all conference data from year view
-    function getConferencesForMonth(monthName) {
-        const events = document.querySelectorAll('#year-view .month-event[data-month="' + monthName + '"]');
-        return Array.from(events);
+    // Load conference dates data
+    let conferenceData = [];
+    const confDataEl = document.getElementById('conference-dates-data');
+    if (confDataEl) {
+        try {
+            conferenceData = JSON.parse(confDataEl.textContent);
+        } catch (e) {
+            console.error('Error parsing conference dates:', e);
+        }
     }
 
-    // Update month view with conferences
-    function updateMonthView() {
-        const monthName = months[currentMonthIndex];
-        monthTitle.textContent = monthName;
-        monthEventsContainer.innerHTML = '';
+    // Get events for a specific date
+    function getEventsForDate(year, month, day) {
+        const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        return conferenceData.filter(conf => {
+            const start = conf.start_date;
+            const end = conf.end_date;
+            return dateStr >= start && dateStr <= end;
+        });
+    }
 
-        const events = getConferencesForMonth(monthName);
+    // Get color for subcategory
+    function getEventColor(subcategory) {
+        return subcategoryColors[subcategory] || '#6b7280';
+    }
 
-        if (events.length === 0) {
-            noEventsMsg.style.display = 'block';
-            monthEventsContainer.style.display = 'none';
-        } else {
-            noEventsMsg.style.display = 'none';
-            monthEventsContainer.style.display = 'grid';
+    // Render calendar grid for current month
+    function renderCalendarMonth() {
+        const year = currentYear;
+        const month = currentMonthIndex;
 
-            events.forEach(event => {
-                const link = event.querySelector('a');
-                const tooltip = event.querySelector('.event-tooltip');
-                const subcatClass = Array.from(event.classList).find(c => c.startsWith('event-') && c !== 'event-tooltip');
+        // Update title
+        monthTitle.textContent = `${months[month]} ${year}`;
 
-                const card = document.createElement('div');
-                card.className = 'resource-card month-detail-card';
+        // Clear grid
+        calendarDaysContainer.innerHTML = '';
 
-                // Extract tooltip data
-                const title = tooltip ? tooltip.querySelector('.tooltip-title').textContent : link.textContent;
-                const metaSpans = tooltip ? tooltip.querySelectorAll('.tooltip-meta span') : [];
-                const badge = tooltip ? tooltip.querySelector('.tooltip-badge') : null;
+        // Get first day of month and total days
+        const firstDay = new Date(year, month, 1).getDay(); // 0 = Sunday
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        const daysInPrevMonth = new Date(year, month, 0).getDate();
 
-                let metaHtml = '';
-                metaSpans.forEach(span => {
-                    metaHtml += '<span class="meta-item">' + span.textContent + '</span>';
+        // Create 42 cells (6 weeks x 7 days)
+        let dayNum = 1;
+        let nextMonthDay = 1;
+        let hasEvents = false;
+
+        for (let i = 0; i < 42; i++) {
+            const cell = document.createElement('div');
+            cell.className = 'calendar-day';
+
+            let displayDay;
+            let isCurrentMonth = true;
+            let cellYear = year;
+            let cellMonth = month;
+
+            if (i < firstDay) {
+                // Previous month days
+                displayDay = daysInPrevMonth - firstDay + i + 1;
+                isCurrentMonth = false;
+                cellMonth = month - 1;
+                if (cellMonth < 0) {
+                    cellMonth = 11;
+                    cellYear = year - 1;
+                }
+                cell.classList.add('other-month');
+            } else if (dayNum > daysInMonth) {
+                // Next month days
+                displayDay = nextMonthDay++;
+                isCurrentMonth = false;
+                cellMonth = month + 1;
+                if (cellMonth > 11) {
+                    cellMonth = 0;
+                    cellYear = year + 1;
+                }
+                cell.classList.add('other-month');
+            } else {
+                displayDay = dayNum++;
+            }
+
+            // Day number
+            const dayNumEl = document.createElement('span');
+            dayNumEl.className = 'day-number';
+            dayNumEl.textContent = displayDay;
+            cell.appendChild(dayNumEl);
+
+            // Get events for this day
+            const events = getEventsForDate(cellYear, cellMonth, displayDay);
+            if (events.length > 0 && isCurrentMonth) {
+                hasEvents = true;
+                const eventsContainer = document.createElement('div');
+                eventsContainer.className = 'day-events';
+
+                events.slice(0, 3).forEach(event => {
+                    const pill = document.createElement('a');
+                    pill.className = 'event-pill';
+                    pill.href = event.url;
+                    pill.target = '_blank';
+                    pill.rel = 'noopener';
+                    pill.textContent = event.name;
+                    pill.style.backgroundColor = getEventColor(event.subcategory);
+                    pill.title = `${event.name}\n${event.location}\n${event.start_date} to ${event.end_date}`;
+                    eventsContainer.appendChild(pill);
                 });
 
-                card.innerHTML = `
-                    <div class="card-header">
-                        <h3 class="resource-name">
-                            <a href="${link.href}" target="_blank" rel="noopener">${title}</a>
-                        </h3>
-                    </div>
-                    <div class="resource-meta">${metaHtml}</div>
-                    <div class="card-footer">
-                        ${badge ? '<span class="subcategory-badge">' + badge.textContent + '</span>' : ''}
-                        <a href="${link.href}" target="_blank" class="link-btn">Visit</a>
-                    </div>
-                `;
+                if (events.length > 3) {
+                    const more = document.createElement('span');
+                    more.className = 'more-events';
+                    more.textContent = `+${events.length - 3} more`;
+                    eventsContainer.appendChild(more);
+                }
 
-                monthEventsContainer.appendChild(card);
-            });
+                cell.appendChild(eventsContainer);
+            }
+
+            calendarDaysContainer.appendChild(cell);
         }
+
+        // Show/hide no events message
+        noEventsMsg.style.display = hasEvents ? 'none' : 'block';
+    }
+
+    // Update month view wrapper
+    function updateMonthView() {
+        renderCalendarMonth();
     }
 
     // View toggle handlers
@@ -567,14 +657,22 @@ document.addEventListener('DOMContentLoaded', function() {
     btnMap.addEventListener('click', () => setActiveView('map'));
     btnCards.addEventListener('click', () => setActiveView('cards'));
 
-    // Month navigation
+    // Month navigation with year support
     document.getElementById('prev-month').addEventListener('click', function() {
-        currentMonthIndex = (currentMonthIndex - 1 + 12) % 12;
+        currentMonthIndex--;
+        if (currentMonthIndex < 0) {
+            currentMonthIndex = 11;
+            currentYear--;
+        }
         updateMonthView();
     });
 
     document.getElementById('next-month').addEventListener('click', function() {
-        currentMonthIndex = (currentMonthIndex + 1) % 12;
+        currentMonthIndex++;
+        if (currentMonthIndex > 11) {
+            currentMonthIndex = 0;
+            currentYear++;
+        }
         updateMonthView();
     });
 });
