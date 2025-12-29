@@ -1,8 +1,25 @@
 // Favorites UI for Tech-Econ
-// Heart button interactions and favorites page
+// Heart button interactions and favorites page - LocalStorage based
 
 (function() {
     'use strict';
+
+    // Simple toast notification
+    function showToast(message, type) {
+        const existing = document.querySelector('.toast-notification');
+        if (existing) existing.remove();
+
+        const toast = document.createElement('div');
+        toast.className = 'toast-notification' + (type === 'error' ? ' toast-error' : '');
+        toast.textContent = message;
+        document.body.appendChild(toast);
+
+        setTimeout(() => toast.classList.add('show'), 10);
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => toast.remove(), 300);
+        }, 2500);
+    }
 
     // Add favorite buttons to all cards
     function initFavoriteButtons() {
@@ -39,6 +56,15 @@
 
             if (!itemId) return;
 
+            // Get item data for storage
+            const itemData = {
+                name: itemId,
+                url: card.querySelector('a[href]')?.href || '',
+                category: itemType
+            };
+            const desc = card.querySelector('.card-desc, .description, p');
+            if (desc) itemData.description = desc.textContent.trim().substring(0, 200);
+
             // Create favorite button
             const btn = document.createElement('button');
             btn.className = 'favorite-btn';
@@ -66,25 +92,20 @@
                 card.appendChild(btn);
             }
 
-            // Handle click
-            btn.addEventListener('click', async function(e) {
+            // Handle click - no auth needed!
+            btn.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
 
-                if (!window.TechEconAuth || !window.TechEconAuth.isLoggedIn()) {
-                    window.TechEconAuth.showModal();
+                if (!window.TechEconFavorites) {
+                    console.error('Favorites module not loaded');
                     return;
                 }
 
-                try {
-                    const isFav = await window.TechEconFavorites.toggle(itemType, itemId);
-                    btn.classList.toggle('favorited', isFav);
-                    btn.setAttribute('aria-pressed', isFav);
-                    showToast(isFav ? 'Added to favorites' : 'Removed from favorites');
-                } catch (err) {
-                    console.error('Favorite error:', err);
-                    showToast('Error updating favorite', 'error');
-                }
+                const isFav = window.TechEconFavorites.toggle(itemType, itemId, itemData);
+                btn.classList.toggle('favorited', isFav);
+                btn.setAttribute('aria-pressed', isFav);
+                showToast(isFav ? 'Added to favorites' : 'Removed from favorites');
             });
 
             // Check initial state
@@ -99,9 +120,6 @@
     function initFavoritesPage() {
         const container = document.getElementById('favorites-list');
         if (!container) return;
-
-        // Track if we've loaded favorites
-        let favoritesLoaded = false;
 
         // Load all data for lookups
         let allData = {};
@@ -144,26 +162,26 @@
 
         // Render a single favorite card
         function renderCard(fav, item) {
-            const name = item?.name || item?.title || fav.item_id;
-            const desc = item?.description || '';
-            const url = item?.url || item?.link || '#';
-            const category = item?.category || item?.type || fav.item_type;
+            const name = item?.name || item?.title || fav.data?.name || fav.id;
+            const desc = item?.description || fav.data?.description || '';
+            const url = item?.url || item?.link || fav.data?.url || '#';
+            const category = item?.category || item?.type || fav.data?.category || fav.type;
             const favicon = getFavicon(url);
-            const escapedId = fav.item_id.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+            const escapedId = fav.id.replace(/'/g, "\\'").replace(/"/g, '&quot;');
 
             return `
-                <div class="favorite-card" data-type="${fav.item_type}" data-id="${fav.item_id}">
+                <div class="favorite-card" data-type="${fav.type}" data-id="${fav.id}">
                     <div class="card-header">
                         ${favicon ? `<img class="resource-favicon" src="${favicon}" alt="" loading="lazy" onerror="this.style.display='none'">` : ''}
                         <h3 class="card-title">
                             <a href="${url}" target="_blank" rel="noopener">${name}</a>
                         </h3>
-                        <span class="type-badge type-${fav.item_type}">${fav.item_type}</span>
+                        <span class="type-badge type-${fav.type}">${fav.type}</span>
                     </div>
                     ${desc ? `<p class="card-desc">${desc}</p>` : ''}
                     <div class="card-footer">
                         <span class="category-badge">${category}</span>
-                        <button class="favorite-remove" onclick="removeFavorite('${fav.item_type}', '${escapedId}')">
+                        <button class="favorite-remove" onclick="removeFavorite('${fav.type}', '${escapedId}')">
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                             </svg>
@@ -173,131 +191,105 @@
             `;
         }
 
-        async function loadFavorites() {
-            container.innerHTML = '<div class="loading">Loading favorites...</div>';
+        function loadFavorites() {
+            if (!window.TechEconFavorites) {
+                container.innerHTML = '<div class="error">Favorites module not loaded</div>';
+                return;
+            }
 
-            if (!window.TechEconAuth || !window.TechEconAuth.isLoggedIn()) {
+            const favorites = window.TechEconFavorites.get();
+
+            if (favorites.length === 0) {
                 container.innerHTML = `
                     <div class="empty-state">
                         <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                         </svg>
-                        <h3>Sign in to see your favorites</h3>
-                        <p>Create an account to save resources, packages, and datasets</p>
-                        <button class="btn btn-primary" onclick="TechEconAuth.showModal()">Sign In</button>
+                        <h3>No favorites yet</h3>
+                        <p>Click the heart icon on any resource to save it here</p>
+                        <a href="/learning/" class="btn btn-primary">Browse Resources</a>
                     </div>
                 `;
                 return;
             }
 
-            try {
-                const favorites = await window.TechEconFavorites.getAll();
+            // Group by type
+            const grouped = {};
+            favorites.forEach(f => {
+                if (!grouped[f.type]) grouped[f.type] = [];
+                grouped[f.type].push(f);
+            });
 
-                if (favorites.length === 0) {
-                    container.innerHTML = `
-                        <div class="empty-state">
-                            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            const typeLabels = {
+                resource: 'Learning Resources',
+                package: 'Packages',
+                dataset: 'Datasets',
+                talk: 'Talks',
+                book: 'Books',
+                career: 'Career Resources',
+                community: 'Community',
+                paper: 'Papers',
+                roadmap: 'Learning Paths'
+            };
+
+            // Export buttons
+            let html = `
+                <div class="favorites-actions">
+                    <span class="favorites-count">${favorites.length} saved items</span>
+                    <div class="export-buttons">
+                        <button class="btn btn-outline btn-sm" onclick="TechEconFavorites.exportJSON()">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
                             </svg>
-                            <h3>No favorites yet</h3>
-                            <p>Click the heart icon on any resource to save it here</p>
-                            <a href="/learning/" class="btn btn-primary">Browse Resources</a>
-                        </div>
-                    `;
-                    return;
-                }
+                            Download JSON
+                        </button>
+                        <button class="btn btn-outline btn-sm" onclick="TechEconFavorites.exportCSV()">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="7 10 12 15 17 10"/>
+                                <line x1="12" y1="15" x2="12" y2="3"/>
+                            </svg>
+                            Download CSV
+                        </button>
+                    </div>
+                </div>
+            `;
 
-                // Group by type
-                const grouped = {};
-                favorites.forEach(f => {
-                    if (!grouped[f.item_type]) grouped[f.item_type] = [];
-                    grouped[f.item_type].push(f);
+            Object.keys(grouped).forEach(type => {
+                html += `<h3 class="favorites-section-title">${typeLabels[type] || type}</h3>`;
+                html += '<div class="favorites-grid">';
+                grouped[type].forEach(fav => {
+                    const item = findItem(type, fav.id);
+                    html += renderCard(fav, item);
                 });
+                html += '</div>';
+            });
 
-                let html = '';
-                const typeLabels = {
-                    resource: 'Learning Resources',
-                    package: 'Packages',
-                    dataset: 'Datasets',
-                    talk: 'Talks',
-                    book: 'Books',
-                    career: 'Career Resources',
-                    community: 'Community',
-                    paper: 'Papers',
-                    roadmap: 'Learning Paths'
-                };
-
-                Object.keys(grouped).forEach(type => {
-                    html += `<h3 class="favorites-section-title">${typeLabels[type] || type}</h3>`;
-                    html += '<div class="favorites-grid">';
-                    grouped[type].forEach(fav => {
-                        const item = findItem(type, fav.item_id);
-                        html += renderCard(fav, item);
-                    });
-                    html += '</div>';
-                });
-
-                container.innerHTML = html;
-            } catch (err) {
-                console.error('Error loading favorites:', err);
-                container.innerHTML = '<div class="error">Error loading favorites</div>';
-            }
+            container.innerHTML = html;
         }
 
         // Remove favorite function
-        window.removeFavorite = async function(type, id) {
-            try {
-                await window.TechEconFavorites.remove(type, id);
+        window.removeFavorite = function(type, id) {
+            if (window.TechEconFavorites) {
+                window.TechEconFavorites.remove(type, id);
                 showToast('Removed from favorites');
                 loadFavorites();
-            } catch (err) {
-                showToast('Error removing favorite', 'error');
             }
         };
 
-        // Expose loadFavorites for external trigger (auth state changes)
+        // Expose loadFavorites for external trigger
         window.reloadFavoritesPage = loadFavorites;
 
-        // Wait for auth to be ready before first load
-        function waitForAuthAndLoad() {
-            // Check if TechEconAuth exists and has a user
-            if (window.TechEconAuth) {
-                loadFavorites();
-                favoritesLoaded = true;
-            } else {
-                // Wait for auth to initialize
-                const checkAuth = setInterval(() => {
-                    if (window.TechEconAuth) {
-                        clearInterval(checkAuth);
-                        if (!favoritesLoaded) {
-                            loadFavorites();
-                            favoritesLoaded = true;
-                        }
-                    }
-                }, 100);
-
-                // Timeout fallback - load anyway after 2 seconds
-                setTimeout(() => {
-                    clearInterval(checkAuth);
-                    if (!favoritesLoaded) {
-                        loadFavorites();
-                        favoritesLoaded = true;
-                    }
-                }, 2000);
-            }
-        }
-
-        // Start loading
-        waitForAuthAndLoad();
+        // Load immediately - no auth wait needed!
+        loadFavorites();
     }
 
     // Initialize when DOM is ready
     function init() {
-        // Delay to ensure supabase-client is loaded
-        setTimeout(() => {
-            initFavoriteButtons();
-            initFavoritesPage();
-        }, 100);
+        initFavoriteButtons();
+        initFavoritesPage();
 
         // Re-run when new content is added (for infinite scroll, etc)
         const observer = new MutationObserver(() => {

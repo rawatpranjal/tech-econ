@@ -179,16 +179,16 @@
 
             <li class="sidebar-divider"></li>
 
-            <!-- User - Favorites hidden temporarily
+            <!-- User - Favorites (LocalStorage based, no login needed) -->
             <li>
                 <a href="{{ "favorites/" | relURL }}" class="sidebar-link{{ if eq .Section "favorites" }} active{{ end }}">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                     </svg>
                     Favorites
+                    <span class="favorites-count" style="display: none;">0</span>
                 </a>
             </li>
-            -->
 
             <li class="sidebar-divider"></li>
 
@@ -287,14 +287,13 @@
             <div class="profile-dropdown-header">
                 <span class="profile-dropdown-email" id="profile-email"></span>
             </div>
-            <!-- Favorites hidden temporarily
             <a href="/favorites/" class="profile-dropdown-item">
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                 </svg>
                 My Favorites
+                <span class="favorites-count" style="display: none;">0</span>
             </a>
-            -->
             <button class="profile-dropdown-item profile-signout" id="profile-signout">
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
                     <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
@@ -326,6 +325,7 @@
     <script src="{{ "js/theme.js" | relURL }}"></script>
     <script src="{{ "js/supabase-client.js" | relURL }}"></script>
     <script src="{{ "js/auth-ui.js" | relURL }}"></script>
+    <script src="{{ "js/favorites-local.js" | relURL }}"></script>
     <script src="{{ "js/favorites-ui.js" | relURL }}"></script>
 
     <!-- Fuse.js for page search -->
