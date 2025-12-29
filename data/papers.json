@@ -656,6 +656,20 @@
               "year": 2021,
               "description": "Comprehensive practitioner's guide to pricing strategy and optimization techniques.",
               "url": "https://www.sup.org/books/title/?id=24833"
+            },
+            {
+              "title": "Optimal Dynamic Pricing of Inventories with Stochastic Demand over Finite Horizons",
+              "authors": "Guillermo Gallego, Garrett van Ryzin",
+              "year": 1994,
+              "description": "The foundational paper for dynamic pricing theory—establishes intensity control formulation, proves optimality of monotonically decreasing prices. 4,000+ citations.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.40.8.999"
+            },
+            {
+              "title": "A Multiproduct Dynamic Pricing Problem and Its Applications to Network Yield Management",
+              "authors": "Guillermo Gallego, Garrett van Ryzin",
+              "year": 1997,
+              "description": "Extends dynamic pricing to multiple products sharing capacity constraints—the theoretical foundation for airline network revenue management and cloud computing.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/opre.45.1.24"
             }
           ]
         },
@@ -677,6 +691,27 @@
               "year": 2009,
               "description": "Bayesian approach to learning demand while optimizing markdown paths.",
               "url": "https://pubsonline.informs.org/doi/abs/10.1287/opre.1080.0647"
+            },
+            {
+              "title": "The Value of Fast Fashion: Quick Response, Enhanced Design, and Strategic Consumer Behavior",
+              "authors": "Gérard P. Cachon, Robert Swinney",
+              "year": 2011,
+              "description": "The definitive paper on fast fashion economics—models how Zara-style systems mitigate strategic consumer behavior and reduce markdowns.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.1100.1303"
+            },
+            {
+              "title": "Coordinating Clearance Markdown Sales of Seasonal Products in Retail Chains",
+              "authors": "Gabriel Bitran, René Caldentey, Susana Mondschein",
+              "year": 1998,
+              "description": "Foundational paper on multi-store clearance optimization using stochastic dynamic programming with real Falabella case study.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/opre.46.5.609"
+            },
+            {
+              "title": "Dynamic Pricing and Learning: Historical Origins, Current Research, and New Directions",
+              "authors": "Arnoud V. den Boer",
+              "year": 2015,
+              "description": "The definitive survey on explore-exploit pricing literature—synthesizes OR/MS, economics, marketing, and CS covering regret bounds and bandit connections.",
+              "url": "https://www.sciencedirect.com/science/article/pii/S1876735415000021"
             }
           ]
         },
@@ -705,6 +740,27 @@
               "year": 2019,
               "description": "Estimates labor supply elasticity and value of flexibility using Uber driver data.",
               "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/702171"
+            },
+            {
+              "title": "Economics of a Bottleneck",
+              "authors": "Richard Arnott, André de Palma, Robin Lindsey",
+              "year": 1990,
+              "description": "The workhorse model for dynamic congestion pricing theory—operationalized Vickrey's bottleneck concept with endogenous departure decisions and time-varying tolls.",
+              "url": "https://www.sciencedirect.com/science/article/pii/009411909090028L"
+            },
+            {
+              "title": "Platform Competition in Two-Sided Markets",
+              "authors": "Jean-Charles Rochet, Jean Tirole",
+              "year": 2003,
+              "description": "The foundational paper on two-sided market pricing—derives optimal price allocation explaining why platforms price asymmetrically across sides.",
+              "url": "https://onlinelibrary.wiley.com/doi/10.1162/154247603322493212"
+            },
+            {
+              "title": "Competition in Two-Sided Markets",
+              "authors": "Mark Armstrong",
+              "year": 2006,
+              "description": "Introduces the competitive bottlenecks framework where one side multi-homes—explains monopoly power over access to single-homing customers.",
+              "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1756-2171.2006.tb00037.x"
             }
           ]
         },
@@ -726,6 +782,27 @@
               "year": 2023,
               "description": "How algorithmic pricing affects competition and market outcomes.",
               "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20220701"
+            },
+            {
+              "title": "Customer Poaching and Brand Switching",
+              "authors": "Drew Fudenberg, Jean Tirole",
+              "year": 2000,
+              "description": "The seminal paper on behavior-based price discrimination—foundational duopoly model showing how firms use purchase history to discriminate. 2,000+ citations.",
+              "url": "https://onlinelibrary.wiley.com/doi/10.1111/1756-2171.00034"
+            },
+            {
+              "title": "The Economics of Privacy",
+              "authors": "Alessandro Acquisti, Curtis Taylor, Liad Wagman",
+              "year": 2016,
+              "description": "The definitive JEL survey on privacy and personal data economics—covers consumer tracking, welfare implications, and regulatory frameworks.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/jel.54.2.442"
+            },
+            {
+              "title": "Approximating Purchase Propensities and Reservation Prices from Broad Consumer Tracking",
+              "authors": "Benjamin Reed Shiller",
+              "year": 2020,
+              "description": "Key paper demonstrating ML enables first-degree price discrimination—shows big data increases potential profits by 14.55% vs 0.14% from demographics alone.",
+              "url": "https://onlinelibrary.wiley.com/doi/10.1111/iere.12441"
             }
           ]
         },
@@ -754,6 +831,27 @@
               "year": 2020,
               "description": "Modern implementation and extensions of BLP with diagnostics and best practices.",
               "url": "https://pyblp.readthedocs.io/"
+            },
+            {
+              "title": "Estimating Discrete-Choice Models of Product Differentiation",
+              "authors": "Steven Berry",
+              "year": 1994,
+              "description": "The foundational paper introducing the critical inversion technique for demand estimation—enables estimation with IVs despite endogenous prices.",
+              "url": "https://onlinelibrary.wiley.com/doi/10.2307/2555829"
+            },
+            {
+              "title": "Differentiated Products Demand Systems from a Combination of Micro and Macro Data: The New Car Market",
+              "authors": "Steven Berry, James Levinsohn, Ariel Pakes",
+              "year": 2004,
+              "description": "Pioneered combining micro-level consumer data with aggregate market shares—foundation for modern 'micro moments' approaches in pyBLP.",
+              "url": "https://www.journals.uchicago.edu/doi/10.1086/379939"
+            },
+            {
+              "title": "Dynamic Online Pricing with Incomplete Information Using Multi-Armed Bandit Experiments",
+              "authors": "Kanishka Misra, Eric M. Schwartz, Jacob Abernethy",
+              "year": 2019,
+              "description": "The workhorse paper for online price experimentation—extends MAB algorithms to incorporate microeconomic choice theory. 43% profit improvements.",
+              "url": "https://pubsonline.informs.org/doi/10.1287/mksc.2018.1129"
             }
           ]
         }
