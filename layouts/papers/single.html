@@ -44,6 +44,7 @@
                 <div class="paper-card" data-aos="fade-up">
                     <div class="paper-header">
                         <span class="paper-year">{{ .year }}</span>
+                        {{ with .citations }}<span class="paper-citations">{{ . }} cited</span>{{ end }}
                     </div>
                     <h3 class="paper-title">
                         <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
@@ -64,6 +65,7 @@
                             <th>Title</th>
                             <th>Authors</th>
                             <th>Year</th>
+                            <th>Citations</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -75,6 +77,7 @@
                             </td>
                             <td class="paper-authors-cell">{{ .authors }}</td>
                             <td class="paper-year-cell">{{ .year }}</td>
+                            <td class="paper-citations-cell">{{ with .citations }}{{ . }}{{ else }}—{{ end }}</td>
                         </tr>
                         {{ end }}
                     </tbody>
