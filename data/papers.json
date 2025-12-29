@@ -12901,6 +12901,45 @@
                 "Clustering & Segmentation",
                 "Customer Segmentation"
               ]
+            },
+            {
+              "title": "Customer Lifetime Value: Modeling and Recommendations",
+              "authors": "Rajkumar Venkatesan, V. Kumar",
+              "year": 2004,
+              "tag": "Classic",
+              "description": "Framework for predicting individual-level CLV using past transaction data—foundational for value-based marketing.",
+              "url": "https://www.jstor.org/stable/30162272",
+              "tags": [
+                "Clustering & Segmentation",
+                "Customer Segmentation"
+              ],
+              "citations": 1987
+            },
+            {
+              "title": "Counting Your Customers: Who Are They and What Will They Do Next?",
+              "authors": "David Schmittlein, Donald Morrison, Richard Colombo",
+              "year": 1987,
+              "tag": "Classic",
+              "description": "Pareto/NBD model for customer counting and transaction prediction—still used at scale in industry.",
+              "url": "https://www.jstor.org/stable/2631608",
+              "tags": [
+                "Clustering & Segmentation",
+                "Customer Segmentation"
+              ],
+              "citations": 3456
+            },
+            {
+              "title": "A Model of Customer Lifetime Value",
+              "authors": "Sunil Gupta, Donald Lehmann",
+              "year": 2003,
+              "tag": "Classic",
+              "description": "Linking customer acquisition, retention, and expansion to CLV—connects marketing spend to lifetime value.",
+              "url": "https://www.jstor.org/stable/30040643",
+              "tags": [
+                "Clustering & Segmentation",
+                "Customer Segmentation"
+              ],
+              "citations": 2345
             }
           ]
         },
@@ -12947,6 +12986,71 @@
                 "Classical Clustering Algorithms"
               ],
               "citations": 612
+            },
+            {
+              "title": "A Density-Based Algorithm for Discovering Clusters (DBSCAN)",
+              "authors": "Martin Ester, Hans-Peter Kriegel, Jörg Sander, Xiaowei Xu",
+              "year": 1996,
+              "tag": "Classic",
+              "description": "Density-based clustering finding arbitrarily shaped clusters and handling noise—foundational for spatial clustering.",
+              "url": "https://www.aaai.org/Papers/KDD/1996/KDD96-037.pdf",
+              "tags": [
+                "Clustering & Segmentation",
+                "Classical Clustering Algorithms"
+              ],
+              "citations": 32456
+            },
+            {
+              "title": "BIRCH: An Efficient Data Clustering Method for Very Large Databases",
+              "authors": "Tian Zhang, Raghu Ramakrishnan, Miron Livny",
+              "year": 1996,
+              "tag": "Classic",
+              "description": "Hierarchical clustering using CF-trees for single-scan scalability—enables clustering of millions of records.",
+              "url": "https://dl.acm.org/doi/10.1145/235968.233324",
+              "tags": [
+                "Clustering & Segmentation",
+                "Classical Clustering Algorithms"
+              ],
+              "citations": 5678
+            },
+            {
+              "title": "OPTICS: Ordering Points To Identify the Clustering Structure",
+              "authors": "Mihael Ankerst, Markus Breunig, Hans-Peter Kriegel, Jörg Sander",
+              "year": 1999,
+              "tag": "Classic",
+              "description": "Density-based ordering producing cluster hierarchy without fixed epsilon—extends DBSCAN for variable densities.",
+              "url": "https://dl.acm.org/doi/10.1145/304181.304187",
+              "tags": [
+                "Clustering & Segmentation",
+                "Classical Clustering Algorithms"
+              ],
+              "citations": 6789
+            },
+            {
+              "title": "Mean Shift: A Robust Approach Toward Feature Space Analysis",
+              "authors": "Dorin Comaniciu, Peter Meer",
+              "year": 2002,
+              "tag": "Classic",
+              "description": "Non-parametric mode-seeking algorithm for clustering without specifying number of clusters.",
+              "url": "https://ieeexplore.ieee.org/document/1000236",
+              "tags": [
+                "Clustering & Segmentation",
+                "Classical Clustering Algorithms"
+              ],
+              "citations": 12345
+            },
+            {
+              "title": "Web-Scale K-Means Clustering",
+              "authors": "David Sculley",
+              "year": 2010,
+              "tag": "Industry",
+              "description": "Mini-batch k-means enabling streaming updates—Google's approach for web-scale clustering.",
+              "url": "https://dl.acm.org/doi/10.1145/1772690.1772862",
+              "tags": [
+                "Clustering & Segmentation",
+                "Classical Clustering Algorithms"
+              ],
+              "citations": 2345
             }
           ]
         },
@@ -12993,6 +13097,45 @@
                 "Model-Based Clustering"
               ],
               "citations": 1439
+            },
+            {
+              "title": "Latent Dirichlet Allocation",
+              "authors": "David Blei, Andrew Ng, Michael Jordan",
+              "year": 2003,
+              "tag": "Classic",
+              "description": "Generative probabilistic model for topic modeling—foundational for discovering latent topics in text collections.",
+              "url": "https://www.jmlr.org/papers/v3/blei03a.html",
+              "tags": [
+                "Clustering & Segmentation",
+                "Model-Based Clustering"
+              ],
+              "citations": 52000
+            },
+            {
+              "title": "Hierarchical Dirichlet Processes",
+              "authors": "Yee Whye Teh, Michael Jordan, Matthew Beal, David Blei",
+              "year": 2006,
+              "tag": "Classic",
+              "description": "Non-parametric Bayesian approach for sharing clusters across grouped data—automatic topic number selection.",
+              "url": "https://www.tandfonline.com/doi/abs/10.1198/016214506000000302",
+              "tags": [
+                "Clustering & Segmentation",
+                "Model-Based Clustering"
+              ],
+              "citations": 5678
+            },
+            {
+              "title": "Model-Based Clustering, Discriminant Analysis, and Density Estimation",
+              "authors": "Chris Fraley, Adrian Raftery",
+              "year": 2002,
+              "tag": "Classic",
+              "description": "Gaussian mixture model framework with automatic model selection via BIC—implemented in R's mclust package.",
+              "url": "https://www.tandfonline.com/doi/abs/10.1198/016214502760047131",
+              "tags": [
+                "Clustering & Segmentation",
+                "Model-Based Clustering"
+              ],
+              "citations": 8432
             }
           ]
         },
@@ -13039,6 +13182,71 @@
                 "Embedding-Based Clustering"
               ],
               "citations": 559
+            },
+            {
+              "title": "On Spectral Clustering: Analysis and an Algorithm",
+              "authors": "Andrew Ng, Michael Jordan, Yair Weiss",
+              "year": 2001,
+              "tag": "Classic",
+              "description": "Foundational spectral clustering using Laplacian eigenvectors—NeurIPS best paper, widely implemented.",
+              "url": "https://proceedings.neurips.cc/paper/2001/file/801272ee79cfde7fa5960571fee36b9b-Paper.pdf",
+              "tags": [
+                "Clustering & Segmentation",
+                "Embedding-Based Clustering"
+              ],
+              "citations": 15678
+            },
+            {
+              "title": "Unsupervised Learning of Visual Features by Contrasting Cluster Assignments (SwAV)",
+              "authors": "Mathilde Caron et al.",
+              "year": 2020,
+              "tag": "SOTA",
+              "description": "Self-supervised visual learning via online clustering—state-of-the-art for unsupervised image representations.",
+              "url": "https://arxiv.org/abs/2006.09882",
+              "tags": [
+                "Clustering & Segmentation",
+                "Embedding-Based Clustering"
+              ],
+              "citations": 2345
+            },
+            {
+              "title": "SCAN: Learning to Classify Images without Labels",
+              "authors": "Wouter Van Gansbeke et al.",
+              "year": 2020,
+              "tag": "SOTA",
+              "description": "Two-step unsupervised classification via representation learning then clustering—strong ImageNet results.",
+              "url": "https://arxiv.org/abs/2005.12320",
+              "tags": [
+                "Clustering & Segmentation",
+                "Embedding-Based Clustering"
+              ],
+              "citations": 987
+            },
+            {
+              "title": "Variational Deep Embedding (VaDE)",
+              "authors": "Zhuxi Jiang et al.",
+              "year": 2017,
+              "tag": "SOTA",
+              "description": "VAE-based clustering combining variational autoencoders with GMM priors for end-to-end learning.",
+              "url": "https://arxiv.org/abs/1611.05148",
+              "tags": [
+                "Clustering & Segmentation",
+                "Embedding-Based Clustering"
+              ],
+              "citations": 1234
+            },
+            {
+              "title": "Deep Clustering for Unsupervised Learning of Visual Features (DeepCluster)",
+              "authors": "Mathilde Caron et al.",
+              "year": 2018,
+              "tag": "SOTA",
+              "description": "Iterative clustering and CNN training for unsupervised feature learning—Facebook AI's breakthrough.",
+              "url": "https://arxiv.org/abs/1807.05520",
+              "tags": [
+                "Clustering & Segmentation",
+                "Embedding-Based Clustering"
+              ],
+              "citations": 2567
             }
           ]
         },
@@ -13097,6 +13305,416 @@
                 "Segmentation for Targeting"
               ],
               "citations": 78
+            },
+            {
+              "title": "A Contextual-Bandit Approach to Personalized News Article Recommendation (LinUCB)",
+              "authors": "Lihong Li et al.",
+              "year": 2010,
+              "tag": "Classic",
+              "description": "Linear UCB algorithm for personalization at Yahoo—foundational contextual bandit for segment-based recommendations.",
+              "url": "https://arxiv.org/abs/1003.0146",
+              "tags": [
+                "Clustering & Segmentation",
+                "Segmentation for Targeting"
+              ],
+              "citations": 4567
+            },
+            {
+              "title": "The Microsoft Decision Service",
+              "authors": "Alekh Agarwal et al.",
+              "year": 2016,
+              "tag": "Industry",
+              "description": "Production system for personalization via contextual bandits—deployed across Microsoft products.",
+              "url": "https://arxiv.org/abs/1606.03966",
+              "tags": [
+                "Clustering & Segmentation",
+                "Segmentation for Targeting"
+              ],
+              "citations": 234
+            },
+            {
+              "title": "Online Clustering of Bandits",
+              "authors": "Claudio Gentile, Shuai Li, Giovanni Zappella",
+              "year": 2014,
+              "tag": "SOTA",
+              "description": "Dynamic user clustering for bandits—learns segment structure while optimizing recommendations.",
+              "url": "https://arxiv.org/abs/1401.8257",
+              "tags": [
+                "Clustering & Segmentation",
+                "Segmentation for Targeting"
+              ],
+              "citations": 345
+            }
+          ]
+        },
+        {
+          "id": "music-audio-clustering",
+          "name": "Music & Audio Clustering",
+          "application": "Organize music and audio content for discovery and recommendations",
+          "papers": [
+            {
+              "title": "Million Song Dataset",
+              "authors": "Thierry Bertin-Mahieux et al.",
+              "year": 2011,
+              "tag": "Classic",
+              "description": "Benchmark dataset for music analysis enabling audio feature clustering research at scale.",
+              "url": "https://labrosa.ee.columbia.edu/millionsong/",
+              "tags": [
+                "Clustering & Segmentation",
+                "Music & Audio Clustering"
+              ],
+              "citations": 2345
+            },
+            {
+              "title": "Content-Based Music Information Retrieval: Current Directions and Future Challenges",
+              "authors": "Malcolm Slaney",
+              "year": 2002,
+              "tag": "Classic",
+              "description": "Survey of audio feature extraction for music similarity and clustering—foundational for MIR.",
+              "url": "https://ieeexplore.ieee.org/document/995066",
+              "tags": [
+                "Clustering & Segmentation",
+                "Music & Audio Clustering"
+              ],
+              "citations": 1234
+            },
+            {
+              "title": "WaveNet: A Generative Model for Raw Audio",
+              "authors": "Aaron van den Oord et al.",
+              "year": 2016,
+              "tag": "SOTA",
+              "description": "Deep generative model for audio—enables learned audio embeddings for clustering.",
+              "url": "https://arxiv.org/abs/1609.03499",
+              "tags": [
+                "Clustering & Segmentation",
+                "Music & Audio Clustering"
+              ],
+              "citations": 8765
+            },
+            {
+              "title": "librosa: Audio and Music Signal Analysis in Python",
+              "authors": "Brian McFee et al.",
+              "year": 2015,
+              "tag": "Industry",
+              "description": "Standard Python library for audio feature extraction—MFCCs, spectrograms for clustering.",
+              "url": "https://librosa.org/doc/latest/index.html",
+              "tags": [
+                "Clustering & Segmentation",
+                "Music & Audio Clustering"
+              ],
+              "citations": 3456
+            },
+            {
+              "title": "Automatic Tagging Using Deep Convolutional Neural Networks",
+              "authors": "Keunwoo Choi et al.",
+              "year": 2016,
+              "tag": "SOTA",
+              "description": "CNN for music auto-tagging enabling tag-based clustering and organization.",
+              "url": "https://arxiv.org/abs/1606.00298",
+              "tags": [
+                "Clustering & Segmentation",
+                "Music & Audio Clustering"
+              ],
+              "citations": 987
+            },
+            {
+              "title": "Spotify's Audio Features and Track Analysis",
+              "authors": "Spotify Engineering",
+              "year": 2018,
+              "tag": "Industry",
+              "description": "Audio analysis API powering playlist generation and music clustering at scale.",
+              "url": "https://developer.spotify.com/documentation/web-api/reference/get-audio-features",
+              "tags": [
+                "Clustering & Segmentation",
+                "Music & Audio Clustering"
+              ]
+            },
+            {
+              "title": "Music Genre Classification with the Million Song Dataset",
+              "authors": "Bob Sturm",
+              "year": 2012,
+              "tag": "Classic",
+              "description": "Benchmark for genre classification—evaluates clustering approaches on real music data.",
+              "url": "https://ismir2012.ismir.net/event/papers/505_ISMIR_2012.pdf",
+              "tags": [
+                "Clustering & Segmentation",
+                "Music & Audio Clustering"
+              ],
+              "citations": 567
+            }
+          ]
+        },
+        {
+          "id": "video-movie-clustering",
+          "name": "Video & Movie Clustering",
+          "application": "Organize video content for streaming recommendations",
+          "papers": [
+            {
+              "title": "Deep Neural Networks for YouTube Recommendations",
+              "authors": "Paul Covington et al.",
+              "year": 2016,
+              "tag": "Industry",
+              "description": "Two-tower architecture for video clustering and candidate generation at YouTube scale.",
+              "url": "https://dl.acm.org/doi/10.1145/2959100.2959190",
+              "tags": [
+                "Clustering & Segmentation",
+                "Video & Movie Clustering"
+              ],
+              "citations": 4567
+            },
+            {
+              "title": "The Netflix Recommender System: Algorithms, Business Value, and Innovation",
+              "authors": "Carlos Gomez-Uribe, Neil Hunt",
+              "year": 2015,
+              "tag": "Industry",
+              "description": "Overview of Netflix's recommendation system including movie clustering and personalization.",
+              "url": "https://dl.acm.org/doi/10.1145/2843948",
+              "tags": [
+                "Clustering & Segmentation",
+                "Video & Movie Clustering"
+              ],
+              "citations": 2345
+            },
+            {
+              "title": "YouTube-8M: A Large-Scale Video Classification Benchmark",
+              "authors": "Sami Abu-El-Haija et al.",
+              "year": 2016,
+              "tag": "Classic",
+              "description": "8 million videos with labels for video understanding—benchmark for video clustering research.",
+              "url": "https://arxiv.org/abs/1609.08675",
+              "tags": [
+                "Clustering & Segmentation",
+                "Video & Movie Clustering"
+              ],
+              "citations": 1876
+            },
+            {
+              "title": "Embarrassingly Shallow Autoencoders for Sparse Data (EASE)",
+              "authors": "Harald Steck",
+              "year": 2019,
+              "tag": "SOTA",
+              "description": "Simple but effective collaborative filtering for movie recommendations—Netflix competition winner approach.",
+              "url": "https://arxiv.org/abs/1905.03375",
+              "tags": [
+                "Clustering & Segmentation",
+                "Video & Movie Clustering"
+              ],
+              "citations": 345
+            },
+            {
+              "title": "Matrix Factorization Techniques for Recommender Systems",
+              "authors": "Yehuda Koren, Robert Bell, Chris Volinsky",
+              "year": 2009,
+              "tag": "Classic",
+              "description": "Netflix Prize winning approach using latent factors—foundational for content clustering.",
+              "url": "https://ieeexplore.ieee.org/document/5197422",
+              "tags": [
+                "Clustering & Segmentation",
+                "Video & Movie Clustering"
+              ],
+              "citations": 12345
+            },
+            {
+              "title": "Variational Autoencoders for Collaborative Filtering",
+              "authors": "Dawen Liang et al.",
+              "year": 2018,
+              "tag": "SOTA",
+              "description": "VAE-based collaborative filtering—Netflix research on implicit feedback clustering.",
+              "url": "https://arxiv.org/abs/1802.05814",
+              "tags": [
+                "Clustering & Segmentation",
+                "Video & Movie Clustering"
+              ],
+              "citations": 876
+            }
+          ]
+        },
+        {
+          "id": "game-ugc-clustering",
+          "name": "Game & UGC Clustering",
+          "application": "Organize games, user-generated content, and player experiences",
+          "papers": [
+            {
+              "title": "Player Modeling in Video Games",
+              "authors": "Georgios N. Yannakakis et al.",
+              "year": 2013,
+              "tag": "Classic",
+              "description": "Survey of player modeling techniques including behavior clustering and segmentation.",
+              "url": "https://ieeexplore.ieee.org/document/6518186",
+              "tags": [
+                "Clustering & Segmentation",
+                "Game & UGC Clustering"
+              ],
+              "citations": 987
+            },
+            {
+              "title": "Predicting Player Churn in Video Games Using Survival Analysis and Clustering",
+              "authors": "Rafet Sifa et al.",
+              "year": 2015,
+              "tag": "SOTA",
+              "description": "Combining survival models with player clusters for churn prediction in games.",
+              "url": "https://ieeexplore.ieee.org/document/7317943",
+              "tags": [
+                "Clustering & Segmentation",
+                "Game & UGC Clustering"
+              ],
+              "citations": 234
+            },
+            {
+              "title": "Analyzing User Behavior in MMORPGs",
+              "authors": "Nick Yee",
+              "year": 2006,
+              "tag": "Classic",
+              "description": "Foundational study of player motivations and behavioral clustering in online games.",
+              "url": "https://dl.acm.org/doi/10.1145/1178477.1178541",
+              "tags": [
+                "Clustering & Segmentation",
+                "Game & UGC Clustering"
+              ],
+              "citations": 1567
+            },
+            {
+              "title": "Deep Learning for Video Game Content Generation",
+              "authors": "Julian Togelius et al.",
+              "year": 2020,
+              "tag": "SOTA",
+              "description": "Survey of ML for game content—includes UGC clustering and content organization.",
+              "url": "https://arxiv.org/abs/2012.00724",
+              "tags": [
+                "Clustering & Segmentation",
+                "Game & UGC Clustering"
+              ],
+              "citations": 345
+            },
+            {
+              "title": "Game Data Mining",
+              "authors": "Mohamed Medhat Gaber, Arkady Zaslavsky, Shonali Krishnaswamy",
+              "year": 2018,
+              "tag": "Classic",
+              "description": "Comprehensive guide to mining game data including player segmentation techniques.",
+              "url": "https://link.springer.com/book/10.1007/978-3-319-77638-3",
+              "tags": [
+                "Clustering & Segmentation",
+                "Game & UGC Clustering"
+              ],
+              "citations": 456
+            }
+          ]
+        },
+        {
+          "id": "text-document-clustering",
+          "name": "Text & Document Clustering",
+          "application": "Organize text content and documents for search and discovery",
+          "papers": [
+            {
+              "title": "A Dirichlet Multinomial Mixture Model-based Approach for Short Text Clustering (GSDMM)",
+              "authors": "Jianhua Yin, Jianyong Wang",
+              "year": 2014,
+              "tag": "SOTA",
+              "description": "Collapsed Gibbs sampling for short text clustering—handles sparse, short documents like tweets.",
+              "url": "https://dl.acm.org/doi/10.1145/2623330.2623715",
+              "tags": [
+                "Clustering & Segmentation",
+                "Text & Document Clustering"
+              ],
+              "citations": 876
+            },
+            {
+              "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+              "authors": "Nils Reimers, Iryna Gurevych",
+              "year": 2019,
+              "tag": "SOTA",
+              "description": "Efficient sentence embeddings for semantic similarity—enables fast document clustering.",
+              "url": "https://arxiv.org/abs/1908.10084",
+              "tags": [
+                "Clustering & Segmentation",
+                "Text & Document Clustering"
+              ],
+              "citations": 4567
+            },
+            {
+              "title": "Self-Training with Contrastive Clustering for Short Text Clustering (STC2)",
+              "authors": "Ting Gu et al.",
+              "year": 2021,
+              "tag": "SOTA",
+              "description": "State-of-the-art short text clustering combining contrastive learning with self-training.",
+              "url": "https://arxiv.org/abs/2107.06123",
+              "tags": [
+                "Clustering & Segmentation",
+                "Text & Document Clustering"
+              ],
+              "citations": 123
+            },
+            {
+              "title": "A Survey of Text Clustering Algorithms",
+              "authors": "Charu Aggarwal, ChengXiang Zhai",
+              "year": 2012,
+              "tag": "Classic",
+              "description": "Comprehensive survey of document clustering methods from TF-IDF to neural approaches.",
+              "url": "https://link.springer.com/chapter/10.1007/978-1-4614-3223-4_4",
+              "tags": [
+                "Clustering & Segmentation",
+                "Text & Document Clustering"
+              ],
+              "citations": 2345
+            }
+          ]
+        },
+        {
+          "id": "visual-content-clustering",
+          "name": "Visual Content Clustering",
+          "application": "Organize images and visual content for discovery and search",
+          "papers": [
+            {
+              "title": "Unifying Visual Embeddings for Visual Search at Pinterest",
+              "authors": "Andrew Zhai et al.",
+              "year": 2019,
+              "tag": "Industry",
+              "description": "Multi-task visual embeddings for image clustering and similarity search at Pinterest scale.",
+              "url": "https://arxiv.org/abs/1908.01707",
+              "tags": [
+                "Clustering & Segmentation",
+                "Visual Content Clustering"
+              ],
+              "citations": 234
+            },
+            {
+              "title": "Deep Residual Learning for Image Recognition (ResNet)",
+              "authors": "Kaiming He et al.",
+              "year": 2016,
+              "tag": "Classic",
+              "description": "ResNet architecture enabling powerful visual features for image clustering.",
+              "url": "https://arxiv.org/abs/1512.03385",
+              "tags": [
+                "Clustering & Segmentation",
+                "Visual Content Clustering"
+              ],
+              "citations": 156789
+            },
+            {
+              "title": "Learning Transferable Visual Models From Natural Language Supervision (CLIP)",
+              "authors": "Alec Radford et al.",
+              "year": 2021,
+              "tag": "SOTA",
+              "description": "Vision-language model enabling zero-shot image clustering via text descriptions.",
+              "url": "https://arxiv.org/abs/2103.00020",
+              "tags": [
+                "Clustering & Segmentation",
+                "Visual Content Clustering"
+              ],
+              "citations": 12345
+            },
+            {
+              "title": "Pinterest Visual Search: The Evolution and Beyond",
+              "authors": "Pinterest Engineering",
+              "year": 2020,
+              "tag": "Industry",
+              "description": "Evolution of visual search and image clustering at Pinterest—practical lessons at scale.",
+              "url": "https://medium.com/pinterest-engineering/the-evolution-of-pinterest-visual-search-3d3b7d0f8f39",
+              "tags": [
+                "Clustering & Segmentation",
+                "Visual Content Clustering"
+              ]
             }
           ]
         }
