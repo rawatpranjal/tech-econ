@@ -301,42 +301,32 @@
   },
   {
     "name": "Growth Data Science",
-    "description": "Growth loops, funnel analysis, and experimentation \u2014 diff-in-diff and regression discontinuity power incrementality testing",
+    "description": "Growth loops, funnel analysis, and experimentation — diff-in-diff and regression discontinuity power incrementality testing",
     "icon": "rocket",
     "resources": [
       {
-        "name": "The Cold Start Problem (Andrew Chen)",
-        "why": "Atomic Networks and tipping points of two-sided marketplaces \u2014 why growth stalls",
-        "url": "https://www.coldstart.com/"
-      },
-      {
         "name": "Lenny's Newsletter: How Duolingo Reignited User Growth",
-        "why": "Case study on gamification, streaks, and retention mechanics that drove 4.5x growth",
+        "why": "Case study on gamification, streaks, and retention mechanics",
         "url": "https://www.lennysnewsletter.com/p/how-duolingo-reignited-user-growth"
       },
       {
         "name": "Causal Inference for the Brave and True",
-        "why": "The best free intro to causal inference \u2014 DiD, IV, RDD with Python code",
+        "why": "Best free intro to DiD, IV, RDD with Python code",
         "url": "https://matheusfacure.github.io/python-causality-handbook/landing-page.html"
       },
       {
         "name": "NFX Network Effects Manual",
-        "why": "Comprehensive framework for 16 types of network effects \u2014 maps to marketplace growth",
+        "why": "Framework for 16 types of network effects",
         "url": "https://www.nfx.com/post/network-effects-manual"
       },
       {
         "name": "Growth Accounting & Backtraced Growth Accounting",
-        "why": "Standard framework for user lifecycle states (New, Retained, Churned, Stale, Resurrected) with weighted backtrace views",
+        "why": "User lifecycle states: New, Retained, Churned, Resurrected",
         "url": "https://bytepawn.com/growth-accounting-and-backtraced-growth-accounting.html"
       },
       {
-        "name": "Guide to Product Metrics",
-        "why": "26 metrics across AARRR framework: activation, retention, LTV, NRR, Quick Ratio, PMF Score explained",
-        "url": "https://www.roarkeclinton.com/product-metrics"
-      },
-      {
         "name": "Measuring Product Health (Sequoia)",
-        "why": "Definitive guide to growth, retention, stickiness & engagement metrics: DAU/MAU, Lness, cohort curves, Quick Ratio",
+        "why": "Definitive guide: DAU/MAU, cohort curves, Quick Ratio",
         "url": "https://articles.sequoiacap.com/measuring-product-health"
       }
     ],
@@ -350,16 +340,6 @@
         "name": "lifelines",
         "why": "Survival analysis for retention curves",
         "url": "https://lifelines.readthedocs.io/"
-      },
-      {
-        "name": "DoWhy",
-        "why": "Observational causal analysis when A/B isn't feasible",
-        "url": "https://www.pywhy.org/dowhy/"
-      },
-      {
-        "name": "pingouin",
-        "why": "Simple syntax for statistical tests",
-        "url": "https://pingouin-stats.org/"
       }
     ],
     "order": 9
