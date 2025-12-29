@@ -2428,6 +2428,7 @@ mark {
 [data-theme="dark"] .roadmap-card,
 [data-theme="dark"] .staff-pick-card,
 [data-theme="dark"] .quick-link-card,
+[data-theme="dark"] .favorite-card,
 [data-theme="dark"] .about-link {
     background: var(--bg-card);
     border-color: var(--border-color);
@@ -2530,7 +2531,8 @@ mark {
 .section-card,
 .roadmap-card,
 .staff-pick-card,
-.quick-link-card {
+.quick-link-card,
+.favorite-card {
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
@@ -2539,7 +2541,8 @@ mark {
 .section-card:hover,
 .roadmap-card:hover,
 .staff-pick-card:hover,
-.quick-link-card:hover {
+.quick-link-card:hover,
+.favorite-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 24px rgba(0,0,0,0.12);
 }
@@ -2549,7 +2552,8 @@ mark {
 [data-theme="dark"] .section-card:hover,
 [data-theme="dark"] .roadmap-card:hover,
 [data-theme="dark"] .staff-pick-card:hover,
-[data-theme="dark"] .quick-link-card:hover {
+[data-theme="dark"] .quick-link-card:hover,
+[data-theme="dark"] .favorite-card:hover {
     box-shadow: 0 12px 24px rgba(0,0,0,0.3);
 }
 
