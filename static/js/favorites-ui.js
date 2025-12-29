@@ -644,6 +644,13 @@
 
     // Initialize when DOM is ready
     function init() {
+        // Ensure modules are loaded before initializing
+        if (!window.TechEconFavorites || !window.TechEconPlaylists) {
+            console.warn('Favorites modules not loaded yet, retrying...');
+            setTimeout(init, 100);
+            return;
+        }
+
         initFavoriteButtons();
         initFavoritesPage();
 
