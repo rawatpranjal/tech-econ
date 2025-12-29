@@ -3890,6 +3890,18 @@
                 "Learning to Rank"
               ],
               "citations": 686
+            },
+            {
+              "title": "Optimizing Search Engines using Clickthrough Data",
+              "authors": "Thorsten Joachims",
+              "year": 2002,
+              "description": "Seminal SVM-based pairwise LTR using click data for preference constraints; established click-based learning to rank paradigm.",
+              "url": "https://dl.acm.org/doi/10.1145/775047.775067",
+              "tags": [
+                "Search & Ranking",
+                "Learning to Rank"
+              ],
+              "citations": 8000
             }
           ]
         },
@@ -3933,6 +3945,42 @@
                 "Query Understanding"
               ],
               "citations": 3
+            },
+            {
+              "title": "Relevance-Based Language Models",
+              "authors": "Victor Lavrenko, W. Bruce Croft",
+              "year": 2001,
+              "description": "Foundational pseudo-relevance feedback method introducing RM3; widely used for query expansion in both traditional and neural retrieval.",
+              "url": "https://dl.acm.org/doi/10.1145/383952.384019",
+              "tags": [
+                "Search & Ranking",
+                "Query Understanding"
+              ],
+              "citations": 3000
+            },
+            {
+              "title": "Context-Sensitive Information Retrieval Using Implicit Feedback",
+              "authors": "Xuehua Shen, Bin Tan, ChengXiang Zhai",
+              "year": 2005,
+              "description": "Pioneered use of session context for query interpretation; demonstrated significant gains from implicit user feedback.",
+              "url": "https://dl.acm.org/doi/10.1145/1076034.1076049",
+              "tags": [
+                "Search & Ranking",
+                "Query Understanding"
+              ],
+              "citations": 500
+            },
+            {
+              "title": "Few-Shot Generative Conversational Query Rewriting",
+              "authors": "Shi Yu, Jiahua Liu, Jie Yang, Chenyan Xiong, Paul Bennett, Jianfeng Gao, Zhiyuan Liu",
+              "year": 2020,
+              "description": "Modern neural query reformulation using GPT-2 for conversational settings; addresses context carryover in multi-turn search.",
+              "url": "https://dl.acm.org/doi/10.1145/3397271.3401130",
+              "tags": [
+                "Search & Ranking",
+                "Query Understanding"
+              ],
+              "citations": 150
             }
           ]
         },
@@ -3988,6 +4036,30 @@
                 "Relevance vs. Engagement"
               ],
               "citations": 26
+            },
+            {
+              "title": "Modeling Dwell Time to Predict Click-level Satisfaction",
+              "authors": "Youngho Kim, Ahmed Hassan, Ryen W. White, Imed Zitouni",
+              "year": 2014,
+              "description": "Established context-dependent satisfaction thresholds beyond fixed dwell time cutoffs; showed satisfaction prediction requires query-document context.",
+              "url": "https://dl.acm.org/doi/10.1145/2556195.2556220",
+              "tags": [
+                "Search & Ranking",
+                "Relevance vs. Engagement"
+              ],
+              "citations": 500
+            },
+            {
+              "title": "Beyond Clicks: Query Reformulation as a Predictor of Search Satisfaction",
+              "authors": "Ahmed Hassan, Xiaolin Shi, Nick Craswell, Bill Ramsey",
+              "year": 2013,
+              "description": "Demonstrated satisfaction signals exist beyond clicks; query reformulation patterns predict user satisfaction better than clicks alone.",
+              "url": "https://dl.acm.org/doi/10.1145/2505515.2505682",
+              "tags": [
+                "Search & Ranking",
+                "Relevance vs. Engagement"
+              ],
+              "citations": 400
             }
           ]
         },
@@ -4055,6 +4127,18 @@
                 "Position Bias & Debiasing"
               ],
               "citations": 36
+            },
+            {
+              "title": "Addressing Trust Bias for Unbiased Learning-to-Rank",
+              "authors": "Aman Agarwal, Xuanhui Wang, Cheng Li, Michael Bendersky, Marc Najork",
+              "year": 2019,
+              "description": "First rigorous treatment of trust bias in ULTR framework; extends counterfactual work to account for users trusting higher-ranked results more.",
+              "url": "https://dl.acm.org/doi/10.1145/3308558.3313697",
+              "tags": [
+                "Search & Ranking",
+                "Position Bias & Debiasing"
+              ],
+              "citations": 150
             }
           ]
         },
