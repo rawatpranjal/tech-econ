@@ -106,6 +106,17 @@
             </button>
             <span class="sidebar-visitors">3,000+ resources</span>
         </div>
+        <!-- Sidebar Search Bar -->
+        <div class="sidebar-search">
+            <div class="search-input-wrapper" onclick="document.getElementById('global-search-modal').style.display='flex'; document.getElementById('global-search-input').focus();">
+                <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="text" class="search-input" placeholder="Search..." readonly>
+                <kbd class="search-kbd">⌘K</kbd>
+            </div>
+        </div>
         <ul class="sidebar-nav">
             <!-- Home -->
             <li>
@@ -251,17 +262,6 @@
                 </a>
             </li>
         </ul>
-        <!-- Sidebar Search Bar -->
-        <div class="sidebar-search">
-            <div class="search-input-wrapper" onclick="document.getElementById('global-search-modal').style.display='flex'; document.getElementById('global-search-input').focus();">
-                <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                </svg>
-                <input type="text" class="search-input" placeholder="Search..." readonly>
-                <kbd class="search-kbd">⌘K</kbd>
-            </div>
-        </div>
         <div class="sidebar-joke" id="sidebar-joke"></div>
         <div class="sidebar-footer">
             <a href="{{ "submit/" | relURL }}" class="sidebar-footer-link{{ if eq .Section "submit" }} active{{ end }}">
