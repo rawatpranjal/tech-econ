@@ -5461,5 +5461,257 @@
     ],
     "best_for": "Multi-armed bandits for adaptive A/B testing with Thompson Sampling, UCB, LinUCB",
     "language": "R"
+  },
+  {
+    "name": "igraph",
+    "description": "Comprehensive network analysis library with efficient algorithms for network creation, manipulation, and analysis. Provides centrality measures, community detection, graph visualization, and network statistics.",
+    "category": "Network Analysis",
+    "docs_url": "https://igraph.org/r/",
+    "github_url": "https://github.com/igraph/rigraph",
+    "url": "https://cran.r-project.org/package=igraph",
+    "install": "install.packages(\"igraph\")",
+    "tags": [
+      "networks",
+      "graph-algorithms",
+      "centrality",
+      "community-detection",
+      "network-statistics"
+    ],
+    "best_for": "Comprehensive network analysis with efficient algorithms for centrality, community detection, and visualization",
+    "language": "R"
+  },
+  {
+    "name": "sna",
+    "description": "Social network analysis tools including network visualization, centrality measures, and statistical models for network data. Part of the statnet suite for network regression and exponential random graph models.",
+    "category": "Network Analysis",
+    "docs_url": "https://cran.r-project.org/web/packages/sna/sna.pdf",
+    "github_url": null,
+    "url": "https://cran.r-project.org/package=sna",
+    "install": "install.packages(\"sna\")",
+    "tags": [
+      "social-networks",
+      "network-regression",
+      "statnet",
+      "ERGM",
+      "centrality"
+    ],
+    "best_for": "Social network analysis and network regression as part of the statnet suite",
+    "language": "R"
+  },
+  {
+    "name": "tidygraph",
+    "description": "Tidy data interface for network/graph data. Extends dplyr verbs to work with nodes and edges, enabling pipe-friendly network manipulation that integrates seamlessly with ggraph for visualization.",
+    "category": "Network Analysis",
+    "docs_url": "https://tidygraph.data-imaginist.com/",
+    "github_url": "https://github.com/thomasp85/tidygraph",
+    "url": "https://cran.r-project.org/package=tidygraph",
+    "install": "install.packages(\"tidygraph\")",
+    "tags": [
+      "networks",
+      "tidyverse",
+      "graph-manipulation",
+      "dplyr",
+      "pipes"
+    ],
+    "best_for": "Tidy manipulation of network data with dplyr-style verbs for nodes and edges",
+    "language": "R"
+  },
+  {
+    "name": "ggraph",
+    "description": "Grammar of graphics for network data built on ggplot2. Provides layouts, geometries, and faceting specifically designed for network visualization with publication-quality output.",
+    "category": "Network Analysis",
+    "docs_url": "https://ggraph.data-imaginist.com/",
+    "github_url": "https://github.com/thomasp85/ggraph",
+    "url": "https://cran.r-project.org/package=ggraph",
+    "install": "install.packages(\"ggraph\")",
+    "tags": [
+      "networks",
+      "visualization",
+      "ggplot2",
+      "graph-layouts",
+      "publication-ready"
+    ],
+    "best_for": "Publication-quality network visualization using ggplot2 grammar",
+    "language": "R"
+  },
+  {
+    "name": "quanteda",
+    "description": "Comprehensive framework for quantitative text analysis. Provides fast text preprocessing, document-feature matrices, dictionary analysis, and integration with topic models. Standard for political science text analysis.",
+    "category": "Text Analysis",
+    "docs_url": "https://quanteda.io/",
+    "github_url": "https://github.com/quanteda/quanteda",
+    "url": "https://cran.r-project.org/package=quanteda",
+    "install": "install.packages(\"quanteda\")",
+    "tags": [
+      "text-analysis",
+      "NLP",
+      "document-term-matrix",
+      "text-preprocessing",
+      "political-science"
+    ],
+    "best_for": "Comprehensive quantitative text analysis with fast preprocessing and document-feature matrices",
+    "language": "R"
+  },
+  {
+    "name": "tidytext",
+    "description": "Tidy data principles for text mining. Converts text to tidy format (one-token-per-row), enabling analysis with dplyr, ggplot2, and other tidyverse tools. Accompanies the book 'Text Mining with R'.",
+    "category": "Text Analysis",
+    "docs_url": "https://juliasilge.github.io/tidytext/",
+    "github_url": "https://github.com/juliasilge/tidytext",
+    "url": "https://cran.r-project.org/package=tidytext",
+    "install": "install.packages(\"tidytext\")",
+    "tags": [
+      "text-mining",
+      "tidyverse",
+      "tokenization",
+      "sentiment-analysis",
+      "NLP"
+    ],
+    "best_for": "Tidy text mining with dplyr and ggplot2 integration—accompanies 'Text Mining with R'",
+    "language": "R"
+  },
+  {
+    "name": "stm",
+    "description": "Structural Topic Models incorporating document-level metadata as covariates affecting topic prevalence and content. Enables studying how topics vary across groups or time with uncertainty quantification.",
+    "category": "Text Analysis",
+    "docs_url": "https://www.structuraltopicmodel.com/",
+    "github_url": "https://github.com/bstewart/stm",
+    "url": "https://cran.r-project.org/package=stm",
+    "install": "install.packages(\"stm\")",
+    "tags": [
+      "topic-models",
+      "text-analysis",
+      "covariates",
+      "LDA",
+      "document-metadata"
+    ],
+    "best_for": "Structural topic models with document metadata affecting topic prevalence and content",
+    "language": "R"
+  },
+  {
+    "name": "text2vec",
+    "description": "Efficient text vectorization with word embeddings (GloVe), topic models (LDA), and document similarity. Memory-efficient streaming API for large corpora with C++ backend.",
+    "category": "Text Analysis",
+    "docs_url": "https://text2vec.org/",
+    "github_url": "https://github.com/dselivanov/text2vec",
+    "url": "https://cran.r-project.org/package=text2vec",
+    "install": "install.packages(\"text2vec\")",
+    "tags": [
+      "word-embeddings",
+      "GloVe",
+      "text-vectorization",
+      "LDA",
+      "document-similarity"
+    ],
+    "best_for": "Efficient word embeddings (GloVe) and text vectorization for large corpora",
+    "language": "R"
+  },
+  {
+    "name": "cjoint",
+    "description": "Estimates Average Marginal Component Effects (AMCEs) for conjoint experiments following Hainmueller, Hopkins & Yamamoto (2014). Handles multi-dimensional preferences with clustered standard errors.",
+    "category": "Conjoint Analysis",
+    "docs_url": "https://cran.r-project.org/web/packages/cjoint/cjoint.pdf",
+    "github_url": null,
+    "url": "https://cran.r-project.org/package=cjoint",
+    "install": "install.packages(\"cjoint\")",
+    "tags": [
+      "conjoint",
+      "AMCE",
+      "survey-experiments",
+      "preferences",
+      "political-science"
+    ],
+    "best_for": "AMCE estimation for conjoint experiments, implementing Hainmueller, Hopkins & Yamamoto (2014)",
+    "language": "R"
+  },
+  {
+    "name": "cregg",
+    "description": "Tidy interface for conjoint analysis with visualization. Provides functions for calculating and plotting marginal means and AMCEs with ggplot2-based output for publication-ready figures.",
+    "category": "Conjoint Analysis",
+    "docs_url": "https://thomasleeper.com/cregg/",
+    "github_url": "https://github.com/leeper/cregg",
+    "url": "https://cran.r-project.org/package=cregg",
+    "install": "install.packages(\"cregg\")",
+    "tags": [
+      "conjoint",
+      "visualization",
+      "marginal-means",
+      "ggplot2",
+      "survey-experiments"
+    ],
+    "best_for": "Tidy conjoint analysis with ggplot2 visualization for marginal means and AMCEs",
+    "language": "R"
+  },
+  {
+    "name": "dagitty",
+    "description": "Analysis of structural causal models represented as DAGs. Computes adjustment sets, identifies instrumental variables, tests conditional independencies, and finds minimal sufficient adjustment sets for causal identification.",
+    "category": "Causal Discovery",
+    "docs_url": "http://www.dagitty.net/",
+    "github_url": "https://github.com/jtextor/dagitty",
+    "url": "https://cran.r-project.org/package=dagitty",
+    "install": "install.packages(\"dagitty\")",
+    "tags": [
+      "DAG",
+      "causal-graphs",
+      "adjustment-sets",
+      "d-separation",
+      "instrumental-variables"
+    ],
+    "best_for": "DAG-based causal analysis with adjustment set computation and d-separation testing",
+    "language": "R"
+  },
+  {
+    "name": "ggdag",
+    "description": "Visualize and analyze causal DAGs using ggplot2. Provides tidy interface to dagitty with publication-quality DAG plots, path highlighting, and adjustment set visualization.",
+    "category": "Causal Discovery",
+    "docs_url": "https://ggdag.malco.io/",
+    "github_url": "https://github.com/malcolmbarrett/ggdag",
+    "url": "https://cran.r-project.org/package=ggdag",
+    "install": "install.packages(\"ggdag\")",
+    "tags": [
+      "DAG",
+      "visualization",
+      "ggplot2",
+      "causal-diagrams",
+      "adjustment-sets"
+    ],
+    "best_for": "Publication-quality DAG visualization using ggplot2 with dagitty integration",
+    "language": "R"
+  },
+  {
+    "name": "pcalg",
+    "description": "Causal structure learning from observational data using the PC algorithm and variants. Estimates Markov equivalence class of DAGs from conditional independence tests with intervention support.",
+    "category": "Causal Discovery",
+    "docs_url": "https://cran.r-project.org/web/packages/pcalg/pcalg.pdf",
+    "github_url": null,
+    "url": "https://cran.r-project.org/package=pcalg",
+    "install": "install.packages(\"pcalg\")",
+    "tags": [
+      "causal-discovery",
+      "PC-algorithm",
+      "structure-learning",
+      "DAG",
+      "conditional-independence"
+    ],
+    "best_for": "Causal structure learning from observational data using PC algorithm",
+    "language": "R"
+  },
+  {
+    "name": "bnlearn",
+    "description": "Bayesian network structure learning, parameter estimation, and inference. Implements constraint-based (PC, GS), score-based (HC, TABU), and hybrid algorithms for DAG learning with discrete and continuous data.",
+    "category": "Causal Discovery",
+    "docs_url": "https://www.bnlearn.com/",
+    "github_url": null,
+    "url": "https://cran.r-project.org/package=bnlearn",
+    "install": "install.packages(\"bnlearn\")",
+    "tags": [
+      "Bayesian-networks",
+      "structure-learning",
+      "parameter-estimation",
+      "probabilistic-graphical-models",
+      "inference"
+    ],
+    "best_for": "Bayesian network learning and inference with constraint-based and score-based algorithms",
+    "language": "R"
   }
 ]
