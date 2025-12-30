@@ -13,6 +13,8 @@
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://gc.zgo.at">
     <link rel="dns-prefetch" href="https://github.com">
+    <link rel="preconnect" href="https://www.google.com" crossorigin>
+    <link rel="preconnect" href="https://img.shields.io" crossorigin>
 
     <!-- Open Graph / Social Preview -->
     <meta property="og:title" content="{{ if .Title }}{{ .Title }} | {{ .Site.Title }}{{ else }}{{ .Site.Title }}{{ end }}">
@@ -97,6 +99,7 @@
                     <rect x="3" y="14" width="7" height="7"></rect>
                 </svg>
             </button>
+            <span class="sidebar-visitors" id="visitor-count"></span>
         </div>
         <ul class="sidebar-nav">
             <!-- Home -->
@@ -292,9 +295,6 @@
                 </svg>
                 Subscribe
             </a>
-            <div class="sidebar-footer-meta">
-                <span class="sidebar-visitors" id="visitor-count"></span>
-            </div>
         </div>
     </nav>
 

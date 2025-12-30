@@ -167,7 +167,7 @@
                     {{ range .Site.Data.leading_lights }}
                     <a href="{{ "leading-lights/" | relURL }}{{ .slug }}/" class="role-model-card">
                         <div class="role-model-image-wrapper">
-                            <img src="{{ .image }}" alt="{{ .name }}" class="role-model-image" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name={{ .name | urlize }}&size=200&background=1e293b&color=fff'">
+                            <img data-src="{{ .image }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect fill='%231e293b' width='120' height='120'/%3E%3C/svg%3E" alt="{{ .name }}" class="role-model-image lazy-profile" onerror="this.src='https://ui-avatars.com/api/?name={{ .name | urlize }}&size=200&background=1e293b&color=fff'">
                         </div>
                         <div class="role-model-info">
                             <span class="role-model-name">{{ .name }}</span>
@@ -682,6 +682,24 @@ document.addEventListener('DOMContentLoaded', function() {
         searchInput.value = '';
         searchInput.dispatchEvent(new Event('input'));
         this.style.display = 'none';
+    });
+
+    // Lazy load Leading Lights profile images
+    var profileObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                var img = entry.target;
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                }
+                profileObserver.unobserve(img);
+            }
+        });
+    }, { rootMargin: '200px' });
+
+    document.querySelectorAll('.lazy-profile').forEach(function(img) {
+        profileObserver.observe(img);
     });
 
 });
