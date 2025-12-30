@@ -411,7 +411,8 @@
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "mobility"
   },
   {
     "name": "Lyft",
@@ -428,7 +429,8 @@
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "mobility"
   },
   {
     "name": "Wayfair",
@@ -445,7 +447,8 @@
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "Airbnb",
@@ -462,7 +465,8 @@
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "travel"
   },
   {
     "name": "DoorDash",
@@ -479,7 +483,8 @@
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "food-grocery"
   },
   {
     "name": "Instacart",
@@ -496,7 +501,8 @@
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "food-grocery"
   },
   {
     "name": "eBay",
@@ -513,7 +519,8 @@
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "Etsy",
@@ -530,7 +537,8 @@
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "LinkedIn",
@@ -547,7 +555,8 @@
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "social-network"
   },
   {
     "name": "Spotify",
@@ -564,7 +573,8 @@
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "music"
   },
   {
     "name": "Netflix",
@@ -581,7 +591,8 @@
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "video"
   },
   {
     "name": "Pinterest",
@@ -598,7 +609,8 @@
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "social-network"
   },
   {
     "name": "Discord",
@@ -615,7 +627,8 @@
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "social-network"
   },
   {
     "name": "Snap",
@@ -632,7 +645,8 @@
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "social-network"
   },
   {
     "name": "Stripe",
@@ -649,7 +663,8 @@
     "section": "companies",
     "sector": "fintech",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "payments"
   },
   {
     "name": "PayPal",
@@ -666,7 +681,8 @@
     "section": "companies",
     "sector": "fintech",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "payments"
   },
   {
     "name": "Robinhood",
@@ -683,7 +699,8 @@
     "section": "companies",
     "sector": "fintech",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "investing"
   },
   {
     "name": "Affirm",
@@ -700,7 +717,8 @@
     "section": "companies",
     "sector": "fintech",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "lending"
   },
   {
     "name": "Block",
@@ -717,7 +735,8 @@
     "section": "companies",
     "sector": "fintech",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "payments"
   },
   {
     "name": "Adobe",
@@ -768,7 +787,8 @@
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "data-infra"
   },
   {
     "name": "Intuit",
@@ -974,7 +994,7 @@
     "tab": "find-jobs",
     "subtab": "companies"
   },
-    {
+  {
     "name": "DataLemur SQL",
     "description": "Free SQL practice with FAANG questions. Created by ex-Facebook authors of Ace the Data Science Interview.",
     "stage": "Interview Prep",
@@ -1122,7 +1142,13 @@
     "category": "Causal Inference",
     "url": "https://www.yuan-meng.com/posts/causality/causality/",
     "type": "Blog",
-    "tags": ["DiD", "synthetic-control", "RDD", "propensity-scores", "tech-examples"],
+    "tags": [
+      "DiD",
+      "synthetic-control",
+      "RDD",
+      "propensity-scores",
+      "tech-examples"
+    ],
     "section": "interview",
     "tab": "interview",
     "subtab": "causal-inference"
@@ -1134,7 +1160,13 @@
     "category": "Causal Inference",
     "url": "https://towardsdatascience.com/interview-preparation-causal-inference-44fbb8b0a5c6/",
     "type": "Article",
-    "tags": ["interview-questions", "RCT", "IV", "DiD", "RDD"],
+    "tags": [
+      "interview-questions",
+      "RCT",
+      "IV",
+      "DiD",
+      "RDD"
+    ],
     "section": "interview",
     "tab": "interview",
     "subtab": "causal-inference"
@@ -1146,7 +1178,11 @@
     "category": "Causal Inference",
     "url": "https://medium.com/@shreyabhattac/how-to-prepare-for-interviews-focused-on-causal-inference-modeling-and-online-experiments-aa1b5278ea69",
     "type": "Guide",
-    "tags": ["strategy", "econometrics", "study-plan"],
+    "tags": [
+      "strategy",
+      "econometrics",
+      "study-plan"
+    ],
     "section": "interview",
     "tab": "interview",
     "subtab": "causal-inference"
@@ -1158,7 +1194,12 @@
     "category": "Causal Inference",
     "url": "https://www.interviewdb.com/causal-inference/",
     "type": "Database",
-    "tags": ["question-bank", "practice", "DAGs", "spillover"],
+    "tags": [
+      "question-bank",
+      "practice",
+      "DAGs",
+      "spillover"
+    ],
     "section": "interview",
     "tab": "interview",
     "subtab": "causal-inference"
@@ -1170,7 +1211,12 @@
     "category": "Causal Inference",
     "url": "https://grabngoinfo.com/",
     "type": "Video",
-    "tags": ["video", "DAGs", "terminology", "A/B-testing"],
+    "tags": [
+      "video",
+      "DAGs",
+      "terminology",
+      "A/B-testing"
+    ],
     "section": "interview",
     "tab": "interview",
     "subtab": "causal-inference"
@@ -2548,7 +2594,11 @@
     "stage": "Discovery",
     "tab": "find-jobs",
     "subtab": "materials",
-    "tags": ["resume", "Harvard", "PhD"]
+    "tags": [
+      "resume",
+      "Harvard",
+      "PhD"
+    ]
   },
   {
     "name": "FAANG Recruiter's Guide to Data Resumes",
@@ -2559,7 +2609,11 @@
     "stage": "Discovery",
     "tab": "find-jobs",
     "subtab": "materials",
-    "tags": ["resume", "FAANG", "recruiter-perspective"]
+    "tags": [
+      "resume",
+      "FAANG",
+      "recruiter-perspective"
+    ]
   },
   {
     "name": "Justin Ellis: Academia to Data Science",
@@ -2570,7 +2624,11 @@
     "stage": "Discovery",
     "tab": "find-jobs",
     "subtab": "materials",
-    "tags": ["portfolio", "PhD", "GitHub"]
+    "tags": [
+      "portfolio",
+      "PhD",
+      "GitHub"
+    ]
   },
   {
     "name": "GitHub for Data Science Job Seekers",
@@ -2581,7 +2639,11 @@
     "stage": "Discovery",
     "tab": "find-jobs",
     "subtab": "materials",
-    "tags": ["GitHub", "portfolio", "LinkedIn-Learning"]
+    "tags": [
+      "GitHub",
+      "portfolio",
+      "LinkedIn-Learning"
+    ]
   },
   {
     "name": "Yu Dong: Building a DS Portfolio",
@@ -2592,7 +2654,11 @@
     "stage": "Discovery",
     "tab": "find-jobs",
     "subtab": "materials",
-    "tags": ["portfolio", "personal-website", "practitioner"]
+    "tags": [
+      "portfolio",
+      "personal-website",
+      "practitioner"
+    ]
   },
   {
     "name": "Evan Buntrock: Amazon Interviewer Perspective",
@@ -2604,7 +2670,11 @@
     "tier": "essential",
     "tab": "start-here",
     "subtab": "",
-    "tags": ["PhD", "Amazon", "interviewer-perspective"]
+    "tags": [
+      "PhD",
+      "Amazon",
+      "interviewer-perspective"
+    ]
   },
   {
     "name": "Chris Nosko: Chicago Booth to Uber VP (Mixtape)",
@@ -2615,7 +2685,11 @@
     "stage": "Strategy",
     "tab": "start-here",
     "subtab": "",
-    "tags": ["PhD", "Uber", "senior-leadership"]
+    "tags": [
+      "PhD",
+      "Uber",
+      "senior-leadership"
+    ]
   },
   {
     "name": "Rose Tan: My Journey from Econ PhD to Tech",
@@ -2626,7 +2700,11 @@
     "stage": "Strategy",
     "tab": "start-here",
     "subtab": "",
-    "tags": ["PhD", "LinkedIn", "internship-strategy"]
+    "tags": [
+      "PhD",
+      "LinkedIn",
+      "internship-strategy"
+    ]
   },
   {
     "name": "Zijing Zhu: How I Became a Data Scientist",
@@ -2637,7 +2715,11 @@
     "stage": "Strategy",
     "tab": "start-here",
     "subtab": "",
-    "tags": ["PhD", "bootcamp", "honest-narrative"]
+    "tags": [
+      "PhD",
+      "bootcamp",
+      "honest-narrative"
+    ]
   },
   {
     "name": "Susan Athey: First Microsoft Chief Economist (Mixtape)",
@@ -2648,7 +2730,11 @@
     "stage": "Strategy",
     "tab": "start-here",
     "subtab": "",
-    "tags": ["PhD", "Microsoft", "pioneer"]
+    "tags": [
+      "PhD",
+      "Microsoft",
+      "pioneer"
+    ]
   },
   {
     "name": "InterviewQuery: Visa Sponsorship for DS Jobs",
@@ -2659,7 +2745,11 @@
     "stage": "Offers",
     "tab": "offers",
     "subtab": "visa",
-    "tags": ["H-1B", "visa", "international"]
+    "tags": [
+      "H-1B",
+      "visa",
+      "international"
+    ]
   },
   {
     "name": "EB2NIW.com: DIY Green Card Resource",
@@ -2670,7 +2760,11 @@
     "stage": "Offers",
     "tab": "offers",
     "subtab": "visa",
-    "tags": ["green-card", "EB-2-NIW", "self-petition"]
+    "tags": [
+      "green-card",
+      "EB-2-NIW",
+      "self-petition"
+    ]
   },
   {
     "name": "H1BData.info: Salary & Sponsor Database",
@@ -2681,7 +2775,11 @@
     "stage": "Offers",
     "tab": "offers",
     "subtab": "visa",
-    "tags": ["H-1B", "salary-data", "database"]
+    "tags": [
+      "H-1B",
+      "salary-data",
+      "database"
+    ]
   },
   {
     "name": "Built In: Companies That Sponsor H-1B",
@@ -2692,7 +2790,11 @@
     "stage": "Offers",
     "tab": "offers",
     "subtab": "visa",
-    "tags": ["H-1B", "company-list", "2025"]
+    "tags": [
+      "H-1B",
+      "company-list",
+      "2025"
+    ]
   },
   {
     "name": "USCIS H-1B Employer Data Hub",
@@ -2703,7 +2805,11 @@
     "stage": "Offers",
     "tab": "offers",
     "subtab": "visa",
-    "tags": ["H-1B", "official", "USCIS"]
+    "tags": [
+      "H-1B",
+      "official",
+      "USCIS"
+    ]
   },
   {
     "name": "Intel",
@@ -2712,7 +2818,10 @@
     "category": "Company Lists",
     "url": "https://intel.wd1.myworkdayjobs.com/External",
     "type": "Career Portal",
-    "tags": ["hardware", "economist-title"],
+    "tags": [
+      "hardware",
+      "economist-title"
+    ],
     "section": "companies",
     "sector": "hardware",
     "tab": "find-jobs",
@@ -2725,7 +2834,10 @@
     "category": "Company Lists",
     "url": "https://www.ibm.com/careers/search",
     "type": "Career Portal",
-    "tags": ["enterprise", "research"],
+    "tags": [
+      "enterprise",
+      "research"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -2738,7 +2850,10 @@
     "category": "Company Lists",
     "url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
     "type": "Career Portal",
-    "tags": ["hardware", "research"],
+    "tags": [
+      "hardware",
+      "research"
+    ],
     "section": "companies",
     "sector": "hardware",
     "tab": "find-jobs",
@@ -2751,7 +2866,10 @@
     "category": "Company Lists",
     "url": "https://jobs.cisco.com/",
     "type": "Career Portal",
-    "tags": ["enterprise", "analytics"],
+    "tags": [
+      "enterprise",
+      "analytics"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -2764,7 +2882,10 @@
     "category": "Company Lists",
     "url": "https://careers.qualcomm.com/",
     "type": "Career Portal",
-    "tags": ["hardware", "AI"],
+    "tags": [
+      "hardware",
+      "AI"
+    ],
     "section": "companies",
     "sector": "hardware",
     "tab": "find-jobs",
@@ -2777,7 +2898,10 @@
     "category": "Company Lists",
     "url": "https://jobs.sap.com/",
     "type": "Career Portal",
-    "tags": ["enterprise", "analytics"],
+    "tags": [
+      "enterprise",
+      "analytics"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -2790,11 +2914,15 @@
     "category": "Company Lists",
     "url": "https://zillow.wd5.myworkdayjobs.com/Zillow_Group_External",
     "type": "Career Portal",
-    "tags": ["marketplace", "economist-title"],
+    "tags": [
+      "marketplace",
+      "economist-title"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "real-estate"
   },
   {
     "name": "Booking.com",
@@ -2803,11 +2931,15 @@
     "category": "Company Lists",
     "url": "https://careers.booking.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "experimentation"],
+    "tags": [
+      "marketplace",
+      "experimentation"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "travel"
   },
   {
     "name": "Thumbtack",
@@ -2816,11 +2948,15 @@
     "category": "Company Lists",
     "url": "https://careers.thumbtack.com/jobs",
     "type": "Career Portal",
-    "tags": ["marketplace", "economist-title"],
+    "tags": [
+      "marketplace",
+      "economist-title"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "services"
   },
   {
     "name": "Expedia Group",
@@ -2829,11 +2965,15 @@
     "category": "Company Lists",
     "url": "https://careers.expediagroup.com/jobs/",
     "type": "Career Portal",
-    "tags": ["marketplace", "PhD-internship"],
+    "tags": [
+      "marketplace",
+      "PhD-internship"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "travel"
   },
   {
     "name": "Opendoor",
@@ -2842,11 +2982,15 @@
     "category": "Company Lists",
     "url": "https://www.opendoor.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "pricing"],
+    "tags": [
+      "marketplace",
+      "pricing"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "real-estate"
   },
   {
     "name": "Redfin",
@@ -2855,11 +2999,15 @@
     "category": "Company Lists",
     "url": "https://www.redfin.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "real-estate"],
+    "tags": [
+      "marketplace",
+      "real-estate"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "real-estate"
   },
   {
     "name": "Rover",
@@ -2868,11 +3016,15 @@
     "category": "Company Lists",
     "url": "https://www.rover.com/careers/search",
     "type": "Career Portal",
-    "tags": ["marketplace", "search-ranking"],
+    "tags": [
+      "marketplace",
+      "search-ranking"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "services"
   },
   {
     "name": "Fiverr",
@@ -2881,11 +3033,15 @@
     "category": "Company Lists",
     "url": "https://www.fiverr.com/jobs",
     "type": "Career Portal",
-    "tags": ["marketplace", "search-ranking"],
+    "tags": [
+      "marketplace",
+      "search-ranking"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "services"
   },
   {
     "name": "TikTok",
@@ -2894,11 +3050,15 @@
     "category": "Company Lists",
     "url": "https://careers.tiktok.com/",
     "type": "Career Portal",
-    "tags": ["social-media", "econometrics"],
+    "tags": [
+      "social-media",
+      "econometrics"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "video"
   },
   {
     "name": "X (Twitter)",
@@ -2907,7 +3067,10 @@
     "category": "Company Lists",
     "url": "https://careers.twitter.com/",
     "type": "Career Portal",
-    "tags": ["social-media", "ads"],
+    "tags": [
+      "social-media",
+      "ads"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -2920,11 +3083,15 @@
     "category": "Company Lists",
     "url": "https://www.redditinc.com/careers/",
     "type": "Career Portal",
-    "tags": ["social-media", "econ-PhD-welcome"],
+    "tags": [
+      "social-media",
+      "econ-PhD-welcome"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "social-network"
   },
   {
     "name": "Disney",
@@ -2933,11 +3100,15 @@
     "category": "Company Lists",
     "url": "https://www.disneycareers.com/",
     "type": "Career Portal",
-    "tags": ["social-media", "streaming"],
+    "tags": [
+      "social-media",
+      "streaming"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "video"
   },
   {
     "name": "YouTube",
@@ -2946,11 +3117,15 @@
     "category": "Company Lists",
     "url": "https://careers.google.com/jobs/results/?company=YouTube",
     "type": "Career Portal",
-    "tags": ["social-media", "econ-PhD-welcome"],
+    "tags": [
+      "social-media",
+      "econ-PhD-welcome"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "video"
   },
   {
     "name": "Twitch",
@@ -2959,11 +3134,15 @@
     "category": "Company Lists",
     "url": "https://www.twitch.tv/jobs/careers/",
     "type": "Career Portal",
-    "tags": ["social-media", "ads"],
+    "tags": [
+      "social-media",
+      "ads"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "video"
   },
   {
     "name": "Two Sigma",
@@ -2972,7 +3151,10 @@
     "category": "Company Lists",
     "url": "https://careers.twosigma.com/",
     "type": "Career Portal",
-    "tags": ["trading", "economist-title"],
+    "tags": [
+      "trading",
+      "economist-title"
+    ],
     "section": "companies",
     "sector": "trading",
     "tab": "find-jobs",
@@ -2985,7 +3167,10 @@
     "category": "Company Lists",
     "url": "https://www.citadel.com/careers/",
     "type": "Career Portal",
-    "tags": ["trading", "quant"],
+    "tags": [
+      "trading",
+      "quant"
+    ],
     "section": "companies",
     "sector": "trading",
     "tab": "find-jobs",
@@ -2998,7 +3183,10 @@
     "category": "Company Lists",
     "url": "https://www.janestreet.com/join-jane-street/",
     "type": "Career Portal",
-    "tags": ["trading", "quant"],
+    "tags": [
+      "trading",
+      "quant"
+    ],
     "section": "companies",
     "sector": "trading",
     "tab": "find-jobs",
@@ -3011,7 +3199,10 @@
     "category": "Company Lists",
     "url": "https://www.deshaw.com/careers",
     "type": "Career Portal",
-    "tags": ["trading", "quant"],
+    "tags": [
+      "trading",
+      "quant"
+    ],
     "section": "companies",
     "sector": "trading",
     "tab": "find-jobs",
@@ -3024,7 +3215,10 @@
     "category": "Company Lists",
     "url": "https://www.jumptrading.com/careers",
     "type": "Career Portal",
-    "tags": ["trading", "quant"],
+    "tags": [
+      "trading",
+      "quant"
+    ],
     "section": "companies",
     "sector": "trading",
     "tab": "find-jobs",
@@ -3037,7 +3231,10 @@
     "category": "Company Lists",
     "url": "https://www.bridgewater.com/working-at-bridgewater/job-openings",
     "type": "Career Portal",
-    "tags": ["trading", "macro-economist"],
+    "tags": [
+      "trading",
+      "macro-economist"
+    ],
     "section": "companies",
     "sector": "trading",
     "tab": "find-jobs",
@@ -3050,11 +3247,15 @@
     "category": "Company Lists",
     "url": "https://www.coinbase.com/careers/positions",
     "type": "Career Portal",
-    "tags": ["fintech", "applied-scientist"],
+    "tags": [
+      "fintech",
+      "applied-scientist"
+    ],
     "section": "companies",
     "sector": "fintech",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "crypto"
   },
   {
     "name": "Upstart",
@@ -3063,11 +3264,15 @@
     "category": "Company Lists",
     "url": "https://careers.upstart.com/",
     "type": "Career Portal",
-    "tags": ["fintech", "econ-preferred"],
+    "tags": [
+      "fintech",
+      "econ-preferred"
+    ],
     "section": "companies",
     "sector": "fintech",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "lending"
   },
   {
     "name": "Capital One",
@@ -3076,7 +3281,10 @@
     "category": "Company Lists",
     "url": "https://www.capitalonecareers.com/",
     "type": "Career Portal",
-    "tags": ["fintech", "PhD-program"],
+    "tags": [
+      "fintech",
+      "PhD-program"
+    ],
     "section": "companies",
     "sector": "fintech",
     "tab": "find-jobs",
@@ -3089,7 +3297,10 @@
     "category": "Company Lists",
     "url": "https://www.goldmansachs.com/careers",
     "type": "Career Portal",
-    "tags": ["fintech", "PhD-economists"],
+    "tags": [
+      "fintech",
+      "PhD-economists"
+    ],
     "section": "companies",
     "sector": "fintech",
     "tab": "find-jobs",
@@ -3102,11 +3313,15 @@
     "category": "Company Lists",
     "url": "https://www.sofi.com/careers/",
     "type": "Career Portal",
-    "tags": ["fintech", "pricing"],
+    "tags": [
+      "fintech",
+      "pricing"
+    ],
     "section": "companies",
     "sector": "fintech",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "lending"
   },
   {
     "name": "Chainalysis",
@@ -3115,7 +3330,10 @@
     "category": "Company Lists",
     "url": "https://www.chainalysis.com/careers/",
     "type": "Career Portal",
-    "tags": ["fintech", "blockchain"],
+    "tags": [
+      "fintech",
+      "blockchain"
+    ],
     "section": "companies",
     "sector": "fintech",
     "tab": "find-jobs",
@@ -3128,7 +3346,10 @@
     "category": "Company Lists",
     "url": "https://www.palantir.com/careers/",
     "type": "Career Portal",
-    "tags": ["enterprise", "quantitative"],
+    "tags": [
+      "enterprise",
+      "quantitative"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -3141,11 +3362,15 @@
     "category": "Company Lists",
     "url": "https://careers.snowflake.com/",
     "type": "Career Portal",
-    "tags": ["enterprise", "AI-research"],
+    "tags": [
+      "enterprise",
+      "AI-research"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "data-infra"
   },
   {
     "name": "ServiceNow",
@@ -3154,7 +3379,10 @@
     "category": "Company Lists",
     "url": "https://www.servicenow.com/careers.html",
     "type": "Career Portal",
-    "tags": ["enterprise", "research"],
+    "tags": [
+      "enterprise",
+      "research"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -3167,11 +3395,15 @@
     "category": "Company Lists",
     "url": "https://www.workday.com/en-us/company/careers.html",
     "type": "Career Portal",
-    "tags": ["enterprise", "ML"],
+    "tags": [
+      "enterprise",
+      "ML"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "hr-tech"
   },
   {
     "name": "Datadog",
@@ -3180,11 +3412,15 @@
     "category": "Company Lists",
     "url": "https://careers.datadoghq.com/",
     "type": "Career Portal",
-    "tags": ["enterprise", "applied-scientist"],
+    "tags": [
+      "enterprise",
+      "applied-scientist"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "security"
   },
   {
     "name": "Atlassian",
@@ -3193,7 +3429,10 @@
     "category": "Company Lists",
     "url": "https://www.atlassian.com/company/careers",
     "type": "Career Portal",
-    "tags": ["enterprise", "econ-welcome"],
+    "tags": [
+      "enterprise",
+      "econ-welcome"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -3206,11 +3445,15 @@
     "category": "Company Lists",
     "url": "https://www.cloudflare.com/careers/",
     "type": "Career Portal",
-    "tags": ["enterprise", "security"],
+    "tags": [
+      "enterprise",
+      "security"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "security"
   },
   {
     "name": "UnitedHealth Group",
@@ -3219,7 +3462,10 @@
     "category": "Company Lists",
     "url": "https://careers.unitedhealthgroup.com/",
     "type": "Career Portal",
-    "tags": ["pharma", "health-economics"],
+    "tags": [
+      "pharma",
+      "health-economics"
+    ],
     "section": "companies",
     "sector": "pharma",
     "tab": "find-jobs",
@@ -3232,7 +3478,10 @@
     "category": "Company Lists",
     "url": "https://jobs.cvshealth.com/",
     "type": "Career Portal",
-    "tags": ["pharma", "analytics"],
+    "tags": [
+      "pharma",
+      "analytics"
+    ],
     "section": "companies",
     "sector": "pharma",
     "tab": "find-jobs",
@@ -3245,7 +3494,10 @@
     "category": "Company Lists",
     "url": "https://careers.elevancehealth.com/",
     "type": "Career Portal",
-    "tags": ["pharma", "health-economist"],
+    "tags": [
+      "pharma",
+      "health-economist"
+    ],
     "section": "companies",
     "sector": "pharma",
     "tab": "find-jobs",
@@ -3258,7 +3510,10 @@
     "category": "Company Lists",
     "url": "https://careers.humana.com/",
     "type": "Career Portal",
-    "tags": ["pharma", "AI-ML"],
+    "tags": [
+      "pharma",
+      "AI-ML"
+    ],
     "section": "companies",
     "sector": "pharma",
     "tab": "find-jobs",
@@ -3271,7 +3526,10 @@
     "category": "Company Lists",
     "url": "https://divisionofresearch.kaiserpermanente.org/",
     "type": "Career Portal",
-    "tags": ["pharma", "research"],
+    "tags": [
+      "pharma",
+      "research"
+    ],
     "section": "companies",
     "sector": "pharma",
     "tab": "find-jobs",
@@ -3284,7 +3542,10 @@
     "category": "Company Lists",
     "url": "https://jobs.iqvia.com/",
     "type": "Career Portal",
-    "tags": ["pharma", "HEOR"],
+    "tags": [
+      "pharma",
+      "HEOR"
+    ],
     "section": "companies",
     "sector": "pharma",
     "tab": "find-jobs",
@@ -3297,7 +3558,10 @@
     "category": "Company Lists",
     "url": "https://flatiron.com/careers",
     "type": "Career Portal",
-    "tags": ["pharma", "oncology"],
+    "tags": [
+      "pharma",
+      "oncology"
+    ],
     "section": "companies",
     "sector": "pharma",
     "tab": "find-jobs",
@@ -3310,7 +3574,10 @@
     "category": "Company Lists",
     "url": "https://tempus.wd5.myworkdayjobs.com/Tempus_Careers",
     "type": "Career Portal",
-    "tags": ["pharma", "AI-medicine"],
+    "tags": [
+      "pharma",
+      "AI-medicine"
+    ],
     "section": "companies",
     "sector": "pharma",
     "tab": "find-jobs",
@@ -3323,7 +3590,10 @@
     "category": "Company Lists",
     "url": "https://careers.veeva.com/",
     "type": "Career Portal",
-    "tags": ["pharma", "life-sciences"],
+    "tags": [
+      "pharma",
+      "life-sciences"
+    ],
     "section": "companies",
     "sector": "pharma",
     "tab": "find-jobs",
@@ -3336,7 +3606,10 @@
     "category": "Company Lists",
     "url": "https://careers.amgen.com/",
     "type": "Career Portal",
-    "tags": ["pharma", "HEOR"],
+    "tags": [
+      "pharma",
+      "HEOR"
+    ],
     "section": "companies",
     "sector": "pharma",
     "tab": "find-jobs",
@@ -3349,7 +3622,10 @@
     "category": "Company Lists",
     "url": "https://careers.abbvie.com/",
     "type": "Career Portal",
-    "tags": ["pharma", "HEOR"],
+    "tags": [
+      "pharma",
+      "HEOR"
+    ],
     "section": "companies",
     "sector": "pharma",
     "tab": "find-jobs",
@@ -3362,7 +3638,10 @@
     "category": "Company Lists",
     "url": "https://careers.regeneron.com/",
     "type": "Career Portal",
-    "tags": ["pharma", "HEOR"],
+    "tags": [
+      "pharma",
+      "HEOR"
+    ],
     "section": "companies",
     "sector": "pharma",
     "tab": "find-jobs",
@@ -3375,7 +3654,10 @@
     "category": "Company Lists",
     "url": "https://careers.bms.com/",
     "type": "Career Portal",
-    "tags": ["pharma", "HEOR"],
+    "tags": [
+      "pharma",
+      "HEOR"
+    ],
     "section": "companies",
     "sector": "pharma",
     "tab": "find-jobs",
@@ -3388,7 +3670,10 @@
     "category": "Company Lists",
     "url": "https://www.gilead.com/careers",
     "type": "Career Portal",
-    "tags": ["pharma", "HEOR"],
+    "tags": [
+      "pharma",
+      "HEOR"
+    ],
     "section": "companies",
     "sector": "pharma",
     "tab": "find-jobs",
@@ -3401,7 +3686,10 @@
     "category": "Company Lists",
     "url": "https://deepmind.google/careers/",
     "type": "Career Portal",
-    "tags": ["AI", "econ-PhD-welcome"],
+    "tags": [
+      "AI",
+      "econ-PhD-welcome"
+    ],
     "section": "companies",
     "sector": "ai",
     "tab": "find-jobs",
@@ -3414,7 +3702,10 @@
     "category": "Company Lists",
     "url": "https://scale.com/careers",
     "type": "Career Portal",
-    "tags": ["AI", "economist-title"],
+    "tags": [
+      "AI",
+      "economist-title"
+    ],
     "section": "companies",
     "sector": "ai",
     "tab": "find-jobs",
@@ -3427,7 +3718,10 @@
     "category": "Company Lists",
     "url": "https://jobs.ashbyhq.com/cohere",
     "type": "Career Portal",
-    "tags": ["AI", "research"],
+    "tags": [
+      "AI",
+      "research"
+    ],
     "section": "companies",
     "sector": "ai",
     "tab": "find-jobs",
@@ -3440,7 +3734,10 @@
     "category": "Company Lists",
     "url": "https://www.perplexity.ai/hub/careers",
     "type": "Career Portal",
-    "tags": ["AI", "search"],
+    "tags": [
+      "AI",
+      "search"
+    ],
     "section": "companies",
     "sector": "ai",
     "tab": "find-jobs",
@@ -3453,7 +3750,10 @@
     "category": "Company Lists",
     "url": "https://wandb.ai/site/careers/",
     "type": "Career Portal",
-    "tags": ["AI", "causal-inference"],
+    "tags": [
+      "AI",
+      "causal-inference"
+    ],
     "section": "companies",
     "sector": "ai",
     "tab": "find-jobs",
@@ -3466,7 +3766,10 @@
     "category": "Company Lists",
     "url": "https://apply.workable.com/huggingface/",
     "type": "Career Portal",
-    "tags": ["AI", "open-source"],
+    "tags": [
+      "AI",
+      "open-source"
+    ],
     "section": "companies",
     "sector": "ai",
     "tab": "find-jobs",
@@ -3479,7 +3782,10 @@
     "category": "Company Lists",
     "url": "https://www.ai21.com/careers/",
     "type": "Career Portal",
-    "tags": ["AI", "research"],
+    "tags": [
+      "AI",
+      "research"
+    ],
     "section": "companies",
     "sector": "ai",
     "tab": "find-jobs",
@@ -3492,7 +3798,10 @@
     "category": "Company Lists",
     "url": "https://www.valvesoftware.com/en/jobs",
     "type": "Career Portal",
-    "tags": ["gaming", "economist-title"],
+    "tags": [
+      "gaming",
+      "economist-title"
+    ],
     "section": "companies",
     "sector": "gaming",
     "tab": "find-jobs",
@@ -3505,7 +3814,10 @@
     "category": "Company Lists",
     "url": "https://www.riotgames.com/en/work-with-us/jobs",
     "type": "Career Portal",
-    "tags": ["gaming", "economy-designer"],
+    "tags": [
+      "gaming",
+      "economy-designer"
+    ],
     "section": "companies",
     "sector": "gaming",
     "tab": "find-jobs",
@@ -3518,7 +3830,10 @@
     "category": "Company Lists",
     "url": "https://www.zynga.com/jobs/careers/",
     "type": "Career Portal",
-    "tags": ["gaming", "game-economist"],
+    "tags": [
+      "gaming",
+      "game-economist"
+    ],
     "section": "companies",
     "sector": "gaming",
     "tab": "find-jobs",
@@ -3531,7 +3846,10 @@
     "category": "Company Lists",
     "url": "https://www.playtika.com/careers/",
     "type": "Career Portal",
-    "tags": ["gaming", "game-economist"],
+    "tags": [
+      "gaming",
+      "game-economist"
+    ],
     "section": "companies",
     "sector": "gaming",
     "tab": "find-jobs",
@@ -3544,7 +3862,10 @@
     "category": "Company Lists",
     "url": "https://www.epicgames.com/site/en-US/careers/jobs",
     "type": "Career Portal",
-    "tags": ["gaming", "metaverse"],
+    "tags": [
+      "gaming",
+      "metaverse"
+    ],
     "section": "companies",
     "sector": "gaming",
     "tab": "find-jobs",
@@ -3557,7 +3878,10 @@
     "category": "Company Lists",
     "url": "https://careers.activisionblizzard.com/",
     "type": "Career Portal",
-    "tags": ["gaming", "economics"],
+    "tags": [
+      "gaming",
+      "economics"
+    ],
     "section": "companies",
     "sector": "gaming",
     "tab": "find-jobs",
@@ -3570,7 +3894,10 @@
     "category": "Company Lists",
     "url": "https://www.ea.com/careers",
     "type": "Career Portal",
-    "tags": ["gaming", "game-economics"],
+    "tags": [
+      "gaming",
+      "game-economics"
+    ],
     "section": "companies",
     "sector": "gaming",
     "tab": "find-jobs",
@@ -3583,7 +3910,10 @@
     "category": "Company Lists",
     "url": "https://supercell.com/en/careers/",
     "type": "Career Portal",
-    "tags": ["gaming", "econometrics"],
+    "tags": [
+      "gaming",
+      "econometrics"
+    ],
     "section": "companies",
     "sector": "gaming",
     "tab": "find-jobs",
@@ -3596,7 +3926,10 @@
     "category": "Company Lists",
     "url": "https://job-boards.greenhouse.io/taketwo/",
     "type": "Career Portal",
-    "tags": ["gaming", "AI"],
+    "tags": [
+      "gaming",
+      "AI"
+    ],
     "section": "companies",
     "sector": "gaming",
     "tab": "find-jobs",
@@ -3609,7 +3942,10 @@
     "category": "Company Lists",
     "url": "https://delta.dejobs.org/jobs/",
     "type": "Career Portal",
-    "tags": ["travel", "econ-welcome"],
+    "tags": [
+      "travel",
+      "econ-welcome"
+    ],
     "section": "companies",
     "sector": "travel",
     "tab": "find-jobs",
@@ -3622,7 +3958,10 @@
     "category": "Company Lists",
     "url": "https://careers.united.com/",
     "type": "Career Portal",
-    "tags": ["travel", "econ-welcome"],
+    "tags": [
+      "travel",
+      "econ-welcome"
+    ],
     "section": "companies",
     "sector": "travel",
     "tab": "find-jobs",
@@ -3635,7 +3974,10 @@
     "category": "Company Lists",
     "url": "https://careers.southwestair.com/",
     "type": "Career Portal",
-    "tags": ["travel", "econ-welcome"],
+    "tags": [
+      "travel",
+      "econ-welcome"
+    ],
     "section": "companies",
     "sector": "travel",
     "tab": "find-jobs",
@@ -3648,7 +3990,10 @@
     "category": "Company Lists",
     "url": "https://jobs.aa.com/",
     "type": "Career Portal",
-    "tags": ["travel", "OR"],
+    "tags": [
+      "travel",
+      "OR"
+    ],
     "section": "companies",
     "sector": "travel",
     "tab": "find-jobs",
@@ -3661,7 +4006,10 @@
     "category": "Company Lists",
     "url": "https://careers.fedex.com/",
     "type": "Career Portal",
-    "tags": ["travel", "PhD-economist"],
+    "tags": [
+      "travel",
+      "PhD-economist"
+    ],
     "section": "companies",
     "sector": "travel",
     "tab": "find-jobs",
@@ -3674,7 +4022,10 @@
     "category": "Company Lists",
     "url": "https://careers.withwaymo.com/jobs/search",
     "type": "Career Portal",
-    "tags": ["travel", "autonomous"],
+    "tags": [
+      "travel",
+      "autonomous"
+    ],
     "section": "companies",
     "sector": "travel",
     "tab": "find-jobs",
@@ -3687,7 +4038,10 @@
     "category": "Company Lists",
     "url": "https://jobs.lever.co/zoox",
     "type": "Career Portal",
-    "tags": ["travel", "econ-OR-welcome"],
+    "tags": [
+      "travel",
+      "econ-OR-welcome"
+    ],
     "section": "companies",
     "sector": "travel",
     "tab": "find-jobs",
@@ -3700,7 +4054,10 @@
     "category": "Company Lists",
     "url": "https://boards.greenhouse.io/aurorainnovation",
     "type": "Career Portal",
-    "tags": ["travel", "econ-welcome"],
+    "tags": [
+      "travel",
+      "econ-welcome"
+    ],
     "section": "companies",
     "sector": "travel",
     "tab": "find-jobs",
@@ -3713,7 +4070,10 @@
     "category": "Company Lists",
     "url": "https://careers.walmart.com/",
     "type": "Career Portal",
-    "tags": ["retail", "economist-team"],
+    "tags": [
+      "retail",
+      "economist-team"
+    ],
     "section": "companies",
     "sector": "retail",
     "tab": "find-jobs",
@@ -3726,7 +4086,10 @@
     "category": "Company Lists",
     "url": "https://careers.starbucks.com",
     "type": "Career Portal",
-    "tags": ["retail", "economist-title"],
+    "tags": [
+      "retail",
+      "economist-title"
+    ],
     "section": "companies",
     "sector": "retail",
     "tab": "find-jobs",
@@ -3739,7 +4102,10 @@
     "category": "Company Lists",
     "url": "https://jobs.nike.com/",
     "type": "Career Portal",
-    "tags": ["retail", "PhD-preferred"],
+    "tags": [
+      "retail",
+      "PhD-preferred"
+    ],
     "section": "companies",
     "sector": "retail",
     "tab": "find-jobs",
@@ -3752,7 +4118,10 @@
     "category": "Company Lists",
     "url": "https://careers.homedepot.com/",
     "type": "Career Portal",
-    "tags": ["retail", "analytics"],
+    "tags": [
+      "retail",
+      "analytics"
+    ],
     "section": "companies",
     "sector": "retail",
     "tab": "find-jobs",
@@ -3765,7 +4134,10 @@
     "category": "Company Lists",
     "url": "https://www.pgcareers.com/",
     "type": "Career Portal",
-    "tags": ["retail", "PhD-program"],
+    "tags": [
+      "retail",
+      "PhD-program"
+    ],
     "section": "companies",
     "sector": "retail",
     "tab": "find-jobs",
@@ -3778,7 +4150,11 @@
     "category": "Company Lists",
     "url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
     "type": "Career Portal",
-    "tags": ["hardware", "AI", "GPU"],
+    "tags": [
+      "hardware",
+      "AI",
+      "GPU"
+    ],
     "section": "companies",
     "sector": "hardware",
     "tab": "find-jobs",
@@ -3791,7 +4167,10 @@
     "category": "Company Lists",
     "url": "https://careers.amd.com/",
     "type": "Career Portal",
-    "tags": ["hardware", "semiconductor"],
+    "tags": [
+      "hardware",
+      "semiconductor"
+    ],
     "section": "companies",
     "sector": "hardware",
     "tab": "find-jobs",
@@ -3804,7 +4183,10 @@
     "category": "Company Lists",
     "url": "https://www.intel.com/content/www/us/en/jobs/jobs-at-intel.html",
     "type": "Career Portal",
-    "tags": ["hardware", "semiconductor"],
+    "tags": [
+      "hardware",
+      "semiconductor"
+    ],
     "section": "companies",
     "sector": "hardware",
     "tab": "find-jobs",
@@ -3817,7 +4199,10 @@
     "category": "Company Lists",
     "url": "https://careers.qualcomm.com/",
     "type": "Career Portal",
-    "tags": ["hardware", "mobile"],
+    "tags": [
+      "hardware",
+      "mobile"
+    ],
     "section": "companies",
     "sector": "hardware",
     "tab": "find-jobs",
@@ -3830,7 +4215,10 @@
     "category": "Company Lists",
     "url": "https://www.broadcom.com/company/careers",
     "type": "Career Portal",
-    "tags": ["hardware", "semiconductor"],
+    "tags": [
+      "hardware",
+      "semiconductor"
+    ],
     "section": "companies",
     "sector": "hardware",
     "tab": "find-jobs",
@@ -3843,7 +4231,10 @@
     "category": "Company Lists",
     "url": "https://careers.ti.com/",
     "type": "Career Portal",
-    "tags": ["hardware", "semiconductor"],
+    "tags": [
+      "hardware",
+      "semiconductor"
+    ],
     "section": "companies",
     "sector": "hardware",
     "tab": "find-jobs",
@@ -3856,7 +4247,10 @@
     "category": "Company Lists",
     "url": "https://www.micron.com/careers",
     "type": "Career Portal",
-    "tags": ["hardware", "memory"],
+    "tags": [
+      "hardware",
+      "memory"
+    ],
     "section": "companies",
     "sector": "hardware",
     "tab": "find-jobs",
@@ -3869,7 +4263,10 @@
     "category": "Company Lists",
     "url": "https://careers.arm.com/",
     "type": "Career Portal",
-    "tags": ["hardware", "semiconductor"],
+    "tags": [
+      "hardware",
+      "semiconductor"
+    ],
     "section": "companies",
     "sector": "hardware",
     "tab": "find-jobs",
@@ -3882,7 +4279,11 @@
     "category": "Company Lists",
     "url": "https://www.tsmc.com/english/careers",
     "type": "Career Portal",
-    "tags": ["hardware", "semiconductor", "foundry"],
+    "tags": [
+      "hardware",
+      "semiconductor",
+      "foundry"
+    ],
     "section": "companies",
     "sector": "hardware",
     "tab": "find-jobs",
@@ -3895,7 +4296,10 @@
     "category": "Company Lists",
     "url": "https://www.appliedmaterials.com/careers",
     "type": "Career Portal",
-    "tags": ["hardware", "semiconductor-equipment"],
+    "tags": [
+      "hardware",
+      "semiconductor-equipment"
+    ],
     "section": "companies",
     "sector": "hardware",
     "tab": "find-jobs",
@@ -3908,11 +4312,16 @@
     "category": "Company Lists",
     "url": "https://www.lifeatspotify.com/jobs",
     "type": "Career Portal",
-    "tags": ["Europe", "Sweden", "experimentation"],
+    "tags": [
+      "Europe",
+      "Sweden",
+      "experimentation"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "music"
   },
   {
     "name": "Klarna",
@@ -3921,11 +4330,16 @@
     "category": "Company Lists",
     "url": "https://www.klarna.com/careers/",
     "type": "Career Portal",
-    "tags": ["Europe", "Sweden", "fintech"],
+    "tags": [
+      "Europe",
+      "Sweden",
+      "fintech"
+    ],
     "section": "companies",
     "sector": "fintech",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "lending"
   },
   {
     "name": "Revolut",
@@ -3934,11 +4348,16 @@
     "category": "Company Lists",
     "url": "https://www.revolut.com/careers/",
     "type": "Career Portal",
-    "tags": ["Europe", "UK", "fintech"],
+    "tags": [
+      "Europe",
+      "UK",
+      "fintech"
+    ],
     "section": "companies",
     "sector": "fintech",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "banking"
   },
   {
     "name": "Wise",
@@ -3947,11 +4366,16 @@
     "category": "Company Lists",
     "url": "https://www.wise.jobs/",
     "type": "Career Portal",
-    "tags": ["Europe", "UK", "fintech"],
+    "tags": [
+      "Europe",
+      "UK",
+      "fintech"
+    ],
     "section": "companies",
     "sector": "fintech",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "payments"
   },
   {
     "name": "Adyen",
@@ -3960,11 +4384,16 @@
     "category": "Company Lists",
     "url": "https://careers.adyen.com/",
     "type": "Career Portal",
-    "tags": ["Europe", "Netherlands", "fintech"],
+    "tags": [
+      "Europe",
+      "Netherlands",
+      "fintech"
+    ],
     "section": "companies",
     "sector": "fintech",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "payments"
   },
   {
     "name": "N26",
@@ -3973,11 +4402,16 @@
     "category": "Company Lists",
     "url": "https://n26.com/en/careers",
     "type": "Career Portal",
-    "tags": ["Europe", "Germany", "fintech"],
+    "tags": [
+      "Europe",
+      "Germany",
+      "fintech"
+    ],
     "section": "companies",
     "sector": "fintech",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "banking"
   },
   {
     "name": "Delivery Hero",
@@ -3986,11 +4420,16 @@
     "category": "Company Lists",
     "url": "https://careers.deliveryhero.com/",
     "type": "Career Portal",
-    "tags": ["Europe", "Germany", "marketplace"],
+    "tags": [
+      "Europe",
+      "Germany",
+      "marketplace"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "food-grocery"
   },
   {
     "name": "Zalando",
@@ -3999,11 +4438,16 @@
     "category": "Company Lists",
     "url": "https://jobs.zalando.com/",
     "type": "Career Portal",
-    "tags": ["Europe", "Germany", "marketplace"],
+    "tags": [
+      "Europe",
+      "Germany",
+      "marketplace"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "BlaBlaCar",
@@ -4012,11 +4456,16 @@
     "category": "Company Lists",
     "url": "https://www.blablacar.com/careers",
     "type": "Career Portal",
-    "tags": ["Europe", "France", "marketplace"],
+    "tags": [
+      "Europe",
+      "France",
+      "marketplace"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "mobility"
   },
   {
     "name": "Bolt",
@@ -4025,11 +4474,16 @@
     "category": "Company Lists",
     "url": "https://bolt.eu/en/careers/",
     "type": "Career Portal",
-    "tags": ["Europe", "Estonia", "marketplace"],
+    "tags": [
+      "Europe",
+      "Estonia",
+      "marketplace"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "mobility"
   },
   {
     "name": "Supercell",
@@ -4038,7 +4492,11 @@
     "category": "Company Lists",
     "url": "https://supercell.com/en/careers/",
     "type": "Career Portal",
-    "tags": ["Europe", "Finland", "gaming"],
+    "tags": [
+      "Europe",
+      "Finland",
+      "gaming"
+    ],
     "section": "companies",
     "sector": "gaming",
     "tab": "find-jobs",
@@ -4051,7 +4509,11 @@
     "category": "Company Lists",
     "url": "https://careers.king.com/",
     "type": "Career Portal",
-    "tags": ["Europe", "Sweden", "gaming"],
+    "tags": [
+      "Europe",
+      "Sweden",
+      "gaming"
+    ],
     "section": "companies",
     "sector": "gaming",
     "tab": "find-jobs",
@@ -4064,7 +4526,11 @@
     "category": "Company Lists",
     "url": "https://mistral.ai/careers/",
     "type": "Career Portal",
-    "tags": ["Europe", "France", "LLM"],
+    "tags": [
+      "Europe",
+      "France",
+      "LLM"
+    ],
     "section": "companies",
     "sector": "ai",
     "tab": "find-jobs",
@@ -4077,11 +4543,15 @@
     "category": "Company Lists",
     "url": "https://careers.upwork.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "freelance"],
+    "tags": [
+      "marketplace",
+      "freelance"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "services"
   },
   {
     "name": "Toptal",
@@ -4090,11 +4560,16 @@
     "category": "Company Lists",
     "url": "https://www.toptal.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "economist-title", "freelance"],
+    "tags": [
+      "marketplace",
+      "economist-title",
+      "freelance"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "services"
   },
   {
     "name": "Instawork",
@@ -4103,11 +4578,16 @@
     "category": "Company Lists",
     "url": "https://www.instawork.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "ML", "staffing"],
+    "tags": [
+      "marketplace",
+      "ML",
+      "staffing"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "services"
   },
   {
     "name": "Wonolo",
@@ -4116,11 +4596,16 @@
     "category": "Company Lists",
     "url": "https://www.wonolo.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "ML", "staffing"],
+    "tags": [
+      "marketplace",
+      "ML",
+      "staffing"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "services"
   },
   {
     "name": "TaskRabbit",
@@ -4129,11 +4614,15 @@
     "category": "Company Lists",
     "url": "https://www.taskrabbit.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "services"],
+    "tags": [
+      "marketplace",
+      "services"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "services"
   },
   {
     "name": "Care.com",
@@ -4142,11 +4631,15 @@
     "category": "Company Lists",
     "url": "https://www.care.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "services"],
+    "tags": [
+      "marketplace",
+      "services"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "services"
   },
   {
     "name": "Catalant",
@@ -4155,11 +4648,16 @@
     "category": "Company Lists",
     "url": "https://www.catalant.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "consulting", "B2B"],
+    "tags": [
+      "marketplace",
+      "consulting",
+      "B2B"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "services"
   },
   {
     "name": "Faire",
@@ -4168,11 +4666,16 @@
     "category": "Company Lists",
     "url": "https://www.faire.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "pricing", "B2B"],
+    "tags": [
+      "marketplace",
+      "pricing",
+      "B2B"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "Flexport",
@@ -4181,11 +4684,16 @@
     "category": "Company Lists",
     "url": "https://www.flexport.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "causal-inference", "logistics"],
+    "tags": [
+      "marketplace",
+      "causal-inference",
+      "logistics"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "GOAT Group",
@@ -4194,11 +4702,16 @@
     "category": "Company Lists",
     "url": "https://www.goat.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "pricing", "resale"],
+    "tags": [
+      "marketplace",
+      "pricing",
+      "resale"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "StockX",
@@ -4207,11 +4720,16 @@
     "category": "Company Lists",
     "url": "https://careers.stockx.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "pricing", "resale"],
+    "tags": [
+      "marketplace",
+      "pricing",
+      "resale"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "Poshmark",
@@ -4220,11 +4738,15 @@
     "category": "Company Lists",
     "url": "https://poshmark.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "resale"],
+    "tags": [
+      "marketplace",
+      "resale"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "ThredUp",
@@ -4233,11 +4755,15 @@
     "category": "Company Lists",
     "url": "https://careers.thredup.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "resale"],
+    "tags": [
+      "marketplace",
+      "resale"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "Mercari",
@@ -4246,11 +4772,17 @@
     "category": "Company Lists",
     "url": "https://careers.mercari.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "resale", "Asia", "Japan"],
+    "tags": [
+      "marketplace",
+      "resale",
+      "Asia",
+      "Japan"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "The RealReal",
@@ -4259,11 +4791,16 @@
     "category": "Company Lists",
     "url": "https://careers.therealreal.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "pricing", "resale"],
+    "tags": [
+      "marketplace",
+      "pricing",
+      "resale"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "Reverb",
@@ -4272,11 +4809,15 @@
     "category": "Company Lists",
     "url": "https://reverb.com/page/jobs",
     "type": "Career Portal",
-    "tags": ["marketplace", "causal-inference"],
+    "tags": [
+      "marketplace",
+      "causal-inference"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "OfferUp",
@@ -4285,11 +4826,15 @@
     "category": "Company Lists",
     "url": "https://offerup.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "local"],
+    "tags": [
+      "marketplace",
+      "local"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "CoStar Group",
@@ -4298,11 +4843,16 @@
     "category": "Company Lists",
     "url": "https://www.costargroup.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "economist-title", "real-estate"],
+    "tags": [
+      "marketplace",
+      "economist-title",
+      "real-estate"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "real-estate"
   },
   {
     "name": "Angi",
@@ -4311,11 +4861,16 @@
     "category": "Company Lists",
     "url": "https://www.angi.com/landing/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "economist-title", "services"],
+    "tags": [
+      "marketplace",
+      "economist-title",
+      "services"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "real-estate"
   },
   {
     "name": "CarGurus",
@@ -4324,11 +4879,16 @@
     "category": "Company Lists",
     "url": "https://careers.cargurus.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "pricing", "auto"],
+    "tags": [
+      "marketplace",
+      "pricing",
+      "auto"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "auto"
   },
   {
     "name": "Cars.com",
@@ -4337,11 +4897,15 @@
     "category": "Company Lists",
     "url": "https://www.cars.com/careers/",
     "type": "Career Portal",
-    "tags": ["marketplace", "auto"],
+    "tags": [
+      "marketplace",
+      "auto"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "auto"
   },
   {
     "name": "Carvana",
@@ -4350,11 +4914,15 @@
     "category": "Company Lists",
     "url": "https://www.carvana.com/careers/jobs",
     "type": "Career Portal",
-    "tags": ["marketplace", "auto"],
+    "tags": [
+      "marketplace",
+      "auto"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "auto"
   },
   {
     "name": "TrueCar",
@@ -4363,11 +4931,15 @@
     "category": "Company Lists",
     "url": "https://www.truecar.com/careers/",
     "type": "Career Portal",
-    "tags": ["marketplace", "auto"],
+    "tags": [
+      "marketplace",
+      "auto"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "auto"
   },
   {
     "name": "Turo",
@@ -4376,11 +4948,16 @@
     "category": "Company Lists",
     "url": "https://turo.com/us/en/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "pricing", "auto"],
+    "tags": [
+      "marketplace",
+      "pricing",
+      "auto"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "travel"
   },
   {
     "name": "Houzz",
@@ -4389,11 +4966,15 @@
     "category": "Company Lists",
     "url": "https://www.houzz.com/jobs",
     "type": "Career Portal",
-    "tags": ["marketplace", "home"],
+    "tags": [
+      "marketplace",
+      "home"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "real-estate"
   },
   {
     "name": "SpotHero",
@@ -4402,11 +4983,16 @@
     "category": "Company Lists",
     "url": "https://spothero.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "pricing", "parking"],
+    "tags": [
+      "marketplace",
+      "pricing",
+      "parking"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "real-estate"
   },
   {
     "name": "Nextdoor",
@@ -4415,11 +5001,15 @@
     "category": "Company Lists",
     "url": "https://about.nextdoor.com/careers/",
     "type": "Career Portal",
-    "tags": ["marketplace", "local"],
+    "tags": [
+      "marketplace",
+      "local"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "services"
   },
   {
     "name": "Hopper",
@@ -4428,11 +5018,16 @@
     "category": "Company Lists",
     "url": "https://www.hopper.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "economist-title", "travel"],
+    "tags": [
+      "marketplace",
+      "economist-title",
+      "travel"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "travel"
   },
   {
     "name": "Tripadvisor",
@@ -4441,11 +5036,15 @@
     "category": "Company Lists",
     "url": "https://careers.tripadvisor.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "travel"],
+    "tags": [
+      "marketplace",
+      "travel"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "travel"
   },
   {
     "name": "Just Eat Takeaway",
@@ -4454,11 +5053,17 @@
     "category": "Company Lists",
     "url": "https://careers.justeattakeaway.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "Europe", "Netherlands", "food-delivery"],
+    "tags": [
+      "marketplace",
+      "Europe",
+      "Netherlands",
+      "food-delivery"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "food-grocery"
   },
   {
     "name": "Grubhub",
@@ -4467,11 +5072,15 @@
     "category": "Company Lists",
     "url": "https://www.grubhub.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "food-delivery"],
+    "tags": [
+      "marketplace",
+      "food-delivery"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "food-grocery"
   },
   {
     "name": "Gopuff",
@@ -4480,11 +5089,15 @@
     "category": "Company Lists",
     "url": "https://gopuff.com/go/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "delivery"],
+    "tags": [
+      "marketplace",
+      "delivery"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "food-grocery"
   },
   {
     "name": "GoodRx",
@@ -4493,11 +5106,16 @@
     "category": "Company Lists",
     "url": "https://www.goodrx.com/jobs",
     "type": "Career Portal",
-    "tags": ["marketplace", "healthcare", "pricing"],
+    "tags": [
+      "marketplace",
+      "healthcare",
+      "pricing"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "healthcare"
   },
   {
     "name": "Zocdoc",
@@ -4506,11 +5124,15 @@
     "category": "Company Lists",
     "url": "https://www.zocdoc.com/about/careers-list",
     "type": "Career Portal",
-    "tags": ["marketplace", "healthcare"],
+    "tags": [
+      "marketplace",
+      "healthcare"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "healthcare"
   },
   {
     "name": "Teladoc",
@@ -4519,11 +5141,15 @@
     "category": "Company Lists",
     "url": "https://www.teladochealth.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "healthcare"],
+    "tags": [
+      "marketplace",
+      "healthcare"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "healthcare"
   },
   {
     "name": "Hims & Hers",
@@ -4532,11 +5158,15 @@
     "category": "Company Lists",
     "url": "https://www.hims.com/careers-professionals",
     "type": "Career Portal",
-    "tags": ["marketplace", "healthcare"],
+    "tags": [
+      "marketplace",
+      "healthcare"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "healthcare"
   },
   {
     "name": "Maven Clinic",
@@ -4545,11 +5175,15 @@
     "category": "Company Lists",
     "url": "https://www.mavenclinic.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "healthcare"],
+    "tags": [
+      "marketplace",
+      "healthcare"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "healthcare"
   },
   {
     "name": "Included Health",
@@ -4558,11 +5192,15 @@
     "category": "Company Lists",
     "url": "https://www.includedhealth.com/careers/tech-jobs",
     "type": "Career Portal",
-    "tags": ["marketplace", "healthcare"],
+    "tags": [
+      "marketplace",
+      "healthcare"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "healthcare"
   },
   {
     "name": "Deliveroo",
@@ -4571,11 +5209,18 @@
     "category": "Company Lists",
     "url": "https://careers.deliveroo.co.uk/",
     "type": "Career Portal",
-    "tags": ["marketplace", "economist-title", "Europe", "UK", "food-delivery"],
+    "tags": [
+      "marketplace",
+      "economist-title",
+      "Europe",
+      "UK",
+      "food-delivery"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "food-grocery"
   },
   {
     "name": "Glovo",
@@ -4584,11 +5229,17 @@
     "category": "Company Lists",
     "url": "https://jobs.glovoapp.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "Europe", "Spain", "food-delivery"],
+    "tags": [
+      "marketplace",
+      "Europe",
+      "Spain",
+      "food-delivery"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "food-grocery"
   },
   {
     "name": "Back Market",
@@ -4597,11 +5248,17 @@
     "category": "Company Lists",
     "url": "https://www.backmarket.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "Europe", "France", "resale"],
+    "tags": [
+      "marketplace",
+      "Europe",
+      "France",
+      "resale"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "Vinted",
@@ -4610,11 +5267,17 @@
     "category": "Company Lists",
     "url": "https://careers.vinted.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "Europe", "Lithuania", "resale"],
+    "tags": [
+      "marketplace",
+      "Europe",
+      "Lithuania",
+      "resale"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "Vestiaire Collective",
@@ -4623,11 +5286,17 @@
     "category": "Company Lists",
     "url": "https://careers.vestiairecollective.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "Europe", "France", "resale"],
+    "tags": [
+      "marketplace",
+      "Europe",
+      "France",
+      "resale"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "Grab",
@@ -4636,11 +5305,17 @@
     "category": "Company Lists",
     "url": "https://grab.careers/",
     "type": "Career Portal",
-    "tags": ["marketplace", "Asia", "Singapore", "super-app"],
+    "tags": [
+      "marketplace",
+      "Asia",
+      "Singapore",
+      "super-app"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "mobility"
   },
   {
     "name": "GoTo Group",
@@ -4649,11 +5324,17 @@
     "category": "Company Lists",
     "url": "https://career.gojek.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "Asia", "Indonesia", "super-app"],
+    "tags": [
+      "marketplace",
+      "Asia",
+      "Indonesia",
+      "super-app"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "mobility"
   },
   {
     "name": "Shopee",
@@ -4662,11 +5343,17 @@
     "category": "Company Lists",
     "url": "https://careers.shopee.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "Asia", "Singapore", "e-commerce"],
+    "tags": [
+      "marketplace",
+      "Asia",
+      "Singapore",
+      "e-commerce"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "Coupang",
@@ -4675,11 +5362,17 @@
     "category": "Company Lists",
     "url": "https://www.coupang.jobs/",
     "type": "Career Portal",
-    "tags": ["marketplace", "Asia", "Korea", "e-commerce"],
+    "tags": [
+      "marketplace",
+      "Asia",
+      "Korea",
+      "e-commerce"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "Flipkart",
@@ -4688,11 +5381,17 @@
     "category": "Company Lists",
     "url": "https://www.flipkartcareers.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "Asia", "India", "e-commerce"],
+    "tags": [
+      "marketplace",
+      "Asia",
+      "India",
+      "e-commerce"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "Swiggy",
@@ -4701,11 +5400,17 @@
     "category": "Company Lists",
     "url": "https://careers.swiggy.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "Asia", "India", "food-delivery"],
+    "tags": [
+      "marketplace",
+      "Asia",
+      "India",
+      "food-delivery"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "food-grocery"
   },
   {
     "name": "Zomato",
@@ -4714,11 +5419,17 @@
     "category": "Company Lists",
     "url": "https://www.zomato.com/careers",
     "type": "Career Portal",
-    "tags": ["marketplace", "Asia", "India", "food-delivery"],
+    "tags": [
+      "marketplace",
+      "Asia",
+      "India",
+      "food-delivery"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "food-grocery"
   },
   {
     "name": "Mercado Libre",
@@ -4727,11 +5438,17 @@
     "category": "Company Lists",
     "url": "https://careers-meli.mercadolibre.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "LatAm", "Argentina", "e-commerce"],
+    "tags": [
+      "marketplace",
+      "LatAm",
+      "Argentina",
+      "e-commerce"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "Rappi",
@@ -4740,11 +5457,17 @@
     "category": "Company Lists",
     "url": "https://rappi.wd12.myworkdayjobs.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "LatAm", "Colombia", "super-app"],
+    "tags": [
+      "marketplace",
+      "LatAm",
+      "Colombia",
+      "super-app"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "food-grocery"
   },
   {
     "name": "Alibaba",
@@ -4753,11 +5476,17 @@
     "category": "Company Lists",
     "url": "https://careers.alibaba.com/",
     "type": "Career Portal",
-    "tags": ["marketplace", "Asia", "China", "e-commerce"],
+    "tags": [
+      "marketplace",
+      "Asia",
+      "China",
+      "e-commerce"
+    ],
     "section": "companies",
     "sector": "marketplace",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "retail"
   },
   {
     "name": "Match Group",
@@ -4766,11 +5495,15 @@
     "category": "Company Lists",
     "url": "https://join.matchgroupcareers.com/careers",
     "type": "Career Portal",
-    "tags": ["dating", "marketplace"],
+    "tags": [
+      "dating",
+      "marketplace"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "social-network"
   },
   {
     "name": "Bumble",
@@ -4779,11 +5512,15 @@
     "category": "Company Lists",
     "url": "https://team.bumble.com/",
     "type": "Career Portal",
-    "tags": ["dating", "economist-title"],
+    "tags": [
+      "dating",
+      "economist-title"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "social-network"
   },
   {
     "name": "Hinge",
@@ -4792,11 +5529,14 @@
     "category": "Company Lists",
     "url": "https://hinge.co/careers",
     "type": "Career Portal",
-    "tags": ["dating"],
+    "tags": [
+      "dating"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "social-network"
   },
   {
     "name": "Grindr",
@@ -4805,7 +5545,10 @@
     "category": "Company Lists",
     "url": "https://www.grindr.com/careers",
     "type": "Career Portal",
-    "tags": ["dating", "economist-title"],
+    "tags": [
+      "dating",
+      "economist-title"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -4818,11 +5561,15 @@
     "category": "Company Lists",
     "url": "https://careers.wbd.com/",
     "type": "Career Portal",
-    "tags": ["streaming", "media"],
+    "tags": [
+      "streaming",
+      "media"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "video"
   },
   {
     "name": "NBCUniversal/Peacock",
@@ -4831,7 +5578,10 @@
     "category": "Company Lists",
     "url": "https://www.nbcunicareers.com/",
     "type": "Career Portal",
-    "tags": ["streaming", "media"],
+    "tags": [
+      "streaming",
+      "media"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -4844,11 +5594,15 @@
     "category": "Company Lists",
     "url": "https://www.weareroku.com/",
     "type": "Career Portal",
-    "tags": ["streaming", "economist-title"],
+    "tags": [
+      "streaming",
+      "economist-title"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "video"
   },
   {
     "name": "Vimeo",
@@ -4857,11 +5611,15 @@
     "category": "Company Lists",
     "url": "https://vimeo.com/jobs",
     "type": "Career Portal",
-    "tags": ["streaming", "video"],
+    "tags": [
+      "streaming",
+      "video"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "video"
   },
   {
     "name": "FuboTV",
@@ -4870,7 +5628,10 @@
     "category": "Company Lists",
     "url": "https://careers.fubo.tv/",
     "type": "Career Portal",
-    "tags": ["streaming", "sports"],
+    "tags": [
+      "streaming",
+      "sports"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -4883,7 +5644,11 @@
     "category": "Company Lists",
     "url": "https://careers.dazn.com/",
     "type": "Career Portal",
-    "tags": ["streaming", "sports", "Europe"],
+    "tags": [
+      "streaming",
+      "sports",
+      "Europe"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -4896,11 +5661,15 @@
     "category": "Company Lists",
     "url": "https://www.audiblecareers.com/",
     "type": "Career Portal",
-    "tags": ["audio", "economist-title"],
+    "tags": [
+      "audio",
+      "economist-title"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "music"
   },
   {
     "name": "SiriusXM/Pandora",
@@ -4909,7 +5678,10 @@
     "category": "Company Lists",
     "url": "https://careers.siriusxm.com/",
     "type": "Career Portal",
-    "tags": ["audio", "economist-title"],
+    "tags": [
+      "audio",
+      "economist-title"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -4922,7 +5694,10 @@
     "category": "Company Lists",
     "url": "https://www.iheartmedia.com/careers",
     "type": "Career Portal",
-    "tags": ["audio", "podcast"],
+    "tags": [
+      "audio",
+      "podcast"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -4935,11 +5710,15 @@
     "category": "Company Lists",
     "url": "https://careers.soundcloud.com/",
     "type": "Career Portal",
-    "tags": ["audio", "music"],
+    "tags": [
+      "audio",
+      "music"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "music"
   },
   {
     "name": "Scopely",
@@ -4948,7 +5727,10 @@
     "category": "Company Lists",
     "url": "https://www.scopely.com/en/join-us",
     "type": "Career Portal",
-    "tags": ["gaming", "mobile"],
+    "tags": [
+      "gaming",
+      "mobile"
+    ],
     "section": "companies",
     "sector": "gaming",
     "tab": "find-jobs",
@@ -4961,7 +5743,11 @@
     "category": "Company Lists",
     "url": "https://careers.draftkings.com/",
     "type": "Career Portal",
-    "tags": ["gaming", "economist-title", "sports-betting"],
+    "tags": [
+      "gaming",
+      "economist-title",
+      "sports-betting"
+    ],
     "section": "companies",
     "sector": "gaming",
     "tab": "find-jobs",
@@ -4974,11 +5760,15 @@
     "category": "Company Lists",
     "url": "https://careers.zoom.us/",
     "type": "Career Portal",
-    "tags": ["communication", "video"],
+    "tags": [
+      "communication",
+      "video"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "productivity"
   },
   {
     "name": "Slack",
@@ -4987,11 +5777,15 @@
     "category": "Company Lists",
     "url": "https://slack.com/careers",
     "type": "Career Portal",
-    "tags": ["communication", "messaging"],
+    "tags": [
+      "communication",
+      "messaging"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "productivity"
   },
   {
     "name": "Notion",
@@ -5000,11 +5794,14 @@
     "category": "Company Lists",
     "url": "https://www.notion.com/careers",
     "type": "Career Portal",
-    "tags": ["productivity"],
+    "tags": [
+      "productivity"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "productivity"
   },
   {
     "name": "Figma",
@@ -5013,11 +5810,15 @@
     "category": "Company Lists",
     "url": "https://www.figma.com/careers/",
     "type": "Career Portal",
-    "tags": ["design", "collaboration"],
+    "tags": [
+      "design",
+      "collaboration"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "productivity"
   },
   {
     "name": "Clubhouse",
@@ -5026,7 +5827,10 @@
     "category": "Company Lists",
     "url": "https://www.clubhouse.com/jobs",
     "type": "Career Portal",
-    "tags": ["audio", "social"],
+    "tags": [
+      "audio",
+      "social"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5039,7 +5843,9 @@
     "category": "Company Lists",
     "url": "https://www.patreon.com/careers",
     "type": "Career Portal",
-    "tags": ["creator-economy"],
+    "tags": [
+      "creator-economy"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5052,7 +5858,10 @@
     "category": "Company Lists",
     "url": "https://substack.com/jobs",
     "type": "Career Portal",
-    "tags": ["creator-economy", "newsletter"],
+    "tags": [
+      "creator-economy",
+      "newsletter"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5065,7 +5874,10 @@
     "category": "Company Lists",
     "url": "https://www.quora.com/careers",
     "type": "Career Portal",
-    "tags": ["social", "Q&A"],
+    "tags": [
+      "social",
+      "Q&A"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5078,7 +5890,10 @@
     "category": "Company Lists",
     "url": "https://www.yelp.careers/",
     "type": "Career Portal",
-    "tags": ["reviews", "local"],
+    "tags": [
+      "reviews",
+      "local"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5091,7 +5906,11 @@
     "category": "Company Lists",
     "url": "https://careers.tencent.com/",
     "type": "Career Portal",
-    "tags": ["Asia", "China", "super-app"],
+    "tags": [
+      "Asia",
+      "China",
+      "super-app"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5104,7 +5923,11 @@
     "category": "Company Lists",
     "url": "https://www.bilibili.com/",
     "type": "Career Portal",
-    "tags": ["Asia", "China", "video"],
+    "tags": [
+      "Asia",
+      "China",
+      "video"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5117,7 +5940,11 @@
     "category": "Company Lists",
     "url": "https://job.xiaohongshu.com/",
     "type": "Career Portal",
-    "tags": ["Asia", "China", "social-commerce"],
+    "tags": [
+      "Asia",
+      "China",
+      "social-commerce"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5130,7 +5957,11 @@
     "category": "Company Lists",
     "url": "https://careers.linecorp.com/",
     "type": "Career Portal",
-    "tags": ["Asia", "Japan", "messaging"],
+    "tags": [
+      "Asia",
+      "Japan",
+      "messaging"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5143,7 +5974,11 @@
     "category": "Company Lists",
     "url": "https://japan-job-en.rakuten.careers/",
     "type": "Career Portal",
-    "tags": ["Asia", "Japan", "e-commerce"],
+    "tags": [
+      "Asia",
+      "Japan",
+      "e-commerce"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5156,7 +5991,11 @@
     "category": "Company Lists",
     "url": "https://careers.kakao.com/",
     "type": "Career Portal",
-    "tags": ["Asia", "Korea", "messaging"],
+    "tags": [
+      "Asia",
+      "Korea",
+      "messaging"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5169,7 +6008,11 @@
     "category": "Company Lists",
     "url": "https://recruit.navercorp.com/",
     "type": "Career Portal",
-    "tags": ["Asia", "Korea", "search"],
+    "tags": [
+      "Asia",
+      "Korea",
+      "search"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5182,7 +6025,11 @@
     "category": "Company Lists",
     "url": "https://career.sea.com/",
     "type": "Career Portal",
-    "tags": ["Asia", "Singapore", "gaming"],
+    "tags": [
+      "Asia",
+      "Singapore",
+      "gaming"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5195,7 +6042,11 @@
     "category": "Company Lists",
     "url": "https://www.viber.com/en/careers/",
     "type": "Career Portal",
-    "tags": ["Europe", "Israel", "messaging"],
+    "tags": [
+      "Europe",
+      "Israel",
+      "messaging"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5208,7 +6059,10 @@
     "category": "Company Lists",
     "url": "https://about.smartnews.com/en/careers/",
     "type": "Career Portal",
-    "tags": ["news", "ML"],
+    "tags": [
+      "news",
+      "ML"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5221,7 +6075,10 @@
     "category": "Company Lists",
     "url": "https://careers.newsbreak.com/",
     "type": "Career Portal",
-    "tags": ["news", "causal-inference"],
+    "tags": [
+      "news",
+      "causal-inference"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5234,7 +6091,10 @@
     "category": "Company Lists",
     "url": "https://www.buzzfeed.com/about/jobs",
     "type": "Career Portal",
-    "tags": ["media", "content"],
+    "tags": [
+      "media",
+      "content"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5247,7 +6107,10 @@
     "category": "Company Lists",
     "url": "https://www.voxmedia.com/pages/careers",
     "type": "Career Portal",
-    "tags": ["media", "content"],
+    "tags": [
+      "media",
+      "content"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5260,7 +6123,10 @@
     "category": "Company Lists",
     "url": "https://www.taboola.com/careers",
     "type": "Career Portal",
-    "tags": ["content-recommendation", "ads"],
+    "tags": [
+      "content-recommendation",
+      "ads"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5273,7 +6139,10 @@
     "category": "Company Lists",
     "url": "https://www.outbrain.com/careers/",
     "type": "Career Portal",
-    "tags": ["content-recommendation", "ads"],
+    "tags": [
+      "content-recommendation",
+      "ads"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5286,7 +6155,11 @@
     "category": "Company Lists",
     "url": "https://jobs.disneycareers.com/espn",
     "type": "Career Portal",
-    "tags": ["sports", "streaming", "media"],
+    "tags": [
+      "sports",
+      "streaming",
+      "media"
+    ],
     "section": "companies",
     "sector": "social",
     "tab": "find-jobs",
@@ -5299,7 +6172,11 @@
     "category": "Company Lists",
     "url": "https://international.nubank.com.br/jobs/",
     "type": "Career Portal",
-    "tags": ["LatAm", "Brazil", "digital-bank"],
+    "tags": [
+      "LatAm",
+      "Brazil",
+      "digital-bank"
+    ],
     "section": "companies",
     "sector": "fintech",
     "tab": "find-jobs",
@@ -5312,7 +6189,11 @@
     "category": "Company Lists",
     "url": "https://www.haus.io/careers",
     "type": "Career Portal",
-    "tags": ["mmm", "incrementality", "causal-inference"],
+    "tags": [
+      "mmm",
+      "incrementality",
+      "causal-inference"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5325,7 +6206,11 @@
     "category": "Company Lists",
     "url": "https://job-boards.greenhouse.io/recast",
     "type": "Career Portal",
-    "tags": ["mmm", "incrementality", "bayesian"],
+    "tags": [
+      "mmm",
+      "incrementality",
+      "bayesian"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5338,7 +6223,10 @@
     "category": "Company Lists",
     "url": "https://www.incrmntal.com/careers",
     "type": "Career Portal",
-    "tags": ["mmm", "incrementality"],
+    "tags": [
+      "mmm",
+      "incrementality"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5351,7 +6239,10 @@
     "category": "Company Lists",
     "url": "https://job-boards.greenhouse.io/northbeam",
     "type": "Career Portal",
-    "tags": ["mmm", "attribution"],
+    "tags": [
+      "mmm",
+      "attribution"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5364,7 +6255,10 @@
     "category": "Company Lists",
     "url": "https://liftlab.com/careers-2/",
     "type": "Career Portal",
-    "tags": ["mmm", "econometrics"],
+    "tags": [
+      "mmm",
+      "econometrics"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5377,7 +6271,10 @@
     "category": "Company Lists",
     "url": "https://paramark.com/careers",
     "type": "Career Portal",
-    "tags": ["mmm", "incrementality"],
+    "tags": [
+      "mmm",
+      "incrementality"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5390,7 +6287,10 @@
     "category": "Company Lists",
     "url": "https://www.measured.com/careers/",
     "type": "Career Portal",
-    "tags": ["mmm", "causal-testing"],
+    "tags": [
+      "mmm",
+      "causal-testing"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5403,7 +6303,10 @@
     "category": "Company Lists",
     "url": "https://job-boards.greenhouse.io/triplewhale",
     "type": "Career Portal",
-    "tags": ["mmm", "ecommerce"],
+    "tags": [
+      "mmm",
+      "ecommerce"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5416,7 +6319,11 @@
     "category": "Company Lists",
     "url": "https://www.rockerbox.com/careers",
     "type": "Career Portal",
-    "tags": ["mmm", "attribution", "incrementality"],
+    "tags": [
+      "mmm",
+      "attribution",
+      "incrementality"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5429,11 +6336,16 @@
     "category": "Company Lists",
     "url": "https://job-boards.greenhouse.io/moloco",
     "type": "Career Portal",
-    "tags": ["ad-tech", "auction", "mobile"],
+    "tags": [
+      "ad-tech",
+      "auction",
+      "mobile"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "ad-tech"
   },
   {
     "name": "Criteo",
@@ -5442,11 +6354,16 @@
     "category": "Company Lists",
     "url": "https://careers.criteo.com/en/jobs/",
     "type": "Career Portal",
-    "tags": ["ad-tech", "auction", "rtb"],
+    "tags": [
+      "ad-tech",
+      "auction",
+      "rtb"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "ad-tech"
   },
   {
     "name": "The Trade Desk",
@@ -5455,11 +6372,16 @@
     "category": "Company Lists",
     "url": "https://careers.thetradedesk.com/jobs",
     "type": "Career Portal",
-    "tags": ["ad-tech", "auction", "programmatic"],
+    "tags": [
+      "ad-tech",
+      "auction",
+      "programmatic"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "ad-tech"
   },
   {
     "name": "Topsort",
@@ -5468,7 +6390,11 @@
     "category": "Company Lists",
     "url": "https://wellfound.com/company/topsort/jobs",
     "type": "Career Portal",
-    "tags": ["ad-tech", "auction", "retail-media"],
+    "tags": [
+      "ad-tech",
+      "auction",
+      "retail-media"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5481,11 +6407,15 @@
     "category": "Company Lists",
     "url": "https://liveramp.com/careers",
     "type": "Career Portal",
-    "tags": ["ad-tech", "measurement"],
+    "tags": [
+      "ad-tech",
+      "measurement"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "ad-tech"
   },
   {
     "name": "Skai",
@@ -5494,7 +6424,10 @@
     "category": "Company Lists",
     "url": "https://skai.io/company/careers/data-science/",
     "type": "Career Portal",
-    "tags": ["ad-tech", "bid-optimization"],
+    "tags": [
+      "ad-tech",
+      "bid-optimization"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5507,7 +6440,10 @@
     "category": "Company Lists",
     "url": "https://pacvue.com/about/careers/",
     "type": "Career Portal",
-    "tags": ["ad-tech", "retail-media"],
+    "tags": [
+      "ad-tech",
+      "retail-media"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5520,7 +6456,10 @@
     "category": "Company Lists",
     "url": "https://www.kevel.com/careers",
     "type": "Career Portal",
-    "tags": ["ad-tech", "ad-platform"],
+    "tags": [
+      "ad-tech",
+      "ad-platform"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5533,11 +6472,16 @@
     "category": "Company Lists",
     "url": "https://launchdarkly.com/careers/",
     "type": "Career Portal",
-    "tags": ["experimentation", "feature-flags", "statistics"],
+    "tags": [
+      "experimentation",
+      "feature-flags",
+      "statistics"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "experimentation"
   },
   {
     "name": "Eppo",
@@ -5546,11 +6490,16 @@
     "category": "Company Lists",
     "url": "https://www.geteppo.com/careers",
     "type": "Career Portal",
-    "tags": ["experimentation", "a-b-testing", "causal-inference"],
+    "tags": [
+      "experimentation",
+      "a-b-testing",
+      "causal-inference"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "experimentation"
   },
   {
     "name": "GrowthBook",
@@ -5559,7 +6508,11 @@
     "category": "Company Lists",
     "url": "https://www.growthbook.io/careers",
     "type": "Career Portal",
-    "tags": ["experimentation", "a-b-testing", "statistics"],
+    "tags": [
+      "experimentation",
+      "a-b-testing",
+      "statistics"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5572,11 +6525,15 @@
     "category": "Company Lists",
     "url": "https://www.statsig.com/careers",
     "type": "Career Portal",
-    "tags": ["experimentation", "a-b-testing"],
+    "tags": [
+      "experimentation",
+      "a-b-testing"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "experimentation"
   },
   {
     "name": "ABsmartly",
@@ -5585,7 +6542,10 @@
     "category": "Company Lists",
     "url": "https://absmartly.com/about",
     "type": "Career Portal",
-    "tags": ["experimentation", "sequential-testing"],
+    "tags": [
+      "experimentation",
+      "sequential-testing"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5598,11 +6558,15 @@
     "category": "Company Lists",
     "url": "https://careers.optimizely.com/",
     "type": "Career Portal",
-    "tags": ["experimentation", "a-b-testing"],
+    "tags": [
+      "experimentation",
+      "a-b-testing"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "experimentation"
   },
   {
     "name": "Split",
@@ -5611,11 +6575,15 @@
     "category": "Company Lists",
     "url": "https://www.split.io/careers",
     "type": "Career Portal",
-    "tags": ["experimentation", "feature-flags"],
+    "tags": [
+      "experimentation",
+      "feature-flags"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "experimentation"
   },
   {
     "name": "VWO",
@@ -5624,11 +6592,15 @@
     "category": "Company Lists",
     "url": "https://wingify.com/careers/",
     "type": "Career Portal",
-    "tags": ["experimentation", "bayesian"],
+    "tags": [
+      "experimentation",
+      "bayesian"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "experimentation"
   },
   {
     "name": "Kameleoon",
@@ -5637,11 +6609,15 @@
     "category": "Company Lists",
     "url": "https://career.kameleoon.com/en/jobs",
     "type": "Career Portal",
-    "tags": ["experimentation", "ai-experimentation"],
+    "tags": [
+      "experimentation",
+      "ai-experimentation"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "experimentation"
   },
   {
     "name": "Zilliant",
@@ -5650,11 +6626,16 @@
     "category": "Company Lists",
     "url": "https://zilliant.applytojob.com/apply",
     "type": "Career Portal",
-    "tags": ["pricing", "price-elasticity", "b2b"],
+    "tags": [
+      "pricing",
+      "price-elasticity",
+      "b2b"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "pricing"
   },
   {
     "name": "PROS Holdings",
@@ -5663,7 +6644,10 @@
     "category": "Company Lists",
     "url": "https://pros.wd5.myworkdayjobs.com/PROS_Careers",
     "type": "Career Portal",
-    "tags": ["pricing", "revenue-management"],
+    "tags": [
+      "pricing",
+      "revenue-management"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5676,11 +6660,15 @@
     "category": "Company Lists",
     "url": "https://www.vendavo.com/careers/",
     "type": "Career Portal",
-    "tags": ["pricing", "margin-optimization"],
+    "tags": [
+      "pricing",
+      "margin-optimization"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "pricing"
   },
   {
     "name": "Competera",
@@ -5689,11 +6677,15 @@
     "category": "Company Lists",
     "url": "https://competera.ai/company/careers",
     "type": "Career Portal",
-    "tags": ["pricing", "demand-forecasting"],
+    "tags": [
+      "pricing",
+      "demand-forecasting"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "pricing"
   },
   {
     "name": "Pricefx",
@@ -5702,11 +6694,15 @@
     "category": "Company Lists",
     "url": "https://www.pricefx.com/careers",
     "type": "Career Portal",
-    "tags": ["pricing", "dynamic-pricing"],
+    "tags": [
+      "pricing",
+      "dynamic-pricing"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "pricing"
   },
   {
     "name": "Intelligence Node",
@@ -5715,11 +6711,15 @@
     "category": "Company Lists",
     "url": "https://www.intelligencenode.com/about-us/",
     "type": "Career Portal",
-    "tags": ["pricing", "market-dynamics"],
+    "tags": [
+      "pricing",
+      "market-dynamics"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "pricing"
   },
   {
     "name": "Perfect Price",
@@ -5728,11 +6728,15 @@
     "category": "Company Lists",
     "url": "https://wellfound.com/company/perfect-price",
     "type": "Career Portal",
-    "tags": ["pricing", "dynamic-pricing"],
+    "tags": [
+      "pricing",
+      "dynamic-pricing"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "pricing"
   },
   {
     "name": "Omnia Retail",
@@ -5741,7 +6745,10 @@
     "category": "Company Lists",
     "url": "https://jobs.omniaretail.com/",
     "type": "Career Portal",
-    "tags": ["pricing", "competitive-pricing"],
+    "tags": [
+      "pricing",
+      "competitive-pricing"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5754,11 +6761,15 @@
     "category": "Company Lists",
     "url": "https://www.pendo.io/careers/",
     "type": "Career Portal",
-    "tags": ["product-analytics", "experimentation"],
+    "tags": [
+      "product-analytics",
+      "experimentation"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "analytics"
   },
   {
     "name": "Contentsquare",
@@ -5767,7 +6778,10 @@
     "category": "Company Lists",
     "url": "https://contentsquare.com/careers/",
     "type": "Career Portal",
-    "tags": ["product-analytics", "journey-analytics"],
+    "tags": [
+      "product-analytics",
+      "journey-analytics"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5780,11 +6794,15 @@
     "category": "Company Lists",
     "url": "https://amplitude.com/careers",
     "type": "Career Portal",
-    "tags": ["product-analytics", "experimentation"],
+    "tags": [
+      "product-analytics",
+      "experimentation"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "analytics"
   },
   {
     "name": "Quantum Metric",
@@ -5793,7 +6811,10 @@
     "category": "Company Lists",
     "url": "https://www.quantummetric.com/careers",
     "type": "Career Portal",
-    "tags": ["product-analytics", "pattern-detection"],
+    "tags": [
+      "product-analytics",
+      "pattern-detection"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5806,7 +6827,10 @@
     "category": "Company Lists",
     "url": "https://posthog.com/careers",
     "type": "Career Portal",
-    "tags": ["product-analytics", "feature-flags"],
+    "tags": [
+      "product-analytics",
+      "feature-flags"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5819,11 +6843,15 @@
     "category": "Company Lists",
     "url": "https://mixpanel.com/jobs/",
     "type": "Career Portal",
-    "tags": ["product-analytics", "event-analytics"],
+    "tags": [
+      "product-analytics",
+      "event-analytics"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "analytics"
   },
   {
     "name": "Glassbox",
@@ -5832,7 +6860,10 @@
     "category": "Company Lists",
     "url": "https://www.glassbox.com/careers/",
     "type": "Career Portal",
-    "tags": ["product-analytics", "enterprise"],
+    "tags": [
+      "product-analytics",
+      "enterprise"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5845,11 +6876,15 @@
     "category": "Company Lists",
     "url": "https://www.fullstory.com/careers/",
     "type": "Career Portal",
-    "tags": ["product-analytics", "behavioral-insights"],
+    "tags": [
+      "product-analytics",
+      "behavioral-insights"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "analytics"
   },
   {
     "name": "Hightouch",
@@ -5858,11 +6893,16 @@
     "category": "Company Lists",
     "url": "https://hightouch.com/careers",
     "type": "Career Portal",
-    "tags": ["data-infrastructure", "cdp", "ai-decisioning"],
+    "tags": [
+      "data-infrastructure",
+      "cdp",
+      "ai-decisioning"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "data-infra"
   },
   {
     "name": "dbt Labs",
@@ -5871,11 +6911,15 @@
     "category": "Company Lists",
     "url": "https://www.getdbt.com/about-us/careers",
     "type": "Career Portal",
-    "tags": ["data-infrastructure", "analytics-engineering"],
+    "tags": [
+      "data-infrastructure",
+      "analytics-engineering"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "data-infra"
   },
   {
     "name": "Fivetran",
@@ -5884,11 +6928,15 @@
     "category": "Company Lists",
     "url": "https://www.fivetran.com/careers",
     "type": "Career Portal",
-    "tags": ["data-infrastructure", "etl"],
+    "tags": [
+      "data-infrastructure",
+      "etl"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "data-infra"
   },
   {
     "name": "RudderStack",
@@ -5897,7 +6945,10 @@
     "category": "Company Lists",
     "url": "https://www.rudderstack.com/careers/",
     "type": "Career Portal",
-    "tags": ["data-infrastructure", "cdp"],
+    "tags": [
+      "data-infrastructure",
+      "cdp"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5910,11 +6961,15 @@
     "category": "Company Lists",
     "url": "https://www.getcensus.com/careers",
     "type": "Career Portal",
-    "tags": ["data-infrastructure", "reverse-etl"],
+    "tags": [
+      "data-infrastructure",
+      "reverse-etl"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "data-infra"
   },
   {
     "name": "Airbyte",
@@ -5923,11 +6978,16 @@
     "category": "Company Lists",
     "url": "https://airbyte.com/company/careers",
     "type": "Career Portal",
-    "tags": ["data-infrastructure", "etl", "open-source"],
+    "tags": [
+      "data-infrastructure",
+      "etl",
+      "open-source"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "data-infra"
   },
   {
     "name": "Qlik",
@@ -5936,7 +6996,11 @@
     "category": "Company Lists",
     "url": "https://www.qlik.com/us/company/careers",
     "type": "Career Portal",
-    "tags": ["data-infrastructure", "bi", "ai-ml"],
+    "tags": [
+      "data-infrastructure",
+      "bi",
+      "ai-ml"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5949,7 +7013,11 @@
     "category": "Company Lists",
     "url": "https://www.matillion.com/careers",
     "type": "Career Portal",
-    "tags": ["data-infrastructure", "etl", "ai-transformation"],
+    "tags": [
+      "data-infrastructure",
+      "etl",
+      "ai-transformation"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5962,7 +7030,10 @@
     "category": "Company Lists",
     "url": "https://6sense.com/about-us/careers/join-us/",
     "type": "Career Portal",
-    "tags": ["revenue-intelligence", "predictive-modeling"],
+    "tags": [
+      "revenue-intelligence",
+      "predictive-modeling"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5975,7 +7046,11 @@
     "category": "Company Lists",
     "url": "https://www.gong.io/careers",
     "type": "Career Portal",
-    "tags": ["revenue-intelligence", "nlp", "forecasting"],
+    "tags": [
+      "revenue-intelligence",
+      "nlp",
+      "forecasting"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -5988,7 +7063,10 @@
     "category": "Company Lists",
     "url": "https://www.outreach.io/company/working-at-outreach",
     "type": "Career Portal",
-    "tags": ["revenue-intelligence", "causal-inference"],
+    "tags": [
+      "revenue-intelligence",
+      "causal-inference"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -6001,7 +7079,10 @@
     "category": "Company Lists",
     "url": "https://www.zoominfo.com/careers",
     "type": "Career Portal",
-    "tags": ["revenue-intelligence", "intent-prediction"],
+    "tags": [
+      "revenue-intelligence",
+      "intent-prediction"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -6014,7 +7095,10 @@
     "category": "Company Lists",
     "url": "https://www.people.ai/about-us/careers",
     "type": "Career Portal",
-    "tags": ["revenue-intelligence", "activity-modeling"],
+    "tags": [
+      "revenue-intelligence",
+      "activity-modeling"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -6027,7 +7111,10 @@
     "category": "Company Lists",
     "url": "https://www.clari.com/careers/",
     "type": "Career Portal",
-    "tags": ["revenue-intelligence", "forecasting"],
+    "tags": [
+      "revenue-intelligence",
+      "forecasting"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -6040,7 +7127,10 @@
     "category": "Company Lists",
     "url": "https://www.salesloft.com/careers",
     "type": "Career Portal",
-    "tags": ["revenue-intelligence", "sales-forecasting"],
+    "tags": [
+      "revenue-intelligence",
+      "sales-forecasting"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -6053,7 +7143,11 @@
     "category": "Company Lists",
     "url": "https://www.zuora.com/careers/",
     "type": "Career Portal",
-    "tags": ["subscription", "churn-prediction", "ltv"],
+    "tags": [
+      "subscription",
+      "churn-prediction",
+      "ltv"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -6066,7 +7160,10 @@
     "category": "Company Lists",
     "url": "https://www.pandadoc.com/careers/",
     "type": "Career Portal",
-    "tags": ["subscription", "quote-conversion"],
+    "tags": [
+      "subscription",
+      "quote-conversion"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -6079,11 +7176,15 @@
     "category": "Company Lists",
     "url": "https://recurly.com/careers/",
     "type": "Career Portal",
-    "tags": ["subscription", "dunning-optimization"],
+    "tags": [
+      "subscription",
+      "dunning-optimization"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "fintech-saas"
   },
   {
     "name": "ConnectWise",
@@ -6092,7 +7193,10 @@
     "category": "Company Lists",
     "url": "https://www.connectwise.com/company/careers/",
     "type": "Career Portal",
-    "tags": ["subscription", "pricing-strategy"],
+    "tags": [
+      "subscription",
+      "pricing-strategy"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -6105,11 +7209,15 @@
     "category": "Company Lists",
     "url": "https://jobs.chargebee.com/",
     "type": "Career Portal",
-    "tags": ["subscription", "payment-optimization"],
+    "tags": [
+      "subscription",
+      "payment-optimization"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
-    "subtab": "companies"
+    "subtab": "companies",
+    "vertical": "fintech-saas"
   },
   {
     "name": "Maxio",
@@ -6118,7 +7226,10 @@
     "category": "Company Lists",
     "url": "https://www.maxio.com/careers",
     "type": "Career Portal",
-    "tags": ["subscription", "saas-metrics"],
+    "tags": [
+      "subscription",
+      "saas-metrics"
+    ],
     "section": "companies",
     "sector": "saas",
     "tab": "find-jobs",
@@ -6131,9 +7242,1019 @@
     "category": "Company Lists",
     "url": "https://dealhub.io/careers/",
     "type": "Career Portal",
-    "tags": ["subscription", "cpq", "deal-velocity"],
+    "tags": [
+      "subscription",
+      "cpq",
+      "deal-velocity"
+    ],
     "section": "companies",
     "sector": "saas",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "CVS Health",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://jobs.cvshealth.com/",
+    "type": "Career Portal",
+    "tags": [
+      "pharmacy",
+      "economist-title",
+      "pricing"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Kroger (84.51\u00b0)",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.8451.com/careers",
+    "type": "Career Portal",
+    "tags": [
+      "grocery",
+      "pricing",
+      "causal-inference"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "PepsiCo",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.pepsicojobs.com/",
+    "type": "Career Portal",
+    "tags": [
+      "cpg",
+      "rgm",
+      "pricing"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Colgate-Palmolive",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://jobs.colgate.com/",
+    "type": "Career Portal",
+    "tags": [
+      "cpg",
+      "rgm",
+      "price-elasticity"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Target",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://corporate.target.com/careers",
+    "type": "Career Portal",
+    "tags": [
+      "big-box",
+      "merchandising"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Nordstrom",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.nordstrom.com/",
+    "type": "Career Portal",
+    "tags": [
+      "department-store",
+      "experimentation"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Macy's",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.macysinc.com/work-with-us/careers/",
+    "type": "Career Portal",
+    "tags": [
+      "department-store",
+      "pricing"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Lowe's",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://talent.lowes.com/",
+    "type": "Career Portal",
+    "tags": [
+      "home-improvement",
+      "econ-preferred"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Best Buy",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://jobs.bestbuy.com/",
+    "type": "Career Portal",
+    "tags": [
+      "electronics",
+      "personalization"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Kohl's",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.kohls.com/",
+    "type": "Career Portal",
+    "tags": [
+      "department-store",
+      "pricing-analytics"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Albertsons",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.albertsons.com/careers.html",
+    "type": "Career Portal",
+    "tags": [
+      "grocery",
+      "demand-forecasting"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Walgreens",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://jobs.walgreens.com/",
+    "type": "Career Portal",
+    "tags": [
+      "pharmacy",
+      "rwe"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Costco",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.costco.com/",
+    "type": "Career Portal",
+    "tags": [
+      "warehouse-club"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Chewy",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.chewy.com/",
+    "type": "Career Portal",
+    "tags": [
+      "ecommerce",
+      "subscription",
+      "pet"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Fanatics",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.fanaticsinc.com/careers",
+    "type": "Career Portal",
+    "tags": [
+      "ecommerce",
+      "sports",
+      "collectibles"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Shein",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.shein.com/",
+    "type": "Career Portal",
+    "tags": [
+      "fast-fashion",
+      "ecommerce"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Temu",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.temu.com/careers.html",
+    "type": "Career Portal",
+    "tags": [
+      "marketplace",
+      "ecommerce"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Trader Joe's",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://traderjoes.avature.net/careers",
+    "type": "Career Portal",
+    "tags": [
+      "grocery"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Lululemon",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.lululemon.com/",
+    "type": "Career Portal",
+    "tags": [
+      "apparel",
+      "experimentation",
+      "econ-phd-preferred"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Gap Inc",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.gapinc.com/en-us/careers",
+    "type": "Career Portal",
+    "tags": [
+      "apparel",
+      "forecasting"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "H&M",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://career.hm.com/",
+    "type": "Career Portal",
+    "tags": [
+      "apparel",
+      "supply-chain",
+      "demand-forecasting"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Adidas",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.adidas-group.com/jobs",
+    "type": "Career Portal",
+    "tags": [
+      "apparel",
+      "pricing-optimization"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Kering",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.kering.com/en/talent/",
+    "type": "Career Portal",
+    "tags": [
+      "luxury",
+      "data-intelligence"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Ralph Lauren",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.ralphlauren.com/",
+    "type": "Career Portal",
+    "tags": [
+      "apparel",
+      "data-lab"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "PVH",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.pvh.com/",
+    "type": "Career Portal",
+    "tags": [
+      "apparel",
+      "calvin-klein",
+      "tommy-hilfiger"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "VF Corporation",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.vfc.com/careers",
+    "type": "Career Portal",
+    "tags": [
+      "apparel",
+      "vans",
+      "north-face"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Under Armour",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.underarmour.com/",
+    "type": "Career Portal",
+    "tags": [
+      "apparel",
+      "athletic"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "LVMH",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.lvmh.com/en/join-us/our-job-offers",
+    "type": "Career Portal",
+    "tags": [
+      "luxury",
+      "data-club"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Inditex (Zara)",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.inditexcareers.com/",
+    "type": "Career Portal",
+    "tags": [
+      "apparel",
+      "fast-fashion"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Unilever",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.unilever.com/",
+    "type": "Career Portal",
+    "tags": [
+      "cpg",
+      "causal-inference",
+      "bayesian"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Nestl\u00e9",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.nestle.com/jobs",
+    "type": "Career Portal",
+    "tags": [
+      "cpg",
+      "commercial-analytics"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Coca-Cola",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.coca-colacompany.com/careers",
+    "type": "Career Portal",
+    "tags": [
+      "cpg",
+      "rgm"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Kraft Heinz",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.kraftheinz.com/",
+    "type": "Career Portal",
+    "tags": [
+      "cpg",
+      "rgm"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "General Mills",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.generalmills.com/",
+    "type": "Career Portal",
+    "tags": [
+      "cpg",
+      "mmm",
+      "optimization"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Kimberly-Clark",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.kimberly-clark.com/",
+    "type": "Career Portal",
+    "tags": [
+      "cpg",
+      "ai-first"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Clorox",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.thecloroxcompany.com/careers/",
+    "type": "Career Portal",
+    "tags": [
+      "cpg",
+      "marketing-ds"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Mondel\u0113z",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.mondelezinternational.com/careers/",
+    "type": "Career Portal",
+    "tags": [
+      "cpg",
+      "pricing-pack-architecture"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Mars",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.mars.com/",
+    "type": "Career Portal",
+    "tags": [
+      "cpg",
+      "analytics"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Kenvue",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://jobs.kenvue.com/",
+    "type": "Career Portal",
+    "tags": [
+      "cpg",
+      "operations-research"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Church & Dwight",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.churchdwight.com/",
+    "type": "Career Portal",
+    "tags": [
+      "cpg",
+      "pricing"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "L'Or\u00e9al",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.loreal.com/",
+    "type": "Career Portal",
+    "tags": [
+      "beauty",
+      "bi-analytics"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Est\u00e9e Lauder",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.elcompanies.com/en/careers",
+    "type": "Career Portal",
+    "tags": [
+      "beauty",
+      "consumer-iq"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Ulta Beauty",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.ulta.com/",
+    "type": "Career Portal",
+    "tags": [
+      "beauty",
+      "loyalty",
+      "personalization"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Sephora",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://jobs.sephora.com/",
+    "type": "Career Portal",
+    "tags": [
+      "beauty",
+      "crm",
+      "mmm"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Coty",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.coty.com/",
+    "type": "Career Portal",
+    "tags": [
+      "beauty",
+      "pricing-analytics"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "IKEA",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://jobs.ikea.com/en",
+    "type": "Career Portal",
+    "tags": [
+      "furniture",
+      "demand-sensing",
+      "ai"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Williams-Sonoma",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.williams-sonomainc.com/",
+    "type": "Career Portal",
+    "tags": [
+      "furniture",
+      "pottery-barn"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "RH",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://rh.com/careers",
+    "type": "Career Portal",
+    "tags": [
+      "furniture",
+      "luxury"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Beyond Inc",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://corporate.beyond.com/corporate/careers",
+    "type": "Career Portal",
+    "tags": [
+      "ecommerce",
+      "overstock"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Petco",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.petco.com/",
+    "type": "Career Portal",
+    "tags": [
+      "pet",
+      "pricing"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "O'Reilly Auto Parts",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.oreillyauto.com/",
+    "type": "Career Portal",
+    "tags": [
+      "auto",
+      "inventory-optimization"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Tractor Supply",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.tractorsupply.careers/",
+    "type": "Career Portal",
+    "tags": [
+      "specialty",
+      "rural-lifestyle"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Dick's Sporting Goods",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.dickssportinggoods.jobs/",
+    "type": "Career Portal",
+    "tags": [
+      "sporting-goods",
+      "decision-engine"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "AutoZone",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.autozone.com/",
+    "type": "Career Portal",
+    "tags": [
+      "auto",
+      "store-development"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "GameStop",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.gamestop.com/",
+    "type": "Career Portal",
+    "tags": [
+      "gaming",
+      "trade-in-pricing"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "PetSmart",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.petsmart.com/",
+    "type": "Career Portal",
+    "tags": [
+      "pet",
+      "clv",
+      "price-elasticity"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "TJX Companies",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://jobs.tjx.com/",
+    "type": "Career Portal",
+    "tags": [
+      "off-price",
+      "demand-forecasting"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Ross Stores",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://jobs.rossstores.com/",
+    "type": "Career Portal",
+    "tags": [
+      "off-price",
+      "supply-chain"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Burlington",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.burlington.com/careers",
+    "type": "Career Portal",
+    "tags": [
+      "off-price",
+      "customer-insights"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Dollar General",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.dollargeneral.com/",
+    "type": "Career Portal",
+    "tags": [
+      "dollar-store",
+      "ai-optimization"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Dollar Tree",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.dollartree.com/",
+    "type": "Career Portal",
+    "tags": [
+      "dollar-store",
+      "pricing-strategy"
+    ],
+    "section": "companies",
+    "sector": "retail",
+    "tab": "find-jobs",
+    "subtab": "companies"
+  },
+  {
+    "name": "Five Below",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.fivebelow.com/",
+    "type": "Career Portal",
+    "tags": [
+      "value-retail",
+      "planning"
+    ],
+    "section": "companies",
+    "sector": "retail",
     "tab": "find-jobs",
     "subtab": "companies"
   }
