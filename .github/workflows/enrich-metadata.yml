@@ -1,0 +1,107 @@
+name: Enrich Metadata (Manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      file:
+        description: 'Specific file to enrich (e.g., packages.json, papers.json)'
+        required: false
+        type: string
+      limit:
+        description: 'Max items to enrich per file (leave empty for all)'
+        required: false
+        type: number
+      force_refresh:
+        description: 'Re-enrich all items (ignore content hashes)'
+        required: false
+        type: boolean
+        default: false
+      dry_run:
+        description: 'Dry run - show what would be enriched without making API calls'
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120  # 2 hours max for full enrichment
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install anthropic pydantic tenacity
+          pip install torch transformers  # For search index regeneration
+
+      - name: Show enrichment plan
+        run: |
+          echo "=== Enrichment Configuration ==="
+          echo "File: ${{ inputs.file || 'all files' }}"
+          echo "Limit: ${{ inputs.limit || 'no limit' }}"
+          echo "Force refresh: ${{ inputs.force_refresh }}"
+          echo "Dry run: ${{ inputs.dry_run }}"
+          echo "================================"
+
+      - name: Run enrichment
+        if: ${{ !inputs.dry_run }}
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python scripts/enrich_metadata_v2.py \
+            ${{ inputs.file && format('--file {0}', inputs.file) || '' }} \
+            ${{ inputs.limit && format('--limit {0}', inputs.limit) || '' }} \
+            ${{ inputs.force_refresh && '--force' || '' }}
+
+      - name: Run enrichment (dry run)
+        if: ${{ inputs.dry_run }}
+        run: |
+          python scripts/enrich_metadata_v2.py --dry-run \
+            ${{ inputs.file && format('--file {0}', inputs.file) || '' }} \
+            ${{ inputs.limit && format('--limit {0}', inputs.limit) || '' }} \
+            ${{ inputs.force_refresh && '--force' || '' }}
+
+      - name: Regenerate search index
+        if: ${{ !inputs.dry_run }}
+        run: python scripts/generate_embeddings.py
+
+      - name: Show changes summary
+        run: |
+          echo "=== Files Changed ==="
+          git status --short
+          echo "===================="
+
+      - name: Commit and push changes
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data/ static/embeddings/
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Enrich metadata via GitHub Action
+
+          File: ${{ inputs.file || 'all' }}
+          Force: ${{ inputs.force_refresh }}
+
+          🤖 Generated with [Claude Code](https://claude.com/claude-code)"
+            git push
+          fi
+
+      - name: Upload review log (if exists)
+        if: ${{ !inputs.dry_run }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: enrichment-review-log
+          path: data/.enrichment_review.json
+          if-no-files-found: ignore
+          retention-days: 30
