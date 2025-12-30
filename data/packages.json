@@ -3913,5 +3913,239 @@
     ],
     "best_for": "Quantifying the minimum confounding strength on the risk ratio scale needed to explain away observed treatment-outcome associations, implementing VanderWeele & Ding (2017)",
     "language": "R"
+  },
+  {
+    "name": "brms",
+    "description": "High-level interface for fitting Bayesian generalized multilevel models using Stan, with lme4-style formula syntax supporting linear, count, survival, ordinal, zero-inflated, hurdle, and mixture models with flexible prior specification.",
+    "category": "Bayesian Inference",
+    "docs_url": "https://paul-buerkner.github.io/brms/",
+    "github_url": "https://github.com/paul-buerkner/brms",
+    "url": "https://cran.r-project.org/package=brms",
+    "install": "install.packages(\"brms\")",
+    "tags": [
+      "Bayesian",
+      "multilevel-models",
+      "Stan",
+      "regression",
+      "distributional-regression"
+    ],
+    "best_for": "Complex hierarchical Bayesian regression with familiar R formula syntax, implementing Bürkner (2017)",
+    "language": "R"
+  },
+  {
+    "name": "rstanarm",
+    "description": "Pre-compiled Bayesian regression models using Stan that mimic familiar R functions (lm, glm, lmer) with customary formula syntax, weakly informative default priors, and zero model compilation time.",
+    "category": "Bayesian Inference",
+    "docs_url": "https://mc-stan.org/rstanarm/",
+    "github_url": "https://github.com/stan-dev/rstanarm",
+    "url": "https://cran.r-project.org/package=rstanarm",
+    "install": "install.packages(\"rstanarm\")",
+    "tags": [
+      "Bayesian",
+      "Stan",
+      "regression",
+      "mixed-effects",
+      "pre-compiled"
+    ],
+    "best_for": "Applied Bayesian regression with minimal learning curve for lm/glm/lmer users",
+    "language": "R"
+  },
+  {
+    "name": "rstan",
+    "description": "Core R interface to the Stan probabilistic programming language, providing full Bayesian inference via NUTS/HMC, approximate inference via ADVI, and penalized maximum likelihood via L-BFGS for custom Bayesian models.",
+    "category": "Bayesian Inference",
+    "docs_url": "https://mc-stan.org/rstan/",
+    "github_url": "https://github.com/stan-dev/rstan",
+    "url": "https://cran.r-project.org/package=rstan",
+    "install": "install.packages(\"rstan\")",
+    "tags": [
+      "Stan",
+      "MCMC",
+      "HMC",
+      "probabilistic-programming",
+      "Bayesian"
+    ],
+    "best_for": "Custom Bayesian models requiring direct Stan language access for maximum flexibility, implementing Carpenter et al. (2017)",
+    "language": "R"
+  },
+  {
+    "name": "bayesplot",
+    "description": "Extensive library of ggplot2-based plotting functions for posterior analysis, MCMC diagnostics, and prior/posterior predictive checks supporting the applied Bayesian workflow for any MCMC-fitted model.",
+    "category": "Bayesian Inference",
+    "docs_url": "https://mc-stan.org/bayesplot/",
+    "github_url": "https://github.com/stan-dev/bayesplot",
+    "url": "https://cran.r-project.org/package=bayesplot",
+    "install": "install.packages(\"bayesplot\")",
+    "tags": [
+      "visualization",
+      "MCMC-diagnostics",
+      "posterior-predictive-checks",
+      "ggplot2",
+      "Bayesian"
+    ],
+    "best_for": "Diagnostic plots and posterior visualization for MCMC-based Bayesian models, implementing Gabry et al. (2019)",
+    "language": "R"
+  },
+  {
+    "name": "lme4",
+    "description": "Fit linear and generalized linear mixed-effects models using S4 classes with Eigen C++ library for efficient computation, supporting arbitrarily nested and crossed random effects structures for hierarchical and longitudinal data.",
+    "category": "Mixed Effects",
+    "docs_url": "https://cran.r-project.org/web/packages/lme4/vignettes/",
+    "github_url": "https://github.com/lme4/lme4",
+    "url": "https://cran.r-project.org/package=lme4",
+    "install": "install.packages(\"lme4\")",
+    "tags": [
+      "linear-mixed-models",
+      "GLMM",
+      "random-effects",
+      "hierarchical-models",
+      "repeated-measures"
+    ],
+    "best_for": "Standard linear and generalized linear mixed-effects modeling with crossed/nested random effects, implementing Bates et al. (2015)",
+    "language": "R"
+  },
+  {
+    "name": "glmmTMB",
+    "description": "Fit generalized linear mixed models with extensions including zero-inflation, hurdle models, heteroscedasticity, and autocorrelation using Template Model Builder (TMB) with automatic differentiation and Laplace approximation.",
+    "category": "Mixed Effects",
+    "docs_url": "https://glmmtmb.github.io/glmmTMB/",
+    "github_url": "https://github.com/glmmTMB/glmmTMB",
+    "url": "https://cran.r-project.org/package=glmmTMB",
+    "install": "install.packages(\"glmmTMB\")",
+    "tags": [
+      "GLMM",
+      "zero-inflation",
+      "negative-binomial",
+      "TMB",
+      "overdispersion"
+    ],
+    "best_for": "Zero-inflated, overdispersed, or complex GLMMs beyond lme4 capabilities, implementing Brooks et al. (2017)",
+    "language": "R"
+  },
+  {
+    "name": "nlme",
+    "description": "Fit Gaussian linear and nonlinear mixed-effects models with flexible correlation structures, variance functions for heteroscedasticity, and nested random effects. Ships with base R and offers more variance-covariance flexibility than lme4.",
+    "category": "Mixed Effects",
+    "docs_url": "https://cran.r-project.org/web/packages/nlme/nlme.pdf",
+    "github_url": null,
+    "url": "https://cran.r-project.org/package=nlme",
+    "install": "install.packages(\"nlme\")",
+    "tags": [
+      "nonlinear-mixed-models",
+      "autocorrelation",
+      "heteroscedasticity",
+      "repeated-measures",
+      "longitudinal"
+    ],
+    "best_for": "Models requiring custom correlation structures, variance functions, or nonlinear mixed effects, implementing Pinheiro & Bates (2000)",
+    "language": "R"
+  },
+  {
+    "name": "lmerTest",
+    "description": "Provides p-values for lme4 model fits via Satterthwaite's or Kenward-Roger degrees of freedom methods, with Type I/II/III ANOVA tables, model selection tools (step, drop1), and least-squares means calculations.",
+    "category": "Mixed Effects",
+    "docs_url": "https://cran.r-project.org/web/packages/lmerTest/lmerTest.pdf",
+    "github_url": "https://github.com/runehaubo/lmerTestR",
+    "url": "https://cran.r-project.org/package=lmerTest",
+    "install": "install.packages(\"lmerTest\")",
+    "tags": [
+      "p-values",
+      "Satterthwaite",
+      "Kenward-Roger",
+      "ANOVA",
+      "hypothesis-testing"
+    ],
+    "best_for": "Getting p-values and formal hypothesis tests for lme4 linear mixed models, implementing Kuznetsova et al. (2017)",
+    "language": "R"
+  },
+  {
+    "name": "lavaan",
+    "description": "Free, open-source latent variable analysis providing commercial-quality functionality for path analysis, confirmatory factor analysis, structural equation modeling, and growth curve models with intuitive model syntax.",
+    "category": "Structural Equation Modeling",
+    "docs_url": "https://lavaan.ugent.be/",
+    "github_url": "https://github.com/yrosseel/lavaan",
+    "url": "https://cran.r-project.org/package=lavaan",
+    "install": "install.packages(\"lavaan\")",
+    "tags": [
+      "SEM",
+      "CFA",
+      "path-analysis",
+      "latent-variables",
+      "psychometrics"
+    ],
+    "best_for": "General-purpose structural equation modeling with accessible syntax for researchers, implementing Rosseel (2012)",
+    "language": "R"
+  },
+  {
+    "name": "OpenMx",
+    "description": "Extended SEM software with programmatic model specification via paths (RAM) or matrix algebra, supporting mixture distributions, item factor analysis, state space models, and behavior genetics twin studies.",
+    "category": "Structural Equation Modeling",
+    "docs_url": "https://openmx.ssri.psu.edu/",
+    "github_url": "https://github.com/OpenMx/OpenMx",
+    "url": "https://cran.r-project.org/package=OpenMx",
+    "install": "install.packages(\"OpenMx\")",
+    "tags": [
+      "SEM",
+      "matrix-algebra",
+      "twin-studies",
+      "behavior-genetics",
+      "IFA"
+    ],
+    "best_for": "Complex/advanced SEM, behavior genetics, and researchers needing maximum specification flexibility, implementing Neale et al. (2016)",
+    "language": "R"
+  },
+  {
+    "name": "blavaan",
+    "description": "Bayesian latent variable analysis extending lavaan with MCMC estimation via Stan or JAGS, supporting Bayesian CFA, SEM, growth models, and model comparison with WAIC, LOO, and Bayes factors.",
+    "category": "Structural Equation Modeling",
+    "docs_url": "https://ecmerkle.github.io/blavaan/",
+    "github_url": "https://github.com/ecmerkle/blavaan",
+    "url": "https://cran.r-project.org/package=blavaan",
+    "install": "install.packages(\"blavaan\")",
+    "tags": [
+      "Bayesian-SEM",
+      "Stan",
+      "JAGS",
+      "MCMC",
+      "latent-variables"
+    ],
+    "best_for": "Bayesian inference for SEM models using familiar lavaan syntax, implementing Merkle & Rosseel (2018)",
+    "language": "R"
+  },
+  {
+    "name": "mgcv",
+    "description": "The definitive GAM implementation providing generalized additive (mixed) models with automatic smoothness estimation via REML/GCV/ML, supporting thin plate splines, tensor products, multiple distributions, and scalable fitting for large datasets.",
+    "category": "Generalized Additive Models",
+    "docs_url": "https://cran.r-project.org/web/packages/mgcv/mgcv.pdf",
+    "github_url": null,
+    "url": "https://cran.r-project.org/package=mgcv",
+    "install": "install.packages(\"mgcv\")",
+    "tags": [
+      "GAM",
+      "splines",
+      "smoothing",
+      "penalized-regression",
+      "mixed-models"
+    ],
+    "best_for": "Flexible nonparametric regression with automatic smoothing parameter selection, implementing Wood (2017)",
+    "language": "R"
+  },
+  {
+    "name": "gamlss",
+    "description": "Distributional regression where all parameters of a response distribution (location, scale, shape) can be modeled as functions of predictors, supporting 100+ distributions including highly skewed and kurtotic continuous and discrete distributions.",
+    "category": "Generalized Additive Models",
+    "docs_url": "https://www.gamlss.com/",
+    "github_url": "https://github.com/gamlss-dev/gamlss",
+    "url": "https://cran.r-project.org/package=gamlss",
+    "install": "install.packages(\"gamlss\")",
+    "tags": [
+      "distributional-regression",
+      "location-scale-shape",
+      "flexible-distributions",
+      "centile-estimation",
+      "beyond-mean-modeling"
+    ],
+    "best_for": "Modeling non-normal responses where variance, skewness, or kurtosis depend on predictors, implementing Rigby & Stasinopoulos (2005)",
+    "language": "R"
   }
 ]
