@@ -284,8 +284,16 @@ function handleLoadModel() {
     payload: { status: 'starting' }
   });
 
-  // Dynamic import of Transformers.js
-  modelLoadPromise = import('https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.0.0')
+  // Timeout promise (30 seconds)
+  var MODEL_LOAD_TIMEOUT = 30000;
+  var timeoutPromise = new Promise(function(_, reject) {
+    setTimeout(function() {
+      reject(new Error('Model loading timeout after ' + MODEL_LOAD_TIMEOUT + 'ms'));
+    }, MODEL_LOAD_TIMEOUT);
+  });
+
+  // Dynamic import of Transformers.js with timeout
+  var loadPromise = import('https://cdn.jsdelivr.net/npm/@huggingface/transformers@3.0.0')
     .then(function(module) {
       postMessage({
         type: 'MODEL_LOADING',
@@ -304,7 +312,10 @@ function handleLoadModel() {
         type: 'MODEL_LOADED',
         payload: { success: true, cached: false }
       });
-    })
+    });
+
+  // Race between load and timeout
+  modelLoadPromise = Promise.race([loadPromise, timeoutPromise])
     .catch(function(error) {
       isModelLoading = false;
       console.error('[SearchWorker] Failed to load model:', error);
@@ -515,7 +526,14 @@ function performKeywordSearch(query, limit) {
   var allResults = [];
 
   expandedQueries.forEach(function(q, queryIndex) {
-    var results = miniSearch.search(q, { limit: limit });
+    // Guard: wrap search in try-catch to handle malformed queries
+    var results;
+    try {
+      results = miniSearch.search(q, { limit: limit });
+    } catch (e) {
+      console.error('[SearchWorker] miniSearch.search failed:', e);
+      results = [];
+    }
 
     results.forEach(function(result) {
       if (!seen[result.id]) {
@@ -660,6 +678,11 @@ function embedQuery(query) {
     pooling: 'mean',
     normalize: true
   }).then(function(output) {
+    // Guard: validate output structure before accessing .data
+    if (!output || !output.data) {
+      console.warn('[SearchWorker] embedQuery: invalid model output');
+      return null;
+    }
     return Array.from(output.data);
   }).catch(function(error) {
     console.error('[SearchWorker] Query embedding failed:', error);
@@ -687,6 +710,9 @@ function performSemanticSearch(queryEmbedding, limit) {
     }
 
     var item = embeddingsMetadata.items[i];
+    // Guard: skip invalid items
+    if (!item || !item.id) continue;
+
     results.push({
       id: item.id,
       name: item.name,

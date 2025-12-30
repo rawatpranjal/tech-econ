@@ -599,6 +599,13 @@
    */
   UnifiedSearch.prototype._doSearch = function(query, options) {
     var self = this;
+
+    // Guard: ensure worker exists and is ready
+    if (!this.worker || !this.workerReady) {
+      console.warn('[UnifiedSearch] Worker not ready, returning empty results');
+      return Promise.resolve({ results: [], isPartial: false, mode: 'none' });
+    }
+
     var useProgressive = options.progressive !== false;
     var canUseSemantic = self.isEmbeddingsLoaded && self.isModelLoaded;
 
@@ -610,8 +617,8 @@
       self.pendingSearches.set(id, function(result) {
         if (hasResolved) {
           // This is a follow-up result (e.g., hybrid after keyword)
-          // Re-render with updated results
-          if (self.isOpen && result.results && result.results.length > 0) {
+          // Re-render with updated results (guard: ensure query still valid)
+          if (self.isOpen && result.results && result.results.length > 0 && query) {
             self.currentResults = result.results.slice(0, CONFIG.maxTotalResults);
             self.renderGlobalResults(self.currentResults, query, result.isPartial);
           }
@@ -681,7 +688,7 @@
 
     // Resolve immediately with keyword results (marked as partial if semantic is coming)
     var resolve = this.pendingSearches.get(id);
-    if (resolve) {
+    if (resolve && typeof resolve === 'function') {
       // Don't delete from pendingSearches yet - we may get SEARCH_RESULTS later
       resolve({
         results: payload.results,
@@ -696,7 +703,7 @@
    */
   UnifiedSearch.prototype.handleSearchResults = function(id, payload) {
     var resolve = this.pendingSearches.get(id);
-    if (resolve) {
+    if (resolve && typeof resolve === 'function') {
       this.pendingSearches.delete(id);
       this.pendingKeywordResults.delete(id);
       resolve({
