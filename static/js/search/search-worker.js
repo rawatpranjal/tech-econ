@@ -30,6 +30,65 @@ var CONFIG = {
   SEMANTIC_WEIGHT: 1.0
 };
 
+// Audience detection patterns
+var BEGINNER_PATTERNS = /intro|beginner|start|basic|learn|what is|simple|getting started|tutorial|guide for/i;
+var ADVANCED_PATTERNS = /paper|research|advanced|theory|proof|optimal|state of the art|sota|novel|algorithm/i;
+
+/**
+ * Score items based on synthetic questions matching
+ * Returns bonus score (0-0.3) if query matches an item's synthetic questions
+ */
+function scoreSyntheticQuestions(item, query) {
+  if (!item.synthetic_questions || !query) return 0;
+  var queryLower = query.toLowerCase().trim();
+  var queryWords = queryLower.split(/\s+/);
+
+  for (var i = 0; i < item.synthetic_questions.length; i++) {
+    var q = item.synthetic_questions[i].toLowerCase();
+    // Full query match
+    if (q.includes(queryLower) || queryLower.includes(q)) {
+      return 0.3;
+    }
+    // Partial word overlap (at least 3 words match)
+    var matchCount = 0;
+    for (var j = 0; j < queryWords.length; j++) {
+      if (queryWords[j].length > 2 && q.includes(queryWords[j])) {
+        matchCount++;
+      }
+    }
+    if (matchCount >= 3) return 0.2;
+    if (matchCount >= 2) return 0.1;
+  }
+  return 0;
+}
+
+/**
+ * Get audience boost multiplier based on query complexity
+ * Boosts beginner content for beginner queries, advanced for research queries
+ */
+function getAudienceBoost(item, query) {
+  if (!item.audience || !query) return 1.0;
+
+  var audienceStr = Array.isArray(item.audience) ? item.audience.join(',') : item.audience;
+
+  if (BEGINNER_PATTERNS.test(query)) {
+    if (audienceStr.includes('Junior-DS') || audienceStr.includes('Beginner')) {
+      return 1.25;  // 25% boost for beginner content on beginner queries
+    }
+    if (audienceStr.includes('Senior-DS') || audienceStr.includes('PhD')) {
+      return 0.85;  // Slight penalty for advanced content on beginner queries
+    }
+  }
+
+  if (ADVANCED_PATTERNS.test(query)) {
+    if (audienceStr.includes('Senior-DS') || audienceStr.includes('PhD')) {
+      return 1.2;  // 20% boost for advanced content on research queries
+    }
+  }
+
+  return 1.0;
+}
+
 /**
  * Handle messages from main thread
  */
@@ -314,8 +373,8 @@ function handleSearch(payload, messageId) {
       return;
     }
 
-    // Fuse results using RRF
-    var fusedResults = reciprocalRankFusion(keywordResults, semanticResults, topK);
+    // Fuse results using RRF with enriched field boosting
+    var fusedResults = reciprocalRankFusion(keywordResults, semanticResults, topK, query);
 
     postMessage({
       type: 'SEARCH_RESULTS',
@@ -393,8 +452,8 @@ function handleProgressiveSearch(payload, messageId) {
         return;
       }
 
-      // Fuse results using RRF
-      var fusedResults = reciprocalRankFusion(keywordResults, semanticResults, topK);
+      // Fuse results using RRF with enriched field boosting
+      var fusedResults = reciprocalRankFusion(keywordResults, semanticResults, topK, query);
 
       postMessage({
         type: 'SEARCH_RESULTS',
@@ -476,7 +535,13 @@ function performKeywordSearch(query, limit) {
           url: result.url,
           type: result.type,
           score: score,
-          source: 'keyword'
+          source: 'keyword',
+          // Enriched fields from LLM
+          difficulty: result.difficulty,
+          prerequisites: result.prerequisites,
+          topic_tags: result.topic_tags,
+          summary: result.summary,
+          audience: result.audience
         });
       }
     });
@@ -630,7 +695,11 @@ function performSemanticSearch(queryEmbedding, limit) {
       url: item.url,
       type: item.type,
       score: similarity,
-      source: 'semantic'
+      source: 'semantic',
+      // Enriched fields from LLM
+      difficulty: item.difficulty,
+      prerequisites: item.prerequisites,
+      summary: item.summary
     });
   }
 
@@ -650,7 +719,7 @@ function performSemanticSearch(queryEmbedding, limit) {
  * - If keyword results have high scores, trust them more
  * - If semantic results are highly confident, trust them more
  */
-function reciprocalRankFusion(keywordResults, semanticResults, topK) {
+function reciprocalRankFusion(keywordResults, semanticResults, topK, query) {
   var k = CONFIG.RRF_K;
   var scores = {};
   var items = {};
@@ -686,10 +755,21 @@ function reciprocalRankFusion(keywordResults, semanticResults, topK) {
     }
   });
 
-  // Build final results
+  // Build final results with enriched field boosts
   var fusedResults = Object.keys(scores).map(function(id) {
-    return Object.assign({}, items[id], {
-      rrfScore: scores[id],
+    var item = items[id];
+    var baseScore = scores[id];
+
+    // Apply synthetic questions bonus (adds 0-0.3)
+    var syntheticBonus = scoreSyntheticQuestions(item, query);
+
+    // Apply audience boost multiplier (0.85-1.25x)
+    var audienceMultiplier = getAudienceBoost(item, query);
+
+    var finalScore = (baseScore + syntheticBonus) * audienceMultiplier;
+
+    return Object.assign({}, item, {
+      rrfScore: finalScore,
       source: 'hybrid'
     });
   });

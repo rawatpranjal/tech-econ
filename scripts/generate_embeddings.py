@@ -135,9 +135,8 @@ def combine_text_for_embedding(item: Dict[str, Any]) -> str:
     """
     Combine relevant fields into a single text for embedding.
 
-    Strategy: Name first (most important), then description, then metadata.
-    This matches how users think about items and search for them.
-    Enriched fields (summary, synthetic_questions) boost semantic matching.
+    Strategy: Name first (most important), then description, then enriched metadata.
+    Enriched fields from LLM (summary, use_cases, synthetic_questions) boost semantic matching.
     """
     parts = []
 
@@ -151,17 +150,29 @@ def combine_text_for_embedding(item: Dict[str, Any]) -> str:
     if description:
         parts.append(description)
 
-    # LLM-generated summary (if available) adds alternative phrasing
+    # LLM-generated summary adds alternative phrasing
     summary = item.get("summary", "").strip()
     if summary:
         parts.append(summary)
+
+    # Use cases describe concrete scenarios (great for matching intent)
+    use_cases = item.get("use_cases", [])
+    if use_cases and isinstance(use_cases, list) and len(use_cases) > 0:
+        use_cases_text = " ".join(str(u) for u in use_cases)
+        parts.append(use_cases_text)
 
     # Category provides domain context
     category = item.get("category", "").strip()
     if category:
         parts.append(f"Category: {category}")
 
-    # Tags are valuable keywords
+    # Topic tags from LLM enrichment (searchable keywords)
+    topic_tags = item.get("topic_tags", [])
+    if topic_tags and isinstance(topic_tags, list) and len(topic_tags) > 0:
+        topic_tags_text = ", ".join(str(t) for t in topic_tags)
+        parts.append(f"Topics: {topic_tags_text}")
+
+    # Original tags
     tags = item.get("tags", [])
     if tags and isinstance(tags, list) and len(tags) > 0:
         tags_text = ", ".join(str(t) for t in tags)
@@ -172,7 +183,7 @@ def combine_text_for_embedding(item: Dict[str, Any]) -> str:
     if best_for:
         parts.append(f"Best for: {best_for}")
 
-    # Synthetic questions help match user queries (if available)
+    # Synthetic questions help match user queries
     synthetic_questions = item.get("synthetic_questions", [])
     if synthetic_questions and isinstance(synthetic_questions, list) and len(synthetic_questions) > 0:
         questions_text = " ".join(str(q) for q in synthetic_questions)
@@ -218,7 +229,13 @@ def load_all_items(data_dir: Path) -> List[Dict[str, Any]]:
             difficulty = item.get("difficulty", "")
             prerequisites = item.get("prerequisites", [])
             prerequisites_str = ", ".join(str(p) for p in prerequisites) if isinstance(prerequisites, list) else ""
+            topic_tags = item.get("topic_tags", [])
+            topic_tags_str = ", ".join(str(t) for t in topic_tags) if isinstance(topic_tags, list) else ""
             summary = item.get("summary", "")
+            use_cases = item.get("use_cases", [])
+            use_cases_str = ", ".join(str(u) for u in use_cases) if isinstance(use_cases, list) else ""
+            audience = item.get("audience", [])
+            audience_str = ", ".join(str(a) for a in audience) if isinstance(audience, list) else ""
             synthetic_questions = item.get("synthetic_questions", [])
 
             all_items.append({
@@ -230,10 +247,13 @@ def load_all_items(data_dir: Path) -> List[Dict[str, Any]]:
                 "url": item.get("url", ""),
                 "tags": tags_str,
                 "best_for": item.get("best_for", ""),
-                # Enriched fields
+                # Enriched fields from LLM
                 "difficulty": difficulty,
                 "prerequisites": prerequisites_str,
+                "topic_tags": topic_tags_str,
                 "summary": summary,
+                "use_cases": use_cases_str,
+                "audience": audience_str,
                 "synthetic_questions": synthetic_questions,
                 "text_for_embedding": combine_text_for_embedding(item)
             })
@@ -320,9 +340,15 @@ def generate_minisearch_index(items: List[Dict[str, Any]]) -> Dict[str, Any]:
             doc["difficulty"] = item["difficulty"]
         if item.get("prerequisites"):
             doc["prerequisites"] = item["prerequisites"]
+        if item.get("topic_tags"):
+            doc["topic_tags"] = item["topic_tags"]
         if item.get("summary"):
             doc["summary"] = item["summary"]
-        # Synthetic questions are added to searchable text but stored as array
+        if item.get("use_cases"):
+            doc["use_cases"] = item["use_cases"]
+        if item.get("audience"):
+            doc["audience"] = item["audience"]
+        # Synthetic questions are searchable text
         if item.get("synthetic_questions"):
             synthetic_q = item["synthetic_questions"]
             if isinstance(synthetic_q, list) and len(synthetic_q) > 0:
@@ -331,16 +357,15 @@ def generate_minisearch_index(items: List[Dict[str, Any]]) -> Dict[str, Any]:
         documents.append(doc)
 
     # Return the documents array - MiniSearch will index them on the client side
-    # This is simpler and more reliable than trying to replicate MiniSearch's internal format
     return {
-        "version": 3,  # Bumped for enriched fields
+        "version": 4,  # Bumped for new enriched fields
         "generatedAt": datetime.utcnow().isoformat() + "Z",
         "documents": documents,
         "config": {
-            "fields": ["name", "description", "category", "tags", "best_for", "authors", "summary", "synthetic_questions"],
-            "storeFields": ["name", "description", "category", "url", "type", "tags", "best_for", "topic", "subtopic", "authors", "year", "difficulty", "prerequisites", "summary"],
+            "fields": ["name", "description", "category", "tags", "best_for", "authors", "summary", "use_cases", "topic_tags", "synthetic_questions"],
+            "storeFields": ["name", "description", "category", "url", "type", "tags", "best_for", "topic", "subtopic", "authors", "year", "difficulty", "prerequisites", "topic_tags", "summary", "use_cases", "audience"],
             "searchOptions": {
-                "boost": {"name": 3, "tags": 2, "authors": 1.5, "best_for": 1.2, "synthetic_questions": 1.2, "summary": 1.1, "description": 1, "category": 0.8},
+                "boost": {"name": 3, "tags": 2, "topic_tags": 2, "authors": 1.5, "use_cases": 1.3, "best_for": 1.2, "synthetic_questions": 1.2, "summary": 1.1, "description": 1, "category": 0.8},
                 "fuzzy": 0.2,
                 "prefix": True
             }
@@ -476,7 +501,7 @@ def generate_all_outputs(items: List[Dict[str, Any]], model, output_dir: Path, c
 
     # 2. Build metadata (items without embeddings, for client-side matching)
     metadata = {
-        "version": 3,  # Bumped for enriched fields
+        "version": 4,  # Bumped for all enriched fields
         "model": "gte-small",
         "dimensions": 384,
         "count": len(items),
@@ -492,7 +517,10 @@ def generate_all_outputs(items: List[Dict[str, Any]], model, output_dir: Path, c
             # Include enriched fields if available
             **({"difficulty": item["difficulty"]} if item.get("difficulty") else {}),
             **({"prerequisites": item["prerequisites"]} if item.get("prerequisites") else {}),
+            **({"topic_tags": item["topic_tags"]} if item.get("topic_tags") else {}),
             **({"summary": item["summary"]} if item.get("summary") else {}),
+            **({"use_cases": item["use_cases"]} if item.get("use_cases") else {}),
+            **({"audience": item["audience"]} if item.get("audience") else {}),
         } for item in items]
     }
 

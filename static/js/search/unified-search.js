@@ -44,6 +44,71 @@
     domain: { label: 'Domain', icon: 'category', color: '#607d8b', href: '/learning/' }
   };
 
+  // Intent detection patterns - classify queries to boost relevant types
+  var INTENT_PATTERNS = {
+    tutorial: {
+      pattern: /how to|guide|beginner|intro|learn|getting started|tutorial|walkthrough/i,
+      boostTypes: ['resource', 'roadmap', 'book'],
+      boostFactor: 1.5
+    },
+    research: {
+      pattern: /paper|study|evidence|finding|analysis|research|literature|empirical/i,
+      boostTypes: ['paper'],
+      boostFactor: 1.8
+    },
+    dataset: {
+      pattern: /\bdataset\b|download data|csv|benchmark data|corpus|training data/i,
+      boostTypes: ['dataset'],
+      boostFactor: 1.8
+    },
+    package: {
+      pattern: /install|npm|pip|code|library|package|cran|pypi|implementation/i,
+      boostTypes: ['package'],
+      boostFactor: 1.8
+    },
+    career: {
+      pattern: /job|interview|resume|salary|hire|career|role|position|company/i,
+      boostTypes: ['career'],
+      boostFactor: 1.8
+    },
+    talk: {
+      pattern: /video|talk|presentation|lecture|conference|youtube|watch/i,
+      boostTypes: ['talk'],
+      boostFactor: 1.5
+    },
+    community: {
+      pattern: /community|forum|slack|discord|newsletter|blog|podcast|follow/i,
+      boostTypes: ['community'],
+      boostFactor: 1.5
+    },
+    book: {
+      pattern: /book|textbook|reading|read|author/i,
+      boostTypes: ['book'],
+      boostFactor: 1.5
+    }
+  };
+
+  /**
+   * Detect query intent and return boost configuration
+   * @param {string} query - Search query
+   * @returns {Object|null} - Intent with boostTypes and boostFactor, or null
+   */
+  function detectIntent(query) {
+    if (!query) return null;
+
+    for (var intentName in INTENT_PATTERNS) {
+      var intent = INTENT_PATTERNS[intentName];
+      if (intent.pattern.test(query)) {
+        return {
+          name: intentName,
+          boostTypes: intent.boostTypes,
+          boostFactor: intent.boostFactor
+        };
+      }
+    }
+    return null;
+  }
+
   /**
    * UnifiedSearch class
    */
@@ -83,6 +148,8 @@
       types: [],      // e.g., ['paper', 'package']
       topics: [],     // e.g., ['Experimentation', 'Causal Inference']
       years: [],      // e.g., [2023, 2024]
+      difficulty: [], // e.g., ['beginner', 'intermediate', 'advanced']
+      audience: [],   // e.g., ['Junior-DS', 'Mid-DS', 'Senior-DS']
       yearRange: null // e.g., { min: 2020, max: 2024 }
     };
     this.facetCounts = null;  // Computed from search results
@@ -794,7 +861,7 @@
     this.emptyState = document.getElementById('global-search-empty');
     this.loadingState = document.getElementById('global-search-loading');
     this.hint = document.getElementById('global-search-hint');
-    this.triggers = document.querySelectorAll('.global-search-trigger');
+    this.triggers = document.querySelectorAll('.global-search-trigger, .search-input-wrapper');
     this.currentTypeFilter = 'all';  // Filter state
 
     // Create preview panel for hover previews (desktop only)
@@ -916,14 +983,18 @@
     this.triggers.forEach(function(trigger) {
       trigger.addEventListener('click', function(e) {
         e.preventDefault();
+        e.stopPropagation();
         self.openModal();
       });
     });
 
-    // Backdrop click
+    // Backdrop click - only close when clicking directly on the backdrop
     if (this.backdrop) {
-      this.backdrop.addEventListener('click', function() {
-        self.closeModal();
+      this.backdrop.addEventListener('click', function(e) {
+        // Only close if the click was directly on the backdrop, not bubbled from inside
+        if (e.target === this) {
+          self.closeModal();
+        }
       });
     }
 
@@ -978,6 +1049,19 @@
           var index = parseInt(explainBtn.getAttribute('data-index'), 10);
           if (!isNaN(index) && self.flatResults && self.flatResults[index]) {
             self.explainResult(self.flatResults[index], self.rawQuery);
+          }
+          return;
+        }
+
+        // Handle prerequisite chip click - search for the prereq topic
+        var prereqChip = e.target.closest('.prereq-chip');
+        if (prereqChip) {
+          e.preventDefault();
+          e.stopPropagation();
+          var prereqQuery = prereqChip.getAttribute('data-query');
+          if (prereqQuery) {
+            self.input.value = prereqQuery;
+            self.performGlobalSearch();
           }
           return;
         }
@@ -1200,8 +1284,24 @@
     // Render sort controls
     this.renderSortControls();
 
-    // Apply facet filters (topics, years)
+    // Apply facet filters (topics, years, difficulty)
     var filteredResults = this.applyFilters(results);
+
+    // Apply intent-based boosting (rerank by detected intent)
+    var intent = detectIntent(query);
+    if (intent) {
+      filteredResults = filteredResults.map(function(result) {
+        var boosted = Object.assign({}, result);
+        if (intent.boostTypes.indexOf(result.type) !== -1) {
+          boosted.rrfScore = (boosted.rrfScore || boosted.score || 0) * intent.boostFactor;
+        }
+        return boosted;
+      });
+      // Re-sort by boosted score
+      filteredResults.sort(function(a, b) {
+        return (b.rrfScore || b.score || 0) - (a.rrfScore || a.score || 0);
+      });
+    }
 
     // Apply sort order to filtered results
     var sortedResults = this.sortResults(filteredResults, this.currentSortOrder);
@@ -1243,8 +1343,24 @@
       html += '</div>';
       html += '<div class="result-meta">';
       html += '<span class="result-type-badge" style="background-color:' + typeConfig.color + '">' + typeConfig.label + '</span>';
+      // Show difficulty badge if available (from LLM enrichment)
+      if (result.difficulty) {
+        var diffColors = { beginner: '#4caf50', intermediate: '#ff9800', advanced: '#f44336' };
+        var diffColor = diffColors[result.difficulty] || '#9e9e9e';
+        html += '<span class="result-difficulty-badge" style="background-color:' + diffColor + '">' + result.difficulty.charAt(0).toUpperCase() + result.difficulty.slice(1) + '</span>';
+      }
       html += '<span class="result-category">' + escapeHtml(result.category) + '</span>';
       html += '</div>';
+      // Show "Learn first" for advanced items with prerequisites
+      if (result.difficulty === 'advanced' && result.prerequisites && result.prerequisites.length > 0) {
+        html += '<div class="result-prerequisites">';
+        html += '<span class="prereq-label">Learn first:</span>';
+        var prereqs = result.prerequisites.slice(0, 3);
+        prereqs.forEach(function(prereq) {
+          html += '<a class="prereq-chip" href="#" data-query="' + escapeHtml(prereq) + '">' + escapeHtml(prereq) + '</a>';
+        });
+        html += '</div>';
+      }
       html += '<button class="result-explain-btn" data-index="' + index + '" title="Explain why this result matches">';
       html += '<svg viewBox="0 0 24 24" width="12" height="12"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>';
       html += '</button>';
@@ -1320,29 +1436,27 @@
       }
     }
 
-    // Only show facets when papers are selected or showing all
-    var showFacets = this.currentTypeFilter === 'all' || this.currentTypeFilter === 'paper';
-    if (!showFacets) {
-      facetContainer.style.display = 'none';
-      return;
-    }
-
     // Compute facet counts from current results (before filtering)
     this.facetCounts = this.computeFacetCounts(this.currentResults);
 
-    // Only show if there are meaningful facets
+    // Check what facets are available
     var hasTopics = Object.keys(this.facetCounts.topics).length > 1;
     var hasYears = Object.keys(this.facetCounts.years).length > 1;
+    var hasDifficulty = Object.keys(this.facetCounts.difficulty).length > 0;
 
-    if (!hasTopics && !hasYears) {
+    // Topics and years only show for papers
+    var showPaperFacets = (this.currentTypeFilter === 'all' || this.currentTypeFilter === 'paper') && (hasTopics || hasYears);
+
+    // Hide facets if nothing to show
+    if (!showPaperFacets && !hasDifficulty) {
       facetContainer.style.display = 'none';
       return;
     }
 
     var html = '';
 
-    // Topic filter dropdown
-    if (hasTopics) {
+    // Topic filter dropdown (only for papers)
+    if (showPaperFacets && hasTopics) {
       var sortedTopics = Object.entries(this.facetCounts.topics)
         .sort(function(a, b) { return b[1] - a[1]; })
         .slice(0, 10);  // Top 10 topics
@@ -1361,8 +1475,8 @@
       html += '</div>';
     }
 
-    // Year filter dropdown
-    if (hasYears) {
+    // Year filter dropdown (only for papers)
+    if (showPaperFacets && hasYears) {
       var sortedYears = Object.entries(this.facetCounts.years)
         .sort(function(a, b) { return parseInt(b[0]) - parseInt(a[0]); });  // Newest first
 
@@ -1375,6 +1489,49 @@
         var count = entry[1];
         var selected = self.activeFilters.years.indexOf(parseInt(year)) !== -1 ? ' selected' : '';
         html += '<option value="' + year + '"' + selected + '>' + year + ' (' + count + ')</option>';
+      });
+      html += '</select>';
+      html += '</div>';
+    }
+
+    // Difficulty filter dropdown (from LLM enrichment)
+    var hasDifficulty = Object.keys(this.facetCounts.difficulty).length > 0;
+    if (hasDifficulty) {
+      var difficultyOrder = ['beginner', 'intermediate', 'advanced'];
+      var sortedDifficulty = difficultyOrder.filter(function(d) {
+        return self.facetCounts.difficulty[d] > 0;
+      });
+
+      html += '<div class="facet-group">';
+      html += '<label class="facet-label">Level:</label>';
+      html += '<select class="facet-select" id="facet-difficulty">';
+      html += '<option value="">All Levels</option>';
+      sortedDifficulty.forEach(function(diff) {
+        var count = self.facetCounts.difficulty[diff];
+        var selected = self.activeFilters.difficulty.indexOf(diff) !== -1 ? ' selected' : '';
+        var label = diff.charAt(0).toUpperCase() + diff.slice(1);
+        html += '<option value="' + diff + '"' + selected + '>' + label + ' (' + count + ')</option>';
+      });
+      html += '</select>';
+      html += '</div>';
+    }
+
+    // Audience filter dropdown (from LLM enrichment)
+    var hasAudience = Object.keys(this.facetCounts.audience).length > 0;
+    if (hasAudience) {
+      var audienceOrder = ['Junior-DS', 'Mid-DS', 'Senior-DS', 'Early-PhD'];
+      var sortedAudience = audienceOrder.filter(function(a) {
+        return self.facetCounts.audience[a] > 0;
+      });
+
+      html += '<div class="facet-group">';
+      html += '<label class="facet-label">Audience:</label>';
+      html += '<select class="facet-select" id="facet-audience">';
+      html += '<option value="">All Audiences</option>';
+      sortedAudience.forEach(function(aud) {
+        var count = self.facetCounts.audience[aud];
+        var selected = self.activeFilters.audience.indexOf(aud) !== -1 ? ' selected' : '';
+        html += '<option value="' + aud + '"' + selected + '>' + aud + ' (' + count + ')</option>';
       });
       html += '</select>';
       html += '</div>';
@@ -1403,6 +1560,24 @@
       yearSelect.addEventListener('change', function() {
         var value = this.value;
         self.activeFilters.years = value ? [parseInt(value)] : [];
+        self.renderGlobalResults(self.currentResults, self.input.value.trim());
+      });
+    }
+
+    var difficultySelect = document.getElementById('facet-difficulty');
+    if (difficultySelect) {
+      difficultySelect.addEventListener('change', function() {
+        var value = this.value;
+        self.activeFilters.difficulty = value ? [value] : [];
+        self.renderGlobalResults(self.currentResults, self.input.value.trim());
+      });
+    }
+
+    var audienceSelect = document.getElementById('facet-audience');
+    if (audienceSelect) {
+      audienceSelect.addEventListener('change', function() {
+        var value = this.value;
+        self.activeFilters.audience = value ? [value] : [];
         self.renderGlobalResults(self.currentResults, self.input.value.trim());
       });
     }
@@ -1494,6 +1669,24 @@
         if (filters.yearRange.max && year > filters.yearRange.max) return false;
       }
 
+      // Difficulty filter (from LLM enrichment)
+      if (filters.difficulty.length > 0) {
+        if (!result.difficulty || filters.difficulty.indexOf(result.difficulty) === -1) {
+          return false;
+        }
+      }
+
+      // Audience filter (from LLM enrichment)
+      if (filters.audience.length > 0) {
+        var resultAudience = result.audience;
+        if (!resultAudience) return false;
+        var audiences = typeof resultAudience === 'string' ? resultAudience.split(',').map(function(a) { return a.trim(); }) : resultAudience;
+        var hasMatch = filters.audience.some(function(aud) {
+          return audiences.indexOf(aud) !== -1;
+        });
+        if (!hasMatch) return false;
+      }
+
       return true;
     });
   };
@@ -1507,7 +1700,9 @@
     var counts = {
       types: {},
       topics: {},
-      years: {}
+      years: {},
+      difficulty: {},
+      audience: {}
     };
 
     results.forEach(function(result) {
@@ -1524,6 +1719,21 @@
       if (result.year) {
         var year = result.year;
         counts.years[year] = (counts.years[year] || 0) + 1;
+      }
+
+      // Count difficulty levels (from LLM enrichment)
+      if (result.difficulty) {
+        counts.difficulty[result.difficulty] = (counts.difficulty[result.difficulty] || 0) + 1;
+      }
+
+      // Count audience types (from LLM enrichment)
+      if (result.audience) {
+        var audiences = typeof result.audience === 'string' ? result.audience.split(',').map(function(a) { return a.trim(); }) : result.audience;
+        if (Array.isArray(audiences)) {
+          audiences.forEach(function(aud) {
+            if (aud) counts.audience[aud] = (counts.audience[aud] || 0) + 1;
+          });
+        }
       }
     });
 
@@ -1568,6 +1778,8 @@
       types: [],
       topics: [],
       years: [],
+      difficulty: [],
+      audience: [],
       yearRange: null
     };
   };
@@ -1580,6 +1792,8 @@
     return this.activeFilters.types.length > 0 ||
            this.activeFilters.topics.length > 0 ||
            this.activeFilters.years.length > 0 ||
+           this.activeFilters.difficulty.length > 0 ||
+           this.activeFilters.audience.length > 0 ||
            this.activeFilters.yearRange !== null;
   };
 

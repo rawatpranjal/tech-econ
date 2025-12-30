@@ -8,6 +8,33 @@
     "tags": [
       "Causal Inference & ML",
       "Podcast"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-statistics",
+      "regression-analysis"
+    ],
+    "topic_tags": [
+      "causal-inference",
+      "applied-research",
+      "tech-industry",
+      "podcast",
+      "career-development"
+    ],
+    "summary": "Susan Athey discusses her pioneering role as an applied researcher at Microsoft and explains the fundamental distinction between predictive modeling and causal 'what if' questions. This podcast provides insights into how academic economists can transition to tech roles and apply causal thinking to business problems.",
+    "use_cases": [
+      "Understanding how to transition from academic economics to tech industry research roles",
+      "Learning when to use causal inference versus prediction models for business decision-making"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is the difference between prediction and causation in data science",
+      "How to become an applied researcher at tech companies",
+      "Susan Athey career transition from academia to Microsoft",
+      "When should I use causal inference vs machine learning prediction"
     ]
   },
   {
@@ -20,6 +47,33 @@
     "tags": [
       "Strategy & Digital Platforms",
       "Interview"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "marketplace-concepts"
+    ],
+    "topic_tags": [
+      "marketplace-design",
+      "platform-economics",
+      "research-careers",
+      "industry-academia",
+      "applied-economics"
+    ],
+    "summary": "Susan Athey discusses the critical need for applied researchers in tech companies to solve complex marketplace design problems. She explains how companies like Airbnb require economists and data scientists who can bridge academic theory with practical business challenges. The talk highlights career opportunities and the value of research skills in platform businesses.",
+    "use_cases": [
+      "Understanding career paths from academia to tech industry research roles",
+      "Learning how economic theory applies to real marketplace design problems at scale"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What do researchers do at tech companies like Airbnb",
+      "How to transition from economics PhD to industry research",
+      "Susan Athey marketplace design problems",
+      "Why do platforms need economists and researchers"
     ]
   },
   {
@@ -31,6 +85,34 @@
     "tags": [
       "Causal Inference & ML",
       "Video"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "basic-econometrics",
+      "machine-learning-fundamentals",
+      "causal-inference-concepts"
+    ],
+    "topic_tags": [
+      "economics-AI",
+      "causal-inference",
+      "machine-learning",
+      "fireside-chat",
+      "video-content"
+    ],
+    "summary": "Stanford GSB fireside chat featuring Susan Athey discussing how economics and artificial intelligence intersect, particularly in causal inference applications. Covers practical insights on applying economic thinking to AI problems and using ML methods for causal analysis. Valuable for practitioners bridging economics and data science in tech environments.",
+    "use_cases": [
+      "Understanding how to apply economic frameworks when building AI systems for business decisions",
+      "Learning approaches to combine machine learning with causal inference for policy evaluation or product impact analysis"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "Susan Athey economics AI intersection",
+      "how to combine economics with artificial intelligence",
+      "causal inference machine learning economics talk",
+      "Stanford economist on AI and causal inference"
     ]
   },
   {
@@ -42,6 +124,34 @@
     "tags": [
       "Strategy & Digital Platforms",
       "Video"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "basic-econometrics",
+      "machine-learning-fundamentals",
+      "causal-inference"
+    ],
+    "topic_tags": [
+      "artificial-intelligence",
+      "economic-research",
+      "digital-transformation",
+      "NBER-lecture",
+      "video-content"
+    ],
+    "summary": "Susan Athey's NBER lecture examining how AI technologies are revolutionizing economic research methodologies and creating new opportunities in industry applications. She discusses the intersection of machine learning and causal inference, highlighting how economists can leverage AI tools for better policy analysis and business decision-making. The talk covers both theoretical frameworks and practical implementations of AI in economic contexts.",
+    "use_cases": [
+      "Understanding how to integrate machine learning methods into traditional economic research workflows",
+      "Learning about AI applications in digital platform strategy and market design"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "Susan Athey AI economics lecture",
+      "how is artificial intelligence changing economic research",
+      "NBER lecture on transformative AI applications",
+      "economics of AI digital platforms Susan Athey"
     ]
   },
   {
@@ -54,6 +164,34 @@
     "tags": [
       "Causal Inference & ML",
       "Video"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "randomized-controlled-trials",
+      "regression-discontinuity",
+      "instrumental-variables"
+    ],
+    "topic_tags": [
+      "causal-inference",
+      "tech-industry",
+      "experimentation",
+      "video-lecture",
+      "applied-methods"
+    ],
+    "summary": "Steve Tadelis, UC Berkeley professor and former eBay economist, presents practical causal inference methods used in tech companies. The talk covers how to identify causal effects in digital environments where traditional experiments may not be feasible. Essential viewing for data scientists working on product decisions and business impact measurement.",
+    "use_cases": [
+      "Measuring the causal impact of product features on user engagement when A/B testing isn't possible",
+      "Evaluating the effectiveness of marketing campaigns using observational data from digital platforms"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "causal inference methods for tech companies",
+      "Steve Tadelis causal inference talk",
+      "how to measure causal effects in digital products",
+      "practical causal inference for data scientists"
     ]
   },
   {
@@ -66,6 +204,33 @@
     "tags": [
       "Market Design & Auctions",
       "Interview"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "microeconomics-basics",
+      "auction-theory-fundamentals"
+    ],
+    "topic_tags": [
+      "auction-design",
+      "tech-economics",
+      "productivity-measurement",
+      "digital-markets",
+      "podcast-interview"
+    ],
+    "summary": "Hal Varian, Google's Chief Economist, discusses fundamental concepts in auction design and the challenges of measuring productivity in digital companies. The interview covers key insights from Google's experience with auction mechanisms and broader questions about economic measurement in the tech sector.",
+    "use_cases": [
+      "Understanding how major tech platforms design their auction systems",
+      "Learning why traditional productivity metrics don't work for digital businesses"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "Hal Varian Google economics interview",
+      "how do tech company auctions work",
+      "why productivity metrics fail digital companies",
+      "Googlenomics auction design explained"
     ]
   },
   {
@@ -77,6 +242,33 @@
     "tags": [
       "Market Design & Auctions",
       "Video"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "business-strategy"
+    ],
+    "topic_tags": [
+      "chief-scientist",
+      "business-economics",
+      "forecasting",
+      "pricing-strategy",
+      "organizational-roles"
+    ],
+    "summary": "Hal Varian, Google's Chief Economist, discusses the strategic value of having a chief scientist role in companies for economic decision-making. He covers how this role applies economic principles to solve business problems in forecasting, pricing optimization, and market design. The talk provides insights into bridging academic economics with practical business applications.",
+    "use_cases": [
+      "Understanding how to structure data science teams with economic expertise",
+      "Learning how major tech companies apply economic principles to business strategy"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "What does a chief scientist do at a tech company",
+      "How does Google use economics for business decisions",
+      "Hal Varian chief economist role",
+      "Why do companies need economists for pricing and forecasting"
     ]
   },
   {
@@ -89,6 +281,34 @@
     "tags": [
       "Market Design & Auctions",
       "Interview"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "auction-theory",
+      "econometrics-basics",
+      "regression-analysis"
+    ],
+    "topic_tags": [
+      "auction-mechanisms",
+      "search-economics",
+      "google-trends",
+      "ad-auctions",
+      "economics-interview"
+    ],
+    "summary": "Google's Chief Economist Hal Varian discusses how economic principles are applied at scale in Google's products, particularly in search algorithms and advertising auctions. The interview covers practical applications of auction theory, using Google Trends for economic forecasting, and insights into how tech companies use market design principles. This provides real-world context for how academic economics translates into billion-dollar tech platforms.",
+    "use_cases": [
+      "Understanding how auction theory applies to real-world ad marketplaces and platform design",
+      "Learning how to use search data and Google Trends for economic forecasting and nowcasting"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "How does Google use auction theory in their ad systems",
+      "Hal Varian interview economics at tech companies",
+      "Google Trends for economic forecasting",
+      "Real world applications of market design"
     ]
   },
   {
@@ -101,6 +321,34 @@
     "tags": [
       "Experimentation & Scaling",
       "Podcast"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "randomized-controlled-trials",
+      "causal-inference",
+      "field-experiments"
+    ],
+    "topic_tags": [
+      "field-experiments",
+      "uber-economics",
+      "driver-incentives",
+      "scaling-experiments",
+      "podcast"
+    ],
+    "summary": "Former Uber and Lyft Chief Scientist John List discusses practical challenges of running large-scale field experiments in rideshare platforms. He shares real-world insights on driver incentive schemes, experiment design at scale, and lessons from The Voltage Effect book. Essential listening for practitioners wanting to understand how academic experimental methods translate to tech industry applications.",
+    "use_cases": [
+      "Designing driver or user incentive experiments at a rideshare or delivery platform",
+      "Understanding how to scale successful pilot experiments to full product launches"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "John List Uber experiments",
+      "field experiments rideshare industry",
+      "voltage effect scaling experiments",
+      "Uber chief scientist experimental design"
     ]
   },
   {
@@ -113,6 +361,33 @@
     "tags": [
       "Experimentation & Scaling",
       "Podcast"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "randomized-controlled-trials",
+      "statistical-significance"
+    ],
+    "topic_tags": [
+      "scaling-experiments",
+      "external-validity",
+      "field-experiments",
+      "tech-platforms",
+      "causal-inference"
+    ],
+    "summary": "John List discusses the challenges of scaling successful small-scale interventions at major tech companies like Uber, Lyft, and Walmart. He explores why most proven ideas fail when expanded to larger populations and different contexts. The talk provides practical insights on external validity and the scaling problem in real-world experimentation.",
+    "use_cases": [
+      "Planning to roll out a successful A/B test result to a broader user base",
+      "Understanding why a pilot program's results didn't replicate when scaled company-wide"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "why do experiments fail when scaled up",
+      "external validity in tech experiments",
+      "scaling A/B test results to production",
+      "John List scaling interventions"
     ]
   },
   {
@@ -125,6 +400,34 @@
     "tags": [
       "Market Design & Auctions",
       "Video"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "microeconomics-theory",
+      "game-theory-basics",
+      "A-B-testing"
+    ],
+    "topic_tags": [
+      "market-design",
+      "ride-sharing",
+      "platform-economics",
+      "auction-theory",
+      "video"
+    ],
+    "summary": "John List explains how ride-sharing platforms like Uber and Lyft design two-sided markets to efficiently match drivers and riders. The talk covers pricing mechanisms, surge pricing, and market design principles that maximize platform efficiency and user satisfaction. Essential viewing for understanding how tech platforms create and optimize marketplace dynamics.",
+    "use_cases": [
+      "Designing pricing algorithms for a new ride-sharing or delivery platform",
+      "Optimizing marketplace matching mechanisms to reduce wait times and increase driver utilization"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "how does uber surge pricing work",
+      "market design principles for ride sharing platforms",
+      "john list uber lyft market design",
+      "two sided marketplace optimization rideshare"
     ]
   },
   {
@@ -137,6 +440,34 @@
     "tags": [
       "Experimentation & Scaling",
       "Podcast"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "A-B-testing",
+      "causal-inference-basics",
+      "experimentation-design"
+    ],
+    "topic_tags": [
+      "spotify",
+      "tech-industry",
+      "experimentation-management",
+      "applied-research",
+      "podcast"
+    ],
+    "summary": "A podcast interview with Kyle Kretschman discussing his role running experimentation teams at Spotify. Provides insights into how causal inference and A/B testing work in practice at a major streaming platform, covering team management, technical challenges, and real-world application of experimental methods.",
+    "use_cases": [
+      "Understanding how experimentation teams operate at major tech companies",
+      "Learning about career paths for applied researchers in industry"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "how does experimentation work at Spotify",
+      "tech industry applied research careers",
+      "managing experimentation teams at scale",
+      "Kyle Kretschman Spotify economics interview"
     ]
   },
   {
@@ -149,6 +480,33 @@
     "tags": [
       "Strategy & Digital Platforms",
       "Interview"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-statistics",
+      "business-strategy-fundamentals"
+    ],
+    "topic_tags": [
+      "research-organization",
+      "applied-economics",
+      "tech-strategy",
+      "team-building",
+      "interview"
+    ],
+    "summary": "Pat Bajari, Amazon's Chief Scientist, shares insights on building and scaling applied research teams from the ground up. He discusses the challenges and strategies for integrating 400+ PhD researchers into a tech company's business operations. The interview covers organizational design, hiring practices, and translating academic research into business value.",
+    "use_cases": [
+      "Building or scaling an applied research team at a tech company",
+      "Understanding how to transition from academic research to industry applications"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "How to build applied research team at tech company",
+      "Amazon Chief Scientist Pat Bajari interview",
+      "Scaling PhD researchers in industry",
+      "Building analytics organization from scratch"
     ]
   },
   {
@@ -161,6 +519,34 @@
     "tags": [
       "Market Design & Auctions",
       "Interview"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "microeconomics-fundamentals",
+      "game-theory-basics",
+      "probability-theory"
+    ],
+    "topic_tags": [
+      "auction-theory",
+      "mechanism-design",
+      "ad-markets",
+      "interview",
+      "applied-economics"
+    ],
+    "summary": "Deep interview with Preston McAfee, former Chief Scientist at major tech companies and Golden Goose Award winner, discussing auction theory and its applications in digital advertising markets. Covers fundamental auction design principles and real-world implementation challenges in tech platforms. Essential listening for understanding how economic theory translates to practical market design in the digital economy.",
+    "use_cases": [
+      "Understanding how search and display ad auctions work at major tech platforms",
+      "Learning career paths from academic economics to applied tech roles"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "Preston McAfee interview auction theory",
+      "how do Google ad auctions work mechanism design",
+      "career path from economics PhD to tech industry",
+      "auction design principles for digital advertising markets"
     ]
   },
   {
@@ -172,6 +558,33 @@
     "tags": [
       "Causal Inference & ML",
       "Video"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-statistics",
+      "correlation-vs-causation"
+    ],
+    "topic_tags": [
+      "causal-inference",
+      "decision-making",
+      "research-design",
+      "experimentation",
+      "talk"
+    ],
+    "summary": "Sean Taylor, former DS lead at Lyft and Facebook, explains when causal inference is necessary versus when simple correlation analysis suffices. This practical talk helps data scientists avoid over-engineering solutions by understanding the decision context and business requirements. Essential viewing for practitioners learning to choose appropriate analytical approaches.",
+    "use_cases": [
+      "Deciding whether to run an A/B test or use observational data for a product feature analysis",
+      "Determining if complex causal methods are needed for a business metric investigation"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "when do I need causal inference vs correlation",
+      "how to decide between observational study and experiment",
+      "Sean Taylor causal inference talk",
+      "when is correlation enough for data science"
     ]
   },
   {
@@ -183,6 +596,34 @@
     "tags": [
       "Market Design & Auctions",
       "Video"
+    ],
+    "difficulty": "advanced",
+    "prerequisites": [
+      "neural-networks",
+      "game-theory",
+      "optimization-theory"
+    ],
+    "topic_tags": [
+      "auction-design",
+      "mechanism-design",
+      "deep-learning",
+      "regretnet",
+      "ICML"
+    ],
+    "summary": "This ICML talk covers RegretNet and deep learning approaches to auction mechanism design, focusing on designing optimal auction mechanisms rather than just bidding strategies. It demonstrates how machine learning can solve complex mechanism design problems that are intractable with traditional analytical methods.",
+    "use_cases": [
+      "Designing revenue-maximizing auction formats for digital advertising platforms",
+      "Creating fair and efficient spectrum allocation mechanisms for telecom regulators"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "RegretNet auction design machine learning",
+      "deep learning mechanism design auctions",
+      "ICML auction theory neural networks",
+      "ML approaches to auction mechanism design"
     ]
   },
   {
@@ -194,6 +635,34 @@
     "tags": [
       "Market Design & Auctions",
       "Video"
+    ],
+    "difficulty": "advanced",
+    "prerequisites": [
+      "lagrangian-optimization",
+      "convex-optimization",
+      "auction-theory"
+    ],
+    "topic_tags": [
+      "mechanism-design",
+      "auction-optimization",
+      "lagrangian-duality",
+      "revenue-maximization",
+      "mathematical-economics"
+    ],
+    "summary": "A technical presentation on using Lagrangian duality theory to design optimal revenue-maximizing auction mechanisms. Covers mathematical frameworks for auction design, budget constraint handling, and deriving simple auction formats from complex optimization problems.",
+    "use_cases": [
+      "Designing ad auction mechanisms for platforms like Google or Facebook",
+      "Creating marketplace pricing strategies for two-sided markets with budget constraints"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "lagrangian duality auction design",
+      "revenue maximizing mechanism design",
+      "optimal auction theory math",
+      "budget constraints auction mechanisms"
     ]
   },
   {
@@ -205,6 +674,34 @@
     "tags": [
       "Nobel Lectures",
       "Video"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "difference-in-differences",
+      "instrumental-variables",
+      "regression-discontinuity"
+    ],
+    "topic_tags": [
+      "causal-inference",
+      "econometrics",
+      "credibility-revolution",
+      "nobel-prize",
+      "video-lecture"
+    ],
+    "summary": "Nobel Prize winner Guido Imbens delivers the definitive overview of how causal inference methods transformed empirical economics. He traces the evolution from traditional regression to modern techniques like instrumental variables and regression discontinuity that enable credible causal identification. Essential viewing for understanding the theoretical foundations behind today's experimental design practices.",
+    "use_cases": [
+      "Understanding the historical development and theoretical justification for modern causal inference methods",
+      "Learning authoritative explanations of IV and RDD from the Nobel laureate who helped develop them"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "Imbens Nobel lecture causal inference",
+      "credibility revolution economics Nobel prize",
+      "instrumental variables regression discontinuity Nobel lecture",
+      "Guido Imbens 2021 Nobel speech video"
     ]
   },
   {
@@ -216,6 +713,34 @@
     "tags": [
       "Nobel Lectures",
       "Video"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "microeconomics",
+      "industrial-organization",
+      "game-theory"
+    ],
+    "topic_tags": [
+      "two-sided-markets",
+      "platform-economics",
+      "antitrust",
+      "digital-markets",
+      "nobel-lecture"
+    ],
+    "summary": "Jean Tirole's 2014 Nobel lecture explaining his groundbreaking work on two-sided market theory and platform economics. He demonstrates why traditional antitrust approaches fail in digital markets where platforms must balance pricing between different user groups. Essential viewing for understanding the economic foundations of modern platform regulation.",
+    "use_cases": [
+      "Understanding why platforms like credit cards or app stores price differently to buyers vs sellers",
+      "Analyzing antitrust cases involving tech platforms like Google, Apple, or Amazon"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "two sided market theory explained",
+      "why traditional antitrust doesn't work for platforms",
+      "Jean Tirole Nobel lecture platform economics",
+      "economic theory behind platform pricing strategies"
     ]
   },
   {
@@ -227,6 +752,34 @@
     "tags": [
       "Nobel Lectures",
       "Video"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "game-theory",
+      "microeconomic-theory",
+      "auction-mechanisms"
+    ],
+    "topic_tags": [
+      "auction-theory",
+      "mechanism-design",
+      "spectrum-auctions",
+      "advertising-markets",
+      "nobel-prize"
+    ],
+    "summary": "Nobel Prize winner Paul Milgrom traces the evolution of auction theory from foundational economic research to real-world applications in FCC spectrum auctions and internet advertising markets. He explains how theoretical insights about bidding strategies and market design were adapted to solve complex allocation problems in technology markets. Essential viewing for understanding how economic theory translates into multi-billion dollar market mechanisms.",
+    "use_cases": [
+      "Understanding the theoretical foundations behind ad auction platforms like Google Ads",
+      "Learning how economic principles guide spectrum allocation and telecommunications policy"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "Paul Milgrom Nobel lecture auction theory",
+      "how do FCC spectrum auctions work economics",
+      "auction theory applications internet advertising",
+      "Nobel Prize economics auction mechanisms 2020"
     ]
   },
   {
@@ -238,6 +791,34 @@
     "tags": [
       "Nobel Lectures",
       "Video"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "microeconomics-theory",
+      "game-theory",
+      "optimization-methods"
+    ],
+    "topic_tags": [
+      "market-design",
+      "matching-theory",
+      "platform-economics",
+      "auction-theory",
+      "nobel-lectures"
+    ],
+    "summary": "Alvin Roth's Nobel Prize lecture explaining the theory and practice of market design, focusing on matching markets where prices alone don't clear markets. Essential viewing for understanding two-sided marketplaces, assignment problems, and mechanism design principles used in modern tech platforms.",
+    "use_cases": [
+      "Designing rider-driver matching algorithms for rideshare platforms",
+      "Creating fair and efficient allocation systems for marketplace platforms"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "Alvin Roth Nobel Prize lecture market design",
+      "matching theory for platform economists",
+      "market design fundamentals for tech companies",
+      "Nobel lecture on two-sided markets"
     ]
   },
   {
@@ -249,6 +830,34 @@
     "tags": [
       "Causal Inference & ML",
       "Video"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "linear-regression",
+      "cross-validation",
+      "regularization-methods"
+    ],
+    "topic_tags": [
+      "double-machine-learning",
+      "high-dimensional-inference",
+      "causal-estimation",
+      "debiased-ml",
+      "video-lecture"
+    ],
+    "summary": "Victor Chernozhukov presents the foundational Double/Debiased Machine Learning methodology for causal inference in high-dimensional settings. The approach combines machine learning flexibility with rigorous statistical inference to estimate treatment effects when you have many confounding variables. Includes practical implementation guidance through the DoubleML package.",
+    "use_cases": [
+      "Estimating price elasticity from observational data with hundreds of potential confounders",
+      "Measuring marketing campaign effectiveness when user features are high-dimensional"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "double machine learning tutorial",
+      "debiased ML for causal inference",
+      "Chernozhukov double ML methodology",
+      "high dimensional causal inference methods"
     ]
   },
   {
@@ -260,6 +869,33 @@
     "tags": [
       "Causal Inference & ML",
       "Podcast"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-statistics",
+      "research-fundamentals"
+    ],
+    "topic_tags": [
+      "career-advice",
+      "academia-to-industry",
+      "applied-research",
+      "microsoft-research",
+      "interview"
+    ],
+    "summary": "Susan Athey discusses her career transition from academic economics to creating the applied researcher role at Microsoft, bridging theory and practice. She shares insights on how economists can contribute to tech companies and the evolution of data science roles. The conversation covers her pioneering work in bringing rigorous causal inference methods to industry applications.",
+    "use_cases": [
+      "Understanding career paths from academia to tech industry",
+      "Learning how to position economics skills in data science roles"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "Susan Athey career path academia to industry",
+      "how to transition from economics PhD to tech",
+      "applied researcher role at Microsoft",
+      "economist working in tech companies"
     ]
   },
   {
@@ -271,6 +907,34 @@
     "tags": [
       "Market Design & Auctions",
       "Podcast"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "auction-theory",
+      "microeconomics",
+      "basic-statistics"
+    ],
+    "topic_tags": [
+      "auction-mechanisms",
+      "price-discrimination",
+      "nowcasting",
+      "google-economics",
+      "podcast"
+    ],
+    "summary": "Hal Varian, Google's Chief Economist, discusses the company's transition from second-price to first-price auctions in ad markets, explaining quality scores and price discrimination mechanisms. The conversation covers practical applications of auction theory at scale and Google's approach to economic nowcasting using search data.",
+    "use_cases": [
+      "Understanding how major tech platforms design and optimize their auction mechanisms",
+      "Learning how search data can be used for real-time economic forecasting and market analysis"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "How did Google change their auction mechanism",
+      "What is nowcasting with search data",
+      "Hal Varian on auction design at Google",
+      "First price vs second price auctions in practice"
     ]
   },
   {
@@ -282,6 +946,34 @@
     "tags": [
       "Strategy & Digital Platforms",
       "Video"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "microeconomics-basics",
+      "game-theory-fundamentals",
+      "mechanism-design-concepts"
+    ],
+    "topic_tags": [
+      "radical-markets",
+      "quadratic-voting",
+      "data-labor",
+      "mechanism-design",
+      "platform-economics"
+    ],
+    "summary": "Glen Weyl discusses innovative market mechanisms including treating data as labor and quadratic voting systems for more democratic decision-making. The talk bridges economic theory with practical applications for digital platforms and tech companies. Covers how mechanism design can create fairer, more efficient markets in the digital economy.",
+    "use_cases": [
+      "Designing voting mechanisms for platform governance or organizational decision-making",
+      "Developing fair compensation models for user-generated data in tech companies"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "quadratic voting implementation for platform decisions",
+      "Glen Weyl radical markets data as labor",
+      "mechanism design for digital platforms",
+      "how to value user data as labor contribution"
     ]
   },
   {
@@ -293,6 +985,33 @@
     "tags": [
       "AI & Labor",
       "Podcast"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "productivity-measurement"
+    ],
+    "topic_tags": [
+      "AI-productivity",
+      "economic-impact",
+      "labor-economics",
+      "technology-adoption",
+      "talk"
+    ],
+    "summary": "Erik Brynjolfsson discusses the J-curve pattern of AI productivity adoption and research showing 14-35% productivity gains from AI implementation. This talk covers economic theory and empirical evidence on how AI technologies impact workforce productivity and economic growth. Accessible overview of current research on AI's economic implications from a leading digital economy researcher.",
+    "use_cases": [
+      "Understanding the timeline and magnitude of AI productivity impacts for strategic planning",
+      "Learning about empirical methods for measuring AI's economic effects in organizations"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "AI productivity gains research",
+      "J-curve AI adoption economics",
+      "Erik Brynjolfsson AI economy talk",
+      "how much does AI increase productivity"
     ]
   },
   {
@@ -304,6 +1023,33 @@
     "tags": [
       "AI & Labor",
       "Podcast"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "technology-fundamentals"
+    ],
+    "topic_tags": [
+      "automation",
+      "future-of-work",
+      "technological-unemployment",
+      "AI-economics",
+      "podcast"
+    ],
+    "summary": "Erik Brynjolfsson discusses his Second Machine Age thesis on the Lex Fridman podcast, exploring which jobs will survive automation and the risks of the Turing Trap. This accessible conversation covers the economic implications of AI and automation on employment and society. Perfect for understanding foundational concepts in AI economics without technical prerequisites.",
+    "use_cases": [
+      "Understanding automation's impact on your industry or career path",
+      "Preparing strategic workforce planning presentations for leadership teams"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "which jobs are safe from AI automation",
+      "what is the turing trap brynjolfsson",
+      "second machine age automation economics",
+      "AI impact on employment future work"
     ]
   },
   {
@@ -315,6 +1061,33 @@
     "tags": [
       "AI & Labor",
       "Podcast"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "labor-market-concepts"
+    ],
+    "topic_tags": [
+      "automation-economics",
+      "labor-displacement",
+      "technology-policy",
+      "podcast-interview",
+      "economic-theory"
+    ],
+    "summary": "MIT economist Daron Acemoglu discusses his influential framework for understanding when new technologies complement workers versus replace them. He explains how the design and deployment of AI and automation can either augment human capabilities or lead to job displacement. The framework provides economists and policymakers with tools to analyze technology's impact on employment and wages.",
+    "use_cases": [
+      "Policy analysts evaluating the employment effects of AI implementation in different industries",
+      "Tech company executives designing automation systems that complement rather than replace human workers"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "How does AI affect jobs and wages",
+      "Daron Acemoglu automation framework explained",
+      "When does technology help workers vs replace them",
+      "Economic theory of AI and labor markets"
     ]
   },
   {
@@ -326,6 +1099,33 @@
     "tags": [
       "AI & Labor",
       "Video"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "labor-market-theory"
+    ],
+    "topic_tags": [
+      "artificial-intelligence",
+      "labor-economics",
+      "automation",
+      "future-of-work",
+      "expert-knowledge"
+    ],
+    "summary": "MIT economist David Autor presents his research on how AI will impact the labor market, focusing on the 'devaluation of expertise' as the primary concern rather than widespread job displacement. He discusses how AI may democratize access to expert knowledge while potentially reducing the premium for specialized skills. The talk provides an economic framework for understanding AI's effects on different types of work and worker categories.",
+    "use_cases": [
+      "Understanding how AI might affect your career trajectory in tech or economics",
+      "Developing workforce strategy for companies implementing AI tools"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "How will AI affect jobs in the future",
+      "David Autor AI labor market research",
+      "Will AI replace workers or devalue expertise",
+      "Economic impacts of artificial intelligence on employment"
     ]
   },
   {
@@ -337,6 +1137,33 @@
     "tags": [
       "AI & Labor",
       "Podcast"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "behavioral-economics-basics",
+      "algorithmic-fairness-concepts"
+    ],
+    "topic_tags": [
+      "behavioral-economics",
+      "algorithmic-bias",
+      "AI-ethics",
+      "podcast",
+      "career-transitions"
+    ],
+    "summary": "MIT economist Sendhil Mullainathan discusses his career evolution from behavioral economics to AI research, focusing on understanding and mitigating algorithmic bias. He explores how behavioral insights can inform AI development and the challenges of ensuring fairness in automated systems. The conversation provides valuable perspective on interdisciplinary research and the intersection of human behavior and machine learning.",
+    "use_cases": [
+      "Understanding career paths from economics to AI research",
+      "Learning about algorithmic bias from a behavioral economics perspective"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "Sendhil Mullainathan behavioral economics AI transition",
+      "algorithmic bias mitigation behavioral economics",
+      "MIT economist podcast AI research",
+      "career change from economics to artificial intelligence"
     ]
   },
   {
@@ -348,6 +1175,33 @@
     "tags": [
       "AI & Labor",
       "Video"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "linear-regression"
+    ],
+    "topic_tags": [
+      "human-AI-collaboration",
+      "algorithmic-decision-making",
+      "labor-economics",
+      "machine-learning-applications",
+      "video-lecture"
+    ],
+    "summary": "Three-part Cornell Messenger Lecture series by Sendhil Mullainathan exploring how algorithms can augment rather than replace human decision-making and cognitive capacity. The talks examine the intersection of behavioral economics, machine learning, and labor markets with accessible explanations suitable for broad audiences. Covers both theoretical foundations and practical applications of human-AI collaboration.",
+    "use_cases": [
+      "Understanding how to design AI systems that complement human judgment in business decisions",
+      "Learning frameworks for evaluating when algorithms should assist versus replace human workers"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "Sendhil Mullainathan Cornell lectures on AI and humans",
+      "how can algorithms enhance human decision making",
+      "behavioral economics meets machine learning video",
+      "AI augmenting human capacity rather than replacing workers"
     ]
   },
   {
@@ -359,6 +1213,33 @@
     "tags": [
       "Pricing & Behavioral",
       "Podcast"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-statistics",
+      "behavioral-economics-concepts"
+    ],
+    "topic_tags": [
+      "surge-pricing",
+      "behavioral-economics",
+      "user-psychology",
+      "pricing-strategy",
+      "podcast"
+    ],
+    "summary": "NPR Hidden Brain podcast featuring Uber researcher Keith Chen discussing behavioral insights from surge pricing experiments. Chen reveals counterintuitive findings like users accepting 2.1x surge pricing more readily than 2.0x, and how low phone battery affects price acceptance. The talk provides accessible insights into how psychological factors influence economic decision-making in tech platforms.",
+    "use_cases": [
+      "Understanding how psychological anchoring affects dynamic pricing strategy",
+      "Learning about real-world behavioral economics applications in ride-sharing platforms"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "surge pricing psychology research",
+      "behavioral economics in ride sharing",
+      "Keith Chen Uber pricing experiments",
+      "why do users accept higher surge prices"
     ]
   },
   {
@@ -370,6 +1251,33 @@
     "tags": [
       "Pricing & Behavioral",
       "Podcast"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-microeconomics",
+      "demand-curves"
+    ],
+    "topic_tags": [
+      "demand-elasticity",
+      "surge-pricing",
+      "rideshare-economics",
+      "behavioral-economics",
+      "podcast"
+    ],
+    "summary": "Steven Levitt discusses Uber's pricing strategy and reveals demand elasticity findings from 54 million user sessions showing -0.6 to -0.7 elasticity. The conversation explores how ride-sharing platforms provide natural experiments for understanding consumer behavior and price sensitivity. Perfect introduction to applied pricing economics using real-world data at massive scale.",
+    "use_cases": [
+      "Understanding how surge pricing affects rider demand in your own marketplace",
+      "Learning foundational concepts of demand elasticity through a familiar consumer product"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "What is demand elasticity in rideshare apps",
+      "How does Uber surge pricing work economically",
+      "Freakonomics Uber pricing episode",
+      "Real world examples of price elasticity"
     ]
   },
   {
@@ -381,6 +1289,33 @@
     "tags": [
       "AI & Labor",
       "Podcast"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-statistics",
+      "regression-analysis"
+    ],
+    "topic_tags": [
+      "gender-pay-gap",
+      "labor-economics",
+      "gig-economy",
+      "uber-case-study",
+      "freakonomics"
+    ],
+    "summary": "Freakonomics podcast episode featuring Uber researchers discussing their study of gender pay gaps among 1M+ drivers, finding a 7% gap explained by experience and driving speed differences. The research provides insights into how algorithmic platforms can still exhibit pay disparities despite seemingly neutral pricing mechanisms. Accessible discussion of a large-scale empirical study relevant to anyone interested in labor economics and platform work.",
+    "use_cases": [
+      "Understanding how gender pay gaps manifest in gig economy platforms",
+      "Learning about natural experiments in digital labor markets"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "uber gender pay gap study podcast",
+      "freakonomics uber drivers wage difference",
+      "platform economy gender pay research",
+      "algorithmic fairness gig worker compensation"
     ]
   },
   {
@@ -392,6 +1327,33 @@
     "tags": [
       "Antitrust & Competition",
       "Video"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "microeconomics-fundamentals",
+      "market-structure-analysis"
+    ],
+    "topic_tags": [
+      "antitrust-policy",
+      "tech-regulation",
+      "congressional-testimony",
+      "digital-markets",
+      "competition-economics"
+    ],
+    "summary": "Congressional testimony and policy analysis by Yale economist Fiona Scott Morton, former DOJ Chief Scientist, covering antitrust enforcement in tech markets and the Digital Markets Act. Provides accessible expert perspective on competition policy and regulatory approaches to big tech platforms. Essential viewing for understanding current policy debates around tech market concentration.",
+    "use_cases": [
+      "Understanding regulatory landscape when joining a tech company's policy or legal team",
+      "Preparing academic research on digital platform regulation and competition policy"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "tech antitrust expert testimony congress",
+      "digital markets act economic analysis",
+      "DOJ economist on big tech competition",
+      "Fiona Scott Morton antitrust policy video"
     ]
   },
   {
@@ -403,6 +1365,33 @@
     "tags": [
       "Antitrust & Competition",
       "Video"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "microeconomics-basics",
+      "market-structure-analysis"
+    ],
+    "topic_tags": [
+      "platform-economics",
+      "antitrust-policy",
+      "tech-regulation",
+      "market-concentration",
+      "video-content"
+    ],
+    "summary": "Tim Wu discusses the shift from tech platforms creating value to extracting it from users and markets, drawing on historical antitrust patterns. This accessible talk connects economic theory to current platform behaviors and regulatory responses. Essential viewing for understanding the economic foundations of tech antitrust policy.",
+    "use_cases": [
+      "Understanding regulatory arguments against big tech platforms",
+      "Learning historical context for current antitrust enforcement trends"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "Tim Wu platform extraction economics",
+      "antitrust history tech platforms",
+      "Biden administration tech policy explained",
+      "why are tech companies being regulated now"
     ]
   },
   {
@@ -414,6 +1403,34 @@
     "tags": [
       "Antitrust & Competition",
       "Video"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "microeconomics-theory",
+      "antitrust-law-basics",
+      "market-structure-analysis"
+    ],
+    "topic_tags": [
+      "platform-regulation",
+      "digital-markets-act",
+      "two-sided-markets",
+      "keynote-talk",
+      "policy-analysis"
+    ],
+    "summary": "Jean Tirole's 2022 NBER keynote explaining why traditional antitrust frameworks are inadequate for regulating digital platforms and examining the European Union's Digital Markets Act as a regulatory response. The talk covers the unique economic characteristics of digital platforms, including network effects and two-sided markets, that challenge conventional competition policy. Essential viewing for understanding current debates around tech platform regulation and policy design.",
+    "use_cases": [
+      "Understanding regulatory approaches when analyzing big tech company strategies or market entry decisions",
+      "Preparing policy recommendations or research on digital platform competition and market power"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "Jean Tirole platform regulation keynote",
+      "why traditional antitrust fails for digital platforms",
+      "EU Digital Markets Act economic analysis",
+      "NBER 2022 platform competition policy talk"
     ]
   },
   {
@@ -425,6 +1442,34 @@
     "tags": [
       "Strategy & Digital Platforms",
       "Interview"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "microeconomics-theory",
+      "network-effects",
+      "platform-business-models"
+    ],
+    "topic_tags": [
+      "two-sided-markets",
+      "platform-pricing",
+      "nobel-economics",
+      "freemium-models",
+      "interview"
+    ],
+    "summary": "Nobel laureate Jean Tirole discusses the economic principles behind platform pricing strategies and how companies monetize 'free' services through two-sided market dynamics. He explores the delicate balance platforms must strike between attracting users and generating revenue from different sides of their markets. This interview provides foundational insights for understanding modern digital platform economics.",
+    "use_cases": [
+      "Understanding how to price products in marketplace platforms where you need to balance buyer and seller incentives",
+      "Analyzing the economics behind freemium business models and ad-supported services"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "How do platforms price when they have users on both sides",
+      "Jean Tirole platform economics interview",
+      "Economics of free services and two sided markets",
+      "Platform pricing strategy academic perspective"
     ]
   },
   {
@@ -436,6 +1481,33 @@
     "tags": [
       "Market Design & Auctions",
       "Video"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "microeconomics-basics",
+      "game-theory-fundamentals"
+    ],
+    "topic_tags": [
+      "matching-theory",
+      "two-sided-markets",
+      "platform-design",
+      "tech-talk",
+      "nobel-prize"
+    ],
+    "summary": "Nobel Prize winner Alvin Roth explains matching theory and how it applies to two-sided markets like rideshare, dating apps, and job platforms. Covers stable matching algorithms and market design principles that tech companies use to optimize marketplace outcomes. Essential foundational knowledge for anyone working on platform products.",
+    "use_cases": [
+      "Designing matching algorithms for rideshare or delivery platforms",
+      "Optimizing job board or dating app recommendation systems"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "Alvin Roth matching theory explained",
+      "how does matching work in marketplace platforms",
+      "Nobel prize winner on two-sided markets",
+      "stable matching algorithms for tech companies"
     ]
   },
   {
@@ -447,6 +1519,34 @@
     "tags": [
       "Experimentation & Scaling",
       "Talks + Papers"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "hypothesis-testing",
+      "statistical-significance",
+      "basic-probability"
+    ],
+    "topic_tags": [
+      "a-b-testing",
+      "online-experiments",
+      "causal-inference",
+      "tech-industry",
+      "experimentation-platform"
+    ],
+    "summary": "Ronny Kohavi shares decades of practical wisdom from building and scaling experimentation platforms at Microsoft and Amazon. He covers common pitfalls, statistical best practices, and organizational challenges in running A/B tests at scale. Essential viewing for anyone implementing or improving online experimentation programs.",
+    "use_cases": [
+      "Setting up A/B testing infrastructure at your company and avoiding common statistical mistakes",
+      "Convincing leadership to invest in proper experimentation culture and tooling"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "Ronny Kohavi A/B testing best practices",
+      "online experimentation platform design",
+      "statistical pitfalls in A/B testing",
+      "scaling experimentation at tech companies"
     ]
   },
   {
@@ -459,6 +1559,34 @@
     "tags": [
       "Market Design & Auctions",
       "YouTube Channel"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "microeconomics-game-theory",
+      "python-optimization",
+      "linear-programming"
+    ],
+    "topic_tags": [
+      "auction-mechanisms",
+      "VCG-auctions",
+      "ad-auctions",
+      "revenue-optimization",
+      "talk"
+    ],
+    "summary": "A technical talk on auction mechanism design by a practitioner with 7+ years of experience building VCG auctions at major tech companies. Covers the intersection of economic theory and practical implementation for search advertising revenue optimization. Provides insights into how auction theory translates to real-world ad serving systems.",
+    "use_cases": [
+      "Building auction systems for online advertising platforms",
+      "Optimizing revenue mechanisms for marketplace bidding"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "VCG auction implementation tutorial",
+      "auction mechanism design for ads",
+      "how to build revenue optimization systems",
+      "search advertising auction algorithms"
     ]
   },
   {
@@ -470,6 +1598,34 @@
     "tags": [
       "Causal Inference & ML",
       "Podcast Series"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "directed-acyclic-graphs",
+      "regression-analysis",
+      "randomized-controlled-trials"
+    ],
+    "topic_tags": [
+      "causal-inference",
+      "A-B-testing",
+      "directed-acyclic-graphs",
+      "podcast",
+      "experimental-design"
+    ],
+    "summary": "A technical podcast series hosted by Lucy D'Agostino McGowan and Ellie Murray covering advanced topics in causal inference methodology. Features deep discussions on A/B testing frameworks, DAG construction, and modern causal identification strategies for practitioners and researchers.",
+    "use_cases": [
+      "Learning advanced A/B testing methodologies while commuting or exercising",
+      "Staying current on causal inference research and hearing expert perspectives on complex identification problems"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "causal inference podcast for data scientists",
+      "A/B testing methodology discussions",
+      "DAGs and causal methods audio content",
+      "technical podcast on experimental design"
     ]
   },
   {
@@ -481,6 +1637,33 @@
     "tags": [
       "Strategy & Digital Platforms",
       "Podcast Series"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "microeconomics-principles"
+    ],
+    "topic_tags": [
+      "economics-interviews",
+      "podcast",
+      "economic-thinking",
+      "strategy",
+      "digital-platforms"
+    ],
+    "summary": "EconTalk is a long-form economics podcast hosted by Russ Roberts featuring in-depth conversations with leading economists and researchers. The show covers fundamental economic concepts, current research, and real-world applications through accessible interviews with experts like John List and Hal Varian. It's ideal for building economic intuition and understanding how economists think about complex problems.",
+    "use_cases": [
+      "Learning economic reasoning and mental models from leading practitioners",
+      "Understanding how economic principles apply to technology companies and digital markets"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "economics podcast for beginners",
+      "Russ Roberts EconTalk episodes",
+      "economics interviews podcast",
+      "learn economic thinking podcast"
     ]
   },
   {
@@ -492,6 +1675,33 @@
     "tags": [
       "Experimentation & Scaling",
       "Podcast Series"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-statistics",
+      "data-analysis-fundamentals"
+    ],
+    "topic_tags": [
+      "statistics",
+      "data-science",
+      "podcast",
+      "industry-academia",
+      "experimentation"
+    ],
+    "summary": "A popular statistics and data science podcast featuring conversations between academic and industry perspectives. Covers practical data science topics, career advice, and bridges the gap between statistical theory and real-world application. Archive of 190 episodes provides comprehensive coverage of evolving data science practices.",
+    "use_cases": [
+      "Learning about data science career paths and industry practices while commuting",
+      "Understanding how statistical concepts apply in tech companies through expert discussions"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "data science podcast recommendations",
+      "statistics podcast for beginners",
+      "industry vs academia data science perspectives",
+      "Roger Peng Hilary Parker podcast archive"
     ]
   },
   {
@@ -503,6 +1713,33 @@
     "tags": [
       "Strategy & Digital Platforms",
       "Podcast Series"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics-concepts",
+      "critical-thinking"
+    ],
+    "topic_tags": [
+      "applied-economics",
+      "behavioral-economics",
+      "communication",
+      "podcast",
+      "intuition-building"
+    ],
+    "summary": "Freakonomics Radio applies economic thinking to unexpected everyday topics, making complex economic concepts accessible through storytelling. The podcast helps listeners develop economic intuition and learn how to communicate data-driven insights to non-technical audiences. It's particularly valuable for understanding how economists approach problems and frame questions.",
+    "use_cases": [
+      "Learning to explain complex data findings to business stakeholders in compelling ways",
+      "Developing economic intuition before diving into technical econometric methods"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "How to communicate economics to general audience",
+      "Podcast for learning economic thinking",
+      "Applied economics examples for beginners",
+      "How to explain data insights like an economist"
     ]
   },
   {
@@ -514,6 +1751,33 @@
     "tags": [
       "Antitrust & Competition",
       "Podcast Series"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "microeconomics-principles",
+      "market-structure-basics"
+    ],
+    "topic_tags": [
+      "antitrust-policy",
+      "tech-competition",
+      "market-regulation",
+      "podcast-series",
+      "competition-economics"
+    ],
+    "summary": "A podcast series from the University of Chicago's Stigler Center featuring discussions on antitrust and competition policy with leading experts. Hosted by Luigi Zingales, it covers major tech competition issues through accessible conversations with prominent figures like Lina Khan, Carl Shapiro, and Tim Wu. The series provides foundational understanding of competition economics and current policy debates in an interview format.",
+    "use_cases": [
+      "Learning foundational antitrust concepts while commuting or exercising",
+      "Staying current on competition policy debates affecting major tech platforms"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "antitrust podcast for beginners",
+      "Lina Khan interviews on tech competition",
+      "accessible content on competition policy",
+      "podcast series on market regulation"
     ]
   },
   {
@@ -526,6 +1790,33 @@
     "tags": [
       "Antitrust & Competition",
       "YouTube Channel"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "microeconomics-theory",
+      "antitrust-law-basics"
+    ],
+    "topic_tags": [
+      "antitrust-policy",
+      "digital-platforms",
+      "competition-economics",
+      "regulatory-analysis",
+      "video-lectures"
+    ],
+    "summary": "The Stigler Center's YouTube archive contains comprehensive video content on antitrust and competition policy, featuring high-profile speakers like FTC Chair Lina Khan and presentations of the influential Stigler Committee Report on digital platforms. This collection provides accessible insights into current debates around tech regulation, market concentration, and competition policy from leading academics and policymakers.",
+    "use_cases": [
+      "Understanding current regulatory approaches to big tech platforms for academic research or policy analysis",
+      "Learning about antitrust economics and policy debates for professional development in competition consulting or government work"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "Lina Khan FTC antitrust talks",
+      "Stigler report digital platforms video",
+      "antitrust policy lectures YouTube",
+      "competition economics video series"
     ]
   },
   {
@@ -537,6 +1828,34 @@
     "tags": [
       "Causal Inference & ML",
       "Podcast Series"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "difference-in-differences",
+      "randomized-controlled-trials",
+      "regression-discontinuity"
+    ],
+    "topic_tags": [
+      "causal-inference",
+      "applied-econometrics",
+      "podcast",
+      "career-advice",
+      "field-experiments"
+    ],
+    "summary": "A podcast series featuring conversations with leading applied researchers like Susan Athey, Michael Luca, and John List about causal inference methods and research careers. Covers practical aspects of conducting rigorous empirical research in tech and economics settings. Provides insights into both methodological approaches and professional development for applied researchers.",
+    "use_cases": [
+      "Learning from top researchers about best practices in causal inference implementation",
+      "Getting career advice on transitioning from academia to tech research roles"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "causal inference podcast with Susan Athey",
+      "career advice for applied researchers",
+      "Scott Cunningham mixtape episodes",
+      "field experiments podcast tech economics"
     ]
   },
   {
@@ -548,6 +1867,33 @@
     "tags": [
       "Strategy & Digital Platforms",
       "Podcast Series"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "podcast-listening"
+    ],
+    "topic_tags": [
+      "economics-interviews",
+      "tech-strategy",
+      "digital-platforms",
+      "podcast-series",
+      "thought-leadership"
+    ],
+    "summary": "Tyler Cowen's conversational podcast featuring in-depth interviews with leading economists and tech figures including Hal Varian and Marc Andreessen. The episodes explore strategic thinking, digital platform economics, and applied analytics through accessible long-form discussions. Ideal for gaining strategic perspective on how economics applies to technology and business decisions.",
+    "use_cases": [
+      "Understanding strategic thinking from tech leaders while commuting or exercising",
+      "Learning how prominent economists approach real-world tech problems and platform dynamics"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "Tyler Cowen economics podcast interviews",
+      "conversations with tech leaders about digital platforms",
+      "accessible economics podcasts for data scientists",
+      "Hal Varian Marc Andreessen economics interviews"
     ]
   },
   {
@@ -559,6 +1905,33 @@
     "tags": [
       "AI & Labor",
       "Podcast Series"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "labor-market-concepts"
+    ],
+    "topic_tags": [
+      "artificial-intelligence",
+      "future-of-work",
+      "labor-economics",
+      "gig-economy",
+      "podcast"
+    ],
+    "summary": "A podcast series from Harvard Business School featuring discussions with leading economists like Erik Brynjolfsson on how AI and digital platforms are reshaping employment and labor markets. The conversations cover the gig economy, automation impacts, and policy implications for the future workforce. Accessible to general audiences interested in understanding tech's impact on work.",
+    "use_cases": [
+      "Getting accessible expert perspectives on AI's impact on jobs for research background",
+      "Understanding labor market trends for strategic workforce planning decisions"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "AI impact on future jobs podcast",
+      "Erik Brynjolfsson future of work",
+      "gig economy labor economics discussions",
+      "Harvard Business School AI employment talks"
     ]
   },
   {
@@ -570,6 +1943,34 @@
     "tags": [
       "Experimentation & Scaling",
       "Podcast Series"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "A-B-testing",
+      "statistical-significance",
+      "experimental-design"
+    ],
+    "topic_tags": [
+      "A-B-testing",
+      "experimentation-platforms",
+      "causal-inference",
+      "tech-industry",
+      "podcast"
+    ],
+    "summary": "A podcast featuring experimentation leaders from Booking.com, Microsoft, and Harvard Business School discussing product experimentation practices at scale. Covers real-world challenges and solutions in running experiments at major tech companies. Valuable for practitioners looking to understand how experimentation works in production environments.",
+    "use_cases": [
+      "Learning how to scale experimentation programs from industry experts",
+      "Understanding common pitfalls and best practices in A/B testing at tech companies"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "experimentation best practices at tech companies",
+      "A/B testing at scale Booking Microsoft",
+      "product experimentation industry leaders podcast",
+      "how to run experiments at large tech companies"
     ]
   },
   {
@@ -581,6 +1982,32 @@
     "tags": [
       "Experimentation & Scaling",
       "Podcast Series"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "a-b-testing-basics",
+      "conversion-rate-metrics"
+    ],
+    "topic_tags": [
+      "conversion-rate-optimization",
+      "a-b-testing",
+      "product-experimentation",
+      "podcast-series"
+    ],
+    "summary": "A popular podcast series hosted by Rommil Santiago from Optimizely covering conversion rate optimization and experimentation practices. With 171+ episodes, it features industry practitioners sharing real-world experiences, best practices, and lessons learned from running experiments at scale. The podcast serves as an accessible introduction to experimentation culture and methodologies for practitioners at all levels.",
+    "use_cases": [
+      "Learning experimentation best practices while commuting or during downtime",
+      "Staying updated on industry trends and hearing case studies from other companies' experimentation programs"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "best experimentation podcasts for data scientists",
+      "conversion rate optimization podcast recommendations",
+      "Optimizely experiment nation podcast episodes",
+      "practical A/B testing podcast series"
     ]
   },
   {
@@ -592,6 +2019,34 @@
     "tags": [
       "Causal Inference & ML",
       "Podcast Series"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "econometrics-basics",
+      "regression-analysis",
+      "research-design"
+    ],
+    "topic_tags": [
+      "organizational-economics",
+      "labor-economics",
+      "empirical-methods",
+      "podcast-series",
+      "academic-papers"
+    ],
+    "summary": "A podcast series by Jordi Blanes i Vidal from LSE that provides detailed walkthroughs of academic papers in organizational and labor economics. Each episode breaks down empirical methodology and research design, making complex academic work accessible. With 100+ episodes, it's a comprehensive resource for understanding how rigorous empirical research is conducted in economics.",
+    "use_cases": [
+      "Learning how to design and execute empirical studies in organizational settings",
+      "Understanding methodology behind seminal papers in labor economics before implementing similar approaches"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "podcast explaining economics research methods",
+      "how to understand empirical methodology in labor economics",
+      "academic paper walkthroughs for organizational economics",
+      "learn research design from economics professors"
     ]
   },
   {
@@ -603,6 +2058,34 @@
     "tags": [
       "Causal Inference & ML",
       "Podcast Series"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "difference-in-differences",
+      "python-scikit-learn",
+      "linear-regression"
+    ],
+    "topic_tags": [
+      "double-machine-learning",
+      "causal-inference",
+      "podcast",
+      "applied-econometrics",
+      "treatment-effects"
+    ],
+    "summary": "Applied AI podcast with exceptional episodes on causal inference methods, featuring accessible discussions of cutting-edge econometric techniques. Episode 220 covers Double Machine Learning and Difference-in-Differences with expert Paul H\u00fcnermund. Perfect for data scientists wanting to bridge ML and causal inference in practice.",
+    "use_cases": [
+      "Learning how to implement Double ML for estimating treatment effects in A/B tests with high-dimensional controls",
+      "Understanding when to combine machine learning with difference-in-differences for policy evaluation"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "double machine learning podcast tutorial",
+      "practical causal inference for data scientists",
+      "difference in differences with machine learning explained",
+      "Paul H\u00fcnermund double ML interview"
     ]
   },
   {
@@ -614,6 +2097,34 @@
     "tags": [
       "Strategy & Digital Platforms",
       "Podcast Series"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "microeconomics-theory",
+      "regression-analysis",
+      "market-competition-concepts"
+    ],
+    "topic_tags": [
+      "industrial-organization",
+      "platform-economics",
+      "competition-policy",
+      "chicago-school",
+      "economics-podcast"
+    ],
+    "summary": "A podcast series from the University of Chicago's Becker Friedman Institute featuring leading economists discussing cutting-edge research in industrial organization, digital platforms, and competition economics. The content focuses on how modern markets operate, particularly in the digital economy, with insights from Chicago School economic thinking. Ideal for understanding theoretical frameworks and empirical approaches to studying market structure and competition policy.",
+    "use_cases": [
+      "Learning about platform market dynamics and two-sided markets for competitive strategy analysis",
+      "Understanding regulatory approaches to big tech and antitrust policy through academic research"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "platform economics research podcast",
+      "chicago economists on digital markets",
+      "industrial organization cutting edge research",
+      "competition policy academic discussions"
     ]
   },
   {
@@ -625,6 +2136,33 @@
     "tags": [
       "Strategy & Digital Platforms",
       "Podcast Series"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "market-fundamentals"
+    ],
+    "topic_tags": [
+      "marketplace-economics",
+      "network-effects",
+      "prediction-markets",
+      "venture-capital",
+      "podcast"
+    ],
+    "summary": "VC-focused podcast discussing marketplace economics, network effects, and market design from an investment perspective. Features discussions with economists Alex Tabarrok and Scott Duke Kominers on prediction markets and digital platform strategies. Provides practical insights on how economic principles apply to tech company valuations and business models.",
+    "use_cases": [
+      "Understanding how VCs evaluate marketplace startups and platform economics",
+      "Learning about prediction market mechanisms and their business applications"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "VC perspective on marketplace economics",
+      "network effects podcast andreessen horowitz",
+      "prediction markets business applications",
+      "how do VCs evaluate platform companies"
     ]
   },
   {
@@ -636,6 +2174,33 @@
     "tags": [
       "Strategy & Digital Platforms",
       "Podcast Series"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "macroeconomic-principles",
+      "financial-markets-basics"
+    ],
+    "topic_tags": [
+      "monetary-policy",
+      "macroeconomics",
+      "financial-markets",
+      "podcast",
+      "strategy"
+    ],
+    "summary": "Long-running Bloomberg podcast hosted by Joe Weisenthal and Tracy Alloway covering finance, markets, and economics with deep dives into monetary policy and macro trends. Accessible format makes complex economic concepts understandable for practitioners across experience levels. Over 10 years of archived episodes provide comprehensive coverage of major economic events and policy shifts.",
+    "use_cases": [
+      "Understanding how Federal Reserve policy decisions might impact tech company valuations and hiring",
+      "Getting expert commentary on macroeconomic trends that could affect platform business models"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "podcast about economics and finance for beginners",
+      "how does monetary policy affect tech companies",
+      "bloomberg podcast on macroeconomics",
+      "accessible finance podcast for data scientists"
     ]
   },
   {
@@ -647,6 +2212,33 @@
     "tags": [
       "Pricing & Behavioral",
       "Podcast Series"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "excel-formulas"
+    ],
+    "topic_tags": [
+      "pricing-strategy",
+      "behavioral-economics",
+      "revenue-optimization",
+      "b2b-pricing",
+      "podcast"
+    ],
+    "summary": "Weekly podcast by Mark Stiving covering pricing strategy, analytics, and revenue optimization with a focus on B2B markets. Combines traditional pricing theory with behavioral economics insights to help businesses set optimal prices. Accessible to beginners while providing actionable strategies for pricing decisions.",
+    "use_cases": [
+      "Product manager needs to price a new SaaS offering and wants to understand value-based pricing approaches",
+      "Business analyst tasked with optimizing subscription tiers and needs behavioral insights on customer price sensitivity"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "pricing strategy podcasts for beginners",
+      "how to price B2B products behavioral economics",
+      "revenue optimization pricing analytics",
+      "value based pricing methodology"
     ]
   },
   {
@@ -658,6 +2250,34 @@
     "tags": [
       "Pricing & Behavioral",
       "Podcast Series"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "price-elasticity-modeling",
+      "A-B-testing",
+      "market-research-fundamentals"
+    ],
+    "topic_tags": [
+      "dynamic-pricing",
+      "retail-optimization",
+      "competitive-intelligence",
+      "revenue-management",
+      "podcast"
+    ],
+    "summary": "Pricing Heroes is a podcast series by Competera featuring discussions on AI-driven retail pricing optimization and dynamic pricing strategies. Industry practitioners from major retailers share insights on competitive pricing, market positioning, and revenue optimization techniques. The content bridges theoretical pricing concepts with real-world implementation challenges in retail environments.",
+    "use_cases": [
+      "Learning how major retailers implement dynamic pricing systems and handle competitive responses",
+      "Understanding best practices for pricing optimization from industry practitioners before launching your own pricing experiments"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "dynamic pricing strategies retail podcast",
+      "how do major retailers optimize pricing",
+      "competitive pricing case studies from industry",
+      "AI pricing optimization real world examples"
     ]
   },
   {
@@ -669,6 +2289,34 @@
     "tags": [
       "Pricing & Behavioral",
       "Podcast Series"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "python-scikit-learn",
+      "linear-regression",
+      "SQL-joins"
+    ],
+    "topic_tags": [
+      "dynamic-pricing",
+      "retail-analytics",
+      "machine-learning",
+      "podcast",
+      "industry-case-studies"
+    ],
+    "summary": "Industry practitioners from major retailers like MediaMarkt Saturn and Deliveroo discuss ML-driven pricing strategies and implementation challenges. The talk covers real-world pricing optimization techniques, competitive dynamics, and operational considerations for retail pricing systems.",
+    "use_cases": [
+      "Building automated pricing systems for e-commerce platforms",
+      "Understanding how major retailers implement dynamic pricing strategies"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "How do major retailers implement machine learning pricing",
+      "Dynamic pricing case studies from retail industry",
+      "ML pricing strategies at MediaMarkt and Deliveroo",
+      "Real world retail pricing optimization examples"
     ]
   },
   {
@@ -680,6 +2328,34 @@
     "tags": [
       "Causal Inference & ML",
       "Podcast Series"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "python-basics",
+      "statistical-inference",
+      "experimental-design"
+    ],
+    "topic_tags": [
+      "causal-inference",
+      "experimentation",
+      "machine-learning",
+      "podcast",
+      "career-development"
+    ],
+    "summary": "Long-running podcast series covering machine learning, AI, and data science careers with over 900 episodes. Features notable episodes on causal inference and experimentation methods from leading practitioners at major tech companies. Provides accessible discussions of advanced topics for data scientists looking to expand their knowledge.",
+    "use_cases": [
+      "Learning about causal inference methods while commuting or exercising",
+      "Staying updated on industry trends and career advice from experienced practitioners"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "podcast about causal inference in tech companies",
+      "Sean Taylor Facebook experimentation interview",
+      "data science career advice podcast",
+      "DoWhy causal inference podcast episode"
     ]
   },
   {
@@ -691,6 +2367,34 @@
     "tags": [
       "Causal Inference & ML",
       "Podcast Series"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "python-scikit-learn",
+      "econometrics-basics",
+      "causal-inference-fundamentals"
+    ],
+    "topic_tags": [
+      "machine-learning",
+      "causal-inference",
+      "podcast-series",
+      "industry-applications",
+      "economics"
+    ],
+    "summary": "Popular ML/AI podcast featuring interviews with researchers and practitioners on applying machine learning to economic problems and business decisions. Covers real-world implementations at major tech companies like Netflix, Uber, and Meta, with episodes on causal inference methods for data scientists. Nearly 10 million downloads make it one of the most accessible resources for learning how ML intersects with economics.",
+    "use_cases": [
+      "Learning how major tech companies implement causal ML in production systems",
+      "Understanding practical applications of econometric methods in industry settings"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "machine learning economics podcast",
+      "causal inference industry applications",
+      "ML at Netflix Uber Meta",
+      "Susan Athey machine learning economics"
     ]
   },
   {
@@ -702,6 +2406,34 @@
     "tags": [
       "AI Economics & Labor",
       "Podcast Series"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "python-basics",
+      "statistical-inference",
+      "machine-learning-fundamentals"
+    ],
+    "topic_tags": [
+      "data-science-podcast",
+      "ml-methodology",
+      "critical-thinking",
+      "AI-economics",
+      "recommender-systems"
+    ],
+    "summary": "Data Skeptic is a podcast hosted by Kyle Polich that applies critical thinking to data science and machine learning topics. The show is organized in thematic seasons covering different areas, with a recommender systems season planned for 2025. It's particularly valuable for practitioners who want to develop a more thoughtful, questioning approach to data science methods and claims.",
+    "use_cases": [
+      "Learning to critically evaluate ML papers and industry claims while commuting or exercising",
+      "Staying current on data science methodology and best practices through structured seasonal deep-dives"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "data science podcast critical thinking",
+      "skeptical approach to machine learning",
+      "data science methodology podcast",
+      "recommender systems podcast 2025"
     ]
   },
   {
@@ -713,6 +2445,34 @@
     "tags": [
       "Experimentation & Scaling",
       "Podcast Series"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "A/B-testing-basics",
+      "statistical-significance",
+      "experimental-design"
+    ],
+    "topic_tags": [
+      "A/B-testing",
+      "experimentation-at-scale",
+      "tech-industry",
+      "podcast",
+      "business-applications"
+    ],
+    "summary": "A podcast discussion featuring Emily Oster and Bilal Mahmoud on implementing A/B testing at scale in tech companies. The conversation covers how data science and AI are transforming business decision-making, with practical insights from Duolingo's experimentation practices. Ideal for data scientists looking to understand real-world experimentation challenges and scaling strategies.",
+    "use_cases": [
+      "Learning how to design and run A/B tests for millions of users at tech companies",
+      "Understanding common pitfalls and best practices when scaling experimental programs"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "A/B testing at scale podcast",
+      "Duolingo experimentation practices",
+      "Emily Oster A/B testing",
+      "how to scale A/B tests at tech companies"
     ]
   },
   {
@@ -724,6 +2484,34 @@
     "tags": [
       "Strategy & Digital Platforms",
       "Podcast Series"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "basic-macroeconomics",
+      "monetary-policy-frameworks",
+      "central-banking-concepts"
+    ],
+    "topic_tags": [
+      "macroeconomics",
+      "monetary-policy",
+      "central-banking",
+      "podcast",
+      "economic-research"
+    ],
+    "summary": "A podcast series hosted by David Beckworth from the Mercatus Center that explores macroeconomic issues with technical depth. Features interviews with central bankers, Federal Reserve officials, and academic researchers discussing current monetary policy, economic theory, and market conditions. Includes full transcripts making content searchable and accessible for research purposes.",
+    "use_cases": [
+      "Understanding current Federal Reserve policy decisions and their economic rationale",
+      "Learning about cutting-edge macroeconomic research and debates from leading practitioners"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "macroeconomics podcast with central bankers",
+      "David Beckworth macro musings transcripts",
+      "monetary policy interviews with Fed officials",
+      "technical macroeconomic discussions podcast"
     ]
   },
   {
@@ -735,6 +2523,34 @@
     "tags": [
       "Strategy & Digital Platforms",
       "Podcast Series"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "policy-analysis",
+      "data-interpretation"
+    ],
+    "topic_tags": [
+      "economic-policy",
+      "applied-economics",
+      "policy-research",
+      "economic-uncertainty",
+      "podcast"
+    ],
+    "summary": "A podcast series featuring Steven J. Davis discussing how to translate academic economic research into practical policy insights and business applications. Features conversations with leading economists like Claudia Goldin and Austan Goolsbee on real-world economic problems and solutions.",
+    "use_cases": [
+      "Learning how to communicate economic findings to non-technical stakeholders and policymakers",
+      "Understanding how academic economists approach policy questions and translate research into actionable recommendations"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "how to apply economic research to policy decisions",
+      "Steven Davis economic policy uncertainty podcast",
+      "translating economics research into practice",
+      "applied economics for policy makers"
     ]
   },
   {
@@ -746,6 +2562,33 @@
     "tags": [
       "Strategy & Digital Platforms",
       "Podcast Series"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "microeconomics-principles",
+      "basic-market-concepts"
+    ],
+    "topic_tags": [
+      "economics-storytelling",
+      "business-strategy",
+      "podcast-series",
+      "market-analysis",
+      "digital-platforms"
+    ],
+    "summary": "Planet Money is NPR's Peabody Award-winning podcast that makes complex economic concepts accessible through engaging storytelling and real-world examples. The show is widely used in undergraduate economics courses to illustrate economic principles in action. It covers topics ranging from market dynamics and business strategy to behavioral economics and digital platform economics.",
+    "use_cases": [
+      "Learning economic concepts through narrative examples before diving into technical analysis",
+      "Understanding real-world business strategy cases to inform product and platform decisions"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "economics podcast for beginners",
+      "Planet Money episodes about digital platforms",
+      "accessible economics storytelling for data scientists",
+      "NPR economics show for learning market concepts"
     ]
   },
   {
@@ -757,6 +2600,33 @@
     "tags": [
       "Pricing & Behavioral",
       "Podcast Series"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-marketing-concepts",
+      "business-strategy-fundamentals"
+    ],
+    "topic_tags": [
+      "behavioral-economics",
+      "marketing-psychology",
+      "nudge-theory",
+      "business-applications",
+      "podcast-series"
+    ],
+    "summary": "A practical podcast series with 500+ episodes exploring how behavioral economics principles can be applied to marketing and business decisions. Melina Palmer breaks down concepts like nudges, framing effects, and behavioral interventions in an accessible way for business practitioners.",
+    "use_cases": [
+      "Learning how to apply behavioral nudges to improve conversion rates and customer decision-making",
+      "Understanding psychological pricing strategies and framing techniques for product launches"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "behavioral economics podcast for business",
+      "how to apply nudges in marketing",
+      "behavioral interventions for customer decisions",
+      "practical behavioral economics examples"
     ]
   },
   {
@@ -769,6 +2639,34 @@
     "tags": [
       "Causal Inference & ML",
       "YouTube Channel"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "python-pandas",
+      "basic-econometrics",
+      "regression-analysis"
+    ],
+    "topic_tags": [
+      "causal-inference",
+      "synthetic-controls",
+      "marketing-mix-modeling",
+      "career-advice",
+      "video-tutorials"
+    ],
+    "summary": "YouTube channel featuring practical tutorials on causal inference methods like synthetic controls and event studies, plus Marketing Mix Models including Google Meridian. Combines technical implementation guidance with data science career advice from a senior practitioner perspective.",
+    "use_cases": [
+      "Learning to implement causal inference methods for measuring marketing campaign effectiveness",
+      "Getting career guidance on transitioning to senior data science roles with causal inference focus"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "synthetic control method tutorial",
+      "marketing mix modeling implementation guide",
+      "data science career advice causal inference",
+      "Google Meridian MMM walkthrough"
     ]
   },
   {
@@ -781,6 +2679,34 @@
     "tags": [
       "Causal Inference & ML",
       "YouTube Channel"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "python-basics",
+      "regression-analysis",
+      "directed-acyclic-graphs"
+    ],
+    "topic_tags": [
+      "causal-inference",
+      "podcast",
+      "interviews",
+      "python-causal-libraries",
+      "DoWhy"
+    ],
+    "summary": "A podcast featuring deep-dive interviews with leading causal inference researchers including Judea Pearl, Julia Rohrer, and Amit Sharma. Covers both theoretical foundations and practical Python implementations of causal methods. Ideal for data scientists wanting to learn from experts about causal AI and inference techniques.",
+    "use_cases": [
+      "Learning causal inference concepts from leading researchers while commuting or exercising",
+      "Understanding how to apply causal methods in practice through expert interviews and case studies"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "causal inference podcast with Judea Pearl",
+      "interviews with causal AI researchers",
+      "Alex Molak causal bandits podcast episodes",
+      "DoWhy creator Amit Sharma interview"
     ]
   },
   {
@@ -793,6 +2719,34 @@
     "tags": [
       "Causal Inference & ML",
       "YouTube Channel"
+    ],
+    "difficulty": "advanced",
+    "prerequisites": [
+      "difference-in-differences",
+      "python-programming",
+      "causal-dag-theory"
+    ],
+    "topic_tags": [
+      "synthetic-control",
+      "causal-inference",
+      "seminar-series",
+      "research-talks",
+      "tigramite"
+    ],
+    "summary": "International research seminar featuring leading academics presenting cutting-edge causal inference methods and applications. Sessions include Susan Athey on Synthetic Difference-in-Differences and Jakob Runge on the Tigramite package for causal discovery. Provides access to the latest methodological advances directly from top researchers in the field.",
+    "use_cases": [
+      "Learning about new causal inference methods before they become mainstream",
+      "Understanding implementation details of advanced techniques like synthetic DiD from the original authors"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "causal inference research seminar talks",
+      "Susan Athey synthetic difference in differences talk",
+      "Tigramite causal discovery seminar",
+      "online causal inference academic presentations"
     ]
   },
   {
@@ -805,6 +2759,34 @@
     "tags": [
       "Causal Inference & ML",
       "YouTube Channel"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "causal-inference-fundamentals",
+      "python-programming",
+      "experimental-design"
+    ],
+    "topic_tags": [
+      "causal-inference",
+      "fintech",
+      "meta",
+      "business-applications",
+      "podcast"
+    ],
+    "summary": "Interview podcast featuring scientists discussing cutting-edge applications of causal inference and ML in business contexts. Episodes cover real-world implementations at companies like Meta and fintech firms, bridging academic methods with industry practice.",
+    "use_cases": [
+      "Learning how causal inference is applied in fintech risk modeling and product analytics",
+      "Understanding the researcher-engineer role transition at major tech companies"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "causal inference podcast for tech companies",
+      "Matheus Facure fintech causal inference interview",
+      "Meta researcher engineer role podcast",
+      "business applications of causal ML interviews"
     ]
   },
   {
@@ -817,6 +2799,34 @@
     "tags": [
       "Causal Inference & ML",
       "YouTube Channel"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "python-basics",
+      "linear-regression",
+      "probability-theory"
+    ],
+    "topic_tags": [
+      "causal-inference",
+      "video-course",
+      "directed-acyclic-graphs",
+      "treatment-effects",
+      "observational-data"
+    ],
+    "summary": "A comprehensive video course on causal inference methods taught by Brady Neal, featuring guest lectures from leading researchers like Susan Athey and Alberto Abadie. The course covers foundational concepts through advanced techniques, making causal inference accessible to data scientists and researchers. Ideal for practitioners who need to move beyond correlation to establish causation in their analysis.",
+    "use_cases": [
+      "Measuring the causal impact of a product feature launch on user engagement",
+      "Evaluating the effectiveness of a marketing campaign while controlling for confounding factors"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "causal inference course for data scientists",
+      "Brady Neal causal inference videos",
+      "how to learn causal inference from scratch",
+      "best video lectures on causality and DAGs"
     ]
   },
   {
@@ -829,6 +2839,34 @@
     "tags": [
       "Causal Inference & ML",
       "YouTube Channel"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "probability-theory",
+      "linear-regression",
+      "python-programming"
+    ],
+    "topic_tags": [
+      "bayesian-statistics",
+      "mcmc",
+      "model-validation",
+      "lecture-series",
+      "statistical-inference"
+    ],
+    "summary": "Comprehensive university course on Bayesian data analysis by renowned expert Aki Vehtari, covering essential techniques like MCMC sampling, Hamiltonian Monte Carlo, and cross-validation methods. The lectures provide both theoretical foundations and practical workflow guidance for implementing Bayesian methods in real data analysis projects.",
+    "use_cases": [
+      "Learning rigorous approach to uncertainty quantification in A/B testing and experimentation",
+      "Implementing Bayesian models for product recommendation systems with proper model validation"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "bayesian data analysis course",
+      "MCMC tutorial Aki Vehtari",
+      "how to do bayesian cross validation",
+      "hamiltonian monte carlo lectures"
     ]
   },
   {
@@ -841,6 +2879,34 @@
     "tags": [
       "Causal Inference & ML",
       "YouTube Channel"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "regression-analysis",
+      "difference-in-differences",
+      "panel-data"
+    ],
+    "topic_tags": [
+      "synthetic-control",
+      "regression-discontinuity",
+      "econometrics",
+      "video-lectures",
+      "academic-talks"
+    ],
+    "summary": "NBER's methods lecture series covering foundational causal inference techniques like synthetic controls, regression discontinuity design, and difference-in-differences. Features high-quality academic presentations from leading economists explaining both theory and practical implementation of these methods.",
+    "use_cases": [
+      "Learning causal inference methods for impact evaluation of policy interventions",
+      "Understanding econometric techniques for product feature launches and A/B test analysis"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "NBER causal inference methods lectures",
+      "synthetic control method tutorial videos",
+      "econometrics lectures difference in differences",
+      "Ben Bernanke Feldstein lecture series"
     ]
   },
   {
@@ -853,6 +2919,34 @@
     "tags": [
       "Market Design & Auctions",
       "YouTube Channel"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "microeconomic-theory",
+      "basic-statistics",
+      "auction-theory"
+    ],
+    "topic_tags": [
+      "marketplace-design",
+      "auction-mechanisms",
+      "pricing-algorithms",
+      "two-sided-markets",
+      "video-lectures"
+    ],
+    "summary": "A seminar series featuring leading researchers like Preston McAfee and Ramesh Johari discussing algorithmic approaches to marketplace design. Covers pricing strategies, experimental methods, and mechanism design for platforms like eBay, Google Ads, and ride-sharing services. Essential viewing for understanding how economic theory translates into real-world marketplace algorithms.",
+    "use_cases": [
+      "Designing pricing algorithms for a two-sided marketplace platform",
+      "Understanding auction mechanisms for ad placement systems"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "marketplace pricing algorithms seminar",
+      "two sided market mechanism design videos",
+      "Preston McAfee auction theory talks",
+      "algorithmic pricing marketplace design lectures"
     ]
   },
   {
@@ -865,6 +2959,34 @@
     "tags": [
       "Experimentation & Scaling",
       "YouTube Channel"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "hypothesis-testing",
+      "python-experimentation-libraries",
+      "SQL-aggregations"
+    ],
+    "topic_tags": [
+      "ab-testing",
+      "experimentation-platforms",
+      "causal-inference",
+      "tech-industry",
+      "conference-talks"
+    ],
+    "summary": "Conference talks from leading tech companies (Meta, Google, Airbnb, Netflix) sharing practical insights on running A/B tests at massive scale. Covers experimentation platform architecture, statistical methods for large-scale testing, and operational challenges. Essential viewing for practitioners implementing or improving experimentation capabilities at tech companies.",
+    "use_cases": [
+      "Building or improving A/B testing infrastructure at a growing tech company",
+      "Learning industry best practices for running experiments with millions of users"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "A/B testing at scale conference talks",
+      "how do big tech companies run experiments",
+      "experimentation platform architecture Netflix Google",
+      "MIT digital experimentation conference videos"
     ]
   },
   {
@@ -876,6 +2998,33 @@
     "tags": [
       "Experimentation & Scaling",
       "YouTube Channel"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-statistics",
+      "A/B-testing-fundamentals"
+    ],
+    "topic_tags": [
+      "A/B-testing",
+      "experimentation-platform",
+      "feature-flags",
+      "product-analytics",
+      "video-tutorials"
+    ],
+    "summary": "Statsig provides video tutorials and customer case studies on their experimentation platform for A/B testing and feature management. The content covers practical implementation of experiments, feature flag deployment, and product analytics workflows. These resources are designed to help teams learn best practices for running statistically rigorous experiments at scale.",
+    "use_cases": [
+      "Learning how to set up and run A/B tests using Statsig's platform",
+      "Understanding real-world experimentation challenges through customer success stories"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "Statsig A/B testing tutorials",
+      "how to use Statsig experimentation platform",
+      "feature flags best practices videos",
+      "product analytics with Statsig"
     ]
   },
   {
@@ -887,6 +3036,34 @@
     "tags": [
       "Experimentation & Scaling",
       "YouTube Channel"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "a-b-testing-basics",
+      "statistical-significance",
+      "chinese-language"
+    ],
+    "topic_tags": [
+      "experimentation",
+      "a-b-testing",
+      "growth-hacking",
+      "chinese-content",
+      "video-series"
+    ],
+    "summary": "Chinese-language YouTube channel by former Statsig Evangelist and Tencent VP covering practical data science, A/B testing, and growth strategies. Features interviews with top AI experts and real-world case studies from major tech companies. Content bridges academic rigor with industry application for Chinese-speaking data professionals.",
+    "use_cases": [
+      "Learning A/B testing best practices from Chinese tech giants like Tencent",
+      "Understanding growth experimentation strategies used in Asian markets"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "Chinese A/B testing tutorials",
+      "Tencent data science practices",
+      "Asian tech company experimentation methods",
+      "Chinese language data science content"
     ]
   },
   {
@@ -899,6 +3076,34 @@
     "tags": [
       "Causal Inference & ML",
       "YouTube Channel"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "regression-analysis",
+      "python-sklearn",
+      "experimental-design"
+    ],
+    "topic_tags": [
+      "causal-inference",
+      "machine-learning",
+      "econometrics",
+      "video-lectures",
+      "AEA"
+    ],
+    "summary": "American Economic Association's video lecture series featuring world-class economists presenting on cutting-edge topics. Includes the renowned Athey-Imbens course on machine learning and econometrics, plus recent sessions on LLMs applications in economics research.",
+    "use_cases": [
+      "Learning modern causal inference methods from leading academics like Athey and Imbens",
+      "Understanding how to apply LLMs and AI tools to economic research and analysis"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "Athey Imbens machine learning econometrics course",
+      "AEA lectures on causal inference",
+      "economics video lectures machine learning",
+      "LLMs for economics research talks"
     ]
   },
   {
@@ -910,6 +3115,34 @@
     "tags": [
       "AI & Labor",
       "Video Series"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "microeconomics-theory",
+      "econometrics-basics",
+      "research-methods"
+    ],
+    "topic_tags": [
+      "artificial-intelligence",
+      "labor-economics",
+      "productivity-analysis",
+      "automation",
+      "conference-talks"
+    ],
+    "summary": "NBER conference recordings featuring leading economists presenting research on AI's impact on labor markets, productivity, and automation. These presentations cover cutting-edge empirical work and theoretical models examining how artificial intelligence transforms economic outcomes. Essential viewing for understanding the economic implications of AI adoption across industries.",
+    "use_cases": [
+      "Literature review for dissertation on AI's labor market effects",
+      "Background research for policy analysis on automation's economic impact"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "NBER AI economics conference presentations",
+      "research on AI impact on labor markets",
+      "economics of artificial intelligence automation",
+      "academic talks on AI productivity effects"
     ]
   },
   {
@@ -921,6 +3154,34 @@
     "tags": [
       "Monographs",
       "Lecture Notes"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "randomized-experiments",
+      "regression-analysis",
+      "random-forests"
+    ],
+    "topic_tags": [
+      "causal-inference",
+      "heterogeneous-treatment-effects",
+      "causal-forests",
+      "policy-learning",
+      "stanford-notes"
+    ],
+    "summary": "Stefan Wager's comprehensive Stanford lecture notes covering modern causal inference methods including causal forests and heterogeneous treatment effects. These are the exact methodologies used by major tech companies for A/B testing, personalization, and policy optimization. The notes bridge theoretical foundations with practical implementation for estimating individualized treatment effects.",
+    "use_cases": [
+      "Personalizing product features by estimating individual user response to interface changes",
+      "Optimizing marketing spend by identifying which customer segments respond best to different campaign types"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "causal forests tutorial for heterogeneous treatment effects",
+      "Stanford causal inference notes Wager",
+      "how to estimate personalized treatment effects in experiments",
+      "causal machine learning methods for A/B testing"
     ]
   },
   {
@@ -932,6 +3193,34 @@
     "tags": [
       "Monographs",
       "Manuscript"
+    ],
+    "difficulty": "advanced",
+    "prerequisites": [
+      "linear-algebra",
+      "probability-theory",
+      "causal-inference"
+    ],
+    "topic_tags": [
+      "regression-analysis",
+      "causal-graphs",
+      "statistical-theory",
+      "data-analysis",
+      "heavy-tails"
+    ],
+    "summary": "Cosma Shalizi's comprehensive 600-page manuscript covering advanced statistical methods including geometric approaches to regression, directed acyclic graphs for causal inference, and heavy-tailed distributions. Written with mathematical rigor but accessible explanations, it serves as both textbook and reference for sophisticated data analysis techniques. Essential reading for those seeking deep theoretical understanding of modern statistical methods.",
+    "use_cases": [
+      "Understanding the geometric intuition behind complex regression models when standard approaches fail",
+      "Learning rigorous causal inference methods using DAGs for observational studies"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "rigorous data analysis textbook",
+      "Shalizi advanced statistics manuscript",
+      "causal inference DAGs heavy tails",
+      "geometric approach to regression analysis"
     ]
   },
   {
@@ -943,6 +3232,34 @@
     "tags": [
       "Monographs",
       "Online Book"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "supervised-learning",
+      "basic-statistics",
+      "model-evaluation"
+    ],
+    "topic_tags": [
+      "decision-theory",
+      "model-deployment",
+      "causal-inference",
+      "ml-philosophy",
+      "prediction-systems"
+    ],
+    "summary": "A comprehensive online book by Moritz Hardt and Benjamin Recht that bridges machine learning theory with real-world decision making. The authors examine why statistical models often fail when deployed and provide frameworks for thinking about prediction as fundamentally about taking actions. Essential reading for understanding the gap between model performance and business impact.",
+    "use_cases": [
+      "Understanding why your high-accuracy model performs poorly in production",
+      "Designing ML systems that account for feedback loops and strategic behavior"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "why do machine learning models fail in production",
+      "decision theory for machine learning",
+      "prediction as action framework",
+      "Hardt Recht patterns predictions actions book"
     ]
   },
   {
@@ -954,6 +3271,34 @@
     "tags": [
       "Monographs",
       "Monograph"
+    ],
+    "difficulty": "advanced",
+    "prerequisites": [
+      "graph-neural-networks",
+      "group-theory",
+      "convolutional-neural-networks"
+    ],
+    "topic_tags": [
+      "geometric-deep-learning",
+      "graph-neural-networks",
+      "symmetry",
+      "group-theory",
+      "neural-architectures"
+    ],
+    "summary": "Bronstein et al.'s comprehensive framework unifying CNNs, GNNs, and Transformers through the lens of geometric principles and symmetry. This foundational text explains how different neural architectures emerge from imposing geometric constraints and invariances. Essential reading for understanding the mathematical foundations connecting major deep learning architectures.",
+    "use_cases": [
+      "Understanding mathematical connections between different neural network architectures",
+      "Designing new neural architectures based on geometric principles and symmetries"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "geometric deep learning book",
+      "unifying theory CNNs GNNs transformers",
+      "symmetry group theory neural networks",
+      "Bronstein geometric deep learning"
     ]
   },
   {
@@ -965,6 +3310,34 @@
     "tags": [
       "Monographs",
       "Case Studies"
+    ],
+    "difficulty": "advanced",
+    "prerequisites": [
+      "bayesian-inference",
+      "markov-chain-monte-carlo",
+      "stan-probabilistic-programming"
+    ],
+    "topic_tags": [
+      "bayesian-modeling",
+      "hamiltonian-monte-carlo",
+      "hierarchical-models",
+      "stan",
+      "mcmc-diagnostics"
+    ],
+    "summary": "Michael Betancourt's comprehensive Stan case studies covering advanced Bayesian modeling techniques including HMC geometry, divergence diagnostics, and hierarchical modeling. These represent the gold standard for technical Bayesian implementation, providing deep insights into proper MCMC methodology and Stan best practices. Essential reading for practitioners serious about rigorous probabilistic modeling.",
+    "use_cases": [
+      "debugging-mcmc-convergence-issues-and-understanding-divergence-warnings",
+      "implementing-complex-hierarchical-bayesian-models-with-proper-priors"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "stan case studies michael betancourt",
+      "how to fix divergences in bayesian models",
+      "hierarchical modeling best practices stan",
+      "hamiltonian monte carlo geometry explanation"
     ]
   },
   {
@@ -976,6 +3349,34 @@
     "tags": [
       "Monographs",
       "Book"
+    ],
+    "difficulty": "advanced",
+    "prerequisites": [
+      "probability-theory",
+      "martingale-theory",
+      "regret-bounds"
+    ],
+    "topic_tags": [
+      "bandit-algorithms",
+      "online-learning",
+      "thompson-sampling",
+      "contextual-bandits",
+      "experimentation"
+    ],
+    "summary": "Comprehensive mathematical treatment of multi-armed bandit algorithms by leading researchers. Covers fundamental algorithms like UCB and Thompson Sampling, contextual bandits, and advanced topics with rigorous regret analysis. Essential reference for researchers and practitioners working on sequential decision-making and online experimentation beyond traditional A/B testing.",
+    "use_cases": [
+      "Dynamic pricing optimization where you need to learn optimal prices while serving customers",
+      "Personalized content recommendation systems that adapt in real-time to user preferences"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "comprehensive bandit algorithms textbook",
+      "Thompson sampling vs UCB comparison",
+      "contextual bandits beyond A/B testing",
+      "Lattimore Szepesvari bandit book"
     ]
   },
   {
@@ -987,6 +3388,34 @@
     "tags": [
       "Monographs",
       "Draft"
+    ],
+    "difficulty": "advanced",
+    "prerequisites": [
+      "markov-decision-processes",
+      "concentration-inequalities",
+      "policy-gradient-methods"
+    ],
+    "topic_tags": [
+      "reinforcement-learning",
+      "statistical-learning-theory",
+      "sample-complexity",
+      "policy-optimization",
+      "theoretical-foundations"
+    ],
+    "summary": "A comprehensive theoretical treatment of reinforcement learning from a statistical learning perspective by leading researchers. Focuses on fundamental questions of sample complexity - how much data is needed to learn effective policies with statistical guarantees. Provides rigorous mathematical foundations for understanding when and why RL algorithms work.",
+    "use_cases": [
+      "PhD student writing dissertation on RL theory needs sample complexity bounds for their algorithm",
+      "Senior researcher designing new RL method wants theoretical justification for data requirements"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "reinforcement learning sample complexity theory",
+      "statistical foundations of RL algorithms",
+      "how many samples needed to learn RL policy",
+      "theoretical guarantees for reinforcement learning"
     ]
   },
   {
@@ -998,6 +3427,34 @@
     "tags": [
       "Monographs",
       "Lecture"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "basic-regression",
+      "potential-outcomes-framework",
+      "python-scikit-learn"
+    ],
+    "topic_tags": [
+      "causal-inference",
+      "synthetic-control",
+      "matrix-completion",
+      "econometrics",
+      "nobel-lecture"
+    ],
+    "summary": "Nobel laureate Guido Imbens presents foundational lectures on causal inference methods, with emphasis on matrix completion techniques for synthetic control methods. These rigorous econometric foundations are essential for modern tech metrics and experimental design. The lectures bridge traditional econometrics with machine learning approaches to causal questions.",
+    "use_cases": [
+      "Evaluating impact of product launches using synthetic control methods",
+      "Building rigorous A/B testing frameworks with proper causal identification"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "Imbens causal inference lectures",
+      "synthetic control matrix completion methods",
+      "Nobel prize econometrics for tech",
+      "rigorous causal inference foundations"
     ]
   },
   {
@@ -1009,6 +3466,34 @@
     "tags": [
       "Monographs",
       "Paper"
+    ],
+    "difficulty": "advanced",
+    "prerequisites": [
+      "lasso-regression",
+      "instrumental-variables",
+      "cross-validation"
+    ],
+    "topic_tags": [
+      "double-ml",
+      "causal-inference",
+      "machine-learning",
+      "econometrics",
+      "post-selection"
+    ],
+    "summary": "Double Machine Learning is a method that combines machine learning predictions with causal inference to estimate treatment effects while maintaining valid statistical inference. It uses cross-fitting and sample splitting to remove bias from regularized models like Lasso when estimating causal parameters. The approach allows economists to leverage high-dimensional controls without sacrificing the ability to conduct valid hypothesis tests.",
+    "use_cases": [
+      "Estimating treatment effects in high-dimensional observational data with many potential confounders",
+      "Running A/B tests with machine learning-based propensity score matching while preserving statistical validity"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "double machine learning causal inference",
+      "how to use ML for treatment effects with valid p-values",
+      "post-double selection lasso Chernozhukov",
+      "combining machine learning with econometric inference"
     ]
   },
   {
@@ -1020,6 +3505,34 @@
     "tags": [
       "Monographs",
       "Book"
+    ],
+    "difficulty": "advanced",
+    "prerequisites": [
+      "linear-regression",
+      "maximum-likelihood-estimation",
+      "matrix-algebra"
+    ],
+    "topic_tags": [
+      "econometrics",
+      "asymptotics",
+      "panel-data",
+      "cluster-robust-inference",
+      "causal-inference"
+    ],
+    "summary": "Bruce Hansen's comprehensive econometrics textbook covering modern theoretical foundations and practical methods. It provides rigorous treatment of asymptotic theory, robust standard errors, and panel data techniques essential for empirical research. The book serves as both a graduate-level reference and a bridge between theory and application in econometric analysis.",
+    "use_cases": [
+      "PhD student learning rigorous econometric theory for dissertation research",
+      "Senior researcher needing technical details on cluster-robust standard errors for publication"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "econometrics textbook Hansen",
+      "cluster robust standard errors theory",
+      "asymptotic econometrics reference",
+      "panel data econometrics book"
     ]
   },
   {
@@ -1031,6 +3544,34 @@
     "tags": [
       "Monographs",
       "Lecture Notes"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "calculus",
+      "linear-algebra",
+      "probability-theory"
+    ],
+    "topic_tags": [
+      "game-theory",
+      "mechanism-design",
+      "bargaining-theory",
+      "rational-choice",
+      "microeconomics"
+    ],
+    "summary": "Ariel Rubinstein's comprehensive lecture notes covering foundational microeconomic theory including game theory, rational choice, and bargaining models. Essential reading for understanding the theoretical foundations behind mechanism design and strategic interactions in markets. Widely used in economics PhD programs and by researchers working on auction design, platform economics, and strategic decision-making.",
+    "use_cases": [
+      "designing auction mechanisms for marketplace platforms",
+      "modeling strategic behavior in multi-sided markets and pricing"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "game theory foundations for mechanism design",
+      "Rubinstein microeconomic theory notes",
+      "bargaining theory for auction design",
+      "rational choice theory lecture notes"
     ]
   },
   {
@@ -1042,6 +3583,34 @@
     "tags": [
       "Monographs",
       "Lecture"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "game-theory",
+      "linear-programming",
+      "microeconomics"
+    ],
+    "topic_tags": [
+      "market-design",
+      "matching-algorithms",
+      "two-sided-markets",
+      "mechanism-design",
+      "nobel-lecture"
+    ],
+    "summary": "Alvin Roth's Nobel Prize lecture explaining how matching markets work when prices can't clear the market, focusing on stability and preventing unraveling. Essential reading for understanding two-sided marketplaces like dating apps, job matching, and kidney exchanges. Provides theoretical foundation with real-world applications that directly inform marketplace design decisions.",
+    "use_cases": [
+      "Designing matching algorithms for rideshare driver-rider pairing",
+      "Building stable matching systems for job marketplace platforms"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "matching markets stability algorithms",
+      "two sided marketplace design theory",
+      "Alvin Roth market design lecture",
+      "preventing market unraveling matching theory"
     ]
   },
   {
@@ -1053,6 +3622,34 @@
     "tags": [
       "Monographs",
       "Book"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "software-engineering-fundamentals",
+      "technical-project-management",
+      "cross-functional-collaboration"
+    ],
+    "topic_tags": [
+      "technical-leadership",
+      "staff-engineer",
+      "career-development",
+      "engineering-management",
+      "organizational-design"
+    ],
+    "summary": "Will Larson's guide to the staff engineer role, covering technical leadership without direct management responsibilities. Essential reading for senior individual contributors navigating complex organizational dynamics and technical decision-making. Focuses on influence, systems thinking, and the 'glue work' that keeps engineering organizations functioning effectively.",
+    "use_cases": [
+      "Senior engineer transitioning to staff role seeking guidance on technical leadership and organizational influence",
+      "Mid-level engineer planning career advancement beyond senior IC roles in tech companies"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "staff engineer career path technical leadership",
+      "how to be effective senior individual contributor",
+      "technical leadership without management responsibilities",
+      "Will Larson staff engineer book review"
     ]
   },
   {
@@ -1064,6 +3661,34 @@
     "tags": [
       "Monographs",
       "Book"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "SQL-joins",
+      "python-basics",
+      "distributed-computing-concepts"
+    ],
+    "topic_tags": [
+      "distributed-systems",
+      "data-architecture",
+      "stream-processing",
+      "database-design",
+      "systems-engineering"
+    ],
+    "summary": "Martin Kleppmann's comprehensive guide to building reliable, scalable, and maintainable data systems. The book covers fundamental concepts in distributed systems, data storage, and processing architectures that every data professional should understand. It bridges the gap between theoretical computer science and practical engineering challenges in modern data infrastructure.",
+    "use_cases": [
+      "Designing a real-time analytics pipeline that handles millions of events per day",
+      "Architecting a microservices system with consistent data across multiple databases"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "best book for learning distributed systems design",
+      "stream vs batch processing comparison guide",
+      "how to build scalable data architecture",
+      "Martin Kleppmann data systems book review"
     ]
   },
   {
@@ -1075,6 +3700,34 @@
     "tags": [
       "Causal Inference & ML",
       "YouTube Channel"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "python-basics",
+      "regression-analysis",
+      "statistical-inference"
+    ],
+    "topic_tags": [
+      "causal-inference",
+      "marketing-mix-modeling",
+      "youtube-series",
+      "applied-econometrics",
+      "business-analytics"
+    ],
+    "summary": "Aryma Labs produces educational YouTube series on causal inference and marketing analytics for data practitioners. The content features expert discussions on causal methods and practical applications in marketing measurement, making advanced econometric concepts accessible through conversational formats.",
+    "use_cases": [
+      "Learning causal inference methods for A/B testing and observational studies",
+      "Understanding marketing mix modeling techniques for budget allocation decisions"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "causal inference youtube videos for data scientists",
+      "marketing mix modeling tutorial series",
+      "practical causal inference discussions",
+      "youtube channel for econometrics in tech"
     ]
   },
   {
@@ -1087,6 +3740,33 @@
     "tags": [
       "Causal Inference & ML",
       "Podcast"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-econometrics",
+      "academic-research-methods"
+    ],
+    "topic_tags": [
+      "academic-interviews",
+      "research-backstories",
+      "marketing-economics",
+      "methodology-discussion",
+      "podcast"
+    ],
+    "summary": "A podcast where marketing professors interview academic authors to reveal the behind-the-scenes stories of how influential papers were conceived, developed, and published. Covers topics like customer valuation, pricing strategies, and misinformation research with insights into the research process itself. Valuable for understanding how academic ideas evolve from initial concepts to published work.",
+    "use_cases": [
+      "Learning about the research process and methodology choices from successful academic authors",
+      "Getting inspiration for thesis topics or research directions in marketing and economics"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "academic research process podcast",
+      "how marketing papers get published",
+      "behind the scenes academic research stories",
+      "interviews with economics paper authors"
     ]
   }
 ]

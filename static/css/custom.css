@@ -4042,6 +4042,7 @@ mark.partial {
 /* Modal Container */
 .global-search-container {
     position: relative;
+    z-index: 1;  /* Ensure above backdrop */
     width: 95%;
     max-width: 900px;
     max-height: 85vh;
@@ -4186,6 +4187,47 @@ mark.partial {
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.03em;
+}
+
+.result-difficulty-badge {
+    font-size: 0.65rem;
+    font-weight: 500;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    color: white;
+    text-transform: capitalize;
+    opacity: 0.9;
+}
+
+/* Prerequisites "Learn first" section */
+.result-prerequisites {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.3rem;
+    flex-wrap: wrap;
+}
+
+.prereq-label {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.prereq-chip {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.4rem;
+    background: var(--accent-bg);
+    color: var(--accent);
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.15s, transform 0.1s;
+}
+
+.prereq-chip:hover {
+    background: var(--accent);
+    color: white;
+    transform: scale(1.05);
 }
 
 .result-category {

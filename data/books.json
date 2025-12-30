@@ -10,6 +10,34 @@
     "url": "https://www.amazon.com/Information-Rules-Strategic-Network-Economy/dp/087584863X",
     "tags": [
       "Platform Economics"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "microeconomics-principles",
+      "basic-game-theory",
+      "market-analysis"
+    ],
+    "topic_tags": [
+      "network-effects",
+      "pricing-strategy",
+      "two-sided-markets",
+      "digital-economics",
+      "platform-strategy"
+    ],
+    "summary": "A seminal book by Shapiro and Varian that established the economic principles governing information-based businesses and network effects. It provides frameworks for understanding pricing, versioning, and competitive strategy in technology markets. Essential reading for anyone working on platform economics, digital marketplaces, or tech company strategy.",
+    "use_cases": [
+      "Designing pricing strategies for SaaS products with network effects",
+      "Analyzing competitive dynamics in two-sided marketplace businesses"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "foundational books on network economics",
+      "how to price products with network effects",
+      "classic texts on platform business models",
+      "Varian Google chief economist book recommendations"
     ]
   },
   {
@@ -23,6 +51,34 @@
     "url": "https://www.amazon.com/Matchmakers-New-Economics-Multisided-Platforms/dp/1633691721",
     "tags": [
       "Platform Economics"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "microeconomics-theory",
+      "game-theory",
+      "econometrics"
+    ],
+    "topic_tags": [
+      "platform-economics",
+      "two-sided-markets",
+      "industrial-organization",
+      "network-effects",
+      "market-design"
+    ],
+    "summary": "Comprehensive textbook on platform economics and two-sided markets by leading industrial organization economists. Covers theoretical foundations, empirical methods, and real-world applications of platforms like ride-sharing, app stores, and payment systems. Essential reading for understanding how digital marketplaces create value by connecting different user groups.",
+    "use_cases": [
+      "Analyzing pricing strategies for a two-sided marketplace startup",
+      "Understanding network effects and competitive dynamics in platform industries"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "platform economics textbook",
+      "two sided markets theory",
+      "network effects empirical analysis",
+      "marketplace pricing strategy research"
     ]
   },
   {
@@ -36,6 +92,33 @@
     "url": "https://www.amazon.com/Platform-Revolution-Networked-Markets-Transforming/dp/0393249131",
     "tags": [
       "Platform Economics"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-microeconomics",
+      "business-strategy-fundamentals"
+    ],
+    "topic_tags": [
+      "platform-strategy",
+      "network-effects",
+      "two-sided-markets",
+      "digital-platforms",
+      "business-models"
+    ],
+    "summary": "Platform Revolution is a foundational guide to understanding how digital platforms create value through network effects and multi-sided markets. The book covers platform design principles, competitive dynamics, and monetization strategies used by companies like Amazon, Uber, and Facebook. It provides frameworks for analyzing platform ecosystems and identifying opportunities in the platform economy.",
+    "use_cases": [
+      "Understanding how to design marketplace features that encourage network effects",
+      "Analyzing competitive positioning against platform-based competitors"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "platform strategy fundamentals",
+      "network effects in digital markets",
+      "two-sided marketplace design",
+      "platform business model basics"
     ]
   },
   {
@@ -49,6 +132,33 @@
     "url": "https://www.amazon.com/Who-Gets-What-Why-Matchmaking/dp/0544291131",
     "tags": [
       "Pricing & Market Design"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "microeconomics",
+      "game-theory-basics"
+    ],
+    "topic_tags": [
+      "market-design",
+      "auction-theory",
+      "matching-algorithms",
+      "mechanism-design",
+      "behavioral-economics"
+    ],
+    "summary": "Accessible introduction to market design by Nobel Prize winner Alvin Roth, explaining how economists design markets and matching systems. Covers real-world applications like kidney exchanges, school choice, and spectrum auctions without heavy mathematics. Essential reading for understanding how economic theory shapes platform design and marketplace mechanisms.",
+    "use_cases": [
+      "Designing matching algorithms for two-sided marketplaces like rideshare or dating apps",
+      "Understanding auction mechanisms for ad exchanges or procurement systems"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "introduction to market design for beginners",
+      "how do matching algorithms work in practice",
+      "Nobel prize winner book on auctions and markets",
+      "accessible book on mechanism design and matching markets"
     ]
   },
   {
@@ -62,6 +172,33 @@
     "url": "https://www.amazon.com/Prediction-Machines-Economics-Artificial-Intelligence/dp/1633695670",
     "tags": [
       "AI & Machine Learning"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "business-strategy"
+    ],
+    "topic_tags": [
+      "economic-framework",
+      "AI-strategy",
+      "prediction-economics",
+      "business-AI",
+      "decision-making"
+    ],
+    "summary": "A foundational book that reframes artificial intelligence as a technology that makes prediction cheap, providing an economic lens for understanding AI's impact on business and society. Written by economists, it offers a clear framework for thinking about when and how to deploy AI systems based on prediction costs and complementary assets. Essential reading for anyone wanting to understand AI's economic implications without technical complexity.",
+    "use_cases": [
+      "Understanding when AI adoption makes economic sense for your organization",
+      "Developing business strategy around AI capabilities and limitations"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "economic framework for understanding AI",
+      "when does AI make business sense",
+      "prediction machines book summary",
+      "AI strategy from economics perspective"
     ]
   },
   {
@@ -75,6 +212,33 @@
     "url": "https://www.amazon.com/Power-Prediction-Disruptive-Artificial-Intelligence/dp/1647824192",
     "tags": [
       "AI & Machine Learning"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "technology-adoption-models"
+    ],
+    "topic_tags": [
+      "AI-strategy",
+      "system-disruption",
+      "economic-transformation",
+      "prediction-markets",
+      "business-strategy"
+    ],
+    "summary": "A strategic framework for understanding how AI creates system-level disruptions beyond individual task automation. Written by economists Ajay Agrawal, Joshua Gans, and Avi Goldfarb as a follow-up to Prediction Machines, exploring how prediction improvements reshape entire business ecosystems and economic structures.",
+    "use_cases": [
+      "Strategic planning for AI adoption across organizational systems",
+      "Understanding competitive dynamics in AI-transformed industries"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "How does AI disrupt entire systems not just tasks",
+      "Sequel to Prediction Machines book",
+      "AI system level transformation economics",
+      "Business strategy for AI disruption"
     ]
   },
   {
@@ -88,6 +252,33 @@
     "url": "https://www.amazon.com/Attention-Merchants-Scramble-Inside-Heads/dp/0385352018",
     "tags": [
       "Advertising & Attention"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "business-strategy-fundamentals"
+    ],
+    "topic_tags": [
+      "attention-economy",
+      "digital-advertising",
+      "media-history",
+      "business-models",
+      "platform-economics"
+    ],
+    "summary": "A comprehensive history of how businesses have captured and monetized human attention, from newspapers to digital platforms. The book explores the economic models underlying advertising-supported media and how tech companies have refined attention capture into a science. Essential reading for understanding the business fundamentals behind today's digital economy.",
+    "use_cases": [
+      "Understanding how advertising-supported business models work at tech companies",
+      "Analyzing the economic incentives behind social media platform design decisions"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "how does the attention economy work",
+      "history of digital advertising business models",
+      "why do social media platforms design addictive features",
+      "economics of free internet services advertising"
     ]
   },
   {
@@ -101,6 +292,33 @@
     "url": "https://www.amazon.com/Subprime-Attention-Crisis-Advertising-Originals/dp/0374538654",
     "tags": [
       "Advertising & Attention"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "digital-marketing-concepts"
+    ],
+    "topic_tags": [
+      "programmatic-advertising",
+      "ad-fraud",
+      "attention-economy",
+      "market-bubbles",
+      "digital-metrics"
+    ],
+    "summary": "This book argues that programmatic advertising represents a market bubble similar to the 2008 subprime mortgage crisis, driven by inflated metrics, widespread fraud, and fundamental misunderstanding of digital ad value. It examines how automated ad buying, fake clicks, and bot traffic create systemic risks in the digital advertising economy. The analysis provides crucial context for data scientists and economists working in digital marketing and attention-based business models.",
+    "use_cases": [
+      "Understanding why digital advertising metrics may be unreliable when building attribution models",
+      "Evaluating the validity of programmatic advertising data before running marketing mix modeling"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "Is programmatic advertising a bubble like housing crisis",
+      "Why are digital advertising metrics unreliable",
+      "Problems with automated ad buying and fraud",
+      "Subprime attention crisis book review tech economics"
     ]
   },
   {
@@ -114,6 +332,33 @@
     "url": "https://www.amazon.com/Priceless-Myth-Fair-Value-Advantage/dp/0809078813",
     "tags": [
       "Pricing & Market Design"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-statistics",
+      "experimental-design"
+    ],
+    "topic_tags": [
+      "behavioral-economics",
+      "pricing-psychology",
+      "consumer-behavior",
+      "market-research",
+      "decision-making"
+    ],
+    "summary": "A foundational book exploring how psychological biases and cognitive limitations affect pricing decisions and consumer behavior. Written for general audiences, it covers key behavioral economics principles like anchoring, loss aversion, and reference point effects in pricing contexts. Essential reading for understanding why traditional economic models fail to predict real-world pricing outcomes.",
+    "use_cases": [
+      "Designing A/B tests for pricing experiments and understanding psychological factors that influence willingness to pay",
+      "Building behavioral assumptions into demand forecasting models and price optimization algorithms"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "behavioral economics pricing book",
+      "psychology of pricing decisions",
+      "how to price products using behavioral insights",
+      "consumer psychology pricing strategies"
     ]
   },
   {
@@ -127,6 +372,33 @@
     "url": "https://www.amazon.com/Confessions-Pricing-Man-Affects-Everything/dp/3319203991",
     "tags": [
       "Pricing & Market Design"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-microeconomics",
+      "business-fundamentals"
+    ],
+    "topic_tags": [
+      "pricing-strategy",
+      "business-operations",
+      "revenue-optimization",
+      "consulting",
+      "practitioner-guide"
+    ],
+    "summary": "A practitioner's guide to pricing strategy written by Hermann Simon, the world's leading pricing consultant and founder of Simon-Kucher & Partners. The book shares real-world insights, case studies, and frameworks for effective pricing decisions across industries. Essential reading for anyone involved in pricing decisions, from product managers to executives.",
+    "use_cases": [
+      "Setting pricing strategy for a new product launch at a tech company",
+      "Evaluating and improving existing pricing models to maximize revenue"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "best book on pricing strategy",
+      "how to price products effectively",
+      "pricing consultant recommendations",
+      "practical pricing frameworks for business"
     ]
   },
   {
@@ -140,6 +412,34 @@
     "url": "https://www.amazon.com/Age-Surveillance-Capitalism-Future-Frontier/dp/1610395697",
     "tags": [
       "Competition & Antitrust"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "microeconomics-theory",
+      "market-structure-analysis",
+      "behavioral-economics"
+    ],
+    "topic_tags": [
+      "surveillance-capitalism",
+      "data-extraction",
+      "platform-economics",
+      "behavioral-surplus",
+      "tech-regulation"
+    ],
+    "summary": "Shoshana Zuboff's foundational work analyzing how tech platforms extract economic value from human behavioral data as a form of 'surveillance capitalism'. The book examines how companies like Google and Facebook create behavioral surplus from user interactions and convert it into predictive products sold to third parties. Essential reading for understanding the economic structures underlying modern digital platforms and their implications for competition policy.",
+    "use_cases": [
+      "Understanding how platform business models monetize user data for antitrust analysis",
+      "Analyzing the economic incentives behind data collection practices in tech companies"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "surveillance capitalism theory Zuboff",
+      "how do tech platforms extract value from user data",
+      "behavioral surplus and data economics",
+      "economic analysis of platform data monetization"
     ]
   },
   {
@@ -153,6 +453,33 @@
     "url": "https://www.amazon.com/Weapons-Math-Destruction-Increases-Inequality/dp/0553418815",
     "tags": [
       "AI & Machine Learning"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-statistics",
+      "data-analysis-concepts"
+    ],
+    "topic_tags": [
+      "algorithmic-bias",
+      "fairness",
+      "ethics",
+      "policy",
+      "book"
+    ],
+    "summary": "Cathy O'Neil's influential book examining how algorithms can perpetuate and amplify social inequalities across hiring, lending, criminal justice, and other domains. Accessible to non-technical readers, it provides frameworks for identifying harmful algorithmic systems and understanding their economic and social impacts. Essential reading for anyone working with ML systems that affect people's lives.",
+    "use_cases": [
+      "Understanding potential biases in recommendation systems or hiring algorithms",
+      "Building ethical frameworks for ML product development"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "algorithmic bias in hiring",
+      "fairness in machine learning book",
+      "ethics of AI algorithms",
+      "weapons of math destruction summary"
     ]
   },
   {
@@ -166,6 +493,34 @@
     "url": "https://www.amazon.com/Alignment-Problem-Machine-Learning-Values/dp/0393635821",
     "tags": [
       "AI & Machine Learning"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-python",
+      "neural-networks",
+      "reinforcement-learning"
+    ],
+    "topic_tags": [
+      "ai-alignment",
+      "ai-safety",
+      "responsible-ai",
+      "machine-learning-ethics",
+      "human-ai-interaction"
+    ],
+    "summary": "A comprehensive introduction to the AI alignment problem - the challenge of ensuring AI systems pursue goals aligned with human values and intentions. The book explores both technical and philosophical aspects of building AI that remains beneficial and controllable as it becomes more capable. Essential reading for anyone working on AI systems who wants to understand potential risks and mitigation strategies.",
+    "use_cases": [
+      "Understanding safety considerations when deploying machine learning models in production",
+      "Designing reward functions and objective functions that align with business goals and ethical constraints"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "what is AI alignment problem",
+      "how to build safe AI systems",
+      "AI safety for data scientists",
+      "responsible AI development practices"
     ]
   },
   {
@@ -179,6 +534,33 @@
     "url": "https://www.amazon.com/Curse-Bigness-Antitrust-New-Gilded/dp/0999745468",
     "tags": [
       "Competition & Antitrust"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "microeconomics-basics",
+      "market-structure-concepts"
+    ],
+    "topic_tags": [
+      "antitrust-law",
+      "tech-monopolies",
+      "market-concentration",
+      "competition-policy",
+      "regulatory-economics"
+    ],
+    "summary": "An accessible introduction to antitrust principles and their application to modern technology companies. Written by Tim Wu, it explains how market concentration harms innovation and consumers, with particular focus on Big Tech platforms. Essential reading for understanding the economic and legal foundations of competition policy in digital markets.",
+    "use_cases": [
+      "Understanding regulatory risks when analyzing tech company investments or market strategies",
+      "Preparing policy briefs on platform competition and market dominance issues"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "introduction to antitrust for tech companies",
+      "how does market concentration affect innovation",
+      "primer on competition policy and big tech",
+      "understanding monopoly power in digital platforms"
     ]
   },
   {
@@ -192,6 +574,34 @@
     "url": "https://www.amazon.com/Great-Reversal-America-Gave-Markets/dp/0674237544",
     "tags": [
       "Competition & Antitrust"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "market-analysis",
+      "statistical-concepts"
+    ],
+    "topic_tags": [
+      "market-concentration",
+      "antitrust-policy",
+      "economic-analysis",
+      "competition-economics",
+      "regulatory-economics"
+    ],
+    "summary": "A comprehensive examination of how market concentration has increased across industries in the United States, leading to reduced competition, higher prices, and lower wages. The book presents empirical evidence showing how dominant firms have gained market power and discusses policy solutions to restore competitive markets. Essential reading for understanding modern competition policy and its economic implications.",
+    "use_cases": [
+      "Understanding market concentration trends when analyzing industry competition",
+      "Building economic arguments for antitrust policy recommendations"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "books on market concentration and competition",
+      "understanding antitrust economics for beginners",
+      "why markets are becoming less competitive",
+      "economic evidence for competition policy"
     ]
   },
   {
@@ -205,6 +615,33 @@
     "url": "https://www.amazon.com/Platform-Delusion-Wins-Loses-Titans/dp/0593189434",
     "tags": [
       "Platform Economics"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "business-strategy"
+    ],
+    "topic_tags": [
+      "platform-economics",
+      "network-effects",
+      "business-strategy",
+      "contrarian-analysis",
+      "market-dynamics"
+    ],
+    "summary": "A contrarian examination of when platform strategies fail and network effects don't create sustainable competitive advantages. The book challenges conventional wisdom about digital platforms by analyzing cases where traditional business fundamentals matter more than network size. Essential reading for understanding the limitations of platform thinking in business strategy.",
+    "use_cases": [
+      "Evaluating whether a company's platform strategy claims are credible during investment analysis",
+      "Designing product strategy for markets where network effects may be weaker than expected"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "when do network effects not work",
+      "criticism of platform business models",
+      "why some platforms fail despite network effects",
+      "contrarian view on digital platform strategy"
     ]
   },
   {
@@ -218,6 +655,34 @@
     "url": "https://www.amazon.com/Radical-Markets-Uprooting-Capitalism-Democracy/dp/0691177503",
     "tags": [
       "Pricing & Market Design"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "microeconomics-theory",
+      "game-theory-basics",
+      "auction-mechanisms"
+    ],
+    "topic_tags": [
+      "mechanism-design",
+      "auction-theory",
+      "quadratic-voting",
+      "harberger-tax",
+      "market-design"
+    ],
+    "summary": "Radical Markets presents innovative mechanism design proposals including Harberger taxes, quadratic voting, and new auction formats to address market failures and inequality. The book bridges economic theory with practical policy applications, making complex concepts accessible to practitioners. It's essential reading for anyone working on platform economics, voting systems, or alternative market structures.",
+    "use_cases": [
+      "designing voting mechanisms for DAOs or corporate governance",
+      "implementing dynamic pricing systems that account for social welfare"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "quadratic voting implementation guide",
+      "harberger tax mechanism design",
+      "alternative auction formats for platforms",
+      "radical markets book summary key concepts"
     ]
   },
   {
@@ -231,6 +696,33 @@
     "url": "https://www.amazon.com/Uberland-Algorithms-Rewriting-Rules-Work/dp/0520298578",
     "tags": [
       "Labor & Gig Economy"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-economics",
+      "survey-methods"
+    ],
+    "topic_tags": [
+      "algorithmic-management",
+      "gig-economy",
+      "platform-labor",
+      "worker-autonomy",
+      "digital-platforms"
+    ],
+    "summary": "Uberland examines how algorithmic management systems control and coordinate workers in the gig economy, particularly focusing on ride-sharing platforms. The book analyzes how algorithms shape worker behavior, earnings, and autonomy while appearing to offer flexibility. It provides insights into the power dynamics between platforms, workers, and the technology that mediates their relationship.",
+    "use_cases": [
+      "Understanding how platform algorithms influence worker decision-making for labor economics research",
+      "Analyzing the social and economic impacts of gig work platforms for policy research"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "how do uber algorithms control drivers",
+      "gig economy worker management systems",
+      "algorithmic management in platform labor",
+      "uber driver autonomy and algorithms"
     ]
   },
   {
@@ -244,6 +736,33 @@
     "url": "https://www.amazon.com/Filter-Bubble-What-Internet-Hiding/dp/1594203008",
     "tags": [
       "Advertising & Attention"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-statistics",
+      "web-analytics"
+    ],
+    "topic_tags": [
+      "personalization",
+      "recommendation-systems",
+      "algorithmic-bias",
+      "platform-economics",
+      "information-filtering"
+    ],
+    "summary": "A foundational book exploring how personalized algorithms create 'filter bubbles' that limit information diversity and shape user behavior. Eli Pariser examines the economic and social implications of recommendation systems used by major tech platforms. Essential reading for understanding the broader impacts of personalization beyond just technical implementation.",
+    "use_cases": [
+      "Understanding algorithmic bias in recommendation systems before designing A/B tests",
+      "Evaluating the societal impact of personalization features in product development"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are the economic effects of personalized recommendations?",
+      "How do filter bubbles impact user behavior?",
+      "What are the downsides of recommendation algorithms?",
+      "How does personalization affect information diversity?"
     ]
   },
   {
@@ -257,6 +776,33 @@
     "url": "https://www.amazon.com/Invisible-Engines-Platforms-Innovation-Industries/dp/0262550687",
     "tags": [
       "Platform Economics"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "basic-microeconomics",
+      "business-strategy-fundamentals"
+    ],
+    "topic_tags": [
+      "platform-economics",
+      "two-sided-markets",
+      "software-platforms",
+      "network-effects",
+      "business-strategy"
+    ],
+    "summary": "A foundational book explaining how software platforms create value by connecting different user groups, introducing the concept of two-sided markets in technology. Essential reading for understanding platform business models, network effects, and the economic principles behind companies like Microsoft, Google, and payment systems. Provides the theoretical framework that underlies modern platform economics without requiring advanced mathematical background.",
+    "use_cases": [
+      "Understanding how to design pricing strategies for multi-sided platforms",
+      "Analyzing competitive dynamics and market entry strategies for platform businesses"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "foundational platform economics book",
+      "two-sided markets software platforms",
+      "how do platform business models work",
+      "network effects economics theory"
     ]
   },
   {
@@ -270,6 +816,34 @@
     "url": "https://www.amazon.com/Credit-Risk-Modeling-using-Excel/dp/0470660929",
     "tags": [
       "Risk Modeling"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "excel-vba-programming",
+      "basic-statistics",
+      "financial-modeling"
+    ],
+    "topic_tags": [
+      "credit-risk",
+      "probability-of-default",
+      "excel-vba",
+      "portfolio-modeling",
+      "loss-given-default"
+    ],
+    "summary": "A hands-on guide to building credit risk models using Excel and VBA, covering probability of default (PD), loss given default (LGD), and exposure at default (EAD) estimation techniques. The book provides practical implementations of portfolio credit risk models with ready-to-use Excel templates and VBA code for risk practitioners.",
+    "use_cases": [
+      "Building internal credit scoring models for loan approval decisions at a bank",
+      "Implementing regulatory capital calculations for credit risk under Basel II/III frameworks"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "credit risk modeling excel VBA tutorial",
+      "how to calculate probability of default in excel",
+      "portfolio credit risk models implementation",
+      "LGD EAD estimation excel templates"
     ]
   },
   {
@@ -283,6 +857,34 @@
     "url": "https://www.casact.org/monograph/cas-monograph-no-5",
     "tags": [
       "Risk Modeling"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "linear-regression",
+      "maximum-likelihood-estimation",
+      "R-programming"
+    ],
+    "topic_tags": [
+      "generalized-linear-models",
+      "insurance-pricing",
+      "actuarial-science",
+      "tweedie-distribution",
+      "territorial-rating"
+    ],
+    "summary": "Industry-standard monograph covering generalized linear models for insurance pricing and risk assessment. Provides comprehensive treatment of GLM theory, Tweedie distributions, and territorial ratemaking techniques specifically applied to insurance contexts. Essential reference for actuaries and data scientists working in insurance pricing and risk modeling.",
+    "use_cases": [
+      "Building auto insurance premium pricing models using claim frequency and severity data",
+      "Developing territorial rating factors for property insurance based on geographic risk patterns"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "GLM insurance pricing models",
+      "Tweedie distribution insurance applications",
+      "territorial ratemaking methods",
+      "actuarial pricing with generalized linear models"
     ]
   }
 ]
