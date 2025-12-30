@@ -13880,6 +13880,91 @@
               "citations": 1400
             }
           ]
+        },
+        {
+          "id": "bayesian-hierarchical-models",
+          "name": "Bayesian Hierarchical Models",
+          "application": "Pool information across groups with principled uncertainty quantification",
+          "papers": [
+            {
+              "title": "Sampling-Based Approaches to Calculating Marginal Densities",
+              "authors": "Alan E. Gelfand, Adrian F. M. Smith",
+              "year": 1990,
+              "tag": "Classic",
+              "description": "Birth of modern Bayesian computation. Demonstrated that the Gibbs sampler could solve any Bayesian posterior computation problem by iteratively sampling from conditional distributions. Before this paper, hierarchical models were limited to conjugate priors. After it, arbitrary model complexity became computationally feasible.",
+              "url": "https://www.jstor.org/stable/2289776",
+              "tags": [
+                "Statistics",
+                "Bayesian Hierarchical Models"
+              ],
+              "citations": 15000
+            },
+            {
+              "title": "Data Analysis Using Stein's Estimator and Its Generalizations",
+              "authors": "Bradley Efron, Carl N. Morris",
+              "year": 1975,
+              "tag": "Classic",
+              "description": "Made James-Stein shrinkage practical and intuitive using baseball batting averages. Showed that shrinking individual estimates toward their collective mean reduces MSE by >50% vs raw sample means. Explains why hierarchical models work—borrowing information via shrinkage slashes estimation error for small cells.",
+              "url": "https://www.jstor.org/stable/2285923",
+              "tags": [
+                "Statistics",
+                "Bayesian Hierarchical Models"
+              ],
+              "citations": 2500
+            },
+            {
+              "title": "Prior Distributions for Variance Parameters in Hierarchical Models",
+              "authors": "Andrew Gelman",
+              "year": 2006,
+              "tag": "Classic",
+              "description": "Identified that conventional inverse-gamma priors for variance parameters often dominate the posterior when group-level sample sizes are small. Introduced half-Cauchy and half-t priors as robust alternatives—now the default in Stan and PyMC. The fix for when hierarchical models return implausible variance estimates.",
+              "url": "https://projecteuclid.org/journals/bayesian-analysis/volume-1/issue-3/Prior-distributions-for-variance-parameters-in-hierarchical-models-comment-on/10.1214/06-BA117A.full",
+              "tags": [
+                "Statistics",
+                "Bayesian Hierarchical Models"
+              ],
+              "citations": 4000
+            },
+            {
+              "title": "The No-U-Turn Sampler: Adaptively Setting Path Lengths in Hamiltonian Monte Carlo",
+              "authors": "Matthew D. Hoffman, Andrew Gelman",
+              "year": 2014,
+              "tag": "SOTA",
+              "description": "NUTS eliminated painful manual tuning that made HMC impractical for non-experts. By automatically determining trajectory lengths, achieved near-optimal efficiency without user intervention. Powers Stan, PyMC, NumPyro—the reason you can fit 50-parameter hierarchical MMMs without tuning anything.",
+              "url": "https://jmlr.org/papers/v15/hoffman14a.html",
+              "tags": [
+                "Statistics",
+                "Bayesian Hierarchical Models"
+              ],
+              "citations": 4750
+            },
+            {
+              "title": "Inferring Causal Impact Using Bayesian Structural Time-Series Models",
+              "authors": "Kay H. Brodersen, Fabian Gallusser, Jim Koehler, Nicolas Remy, Steven L. Scott",
+              "year": 2015,
+              "tag": "Industry",
+              "description": "CausalImpact combines Bayesian structural time-series with synthetic control to estimate counterfactual outcomes when experiments are impossible. Answers 'what would have happened without the intervention?' Google's most-used internal causal inference tool for measuring TV campaigns and regional launches.",
+              "url": "https://projecteuclid.org/journals/annals-of-applied-statistics/volume-9/issue-1/Inferring-causal-impact-using-Bayesian-structural-time-series-models/10.1214/14-AOAS788.full",
+              "tags": [
+                "Statistics",
+                "Bayesian Hierarchical Models"
+              ],
+              "citations": 1800
+            },
+            {
+              "title": "Bayesian Methods for Media Mix Modeling with Carryover and Shape Effects",
+              "authors": "Yuxue Jin, Yueqing Wang, Yunting Sun, David Chan, Jim Koehler",
+              "year": 2017,
+              "tag": "Industry",
+              "description": "Established modern Bayesian MMM paradigm now implemented in Google's LightweightMMM and Meridian. Key innovations: flexible functional forms for adstock decay and saturation, full Bayesian treatment propagating uncertainty to ROAS estimates. The starting point for marketing budget optimization at scale.",
+              "url": "https://research.google/pubs/pub46001/",
+              "tags": [
+                "Statistics",
+                "Bayesian Hierarchical Models"
+              ],
+              "citations": 200
+            }
+          ]
         }
       ]
     }
