@@ -618,6 +618,78 @@
               "citations": 500
             }
           ]
+        },
+        {
+          "id": "item-response-theory",
+          "name": "Item Response Theory",
+          "application": "Model skill assessment, adaptive testing, and ML evaluation",
+          "papers": [
+            {
+              "title": "Probabilistic Models for Some Intelligence and Attainment Tests",
+              "authors": "Georg Rasch",
+              "year": 1960,
+              "tag": "Classic",
+              "description": "Introduced the one-parameter logistic (1PL/Rasch) model where response probability depends on person ability minus item difficulty. The 'specific objectivity' property enables comparing persons independent of which items they answered—the theoretical cornerstone of all computer adaptive testing (CAT) and Duolingo-style assessments.",
+              "url": "https://press.uchicago.edu/ucp/books/book/chicago/P/bo5963223.html",
+              "tags": [
+                "Statistics",
+                "Item Response Theory"
+              ],
+              "citations": 15500
+            },
+            {
+              "title": "Statistical Theories of Mental Test Scores",
+              "authors": "Frederic M. Lord, Melvin R. Novick, Allan Birnbaum",
+              "year": 1968,
+              "tag": "Classic",
+              "description": "The 'bible of test theory'. Birnbaum's chapters introduced 2PL (adding discrimination α) and 3PL (adding guessing γ) models. 2PL identifies which items best differentiate abilities—high-discrimination items worth more for rankings. 3PL handles multiple-choice guessing and random baseline performance. The canonical model family for 50+ years.",
+              "url": "https://www.infoagepub.com/products/Statistical-Theories-of-Mental-Test-Scores",
+              "tags": [
+                "Statistics",
+                "Item Response Theory"
+              ],
+              "citations": 12800
+            },
+            {
+              "title": "Machine Learning–Driven Language Assessment",
+              "authors": "Burr Settles, Geoffrey T. LaFlair, Masato Hagiwara",
+              "year": 2020,
+              "tag": "Industry",
+              "description": "How Duolingo English Test works at scale. Uses ML/NLP to estimate Rasch difficulty from item text—skipping expensive human piloting. Achieves 0.96 internal consistency and r=0.77-0.78 with TOEFL/IELTS. Item exposure drops to 0.10% vs 20% in conventional CAT. Blueprint for building adaptive assessment without human norming.",
+              "url": "https://aclanthology.org/2020.tacl-1.16/",
+              "tags": [
+                "Statistics",
+                "Item Response Theory"
+              ],
+              "citations": 90
+            },
+            {
+              "title": "β³-IRT: A New Item Response Model and its Applications",
+              "authors": "Yu Chen, Telmo Silva Filho, Ricardo B. C. Prudêncio, Tom Diethe, Peter Flach",
+              "year": 2019,
+              "tag": "SOTA",
+              "description": "Extends IRT to continuous responses using Beta-distributed item characteristic curves. Treats ML model evaluation as psychometric problem: each test instance has latent difficulty, each model has latent ability. Identifies which benchmark examples genuinely discriminate strong from weak classifiers—critical for efficient benchmarking.",
+              "url": "https://proceedings.mlr.press/v89/chen19b.html",
+              "tags": [
+                "Statistics",
+                "Item Response Theory"
+              ],
+              "citations": 100
+            },
+            {
+              "title": "Building an Evaluation Scale using Item Response Theory",
+              "authors": "John P. Lalor, Hao Wu, Hong Yu",
+              "year": 2016,
+              "tag": "SOTA",
+              "description": "First systematic application of IRT to NLP evaluation. Shows high accuracy ≠ high ability when item difficulty ignored—80% on easy items may indicate lower ability than 70% on hard items. Foundation for IRT-based ML leaderboards accounting for difficulty. Directly applicable to crowdsourcing quality estimation.",
+              "url": "https://aclanthology.org/D16-1062/",
+              "tags": [
+                "Statistics",
+                "Item Response Theory"
+              ],
+              "citations": 200
+            }
+          ]
         }
       ]
     },
