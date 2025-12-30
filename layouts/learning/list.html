@@ -105,16 +105,15 @@
                     <div class="cards-row">
                         {{ range $.Site.Data.resources }}
                         {{ if and (eq .domain $domain) (eq .category $cat) }}
-                        <div class="resource-card" data-aos="fade-up"
+                        <div class="resource-card"
                              data-name="{{ .name | lower }}"
                              data-description="{{ .description | lower }}"
                              data-category="{{ .category }}"
                              data-domain="{{ .domain }}">
                             <div class="card-header">
-                                <img class="resource-favicon"
-                                     src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32"
+                                <img class="resource-favicon lazy-favicon"
+                                     data-src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32"
                                      alt=""
-                                     loading="lazy"
                                      onerror="this.style.display='none'">
                                 <h3 class="resource-name">
                                     <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
@@ -215,8 +214,26 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('result-count').textContent = visibleCount + ' resources';
     }
 
-    // Initialize PageSearch for fuzzy search
-    new PageSearch({
+    // Lazy load favicons with Intersection Observer
+    var faviconObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                var img = entry.target;
+                if (img.dataset.src) {
+                    img.src = img.dataset.src;
+                    img.removeAttribute('data-src');
+                }
+                faviconObserver.unobserve(img);
+            }
+        });
+    }, { rootMargin: '200px' });
+
+    document.querySelectorAll('.lazy-favicon').forEach(function(img) {
+        faviconObserver.observe(img);
+    });
+
+    // Defer PageSearch initialization until idle
+    var pageSearchConfig = {
         searchInputId: 'resource-search',
         cardSelector: '.resource-card',
         sectionSelector: '.category-section',
@@ -229,7 +246,24 @@ document.addEventListener('DOMContentLoaded', function() {
             { name: 'domain', weight: 0.5 },
             { name: 'category', weight: 0.5 }
         ]
-    });
+    };
+
+    var pageSearchInstance = null;
+    function initPageSearch() {
+        if (!pageSearchInstance) {
+            pageSearchInstance = new PageSearch(pageSearchConfig);
+        }
+    }
+
+    // Initialize on idle or when user focuses search
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(initPageSearch, { timeout: 2000 });
+    } else {
+        setTimeout(initPageSearch, 100);
+    }
+
+    // Also init immediately if user interacts with search
+    document.getElementById('resource-search').addEventListener('focus', initPageSearch, { once: true });
 });
 </script>
 {{ end }}
