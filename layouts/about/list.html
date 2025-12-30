@@ -58,9 +58,65 @@
             </tbody>
         </table>
     </div>
+
+    <!-- Privacy Section -->
+    <div class="privacy-section">
+        <h3>Privacy</h3>
+        <div class="privacy-content">
+            <p>
+                Tech-Econ collects minimal, anonymous data (page views, search queries, country) using
+                <a href="https://www.goatcounter.com/" target="_blank">GoatCounter</a>, a privacy-focused
+                analytics service that uses no cookies and is GDPR-compliant. Our analytics are public:
+                <a href="https://tech-econ.goatcounter.com" target="_blank">tech-econ.goatcounter.com</a>
+            </p>
+            <p>
+                We respect <strong>Do Not Track</strong> settings. The "My Collection" feature uses local
+                storage only—your favorites never leave your device.
+            </p>
+            <p>
+                <strong>No ads, no affiliate links, no tracking pixels.</strong> This is a free resource
+                for the community.
+            </p>
+        </div>
+    </div>
 </div>
 
 <style>
+.privacy-section {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.privacy-section h3 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    color: var(--text-primary);
+}
+
+.privacy-content {
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.privacy-content p {
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.privacy-content p:last-child {
+    margin-bottom: 0;
+}
+
+.privacy-content a {
+    color: var(--accent);
+}
+
 .stats-section {
     max-width: 500px;
     margin: 3rem auto;
