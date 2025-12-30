@@ -2145,16 +2145,19 @@
     "maintenance_status": "active"
   },
   {
-    "name": "CausalPy",
+    "name": "PyMC Marketing",
     "description": "Developed by PyMC Labs, focuses specifically on causal inference in quasi-experimental settings. Specializes in scenarios where randomization is impossible or expensive.",
-    "category": "Causal Inference & Matching",
+    "category": "Marketing Mix Models (MMM) & Business Analytics",
     "docs_url": "https://www.pymc-marketing.io/",
     "github_url": "https://github.com/pymc-labs/pymc-marketing",
     "url": "https://github.com/pymc-labs/pymc-marketing",
-    "install": "pip install CausalPy",
+    "install": "pip install pymc-marketing",
     "tags": [
       "causal inference",
-      "matching"
+      "matching",
+      "marketing",
+      "analytics",
+      "Bayesian"
     ],
     "best_for": "Estimating treatment effects, propensity score matching, observational studies",
     "language": "Python",
@@ -2165,17 +2168,24 @@
     ],
     "topic_tags": [
       "causal-inference",
-      "matching"
+      "matching",
+      "bayesian",
+      "marketing",
+      "analytics"
     ],
-    "summary": "CausalPy is a Python library developed by PyMC Labs that focuses on causal inference in quasi-experimental settings. It is designed for scenarios where randomization is impossible or expensive, making it useful for researchers and data scientists working in fields that require causal analysis.",
+    "summary": "PyMC Marketing is a collection of Bayesian marketing models built with PyMC, designed for tasks such as Marketing Mix Modeling (MMM), Customer Lifetime Value (CLV) estimation, and attribution analysis. It is useful for data scientists and marketers looking to apply Bayesian methods to their marketing strategies.",
     "use_cases": [
       "Analyzing the impact of a policy change",
-      "Evaluating the effectiveness of a marketing campaign"
+      "Evaluating the effectiveness of a marketing campaign",
+      "Estimating the impact of marketing channels",
+      "Analyzing customer lifetime value",
+      "Attributing sales to different marketing efforts"
     ],
     "audience": [
       "Mid-DS",
       "Senior-DS",
-      "Curious-browser"
+      "Curious-browser",
+      "Junior-DS"
     ],
     "synthetic_questions": [
       "python library for causal inference",
@@ -2183,11 +2193,20 @@
       "matching techniques in python",
       "quasi-experimental methods python",
       "CausalPy documentation",
-      "causal inference tools in python"
+      "causal inference tools in python",
+      "python library for Bayesian marketing models",
+      "how to perform MMM in python",
+      "customer lifetime value estimation with PyMC",
+      "attribution modeling in python",
+      "bayesian analytics for marketing",
+      "marketing mix models in python"
     ],
     "primary_use_cases": [
       "causal forest estimation",
-      "A/B test analysis"
+      "A/B test analysis",
+      "Marketing Mix Modeling",
+      "Customer Lifetime Value estimation",
+      "Attribution analysis"
     ],
     "api_complexity": "intermediate",
     "related_packages": [
@@ -5542,33 +5561,39 @@
     "maintenance_status": "active"
   },
   {
-    "name": "Scikit-learn",
-    "description": "Foundational ML library with regression models (incl. regularized), model selection, cross-validation, evaluation metrics.",
-    "category": "Core Libraries & Linear Models",
-    "docs_url": "https://scikit-learn.org/",
+    "name": "Scikit-learn Ens.",
+    "description": "(`RandomForestClassifier`/`Regressor`) Widely-used, versatile implementation of Random Forests. Easy API and parallel processing support.",
+    "category": "Tree & Ensemble Methods for Prediction",
+    "docs_url": "https://scikit-learn.org/stable/modules/ensemble.html#random-forests",
     "github_url": "https://github.com/scikit-learn/scikit-learn",
     "url": "https://github.com/scikit-learn/scikit-learn",
     "install": "pip install scikit-learn",
     "tags": [
       "regression",
-      "linear models"
+      "linear models",
+      "machine learning",
+      "prediction"
     ],
     "best_for": "OLS regression, basic econometrics, data manipulation",
     "language": "Python",
     "difficulty": "intermediate",
     "prerequisites": [
-      "python-pandas"
+      "python-pandas",
+      "scikit-learn-basics"
     ],
     "topic_tags": [],
     "summary": "Scikit-learn is a foundational machine learning library in Python that provides tools for regression models, model selection, cross-validation, and evaluation metrics. It is widely used by data scientists and machine learning practitioners for building and evaluating predictive models.",
     "use_cases": [
       "Building regression models",
-      "Evaluating model performance"
+      "Evaluating model performance",
+      "Predicting outcomes based on historical data",
+      "Classifying data into categories using ensemble methods"
     ],
     "audience": [
       "Junior-DS",
       "Mid-DS",
-      "Senior-DS"
+      "Senior-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
       "python library for regression",
@@ -5577,7 +5602,13 @@
       "evaluation metrics for machine learning in python",
       "implementing linear models in python",
       "scikit-learn documentation",
-      "best practices for using scikit-learn"
+      "best practices for using scikit-learn",
+      "python library for Random Forests",
+      "how to use RandomForestClassifier in python",
+      "machine learning prediction with scikit-learn",
+      "parallel processing in scikit-learn",
+      "Random Forests implementation in python",
+      "predictive modeling with RandomForestRegressor"
     ],
     "primary_use_cases": [
       "Building regression models",
@@ -5587,7 +5618,9 @@
     "related_packages": [
       "statsmodels",
       "TensorFlow",
-      "PyTorch"
+      "PyTorch",
+      "RandomForest",
+      "XGBoost"
     ],
     "maintenance_status": "active"
   },
@@ -8374,58 +8407,6 @@
       "python tools for business analytics"
     ],
     "api_complexity": "simple",
-    "maintenance_status": "active"
-  },
-  {
-    "name": "PyMC Marketing",
-    "description": "Collection of Bayesian marketing models built with PyMC, including MMM, CLV, and attribution.",
-    "category": "Marketing Mix Models (MMM) & Business Analytics",
-    "docs_url": "https://www.pymc-marketing.io/",
-    "github_url": "https://github.com/pymc-labs/pymc-marketing",
-    "url": "https://github.com/pymc-labs/pymc-marketing",
-    "install": "pip install pymc-marketing",
-    "tags": [
-      "marketing",
-      "analytics",
-      "Bayesian"
-    ],
-    "best_for": "Marketing ROI, media mix optimization, attribution",
-    "language": "Python",
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "python-pandas",
-      "scikit-learn"
-    ],
-    "topic_tags": [
-      "bayesian",
-      "marketing",
-      "analytics"
-    ],
-    "summary": "PyMC Marketing is a collection of Bayesian marketing models built with PyMC, designed for tasks such as Marketing Mix Modeling (MMM), Customer Lifetime Value (CLV) estimation, and attribution analysis. It is useful for data scientists and marketers looking to apply Bayesian methods to their marketing strategies.",
-    "use_cases": [
-      "Estimating the impact of marketing channels",
-      "Analyzing customer lifetime value",
-      "Attributing sales to different marketing efforts"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS"
-    ],
-    "synthetic_questions": [
-      "python library for Bayesian marketing models",
-      "how to perform MMM in python",
-      "customer lifetime value estimation with PyMC",
-      "attribution modeling in python",
-      "bayesian analytics for marketing",
-      "marketing mix models in python"
-    ],
-    "primary_use_cases": [
-      "Marketing Mix Modeling",
-      "Customer Lifetime Value estimation",
-      "Attribution analysis"
-    ],
-    "api_complexity": "intermediate",
     "maintenance_status": "active"
   },
   {
@@ -12896,7 +12877,7 @@
   },
   {
     "name": "SciPy Bootstrap",
-    "description": "(`scipy.stats.bootstrap`) Computes bootstrap confidence intervals for various statistics using percentile, BCa methods.",
+    "description": "Foundational module within SciPy for a wide range of statistical functions, distributions, and hypothesis tests (t-tests, ANOVA, chi\u00b2, KS, etc.).",
     "category": "Standard Errors, Bootstrapping & Reporting",
     "docs_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html",
     "github_url": "https://github.com/scipy/scipy",
@@ -12904,14 +12885,16 @@
     "install": "pip install scipy",
     "tags": [
       "bootstrap",
-      "standard errors"
+      "standard errors",
+      "inference",
+      "hypothesis testing"
     ],
-    "best_for": "Robust inference, clustered SEs, result presentation",
+    "best_for": "Hypothesis tests, confidence intervals, multiple testing",
     "language": "Python",
     "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [],
-    "summary": "SciPy Bootstrap is a Python package that computes bootstrap confidence intervals for various statistics using percentile and BCa methods. It is used by data scientists and statisticians for estimating the uncertainty of statistical estimates.",
+    "summary": "Scipy.stats is a foundational module within SciPy that provides a wide range of statistical functions, distributions, and hypothesis tests such as t-tests, ANOVA, and chi-squared tests. It is commonly used by data scientists and statisticians for statistical analysis and inference.",
     "use_cases": [],
     "audience": [
       "Junior-DS",
@@ -12924,10 +12907,24 @@
       "bootstrap methods in scipy",
       "scipy.stats.bootstrap example",
       "confidence intervals using bootstrap in python",
-      "scipy bootstrap tutorial"
+      "scipy bootstrap tutorial",
+      "python library for statistical functions",
+      "how to perform hypothesis testing in python",
+      "python library for t-tests",
+      "using ANOVA in python",
+      "statistical distributions in python",
+      "python scipy stats examples"
     ],
     "api_complexity": "intermediate",
-    "maintenance_status": "active"
+    "maintenance_status": "active",
+    "primary_use_cases": [
+      "hypothesis testing",
+      "statistical analysis"
+    ],
+    "related_packages": [
+      "scipy",
+      "numpy"
+    ]
   },
   {
     "name": "Stargazer",
@@ -13187,7 +13184,7 @@
     "name": "PyMC Statespace",
     "description": "(See Bayesian) Bayesian state-space modeling using PyMC, integrating Kalman filtering within MCMC for parameter estimation.",
     "category": "State Space & Volatility Models",
-    "docs_url": "https://www.pymc.io/projects/examples/en/latest/time_series/",
+    "docs_url": "https://www.pymc.io/projects/examples/en/latest/blog/tag/time-series.html",
     "github_url": "https://github.com/jessegrabowski/pymc_statespace",
     "url": "https://github.com/jessegrabowski/pymc_statespace",
     "install": "pip install pymc-statespace",
@@ -13406,49 +13403,6 @@
       "A/B test analysis"
     ],
     "api_complexity": "intermediate",
-    "maintenance_status": "active"
-  },
-  {
-    "name": "Scipy.stats",
-    "description": "Foundational module within SciPy for a wide range of statistical functions, distributions, and hypothesis tests (t-tests, ANOVA, chi\u00b2, KS, etc.).",
-    "category": "Statistical Inference & Hypothesis Testing",
-    "docs_url": "https://docs.scipy.org/doc/scipy/reference/stats.html",
-    "github_url": "https://github.com/scipy/scipy",
-    "url": "https://github.com/scipy/scipy",
-    "install": "pip install scipy",
-    "tags": [
-      "inference",
-      "hypothesis testing"
-    ],
-    "best_for": "Hypothesis tests, confidence intervals, multiple testing",
-    "language": "Python",
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "Scipy.stats is a foundational module within SciPy that provides a wide range of statistical functions, distributions, and hypothesis tests such as t-tests, ANOVA, and chi-squared tests. It is commonly used by data scientists and statisticians for statistical analysis and inference.",
-    "use_cases": [],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS"
-    ],
-    "synthetic_questions": [
-      "python library for statistical functions",
-      "how to perform hypothesis testing in python",
-      "python library for t-tests",
-      "using ANOVA in python",
-      "statistical distributions in python",
-      "python scipy stats examples"
-    ],
-    "primary_use_cases": [
-      "hypothesis testing",
-      "statistical analysis"
-    ],
-    "api_complexity": "intermediate",
-    "related_packages": [
-      "scipy",
-      "numpy"
-    ],
     "maintenance_status": "active"
   },
   {
@@ -15949,51 +15903,6 @@
     "related_packages": [
       "XGBoost",
       "LightGBM"
-    ],
-    "maintenance_status": "active"
-  },
-  {
-    "name": "Scikit-learn Ens.",
-    "description": "(`RandomForestClassifier`/`Regressor`) Widely-used, versatile implementation of Random Forests. Easy API and parallel processing support.",
-    "category": "Tree & Ensemble Methods for Prediction",
-    "docs_url": "https://scikit-learn.org/stable/modules/ensemble.html#random-forests",
-    "github_url": "https://github.com/scikit-learn/scikit-learn",
-    "url": "https://github.com/scikit-learn/scikit-learn",
-    "install": "pip install scikit-learn",
-    "tags": [
-      "machine learning",
-      "prediction"
-    ],
-    "best_for": "Random forests, gradient boosting, prediction tasks",
-    "language": "Python",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "python-pandas",
-      "scikit-learn-basics"
-    ],
-    "topic_tags": [],
-    "summary": "Scikit-learn Ens. provides a versatile implementation of Random Forests through its RandomForestClassifier and Regressor. It is widely used in machine learning for prediction tasks and is suitable for users looking for an easy-to-use API with support for parallel processing.",
-    "use_cases": [
-      "Predicting outcomes based on historical data",
-      "Classifying data into categories using ensemble methods"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "python library for Random Forests",
-      "how to use RandomForestClassifier in python",
-      "machine learning prediction with scikit-learn",
-      "parallel processing in scikit-learn",
-      "Random Forests implementation in python",
-      "predictive modeling with RandomForestRegressor"
-    ],
-    "api_complexity": "simple",
-    "related_packages": [
-      "RandomForest",
-      "XGBoost"
     ],
     "maintenance_status": "active"
   },

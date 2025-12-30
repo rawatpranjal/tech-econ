@@ -223,26 +223,32 @@
     ]
   },
   {
-    "name": "Hal Varian: Googlenomics Q&A",
-    "description": "AEI podcast. The 'Adam Smith of Googlenomics' on auction design and why productivity metrics fail in the digital age.",
+    "name": "Hal Varian: Googlenomics Long-read Q&A (AEI)",
+    "description": "In-depth AEI interview covering the Varian Rule for tech adoption, second-price auctions, and YouTube's 500M daily how-to video views.",
     "category": "Market Design & Auctions",
     "url": "https://www.aei.org/economics/googlenomics-a-long-read-qa-with-chief-economist-hal-varian/",
     "type": "Interview",
     "image_url": "https://digitaleconomy.stanford.edu/wp-content/uploads/2021/10/halvarian-80.jpg",
     "tags": [
       "Market Design & Auctions",
-      "Interview"
+      "Interview",
+      "Google",
+      "Auctions",
+      "Tech Economics"
     ],
     "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
       "Market Design",
-      "Auctions"
+      "Auctions",
+      "industry-insights"
     ],
-    "summary": "In this podcast, Hal Varian discusses the principles of Googlenomics, focusing on auction design and the challenges of productivity metrics in the digital age. Key takeaways include insights into how traditional metrics may not apply in a digital context.",
+    "summary": "The interview with Hal Varian delves into the Varian Rule for tech adoption, explores the mechanics of second-price auctions, and discusses the significance of YouTube's 500 million daily how-to video views. Key takeaways include insights into how these concepts influence tech economics and consumer behavior.",
     "use_cases": [
       "To understand the intersection of economics and technology",
-      "To learn about auction design principles"
+      "To learn about auction design principles",
+      "Gain insights into tech adoption and economic principles",
+      "Understand the role of auctions in technology markets"
     ],
     "audience": [
       "Curious-browser"
@@ -255,15 +261,28 @@
       "Who is Hal Varian?",
       "What insights can be gained from auction design?",
       "How can productivity metrics be improved?",
-      "What are the challenges of digital economics?"
+      "What are the challenges of digital economics?",
+      "What is the Varian Rule for tech adoption?",
+      "How do second-price auctions work?",
+      "What impact do YouTube's daily views have on tech economics?",
+      "What are the implications of Googlenomics?",
+      "How does Google utilize auctions in its business model?",
+      "What insights can be gained from Hal Varian's interview?",
+      "What are the key concepts in tech economics discussed in this talk?",
+      "How does tech adoption relate to consumer behavior?"
     ],
     "speaker_expertise": [
       "Googlenomics",
       "Auction design",
-      "Productivity metrics"
+      "Productivity metrics",
+      "tech adoption",
+      "auctions",
+      "YouTube economics"
     ],
     "key_insights": [
-      "Productivity metrics fail in the digital age"
+      "Productivity metrics fail in the digital age",
+      "Varian Rule for tech adoption",
+      "Mechanics of second-price auctions"
     ]
   },
   {
@@ -561,24 +580,33 @@
     "image_url": "https://patbajari.ai/wp-content/uploads/2024/02/image-4-1.png",
     "tags": [
       "Strategy & Digital Platforms",
-      "Interview"
+      "Interview",
+      "Amazon",
+      "Economics",
+      "AI"
     ],
     "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
       "industry-insights",
-      "career-advice"
+      "career-advice",
+      "AI",
+      "economics"
     ],
     "summary": "In this interview, Pat Bajari discusses how he built applied research at Amazon from the ground up, leading a team of over 400 PhD researchers. Key takeaways include insights into the strategic importance of applied analytics in a tech-driven company.",
     "use_cases": [
       "Gain insights into building a research team",
       "Understand the role of analytics in strategy",
-      "Learn from a leader in applied research"
+      "Learn from a leader in applied research",
+      "Gain insights into Amazon's economic strategies",
+      "Understand the role of AI in economics",
+      "Learn about the intersection of technology and economics"
     ],
     "audience": [
       "Mid-DS",
       "Senior-DS",
-      "Curious-browser"
+      "Curious-browser",
+      "Junior-DS"
     ],
     "synthetic_questions": [
       "What is applied analytics?",
@@ -586,27 +614,41 @@
       "What challenges did Pat Bajari face in building his team?",
       "What skills are important for a career in applied analytics?",
       "How can research influence business strategy?",
-      "What insights can be gained from leading a large research team?"
+      "What insights can be gained from leading a large research team?",
+      "What is Amazon's approach to economics?",
+      "How does AI influence economic strategies?",
+      "What are the key economic principles at Amazon?",
+      "What insights can be gained from the intersection of economics and AI?",
+      "What are the implications of AI in business economics?",
+      "How does Amazon leverage AI in its economic strategies?"
     ],
     "speaker_expertise": [
       "applied analytics",
-      "research leadership"
+      "research leadership",
+      "Economics",
+      "AI"
     ],
     "key_insights": [
       "Building applied research from scratch",
-      "Leading a team of 400+ PhD researchers"
+      "Leading a team of 400+ PhD researchers",
+      "Amazon's economics approach",
+      "Intersection of economics and AI"
     ]
   },
   {
     "name": "Preston McAfee: Auction Design & applied analytics",
-    "description": "Chief Scientist at Yahoo, Google, Microsoft. Golden Goose Award winner. Deep interview on auction theory, ad markets, and mechanism design.",
+    "description": "Deep career retrospective: Yahoo to Microsoft to Google. 'The major change is the relevance of microeconomics... When I joined Yahoo, that was still fairly fragile.'",
     "category": "Market Design & Auctions",
     "url": "https://www.richmondfed.org/publications/research/econ_focus/2018/q4/interview",
     "type": "Interview",
     "image_url": "https://mc4f.ee/Bin/PubPhoto.jpg",
     "tags": [
       "Market Design & Auctions",
-      "Interview"
+      "Interview",
+      "Career",
+      "Yahoo",
+      "Microsoft",
+      "Google"
     ],
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -614,18 +656,24 @@
       "market-design",
       "auction-theory",
       "ad-markets",
-      "mechanism-design"
+      "mechanism-design",
+      "industry-insights",
+      "career-advice"
     ],
-    "summary": "In this interview, Preston McAfee discusses the intricacies of auction theory and its applications in ad markets and mechanism design. Key takeaways include insights into how auction design influences market efficiency and the role of analytics in optimizing these processes.",
+    "summary": "In this interview, Preston McAfee reflects on his career journey from Yahoo to Microsoft to Google, emphasizing the evolving importance of microeconomics in the tech industry. Key takeaways include insights into the changing landscape of tech economics and the relevance of microeconomic principles in major tech companies.",
     "use_cases": [
       "To understand auction theory applications",
       "To learn from a leading expert in the field",
-      "To gain insights into ad market dynamics"
+      "To gain insights into ad market dynamics",
+      "Gain insights into a tech career path",
+      "Understand the role of microeconomics in tech",
+      "Learn from an experienced industry professional"
     ],
     "audience": [
       "Mid-DS",
       "Senior-DS",
-      "Curious-browser"
+      "Curious-browser",
+      "Junior-DS"
     ],
     "synthetic_questions": [
       "What is auction theory?",
@@ -635,12 +683,26 @@
       "How can analytics be applied to market design?",
       "What is the Golden Goose Award?",
       "What are the challenges in auction design?",
-      "What are the implications of market design on technology companies?"
+      "What are the implications of market design on technology companies?",
+      "What insights does Preston McAfee share about his career?",
+      "How has microeconomics changed in the tech industry?",
+      "What are the key takeaways from the Richmond Fed Econ Focus interview?",
+      "What experiences did Preston McAfee have at Yahoo, Microsoft, and Google?",
+      "Why is microeconomics relevant in today's tech companies?",
+      "What career advice does Preston McAfee offer?",
+      "How does Preston McAfee view the evolution of tech economics?",
+      "What challenges did Preston McAfee face in his career?"
     ],
     "speaker_expertise": [
       "auction theory",
       "ad markets",
-      "mechanism design"
+      "mechanism design",
+      "microeconomics",
+      "tech industry",
+      "career development"
+    ],
+    "key_insights": [
+      "The major change is the relevance of microeconomics in tech."
     ]
   },
   {
@@ -2460,14 +2522,17 @@
     ]
   },
   {
-    "name": "a16z Podcast",
+    "name": "a16z Marketplace Podcast: Business of Marketplaces",
     "description": "Andreessen Horowitz. VC perspective on marketplace economics, network effects, and market design. Prediction markets with Alex Tabarrok and Scott Duke Kominers.",
     "category": "Strategy & Digital Platforms",
     "url": "https://a16z.com/podcasts/",
     "type": "Podcast Series",
     "tags": [
       "Strategy & Digital Platforms",
-      "Podcast Series"
+      "Podcast Series",
+      "a16z",
+      "Marketplaces",
+      "Metrics"
     ],
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -2475,7 +2540,9 @@
       "industry-insights",
       "marketplace-economics",
       "network-effects",
-      "market-design"
+      "market-design",
+      "platform-economics",
+      "marketplace-business-models"
     ],
     "summary": "The a16z Podcast discusses the VC perspective on various aspects of marketplace economics, including network effects and market design. Key takeaways include insights into prediction markets as discussed by experts Alex Tabarrok and Scott Duke Kominers.",
     "audience": [
@@ -2489,17 +2556,31 @@
       "Why are prediction markets important?",
       "What is the role of VC in marketplace economics?",
       "How can I understand digital platforms better?",
-      "What strategies are discussed in the a16z Podcast?"
+      "What strategies are discussed in the a16z Podcast?",
+      "What are marketplace business models?",
+      "How do marketplaces scale?",
+      "What metrics are important for marketplaces?",
+      "What strategies can be used in marketplace businesses?",
+      "What insights can be gained from the a16z Marketplace Podcast?",
+      "How does a16z analyze marketplace economics?",
+      "What are the challenges faced by marketplace businesses?",
+      "What trends are emerging in the marketplace sector?"
     ],
     "use_cases": [
       "Gain insights into marketplace economics",
       "Understand network effects",
-      "Learn about market design from experts"
+      "Learn about market design from experts",
+      "to understand marketplace dynamics",
+      "to learn about scaling strategies",
+      "to gain insights into marketplace metrics"
     ],
     "speaker_expertise": [
       "marketplace economics",
       "network effects",
-      "market design"
+      "market design",
+      "marketplace business models",
+      "metrics",
+      "scaling strategies"
     ],
     "key_insights": [
       "VC perspective on marketplace economics",
@@ -5799,50 +5880,6 @@
     ]
   },
   {
-    "name": "Hal Varian: Googlenomics Long-read Q&A (AEI)",
-    "description": "In-depth AEI interview covering the Varian Rule for tech adoption, second-price auctions, and YouTube's 500M daily how-to video views.",
-    "category": "Tech Economics",
-    "url": "https://www.aei.org/economics/googlenomics-a-long-read-qa-with-chief-economist-hal-varian/",
-    "type": "Interview",
-    "tags": [
-      "Google",
-      "Auctions",
-      "Tech Economics"
-    ],
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [
-      "industry-insights"
-    ],
-    "summary": "The interview with Hal Varian delves into the Varian Rule for tech adoption, explores the mechanics of second-price auctions, and discusses the significance of YouTube's 500 million daily how-to video views. Key takeaways include insights into how these concepts influence tech economics and consumer behavior.",
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is the Varian Rule for tech adoption?",
-      "How do second-price auctions work?",
-      "What impact do YouTube's daily views have on tech economics?",
-      "What are the implications of Googlenomics?",
-      "How does Google utilize auctions in its business model?",
-      "What insights can be gained from Hal Varian's interview?",
-      "What are the key concepts in tech economics discussed in this talk?",
-      "How does tech adoption relate to consumer behavior?"
-    ],
-    "use_cases": [
-      "Gain insights into tech adoption and economic principles",
-      "Understand the role of auctions in technology markets"
-    ],
-    "speaker_expertise": [
-      "tech adoption",
-      "auctions",
-      "YouTube economics"
-    ],
-    "key_insights": [
-      "Varian Rule for tech adoption",
-      "Mechanics of second-price auctions"
-    ]
-  },
-  {
     "name": "Hal Varian: Future of Work (Oxford)",
     "description": "Oxford podcast on automation, AI, and labor markets. Varian shares optimism that machines will fill jobs from retiring baby boomers.",
     "category": "AI & Labor",
@@ -6070,54 +6107,6 @@
     "key_insights": [
       "Discussion on tech economics and platform competition",
       "Future of antitrust in digital markets"
-    ]
-  },
-  {
-    "name": "Preston McAfee: Richmond Fed Econ Focus Interview",
-    "description": "Deep career retrospective: Yahoo to Microsoft to Google. 'The major change is the relevance of microeconomics... When I joined Yahoo, that was still fairly fragile.'",
-    "category": "Tech Economics",
-    "url": "https://www.richmondfed.org/publications/research/econ_focus/2018/q4/interview",
-    "type": "Interview",
-    "tags": [
-      "Career",
-      "Yahoo",
-      "Microsoft",
-      "Google"
-    ],
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [
-      "industry-insights",
-      "career-advice"
-    ],
-    "summary": "In this interview, Preston McAfee reflects on his career journey from Yahoo to Microsoft to Google, emphasizing the evolving importance of microeconomics in the tech industry. Key takeaways include insights into the changing landscape of tech economics and the relevance of microeconomic principles in major tech companies.",
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What insights does Preston McAfee share about his career?",
-      "How has microeconomics changed in the tech industry?",
-      "What are the key takeaways from the Richmond Fed Econ Focus interview?",
-      "What experiences did Preston McAfee have at Yahoo, Microsoft, and Google?",
-      "Why is microeconomics relevant in today's tech companies?",
-      "What career advice does Preston McAfee offer?",
-      "How does Preston McAfee view the evolution of tech economics?",
-      "What challenges did Preston McAfee face in his career?"
-    ],
-    "use_cases": [
-      "Gain insights into a tech career path",
-      "Understand the role of microeconomics in tech",
-      "Learn from an experienced industry professional"
-    ],
-    "speaker_expertise": [
-      "microeconomics",
-      "tech industry",
-      "career development"
-    ],
-    "key_insights": [
-      "The major change is the relevance of microeconomics in tech."
     ]
   },
   {
@@ -7759,52 +7748,6 @@
     ]
   },
   {
-    "name": "Pat Bajari: Keystone Strategy Q&A",
-    "description": "Written interview on Amazon's economics approach and the intersection of economics and AI.",
-    "category": "Tech Economics",
-    "url": "https://www.keystone.ai/news-publications/patrick-bajari-qa",
-    "type": "Interview",
-    "tags": [
-      "Amazon",
-      "Economics",
-      "AI"
-    ],
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [
-      "industry-insights",
-      "AI",
-      "economics"
-    ],
-    "summary": "This interview explores Amazon's economic strategies and how they intersect with artificial intelligence. Key takeaways include insights into the economic principles guiding Amazon's operations and the implications of AI in this context.",
-    "audience": [
-      "Curious-browser",
-      "Junior-DS",
-      "Mid-DS"
-    ],
-    "synthetic_questions": [
-      "What is Amazon's approach to economics?",
-      "How does AI influence economic strategies?",
-      "What are the key economic principles at Amazon?",
-      "What insights can be gained from the intersection of economics and AI?",
-      "What are the implications of AI in business economics?",
-      "How does Amazon leverage AI in its economic strategies?"
-    ],
-    "use_cases": [
-      "Gain insights into Amazon's economic strategies",
-      "Understand the role of AI in economics",
-      "Learn about the intersection of technology and economics"
-    ],
-    "speaker_expertise": [
-      "Economics",
-      "AI"
-    ],
-    "key_insights": [
-      "Amazon's economics approach",
-      "Intersection of economics and AI"
-    ]
-  },
-  {
     "name": "Amazon's Secret Economists (CNN)",
     "description": "CNN feature on Amazon employing 150+ PhD economists in five years. Inside look at Bajari's team.",
     "category": "Tech Economics",
@@ -8888,48 +8831,6 @@
     ]
   },
   {
-    "name": "a16z Marketplace Podcast: Business of Marketplaces",
-    "description": "a16z podcast episodes specifically covering marketplace business models, metrics, and scaling strategies.",
-    "category": "Platform Economics",
-    "url": "https://a16z.com/podcasts/",
-    "type": "Podcast Series",
-    "tags": [
-      "a16z",
-      "Marketplaces",
-      "Metrics"
-    ],
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "platform-economics",
-      "marketplace-business-models"
-    ],
-    "summary": "The a16z Marketplace Podcast explores various aspects of marketplace business models, including metrics and strategies for scaling. Key takeaways include insights into how marketplaces operate and what metrics are crucial for their success.",
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are marketplace business models?",
-      "How do marketplaces scale?",
-      "What metrics are important for marketplaces?",
-      "What strategies can be used in marketplace businesses?",
-      "What insights can be gained from the a16z Marketplace Podcast?",
-      "How does a16z analyze marketplace economics?",
-      "What are the challenges faced by marketplace businesses?",
-      "What trends are emerging in the marketplace sector?"
-    ],
-    "use_cases": [
-      "to understand marketplace dynamics",
-      "to learn about scaling strategies",
-      "to gain insights into marketplace metrics"
-    ],
-    "speaker_expertise": [
-      "marketplace business models",
-      "metrics",
-      "scaling strategies"
-    ]
-  },
-  {
     "name": "Data Analysis Journal: Experimentation Series",
     "description": "Olga Berezovsky's detailed episodes on experimentation workflows, A/B testing checklists, and product analytics best practices.",
     "category": "Experimentation",
@@ -9916,7 +9817,7 @@
       "logistics",
       "academic-research"
     ],
-    "summary": "Subject to Podcast features monthly interviews with OR researchers including Louis-Martin Rousseau (Polytechnique Montréal) and Laureano Escudero. Provides international perspective on combinatorial optimization and logistics research.",
+    "summary": "Subject to Podcast features monthly interviews with OR researchers including Louis-Martin Rousseau (Polytechnique Montr\u00e9al) and Laureano Escudero. Provides international perspective on combinatorial optimization and logistics research.",
     "audience": [
       "Mid-DS",
       "Senior-DS",

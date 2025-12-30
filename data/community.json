@@ -615,7 +615,7 @@
     "location": "Seattle, WA (2025)",
     "dates": "November (annually)",
     "attendees": "200+",
-    "best_for": "Applied analytics practitioners in tech",
+    "best_for": "Tech company economists and causal inference practitioners",
     "tags": [
       "Conferences",
       "Experimentation"
@@ -628,19 +628,27 @@
     "prerequisites": [
       "A-B-testing",
       "regression-analysis",
-      "python-or-R"
+      "python-or-R",
+      "causal-inference",
+      "experimental-design",
+      "econometrics"
     ],
     "topic_tags": [
       "causal-inference",
       "experimentation",
       "applied-ML",
       "industry-practices",
-      "conference"
+      "conference",
+      "tech-industry",
+      "networking",
+      "conferences"
     ],
     "summary": "NABE's Applied Analytics Conference brings together practitioners from major tech companies to share real-world applications of causal inference, AI, and experimentation methods. The conference focuses on production-ready techniques and case studies from companies like Amazon, Microsoft, and Meta. Attendees learn how academic methods translate to industry problems and get insights into best practices for running experiments at scale.",
     "use_cases": [
       "Learning how top tech companies implement causal inference methods in production systems",
-      "Networking with industry practitioners and discovering new approaches to A/B testing and ML deployment"
+      "Networking with industry practitioners and discovering new approaches to A/B testing and ML deployment",
+      "Learning latest experimental design techniques used at major tech companies",
+      "Networking with other tech economists and finding new job opportunities"
     ],
     "audience": [
       "Mid-DS",
@@ -650,7 +658,11 @@
       "NABE applied analytics conference tech industry",
       "causal inference conference tech companies",
       "experimentation best practices industry conference",
-      "applied ML conference Amazon Microsoft Meta"
+      "applied ML conference Amazon Microsoft Meta",
+      "tech economics conference causal inference",
+      "NABE tech industry experiments conference",
+      "networking events for tech economists",
+      "causal inference AI conference tech industry"
     ]
   },
   {
@@ -1084,35 +1096,41 @@
   },
   {
     "name": "CLeaR (Causal Learning and Reasoning)",
-    "description": "ML-focused causal inference conference covering causal discovery, treatment effect estimation, and causal ML applications. Published in PMLR proceedings.",
+    "description": "Dedicated venue for causal inference attracting both ML and economics researchers. Covers causal discovery, causal representation learning, and applications to decision-making.",
     "category": "Conferences",
     "subcategory": "Experimentation",
     "url": "https://www.cclear.cc/",
     "type": "Annual Conference",
-    "location": "Various (rotating)",
+    "location": "Lausanne, Switzerland (2025)",
     "dates": "May (annually)",
-    "best_for": "ML-focused causality researchers",
+    "best_for": "Causal ML researchers and econometricians",
     "tags": [
       "Conferences",
       "Experimentation"
     ],
-    "difficulty": "advanced",
+    "difficulty": "intermediate",
     "prerequisites": [
       "python-scikit-learn",
       "causal-DAGs",
-      "observational-data-analysis"
+      "observational-data-analysis",
+      "causal-inference-basics",
+      "directed-acyclic-graphs"
     ],
     "topic_tags": [
       "causal-inference",
       "machine-learning",
       "treatment-effects",
       "causal-discovery",
-      "conference-proceedings"
+      "conference-proceedings",
+      "decision-making",
+      "conferences"
     ],
     "summary": "CLeaR is a premier machine learning conference focused on causal inference methods, publishing cutting-edge research on causal discovery algorithms, treatment effect estimation, and applications of causal reasoning in ML systems. The conference proceedings contain state-of-the-art methods for identifying causal relationships from data and estimating causal effects in complex settings. Papers cover both theoretical advances and practical applications across domains like healthcare, tech platforms, and policy evaluation.",
     "use_cases": [
       "Finding latest methods for causal discovery from observational data in your recommendation system",
-      "Learning advanced treatment effect estimation techniques for A/B test analysis with interference"
+      "Learning advanced treatment effect estimation techniques for A/B test analysis with interference",
+      "Finding latest research on causal discovery algorithms for observational data",
+      "Learning about causal representation learning techniques for complex datasets"
     ],
     "audience": [
       "Senior-DS",
@@ -1122,8 +1140,17 @@
       "latest causal inference conference papers",
       "CLeaR proceedings causal machine learning",
       "causal discovery algorithms conference",
-      "treatment effect estimation ML conference"
-    ]
+      "treatment effect estimation ML conference",
+      "causal inference conference machine learning",
+      "CLeaR conference causal discovery papers",
+      "causal reasoning machine learning venue",
+      "best causal inference research conference"
+    ],
+    "attendees": "300+",
+    "lat": 46.5197,
+    "lng": 6.6323,
+    "start_date": "2025-05-07",
+    "end_date": "2025-05-09"
   },
   {
     "name": "Experimentation Island",
@@ -1242,19 +1269,29 @@
     "prerequisites": [
       "regression-analysis",
       "python-or-r",
-      "A-B-testing"
+      "A-B-testing",
+      "survey-methodology",
+      "differential-privacy",
+      "statistical-sampling"
     ],
     "topic_tags": [
       "marketing-mix-modeling",
       "attribution-modeling",
       "incrementality-testing",
       "causal-inference",
-      "marketing-analytics"
+      "marketing-analytics",
+      "audience-measurement",
+      "privacy-preserving",
+      "media-research",
+      "advertising-analytics",
+      "conference"
     ],
-    "summary": "A specialized conference focused on advanced marketing measurement techniques including marketing mix models, multi-touch attribution, and incrementality testing. Covers both methodological foundations and practical implementation of attribution systems at scale. Designed for practitioners working on measuring marketing effectiveness and ROI.",
+    "summary": "ARF AUDIENCExSCIENCE is a conference focused on audience measurement methodology and privacy-preserving techniques for media and advertising research. It brings together researchers and practitioners working on measuring media consumption, advertising effectiveness, and audience analytics while addressing privacy concerns. The conference covers both traditional measurement approaches and emerging privacy-first methodologies.",
     "use_cases": [
       "Building marketing mix models to optimize budget allocation across channels",
-      "Implementing multi-touch attribution systems to measure customer journey impact"
+      "Implementing multi-touch attribution systems to measure customer journey impact",
+      "Developing privacy-preserving methods for measuring TV/streaming audience sizes without exposing individual viewing habits",
+      "Implementing differential privacy techniques for advertising attribution while maintaining measurement accuracy"
     ],
     "audience": [
       "Mid-DS",
@@ -1264,7 +1301,11 @@
       "marketing mix modeling conference",
       "attribution modeling events",
       "incrementality measurement training",
-      "MMM methodology conference"
+      "MMM methodology conference",
+      "privacy preserving audience measurement techniques",
+      "media research methodology conference",
+      "advertising analytics with differential privacy",
+      "audience measurement without tracking cookies"
     ]
   },
   {
@@ -1781,7 +1822,7 @@
   },
   {
     "name": "Shoptalk",
-    "description": "Dominant retail/e-commerce event covering retail analytics, customer lifetime value, marketplace strategies, and AI in retail. One of the largest retail technology conferences.",
+    "description": "Leading retail and e-commerce innovation conference with 10,000+ attendees. Unique matchmaking facilitates 40,000+ one-on-one meetings. Strong analytics and personalization content.",
     "category": "Conferences",
     "subcategory": "Platforms & E-commerce",
     "url": "https://shoptalk.com/",
@@ -1789,10 +1830,11 @@
     "location": "Las Vegas/Chicago",
     "dates": "March & October (biannually)",
     "attendees": "10,000+",
-    "best_for": "Retail and e-commerce analytics",
+    "best_for": "E-commerce and retail innovators",
     "tags": [
       "Conferences",
-      "Platforms & E-commerce"
+      "Platforms & E-commerce",
+      "Retail & CPG"
     ],
     "lat": 36.1699,
     "lng": -115.1398,
@@ -1801,29 +1843,40 @@
     "difficulty": "beginner",
     "prerequisites": [
       "basic-statistics",
-      "business-metrics"
+      "business-metrics",
+      "business-analytics"
     ],
     "topic_tags": [
       "retail-analytics",
       "e-commerce",
       "customer-lifetime-value",
       "marketplace-strategies",
-      "retail-ai"
+      "retail-ai",
+      "conference-networking",
+      "industry-trends",
+      "personalization"
     ],
     "summary": "Shoptalk is the largest retail technology conference focusing on e-commerce analytics, customer lifetime value, and AI applications in retail. The event brings together practitioners, vendors, and researchers to discuss cutting-edge retail analytics methods and marketplace strategies. It's particularly valuable for data scientists working in retail or e-commerce looking to stay current with industry trends and network with peers.",
     "use_cases": [
       "Learning about latest retail analytics tools and methodologies from industry leaders",
-      "Networking with other retail data scientists and discovering career opportunities in e-commerce"
+      "Networking with other retail data scientists and discovering career opportunities in e-commerce",
+      "Learning about latest retail analytics trends and personalization techniques from industry leaders",
+      "Networking with retail data science teams and discovering new tools and methodologies used in e-commerce"
     ],
     "audience": [
       "Junior-DS",
-      "Mid-DS"
+      "Mid-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
       "retail analytics conferences 2024",
       "best e-commerce data science events",
       "customer lifetime value conference",
-      "shoptalk retail technology event"
+      "shoptalk retail technology event",
+      "retail analytics conference",
+      "e-commerce data science events",
+      "shoptalk conference for data scientists",
+      "retail personalization industry trends"
     ]
   },
   {
@@ -2625,53 +2678,6 @@
     ]
   },
   {
-    "name": "ARF AUDIENCExSCIENCE",
-    "description": "Covers audience measurement methodology and privacy-preserving techniques for media and advertising research.",
-    "category": "Conferences",
-    "subcategory": "Marketing Science",
-    "url": "https://thearf.org/arf-events/",
-    "type": "Annual Conference",
-    "location": "New York, NY",
-    "dates": "March (annually)",
-    "best_for": "Audience measurement researchers",
-    "tags": [
-      "Conferences",
-      "Marketing Science"
-    ],
-    "lat": 40.7128,
-    "lng": -74.006,
-    "start_date": "2025-10-07",
-    "end_date": "2025-10-08",
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "survey-methodology",
-      "differential-privacy",
-      "statistical-sampling"
-    ],
-    "topic_tags": [
-      "audience-measurement",
-      "privacy-preserving",
-      "media-research",
-      "advertising-analytics",
-      "conference"
-    ],
-    "summary": "ARF AUDIENCExSCIENCE is a conference focused on audience measurement methodology and privacy-preserving techniques for media and advertising research. It brings together researchers and practitioners working on measuring media consumption, advertising effectiveness, and audience analytics while addressing privacy concerns. The conference covers both traditional measurement approaches and emerging privacy-first methodologies.",
-    "use_cases": [
-      "Developing privacy-preserving methods for measuring TV/streaming audience sizes without exposing individual viewing habits",
-      "Implementing differential privacy techniques for advertising attribution while maintaining measurement accuracy"
-    ],
-    "audience": [
-      "Mid-DS",
-      "Senior-DS"
-    ],
-    "synthetic_questions": [
-      "privacy preserving audience measurement techniques",
-      "media research methodology conference",
-      "advertising analytics with differential privacy",
-      "audience measurement without tracking cookies"
-    ]
-  },
-  {
     "name": "SJDM Annual Meeting",
     "description": "Society for Judgment and Decision Making annual meeting. Covers experimental studies, utility theory, and applications to medicine, law, and consumer behavior. Foundational behavioral economics venue.",
     "category": "Conferences",
@@ -3081,54 +3087,6 @@
     ]
   },
   {
-    "name": "NABE Tech Economics Conference",
-    "description": "The largest causal inference conference specifically for tech industry economists. Theme: 'Causal Inference, A.I., and Experiments in Action.' Features Industry Job Fair and strong networking for tech economists.",
-    "category": "Conferences",
-    "subcategory": "Experimentation",
-    "url": "https://www.nabe.com/",
-    "type": "Annual Conference",
-    "location": "Seattle, WA (2025)",
-    "dates": "November (annually)",
-    "attendees": "400+",
-    "best_for": "Tech company economists and causal inference practitioners",
-    "tags": [
-      "Conferences",
-      "Experimentation"
-    ],
-    "lat": 47.6062,
-    "lng": -122.3321,
-    "start_date": "2025-11-09",
-    "end_date": "2025-11-11",
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "causal-inference",
-      "experimental-design",
-      "econometrics"
-    ],
-    "topic_tags": [
-      "causal-inference",
-      "experimentation",
-      "tech-industry",
-      "networking",
-      "conferences"
-    ],
-    "summary": "The premier annual conference bringing together economists working in tech companies to share cutting-edge research on causal inference, AI applications, and experimental methods. Features presentations of industry research, methodological advances, and extensive networking opportunities including a dedicated job fair for tech economist positions.",
-    "use_cases": [
-      "Learning latest experimental design techniques used at major tech companies",
-      "Networking with other tech economists and finding new job opportunities"
-    ],
-    "audience": [
-      "Mid-DS",
-      "Senior-DS"
-    ],
-    "synthetic_questions": [
-      "tech economics conference causal inference",
-      "NABE tech industry experiments conference",
-      "networking events for tech economists",
-      "causal inference AI conference tech industry"
-    ]
-  },
-  {
     "name": "IAPP AI Governance Global",
     "description": "Premier AI governance conference with 1,000+ privacy and AI governance professionals. Covers EU AI Act implementation, practical governance frameworks, and AI compliance strategies.",
     "category": "Conferences",
@@ -3266,54 +3224,6 @@
       "where to learn about AI policy and society",
       "AIES conference papers on responsible AI",
       "best venues for AI ethics research"
-    ]
-  },
-  {
-    "name": "CLeaR (Causal Learning and Reasoning)",
-    "description": "Dedicated venue for causal inference attracting both ML and economics researchers. Covers causal discovery, causal representation learning, and applications to decision-making.",
-    "category": "Conferences",
-    "subcategory": "Experimentation",
-    "url": "https://www.cclear.cc/",
-    "type": "Annual Conference",
-    "location": "Lausanne, Switzerland (2025)",
-    "dates": "May (annually)",
-    "attendees": "300+",
-    "best_for": "Causal ML researchers and econometricians",
-    "tags": [
-      "Conferences",
-      "Experimentation"
-    ],
-    "lat": 46.5197,
-    "lng": 6.6323,
-    "start_date": "2025-05-07",
-    "end_date": "2025-05-09",
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "causal-inference-basics",
-      "directed-acyclic-graphs",
-      "python-scikit-learn"
-    ],
-    "topic_tags": [
-      "causal-inference",
-      "machine-learning",
-      "causal-discovery",
-      "decision-making",
-      "conferences"
-    ],
-    "summary": "CLeaR is a specialized academic conference that bridges machine learning and economics through causal inference research. It focuses on cutting-edge methods for causal discovery, causal representation learning, and their applications to real-world decision-making problems. The venue attracts researchers working on both theoretical foundations and practical implementations of causal methods.",
-    "use_cases": [
-      "Finding latest research on causal discovery algorithms for observational data",
-      "Learning about causal representation learning techniques for complex datasets"
-    ],
-    "audience": [
-      "Senior-DS",
-      "Early-PhD"
-    ],
-    "synthetic_questions": [
-      "causal inference conference machine learning",
-      "CLeaR conference causal discovery papers",
-      "causal reasoning machine learning venue",
-      "best causal inference research conference"
     ]
   },
   {
@@ -3882,16 +3792,16 @@
     ]
   },
   {
-    "name": "ARF AUDIENCExSCIENCE",
+    "name": "ARF Marketing Analytics Accelerator",
     "description": "Flagship audience measurement conference with peer-reviewed research on cross-platform measurement, attention metrics, and AI in advertising. Premier venue for advertising researchers.",
     "category": "Conferences",
     "subcategory": "Marketing Science",
     "url": "https://thearf.org/",
     "type": "Annual Conference",
     "location": "New York, NY",
-    "dates": "March (annually)",
+    "dates": "November (annually)",
     "attendees": "500+",
-    "best_for": "Advertising and media measurement researchers",
+    "best_for": "Marketing analytics and attribution specialists",
     "tags": [
       "Conferences",
       "Marketing Science"
@@ -3904,19 +3814,29 @@
     "prerequisites": [
       "statistical-testing",
       "experimental-design",
-      "survey-methodology"
+      "survey-methodology",
+      "marketing-mix-modeling",
+      "attribution-modeling",
+      "causal-inference"
     ],
     "topic_tags": [
       "audience-measurement",
       "advertising-research",
       "cross-platform-analytics",
       "attention-metrics",
-      "marketing-science"
+      "marketing-science",
+      "marketing-mix-modeling",
+      "attribution",
+      "incrementality",
+      "conferences",
+      "marketing-analytics"
     ],
     "summary": "Premier conference for advertising and audience measurement researchers featuring peer-reviewed studies on cross-platform measurement, attention metrics, and AI applications in advertising. Brings together industry practitioners and academics working on problems in media measurement and advertising effectiveness. Essential venue for staying current with methodological advances in audience research.",
     "use_cases": [
       "Learning about new methodologies for measuring advertising effectiveness across digital and traditional media platforms",
-      "Networking with researchers working on similar problems in audience measurement and presenting your own research findings"
+      "Networking with researchers working on similar problems in audience measurement and presenting your own research findings",
+      "Learning latest MMM methodologies for measuring cross-channel marketing impact",
+      "Networking with marketing analytics practitioners to discuss attribution challenges"
     ],
     "audience": [
       "Mid-DS",
@@ -3926,49 +3846,7 @@
       "advertising research conferences with peer review",
       "cross-platform audience measurement methods",
       "attention metrics in advertising research",
-      "AI applications in media measurement conference"
-    ]
-  },
-  {
-    "name": "ARF Marketing Analytics Accelerator",
-    "description": "The only event focused exclusively on attribution and marketing mix modeling. Covers MMM methodology, multi-touch attribution, and incrementality measurement.",
-    "category": "Conferences",
-    "subcategory": "Marketing Science",
-    "url": "https://thearf.org/",
-    "type": "Annual Conference",
-    "location": "New York, NY",
-    "dates": "November (annually)",
-    "attendees": "300+",
-    "best_for": "Marketing analytics and attribution specialists",
-    "tags": [
-      "Conferences",
-      "Marketing Science"
-    ],
-    "lat": 40.7128,
-    "lng": -74.006,
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "marketing-mix-modeling",
-      "attribution-modeling",
-      "causal-inference"
-    ],
-    "topic_tags": [
-      "marketing-mix-modeling",
-      "attribution",
-      "incrementality",
-      "conferences",
-      "marketing-analytics"
-    ],
-    "summary": "A specialized conference focused on attribution and marketing mix modeling (MMM) for marketing analytics professionals. Covers advanced techniques for measuring marketing effectiveness, multi-touch attribution, and incrementality testing. Ideal for data scientists and analysts working on marketing measurement problems in tech companies.",
-    "use_cases": [
-      "Learning latest MMM methodologies for measuring cross-channel marketing impact",
-      "Networking with marketing analytics practitioners to discuss attribution challenges"
-    ],
-    "audience": [
-      "Mid-DS",
-      "Senior-DS"
-    ],
-    "synthetic_questions": [
+      "AI applications in media measurement conference",
       "marketing mix modeling conference 2024",
       "attribution modeling events for data scientists",
       "incrementality measurement workshops",
@@ -4437,53 +4315,6 @@
       "NRF Big Show dynamic pricing sessions",
       "retail AI conference data science",
       "largest retail technology conference"
-    ]
-  },
-  {
-    "name": "Shoptalk",
-    "description": "Leading retail and e-commerce innovation conference with 10,000+ attendees. Unique matchmaking facilitates 40,000+ one-on-one meetings. Strong analytics and personalization content.",
-    "category": "Conferences",
-    "subcategory": "Retail & CPG",
-    "url": "https://shoptalk.com/",
-    "type": "Annual Conference",
-    "location": "Las Vegas, NV",
-    "dates": "March (annually)",
-    "attendees": "10,000+",
-    "best_for": "E-commerce and retail innovators",
-    "tags": [
-      "Conferences",
-      "Retail & CPG"
-    ],
-    "lat": 36.1699,
-    "lng": -115.1398,
-    "start_date": "2025-03-23",
-    "end_date": "2025-03-26",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-statistics",
-      "business-analytics"
-    ],
-    "topic_tags": [
-      "retail-analytics",
-      "e-commerce",
-      "conference-networking",
-      "industry-trends",
-      "personalization"
-    ],
-    "summary": "Shoptalk is the premier retail and e-commerce conference bringing together 10,000+ industry professionals to discuss innovation and analytics. The conference features extensive content on personalization, customer analytics, and retail technology with unique networking opportunities through structured matchmaking. It serves as a key learning and connection hub for data scientists working in retail and e-commerce domains.",
-    "use_cases": [
-      "Learning about latest retail analytics trends and personalization techniques from industry leaders",
-      "Networking with retail data science teams and discovering new tools and methodologies used in e-commerce"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "retail analytics conference",
-      "e-commerce data science events",
-      "shoptalk conference for data scientists",
-      "retail personalization industry trends"
     ]
   },
   {
@@ -5316,19 +5147,25 @@
     "prerequisites": [
       "python-scikit-learn",
       "A-B-testing",
-      "system-design"
+      "system-design",
+      "docker-containers"
     ],
     "topic_tags": [
       "machine-learning-systems",
       "recommendation-systems",
       "large-language-models",
       "ml-engineering",
-      "applied-ml"
+      "applied-ml",
+      "production-ml",
+      "applied-science",
+      "llm-deployment"
     ],
-    "summary": "Eugene Yan is a Principal Applied Scientist at Amazon who writes extensively about building and scaling ML systems in production. His blog covers practical aspects of recommendation systems, LLMs, and ML engineering with real-world examples from tech companies. He's known for bridging the gap between ML research and production implementation.",
+    "summary": "Eugene Yan's blog offers practical insights on building and deploying ML systems at scale, with focus on recommendation engines and LLMs in production environments. As an Amazon Principal Applied Scientist, he shares real-world experiences and best practices for moving from research to production. Content covers system design, experimentation frameworks, and operational challenges in large-scale ML applications.",
     "use_cases": [
       "Learning how to transition ML models from research to production systems",
-      "Understanding best practices for building recommendation systems at scale"
+      "Understanding best practices for building recommendation systems at scale",
+      "Learning how to deploy recommendation systems in production environments",
+      "Understanding best practices for LLM implementation and scaling at tech companies"
     ],
     "audience": [
       "Mid-DS",
@@ -5338,7 +5175,11 @@
       "Eugene Yan blog machine learning systems",
       "how to build ML systems in production",
       "recommendation systems best practices",
-      "applied machine learning engineering"
+      "applied machine learning engineering",
+      "How to deploy ML models in production",
+      "Recommendation system best practices",
+      "Eugene Yan ML engineering blog",
+      "LLM production deployment challenges"
     ]
   },
   {
@@ -13757,44 +13598,6 @@
     ]
   },
   {
-    "name": "Eugene Yan",
-    "description": "ML systems, recommendations, and LLMs in production. Practical insights from an Amazon Principal Applied Scientist.",
-    "category": "Blogs",
-    "url": "https://eugeneyan.com/",
-    "type": "Blog",
-    "location": "Online",
-    "dates": "Ongoing",
-    "image_url": "https://eugeneyan.com/assets/profile.jpg",
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "python-scikit-learn",
-      "A-B-testing",
-      "docker-containers"
-    ],
-    "topic_tags": [
-      "machine-learning-systems",
-      "recommendation-systems",
-      "production-ml",
-      "applied-science",
-      "llm-deployment"
-    ],
-    "summary": "Eugene Yan's blog offers practical insights on building and deploying ML systems at scale, with focus on recommendation engines and LLMs in production environments. As an Amazon Principal Applied Scientist, he shares real-world experiences and best practices for moving from research to production. Content covers system design, experimentation frameworks, and operational challenges in large-scale ML applications.",
-    "use_cases": [
-      "Learning how to deploy recommendation systems in production environments",
-      "Understanding best practices for LLM implementation and scaling at tech companies"
-    ],
-    "audience": [
-      "Mid-DS",
-      "Senior-DS"
-    ],
-    "synthetic_questions": [
-      "How to deploy ML models in production",
-      "Recommendation system best practices",
-      "Eugene Yan ML engineering blog",
-      "LLM production deployment challenges"
-    ]
-  },
-  {
     "name": "Al Roth's Market Design Blog",
     "description": "Direct commentary from the architect of modern market design (Nobel 2012). Roth redesigned NRMP, co-founded kidney exchange programs, advised on school choice. Practitioner insights unavailable elsewhere.",
     "category": "Blogs",
@@ -16083,7 +15886,7 @@
     "name": "Willem Pienaar",
     "description": "Creator of Feast open-source feature store, Principal Engineer at Tecton. Formerly led Data Science Platform at Gojek.",
     "category": "Notable Contributors",
-    "url": "https://blog.feast.dev",
+    "url": "https://www.tecton.ai/blog/author/willempienaar/",
     "type": "Industry Leader",
     "location": "Bay Area, CA",
     "best_for": "Feature store open source, lightweight feature management, production feature serving",

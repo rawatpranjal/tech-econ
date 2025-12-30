@@ -3617,31 +3617,30 @@
     "tab": "interview",
     "subtab": "behavioral",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "basic-interviewing-skills"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "behavioral-interviews",
-      "google-interview",
-      "career-development",
-      "soft-skills",
-      "interview-preparation"
+      "interview-prep"
     ],
-    "summary": "Guide to Google's behavioral interview process focusing on core 'Googleyness' traits including comfort with ambiguity, bias for action, and intellectual humility. Helps candidates understand what Google looks for in behavioral responses and how to demonstrate these qualities effectively. Essential preparation for anyone interviewing at Google or similar tech companies.",
+    "summary": "This resource provides insights into the traits that Google values in candidates, emphasizing the importance of comfort with ambiguity, a bias for action, and intellectual humility. It helps candidates understand what it means to embody 'Googleyness' during the interview process.",
     "use_cases": [
-      "Preparing for Google behavioral interview rounds",
-      "Understanding how to demonstrate soft skills valued by top tech companies"
+      "when preparing for an interview at Google"
     ],
     "audience": [
-      "Junior-DS",
-      "Mid-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Google behavioral interview preparation",
-      "What is Googleyness traits",
-      "How to prepare for Google soft skills interview",
-      "Google interview behavioral questions examples"
+      "What are Googleyness traits?",
+      "How to prepare for a Google interview?",
+      "What does comfort with ambiguity mean?",
+      "Why is bias for action important?",
+      "What is intellectual humility?",
+      "How to demonstrate Googleyness in an interview?",
+      "What traits do tech companies look for?",
+      "How to succeed in behavioral interviews?"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -3659,33 +3658,29 @@
     "tab": "interview",
     "subtab": "ml-design",
     "difficulty": "intermediate",
-    "prerequisites": [
-      "python-scikit-learn",
-      "docker-containers",
-      "SQL-databases"
-    ],
-    "topic_tags": [
-      "ml-systems",
-      "production-ml",
-      "system-design",
-      "mlops",
-      "engineering"
-    ],
-    "summary": "Comprehensive guide to building production ML systems covering the full lifecycle from data engineering to model deployment and monitoring. Written by Chip Huyen based on Stanford's popular CS 329S course. Essential reading for anyone moving ML models from notebooks to real-world applications.",
-    "use_cases": [
-      "Designing recommendation systems at scale for e-commerce platforms",
-      "Building fraud detection pipelines that process millions of transactions daily"
-    ],
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides insights into the design of machine learning systems, emphasizing foundational concepts and practical applications. It serves as a guide for those looking to understand the complexities of building effective ML systems.",
+    "use_cases": [],
     "audience": [
       "Junior-DS",
-      "Mid-DS"
+      "Mid-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "how to deploy machine learning models in production",
-      "ML system design book recommendations",
-      "scaling machine learning systems",
-      "production ML best practices guide"
-    ]
+      "What are the key principles of ML system design?",
+      "How can I effectively design a machine learning system?",
+      "What are the common challenges in ML system design?",
+      "What skills are needed for designing ML systems?",
+      "How does Stanford CS 329S influence ML system design?",
+      "What resources complement the study of ML system design?",
+      "How can I apply ML system design in real-world projects?",
+      "What career paths are available in ML system design?"
+    ],
+    "role_type": [
+      "ML-engineer"
+    ],
+    "experience_level": "mid"
   },
   {
     "name": "ML System Design Interview (Alex Xu)",
@@ -3702,120 +3697,159 @@
     "tab": "interview",
     "subtab": "ml-design",
     "difficulty": "intermediate",
-    "prerequisites": [
-      "python-scikit-learn",
-      "system-architecture-basics",
-      "SQL-joins"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "system-design",
-      "interview-preparation",
-      "ml-architecture",
-      "production-systems"
+      "interview-prep"
     ],
-    "summary": "A structured 7-step framework for tackling machine learning system design interviews with detailed walkthroughs of 10 real-world problems. Covers end-to-end system architecture from data ingestion to model serving for applications like visual search and recommendation systems. Essential preparation material for data scientists interviewing at tech companies.",
+    "summary": "This resource provides a structured approach to tackling machine learning system design interviews, outlining a 7-step framework and offering detailed solutions to common problems. It aims to help candidates prepare effectively for technical interviews in the field of machine learning.",
     "use_cases": [
-      "Preparing for senior data scientist interviews at FAANG companies",
-      "Learning how to design scalable ML systems for production environments"
+      "when preparing for machine learning system design interviews"
     ],
     "audience": [
+      "Junior-DS",
       "Mid-DS",
       "Senior-DS"
     ],
     "synthetic_questions": [
-      "ML system design interview preparation",
-      "how to design recommendation system architecture",
-      "machine learning system design framework",
-      "tech interview ML systems questions"
-    ]
+      "What are the key components of a machine learning system design?",
+      "How can I prepare for a machine learning system design interview?",
+      "What types of problems are commonly asked in ML system design interviews?",
+      "What frameworks can I use to approach ML system design?",
+      "How do I improve my problem-solving skills for ML interviews?",
+      "What resources are recommended for ML system design preparation?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "ML-engineer"
+    ],
+    "experience_level": "mid"
   },
   {
-    "name": "ML Interviews GitHub",
-    "description": "7.2k stars. Created by someone with offers from Meta, Google, Amazon, Apple for Applied Scientist.",
+    "name": "alirezadir/Machine-Learning-Interviews",
+    "description": "6 structured chapters: algorithms, ML coding, fundamentals, system design, behavioral. Updated 2025 with Agentic AI chapter. Author received offers from Meta, Google, Amazon, Apple. MIT licensed.",
     "stage": "Interview Prep",
     "category": "ML Fundamentals",
     "url": "https://github.com/alirezadir/Machine-Learning-Interviews",
     "type": "Resource",
     "tags": [
       "comprehensive",
-      "applied-scientist"
+      "applied-scientist",
+      "free",
+      "2025-updated",
+      "FAANG"
     ],
     "section": "interview",
     "tab": "interview",
     "subtab": "ml-fundamentals",
     "archived": true,
-    "difficulty": "beginner",
+    "difficulty": "intermediate",
     "prerequisites": [
-      "python-basics",
-      "linear-algebra",
-      "probability-theory"
+      "python-programming",
+      "supervised-learning-algorithms",
+      "basic-statistics"
     ],
     "topic_tags": [
       "interview-prep",
-      "ml-fundamentals",
-      "applied-scientist",
-      "faang-interviews",
-      "github-resource"
+      "ml-algorithms",
+      "system-design",
+      "coding-practice",
+      "behavioral-interviews"
     ],
-    "summary": "A comprehensive GitHub repository with 7.2k stars containing machine learning interview preparation materials, created by someone who received offers from top tech companies (Meta, Google, Amazon, Apple) for Applied Scientist roles. The resource covers fundamental ML concepts, coding problems, and interview strategies specifically tailored for applied scientist positions at major tech companies.",
+    "summary": "This resource provides insights and strategies for preparing for machine learning interviews, drawing from the experiences of someone who has received offers from top tech companies. It is particularly useful for those looking to understand the expectations and challenges of the applied scientist role.",
     "use_cases": [
-      "Preparing for Applied Scientist interviews at FAANG companies",
-      "Reviewing core ML concepts before technical interviews"
+      "when preparing for machine learning interviews",
+      "when seeking advice on job offers from top tech companies",
+      "Preparing for machine learning engineer interviews at FAANG companies",
+      "Systematic review of ML concepts and coding skills before job transitions"
     ],
     "audience": [
       "Junior-DS",
-      "Early-PhD"
+      "Mid-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "ML interview prep for Google Applied Scientist",
-      "Machine learning interview questions FAANG",
-      "Applied scientist interview preparation GitHub",
-      "Tech company ML interview study guide"
+      "What are common interview questions for applied scientists?",
+      "How can I negotiate my salary in tech?",
+      "What skills are essential for machine learning roles?",
+      "How do I prepare for a technical interview?",
+      "What is the interview process like at FAANG companies?",
+      "What resources can help me improve my coding skills for interviews?",
+      "How do I stand out as a candidate for data science positions?",
+      "What are the typical career paths for applied scientists?",
+      "machine learning interview preparation guide",
+      "how to prepare for ML interviews at tech companies",
+      "FAANG machine learning interview questions and answers",
+      "complete ML interview prep with coding and system design"
+    ],
+    "role_type": [
+      "applied-scientist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
-    "name": "Chip Huyen ML Interviews Book",
-    "description": "200+ knowledge questions organized by difficulty for ML fundamentals.",
+    "name": "Chip Huyen's ML Interviews (Free!)",
+    "description": "200+ questions across math, CS, ML workflows, algorithms. Difficulty tagged. 30 systems design questions. Companion answers at github.com/zafstojano/ml-interview-questions-and-answers. The book is FREE online.",
     "stage": "Interview Prep",
     "category": "ML Fundamentals",
     "url": "https://huyenchip.com/ml-interviews-book/",
     "type": "Book",
     "tags": [
       "comprehensive",
-      "by-difficulty"
+      "by-difficulty",
+      "free",
+      "Stanford",
+      "200-questions"
     ],
     "section": "interview",
     "tab": "interview",
     "subtab": "ml-fundamentals",
     "archived": true,
-    "difficulty": "beginner",
+    "difficulty": "beginner|intermediate|advanced",
     "prerequisites": [
       "python-basics",
       "linear-algebra",
-      "probability-theory"
+      "supervised-learning"
     ],
     "topic_tags": [
       "interview-prep",
       "ml-fundamentals",
-      "knowledge-questions",
+      "systems-design",
       "career-development",
-      "self-assessment"
+      "free-resource"
     ],
-    "summary": "A comprehensive collection of 200+ machine learning interview questions organized by difficulty level, covering core ML concepts and fundamentals. Created by Chip Huyen, this resource helps practitioners test and strengthen their theoretical knowledge of machine learning. The questions span from basic concepts to more challenging problems, making it useful for both learning and interview preparation.",
+    "summary": "Comprehensive collection of 200+ machine learning interview questions covering mathematical foundations, computer science concepts, ML workflows, and algorithms with difficulty ratings. Includes 30 systems design questions and is freely available online with companion answer repository on GitHub.",
     "use_cases": [
-      "Preparing for machine learning engineer or data scientist job interviews",
-      "Self-assessment and identifying knowledge gaps in ML fundamentals"
+      "when preparing for machine learning interviews",
+      "to assess knowledge in ML fundamentals",
+      "Preparing for ML engineer or data scientist job interviews at tech companies",
+      "Self-assessment and knowledge gap identification for ML practitioners transitioning roles"
     ],
     "audience": [
       "Junior-DS",
-      "Early-PhD"
+      "Mid-DS",
+      "Senior-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "ML interview questions practice",
-      "machine learning fundamentals quiz",
-      "data science interview prep questions",
-      "Chip Huyen ML interview book"
-    ]
+      "What are common ML interview questions?",
+      "How can I prepare for a data science interview?",
+      "What topics should I study for ML fundamentals?",
+      "What is the best way to approach ML interview questions?",
+      "How do I assess my ML knowledge level?",
+      "What resources are recommended for ML interview prep?",
+      "machine learning interview questions preparation",
+      "free ML interview prep book",
+      "data science interview questions with answers",
+      "ML systems design interview practice"
+    ],
+    "role_type": [
+      "data-scientist",
+      "ML-engineer"
+    ],
+    "experience_level": "entry|mid|senior"
   },
   {
     "name": "Interview Query Take-Homes",
@@ -3833,32 +3867,35 @@
     "subtab": "take-home",
     "archived": true,
     "difficulty": "intermediate",
-    "prerequisites": [
-      "python-pandas",
-      "SQL-joins",
-      "statistical-hypothesis-testing"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "interview-prep",
-      "data-science-interviews",
-      "take-home-assignments",
-      "case-studies",
-      "tech-companies"
+      "interview-prep"
     ],
-    "summary": "A curated collection of 23 authentic take-home data science challenges from top tech companies including Airbnb, Stripe, Uber, DoorDash, and Amazon, complete with detailed solutions. These real-world problems cover the types of analytical challenges candidates face during the interview process at major tech firms. The resource provides both the original problem statements and worked-through solutions to help prepare for similar interview scenarios.",
+    "summary": "This resource provides real take-home challenges from well-known tech companies, offering candidates a practical way to prepare for interviews. It includes solutions, which can help users understand the expected approach to these challenges.",
     "use_cases": [
-      "Preparing for data science interviews at major tech companies by practicing with real challenge problems",
-      "Understanding what types of analytical problems and expectations exist at different tech firms"
+      "when preparing for data science interviews",
+      "when practicing coding challenges"
     ],
     "audience": [
       "Junior-DS",
       "Mid-DS"
     ],
     "synthetic_questions": [
-      "real data science take home interview questions",
-      "Airbnb Uber data science interview challenges with solutions",
-      "tech company take home assignments examples",
-      "how to prepare for data science take home interviews"
+      "What are common take-home challenges in tech interviews?",
+      "How can I prepare for a data science take-home assignment?",
+      "What solutions are expected for take-home challenges?",
+      "What companies provide take-home interview challenges?",
+      "How do I approach a take-home coding challenge?",
+      "What skills are tested in take-home assignments?",
+      "How do I evaluate my performance on a take-home task?",
+      "What resources can help with take-home interview preparation?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -3875,33 +3912,33 @@
     ],
     "tab": "offers",
     "subtab": "negotiation",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-arithmetic",
-      "email-communication"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
       "salary-negotiation",
-      "compensation-packages",
-      "career-guide",
-      "equity-valuation",
-      "total-compensation"
+      "compensation",
+      "equity"
     ],
-    "summary": "A comprehensive framework for negotiating all components of tech compensation including base salary, equity valuation, signing bonuses, and job levels. Provides practical strategies and scripts for maximizing total compensation packages. Essential reading for anyone entering or advancing in tech roles.",
+    "summary": "The Candor Salary Negotiation Guide provides a comprehensive framework for negotiating total compensation, including base salary, equity valuation, and signing bonuses. It is recommended by Harvard Career Services and has proven effective in securing significant salary increases.",
     "use_cases": [
-      "New graduate preparing for first tech job offer negotiations",
-      "Experienced professional switching companies and evaluating competing offers"
+      "when negotiating a job offer",
+      "when seeking a raise",
+      "when evaluating equity in a compensation package"
     ],
     "audience": [
-      "Junior-DS",
-      "Mid-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "how to negotiate tech salary and equity",
-      "startup equity vs public company stock options",
-      "total compensation negotiation guide",
-      "how to evaluate and negotiate job offers in tech"
-    ]
+      "How to negotiate salary effectively?",
+      "What is total compensation?",
+      "What factors to consider in equity valuation?",
+      "How to approach signing bonuses?",
+      "What are common negotiation tactics?",
+      "How does negotiation differ between public and startup companies?",
+      "What resources can help with salary negotiation?",
+      "How to prepare for a compensation negotiation?"
+    ],
+    "experience_level": "mid"
   },
   {
     "name": "Haseeb Qureshi: Ten Rules for Negotiating",
@@ -3916,33 +3953,37 @@
     ],
     "tab": "offers",
     "subtab": "negotiation",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-communication",
-      "job-market-awareness"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "salary-negotiation",
-      "job-offers",
-      "career-strategy",
-      "communication-tactics",
-      "compensation"
+      "negotiation",
+      "salary-negotiation"
     ],
-    "summary": "Comprehensive negotiation framework from a former poker player who successfully negotiated a $250K offer at Airbnb for his first tech role. Uses game theory principles to teach information control, developing alternatives (BATNA), and handling pressure tactics like exploding offers. Essential reading for anyone entering or advancing in tech careers.",
+    "summary": "This resource provides essential strategies for negotiating job offers, focusing on techniques such as information control and developing a Best Alternative to a Negotiated Agreement (BATNA). It draws on game theory principles to help individuals effectively handle complex negotiation scenarios.",
     "use_cases": [
-      "Negotiating initial job offer at a tech company",
-      "Discussing promotion or raise with current employer"
+      "when negotiating a job offer",
+      "when discussing salary increases"
     ],
     "audience": [
       "Junior-DS",
+      "Mid-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "how to negotiate tech job salary",
-      "negotiating first data science job offer",
-      "salary negotiation strategies for tech workers",
-      "handling exploding job offers"
-    ]
+      "What are effective negotiation strategies for tech job offers?",
+      "How can I develop my BATNA for salary negotiations?",
+      "What is the game-theory approach to negotiating?",
+      "How do I handle exploding offers in job negotiations?",
+      "What are the key rules for negotiating a salary?",
+      "How can an ex-poker player's insights help in negotiations?",
+      "What should I know before negotiating my first tech job salary?",
+      "What strategies can I use to control information during negotiations?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "mid"
   },
   {
     "name": "Levels.fyi Negotiation Guide",
@@ -3957,32 +3998,38 @@
     ],
     "tab": "offers",
     "subtab": "negotiation",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-arithmetic",
-      "job-application-experience"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
       "salary-negotiation",
-      "compensation-benchmarking",
-      "career-progression",
-      "equity-valuation"
+      "compensation",
+      "equity"
     ],
-    "summary": "Comprehensive negotiation guide from Levels.fyi that breaks down total compensation structures, equity differences between public and private companies, and leveling systems across tech companies. Built on a database of 75K+ verified compensation data points, helping tech workers understand and negotiate their market value. Essential resource for anyone entering salary negotiations or evaluating job offers in tech.",
+    "summary": "The Levels.fyi Negotiation Guide provides insights into negotiating total compensation, understanding equity differences between public and private companies, and the impact of location on salaries. It also offers a companion database with verified data points to assist in benchmarking negotiations.",
     "use_cases": [
-      "Preparing for salary negotiation with current employer using market data",
-      "Evaluating competing job offers from different companies and stages"
+      "when preparing for salary negotiations",
+      "when researching compensation packages"
     ],
     "audience": [
       "Junior-DS",
-      "Mid-DS"
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "How to negotiate data scientist salary",
-      "Tech compensation benchmarking guide",
-      "Equity valuation startup vs public company",
-      "Salary negotiation strategies for data scientists"
-    ]
+      "How to negotiate salary effectively?",
+      "What is total compensation?",
+      "How does location affect salary?",
+      "What equity should I expect from a startup?",
+      "How to benchmark my salary?",
+      "What are leveling systems in tech companies?",
+      "How to use data for salary negotiation?",
+      "What resources help in salary negotiation?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "mid"
   },
   {
     "name": "Interviewing.io Negotiation Series",
@@ -3998,31 +4045,37 @@
     "tab": "offers",
     "subtab": "negotiation",
     "difficulty": "beginner",
-    "prerequisites": [
-      "job-search-basics",
-      "salary-research"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "salary-negotiation",
-      "tech-interviews",
-      "career-advancement",
-      "communication-scripts"
+      "interview-prep",
+      "salary-negotiation"
     ],
-    "summary": "Complete negotiation playbook with proven word-for-word scripts from a platform achieving 94% success rates and $50K average salary increases. Reveals recruiter psychology, information extraction tactics, and company-specific strategies including detailed Meta playbook.",
+    "summary": "The Interviewing.io Negotiation Series provides scripts that help individuals understand recruiter psychology and negotiation tactics, leading to significant salary gains. It offers a Meta-specific playbook to enhance negotiation skills.",
     "use_cases": [
-      "Negotiating initial job offer at tech company",
-      "Requesting salary increase during performance review cycle"
+      "when preparing for salary negotiations",
+      "when interacting with recruiters"
     ],
     "audience": [
+      "Early-PhD",
       "Junior-DS",
-      "Mid-DS"
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "salary negotiation scripts for data science jobs",
-      "how to negotiate with tech recruiters effectively",
-      "proven salary negotiation tactics that work",
-      "Meta salary negotiation playbook strategies"
-    ]
+      "How to negotiate salary effectively?",
+      "What are common recruiter tactics?",
+      "What scripts can I use for salary negotiation?",
+      "How can I improve my negotiation skills?",
+      "What is the average salary gain from negotiation?",
+      "How does recruiter psychology affect negotiations?",
+      "What resources are available for interview preparation?",
+      "What is included in the Meta-specific playbook?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "entry"
   },
   {
     "name": "Team Rora: Applied Scientist Negotiation",
@@ -4038,33 +4091,37 @@
     ],
     "tab": "offers",
     "subtab": "negotiation",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "job-application-process",
-      "resume-writing",
-      "interview-preparation"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
       "salary-negotiation",
-      "applied-scientist",
-      "FAANG",
-      "compensation",
-      "career-guide"
+      "job-search"
     ],
-    "summary": "Specialized negotiation guide for Applied Scientist positions at major tech companies, featuring over 400 FAANG salary negotiations. Provides concrete salary bands and strategies for maximizing compensation packages including base salary, equity, and sign-on bonuses.",
+    "summary": "This guide provides specific insights into salary negotiations for Applied Scientist roles, particularly within FAANG companies. It includes detailed salary bands and strategies for maximizing sign-on bonuses.",
     "use_cases": [
-      "Preparing for Applied Scientist offer negotiations at Amazon, Google, Meta, or other FAANG companies",
-      "Understanding market rates and compensation structures before salary discussions"
+      "when negotiating salary for Applied Scientist roles",
+      "preparing for interviews with FAANG companies"
     ],
     "audience": [
       "Junior-DS",
       "Mid-DS"
     ],
     "synthetic_questions": [
-      "applied scientist salary negotiation FAANG",
-      "Amazon L5 applied scientist compensation bands",
-      "how to negotiate sign-on bonus data science",
-      "FAANG applied scientist offer negotiation guide"
+      "How to negotiate salary as an Applied Scientist?",
+      "What are the salary bands for FAANG Applied Scientists?",
+      "What leverage can I use for sign-on bonuses?",
+      "How do FAANG salaries compare?",
+      "What is the typical salary range for an Amazon L5 Applied Scientist?",
+      "What negotiation strategies work best for tech roles?",
+      "How to prepare for salary discussions in tech?",
+      "What are common pitfalls in salary negotiations?"
+    ],
+    "role_type": [
+      "applied-scientist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -4083,34 +4140,30 @@
     "tab": "start-here",
     "subtab": "",
     "difficulty": "beginner",
-    "prerequisites": [
-      "microeconomics-basics",
-      "basic-statistics"
-    ],
-    "topic_tags": [
-      "tech-careers",
-      "economist-roles",
-      "industry-overview",
-      "HBR-article"
-    ],
-    "summary": "Harvard Business Review article explaining why technology companies hire economists and the five key areas where they contribute value. Covers auction design, ROI measurement, marketplace design, causal inference, and understanding equilibrium effects in tech platforms. Provides an accessible overview for anyone considering or curious about economist roles in the tech industry.",
-    "use_cases": [
-      "PhD student exploring career options beyond academia",
-      "Tech professional wanting to understand what economists do at their company"
-    ],
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource discusses the importance of economists in tech roles, highlighting five key areas where their skills are applicable. It emphasizes how economists can contribute to areas such as ad design and marketplace incentives.",
+    "use_cases": [],
     "audience": [
-      "Early-PhD",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "why do tech companies hire economists",
-      "what do economists do at Google Facebook",
-      "economist jobs in tech industry",
-      "career transition from economics PhD to tech"
-    ]
+      "What skills do economists bring to tech companies?",
+      "How can understanding ROI estimation benefit a tech career?",
+      "What is the role of causal inference in technology?",
+      "How do marketplace incentives work in tech?",
+      "What are equilibrium effects in tech industries?",
+      "What are the key areas for economists in tech?",
+      "How does ad design impact tech companies?",
+      "What career paths are available for economists in the tech sector?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry"
   },
   {
-    "name": "Evan's Industry Job Finding Advice",
+    "name": "Evan Buntrock: Amazon Interviewer Perspective",
     "description": "Econ PhD who conducted 250+ interviews at Amazon shares job search strategy. Failed 2014 search (30 apps, 0 offers) \u2192 successful 2015 (100 apps, 35 interviews, Amazon offer). Covers networking, resume, behavioral interviews, technical prep.",
     "stage": "Strategy",
     "category": "PhD Transition",
@@ -4124,32 +4177,54 @@
     ],
     "tab": "start-here",
     "subtab": "",
-    "difficulty": "beginner",
+    "difficulty": "intermediate",
     "prerequisites": [
-      "economics-PhD",
-      "basic-resume-writing"
+      "PhD-coursework",
+      "basic-coding"
     ],
     "topic_tags": [
       "job-search",
-      "PhD-transition",
-      "tech-industry",
       "interview-prep",
-      "career-advice"
+      "amazon-interviews",
+      "phd-transition",
+      "career-advice",
+      "tech-interviews",
+      "economist-hiring"
     ],
-    "summary": "An economics PhD's detailed job search strategy based on conducting 250+ interviews at Amazon and his own transition from academia to tech. Covers the complete process from failed attempts to successful placement, including networking tactics, resume optimization, and interview preparation. Provides insider perspective on what tech companies look for when hiring PhDs.",
+    "summary": "Career insights from a Cornell PhD who experienced both sides of Amazon's hiring process, conducting 250+ interviews including 175 for economist roles. Covers the dramatic difference between his failed 2014 job search (30 applications, 0 offers) and successful 2015 search (100 applications, 35 interviews). Provides unique perspective on what Amazon looks for when hiring economists and data scientists.",
     "use_cases": [
-      "Economics PhD preparing to leave academia and enter tech industry",
-      "Recent PhD graduate struggling with initial job search rejections and needing strategic guidance"
+      "When looking for job search strategies",
+      "When preparing for interviews",
+      "When needing advice on networking",
+      "PhD student preparing for tech industry job applications and interviews",
+      "Recent graduate who failed initial job search and wants to understand what went wrong"
     ],
     "audience": [
       "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "How to get a tech job with economics PhD",
-      "PhD to industry transition advice",
-      "Amazon interview tips from hiring manager",
-      "Why PhD job search failed and how to fix it"
+      "How to effectively network for job opportunities?",
+      "What are the best strategies for resume writing?",
+      "How to prepare for behavioral interviews?",
+      "What technical preparation is needed for data science roles?",
+      "How many applications should I submit?",
+      "What can I learn from failed job searches?",
+      "How to leverage interviews for job offers?",
+      "What is the role of an interviewer in the job search process?",
+      "Amazon interview tips for economists",
+      "PhD to tech transition failure stories",
+      "what does Amazon look for in economist interviews",
+      "how to improve tech job search after rejection"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "Amazon"
     ]
   },
   {
@@ -4165,30 +4240,31 @@
     ],
     "archived": true,
     "difficulty": "beginner",
-    "prerequisites": [
-      "basic-economics",
-      "business-communication"
-    ],
-    "topic_tags": [
-      "tech-economist-roles",
-      "industry-career",
-      "public-relations",
-      "data-storytelling"
-    ],
-    "summary": "Jed Kolko discusses the dual role of economists at major tech companies like Indeed, Glassdoor, and Zillow as both public-facing spokespeople and internal data analysts. He explains how economists contribute to companies through external thought leadership, media engagement, and internal strategic analysis. This perspective helps understand the career opportunities and value proposition for economists in the tech industry.",
-    "use_cases": [
-      "Understanding what economists actually do at tech companies before applying for roles",
-      "Making the business case to hire an economist for your startup or team"
-    ],
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource discusses the role of economists as both public spokespeople and internal analysts within companies like Indeed, Glassdoor, and Zillow. It provides insights into how firms can benefit from having economists on their teams.",
+    "use_cases": [],
     "audience": [
-      "Early-PhD",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "What do economists do at tech companies",
-      "Should I hire an economist for my startup",
-      "Economist jobs at Indeed Zillow Glassdoor",
-      "Tech economist career path and responsibilities"
+      "What role do economists play in tech companies?",
+      "How can having an economist benefit a firm?",
+      "What skills are important for economists in the tech industry?",
+      "What are the career paths for economists in tech?",
+      "How do economists contribute to company strategy?",
+      "What companies hire economists?",
+      "What is the demand for economists in the tech sector?",
+      "What are the differences between economists and data scientists?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "Indeed",
+      "Glassdoor",
+      "Zillow"
     ]
   },
   {
@@ -4206,31 +4282,28 @@
     "tab": "understand",
     "subtab": "role-types",
     "difficulty": "beginner",
-    "prerequisites": [
-      "basic-python",
-      "data-analysis-experience"
-    ],
-    "topic_tags": [
-      "career-guidance",
-      "role-definitions",
-      "data-science-roles",
-      "career-transitions",
-      "job-market"
-    ],
-    "summary": "Eugene Yan provides a clear framework distinguishing four key data roles: Data Scientists focus on analysis and documentation, Applied Scientists build ML systems, Research Scientists publish papers, and MLEs handle infrastructure. This breakdown helps clarify career paths and expectations across different data science positions.",
-    "use_cases": [
-      "Deciding which data science role to target when job searching or transitioning careers",
-      "Understanding team structure and responsibilities when hiring or organizing data teams"
-    ],
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides a clear breakdown of different roles in the data science and machine learning fields, highlighting the distinctions between Data Scientist, Applied Scientist, Research Scientist, and Machine Learning Engineer. It serves as a guide for understanding the focus and responsibilities associated with each role.",
+    "use_cases": [],
     "audience": [
-      "Junior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "What's the difference between data scientist and applied scientist roles?",
-      "Should I become an MLE or research scientist?",
-      "Data science career path options explained",
-      "Eugene Yan guide to DS vs MLE roles"
+      "What are the differences between Data Scientist and Applied Scientist?",
+      "What does a Research Scientist do in the field of machine learning?",
+      "How does the role of a Machine Learning Engineer differ from that of a Data Scientist?",
+      "What skills are needed for each of these roles?",
+      "How do I choose between a career as a Data Scientist or an Applied Scientist?",
+      "What is the career path for a Research Scientist in machine learning?",
+      "What are the key responsibilities of a Machine Learning Engineer?",
+      "What should I focus on to transition from Data Scientist to Applied Scientist?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "applied-scientist",
+      "research-scientist",
+      "machine-learning-engineer"
     ]
   },
   {
@@ -4245,33 +4318,28 @@
       "applied-scientist"
     ],
     "archived": true,
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-statistics",
-      "python-programming"
-    ],
-    "topic_tags": [
-      "role-taxonomy",
-      "applied-scientist",
-      "career-guidance",
-      "research-vs-applied",
-      "data-science-roles"
-    ],
-    "summary": "This article clarifies the distinction between Applied Scientists and Research Scientists in tech companies. Applied Scientists focus on implementing research at production scale while maintaining research-level expertise. It's essential reading for anyone navigating data science career paths in tech.",
-    "use_cases": [
-      "Deciding between applied scientist vs research scientist career tracks",
-      "Understanding role expectations when interviewing for scientist positions"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource outlines the distinction between applied and research scientists, emphasizing that applied scientists are equally skilled but focus on practical implementation at scale. It provides insights into the roles and expectations within the tech landscape.",
+    "use_cases": [],
     "audience": [
-      "Junior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "What's the difference between applied scientist and research scientist?",
-      "Applied scientist vs research scientist career path",
-      "Should I become an applied scientist or research scientist?",
-      "What does an applied scientist do at tech companies?"
-    ]
+      "What is the difference between applied and research scientists?",
+      "What skills are needed for an applied scientist?",
+      "How do I transition from research to applied science?",
+      "What are the career prospects for applied scientists?",
+      "What industries employ applied scientists?",
+      "What does an applied scientist do on a daily basis?",
+      "How do salaries compare between applied and research scientists?",
+      "What educational background is typical for applied scientists?"
+    ],
+    "role_type": [
+      "applied-scientist"
+    ],
+    "experience_level": "mid"
   },
   {
     "name": "Neptune.ai: MLE vs Data Scientist",
@@ -4285,34 +4353,31 @@
       "role-taxonomy"
     ],
     "archived": true,
-    "difficulty": "beginner",
-    "prerequisites": [
-      "python-scikit-learn",
-      "docker-containers",
-      "REST-APIs"
-    ],
-    "topic_tags": [
-      "MLE",
-      "data-scientist",
-      "career-paths",
-      "MLOps",
-      "role-comparison"
-    ],
-    "summary": "Compares Machine Learning Engineer and Data Scientist roles, focusing on how MLEs specialize in productionizing ML models. Covers key responsibilities like model optimization, deployment infrastructure, A/B testing frameworks, and containerization. Useful for understanding career paths and role distinctions in tech organizations.",
-    "use_cases": [
-      "Deciding between MLE and DS career tracks after completing a data science bootcamp",
-      "Understanding which role to hire when building an ML team that needs both research and production capabilities"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides insights into the differences between Machine Learning Engineers (MLEs) and Data Scientists, emphasizing the role of MLEs in taking models to production through various techniques such as optimization and MLOps.",
+    "use_cases": [],
     "audience": [
       "Junior-DS",
+      "Mid-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "What's the difference between MLE and data scientist roles",
-      "Should I become a machine learning engineer or data scientist",
-      "MLE vs DS responsibilities and career paths",
-      "What does a machine learning engineer do compared to data scientist"
-    ]
+      "What is the difference between an MLE and a Data Scientist?",
+      "What skills are required for a Machine Learning Engineer?",
+      "How do MLEs contribute to model deployment?",
+      "What is MLOps and why is it important?",
+      "What are the responsibilities of a Machine Learning Engineer?",
+      "How can I transition from Data Scientist to MLE?",
+      "What tools are commonly used in MLE roles?",
+      "What are the career prospects for MLEs?"
+    ],
+    "role_type": [
+      "ML-engineer",
+      "data-scientist"
+    ],
+    "experience_level": "mid"
   },
   {
     "name": "365 Data Science: DS vs MLE Skills",
@@ -4326,32 +4391,25 @@
       "data-driven"
     ],
     "archived": true,
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-statistics",
-      "job-market-awareness"
-    ],
-    "topic_tags": [
-      "career-planning",
-      "skill-requirements",
-      "role-comparison",
-      "job-market",
-      "data-science-careers"
-    ],
-    "summary": "Analysis comparing skill requirements between Data Scientist and Machine Learning Engineer roles based on job postings. Shows MLE positions require significantly more ML/AI skills (88.3% vs 69.3% for ML, 60.4% vs 21.2% for AI). Useful for career planning and understanding role distinctions in the data science job market.",
-    "use_cases": [
-      "Planning career transition from DS to MLE role and identifying skill gaps",
-      "Understanding which skills to prioritize when applying for different data roles"
-    ],
+    "difficulty": "beginner|intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource compares the skill requirements for Data Scientists (DS) and Machine Learning Engineers (MLE), highlighting the differences in ML and AI competencies needed for each role. It provides insights into the skills that are more critical for success in these career paths.",
+    "use_cases": [],
     "audience": [
-      "Junior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "What skills do I need for machine learning engineer vs data scientist",
-      "Difference between data scientist and ML engineer requirements",
-      "Should I learn more AI skills for data science jobs",
-      "Career path from data scientist to machine learning engineer"
+      "What skills are required for a Data Scientist?",
+      "How do the skills of a Machine Learning Engineer differ from those of a Data Scientist?",
+      "What percentage of ML skills are necessary for Data Scientists?",
+      "What AI skills should I focus on as a Machine Learning Engineer?",
+      "How can I transition from a Data Scientist to a Machine Learning Engineer?",
+      "What are the key competencies for success in data-driven roles?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "ML-engineer"
     ]
   },
   {
@@ -4368,32 +4426,33 @@
     "section": "roles",
     "tab": "understand",
     "subtab": "role-types",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "SQL-basics",
-      "A-B-testing"
-    ],
-    "topic_tags": [
-      "product-data-science",
-      "role-comparison",
-      "career-guidance",
-      "Google",
-      "analyst-vs-DS"
-    ],
-    "summary": "Daliana Liu from Google explains the key differences between Product Data Scientists and Data Analysts. Product DS focuses on predictive and prescriptive analytics through experimentation, while Analysts primarily create descriptive dashboards and reports. This helps clarify career paths and role expectations in product organizations.",
-    "use_cases": [
-      "New graduate deciding between product analyst vs product DS roles",
-      "Current analyst considering transition to product data science"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource compares the roles of Product Data Scientists and Analysts, highlighting their different focuses on predictive/prescriptive analysis versus descriptive dashboards. It provides insights into the skills and responsibilities associated with each role.",
+    "use_cases": [],
     "audience": [
       "Junior-DS",
+      "Mid-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "What's the difference between product data scientist and analyst",
-      "Product DS vs analyst roles at Google",
-      "Should I be a product analyst or data scientist",
-      "Career path from analyst to product data scientist"
+      "What is the difference between a Product Data Scientist and an Analyst?",
+      "What skills are needed for a Product Data Scientist?",
+      "How does the role of an Analyst differ from that of a Data Scientist?",
+      "What types of analysis do Product Data Scientists perform?",
+      "What tools do Analysts typically use for dashboards?",
+      "How can I transition from an Analyst role to a Product Data Scientist role?",
+      "What are the career paths for Data Scientists and Analysts?",
+      "What are common job titles related to Product Data Science?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "analyst"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "Google"
     ]
   },
   {
@@ -4409,32 +4468,28 @@
     ],
     "archived": true,
     "difficulty": "beginner",
-    "prerequisites": [
-      "SQL-basics",
-      "business-metrics"
-    ],
-    "topic_tags": [
-      "product-analytics",
-      "role-taxonomy",
-      "career-guidance",
-      "analyst-vs-scientist",
-      "business-insights"
-    ],
-    "summary": "This article explains the role of product analysts and how they differ from data scientists. Product analysts focus on providing quick, actionable insights to inform product decisions, while data scientists work on longer-term, more complex analytical projects. It's essential reading for understanding career paths in data roles.",
-    "use_cases": [
-      "Deciding between product analyst and data scientist career paths",
-      "Understanding team structure when hiring for analytics roles"
-    ],
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource explains the role of product analysts and their focus on providing timely insights compared to data scientists who engage in longer, in-depth projects. It highlights the differences in responsibilities and approaches within the field.",
+    "use_cases": [],
     "audience": [
       "Junior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "What's the difference between product analyst and data scientist?",
-      "Product analyst vs data scientist roles",
-      "Should I become a product analyst or data scientist?",
-      "What does a product analyst do day to day?"
-    ]
+      "What does a product analyst do?",
+      "How does product analytics differ from data science?",
+      "What skills are needed for a career in product analytics?",
+      "How can I transition from data science to product analytics?",
+      "What are the career prospects for product analysts?",
+      "What tools are commonly used in product analytics?",
+      "How do product analysts provide insights?",
+      "What is the role taxonomy for product analytics?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "entry"
   },
   {
     "name": "Greg Rafferty: Hidden Career Ladder",
@@ -4450,32 +4505,29 @@
     "section": "roles",
     "tab": "understand",
     "subtab": "role-types",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "performance-reviews",
-      "1-on-1-meetings"
-    ],
-    "topic_tags": [
-      "career-progression",
-      "tech-levels",
-      "leadership-skills",
-      "performance-management"
-    ],
-    "summary": "Greg Rafferty breaks down the hidden expectations at each tech career level: L3\u2192L4 requires consistent reliable delivery, L4\u2192L5 demands strategic thinking and problem definition skills, while L5\u2192L6 focuses on multiplying impact through others. This framework helps data scientists understand what behaviors and mindsets are actually evaluated for promotions beyond just technical skills.",
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource outlines the progression from L3 to L6 in a career, emphasizing the transition from reliable problem-solving to strategic thinking and scaling through others. It provides insights into the different expectations and responsibilities at each level.",
     "use_cases": [
-      "Preparing for promotion conversations with your manager by understanding level expectations",
-      "Self-assessing your current performance and identifying specific growth areas for advancement"
+      "to understand career progression in tech roles",
+      "to prepare for promotions",
+      "to evaluate skills needed for advancement"
     ],
     "audience": [
       "Junior-DS",
-      "Mid-DS"
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "What's the difference between L4 and L5 data scientist expectations",
-      "How do I get promoted from senior to staff level",
-      "Career ladder progression in tech companies",
-      "What skills do I need for L6 principal data scientist"
-    ]
+      "What are the differences between L3 and L4 roles?",
+      "How do I transition from L4 to L5?",
+      "What skills are needed to become a multiplier at L6?",
+      "What does it mean to define vs solve problems in a career context?",
+      "How can I scale my impact through others?",
+      "What are the expectations at each level of the career ladder?"
+    ],
+    "experience_level": "mid|senior"
   },
   {
     "name": "Data Science Leadership: Career Ladder",
@@ -4489,32 +4541,30 @@
       "leadership"
     ],
     "archived": true,
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-data-analysis",
-      "project-management-basics"
-    ],
-    "topic_tags": [
-      "career-progression",
-      "data-science-roles",
-      "leadership-development",
-      "skills-framework"
-    ],
-    "summary": "Framework showing how data science careers progress from task-focused junior roles to project-owning mid-level positions to product-driving senior roles. Provides mental models for understanding responsibility scope and skill development at each career stage. Essential roadmap for planning career advancement in data science.",
-    "use_cases": [
-      "Junior data scientist planning next career moves and understanding what skills to develop",
-      "Manager designing career ladder framework and promotion criteria for data science team"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource outlines the progression of a data science career from junior tasks to senior product management, emphasizing the mental model development required at each stage. It serves as a guide for understanding the career ladder in data science leadership.",
+    "use_cases": [],
     "audience": [
       "Junior-DS",
-      "Mid-DS"
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "data science career progression ladder",
-      "junior to senior data scientist roadmap",
-      "what skills do I need to become senior data scientist",
-      "data science leadership career path"
-    ]
+      "What are the key tasks for a junior data scientist?",
+      "How do projects differ from tasks in data science?",
+      "What skills are needed for senior data science roles?",
+      "What does a career ladder in data science look like?",
+      "How can I progress from junior to senior data scientist?",
+      "What leadership qualities are important in data science?",
+      "What mental models should I develop as I advance in my career?",
+      "What are common projects for mid-level data scientists?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "mid"
   },
   {
     "name": "Design Gurus: FAANG Levels Comparison",
@@ -4528,32 +4578,34 @@
       "levels"
     ],
     "archived": true,
-    "difficulty": "beginner",
-    "prerequisites": [
-      "tech-industry-basics",
-      "job-search-fundamentals"
-    ],
-    "topic_tags": [
-      "career-levels",
-      "FAANG",
-      "compensation",
-      "career-progression",
-      "tech-roles"
-    ],
-    "summary": "A comprehensive comparison of career levels across major tech companies including Meta (E3-E10), Google (L3-L10), and Amazon (SDE I-III). Shows how roles map between companies and explains promotion trajectories, with L5/Senior being the 'terminal level' where many engineers plateau. Essential reference for understanding tech career progression and compensation bands.",
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides a comparison of design levels across major tech companies, specifically within the FAANG group. It highlights the terminal level for senior positions and offers insights into career progression within these organizations.",
     "use_cases": [
-      "Negotiating job offers across different FAANG companies by understanding equivalent levels",
-      "Planning career progression and setting realistic timeline expectations for promotions"
+      "to understand career progression in design roles at FAANG companies",
+      "to compare design levels across major tech firms"
     ],
     "audience": [
-      "Junior-DS",
-      "Curious-browser"
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "What is L5 equivalent at Meta and Amazon",
-      "FAANG levels comparison chart",
-      "How do Google levels compare to Facebook levels",
-      "What does terminal level mean in tech careers"
+      "What are the different design levels at FAANG companies?",
+      "How does the senior level compare across Meta, Google, and Amazon?",
+      "What does it mean to plateau at a terminal level in tech?",
+      "What are the expectations for a Senior Designer at FAANG?",
+      "How do design roles differ between FAANG companies?",
+      "What career paths are available for designers in tech?",
+      "What skills are needed to advance to higher levels in design?",
+      "How can I prepare for a design role at a FAANG company?"
+    ],
+    "role_type": [
+      "designer"
+    ],
+    "experience_level": "mid|senior",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -4572,33 +4624,30 @@
     "section": "work",
     "tab": "understand",
     "subtab": "what-teams-do",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-economics",
-      "python-pandas",
-      "SQL-basics"
-    ],
-    "topic_tags": [
-      "marketplace-economics",
-      "pricing-models",
-      "team-structure",
-      "rideshare",
-      "career-guidance"
-    ],
-    "summary": "Overview of data science roles and responsibilities at Lyft, covering how different teams approach marketplace problems. Shows how Marketplace teams handle dispatch and pricing algorithms while Fleet teams focus on supply-side optimization. Demonstrates the intersection of economic theory and practical implementation in a major tech platform.",
-    "use_cases": [
-      "Understanding career paths and team structures at rideshare companies",
-      "Learning how economic principles are applied in real marketplace platforms"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides insights into the intersection of data science and economics within the context of Lyft's marketplace operations, emphasizing the importance of pricing strategies and econometrics in data science roles.",
+    "use_cases": [],
     "audience": [
-      "Junior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "What does a data scientist do at Lyft",
-      "How is data science organized at rideshare companies",
-      "What teams work on pricing at tech companies",
-      "Career paths in marketplace data science"
+      "What is the role of data science in pricing strategies?",
+      "How does Lyft utilize data science in its marketplace?",
+      "What skills are needed for a data scientist in the transportation industry?",
+      "How can economics literature inform data science practices?",
+      "What are the key teams involved in data science at Lyft?",
+      "What is the relationship between dispatch and pricing in data science?",
+      "How can one transition from economics to data science?",
+      "What are the career paths available in data science at Lyft?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "company_context": [
+      "Lyft"
     ]
   },
   {
@@ -4614,33 +4663,33 @@
     ],
     "archived": true,
     "difficulty": "intermediate",
-    "prerequisites": [
-      "difference-in-differences",
-      "python-pandas",
-      "statistical-significance-testing"
-    ],
-    "topic_tags": [
-      "surge-pricing",
-      "driver-behavior",
-      "difference-in-differences",
-      "spatial-analysis",
-      "rideshare"
-    ],
-    "summary": "This study uses difference-in-differences methodology to analyze how Uber's surge pricing heatmap affects driver positioning decisions. The research demonstrates that visual surge information accounts for 10-60% of drivers' self-positioning behavior, providing concrete evidence for how pricing signals influence supply allocation in rideshare markets.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides insights into how surge pricing affects driver behavior in ride-sharing services, specifically focusing on the visibility of surge heatmaps. It highlights the importance of understanding causal relationships in pricing strategies.",
     "use_cases": [
-      "Designing driver incentive systems and heat map interfaces for rideshare platforms",
-      "Evaluating the effectiveness of dynamic pricing visualization tools on supplier behavior"
+      "to understand driver behavior in ride-sharing",
+      "to analyze pricing strategies",
+      "to explore causal relationships in economics"
     ],
     "audience": [
       "Mid-DS",
       "Senior-DS"
     ],
     "synthetic_questions": [
-      "How does surge pricing affect driver behavior",
-      "Difference in differences analysis for pricing experiments",
-      "Uber driver positioning surge pricing study",
-      "Causal inference rideshare driver supply"
-    ]
+      "How does surge pricing impact driver decisions?",
+      "What is the role of visibility in pricing strategies?",
+      "How can causal inference be applied in economics?",
+      "What are the implications of surge pricing for ride-sharing companies?",
+      "How do data scientists analyze driver behavior?",
+      "What factors influence self-positioning decisions in drivers?",
+      "How can heatmaps be used in pricing analysis?",
+      "What are the challenges in conducting DiD analysis?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "mid"
   },
   {
     "name": "Airbnb: Learning Market Dynamics for Pricing",
@@ -4655,33 +4704,34 @@
     ],
     "archived": true,
     "difficulty": "intermediate",
-    "prerequisites": [
-      "python-scikit-learn",
-      "econometric-modeling",
-      "time-series-analysis"
-    ],
-    "topic_tags": [
-      "dynamic-pricing",
-      "structural-modeling",
-      "marketplace-economics",
-      "demand-forecasting",
-      "airbnb"
-    ],
-    "summary": "This content explores how Airbnb combines machine learning with structural economic modeling to understand booking arrival processes and optimize dynamic pricing strategies. It demonstrates how tech companies integrate traditional econometric approaches with modern ML techniques to solve complex marketplace problems. The material covers both the technical implementation and strategic considerations for pricing in two-sided markets.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides insights into how machine learning and structural modeling can be applied to understand market dynamics and optimize pricing strategies, particularly in the context of booking systems like Airbnb.",
     "use_cases": [
-      "Building dynamic pricing systems for marketplace platforms with supply and demand fluctuations",
-      "Developing booking demand forecasting models that account for market structure and competitor behavior"
+      "when exploring pricing strategies",
+      "when analyzing market dynamics",
+      "when applying machine learning to economics"
     ],
     "audience": [
       "Mid-DS",
       "Senior-DS"
     ],
     "synthetic_questions": [
-      "How does Airbnb use machine learning for dynamic pricing",
-      "Structural modeling for marketplace pricing strategies",
-      "Booking arrival process modeling techniques",
-      "Dynamic pricing ML models for two-sided markets"
-    ]
+      "How can machine learning improve pricing strategies?",
+      "What are the key factors in market dynamics?",
+      "How does structural modeling apply to booking processes?",
+      "What techniques are used for dynamic pricing?",
+      "What skills are needed for a career in data science focused on pricing?",
+      "How can I leverage ML for economic modeling?",
+      "What are the challenges in pricing for platforms like Airbnb?",
+      "What career paths involve market dynamics and pricing?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist",
+      "ML-engineer"
+    ],
+    "experience_level": "mid"
   },
   {
     "name": "Amazon: Science of Price Experiments",
@@ -4696,32 +4746,24 @@
     ],
     "archived": true,
     "difficulty": "intermediate",
-    "prerequisites": [
-      "randomized-controlled-trials",
-      "causal-inference",
-      "random-forest"
-    ],
-    "topic_tags": [
-      "pricing-experiments",
-      "causal-forests",
-      "crossover-design",
-      "non-discrimination",
-      "tech-industry"
-    ],
-    "summary": "Amazon's approach to price experimentation using crossover designs, random-days methodology, and causal forests to test pricing strategies while maintaining non-discriminatory practices. These methods allow tech companies to experiment with pricing without showing different prices to different users simultaneously. The techniques are essential for large-scale platforms that need to balance revenue optimization with fairness constraints.",
-    "use_cases": [
-      "Testing promotional pricing strategies across different time periods without user discrimination",
-      "Evaluating dynamic pricing algorithms while complying with fair pricing regulations"
-    ],
-    "audience": [
-      "Mid-DS",
-      "Senior-DS"
-    ],
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource discusses the application of crossover experiments and causal forests in the context of pricing strategies, specifically focusing on non-discriminatory pricing methods. It highlights the complexities of conducting price experiments without revealing different price points to consumers.",
+    "use_cases": [],
+    "audience": [],
     "synthetic_questions": [
-      "How does Amazon test different prices without discriminating",
-      "Crossover experiments for pricing at tech companies",
-      "Causal forests for non-discriminatory price testing",
-      "Random days methodology for pricing experiments"
+      "What are crossover experiments in pricing?",
+      "How can causal forests be applied to pricing strategies?",
+      "What is non-discriminatory pricing?",
+      "What are the challenges of conducting price experiments?",
+      "How does Amazon approach pricing experiments?",
+      "What statistical methods are used in price experiments?",
+      "What is the significance of random-days in pricing experiments?",
+      "How can I learn more about pricing strategies in data science?"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "Amazon"
     ]
   },
   {
@@ -4737,32 +4779,30 @@
     ],
     "archived": true,
     "difficulty": "intermediate",
-    "prerequisites": [
-      "causal-inference",
-      "experimental-design",
-      "python-scikit-learn"
-    ],
-    "topic_tags": [
-      "causal-forecasting",
-      "lyft",
-      "team-structure",
-      "industry-practice",
-      "predictive-modeling"
-    ],
-    "summary": "Lyft's data science team develops forecasting models that maintain both predictive accuracy and causal validity through experimental validation. This approach ensures that models can make reliable predictions while also identifying true causal relationships between variables. The methodology combines traditional forecasting techniques with rigorous experimental design to support business decision-making.",
-    "use_cases": [
-      "Predicting ride demand while understanding causal impact of pricing changes",
-      "Forecasting driver supply with ability to measure effects of incentive programs"
-    ],
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides insights into building causal models that are both predictive and causally valid, emphasizing the importance of experiments in data science.",
+    "use_cases": [],
     "audience": [
       "Mid-DS",
       "Senior-DS"
     ],
     "synthetic_questions": [
-      "How does Lyft combine causal inference with forecasting",
-      "What is causal forecasting in industry",
-      "Lyft data science team structure",
-      "Building predictive models with causal validity"
+      "What are causal models in data science?",
+      "How can experiments improve forecasting accuracy?",
+      "What skills are needed for causal forecasting?",
+      "What are the challenges in building predictive models?",
+      "How does Lyft approach causal modeling?",
+      "What is the importance of causally valid models?",
+      "What tools are used in causal forecasting?",
+      "How can I transition from traditional forecasting to causal forecasting?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "Lyft"
     ]
   },
   {
@@ -4778,33 +4818,32 @@
     ],
     "archived": true,
     "difficulty": "intermediate",
-    "prerequisites": [
-      "LSTM-neural-networks",
-      "python-tensorflow",
-      "demand-forecasting"
-    ],
-    "topic_tags": [
-      "surge-pricing",
-      "rideshare-algorithms",
-      "dynamic-pricing",
-      "LSTM-networks",
-      "platform-economics"
-    ],
-    "summary": "Analysis of surge pricing algorithms used by major rideshare companies, comparing Uber's LSTM-based approach with Lyft's Prime Time and Happy Hour pricing strategies. Provides insights into how tech platforms implement dynamic pricing to balance supply and demand in real-time marketplace environments.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource discusses the implementation of surge pricing algorithms by Uber and Lyft, highlighting the use of LSTM networks and specific pricing strategies. It provides insights into how these companies optimize pricing based on demand fluctuations.",
     "use_cases": [
-      "Building dynamic pricing systems for marketplace platforms",
-      "Analyzing competitor pricing strategies in the sharing economy"
+      "when analyzing pricing strategies in ride-sharing services",
+      "when studying machine learning applications in economics"
     ],
     "audience": [
       "Mid-DS",
-      "Junior-DS"
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "How does Uber implement surge pricing algorithms",
-      "LSTM networks for dynamic pricing rideshare",
-      "Lyft vs Uber pricing algorithm comparison",
-      "Real-time demand pricing machine learning models"
-    ]
+      "What are surge pricing algorithms and how do they work?",
+      "How does Uber's use of LSTM networks improve pricing strategies?",
+      "What are the differences between Uber and Lyft's pricing models?",
+      "How can data scientists leverage pricing algorithms in their work?",
+      "What skills are needed to understand surge pricing in tech companies?",
+      "How do companies determine when to implement surge pricing?",
+      "What impact does surge pricing have on customer behavior?",
+      "What are the ethical considerations of surge pricing?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "mid"
   },
   {
     "name": "Beyond Winning: Spotify's Experiments with Learning Framework",
@@ -4822,32 +4861,26 @@
     "tab": "understand",
     "subtab": "what-teams-do",
     "difficulty": "intermediate",
-    "prerequisites": [
-      "A-B-testing",
-      "statistical-significance",
-      "experiment-design"
-    ],
-    "topic_tags": [
-      "experimentation-platforms",
-      "learning-metrics",
-      "spotify-case-study",
-      "ROI-measurement",
-      "product-experiments"
-    ],
-    "summary": "Spotify's framework for measuring experimentation success beyond traditional win rates, focusing on learning outcomes and platform ROI. Shows how mature product teams can extract value from experiments even when most don't show statistically significant wins. Demonstrates methods for experimentation platforms to quantify their own business impact across hundreds of teams.",
-    "use_cases": [
-      "Building business case for experimentation platform investment by measuring learning value beyond statistical wins",
-      "Designing metrics framework for experimentation team to demonstrate ROI to leadership at scale"
-    ],
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource discusses how Spotify's learning framework prioritizes learning over winning in product development, highlighting the importance of experimentation in measuring ROI. It provides insights into the dynamics of team performance and decision-making in tech environments.",
+    "use_cases": [],
     "audience": [
-      "Mid-DS",
-      "Senior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "how to measure ROI of experimentation platform",
-      "spotify experiment learning framework",
-      "measuring value of failed experiments",
-      "experimentation platform success metrics beyond win rate"
+      "How does Spotify measure the ROI of experimentation?",
+      "What is the significance of a higher learning rate compared to win rate?",
+      "How can teams implement a learning framework in their projects?",
+      "What are the benefits of using experimentation platforms?",
+      "How does team structure impact product development success?",
+      "What lessons can be learned from Spotify's approach to experimentation?",
+      "How can organizations balance learning and winning in product strategies?",
+      "What role does data play in measuring team performance?"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -4866,32 +4899,33 @@
     "subtab": "experimentation",
     "archived": true,
     "difficulty": "intermediate",
-    "prerequisites": [
-      "A-B-testing",
-      "statistical-significance",
-      "python-experimentation"
-    ],
-    "topic_tags": [
-      "experimentation-platform",
-      "A-B-testing",
-      "causal-inference",
-      "multi-armed-bandits",
-      "tech-industry"
-    ],
-    "summary": "Uber's XP is a large-scale experimentation platform that manages over 1,000 concurrent experiments across the company. It supports A/B/N testing, causal inference methods, and multi-armed bandit algorithms for product optimization. The platform provides infrastructure for running statistically rigorous experiments at scale in a ride-sharing environment.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Uber XP Experimentation Platform provides insights into running a large number of experiments simultaneously, which can help in understanding the effectiveness of various strategies in tech and data science. It emphasizes the importance of experimentation in decision-making processes.",
     "use_cases": [
-      "Setting up A/B tests for new driver incentive programs across different cities",
-      "Implementing multi-armed bandit algorithms to optimize dynamic pricing strategies in real-time"
+      "when to use this resource"
     ],
     "audience": [
       "Mid-DS",
-      "Senior-DS"
+      "Senior-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "How does Uber run thousands of experiments simultaneously",
-      "Large scale A/B testing platform architecture",
-      "Multi-armed bandits for ride sharing optimization",
-      "Causal inference at scale in tech companies"
+      "What is the Uber XP Experimentation Platform?",
+      "How can I conduct A/B tests effectively?",
+      "What are multi-armed bandits in experimentation?",
+      "What is causal inference in data science?",
+      "How does Uber manage experiments?",
+      "What are the best practices for running experiments?",
+      "What tools support experimentation in tech?",
+      "How can experimentation improve decision-making?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "Uber"
     ]
   },
   {
@@ -4909,33 +4943,27 @@
     "tab": "interview",
     "subtab": "experimentation",
     "archived": true,
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "A-B-testing",
-      "statistical-significance",
-      "automated-monitoring"
-    ],
-    "topic_tags": [
-      "automated-experimentation",
-      "circuit-breaker",
-      "release-monitoring",
-      "booking-case-study",
-      "fail-fast"
-    ],
-    "summary": "Booking.com's automated circuit breaker system for A/B tests that monitors key metrics in real-time and automatically stops experiments when statistically significant negative effects are detected. This system allows the company to move faster with experimentation by reducing the risk of prolonged exposure to harmful variants. It's particularly valuable for high-traffic platforms where bad experiments can quickly impact millions of users.",
-    "use_cases": [
-      "Automatically stopping a checkout flow experiment that's causing conversion drops within minutes",
-      "Monitoring homepage redesign tests and killing variants that increase bounce rates before manual review"
-    ],
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource discusses the implementation of automated monitoring systems that quickly detect errors during software releases, emphasizing the importance of experimentation in tech development.",
+    "use_cases": [],
     "audience": [
-      "Mid-DS",
-      "Senior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "automated experiment monitoring systems",
-      "circuit breaker pattern for A/B tests",
-      "how does Booking.com run safe experiments",
-      "automated stopping rules for experimentation"
+      "What are the benefits of using automated monitoring in software development?",
+      "How can experimentation improve software release processes?",
+      "What role does a circuit breaker play in error management?",
+      "Why is fast error detection important in tech environments?",
+      "How can I implement similar monitoring systems in my projects?",
+      "What are the best practices for conducting experiments in tech?",
+      "How does Booking.com utilize experimentation in their development process?",
+      "What skills are needed to work with automated monitoring tools?"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "Booking"
     ]
   },
   {
@@ -4954,32 +4982,31 @@
     "subtab": "experimentation",
     "archived": true,
     "difficulty": "intermediate",
-    "prerequisites": [
-      "a-b-testing",
-      "statistical-significance",
-      "python-scipy"
-    ],
-    "topic_tags": [
-      "interleaving",
-      "search-ranking",
-      "airbnb",
-      "sensitivity-analysis",
-      "experimentation"
-    ],
-    "summary": "Interleaving experiments blend control and treatment results in search rankings, allowing direct head-to-head comparison of algorithms. Airbnb achieved 50x sensitivity improvement by showing users results from both variants simultaneously rather than separate A/B buckets. This method is particularly powerful for search, recommendation, and ranking systems where traditional A/B tests lack statistical power.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource discusses a significant improvement in search ranking through experimentation, highlighting the importance of blending control and treatment groups for effective comparison. It provides insights into the methodology of conducting experiments in a tech environment.",
     "use_cases": [
-      "Testing new search ranking algorithms with limited traffic by comparing click-through rates on interleaved results",
-      "Evaluating recommendation system changes when conversion events are rare and traditional A/B tests would take months"
+      "when to use this resource"
     ],
     "audience": [
       "Mid-DS",
-      "Senior-DS"
+      "Senior-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "how to run interleaving experiments for search ranking",
-      "airbnb interleaving methodology sensitivity improvement",
-      "alternatives to a/b testing for recommendation systems",
-      "interleaving vs traditional experiments statistical power"
+      "What are the benefits of interleaving experiments?",
+      "How can I improve search ranking using experimentation?",
+      "What methodologies are effective in A/B testing?",
+      "What role does control/treatment blending play in experiments?",
+      "How can I apply experimental results to real-world scenarios?",
+      "What are common pitfalls in experimentation?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "Airbnb"
     ]
   },
   {
@@ -4998,32 +5025,30 @@
     "subtab": "experimentation",
     "archived": true,
     "difficulty": "intermediate",
-    "prerequisites": [
-      "A/B-testing",
-      "python-pandas",
-      "statistical-inference"
-    ],
-    "topic_tags": [
-      "variance-reduction",
-      "A/B-testing",
-      "experimental-design",
-      "CUPED",
-      "Microsoft"
-    ],
-    "summary": "CUPED (Controlled-experiment Using Pre-Experiment Data) is a variance reduction technique developed at Microsoft that uses pre-experiment user data to reduce noise in A/B test results. By controlling for pre-experiment behavior, it effectively increases statistical power, allowing experiments to detect smaller effects or reach significance faster. This method is widely adopted across tech companies for improving experiment sensitivity.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides insights into the CUPED method, which enhances the efficiency of experimental traffic analysis, particularly useful for those involved in data-driven decision-making. It emphasizes the importance of variance reduction techniques in experimentation.",
     "use_cases": [
-      "Reducing experiment runtime by 30-50% while maintaining statistical power for product feature tests",
-      "Detecting smaller conversion rate improvements in scenarios where traditional A/B tests would require prohibitively large sample sizes"
+      "when conducting experiments that require faster results"
     ],
     "audience": [
       "Mid-DS",
       "Senior-DS"
     ],
     "synthetic_questions": [
-      "how does CUPED work for A/B testing",
-      "variance reduction techniques for experiments",
-      "Microsoft CUPED implementation guide",
-      "pre-experiment data for statistical power"
+      "What is CUPED and how does it work?",
+      "How can variance reduction improve experiment outcomes?",
+      "What are the benefits of using CUPED in data analysis?",
+      "How does Microsoft implement CUPED in their experiments?",
+      "What are the common challenges when using variance reduction techniques?",
+      "How can I apply CUPED in my own experiments?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "Microsoft"
     ]
   },
   {
@@ -5042,32 +5067,33 @@
     "subtab": "experimentation",
     "archived": true,
     "difficulty": "intermediate",
-    "prerequisites": [
-      "a-b-testing",
-      "variance-reduction",
-      "python-pandas"
-    ],
-    "topic_tags": [
-      "CUPED",
-      "variance-reduction",
-      "experimentation",
-      "nubank",
-      "case-study"
-    ],
-    "summary": "Nubank's implementation of CUPED (Controlled-experiment Using Pre-Experiment Data) for variance reduction in A/B tests. The case study shows how 40% of metric comparisons achieved 20%+ variance reduction, demonstrating practical application of this advanced experimentation technique. Provides real-world evidence of CUPED's effectiveness at scale in fintech.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource discusses the implementation of CUPED at Nubank, highlighting its effectiveness in reducing variance in metric comparisons. It provides insights into how statistical techniques can enhance data analysis in experimentation.",
     "use_cases": [
-      "Reducing noise in A/B tests with high-variance metrics like revenue or engagement",
-      "Improving statistical power for experiments in fintech or marketplace environments"
+      "when to use statistical techniques in experimentation"
     ],
     "audience": [
+      "Junior-DS",
       "Mid-DS",
       "Senior-DS"
     ],
     "synthetic_questions": [
-      "CUPED implementation case study",
-      "Nubank variance reduction experiments",
-      "real world CUPED results",
-      "how to implement CUPED in practice"
+      "What is CUPED and how is it implemented?",
+      "How can variance reduction improve experimentation results?",
+      "What are the benefits of using CUPED in data analysis?",
+      "What metrics should be considered when evaluating CUPED's effectiveness?",
+      "How does Nubank utilize statistical methods in their experiments?",
+      "What challenges might arise when implementing CUPED?",
+      "How can I apply CUPED in my own data science projects?",
+      "What are some case studies of successful CUPED implementations?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "startup"
     ]
   },
   {
@@ -5085,32 +5111,33 @@
     "tab": "interview",
     "subtab": "experimentation",
     "difficulty": "intermediate",
-    "prerequisites": [
-      "A-B-testing",
-      "python-pandas",
-      "variance-reduction"
-    ],
-    "topic_tags": [
-      "CUPED",
-      "experimentation",
-      "variance-reduction",
-      "A-B-testing",
-      "technical-guide"
-    ],
-    "summary": "CUPED (Controlled-experiment Using Pre-Experiment Data) is a variance reduction technique that uses pre-experiment covariates to increase the statistical power of A/B tests. This technical guide covers implementation details for the method widely adopted by major tech companies like Netflix, Meta, and Uber. It provides practical guidance for data scientists looking to reduce experiment runtime and improve statistical sensitivity.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This guide provides insights into the CUPED methodology, which is utilized by major tech companies for experimentation. It outlines the technical aspects of implementing CUPED to improve the efficiency of A/B testing.",
     "use_cases": [
-      "Reducing A/B test duration by improving statistical power through variance reduction",
-      "Implementing CUPED methodology at a tech company to match industry best practices"
+      "when designing experiments to improve statistical power"
     ],
     "audience": [
+      "Junior-DS",
       "Mid-DS",
-      "Junior-DS"
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "How to implement CUPED for A/B testing",
-      "CUPED variance reduction technique tutorial",
-      "Netflix Uber CUPED experimentation method",
-      "Reducing A/B test sample size with pre-experiment data"
+      "What is CUPED?",
+      "How is CUPED used in A/B testing?",
+      "What companies use CUPED?",
+      "What are the benefits of using CUPED?",
+      "How to implement CUPED in experiments?",
+      "What technical skills are needed for CUPED?",
+      "What resources are available for learning CUPED?",
+      "What are common challenges when using CUPED?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -5128,32 +5155,34 @@
     "tab": "interview",
     "subtab": "experimentation",
     "difficulty": "intermediate",
-    "prerequisites": [
-      "randomized-controlled-trials",
-      "causal-inference",
-      "python-pandas"
-    ],
-    "topic_tags": [
-      "switchback-experiments",
-      "marketplace-analysis",
-      "doordash",
-      "region-randomization",
-      "case-study"
-    ],
-    "summary": "DoorDash's approach to running experiments in a three-sided marketplace (customers, drivers, merchants) using switchback designs with region-time randomization. The methodology addresses network effects and spillovers inherent in marketplace platforms, achieving significantly faster experiment cycles. Provides practical implementation details for similar marketplace experimentation challenges.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides insights into optimizing experimentation in a three-sided marketplace, highlighting the importance of region-time randomization for faster results. It demonstrates a practical application of experimentation techniques that can enhance decision-making processes in similar environments.",
     "use_cases": [
-      "Running A/B tests in rideshare or delivery platforms where users interact within geographic regions",
-      "Designing experiments for marketplaces where treatment spillover between users makes traditional randomization ineffective"
+      "when to optimize experimentation processes",
+      "when working in a three-sided marketplace"
     ],
     "audience": [
       "Mid-DS",
       "Senior-DS"
     ],
     "synthetic_questions": [
-      "switchback experiments marketplace",
-      "DoorDash experimentation methodology",
-      "region time randomization three sided marketplace",
-      "how to run experiments with network effects"
+      "How can randomization improve experimentation outcomes?",
+      "What are the challenges of three-sided marketplaces?",
+      "What techniques can be used for faster experimentation?",
+      "How does DoorDash implement experimentation?",
+      "What is a switchback experiment?",
+      "What are the benefits of region-time randomization?",
+      "How can I apply these findings to my own projects?",
+      "What are the key takeaways from the DoorDash experiment analysis?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "startup"
     ]
   },
   {
@@ -5171,32 +5200,30 @@
     "tab": "interview",
     "subtab": "experimentation",
     "difficulty": "intermediate",
-    "prerequisites": [
-      "randomized-controlled-trials",
-      "statistical-hypothesis-testing",
-      "network-effects"
-    ],
-    "topic_tags": [
-      "interference-detection",
-      "cluster-randomization",
-      "network-experiments",
-      "linkedin-research"
-    ],
-    "summary": "LinkedIn's meta-experiment comparing individual-level versus cluster-based randomization to detect interference in A/B tests. This research demonstrates how to empirically measure spillover effects when treatment of one user affects outcomes for connected users. The methodology provides a practical framework for choosing appropriate randomization strategies in networked environments.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides insights into the complexities of A/B testing methodologies, particularly focusing on the implications of interference in experimental designs. It is beneficial for understanding how different randomization techniques can impact the validity of test results.",
     "use_cases": [
-      "Social media platforms testing features where user interactions create spillover effects",
-      "Marketplace experiments where seller treatments affect buyer behavior through network connections"
+      "when to use this resource"
     ],
     "audience": [
       "Mid-DS",
       "Senior-DS"
     ],
     "synthetic_questions": [
-      "How to detect interference in A/B tests on social networks",
-      "Individual vs cluster randomization for network experiments",
-      "LinkedIn interference detection methodology",
-      "Measuring spillover effects in online experiments"
-    ]
+      "What are the best practices for conducting A/B tests?",
+      "How does randomization affect the results of A/B tests?",
+      "What is the difference between individual-level and cluster-based randomization?",
+      "How can interference impact A/B testing outcomes?",
+      "What are common pitfalls in A/B testing?",
+      "How do you analyze A/B test results effectively?",
+      "What statistical methods are used in A/B testing?",
+      "How can A/B testing be applied in product development?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "mid"
   },
   {
     "name": "Lyft: Marketplace Experimentation",
@@ -5213,33 +5240,36 @@
     "tab": "interview",
     "subtab": "experimentation",
     "archived": true,
-    "difficulty": "advanced",
-    "prerequisites": [
-      "randomized-controlled-trials",
-      "causal-inference",
-      "network-effects"
-    ],
-    "topic_tags": [
-      "marketplace-experimentation",
-      "interference-effects",
-      "two-sided-markets",
-      "causal-inference",
-      "ridesharing"
-    ],
-    "summary": "Advanced methodology for running experiments in two-sided marketplaces where standard A/B testing fails due to network interference between riders and drivers. Lyft's approach handles spillover effects and provides unbiased treatment effect estimates in interconnected marketplace settings. Essential reading for data scientists working on platform experiments where participants influence each other.",
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides insights into the methodologies used for estimating treatment effects in ridesharing marketplaces, which can be valuable for those interested in experimentation and data analysis in the tech industry.",
     "use_cases": [
-      "Running pricing experiments in ridesharing without driver spillover effects",
-      "Testing matching algorithms in marketplaces while controlling for network interference"
+      "when to understand treatment effects in marketplace scenarios",
+      "when to learn about experimentation methodologies"
     ],
     "audience": [
-      "Senior-DS",
-      "Mid-DS"
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "marketplace A/B testing interference",
-      "two sided market experiment design",
-      "Lyft experimentation methodology",
-      "network effects randomized trials"
+      "What are treatment effect estimators?",
+      "How does experimentation apply to ridesharing?",
+      "What are the challenges in marketplace experimentation?",
+      "How can I improve my skills in data analysis?",
+      "What tools are used for experimentation in tech?",
+      "How does Lyft utilize data science in their operations?",
+      "What career paths are available in experimentation?",
+      "What is the importance of interference-free estimators?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "startup"
     ]
   },
   {
@@ -5257,34 +5287,25 @@
     "tab": "interview",
     "subtab": "experimentation",
     "archived": true,
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "randomized-controlled-trials",
-      "statistical-significance",
-      "python-scipy"
-    ],
-    "topic_tags": [
-      "cluster-experiments",
-      "a-b-testing",
-      "causal-inference",
-      "experimental-design",
-      "meta-research"
-    ],
-    "summary": "Meta's research on cluster experimentation shows how grouping similar units can dramatically reduce interference between test and control groups. The study demonstrates that even minimal cluster purity (1% improvement) can triple the effectiveness of reducing interactions that bias experiment results. This is particularly valuable for large-scale platform experiments where user interactions can contaminate results.",
-    "use_cases": [
-      "Running A/B tests on social media platforms where users influence each other through network effects",
-      "Testing marketplace interventions where buyer-seller interactions could spread treatment effects across groups"
-    ],
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource discusses the impact of cluster purity on reducing test interactions, highlighting the importance of effective experimentation in data analysis. It emphasizes that even a small improvement in cluster purity can lead to significant enhancements in testing efficiency.",
+    "use_cases": [],
     "audience": [
-      "Mid-DS",
-      "Senior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "how to reduce interference in A/B tests",
-      "cluster randomization experiments Meta",
-      "preventing spillover effects in platform experiments",
-      "best practices for network effect experiments"
-    ]
+      "What is cluster purity in data science?",
+      "How can experimentation improve data analysis?",
+      "What are the benefits of cluster experimentation?",
+      "Why is reducing test interactions important?",
+      "How does Meta approach experimentation?",
+      "What techniques can improve cluster purity?",
+      "What role does experimentation play in data-driven decision making?",
+      "How can I apply cluster experimentation in my projects?"
+    ],
+    "experience_level": "entry"
   },
   {
     "name": "Uber CausalML Package",
@@ -6871,90 +6892,6 @@
     ]
   },
   {
-    "name": "alirezadir/Machine-Learning-Interviews",
-    "description": "6 structured chapters: algorithms, ML coding, fundamentals, system design, behavioral. Updated 2025 with Agentic AI chapter. Author received offers from Meta, Google, Amazon, Apple. MIT licensed.",
-    "url": "https://github.com/alirezadir/Machine-Learning-Interviews",
-    "type": "GitHub",
-    "tab": "interview",
-    "subtab": "ml-questions",
-    "category": "ML Fundamentals",
-    "tags": [
-      "free",
-      "2025-updated",
-      "FAANG"
-    ],
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "python-programming",
-      "supervised-learning-algorithms",
-      "basic-statistics"
-    ],
-    "topic_tags": [
-      "interview-prep",
-      "ml-algorithms",
-      "system-design",
-      "coding-practice",
-      "behavioral-interviews"
-    ],
-    "summary": "Comprehensive ML interview preparation guide with 6 structured chapters covering algorithms, coding, fundamentals, system design, and behavioral questions. Recently updated for 2025 with new Agentic AI content, authored by someone who successfully landed offers at major tech companies.",
-    "use_cases": [
-      "Preparing for machine learning engineer interviews at FAANG companies",
-      "Systematic review of ML concepts and coding skills before job transitions"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS"
-    ],
-    "synthetic_questions": [
-      "machine learning interview preparation guide",
-      "how to prepare for ML interviews at tech companies",
-      "FAANG machine learning interview questions and answers",
-      "complete ML interview prep with coding and system design"
-    ]
-  },
-  {
-    "name": "Chip Huyen's ML Interviews (Free!)",
-    "description": "200+ questions across math, CS, ML workflows, algorithms. Difficulty tagged. 30 systems design questions. Companion answers at github.com/zafstojano/ml-interview-questions-and-answers. The book is FREE online.",
-    "url": "https://huyenchip.com/ml-interviews-book/",
-    "type": "Book",
-    "tab": "interview",
-    "subtab": "ml-questions",
-    "category": "ML Fundamentals",
-    "tags": [
-      "free",
-      "Stanford",
-      "200-questions"
-    ],
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "python-basics",
-      "linear-algebra",
-      "supervised-learning"
-    ],
-    "topic_tags": [
-      "interview-prep",
-      "ml-fundamentals",
-      "systems-design",
-      "career-development",
-      "free-resource"
-    ],
-    "summary": "Comprehensive collection of 200+ machine learning interview questions covering mathematical foundations, computer science concepts, ML workflows, and algorithms with difficulty ratings. Includes 30 systems design questions and is freely available online with companion answer repository on GitHub.",
-    "use_cases": [
-      "Preparing for ML engineer or data scientist job interviews at tech companies",
-      "Self-assessment and knowledge gap identification for ML practitioners transitioning roles"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS"
-    ],
-    "synthetic_questions": [
-      "machine learning interview questions preparation",
-      "free ML interview prep book",
-      "data science interview questions with answers",
-      "ML systems design interview practice"
-    ]
-  },
-  {
     "name": "Made With ML",
     "description": "47 free lessons covering complete ML lifecycle: product design, data prep, feature engineering, training, serving, monitoring, CI/CD, testing. 30k GitHub stars. Includes working code from laptop to distributed cluster.",
     "url": "https://madewithml.com/courses/mlops/",
@@ -7538,49 +7475,6 @@
     ]
   },
   {
-    "name": "Evan Buntrock: Amazon Interviewer Perspective",
-    "description": "Cornell PhD who conducted 250+ Amazon interviews (175 economist). Failed 2014 (30 apps, 0 offers), succeeded 2015 (100 apps, 35 interviews). Both sides of the interview table.",
-    "url": "https://sites.google.com/view/themostdismalscientist/industry-job-finding-advice",
-    "type": "Guide",
-    "category": "PhD Transition",
-    "stage": "Strategy",
-    "tier": "essential",
-    "tab": "start-here",
-    "subtab": "",
-    "tags": [
-      "PhD",
-      "Amazon",
-      "interviewer-perspective"
-    ],
-    "difficulty": "beginner",
-    "prerequisites": [
-      "PhD-coursework",
-      "basic-coding"
-    ],
-    "topic_tags": [
-      "amazon-interviews",
-      "phd-transition",
-      "career-advice",
-      "tech-interviews",
-      "economist-hiring"
-    ],
-    "summary": "Career insights from a Cornell PhD who experienced both sides of Amazon's hiring process, conducting 250+ interviews including 175 for economist roles. Covers the dramatic difference between his failed 2014 job search (30 applications, 0 offers) and successful 2015 search (100 applications, 35 interviews). Provides unique perspective on what Amazon looks for when hiring economists and data scientists.",
-    "use_cases": [
-      "PhD student preparing for tech industry job applications and interviews",
-      "Recent graduate who failed initial job search and wants to understand what went wrong"
-    ],
-    "audience": [
-      "Early-PhD",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "Amazon interview tips for economists",
-      "PhD to tech transition failure stories",
-      "what does Amazon look for in economist interviews",
-      "how to improve tech job search after rejection"
-    ]
-  },
-  {
     "name": "Chris Nosko: Chicago Booth to Uber VP (Mixtape)",
     "description": "Harvard PhD to tenure-track at Chicago Booth to VP at Uber. How Pat Bajari recruited structural IO economists to Amazon, economist work at marketplace companies, managing career risk.",
     "url": "https://causalinf.substack.com/p/s1e23-interview-with-chris-nosko",
@@ -8051,7 +7945,9 @@
     "type": "Career Portal",
     "tags": [
       "hardware",
-      "research"
+      "research",
+      "AI",
+      "GPU"
     ],
     "section": "companies",
     "sector": "hardware",
@@ -8060,18 +7956,24 @@
     "difficulty": "beginner",
     "prerequisites": [
       "resume-writing",
-      "technical-interviewing"
+      "technical-interviewing",
+      "job-search-strategies"
     ],
     "topic_tags": [
       "career-portal",
       "hardware-industry",
       "tech-jobs",
-      "research-careers"
+      "research-careers",
+      "careers",
+      "NVIDIA",
+      "AI-companies"
     ],
     "summary": "NVIDIA's career portal showcasing job opportunities at one of the world's leading GPU and AI hardware companies. The portal features roles spanning from research scientist positions to data science and engineering roles across AI, graphics, and autonomous systems. It provides insight into career paths at a major tech hardware company driving advances in machine learning infrastructure.",
     "use_cases": [
       "Exploring research scientist or data science roles at a leading AI hardware company",
-      "Understanding career opportunities in GPU computing and machine learning infrastructure"
+      "Understanding career opportunities in GPU computing and machine learning infrastructure",
+      "Exploring job opportunities in AI hardware and GPU computing industry",
+      "Researching career paths and role requirements at a leading tech company"
     ],
     "audience": [
       "Junior-DS",
@@ -8081,7 +7983,11 @@
       "NVIDIA data science jobs",
       "research careers at GPU companies",
       "AI hardware company job opportunities",
-      "NVIDIA career portal tech roles"
+      "NVIDIA career portal tech roles",
+      "NVIDIA careers and job openings",
+      "how to get a job at NVIDIA",
+      "NVIDIA data scientist positions",
+      "working at NVIDIA tech jobs"
     ]
   },
   {
@@ -8136,7 +8042,8 @@
     "type": "Career Portal",
     "tags": [
       "hardware",
-      "AI"
+      "AI",
+      "mobile"
     ],
     "section": "companies",
     "sector": "hardware",
@@ -8145,19 +8052,27 @@
     "difficulty": "beginner",
     "prerequisites": [
       "resume-writing",
-      "technical-interviewing"
+      "technical-interviewing",
+      "interview-preparation"
     ],
     "topic_tags": [
       "career-opportunities",
       "hardware-company",
       "tech-jobs",
       "AI-roles",
-      "semiconductor"
+      "semiconductor",
+      "career-portal",
+      "hardware",
+      "mobile",
+      "job-applications",
+      "tech-careers"
     ],
-    "summary": "Qualcomm's career portal showcasing job opportunities at the leading semiconductor and wireless technology company. The company offers roles spanning hardware engineering, AI/ML research, software development, and data science positions. Tech economists can explore career paths in a company that sits at the intersection of hardware innovation and AI advancement.",
+    "summary": "Qualcomm's career portal provides job listings and application opportunities at the mobile chipset and wireless technology company. The portal offers positions across engineering, data science, research, and business functions focused on mobile hardware and telecommunications. Job seekers can explore roles in RF engineering, signal processing, product management, and data analytics within the mobile technology ecosystem.",
     "use_cases": [
       "Exploring hardware-focused data science roles that differ from typical software company positions",
-      "Researching career opportunities in semiconductor industry for economists interested in chip market dynamics"
+      "Researching career opportunities in semiconductor industry for economists interested in chip market dynamics",
+      "Applying for data scientist positions focusing on mobile device analytics and wireless network optimization",
+      "Exploring hardware engineering roles in chipset design and mobile processor development"
     ],
     "audience": [
       "Junior-DS",
@@ -8167,7 +8082,10 @@
       "Qualcomm data science jobs",
       "hardware company career opportunities",
       "semiconductor industry tech roles",
-      "AI jobs at chip companies"
+      "AI jobs at chip companies",
+      "mobile hardware company careers",
+      "wireless technology job opportunities",
+      "chipset company employment portal"
     ]
   },
   {
@@ -9698,7 +9616,10 @@
     "type": "Career Portal",
     "tags": [
       "pharma",
-      "analytics"
+      "analytics",
+      "pharmacy",
+      "economist-title",
+      "pricing"
     ],
     "section": "companies",
     "sector": "pharma",
@@ -9707,18 +9628,23 @@
     "difficulty": "beginner",
     "prerequisites": [
       "resume-writing",
-      "job-search-strategy"
+      "job-search-strategy",
+      "interview-preparation"
     ],
     "topic_tags": [
       "career-opportunities",
       "healthcare-analytics",
       "pharma-jobs",
-      "company-portal"
+      "company-portal",
+      "pharmacy-economics",
+      "job-search"
     ],
     "summary": "CVS Health's career portal showcasing analytics and data science opportunities within one of the largest healthcare companies. The portal provides insights into available roles, company culture, and application processes for tech positions in the pharmaceutical and healthcare analytics space. Useful for understanding career paths and requirements at a major healthcare technology employer.",
     "use_cases": [
       "Junior data scientist researching healthcare analytics roles and required qualifications at CVS Health",
-      "Career changer exploring opportunities to transition into pharmaceutical data science positions"
+      "Career changer exploring opportunities to transition into pharmaceutical data science positions",
+      "Finding economist positions in the pharmacy and healthcare industry",
+      "Researching job requirements and qualifications for healthcare analytics roles"
     ],
     "audience": [
       "Junior-DS",
@@ -9728,7 +9654,11 @@
       "CVS Health data science jobs",
       "healthcare analytics career opportunities",
       "pharma company data roles",
-      "CVS Health analytics positions"
+      "CVS Health analytics positions",
+      "CVS Health economist jobs",
+      "pharmacy company data science careers",
+      "healthcare economics job opportunities",
+      "CVS pricing analyst positions"
     ]
   },
   {
@@ -10849,7 +10779,9 @@
     "type": "Career Portal",
     "tags": [
       "gaming",
-      "econometrics"
+      "econometrics",
+      "Europe",
+      "Finland"
     ],
     "section": "companies",
     "sector": "gaming",
@@ -10858,19 +10790,25 @@
     "difficulty": "beginner",
     "prerequisites": [
       "resume-writing",
-      "interview-preparation"
+      "interview-preparation",
+      "job-search-strategy"
     ],
     "topic_tags": [
       "gaming-industry",
       "career-opportunities",
       "mobile-games",
       "tech-jobs",
-      "company-portal"
+      "company-portal",
+      "career-portal",
+      "finland-jobs",
+      "tech-careers"
     ],
-    "summary": "Supercell's career portal provides job opportunities at the Finnish mobile gaming company behind Clash of Clans, Clash Royale, and other popular games. The portal showcases data science, analytics, and product roles within the gaming industry. It offers insights into working at a leading mobile gaming company with a unique culture and data-driven approach to game development.",
+    "summary": "Supercell's career portal showcasing job opportunities at the Finnish mobile gaming company behind Clash of Clans and Clash Royale. The portal provides insights into their company culture, open positions, and application process for data science and analytics roles in the gaming industry. Useful for understanding how a leading European gaming company structures their data teams and what skills they value.",
     "use_cases": [
       "Data scientists looking for roles in the gaming industry to apply statistical methods to player behavior and game monetization",
-      "Recent graduates exploring career opportunities at innovative tech companies with strong analytical cultures"
+      "Recent graduates exploring career opportunities at innovative tech companies with strong analytical cultures",
+      "Researching gaming industry career opportunities in Finland",
+      "Understanding data science roles at mobile gaming companies"
     ],
     "audience": [
       "Junior-DS",
@@ -10880,7 +10818,10 @@
       "Supercell data science jobs",
       "gaming industry career opportunities",
       "mobile games company jobs",
-      "data analyst positions at game studios"
+      "data analyst positions at game studios",
+      "gaming companies hiring data scientists Finland",
+      "mobile gaming analytics careers Europe",
+      "Finnish tech company job opportunities"
     ]
   },
   {
@@ -11481,50 +11422,6 @@
     ]
   },
   {
-    "name": "NVIDIA",
-    "description": "Career portal",
-    "stage": "Discovery",
-    "category": "Company Lists",
-    "url": "https://www.nvidia.com/en-us/about-nvidia/careers/",
-    "type": "Career Portal",
-    "tags": [
-      "hardware",
-      "AI",
-      "GPU"
-    ],
-    "section": "companies",
-    "sector": "hardware",
-    "tab": "find-jobs",
-    "subtab": "companies",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "job-search-strategies"
-    ],
-    "topic_tags": [
-      "careers",
-      "NVIDIA",
-      "tech-jobs",
-      "hardware-industry",
-      "AI-companies"
-    ],
-    "summary": "NVIDIA's career portal showcasing job opportunities at the leading GPU and AI hardware company. Features roles across engineering, research, data science, and business functions at a company central to the AI revolution. Provides insights into working at one of the most valuable tech companies driving modern AI infrastructure.",
-    "use_cases": [
-      "Exploring job opportunities in AI hardware and GPU computing industry",
-      "Researching career paths and role requirements at a leading tech company"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "NVIDIA careers and job openings",
-      "how to get a job at NVIDIA",
-      "NVIDIA data scientist positions",
-      "working at NVIDIA tech jobs"
-    ]
-  },
-  {
     "name": "AMD",
     "description": "Career portal",
     "stage": "Discovery",
@@ -11608,49 +11505,6 @@
       "semiconductor industry careers",
       "hardware company job opportunities",
       "Intel career requirements"
-    ]
-  },
-  {
-    "name": "Qualcomm",
-    "description": "Career portal",
-    "stage": "Discovery",
-    "category": "Company Lists",
-    "url": "https://careers.qualcomm.com/",
-    "type": "Career Portal",
-    "tags": [
-      "hardware",
-      "mobile"
-    ],
-    "section": "companies",
-    "sector": "hardware",
-    "tab": "find-jobs",
-    "subtab": "companies",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "interview-preparation"
-    ],
-    "topic_tags": [
-      "career-portal",
-      "hardware",
-      "mobile",
-      "job-applications",
-      "tech-careers"
-    ],
-    "summary": "Qualcomm's career portal provides job listings and application opportunities at the mobile chipset and wireless technology company. The portal offers positions across engineering, data science, research, and business functions focused on mobile hardware and telecommunications. Job seekers can explore roles in RF engineering, signal processing, product management, and data analytics within the mobile technology ecosystem.",
-    "use_cases": [
-      "Applying for data scientist positions focusing on mobile device analytics and wireless network optimization",
-      "Exploring hardware engineering roles in chipset design and mobile processor development"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "Qualcomm data science jobs",
-      "mobile hardware company careers",
-      "wireless technology job opportunities",
-      "chipset company employment portal"
     ]
   },
   {
@@ -12009,7 +11863,9 @@
     "tags": [
       "Europe",
       "UK",
-      "fintech"
+      "fintech",
+      "neobank",
+      "causal-inference"
     ],
     "section": "companies",
     "sector": "fintech",
@@ -12025,12 +11881,18 @@
       "career-opportunities",
       "fintech-jobs",
       "europe-tech",
-      "company-research"
+      "company-research",
+      "careers",
+      "neobank",
+      "fintech",
+      "job-opportunities"
     ],
-    "summary": "Revolut's career portal showcasing job opportunities at the European fintech unicorn. Features roles across data science, engineering, product, and business functions with details on company culture and benefits. Useful for understanding career paths and requirements at a leading digital banking platform.",
+    "summary": "Revolut's career portal showcasing job opportunities at the digital banking and financial technology company. The portal provides insights into roles across data science, engineering, product, and business functions at one of Europe's leading neobanks. Useful for understanding career paths and requirements in the fintech industry.",
     "use_cases": [
       "Researching data science job opportunities at European fintech companies",
-      "Understanding skill requirements and career progression at fast-growing tech startups"
+      "Understanding skill requirements and career progression at fast-growing tech startups",
+      "Researching data science roles and requirements at a major neobank to understand industry expectations",
+      "Exploring career opportunities in fintech and understanding how tech roles function in digital banking"
     ],
     "audience": [
       "Junior-DS",
@@ -12040,7 +11902,11 @@
       "Revolut data scientist jobs London",
       "fintech career opportunities Europe",
       "Revolut hiring requirements data roles",
-      "digital banking company careers UK"
+      "digital banking company careers UK",
+      "Revolut data science jobs",
+      "neobank career opportunities",
+      "fintech company hiring data scientists",
+      "Revolut careers portal"
     ]
   },
   {
@@ -12143,7 +12009,9 @@
     "tags": [
       "Europe",
       "Germany",
-      "fintech"
+      "fintech",
+      "neobank",
+      "causal-inference"
     ],
     "section": "companies",
     "sector": "fintech",
@@ -12153,18 +12021,26 @@
     "difficulty": "beginner",
     "prerequisites": [
       "resume-writing",
-      "job-search-strategies"
+      "job-search-strategies",
+      "basic-finance",
+      "company-research"
     ],
     "topic_tags": [
       "career-opportunities",
       "fintech-jobs",
       "europe-careers",
-      "company-research"
+      "company-research",
+      "neobank",
+      "fintech-careers",
+      "causal-inference",
+      "company-portal"
     ],
     "summary": "N26's career portal showcasing job opportunities at the German digital banking and fintech company. The portal provides insights into company culture, available positions, and application processes for one of Europe's leading neobanks. Useful for understanding fintech career paths and company expectations in the European market.",
     "use_cases": [
       "Researching fintech career opportunities and company culture at a major European digital bank",
-      "Understanding job requirements and skills needed for data science roles in the financial technology sector"
+      "Understanding job requirements and skills needed for data science roles in the financial technology sector",
+      "Researching fintech companies that heavily use causal inference and experimentation",
+      "Finding data science roles in European neobanking sector"
     ],
     "audience": [
       "Junior-DS",
@@ -12174,7 +12050,11 @@
       "N26 data scientist jobs",
       "fintech careers in Germany",
       "European digital banking job opportunities",
-      "N26 company culture and hiring"
+      "N26 company culture and hiring",
+      "N26 data science jobs",
+      "neobank careers for economists",
+      "fintech companies using causal inference",
+      "N26 career opportunities"
     ]
   },
   {
@@ -12355,49 +12235,6 @@
       "European tech company job opportunities",
       "Estonia startup careers marketplace",
       "Bolt data scientist positions Europe"
-    ]
-  },
-  {
-    "name": "Supercell",
-    "description": "Career portal",
-    "stage": "Discovery",
-    "category": "Company Lists",
-    "url": "https://supercell.com/en/careers/",
-    "type": "Career Portal",
-    "tags": [
-      "Europe",
-      "Finland",
-      "gaming"
-    ],
-    "section": "companies",
-    "sector": "gaming",
-    "tab": "find-jobs",
-    "subtab": "companies",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "job-search-strategy"
-    ],
-    "topic_tags": [
-      "career-portal",
-      "gaming-industry",
-      "finland-jobs",
-      "tech-careers"
-    ],
-    "summary": "Supercell's career portal showcasing job opportunities at the Finnish mobile gaming company behind Clash of Clans and Clash Royale. The portal provides insights into their company culture, open positions, and application process for data science and analytics roles in the gaming industry. Useful for understanding how a leading European gaming company structures their data teams and what skills they value.",
-    "use_cases": [
-      "Researching gaming industry career opportunities in Finland",
-      "Understanding data science roles at mobile gaming companies"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "gaming companies hiring data scientists Finland",
-      "Supercell data science jobs",
-      "mobile gaming analytics careers Europe",
-      "Finnish tech company job opportunities"
     ]
   },
   {
@@ -19463,49 +19300,6 @@
     ]
   },
   {
-    "name": "CVS Health",
-    "description": "Career portal",
-    "stage": "Discovery",
-    "category": "Company Lists",
-    "url": "https://jobs.cvshealth.com/",
-    "type": "Career Portal",
-    "tags": [
-      "pharmacy",
-      "economist-title",
-      "pricing"
-    ],
-    "section": "companies",
-    "sector": "retail",
-    "tab": "find-jobs",
-    "subtab": "companies",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "interview-preparation"
-    ],
-    "topic_tags": [
-      "career-opportunities",
-      "pharmacy-economics",
-      "healthcare-analytics",
-      "job-search"
-    ],
-    "summary": "CVS Health's career portal showcasing economist and data science positions at one of the largest pharmacy and healthcare companies. The portal features roles in pricing, health economics, and analytics within the retail pharmacy and healthcare services sectors. Useful for understanding career paths and requirements in healthcare economics.",
-    "use_cases": [
-      "Finding economist positions in the pharmacy and healthcare industry",
-      "Researching job requirements and qualifications for healthcare analytics roles"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "CVS Health economist jobs",
-      "pharmacy company data science careers",
-      "healthcare economics job opportunities",
-      "CVS pricing analyst positions"
-    ]
-  },
-  {
     "name": "Kroger (84.51\u00b0)",
     "description": "Career portal",
     "stage": "Discovery",
@@ -23010,91 +22804,6 @@
       "fintech jobs causal inference",
       "tech economics career opportunities",
       "companies using experimental design finance"
-    ]
-  },
-  {
-    "name": "Revolut",
-    "description": "Career portal",
-    "stage": "Discovery",
-    "category": "Company Lists",
-    "url": "https://www.revolut.com/careers/",
-    "type": "Career Portal",
-    "tags": [
-      "neobank",
-      "causal-inference"
-    ],
-    "section": "companies",
-    "sector": "fintech",
-    "tab": "find-jobs",
-    "subtab": "companies",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "interview-preparation"
-    ],
-    "topic_tags": [
-      "careers",
-      "neobank",
-      "fintech",
-      "job-opportunities",
-      "company-research"
-    ],
-    "summary": "Revolut's career portal showcasing job opportunities at the digital banking and financial technology company. The portal provides insights into roles across data science, engineering, product, and business functions at one of Europe's leading neobanks. Useful for understanding career paths and requirements in the fintech industry.",
-    "use_cases": [
-      "Researching data science roles and requirements at a major neobank to understand industry expectations",
-      "Exploring career opportunities in fintech and understanding how tech roles function in digital banking"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "Revolut data science jobs",
-      "neobank career opportunities",
-      "fintech company hiring data scientists",
-      "Revolut careers portal"
-    ]
-  },
-  {
-    "name": "N26",
-    "description": "Career portal",
-    "stage": "Discovery",
-    "category": "Company Lists",
-    "url": "https://n26.com/en/careers",
-    "type": "Career Portal",
-    "tags": [
-      "neobank",
-      "causal-inference"
-    ],
-    "section": "companies",
-    "sector": "fintech",
-    "tab": "find-jobs",
-    "subtab": "companies",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-finance",
-      "company-research"
-    ],
-    "topic_tags": [
-      "neobank",
-      "fintech-careers",
-      "causal-inference",
-      "company-portal"
-    ],
-    "summary": "N26 is a German neobank's career portal showcasing opportunities in digital banking and fintech. The company is known for data-driven decision making and modern financial products. Tech economists can explore roles that combine banking domain knowledge with analytical skills.",
-    "use_cases": [
-      "Researching fintech companies that heavily use causal inference and experimentation",
-      "Finding data science roles in European neobanking sector"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "N26 data science jobs",
-      "neobank careers for economists",
-      "fintech companies using causal inference",
-      "N26 career opportunities"
     ]
   },
   {

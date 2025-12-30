@@ -11,7 +11,7 @@
       "Blog"
     ],
     "domain": "Statistics",
-    "image_url": "https://www.pymc-labs.com/images/pymc-labs-logo.png",
+    "image_url": "https://www.pymc-labs.com/static/images/pymc-labs-logo.svg",
     "difficulty": "intermediate",
     "prerequisites": [
       "python-basics"
@@ -45,26 +45,35 @@
     ]
   },
   {
-    "name": "Coding for Economists",
-    "description": "Arthur Turrell's practical guide. Python basics through advanced workflows \u2014 built specifically for econ researchers.",
-    "category": "Python",
+    "name": "Coding for Economists (Arthur Turrell)",
+    "description": "Python workflow for economists covering data transformation, econometrics, Bayesian inference, and ML. Modern Python-first approach.",
+    "category": "Causal Inference & ML",
     "url": "https://aeturrell.github.io/coding-for-economists/",
     "type": "Online Book",
-    "level": "Easy",
+    "level": "Medium",
     "tags": [
       "Coding",
-      "Online Book"
+      "Online Book",
+      "Python",
+      "Econometrics",
+      "Workflow"
     ],
     "domain": "Programming",
     "difficulty": "beginner|intermediate|advanced",
     "prerequisites": [
       "python-basics"
     ],
-    "topic_tags": [],
-    "summary": "This resource provides a practical guide to Python, tailored for economists. It covers basics through advanced workflows, making it suitable for econ researchers.",
+    "topic_tags": [
+      "causal-inference",
+      "machine-learning",
+      "econometrics"
+    ],
+    "summary": "This resource teaches a modern Python workflow tailored for economists, focusing on data transformation, econometrics, Bayesian inference, and machine learning. It is suitable for those looking to enhance their skills in applying Python to economic data analysis.",
     "use_cases": [
       "When you need to learn Python for economic research",
-      "When looking for practical coding examples in economics"
+      "When looking for practical coding examples in economics",
+      "when to analyze economic data with Python",
+      "when to apply machine learning techniques in economics"
     ],
     "audience": [
       "Early-PhD",
@@ -77,13 +86,25 @@
       "What advanced workflows can be learned in Python?",
       "Is this book suitable for beginners?",
       "What coding skills will I gain?",
-      "How does this resource help with economic analysis?"
+      "How does this resource help with economic analysis?",
+      "What is the Python workflow for economists?",
+      "How can I apply Bayesian inference in economics?",
+      "What are the best practices for data transformation in Python?",
+      "What machine learning techniques are relevant for economists?",
+      "How does econometrics integrate with Python?",
+      "What resources are available for learning Python for economic analysis?",
+      "What is the modern approach to econometrics using Python?",
+      "How can I improve my workflow as an economist using Python?"
     ],
     "content_format": "book",
     "skill_progression": [
       "Python programming skills",
       "Data analysis for economics",
-      "Advanced coding techniques for researchers"
+      "Advanced coding techniques for researchers",
+      "data transformation",
+      "econometrics",
+      "Bayesian inference",
+      "machine learning"
     ]
   },
   {
@@ -3078,27 +3099,33 @@
   },
   {
     "name": "Uber: Dynamic Pricing and Matching in Ride-Hailing",
-    "description": "Academic rigor with industry application. Joint optimization of pricing and matching.",
-    "category": "Case Studies",
+    "description": "How classical two-sided matching translates to 30M+ predictions/minute. MDP framework, batch vs. greedy matching, bipartite graph algorithms, RL for supply-demand balance. Quantitative production results.",
+    "category": "Market Design & Matching",
     "url": "https://www.uber.com/blog/research/dynamic-pricing-and-matching-in-ride-hailing-platforms/",
-    "type": "Article",
-    "level": "Hard",
+    "type": "Engineering Blog",
+    "level": "Medium",
     "tags": [
       "Optimization",
-      "Blog"
+      "Blog",
+      "Economics",
+      "Marketplace"
     ],
     "domain": "Product Sense",
     "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "optimization"
+      "optimization",
+      "market-design",
+      "matching-algorithms",
+      "reinforcement-learning"
     ],
     "summary": "This resource explores the joint optimization of pricing and matching in the ride-hailing industry, specifically focusing on Uber's dynamic pricing model. It is suitable for those interested in applying academic concepts to real-world scenarios.",
     "use_cases": [],
     "audience": [
       "Junior-DS",
       "Mid-DS",
-      "Curious-browser"
+      "Curious-browser",
+      "Senior-DS"
     ],
     "synthetic_questions": [
       "What is dynamic pricing in ride-hailing?",
@@ -3108,12 +3135,23 @@
       "How does optimization impact customer experience?",
       "What are case studies on dynamic pricing?",
       "How can I apply optimization in my own projects?",
-      "What are the challenges in ride-hailing pricing strategies?"
+      "What are the challenges in ride-hailing pricing strategies?",
+      "What is two-sided matching in marketplaces?",
+      "How does reinforcement learning apply to supply-demand balance?",
+      "What are bipartite graph algorithms?",
+      "What are the quantitative production results of Uber's matching system?",
+      "How does batch matching differ from greedy matching?",
+      "What is the MDP framework in marketplace matching?",
+      "What are the challenges in marketplace predictions?",
+      "How can I implement matching algorithms in Python?"
     ],
     "content_format": "article",
     "skill_progression": [
       "understanding dynamic pricing",
-      "applying optimization techniques"
+      "applying optimization techniques",
+      "Understanding of marketplace dynamics",
+      "Knowledge of matching algorithms",
+      "Application of reinforcement learning in practical scenarios"
     ]
   },
   {
@@ -4321,25 +4359,30 @@
     ]
   },
   {
-    "name": "StatQuest (Josh Starmer)",
-    "description": "Visual intuition for stats \u2014 the 'Bill Nye of Statistics'",
+    "name": "StatQuest with Josh Starmer",
+    "description": "Visual explanations of cross-validation, regularization, gradient boosting, PCA, and bias-variance tradeoff. 675,000+ subscribers. Fills conceptual gaps that course-based learning misses.",
     "category": "Probability & Inference",
     "url": "https://www.youtube.com/@statquest",
-    "type": "Resource",
+    "type": "Video Series",
     "level": "Medium",
     "tags": [
-      "Statistics"
+      "Statistics",
+      "Machine Learning",
+      "Video"
     ],
-    "domain": "Statistics",
+    "domain": "Machine Learning",
     "difficulty": "beginner|intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "statistics"
+      "statistics",
+      "machine-learning"
     ],
-    "summary": "StatQuest provides visual intuition for statistics, making complex concepts accessible. It is ideal for anyone looking to understand statistical principles in a clear and engaging way.",
+    "summary": "StatQuest with Josh Starmer provides visual explanations of key concepts in machine learning, such as cross-validation and gradient boosting. It is designed for learners who want to fill conceptual gaps in their understanding of these topics.",
     "use_cases": [
       "when to learn statistics",
-      "understanding statistical concepts visually"
+      "understanding statistical concepts visually",
+      "when to understand machine learning fundamentals",
+      "when to clarify concepts missed in traditional courses"
     ],
     "audience": [
       "Curious-browser"
@@ -4352,12 +4395,24 @@
       "Is StatQuest suitable for beginners?",
       "What is the Bill Nye of Statistics?",
       "Where can I find StatQuest resources?",
-      "What is the focus of StatQuest?"
+      "What is the focus of StatQuest?",
+      "What is cross-validation?",
+      "How does regularization work?",
+      "What is gradient boosting?",
+      "What is PCA?",
+      "What is the bias-variance tradeoff?",
+      "How can I improve my understanding of machine learning concepts?",
+      "What are the fundamental concepts in machine learning?"
     ],
     "content_format": "video",
     "skill_progression": [
       "visual understanding of statistics",
-      "basic statistical concepts"
+      "basic statistical concepts",
+      "understanding of cross-validation",
+      "knowledge of regularization techniques",
+      "familiarity with gradient boosting",
+      "grasp of PCA",
+      "insight into bias-variance tradeoff"
     ]
   },
   {
@@ -5114,15 +5169,16 @@
     ]
   },
   {
-    "name": "Matteo Courthoud's Causal Inference Blog",
-    "description": "PhD economist writing for data scientists in tech. Covers selection bias, Frisch-Waugh-Lovell, weighting vs. matching, DAGs, and CUPED. Every post includes Python code with realistic examples.",
-    "category": "Fundamentals",
+    "name": "Matteo Courthoud's Experimentation Series",
+    "description": "Connects experimentation to econometric foundations. Covers CUPED (linking to DiD), group sequential testing, Bayesian A/B testing, and clustered standard errors. Every post includes complete Python code.",
+    "category": "A/B Testing Fundamentals",
     "url": "https://matteocourthoud.github.io/post/",
     "type": "Tutorial Blog",
     "level": "Medium",
     "tags": [
       "Causal Inference",
-      "Tutorial"
+      "Tutorial",
+      "Experimentation"
     ],
     "domain": "Causal Inference",
     "difficulty": "beginner|intermediate",
@@ -5137,11 +5193,15 @@
     "use_cases": [
       "Understanding causal relationships in data",
       "Improving data analysis techniques",
-      "Learning practical applications of causal inference"
+      "Learning practical applications of causal inference",
+      "When to apply Bayesian A/B testing",
+      "Understanding econometric foundations in experimentation"
     ],
     "audience": [
       "Early-PhD",
-      "Junior-DS"
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
       "What is causal inference?",
@@ -5151,13 +5211,23 @@
       "What is the Frisch-Waugh-Lovell theorem?",
       "How to choose between weighting and matching?",
       "What Python libraries are useful for causal inference?",
-      "What are realistic examples of causal inference?"
+      "What are realistic examples of causal inference?",
+      "What is CUPED in A/B testing?",
+      "How to implement Bayesian A/B testing?",
+      "What are clustered standard errors?",
+      "How to conduct group sequential testing?",
+      "What Python code is needed for A/B testing?",
+      "What are the econometric foundations of experimentation?",
+      "How does DiD relate to A/B testing?",
+      "What are the best practices for experimentation?"
     ],
     "content_format": "tutorial",
     "skill_progression": [
       "Understanding causal inference concepts",
       "Applying Python for causal analysis",
-      "Analyzing data with reduced bias"
+      "Analyzing data with reduced bias",
+      "Understanding of A/B testing methods",
+      "Ability to implement statistical tests in Python"
     ]
   },
   {
@@ -5663,15 +5733,17 @@
     ]
   },
   {
-    "name": "Teconomics Blog: ML Meets Instrumental Variables",
+    "name": "Teconomics: Machine Learning Meets Instrumental Variables",
     "description": "How to reframe past A/B tests as instruments for behaviors you cannot randomize. Covers IV for behavioral effects, Deep IV, and ML for instrument selection. Actionable for data scientists.",
-    "category": "IV & RDD",
+    "category": "Causal Inference & ML",
     "url": "https://medium.com/teconomics-blog/machine-learning-meets-instrumental-variables-c8eecf5cec95",
     "type": "Article",
     "level": "Medium",
     "tags": [
       "Causal Inference",
-      "IV"
+      "IV",
+      "Instrumental Variables",
+      "Machine Learning"
     ],
     "domain": "Causal Inference",
     "difficulty": "intermediate",
@@ -5687,7 +5759,9 @@
     "summary": "This article discusses how to use past A/B tests as instruments for behaviors that cannot be randomized, focusing on IV for behavioral effects, Deep IV, and ML for instrument selection. It is aimed at data scientists looking to enhance their understanding of causal inference methods.",
     "use_cases": [
       "When to apply instrumental variables in analysis",
-      "Using A/B tests for causal inference"
+      "Using A/B tests for causal inference",
+      "When exploring causal relationships using A/B tests",
+      "When applying machine learning techniques to causal inference problems"
     ],
     "audience": [
       "Junior-DS",
@@ -5701,13 +5775,24 @@
       "What are the applications of causal inference?",
       "What skills do I need to understand IV?",
       "How to implement IV in Python?",
-      "What are the challenges in using IV for behavioral effects?"
+      "What are the challenges in using IV for behavioral effects?",
+      "What are A/B tests in causal inference?",
+      "How to combine machine learning with instrumental variables?",
+      "What is the role of instrumental variables in ML?",
+      "When to use A/B tests as instruments?",
+      "What are the benefits of using ML for causal inference?",
+      "How do IV identification strategies work?",
+      "What skills are needed for causal inference?",
+      "What resources are available for learning about ML and IV?"
     ],
     "content_format": "article",
     "skill_progression": [
       "Understanding of instrumental variables",
       "Application of Deep IV",
-      "Machine learning techniques for instrument selection"
+      "Machine learning techniques for instrument selection",
+      "Understanding of causal inference",
+      "Ability to apply machine learning techniques",
+      "Knowledge of instrumental variable strategies"
     ]
   },
   {
@@ -6209,52 +6294,6 @@
     ]
   },
   {
-    "name": "Matteo Courthoud's Experimentation Series",
-    "description": "Connects experimentation to econometric foundations. Covers CUPED (linking to DiD), group sequential testing, Bayesian A/B testing, and clustered standard errors. Every post includes complete Python code.",
-    "category": "A/B Testing Fundamentals",
-    "url": "https://matteocourthoud.github.io/post/",
-    "type": "Tutorial Blog",
-    "level": "Medium",
-    "tags": [
-      "Experimentation",
-      "Tutorial"
-    ],
-    "domain": "Experimentation",
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "python-basics"
-    ],
-    "topic_tags": [
-      "causal-inference",
-      "statistics"
-    ],
-    "summary": "This series connects experimentation to econometric foundations, covering various advanced topics in A/B testing. It is designed for those looking to deepen their understanding of experimental methods in data science.",
-    "use_cases": [
-      "When to apply Bayesian A/B testing",
-      "Understanding econometric foundations in experimentation"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS"
-    ],
-    "synthetic_questions": [
-      "What is CUPED in A/B testing?",
-      "How to implement Bayesian A/B testing?",
-      "What are clustered standard errors?",
-      "How to conduct group sequential testing?",
-      "What Python code is needed for A/B testing?",
-      "What are the econometric foundations of experimentation?",
-      "How does DiD relate to A/B testing?",
-      "What are the best practices for experimentation?"
-    ],
-    "content_format": "tutorial",
-    "skill_progression": [
-      "Understanding of A/B testing methods",
-      "Ability to implement statistical tests in Python"
-    ]
-  },
-  {
     "name": "Netflix Tech Blog: What is an A/B Test?",
     "description": "Multi-part series covering metric selection, sequential testing at scale, quasi-experimentation when SUTVA is violated, and interleaving for recommendation testing. Published at KDD.",
     "category": "A/B Testing Fundamentals",
@@ -6568,23 +6607,27 @@
     "description": "Derives a simple sequential test using gambler's ruin: stop when T-C reaches 2\u221aN. Elegant and implementable with basic arithmetic. Includes interactive calculator.",
     "category": "Sequential Testing",
     "url": "https://www.evanmiller.org/sequential-ab-testing.html",
-    "type": "Tutorial",
+    "type": "Blog Post",
     "level": "Medium",
     "tags": [
       "Experimentation",
-      "Sequential Testing"
+      "Sequential Testing",
+      "A/B Testing",
+      "Early Stopping"
     ],
     "domain": "Experimentation",
-    "difficulty": "intermediate",
+    "difficulty": "beginner|intermediate",
     "prerequisites": [],
     "topic_tags": [
       "sequential-testing",
       "experimentation",
-      "statistics"
+      "statistics",
+      "AB Testing"
     ],
-    "summary": "This tutorial teaches you how to implement a simple sequential A/B testing method using gambler's ruin. It is designed for those interested in experimentation and statistical testing.",
+    "summary": "This resource introduces sequential testing methods that allow for valid early stopping in A/B testing. It is suitable for those looking to understand practical alternatives to fixed-horizon tests.",
     "use_cases": [
-      "when to use sequential testing in experiments"
+      "when to use sequential testing in experiments",
+      "when to use this resource"
     ],
     "audience": [
       "Curious-browser"
@@ -6597,12 +6640,22 @@
       "What is the formula for stopping criteria in sequential testing?",
       "What tools can I use for A/B testing?",
       "What is the difference between sequential and traditional A/B testing?",
-      "How do I interpret results from a sequential A/B test?"
+      "How do I interpret results from a sequential A/B test?",
+      "What is sequential A/B testing?",
+      "How does early stopping work in A/B testing?",
+      "What are the advantages of sequential testing methods?",
+      "When should I use sequential testing?",
+      "What is the difference between fixed-horizon tests and sequential tests?",
+      "Who can benefit from learning about A/B testing?",
+      "What are practical applications of A/B testing?",
+      "How can I implement sequential testing in my projects?"
     ],
-    "content_format": "tutorial",
+    "content_format": "blog post",
     "skill_progression": [
       "understanding of sequential testing",
-      "ability to implement basic A/B tests"
+      "ability to implement basic A/B tests",
+      "understanding of sequential testing methods",
+      "knowledge of early stopping in A/B testing"
     ]
   },
   {
@@ -7188,51 +7241,6 @@
       "Understanding of supervised learning",
       "Understanding of unsupervised learning",
       "Knowledge of recommender systems"
-    ]
-  },
-  {
-    "name": "StatQuest with Josh Starmer",
-    "description": "Visual explanations of cross-validation, regularization, gradient boosting, PCA, and bias-variance tradeoff. 675,000+ subscribers. Fills conceptual gaps that course-based learning misses.",
-    "category": "Fundamentals",
-    "url": "https://www.youtube.com/@statquest",
-    "type": "Video Series",
-    "level": "Easy",
-    "tags": [
-      "Machine Learning",
-      "Video"
-    ],
-    "domain": "Machine Learning",
-    "difficulty": "beginner|intermediate",
-    "prerequisites": [],
-    "topic_tags": [
-      "machine-learning",
-      "statistics"
-    ],
-    "summary": "StatQuest with Josh Starmer provides visual explanations of key concepts in machine learning, such as cross-validation and gradient boosting. It is designed for learners who want to fill conceptual gaps in their understanding of these topics.",
-    "use_cases": [
-      "when to understand machine learning fundamentals",
-      "when to clarify concepts missed in traditional courses"
-    ],
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is cross-validation?",
-      "How does regularization work?",
-      "What is gradient boosting?",
-      "What is PCA?",
-      "What is the bias-variance tradeoff?",
-      "How can I improve my understanding of machine learning concepts?",
-      "What are the fundamental concepts in machine learning?",
-      "Who is Josh Starmer?"
-    ],
-    "content_format": "video",
-    "skill_progression": [
-      "understanding of cross-validation",
-      "knowledge of regularization techniques",
-      "familiarity with gradient boosting",
-      "grasp of PCA",
-      "insight into bias-variance tradeoff"
     ]
   },
   {
@@ -8580,49 +8588,6 @@
     ]
   },
   {
-    "name": "Uber Engineering: Marketplace Matching",
-    "description": "How classical two-sided matching translates to 30M+ predictions/minute. MDP framework, batch vs. greedy matching, bipartite graph algorithms, RL for supply-demand balance. Quantitative production results.",
-    "category": "Market Design & Matching",
-    "url": "https://www.uber.com/blog/research/dynamic-pricing-and-matching-in-ride-hailing-platforms/",
-    "type": "Engineering Blog",
-    "level": "Medium",
-    "tags": [
-      "Economics",
-      "Marketplace"
-    ],
-    "domain": "Economics",
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [
-      "market-design",
-      "matching-algorithms",
-      "reinforcement-learning"
-    ],
-    "summary": "This resource explores how classical two-sided matching can be applied to high-frequency predictions in marketplaces. It is designed for those interested in the intersection of economics and engineering.",
-    "use_cases": [],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS"
-    ],
-    "synthetic_questions": [
-      "What is two-sided matching in marketplaces?",
-      "How does reinforcement learning apply to supply-demand balance?",
-      "What are bipartite graph algorithms?",
-      "What are the quantitative production results of Uber's matching system?",
-      "How does batch matching differ from greedy matching?",
-      "What is the MDP framework in marketplace matching?",
-      "What are the challenges in marketplace predictions?",
-      "How can I implement matching algorithms in Python?"
-    ],
-    "content_format": "article",
-    "skill_progression": [
-      "Understanding of marketplace dynamics",
-      "Knowledge of matching algorithms",
-      "Application of reinforcement learning in practical scenarios"
-    ]
-  },
-  {
     "name": "Airbnb Engineering: Two-Sided Marketplace Matching",
     "description": "Unique focus on 'both sides must accept' constraint. Host acceptance prediction, listing embeddings, cold start solutions. Shows how to infer host preferences from behavior\u20143.75% booking improvement.",
     "category": "Market Design & Matching",
@@ -9222,17 +9187,23 @@
     "level": "Hard",
     "tags": [
       "Economics",
-      "Causal ML"
+      "Causal ML",
+      "Machine Learning",
+      "Econometrics",
+      "Education"
     ],
     "domain": "Economics",
     "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
       "causal-inference",
-      "machine-learning"
+      "machine-learning",
+      "econometrics"
     ],
     "summary": "This course covers the intersection of machine learning and econometrics, focusing on topics such as heterogeneous treatment effects and policy learning. It is designed for those interested in applying machine learning techniques to economic data analysis.",
-    "use_cases": [],
+    "use_cases": [
+      "when to apply machine learning methods in econometrics"
+    ],
     "audience": [
       "Early-PhD",
       "Junior-DS",
@@ -9246,13 +9217,23 @@
       "What skills can I gain from a course on ML and econometrics?",
       "How does policy learning relate to machine learning?",
       "What are causal forests and how are they used?",
-      "What prerequisites do I need for a course on ML in economics?"
+      "What prerequisites do I need for a course on ML in economics?",
+      "What is machine learning in econometrics?",
+      "How can I apply ML methods in economic research?",
+      "What are the latest trends in econometrics?",
+      "Who are the leading researchers in ML and econometrics?",
+      "What skills do I need for ML in econometrics?",
+      "Where can I find resources on econometrics and machine learning?",
+      "What are the applications of ML in economics?",
+      "How does AEA's continuing education help in learning econometrics?"
     ],
-    "content_format": "video",
+    "content_format": "course",
     "estimated_duration": "9 hours",
     "skill_progression": [
       "Understanding of causal inference",
-      "Application of machine learning techniques in economics"
+      "Application of machine learning techniques in economics",
+      "understanding of machine learning methods",
+      "application of econometric techniques"
     ]
   },
   {
@@ -11146,52 +11127,6 @@
     ]
   },
   {
-    "name": "Teconomics: Machine Learning Meets Instrumental Variables",
-    "description": "Using A/B tests as instruments for causal inference. How to combine ML flexibility with IV identification strategies.",
-    "category": "Causal Inference & ML",
-    "url": "https://medium.com/teconomics-blog/machine-learning-meets-instrumental-variables-c8eecf5cec95",
-    "type": "Article",
-    "tags": [
-      "Causal Inference",
-      "Instrumental Variables",
-      "Machine Learning"
-    ],
-    "level": "Hard",
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "python-basics"
-    ],
-    "topic_tags": [
-      "causal-inference",
-      "machine-learning"
-    ],
-    "summary": "This resource teaches how to use A/B tests as instruments for causal inference, combining machine learning flexibility with instrumental variable identification strategies. It is suitable for those interested in advanced statistical methods in data science.",
-    "audience": [
-      "Junior-DS",
-      "Mid-DS"
-    ],
-    "synthetic_questions": [
-      "What are A/B tests in causal inference?",
-      "How to combine machine learning with instrumental variables?",
-      "What is the role of instrumental variables in ML?",
-      "When to use A/B tests as instruments?",
-      "What are the benefits of using ML for causal inference?",
-      "How do IV identification strategies work?",
-      "What skills are needed for causal inference?",
-      "What resources are available for learning about ML and IV?"
-    ],
-    "use_cases": [
-      "When exploring causal relationships using A/B tests",
-      "When applying machine learning techniques to causal inference problems"
-    ],
-    "content_format": "article",
-    "skill_progression": [
-      "Understanding of causal inference",
-      "Ability to apply machine learning techniques",
-      "Knowledge of instrumental variable strategies"
-    ]
-  },
-  {
     "name": "Uber: Driver Surge Pricing",
     "description": "Shows why multiplicative surge is NOT incentive-compatible; presents the additive driver surge mechanism now in production. Foundational work on incentive design for gig economy platforms.",
     "category": "Pricing & Revenue",
@@ -11946,50 +11881,6 @@
     "skill_progression": [
       "Understanding machine learning applications in economics",
       "Analyzing economic research using ML techniques"
-    ]
-  },
-  {
-    "name": "AEA Continuing Education: ML and Econometrics 2018",
-    "description": "AEA's official continuing education webcasts on machine learning methods for econometrics, featuring leading researchers in the field.",
-    "category": "Causal Inference & ML",
-    "url": "https://www.aeaweb.org/conference/cont-ed/2018-webcasts",
-    "type": "Course",
-    "tags": [
-      "Machine Learning",
-      "Econometrics",
-      "Education"
-    ],
-    "level": "Hard",
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [
-      "causal-inference",
-      "machine-learning",
-      "econometrics"
-    ],
-    "summary": "This course covers machine learning methods for econometrics, aimed at those looking to enhance their understanding of these techniques. It is suitable for individuals interested in applying machine learning in economic research.",
-    "audience": [
-      "Early-PhD",
-      "Junior-DS",
-      "Mid-DS"
-    ],
-    "synthetic_questions": [
-      "What is machine learning in econometrics?",
-      "How can I apply ML methods in economic research?",
-      "What are the latest trends in econometrics?",
-      "Who are the leading researchers in ML and econometrics?",
-      "What skills do I need for ML in econometrics?",
-      "Where can I find resources on econometrics and machine learning?",
-      "What are the applications of ML in economics?",
-      "How does AEA's continuing education help in learning econometrics?"
-    ],
-    "use_cases": [
-      "when to apply machine learning methods in econometrics"
-    ],
-    "content_format": "course",
-    "skill_progression": [
-      "understanding of machine learning methods",
-      "application of econometric techniques"
     ]
   },
   {
@@ -14468,47 +14359,6 @@
     ]
   },
   {
-    "name": "Evan Miller: Simple Sequential A/B Testing",
-    "description": "Introduction to sequential testing methods that allow valid early stopping. Practical alternative to fixed-horizon tests.",
-    "category": "AB Testing",
-    "url": "https://www.evanmiller.org/sequential-ab-testing.html",
-    "type": "Blog Post",
-    "tags": [
-      "Sequential Testing",
-      "A/B Testing",
-      "Early Stopping"
-    ],
-    "level": "Medium",
-    "difficulty": "beginner|intermediate",
-    "prerequisites": [],
-    "topic_tags": [
-      "AB Testing",
-      "statistics"
-    ],
-    "summary": "This resource introduces sequential testing methods that allow for valid early stopping in A/B testing. It is suitable for those looking to understand practical alternatives to fixed-horizon tests.",
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is sequential A/B testing?",
-      "How does early stopping work in A/B testing?",
-      "What are the advantages of sequential testing methods?",
-      "When should I use sequential testing?",
-      "What is the difference between fixed-horizon tests and sequential tests?",
-      "Who can benefit from learning about A/B testing?",
-      "What are practical applications of A/B testing?",
-      "How can I implement sequential testing in my projects?"
-    ],
-    "use_cases": [
-      "when to use this resource"
-    ],
-    "content_format": "blog post",
-    "skill_progression": [
-      "understanding of sequential testing methods",
-      "knowledge of early stopping in A/B testing"
-    ]
-  },
-  {
     "name": "Ronny Kohavi: Trustworthy Online Controlled Experiments",
     "description": "The definitive book on A/B testing methodology by the architect of experimentation at Microsoft, Amazon, and Airbnb. 27,000+ citations.",
     "category": "AB Testing",
@@ -14862,55 +14712,6 @@
       "Understanding research design",
       "Applying causal inference techniques",
       "Using R, Stata, and Python for data analysis"
-    ]
-  },
-  {
-    "name": "Coding for Economists (Arthur Turrell)",
-    "description": "Python workflow for economists covering data transformation, econometrics, Bayesian inference, and ML. Modern Python-first approach.",
-    "category": "Causal Inference & ML",
-    "url": "https://aeturrell.github.io/coding-for-economists/",
-    "type": "Book",
-    "tags": [
-      "Python",
-      "Econometrics",
-      "Workflow"
-    ],
-    "level": "Medium",
-    "difficulty": "beginner|intermediate",
-    "prerequisites": [
-      "python-basics"
-    ],
-    "topic_tags": [
-      "causal-inference",
-      "machine-learning",
-      "econometrics"
-    ],
-    "summary": "This resource teaches a modern Python workflow tailored for economists, focusing on data transformation, econometrics, Bayesian inference, and machine learning. It is suitable for those looking to enhance their skills in applying Python to economic data analysis.",
-    "audience": [
-      "Early-PhD",
-      "Junior-DS",
-      "Mid-DS"
-    ],
-    "synthetic_questions": [
-      "What is the Python workflow for economists?",
-      "How can I apply Bayesian inference in economics?",
-      "What are the best practices for data transformation in Python?",
-      "What machine learning techniques are relevant for economists?",
-      "How does econometrics integrate with Python?",
-      "What resources are available for learning Python for economic analysis?",
-      "What is the modern approach to econometrics using Python?",
-      "How can I improve my workflow as an economist using Python?"
-    ],
-    "use_cases": [
-      "when to analyze economic data with Python",
-      "when to apply machine learning techniques in economics"
-    ],
-    "content_format": "book",
-    "skill_progression": [
-      "data transformation",
-      "econometrics",
-      "Bayesian inference",
-      "machine learning"
     ]
   },
   {
@@ -15871,17 +15672,46 @@
     "url": "https://yetanothermathprogrammingconsultant.blogspot.com/",
     "type": "Blog",
     "level": "Advanced",
-    "tags": ["Operations Research", "Mathematical Programming", "Blog"],
+    "tags": [
+      "Operations Research",
+      "Mathematical Programming",
+      "Blog"
+    ],
     "domain": "Optimization",
     "difficulty": "advanced",
-    "prerequisites": ["linear-programming", "optimization-basics"],
-    "topic_tags": ["mathematical-programming", "solver-tuning", "GAMS", "AMPL", "CPLEX", "MINLP"],
+    "prerequisites": [
+      "linear-programming",
+      "optimization-basics"
+    ],
+    "topic_tags": [
+      "mathematical-programming",
+      "solver-tuning",
+      "GAMS",
+      "AMPL",
+      "CPLEX",
+      "MINLP"
+    ],
     "summary": "Perhaps the highest concentration of practical modeling wisdom online. Erwin Kalvelagen shares decades of consulting experience with GAMS, AMPL, CPLEX, and MINOS, covering topics from large sparse transportation models to creative optimization problems.",
-    "use_cases": ["When you need solver tuning tips for production systems", "When formulating complex MINLP models"],
-    "audience": ["Senior-DS", "Early-PhD"],
-    "synthetic_questions": ["How to tune CPLEX for large-scale problems?", "What are best practices for GAMS modeling?", "How to formulate transportation problems?", "MINLP formulation techniques?"],
+    "use_cases": [
+      "When you need solver tuning tips for production systems",
+      "When formulating complex MINLP models"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "How to tune CPLEX for large-scale problems?",
+      "What are best practices for GAMS modeling?",
+      "How to formulate transportation problems?",
+      "MINLP formulation techniques?"
+    ],
     "content_format": "blog",
-    "skill_progression": ["Mathematical programming fundamentals", "Solver-specific tuning", "Production optimization systems"]
+    "skill_progression": [
+      "Mathematical programming fundamentals",
+      "Solver-specific tuning",
+      "Production optimization systems"
+    ]
   },
   {
     "name": "Nathan Brixius: ML + Optimization",
@@ -15890,17 +15720,41 @@
     "url": "https://nathanbrixius.wordpress.com/",
     "type": "Blog",
     "level": "Medium",
-    "tags": ["Operations Research", "Machine Learning", "Blog"],
+    "tags": [
+      "Operations Research",
+      "Machine Learning",
+      "Blog"
+    ],
     "domain": "Optimization",
     "difficulty": "intermediate",
-    "prerequisites": ["optimization-basics", "machine-learning-basics"],
-    "topic_tags": ["ML-optimization-integration", "solver-comparison", "mathematical-programming"],
+    "prerequisites": [
+      "optimization-basics",
+      "machine-learning-basics"
+    ],
+    "topic_tags": [
+      "ML-optimization-integration",
+      "solver-comparison",
+      "mathematical-programming"
+    ],
     "summary": "Nathan Brixius, former Microsoft Solver Foundation developer, bridges optimization and machine learning. Essential reading for practitioners integrating ML predictions with optimization, including creative posts like solving Don Knuth's 1960 IP model with modern solvers.",
-    "use_cases": ["When integrating ML predictions into optimization pipelines", "When comparing solver performance"],
-    "audience": ["Mid-DS", "Senior-DS"],
-    "synthetic_questions": ["How to chain machine learning and optimization models?", "What is the Microsoft Solver Foundation?", "How to integrate predictions into optimization?"],
+    "use_cases": [
+      "When integrating ML predictions into optimization pipelines",
+      "When comparing solver performance"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "How to chain machine learning and optimization models?",
+      "What is the Microsoft Solver Foundation?",
+      "How to integrate predictions into optimization?"
+    ],
     "content_format": "blog",
-    "skill_progression": ["Understanding ML-optimization integration", "Solver comparison methodology"]
+    "skill_progression": [
+      "Understanding ML-optimization integration",
+      "Solver comparison methodology"
+    ]
   },
   {
     "name": "Alain Chabrier: Column Generation with CPLEX",
@@ -15909,17 +15763,44 @@
     "url": "https://medium.com/@AlainChabrier",
     "type": "Blog",
     "level": "Advanced",
-    "tags": ["Operations Research", "Column Generation", "Blog"],
+    "tags": [
+      "Operations Research",
+      "Column Generation",
+      "Blog"
+    ],
     "domain": "Optimization",
     "difficulty": "advanced",
-    "prerequisites": ["linear-programming", "VRP-basics"],
-    "topic_tags": ["column-generation", "CPLEX", "docplex", "VRP", "branch-and-price"],
+    "prerequisites": [
+      "linear-programming",
+      "VRP-basics"
+    ],
+    "topic_tags": [
+      "column-generation",
+      "CPLEX",
+      "docplex",
+      "VRP",
+      "branch-and-price"
+    ],
     "summary": "Alain Chabrier, former IBM Decision Optimization Senior Technical Staff Member, publishes authoritative content on column generation with complete code examples. His PhD thesis solved 17 previously open Solomon VRP benchmark instances.",
-    "use_cases": ["When implementing column generation algorithms", "When solving large-scale VRP problems"],
-    "audience": ["Senior-DS", "Early-PhD"],
-    "synthetic_questions": ["How to implement column generation in Python?", "What is docplex?", "How to solve VRP with column generation?"],
+    "use_cases": [
+      "When implementing column generation algorithms",
+      "When solving large-scale VRP problems"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "How to implement column generation in Python?",
+      "What is docplex?",
+      "How to solve VRP with column generation?"
+    ],
     "content_format": "blog",
-    "skill_progression": ["Column generation fundamentals", "Branch-and-price implementation", "Large-scale VRP solving"]
+    "skill_progression": [
+      "Column generation fundamentals",
+      "Branch-and-price implementation",
+      "Large-scale VRP solving"
+    ]
   },
   {
     "name": "Ryan O'Neil: Real-Time Optimization",
@@ -15928,17 +15809,41 @@
     "url": "https://ryanjoneil.dev/",
     "type": "Blog",
     "level": "Medium",
-    "tags": ["Operations Research", "Real-Time Systems", "Blog"],
+    "tags": [
+      "Operations Research",
+      "Real-Time Systems",
+      "Blog"
+    ],
     "domain": "Optimization",
     "difficulty": "intermediate",
-    "prerequisites": ["optimization-basics"],
-    "topic_tags": ["real-time-optimization", "decision-diagrams", "delivery-optimization"],
+    "prerequisites": [
+      "optimization-basics"
+    ],
+    "topic_tags": [
+      "real-time-optimization",
+      "decision-diagrams",
+      "delivery-optimization"
+    ],
     "summary": "Ryan O'Neil, co-founder of Nextmv and PhD from George Mason under Karla Hoffman, writes about real-time optimization for delivery platforms. His hybrid optimization and decision diagram expertise bridges academic research with commercial product development.",
-    "use_cases": ["When building real-time optimization systems", "When designing delivery platform algorithms"],
-    "audience": ["Mid-DS", "Senior-DS"],
-    "synthetic_questions": ["What is Nextmv?", "How to build real-time optimization systems?", "What are decision diagrams?"],
+    "use_cases": [
+      "When building real-time optimization systems",
+      "When designing delivery platform algorithms"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "What is Nextmv?",
+      "How to build real-time optimization systems?",
+      "What are decision diagrams?"
+    ],
     "content_format": "blog",
-    "skill_progression": ["Real-time optimization concepts", "Decision diagram applications", "Production delivery systems"]
+    "skill_progression": [
+      "Real-time optimization concepts",
+      "Decision diagram applications",
+      "Production delivery systems"
+    ]
   },
   {
     "name": "Stephen Maher: Optimisation in the Real World",
@@ -15947,17 +15852,42 @@
     "url": "https://optimisationintherealworld.co.uk/",
     "type": "Blog",
     "level": "Medium",
-    "tags": ["Operations Research", "Applied OR", "Blog"],
+    "tags": [
+      "Operations Research",
+      "Applied OR",
+      "Blog"
+    ],
     "domain": "Optimization",
     "difficulty": "intermediate",
-    "prerequisites": ["optimization-basics"],
-    "topic_tags": ["renewable-energy", "vaccine-distribution", "supply-chain", "sustainability"],
+    "prerequisites": [
+      "optimization-basics"
+    ],
+    "topic_tags": [
+      "renewable-energy",
+      "vaccine-distribution",
+      "supply-chain",
+      "sustainability"
+    ],
     "summary": "Stephen Maher applies OR to renewable energy, vaccine distribution logistics, and carbon-neutral supply chains. His creative real-world applications demonstrate practical optimization in diverse domains.",
-    "use_cases": ["When exploring OR applications in sustainability", "When learning about vaccine distribution optimization"],
-    "audience": ["Mid-DS", "Curious-browser"],
-    "synthetic_questions": ["How is OR used in renewable energy?", "How to optimize vaccine distribution?", "What are carbon-neutral supply chain methods?"],
+    "use_cases": [
+      "When exploring OR applications in sustainability",
+      "When learning about vaccine distribution optimization"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "How is OR used in renewable energy?",
+      "How to optimize vaccine distribution?",
+      "What are carbon-neutral supply chain methods?"
+    ],
     "content_format": "blog",
-    "skill_progression": ["Applied OR thinking", "Sustainability optimization", "Real-world problem formulation"]
+    "skill_progression": [
+      "Applied OR thinking",
+      "Sustainability optimization",
+      "Real-world problem formulation"
+    ]
   },
   {
     "name": "Laura Albert: Punk Rock Operations Research",
@@ -15966,17 +15896,42 @@
     "url": "https://punkrockor.com/",
     "type": "Blog",
     "level": "Easy",
-    "tags": ["Operations Research", "Emergency Response", "Blog"],
+    "tags": [
+      "Operations Research",
+      "Emergency Response",
+      "Blog"
+    ],
     "domain": "Optimization",
     "difficulty": "beginner",
     "prerequisites": [],
-    "topic_tags": ["emergency-response", "ambulance-dispatch", "homeland-security", "OR-education"],
+    "topic_tags": [
+      "emergency-response",
+      "ambulance-dispatch",
+      "homeland-security",
+      "OR-education"
+    ],
     "summary": "The most-read academic OR blog with 84,600+ annual hits. Laura Albert, 2023 INFORMS President and NSF CAREER Award winner, covers emergency response optimization, ambulance dispatch, and homeland security analytics with accessible explanations.",
-    "use_cases": ["When learning OR fundamentals through engaging examples", "When exploring emergency response optimization"],
-    "audience": ["Curious-browser", "Junior-DS", "Early-PhD"],
-    "synthetic_questions": ["What is operations research?", "How is OR used in emergency response?", "What is ambulance dispatch optimization?", "How to apply OR to homeland security?"],
+    "use_cases": [
+      "When learning OR fundamentals through engaging examples",
+      "When exploring emergency response optimization"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "What is operations research?",
+      "How is OR used in emergency response?",
+      "What is ambulance dispatch optimization?",
+      "How to apply OR to homeland security?"
+    ],
     "content_format": "blog",
-    "skill_progression": ["OR fundamentals", "Emergency response applications", "Stochastic modeling intuition"]
+    "skill_progression": [
+      "OR fundamentals",
+      "Emergency response applications",
+      "Stochastic modeling intuition"
+    ]
   },
   {
     "name": "Paul Rubin: OR in an OB World",
@@ -15985,17 +15940,43 @@
     "url": "https://orinanobworld.blogspot.com/",
     "type": "Blog",
     "level": "Advanced",
-    "tags": ["Operations Research", "CPLEX", "Blog"],
+    "tags": [
+      "Operations Research",
+      "CPLEX",
+      "Blog"
+    ],
     "domain": "Optimization",
     "difficulty": "advanced",
-    "prerequisites": ["linear-programming", "programming-basics"],
-    "topic_tags": ["CPLEX", "Java-optimization", "R-optimization", "mathematical-programming"],
+    "prerequisites": [
+      "linear-programming",
+      "programming-basics"
+    ],
+    "topic_tags": [
+      "CPLEX",
+      "Java-optimization",
+      "R-optimization",
+      "mathematical-programming"
+    ],
     "summary": "Paul Rubin, Professor Emeritus at Michigan State with 33+ years experience, provides the most technically detailed academic blog. Posts include specific CPLEX implementation tips, Java/R code snippets, and answers to reader questions.",
-    "use_cases": ["When debugging CPLEX implementations", "When seeking expert advice on optimization code"],
-    "audience": ["Senior-DS", "Early-PhD"],
-    "synthetic_questions": ["How to debug CPLEX models?", "What are best practices for optimization in Java?", "How to implement OR algorithms in R?"],
+    "use_cases": [
+      "When debugging CPLEX implementations",
+      "When seeking expert advice on optimization code"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "How to debug CPLEX models?",
+      "What are best practices for optimization in Java?",
+      "How to implement OR algorithms in R?"
+    ],
     "content_format": "blog",
-    "skill_progression": ["CPLEX mastery", "Production optimization code", "Mathematical programming implementation"]
+    "skill_progression": [
+      "CPLEX mastery",
+      "Production optimization code",
+      "Mathematical programming implementation"
+    ]
   },
   {
     "name": "Tallys Yunes: OR by the Beach",
@@ -16004,17 +15985,39 @@
     "url": "https://orbythebeach.wordpress.com/",
     "type": "Blog",
     "level": "Easy",
-    "tags": ["Operations Research", "Education", "Blog"],
+    "tags": [
+      "Operations Research",
+      "Education",
+      "Blog"
+    ],
     "domain": "Optimization",
     "difficulty": "beginner",
     "prerequisites": [],
-    "topic_tags": ["OR-education", "integer-programming", "accessibility"],
+    "topic_tags": [
+      "OR-education",
+      "integer-programming",
+      "accessibility"
+    ],
     "summary": "Tallys Yunes, Associate Professor at University of Miami, focuses on making optimization accessible. His downloadable 'Optimization Games for the Young' teach OR concepts through play, while posts show integer programming in daily life.",
-    "use_cases": ["When teaching OR concepts", "When seeking accessible optimization examples"],
-    "audience": ["Curious-browser", "Junior-DS"],
-    "synthetic_questions": ["How to teach operations research?", "What are fun ways to learn optimization?", "How does OR apply to everyday life?"],
+    "use_cases": [
+      "When teaching OR concepts",
+      "When seeking accessible optimization examples"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "How to teach operations research?",
+      "What are fun ways to learn optimization?",
+      "How does OR apply to everyday life?"
+    ],
     "content_format": "blog",
-    "skill_progression": ["OR intuition", "Integer programming concepts", "Teaching optimization"]
+    "skill_progression": [
+      "OR intuition",
+      "Integer programming concepts",
+      "Teaching optimization"
+    ]
   },
   {
     "name": "Michael Trick: Operations Research Blog",
@@ -16023,17 +16026,41 @@
     "url": "https://mat.tepper.cmu.edu/blog/",
     "type": "Blog",
     "level": "Medium",
-    "tags": ["Operations Research", "Sports Scheduling", "Blog"],
+    "tags": [
+      "Operations Research",
+      "Sports Scheduling",
+      "Blog"
+    ],
     "domain": "Optimization",
     "difficulty": "intermediate",
-    "prerequisites": ["optimization-basics"],
-    "topic_tags": ["sports-scheduling", "OR-community", "blog-aggregation"],
+    "prerequisites": [
+      "optimization-basics"
+    ],
+    "topic_tags": [
+      "sports-scheduling",
+      "OR-community",
+      "blog-aggregation"
+    ],
     "summary": "Michael Trick, CMU Professor and former IFORS President, maintains both original content and the definitive aggregated listing of 40+ OR blogs. His sports scheduling work with MLB and NFL demonstrates theory-to-production application.",
-    "use_cases": ["When discovering OR blogs and resources", "When learning about sports scheduling optimization"],
-    "audience": ["Mid-DS", "Early-PhD"],
-    "synthetic_questions": ["What are the best OR blogs?", "How is optimization used in sports scheduling?", "What is the IFORS?"],
+    "use_cases": [
+      "When discovering OR blogs and resources",
+      "When learning about sports scheduling optimization"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "What are the best OR blogs?",
+      "How is optimization used in sports scheduling?",
+      "What is the IFORS?"
+    ],
     "content_format": "blog",
-    "skill_progression": ["OR community awareness", "Sports scheduling applications", "Industry-academia bridge"]
+    "skill_progression": [
+      "OR community awareness",
+      "Sports scheduling applications",
+      "Industry-academia bridge"
+    ]
   },
   {
     "name": "Kevin Gue: Warehouse Design",
@@ -16042,17 +16069,42 @@
     "url": "https://kevingue.wordpress.com/",
     "type": "Blog",
     "level": "Medium",
-    "tags": ["Operations Research", "Warehouse Design", "Blog"],
+    "tags": [
+      "Operations Research",
+      "Warehouse Design",
+      "Blog"
+    ],
     "domain": "Optimization",
     "difficulty": "intermediate",
-    "prerequisites": ["optimization-basics"],
-    "topic_tags": ["warehouse-design", "order-picking", "logistics", "academic-to-industry"],
+    "prerequisites": [
+      "optimization-basics"
+    ],
+    "topic_tags": [
+      "warehouse-design",
+      "order-picking",
+      "logistics",
+      "academic-to-industry"
+    ],
     "summary": "Kevin Gue, now Senior Director of R&D at Fortna after academia at Naval Postgraduate School, Auburn, and Louisville, exemplifies the academic-to-industry transition. His DC Velocity columns on warehouse design bring research directly to practitioner audiences.",
-    "use_cases": ["When designing warehouse layouts", "When optimizing order picking routes"],
-    "audience": ["Mid-DS", "Senior-DS"],
-    "synthetic_questions": ["How to optimize warehouse design?", "What are order picking routing strategies?", "How to transition from OR academia to industry?"],
+    "use_cases": [
+      "When designing warehouse layouts",
+      "When optimizing order picking routes"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "How to optimize warehouse design?",
+      "What are order picking routing strategies?",
+      "How to transition from OR academia to industry?"
+    ],
     "content_format": "blog",
-    "skill_progression": ["Warehouse operations understanding", "Order picking optimization", "Industry application of research"]
+    "skill_progression": [
+      "Warehouse operations understanding",
+      "Order picking optimization",
+      "Industry application of research"
+    ]
   },
   {
     "name": "Austin Buchanan: Farkas' Dilemma",
@@ -16061,17 +16113,43 @@
     "url": "https://farkasdilemma.wordpress.com/",
     "type": "Blog",
     "level": "Advanced",
-    "tags": ["Operations Research", "Decomposition Methods", "Blog"],
+    "tags": [
+      "Operations Research",
+      "Decomposition Methods",
+      "Blog"
+    ],
     "domain": "Optimization",
     "difficulty": "advanced",
-    "prerequisites": ["linear-programming", "integer-programming"],
-    "topic_tags": ["Benders-decomposition", "Lagrangian-relaxation", "redistricting", "k-median"],
+    "prerequisites": [
+      "linear-programming",
+      "integer-programming"
+    ],
+    "topic_tags": [
+      "Benders-decomposition",
+      "Lagrangian-relaxation",
+      "redistricting",
+      "k-median"
+    ],
     "summary": "Austin Buchanan, Oklahoma State Associate Professor, publishes accessible tutorials on advanced techniques: Benders decomposition, Lagrangian techniques for k-median, and political redistricting applications connecting OR to current policy debates.",
-    "use_cases": ["When learning Benders decomposition", "When implementing Lagrangian relaxation"],
-    "audience": ["Senior-DS", "Early-PhD"],
-    "synthetic_questions": ["How to implement Benders decomposition?", "What is Lagrangian relaxation?", "How is OR used in redistricting?"],
+    "use_cases": [
+      "When learning Benders decomposition",
+      "When implementing Lagrangian relaxation"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "How to implement Benders decomposition?",
+      "What is Lagrangian relaxation?",
+      "How is OR used in redistricting?"
+    ],
     "content_format": "blog",
-    "skill_progression": ["Decomposition methods", "Advanced LP techniques", "Policy applications of OR"]
+    "skill_progression": [
+      "Decomposition methods",
+      "Advanced LP techniques",
+      "Policy applications of OR"
+    ]
   },
   {
     "name": "Dominik Krupke: CP-SAT Primer",
@@ -16080,17 +16158,43 @@
     "url": "https://d-krupke.github.io/cpsat-primer/",
     "type": "Online Book",
     "level": "Medium",
-    "tags": ["Operations Research", "CP-SAT", "Tutorial"],
+    "tags": [
+      "Operations Research",
+      "CP-SAT",
+      "Tutorial"
+    ],
     "domain": "Optimization",
     "difficulty": "intermediate",
-    "prerequisites": ["constraint-programming-basics"],
-    "topic_tags": ["CP-SAT", "OR-Tools", "constraint-programming", "solver-tuning"],
-    "summary": "Fills a critical documentation gap as the most comprehensive unofficial guide to Google OR-Tools' CP-SAT solver. Chapters cover modeling patterns, parameter tuning, benchmarking methodology, and large neighborhood search—content essential for practitioners.",
-    "use_cases": ["When learning CP-SAT beyond official docs", "When tuning CP-SAT for production"],
-    "audience": ["Mid-DS", "Senior-DS"],
-    "synthetic_questions": ["How to use CP-SAT effectively?", "What are CP-SAT modeling patterns?", "How to tune CP-SAT parameters?", "What is large neighborhood search in CP-SAT?"],
+    "prerequisites": [
+      "constraint-programming-basics"
+    ],
+    "topic_tags": [
+      "CP-SAT",
+      "OR-Tools",
+      "constraint-programming",
+      "solver-tuning"
+    ],
+    "summary": "Fills a critical documentation gap as the most comprehensive unofficial guide to Google OR-Tools' CP-SAT solver. Chapters cover modeling patterns, parameter tuning, benchmarking methodology, and large neighborhood search\u2014content essential for practitioners.",
+    "use_cases": [
+      "When learning CP-SAT beyond official docs",
+      "When tuning CP-SAT for production"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "How to use CP-SAT effectively?",
+      "What are CP-SAT modeling patterns?",
+      "How to tune CP-SAT parameters?",
+      "What is large neighborhood search in CP-SAT?"
+    ],
     "content_format": "book",
-    "skill_progression": ["CP-SAT fundamentals", "Modeling patterns", "Solver tuning for production"]
+    "skill_progression": [
+      "CP-SAT fundamentals",
+      "Modeling patterns",
+      "Solver tuning for production"
+    ]
   },
   {
     "name": "Hands-On Mathematical Optimization with Python (MO-book)",
@@ -16099,17 +16203,44 @@
     "url": "https://mobook.github.io/MO-book/",
     "type": "Online Book",
     "level": "Medium",
-    "tags": ["Linear Programming", "Pyomo", "Tutorial"],
+    "tags": [
+      "Linear Programming",
+      "Pyomo",
+      "Tutorial"
+    ],
     "domain": "Optimization",
     "difficulty": "intermediate",
-    "prerequisites": ["python-basics", "linear-algebra"],
-    "topic_tags": ["Pyomo", "linear-programming", "optimization-under-uncertainty", "mathematical-optimization"],
+    "prerequisites": [
+      "python-basics",
+      "linear-algebra"
+    ],
+    "topic_tags": [
+      "Pyomo",
+      "linear-programming",
+      "optimization-under-uncertainty",
+      "mathematical-optimization"
+    ],
     "summary": "50+ Jupyter notebooks covering linear optimization through optimization under uncertainty. By Krzysztof Postek (BCG), Alessandro Zocca, Joaquim Gromicho (ORTEC), and Jeffrey Kantor (Notre Dame). Cambridge University Press publication combining theory with Pyomo implementations.",
-    "use_cases": ["When learning mathematical optimization with Python", "When implementing Pyomo models"],
-    "audience": ["Junior-DS", "Mid-DS", "Early-PhD"],
-    "synthetic_questions": ["How to learn Pyomo?", "What is mathematical optimization?", "How to model uncertainty in optimization?"],
+    "use_cases": [
+      "When learning mathematical optimization with Python",
+      "When implementing Pyomo models"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "How to learn Pyomo?",
+      "What is mathematical optimization?",
+      "How to model uncertainty in optimization?"
+    ],
     "content_format": "book",
-    "skill_progression": ["Linear programming fundamentals", "Pyomo implementation", "Stochastic optimization"]
+    "skill_progression": [
+      "Linear programming fundamentals",
+      "Pyomo implementation",
+      "Stochastic optimization"
+    ]
   },
   {
     "name": "Jeffrey Kantor: Pyomo Cookbook",
@@ -16118,17 +16249,42 @@
     "url": "https://github.com/jckantor/ND-Pyomo-Cookbook",
     "type": "Repository",
     "level": "Medium",
-    "tags": ["Linear Programming", "Pyomo", "Code Examples"],
+    "tags": [
+      "Linear Programming",
+      "Pyomo",
+      "Code Examples"
+    ],
     "domain": "Optimization",
     "difficulty": "intermediate",
-    "prerequisites": ["python-basics", "optimization-basics"],
-    "topic_tags": ["Pyomo", "modeling-examples", "mathematical-programming"],
+    "prerequisites": [
+      "python-basics",
+      "optimization-basics"
+    ],
+    "topic_tags": [
+      "Pyomo",
+      "modeling-examples",
+      "mathematical-programming"
+    ],
     "summary": "Jeffrey Kantor's Pyomo Cookbook with 381+ GitHub stars offers practical modeling examples that complement Pyomo's official documentation. Kantor's Notre Dame affiliation ensures academic quality while maintaining practitioner accessibility.",
-    "use_cases": ["When seeking Pyomo code examples", "When learning optimization modeling patterns"],
-    "audience": ["Mid-DS", "Senior-DS"],
-    "synthetic_questions": ["Where to find Pyomo examples?", "How to model optimization problems in Pyomo?", "What are common Pyomo patterns?"],
+    "use_cases": [
+      "When seeking Pyomo code examples",
+      "When learning optimization modeling patterns"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "Where to find Pyomo examples?",
+      "How to model optimization problems in Pyomo?",
+      "What are common Pyomo patterns?"
+    ],
     "content_format": "repository",
-    "skill_progression": ["Pyomo syntax", "Modeling patterns", "Practical implementation"]
+    "skill_progression": [
+      "Pyomo syntax",
+      "Modeling patterns",
+      "Practical implementation"
+    ]
   },
   {
     "name": "awesome-optimization",
@@ -16137,17 +16293,38 @@
     "url": "https://github.com/ebrahimpichka/awesome-optimization",
     "type": "Repository",
     "level": "Easy",
-    "tags": ["Operations Research", "Resource List", "Repository"],
+    "tags": [
+      "Operations Research",
+      "Resource List",
+      "Repository"
+    ],
     "domain": "Optimization",
     "difficulty": "beginner",
     "prerequisites": [],
-    "topic_tags": ["optimization-resources", "curated-list", "learning-path"],
+    "topic_tags": [
+      "optimization-resources",
+      "curated-list",
+      "learning-path"
+    ],
     "summary": "Curated list of courses, books, libraries, and frameworks across convex optimization, discrete optimization, and metaheuristics. A comprehensive starting point regularly updated for anyone entering the optimization field.",
-    "use_cases": ["When discovering optimization resources", "When building an optimization learning path"],
-    "audience": ["Curious-browser", "Junior-DS"],
-    "synthetic_questions": ["What are the best optimization resources?", "Where to start learning optimization?", "What optimization libraries exist?"],
+    "use_cases": [
+      "When discovering optimization resources",
+      "When building an optimization learning path"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "What are the best optimization resources?",
+      "Where to start learning optimization?",
+      "What optimization libraries exist?"
+    ],
     "content_format": "repository",
-    "skill_progression": ["Resource discovery", "Learning path construction"]
+    "skill_progression": [
+      "Resource discovery",
+      "Learning path construction"
+    ]
   },
   {
     "name": "SolverMax: Python OR Library Comparison",
@@ -16156,17 +16333,40 @@
     "url": "https://www.solvermax.com/",
     "type": "Blog",
     "level": "Medium",
-    "tags": ["Operations Research", "Library Comparison", "Blog"],
+    "tags": [
+      "Operations Research",
+      "Library Comparison",
+      "Blog"
+    ],
     "domain": "Optimization",
     "difficulty": "intermediate",
-    "prerequisites": ["python-basics"],
-    "topic_tags": ["library-comparison", "Python-optimization", "solver-benchmarking"],
+    "prerequisites": [
+      "python-basics"
+    ],
+    "topic_tags": [
+      "library-comparison",
+      "Python-optimization",
+      "solver-benchmarking"
+    ],
     "summary": "SolverMax maintains both original content (13-article series comparing Python OR libraries) and the most comprehensive directory of optimization blogs with summaries and notable posts.",
-    "use_cases": ["When choosing between Python optimization libraries", "When discovering OR blogs"],
-    "audience": ["Mid-DS", "Senior-DS"],
-    "synthetic_questions": ["Which Python optimization library should I use?", "How do OR-Tools, Pyomo, and PuLP compare?", "What are the best optimization blogs?"],
+    "use_cases": [
+      "When choosing between Python optimization libraries",
+      "When discovering OR blogs"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "Which Python optimization library should I use?",
+      "How do OR-Tools, Pyomo, and PuLP compare?",
+      "What are the best optimization blogs?"
+    ],
     "content_format": "blog",
-    "skill_progression": ["Library selection", "Solver comparison methodology"]
+    "skill_progression": [
+      "Library selection",
+      "Solver comparison methodology"
+    ]
   },
   {
     "name": "Afi Labs: Ride-Share Dispatch Algorithms",
@@ -16175,17 +16375,43 @@
     "url": "https://blog.afi.io/",
     "type": "Blog",
     "level": "Medium",
-    "tags": ["Routing & Logistics", "Ride-Share", "Blog"],
+    "tags": [
+      "Routing & Logistics",
+      "Ride-Share",
+      "Blog"
+    ],
     "domain": "Optimization",
     "difficulty": "intermediate",
-    "prerequisites": ["optimization-basics", "python-basics"],
-    "topic_tags": ["ride-share", "dispatch-optimization", "trip-chaining", "assignment-problems"],
+    "prerequisites": [
+      "optimization-basics",
+      "python-basics"
+    ],
+    "topic_tags": [
+      "ride-share",
+      "dispatch-optimization",
+      "trip-chaining",
+      "assignment-problems"
+    ],
     "summary": "Afian Anwar (Solution Architect/CTO) provides complete worked examples for ride-share dispatch algorithms with full code. Posts explain why greedy nearest-driver matching fails compared to optimal trip chaining, with real API implementations.",
-    "use_cases": ["When building ride-share dispatch systems", "When understanding assignment problem trade-offs"],
-    "audience": ["Mid-DS", "Senior-DS"],
-    "synthetic_questions": ["How to optimize ride-share dispatch?", "Why is greedy matching suboptimal?", "What is trip chaining optimization?"],
+    "use_cases": [
+      "When building ride-share dispatch systems",
+      "When understanding assignment problem trade-offs"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "How to optimize ride-share dispatch?",
+      "Why is greedy matching suboptimal?",
+      "What is trip chaining optimization?"
+    ],
     "content_format": "blog",
-    "skill_progression": ["Dispatch fundamentals", "Assignment problem modeling", "Production implementation"]
+    "skill_progression": [
+      "Dispatch fundamentals",
+      "Assignment problem modeling",
+      "Production implementation"
+    ]
   },
   {
     "name": "Nextmv Blog",
@@ -16194,17 +16420,42 @@
     "url": "https://www.nextmv.io/blog",
     "type": "Blog",
     "level": "Medium",
-    "tags": ["Routing & Logistics", "Production Systems", "Blog"],
+    "tags": [
+      "Routing & Logistics",
+      "Production Systems",
+      "Blog"
+    ],
     "domain": "Optimization",
     "difficulty": "intermediate",
-    "prerequisites": ["optimization-basics"],
-    "topic_tags": ["production-optimization", "decision-science", "OR-Tools", "NVIDIA-cuOpt"],
+    "prerequisites": [
+      "optimization-basics"
+    ],
+    "topic_tags": [
+      "production-optimization",
+      "decision-science",
+      "OR-Tools",
+      "NVIDIA-cuOpt"
+    ],
     "summary": "From former Convoy and Uber operations researchers, Nextmv Blog bridges open-source tools and production systems. DecisionFest recordings feature practitioners from IKEA, Walmart, Carvana, and Toyota discussing vehicle routing implementations.",
-    "use_cases": ["When learning production optimization patterns", "When integrating OR-Tools or cuOpt"],
-    "audience": ["Mid-DS", "Senior-DS"],
-    "synthetic_questions": ["How do companies implement vehicle routing?", "What is Nextmv?", "How to use NVIDIA cuOpt?"],
+    "use_cases": [
+      "When learning production optimization patterns",
+      "When integrating OR-Tools or cuOpt"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "How do companies implement vehicle routing?",
+      "What is Nextmv?",
+      "How to use NVIDIA cuOpt?"
+    ],
     "content_format": "blog",
-    "skill_progression": ["Open-source to production bridge", "Industry case studies", "Modern solver integration"]
+    "skill_progression": [
+      "Open-source to production bridge",
+      "Industry case studies",
+      "Modern solver integration"
+    ]
   },
   {
     "name": "VRPSolver: Column Generation for Vehicle Routing",
@@ -16213,17 +16464,43 @@
     "url": "https://optimizingwithcolumngeneration.github.io/",
     "type": "Online Book",
     "level": "Advanced",
-    "tags": ["Routing & Logistics", "Column Generation", "Academic"],
+    "tags": [
+      "Routing & Logistics",
+      "Column Generation",
+      "Academic"
+    ],
     "domain": "Optimization",
     "difficulty": "advanced",
-    "prerequisites": ["linear-programming", "column-generation-basics"],
-    "topic_tags": ["branch-cut-and-price", "VRP", "column-generation", "exact-methods"],
+    "prerequisites": [
+      "linear-programming",
+      "column-generation-basics"
+    ],
+    "topic_tags": [
+      "branch-cut-and-price",
+      "VRP",
+      "column-generation",
+      "exact-methods"
+    ],
     "summary": "Eduardo Uchoa, Artur Pessoa, and Lorenza Moreno (VRPSolver creators) provide cutting-edge branch-cut-and-price algorithms for vehicle routing. This represents state-of-the-art academic work with production solver implications.",
-    "use_cases": ["When implementing exact VRP algorithms", "When learning advanced column generation"],
-    "audience": ["Senior-DS", "Early-PhD"],
-    "synthetic_questions": ["What is branch-cut-and-price?", "How does VRPSolver work?", "What are exact methods for VRP?"],
+    "use_cases": [
+      "When implementing exact VRP algorithms",
+      "When learning advanced column generation"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "What is branch-cut-and-price?",
+      "How does VRPSolver work?",
+      "What are exact methods for VRP?"
+    ],
     "content_format": "book",
-    "skill_progression": ["Column generation theory", "Branch-cut-and-price implementation", "State-of-the-art VRP solving"]
+    "skill_progression": [
+      "Column generation theory",
+      "Branch-cut-and-price implementation",
+      "State-of-the-art VRP solving"
+    ]
   },
   {
     "name": "Timefold Blog",
@@ -16232,17 +16509,42 @@
     "url": "https://timefold.ai/blog",
     "type": "Blog",
     "level": "Medium",
-    "tags": ["Operations Research", "Scheduling", "Blog"],
+    "tags": [
+      "Operations Research",
+      "Scheduling",
+      "Blog"
+    ],
     "domain": "Optimization",
     "difficulty": "intermediate",
-    "prerequisites": ["constraint-programming-basics"],
-    "topic_tags": ["employee-rostering", "nurse-scheduling", "constraint-programming", "Timefold"],
+    "prerequisites": [
+      "constraint-programming-basics"
+    ],
+    "topic_tags": [
+      "employee-rostering",
+      "nurse-scheduling",
+      "constraint-programming",
+      "Timefold"
+    ],
     "summary": "Founded by OptaPlanner creator Geoffrey De Smet (17+ years OR experience), Timefold Blog covers employee rostering, nurse scheduling, and constraint programming with Java/Kotlin/Python. Claims 2x performance improvement over OptaPlanner.",
-    "use_cases": ["When building scheduling systems", "When evaluating Timefold vs OptaPlanner"],
-    "audience": ["Mid-DS", "Senior-DS"],
-    "synthetic_questions": ["What is Timefold?", "How does Timefold compare to OptaPlanner?", "How to implement nurse scheduling?"],
+    "use_cases": [
+      "When building scheduling systems",
+      "When evaluating Timefold vs OptaPlanner"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "What is Timefold?",
+      "How does Timefold compare to OptaPlanner?",
+      "How to implement nurse scheduling?"
+    ],
     "content_format": "blog",
-    "skill_progression": ["Scheduling fundamentals", "Constraint programming patterns", "Production scheduling systems"]
+    "skill_progression": [
+      "Scheduling fundamentals",
+      "Constraint programming patterns",
+      "Production scheduling systems"
+    ]
   },
   {
     "name": "NSPLib: Nurse Scheduling Benchmarks (Ghent University)",
@@ -16251,17 +16553,43 @@
     "url": "https://projectmanagement.ugent.be/research/personnel_scheduling/nsp",
     "type": "Dataset",
     "level": "Advanced",
-    "tags": ["Operations Research", "Benchmarks", "Dataset"],
+    "tags": [
+      "Operations Research",
+      "Benchmarks",
+      "Dataset"
+    ],
     "domain": "Optimization",
     "difficulty": "advanced",
-    "prerequisites": ["scheduling-basics", "metaheuristics"],
-    "topic_tags": ["nurse-scheduling", "benchmark-instances", "genetic-algorithms", "scatter-search"],
+    "prerequisites": [
+      "scheduling-basics",
+      "metaheuristics"
+    ],
+    "topic_tags": [
+      "nurse-scheduling",
+      "benchmark-instances",
+      "genetic-algorithms",
+      "scatter-search"
+    ],
     "summary": "Ghent University OR&S Research Group (Prof. Mario Vanhoucke and Dr. Broos Maenhout) publishes NSPLib benchmark instances for nurse scheduling with downloadable datasets and solutions. Research covers genetic algorithms, scatter search, and nurse rerostering.",
-    "use_cases": ["When benchmarking scheduling algorithms", "When researching nurse scheduling"],
-    "audience": ["Senior-DS", "Early-PhD"],
-    "synthetic_questions": ["Where to find nurse scheduling benchmarks?", "What are NSPLib instances?", "How to evaluate scheduling algorithms?"],
+    "use_cases": [
+      "When benchmarking scheduling algorithms",
+      "When researching nurse scheduling"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "Where to find nurse scheduling benchmarks?",
+      "What are NSPLib instances?",
+      "How to evaluate scheduling algorithms?"
+    ],
     "content_format": "dataset",
-    "skill_progression": ["Benchmark methodology", "Algorithm comparison", "Scheduling research"]
+    "skill_progression": [
+      "Benchmark methodology",
+      "Algorithm comparison",
+      "Scheduling research"
+    ]
   },
   {
     "name": "Feasible Newsletter",
@@ -16270,17 +16598,41 @@
     "url": "https://feasible.substack.com/",
     "type": "Newsletter",
     "level": "Easy",
-    "tags": ["Operations Research", "Industry News", "Newsletter"],
+    "tags": [
+      "Operations Research",
+      "Industry News",
+      "Newsletter"
+    ],
     "domain": "Optimization",
     "difficulty": "beginner",
     "prerequisites": [],
-    "topic_tags": ["OR-industry", "case-studies", "career-guidance", "solver-news"],
+    "topic_tags": [
+      "OR-industry",
+      "case-studies",
+      "career-guidance",
+      "solver-news"
+    ],
     "summary": "Borja Menendez delivers weekly OR industry news including real-world case studies from UPS ORION and Walmart Route Optimization, solver announcements, and career guidance. Practitioner perspective unavailable in academic publications.",
-    "use_cases": ["When staying current on OR industry", "When seeking OR career advice"],
-    "audience": ["Curious-browser", "Junior-DS", "Mid-DS"],
-    "synthetic_questions": ["What's happening in the OR industry?", "How is OR used at UPS?", "What are OR career paths?"],
+    "use_cases": [
+      "When staying current on OR industry",
+      "When seeking OR career advice"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "What's happening in the OR industry?",
+      "How is OR used at UPS?",
+      "What are OR career paths?"
+    ],
     "content_format": "newsletter",
-    "skill_progression": ["Industry awareness", "Case study exposure", "Career development"]
+    "skill_progression": [
+      "Industry awareness",
+      "Case study exposure",
+      "Career development"
+    ]
   },
   {
     "name": "Kuang Xu Newsletter",
@@ -16289,17 +16641,41 @@
     "url": "https://kuangxu.substack.com/",
     "type": "Newsletter",
     "level": "Medium",
-    "tags": ["Operations Research", "AI Strategy", "Newsletter"],
+    "tags": [
+      "Operations Research",
+      "AI Strategy",
+      "Newsletter"
+    ],
     "domain": "Optimization",
     "difficulty": "intermediate",
-    "prerequisites": ["optimization-basics"],
-    "topic_tags": ["OR-AI-intersection", "experimental-design", "business-applications"],
+    "prerequisites": [
+      "optimization-basics"
+    ],
+    "topic_tags": [
+      "OR-AI-intersection",
+      "experimental-design",
+      "business-applications"
+    ],
     "summary": "Kuang Xu, Stanford GSB Professor, bridges OR research with AI strategy and experimental design. Posts combine academic rigor with business applications, covering the intersection of operations research and modern AI.",
-    "use_cases": ["When exploring OR-AI intersection", "When seeking academic perspective on business problems"],
-    "audience": ["Mid-DS", "Senior-DS", "Early-PhD"],
-    "synthetic_questions": ["How does OR relate to AI?", "What is the intersection of optimization and machine learning?", "How to apply OR in business strategy?"],
+    "use_cases": [
+      "When exploring OR-AI intersection",
+      "When seeking academic perspective on business problems"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "How does OR relate to AI?",
+      "What is the intersection of optimization and machine learning?",
+      "How to apply OR in business strategy?"
+    ],
     "content_format": "newsletter",
-    "skill_progression": ["OR-AI integration", "Academic-business translation"]
+    "skill_progression": [
+      "OR-AI integration",
+      "Academic-business translation"
+    ]
   },
   {
     "name": "Richard Oberdieck: Modern OR Software Engineering",
@@ -16308,17 +16684,42 @@
     "url": "https://oberdieck.dk/",
     "type": "Blog",
     "level": "Medium",
-    "tags": ["Operations Research", "Software Engineering", "Blog"],
+    "tags": [
+      "Operations Research",
+      "Software Engineering",
+      "Blog"
+    ],
     "domain": "Optimization",
     "difficulty": "intermediate",
-    "prerequisites": ["python-basics", "optimization-basics"],
-    "topic_tags": ["software-engineering", "LLM-optimization", "Python-patterns"],
-    "summary": "Richard Oberdieck covers modern software engineering practices for optimization, including 'LLM-ify me – Optimization edition' exploring AI-OR integration and Python modeling patterns.",
-    "use_cases": ["When building production optimization systems", "When exploring LLM-OR integration"],
-    "audience": ["Mid-DS", "Senior-DS"],
-    "synthetic_questions": ["How to use LLMs with optimization?", "What are software engineering best practices for OR?", "How to structure Python optimization code?"],
+    "prerequisites": [
+      "python-basics",
+      "optimization-basics"
+    ],
+    "topic_tags": [
+      "software-engineering",
+      "LLM-optimization",
+      "Python-patterns"
+    ],
+    "summary": "Richard Oberdieck covers modern software engineering practices for optimization, including 'LLM-ify me \u2013 Optimization edition' exploring AI-OR integration and Python modeling patterns.",
+    "use_cases": [
+      "When building production optimization systems",
+      "When exploring LLM-OR integration"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "How to use LLMs with optimization?",
+      "What are software engineering best practices for OR?",
+      "How to structure Python optimization code?"
+    ],
     "content_format": "blog",
-    "skill_progression": ["Production OR systems", "LLM integration", "Software engineering patterns"]
+    "skill_progression": [
+      "Production OR systems",
+      "LLM integration",
+      "Software engineering patterns"
+    ]
   },
   {
     "name": "Franco Peschiera: PuLP Maintainer",
@@ -16327,16 +16728,41 @@
     "url": "https://pchtsp.github.io/",
     "type": "Blog",
     "level": "Medium",
-    "tags": ["Operations Research", "PuLP", "Blog"],
+    "tags": [
+      "Operations Research",
+      "PuLP",
+      "Blog"
+    ],
     "domain": "Optimization",
     "difficulty": "intermediate",
-    "prerequisites": ["python-basics", "linear-programming"],
-    "topic_tags": ["PuLP", "open-source-OR", "library-development"],
+    "prerequisites": [
+      "python-basics",
+      "linear-programming"
+    ],
+    "topic_tags": [
+      "PuLP",
+      "open-source-OR",
+      "library-development"
+    ],
     "summary": "Franco Peschiera, PuLP maintainer, publishes insider perspective on open-source OR library development. Posts include 'PuLP: past, present and future' and Timefold integration guidance.",
-    "use_cases": ["When using PuLP in production", "When contributing to open-source OR"],
-    "audience": ["Mid-DS", "Senior-DS"],
-    "synthetic_questions": ["What is the future of PuLP?", "How to integrate PuLP with other tools?", "How to contribute to open-source OR libraries?"],
+    "use_cases": [
+      "When using PuLP in production",
+      "When contributing to open-source OR"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "What is the future of PuLP?",
+      "How to integrate PuLP with other tools?",
+      "How to contribute to open-source OR libraries?"
+    ],
     "content_format": "blog",
-    "skill_progression": ["PuLP mastery", "Open-source contribution", "Library integration"]
+    "skill_progression": [
+      "PuLP mastery",
+      "Open-source contribution",
+      "Library integration"
+    ]
   }
 ]

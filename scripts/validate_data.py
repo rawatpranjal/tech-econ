@@ -92,11 +92,11 @@ def validate_required_fields(files: dict) -> list:
 
 
 def find_duplicate_urls(files: dict) -> list:
-    """Find duplicate URLs within and across files."""
+    """Find duplicate URLs within files (cross-file duplicates are allowed)."""
     errors = []
-    all_urls = {}  # url -> [(filename, name), ...]
 
     for filename, data in files.items():
+        file_urls = {}  # Track URLs within this file only
         items = data if isinstance(data, list) else [data]
 
         for item in items:
@@ -108,15 +108,10 @@ def find_duplicate_urls(files: dict) -> list:
 
             name = item.get("name", item.get("title", "unknown"))
 
-            if url not in all_urls:
-                all_urls[url] = []
-            all_urls[url].append((filename, name))
-
-    # Find duplicates
-    for url, occurrences in all_urls.items():
-        if len(occurrences) > 1:
-            locations = ", ".join(f"{f}:'{n}'" for f, n in occurrences)
-            errors.append(f"Duplicate URL '{url}' found in: {locations}")
+            if url in file_urls:
+                errors.append(f"{filename}: Duplicate URL '{url}' - '{name}' and '{file_urls[url]}'")
+            else:
+                file_urls[url] = name
 
     return errors
 
