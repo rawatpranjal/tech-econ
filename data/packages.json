@@ -4147,5 +4147,275 @@
     ],
     "best_for": "Modeling non-normal responses where variance, skewness, or kurtosis depend on predictors, implementing Rigby & Stasinopoulos (2005)",
     "language": "R"
+  },
+  {
+    "name": "vars",
+    "description": "Comprehensive package for Vector Autoregression (VAR), Structural VAR (SVAR), and Structural Vector Error Correction (SVEC) models. Provides estimation, lag selection, diagnostic testing, forecasting, Granger causality analysis, impulse response functions, and forecast error variance decomposition.",
+    "category": "Time Series Econometrics",
+    "docs_url": "https://cran.r-project.org/web/packages/vars/vars.pdf",
+    "github_url": "https://github.com/bpfaff/vars",
+    "url": "https://cran.r-project.org/package=vars",
+    "install": "install.packages(\"vars\")",
+    "tags": [
+      "VAR",
+      "SVAR",
+      "impulse-response",
+      "Granger-causality",
+      "FEVD"
+    ],
+    "best_for": "Multivariate time series analysis with impulse response functions and variance decomposition, implementing Pfaff (2008)",
+    "language": "R"
+  },
+  {
+    "name": "urca",
+    "description": "Implements unit root and cointegration tests commonly used in applied econometric analysis. Includes Augmented Dickey-Fuller, Phillips-Perron, KPSS, Elliott-Rothenberg-Stock, and Zivot-Andrews tests, plus Johansen's cointegration procedure for multivariate series.",
+    "category": "Time Series Econometrics",
+    "docs_url": "https://cran.r-project.org/web/packages/urca/urca.pdf",
+    "github_url": "https://github.com/bpfaff/urca",
+    "url": "https://cran.r-project.org/package=urca",
+    "install": "install.packages(\"urca\")",
+    "tags": [
+      "unit-root",
+      "cointegration",
+      "ADF-test",
+      "KPSS",
+      "Johansen"
+    ],
+    "best_for": "Testing stationarity and finding cointegrating relationships in non-stationary time series, implementing Pfaff (2008)",
+    "language": "R"
+  },
+  {
+    "name": "tsDyn",
+    "description": "Implements nonlinear autoregressive time series models including threshold AR (TAR/SETAR), smooth transition AR (STAR, LSTAR), and multivariate extensions (TVAR, TVECM). Enables regime-switching dynamics analysis with parametric and non-parametric approaches.",
+    "category": "Time Series Econometrics",
+    "docs_url": "https://github.com/MatthieuStigler/tsDyn/wiki",
+    "github_url": "https://github.com/MatthieuStigler/tsDyn",
+    "url": "https://cran.r-project.org/package=tsDyn",
+    "install": "install.packages(\"tsDyn\")",
+    "tags": [
+      "nonlinear",
+      "SETAR",
+      "LSTAR",
+      "threshold-VAR",
+      "regime-switching"
+    ],
+    "best_for": "Modeling regime-switching dynamics and threshold cointegration in univariate and multivariate series",
+    "language": "R"
+  },
+  {
+    "name": "dynlm",
+    "description": "Provides an interface for fitting dynamic linear regression models with extended formula syntax. Supports convenient lag operators L(), differencing d(), trend(), season(), and harmonic components while preserving time series attributes.",
+    "category": "Time Series Econometrics",
+    "docs_url": "https://cran.r-project.org/web/packages/dynlm/dynlm.pdf",
+    "github_url": null,
+    "url": "https://cran.r-project.org/package=dynlm",
+    "install": "install.packages(\"dynlm\")",
+    "tags": [
+      "dynamic-regression",
+      "lag-operator",
+      "time-series-regression",
+      "distributed-lags",
+      "formula-syntax"
+    ],
+    "best_for": "Time series regression with easy specification of lags, differences, and seasonal patterns using formula syntax",
+    "language": "R"
+  },
+  {
+    "name": "strucchange",
+    "description": "Testing, monitoring, and dating structural changes in linear regression models. Implements the generalized fluctuation test framework (CUSUM, MOSUM, recursive estimates) and F-test framework (Chow test, supF, aveF, expF) with breakpoint estimation and confidence intervals.",
+    "category": "Time Series Econometrics",
+    "docs_url": "https://cran.r-project.org/web/packages/strucchange/vignettes/strucchange-intro.pdf",
+    "github_url": null,
+    "url": "https://cran.r-project.org/package=strucchange",
+    "install": "install.packages(\"strucchange\")",
+    "tags": [
+      "structural-break",
+      "CUSUM",
+      "Chow-test",
+      "breakpoints",
+      "parameter-stability"
+    ],
+    "best_for": "Detecting and dating parameter instability and structural breaks in regression relationships, implementing Zeileis et al. (2002)",
+    "language": "R"
+  },
+  {
+    "name": "mFilter",
+    "description": "Implements time series filters for extracting trend and cyclical components. Includes Hodrick-Prescott, Baxter-King, Christiano-Fitzgerald, Butterworth, and trigonometric regression filters commonly used in macroeconomics and business cycle analysis.",
+    "category": "Time Series Econometrics",
+    "docs_url": "https://cran.r-project.org/web/packages/mFilter/mFilter.pdf",
+    "github_url": null,
+    "url": "https://cran.r-project.org/package=mFilter",
+    "install": "install.packages(\"mFilter\")",
+    "tags": [
+      "HP-filter",
+      "Baxter-King",
+      "trend-extraction",
+      "business-cycles",
+      "detrending"
+    ],
+    "best_for": "Decomposing time series into trend and cyclical components for business cycle analysis",
+    "language": "R"
+  },
+  {
+    "name": "forecast",
+    "description": "The foundational R package for univariate time series forecasting. Provides methods for exponential smoothing via state space models (ETS), automatic ARIMA modeling with auto.arima(), TBATS for complex seasonality, and comprehensive model evaluation tools.",
+    "category": "Time Series Forecasting",
+    "docs_url": "https://pkg.robjhyndman.com/forecast/",
+    "github_url": "https://github.com/robjhyndman/forecast",
+    "url": "https://cran.r-project.org/package=forecast",
+    "install": "install.packages(\"forecast\")",
+    "tags": [
+      "time-series",
+      "ARIMA",
+      "exponential-smoothing",
+      "ETS",
+      "auto.arima"
+    ],
+    "best_for": "Classical statistical forecasting for univariate time series with automatic model selection, implementing Hyndman & Khandakar (2008)",
+    "language": "R"
+  },
+  {
+    "name": "fable",
+    "description": "A tidyverse-native forecasting framework providing ETS, ARIMA, and other models for tidy time series (tsibble objects). Enables fitting multiple models across many time series simultaneously with a consistent formula-based interface.",
+    "category": "Time Series Forecasting",
+    "docs_url": "https://fable.tidyverts.org/",
+    "github_url": "https://github.com/tidyverts/fable",
+    "url": "https://cran.r-project.org/package=fable",
+    "install": "install.packages(\"fable\")",
+    "tags": [
+      "time-series",
+      "tidyverse",
+      "ARIMA",
+      "ETS",
+      "tsibble"
+    ],
+    "best_for": "Tidy forecasting workflows handling many related time series with tidyverse-consistent syntax",
+    "language": "R"
+  },
+  {
+    "name": "prophet",
+    "description": "Automatic forecasting procedure based on an additive decomposable model with non-linear trends, yearly/weekly/daily seasonality, and holiday effects. Robust to missing data, trend shifts, and outliers; designed for business time series with strong seasonal patterns.",
+    "category": "Time Series Forecasting",
+    "docs_url": "https://facebook.github.io/prophet/",
+    "github_url": "https://github.com/facebook/prophet",
+    "url": "https://cran.r-project.org/package=prophet",
+    "install": "install.packages(\"prophet\")",
+    "tags": [
+      "time-series",
+      "Facebook",
+      "decomposable-model",
+      "seasonality",
+      "holidays"
+    ],
+    "best_for": "Business time series forecasting with multiple seasonalities, holiday effects, and automated tunable forecasts, implementing Taylor & Letham (2018)",
+    "language": "R"
+  },
+  {
+    "name": "KFAS",
+    "description": "State space modeling framework for exponential family time series with computationally efficient Kalman filtering, smoothing, forecasting, and simulation. Supports observations from Gaussian, Poisson, binomial, negative binomial, and gamma distributions.",
+    "category": "Time Series Econometrics",
+    "docs_url": "https://cran.r-project.org/web/packages/KFAS/KFAS.pdf",
+    "github_url": "https://github.com/helske/KFAS",
+    "url": "https://cran.r-project.org/package=KFAS",
+    "install": "install.packages(\"KFAS\")",
+    "tags": [
+      "state-space",
+      "kalman-filter",
+      "time-series",
+      "forecasting",
+      "exponential-family"
+    ],
+    "best_for": "Multivariate time series modeling with non-Gaussian observations (e.g., count data with Poisson), implementing Helske (2017)",
+    "language": "R"
+  },
+  {
+    "name": "dlm",
+    "description": "Maximum likelihood and Bayesian analysis of Normal linear state space models (Dynamic Linear Models). Features numerically stable SVD-based algorithms for Kalman filtering and smoothing, plus tools for MCMC-based Bayesian inference including forward filtering backward sampling (FFBS).",
+    "category": "Time Series Econometrics",
+    "docs_url": "https://cran.r-project.org/web/packages/dlm/vignettes/dlm.pdf",
+    "github_url": null,
+    "url": "https://cran.r-project.org/package=dlm",
+    "install": "install.packages(\"dlm\")",
+    "tags": [
+      "state-space",
+      "kalman-filter",
+      "Bayesian",
+      "time-series",
+      "dynamic-linear-models"
+    ],
+    "best_for": "Bayesian analysis of linear Gaussian state space models with MCMC methods (Gibbs sampling), implementing Petris (2010)",
+    "language": "R"
+  },
+  {
+    "name": "spdep",
+    "description": "The foundational R package for spatial weights matrix creation and spatial autocorrelation testing. Provides functions for creating spatial weights from polygon contiguities and point patterns, computing global statistics (Moran's I, Geary's C), local indicators (LISA), and Lagrange multiplier tests.",
+    "category": "Spatial Econometrics",
+    "docs_url": "https://r-spatial.github.io/spdep/",
+    "github_url": "https://github.com/r-spatial/spdep",
+    "url": "https://cran.r-project.org/package=spdep",
+    "install": "install.packages(\"spdep\")",
+    "tags": [
+      "spatial-weights",
+      "autocorrelation",
+      "morans-i",
+      "neighborhood-analysis",
+      "spatial-statistics"
+    ],
+    "best_for": "Creating spatial weights matrices and testing for spatial autocorrelation in cross-sectional data, implementing Bivand & Wong (2018)",
+    "language": "R"
+  },
+  {
+    "name": "spatialreg",
+    "description": "Comprehensive package for spatial regression model estimation, split from spdep in 2019. Provides maximum likelihood, two-stage least squares, and GMM estimation for spatial lag (SAR), spatial error (SEM), and combined (SARAR/SAC) models, plus Spatial Durbin and SLX variants with impact calculations.",
+    "category": "Spatial Econometrics",
+    "docs_url": "https://r-spatial.github.io/spatialreg/",
+    "github_url": "https://github.com/r-spatial/spatialreg",
+    "url": "https://cran.r-project.org/package=spatialreg",
+    "install": "install.packages(\"spatialreg\")",
+    "tags": [
+      "spatial-regression",
+      "maximum-likelihood",
+      "spatial-lag",
+      "spatial-error",
+      "GMM"
+    ],
+    "best_for": "Estimating cross-sectional spatial regression models (SAR, SEM, SAC, SDM) with maximum likelihood or GMM, implementing Bivand & Piras (2015)",
+    "language": "R"
+  },
+  {
+    "name": "splm",
+    "description": "Maximum likelihood and GMM estimation for spatial panel data models. Implements fixed and random effects specifications with spatial lag and/or spatial error components, including the Kapoor-Kelejian-Prucha (2007) GM estimator. Provides diagnostic tests for spatial autocorrelation in panel settings.",
+    "category": "Spatial Econometrics",
+    "docs_url": "https://cran.r-project.org/web/packages/splm/splm.pdf",
+    "github_url": null,
+    "url": "https://cran.r-project.org/package=splm",
+    "install": "install.packages(\"splm\")",
+    "tags": [
+      "spatial-panel",
+      "panel-data",
+      "fixed-effects",
+      "random-effects",
+      "GMM"
+    ],
+    "best_for": "Estimating spatial econometric models with panel (longitudinal) data structures, implementing Millo & Piras (2012)",
+    "language": "R"
+  },
+  {
+    "name": "sf",
+    "description": "The modern standard for spatial vector data in R, implementing Simple Features access (ISO 19125). Represents spatial data as data frames with geometry list-columns, enabling seamless tidyverse integration. Interfaces with GDAL (I/O), GEOS (geometry operations), PROJ (projections), and s2 (spherical geometry).",
+    "category": "Spatial Econometrics",
+    "docs_url": "https://r-spatial.github.io/sf/",
+    "github_url": "https://github.com/r-spatial/sf",
+    "url": "https://cran.r-project.org/package=sf",
+    "install": "install.packages(\"sf\")",
+    "tags": [
+      "simple-features",
+      "spatial-data",
+      "vector-data",
+      "tidyverse",
+      "GDAL-GEOS-PROJ"
+    ],
+    "best_for": "Reading, writing, manipulating, and visualizing spatial vector data; foundation for all spatial workflows, implementing Pebesma (2018)",
+    "language": "R"
   }
 ]

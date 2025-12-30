@@ -1,10 +1,33 @@
 {{ define "main" }}
+<!-- Leaflet CSS for Map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+
 <!-- Search Index Data for Fuse.js -->
 <script id="search-data" type="application/json">
 [{{ range $i, $pkg := .Site.Data.packages }}{{ if $i }},{{ end }}{"name":"{{ .name }}","description":"{{ .description | htmlEscape }}","category":"{{ .category }}","tags":"{{ delimit .tags "," }}","best_for":"{{ .best_for | htmlEscape }}"}{{ end }}]
 </script>
 
+<!-- Map Data for Homepage -->
+{{ $eventsWithLocation := where .Site.Data.community "lat" "!=" nil }}
+<script id="homepage-map-data" type="application/json">
+[{{ $first := true }}{{ range .Site.Data.community }}{{ if and .lat .lng }}{{ if not $first }},{{ end }}{{ $first = false }}{"name":"{{ .name }}","url":"{{ .url }}","lat":{{ .lat }},"lng":{{ .lng }},"category":"{{ .category }}","subcategory":"{{ .subcategory | default "" }}","location":"{{ .location | htmlEscape }}","dates":"{{ .dates }}","start_date":"{{ .start_date | default "" }}","end_date":"{{ .end_date | default "" }}"}{{ end }}{{ end }}]
+</script>
+
 <div class="container">
+    <!-- Events Map Section -->
+    <div class="homepage-events-section">
+        <div class="events-section-header">
+            <h2>Find Events Near You</h2>
+            <p>{{ len $eventsWithLocation }} conferences & meetups around the world. <a href="{{ "community/" | relURL }}">View all events →</a></p>
+        </div>
+        <div class="homepage-map-controls">
+            <button id="homepage-find-near-me" class="near-me-btn">📍 Find Near Me</button>
+        </div>
+        <div id="homepage-map"></div>
+    </div>
+
     <!-- Search and Filters Row -->
     <div class="search-filters-row">
         <!-- Search Bar -->
@@ -152,4 +175,187 @@
         <p>Data sourced from <a href="https://github.com/rawatpranjal/econometrics-in-python" target="_blank">econometrics-in-python</a></p>
     </footer>
 </div>
+
+<!-- Leaflet JS for Homepage Map -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script>
+(function() {
+    let homepageMap = null;
+    let homepageMarkers = null;
+    let userMarker = null;
+
+    // Subcategory colors
+    const subcategoryColors = {
+        'Experimentation': '#3b82f6',
+        'Marketing Science': '#f97316',
+        'Pricing & Revenue': '#22c55e',
+        'Platforms & E-commerce': '#a855f7',
+        'Statistics & Analytics': '#6366f1',
+        'Healthcare Economics': '#ef4444',
+        'Labor & Finance': '#14b8a6',
+        'Antitrust': '#ec4899',
+        'Market Design': '#8b5cf6',
+        'Decision Science': '#7c3aed',
+        'Sports Analytics': '#84cc16',
+        'Gaming & Esports': '#a855f7',
+        'Insurance & Actuarial': '#06b6d4',
+        'Retail & CPG': '#eab308',
+        'Supply Chain': '#78716c'
+    };
+
+    function getMarkerColor(item) {
+        if (item.subcategory && subcategoryColors[item.subcategory]) {
+            return subcategoryColors[item.subcategory];
+        }
+        if (item.category === 'Meetups') return '#f59e0b';
+        if (item.category === 'Research Labs') return '#10b981';
+        return '#6b7280';
+    }
+
+    function createCustomIcon(color) {
+        return L.divIcon({
+            className: 'custom-marker',
+            html: `<div style="background-color: ${color}; width: 12px; height: 12px; border-radius: 50%; border: 2px solid white; box-shadow: 0 2px 4px rgba(0,0,0,0.3);"></div>`,
+            iconSize: [16, 16],
+            iconAnchor: [8, 8],
+            popupAnchor: [0, -8]
+        });
+    }
+
+    function initHomepageMap() {
+        const mapContainer = document.getElementById('homepage-map');
+        if (!mapContainer || homepageMap) return;
+
+        // Create map centered on US
+        homepageMap = L.map('homepage-map').setView([39.8283, -98.5795], 4);
+
+        // Add CartoDB Positron tiles
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
+            maxZoom: 19,
+            subdomains: 'abcd'
+        }).addTo(homepageMap);
+
+        // Create marker cluster group
+        homepageMarkers = L.markerClusterGroup({
+            maxClusterRadius: 50,
+            spiderfyOnMaxZoom: true,
+            showCoverageOnHover: false,
+            zoomToBoundsOnClick: true,
+            iconCreateFunction: function(cluster) {
+                const count = cluster.getChildCount();
+                let size = 'small';
+                if (count >= 10) size = 'medium';
+                if (count >= 25) size = 'large';
+                return L.divIcon({
+                    html: `<div class="cluster-${size}"><span>${count}</span></div>`,
+                    className: 'custom-cluster',
+                    iconSize: L.point(40, 40)
+                });
+            }
+        });
+
+        // Load and add markers from map data
+        const mapDataEl = document.getElementById('homepage-map-data');
+        if (mapDataEl) {
+            try {
+                const data = JSON.parse(mapDataEl.textContent);
+                data.forEach(item => {
+                    const color = getMarkerColor(item);
+                    const icon = createCustomIcon(color);
+                    const marker = L.marker([item.lat, item.lng], { icon: icon });
+
+                    // Create popup content
+                    let popupContent = `
+                        <div class="map-popup">
+                            <strong class="popup-title">
+                                <a href="${item.url}" target="_blank" rel="noopener">${item.name}</a>
+                            </strong>
+                            <div class="popup-meta">
+                                <span>📍 ${item.location}</span>
+                                ${item.dates ? `<span>📅 ${item.dates}</span>` : ''}
+                            </div>
+                            <div class="popup-footer">
+                                <span class="popup-badge" style="background-color: ${color}; color: white;">
+                                    ${item.subcategory || item.category}
+                                </span>
+                                <a href="${item.url}" target="_blank" rel="noopener" class="popup-link">Visit →</a>
+                            </div>
+                        </div>
+                    `;
+
+                    marker.bindPopup(popupContent, { maxWidth: 280 });
+                    homepageMarkers.addLayer(marker);
+                });
+
+                homepageMap.addLayer(homepageMarkers);
+            } catch (e) {
+                console.error('Error loading homepage map data:', e);
+            }
+        }
+    }
+
+    function setupHomepageNearMe() {
+        const nearMeBtn = document.getElementById('homepage-find-near-me');
+        if (!nearMeBtn) return;
+
+        nearMeBtn.addEventListener('click', function() {
+            if (!navigator.geolocation) {
+                alert('Geolocation is not supported by your browser');
+                return;
+            }
+
+            nearMeBtn.textContent = '📍 Locating...';
+            nearMeBtn.disabled = true;
+
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const userLat = position.coords.latitude;
+                    const userLng = position.coords.longitude;
+
+                    if (homepageMap) {
+                        homepageMap.setView([userLat, userLng], 8);
+
+                        // Remove previous user marker if exists
+                        if (userMarker) {
+                            homepageMap.removeLayer(userMarker);
+                        }
+
+                        // Add pulsing marker at user location
+                        userMarker = L.marker([userLat, userLng], {
+                            icon: L.divIcon({
+                                className: 'user-location-marker',
+                                html: '<div class="user-pulse"></div><div class="user-dot"></div>',
+                                iconSize: [20, 20],
+                                iconAnchor: [10, 10]
+                            })
+                        }).addTo(homepageMap);
+                        userMarker.bindPopup('📍 You are here').openPopup();
+                    }
+
+                    nearMeBtn.textContent = '📍 Find Near Me';
+                    nearMeBtn.disabled = false;
+                },
+                (error) => {
+                    let msg = 'Unable to get your location';
+                    if (error.code === error.PERMISSION_DENIED) {
+                        msg = 'Location access denied. Please enable location in your browser.';
+                    }
+                    alert(msg);
+                    nearMeBtn.textContent = '📍 Find Near Me';
+                    nearMeBtn.disabled = false;
+                },
+                { timeout: 10000, enableHighAccuracy: false }
+            );
+        });
+    }
+
+    // Initialize on DOM load
+    document.addEventListener('DOMContentLoaded', function() {
+        initHomepageMap();
+        setupHomepageNearMe();
+    });
+})();
+</script>
 {{ end }}

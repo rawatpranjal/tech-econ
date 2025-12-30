@@ -3180,6 +3180,60 @@ a:hover {
     background: var(--bg-secondary);
 }
 
+/* Homepage Events Map Section */
+.homepage-events-section {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.events-section-header {
+    margin-bottom: 1rem;
+}
+
+.events-section-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: var(--text-primary);
+}
+
+.events-section-header p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.events-section-header a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.events-section-header a:hover {
+    text-decoration: underline;
+}
+
+.homepage-map-controls {
+    margin-bottom: 0.75rem;
+}
+
+#homepage-map {
+    height: 320px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-secondary);
+}
+
+@media (max-width: 768px) {
+    #homepage-map {
+        height: 280px;
+    }
+
+    .events-section-header h2 {
+        font-size: 1.25rem;
+    }
+}
+
 .map-legend {
     margin-bottom: 1rem;
 }
@@ -3210,6 +3264,31 @@ a:hover {
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+/* Map Category Dropdown */
+.map-category-select {
+    padding: 0.5rem 2rem 0.5rem 0.75rem;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+}
+
+.map-category-select:hover {
+    border-color: var(--accent);
+}
+
+.map-category-select:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--accent-bg);
 }
 
 .near-me-btn:hover {

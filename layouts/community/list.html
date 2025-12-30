@@ -294,6 +294,30 @@
         <div class="map-controls">
             <button id="find-near-me" class="near-me-btn">📍 Find Near Me</button>
             <button id="map-fullscreen" class="fullscreen-btn" title="Toggle fullscreen">⛶</button>
+            <select id="map-category-filter" class="map-category-select">
+                <option value="all">All Categories</option>
+                <optgroup label="Conference Topics">
+                    <option value="Experimentation">Experimentation</option>
+                    <option value="Marketing Science">Marketing</option>
+                    <option value="Pricing & Revenue">Pricing</option>
+                    <option value="Platforms & E-commerce">Platforms</option>
+                    <option value="Statistics & Analytics">Statistics</option>
+                    <option value="Healthcare Economics">Healthcare</option>
+                    <option value="Labor & Finance">Labor & Finance</option>
+                    <option value="Antitrust">Antitrust</option>
+                    <option value="Market Design">Market Design</option>
+                    <option value="Decision Science">Decision Science</option>
+                    <option value="Sports Analytics">Sports Analytics</option>
+                    <option value="Gaming & Esports">Gaming & Esports</option>
+                    <option value="Insurance & Actuarial">Insurance & Actuarial</option>
+                    <option value="Retail & CPG">Retail & CPG</option>
+                    <option value="Supply Chain">Supply Chain</option>
+                </optgroup>
+                <optgroup label="Other">
+                    <option value="Meetups">Meetups</option>
+                    <option value="Research Labs">Research Labs</option>
+                </optgroup>
+            </select>
             <div class="city-filter">
                 <button class="city-btn active" data-city="all">All</button>
                 <button class="city-btn" data-city="nyc">NYC</button>
@@ -1049,6 +1073,75 @@ document.addEventListener('DOMContentLoaded', function() {
                 activeFilters.delete(filter);
             } else {
                 activeFilters.add(filter);
+            }
+
+            // Rebuild markers with filtered data
+            if (markers && map) {
+                markers.clearLayers();
+                allMapData.forEach(item => {
+                    const itemFilter = item.category === 'Meetups' ? 'Meetups' :
+                                       item.category === 'Research Labs' ? 'Research Labs' :
+                                       item.subcategory;
+                    if (!activeFilters.has(itemFilter)) return;
+
+                    const color = getMarkerColor(item);
+                    const icon = createCustomIcon(color);
+                    const marker = L.marker([item.lat, item.lng], { icon: icon });
+
+                    const dateDisplay = item.start_date
+                        ? formatDateRange(item.start_date, item.end_date)
+                        : item.dates;
+
+                    let popupContent = `
+                        <div class="map-popup">
+                            <strong class="popup-title">
+                                <a href="${item.url}" target="_blank" rel="noopener">${item.name}</a>
+                            </strong>
+                            ${item.description ? `<p class="popup-desc">${item.description}</p>` : ''}
+                            <div class="popup-meta">
+                                <span>📍 ${item.location}</span>
+                                ${dateDisplay ? `<span>📅 ${dateDisplay}</span>` : ''}
+                                ${item.attendees ? `<span>👥 ${item.attendees} attendees</span>` : ''}
+                            </div>
+                            <div class="popup-footer">
+                                <span class="popup-badge" style="background-color: ${color}; color: white;">
+                                    ${item.subcategory || item.category}
+                                </span>
+                                <a href="${item.url}" target="_blank" rel="noopener" class="popup-link">Visit Website →</a>
+                            </div>
+                        </div>
+                    `;
+                    marker.bindPopup(popupContent, { maxWidth: 300 });
+                    markers.addLayer(marker);
+                });
+            }
+        });
+    }
+
+    // Category dropdown filter
+    const categoryDropdown = document.getElementById('map-category-filter');
+    if (categoryDropdown && mapLegend) {
+        categoryDropdown.addEventListener('change', function() {
+            const selected = this.value;
+
+            if (selected === 'all') {
+                // Activate all filters
+                activeFilters.clear();
+                mapLegend.querySelectorAll('.legend-item').forEach(item => {
+                    item.classList.add('active');
+                    activeFilters.add(item.dataset.filter);
+                });
+            } else {
+                // Activate only the selected filter
+                activeFilters.clear();
+                activeFilters.add(selected);
+                mapLegend.querySelectorAll('.legend-item').forEach(item => {
+                    if (item.dataset.filter === selected) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
             }
 
             // Rebuild markers with filtered data
