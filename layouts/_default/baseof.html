@@ -428,7 +428,7 @@
             .then(function(data) {
                 var el = document.getElementById('visitor-count');
                 if (el && data.count) {
-                    el.textContent = data.count.toLocaleString() + ' views';
+                    el.textContent = data.count.toLocaleString() + ' visitors';
                 }
             })
             .catch(function() {});
