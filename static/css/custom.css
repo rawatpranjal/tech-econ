@@ -2346,6 +2346,13 @@ a:hover {
     font-style: italic;
 }
 
+.hero-active {
+    font-size: 0.85rem;
+    color: var(--accent);
+    margin: 1rem 0 0;
+    opacity: 0.8;
+}
+
 /* Homepage Search Bar */
 .homepage-search {
     max-width: 600px;

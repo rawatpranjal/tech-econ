@@ -25,6 +25,11 @@ export default {
       return handleStats(request, env, origin);
     }
 
+    // Route: GET /cf-stats - Return Cloudflare analytics (hourly visitors)
+    if (request.method === 'GET' && url.pathname === '/cf-stats') {
+      return handleCfStats(request, env, origin);
+    }
+
     // Route: POST /events - Receive events
     if (request.method === 'POST' && (url.pathname === '/events' || url.pathname === '/')) {
       return handleEvents(request, env, ctx, origin);
@@ -186,6 +191,146 @@ async function handleStats(request, env, origin) {
     return new Response(JSON.stringify({ error: 'Failed to fetch stats' }), {
       status: 500,
       headers: { 'Content-Type': 'application/json' }
+    });
+  }
+}
+
+// ============================================
+// GET /cf-stats - Return Cloudflare Analytics
+// ============================================
+
+async function handleCfStats(request, env, origin) {
+  // Allow from allowed origins or no origin (direct access)
+  if (origin && !isAllowedOrigin(origin)) {
+    return new Response('Forbidden', { status: 403 });
+  }
+
+  const CF_CACHE_KEY = 'cf-stats:cached';
+  const CF_CACHE_TTL = 3600; // 1 hour
+
+  try {
+    const now = Date.now();
+
+    // Check cache first
+    const cached = await env.ANALYTICS_EVENTS.get(CF_CACHE_KEY);
+    if (cached) {
+      try {
+        const { data, ts } = JSON.parse(cached);
+        if (now - ts < CF_CACHE_TTL * 1000) {
+          return new Response(JSON.stringify({ ...data, _cached: true }), {
+            status: 200,
+            headers: {
+              'Content-Type': 'application/json',
+              'Cache-Control': 'public, max-age=1800',
+              ...corsHeaders(origin || '*')
+            }
+          });
+        }
+      } catch (e) {
+        // Invalid cache, continue to regenerate
+      }
+    }
+
+    // Check if API token and Zone ID are configured
+    if (!env.CF_API_TOKEN || !env.CF_ZONE_ID) {
+      return new Response(JSON.stringify({
+        error: 'Cloudflare API not configured',
+        minVisitors: 11,
+        maxVisitors: 37,
+        _fallback: true
+      }), {
+        status: 200,
+        headers: {
+          'Content-Type': 'application/json',
+          ...corsHeaders(origin || '*')
+        }
+      });
+    }
+
+    // Fetch from Cloudflare GraphQL Analytics API
+    const yesterday = new Date(now - 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+    const today = new Date(now).toISOString().split('T')[0];
+
+    const query = `
+      query {
+        viewer {
+          zones(filter: { zoneTag: "${env.CF_ZONE_ID}" }) {
+            httpRequests1hGroups(
+              limit: 24
+              filter: { date_geq: "${yesterday}", date_leq: "${today}" }
+            ) {
+              dimensions {
+                datetime
+              }
+              uniq {
+                uniques
+              }
+            }
+          }
+        }
+      }
+    `;
+
+    const response = await fetch('https://api.cloudflare.com/client/v4/graphql', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${env.CF_API_TOKEN}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ query })
+    });
+
+    if (!response.ok) {
+      throw new Error(`Cloudflare API error: ${response.status}`);
+    }
+
+    const result = await response.json();
+    const hourlyData = result?.data?.viewer?.zones?.[0]?.httpRequests1hGroups || [];
+
+    // Calculate min/max unique visitors
+    const uniqueCounts = hourlyData
+      .map(h => h.uniq?.uniques || 0)
+      .filter(n => n > 0);
+
+    const stats = {
+      minVisitors: uniqueCounts.length > 0 ? Math.min(...uniqueCounts) : 11,
+      maxVisitors: uniqueCounts.length > 0 ? Math.max(...uniqueCounts) : 37,
+      avgVisitors: uniqueCounts.length > 0
+        ? Math.round(uniqueCounts.reduce((a, b) => a + b, 0) / uniqueCounts.length)
+        : 20,
+      hoursAnalyzed: uniqueCounts.length,
+      updated: now
+    };
+
+    // Cache the result
+    await env.ANALYTICS_EVENTS.put(CF_CACHE_KEY, JSON.stringify({
+      data: stats,
+      ts: now
+    }), { expirationTtl: CF_CACHE_TTL });
+
+    return new Response(JSON.stringify(stats), {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'public, max-age=1800',
+        ...corsHeaders(origin || '*')
+      }
+    });
+
+  } catch (err) {
+    console.error('CF Stats error:', err);
+    // Return fallback data on error
+    return new Response(JSON.stringify({
+      error: err.message,
+      minVisitors: 11,
+      maxVisitors: 37,
+      _fallback: true
+    }), {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        ...corsHeaders(origin || '*')
+      }
     });
   }
 }

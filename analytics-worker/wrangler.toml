@@ -3,6 +3,16 @@ main = "index.js"
 compatibility_date = "2024-01-01"
 workers_dev = true
 
+# Environment variables
+[vars]
+# Get your Zone ID from Cloudflare Dashboard > Overview (right sidebar)
+CF_ZONE_ID = "YOUR_ZONE_ID_HERE"
+
+# Secrets (set via: wrangler secret put CF_API_TOKEN)
+# CF_API_TOKEN - Create at https://dash.cloudflare.com/profile/api-tokens
+#   Permissions: Zone > Analytics > Read
+#   Zone Resources: Include > Specific zone > tech-econ.com
+
 # KV Namespace for storing analytics events
 # Run: wrangler kv:namespace create ANALYTICS_EVENTS
 # Then update the id below with your namespace ID

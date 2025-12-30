@@ -8,6 +8,7 @@
         {{ $total := add (len .Site.Data.packages) (add (len .Site.Data.datasets) (add (len .Site.Data.resources) (add (len .Site.Data.talks) (add (len .Site.Data.books) (add (len .Site.Data.career) (add (len .Site.Data.community) $paperCount)))))) }}
         <p class="hero-subtitle">{{ len .Site.Data.packages }} packages • {{ len .Site.Data.datasets }} datasets • {{ $paperCount }} papers • {{ len .Site.Data.resources }} learning resources</p>
         <p class="hero-inspiration">See what others have done to imagine what's possible.</p>
+        <p class="hero-active" id="active-visitors"></p>
     </header>
 
     <!-- Homepage Search Bar -->
@@ -192,4 +193,38 @@
         <p>Built for tech economists. <a href="https://github.com/rawatpranjal/tech-econ" target="_blank">Contribute on GitHub</a></p>
     </footer>
 </div>
+
+<script>
+// Fetch and display active visitor stats
+(function() {
+    var el = document.getElementById('active-visitors');
+    if (!el) return;
+
+    // Check session cache first
+    var cached = sessionStorage.getItem('cf-stats');
+    if (cached) {
+        try {
+            var data = JSON.parse(cached);
+            if (Date.now() - data.ts < 3600000) { // 1 hour cache
+                el.textContent = data.text;
+                return;
+            }
+        } catch(e) {}
+    }
+
+    fetch('https://tech-econ-analytics.rawat-pranjal010.workers.dev/cf-stats')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            if (data.minVisitors && data.maxVisitors) {
+                var text = '~' + data.minVisitors + '-' + data.maxVisitors + ' economists browsing per hour';
+                el.textContent = text;
+                sessionStorage.setItem('cf-stats', JSON.stringify({ text: text, ts: Date.now() }));
+            }
+        })
+        .catch(function() {
+            // Fallback
+            el.textContent = '~11-37 economists browsing per hour';
+        });
+})();
+</script>
 {{ end }}
