@@ -2368,9 +2368,8 @@
   PageSearchHandler.prototype.showCategoryLayout = function() {
     var self = this;
 
-    // Reset section visibility
+    // Reset section visibility (use inline styles consistently)
     this.sections.forEach(function(section) {
-      section.classList.remove('section-hidden');
       var cat = section.dataset.sectionCategory;
       var shouldShow = self.currentCategory === 'all' || cat === self.currentCategory;
       section.style.display = shouldShow ? '' : 'none';
@@ -2408,13 +2407,11 @@
       }
     });
 
-    // Update section visibility based on visible cards
+    // Update section visibility based on visible cards (use inline styles for consistency)
     this.sections.forEach(function(section) {
       var visibleCards = section.querySelectorAll(self.config.cardSelector + ':not(.hidden)');
       if (visibleCards.length === 0) {
-        section.classList.add('section-hidden');
-      } else {
-        section.classList.remove('section-hidden');
+        section.style.display = 'none';
       }
     });
 
