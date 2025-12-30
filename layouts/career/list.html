@@ -103,6 +103,7 @@
         <div class="subtabs">
             <button class="subtab active" data-subtab="role-types">Role Types</button>
             <button class="subtab" data-subtab="what-teams-do">What Teams Do</button>
+            <button class="subtab" data-subtab="role-models">Role Models</button>
         </div>
 
         <!-- Role Types Subtab -->
@@ -150,6 +151,30 @@
                     </a>
                     {{ end }}
                     {{ end }}
+                    {{ end }}
+                </div>
+            </section>
+        </div>
+
+        <!-- Role Models Subtab -->
+        <div id="subtab-role-models" class="subtab-content">
+            <section class="curated-section role-models-section">
+                <div class="section-header">
+                    <h2>Role Models</h2>
+                    <p>{{ len .Site.Data.leading_lights }} pioneers who forged the path for tech economics.</p>
+                </div>
+                <div class="role-models-grid">
+                    {{ range .Site.Data.leading_lights }}
+                    <a href="{{ "leading-lights/" | relURL }}{{ .slug }}/" class="role-model-card">
+                        <div class="role-model-image-wrapper">
+                            <img src="{{ .image }}" alt="{{ .name }}" class="role-model-image" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name={{ .name | urlize }}&size=200&background=1e293b&color=fff'">
+                        </div>
+                        <div class="role-model-info">
+                            <span class="role-model-name">{{ .name }}</span>
+                            <span class="role-model-title">{{ .title }}</span>
+                            <span class="role-model-company">{{ .company }}</span>
+                        </div>
+                    </a>
                     {{ end }}
                 </div>
             </section>
@@ -449,7 +474,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const query = this.value.toLowerCase();
 
         // Search in all visible cards across all sections
-        document.querySelectorAll('.essential-item, .role-card, .work-card, .company-card, .negotiation-card, .interview-card, .reference-card, .resource-card').forEach(card => {
+        document.querySelectorAll('.essential-item, .role-card, .work-card, .company-card, .negotiation-card, .interview-card, .reference-card, .resource-card, .role-model-card').forEach(card => {
             const text = card.textContent.toLowerCase();
             if (query === '' || text.includes(query)) {
                 card.style.display = '';
@@ -469,4 +494,97 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 </script>
+
+<style>
+/* Role Models Grid */
+.role-models-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+}
+
+.role-model-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.25rem;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.role-model-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border-color: var(--accent-color);
+}
+
+.role-model-image-wrapper {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+}
+
+.role-model-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.role-model-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.role-model-name {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.role-model-title {
+    font-size: 0.8rem;
+    color: var(--accent-color);
+}
+
+.role-model-company {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+/* Dark mode */
+[data-theme="dark"] .role-model-card {
+    background: rgba(30, 41, 59, 0.6);
+    border-color: rgba(71, 85, 105, 0.5);
+}
+
+[data-theme="dark"] .role-model-card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 640px) {
+    .role-models-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .role-model-image-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+
+    .role-model-name {
+        font-size: 0.9rem;
+    }
+}
+</style>
 {{ end }}
