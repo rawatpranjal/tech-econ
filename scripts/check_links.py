@@ -6,6 +6,7 @@ Check all URLs in data JSON files for broken links.
 import json
 import asyncio
 import aiohttp
+import ssl
 import os
 import sys
 from datetime import datetime, timezone
@@ -30,37 +31,72 @@ URL_FIELDS = ["url", "github_url", "docs_url", "image_url"]
 
 # Domains to skip (often block automated requests)
 SKIP_DOMAINS = [
+    # Social media
     "linkedin.com",
     "twitter.com",
     "x.com",
     "facebook.com",
     "instagram.com",
-    "medium.com",          # Blocks bots
-    "leetcode.com",        # Blocks bots
-    "sec.gov",             # Blocks bots
-    "zillow.com",          # Blocks bots
-    "freakonomics.com",    # Blocks bots
-    "doordash.engineering", # Blocks bots
-    "uber.com",            # Returns 406
-    "informs.org",         # Various issues
+    # Content platforms
+    "medium.com",
+    "substack.com",
+    # Academic publishers (block bots with 403)
+    "jstor.org",
+    "dl.acm.org",
+    "academic.oup.com",
+    "ieeexplore.ieee.org",
+    "tandfonline.com",
+    "journals.sagepub.com",
+    "journals.uchicago.edu",
+    "liebertpub.com",
+    "onlinelibrary.wiley.com",
+    "link.springer.com",
+    "sciencedirect.com",
+    "nature.com",
+    "pnas.org",
+    "aeaweb.org",
+    # Tech/business sites
+    "leetcode.com",
+    "upwork.com",
+    "patentsview.org",
+    "sec.gov",
+    "zillow.com",
+    "freakonomics.com",
+    "doordash.engineering",
+    "uber.com",
+    "informs.org",
     "pubsonline.informs.org",
-    "forecasters.org",     # Blocks bots
-    "statmodeling.stat.columbia.edu",  # Blocks bots
-    "netflixtechblog.com", # SSL issues
-    "eng.lyft.com",        # SSL issues
-    "mediaspace.gatech.edu", # SSL issues
-    "leonwei.com",         # Blocks bots
-    "sciencedirect.com",   # Blocks bots
-    "data.iowa.gov",       # Slow/timeout
-    "kevinsheppard.com",   # Slow/timeout
-    "nabe.com",            # Various issues
-    "bts.gov",             # Blocks bots
-    "ec.sigecom.org",      # Connection issues
-    "wine-conference.org", # Connection issues
-    "data-mining-cup.com", # Timeout
-    "ai.baidu.com",        # Various issues
-    "openicpsr.org",       # Blocks bots
-    "web.stanford.edu",    # Various issues
+    "forecasters.org",
+    "statmodeling.stat.columbia.edu",
+    "netflixtechblog.com",
+    "eng.lyft.com",
+    "mediaspace.gatech.edu",
+    "leonwei.com",
+    "data.iowa.gov",
+    "kevinsheppard.com",
+    "nabe.com",
+    "bts.gov",
+    "ec.sigecom.org",
+    "wine-conference.org",
+    "data-mining-cup.com",
+    "ai.baidu.com",
+    "openicpsr.org",
+    "web.stanford.edu",
+    "ssrn.com",
+    "arxiv.org",
+    "nber.org",
+    # Career sites (often block bots)
+    "careers.chime.com",
+    "udemy.com",
+    "mgmresorts.com",
+    "stories.starbucks.com",
+    "careersatdoordash.com",
+    "careers.kimberly-clark.com",
+    "block.xyz",
+    "notion.so",
+    "wellfound.com",
+    "ncbi.nlm.nih.gov",
+    "cambridge.org",
 ]
 
 async def check_url(session, url, semaphore):
@@ -121,7 +157,13 @@ async def main():
     semaphore = asyncio.Semaphore(20)  # Limit concurrent requests
     headers = {"User-Agent": "Mozilla/5.0 (compatible; LinkChecker/1.0)"}
 
-    async with aiohttp.ClientSession(headers=headers) as session:
+    # Disable SSL verification (acceptable for link checking)
+    ssl_context = ssl.create_default_context()
+    ssl_context.check_hostname = False
+    ssl_context.verify_mode = ssl.CERT_NONE
+    connector = aiohttp.TCPConnector(ssl=ssl_context)
+
+    async with aiohttp.ClientSession(headers=headers, connector=connector) as session:
         tasks = [check_url(session, url, semaphore) for url in all_urls]
         results = await asyncio.gather(*tasks)
 
