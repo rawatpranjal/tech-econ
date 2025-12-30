@@ -238,6 +238,27 @@ SKIP_DOMAINS = [
     "mc4f.ee",
     "jobs.omniaretail.com",
     "japan-job-en.rakuten.careers",
+    # Additional career sites (block bots with 403/429)
+    "careers.churchdwight.com",
+    "careers.paypal.com",
+    "careers.regeneron.com",
+    "6sense.com",
+    "offerup.com",
+    "tsmc.com",
+    "wayfair.com",
+    # Media/content sites (block bots)
+    "c-span.org",
+    "cfr.org",
+    "datacamp.com",
+    "cxl.com",
+    "hiringlab.org",
+    "abovethecrowd.com",
+    "ipa.co.uk",
+    "engineering.atspotify.com",  # Moved to engineering.atspotify.com
+    "lh3.googleusercontent.com",  # Google image CDN
+    # Data portals (rate limiting/timeouts)
+    "data.cityofchicago.org",
+    "jobs.lever.co",
 ]
 
 async def check_url(session, url, semaphore):

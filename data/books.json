@@ -418,32 +418,31 @@
       "Competition & Antitrust"
     ],
     "difficulty": "intermediate",
-    "prerequisites": [
-      "microeconomics-theory",
-      "market-structure-analysis",
-      "behavioral-economics"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "surveillance-capitalism",
-      "data-extraction",
-      "platform-economics",
-      "behavioral-surplus",
-      "tech-regulation"
+      "data-economics",
+      "behavioral-surplus"
     ],
-    "summary": "Shoshana Zuboff's foundational work analyzing how tech platforms extract economic value from human behavioral data as a form of 'surveillance capitalism'. The book examines how companies like Google and Facebook create behavioral surplus from user interactions and convert it into predictive products sold to third parties. Essential reading for understanding the economic structures underlying modern digital platforms and their implications for competition policy.",
+    "summary": "This book explores the concept of surveillance capitalism and how data is used to extract behavioral surplus. It is suitable for those interested in understanding the implications of data economics in competition and antitrust contexts.",
     "use_cases": [
-      "Understanding how platform business models monetize user data for antitrust analysis",
-      "Analyzing the economic incentives behind data collection practices in tech companies"
+      "Understanding the impact of data on competition",
+      "Analyzing the ethical implications of data usage"
     ],
     "audience": [
-      "Senior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "surveillance capitalism theory Zuboff",
-      "how do tech platforms extract value from user data",
-      "behavioral surplus and data economics",
-      "economic analysis of platform data monetization"
+      "What is surveillance capitalism?",
+      "How does data economics affect competition?",
+      "What are the implications of behavioral surplus extraction?",
+      "Who benefits from surveillance capitalism?",
+      "What are the challenges of regulating data economics?",
+      "How does this concept relate to antitrust laws?"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "Understanding data economics",
+      "Analyzing behavioral surplus extraction"
     ]
   },
   {
@@ -458,32 +457,37 @@
     "tags": [
       "AI & Machine Learning"
     ],
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-statistics",
-      "data-analysis-concepts"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "algorithmic-bias",
+      "algorithmic bias",
       "fairness",
-      "ethics",
-      "policy",
-      "book"
+      "machine learning economics"
     ],
-    "summary": "Cathy O'Neil's influential book examining how algorithms can perpetuate and amplify social inequalities across hiring, lending, criminal justice, and other domains. Accessible to non-technical readers, it provides frameworks for identifying harmful algorithmic systems and understanding their economic and social impacts. Essential reading for anyone working with ML systems that affect people's lives.",
+    "summary": "This resource explores the implications of algorithmic bias and fairness in machine learning, focusing on the economic aspects. It is suitable for those interested in understanding the intersection of AI and economics.",
     "use_cases": [
-      "Understanding potential biases in recommendation systems or hiring algorithms",
-      "Building ethical frameworks for ML product development"
+      "to understand algorithmic bias",
+      "to explore fairness in AI",
+      "to learn about ML economics"
     ],
     "audience": [
-      "Junior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "algorithmic bias in hiring",
-      "fairness in machine learning book",
-      "ethics of AI algorithms",
-      "weapons of math destruction summary"
+      "What is algorithmic bias?",
+      "How does fairness affect machine learning?",
+      "What are the economic implications of AI?",
+      "Who should read Weapons of Math Destruction?",
+      "What are the key concepts in ML economics?",
+      "How can I learn about algorithmic fairness?",
+      "What are the challenges in AI ethics?",
+      "What is the impact of algorithms on society?"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "understanding algorithmic bias",
+      "knowledge of fairness in AI",
+      "insight into ML economics"
     ]
   },
   {
@@ -498,33 +502,35 @@
     "tags": [
       "AI & Machine Learning"
     ],
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-python",
-      "neural-networks",
-      "reinforcement-learning"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "ai-alignment",
-      "ai-safety",
-      "responsible-ai",
-      "machine-learning-ethics",
-      "human-ai-interaction"
+      "AI alignment",
+      "human values",
+      "responsible AI"
     ],
-    "summary": "A comprehensive introduction to the AI alignment problem - the challenge of ensuring AI systems pursue goals aligned with human values and intentions. The book explores both technical and philosophical aspects of building AI that remains beneficial and controllable as it becomes more capable. Essential reading for anyone working on AI systems who wants to understand potential risks and mitigation strategies.",
+    "summary": "This book explores the challenges of aligning artificial intelligence systems with human values, making it relevant for those interested in responsible AI practices. It is suitable for individuals seeking to understand the ethical implications of AI development.",
     "use_cases": [
-      "Understanding safety considerations when deploying machine learning models in production",
-      "Designing reward functions and objective functions that align with business goals and ethical constraints"
+      "Understanding AI ethics",
+      "Exploring responsible AI practices"
     ],
     "audience": [
-      "Junior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "what is AI alignment problem",
-      "how to build safe AI systems",
-      "AI safety for data scientists",
-      "responsible AI development practices"
+      "What is the alignment problem in AI?",
+      "How can AI align with human values?",
+      "What are the ethical implications of AI?",
+      "Who should read The Alignment Problem?",
+      "What will I learn from The Alignment Problem?",
+      "Why is responsible AI important?",
+      "What challenges exist in AI alignment?",
+      "How does AI impact society?"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "Understanding AI alignment",
+      "Recognizing ethical considerations in AI"
     ]
   },
   {
@@ -540,31 +546,32 @@
       "Competition & Antitrust"
     ],
     "difficulty": "beginner",
-    "prerequisites": [
-      "microeconomics-basics",
-      "market-structure-concepts"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "antitrust-law",
-      "tech-monopolies",
-      "market-concentration",
-      "competition-policy",
-      "regulatory-economics"
+      "competition",
+      "antitrust"
     ],
-    "summary": "An accessible introduction to antitrust principles and their application to modern technology companies. Written by Tim Wu, it explains how market concentration harms innovation and consumers, with particular focus on Big Tech platforms. Essential reading for understanding the economic and legal foundations of competition policy in digital markets.",
+    "summary": "This resource serves as a concise primer on antitrust issues in the tech industry, aimed at those looking to understand competition laws and their implications. It is suitable for beginners interested in the intersection of technology and regulatory frameworks.",
     "use_cases": [
-      "Understanding regulatory risks when analyzing tech company investments or market strategies",
-      "Preparing policy briefs on platform competition and market dominance issues"
+      "when to understand the basics of antitrust in technology"
     ],
     "audience": [
-      "Curious-browser",
-      "Junior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "introduction to antitrust for tech companies",
-      "how does market concentration affect innovation",
-      "primer on competition policy and big tech",
-      "understanding monopoly power in digital platforms"
+      "What is antitrust law?",
+      "How does antitrust affect tech companies?",
+      "What are the implications of competition in the tech industry?",
+      "Why is antitrust important for consumers?",
+      "What are the key concepts in antitrust?",
+      "How can I learn more about competition policy?",
+      "What resources are available for understanding antitrust?",
+      "Who are the major players in antitrust discussions?"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "understanding of antitrust concepts",
+      "knowledge of competition laws in tech"
     ]
   },
   {
@@ -579,33 +586,35 @@
     "tags": [
       "Competition & Antitrust"
     ],
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-economics",
-      "market-analysis",
-      "statistical-concepts"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "market-concentration",
-      "antitrust-policy",
-      "economic-analysis",
-      "competition-economics",
-      "regulatory-economics"
+      "competition",
+      "antitrust",
+      "economics"
     ],
-    "summary": "A comprehensive examination of how market concentration has increased across industries in the United States, leading to reduced competition, higher prices, and lower wages. The book presents empirical evidence showing how dominant firms have gained market power and discusses policy solutions to restore competitive markets. Essential reading for understanding modern competition policy and its economic implications.",
+    "summary": "This book explores the dynamics of competition and antitrust through data-driven analysis. It is aimed at readers interested in understanding the complexities of market competition.",
     "use_cases": [
-      "Understanding market concentration trends when analyzing industry competition",
-      "Building economic arguments for antitrust policy recommendations"
+      "to understand competition dynamics",
+      "for insights into antitrust policy"
     ],
     "audience": [
-      "Curious-browser",
-      "Early-PhD"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "books on market concentration and competition",
-      "understanding antitrust economics for beginners",
-      "why markets are becoming less competitive",
-      "economic evidence for competition policy"
+      "What is competition economics?",
+      "How does antitrust policy affect markets?",
+      "What data is used in competition analysis?",
+      "Who benefits from competition?",
+      "What are the effects of antitrust laws?",
+      "How can competition be measured?",
+      "What are the challenges in competition economics?",
+      "What case studies are presented in The Great Reversal?"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "understanding competition economics",
+      "analyzing antitrust implications"
     ]
   },
   {
@@ -620,33 +629,29 @@
     "tags": [
       "Platform Economics"
     ],
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-economics",
-      "business-strategy"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "platform-economics",
-      "network-effects",
-      "business-strategy",
-      "contrarian-analysis",
-      "market-dynamics"
+      "platform-economics"
     ],
-    "summary": "A contrarian examination of when platform strategies fail and network effects don't create sustainable competitive advantages. The book challenges conventional wisdom about digital platforms by analyzing cases where traditional business fundamentals matter more than network size. Essential reading for understanding the limitations of platform thinking in business strategy.",
+    "summary": "This book offers a contrarian perspective on the significance of network effects in platform economics. It is suitable for readers interested in understanding the limitations of conventional wisdom in this field.",
     "use_cases": [
-      "Evaluating whether a company's platform strategy claims are credible during investment analysis",
-      "Designing product strategy for markets where network effects may be weaker than expected"
+      "to challenge conventional beliefs about network effects"
     ],
     "audience": [
-      "Curious-browser",
-      "Junior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "when do network effects not work",
-      "criticism of platform business models",
-      "why some platforms fail despite network effects",
-      "contrarian view on digital platform strategy"
-    ]
+      "What is the platform delusion?",
+      "How do network effects impact platform economics?",
+      "What are the limitations of network effects?",
+      "Who should read The Platform Delusion?",
+      "What are the key arguments in The Platform Delusion?",
+      "How does The Platform Delusion challenge existing theories?",
+      "What insights can be gained from The Platform Delusion?",
+      "What is a contrarian take on platform economics?"
+    ],
+    "content_format": "book"
   },
   {
     "name": "Radical Markets",
@@ -661,32 +666,36 @@
       "Pricing & Market Design"
     ],
     "difficulty": "intermediate",
-    "prerequisites": [
-      "microeconomics-theory",
-      "game-theory-basics",
-      "auction-mechanisms"
-    ],
+    "prerequisites": [],
     "topic_tags": [
       "mechanism-design",
-      "auction-theory",
-      "quadratic-voting",
-      "harberger-tax",
-      "market-design"
+      "auctions",
+      "taxation",
+      "voting"
     ],
-    "summary": "Radical Markets presents innovative mechanism design proposals including Harberger taxes, quadratic voting, and new auction formats to address market failures and inequality. The book bridges economic theory with practical policy applications, making complex concepts accessible to practitioners. It's essential reading for anyone working on platform economics, voting systems, or alternative market structures.",
+    "summary": "This book explores innovative mechanism design ideas such as auctions, Harberger taxes, and quadratic voting. It is aimed at individuals interested in understanding new approaches to pricing and market design.",
     "use_cases": [
-      "designing voting mechanisms for DAOs or corporate governance",
-      "implementing dynamic pricing systems that account for social welfare"
+      "Understanding new market mechanisms",
+      "Exploring innovative pricing strategies"
     ],
     "audience": [
-      "Mid-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "quadratic voting implementation guide",
-      "harberger tax mechanism design",
-      "alternative auction formats for platforms",
-      "radical markets book summary key concepts"
+      "What are radical markets?",
+      "How do auctions work in mechanism design?",
+      "What is a Harberger tax?",
+      "What is quadratic voting?",
+      "How can pricing be improved?",
+      "What are the implications of these market designs?",
+      "Who benefits from radical market ideas?",
+      "What are examples of mechanism design in practice?"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "Understanding of auctions",
+      "Knowledge of Harberger taxes",
+      "Familiarity with quadratic voting"
     ]
   },
   {
@@ -701,32 +710,34 @@
     "tags": [
       "Labor & Gig Economy"
     ],
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-economics",
-      "survey-methods"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "algorithmic-management",
-      "gig-economy",
-      "platform-labor",
-      "worker-autonomy",
-      "digital-platforms"
+      "algorithmic management",
+      "gig economy"
     ],
-    "summary": "Uberland examines how algorithmic management systems control and coordinate workers in the gig economy, particularly focusing on ride-sharing platforms. The book analyzes how algorithms shape worker behavior, earnings, and autonomy while appearing to offer flexibility. It provides insights into the power dynamics between platforms, workers, and the technology that mediates their relationship.",
+    "summary": "This book explores the dynamics of algorithmic management within the gig economy, focusing on how technology shapes labor practices. It is suitable for those interested in understanding the intersection of technology and labor markets.",
     "use_cases": [
-      "Understanding how platform algorithms influence worker decision-making for labor economics research",
-      "Analyzing the social and economic impacts of gig work platforms for policy research"
+      "to understand the impact of technology on labor",
+      "to explore the gig economy dynamics"
     ],
     "audience": [
-      "Curious-browser",
-      "Early-PhD"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "how do uber algorithms control drivers",
-      "gig economy worker management systems",
-      "algorithmic management in platform labor",
-      "uber driver autonomy and algorithms"
+      "What is algorithmic management?",
+      "How does the gig economy function?",
+      "What are the implications of gig work?",
+      "What technologies are used in gig platforms?",
+      "How does Uber manage its workforce?",
+      "What are the challenges faced by gig workers?",
+      "What is the future of labor in the gig economy?",
+      "How can workers navigate algorithmic management?"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "understanding of gig economy dynamics",
+      "insight into algorithmic management practices"
     ]
   },
   {
@@ -742,31 +753,32 @@
       "Advertising & Attention"
     ],
     "difficulty": "beginner",
-    "prerequisites": [
-      "basic-statistics",
-      "web-analytics"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "personalization",
-      "recommendation-systems",
-      "algorithmic-bias",
-      "platform-economics",
-      "information-filtering"
+      "advertising",
+      "economics"
     ],
-    "summary": "A foundational book exploring how personalized algorithms create 'filter bubbles' that limit information diversity and shape user behavior. Eli Pariser examines the economic and social implications of recommendation systems used by major tech platforms. Essential reading for understanding the broader impacts of personalization beyond just technical implementation.",
+    "summary": "This book explores the economics of personalization and recommendation systems. It is suitable for anyone interested in understanding how these systems impact advertising and attention.",
     "use_cases": [
-      "Understanding algorithmic bias in recommendation systems before designing A/B tests",
-      "Evaluating the societal impact of personalization features in product development"
+      "when to understand the impact of personalization on advertising"
     ],
     "audience": [
-      "Junior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "What are the economic effects of personalized recommendations?",
-      "How do filter bubbles impact user behavior?",
-      "What are the downsides of recommendation algorithms?",
-      "How does personalization affect information diversity?"
+      "What is the filter bubble?",
+      "How does personalization affect advertising?",
+      "What are recommendation systems?",
+      "Why is attention important in advertising?",
+      "What are the economic implications of the filter bubble?",
+      "How does personalization influence consumer behavior?",
+      "What are the risks of recommendation systems?",
+      "How can businesses leverage recommendation economics?"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "understanding of personalization economics",
+      "insight into advertising strategies"
     ]
   },
   {
@@ -781,33 +793,27 @@
     "tags": [
       "Platform Economics"
     ],
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-microeconomics",
-      "business-strategy-fundamentals"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "platform-economics",
-      "two-sided-markets",
-      "software-platforms",
-      "network-effects",
-      "business-strategy"
+      "platform-economics"
     ],
-    "summary": "A foundational book explaining how software platforms create value by connecting different user groups, introducing the concept of two-sided markets in technology. Essential reading for understanding platform business models, network effects, and the economic principles behind companies like Microsoft, Google, and payment systems. Provides the theoretical framework that underlies modern platform economics without requiring advanced mathematical background.",
-    "use_cases": [
-      "Understanding how to design pricing strategies for multi-sided platforms",
-      "Analyzing competitive dynamics and market entry strategies for platform businesses"
-    ],
+    "summary": "This book explores the concept of platform economics, focusing on software as two-sided markets. It is suitable for those interested in understanding the dynamics of platform-based business models.",
+    "use_cases": [],
     "audience": [
-      "Junior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "foundational platform economics book",
-      "two-sided markets software platforms",
-      "how do platform business models work",
-      "network effects economics theory"
-    ]
+      "What are two-sided markets?",
+      "How does platform economics work?",
+      "What is software as a service?",
+      "What are the benefits of platform-based businesses?",
+      "How do platforms create value?",
+      "What are examples of successful platforms?",
+      "What challenges do platforms face?",
+      "How do you analyze platform economics?"
+    ],
+    "content_format": "book"
   },
   {
     "name": "Credit Risk Modeling using Excel and VBA",
@@ -822,32 +828,35 @@
       "Risk Modeling"
     ],
     "difficulty": "intermediate",
-    "prerequisites": [
-      "excel-vba-programming",
-      "basic-statistics",
-      "financial-modeling"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "credit-risk",
-      "probability-of-default",
-      "excel-vba",
-      "portfolio-modeling",
-      "loss-given-default"
+      "risk-modeling"
     ],
-    "summary": "A hands-on guide to building credit risk models using Excel and VBA, covering probability of default (PD), loss given default (LGD), and exposure at default (EAD) estimation techniques. The book provides practical implementations of portfolio credit risk models with ready-to-use Excel templates and VBA code for risk practitioners.",
+    "summary": "This resource provides a practical guide to credit risk modeling using Excel and VBA. It is suitable for practitioners looking to implement PD, LGD, and EAD estimations along with portfolio models.",
     "use_cases": [
-      "Building internal credit scoring models for loan approval decisions at a bank",
-      "Implementing regulatory capital calculations for credit risk under Basel II/III frameworks"
+      "When implementing credit risk assessments",
+      "For financial modeling in Excel"
     ],
     "audience": [
       "Junior-DS",
-      "Mid-DS"
+      "Mid-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "credit risk modeling excel VBA tutorial",
-      "how to calculate probability of default in excel",
-      "portfolio credit risk models implementation",
-      "LGD EAD estimation excel templates"
+      "What is credit risk modeling?",
+      "How to estimate PD using Excel?",
+      "What are LGD and EAD in credit risk?",
+      "How can VBA be used in risk modeling?",
+      "What portfolio models can be implemented in Excel?",
+      "What are the best practices for credit risk assessment?",
+      "How to use Excel for financial modeling?",
+      "What are the key components of a credit risk model?"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "Credit risk estimation",
+      "Excel modeling",
+      "VBA programming"
     ]
   },
   {
@@ -863,32 +872,36 @@
       "Risk Modeling"
     ],
     "difficulty": "intermediate",
-    "prerequisites": [
-      "linear-regression",
-      "maximum-likelihood-estimation",
-      "R-programming"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "generalized-linear-models",
-      "insurance-pricing",
-      "actuarial-science",
-      "tweedie-distribution",
-      "territorial-rating"
+      "risk-modeling",
+      "statistics"
     ],
-    "summary": "Industry-standard monograph covering generalized linear models for insurance pricing and risk assessment. Provides comprehensive treatment of GLM theory, Tweedie distributions, and territorial ratemaking techniques specifically applied to insurance contexts. Essential reference for actuaries and data scientists working in insurance pricing and risk modeling.",
+    "summary": "This resource covers the use of Generalized Linear Models (GLMs) in insurance pricing, focusing on industry standards and methodologies. It is suitable for professionals and students interested in risk modeling and insurance analytics.",
     "use_cases": [
-      "Building auto insurance premium pricing models using claim frequency and severity data",
-      "Developing territorial rating factors for property insurance based on geographic risk patterns"
+      "when to use GLMs in insurance pricing",
+      "understanding risk modeling techniques"
     ],
     "audience": [
+      "Junior-DS",
       "Mid-DS",
       "Senior-DS"
     ],
     "synthetic_questions": [
-      "GLM insurance pricing models",
-      "Tweedie distribution insurance applications",
-      "territorial ratemaking methods",
-      "actuarial pricing with generalized linear models"
+      "What are Generalized Linear Models?",
+      "How are GLMs used in insurance pricing?",
+      "What is territorial ratemaking?",
+      "What is the Tweedie distribution?",
+      "How do GLMs improve risk modeling?",
+      "What are the industry standards for insurance pricing?",
+      "What skills are needed for insurance analytics?",
+      "What resources are available for learning about GLMs?"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "understanding GLMs",
+      "applying statistical methods to insurance",
+      "analyzing risk in insurance pricing"
     ]
   }
 ]

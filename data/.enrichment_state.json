@@ -1,6 +1,6 @@
 {
   "schema_version": "2.1",
-  "last_run": "2025-12-30T23:18:20.278357+00:00",
+  "last_run": "2025-12-30T23:21:54.843644+00:00",
   "items": {
     "packages.json": {
       "BayesianBandits": {
@@ -8745,6 +8745,286 @@
       "Snap": {
         "content_hash": "8b517c4b697b9a62",
         "enriched_at": "2025-12-30T23:18:20.245408+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Stripe": {
+        "content_hash": "3f2079e2114e17ce",
+        "enriched_at": "2025-12-30T23:18:25.596343+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "PayPal": {
+        "content_hash": "c182eb1888e4bff4",
+        "enriched_at": "2025-12-30T23:18:31.247840+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Robinhood": {
+        "content_hash": "f0c8d27a0a53de50",
+        "enriched_at": "2025-12-30T23:18:36.123476+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Affirm": {
+        "content_hash": "73e48d347a42c7b0",
+        "enriched_at": "2025-12-30T23:18:41.747067+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 0.9
+      },
+      "Block": {
+        "content_hash": "c54d96e4bdf03039",
+        "enriched_at": "2025-12-30T23:18:47.692208+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Adobe": {
+        "content_hash": "c8d7020f8fd6ca16",
+        "enriched_at": "2025-12-30T23:18:51.828242+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Salesforce": {
+        "content_hash": "be6eef176b9548c0",
+        "enriched_at": "2025-12-30T23:18:56.969519+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Databricks": {
+        "content_hash": "b1103a25fee1ab25",
+        "enriched_at": "2025-12-30T23:19:04.028940+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Intuit": {
+        "content_hash": "073549ce8ddf0b4c",
+        "enriched_at": "2025-12-30T23:19:08.846896+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Eli Lilly": {
+        "content_hash": "f85a7f252973396a",
+        "enriched_at": "2025-12-30T23:19:14.765883+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Pfizer": {
+        "content_hash": "ce595919c42d1fe8",
+        "enriched_at": "2025-12-30T23:19:19.409362+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "J&J": {
+        "content_hash": "1c27c0b5cf1ffda7",
+        "enriched_at": "2025-12-30T23:19:23.531546+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Moderna": {
+        "content_hash": "afad0c5298af9bd4",
+        "enriched_at": "2025-12-30T23:19:28.469687+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Roche": {
+        "content_hash": "cc4bbe748d4a8187",
+        "enriched_at": "2025-12-30T23:19:32.802035+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Genentech": {
+        "content_hash": "f09fcd85bc6a9bf0",
+        "enriched_at": "2025-12-30T23:19:38.783035+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Optum": {
+        "content_hash": "3f85ccbc1a1d9b0d",
+        "enriched_at": "2025-12-30T23:19:45.357331+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Roblox": {
+        "content_hash": "b60e60e34832ba55",
+        "enriched_at": "2025-12-30T23:19:50.102577+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "OpenAI": {
+        "content_hash": "b262f20fa523f603",
+        "enriched_at": "2025-12-30T23:19:54.800165+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Anthropic": {
+        "content_hash": "557f8218187b4a39",
+        "enriched_at": "2025-12-30T23:20:01.309562+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Notion": {
+        "content_hash": "c34f39c05b01be3e",
+        "enriched_at": "2025-12-30T23:20:06.881977+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "DataLemur SQL": {
+        "content_hash": "3e7b6f33cc92e6a5",
+        "enriched_at": "2025-12-30T23:20:12.674445+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "StrataScratch": {
+        "content_hash": "8a50a5eb31c6b83d",
+        "enriched_at": "2025-12-30T23:20:17.559999+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Window Functions Practice": {
+        "content_hash": "80689ff39ca511b6",
+        "enriched_at": "2025-12-30T23:20:22.464122+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 0.8
+      },
+      "Interview Query": {
+        "content_hash": "b7a594eb6f1f0d3e",
+        "enriched_at": "2025-12-30T23:20:26.783731+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Nick Singh's 40 Stats Questions": {
+        "content_hash": "a875e780246deae1",
+        "enriched_at": "2025-12-30T23:20:31.765910+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "StatQuest with Josh Starmer": {
+        "content_hash": "830dd592800965f5",
+        "enriched_at": "2025-12-30T23:20:37.781052+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Trustworthy Online Controlled Experiments (Kohavi)": {
+        "content_hash": "f3a8c4c563648d55",
+        "enriched_at": "2025-12-30T23:20:43.310633+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Understanding CUPED": {
+        "content_hash": "2226a38a1bfbe4e0",
+        "enriched_at": "2025-12-30T23:20:47.996717+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Netflix: Quasi Experimentation": {
+        "content_hash": "a42b7d261cff3d5d",
+        "enriched_at": "2025-12-30T23:20:54.637378+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Yuan Meng's Causal Inference in Data Science": {
+        "content_hash": "4b9389aed46fc562",
+        "enriched_at": "2025-12-30T23:21:00.611405+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Interview Prep: Causal Inference (Julie Zhang)": {
+        "content_hash": "984c1ae5f64522e0",
+        "enriched_at": "2025-12-30T23:21:05.653956+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Causal Inference Interview Prep Guide (Bhattacherjee)": {
+        "content_hash": "29efcdaf1decb78a",
+        "enriched_at": "2025-12-30T23:21:10.826712+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "InterviewDB Causal Inference Collection": {
+        "content_hash": "c688cb1fe59ddee4",
+        "enriched_at": "2025-12-30T23:21:16.758375+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 0.8
+      },
+      "GrabNGoInfo: Causal Inference Interview Q&A": {
+        "content_hash": "0d037c164bac6795",
+        "enriched_at": "2025-12-30T23:21:23.771962+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 0.8
+      },
+      "Emma Ding: Product Sense Guide": {
+        "content_hash": "8b6316f77392a965",
+        "enriched_at": "2025-12-30T23:21:29.372955+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Amplitude: North Star Metrics": {
+        "content_hash": "9bde8b9f6bc95132",
+        "enriched_at": "2025-12-30T23:21:35.221917+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "DataLemur Meta DS Guide": {
+        "content_hash": "bfc5c8b050da465d",
+        "enriched_at": "2025-12-30T23:21:40.081722+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Scarlet Ink: Amazon LP Guide": {
+        "content_hash": "1bdf6610a008226e",
+        "enriched_at": "2025-12-30T23:21:44.092055+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 1.0
+      },
+      "Amazon Leadership Principles": {
+        "content_hash": "17e29679090a0f3e",
+        "enriched_at": "2025-12-30T23:21:49.533478+00:00",
+        "model_version": "gpt-4o-mini",
+        "schema_version": "2.1",
+        "confidence": 0.9
+      },
+      "Interviewing.io Amazon Guide": {
+        "content_hash": "fb11b2a942f22885",
+        "enriched_at": "2025-12-30T23:21:54.814562+00:00",
         "model_version": "gpt-4o-mini",
         "schema_version": "2.1",
         "confidence": 1.0

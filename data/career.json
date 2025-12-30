@@ -14,32 +14,35 @@
     "section": "essential",
     "tab": "start-here",
     "subtab": "",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-economics",
-      "causal-inference-concepts"
-    ],
-    "topic_tags": [
-      "tech-economics",
-      "career-guidance",
-      "market-design",
-      "causal-inference",
-      "academic-paper"
-    ],
-    "summary": "Foundational JEP article explaining why major tech companies hire economists and what they do. Amazon employs 150+ PhD economists working on causal inference, market design, and incentive problems. Essential reading for understanding the intersection of economics and technology industry.",
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides insights into the role of economists in tech companies, emphasizing the importance of skills like causal inference and market design. It highlights the growing trend of hiring economists in the tech industry and the unique perspectives they bring.",
     "use_cases": [
-      "Understanding career opportunities for economists in tech companies",
-      "Learning about the role of economic methods in business strategy and product development"
+      "to understand the role of economists in tech",
+      "to explore career opportunities for economists in tech"
     ],
     "audience": [
       "Early-PhD",
-      "Curious-browser"
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "why do tech companies hire economists",
-      "what do economists do at Amazon Google Facebook",
-      "economists in tech companies career guide",
-      "causal inference jobs in technology"
+      "Why do tech companies hire economists?",
+      "What skills are important for economists in tech?",
+      "How does causal inference apply in tech companies?",
+      "What is market design and why is it relevant to tech?",
+      "What incentives do tech companies provide for economists?",
+      "How many economists does Amazon employ?",
+      "What are the foundational readings for economists in tech?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -55,31 +58,32 @@
     ],
     "archived": true,
     "difficulty": "beginner",
-    "prerequisites": [
-      "basic-economics",
-      "research-methods"
-    ],
-    "topic_tags": [
-      "amazon",
-      "research-culture",
-      "career-guidance",
-      "tech-economics",
-      "industry-insights"
-    ],
-    "summary": "Amazon Science Blog showcases how Amazon's economics team operates, their research culture, and published work. It provides insights into the daily work of tech economists at one of the world's largest companies. The blog serves as a window into industry research practices and career paths for economists in tech.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Amazon Science Blog provides insights into the workings of Amazon's economics team, highlighting their research culture and daily activities. It serves as a resource for those interested in understanding the intersection of technology and economics.",
     "use_cases": [
-      "Understanding what economists do at major tech companies before applying for jobs",
-      "Learning about research priorities and methodologies used in industry settings"
+      "to understand the work environment of tech economists",
+      "to explore research culture in a tech company"
     ],
     "audience": [
-      "Early-PhD",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "what do economists do at Amazon",
-      "Amazon economics team research culture",
-      "tech economist career at big companies",
-      "how does Amazon economics research work"
+      "What is the research culture at Amazon?",
+      "How does Amazon's economics team operate?",
+      "What publications are produced by Amazon's economics team?",
+      "What does a tech economist do daily?",
+      "How can I learn about tech economics?",
+      "What insights can I gain from Amazon's research?",
+      "What are the career paths in tech economics?",
+      "How does Amazon influence tech economics?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -97,31 +101,39 @@
     "section": "essential",
     "tab": "start-here",
     "subtab": "",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-economics",
-      "python-basics"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "career-transition",
       "interview-prep",
-      "econ-phd",
-      "tech-industry"
+      "job-search"
     ],
-    "summary": "A comprehensive 4-part guide from Stanford Economics PhD Scarlet Chen documenting her transition to tech roles at Google and Shopify. Includes detailed interview experiences and insights from applications to major tech companies including Google, Amazon, Facebook, and Uber. Provides practical advice for economics PhDs looking to break into the tech industry.",
+    "summary": "This resource provides a comprehensive guide for PhD graduates transitioning into tech roles, sharing first-hand interview experiences at major tech companies. It aims to equip candidates with insights and strategies for navigating the job market.",
     "use_cases": [
-      "Economics PhD student preparing for tech industry job applications",
-      "Recent economics graduate looking for first-hand accounts of the PhD-to-tech transition process"
+      "when transitioning from academia to tech",
+      "preparing for interviews at major tech companies"
     ],
     "audience": [
       "Early-PhD",
+      "Junior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "How to transition from economics PhD to tech job",
-      "Google data scientist interview experience economics PhD",
-      "What is it like going from Stanford econ PhD to tech industry",
-      "Real interview experiences at big tech companies for economists"
+      "How to prepare for tech interviews?",
+      "What are common interview questions at Google?",
+      "How to transition from academia to tech?",
+      "What is the interview process like at Amazon?",
+      "How to negotiate salary in tech?",
+      "What skills are needed for a data scientist role?",
+      "What are the differences between working at a startup vs a large tech company?",
+      "How to leverage a PhD in the tech industry?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -140,33 +152,37 @@
     "tab": "interview",
     "subtab": "general",
     "archived": true,
-    "difficulty": "beginner",
-    "prerequisites": [
-      "python-basics",
-      "statistics-fundamentals",
-      "SQL-queries"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "interview-prep",
-      "career-development",
-      "data-science-roles",
-      "technical-questions",
-      "industry-practices"
+      "interview-prep"
     ],
-    "summary": "A comprehensive interview preparation guide featuring 201 real data science interview questions from top tech companies, financial firms, and startups. The resource covers technical concepts, coding challenges, and role-specific expectations across the industry. Essential reference for understanding what employers actually ask and how to structure effective responses.",
+    "summary": "This resource provides a comprehensive guide to preparing for data science interviews, featuring real questions from top companies. It helps candidates understand industry expectations and improve their interview skills.",
     "use_cases": [
-      "Preparing for data science interviews at FAANG companies or major tech firms",
-      "Understanding industry expectations and common technical topics tested in DS roles"
+      "when preparing for data science interviews",
+      "when seeking to understand role expectations in data science"
     ],
     "audience": [
       "Junior-DS",
-      "Curious-browser"
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "data science interview questions FAANG",
-      "how to prepare for tech company data science interviews",
-      "real interview questions from Google Amazon data science",
-      "what do data science interviews actually ask"
+      "What are common data science interview questions?",
+      "How can I prepare for a data science interview?",
+      "What do FAANG companies expect from data science candidates?",
+      "What resources are available for data science interview prep?",
+      "How do I negotiate my salary as a data scientist?",
+      "What skills should I highlight in a data science interview?",
+      "What is the role of a data scientist?",
+      "How do startups differ in their data science hiring process?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "FAANG",
+      "startup"
     ]
   },
   {
@@ -184,32 +200,36 @@
     "section": "roles",
     "tab": "understand",
     "subtab": "role-types",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "microeconomics-principles",
-      "econometrics-basics"
-    ],
-    "topic_tags": [
-      "career-paths",
-      "amazon-jobs",
-      "economist-roles",
-      "tech-industry",
-      "job-search"
-    ],
-    "summary": "Amazon operates the largest economist job family in tech with three specialized tracks: reduced-form causal inference (RFCA), structural modeling (STRUC), and forecasting/machine learning (FMF). The company offers dedicated economist titles and extensive PhD internship programs, making it a primary destination for economics PhDs entering tech.",
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Amazon Economist Careers resource provides insights into various economist tracks within Amazon, including RFCA, STRUC, and FMF. It serves as a guide for those interested in pursuing a career as an economist in the tech industry.",
     "use_cases": [
-      "PhD student exploring tech career options and understanding different economist role types",
-      "Early-career economist comparing Amazon's structure to other tech companies for job applications"
+      "when exploring economist career options",
+      "when considering internships at Amazon"
     ],
     "audience": [
       "Early-PhD",
-      "Curious-browser"
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "amazon economist jobs",
-      "tech companies hiring economists",
-      "PhD internships at Amazon",
-      "FAANG economist career paths"
+      "What are the different economist tracks at Amazon?",
+      "How to apply for economist positions at Amazon?",
+      "What qualifications are needed for an economist role at Amazon?",
+      "What is the career progression for economists at Amazon?",
+      "What is the work environment like for economists at Amazon?",
+      "What skills are essential for an economist in tech?",
+      "How does Amazon compare to other FAANG companies for economists?",
+      "What internship opportunities are available for PhD students at Amazon?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -230,30 +250,32 @@
     "tab": "find-jobs",
     "subtab": "companies",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "behavioral-interviews"
-    ],
-    "topic_tags": [
-      "career-portal",
-      "tech-jobs",
-      "FAANG",
-      "economist-roles"
-    ],
-    "summary": "Google's official career portal showcasing available positions including quantitative analyst, research scientist, and economist roles. The portal provides job descriptions, application processes, and insights into working at one of the world's largest tech companies. Essential resource for anyone exploring opportunities at Google or understanding their hiring requirements.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Google's career portal provides resources and information for individuals seeking careers in various roles, particularly in tech and economics. It offers insights into job opportunities and company culture.",
     "use_cases": [
-      "Searching for data science or economist positions at Google",
-      "Understanding job requirements and qualifications for FAANG companies"
+      "when exploring career options in tech and economics",
+      "when preparing for interviews at Google"
     ],
     "audience": [
-      "Junior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "Google data scientist jobs",
-      "How to apply to Google as an economist",
-      "FAANG career opportunities",
-      "Google quantitative analyst positions"
+      "What job opportunities are available at Google?",
+      "How can I prepare for an interview at Google?",
+      "What roles does Google offer for economists?",
+      "What is the salary range for quant analysts at Google?",
+      "How does Google support career development?",
+      "What is the company culture like at Google?",
+      "What skills are needed for a research position at Google?",
+      "How can I network with professionals at Google?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -274,30 +296,32 @@
     "tab": "find-jobs",
     "subtab": "companies",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "behavioral-interviews"
-    ],
-    "topic_tags": [
-      "meta-careers",
-      "tech-jobs",
-      "data-science-hiring",
-      "economist-roles"
-    ],
-    "summary": "Meta's career portal provides job listings and application information for data science, research, and economist positions at the company. This resource helps candidates understand role requirements, compensation, and hiring processes at one of the major tech companies. It serves as a gateway for exploring opportunities in tech economics and applied research.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Meta's career portal provides resources and information for individuals seeking careers in various fields, particularly in tech and economics. It serves as a platform for job seekers to explore opportunities and gain insights into the industry.",
     "use_cases": [
-      "Searching for data scientist or economist positions at Meta to transition into tech industry",
-      "Researching role requirements and qualifications needed for applied research positions at large tech companies"
+      "when to explore job opportunities at Meta",
+      "when seeking career advice in tech and economics"
     ],
     "audience": [
-      "Junior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "Meta data scientist jobs",
-      "how to get hired at Meta as economist",
-      "Meta careers research scientist requirements",
-      "FAANG economist job openings"
+      "What career opportunities are available at Meta?",
+      "How can I prepare for an interview at a FAANG company?",
+      "What salary can I expect as an economist at Meta?",
+      "What skills are needed for a data scientist role?",
+      "How do I negotiate my salary?",
+      "What resources does Meta provide for career development?",
+      "What is the company culture like at Meta?",
+      "How can I transition from academia to industry?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -317,32 +341,26 @@
     "tab": "start-here",
     "subtab": "",
     "tier": "essential",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "microeconomics-fundamentals",
-      "statistical-inference"
-    ],
-    "topic_tags": [
-      "hiring-decisions",
-      "team-structure",
-      "economist-roles",
-      "data-science-teams",
-      "organizational-design"
-    ],
-    "summary": "Framework for deciding whether tech companies should hire economists and how to structure their roles effectively. Outlines five key advantages economists bring compared to data scientists: causal inference expertise, strategic thinking, and policy analysis skills. Provides guidance for managers building cross-functional analytics teams.",
-    "use_cases": [
-      "Tech startup deciding between hiring an economist vs additional data scientist for their growth team",
-      "Established company evaluating whether to create a dedicated economist role for marketplace design and pricing strategy"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides a framework for understanding the roles of economists in tech firms, highlighting their strategic advisory capabilities, product development contributions, impact evaluation, and thought leadership. It also outlines five advantages that economists have over data scientists.",
+    "use_cases": [],
     "audience": [
-      "Senior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "should I hire an economist or data scientist",
-      "what do economists do at tech companies",
-      "economist vs data scientist roles",
-      "when does a startup need an economist"
+      "What roles do economists play in tech firms?",
+      "How do economists contribute to product development?",
+      "What are the advantages of hiring an economist over a data scientist?",
+      "In what scenarios should a tech firm consider employing an economist?",
+      "What skills are important for an economist in the tech industry?",
+      "How can economists evaluate the impact of tech products?",
+      "What is the role of thought leadership for economists in tech?",
+      "What strategies can economists advise tech firms on?"
+    ],
+    "role_type": [
+      "economist"
     ]
   },
   {
@@ -358,32 +376,34 @@
       "company-profile"
     ],
     "archived": true,
-    "difficulty": "beginner",
-    "prerequisites": [
-      "microeconomics-basics",
-      "regression-analysis"
-    ],
-    "topic_tags": [
-      "wayfair",
-      "economist-roles",
-      "company-profiles",
-      "applied-microeconomics",
-      "career-planning"
-    ],
-    "summary": "Wayfair's Economics Group employs approximately 15 PhD economists from top universities like MIT, Harvard, and Northwestern with explicit 'Economist' job titles. The team focuses on applied microeconomics research and offers structured internship programs for economics students.",
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Wayfair Economics Group offers insights into applied microeconomics through the work of its team of PhD economists. It provides a unique perspective on the role of economists in a corporate setting, particularly for those interested in practical applications of economic theory.",
     "use_cases": [
-      "PhD economics student researching potential industry career paths and companies that value economics expertise",
-      "Academic economist considering transition to industry and looking for companies with strong economics teams"
+      "Understanding the role of economists in tech companies",
+      "Exploring internship opportunities in economics"
     ],
     "audience": [
       "Early-PhD",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "companies hiring economists with PhD",
-      "Wayfair economics team structure",
-      "tech companies with economist job titles",
-      "applied micro economics jobs industry"
+      "What roles do economists play in companies like Wayfair?",
+      "How can I prepare for an economist position at a tech company?",
+      "What skills are essential for applied microeconomics?",
+      "What is the career path for a PhD economist in the tech industry?",
+      "How does the economist title differ across companies?",
+      "What internship opportunities are available for economics PhD students?",
+      "What are the benefits of working in a corporate economics group?",
+      "How does Wayfair's Economics Group contribute to business decisions?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "Wayfair"
     ]
   },
   {
@@ -399,31 +419,29 @@
       "company-profile"
     ],
     "archived": true,
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-statistics",
-      "research-methods"
-    ],
-    "topic_tags": [
-      "labor-economics",
-      "linkedin-data",
-      "economic-research",
-      "policy-analysis"
-    ],
-    "summary": "LinkedIn's Economic Graph team conducts research on labor market trends using the platform's professional network data. Led by Chief Economist Karin Kimbrough, the team publishes studies on employment patterns, skills demand, and workforce mobility. Their research influences policy discussions and provides insights into real-time labor market dynamics.",
-    "use_cases": [
-      "Understanding which skills are in highest demand in your industry or region",
-      "Researching labor market trends for academic papers or policy recommendations"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The LinkedIn Economic Graph provides insights into labor market dynamics, helping users understand trends and patterns in employment. It is a valuable resource for policymakers and researchers interested in the economic landscape.",
+    "use_cases": [],
     "audience": [
-      "Early-PhD",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "LinkedIn economist research team",
-      "labor market data from social networks",
-      "Karin Kimbrough LinkedIn Economic Graph",
-      "how does LinkedIn study employment trends"
+      "What are the current trends in labor market dynamics?",
+      "How can LinkedIn data inform economic policy?",
+      "What role does a Chief Economist play in analyzing labor markets?",
+      "How does the LinkedIn Economic Graph impact job seekers?",
+      "What methodologies are used in labor economics research?",
+      "How can I access LinkedIn's labor market studies?",
+      "What are the implications of labor market studies on economic policy?",
+      "Who is Karin Kimbrough and what is her role in the Economic Graph?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "company_context": [
+      "LinkedIn"
     ]
   },
   {
@@ -438,32 +456,35 @@
       "fellowship"
     ],
     "archived": true,
-    "difficulty": "beginner",
-    "prerequisites": [
-      "research-proposal-writing",
-      "academic-cv"
-    ],
-    "topic_tags": [
-      "fellowship",
-      "economics-research",
-      "AI-economics",
-      "funding",
-      "career"
-    ],
-    "summary": "The Stripe Economics of AI Fellowship provides $10K+ grants to academic economists for research on AI's economic impacts. Led by Chief Economist Ernie Tedeschi and partnering with Stanford, it supports economists studying how AI transforms markets, labor, and economic systems. This fellowship offers both funding and mentorship opportunities for AI economics research.",
+    "difficulty": null,
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Stripe Economics of AI Fellowship provides grants for academic economists to conduct research on the economics of AI, partnering with Stanford. This resource offers financial support and collaboration opportunities for those interested in the intersection of economics and artificial intelligence.",
     "use_cases": [
-      "PhD student researching AI's impact on labor markets needs funding and industry mentorship",
-      "Academic economist studying platform economics wants to collaborate with tech practitioners"
+      "when seeking funding for research in economics and AI",
+      "when looking for fellowship opportunities in academia"
     ],
     "audience": [
       "Early-PhD",
-      "Curious-browser"
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "economics AI fellowship funding opportunities",
-      "Stripe economist research grants",
-      "AI economics research fellowship Stanford",
-      "tech industry economics fellowship programs"
+      "What is the Stripe Economics of AI Fellowship?",
+      "How can I apply for the Stripe Fellowship?",
+      "What research topics are supported by the Stripe Fellowship?",
+      "What are the benefits of the Stripe Economics of AI Fellowship?",
+      "Who is eligible for the Stripe Fellowship?",
+      "What is the grant amount for the Stripe Fellowship?",
+      "How does the Stripe Fellowship partner with Stanford?",
+      "What role does Ernie Tedeschi play in the Stripe Fellowship?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "company_context": [
+      "Stripe"
     ]
   },
   {
@@ -479,32 +500,29 @@
     ],
     "archived": true,
     "difficulty": "intermediate",
-    "prerequisites": [
-      "reinforcement-learning",
-      "econometrics",
-      "deep-learning-frameworks"
-    ],
-    "topic_tags": [
-      "AI-economics",
-      "reinforcement-learning",
-      "economic-policy",
-      "multi-agent-systems",
-      "Salesforce"
-    ],
-    "summary": "Salesforce's AI Economist team develops reinforcement learning systems to optimize economic policies and taxation strategies. The project combines multi-agent simulation with economic theory to design fairer and more efficient policy mechanisms. Their work has been published at top ML conferences like NeurIPS and ICML, demonstrating novel applications of AI to economic problems.",
-    "use_cases": [
-      "Designing optimal tax policies using multi-agent reinforcement learning simulations",
-      "Building AI systems that can propose and evaluate economic policy interventions"
-    ],
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Salesforce AI Economist project explores the intersection of artificial intelligence and economics, providing insights into how AI can optimize economic policies. It is particularly relevant for those interested in the application of AI in economic research and policy-making.",
+    "use_cases": [],
     "audience": [
-      "Mid-DS",
-      "Senior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "What is Salesforce AI Economist project",
-      "reinforcement learning for economic policy optimization",
-      "AI economics research team opportunities",
-      "multi-agent systems for taxation policy"
+      "What is the role of AI in economic policy optimization?",
+      "How can I leverage AI in economic research?",
+      "What are the latest publications in AI and economics?",
+      "What skills are needed to work in AI economics?",
+      "How does Salesforce apply AI to economics?",
+      "What are the implications of AI on economic policies?",
+      "What career paths are available in AI and economics?",
+      "How can I get involved in projects like Salesforce AI Economist?"
+    ],
+    "role_type": [
+      "economist",
+      "ML-engineer"
+    ],
+    "company_context": [
+      "Salesforce"
     ]
   },
   {
@@ -520,32 +538,33 @@
       "role-overview"
     ],
     "archived": true,
-    "difficulty": "beginner",
-    "prerequisites": [
-      "clinical-trials-basics",
-      "descriptive-statistics"
-    ],
-    "topic_tags": [
-      "pharma",
-      "HEOR",
-      "biostatistics",
-      "career-paths",
-      "healthcare"
-    ],
-    "summary": "Health Economics and Outcomes Research (HEOR) teams in pharmaceutical companies focus on demonstrating drug value through biostatistics, value evidence outcomes analysis, and real-world evidence generation. Major pharma companies like Lilly, Pfizer, and Roche employ hundreds of statisticians across these specialized roles. These teams bridge clinical research and business strategy by quantifying treatment effectiveness and economic impact.",
-    "use_cases": [
-      "Understanding career paths and team structures when transitioning from academia or other industries into pharmaceutical data science",
-      "Exploring alternative career options for statisticians and data scientists interested in healthcare applications beyond traditional tech companies"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides an overview of the roles and responsibilities within Pharma HEOR teams, highlighting the significance of biostatistics and real-world evidence in the pharmaceutical industry. It serves as a guide for understanding the landscape of roles available in this field.",
+    "use_cases": [],
     "audience": [
+      "Early-PhD",
       "Junior-DS",
-      "Curious-browser"
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "What do HEOR teams do at pharmaceutical companies",
-      "Career opportunities for statisticians in pharma industry",
-      "Difference between biostatistics and real world evidence roles",
-      "How many data scientists work at big pharma companies"
+      "What roles are available in Pharma HEOR teams?",
+      "What is the importance of biostatistics in the pharmaceutical industry?",
+      "How do VEO and RWE contribute to healthcare outcomes?",
+      "What skills are required for a career in Pharma HEOR?",
+      "What companies are leading in Pharma HEOR?",
+      "How many statisticians work in Pharma HEOR teams?",
+      "What is the career path for a statistician in Pharma?",
+      "What are the challenges faced by Pharma HEOR teams?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "pharma"
     ]
   },
   {
@@ -564,32 +583,34 @@
     "tab": "start-here",
     "subtab": "",
     "difficulty": "beginner",
-    "prerequisites": [
-      "economics-PhD",
-      "job-search-fundamentals"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "career-transition",
-      "tech-jobs",
-      "networking",
-      "PhD-to-industry",
-      "job-market"
+      "job-search",
+      "networking"
     ],
-    "summary": "Rose Tan's LinkedIn guide provides practical advice for economics PhDs entering the tech job market. Covers networking strategies, different role types, and setting realistic expectations for the transition. Emphasizes the importance of not being the first economist hired at a company.",
+    "summary": "This resource provides guidance for PhDs in economics looking to transition into tech jobs. It includes networking tips and insights into various role types and expectations in the tech job market.",
     "use_cases": [
-      "Economics PhD student preparing for tech industry job applications",
-      "Recent economics graduate exploring career options beyond academia"
+      "When seeking to understand the tech job market as an economist",
+      "When looking for networking strategies in tech"
     ],
     "audience": [
       "Early-PhD",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "how to get tech jobs with economics PhD",
-      "networking tips for economists in tech",
-      "what roles can economics PhDs get in tech companies",
-      "career advice PhD to industry transition"
-    ]
+      "How can I transition from an economics PhD to a tech job?",
+      "What networking strategies are effective for tech job seekers?",
+      "What types of roles are available for economists in tech?",
+      "What should I expect when applying for tech jobs as an economist?",
+      "How can I avoid common pitfalls when entering the tech job market?",
+      "What are the key skills needed for tech jobs for econ PhDs?",
+      "How can I leverage my PhD in economics in the tech industry?",
+      "What advice do experienced economists have for entering tech?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry"
   },
   {
     "name": "Key Advice: Title vs Tasks",
@@ -606,32 +627,32 @@
     "tab": "understand",
     "subtab": "role-types",
     "difficulty": "beginner",
-    "prerequisites": [
-      "PhD-experience",
-      "job-applications"
-    ],
-    "topic_tags": [
-      "career-advice",
-      "job-titles",
-      "PhD-transition",
-      "industry-roles",
-      "data-science"
-    ],
-    "summary": "Guidance for PhD graduates and career changers on how job titles like 'Data Scientist', 'Economist', and 'Applied Scientist' can involve overlapping responsibilities. Emphasizes evaluating opportunities based on actual work tasks and team dynamics rather than getting caught up in title distinctions.",
-    "use_cases": [
-      "PhD economist deciding between 'Data Scientist' and 'Applied Scientist' roles at different companies",
-      "Career changer comparing similar-sounding positions to find the best fit for their skills"
-    ],
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource emphasizes that job titles such as 'Data Scientist', 'Economist', and 'Applied Scientist' can involve similar responsibilities. It suggests that the specific title is less important than the team dynamics and the tasks involved in the role.",
+    "use_cases": [],
     "audience": [
       "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "do job titles matter for data science careers",
-      "difference between data scientist and applied scientist roles",
-      "how to choose between economist and data scientist positions",
-      "PhD career advice job titles vs actual work"
-    ]
+      "What are the differences between job titles in data science?",
+      "How do job tasks vary between a Data Scientist and an Economist?",
+      "What should I prioritize when choosing a job title?",
+      "How important is job title in the tech industry?",
+      "What roles should I consider with a PhD in economics?",
+      "How can I transition from a PhD to a data-related job?",
+      "What tasks should I expect in a Data Scientist role?",
+      "How do team dynamics affect job satisfaction?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist",
+      "applied-scientist"
+    ],
+    "experience_level": "entry"
   },
   {
     "name": "NABE TEC Conference & Job Fair",
@@ -647,32 +668,38 @@
     ],
     "tab": "find-jobs",
     "subtab": "networking",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "causal-inference-basics",
-      "resume-writing"
-    ],
+    "difficulty": null,
+    "prerequisites": [],
     "topic_tags": [
-      "job-market",
-      "causal-inference",
-      "tech-economics",
       "networking",
-      "career-development"
+      "job-search"
     ],
-    "summary": "The NABE TEC Conference is the premier annual gathering for tech economists, featuring the latest research in causal inference and econometrics applied to technology companies. With 800+ participants from academia and industry, it serves as the primary recruiting venue for tech companies like Amazon, Google, Netflix, and Stripe. The event offers free registration for job market PhDs and includes both technical presentations and networking opportunities.",
+    "summary": "The NABE TEC Conference & Job Fair is a key event for tech economists, providing opportunities for networking and recruitment by major companies. It offers free registration for job market PhDs, making it an essential resource for those seeking to advance their careers in tech economics.",
     "use_cases": [
-      "PhD student on the job market submitting resume to tech companies recruiting at the conference",
-      "Early career researcher networking with industry practitioners to learn about applied econometrics roles"
+      "when looking for job opportunities in tech economics",
+      "when wanting to network with industry leaders",
+      "when seeking recruitment by top companies"
     ],
     "audience": [
       "Early-PhD",
-      "Curious-browser"
+      "Junior-DS",
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "tech economics job fair 2024",
-      "NABE TEC conference registration",
-      "where do tech companies recruit economists",
-      "causal inference networking events"
+      "How can I prepare for a job fair?",
+      "What companies recruit at the NABE TEC Conference?",
+      "What is the importance of networking in tech economics?",
+      "When is the resume deadline for the job fair?",
+      "How can PhDs benefit from attending this conference?",
+      "What roles are typically available at the job fair?",
+      "What should I bring to a job fair?",
+      "How can I effectively network at conferences?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -690,32 +717,38 @@
     "tab": "find-jobs",
     "subtab": "networking",
     "difficulty": "beginner",
-    "prerequisites": [
-      "linkedin-profile",
-      "economics-phd"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "career-networking",
       "job-search",
-      "economics-phd",
-      "tech-industry",
-      "professional-community"
+      "networking",
+      "referrals",
+      "interview-prep"
     ],
-    "summary": "A specialized LinkedIn group connecting economics PhDs working in tech companies. Members share job opportunities, provide referrals, and discuss interview experiences in an informal community setting. Open to anyone with an economics background looking to break into or advance within the tech industry.",
+    "summary": "The Economists in Tech LinkedIn Group provides a platform for economics PhDs in tech to connect, share job openings, and discuss interview processes. It serves as an informal job board and a community for support and networking.",
     "use_cases": [
-      "Economics PhD student looking for internship or full-time opportunities at tech companies",
-      "Experienced economist seeking referrals for senior data scientist positions at FAANG companies"
+      "When looking for job opportunities in tech",
+      "When seeking referrals from peers",
+      "When preparing for interviews"
     ],
     "audience": [
       "Early-PhD",
-      "Curious-browser"
+      "Junior-DS",
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "linkedin group for economists in tech",
-      "how to find tech jobs with economics phd",
-      "networking community for data scientists with economics background",
-      "where do economics phds share tech job opportunities"
-    ]
+      "How can I find job openings in tech?",
+      "What are the best practices for referrals?",
+      "How do I prepare for interviews in tech?",
+      "What resources are available for economics PhDs in tech?",
+      "How can networking help in my job search?",
+      "What are common interview questions for tech roles?",
+      "How do I negotiate my salary in tech?",
+      "What should I include in my LinkedIn profile for tech jobs?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry"
   },
   {
     "name": "MIT CODE Conference",
@@ -731,33 +764,33 @@
     ],
     "tab": "find-jobs",
     "subtab": "networking",
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "A/B-testing",
-      "experimental-design",
-      "statistical-inference"
-    ],
-    "topic_tags": [
-      "experimentation",
-      "A/B-testing",
-      "conference",
-      "networking",
-      "digital-experiments"
-    ],
-    "summary": "Premier academic conference focused on large-scale digital experimentation, bringing together industry practitioners from major tech companies and academic researchers. The intimate setting facilitates meaningful networking and knowledge sharing on cutting-edge experimental methods. Ideal for data scientists and researchers working on experimentation platforms and causal inference.",
+    "difficulty": null,
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The MIT CODE Conference provides a platform for networking and learning about large-scale digital experimentation, featuring industry leaders and fostering connections among attendees.",
     "use_cases": [
-      "Mid-level data scientist at a startup wants to learn how Netflix and Airbnb approach large-scale A/B testing",
-      "Academic researcher seeking industry connections and real-world applications of experimental design methods"
+      "When looking to expand professional network",
+      "When seeking insights into digital experimentation"
     ],
     "audience": [
+      "Early-PhD",
+      "Junior-DS",
       "Mid-DS",
-      "Senior-DS"
+      "Senior-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "experimentation conferences for data scientists",
-      "MIT CODE conference digital experiments",
-      "A/B testing networking events academia industry",
-      "large scale experimentation conference Cambridge"
+      "What are the benefits of attending academic conferences?",
+      "How can networking at conferences lead to job opportunities?",
+      "What topics are covered in large-scale digital experimentation?",
+      "Who are the key speakers at the MIT CODE Conference?",
+      "How does the size of a conference affect networking opportunities?",
+      "What companies sponsor academic conferences in the tech industry?",
+      "What are the latest trends in digital experimentation?",
+      "How can I prepare for networking at conferences?"
+    ],
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -775,32 +808,32 @@
     "tab": "find-jobs",
     "subtab": "networking",
     "difficulty": "beginner",
-    "prerequisites": [
-      "microeconomics-theory",
-      "game-theory-basics"
-    ],
-    "topic_tags": [
-      "conference",
-      "mechanism-design",
-      "auctions",
-      "market-design",
-      "academic-networking"
-    ],
-    "summary": "Premier academic conference bringing together economists and computer scientists to present research on algorithmic game theory, mechanism design, and computational economics. Hosted at Stanford in July 2025 with heavily subsidized student registration through SIGecom membership. Ideal for PhD students and researchers wanting to network with leading academics in the intersection of economics and computation.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The ACM EC Conference provides insights into the intersection of economics and computation, focusing on mechanism design and market strategies. It offers networking opportunities for students and professionals interested in these fields.",
     "use_cases": [
-      "PhD student presenting thesis research on auction mechanisms to get feedback from top researchers",
-      "Academic researcher networking to find collaborators for computational market design projects"
+      "when to learn about mechanism design",
+      "when to network with professionals in economics"
     ],
     "audience": [
       "Early-PhD",
-      "Senior-DS"
+      "Junior-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "economics and computation conference 2025",
-      "mechanism design academic conferences",
-      "ACM EC Stanford networking opportunities",
-      "cheap student registration economics conferences"
-    ]
+      "What is mechanism design?",
+      "How can I register for the ACM EC Conference?",
+      "What are the benefits of attending academic conferences?",
+      "What topics are covered in economics and computation?",
+      "How does networking at conferences help my career?",
+      "What is SIGecom membership?",
+      "What are auctions in the context of economics?",
+      "How do I prepare for a conference presentation?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry"
   },
   {
     "name": "Academic Economics Discord",
@@ -817,31 +850,37 @@
     "tab": "find-jobs",
     "subtab": "networking",
     "difficulty": "beginner",
-    "prerequisites": [
-      "academic-economics-background",
-      "job-search-basics"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "discord-community",
-      "career-transition",
       "job-market",
-      "academia-to-tech"
+      "interview-prep",
+      "networking"
     ],
-    "summary": "A Discord server with over 8,400 academic economists providing peer support and career guidance. Members share job market experiences, interview tips, and advice for transitioning from academia to tech roles. The community offers real-time discussions and networking opportunities for economists at all career stages.",
+    "summary": "The Academic Economics Discord provides a platform for members to seek peer support and engage in discussions related to job market questions and interview preparation. It is particularly useful for those transitioning from academia to tech.",
     "use_cases": [
-      "Getting feedback on tech job applications and interview preparation from peers who've made similar transitions",
-      "Finding mentorship and advice during the academic job market process or when considering leaving academia"
+      "when seeking peer support",
+      "when preparing for interviews",
+      "when transitioning from academia to tech"
     ],
     "audience": [
       "Early-PhD",
-      "Curious-browser"
+      "Junior-DS",
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "Discord community for economists transitioning to tech",
-      "peer support for academic job market",
-      "economics PhD career advice community",
-      "where to network with other economists online"
-    ]
+      "How can I prepare for tech interviews?",
+      "What are common job market questions?",
+      "How do I network effectively in tech?",
+      "What resources are available for transitioning from academia to tech?",
+      "How can I find peer support during my job search?",
+      "What are the best practices for interview preparation?",
+      "How do I connect with others in the tech industry?",
+      "What are the challenges of moving from academia to tech?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry"
   },
   {
     "name": "AEA JOE Listings",
@@ -857,30 +896,33 @@
     "tab": "find-jobs",
     "subtab": "job-boards",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "job-search-strategies"
-    ],
-    "topic_tags": [
-      "job-boards",
-      "academic-careers",
-      "tech-recruiting",
-      "economist-jobs"
-    ],
-    "summary": "The American Economic Association's Job Openings for Economists (JOE) listings where major tech companies like Amazon, Google, Microsoft, Uber, Airbnb, Wayfair, and Stripe post economist and research scientist positions. While most data science roles are found on LinkedIn, JOE remains the primary venue for academic-style research positions in tech companies.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The AEA JOE Listings is a job board where tech companies like Amazon, Google, and Microsoft post job openings. It serves as a resource for job seekers in the tech industry, particularly for data science roles.",
     "use_cases": [
-      "PhD economist looking for research scientist roles at major tech companies",
-      "Academic researcher seeking industry transition opportunities with economics focus"
+      "when looking for job openings in tech companies"
     ],
     "audience": [
-      "Early-PhD",
-      "Senior-DS"
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "where do tech companies post economist jobs",
-      "AEA job board for tech industry positions",
-      "economist jobs at Amazon Google Microsoft",
-      "academic job board for tech research roles"
+      "What tech companies are hiring for data science roles?",
+      "How can I find job postings from Amazon and Google?",
+      "Where can I search for tech job listings?",
+      "What are the most common job boards for tech positions?",
+      "How does AEA JOE Listings compare to LinkedIn for job searches?",
+      "What types of roles are available in tech companies?",
+      "How often are new job postings added to AEA JOE Listings?",
+      "What should I consider when applying for tech jobs?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -897,32 +939,28 @@
     "tab": "find-jobs",
     "subtab": "job-boards",
     "difficulty": "beginner",
-    "prerequisites": [
-      "undergraduate-statistics",
-      "resume-writing"
-    ],
-    "topic_tags": [
-      "biostatistics",
-      "pharma",
-      "internships",
-      "career-development",
-      "ASA"
-    ],
-    "summary": "A comprehensive ASA-maintained list of pharmaceutical biostatistics internship opportunities with application deadlines and program details. This annually updated resource helps students find structured internship programs at major pharma companies. Essential for biostatistics students seeking industry experience and career entry points.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides a comprehensive list of biostatistics internships in the pharmaceutical industry, including application deadlines. It is particularly useful for individuals seeking entry-level opportunities in biostatistics.",
     "use_cases": [
-      "Biostatistics PhD student looking for summer internship opportunities at pharmaceutical companies",
-      "Master's student in statistics seeking hands-on experience in drug development and clinical trials"
+      "When looking for biostatistics internships in the pharmaceutical sector."
     ],
     "audience": [
       "Early-PhD",
+      "Junior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "biostatistics internships pharma companies",
-      "pharmaceutical statistics summer internship programs",
-      "ASA biostat internship deadlines",
-      "how to find biostatistics internship opportunities"
-    ]
+      "What biostatistics internships are available in pharma?",
+      "How can I find deadlines for biostatistics internships?",
+      "What skills are needed for a biostatistics internship?",
+      "Where can I apply for biostatistics internships?",
+      "What is the role of a biostatistics intern?",
+      "How do I prepare for a biostatistics internship application?",
+      "What companies offer biostatistics internships?",
+      "What is the typical duration of a biostatistics internship?"
+    ],
+    "experience_level": "entry"
   },
   {
     "name": "EuropeanHealthEconomics Jobs",
@@ -938,32 +976,36 @@
     "tab": "find-jobs",
     "subtab": "job-boards",
     "difficulty": "beginner",
-    "prerequisites": [
-      "health-economics",
-      "econometrics-basics"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "HEOR",
-      "health-economics",
-      "pharma-jobs",
-      "europe",
-      "career"
+      "job-search"
     ],
-    "summary": "Job board specializing in Health Economics and Outcomes Research (HEOR) positions across pharmaceutical companies and consulting firms. Features European and global opportunities for health economists at various career levels. Useful for finding roles that combine economic analysis with healthcare policy and pharmaceutical research.",
+    "summary": "EuropeanHealthEconomics Jobs provides a platform for job postings specifically in the Health Economics and Outcomes Research (HEOR) field, catering to both European and global positions in pharma and consulting. It serves as a valuable resource for individuals seeking opportunities in this specialized area.",
     "use_cases": [
-      "PhD health economist seeking industry transition to pharma consulting",
-      "Experienced HEOR analyst looking for senior positions at European pharmaceutical companies"
+      "when looking for HEOR job opportunities",
+      "when exploring career options in pharma and consulting"
     ],
     "audience": [
+      "Early-PhD",
       "Junior-DS",
-      "Mid-DS"
+      "Mid-DS",
+      "Senior-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "HEOR jobs Europe pharma",
-      "health economics consulting positions",
-      "pharmaceutical outcomes research careers",
-      "European health economics job board"
-    ]
+      "What HEOR jobs are available in Europe?",
+      "How to apply for pharma consulting positions?",
+      "What are the latest job postings in health economics?",
+      "Where to find global HEOR job opportunities?",
+      "What qualifications are needed for HEOR roles?",
+      "How to navigate job boards for health economics careers?",
+      "What companies are hiring in the HEOR field?",
+      "What trends are emerging in health economics job markets?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry"
   },
   {
     "name": "Amazon",
@@ -982,31 +1024,33 @@
     "tab": "find-jobs",
     "subtab": "companies",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "behavioral-interviewing"
-    ],
-    "topic_tags": [
-      "career-portal",
-      "FAANG-jobs",
-      "economist-positions",
-      "tech-recruiting",
-      "PhD-careers"
-    ],
-    "summary": "Amazon's career portal showcasing economist roles, PhD internships, and data science positions at one of the largest tech companies. The portal provides job listings, application processes, and insights into working as an economist or data scientist at Amazon. Essential resource for understanding FAANG-level expectations and opportunities in tech economics.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Amazon career portal provides a comprehensive overview of job opportunities within the company, particularly for roles suited for economists and those with advanced degrees. It serves as a valuable resource for individuals seeking internships or full-time positions in a leading tech company.",
     "use_cases": [
-      "PhD student researching summer internship opportunities at major tech companies",
-      "Junior data scientist exploring economist-titled roles at Amazon"
+      "when looking for job opportunities at Amazon",
+      "when preparing for an internship application"
     ],
     "audience": [
       "Early-PhD",
-      "Junior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Amazon economist jobs",
-      "FAANG PhD internships",
-      "Amazon data scientist careers",
-      "tech economist positions Amazon"
+      "What job opportunities are available at Amazon?",
+      "How can I apply for an internship at Amazon?",
+      "What qualifications does Amazon look for in economists?",
+      "What is the application process for Amazon?",
+      "What roles are available for PhD candidates at Amazon?",
+      "How does Amazon support career development?",
+      "What are the benefits of working at Amazon?",
+      "What is the company culture like at Amazon?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -1027,30 +1071,33 @@
     "tab": "find-jobs",
     "subtab": "companies",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "interview-preparation"
-    ],
-    "topic_tags": [
-      "career-portal",
-      "tech-jobs",
-      "microsoft",
-      "recruiting"
-    ],
-    "summary": "Microsoft's career portal showcasing job opportunities, internships, and company culture for tech professionals. The platform is particularly valuable for economists and data scientists seeking roles at major tech companies, offering insights into Microsoft's hiring processes and team structures. Features dedicated sections for PhD internships and research-oriented positions with economist job titles.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Microsoft career portal serves as a resource for individuals seeking career opportunities within the company, particularly for those with academic backgrounds. It provides insights into internships and roles suitable for PhD candidates and economists.",
     "use_cases": [
-      "Searching for data scientist or economist positions at Microsoft with academic research components",
-      "Exploring PhD internship opportunities at a major tech company to gain industry experience"
+      "when seeking internship opportunities",
+      "when exploring career paths in tech companies"
     ],
     "audience": [
       "Early-PhD",
-      "Junior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Microsoft data scientist jobs",
-      "PhD internships at Microsoft",
-      "economist roles at tech companies",
-      "Microsoft careers for researchers"
+      "What internships does Microsoft offer for PhD students?",
+      "How can I prepare for a job interview at Microsoft?",
+      "What roles are available for economists at Microsoft?",
+      "What is the salary range for data scientists at Microsoft?",
+      "How does Microsoft support career development?",
+      "What are the benefits of working at Microsoft?",
+      "What is the application process for internships at Microsoft?",
+      "What skills are valued at Microsoft for tech roles?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -1071,30 +1118,37 @@
     "tab": "find-jobs",
     "subtab": "companies",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "behavioral-interviews"
-    ],
-    "topic_tags": [
-      "career-portal",
-      "tech-jobs",
-      "FAANG",
-      "economist-roles"
-    ],
-    "summary": "Apple's career portal for exploring job opportunities at one of the world's largest tech companies. The platform lists various roles including data science, economics, and research positions with economist-specific titles. Apple offers PhD internships and ML-focused roles across product teams and research divisions.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Apple career portal provides resources and information for individuals interested in pursuing careers at Apple, particularly in roles related to machine learning and economics. It offers insights into internship opportunities for PhD students and the types of positions available within the company.",
     "use_cases": [
-      "Searching for data scientist or economist positions at Apple to transition into Big Tech",
-      "Exploring PhD internship opportunities in machine learning and applied economics at a FAANG company"
+      "When looking for internship opportunities at Apple",
+      "When preparing for interviews at Apple",
+      "When researching company culture at FAANG companies"
     ],
     "audience": [
+      "Early-PhD",
       "Junior-DS",
-      "Curious-browser"
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "Apple data science jobs",
-      "FAANG economist positions",
-      "Apple PhD internships machine learning",
-      "tech economist careers at Apple"
+      "What internships does Apple offer for PhD students?",
+      "How can I prepare for an interview at Apple?",
+      "What roles are available for economists at Apple?",
+      "What is the salary range for data scientists at Apple?",
+      "What skills are needed for ML-focused positions at Apple?",
+      "How does Apple support career development for interns?",
+      "What is the company culture like at Apple?",
+      "What are the benefits of working at a FAANG company?"
+    ],
+    "role_type": [
+      "economist",
+      "ML-engineer"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -1115,31 +1169,32 @@
     "subtab": "companies",
     "vertical": "mobility",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "behavioral-interviews"
-    ],
-    "topic_tags": [
-      "career-portal",
-      "tech-jobs",
-      "marketplace-company",
-      "economist-roles",
-      "PhD-opportunities"
-    ],
-    "summary": "Uber's career portal showcasing available positions at the ride-sharing and delivery marketplace company. The portal features economist roles, PhD internship programs, and various data science positions across different business units. It provides insights into Uber's hiring practices, team structures, and career development opportunities for tech economists.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Uber's career portal provides a platform for job seekers to explore opportunities within the company, particularly in roles related to marketplace and economics. It serves as a resource for individuals looking to apply for internships or full-time positions.",
     "use_cases": [
-      "Searching for economist or data scientist positions at a major marketplace company",
-      "Researching PhD internship opportunities in tech industry applications"
+      "when looking for job opportunities at Uber",
+      "when researching company culture and roles at Uber"
     ],
     "audience": [
-      "Early-PhD",
-      "Junior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Uber economist jobs",
-      "PhD internships at marketplace companies",
-      "data science careers at Uber",
-      "tech economist positions ride sharing"
+      "What career opportunities are available at Uber?",
+      "How can I apply for a PhD internship at Uber?",
+      "What roles does Uber offer for economists?",
+      "What is the application process for Uber?",
+      "What skills are needed for a marketplace role at Uber?",
+      "How does Uber support career development?",
+      "What is the work culture like at Uber?",
+      "What are the benefits of working at Uber?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "startup"
     ]
   },
   {
@@ -1160,31 +1215,32 @@
     "subtab": "companies",
     "vertical": "mobility",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "interview-preparation"
-    ],
-    "topic_tags": [
-      "career-opportunities",
-      "marketplace",
-      "PhD-internship",
-      "economist-roles",
-      "job-search"
-    ],
-    "summary": "Lyft's career portal showcasing available positions for data scientists, economists, and researchers at the ride-sharing company. The portal features roles specifically for PhD-level economists and internship opportunities in marketplace analytics and pricing optimization. It provides insights into how economists contribute to real-world marketplace problems in the transportation industry.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Lyft's career portal provides a platform for individuals seeking opportunities within the company, particularly in roles related to marketplace economics and internships for PhD candidates. It serves as a resource for job seekers interested in tech and economic roles.",
     "use_cases": [
-      "PhD student seeking industry internships in marketplace economics",
-      "Data scientist looking for economist-titled roles at a major tech platform"
+      "when looking for job opportunities at Lyft",
+      "when researching company roles in tech and economics"
     ],
     "audience": [
-      "Early-PhD",
-      "Junior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Lyft economist jobs",
-      "PhD internships at ride sharing companies",
-      "marketplace analytics careers",
-      "economist roles at Lyft"
+      "What career opportunities are available at Lyft?",
+      "How can I apply for a PhD internship at Lyft?",
+      "What roles does Lyft offer for economists?",
+      "What is the application process for Lyft's career portal?",
+      "What skills are needed for a data scientist role at Lyft?",
+      "How does Lyft support marketplace economists?",
+      "What are the benefits of working at Lyft?",
+      "What is the company culture like at Lyft?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "startup"
     ]
   },
   {
@@ -1205,31 +1261,31 @@
     "subtab": "companies",
     "vertical": "retail",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "interview-preparation"
-    ],
-    "topic_tags": [
-      "career-portal",
-      "marketplace",
-      "job-applications",
-      "economist-roles",
-      "internships"
-    ],
-    "summary": "Wayfair's career portal showcasing economist positions and PhD internship opportunities at the home goods marketplace. The portal provides insights into data science and economics roles within e-commerce operations. Useful for understanding how economists contribute to pricing, demand forecasting, and marketplace dynamics at scale.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Wayfair's career portal provides insights into job opportunities within the company, focusing on roles related to marketplace and economics. It serves as a resource for individuals seeking internships or positions that require a PhD in economics.",
     "use_cases": [
-      "Exploring economist job opportunities at a major e-commerce company",
-      "Researching PhD internship programs in applied economics and data science"
+      "when looking for job opportunities in economics or marketplace roles"
     ],
     "audience": [
-      "Early-PhD",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "Wayfair economist jobs",
-      "PhD internships at tech companies",
-      "economist roles at marketplace companies",
-      "Wayfair data science careers"
+      "What job opportunities are available at Wayfair?",
+      "How can I apply for a PhD internship at Wayfair?",
+      "What roles does Wayfair offer for economists?",
+      "What is the company culture like at Wayfair?",
+      "What skills are needed for a marketplace role at Wayfair?",
+      "How does Wayfair support career development?",
+      "What is the application process for Wayfair internships?",
+      "What are the benefits of working at Wayfair?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "startup"
     ]
   },
   {
@@ -1251,30 +1307,35 @@
     "subtab": "companies",
     "vertical": "travel",
     "difficulty": "beginner",
-    "prerequisites": [
-      "undergraduate-economics",
-      "basic-statistics"
-    ],
-    "topic_tags": [
-      "career-opportunities",
-      "marketplace-economics",
-      "industry-application",
-      "internship-programs"
-    ],
-    "summary": "Airbnb's career portal showcases opportunities for economists and data scientists at one of the world's leading marketplace companies. The platform is known for heavy use of causal inference methods and offers PhD internship programs with economist job titles. It provides insight into how economic research is applied in tech industry settings.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Airbnb career portal provides resources and information for individuals interested in pursuing careers within the company, particularly in roles related to economics and data science.",
     "use_cases": [
-      "PhD students seeking internships at tech companies that value economic research",
-      "Early career economists wanting to transition into industry roles at marketplace companies"
+      "when looking for internship opportunities",
+      "when preparing for interviews at Airbnb"
     ],
     "audience": [
       "Early-PhD",
-      "Curious-browser"
+      "Junior-DS",
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "Airbnb economist jobs",
-      "tech company PhD internships economics",
-      "marketplace company career opportunities",
-      "Airbnb data scientist positions"
+      "What internships does Airbnb offer for PhD students?",
+      "How can I prepare for an interview at Airbnb?",
+      "What is the salary range for data scientists at Airbnb?",
+      "What career paths are available at Airbnb?",
+      "How does Airbnb support career development?",
+      "What skills are needed for an economist role at Airbnb?",
+      "What is the work culture like at Airbnb?",
+      "How can I network with Airbnb employees?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "startup"
     ]
   },
   {
@@ -1296,31 +1357,33 @@
     "subtab": "companies",
     "vertical": "food-grocery",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "behavioral-interviews"
-    ],
-    "topic_tags": [
-      "job-search",
-      "marketplace-company",
-      "career-opportunities",
-      "economist-roles",
-      "tech-industry"
-    ],
-    "summary": "DoorDash career portal showcasing opportunities for economists and data scientists at the leading food delivery marketplace. The company actively recruits PhD economists and offers dedicated economist titles, making it a prime destination for academics transitioning to industry. Features internship programs, full-time positions, and detailed role descriptions across economic research and data science functions.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "DoorDash's career portal provides information about job opportunities and internships for economists, particularly those with a PhD. It serves as a resource for individuals looking to explore career paths within the company.",
     "use_cases": [
-      "PhD economist seeking industry transition opportunities at a major marketplace company",
-      "Data scientist looking for roles at companies that value economic thinking and experimentation"
+      "when looking for internship opportunities",
+      "when exploring career options in tech companies"
     ],
     "audience": [
       "Early-PhD",
-      "Junior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "DoorDash economist jobs",
-      "marketplace companies hiring PhDs",
-      "DoorDash data scientist careers",
-      "tech companies with economist titles"
+      "What internships does DoorDash offer for economists?",
+      "How can I apply for a PhD internship at DoorDash?",
+      "What roles are available for data scientists at DoorDash?",
+      "What is the company culture like at DoorDash?",
+      "How does DoorDash support career development for economists?",
+      "What skills are required for a data scientist role at DoorDash?",
+      "What are the benefits of working at DoorDash?",
+      "How can I prepare for an interview at DoorDash?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "startup"
     ]
   },
   {
@@ -1342,31 +1405,33 @@
     "subtab": "companies",
     "vertical": "food-grocery",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "interview-preparation"
-    ],
-    "topic_tags": [
-      "career-portal",
-      "marketplace",
-      "economist-jobs",
-      "PhD-internships",
-      "tech-careers"
-    ],
-    "summary": "Instacart's career portal showcasing opportunities for economists and data scientists at the grocery delivery marketplace. Features roles with economist titles and PhD internship programs, highlighting their focus on pricing, marketplace dynamics, and economic research.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Instacart's career portal provides resources and information for individuals interested in pursuing careers within the company, particularly in roles related to marketplace pricing and internships for economists.",
     "use_cases": [
-      "PhD student looking for economics internships at tech companies",
-      "Experienced economist seeking marketplace or pricing roles in industry"
+      "when looking for internship opportunities",
+      "when researching company culture",
+      "when exploring roles in marketplace pricing"
     ],
     "audience": [
-      "Early-PhD",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "instacart economist jobs",
-      "PhD internships at marketplace companies",
-      "tech companies hiring economists",
-      "instacart data science careers"
+      "What internships does Instacart offer?",
+      "How can I apply for a position at Instacart?",
+      "What roles are available for economists at Instacart?",
+      "What is the company culture at Instacart?",
+      "What skills are needed for a career at Instacart?",
+      "How does Instacart approach pricing strategies?",
+      "What is the hiring process like at Instacart?",
+      "What career paths are available at Instacart?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "startup"
     ]
   },
   {
@@ -1387,31 +1452,32 @@
     "subtab": "companies",
     "vertical": "retail",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "interview-preparation"
-    ],
-    "topic_tags": [
-      "careers",
-      "job-search",
-      "marketplace",
-      "tech-jobs",
-      "internships"
-    ],
-    "summary": "eBay's career portal showcasing open positions across data science, engineering, and research roles at the major e-commerce marketplace. Features entry-level positions, PhD internships, and experienced roles with detailed job descriptions and application processes. Provides insights into eBay's data-driven culture and technical challenges in marketplace optimization.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The eBay career portal provides a platform for job seekers to explore career opportunities within the company, focusing on roles related to marketplace and data science. It may also offer insights into internships for PhD students.",
     "use_cases": [
-      "Finding data science internships or full-time positions at a major tech marketplace",
-      "Researching eBay's technical culture and data science problems before interviews"
+      "when looking for job opportunities at eBay",
+      "when seeking internships in data science"
     ],
     "audience": [
-      "Junior-DS",
-      "Early-PhD"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "eBay data science jobs",
-      "PhD internships at eBay",
-      "marketplace data science careers",
-      "eBay research positions"
+      "What career opportunities are available at eBay?",
+      "How can I apply for a data science internship at eBay?",
+      "What is the work culture like at eBay?",
+      "What skills are required for a marketplace role at eBay?",
+      "How does eBay support career development?",
+      "What are the benefits of working at eBay?",
+      "What is the interview process like at eBay?",
+      "What types of roles are available for PhD graduates at eBay?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "startup"
     ]
   },
   {
@@ -1432,31 +1498,29 @@
     "subtab": "companies",
     "vertical": "retail",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "python-basics"
-    ],
-    "topic_tags": [
-      "career-portal",
-      "marketplace",
-      "tech-jobs",
-      "phd-internship",
-      "data-science-careers"
-    ],
-    "summary": "Etsy's career portal showcasing job opportunities at the online marketplace platform. The portal highlights roles in data science, research, and engineering, with particular emphasis on PhD-level internships and research positions. It provides insight into Etsy's tech culture and approach to data-driven marketplace optimization.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Etsy's career portal provides resources and information for individuals seeking careers in the marketplace sector, particularly for those interested in research and internship opportunities. It serves as a guide for navigating career paths within the company.",
     "use_cases": [
-      "Finding data science internship opportunities at a marketplace company",
-      "Researching Etsy's technical culture and team structure before applying"
+      "when looking for career opportunities in the marketplace sector",
+      "when seeking internship positions"
     ],
     "audience": [
-      "Early-PhD",
-      "Junior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Etsy data science jobs",
-      "marketplace company internships",
-      "PhD internships at Etsy",
-      "Etsy research careers"
+      "What career opportunities are available at Etsy?",
+      "How can I apply for a PhD internship at Etsy?",
+      "What is the company culture like at Etsy?",
+      "What skills are valued at Etsy?",
+      "How does Etsy support employee growth?",
+      "What are the benefits of working at Etsy?",
+      "What types of roles are available in the marketplace sector?",
+      "How can I prepare for an interview at Etsy?"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "startup"
     ]
   },
   {
@@ -1478,31 +1542,28 @@
     "subtab": "companies",
     "vertical": "social-network",
     "difficulty": "beginner",
-    "prerequisites": [
-      "web-scraping",
-      "job-search-strategy"
-    ],
-    "topic_tags": [
-      "career-development",
-      "job-search",
-      "networking",
-      "tech-recruiting"
-    ],
-    "summary": "LinkedIn is a professional networking platform and career portal widely used in tech for job searching, recruiting, and industry networking. Tech economists and data scientists use it to find positions, connect with peers, and showcase their work. The platform offers job listings, company insights, and professional networking opportunities specific to tech and economics roles.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "LinkedIn serves as a career portal that provides users with tools and resources to enhance their job search and professional networking. It is particularly useful for individuals looking to connect with potential employers and explore career opportunities.",
     "use_cases": [
-      "Finding economist or data scientist positions at tech companies",
-      "Networking with other tech economists and building professional connections"
+      "when looking for job opportunities",
+      "when networking with professionals",
+      "when researching companies"
     ],
     "audience": [
-      "Early-PhD",
-      "Junior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "How to find economist jobs at tech companies",
-      "LinkedIn networking tips for data scientists",
-      "Tech company recruiting through LinkedIn",
-      "Building a LinkedIn profile for tech economists"
-    ]
+      "How to create a LinkedIn profile?",
+      "What are the benefits of using LinkedIn for job searching?",
+      "How to network effectively on LinkedIn?",
+      "What types of jobs can I find on LinkedIn?",
+      "How to optimize my LinkedIn profile for recruiters?",
+      "What are LinkedIn groups and how can they help my career?",
+      "How to use LinkedIn for professional development?",
+      "What should I include in my LinkedIn summary?"
+    ],
+    "experience_level": "entry"
   },
   {
     "name": "Spotify",
@@ -1523,31 +1584,32 @@
     "subtab": "companies",
     "vertical": "music",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "behavioral-interviews"
-    ],
-    "topic_tags": [
-      "careers",
-      "job-search",
-      "tech-companies",
-      "economist-roles",
-      "PhD-careers"
-    ],
-    "summary": "Spotify's career portal showcasing open positions across data science, economics, and research roles. The company is known for being PhD-friendly and offering economist-titled positions, making it attractive for academic transitions. Features internship opportunities and emphasizes social media/music industry applications.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Spotify's career portal provides information and resources for individuals interested in pursuing careers within the company, particularly welcoming those with a PhD in economics. It serves as a platform for job seekers to explore various roles and opportunities available at Spotify.",
     "use_cases": [
-      "PhD economist looking for industry transition opportunities at a well-known tech company",
-      "Data scientist seeking roles that combine music/media domain expertise with economic analysis"
+      "when looking for job opportunities at Spotify",
+      "when exploring internships for PhD students"
     ],
     "audience": [
-      "Early-PhD",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "Spotify data scientist jobs",
-      "tech companies hiring economists",
-      "PhD internships at music streaming companies",
-      "Spotify research scientist careers"
+      "What career opportunities are available at Spotify?",
+      "How can I apply for a PhD internship at Spotify?",
+      "What roles does Spotify offer for economists?",
+      "What is the application process for jobs at Spotify?",
+      "Are there specific qualifications needed for data science roles at Spotify?",
+      "What is the work culture like at Spotify?",
+      "How does Spotify support career development?",
+      "What types of projects do interns work on at Spotify?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -1569,30 +1631,32 @@
     "subtab": "companies",
     "vertical": "video",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "behavioral-interviews"
-    ],
-    "topic_tags": [
-      "netflix-careers",
-      "tech-company-jobs",
-      "data-science-roles",
-      "economist-positions"
-    ],
-    "summary": "Netflix's career portal showcasing available positions across their data science, economics, and research teams. The platform highlights roles that often prefer industry experience and offers internship opportunities for PhD candidates. Netflix is known for hiring economists with dedicated economist titles and competitive compensation packages.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Netflix career portal provides resources and information for individuals seeking careers at the company, including insights into various roles and application processes.",
     "use_cases": [
-      "Searching for data scientist or economist roles at a leading streaming company with strong quantitative culture",
-      "Exploring internship opportunities as a PhD student interested in tech industry applications"
+      "when looking for job opportunities at Netflix",
+      "when researching company culture and roles at Netflix"
     ],
     "audience": [
-      "Junior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "Netflix data science jobs",
-      "economist positions at Netflix",
-      "Netflix PhD internships",
-      "tech company careers for economists"
+      "What roles are available at Netflix?",
+      "How to apply for a PhD internship at Netflix?",
+      "What is the interview process like at Netflix?",
+      "What skills are preferred for economists at Netflix?",
+      "How does Netflix support career growth?",
+      "What is the company culture at Netflix?",
+      "What are the benefits of working at Netflix?",
+      "What are the salary expectations for data scientists at Netflix?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -1614,30 +1678,33 @@
     "subtab": "companies",
     "vertical": "social-network",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "behavioral-interviews"
-    ],
-    "topic_tags": [
-      "career-portal",
-      "tech-jobs",
-      "social-media",
-      "economist-roles"
-    ],
-    "summary": "Pinterest's career portal showcasing job opportunities at the visual discovery platform. The company is known for hiring economists and PhD researchers, offering both full-time positions and internship programs. Pinterest provides opportunities to work on marketplace dynamics, user behavior analysis, and product economics.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Pinterest's career portal offers resources and opportunities for individuals interested in pursuing careers in social media and economics. It is particularly welcoming to those with a PhD background, providing internship opportunities for economists.",
     "use_cases": [
-      "Looking for economist or data scientist roles at a major social media platform",
-      "Exploring PhD-level research opportunities in tech industry"
+      "when looking for internships in social media",
+      "when exploring career opportunities in economics"
     ],
     "audience": [
       "Early-PhD",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "Pinterest economist jobs",
-      "tech companies hiring PhD economists",
-      "Pinterest data scientist careers",
-      "social media company economist internships"
+      "What internships does Pinterest offer for PhD students?",
+      "How can I apply for a job at Pinterest?",
+      "What is the work culture like at Pinterest?",
+      "What career paths are available for economists at Pinterest?",
+      "How does Pinterest support social media professionals?",
+      "What skills are needed to work at Pinterest?",
+      "What are the benefits of working at Pinterest?",
+      "How does Pinterest approach salary negotiations?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "social media"
     ]
   },
   {
@@ -1658,31 +1725,26 @@
     "subtab": "companies",
     "vertical": "social-network",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "technical-interviewing"
-    ],
-    "topic_tags": [
-      "career-development",
-      "tech-jobs",
-      "social-media",
-      "company-research"
-    ],
-    "summary": "Discord's career portal provides job listings and company information for one of the largest gaming-focused communication platforms. The portal showcases opportunities in data science, engineering, and research roles at a company known for real-time messaging infrastructure and community analytics. Useful for understanding career paths at social media companies with complex user engagement challenges.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Discord serves as a career portal that connects users with various career opportunities and resources. It provides a platform for networking and exploring job options in the tech industry.",
     "use_cases": [
-      "Finding data science roles at a major social media platform",
-      "Researching Discord's tech stack and data challenges before applying"
+      "when to use this resource"
     ],
     "audience": [
-      "Junior-DS",
-      "Mid-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Discord data scientist jobs",
-      "social media company careers",
-      "Discord tech internships",
-      "gaming platform data roles"
-    ]
+      "What career opportunities are available on Discord?",
+      "How can I use Discord for job searching?",
+      "What resources does Discord offer for career development?",
+      "Are there internship opportunities listed on Discord?",
+      "How can I network with professionals on Discord?",
+      "What are the benefits of using Discord for career advice?",
+      "How do I navigate the career portal on Discord?",
+      "What types of companies are listed on Discord's career portal?"
+    ],
+    "experience_level": "entry"
   },
   {
     "name": "Snap",
@@ -1702,31 +1764,33 @@
     "subtab": "companies",
     "vertical": "social-network",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "behavioral-interviews"
-    ],
-    "topic_tags": [
-      "career-portal",
-      "social-media",
-      "ML-jobs",
-      "PhD-internships",
-      "tech-recruiting"
-    ],
-    "summary": "Snap's official career portal showcasing job opportunities at the social media and AR technology company. The portal features ML-focused roles and offers PhD internship programs for researchers. It provides insights into Snap's engineering culture and application process for data science and machine learning positions.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Snap's career portal provides resources for individuals seeking opportunities in social media and machine learning, particularly focusing on internships for PhD candidates. It serves as a platform to explore various career paths within the tech industry.",
     "use_cases": [
-      "PhD students searching for ML internships at major social media companies",
-      "Data scientists looking to transition into AR/computer vision roles at Snap"
+      "when looking for internship opportunities in tech",
+      "when exploring company culture in social media firms"
     ],
     "audience": [
       "Early-PhD",
-      "Junior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Snap ML internship opportunities for PhD students",
-      "Data science jobs at Snap career portal",
-      "How to apply for machine learning roles at Snapchat",
-      "Snap research internship application process"
+      "What internships are available at Snap?",
+      "How can I prepare for a machine learning internship?",
+      "What is the application process for Snap internships?",
+      "What skills are required for a role at Snap?",
+      "How does Snap support PhD interns?",
+      "What is the company culture like at Snap?",
+      "What types of projects do interns work on at Snap?",
+      "What are the benefits of working at Snap?"
+    ],
+    "role_type": [
+      "ML-engineer"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "startup"
     ]
   },
   {
@@ -1747,31 +1811,32 @@
     "subtab": "companies",
     "vertical": "payments",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "interview-preparation"
-    ],
-    "topic_tags": [
-      "careers",
-      "fintech",
-      "economist-roles",
-      "job-applications",
-      "phd-internships"
-    ],
-    "summary": "Stripe's career portal showcasing opportunities for economists and data scientists at one of the world's leading fintech companies. The portal features economist-titled positions and PhD internship programs, making it particularly relevant for academics transitioning to industry. Stripe is known for hiring technical economists to work on payment systems, marketplace dynamics, and financial infrastructure.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Stripe career portal provides resources and information for individuals interested in pursuing careers in fintech and related fields. It offers insights into various roles and opportunities available within the company.",
     "use_cases": [
-      "PhD student looking for internship opportunities at a leading fintech company",
-      "Early career economist seeking economist-titled roles in the tech industry"
+      "when looking for career opportunities in fintech",
+      "when researching company culture at Stripe"
     ],
     "audience": [
-      "Early-PhD",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "Stripe economist jobs",
-      "fintech companies hiring PhDs",
-      "tech economist internships",
-      "Stripe careers for economists"
+      "What career opportunities are available at Stripe?",
+      "How can I apply for a PhD internship at Stripe?",
+      "What is the work culture like at Stripe?",
+      "What skills are needed for a career in fintech?",
+      "How does Stripe support career development?",
+      "What roles are available for economists at Stripe?",
+      "What are the benefits of working at a fintech company?",
+      "How can I prepare for an interview at Stripe?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "fintech"
     ]
   },
   {
@@ -1792,32 +1857,34 @@
     "subtab": "companies",
     "vertical": "payments",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "basic-statistics",
-      "python-pandas"
-    ],
-    "topic_tags": [
-      "career-opportunities",
-      "fintech-jobs",
-      "risk-analytics",
-      "PhD-internships",
-      "industry-transition"
-    ],
-    "summary": "PayPal's career portal showcasing opportunities in financial technology, risk analytics, and data science roles. The company offers structured PhD internship programs and various technical positions for data scientists at different career levels. Known for its focus on payment systems, fraud detection, and machine learning applications in financial services.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "PayPal's career portal provides insights into job opportunities and career paths within the fintech industry, particularly for those interested in risk analytics and internships for PhD candidates.",
     "use_cases": [
-      "PhD student looking for industry internships in fintech and risk modeling",
-      "Data scientist seeking roles in payment systems and fraud detection at a major tech company"
+      "when looking for internship opportunities in fintech",
+      "when exploring career paths in risk analytics"
     ],
     "audience": [
       "Early-PhD",
-      "Junior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "PayPal data science internship opportunities",
-      "fintech PhD internship programs",
-      "risk analytics careers at PayPal",
-      "PayPal machine learning engineer positions"
+      "What career opportunities are available at PayPal?",
+      "How can I prepare for a PhD internship at PayPal?",
+      "What skills are needed for a career in fintech?",
+      "What is the hiring process like at PayPal?",
+      "How does PayPal approach risk analytics?",
+      "What are the benefits of working at PayPal?",
+      "What roles are available for data scientists at PayPal?",
+      "How can I network with professionals at PayPal?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "fintech"
     ]
   },
   {
@@ -1838,30 +1905,33 @@
     "subtab": "companies",
     "vertical": "investing",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "behavioral-interviews"
-    ],
-    "topic_tags": [
-      "career-portal",
-      "fintech",
-      "job-applications",
-      "company-research"
-    ],
-    "summary": "Robinhood's career portal showcasing available positions at the popular commission-free trading platform. The company offers roles across data science, engineering, and research with opportunities to work on experimentation and financial product optimization. Features detailed job descriptions, company culture information, and application processes for tech roles in fintech.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Robinhood serves as a career portal that provides resources and opportunities for individuals interested in the fintech sector, particularly those looking for internships or entry-level positions. It emphasizes experimentation and innovation in career development.",
     "use_cases": [
-      "Exploring data science opportunities at a high-growth fintech company",
-      "Researching Robinhood's tech culture and interview process before applying"
+      "when looking for internships in fintech",
+      "when exploring career options in the financial technology sector"
     ],
     "audience": [
-      "Junior-DS",
+      "Early-PhD",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "Robinhood data science jobs",
-      "fintech career opportunities",
-      "Robinhood company culture tech roles",
-      "trading platform data science positions"
+      "What internships are available at Robinhood?",
+      "How can I prepare for a career in fintech?",
+      "What skills are needed for a PhD internship at Robinhood?",
+      "What is the company culture like at Robinhood?",
+      "How does Robinhood support career development?",
+      "What are the benefits of working at a fintech company?",
+      "What types of roles are available at Robinhood?",
+      "How can I apply for a job at Robinhood?"
+    ],
+    "role_type": [
+      "intern"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "fintech"
     ]
   },
   {
@@ -1882,30 +1952,24 @@
     "subtab": "companies",
     "vertical": "lending",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "interview-preparation"
-    ],
-    "topic_tags": [
-      "career-portal",
-      "fintech-jobs",
-      "credit-risk",
-      "company-research"
-    ],
-    "summary": "Affirm's career portal showcasing opportunities at the buy-now-pay-later fintech company. The company focuses on point-of-sale lending and credit risk modeling with limited PhD-level research positions. Useful for understanding fintech career paths and company culture in consumer lending.",
-    "use_cases": [
-      "Researching fintech companies that work on credit risk and lending algorithms",
-      "Finding entry-level to mid-level data science positions in financial technology"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS"
-    ],
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Affirm's career portal provides resources and information for individuals interested in pursuing careers in fintech and credit risk. It serves as a guide for job seekers looking to understand opportunities within the company.",
+    "use_cases": [],
+    "audience": [],
     "synthetic_questions": [
-      "Affirm data science jobs",
-      "fintech companies hiring data scientists",
-      "buy now pay later company careers",
-      "credit risk modeling jobs"
+      "What career opportunities are available at Affirm?",
+      "How can I prepare for a job interview at Affirm?",
+      "What is the company culture like at Affirm?",
+      "What skills are needed for a career in fintech?",
+      "How does Affirm support career development?",
+      "What are the benefits of working at Affirm?",
+      "What positions are available at Affirm for recent graduates?",
+      "How does Affirm approach credit risk management?"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "fintech"
     ]
   },
   {
@@ -1926,31 +1990,32 @@
     "subtab": "companies",
     "vertical": "payments",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "interview-preparation"
-    ],
-    "topic_tags": [
-      "careers",
-      "fintech",
-      "software-engineering",
-      "job-search",
-      "company-portal"
-    ],
-    "summary": "Block's career portal showcases job opportunities at the fintech company, with a strong emphasis on software engineering roles. The portal provides insights into company culture, engineering practices, and available positions across Block's various products including Square and Cash App. Limited opportunities for PhD-level research roles, making it more suitable for software-focused career paths.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Block serves as a career portal that connects job seekers with opportunities in the fintech sector, particularly focusing on software engineering roles. It provides resources tailored for those with limited PhD backgrounds.",
     "use_cases": [
-      "Software engineers looking for fintech opportunities at a major payments company",
-      "Data scientists seeking industry roles in financial technology and payment processing"
+      "when looking for jobs in fintech",
+      "when preparing for software engineering interviews"
     ],
     "audience": [
-      "Junior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "Block careers software engineering jobs",
-      "fintech companies hiring data scientists",
-      "Square Cash App job opportunities",
-      "Block company culture engineering roles"
+      "What career opportunities are available in fintech?",
+      "How can I prepare for a software engineering interview?",
+      "What are the salary expectations for fintech roles?",
+      "What resources can help me in my job search?",
+      "How do I negotiate my salary in tech?",
+      "What skills are essential for a career in fintech?",
+      "What companies are hiring for software engineering positions?",
+      "How does a limited PhD background affect my job prospects?"
+    ],
+    "role_type": [
+      "SWE"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "fintech"
     ]
   },
   {
@@ -1971,31 +2036,35 @@
     "subtab": "companies",
     "vertical": "productivity",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "interview-preparation"
-    ],
-    "topic_tags": [
-      "careers",
-      "adobe",
-      "enterprise-jobs",
-      "tech-industry",
-      "internships"
-    ],
-    "summary": "Adobe's career portal providing access to job opportunities at one of the largest enterprise software companies. The portal features positions across data science, research, engineering, and product teams, with strong PhD internship programs. Adobe offers opportunities to work on creative tools, digital marketing platforms, and document management solutions used by millions worldwide.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Adobe career portal provides resources and information for individuals seeking internships and employment opportunities within the company, particularly targeting those with advanced degrees.",
     "use_cases": [
-      "PhD students seeking summer internships at a major tech company with research opportunities",
-      "Data scientists looking for enterprise roles working on creative software and marketing analytics platforms"
+      "when looking for internship opportunities",
+      "when researching company culture",
+      "when preparing for a job application at Adobe"
     ],
     "audience": [
       "Early-PhD",
-      "Junior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Adobe data scientist jobs",
-      "PhD internships at Adobe",
-      "Adobe careers tech economics",
-      "enterprise software company jobs"
+      "What internships does Adobe offer?",
+      "How can I apply for a job at Adobe?",
+      "What is the work culture like at Adobe?",
+      "What types of roles are available for PhD graduates at Adobe?",
+      "How does Adobe support career development?",
+      "What skills are valued at Adobe?",
+      "What is the application process for Adobe internships?",
+      "What benefits does Adobe offer to employees?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "enterprise"
     ]
   },
   {
@@ -2017,31 +2086,32 @@
     "subtab": "companies",
     "vertical": "enterprise",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "interview-preparation"
-    ],
-    "topic_tags": [
-      "career-portal",
-      "enterprise-jobs",
-      "economist-roles",
-      "PhD-opportunities",
-      "AI-economics"
-    ],
-    "summary": "Salesforce's career portal showcasing opportunities for economists and data scientists at one of the largest enterprise software companies. The portal features economist-titled positions and PhD internship programs, particularly in AI economics and enterprise analytics. It provides insight into how economists contribute to product strategy, pricing optimization, and market analysis in the enterprise software sector.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Salesforce provides a career portal that serves as a resource for individuals seeking opportunities within the company. It is designed to assist users in navigating career paths and finding relevant job openings.",
     "use_cases": [
-      "PhD student seeking summer internships at major tech companies with dedicated economist roles",
-      "Mid-career economist looking to transition from academia to enterprise software and AI-driven business strategy"
+      "when looking for job openings at Salesforce",
+      "when researching company culture at Salesforce"
     ],
     "audience": [
-      "Early-PhD",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "Salesforce economist jobs",
-      "PhD internships at enterprise software companies",
-      "economist roles in AI and enterprise technology",
-      "Salesforce data scientist career opportunities"
+      "What career opportunities are available at Salesforce?",
+      "How can I prepare for an interview at Salesforce?",
+      "What roles does Salesforce offer for economists?",
+      "What is the salary range for data scientists at Salesforce?",
+      "How does Salesforce support PhD interns?",
+      "What skills are valued at Salesforce?",
+      "What is the company culture like at Salesforce?",
+      "How can I apply for a job at Salesforce?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "startup"
     ]
   },
   {
@@ -2063,31 +2133,37 @@
     "subtab": "companies",
     "vertical": "data-infra",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "interview-skills"
-    ],
-    "topic_tags": [
-      "career-opportunities",
-      "tech-companies",
-      "job-search",
-      "enterprise-roles",
-      "economist-positions"
-    ],
-    "summary": "Databricks career portal showcasing job opportunities at the unified analytics and AI platform company. Features roles welcoming economics PhDs and offers economist-titled positions across product, research, and data science teams. Includes internship programs and enterprise-focused positions for candidates with quantitative backgrounds.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Databricks provides a career portal aimed at connecting individuals with opportunities in the tech and economics fields, particularly welcoming those with PhDs. It serves as a resource for job seekers looking for roles in data science and economics.",
     "use_cases": [
-      "Economics PhD seeking industry transition to tech company with strong data science culture",
-      "Data scientist looking for enterprise-focused role at company that values economic thinking"
+      "when looking for internships in data science",
+      "when exploring career options in economics",
+      "when seeking company information for job applications"
     ],
     "audience": [
       "Early-PhD",
-      "Junior-DS"
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "databricks jobs for economists",
-      "tech companies hiring economics PhDs",
-      "databricks data scientist careers",
-      "enterprise analytics job opportunities"
+      "What career opportunities are available at Databricks?",
+      "How can I apply for a PhD internship at Databricks?",
+      "What roles does Databricks offer for economists?",
+      "What is the company culture like at Databricks?",
+      "Are there specific skills required for data science roles at Databricks?",
+      "How does Databricks support career development for PhDs?",
+      "What types of projects do interns work on at Databricks?",
+      "What is the hiring process like at Databricks?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "startup"
     ]
   },
   {
@@ -2109,31 +2185,32 @@
     "subtab": "companies",
     "vertical": "fintech-saas",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "interview-preparation"
-    ],
-    "topic_tags": [
-      "career-portal",
-      "fintech-jobs",
-      "economist-roles",
-      "PhD-opportunities",
-      "enterprise-careers"
-    ],
-    "summary": "Intuit's career portal showcasing opportunities for economists, data scientists, and researchers at the financial technology company behind TurboTax, QuickBooks, and Mint. The portal features roles ranging from PhD internships to senior economist positions, emphasizing AI and machine learning applications in consumer finance. Ideal for exploring career paths in fintech and understanding how economic research translates to product impact.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Intuit's career portal provides resources and information for individuals seeking career opportunities within the company, particularly in areas related to fintech and economics.",
     "use_cases": [
-      "PhD student researching fintech internship opportunities and economist career tracks",
-      "Data scientist exploring enterprise fintech roles and understanding Intuit's research culture"
+      "when looking for internship opportunities",
+      "when exploring career paths in fintech"
     ],
     "audience": [
-      "Early-PhD",
-      "Junior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Intuit economist jobs",
-      "fintech PhD internships",
-      "data science careers at Intuit",
-      "economist roles in financial technology"
+      "What internships does Intuit offer?",
+      "How can I apply for a PhD internship at Intuit?",
+      "What roles are available for economists at Intuit?",
+      "What is the company culture like at Intuit?",
+      "What skills are needed for a career in fintech?",
+      "How does Intuit support career development?",
+      "What are the benefits of working at Intuit?",
+      "What types of projects do interns work on at Intuit?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "fintech"
     ]
   },
   {
@@ -2153,32 +2230,34 @@
     "tab": "find-jobs",
     "subtab": "companies",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "python-pandas",
-      "statistical-analysis"
-    ],
-    "topic_tags": [
-      "pharma-careers",
-      "biostatistics-jobs",
-      "PhD-internships",
-      "healthcare-analytics",
-      "career-portal"
-    ],
-    "summary": "Eli Lilly's career portal showcasing opportunities in pharmaceutical data science and biostatistics. The company offers roles ranging from PhD internships to senior researcher positions focused on drug development analytics. Particularly valuable for data scientists interested in healthcare applications and statistical modeling in clinical trials.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Eli Lilly's career portal provides information about career opportunities within the pharmaceutical industry, focusing on roles related to biostatistics and internships for PhD candidates. It serves as a resource for those interested in pursuing a career in pharma.",
     "use_cases": [
-      "PhD student seeking summer internship in pharmaceutical biostatistics",
-      "Data scientist transitioning from tech to healthcare industry looking for relevant opportunities"
+      "when looking for internships in pharma",
+      "when researching career opportunities in biostatistics"
     ],
     "audience": [
       "Early-PhD",
-      "Junior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "pharma data science internships",
-      "Eli Lilly biostatistics jobs",
-      "PhD internships pharmaceutical industry",
-      "healthcare data science career opportunities"
+      "What internships are available at Eli Lilly?",
+      "How can I apply for a PhD internship at Eli Lilly?",
+      "What career paths are available in biostatistics?",
+      "What is the company culture like at Eli Lilly?",
+      "What skills are needed for a career in pharma?",
+      "How does Eli Lilly support employee development?",
+      "What are the benefits of working at Eli Lilly?",
+      "What roles are available for data scientists at Eli Lilly?"
+    ],
+    "role_type": [
+      "biostatistician",
+      "intern"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "pharma"
     ]
   },
   {
@@ -2198,31 +2277,34 @@
     "tab": "find-jobs",
     "subtab": "companies",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "job-applications"
-    ],
-    "topic_tags": [
-      "pharma",
-      "biostatistics",
-      "career-portal",
-      "PhD-internship",
-      "industry-jobs"
-    ],
-    "summary": "Pfizer's career portal provides job opportunities and internship programs in pharmaceutical research and development. The portal is particularly valuable for biostatisticians and data scientists interested in healthcare applications. It offers positions ranging from PhD internships to senior research roles in drug development and clinical trials.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Pfizer career portal provides information about career opportunities within the company, particularly for those interested in the pharmaceutical industry. It may offer insights into internships and roles related to biostatistics and other fields.",
     "use_cases": [
-      "Finding PhD internship opportunities in pharmaceutical biostatistics and clinical trial design",
-      "Exploring full-time data science positions in drug discovery and regulatory affairs"
+      "when looking for internship opportunities in pharma",
+      "when exploring career paths in biostatistics"
     ],
     "audience": [
       "Early-PhD",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "Pfizer PhD internship biostatistics",
-      "pharma data science jobs career opportunities",
-      "pharmaceutical industry positions for statisticians",
-      "biotech career portal internships"
+      "What internships are available at Pfizer?",
+      "How can I apply for a PhD internship at Pfizer?",
+      "What roles does Pfizer offer in biostatistics?",
+      "What is the career path for a data scientist at Pfizer?",
+      "What skills are needed for a career in pharma?",
+      "How does Pfizer support career development?",
+      "What is the company culture like at Pfizer?",
+      "What are the benefits of working at Pfizer?"
+    ],
+    "role_type": [
+      "biostatistician",
+      "intern"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "pharma"
     ]
   },
   {
@@ -2242,30 +2324,34 @@
     "tab": "find-jobs",
     "subtab": "companies",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "interview-preparation"
-    ],
-    "topic_tags": [
-      "pharma-careers",
-      "biostatistics-jobs",
-      "PhD-internships",
-      "industry-transition"
-    ],
-    "summary": "Johnson & Johnson's career portal showcasing opportunities in pharmaceutical data science and biostatistics. Features PhD internship programs and full-time positions for statisticians and data scientists in healthcare innovation. Provides insight into one of the largest pharma companies' approach to recruiting quantitative talent.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "J&J's career portal provides resources and information for individuals seeking opportunities in the pharmaceutical industry, particularly in biostatistics and internships for PhD candidates.",
     "use_cases": [
-      "PhD student seeking summer internship in pharmaceutical biostatistics",
-      "Academic researcher transitioning to industry data science role at major pharma company"
+      "when looking for internships in pharma",
+      "when exploring career options in biostatistics"
     ],
     "audience": [
       "Early-PhD",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "pharma companies hiring PhD interns",
-      "Johnson and Johnson biostatistics careers",
-      "pharmaceutical industry data science jobs",
-      "how to get internship at J&J"
+      "What internship opportunities are available at J&J?",
+      "How can I apply for a PhD internship at J&J?",
+      "What roles does J&J offer in biostatistics?",
+      "What is the career path for a biostatistician at J&J?",
+      "What are the benefits of working at J&J?",
+      "How does J&J support career development for interns?",
+      "What skills are required for a career in pharma at J&J?",
+      "What is the company culture like at J&J?"
+    ],
+    "role_type": [
+      "biostatistician",
+      "intern"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "pharma"
     ]
   },
   {
@@ -2285,31 +2371,34 @@
     "tab": "find-jobs",
     "subtab": "companies",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "interview-preparation"
-    ],
-    "topic_tags": [
-      "careers",
-      "pharma",
-      "biostatistics",
-      "job-search",
-      "internships"
-    ],
-    "summary": "Moderna's career portal featuring opportunities in biostatistics, data science, and computational biology roles. Particularly valuable for those interested in pharmaceutical and biotech industry positions, with strong PhD internship programs and entry-level opportunities.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Moderna's career portal provides information about career opportunities within the company, particularly in the fields of pharmaceuticals and biostatistics. It is a resource for individuals seeking internships or positions that may require a PhD.",
     "use_cases": [
-      "PhD student seeking biostatistics internship in pharmaceutical industry",
-      "Data scientist transitioning from tech to healthcare/pharma sector"
+      "when looking for internship opportunities",
+      "when exploring career paths in pharmaceuticals"
     ],
     "audience": [
       "Early-PhD",
-      "Junior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Moderna data science jobs",
-      "biostatistics PhD internships pharma",
-      "pharmaceutical industry data scientist careers",
-      "Moderna biostatistics positions"
+      "What internships are available at Moderna?",
+      "How can I apply for a PhD internship at Moderna?",
+      "What roles does Moderna offer in biostatistics?",
+      "What is the career path for a data scientist at Moderna?",
+      "What skills are needed for a career in pharma?",
+      "How does Moderna support career development?",
+      "What is the company culture like at Moderna?",
+      "What are the benefits of working at Moderna?"
+    ],
+    "role_type": [
+      "biostatistician",
+      "intern"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "pharma"
     ]
   },
   {
@@ -2329,30 +2418,34 @@
     "tab": "find-jobs",
     "subtab": "companies",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "python-basics"
-    ],
-    "topic_tags": [
-      "pharma-careers",
-      "biostatistics-jobs",
-      "PhD-internships",
-      "company-portal"
-    ],
-    "summary": "Roche's career portal showcasing opportunities in pharmaceutical data science and biostatistics. The portal features internships, full-time positions, and PhD programs focused on drug development and clinical trials. Particularly valuable for data scientists interested in healthcare applications and regulatory environments.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Roche's career portal provides information about career opportunities in the pharmaceutical industry, particularly for those interested in biostatistics and internships for PhD candidates.",
     "use_cases": [
-      "PhD student seeking summer internship in pharmaceutical biostatistics",
-      "Junior data scientist exploring transition from tech to pharma industry"
+      "when looking for internships in pharma",
+      "when exploring career options in biostatistics"
     ],
     "audience": [
       "Early-PhD",
-      "Junior-DS"
+      "Junior-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Roche data science internships",
-      "pharma biostatistics career opportunities",
-      "PhD internships pharmaceutical industry",
-      "Roche data scientist job requirements"
+      "What internships are available at Roche?",
+      "How can I apply for a PhD internship at Roche?",
+      "What career paths are available in biostatistics?",
+      "What is the work culture like at Roche?",
+      "What skills are needed for a career in pharma?",
+      "How does Roche support career development?",
+      "What are the benefits of working at Roche?",
+      "What types of roles are available in the pharmaceutical industry?"
+    ],
+    "role_type": [
+      "biostatistician"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "pharma"
     ]
   },
   {
@@ -2372,31 +2465,32 @@
     "tab": "find-jobs",
     "subtab": "companies",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "interview-preparation"
-    ],
-    "topic_tags": [
-      "pharma-careers",
-      "biotech-jobs",
-      "industry-transition",
-      "HEOR",
-      "PhD-opportunities"
-    ],
-    "summary": "Genentech's career portal showcasing opportunities in pharmaceutical and biotechnology research, with focus on health economics and outcomes research (HEOR) roles. The portal features positions for data scientists, researchers, and PhD-level scientists looking to transition from academia to industry. Includes internship programs specifically designed for PhD students and postdocs.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Genentech's career portal provides information about internship opportunities for PhD students in the pharmaceutical industry, particularly in Health Economics and Outcomes Research (HEOR). It serves as a resource for those interested in pursuing careers in this field.",
     "use_cases": [
-      "PhD student in economics or biostatistics looking for industry internship opportunities in pharmaceutical research",
-      "Data scientist seeking to transition from tech to biotech/pharma with focus on health outcomes analysis"
+      "when looking for internship opportunities in pharma",
+      "when researching career paths in HEOR"
     ],
     "audience": [
-      "Early-PhD",
-      "Junior-DS"
+      "Early-PhD"
     ],
     "synthetic_questions": [
-      "pharma data science jobs for PhD economists",
-      "Genentech internships for economics PhD students",
-      "biotech career opportunities health economics",
-      "pharmaceutical industry jobs for data scientists"
+      "What internship opportunities are available at Genentech?",
+      "How can I apply for a PhD internship at Genentech?",
+      "What is HEOR and its relevance in pharma?",
+      "What skills are needed for a career in pharma?",
+      "What career paths are available for PhD graduates in pharma?",
+      "How does Genentech support PhD interns?",
+      "What is the work culture like at Genentech?",
+      "What are the benefits of interning at Genentech?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "pharma"
     ]
   },
   {
@@ -2416,30 +2510,33 @@
     "tab": "find-jobs",
     "subtab": "companies",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "healthcare-domain-knowledge"
-    ],
-    "topic_tags": [
-      "career-opportunities",
-      "healthcare-economics",
-      "pharma-industry",
-      "internships"
-    ],
-    "summary": "Optum is a major health services and innovation company that offers career opportunities for data scientists and economists in healthcare. The company provides roles in health economics and outcomes research (HEOR), analytics, and pharmaceutical consulting. They offer internship programs particularly suited for PhD students looking to transition into industry.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Optum provides a career portal that connects individuals with opportunities in the pharmaceutical sector, specifically for roles related to health economics and outcomes research (HEOR). It is particularly beneficial for those seeking internships at the PhD level.",
     "use_cases": [
-      "PhD student in economics or health policy seeking summer internship opportunities in healthcare industry",
-      "Data scientist looking to pivot from general tech into healthcare economics and pharmaceutical research"
+      "when looking for internships in pharma",
+      "when exploring career options in health economics"
     ],
     "audience": [
       "Early-PhD",
-      "Junior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Optum internships for economics PhD students",
-      "healthcare data science jobs at Optum",
-      "HEOR career opportunities pharma industry",
-      "transitioning from academia to healthcare consulting"
+      "What internships are available at Optum?",
+      "How can I apply for a PhD internship at Optum?",
+      "What career paths are available in pharma?",
+      "What is HEOR and how does it relate to my career?",
+      "What skills are needed for a career in pharma?",
+      "How can I prepare for a career in health economics?",
+      "What resources does Optum offer for job seekers?",
+      "What is the company culture like at Optum?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "pharma"
     ]
   },
   {
@@ -2460,30 +2557,33 @@
     "tab": "find-jobs",
     "subtab": "companies",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "behavioral-interviews"
-    ],
-    "topic_tags": [
-      "career-portal",
-      "tech-economics",
-      "job-applications",
-      "roblox-careers"
-    ],
-    "summary": "Roblox's career portal featuring opportunities for economists and data scientists in the gaming industry. The company actively recruits economics PhDs and offers internship programs with economist job titles. Known for being PhD-friendly and embracing economic methodologies in their data science work.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Roblox's career portal provides resources and information for individuals interested in pursuing careers in economics and related fields. It is particularly welcoming to those with PhDs and offers internship opportunities for economists.",
     "use_cases": [
-      "Economics PhD student looking for industry internships at gaming companies",
-      "Data scientist seeking economist-titled roles at tech companies that value economic training"
+      "when looking for internship opportunities",
+      "when exploring career paths in economics"
     ],
     "audience": [
       "Early-PhD",
-      "Junior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "roblox economist jobs",
-      "gaming companies hiring economics PhDs",
-      "roblox data science internships",
-      "tech companies with economist job titles"
+      "What career opportunities are available at Roblox?",
+      "How can I apply for an internship at Roblox?",
+      "What qualifications does Roblox look for in economists?",
+      "Are there specific roles for PhD graduates at Roblox?",
+      "What is the work culture like at Roblox?",
+      "How does Roblox support career development for economists?",
+      "What skills are important for a career at Roblox?",
+      "What are the benefits of working at Roblox?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "startup"
     ]
   },
   {
@@ -2504,31 +2604,32 @@
     "tab": "find-jobs",
     "subtab": "companies",
     "difficulty": "beginner",
-    "prerequisites": [
-      "python-programming",
-      "statistical-inference"
-    ],
-    "topic_tags": [
-      "careers",
-      "openai",
-      "job-applications",
-      "tech-companies",
-      "ai-research"
-    ],
-    "summary": "OpenAI's career portal showcasing job opportunities at one of the leading AI research companies. The portal features roles spanning research, engineering, and applied AI positions that often require strong technical backgrounds. It serves as a gateway for tech economists and data scientists interested in working at the forefront of artificial intelligence development.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "OpenAI's career portal provides resources and opportunities for individuals interested in careers related to economics and technology. It focuses on networking and emerging roles in the field.",
     "use_cases": [
-      "Exploring research scientist positions that combine economics and AI capabilities",
-      "Finding applied AI roles that leverage econometric skills in product development"
+      "when looking for career opportunities in tech and economics",
+      "when seeking networking opportunities"
     ],
     "audience": [
-      "Junior-DS",
-      "Mid-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "OpenAI jobs for economists",
-      "How to get hired at OpenAI",
-      "OpenAI career opportunities data science",
-      "Working at OpenAI requirements"
+      "What career opportunities are available at OpenAI?",
+      "How can I network in the tech-economics field?",
+      "What is the residency program at OpenAI?",
+      "What titles are available for economists at OpenAI?",
+      "How do I prepare for a career in tech economics?",
+      "What skills are needed for a role at OpenAI?",
+      "What does the career portal offer?",
+      "How can I connect with professionals in the field?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "startup"
     ]
   },
   {
@@ -2549,31 +2650,36 @@
     "tab": "find-jobs",
     "subtab": "companies",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "python-basics"
-    ],
-    "topic_tags": [
-      "career-portal",
-      "ai-safety",
-      "research-positions",
-      "machine-learning-jobs",
-      "anthropic-careers"
-    ],
-    "summary": "Anthropic's career portal for AI safety and research positions at a leading AI company. Primarily targets researchers and engineers working on large language models and AI alignment. Known for having high bars and requiring strong networking or referrals rather than traditional internship pipelines.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Anthropic career portal provides resources and information for individuals seeking careers in the tech and economics fields, with a focus on networking and opportunities that do not require internships.",
     "use_cases": [
-      "Transitioning from academic research to industry AI safety roles",
-      "Finding senior research scientist positions focused on AI alignment and interpretability"
+      "when looking for career opportunities in tech economics",
+      "when needing to network with professionals in the field"
     ],
     "audience": [
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
       "Senior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "Anthropic careers AI safety jobs",
-      "how to get hired at Anthropic without internship",
-      "AI research scientist jobs Anthropic",
-      "Anthropic economist research positions"
+      "What career opportunities are available at Anthropic?",
+      "How can I network effectively in tech economics?",
+      "What roles are suitable for economists in tech?",
+      "Are there any internships offered by Anthropic?",
+      "What skills are needed for a career in tech economics?",
+      "How to prepare for interviews in tech companies?",
+      "What is the salary range for economists at tech firms?",
+      "What networking strategies work best in the tech industry?"
+    ],
+    "role_type": [
+      "economist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "startup"
     ]
   },
   {
@@ -2593,32 +2699,26 @@
     "tab": "find-jobs",
     "subtab": "companies",
     "difficulty": "beginner",
-    "prerequisites": [
-      "resume-writing",
-      "basic-networking"
-    ],
-    "topic_tags": [
-      "career-portal",
-      "job-search",
-      "company-directory",
-      "internships",
-      "entry-level"
-    ],
-    "summary": "Notion's career portal provides job listings and company information for early-career professionals in tech. The platform focuses on emerging opportunities including internships and entry-level positions with limited PhD-level roles. It serves as a gateway for students and new graduates to discover tech companies and available positions.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Notion serves as a career portal that provides resources and information for individuals seeking career opportunities. It is particularly useful for those looking to explore various companies and roles in the tech industry.",
     "use_cases": [
-      "New computer science graduate searching for entry-level data science positions at tech companies",
-      "PhD student looking for summer internship opportunities in applied research roles"
+      "when looking for company lists and career opportunities"
     ],
     "audience": [
-      "Junior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "entry level data science jobs at tech companies",
-      "internship opportunities for data science students",
-      "notion careers early career opportunities",
-      "tech company job listings for new graduates"
-    ]
+      "What companies are listed on Notion?",
+      "How can I find internships through Notion?",
+      "What resources does Notion offer for job searching?",
+      "Are there career tips available on Notion?",
+      "How does Notion help with career planning?",
+      "What types of roles can I find on Notion?",
+      "Is Notion useful for PhD candidates?",
+      "What are the emerging companies listed on Notion?"
+    ],
+    "experience_level": "entry"
   },
   {
     "name": "DataLemur SQL",
@@ -2635,31 +2735,36 @@
     "tab": "interview",
     "subtab": "sql",
     "difficulty": "beginner",
-    "prerequisites": [
-      "basic-SQL",
-      "database-joins"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "SQL-practice",
-      "interview-prep",
-      "FAANG-questions",
-      "data-querying",
-      "career-prep"
+      "interview-prep"
     ],
-    "summary": "DataLemur SQL is a free practice platform featuring real SQL interview questions from top tech companies like Facebook, Google, and Amazon. Created by ex-Facebook data scientists who authored a popular interview guide, it provides hands-on coding practice with company-specific problem sets. The platform is designed to help aspiring data professionals prepare for technical interviews at major tech companies.",
+    "summary": "DataLemur SQL offers free SQL practice specifically designed to help users prepare for FAANG interviews. It is created by experienced authors from Facebook, making it a valuable resource for those looking to enhance their SQL skills.",
     "use_cases": [
-      "Preparing for data science or analytics interviews at FAANG companies by practicing actual SQL questions",
-      "Learning industry-standard SQL patterns and problem-solving approaches used at top tech firms"
+      "when preparing for FAANG interviews",
+      "to practice SQL skills",
+      "to gain confidence in SQL for job applications"
     ],
     "audience": [
       "Junior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "SQL practice questions for tech interviews",
-      "FAANG data science interview preparation",
-      "free SQL coding practice platform",
-      "Facebook Google SQL interview questions"
+      "How can I practice SQL for FAANG interviews?",
+      "What are some beginner-friendly SQL resources?",
+      "How do I prepare for data science interviews?",
+      "What types of questions are asked in SQL interviews?",
+      "Where can I find free SQL practice?",
+      "What is the best way to learn SQL for data science?",
+      "How important is SQL for data science roles?",
+      "What should I focus on when preparing for SQL interviews?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -2676,33 +2781,35 @@
     "section": "interview",
     "tab": "interview",
     "subtab": "sql",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "SQL-basics",
-      "database-joins",
-      "SQL-window-functions"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "SQL-practice",
-      "interview-prep",
-      "tech-companies",
-      "data-analysis",
-      "career-prep"
+      "interview-prep"
     ],
-    "summary": "StrataScratch provides real SQL interview questions from major tech companies like Airbnb, Uber, and Netflix with step-by-step solutions. It focuses on practical data filtering and analysis problems that mirror actual work scenarios at these companies. The platform is designed to help data professionals prepare for technical interviews while learning company-specific data patterns.",
+    "summary": "StrataScratch provides users with company-specific SQL interview questions and solutions, helping candidates prepare for technical interviews at major tech companies. It focuses on real-world scenarios to enhance practical SQL skills.",
     "use_cases": [
-      "Preparing for data scientist or analyst interviews at FAANG companies",
-      "Learning how major tech companies structure their data problems and expect solutions"
+      "when preparing for technical interviews at tech companies",
+      "to practice SQL skills with real questions"
     ],
     "audience": [
       "Junior-DS",
-      "Mid-DS"
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "SQL interview questions from tech companies",
-      "Airbnb Uber Netflix SQL practice problems",
-      "real data science interview questions with solutions",
-      "company specific SQL filtering practice"
+      "How to prepare for SQL interviews?",
+      "What are common SQL interview questions?",
+      "How to filter data in SQL?",
+      "What SQL skills are needed for data science?",
+      "How to analyze SQL interview performance?",
+      "What resources are best for SQL practice?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -2719,33 +2826,33 @@
     "section": "interview",
     "tab": "interview",
     "subtab": "sql",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "SQL-basics",
-      "SELECT-statements"
-    ],
+    "difficulty": "beginner|intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "window-functions",
-      "SQL-practice",
-      "interview-prep",
-      "data-analysis",
-      "interactive-quiz"
+      "interview-prep"
     ],
-    "summary": "Interactive practice quizzes focusing on SQL window functions including ROW_NUMBER, RANK, and LAG/LEAD operations. Essential skill for data analysts and commonly tested in technical interviews. Provides hands-on experience with ranking, ordering, and accessing adjacent row data.",
+    "summary": "This resource provides interactive quizzes that help users practice window functions commonly tested in technical interviews. It aims to enhance understanding and proficiency in SQL window functions, which are essential for data analysis roles.",
     "use_cases": [
-      "Preparing for data analyst or data scientist technical interviews",
-      "Learning to rank customers by purchase history or calculate running totals in business analytics"
+      "when preparing for SQL interviews",
+      "to improve SQL skills for data analysis"
     ],
     "audience": [
       "Junior-DS",
+      "Mid-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "SQL window functions practice problems",
-      "ROW_NUMBER vs RANK SQL exercises",
-      "LAG LEAD SQL interview questions",
-      "interactive SQL window functions quiz"
-    ]
+      "What are window functions in SQL?",
+      "How do I prepare for SQL interviews?",
+      "What is the difference between ROW_NUMBER and RANK?",
+      "What are LAG and LEAD functions used for?",
+      "How can I practice SQL for data science?",
+      "What are some common SQL interview questions?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "entry|mid"
   },
   {
     "name": "Interview Query",
@@ -2761,34 +2868,37 @@
     "section": "interview",
     "tab": "interview",
     "subtab": "sql",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "python-basics",
-      "SQL-queries",
-      "pandas-dataframes"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
       "interview-prep",
-      "SQL-practice",
-      "python-coding",
-      "data-science-jobs",
-      "technical-screening"
+      "data-science",
+      "machine-learning"
     ],
-    "summary": "Interview Query is a comprehensive platform designed to help data scientists prepare for technical interviews through practice problems in SQL, Python, and machine learning. The platform includes both quick coding challenges and realistic take-home assignments that mirror actual interview processes at tech companies. It's particularly valuable for practicing the specific types of questions and problem formats commonly encountered in data science interviews.",
+    "summary": "Interview Query provides a platform for practicing data science interview questions, including SQL, Python, and machine learning challenges. It offers comprehensive resources for candidates preparing for technical interviews.",
     "use_cases": [
-      "Preparing for data scientist interviews at tech companies by practicing SQL queries and Python coding problems",
-      "Completing mock take-home assignments to simulate real interview experiences and improve problem-solving skills"
+      "when preparing for data science interviews",
+      "to practice SQL and Python skills",
+      "to understand the types of challenges faced in interviews"
     ],
     "audience": [
       "Junior-DS",
       "Mid-DS"
     ],
     "synthetic_questions": [
-      "data science interview questions SQL Python",
-      "practice problems for tech interviews data science",
-      "take home challenges data scientist interviews",
-      "SQL coding interview preparation platform"
-    ]
+      "What are common SQL interview questions?",
+      "How can I prepare for a data science interview?",
+      "What Python skills are essential for data science?",
+      "What types of take-home challenges can I expect?",
+      "How do I approach machine learning interview questions?",
+      "What resources are best for interview preparation?",
+      "How can I improve my interview skills?",
+      "What is the typical interview process for data scientists?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "mid"
   },
   {
     "name": "Nick Singh's 40 Stats Questions",
@@ -2806,33 +2916,34 @@
     "tab": "interview",
     "subtab": "stats",
     "archived": true,
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-probability",
-      "combinatorics",
-      "bayes-theorem"
-    ],
-    "topic_tags": [
-      "interview-prep",
-      "probability-puzzles",
-      "bayesian-inference",
-      "statistics-fundamentals",
-      "FAANG"
-    ],
-    "summary": "A collection of 40 probability and statistics interview questions commonly asked at top tech companies (FAANG) and Wall Street firms. The questions focus on Bayesian reasoning, probability distributions, and statistical puzzles that test fundamental understanding. This resource helps candidates prepare for technical interviews and solidify their grasp of core statistical concepts.",
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides a collection of probability and statistics questions that are commonly asked in interviews for tech and finance roles. It helps candidates prepare for challenging statistical concepts and problem-solving scenarios they may encounter during the hiring process.",
     "use_cases": [
-      "preparing for data science interviews at tech companies",
-      "practicing probability puzzles for finance quantitative roles"
+      "when preparing for technical interviews in data science or finance"
     ],
     "audience": [
       "Junior-DS",
-      "Curious-browser"
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "FAANG data science interview questions",
-      "probability puzzles for tech interviews",
-      "Bayesian statistics interview prep",
-      "Wall Street quant interview problems"
+      "What are the key statistics concepts to know for a data science interview?",
+      "How can I prepare for a statistics interview at a FAANG company?",
+      "What types of probability questions are commonly asked in finance interviews?",
+      "What resources can help me improve my Bayesian statistics knowledge?",
+      "How do I approach solving statistical puzzles in interviews?",
+      "What is the importance of understanding distributions in data science?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "FAANG",
+      "Wall-Street"
     ]
   },
   {
@@ -2851,32 +2962,32 @@
     "subtab": "ml-fundamentals",
     "archived": true,
     "difficulty": "beginner",
-    "prerequisites": [
-      "basic-statistics",
-      "python-basics"
-    ],
-    "topic_tags": [
-      "machine-learning",
-      "statistical-concepts",
-      "video-tutorials",
-      "regularization",
-      "ensemble-methods"
-    ],
-    "summary": "StatQuest is a YouTube channel that explains machine learning concepts through visual animations and intuitive examples. Josh Starmer breaks down complex ML topics like bias-variance tradeoff, regularization, and ensemble methods into digestible explanations. Perfect for economists transitioning into data science who need to understand the statistical foundations behind ML algorithms.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "StatQuest with Josh Starmer provides accessible explanations of key machine learning concepts such as bias-variance, regularization, and ensemble methods, making it an excellent resource for econ PhDs looking to learn ML. The content is tailored to help beginners grasp complex topics in a straightforward manner.",
     "use_cases": [
-      "Economics PhD student needs to understand random forests for their dissertation analysis",
-      "New data scientist at tech company wants to grasp regularization concepts before implementing models"
+      "when starting to learn machine learning concepts",
+      "to clarify complex ML topics"
     ],
     "audience": [
       "Early-PhD",
-      "Junior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "best videos to learn machine learning basics",
-      "bias variance tradeoff explained simply",
-      "regularization tutorial for economists",
-      "ensemble methods beginner guide"
-    ]
+      "What are the best resources for learning machine learning as an economist?",
+      "How can I understand bias-variance tradeoff in machine learning?",
+      "What are ensemble methods in machine learning?",
+      "What is regularization and why is it important in ML?",
+      "Where can I find beginner-friendly ML tutorials?",
+      "How can econ PhDs transition to data science roles?",
+      "What are the key concepts in machine learning that I should learn first?",
+      "What resources are available for visual learning in ML?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "entry"
   },
   {
     "name": "Trustworthy Online Controlled Experiments (Kohavi)",
@@ -2893,34 +3004,31 @@
     "tab": "interview",
     "subtab": "experimentation",
     "archived": true,
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "hypothesis-testing",
-      "statistical-significance",
-      "basic-probability"
-    ],
-    "topic_tags": [
-      "a-b-testing",
-      "causal-inference",
-      "product-experimentation",
-      "statistical-methods",
-      "industry-guide"
-    ],
-    "summary": "Comprehensive industry guide to designing and analyzing A/B tests at scale, covering common pitfalls and best practices from tech giants. Written by experimentation leaders at Microsoft, LinkedIn, and Google with real-world examples and statistical rigor. Essential reference for anyone running controlled experiments in product development.",
+    "difficulty": "advanced",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides insights into the design and analysis of A/B testing at scale, highlighting common pitfalls and the fact that only a fraction of well-designed experiments yield positive results. It serves as a comprehensive guide for those looking to understand the intricacies of experimentation in tech environments.",
     "use_cases": [
-      "Designing A/B tests for product features while avoiding common statistical mistakes",
-      "Building experimentation culture and processes at a tech company"
+      "when to use this resource"
     ],
     "audience": [
       "Mid-DS",
       "Senior-DS"
     ],
     "synthetic_questions": [
-      "best practices for A/B testing at scale",
-      "how to avoid pitfalls in controlled experiments",
-      "industry guide to online experimentation",
-      "statistical methods for product testing"
-    ]
+      "What are the common pitfalls in A/B testing?",
+      "How can I design effective experiments?",
+      "What metrics should I focus on in A/B testing?",
+      "When should I use controlled experiments?",
+      "What resources are available for learning about experimentation?",
+      "How do I analyze the results of an A/B test?",
+      "What percentage of experiments typically improve metrics?",
+      "What is the importance of controlled experiments in tech?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "mid|senior"
   },
   {
     "name": "Understanding CUPED",
@@ -2938,33 +3046,34 @@
     "subtab": "experimentation",
     "archived": true,
     "difficulty": "intermediate",
-    "prerequisites": [
-      "A-B-testing",
-      "linear-regression",
-      "python-scipy"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "CUPED",
-      "variance-reduction",
-      "A-B-testing",
-      "experimentation",
-      "causal-inference"
+      "interview-prep"
     ],
-    "summary": "CUPED (Controlled-experiment Using Pre-Experiment Data) is a variance reduction technique that uses pre-experiment data to reduce noise in A/B test results. It's widely used in tech companies to increase statistical power and reduce experiment runtime. The method connects to difference-in-differences and regression adjustment, making it essential knowledge for experimentation roles.",
+    "summary": "This resource provides insights into the CUPED methodology and its applications in causal inference and A/B testing. It is particularly useful for those preparing for industry interviews in data science.",
     "use_cases": [
-      "Reducing variance in conversion rate experiments by using historical user behavior",
-      "Shortening experiment duration for revenue metrics by controlling for pre-period spending"
+      "when preparing for A/B testing interviews",
+      "when learning about causal inference techniques"
     ],
     "audience": [
       "Junior-DS",
-      "Mid-DS"
+      "Mid-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "What is CUPED and how does it work",
-      "CUPED vs difference in differences experimentation",
-      "How to implement CUPED for A/B testing",
-      "CUPED interview questions tech companies"
-    ]
+      "What is CUPED?",
+      "How does CUPED relate to A/B testing?",
+      "What are the benefits of using CUPED in experiments?",
+      "What is the importance of causal inference in data science?",
+      "How can I prepare for A/B testing interviews?",
+      "What are common variance reduction techniques?",
+      "What should I know about regression in the context of CUPED?",
+      "How does CUPED improve experimental design?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "mid"
   },
   {
     "name": "Netflix: Quasi Experimentation",
@@ -2982,32 +3091,34 @@
     "subtab": "experimentation",
     "archived": true,
     "difficulty": "intermediate",
-    "prerequisites": [
-      "A-B-testing",
-      "causal-inference",
-      "regression-analysis"
-    ],
-    "topic_tags": [
-      "quasi-experiments",
-      "SUTVA-violations",
-      "Netflix",
-      "causal-inference",
-      "experimentation"
-    ],
-    "summary": "Netflix's approach to causal inference when randomized A/B tests aren't possible due to technical or business constraints. Covers methods for handling violations of SUTVA (Stable Unit Treatment Value Assumption) when user experiences are interconnected. Practical guidance for data scientists working on platform products where network effects matter.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource discusses the challenges faced when A/B tests are not feasible and how Netflix addresses SUTVA violations, providing insights into quasi-experimental methods in data analysis.",
     "use_cases": [
-      "Measuring impact of recommendation algorithm changes when users influence each other's content consumption",
-      "Evaluating product features that can't be randomized due to technical infrastructure limitations"
+      "when A/B tests are not feasible"
     ],
     "audience": [
+      "Junior-DS",
       "Mid-DS",
       "Senior-DS"
     ],
     "synthetic_questions": [
-      "alternatives to A/B testing when randomization isn't possible",
-      "how to handle SUTVA violations in experimentation",
-      "Netflix quasi experimental methods",
-      "causal inference without randomization in tech"
+      "What are quasi-experiments?",
+      "How does Netflix conduct experimentation?",
+      "What is SUTVA and why is it important?",
+      "When should I use quasi-experimental methods?",
+      "What are the limitations of A/B testing?",
+      "How can I apply quasi-experimental designs in my work?",
+      "What skills are needed for experimentation in data science?",
+      "How does Netflix handle data privacy in experiments?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -3028,32 +3139,36 @@
     "tab": "interview",
     "subtab": "causal-inference",
     "difficulty": "intermediate",
-    "prerequisites": [
-      "python-pandas",
-      "basic-statistics",
-      "A-B-testing"
-    ],
-    "topic_tags": [
-      "causal-inference",
-      "tech-interviews",
-      "case-studies",
-      "experimental-design",
-      "industry-applications"
-    ],
-    "summary": "A practical guide to causal inference methods specifically tailored for tech industry applications and interviews. Covers key techniques like difference-in-differences, synthetic control, and RDD through real case studies from major tech companies. Written by a practitioner with both academic background and industry experience at DoorDash.",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides a comprehensive guide to causal inference relevant for tech interviews, featuring case studies from notable companies. It is especially useful for those preparing for data science roles in tech.",
     "use_cases": [
-      "Preparing for data science interviews at tech companies focusing on causal inference questions",
-      "Learning how to apply causal methods to real business problems like measuring platform effects or policy changes"
+      "when preparing for data science interviews",
+      "when studying causal inference techniques",
+      "when looking for real-world examples in tech"
     ],
     "audience": [
       "Junior-DS",
-      "Mid-DS"
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "causal inference interview questions tech companies",
-      "difference in differences example DoorDash Meta",
-      "synthetic control method Uber case study",
-      "how to prepare for causal inference data science interviews"
+      "What is causal inference?",
+      "How do I prepare for a data science interview?",
+      "What are common causal inference techniques?",
+      "What case studies should I review for tech interviews?",
+      "How does RDD work in practice?",
+      "What is the importance of DiD in causal analysis?",
+      "How can I apply synthetic control methods?",
+      "What are the best resources for learning causal inference?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "ML-engineer"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "tech"
     ]
   },
   {
@@ -3074,32 +3189,34 @@
     "tab": "interview",
     "subtab": "causal-inference",
     "difficulty": "intermediate",
-    "prerequisites": [
-      "basic-statistics",
-      "regression-analysis",
-      "experimental-design"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "interview-prep",
-      "causal-methods",
-      "econometrics",
-      "data-science-interviews"
+      "interview-prep"
     ],
-    "summary": "Structured Q&A format covering core causal inference methods with model interview responses. Covers randomized controlled trials, matching, instrumental variables, difference-in-differences, and regression discontinuity design. Designed specifically for data science and economics job interviews with detailed explanations of key concepts.",
+    "summary": "This resource provides a structured approach to preparing for interviews focused on causal inference, offering specific questions and model answers that can help candidates articulate their understanding of key concepts.",
     "use_cases": [
-      "Preparing for data scientist interviews at tech companies focusing on causal methods",
-      "Economics PhD students practicing for industry interviews covering experimental design"
+      "when preparing for interviews focused on causal inference"
     ],
     "audience": [
+      "Early-PhD",
       "Junior-DS",
-      "Early-PhD"
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "causal inference interview questions",
-      "how to explain difference in differences in interview",
-      "data science interview prep causal methods",
-      "RCT interview questions and answers"
-    ]
+      "What are the key concepts in causal inference?",
+      "How do you prepare for an interview in data science?",
+      "What is the difference between RCT and observational studies?",
+      "Can you explain the concept of instrumental variables?",
+      "What are common pitfalls in causal inference?",
+      "How do you approach a DiD analysis in an interview?",
+      "What questions should I expect when discussing RDD in interviews?",
+      "How can I effectively communicate my answers during a technical interview?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "mid"
   },
   {
     "name": "Causal Inference Interview Prep Guide (Bhattacherjee)",
@@ -3117,33 +3234,34 @@
     "tab": "interview",
     "subtab": "causal-inference",
     "difficulty": "intermediate",
-    "prerequisites": [
-      "linear-regression",
-      "python-basics",
-      "experimental-design"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "interview-prep",
-      "causal-inference",
-      "study-guide",
-      "econometrics",
-      "career-advice"
+      "interview-prep"
     ],
-    "summary": "A strategic framework for preparing for causal inference interviews at tech companies. Provides a structured approach starting with identifying treatment administration levels and recommends specific resources including Wooldridge textbook chapters and industry blog posts. Particularly useful for data scientists transitioning into roles requiring causal reasoning skills.",
+    "summary": "This resource provides a strategic framework for preparing for causal inference interviews, emphasizing the importance of understanding treatment levels. It also recommends specific chapters and blogs for further study.",
     "use_cases": [
-      "Preparing for data scientist interviews at companies like Netflix, Uber, or Microsoft that emphasize causal inference",
-      "Structuring study plan for economists entering tech roles that require experimental design expertise"
+      "when preparing for causal inference interviews"
     ],
     "audience": [
+      "Early-PhD",
       "Junior-DS",
       "Mid-DS"
     ],
     "synthetic_questions": [
-      "How to prepare for causal inference interviews",
-      "Data science interview prep causal methods",
-      "What to study for econometrics tech interviews",
-      "Causal inference interview questions and answers"
-    ]
+      "What are the key strategies for causal inference interviews?",
+      "How can I prepare for a data science interview focused on econometrics?",
+      "What resources should I review for causal inference concepts?",
+      "What are common interview questions in causal inference?",
+      "How do companies like Netflix and Uber approach causal inference?",
+      "What chapters from Wooldridge should I focus on for interviews?",
+      "What is the significance of treatment levels in causal inference?",
+      "How can I develop a study plan for causal inference interviews?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "mid"
   },
   {
     "name": "InterviewDB Causal Inference Collection",
@@ -3161,34 +3279,37 @@
     "section": "interview",
     "tab": "interview",
     "subtab": "causal-inference",
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "hypothesis-testing",
-      "regression-analysis",
-      "DAG-construction"
-    ],
+    "difficulty": "beginner|intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "causal-inference",
-      "interview-prep",
-      "question-bank",
-      "econometrics",
-      "methodology"
+      "interview-prep"
     ],
-    "summary": "Comprehensive question bank with 100+ causal inference interview questions covering essential methods like confounding, RCTs, propensity score matching, and difference-in-differences. Designed for data scientists and researchers preparing for technical interviews or testing their understanding of causal methods. Questions span from fundamental concepts like DAGs to advanced topics like spillover effects and sensitivity analysis.",
+    "summary": "This resource provides a comprehensive collection of causal inference questions that can help individuals prepare for interviews in data science and economics. It covers various methodologies and concepts essential for understanding causal inference.",
     "use_cases": [
-      "Preparing for data scientist interviews at tech companies focusing on causal inference expertise",
-      "Self-assessment and skill validation for researchers transitioning from observational to experimental methods"
+      "when preparing for data science interviews",
+      "to understand causal inference methodologies",
+      "for practicing causal analysis questions"
     ],
     "audience": [
-      "Mid-DS",
-      "Junior-DS"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "causal inference interview questions practice",
-      "difference in differences interview prep",
-      "propensity score matching technical questions",
-      "DAG causal inference question bank"
-    ]
+      "What are the key concepts in causal inference?",
+      "How do I prepare for a data science interview?",
+      "What is the importance of RCTs in causal inference?",
+      "How can I effectively use a question bank for interview prep?",
+      "What are common pitfalls in causal analysis?",
+      "How do I approach confounding in causal studies?",
+      "What is the role of DAGs in understanding causal relationships?",
+      "How can I practice for questions on spillover effects?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "entry|mid"
   },
   {
     "name": "GrabNGoInfo: Causal Inference Interview Q&A",
@@ -3206,34 +3327,34 @@
     "section": "interview",
     "tab": "interview",
     "subtab": "causal-inference",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-statistics",
-      "experimental-design",
-      "causal-graphs"
-    ],
+    "difficulty": "beginner|intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "interview-prep",
-      "causal-inference",
-      "DAGs",
-      "A/B-testing",
-      "video-tutorial"
+      "interview-prep"
     ],
-    "summary": "Interactive interview preparation resource combining video explanations and blog content focused on causal inference fundamentals. Covers essential concepts like directed acyclic graphs, causal relationships, and key terminology used in data science interviews. Also includes specialized A/B testing interview questions to help candidates prepare for practical experimental design discussions.",
+    "summary": "This resource provides a comprehensive guide for preparing for causal inference interviews, focusing on essential concepts like DAGs and key terminology. It also includes a curated list of common A/B test interview questions to enhance readiness.",
     "use_cases": [
-      "Preparing for data scientist interviews at tech companies with causal inference questions",
-      "Reviewing fundamental causal concepts before job interviews or performance reviews"
+      "when preparing for causal inference interviews",
+      "to understand key concepts in causal relationships"
     ],
     "audience": [
+      "Early-PhD",
       "Junior-DS",
       "Mid-DS"
     ],
     "synthetic_questions": [
-      "causal inference interview questions and answers",
-      "how to explain DAGs in data science interviews",
-      "A/B testing interview prep questions",
-      "causal inference terminology for job interviews"
-    ]
+      "What are the key concepts in causal inference?",
+      "How do I prepare for a causal inference interview?",
+      "What are common interview questions for data science roles?",
+      "What is a DAG in causal inference?",
+      "How can I improve my interview skills for data science?",
+      "What terminology should I know for causal inference interviews?"
+    ],
+    "role_type": [
+      "data-scientist",
+      "economist"
+    ],
+    "experience_level": "entry|mid"
   },
   {
     "name": "Emma Ding: Product Sense Guide",
@@ -3249,33 +3370,35 @@
     "section": "interview",
     "tab": "interview",
     "subtab": "product",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-statistics",
-      "business-fundamentals"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "product-metrics",
-      "AARRR-framework",
-      "business-case-interviews",
-      "diagnostic-analysis",
-      "product-management"
+      "interview-prep"
     ],
-    "summary": "Comprehensive guide to product sense for business case interviews, focusing on the AARRR (Acquisition, Activation, Retention, Referral, Revenue) framework. Covers metrics design, diagnostic approaches, and structured thinking for product problems. Essential resource for data scientists transitioning into product-focused roles or preparing for tech interviews.",
+    "summary": "This resource provides a comprehensive guide to business case interviews, focusing on the AARRR framework and various metrics. It aims to equip candidates with diagnostic approaches to effectively tackle product sense challenges during interviews.",
     "use_cases": [
-      "Preparing for product data scientist interviews at tech companies",
-      "Learning to design and interpret product metrics for A/B testing and feature launches"
+      "when preparing for product management interviews",
+      "when learning about business case frameworks"
     ],
     "audience": [
       "Junior-DS",
-      "Mid-DS"
+      "Mid-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "AARRR framework guide for data scientists",
-      "product sense interview preparation",
-      "how to design product metrics",
-      "business case interview diagnostics"
-    ]
+      "What is the AARRR framework?",
+      "How can I prepare for business case interviews?",
+      "What metrics should I focus on for product sense?",
+      "What are diagnostic approaches in product management?",
+      "How do I improve my interview skills for product roles?",
+      "What resources are available for product sense preparation?",
+      "What are common interview questions for product management?",
+      "How can I assess my product sense skills?"
+    ],
+    "role_type": [
+      "product-manager"
+    ],
+    "experience_level": "mid"
   },
   {
     "name": "Amplitude: North Star Metrics",
@@ -3292,31 +3415,24 @@
     "tab": "interview",
     "subtab": "product",
     "difficulty": "beginner",
-    "prerequisites": [
-      "basic-analytics",
-      "product-metrics"
-    ],
-    "topic_tags": [
-      "north-star-metrics",
-      "product-strategy",
-      "kpi-frameworks",
-      "case-studies"
-    ],
-    "summary": "Framework for identifying the single most important metric that captures core product value through three business model types: Attention, Transaction, and Productivity games. Uses real-world examples from major tech companies like Facebook, Airbnb, and Spotify to illustrate how different products define and measure their north star metrics.",
-    "use_cases": [
-      "Product manager needs to define primary success metric for new feature launch",
-      "Data scientist building executive dashboard and needs to identify most important KPI to highlight"
-    ],
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides insights into the North Star Metrics framework used by major companies like Facebook, Airbnb, and Spotify. It focuses on three key areas: Attention, Transaction, and Productivity, helping individuals understand how to measure and drive product success.",
+    "use_cases": [],
     "audience": [
-      "Junior-DS",
-      "Mid-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "how to choose north star metric for product",
-      "facebook airbnb spotify key metrics examples",
-      "attention transaction productivity games framework",
-      "what is north star metric framework"
-    ]
+      "What are North Star Metrics?",
+      "How do companies like Facebook use metrics?",
+      "What frameworks can improve product sense?",
+      "What is the importance of Attention in product metrics?",
+      "How can I apply real examples from tech companies to my work?",
+      "What are the key components of a successful product strategy?",
+      "How do I measure productivity in my projects?",
+      "What can I learn from Airbnb's approach to metrics?"
+    ],
+    "experience_level": "entry"
   },
   {
     "name": "DataLemur Meta DS Guide",
@@ -3333,32 +3449,33 @@
     "tab": "interview",
     "subtab": "product",
     "difficulty": "intermediate",
-    "prerequisites": [
-      "SQL-joins",
-      "product-metrics",
-      "A-B-testing"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "interview-prep",
-      "product-sense",
-      "meta-facebook",
-      "sql-questions",
-      "data-science-interviews"
+      "interview-prep"
     ],
-    "summary": "A collection of 31 actual Meta/Facebook data science interview questions focusing on product sense and SQL skills. The guide provides real questions that have been asked in Meta interviews, helping candidates prepare for the specific types of problems and analytical thinking required at the company.",
+    "summary": "This resource provides insights into the types of interview questions candidates may face when applying for positions at Meta, with a focus on product sense and SQL skills. It is designed to help candidates prepare effectively for their interviews.",
     "use_cases": [
-      "Preparing for Meta data science interviews",
-      "Learning product sense frameworks used at major tech companies"
+      "when preparing for Meta interviews",
+      "when improving product sense skills"
     ],
     "audience": [
       "Junior-DS",
       "Mid-DS"
     ],
     "synthetic_questions": [
-      "Meta Facebook data science interview questions",
-      "product sense interview prep for tech companies",
-      "SQL interview questions for data scientist roles",
-      "leaked FAANG interview questions data science"
+      "What are common interview questions for data scientists?",
+      "How can I prepare for a Meta interview?",
+      "What is product sense in data science?",
+      "What SQL skills are important for data science interviews?",
+      "How do I negotiate salary after receiving a job offer?",
+      "What resources can help with job searching in data science?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -3376,31 +3493,32 @@
     "tab": "interview",
     "subtab": "behavioral",
     "difficulty": "beginner",
-    "prerequisites": [
-      "behavioral-interviewing",
-      "resume-writing"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "amazon-interview",
-      "leadership-principles",
-      "behavioral-questions",
-      "tech-recruiting",
-      "career-guide"
+      "interview-prep"
     ],
-    "summary": "A comprehensive guide to Amazon's Leadership Principles written by a former Bar Raiser who helped evaluate candidates. Provides frameworks and examples for answering behavioral questions using Amazon's specific evaluation criteria. Widely shared by recruiters and credited by 100+ candidates for successful Amazon interviews.",
+    "summary": "This resource provides insights and strategies for candidates preparing for interviews at Amazon, specifically focusing on the behavioral aspects that are crucial for success. It is highly regarded by over 100 candidates who attribute their hiring success to its guidance.",
     "use_cases": [
-      "Preparing for Amazon software engineer or data scientist interviews",
-      "Understanding how to structure STAR method responses for Amazon's leadership principles"
+      "When preparing for interviews at Amazon",
+      "When seeking behavioral interview strategies"
     ],
     "audience": [
       "Junior-DS",
-      "Mid-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Amazon leadership principles interview guide",
-      "how to prepare for Amazon behavioral interview",
-      "bar raiser tips for Amazon interview",
-      "Amazon STAR method examples"
+      "How to prepare for Amazon interviews?",
+      "What is a bar raiser interview?",
+      "What behavioral questions are asked at Amazon?",
+      "How to improve interview skills?",
+      "What resources help with job search?",
+      "How to negotiate salary after an offer?",
+      "What do recruiters look for in candidates?",
+      "How to stand out in a job application?"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "Amazon"
     ]
   },
   {
@@ -3418,30 +3536,23 @@
     "tab": "interview",
     "subtab": "behavioral",
     "difficulty": "beginner",
-    "prerequisites": [
-      "behavioral-interviewing",
-      "corporate-culture"
-    ],
-    "topic_tags": [
-      "leadership-principles",
-      "behavioral-interviews",
-      "amazon-culture",
-      "career-development"
-    ],
-    "summary": "Amazon's 16 official Leadership Principles that guide decision-making and behavior across the company, including Customer Obsession, Ownership, and Invent and Simplify. These principles are heavily used in Amazon's interview process and day-to-day operations. Essential reading for anyone interviewing at Amazon or wanting to understand their corporate culture.",
-    "use_cases": [
-      "Preparing for Amazon behavioral interviews and understanding expected responses",
-      "Learning corporate leadership frameworks to apply at other tech companies"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Curious-browser"
-    ],
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Amazon Leadership Principles provide a framework for understanding the core values that drive decision-making and behavior within Amazon. These principles emphasize customer focus, ownership, and innovation, offering valuable insights for professionals aiming to align with Amazon's corporate culture.",
+    "use_cases": [],
+    "audience": [],
     "synthetic_questions": [
-      "Amazon leadership principles interview prep",
-      "What are Amazon's 16 leadership principles",
-      "Amazon behavioral interview questions",
-      "Amazon corporate culture values"
+      "What are the Amazon Leadership Principles?",
+      "How can I apply the Amazon Leadership Principles in my career?",
+      "What is the importance of customer obsession in leadership?",
+      "How do ownership and accountability impact team dynamics?",
+      "What does it mean to invent and simplify in a business context?",
+      "How can I prepare for an interview at Amazon using these principles?",
+      "What behaviors are encouraged by the Amazon Leadership Principles?",
+      "How can understanding these principles benefit my career growth?"
+    ],
+    "company_context": [
+      "FAANG"
     ]
   },
   {
@@ -3458,32 +3569,37 @@
     "section": "interview",
     "tab": "interview",
     "subtab": "behavioral",
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic-communication-skills",
-      "job-search-experience"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "behavioral-interviews",
-      "STAR-method",
-      "Amazon-interviews",
-      "career-preparation",
-      "interview-coaching"
+      "interview-prep"
     ],
-    "summary": "A comprehensive guide based on analysis of 500+ mock Amazon behavioral interviews, focusing on the STARI method where the Action component should comprise 50-60% of your response. Provides data-driven insights into what works in Amazon's behavioral interview format. Essential preparation material for anyone interviewing at Amazon or other companies using similar behavioral interview techniques.",
+    "summary": "This resource provides insights from over 500 mock interviews conducted at Amazon, focusing on the STARI method for behavioral interviews. It emphasizes the importance of action-oriented responses in interviews.",
     "use_cases": [
-      "Preparing for Amazon behavioral interviews by learning the optimal structure and timing for STARI responses",
-      "Understanding common behavioral interview patterns and mistakes based on real interview data"
+      "when preparing for Amazon interviews",
+      "to practice behavioral interview techniques"
     ],
     "audience": [
       "Junior-DS",
+      "Mid-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "How to prepare for Amazon behavioral interviews",
-      "STAR method tips for tech interviews",
-      "Amazon interview behavioral questions guide",
-      "What is STARI method for interviews"
+      "How to prepare for Amazon interviews?",
+      "What is the STARI method?",
+      "What are common behavioral questions at Amazon?",
+      "How to improve interview skills?",
+      "What to expect in a mock interview?",
+      "How to analyze interview performance?",
+      "What are the key components of successful answers?",
+      "How to handle behavioral interview challenges?"
+    ],
+    "role_type": [
+      "data-scientist"
+    ],
+    "experience_level": "mid",
+    "company_context": [
+      "Amazon"
     ]
   },
   {
