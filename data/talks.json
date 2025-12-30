@@ -9896,5 +9896,212 @@
       "Spark",
       "MLflow"
     ]
+  },
+  {
+    "name": "Subject to Podcast",
+    "description": "Monthly interviews with OR researchers hosted by Anand Subramanian. Features international perspective on combinatorial optimization and logistics research.",
+    "category": "Operations Research",
+    "url": "https://open.spotify.com/show/subject-to-podcast",
+    "type": "Podcast Series",
+    "tags": [
+      "Operations Research",
+      "Combinatorial Optimization",
+      "Academic Interviews"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "operations-research",
+      "combinatorial-optimization",
+      "logistics",
+      "academic-research"
+    ],
+    "summary": "Subject to Podcast features monthly interviews with OR researchers including Louis-Martin Rousseau (Polytechnique Montréal) and Laureano Escudero. Provides international perspective on combinatorial optimization and logistics research.",
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "What is the Subject to Podcast?",
+      "Who hosts the Subject to Podcast?",
+      "What topics are covered in OR podcasts?",
+      "Where can I find interviews with optimization researchers?"
+    ],
+    "use_cases": [
+      "Learning about cutting-edge OR research",
+      "Hearing from international optimization experts",
+      "Understanding logistics optimization trends"
+    ],
+    "speaker_expertise": [
+      "combinatorial optimization",
+      "logistics research",
+      "OR academia"
+    ]
+  },
+  {
+    "name": "Resoundingly Human (INFORMS)",
+    "description": "Official INFORMS podcast covering enterprise implementation stories and interviews with analytics leaders. Features UPS Head of Innovation on optimization at scale.",
+    "category": "Operations Research",
+    "url": "https://www.informs.org/Explore/Resoundingly-Human-Podcast",
+    "type": "Podcast Series",
+    "tags": [
+      "Operations Research",
+      "INFORMS",
+      "Enterprise Analytics"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "operations-research",
+      "enterprise-analytics",
+      "industry-applications",
+      "INFORMS"
+    ],
+    "summary": "The official INFORMS podcast covers enterprise implementation stories and interviews with analytics leaders. Features practitioners from major companies discussing real-world optimization deployments.",
+    "audience": [
+      "Curious-browser",
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "What is the INFORMS podcast?",
+      "How is OR used at UPS?",
+      "What are enterprise analytics case studies?",
+      "Where can I hear about real-world optimization?"
+    ],
+    "use_cases": [
+      "Learning about industry OR applications",
+      "Hearing from analytics leaders",
+      "Understanding enterprise optimization"
+    ],
+    "speaker_expertise": [
+      "enterprise analytics",
+      "optimization at scale",
+      "industry applications"
+    ]
+  },
+  {
+    "name": "The Optimization Catalyst (Princeton Consultants)",
+    "description": "Podcast covering enterprise optimization implementation from Princeton Consultants. Features interviews on scheduling, routing, and supply chain optimization.",
+    "category": "Operations Research",
+    "url": "https://www.princeton.com/optimization-catalyst-podcast",
+    "type": "Podcast Series",
+    "tags": [
+      "Operations Research",
+      "Enterprise",
+      "Supply Chain"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "operations-research",
+      "scheduling",
+      "routing",
+      "supply-chain"
+    ],
+    "summary": "The Optimization Catalyst covers enterprise optimization implementation from practitioners at Princeton Consultants. Discusses scheduling, routing, and supply chain optimization in practice.",
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "What is The Optimization Catalyst podcast?",
+      "How do companies implement optimization?",
+      "What are supply chain optimization case studies?",
+      "Where can I learn about enterprise scheduling?"
+    ],
+    "use_cases": [
+      "Learning enterprise optimization patterns",
+      "Understanding scheduling implementations",
+      "Hearing supply chain optimization stories"
+    ],
+    "speaker_expertise": [
+      "enterprise optimization",
+      "scheduling",
+      "supply chain"
+    ]
+  },
+  {
+    "name": "Tallys Yunes: Dr. Y YouTube Channel",
+    "description": "University of Miami professor making optimization accessible through video tutorials. Covers integer programming, OR education, and everyday optimization examples.",
+    "category": "Operations Research",
+    "url": "https://www.youtube.com/@TallysYunes",
+    "type": "YouTube Channel",
+    "tags": [
+      "Operations Research",
+      "Education",
+      "Integer Programming"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "operations-research",
+      "OR-education",
+      "integer-programming",
+      "tutorials"
+    ],
+    "summary": "Tallys Yunes makes optimization accessible through his Dr. Y YouTube channel. Covers integer programming concepts, OR education approaches, and everyday optimization examples.",
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "Who is Dr. Y on YouTube?",
+      "Where can I learn operations research on YouTube?",
+      "What are good OR video tutorials?",
+      "How to learn integer programming?"
+    ],
+    "use_cases": [
+      "Learning OR through video",
+      "Understanding integer programming basics",
+      "Accessible optimization education"
+    ],
+    "speaker_expertise": [
+      "OR education",
+      "integer programming",
+      "accessible optimization"
+    ]
+  },
+  {
+    "name": "DecisionFest (Nextmv)",
+    "description": "Conference recordings featuring OR practitioners from IKEA, Walmart, Carvana, and Toyota discussing vehicle routing implementations and production optimization.",
+    "category": "Operations Research",
+    "url": "https://www.nextmv.io/decisionfest",
+    "type": "Conference Recordings",
+    "tags": [
+      "Operations Research",
+      "Vehicle Routing",
+      "Industry Case Studies"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "operations-research",
+      "vehicle-routing",
+      "production-optimization",
+      "industry-case-studies"
+    ],
+    "summary": "DecisionFest recordings feature OR practitioners from IKEA, Walmart, Carvana, and Toyota discussing vehicle routing implementations and production optimization at scale.",
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "What is DecisionFest?",
+      "How does IKEA implement vehicle routing?",
+      "What are Walmart's optimization practices?",
+      "Where can I see OR case studies from major companies?"
+    ],
+    "use_cases": [
+      "Learning from industry OR implementations",
+      "Understanding vehicle routing at scale",
+      "Hearing from major company practitioners"
+    ],
+    "speaker_expertise": [
+      "vehicle routing",
+      "production optimization",
+      "industry implementation"
+    ]
   }
 ]

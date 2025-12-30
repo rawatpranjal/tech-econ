@@ -16407,5 +16407,438 @@
       "Twitter ML researcher",
       "causal inference blog"
     ]
+  },
+  {
+    "name": "Erwin Kalvelagen",
+    "description": "Decades-long optimization consultant specializing in GAMS, AMPL, CPLEX, and MINOS. Author of 'Yet Another Math Programming Consultant' blog with production modeling wisdom.",
+    "category": "Notable Contributors",
+    "url": "https://yetanothermathprogrammingconsultant.blogspot.com/",
+    "type": "Industry Leader",
+    "location": "Netherlands",
+    "best_for": "Mathematical programming, solver tuning, GAMS, AMPL, CPLEX, MINLP formulations",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "linear-programming",
+      "optimization-basics"
+    ],
+    "topic_tags": [
+      "operations-research",
+      "mathematical-programming",
+      "GAMS",
+      "CPLEX",
+      "solver-tuning"
+    ],
+    "summary": "Erwin Kalvelagen shares decades of consulting experience with mathematical programming systems. His blog represents perhaps the highest concentration of practical modeling wisdom online.",
+    "use_cases": [
+      "Solver tuning for production systems",
+      "Complex MINLP formulations",
+      "Large-scale transportation models"
+    ],
+    "audience": [
+      "Senior-DS",
+      "OR-Practitioner"
+    ],
+    "synthetic_questions": [
+      "Who is Erwin Kalvelagen",
+      "GAMS expert",
+      "mathematical programming consultant",
+      "solver tuning tips"
+    ]
+  },
+  {
+    "name": "Nathan Brixius",
+    "description": "Former Microsoft Solver Foundation developer. Bridges optimization and machine learning, writes about chaining ML and optimization models.",
+    "category": "Notable Contributors",
+    "url": "https://nathanbrixius.wordpress.com/",
+    "type": "Industry Leader",
+    "location": "USA",
+    "best_for": "ML-optimization integration, solver comparison, historical IP problems with modern solvers",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "optimization-basics",
+      "machine-learning-basics"
+    ],
+    "topic_tags": [
+      "operations-research",
+      "machine-learning",
+      "Microsoft-Solver-Foundation",
+      "solver-comparison"
+    ],
+    "summary": "Nathan Brixius, former Microsoft Solver Foundation developer, bridges optimization and machine learning. Essential reading for practitioners integrating ML predictions with optimization.",
+    "use_cases": [
+      "Integrating ML predictions into optimization",
+      "Solver performance comparison",
+      "Historical optimization perspectives"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "Who is Nathan Brixius",
+      "Microsoft Solver Foundation",
+      "ML optimization integration",
+      "optimization blog"
+    ]
+  },
+  {
+    "name": "Alain Chabrier",
+    "description": "Former IBM Decision Optimization Senior Technical Staff Member. PhD solved 17 previously open Solomon VRP benchmark instances. Expert in column generation with docplex/CPLEX.",
+    "category": "Notable Contributors",
+    "url": "https://medium.com/@AlainChabrier",
+    "type": "Industry Leader",
+    "location": "France",
+    "best_for": "Column generation, CPLEX, docplex, VRP, branch-and-price algorithms",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "linear-programming",
+      "VRP-basics"
+    ],
+    "topic_tags": [
+      "operations-research",
+      "column-generation",
+      "CPLEX",
+      "VRP",
+      "IBM"
+    ],
+    "summary": "Alain Chabrier publishes authoritative content on column generation with complete code examples. His PhD thesis made significant contributions to VRP benchmark solutions.",
+    "use_cases": [
+      "Implementing column generation algorithms",
+      "Solving large-scale VRP problems",
+      "Learning docplex/CPLEX"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "Who is Alain Chabrier",
+      "column generation expert",
+      "IBM Decision Optimization",
+      "VRP benchmark solutions"
+    ]
+  },
+  {
+    "name": "Ryan O'Neil",
+    "description": "Co-founder of Nextmv, PhD from George Mason under Karla Hoffman. Expert in real-time optimization for delivery platforms and decision diagrams.",
+    "category": "Notable Contributors",
+    "url": "https://ryanjoneil.dev/",
+    "type": "Industry Leader",
+    "location": "USA",
+    "best_for": "Real-time optimization, decision diagrams, delivery platform algorithms, Nextmv",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "optimization-basics"
+    ],
+    "topic_tags": [
+      "operations-research",
+      "real-time-optimization",
+      "decision-diagrams",
+      "Nextmv",
+      "delivery-optimization"
+    ],
+    "summary": "Ryan O'Neil, Nextmv co-founder, bridges academic research with commercial product development. Expert in real-time optimization for delivery platforms.",
+    "use_cases": [
+      "Building real-time optimization systems",
+      "Decision diagram applications",
+      "Delivery platform design"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "Who is Ryan O'Neil",
+      "Nextmv founder",
+      "real-time optimization",
+      "decision diagrams expert"
+    ]
+  },
+  {
+    "name": "Geoffrey De Smet",
+    "description": "Creator of OptaPlanner (17+ years) and founder of Timefold. Leading expert in constraint solving for scheduling problems.",
+    "category": "Notable Contributors",
+    "url": "https://timefold.ai/blog",
+    "type": "Industry Leader",
+    "location": "Belgium",
+    "best_for": "Constraint programming, employee rostering, nurse scheduling, OptaPlanner, Timefold",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "constraint-programming-basics"
+    ],
+    "topic_tags": [
+      "operations-research",
+      "constraint-programming",
+      "scheduling",
+      "OptaPlanner",
+      "Timefold"
+    ],
+    "summary": "Geoffrey De Smet created OptaPlanner and founded Timefold. Leading voice in constraint solving for scheduling problems with 17+ years of OR experience.",
+    "use_cases": [
+      "Building scheduling systems",
+      "Constraint programming applications",
+      "Employee rostering optimization"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "Who is Geoffrey De Smet",
+      "OptaPlanner creator",
+      "Timefold founder",
+      "constraint programming expert"
+    ]
+  },
+  {
+    "name": "Dominik Krupke",
+    "description": "Author of the CP-SAT Primer, the most comprehensive unofficial guide to Google OR-Tools' CP-SAT solver. Academic researcher in algorithmic optimization.",
+    "category": "Notable Contributors",
+    "url": "https://d-krupke.github.io/cpsat-primer/",
+    "type": "Industry Leader",
+    "location": "Germany",
+    "best_for": "CP-SAT, OR-Tools, constraint programming, solver tuning, benchmarking methodology",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "constraint-programming-basics"
+    ],
+    "topic_tags": [
+      "operations-research",
+      "CP-SAT",
+      "OR-Tools",
+      "constraint-programming",
+      "solver-tuning"
+    ],
+    "summary": "Dominik Krupke authored the CP-SAT Primer, filling a critical documentation gap for Google OR-Tools users. Essential resource for practitioners using CP-SAT.",
+    "use_cases": [
+      "Learning CP-SAT beyond official docs",
+      "Solver tuning for production",
+      "Benchmarking constraint solvers"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "Who is Dominik Krupke",
+      "CP-SAT Primer author",
+      "OR-Tools expert",
+      "constraint programming guide"
+    ]
+  },
+  {
+    "name": "Laura Albert",
+    "description": "2023 INFORMS President, NSF CAREER Award winner. Author of 'Punk Rock Operations Research' blog with 84,600+ annual hits. Expert in emergency response optimization.",
+    "category": "Notable Contributors",
+    "url": "https://punkrockor.com/",
+    "type": "Academic",
+    "location": "USA",
+    "best_for": "Emergency response optimization, ambulance dispatch, homeland security analytics, OR education",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "operations-research",
+      "emergency-response",
+      "ambulance-dispatch",
+      "homeland-security",
+      "OR-education"
+    ],
+    "summary": "Laura Albert, 2023 INFORMS President, runs the most-read academic OR blog. Makes operations research accessible through engaging examples from emergency response and homeland security.",
+    "use_cases": [
+      "Learning OR fundamentals",
+      "Emergency response optimization",
+      "OR career guidance"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "Who is Laura Albert",
+      "INFORMS President",
+      "Punk Rock OR blog",
+      "emergency response optimization"
+    ]
+  },
+  {
+    "name": "Paul Rubin",
+    "description": "Professor Emeritus at Michigan State with 33+ years experience. Author of 'OR in an OB World' blog with detailed CPLEX implementation tips and code snippets.",
+    "category": "Notable Contributors",
+    "url": "https://orinanobworld.blogspot.com/",
+    "type": "Academic",
+    "location": "USA",
+    "best_for": "CPLEX implementation, Java/R optimization code, mathematical programming, pro bono analytics",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "linear-programming",
+      "programming-basics"
+    ],
+    "topic_tags": [
+      "operations-research",
+      "CPLEX",
+      "Java-optimization",
+      "R-optimization",
+      "mathematical-programming"
+    ],
+    "summary": "Paul Rubin provides the most technically detailed academic OR blog. Specific CPLEX tips, Java/R code snippets, and reader Q&A from 33+ years of academic experience.",
+    "use_cases": [
+      "Debugging CPLEX implementations",
+      "Production optimization code",
+      "Learning from OR expert"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "Who is Paul Rubin",
+      "Michigan State OR professor",
+      "CPLEX expert",
+      "OR in an OB World blog"
+    ]
+  },
+  {
+    "name": "Tallys Yunes",
+    "description": "Associate Professor at University of Miami. Author of 'OR by the Beach' blog focused on making optimization accessible. Creator of 'Optimization Games for the Young'.",
+    "category": "Notable Contributors",
+    "url": "https://orbythebeach.wordpress.com/",
+    "type": "Academic",
+    "location": "Miami, USA",
+    "best_for": "OR education, integer programming, accessible optimization examples, teaching resources",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "operations-research",
+      "OR-education",
+      "integer-programming",
+      "teaching",
+      "accessibility"
+    ],
+    "summary": "Tallys Yunes makes optimization accessible through games, everyday examples, and YouTube tutorials. Essential resource for OR educators and curious learners.",
+    "use_cases": [
+      "Teaching OR concepts",
+      "Learning optimization fundamentals",
+      "Educational resources"
+    ],
+    "audience": [
+      "Curious-browser",
+      "Junior-DS"
+    ],
+    "synthetic_questions": [
+      "Who is Tallys Yunes",
+      "OR by the Beach blog",
+      "optimization education",
+      "Dr. Y YouTube"
+    ]
+  },
+  {
+    "name": "Michael Trick",
+    "description": "CMU Professor and former IFORS President. Maintains aggregated listing of 40+ OR blogs. Known for sports scheduling work with MLB and NFL.",
+    "category": "Notable Contributors",
+    "url": "https://mat.tepper.cmu.edu/blog/",
+    "type": "Academic",
+    "location": "Pittsburgh, USA",
+    "best_for": "Sports scheduling, OR blog aggregation, industry-academia bridge, MLB/NFL optimization",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "optimization-basics"
+    ],
+    "topic_tags": [
+      "operations-research",
+      "sports-scheduling",
+      "OR-community",
+      "CMU",
+      "IFORS"
+    ],
+    "summary": "Michael Trick, CMU Professor and former IFORS President, maintains the definitive OR blog aggregation. Sports scheduling work with MLB and NFL demonstrates theory-to-production application.",
+    "use_cases": [
+      "Discovering OR resources",
+      "Sports scheduling optimization",
+      "OR community networking"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "Who is Michael Trick",
+      "CMU operations research",
+      "IFORS President",
+      "sports scheduling optimization"
+    ]
+  },
+  {
+    "name": "Kevin Gue",
+    "description": "Senior Director of R&D at Fortna, formerly academia at Naval Postgraduate School, Auburn, and Louisville. Expert in warehouse design and order picking optimization.",
+    "category": "Notable Contributors",
+    "url": "https://kevingue.wordpress.com/",
+    "type": "Industry Leader",
+    "location": "USA",
+    "best_for": "Warehouse design, order picking routing, logistics optimization, academic-to-industry transition",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "optimization-basics"
+    ],
+    "topic_tags": [
+      "operations-research",
+      "warehouse-design",
+      "order-picking",
+      "logistics",
+      "Fortna"
+    ],
+    "summary": "Kevin Gue exemplifies the academic-to-industry transition. His DC Velocity columns bring warehouse design research directly to practitioner audiences.",
+    "use_cases": [
+      "Warehouse layout optimization",
+      "Order picking routing",
+      "Logistics system design"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "Who is Kevin Gue",
+      "Fortna R&D",
+      "warehouse design expert",
+      "order picking optimization"
+    ]
+  },
+  {
+    "name": "Austin Buchanan",
+    "description": "Oklahoma State Associate Professor. Author of 'Farkas' Dilemma' blog with tutorials on Benders decomposition, Lagrangian techniques, and political redistricting.",
+    "category": "Notable Contributors",
+    "url": "https://farkasdilemma.wordpress.com/",
+    "type": "Academic",
+    "location": "Oklahoma, USA",
+    "best_for": "Benders decomposition, Lagrangian relaxation, k-median problems, political redistricting",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "linear-programming",
+      "integer-programming"
+    ],
+    "topic_tags": [
+      "operations-research",
+      "Benders-decomposition",
+      "Lagrangian-relaxation",
+      "redistricting",
+      "k-median"
+    ],
+    "summary": "Austin Buchanan publishes accessible tutorials on advanced OR techniques. Notable for connecting optimization to policy debates through redistricting applications.",
+    "use_cases": [
+      "Learning decomposition methods",
+      "Lagrangian relaxation implementation",
+      "Policy-relevant OR applications"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Early-PhD"
+    ],
+    "synthetic_questions": [
+      "Who is Austin Buchanan",
+      "Farkas Dilemma blog",
+      "Benders decomposition tutorial",
+      "redistricting optimization"
+    ]
   }
 ]
