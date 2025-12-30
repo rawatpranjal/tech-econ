@@ -546,6 +546,78 @@
               "citations": 350
             }
           ]
+        },
+        {
+          "id": "extreme-value-theory",
+          "name": "Extreme Value Theory",
+          "application": "Model tail risks, detect anomalies, and quantify rare events",
+          "papers": [
+            {
+              "title": "Limiting Forms of the Frequency Distribution of the Largest or Smallest Member of a Sample",
+              "authors": "R. A. Fisher, L. H. C. Tippett",
+              "year": 1928,
+              "tag": "Classic",
+              "description": "Proves that maxima of i.i.d. samples converge to exactly three distribution types—Gumbel (light tails), Fréchet (heavy tails), and Weibull (bounded tails). This 'three types theorem' is the foundation of all EVT. Every anomaly detector, VaR model, and tail risk estimator builds on this elegant result.",
+              "url": "https://www.cambridge.org/core/journals/mathematical-proceedings-of-the-cambridge-philosophical-society/article/limiting-forms-of-the-frequency-distribution-of-the-largest-or-smallest-member-of-a-sample/D9F2E08BF5539E47E0CDEE35B4DC4C62",
+              "tags": [
+                "Statistics",
+                "Extreme Value Theory"
+              ],
+              "citations": 2500
+            },
+            {
+              "title": "Statistical Inference Using Extreme Order Statistics",
+              "authors": "James Pickands III",
+              "year": 1975,
+              "tag": "Classic",
+              "description": "Introduced GPD (Generalized Pareto Distribution) and Peaks-Over-Threshold methodology. Exceedances beyond any sufficiently high threshold follow GPD regardless of original distribution. POT uses all extreme observations rather than just block maxima, enabling anomaly detection with 10-100x fewer observations. Foundation of SPOT, DSPOT, and all modern streaming EVT.",
+              "url": "https://projecteuclid.org/journals/annals-of-statistics/volume-3/issue-1/Statistical-Inference-Using-Extreme-Order-Statistics/10.1214/aos/1176343003.full",
+              "tags": [
+                "Statistics",
+                "Extreme Value Theory"
+              ],
+              "citations": 5800
+            },
+            {
+              "title": "Models for Exceedances Over High Thresholds",
+              "authors": "A. C. Davison, R. L. Smith",
+              "year": 1990,
+              "tag": "Classic",
+              "description": "THE implementation guide for POT modeling. Complete toolkit: MLE for GPD parameters, threshold selection via mean residual life plots, diagnostic methods, handling temporal dependence. Every EVT software package (R's extRemes, Python's scipy.stats) implements methods from this paper. Answers: How to choose threshold? How to validate model?",
+              "url": "https://www.jstor.org/stable/2345667",
+              "tags": [
+                "Statistics",
+                "Extreme Value Theory"
+              ],
+              "citations": 3500
+            },
+            {
+              "title": "Estimation of Tail-Related Risk Measures for Heteroscedastic Financial Time Series: An Extreme Value Approach",
+              "authors": "Alexander J. McNeil, Rüdiger Frey",
+              "year": 2000,
+              "tag": "SOTA",
+              "description": "Solved EVT's limitation for time-varying volatility via two-stage GARCH-EVT: filter through GARCH to remove heteroscedasticity, then apply GPD to standardized residuals. First rigorous formulas for conditional VaR and Expected Shortfall satisfying Basel requirements. Same framework applies to tail latency, fraud detection, any metric with volatility clustering.",
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S0927539800000128",
+              "tags": [
+                "Statistics",
+                "Extreme Value Theory"
+              ],
+              "citations": 2000
+            },
+            {
+              "title": "Anomaly Detection in Streams with Extreme Value Theory",
+              "authors": "Alban Siffer, Pierre-Alain Fouque, Alexandre Termier, Christine Largouët",
+              "year": 2017,
+              "tag": "Industry",
+              "description": "SPOT (Streaming Peaks-Over-Threshold) automatically detects anomalies in real-time with no manual threshold tuning—threshold emerges from EVT theory. DSPOT extends to non-stationary streams with concept drift. O(1) per observation, no distributional assumptions. Applications: DDoS detection, equipment failures, fraud, latency spikes. Open-source Python code included.",
+              "url": "https://dl.acm.org/doi/10.1145/3097983.3098144",
+              "tags": [
+                "Statistics",
+                "Extreme Value Theory"
+              ],
+              "citations": 500
+            }
+          ]
         }
       ]
     },
