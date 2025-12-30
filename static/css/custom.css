@@ -1959,7 +1959,7 @@ a:hover {
 
 .talk-thumbnail {
     width: 100%;
-    max-height: 120px;
+    height: 180px;
     aspect-ratio: 16/9;
     object-fit: cover;
     display: block;
