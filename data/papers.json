@@ -389,6 +389,91 @@
               "citations": 8000
             }
           ]
+        },
+        {
+          "id": "multiple-testing-fdr",
+          "name": "Multiple Testing & False Discovery Rate",
+          "application": "Control error rates when testing many hypotheses simultaneously",
+          "papers": [
+            {
+              "title": "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing",
+              "authors": "Yoav Benjamini, Yosef Hochberg",
+              "year": 1995,
+              "tag": "Classic",
+              "description": "One of the most-cited statistics papers ever (~100,000 citations). Introduced FDR as alternative to FWER—controls expected proportion of false discoveries among rejections. The BH step-up procedure is now default in experimentation platforms at Google, Netflix, Meta. Essential when testing 500 experiments or 20 metrics per A/B test.",
+              "url": "https://www.jstor.org/stable/2346101",
+              "tags": [
+                "Statistics",
+                "Multiple Testing & False Discovery Rate"
+              ],
+              "citations": 100000
+            },
+            {
+              "title": "A Simple Sequentially Rejective Multiple Test Procedure",
+              "authors": "Sture Holm",
+              "year": 1979,
+              "tag": "Classic",
+              "description": "Dominant method for FWER control when you cannot tolerate any false positives. Step-down approach uniformly more powerful than Bonferroni with same guarantee, no dependence assumptions required. The right choice for guardrail metrics (revenue, latency, crash rates) where a single false positive could ship a harmful feature.",
+              "url": "https://www.jstor.org/stable/4615733",
+              "tags": [
+                "Statistics",
+                "Multiple Testing & False Discovery Rate"
+              ],
+              "citations": 23000
+            },
+            {
+              "title": "A Direct Approach to False Discovery Rates",
+              "authors": "John D. Storey",
+              "year": 2002,
+              "tag": "Classic",
+              "description": "Introduced q-values—the FDR analogue of p-values. A q-value tells you the minimum FDR threshold at which a test becomes significant. Also introduced π₀ estimation (proportion of true nulls), which can boost power up to 8× compared to BH when many tests are truly non-null.",
+              "url": "https://www.jstor.org/stable/3088784",
+              "tags": [
+                "Statistics",
+                "Multiple Testing & False Discovery Rate"
+              ],
+              "citations": 5400
+            },
+            {
+              "title": "The Control of the False Discovery Rate in Multiple Testing Under Dependency",
+              "authors": "Yoav Benjamini, Daniel Yekutieli",
+              "year": 2001,
+              "tag": "Classic",
+              "description": "Proves BH controls FDR under positive regression dependence (PRDS), covering most real-world cases. For arbitrary dependence, provides the BY correction guaranteeing FDR control under any correlation structure. Essential since A/B test metrics are correlated, user segments overlap, and experimental units cluster.",
+              "url": "https://projecteuclid.org/journals/annals-of-statistics/volume-29/issue-4/The-control-of-the-false-discovery-rate-in-multiple-testing/10.1214/aos/1013699998.full",
+              "tags": [
+                "Statistics",
+                "Multiple Testing & False Discovery Rate"
+              ],
+              "citations": 10400
+            },
+            {
+              "title": "Large-Scale Simultaneous Hypothesis Testing: The Choice of a Null Hypothesis",
+              "authors": "Bradley Efron",
+              "year": 2004,
+              "tag": "Classic",
+              "description": "Introduced empirical null and local FDR (lfdr). When testing thousands of hypotheses, the theoretical null N(0,1) may be miscalibrated. Estimating null from data corrects for systematic biases. Local FDR assigns each experiment a 'probability of being noise'—essential for prioritizing follow-up in large experimentation portfolios.",
+              "url": "https://www.jstor.org/stable/27590386",
+              "tags": [
+                "Statistics",
+                "Multiple Testing & False Discovery Rate"
+              ],
+              "citations": 2500
+            },
+            {
+              "title": "Controlling the False Discovery Rate via Knockoffs",
+              "authors": "Rina Foygel Barber, Emmanuel J. Candès",
+              "year": 2015,
+              "tag": "SOTA",
+              "description": "FDR control for variable selection in regression—where traditional p-values are unreliable due to correlated predictors. Constructs 'fake' knockoff variables mimicking correlation structure but independent of outcome. Enables FDR-controlled claims about which variables matter, not just whether there's signal. Bridge between multiple testing and high-dimensional regression.",
+              "url": "https://projecteuclid.org/journals/annals-of-statistics/volume-43/issue-5/Controlling-the-false-discovery-rate-via-knockoffs/10.1214/15-AOS1337.full",
+              "tags": [
+                "Statistics",
+                "Multiple Testing & False Discovery Rate"
+              ],
+              "citations": 1300
+            }
+          ]
         }
       ]
     },
