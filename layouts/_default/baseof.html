@@ -54,9 +54,6 @@
     <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css"></noscript>
 </head>
 <body>
-    <!-- Snow Effect Container -->
-    <div id="snow-container" class="snow-container"></div>
-
     <!-- Skip to Content (Accessibility) -->
     <a href="#main-content" class="skip-link">Skip to content</a>
 
@@ -74,17 +71,6 @@
     <nav class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <span class="sidebar-logo">tech-econ</span>
-        </div>
-        <div class="snow-toggle-bar">
-            <button id="snow-toggle" class="snow-toggle-btn" aria-label="Toggle snow" title="Toggle snow effect">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="12" y1="2" x2="12" y2="22"></line>
-                    <line x1="2" y1="12" x2="22" y2="12"></line>
-                    <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"></line>
-                    <line x1="19.07" y1="4.93" x2="4.93" y2="19.07"></line>
-                </svg>
-                <span class="snow-label">Snow</span>
-            </button>
         </div>
         <ul class="sidebar-nav">
             <!-- Home -->
@@ -483,8 +469,5 @@
       };
     </script>
     {{ end }}
-
-    <!-- Snow Effect -->
-    <script src="{{ "js/snow.js" | relURL }}" defer></script>
 </body>
 </html>
