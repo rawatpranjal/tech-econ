@@ -5,22 +5,18 @@
     <p class="hero-tagline">{{ .Site.Data.topic_clusters_all.num_clusters }} topics, {{ .Site.Data.topic_clusters_all.num_items }} resources to discover.</p>
 </header>
 
-<!-- Cluster Data for JavaScript -->
-<script id="cluster-data" type="application/json">
-{{ .Site.Data.topic_clusters_all | jsonify }}
-</script>
-
-<!-- All Items Data (unified from all sources) -->
-<script id="all-items-data" type="application/json">
-{
-    "packages": {{ .Site.Data.packages | jsonify }},
-    "resources": {{ .Site.Data.resources | jsonify }},
-    "datasets": {{ .Site.Data.datasets | jsonify }},
-    "talks": {{ .Site.Data.talks | jsonify }},
-    "career": {{ .Site.Data.career | jsonify }},
-    "community": {{ .Site.Data.community | jsonify }},
-    "books": {{ .Site.Data.books | jsonify }}
-}
+<!-- Data files loaded asynchronously for faster page load -->
+<script>
+    window.DISCOVER_DATA_URLS = {
+        clusters: '{{ "data/topic_clusters_all.json" | relURL }}',
+        packages: '{{ "data/packages.json" | relURL }}',
+        resources: '{{ "data/resources.json" | relURL }}',
+        datasets: '{{ "data/datasets.json" | relURL }}',
+        talks: '{{ "data/talks.json" | relURL }}',
+        career: '{{ "data/career.json" | relURL }}',
+        community: '{{ "data/community.json" | relURL }}',
+        books: '{{ "data/books.json" | relURL }}'
+    };
 </script>
 
 <div class="explore-container">

@@ -11,9 +11,22 @@
     'use strict';
 
     // Configuration
-    const ROWS_PER_BATCH = 10;      // Load 10 rows at a time
+    const ROWS_PER_BATCH = 5;       // Load 5 rows at a time (faster first paint)
     const ITEMS_PER_ROW = 15;       // Show max 15 items per row
-    const MIN_CLUSTER_SIZE = 5;    // Hide clusters with < 5 items
+    const MIN_CLUSTER_SIZE = 5;     // Hide clusters with < 5 items
+
+    // Curation: Labels to deprioritize (generic/career-heavy)
+    const DEPRIORITIZED_LABELS = [
+        'career portal', 'job search', 'marketplace', 'recruitment',
+        'job board', 'hiring', 'employment', 'resume'
+    ];
+
+    // Curation: Labels to prioritize (technical/interesting)
+    const PRIORITIZED_LABELS = [
+        'causal', 'inference', 'bayesian', 'machine learning', 'neural',
+        'statistical', 'regression', 'time series', 'experimental',
+        'econometric', 'optimization', 'algorithm', 'deep learning'
+    ];
 
     let clusterData = null;
     let allItemsData = null;
@@ -25,13 +38,39 @@
     // Initialize on DOM load
     document.addEventListener('DOMContentLoaded', init);
 
-    function init() {
-        // Parse data from script tags
+    async function init() {
+        // Show loading state
+        const loader = document.getElementById('explore-loader');
+        loader.classList.add('visible');
+
         try {
-            clusterData = JSON.parse(document.getElementById('cluster-data').textContent);
-            allItemsData = JSON.parse(document.getElementById('all-items-data').textContent);
+            // Fetch data files in parallel for speed
+            const urls = window.DISCOVER_DATA_URLS;
+            const [clustersRes, packagesRes, resourcesRes, datasetsRes, talksRes, careerRes, communityRes, booksRes] = await Promise.all([
+                fetch(urls.clusters),
+                fetch(urls.packages),
+                fetch(urls.resources),
+                fetch(urls.datasets),
+                fetch(urls.talks),
+                fetch(urls.career),
+                fetch(urls.community),
+                fetch(urls.books)
+            ]);
+
+            clusterData = await clustersRes.json();
+            allItemsData = {
+                packages: await packagesRes.json(),
+                resources: await resourcesRes.json(),
+                datasets: await datasetsRes.json(),
+                talks: await talksRes.json(),
+                career: await careerRes.json(),
+                community: await communityRes.json(),
+                books: await booksRes.json()
+            };
         } catch (e) {
-            console.error('Failed to parse explore data:', e);
+            console.error('Failed to load explore data:', e);
+            loader.classList.remove('visible');
+            document.getElementById('explore-rows').innerHTML = '<p style="padding: 2rem; text-align: center;">Failed to load data. Please refresh.</p>';
             return;
         }
 
@@ -89,10 +128,82 @@
         return arr;
     }
 
+    // Score cluster for curation (higher = show first)
+    function scoreCluster(cluster) {
+        const label = cluster.label.toLowerCase();
+        let score = 0;
+
+        // Deprioritize generic/career labels
+        for (const term of DEPRIORITIZED_LABELS) {
+            if (label.includes(term)) {
+                score -= 50;
+                break;
+            }
+        }
+
+        // Prioritize technical/interesting labels
+        for (const term of PRIORITIZED_LABELS) {
+            if (label.includes(term)) {
+                score += 30;
+                break;
+            }
+        }
+
+        // Prefer medium-sized clusters (10-50 items) over very large ones
+        if (cluster.item_count >= 10 && cluster.item_count <= 50) {
+            score += 10;
+        } else if (cluster.item_count > 100) {
+            score -= 5; // Very large clusters might be too generic
+        }
+
+        // Add randomness to keep it fresh each load
+        score += Math.random() * 20;
+
+        return score;
+    }
+
+    function curatedSort(clusters) {
+        // Score all clusters
+        const scored = clusters.map(c => ({ cluster: c, score: scoreCluster(c) }));
+
+        // Sort by score descending
+        scored.sort((a, b) => b.score - a.score);
+
+        // Interleave for variety: take from top, middle, bottom
+        const result = [];
+        const sorted = scored.map(s => s.cluster);
+        const third = Math.floor(sorted.length / 3);
+
+        let top = 0, mid = third, bot = third * 2;
+        let pickFrom = 'top';
+
+        while (result.length < sorted.length) {
+            if (pickFrom === 'top' && top < third) {
+                result.push(sorted[top++]);
+                pickFrom = 'mid';
+            } else if (pickFrom === 'mid' && mid < third * 2) {
+                result.push(sorted[mid++]);
+                pickFrom = 'bot';
+            } else if (pickFrom === 'bot' && bot < sorted.length) {
+                result.push(sorted[bot++]);
+                pickFrom = 'top';
+            } else {
+                // Fallback: add remaining from any bucket
+                if (top < third) result.push(sorted[top++]);
+                else if (mid < third * 2) result.push(sorted[mid++]);
+                else if (bot < sorted.length) result.push(sorted[bot++]);
+            }
+        }
+
+        return result;
+    }
+
     function shuffleAndLoad() {
-        // Filter clusters by min size and shuffle
+        // Filter clusters by min size
         const filtered = clusterData.clusters.filter(c => c.item_count >= MIN_CLUSTER_SIZE);
-        shuffledClusters = shuffleArray(filtered);
+
+        // Apply curated sorting (scoring + interleaving)
+        shuffledClusters = curatedSort(filtered);
 
         // Reset and reload
         const container = document.getElementById('explore-rows');

@@ -8829,10 +8829,12 @@ mark.partial {
     border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.2s;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.15s;
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    will-change: transform;
+    contain: layout style paint;
 }
 
 .explore-card::before {
