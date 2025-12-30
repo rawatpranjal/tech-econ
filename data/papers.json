@@ -317,6 +317,78 @@
               "citations": 2000
             }
           ]
+        },
+        {
+          "id": "mixed-effects-multilevel",
+          "name": "Mixed Effects & Multilevel Models",
+          "application": "Handle user-level heterogeneity, repeated measures, and hierarchical platform data",
+          "papers": [
+            {
+              "title": "Random-Effects Models for Longitudinal Data",
+              "authors": "Nan M. Laird, James H. Ware",
+              "year": 1982,
+              "tag": "Classic",
+              "description": "Won 2021 International Prize in Statistics. Unified empirical Bayes and ML via EM algorithm for unbalanced longitudinal data with subject-specific random effects. Solves the 'users have different numbers of sessions' problem—models user heterogeneity while borrowing strength across users through partial pooling.",
+              "url": "https://www.jstor.org/stable/2529876",
+              "tags": [
+                "Statistics",
+                "Mixed Effects & Multilevel Models"
+              ],
+              "citations": 9200
+            },
+            {
+              "title": "Recovery of Inter-Block Information when Block Sizes are Unequal",
+              "authors": "H. D. Patterson, Robin Thompson",
+              "year": 1971,
+              "tag": "Classic",
+              "description": "Invented Restricted Maximum Likelihood (REML), which accounts for degrees of freedom lost to estimating fixed effects. Now the default estimation method in virtually every mixed model software. Critical for unbiased variance component estimates, especially important for power analysis in A/B testing.",
+              "url": "https://www.jstor.org/stable/2334389",
+              "tags": [
+                "Statistics",
+                "Mixed Effects & Multilevel Models"
+              ],
+              "citations": 4100
+            },
+            {
+              "title": "That BLUP is a Good Thing: The Estimation of Random Effects",
+              "authors": "G. K. Robinson",
+              "year": 1991,
+              "tag": "Classic",
+              "description": "Unified BLUP (Best Linear Unbiased Prediction) theory—showing it's the same as Kalman filtering, kriging, and credibility theory. Explains why shrinkage toward the grand mean is optimal: users with little data shrink toward population mean, users with abundant data reflect their own history.",
+              "url": "https://projecteuclid.org/journals/statistical-science/volume-6/issue-1/That-BLUP-is-a-Good-Thing--The-Estimation-of/10.1214/ss/1177011926.full",
+              "tags": [
+                "Statistics",
+                "Mixed Effects & Multilevel Models"
+              ],
+              "citations": 1900
+            },
+            {
+              "title": "Fitting Linear Mixed-Effects Models Using lme4",
+              "authors": "Douglas Bates, Martin Mächler, Ben Bolker, Steve Walker",
+              "year": 2015,
+              "tag": "SOTA",
+              "description": "One of the most cited statistical papers in history (~75,000 citations). Documents lme4's computational algorithms and formula syntax: (1|user_id) for random intercepts, (treatment|user_id) for random slopes, (1|user_id) + (1|market) for crossed effects. The implementation guide for mixed models in R.",
+              "url": "https://www.jstatsoft.org/article/view/v067i01",
+              "tags": [
+                "Statistics",
+                "Mixed Effects & Multilevel Models"
+              ],
+              "citations": 75000
+            },
+            {
+              "title": "On the Pooling of Time Series and Cross Section Data",
+              "authors": "Yair Mundlak",
+              "year": 1978,
+              "tag": "Classic",
+              "description": "Bridges econometrics and biostatistics: proves fixed effects equals random effects when you include group means as covariates. The 'Mundlak approach' offers a compromise—random effects for efficiency plus cluster means to allow correlation between effects and regressors. Critical for choosing between plm and lmer.",
+              "url": "https://www.jstor.org/stable/1913646",
+              "tags": [
+                "Statistics",
+                "Mixed Effects & Multilevel Models"
+              ],
+              "citations": 8000
+            }
+          ]
         }
       ]
     },
