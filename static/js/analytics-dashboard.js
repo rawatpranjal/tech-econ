@@ -86,19 +86,11 @@
       formatNumber(data.summary?.pageviews || 0);
     document.getElementById('metric-sessions').textContent =
       formatNumber(data.summary?.sessions || 0);
-    document.getElementById('metric-time').textContent =
-      formatTime(data.summary?.avgTimeOnPage || 0);
-
-    // Top search
-    var topSearch = data.topSearches && data.topSearches[0];
-    document.getElementById('metric-top-search').textContent =
-      topSearch ? '"' + topSearch.name + '"' : '-';
 
     // Render charts
     renderPageviewsChart(data.dailyPageviews || {});
 
     // Render lists
-    renderList('list-searches', data.topSearches || []);
     renderList('list-pages', data.topPages || []);
 
     // Combine all click buckets into one list
@@ -269,9 +261,12 @@
 
     list.innerHTML = items.map(function(item) {
       var name = item.name || '-';
-      // Clean up page paths
+      var path = item.name || '/';
+      // Clean up page paths and make them clickable
       if (elementId === 'list-pages') {
-        name = name === '/' ? 'Home' : name.replace(/\//g, ' / ').trim();
+        var displayName = path === '/' ? 'Home' : path.replace(/\//g, ' / ').trim();
+        return '<li><a href="' + escapeHtml(path) + '" class="name">' + escapeHtml(displayName) + '</a>' +
+               '<span class="count">' + formatNumber(item.count) + '</span></li>';
       }
       return '<li><span class="name">' + escapeHtml(name) + '</span>' +
              '<span class="count">' + formatNumber(item.count) + '</span></li>';
