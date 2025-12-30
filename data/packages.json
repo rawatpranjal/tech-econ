@@ -5713,5 +5713,239 @@
     ],
     "best_for": "Bayesian network learning and inference with constraint-based and score-based algorithms",
     "language": "R"
+  },
+  {
+    "name": "data.table",
+    "description": "Extension of data.frame providing fast aggregation of large data (100GB+), ordered joins, and memory-efficient operations. Uses reference semantics for in-place modification with concise syntax [:=, .SD, by=].",
+    "category": "Data Workflow",
+    "docs_url": "https://rdatatable.gitlab.io/data.table/",
+    "github_url": "https://github.com/Rdatatable/data.table",
+    "url": "https://cran.r-project.org/package=data.table",
+    "install": "install.packages(\"data.table\")",
+    "tags": [
+      "data-manipulation",
+      "fast",
+      "large-data",
+      "reference-semantics",
+      "aggregation"
+    ],
+    "best_for": "Fast operations on large datasets (100GB+) with memory-efficient reference semantics",
+    "language": "R"
+  },
+  {
+    "name": "tidyverse",
+    "description": "Meta-package installing core tidyverse packages: ggplot2 (visualization), dplyr (manipulation), tidyr (tidying), readr (import), purrr (functional programming), tibble (data frames), stringr (strings), and forcats (factors).",
+    "category": "Data Workflow",
+    "docs_url": "https://www.tidyverse.org/",
+    "github_url": "https://github.com/tidyverse/tidyverse",
+    "url": "https://cran.r-project.org/package=tidyverse",
+    "install": "install.packages(\"tidyverse\")",
+    "tags": [
+      "tidyverse",
+      "data-science",
+      "dplyr",
+      "ggplot2",
+      "meta-package"
+    ],
+    "best_for": "Core tidyverse ecosystem for consistent data science workflows",
+    "language": "R"
+  },
+  {
+    "name": "haven",
+    "description": "Import and export Stata, SPSS, and SAS data files preserving variable labels and value labels. Handles .dta, .sav, .sas7bdat, and .xpt formats with labelled vectors for metadata.",
+    "category": "Data Workflow",
+    "docs_url": "https://haven.tidyverse.org/",
+    "github_url": "https://github.com/tidyverse/haven",
+    "url": "https://cran.r-project.org/package=haven",
+    "install": "install.packages(\"haven\")",
+    "tags": [
+      "Stata",
+      "SPSS",
+      "SAS",
+      "data-import",
+      "labelled-data"
+    ],
+    "best_for": "Reading and writing Stata, SPSS, and SAS files with preserved labels",
+    "language": "R"
+  },
+  {
+    "name": "collapse",
+    "description": "High-performance data transformation package designed by an economist. Provides fast grouped operations, time series functions, and panel data tools with 10-100× speedups over dplyr on large data.",
+    "category": "Data Workflow",
+    "docs_url": "https://sebkrantz.github.io/collapse/",
+    "github_url": "https://github.com/SebKrantz/collapse",
+    "url": "https://cran.r-project.org/package=collapse",
+    "install": "install.packages(\"collapse\")",
+    "tags": [
+      "data-transformation",
+      "high-performance",
+      "panel-data",
+      "time-series",
+      "grouped-operations"
+    ],
+    "best_for": "High-performance data transformation optimized for economists—10-100× faster than dplyr",
+    "language": "R"
+  },
+  {
+    "name": "patchwork",
+    "description": "Compose multiple ggplot2 plots into publication-ready multi-panel figures. Uses intuitive operators (+, |, /) for arrangement with automatic alignment and shared legends.",
+    "category": "Visualization",
+    "docs_url": "https://patchwork.data-imaginist.com/",
+    "github_url": "https://github.com/thomasp85/patchwork",
+    "url": "https://cran.r-project.org/package=patchwork",
+    "install": "install.packages(\"patchwork\")",
+    "tags": [
+      "ggplot2",
+      "multi-panel",
+      "figure-composition",
+      "visualization",
+      "publication-ready"
+    ],
+    "best_for": "Composing multi-panel ggplot2 figures with intuitive + and | operators",
+    "language": "R"
+  },
+  {
+    "name": "cowplot",
+    "description": "Publication-ready ggplot2 themes and plot arrangement utilities. Provides clean themes, plot annotations, and functions for combining plots with shared axes.",
+    "category": "Visualization",
+    "docs_url": "https://wilkelab.org/cowplot/",
+    "github_url": "https://github.com/wilkelab/cowplot",
+    "url": "https://cran.r-project.org/package=cowplot",
+    "install": "install.packages(\"cowplot\")",
+    "tags": [
+      "ggplot2",
+      "themes",
+      "publication-ready",
+      "plot-arrangement",
+      "annotations"
+    ],
+    "best_for": "Publication-ready ggplot2 themes and multi-plot arrangements with annotations",
+    "language": "R"
+  },
+  {
+    "name": "renv",
+    "description": "Project-local R dependency management. Creates reproducible environments by recording package versions in a lockfile, isolating project libraries, and enabling version restore.",
+    "category": "Reproducibility",
+    "docs_url": "https://rstudio.github.io/renv/",
+    "github_url": "https://github.com/rstudio/renv",
+    "url": "https://cran.r-project.org/package=renv",
+    "install": "install.packages(\"renv\")",
+    "tags": [
+      "reproducibility",
+      "package-management",
+      "dependency-isolation",
+      "lockfile",
+      "environments"
+    ],
+    "best_for": "Project-local package management for reproducible R environments",
+    "language": "R"
+  },
+  {
+    "name": "here",
+    "description": "Simple path construction from project root. Uses heuristics to find project root (RStudio, .git, .here) enabling portable paths that work across different machines and working directories.",
+    "category": "Reproducibility",
+    "docs_url": "https://here.r-lib.org/",
+    "github_url": "https://github.com/r-lib/here",
+    "url": "https://cran.r-project.org/package=here",
+    "install": "install.packages(\"here\")",
+    "tags": [
+      "paths",
+      "project-management",
+      "reproducibility",
+      "portability",
+      "working-directory"
+    ],
+    "best_for": "Portable file paths from project root for reproducible scripts",
+    "language": "R"
+  },
+  {
+    "name": "targets",
+    "description": "Make-like pipeline toolkit for R. Declares dependencies between pipeline steps, skips up-to-date targets, and supports parallel execution. Standard for reproducible research workflows.",
+    "category": "Reproducibility",
+    "docs_url": "https://docs.ropensci.org/targets/",
+    "github_url": "https://github.com/ropensci/targets",
+    "url": "https://cran.r-project.org/package=targets",
+    "install": "install.packages(\"targets\")",
+    "tags": [
+      "pipelines",
+      "reproducibility",
+      "make",
+      "dependency-tracking",
+      "parallel"
+    ],
+    "best_for": "Make-like reproducible pipelines with automatic dependency tracking and parallel execution",
+    "language": "R"
+  },
+  {
+    "name": "rmarkdown",
+    "description": "Dynamic documents combining R code with Markdown text. Generates reproducible reports in HTML, PDF, Word, and slides. Foundation for literate programming and reproducible research in R.",
+    "category": "Reproducibility",
+    "docs_url": "https://rmarkdown.rstudio.com/",
+    "github_url": "https://github.com/rstudio/rmarkdown",
+    "url": "https://cran.r-project.org/package=rmarkdown",
+    "install": "install.packages(\"rmarkdown\")",
+    "tags": [
+      "literate-programming",
+      "reproducible-research",
+      "dynamic-documents",
+      "reporting",
+      "Markdown"
+    ],
+    "best_for": "Literate programming and reproducible reports combining R code with Markdown",
+    "language": "R"
+  },
+  {
+    "name": "wooldridge",
+    "description": "All 115 datasets from Wooldridge's 'Introductory Econometrics: A Modern Approach' (7th edition). Includes wage equations, crime data, housing prices, and classic econometrics teaching examples.",
+    "category": "Datasets",
+    "docs_url": "https://cran.r-project.org/web/packages/wooldridge/wooldridge.pdf",
+    "github_url": "https://github.com/JustinMShea/wooldridge",
+    "url": "https://cran.r-project.org/package=wooldridge",
+    "install": "install.packages(\"wooldridge\")",
+    "tags": [
+      "datasets",
+      "textbook",
+      "teaching",
+      "Wooldridge",
+      "econometrics"
+    ],
+    "best_for": "115 datasets from Wooldridge's 'Introductory Econometrics' for teaching and examples",
+    "language": "R"
+  },
+  {
+    "name": "AER",
+    "description": "Companion package to 'Applied Econometrics with R' (Kleiber & Zeileis) plus datasets from Stock & Watson. Provides ivreg() for instrumental variables, tobit(), and econometric testing functions.",
+    "category": "Datasets",
+    "docs_url": "https://cran.r-project.org/web/packages/AER/AER.pdf",
+    "github_url": null,
+    "url": "https://cran.r-project.org/package=AER",
+    "install": "install.packages(\"AER\")",
+    "tags": [
+      "datasets",
+      "textbook",
+      "instrumental-variables",
+      "Stock-Watson",
+      "Kleiber-Zeileis"
+    ],
+    "best_for": "Datasets and functions from 'Applied Econometrics with R' plus Stock & Watson data",
+    "language": "R"
+  },
+  {
+    "name": "causaldata",
+    "description": "Unified collection of datasets from three major causal inference textbooks: 'The Effect' (Huntington-Klein), 'Causal Inference: The Mixtape' (Cunningham), and 'Causal Inference: What If?' (Hernán & Robins).",
+    "category": "Datasets",
+    "docs_url": "https://nickch-k.github.io/causaldata/",
+    "github_url": "https://github.com/NickCH-K/causaldata",
+    "url": "https://cran.r-project.org/package=causaldata",
+    "install": "install.packages(\"causaldata\")",
+    "tags": [
+      "datasets",
+      "causal-inference",
+      "textbook",
+      "The-Effect",
+      "Mixtape"
+    ],
+    "best_for": "Datasets from The Effect, Causal Inference: The Mixtape, and What If? textbooks",
+    "language": "R"
   }
 ]
