@@ -950,7 +950,7 @@ document.addEventListener('DOMContentLoaded', function() {
         btnTable.classList.remove('active');
 
         if (view === 'map') {
-            mapView.style.display = 'block';
+            mapView.style.display = '';
             btnMap.classList.add('active');
             // Initialize map on first view (Leaflet needs visible container)
             setTimeout(() => {
@@ -958,17 +958,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (map) map.invalidateSize();
             }, 100);
         } else if (view === 'calendar') {
-            calendarView.style.display = 'block';
+            calendarView.style.display = '';
             btnCalendar.classList.add('active');
             // Initialize month view if showing month subview
             if (monthSubview.style.display !== 'none') {
                 updateMonthView();
             }
         } else if (view === 'cards') {
-            cardsView.style.display = 'block';
+            cardsView.style.display = '';
             btnCards.classList.add('active');
         } else if (view === 'table') {
-            tableView.style.display = 'block';
+            tableView.style.display = '';
             btnTable.classList.add('active');
         }
     }

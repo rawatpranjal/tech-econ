@@ -195,11 +195,11 @@ document.addEventListener('DOMContentLoaded', function() {
     function setView(view) {
         if (view === 'table') {
             cardsView.style.display = 'none';
-            tableView.style.display = 'block';
+            tableView.style.display = '';
             btnCards.classList.remove('active');
             btnTable.classList.add('active');
         } else {
-            cardsView.style.display = 'flex';
+            cardsView.style.display = '';
             tableView.style.display = 'none';
             btnCards.classList.add('active');
             btnTable.classList.remove('active');

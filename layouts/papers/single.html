@@ -122,8 +122,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function setView(view) {
         const isCards = view === 'cards';
-        cardsViews.forEach(el => el.style.display = isCards ? 'grid' : 'none');
-        tableViews.forEach(el => el.style.display = isCards ? 'none' : 'block');
+        cardsViews.forEach(el => el.style.display = isCards ? '' : 'none');
+        tableViews.forEach(el => el.style.display = isCards ? 'none' : '');
         btnCards.classList.toggle('active', isCards);
         btnTable.classList.toggle('active', !isCards);
     }

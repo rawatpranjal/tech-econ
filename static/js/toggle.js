@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function setView(view) {
         const isCards = view === 'cards';
-        cardsView.style.display = isCards ? 'flex' : 'none';
-        tableView.style.display = isCards ? 'none' : 'block';
+        cardsView.style.display = isCards ? '' : 'none';
+        tableView.style.display = isCards ? 'none' : '';
         btnCards.classList.toggle('active', isCards);
         btnTable.classList.toggle('active', !isCards);
     }
