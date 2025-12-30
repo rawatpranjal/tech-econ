@@ -1,0 +1,638 @@
+[
+  {
+    "slug": "andrey-fradkin",
+    "name": "Andrey Fradkin",
+    "title": "Associate Professor",
+    "company": "Boston University",
+    "phd": "Stanford, 2016",
+    "image": "https://www.bu.edu/econ/files/2020/08/fradkin_headshot-e1598380813859.jpg",
+    "bio": "Andrey Fradkin studies online marketplaces and platform economics. His research on Airbnb helped shape understanding of how digital platforms affect local markets. Previously worked at Indeed.com and continues to collaborate with major tech platforms on marketplace design.",
+    "specialty": ["Platform Economics", "Marketplace Design", "Search & Matching"],
+    "papers": [
+      {
+        "title": "Search, Matching, and the Role of Digital Marketplace Design",
+        "year": 2021,
+        "venue": "Econometrica",
+        "url": "https://www.econometricsociety.org/publications/econometrica/2021/07/01/search-matching-and-role-digital-marketplace-design",
+        "note": "How Airbnb's design affects market outcomes"
+      },
+      {
+        "title": "The Welfare Effects of Peer Entry in the Accommodation Market",
+        "year": 2018,
+        "venue": "AER",
+        "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20160853",
+        "note": "Airbnb's impact on hotel markets"
+      }
+    ],
+    "links": {
+      "personal": "https://andreyfradkin.com/",
+      "scholar": "https://scholar.google.com/citations?user=VPL2zFYAAAAJ",
+      "twitter": "https://twitter.com/anfradkin"
+    }
+  },
+  {
+    "slug": "chris-nosko",
+    "name": "Chris Nosko",
+    "title": "VP and Head of Science & Analytics",
+    "company": "Uber",
+    "phd": "Harvard, 2008",
+    "image": "https://harris.uchicago.edu/sites/default/files/styles/portrait/public/images/nosko.jpg",
+    "bio": "Chris Nosko leads Uber's data science and analytics organization. Before Uber, he was a professor at Chicago Booth where he pioneered research on online marketplaces. His work on eBay auctions set the standard for empirical marketplace analysis.",
+    "specialty": ["Marketplace Design", "Empirical IO", "Dynamic Pricing"],
+    "papers": [
+      {
+        "title": "Competition and Quality in eBay",
+        "year": 2015,
+        "venue": "AEJ: Microeconomics",
+        "url": "https://www.aeaweb.org/articles?id=10.1257/mic.20130230",
+        "note": "How competition affects seller behavior"
+      },
+      {
+        "title": "The Limits of Reputation in Platform Markets",
+        "year": 2017,
+        "venue": "NBER Working Paper",
+        "url": "https://www.nber.org/papers/w22800",
+        "note": "When reputation systems fail"
+      }
+    ],
+    "links": {
+      "personal": "https://www.chicagobooth.edu/faculty/directory/n/chris-nosko",
+      "scholar": "https://scholar.google.com/citations?user=2M-WFUQAAAAJ"
+    }
+  },
+  {
+    "slug": "colin-gray",
+    "name": "Colin Gray",
+    "title": "Economics & Data Science",
+    "company": "Netflix",
+    "phd": "MIT, 2016",
+    "image": "https://economics.mit.edu/sites/default/files/styles/person_photo_large/public/images/colinfloydgray.jpg",
+    "bio": "Colin Gray leads economics and data science at Netflix, where he applies causal inference and machine learning at scale. His research focuses on labor economics and the future of work, with influential papers on online labor markets.",
+    "specialty": ["Causal Inference", "Labor Economics", "Online Platforms"],
+    "papers": [
+      {
+        "title": "Employed in a Gig Economy",
+        "year": 2017,
+        "venue": "NBER Working Paper",
+        "url": "https://www.nber.org/papers/w24070",
+        "note": "Pioneering research on gig work"
+      },
+      {
+        "title": "Do Ride-Sharing Services Reduce Traffic Congestion?",
+        "year": 2018,
+        "venue": "Working Paper",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3094399",
+        "note": "Causal effects of Uber/Lyft on cities"
+      }
+    ],
+    "links": {
+      "scholar": "https://scholar.google.com/citations?user=cLqRqWUAAAAJ"
+    }
+  },
+  {
+    "slug": "erik-brynjolfsson",
+    "name": "Erik Brynjolfsson",
+    "title": "Director, Stanford Digital Economy Lab",
+    "company": "Stanford",
+    "phd": "MIT, 1991",
+    "image": "https://www.brynjolfsson.com/wp-content/uploads/2024/06/Erik-Brynjolfsson-2024.jpg",
+    "bio": "Erik Brynjolfsson is the world's leading researcher on the economics of AI and digital transformation. His books 'The Second Machine Age' and 'Machine, Platform, Crowd' have shaped how we understand technology's impact on productivity and labor. He directs the Stanford Digital Economy Lab.",
+    "specialty": ["AI Economics", "Digital Transformation", "Productivity"],
+    "papers": [
+      {
+        "title": "The Turing Trap: The Promise & Peril of Human-Like AI",
+        "year": 2022,
+        "venue": "Daedalus",
+        "url": "https://www.amacad.org/publication/turing-trap-promise-peril-human-artificial-intelligence",
+        "note": "Why AI should augment, not replace humans"
+      },
+      {
+        "title": "Generative AI at Work",
+        "year": 2023,
+        "venue": "NBER Working Paper",
+        "url": "https://www.nber.org/papers/w31161",
+        "note": "First rigorous study of ChatGPT productivity effects"
+      },
+      {
+        "title": "The Second Machine Age",
+        "year": 2014,
+        "venue": "Book",
+        "url": "https://www.amazon.com/Second-Machine-Age-Prosperity-Technologies/dp/0393350649",
+        "note": "Influential book on AI and the economy"
+      }
+    ],
+    "links": {
+      "personal": "https://www.brynjolfsson.com/",
+      "scholar": "https://scholar.google.com/citations?user=E9R3b6cAAAAJ",
+      "twitter": "https://twitter.com/erikbryn"
+    }
+  },
+  {
+    "slug": "hal-varian",
+    "name": "Hal Varian",
+    "title": "Chief Economist Emeritus",
+    "company": "Google",
+    "phd": "UC Berkeley, 1973",
+    "image": "https://digitaleconomy.stanford.edu/wp-content/uploads/2021/10/halvarian-80.jpg",
+    "bio": "Hal Varian invented the role of 'Chief Economist' in tech when he joined Google in 2002. He designed Google's ad auction system, which generates over $200 billion annually. His textbook 'Intermediate Microeconomics' taught generations of economists. With Carl Shapiro, he wrote 'Information Rules,' the bible of internet business strategy.",
+    "specialty": ["Market Design", "Ad Auctions", "Information Economics"],
+    "papers": [
+      {
+        "title": "Position Auctions",
+        "year": 2007,
+        "venue": "Int. J. Industrial Organization",
+        "url": "https://people.ischool.berkeley.edu/~hal/Papers/2006/position.pdf",
+        "note": "Theory behind Google's $200B+ ad business"
+      },
+      {
+        "title": "Information Rules",
+        "year": 1999,
+        "venue": "Book with Carl Shapiro",
+        "url": "https://www.amazon.com/Information-Rules-Strategic-Network-Economy/dp/087584863X",
+        "note": "The bible of internet business strategy"
+      },
+      {
+        "title": "Predicting the Present with Google Trends",
+        "year": 2009,
+        "venue": "Economic Record",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1659302",
+        "note": "Pioneered nowcasting with search data"
+      }
+    ],
+    "links": {
+      "personal": "https://people.ischool.berkeley.edu/~hal/",
+      "scholar": "https://scholar.google.com/citations?user=yLNtA1cAAAAJ"
+    }
+  },
+  {
+    "slug": "john-list",
+    "name": "John List",
+    "title": "Chief Economist",
+    "company": "Walmart (prev. Uber, Lyft)",
+    "phd": "Wyoming, 1996",
+    "image": "https://voices.uchicago.edu/jlist/files/2018/01/john_list_bio_3.jpeg",
+    "bio": "John List revolutionized how companies run experiments. As Chief Economist at Uber and Lyft, he built their experimentation platforms. His book 'The Voltage Effect' teaches how to scale successful experiments. He's the world's leading field experimentalist, ranked #5 most influential economist by RePEc.",
+    "specialty": ["Field Experiments", "Behavioral Economics", "Scaling"],
+    "papers": [
+      {
+        "title": "The Voltage Effect",
+        "year": 2022,
+        "venue": "Book",
+        "url": "https://www.amazon.com/Voltage-Effect-Ideas-Great-Scale/dp/0593239482",
+        "note": "Why most ideas fail at scale"
+      },
+      {
+        "title": "Field Experiments",
+        "year": 2017,
+        "venue": "JEP",
+        "url": "https://pubs.aeaweb.org/doi/10.1257/jep.31.2.103",
+        "note": "Defining the field experiment methodology"
+      },
+      {
+        "title": "The Behavioralist as Tax Collector",
+        "year": 2019,
+        "venue": "JPE",
+        "url": "https://www.journals.uchicago.edu/doi/10.1086/701424",
+        "note": "Using nudges to increase tax compliance"
+      }
+    ],
+    "links": {
+      "personal": "https://voices.uchicago.edu/jlist/",
+      "scholar": "https://scholar.google.com/citations?user=VPL2rjUAAAAJ",
+      "twitter": "https://twitter.com/Jlist22"
+    }
+  },
+  {
+    "slug": "jonathan-hall",
+    "name": "Jonathan Hall",
+    "title": "Chief Economist & Director of Public Policy",
+    "company": "Uber",
+    "phd": "Harvard, 2011",
+    "image": "https://www.uber.com/img/blog/2015-06-08-uber-economics-how-we-set-rates/jonathan-hall.jpg",
+    "bio": "Jonathan Hall is Uber's Chief Economist, responsible for pricing strategy including surge pricing. His research on the labor supply of Uber drivers reshaped how we understand gig work. Previously at Google and Pandora.",
+    "specialty": ["Dynamic Pricing", "Labor Economics", "Platform Markets"],
+    "papers": [
+      {
+        "title": "An Analysis of the Labor Market for Uber's Driver-Partners",
+        "year": 2017,
+        "venue": "NBER Working Paper",
+        "url": "https://www.nber.org/papers/w22843",
+        "note": "Foundational research on gig work flexibility"
+      },
+      {
+        "title": "The Effects of Uber's Surge Pricing",
+        "year": 2016,
+        "venue": "Working Paper",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2843546",
+        "note": "Why dynamic pricing improves markets"
+      }
+    ],
+    "links": {
+      "scholar": "https://scholar.google.com/citations?user=E6BrYW8AAAAJ"
+    }
+  },
+  {
+    "slug": "kyle-kretschman",
+    "name": "Kyle Kretschman",
+    "title": "Head of Economics",
+    "company": "Spotify",
+    "phd": "Yale, 2018",
+    "image": "https://media.licdn.com/dms/image/v2/C5603AQF8FTR6xTaE5g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1516331694827?e=1740614400&v=beta&t=yCwNFyDp_jkCJB5EhZcPvnMFwWdKxF_1Bq2kh9wI-Zk",
+    "bio": "Kyle Kretschman leads economics at Spotify, applying economic thinking to music streaming, creator payouts, and platform design. His team works on pricing, marketplace optimization, and understanding how users discover content.",
+    "specialty": ["Platform Economics", "Creator Economy", "Pricing"],
+    "papers": [
+      {
+        "title": "The Music Streaming Revolution",
+        "year": 2020,
+        "venue": "Spotify Research",
+        "url": "https://research.spotify.com/",
+        "note": "Economic analysis of streaming markets"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/kylekretschman/"
+    }
+  },
+  {
+    "slug": "liran-einav",
+    "name": "Liran Einav",
+    "title": "Professor",
+    "company": "Stanford",
+    "phd": "MIT, 2002",
+    "image": "https://siepr.stanford.edu/sites/default/files/styles/stanford_portrait/public/people/Einav_0.jpg",
+    "bio": "Liran Einav pioneered the use of large-scale private sector data for economics research. His collaborations with Visa and e-commerce platforms produced landmark studies. He serves as a Senior Fellow at SIEPR and co-editor of leading journals.",
+    "specialty": ["Empirical IO", "Health Economics", "Big Data"],
+    "papers": [
+      {
+        "title": "The Data Revolution and Economic Analysis",
+        "year": 2020,
+        "venue": "NBER Macro Annual",
+        "url": "https://www.nber.org/papers/w26531",
+        "note": "How private data is transforming economics"
+      },
+      {
+        "title": "Consumer Spending and Economic Stimulus",
+        "year": 2021,
+        "venue": "QJE",
+        "url": "https://academic.oup.com/qje/article/136/4/2457/6295259",
+        "note": "Using Visa data to track spending in real-time"
+      }
+    ],
+    "links": {
+      "personal": "https://web.stanford.edu/~leinav/",
+      "scholar": "https://scholar.google.com/citations?user=N8yXUB4AAAAJ"
+    }
+  },
+  {
+    "slug": "michael-luca",
+    "name": "Michael Luca",
+    "title": "Professor",
+    "company": "Harvard Business School",
+    "phd": "Boston University, 2012",
+    "image": "https://www.hbs.edu/Style%20Library/api/headshots/mluca.png",
+    "bio": "Michael Luca is the leading researcher on platform design and the economics of reputation. His work with Yelp showed how online reviews reshape markets. With Susan Athey, he wrote the definitive paper on 'Economists (and Economics) in Tech Companies.'",
+    "specialty": ["Platform Design", "Reputation", "Behavioral Economics"],
+    "papers": [
+      {
+        "title": "Economists (and Economics) in Tech Companies",
+        "year": 2019,
+        "venue": "JEP",
+        "url": "https://www.aeaweb.org/articles?id=10.1257/jep.33.1.209",
+        "note": "The definitive guide to being a tech economist"
+      },
+      {
+        "title": "Reviews, Reputation, and Revenue",
+        "year": 2016,
+        "venue": "HBS Working Paper",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1928601",
+        "note": "How Yelp stars affect restaurant revenue"
+      },
+      {
+        "title": "The Power of Experiments",
+        "year": 2020,
+        "venue": "Book",
+        "url": "https://www.amazon.com/Power-Experiments-Decision-Making-Data-Driven/dp/0262043505",
+        "note": "Guide to experimentation for practitioners"
+      }
+    ],
+    "links": {
+      "personal": "https://www.hbs.edu/faculty/Pages/profile.aspx?facId=602417",
+      "scholar": "https://scholar.google.com/citations?user=MU8S7-4AAAAJ",
+      "twitter": "https://twitter.com/MichaelLuca"
+    }
+  },
+  {
+    "slug": "michael-ostrovsky",
+    "name": "Michael Ostrovsky",
+    "title": "Professor & Co-Director, NBER Market Design",
+    "company": "Stanford GSB",
+    "phd": "Harvard, 2003",
+    "image": "https://www.gsb.stanford.edu/sites/default/files/image/faculty/0_ostrovsky_michael_2020_port_1.jpg",
+    "bio": "Michael Ostrovsky is the theorist behind modern ad auctions. His work with Schwarz on generalized second-price auctions (used by Google and Yahoo) won the Kalai Prize. He's advised Google, Yahoo, LinkedIn, and Pinterest, and co-founded TopSort.",
+    "specialty": ["Market Design", "Auction Theory", "Ad Markets"],
+    "papers": [
+      {
+        "title": "Reserve Prices in Internet Advertising Auctions",
+        "year": 2011,
+        "venue": "JPE",
+        "url": "https://www.journals.uchicago.edu/doi/10.1086/662725",
+        "note": "Optimal pricing in ad auctions"
+      },
+      {
+        "title": "Stability in Supply Chain Networks",
+        "year": 2008,
+        "venue": "AER",
+        "url": "https://www.aeaweb.org/articles?id=10.1257/aer.98.3.897",
+        "note": "Game theory of supply chains"
+      }
+    ],
+    "links": {
+      "personal": "https://web.stanford.edu/~ost/",
+      "scholar": "https://scholar.google.com/citations?user=SZW4jkgAAAAJ"
+    }
+  },
+  {
+    "slug": "michael-schwarz",
+    "name": "Michael Schwarz",
+    "title": "Corporate VP & Chief Economist",
+    "company": "Microsoft",
+    "phd": "Stanford GSB, 2000",
+    "image": "https://www.microsoft.com/en-us/research/uploads/prod/2018/03/avatar-MSchwarz.jpg",
+    "bio": "Michael Schwarz leads Microsoft's Office of the Chief Economist. He was previously Chief Economist at Google Cloud and Head of Economics Research at Yahoo. With Ostrovsky, he designed the GSP auctions that power internet advertising.",
+    "specialty": ["Auction Design", "Cloud Economics", "Market Design"],
+    "papers": [
+      {
+        "title": "Internet Advertising and the Generalized Second-Price Auction",
+        "year": 2007,
+        "venue": "AER",
+        "url": "https://www.aeaweb.org/articles?id=10.1257/aer.97.1.242",
+        "note": "The paper behind $100B+ in ad revenue"
+      },
+      {
+        "title": "Optimal Auction Design and Equilibrium Selection",
+        "year": 2009,
+        "venue": "AER P&P",
+        "url": "https://www.aeaweb.org/articles?id=10.1257/aer.99.2.597",
+        "note": "How to set reserve prices"
+      }
+    ],
+    "links": {
+      "personal": "https://www.microsoft.com/en-us/research/people/mschwarz/",
+      "scholar": "https://scholar.google.com/citations?user=zMfHjC8AAAAJ"
+    }
+  },
+  {
+    "slug": "pat-bajari",
+    "name": "Pat Bajari",
+    "title": "Chief Economist & VP",
+    "company": "Amazon (1969-2025)",
+    "phd": "Minnesota, 1998",
+    "image": "https://econ.duke.edu/sites/econ.duke.edu/files/styles/people_thumbnail_medium/public/BajariPatrick.jpg",
+    "bio": "Pat Bajari built Amazon's economics team from scratch to 400+ PhD economists, creating the template that every tech company now follows. His empirical methods for studying auctions and contracts are foundational. He passed away in December 2025 at age 55.",
+    "specialty": ["Empirical Auctions", "Industrial Organization", "Structural Econometrics"],
+    "papers": [
+      {
+        "title": "Identification and Estimation of a Structural Model",
+        "year": 2003,
+        "venue": "AER",
+        "url": "https://www.aeaweb.org/articles?id=10.1257/000282803322655454",
+        "note": "Foundational empirical auctions paper"
+      },
+      {
+        "title": "Machine Learning Methods Economists Should Know About",
+        "year": 2021,
+        "venue": "Annual Review of Economics",
+        "url": "https://www.annualreviews.org/doi/10.1146/annurev-economics-080217-053421",
+        "note": "Bridge between ML and economics"
+      }
+    ],
+    "links": {
+      "personal": "https://patbajari.ai/",
+      "scholar": "https://scholar.google.com/citations?user=5LcAyWUAAAAJ"
+    }
+  },
+  {
+    "slug": "patrick-hummel",
+    "name": "Patrick Hummel",
+    "title": "Partner Director of Economics",
+    "company": "Microsoft Cloud",
+    "phd": "Stanford GSB, 2010",
+    "image": "https://media.licdn.com/dms/image/C5603AQHQxNJIJlI3zg/profile-displayphoto-shrink_400_400/0/1516337197652",
+    "bio": "Patrick Hummel leads economics for Microsoft Cloud, working on pricing, capacity planning, and market design. Previously at Yahoo and Google, he worked on ad auction design with Preston McAfee.",
+    "specialty": ["Cloud Economics", "Pricing", "Auction Design"],
+    "papers": [
+      {
+        "title": "When Does Machine Learning Succeed in Predicting Winners?",
+        "year": 2018,
+        "venue": "Working Paper",
+        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3169080",
+        "note": "ML for sports prediction markets"
+      }
+    ],
+    "links": {
+      "linkedin": "https://www.linkedin.com/in/patrick-hummel-5b5b4b10/"
+    }
+  },
+  {
+    "slug": "peter-coles",
+    "name": "Peter Coles",
+    "title": "Head Economist for Policy",
+    "company": "Airbnb",
+    "phd": "Stanford, 2009",
+    "image": "https://www.hbs.edu/Style%20Library/api/headshots/pcoles.png",
+    "bio": "Peter Coles leads economics at Airbnb, applying market design to the sharing economy. Previously Head Economist at eBay and professor at Harvard Business School. He trained under Nobel laureate Alvin Roth and designed the AEA job market signaling mechanism.",
+    "specialty": ["Market Design", "Matching Markets", "Sharing Economy"],
+    "papers": [
+      {
+        "title": "Preference Signaling in Matching Markets",
+        "year": 2013,
+        "venue": "AEJ: Microeconomics",
+        "url": "https://www.aeaweb.org/articles?id=10.1257/mic.5.2.99",
+        "note": "Design of AEA job market signaling"
+      },
+      {
+        "title": "Optimal Truncation in Matching Markets",
+        "year": 2014,
+        "venue": "Games and Economic Behavior",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0899825614000724",
+        "note": "Strategic behavior in matching"
+      }
+    ],
+    "links": {
+      "scholar": "https://scholar.google.com/citations?user=5vi6xPQAAAAJ"
+    }
+  },
+  {
+    "slug": "preston-mcafee",
+    "name": "Preston McAfee",
+    "title": "Distinguished Scientist",
+    "company": "Google (prev. Microsoft, Yahoo)",
+    "phd": "Purdue, 1980",
+    "image": "https://vita.mcafee.cc/images/head.png",
+    "bio": "Preston McAfee is an auction design legend. He designed the FCC spectrum auctions with Milgrom and Wilson. As Chief Economist at Microsoft and VP at Yahoo, he built world-class economics teams. He founded ACM Transactions on Economics and Computation.",
+    "specialty": ["Auction Theory", "Mechanism Design", "Antitrust"],
+    "papers": [
+      {
+        "title": "A Dominant Strategy Double Auction",
+        "year": 1992,
+        "venue": "J. Economic Theory",
+        "url": "https://www.sciencedirect.com/science/article/pii/002205319290055P",
+        "note": "Foundational auction theory"
+      },
+      {
+        "title": "Incentive Compatibility and Internet Advertising",
+        "year": 2011,
+        "venue": "Working Paper",
+        "url": "https://vita.mcafee.cc/papers/incentive.pdf",
+        "note": "Theory of online ad markets"
+      },
+      {
+        "title": "Introduction to Economic Analysis",
+        "year": 2006,
+        "venue": "Open Textbook",
+        "url": "https://open.umn.edu/opentextbooks/textbooks/introduction-to-economic-analysis",
+        "note": "Free, open-source economics textbook"
+      }
+    ],
+    "links": {
+      "personal": "https://vita.mcafee.cc/",
+      "scholar": "https://scholar.google.com/citations?user=y8PJZAQAAAAJ"
+    }
+  },
+  {
+    "slug": "scott-kominers",
+    "name": "Scott Kominers",
+    "title": "Professor & Research Partner",
+    "company": "Harvard & a16z crypto",
+    "phd": "Harvard, 2011",
+    "image": "https://www.hbs.edu/Style%20Library/api/headshots/skominers.png",
+    "bio": "Scott Kominers bridges market design theory and crypto/Web3 practice. He's a professor at Harvard Business School and Research Partner at a16z crypto. His work on NFTs and tokenomics shapes how we design digital marketplaces.",
+    "specialty": ["Market Design", "Crypto/Web3", "Matching Theory"],
+    "papers": [
+      {
+        "title": "Property Rights and the Efficiency of Bargaining",
+        "year": 2017,
+        "venue": "Journal of Economic Theory",
+        "url": "https://www.sciencedirect.com/science/article/pii/S0022053117301114",
+        "note": "Theory of property rights in markets"
+      },
+      {
+        "title": "How to Build a Low-cost ERC721",
+        "year": 2022,
+        "venue": "a16z Research",
+        "url": "https://a16zcrypto.com/",
+        "note": "Practical NFT design"
+      }
+    ],
+    "links": {
+      "personal": "https://www.scottkom.com/",
+      "scholar": "https://scholar.google.com/citations?user=L7KIXx4AAAAJ",
+      "twitter": "https://twitter.com/skominers"
+    }
+  },
+  {
+    "slug": "sonia-jaffe",
+    "name": "Sonia Jaffe",
+    "title": "Principal Researcher",
+    "company": "Microsoft Research",
+    "phd": "Harvard, 2015",
+    "image": "https://www.microsoft.com/en-us/research/uploads/prod/2020/06/MSFT-Sonia-Jaffe.jpg",
+    "bio": "Sonia Jaffe works in Microsoft's Office of the Chief Economist on antitrust, labor, and health economics. Her research on health insurance has influenced policy debates. Previously on the Stanford GSB faculty.",
+    "specialty": ["Health Economics", "Labor Economics", "Antitrust"],
+    "papers": [
+      {
+        "title": "The Welfare Implications of Health Insurance",
+        "year": 2019,
+        "venue": "QJE",
+        "url": "https://academic.oup.com/qje/article/134/3/1261/5371179",
+        "note": "Consumer welfare in insurance markets"
+      },
+      {
+        "title": "Antitrust in the Age of Big Data",
+        "year": 2020,
+        "venue": "Microsoft Research Blog",
+        "url": "https://www.microsoft.com/en-us/research/blog/",
+        "note": "Competition policy for tech"
+      }
+    ],
+    "links": {
+      "personal": "https://www.microsoft.com/en-us/research/people/soniaj/",
+      "scholar": "https://scholar.google.com/citations?user=Vq_eFMsAAAAJ"
+    }
+  },
+  {
+    "slug": "steve-tadelis",
+    "name": "Steve Tadelis",
+    "title": "Professor",
+    "company": "UC Berkeley Haas (prev. eBay, Amazon)",
+    "phd": "Stanford, 1995",
+    "image": "https://haas.berkeley.edu/wp-content/uploads/Tadelis-Steve-2022.jpg",
+    "bio": "Steve Tadelis is the godfather of tech-economics field experiments. He led eBay's research team and served as VP at Amazon. His paper showing eBay was wasting millions on ads changed how tech companies think about marketing effectiveness.",
+    "specialty": ["Digital Advertising", "Market Design", "Contracts"],
+    "papers": [
+      {
+        "title": "Consumer Acquisition Cost and Marketing Experiments at eBay",
+        "year": 2015,
+        "venue": "Econometrica",
+        "url": "https://www.econometricsociety.org/publications/econometrica/2015/01/01/consumer-acquisition-cost-and-marketing-experiments-ebay",
+        "note": "The paper that proved eBay was wasting $millions on ads"
+      },
+      {
+        "title": "Game Theory: An Introduction",
+        "year": 2013,
+        "venue": "Textbook",
+        "url": "https://www.amazon.com/Game-Theory-Introduction-Steve-Tadelis/dp/0691129088",
+        "note": "Standard game theory textbook"
+      },
+      {
+        "title": "Reputation and Feedback in Online Markets",
+        "year": 2016,
+        "venue": "JEP",
+        "url": "https://www.aeaweb.org/articles?id=10.1257/jep.30.3.133",
+        "note": "How online reputation works"
+      }
+    ],
+    "links": {
+      "personal": "https://faculty.haas.berkeley.edu/stadelis/",
+      "scholar": "https://scholar.google.com/citations?user=5hE6L2sAAAAJ"
+    }
+  },
+  {
+    "slug": "susan-athey",
+    "name": "Susan Athey",
+    "title": "Economics of Technology Professor",
+    "company": "Stanford GSB",
+    "phd": "Stanford, 1995",
+    "image": "https://gsb-faculty.stanford.edu/susan-athey/files/2025/08/Stanford_Susan_Athey-1048x1280.jpg",
+    "bio": "Susan Athey is the most influential tech economist alive. The first female John Bates Clark Medal winner. She pioneered causal forests (machine learning for causal inference) and served as consulting Chief Economist at Microsoft. Past AEA President and member of the National Academy of Sciences.",
+    "specialty": ["Causal ML", "Market Design", "Digital Economics"],
+    "papers": [
+      {
+        "title": "Generalized Random Forests",
+        "year": 2019,
+        "venue": "Annals of Statistics",
+        "url": "https://projecteuclid.org/journals/annals-of-statistics/volume-47/issue-2/Generalized-random-forests/10.1214/18-AOS1709.full",
+        "note": "The paper that launched causal ML"
+      },
+      {
+        "title": "The Impact of Machine Learning on Economics",
+        "year": 2019,
+        "venue": "NBER",
+        "url": "https://www.nber.org/chapters/c14009",
+        "note": "Roadmap for ML in economics"
+      },
+      {
+        "title": "Economists (and Economics) in Tech Companies",
+        "year": 2019,
+        "venue": "JEP (with Luca)",
+        "url": "https://www.aeaweb.org/articles?id=10.1257/jep.33.1.209",
+        "note": "Definitive guide for aspiring tech economists"
+      }
+    ],
+    "links": {
+      "personal": "https://gsb-faculty.stanford.edu/susan-athey/",
+      "scholar": "https://scholar.google.com/citations?user=UdaJi94AAAAJ",
+      "twitter": "https://twitter.com/susanathey"
+    }
+  }
+]

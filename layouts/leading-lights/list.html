@@ -1,0 +1,188 @@
+{{ define "main" }}
+{{ $lights := .Site.Data.leading_lights }}
+
+<!-- Hero Section -->
+<header class="hero hero-with-image hero-leading-lights">
+    <h1 class="hero-title">Leading Lights</h1>
+    <p class="hero-tagline">{{ len $lights }} economists who forged the path for tech economics</p>
+</header>
+
+<div class="container">
+    <div class="leading-lights-intro">
+        <p>These pioneers built economics teams at tech giants, designed billion-dollar auction systems, and created the field of tech economics. Each profile features their most influential work and contributions.</p>
+    </div>
+
+    <!-- Profile Grid -->
+    <div class="leading-lights-grid">
+        {{ range $lights }}
+        <a href="{{ $.RelPermalink }}{{ .slug }}/" class="light-card" data-aos="fade-up">
+            <div class="light-image-wrapper">
+                <img src="{{ .image }}" alt="{{ .name }}" class="light-image" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name={{ .name | urlize }}&size=400&background=1e293b&color=fff'">
+            </div>
+            <div class="light-info">
+                <h2 class="light-name">{{ .name }}</h2>
+                <p class="light-title">{{ .title }}</p>
+                <p class="light-company">{{ .company }}</p>
+                <div class="light-specialties">
+                    {{ range first 2 .specialty }}
+                    <span class="specialty-tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+            </div>
+        </a>
+        {{ end }}
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Celebrating the pioneers of tech economics</p>
+    </footer>
+</div>
+
+<style>
+/* Leading Lights Hero */
+.hero-leading-lights {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 50%, #0f172a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-leading-lights::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at 30% 20%, rgba(59, 130, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(168, 85, 247, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.leading-lights-intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* Grid Layout */
+.leading-lights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+/* Profile Card */
+.light-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.light-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Large Image */
+.light-image-wrapper {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+}
+
+.light-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.4s ease;
+}
+
+.light-card:hover .light-image {
+    transform: scale(1.05);
+}
+
+/* Card Info */
+.light-info {
+    padding: 1.5rem;
+}
+
+.light-name {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: var(--text-primary);
+}
+
+.light-title {
+    font-size: 0.95rem;
+    color: var(--accent-color);
+    margin: 0 0 0.25rem;
+    font-weight: 500;
+}
+
+.light-company {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0 0 1rem;
+}
+
+.light-specialties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.specialty-tag {
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .light-card {
+    background: rgba(30, 41, 59, 0.8);
+    border-color: rgba(71, 85, 105, 0.5);
+}
+
+[data-theme="dark"] .light-card:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .specialty-tag {
+    background: rgba(59, 130, 246, 0.2);
+    color: #93c5fd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .leading-lights-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .light-name {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .leading-lights-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+{{ end }}
