@@ -1,4 +1,13 @@
 {{ define "main" }}
+<!-- Preconnect to CDNs for faster resource loading -->
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+<link rel="preconnect" href="https://basemaps.cartocdn.com" crossorigin>
+<link rel="preconnect" href="https://www.google.com" crossorigin>
+
+<!-- Preload critical Leaflet resources -->
+<link rel="preload" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" as="script">
+<link rel="preload" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" as="style">
+
 {{ $conferences := where .Site.Data.community "category" "Conferences" }}
 {{ $researchLabs := where .Site.Data.community "category" "Research Labs" }}
 {{ $online := where .Site.Data.community "category" "Online" }}
@@ -388,10 +397,9 @@
                          data-dates="{{ .dates | lower }}"
                          data-subcategory="{{ .subcategory | default "" | lower }}">
                         <div class="card-header">
-                            <img class="resource-favicon"
-                                 src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32"
+                            <img class="resource-favicon lazy-badge"
+                                 data-src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32"
                                  alt=""
-                                 loading="lazy"
                                  onerror="this.style.display='none'">
                             <h3 class="resource-name">
                                 <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
@@ -602,7 +610,10 @@ document.addEventListener('DOMContentLoaded', function() {
         L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/">CARTO</a>',
             maxZoom: 19,
-            subdomains: 'abcd'
+            subdomains: 'abcd',
+            updateWhenIdle: true,
+            updateWhenZooming: false,
+            keepBuffer: 2
         }).addTo(map);
 
         // Create marker cluster group with custom styling
@@ -977,10 +988,10 @@ document.addEventListener('DOMContentLoaded', function() {
             mapView.style.display = '';
             btnMap.classList.add('active');
             // Initialize map on first view (Leaflet needs visible container)
-            setTimeout(() => {
+            requestAnimationFrame(() => {
                 initMap();
                 if (map) map.invalidateSize();
-            }, 100);
+            });
         } else if (view === 'calendar') {
             calendarView.style.display = '';
             btnCalendar.classList.add('active');
@@ -1022,10 +1033,15 @@ document.addEventListener('DOMContentLoaded', function() {
     btnTable.addEventListener('click', () => setActiveView('table'));
 
     // Initialize map on page load (Map is default view)
-    setTimeout(() => {
-        initMap();
-        if (map) map.invalidateSize();
-    }, 100);
+    function tryInitMap() {
+        if (typeof L !== 'undefined' && typeof L.markerClusterGroup !== 'undefined') {
+            initMap();
+            if (map) map.invalidateSize();
+        } else {
+            requestAnimationFrame(tryInitMap);
+        }
+    }
+    requestAnimationFrame(tryInitMap);
 
     // Handle URL hash for direct navigation (e.g., #map, #calendar, #cards, #table)
     const hash = window.location.hash.substring(1);
