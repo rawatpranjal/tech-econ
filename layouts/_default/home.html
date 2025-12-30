@@ -103,6 +103,20 @@
             </div>
         </a>
 
+        <a href="{{ "discover/" | relURL }}" class="section-card section-card-with-image" data-aos="fade-up" data-aos-delay="175">
+            <div class="card-bg" style="background-image: url('/images/hero/discover-hero.webp')"></div>
+            <div class="card-content">
+                <div class="section-icon">
+                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                    </svg>
+                </div>
+                <h3>Discover</h3>
+                <p>{{ .Site.Data.topic_clusters_all.num_clusters }} topic clusters across {{ .Site.Data.topic_clusters_all.num_items }} resources</p>
+            </div>
+        </a>
+
         <a href="{{ "papers/" | relURL }}" class="section-card section-card-with-image" data-aos="fade-up" data-aos-delay="200">
             <div class="card-bg" style="background-image: url('/images/cards/papers-card.webp')"></div>
             <div class="card-content">

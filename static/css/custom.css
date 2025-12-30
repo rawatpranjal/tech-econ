@@ -3324,6 +3324,110 @@ a:hover {
     background: var(--bg-secondary);
 }
 
+/* Homepage Discover Section */
+.homepage-discover-section {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.discover-section-header {
+    margin-bottom: 1rem;
+}
+
+.discover-section-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: var(--text-primary);
+}
+
+.discover-section-header p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.discover-section-header a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.discover-section-header a:hover {
+    text-decoration: underline;
+}
+
+.discover-preview-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.discover-preview-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    min-height: 100px;
+}
+
+.discover-preview-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    border-color: var(--accent);
+}
+
+.discover-preview-count {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.discover-preview-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    text-align: center;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .discover-preview-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .discover-section-header h2 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .discover-preview-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+
+    .discover-preview-card {
+        padding: 1rem 0.75rem;
+        min-height: 80px;
+    }
+
+    .discover-preview-count {
+        font-size: 1.5rem;
+    }
+}
+
 /* Homepage Events Map Section */
 .homepage-events-section {
     margin-bottom: 2rem;
@@ -5441,6 +5545,7 @@ mark.partial {
 .hero-analytics { background-image: url('/images/hero/analytics-hero.webp'); }
 .hero-privacy { background-image: url('/images/hero/privacy-hero.webp'); }
 .hero-about { background-image: url('/images/hero/about-hero.webp'); }
+.hero-discover { background-image: url('/images/hero/discover-hero.webp'); }
 
 /* Book author styling */
 .resource-author {
