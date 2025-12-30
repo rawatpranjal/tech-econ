@@ -66,6 +66,12 @@
             </svg>
             Offers
         </button>
+        <button class="career-tab" data-tab="role-models">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            Role Models
+        </button>
     </div>
 
     <!-- Tab 1: Start Here -->
@@ -103,7 +109,6 @@
         <div class="subtabs">
             <button class="subtab active" data-subtab="role-types">Role Types</button>
             <button class="subtab" data-subtab="what-teams-do">What Teams Do</button>
-            <button class="subtab" data-subtab="role-models">Role Models</button>
         </div>
 
         <!-- Role Types Subtab -->
@@ -156,29 +161,6 @@
             </section>
         </div>
 
-        <!-- Role Models Subtab -->
-        <div id="subtab-role-models" class="subtab-content">
-            <section class="curated-section role-models-section">
-                <div class="section-header">
-                    <h2>Role Models</h2>
-                    <p>{{ len .Site.Data.leading_lights }} pioneers who forged the path for tech economics.</p>
-                </div>
-                <div class="role-models-grid">
-                    {{ range .Site.Data.leading_lights }}
-                    <a href="{{ "leading-lights/" | relURL }}{{ .slug }}/" class="role-model-card">
-                        <div class="role-model-image-wrapper">
-                            <img src="{{ .image }}" alt="{{ .name }}" class="role-model-image" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name={{ .name | urlize }}&size=200&background=1e293b&color=fff'">
-                        </div>
-                        <div class="role-model-info">
-                            <span class="role-model-name">{{ .name }}</span>
-                            <span class="role-model-title">{{ .title }}</span>
-                            <span class="role-model-company">{{ .company }}</span>
-                        </div>
-                    </a>
-                    {{ end }}
-                </div>
-            </section>
-        </div>
     </div>
 
     <!-- Tab 3: Find Jobs -->
@@ -401,6 +383,30 @@
                 </div>
             </section>
         </div>
+    </div>
+
+    <!-- Tab 6: Role Models -->
+    <div id="tab-role-models" class="career-tab-content">
+        <section class="curated-section role-models-section">
+            <div class="section-header">
+                <h2>Role Models</h2>
+                <p>{{ len .Site.Data.leading_lights }} pioneers who forged the path for tech economics.</p>
+            </div>
+            <div class="role-models-grid">
+                {{ range .Site.Data.leading_lights }}
+                <a href="{{ "leading-lights/" | relURL }}{{ .slug }}/" class="role-model-card">
+                    <div class="role-model-image-wrapper">
+                        <img src="{{ .image }}" alt="{{ .name }}" class="role-model-image" loading="lazy" onerror="this.src='https://ui-avatars.com/api/?name={{ .name | urlize }}&size=200&background=1e293b&color=fff'">
+                    </div>
+                    <div class="role-model-info">
+                        <span class="role-model-name">{{ .name }}</span>
+                        <span class="role-model-title">{{ .title }}</span>
+                        <span class="role-model-company">{{ .company }}</span>
+                    </div>
+                </a>
+                {{ end }}
+            </div>
+        </section>
     </div>
 
 </div>
