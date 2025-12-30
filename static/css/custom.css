@@ -8398,3 +8398,56 @@ mark.partial {
         height: 10px;
     }
 }
+
+/* ==================== */
+/* Sidebar Toggles Row  */
+/* ==================== */
+.sidebar-toggles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border-color, #333);
+}
+
+/* ==================== */
+/* Snow Effect          */
+/* ==================== */
+.snow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+.snow-container.hidden {
+    display: none;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: #fff;
+    font-size: 1em;
+    opacity: 0.8;
+    animation: snowfall linear infinite, sway ease-in-out infinite;
+}
+
+@keyframes snowfall {
+    0% { transform: translateY(-10px); }
+    100% { transform: translateY(100vh); }
+}
+
+@keyframes sway {
+    0%, 100% { margin-left: 0; }
+    50% { margin-left: 30px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .snowflake { animation: none; display: none; }
+}
