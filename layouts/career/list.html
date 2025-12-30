@@ -103,7 +103,7 @@
         <div class="subtabs">
             <button class="subtab active" data-subtab="role-types">Role Types</button>
             <button class="subtab" data-subtab="what-teams-do">What Teams Do</button>
-            <button class="subtab" data-subtab="role-models">Role Models</button>
+            <button class="subtab" data-subtab="role-models">Leading Lights</button>
         </div>
 
         <!-- Role Types Subtab -->
@@ -156,11 +156,11 @@
             </section>
         </div>
 
-        <!-- Role Models Subtab -->
+        <!-- Leading Lights Subtab -->
         <div id="subtab-role-models" class="subtab-content">
             <section class="curated-section role-models-section">
                 <div class="section-header">
-                    <h2>Role Models</h2>
+                    <h2>Leading Lights</h2>
                     <p>{{ len .Site.Data.leading_lights }} pioneers who forged the path for tech economics.</p>
                 </div>
                 <div class="role-models-grid">
@@ -558,7 +558,7 @@ document.addEventListener('DOMContentLoaded', function() {
     margin: 0;
 }
 
-/* Role Models Grid */
+/* Leading Lights Grid */
 .role-models-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
