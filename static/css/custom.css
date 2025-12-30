@@ -2635,6 +2635,13 @@ a:hover {
     color: var(--accent);
 }
 
+.homepage-footer .link-health {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    opacity: 0.7;
+}
+
 /* Homepage Mobile Responsive */
 @media (max-width: 768px) {
     .homepage {

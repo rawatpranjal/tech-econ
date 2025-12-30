@@ -8,9 +8,11 @@ import asyncio
 import aiohttp
 import os
 import sys
+from datetime import datetime, timezone
 from pathlib import Path
 
 DATA_DIR = Path(__file__).parent.parent / "data"
+STATIC_DIR = Path(__file__).parent.parent / "static"
 
 # Files to check
 DATA_FILES = [
@@ -139,6 +141,32 @@ async def main():
         print(f"\n::warning::Found {len(errors)} broken links")
         # Don't fail the workflow, just warn
         # sys.exit(1)
+
+    # Calculate link health score
+    total_checked = ok_count + len(errors) + len(timeouts)
+    if total_checked > 0:
+        score = round((ok_count / total_checked) * 100, 1)
+    else:
+        score = 100.0
+
+    # Save link health report
+    health_data = {
+        "score": score,
+        "total": total_checked,
+        "working": ok_count,
+        "broken": len(errors),
+        "timeouts": len(timeouts),
+        "skipped": skipped_count,
+        "updated": datetime.now(timezone.utc).isoformat()
+    }
+
+    health_file = STATIC_DIR / "link-health.json"
+    with open(health_file, "w") as f:
+        json.dump(health_data, f, indent=2)
+        f.write("\n")
+
+    print(f"\nLink health score: {score}%")
+    print(f"Saved to {health_file}")
 
     print("\nLink check complete!")
 

@@ -191,6 +191,7 @@
     <!-- Footer -->
     <footer class="homepage-footer">
         <p>Built for tech economists. <a href="https://github.com/rawatpranjal/tech-econ" target="_blank">Contribute on GitHub</a></p>
+        <p class="link-health" id="link-health"></p>
     </footer>
 </div>
 
@@ -225,6 +226,21 @@
             // Fallback
             el.textContent = '~11-37 economists browsing per hour';
         });
+})();
+
+// Fetch and display link health score
+(function() {
+    var el = document.getElementById('link-health');
+    if (!el) return;
+
+    fetch('/link-health.json')
+        .then(function(r) { return r.json(); })
+        .then(function(data) {
+            if (data.score !== undefined) {
+                el.textContent = 'Link Health: ' + data.score + '% (' + data.working + '/' + data.total + ' links working)';
+            }
+        })
+        .catch(function() {});
 })();
 </script>
 {{ end }}

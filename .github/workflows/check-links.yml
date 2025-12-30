@@ -5,6 +5,9 @@ on:
     - cron: '0 6 * * 0'  # Weekly on Sunday at 6am UTC
   workflow_dispatch:  # Allow manual trigger
 
+permissions:
+  contents: write
+
 jobs:
   check-links:
     runs-on: ubuntu-latest
@@ -24,3 +27,11 @@ jobs:
 
       - name: Check links in data files
         run: python scripts/check_links.py
+
+      - name: Commit link health report
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add static/link-health.json
+          git diff --staged --quiet || git commit -m "Update link health report"
+          git push
