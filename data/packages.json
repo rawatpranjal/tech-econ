@@ -5227,5 +5227,239 @@
     ],
     "best_for": "Modern treatment effect bounds with tighter identification under various assumptions, implementing Lee & Weidner (2021)",
     "language": "R"
+  },
+  {
+    "name": "glmnet",
+    "description": "Efficient procedures for fitting regularized generalized linear models via penalized maximum likelihood. Implements LASSO, ridge regression, and elastic net with extremely fast coordinate descent algorithms. Foundation for high-dimensional regression and causal ML.",
+    "category": "Machine Learning",
+    "docs_url": "https://glmnet.stanford.edu/",
+    "github_url": null,
+    "url": "https://cran.r-project.org/package=glmnet",
+    "install": "install.packages(\"glmnet\")",
+    "tags": [
+      "LASSO",
+      "ridge",
+      "elastic-net",
+      "regularization",
+      "high-dimensional"
+    ],
+    "best_for": "LASSO, ridge, and elastic net regularization—foundation for high-dimensional regression and causal ML",
+    "language": "R"
+  },
+  {
+    "name": "ranger",
+    "description": "Fast implementation of random forests particularly suited for high-dimensional data. Provides survival forests, classification, and regression with efficient memory usage. Core backend for grf's causal forests.",
+    "category": "Machine Learning",
+    "docs_url": "https://cran.r-project.org/web/packages/ranger/ranger.pdf",
+    "github_url": "https://github.com/imbs-hl/ranger",
+    "url": "https://cran.r-project.org/package=ranger",
+    "install": "install.packages(\"ranger\")",
+    "tags": [
+      "random-forests",
+      "survival-forests",
+      "high-dimensional",
+      "fast",
+      "causal-forests"
+    ],
+    "best_for": "Fast random forests for high-dimensional data—backend for grf causal forests",
+    "language": "R"
+  },
+  {
+    "name": "xgboost",
+    "description": "Extreme Gradient Boosting implementing state-of-the-art gradient boosted decision trees. Highly efficient, scalable, and portable with interfaces to R, Python, and other languages. Essential for prediction in double ML workflows.",
+    "category": "Machine Learning",
+    "docs_url": "https://xgboost.readthedocs.io/",
+    "github_url": "https://github.com/dmlc/xgboost",
+    "url": "https://cran.r-project.org/package=xgboost",
+    "install": "install.packages(\"xgboost\")",
+    "tags": [
+      "gradient-boosting",
+      "XGBoost",
+      "prediction",
+      "machine-learning",
+      "ensemble"
+    ],
+    "best_for": "State-of-the-art gradient boosting for prediction in causal ML and double ML workflows",
+    "language": "R"
+  },
+  {
+    "name": "tidymodels",
+    "description": "Modern framework for modeling and machine learning using tidyverse principles. Meta-package including parsnip (model specification), recipes (preprocessing), workflows, tune (hyperparameter tuning), and yardstick (metrics). Successor to caret.",
+    "category": "Machine Learning",
+    "docs_url": "https://www.tidymodels.org/",
+    "github_url": "https://github.com/tidymodels/tidymodels",
+    "url": "https://cran.r-project.org/package=tidymodels",
+    "install": "install.packages(\"tidymodels\")",
+    "tags": [
+      "machine-learning",
+      "tidyverse",
+      "modeling-framework",
+      "hyperparameter-tuning",
+      "preprocessing"
+    ],
+    "best_for": "Modern tidyverse-native ML framework with reproducible workflows—successor to caret",
+    "language": "R"
+  },
+  {
+    "name": "fwildclusterboot",
+    "description": "Fast wild cluster bootstrap implementation following Roodman et al. (2019)—up to 1000× faster than alternatives. Critical for panel data with few clusters. Integrates with fixest and lfe for efficient inference.",
+    "category": "Bootstrap & Inference",
+    "docs_url": "https://s3alfisc.github.io/fwildclusterboot/",
+    "github_url": "https://github.com/s3alfisc/fwildclusterboot",
+    "url": "https://cran.r-project.org/package=fwildclusterboot",
+    "install": "install.packages(\"fwildclusterboot\")",
+    "tags": [
+      "wild-bootstrap",
+      "cluster-robust",
+      "few-clusters",
+      "panel-data",
+      "fixest"
+    ],
+    "best_for": "Fast wild cluster bootstrap for panel data with few clusters, implementing Roodman et al. (2019)",
+    "language": "R"
+  },
+  {
+    "name": "boot",
+    "description": "Classic bootstrap methods implementing the approaches described in Davison & Hinkley (1997). Provides functions for both parametric and nonparametric resampling with various confidence interval methods.",
+    "category": "Bootstrap & Inference",
+    "docs_url": "https://cran.r-project.org/web/packages/boot/boot.pdf",
+    "github_url": null,
+    "url": "https://cran.r-project.org/package=boot",
+    "install": "install.packages(\"boot\")",
+    "tags": [
+      "bootstrap",
+      "resampling",
+      "confidence-intervals",
+      "nonparametric",
+      "parametric"
+    ],
+    "best_for": "Classic bootstrap methods from Davison & Hinkley (1997) for general resampling inference",
+    "language": "R"
+  },
+  {
+    "name": "rsample",
+    "description": "Modern tidyverse-compatible resampling infrastructure. Provides functions for creating resamples (bootstrap, cross-validation, time series splits) that integrate seamlessly with tidymodels workflows.",
+    "category": "Bootstrap & Inference",
+    "docs_url": "https://rsample.tidymodels.org/",
+    "github_url": "https://github.com/tidymodels/rsample",
+    "url": "https://cran.r-project.org/package=rsample",
+    "install": "install.packages(\"rsample\")",
+    "tags": [
+      "resampling",
+      "cross-validation",
+      "bootstrap",
+      "tidymodels",
+      "time-series-cv"
+    ],
+    "best_for": "Tidyverse-native resampling for bootstrap, cross-validation, and time series splits",
+    "language": "R"
+  },
+  {
+    "name": "marginaleffects",
+    "description": "Modern standard for interpreting regression results—up to 1000× faster than margins. Computes marginal effects, predictions, contrasts, and slopes for 100+ model classes. Published in JSS 2024.",
+    "category": "Marginal Effects",
+    "docs_url": "https://marginaleffects.com/",
+    "github_url": "https://github.com/vincentarelbundock/marginaleffects",
+    "url": "https://cran.r-project.org/package=marginaleffects",
+    "install": "install.packages(\"marginaleffects\")",
+    "tags": [
+      "marginal-effects",
+      "predictions",
+      "contrasts",
+      "interpretation",
+      "slopes"
+    ],
+    "best_for": "Modern marginal effects interpretation—1000× faster than margins with 100+ model support, JSS 2024",
+    "language": "R"
+  },
+  {
+    "name": "emmeans",
+    "description": "Estimated Marginal Means (least-squares means) for factorial designs. Computes adjusted means and contrasts for balanced and unbalanced designs, with support for mixed models and Bayesian models.",
+    "category": "Marginal Effects",
+    "docs_url": "https://rvlenth.github.io/emmeans/",
+    "github_url": "https://github.com/rvlenth/emmeans",
+    "url": "https://cran.r-project.org/package=emmeans",
+    "install": "install.packages(\"emmeans\")",
+    "tags": [
+      "marginal-means",
+      "least-squares-means",
+      "factorial-designs",
+      "contrasts",
+      "mixed-models"
+    ],
+    "best_for": "Estimated marginal means for factorial designs with interaction interpretation",
+    "language": "R"
+  },
+  {
+    "name": "DeclareDesign",
+    "description": "Ex ante experimental design declaration and diagnosis. Enables researchers to formally describe their research design, diagnose statistical properties via simulation, and improve designs before data collection.",
+    "category": "Experimental Design",
+    "docs_url": "https://declaredesign.org/",
+    "github_url": "https://github.com/DeclareDesign/DeclareDesign",
+    "url": "https://cran.r-project.org/package=DeclareDesign",
+    "install": "install.packages(\"DeclareDesign\")",
+    "tags": [
+      "experimental-design",
+      "pre-registration",
+      "power-analysis",
+      "simulation",
+      "design-diagnosis"
+    ],
+    "best_for": "Ex ante experimental design declaration and diagnosis via simulation",
+    "language": "R"
+  },
+  {
+    "name": "randomizr",
+    "description": "Proper randomization procedures for experiments with known assignment probabilities. Implements simple, complete, block, and cluster randomization with exact probability calculations for IPW estimation.",
+    "category": "Experimental Design",
+    "docs_url": "https://declaredesign.org/r/randomizr/",
+    "github_url": "https://github.com/DeclareDesign/randomizr",
+    "url": "https://cran.r-project.org/package=randomizr",
+    "install": "install.packages(\"randomizr\")",
+    "tags": [
+      "randomization",
+      "block-randomization",
+      "cluster-randomization",
+      "assignment-probability",
+      "experiments"
+    ],
+    "best_for": "Proper experimental randomization with exact assignment probabilities for IPW",
+    "language": "R"
+  },
+  {
+    "name": "fabricatr",
+    "description": "Simulates realistic social science data for power analysis and design testing. Creates hierarchical data structures with correlated variables matching real-world patterns.",
+    "category": "Experimental Design",
+    "docs_url": "https://declaredesign.org/r/fabricatr/",
+    "github_url": "https://github.com/DeclareDesign/fabricatr",
+    "url": "https://cran.r-project.org/package=fabricatr",
+    "install": "install.packages(\"fabricatr\")",
+    "tags": [
+      "data-simulation",
+      "power-analysis",
+      "hierarchical-data",
+      "synthetic-data",
+      "design-testing"
+    ],
+    "best_for": "Simulating realistic hierarchical data for experimental power analysis and design testing",
+    "language": "R"
+  },
+  {
+    "name": "contextual",
+    "description": "Multi-armed bandit algorithms including Thompson Sampling, UCB, and LinUCB. Directly applicable to adaptive A/B testing and recommendation optimization with simulation and evaluation tools.",
+    "category": "Experimental Design",
+    "docs_url": "https://nth-iteration-labs.github.io/contextual/",
+    "github_url": "https://github.com/Nth-iteration-labs/contextual",
+    "url": "https://cran.r-project.org/package=contextual",
+    "install": "install.packages(\"contextual\")",
+    "tags": [
+      "bandits",
+      "Thompson-sampling",
+      "UCB",
+      "adaptive-experiments",
+      "A/B-testing"
+    ],
+    "best_for": "Multi-armed bandits for adaptive A/B testing with Thompson Sampling, UCB, LinUCB",
+    "language": "R"
   }
 ]
