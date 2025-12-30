@@ -253,8 +253,9 @@
         self.workerReady = false;
       };
     } catch (e) {
-      console.warn('[UnifiedSearch] Web Worker not supported, using fallback');
+      console.warn('[UnifiedSearch] Web Worker not supported, search disabled');
       this.workerReady = false;
+      this.worker = null;  // Explicitly null so guards work
     }
   };
 
@@ -869,6 +870,13 @@
     this.loadingState = document.getElementById('global-search-loading');
     this.hint = document.getElementById('global-search-hint');
     this.triggers = document.querySelectorAll('.global-search-trigger, .search-input-wrapper');
+
+    // Guard: ensure critical elements exist
+    if (!this.input || !this.resultsContainer) {
+      console.error('[UnifiedSearch] Required DOM elements missing (input or resultsContainer)');
+      return;
+    }
+
     this.currentTypeFilter = 'all';  // Filter state
 
     // Create preview panel for hover previews (desktop only)
@@ -1135,14 +1143,14 @@
    * Open modal
    */
   UnifiedSearch.prototype.openModal = function() {
-    if (!this.modal) return;
+    if (!this.modal || !this.input) return;
     this.modal.style.display = 'flex';
     this.isOpen = true;
     this.selectedIndex = -1;
     this.flatResults = [];
     this.input.value = '';
     var self = this;
-    setTimeout(function() { self.input.focus(); }, 50);
+    setTimeout(function() { if (self.input) self.input.focus(); }, 50);
     this.showHint();
     document.body.style.overflow = 'hidden';
 
@@ -1197,8 +1205,13 @@
 
     // Parse query for advanced syntax (phrases, filters, negations)
     if (typeof QueryParser !== 'undefined') {
-      this.parsedQuery = QueryParser.parse(query);
-      console.log('[UnifiedSearch] Parsed query:', this.parsedQuery);
+      try {
+        this.parsedQuery = QueryParser.parse(query);
+        console.log('[UnifiedSearch] Parsed query:', this.parsedQuery);
+      } catch (e) {
+        console.warn('[UnifiedSearch] Query parse failed:', e);
+        this.parsedQuery = null;
+      }
     } else {
       this.parsedQuery = null;
     }
@@ -1237,6 +1250,13 @@
           self.currentResults = results.slice(0, CONFIG.maxTotalResults);
 
           if (self.currentResults.length === 0) {
+            // Track zero-result query for content gap analysis
+            if (window.Tracker && typeof window.Tracker.track === 'function') {
+              window.Tracker.track('zero_result', {
+                q: query.toLowerCase(),
+                enhanced: enhancedQuery !== searchQuery
+              });
+            }
             self.showEmpty();
             self.flatResults = [];
           } else {
