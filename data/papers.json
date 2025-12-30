@@ -1456,6 +1456,19 @@
                 "Synthetic Control"
               ],
               "citations": 182
+            },
+            {
+              "title": "Synthetic Learner: Model-free inference on treatments over time",
+              "authors": "Davide Viviano, Jelena Bradic",
+              "year": 2023,
+              "tag": "SOTA",
+              "description": "Non-parametric algorithm for detecting treatment effects over time using synthetic controls with ML methods (Random Forest, Lasso, etc.) without assuming correct model specification.",
+              "url": "https://www.sciencedirect.com/science/article/abs/pii/S0304407622001725",
+              "tags": [
+                "Observational Causal Inference",
+                "Synthetic Control"
+              ],
+              "citations": 50
             }
           ]
         },

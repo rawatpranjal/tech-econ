@@ -1,0 +1,91 @@
+# Leading Lights - Seed Configuration
+# Trailblazer economists who forged paths in tech
+
+seed_people:
+  # Google pioneers
+  - Hal Varian
+  - Preston McAfee
+  - Michael Schwarz
+
+  # Amazon builders
+  - Pat Bajari
+  - Steve Tadelis
+
+  # Stanford/academia-tech bridge
+  - Susan Athey
+  - Michael Ostrovsky
+  - Erik Brynjolfsson
+  - Michael Luca
+
+  # Platform economists
+  - Peter Coles
+  - John List
+  - Jonathan Hall
+
+  # Market design
+  - Glen Weyl
+
+  # Others to explore
+  - Emily Oster
+  - Liran Einav
+  - Jonathan Levin
+  - Scott Kominers
+  - Andrey Fradkin
+
+target_companies:
+  # FAANG+
+  - Google
+  - Amazon
+  - Meta
+  - Apple
+  - Netflix
+  - Microsoft
+
+  # Ride-sharing/Delivery
+  - Uber
+  - Lyft
+  - DoorDash
+  - Instacart
+
+  # Travel/Hospitality
+  - Airbnb
+  - Booking.com
+  - Expedia
+
+  # Fintech
+  - Stripe
+  - Square
+  - PayPal
+  - Robinhood
+  - Coinbase
+
+  # Other tech
+  - LinkedIn
+  - Spotify
+  - Zillow
+  - Yelp
+  - eBay
+  - Salesforce
+  - Adobe
+  - Twitter
+  - Snap
+  - Pinterest
+
+# Query templates for Perplexity
+query_templates:
+  by_seed: |
+    {seed_name} is a prominent tech economist. List other PhD economists
+    who have worked with them, co-authored papers, or held similar roles
+    at the same companies. Focus on people currently in tech industry
+    senior roles or professors with strong tech connections.
+    For each person provide: name, current role, PhD institution.
+
+  by_company: |
+    List all economists with PhD degrees currently working at {company}
+    in senior roles (Director, VP, Principal, Senior Staff, Chief Economist).
+    For each person provide: Full name, Current title, PhD institution if known.
+
+  by_role: |
+    List all current Chief Economists, Head of Economics, or Director
+    of Economics at major US tech companies. Include their PhD institution
+    and current company.
