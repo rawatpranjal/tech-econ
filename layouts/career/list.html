@@ -283,29 +283,20 @@
                             <button class="region-pill" data-region="latam">LatAm</button>
                         </div>
                     </div>
-                    <div class="filter-group">
-                        <label class="economist-toggle">
-                            <input type="checkbox" id="economist-filter">
-                            <span class="toggle-label">Economist-friendly only</span>
-                        </label>
-                    </div>
                 </div>
 
                 <div class="companies-grid">
                     {{ range .Site.Data.career }}
                     {{ if and (eq .tab "find-jobs") (eq .subtab "companies") }}
                     {{ $region := "us" }}
-                    {{ $isEconomist := false }}
                     {{ range .tags }}
                         {{ if eq . "Europe" }}{{ $region = "europe" }}{{ end }}
                         {{ if eq . "Asia" }}{{ $region = "asia" }}{{ end }}
                         {{ if eq . "LatAm" }}{{ $region = "latam" }}{{ end }}
-                        {{ if eq . "economist-title" }}{{ $isEconomist = true }}{{ end }}
                     {{ end }}
-                    <a href="{{ .url }}" target="_blank" rel="noopener" class="company-card" data-sector="{{ .sector }}" data-vertical="{{ .vertical | default "" }}" data-region="{{ $region }}" data-economist="{{ $isEconomist }}" data-name="{{ .name | lower }}">
+                    <a href="{{ .url }}" target="_blank" rel="noopener" class="company-card" data-sector="{{ .sector }}" data-vertical="{{ .vertical | default "" }}" data-region="{{ $region }}" data-name="{{ .name | lower }}">
                         <img class="favicon" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
                         <span class="company-name">{{ .name }}</span>
-                        {{ if $isEconomist }}<span class="economist-badge" title="Explicit economist roles">🎓</span>{{ end }}
                     </a>
                     {{ end }}
                     {{ end }}
@@ -531,12 +522,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Company filtering (sector, vertical, region, economist, search)
+    // Company filtering (sector, vertical, region, search)
     const sectorPills = document.querySelectorAll('.sector-pill');
     const regionPills = document.querySelectorAll('.region-pill');
     const companyCards = document.querySelectorAll('.company-card');
     const sectorDescs = document.querySelectorAll('.sector-description');
-    const economistFilter = document.getElementById('economist-filter');
     const companySearch = document.getElementById('company-search');
     const verticalPillsContainer = document.getElementById('vertical-pills-container');
     const verticalPillsEl = document.getElementById('vertical-pills');
@@ -555,7 +545,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentSector = 'all';
     let currentVertical = 'all';
     let currentRegion = 'all';
-    let economistOnly = false;
     let searchQuery = '';
 
     function filterCompanies() {
@@ -563,10 +552,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const matchesSector = currentSector === 'all' || card.dataset.sector === currentSector;
             const matchesVertical = currentVertical === 'all' || card.dataset.vertical === currentVertical;
             const matchesRegion = currentRegion === 'all' || card.dataset.region === currentRegion;
-            const matchesEconomist = !economistOnly || card.dataset.economist === 'true';
             const matchesSearch = searchQuery === '' || card.dataset.name.includes(searchQuery);
 
-            if (matchesSector && matchesVertical && matchesRegion && matchesEconomist && matchesSearch) {
+            if (matchesSector && matchesVertical && matchesRegion && matchesSearch) {
                 card.style.display = '';
             } else {
                 card.style.display = 'none';
@@ -647,13 +635,6 @@ document.addEventListener('DOMContentLoaded', function() {
             filterCompanies();
         });
     });
-
-    if (economistFilter) {
-        economistFilter.addEventListener('change', function() {
-            economistOnly = this.checked;
-            filterCompanies();
-        });
-    }
 
     if (companySearch) {
         companySearch.addEventListener('input', function() {
@@ -762,33 +743,6 @@ document.addEventListener('DOMContentLoaded', function() {
     background: var(--accent-color);
     border-color: var(--accent-color);
     color: white;
-}
-
-/* Economist Toggle */
-.economist-toggle {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    cursor: pointer;
-    font-size: 0.85rem;
-    color: var(--text-muted);
-}
-
-.economist-toggle input[type="checkbox"] {
-    width: 18px;
-    height: 18px;
-    cursor: pointer;
-    accent-color: var(--accent-color);
-}
-
-.toggle-label {
-    user-select: none;
-}
-
-/* Economist Badge */
-.economist-badge {
-    font-size: 0.75rem;
-    margin-left: 0.25rem;
 }
 
 /* Sector Descriptions */
