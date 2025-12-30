@@ -246,43 +246,96 @@ def parse_readme(content: str) -> list[dict[str, str | None]]:
     return packages
 
 
+def load_existing_packages(path: str) -> list[dict]:
+    """Load existing packages from JSON file.
+
+    Args:
+        path: Path to the packages.json file.
+
+    Returns:
+        List of existing package dictionaries, or empty list if file not found.
+    """
+    try:
+        with open(path, 'r') as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+
+
 def main() -> None:
     """Main entry point for the README conversion script.
 
-    Fetches the upstream README, parses packages, removes duplicates,
-    and saves the result to data/packages.json.
+    Fetches the upstream README, parses packages, merges with existing
+    packages (preserving R packages and other additions), and saves the result.
     """
+    output_path = 'data/packages.json'
+
+    # Load existing packages first (to preserve R packages, etc.)
+    print("Loading existing packages...")
+    existing_packages = load_existing_packages(output_path)
+    existing_by_name = {pkg['name']: pkg for pkg in existing_packages}
+    print(f"  Found {len(existing_packages)} existing packages")
+
+    # Count existing non-Python packages (R, Rust, etc.)
+    non_python = [p for p in existing_packages if p.get('language', 'Python') != 'Python']
+    print(f"  Including {len(non_python)} non-Python packages to preserve")
+
     print("Fetching README from GitHub...")
     content = fetch_readme()
 
-    print("Parsing packages...")
-    packages = parse_readme(content)
+    print("Parsing packages from upstream...")
+    upstream_packages = parse_readme(content)
+    print(f"  Found {len(upstream_packages)} packages in upstream README")
 
-    # Remove duplicates by name and add tags + best_for
+    # Process upstream packages and add Python language tag
     seen = set()
-    unique_packages = []
-    for pkg in packages:
+    merged_packages = []
+
+    for pkg in upstream_packages:
         if pkg['name'] not in seen:
             seen.add(pkg['name'])
             # Generate use-case tags for each package
             pkg['tags'] = generate_tags(pkg['category'], pkg['description'])
             # Add "best for" field from category mapping
             pkg['best_for'] = CATEGORY_BEST_FOR.get(pkg['category'], "")
-            unique_packages.append(pkg)
+            # Mark as Python package (from upstream README)
+            pkg['language'] = 'Python'
+            merged_packages.append(pkg)
+
+    # Add existing non-Python packages (R, Rust, etc.) that weren't in upstream
+    for pkg in existing_packages:
+        if pkg['name'] not in seen and pkg.get('language', 'Python') != 'Python':
+            seen.add(pkg['name'])
+            merged_packages.append(pkg)
+
+    # Also preserve any Python packages that were manually added and not in upstream
+    for pkg in existing_packages:
+        if pkg['name'] not in seen:
+            seen.add(pkg['name'])
+            merged_packages.append(pkg)
 
     # Sort by category then name
-    unique_packages.sort(key=lambda x: (x['category'], x['name']))
+    merged_packages.sort(key=lambda x: (x['category'], x['name']))
 
     # Save to data directory
-    output_path = 'data/packages.json'
     with open(output_path, 'w') as f:
-        json.dump(unique_packages, f, indent=2)
+        json.dump(merged_packages, f, indent=2)
 
-    print(f"Saved {len(unique_packages)} packages to {output_path}")
+    print(f"\nSaved {len(merged_packages)} packages to {output_path}")
+
+    # Print language summary
+    languages = {}
+    for pkg in merged_packages:
+        lang = pkg.get('language', 'Python')
+        languages[lang] = languages.get(lang, 0) + 1
+
+    print("\nPackages by language:")
+    for lang, count in sorted(languages.items()):
+        print(f"  {lang}: {count}")
 
     # Print category summary
     categories = {}
-    for pkg in unique_packages:
+    for pkg in merged_packages:
         cat = pkg['category']
         categories[cat] = categories.get(cat, 0) + 1
 
