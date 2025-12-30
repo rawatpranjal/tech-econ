@@ -35,6 +35,32 @@ SKIP_DOMAINS = [
     "x.com",
     "facebook.com",
     "instagram.com",
+    "medium.com",          # Blocks bots
+    "leetcode.com",        # Blocks bots
+    "sec.gov",             # Blocks bots
+    "zillow.com",          # Blocks bots
+    "freakonomics.com",    # Blocks bots
+    "doordash.engineering", # Blocks bots
+    "uber.com",            # Returns 406
+    "informs.org",         # Various issues
+    "pubsonline.informs.org",
+    "forecasters.org",     # Blocks bots
+    "statmodeling.stat.columbia.edu",  # Blocks bots
+    "netflixtechblog.com", # SSL issues
+    "eng.lyft.com",        # SSL issues
+    "mediaspace.gatech.edu", # SSL issues
+    "leonwei.com",         # Blocks bots
+    "sciencedirect.com",   # Blocks bots
+    "data.iowa.gov",       # Slow/timeout
+    "kevinsheppard.com",   # Slow/timeout
+    "nabe.com",            # Various issues
+    "bts.gov",             # Blocks bots
+    "ec.sigecom.org",      # Connection issues
+    "wine-conference.org", # Connection issues
+    "data-mining-cup.com", # Timeout
+    "ai.baidu.com",        # Various issues
+    "openicpsr.org",       # Blocks bots
+    "web.stanford.edu",    # Various issues
 ]
 
 async def check_url(session, url, semaphore):
