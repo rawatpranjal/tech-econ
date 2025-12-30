@@ -13808,6 +13808,78 @@
               ]
             }
           ]
+        },
+        {
+          "id": "survival-analysis-time-to-event",
+          "name": "Survival Analysis & Time-to-Event Models",
+          "application": "Model censored time-to-event outcomes for churn, LTV, and engagement",
+          "papers": [
+            {
+              "title": "Nonparametric Estimation from Incomplete Observations",
+              "authors": "Edward L. Kaplan, Paul Meier",
+              "year": 1958,
+              "tag": "Classic",
+              "description": "Introduced the Kaplan-Meier estimator (product-limit estimator), the universal method for estimating survival curves from censored data. Every survival analysis begins here—essential for visualizing retention curves, comparing cohorts, and calculating median time-to-churn.",
+              "url": "https://www.jstor.org/stable/2281868",
+              "tags": [
+                "Statistics",
+                "Survival Analysis & Time-to-Event Models"
+              ],
+              "citations": 65000
+            },
+            {
+              "title": "Regression Models and Life-Tables",
+              "authors": "David R. Cox",
+              "year": 1972,
+              "tag": "Classic",
+              "description": "Introduced the Cox proportional hazards model, enabling regression analysis on survival data while leaving the baseline hazard unspecified. Ranked 24th among all scientific papers ever published. The workhorse for identifying churn drivers and estimating treatment effects of retention interventions.",
+              "url": "https://www.jstor.org/stable/2985181",
+              "tags": [
+                "Statistics",
+                "Survival Analysis & Time-to-Event Models"
+              ],
+              "citations": 65000
+            },
+            {
+              "title": "A Proportional Hazards Model for the Subdistribution of a Competing Risk",
+              "authors": "Jason P. Fine, Robert J. Gray",
+              "year": 1999,
+              "tag": "Classic",
+              "description": "Extended Cox regression to competing risks—situations where multiple mutually exclusive event types are possible. Answers 'what's the probability of Event A by time t, given Event B could happen first?' Critical for subscription dynamics where users can churn, upgrade, downgrade, or convert.",
+              "url": "https://www.jstor.org/stable/2670170",
+              "tags": [
+                "Statistics",
+                "Survival Analysis & Time-to-Event Models"
+              ],
+              "citations": 8000
+            },
+            {
+              "title": "Random Survival Forests",
+              "authors": "Hemant Ishwaran, Udaya B. Kogalur, Eugene H. Blackstone, Michael S. Lauer",
+              "year": 2008,
+              "tag": "SOTA",
+              "description": "Extended random forests to censored survival data, creating a nonparametric, ensemble-based alternative to Cox regression. Captures complex interactions without proportional hazards assumption. The go-to ML approach for churn prediction with high-dimensional feature sets.",
+              "url": "https://projecteuclid.org/journals/annals-of-applied-statistics/volume-2/issue-3/Random-survival-forests/10.1214/08-AOAS169.full",
+              "tags": [
+                "Statistics",
+                "Survival Analysis & Time-to-Event Models"
+              ],
+              "citations": 2500
+            },
+            {
+              "title": "DeepSurv: Personalized Treatment Recommender System Using a Cox Proportional Hazards Deep Neural Network",
+              "authors": "Jared L. Katzman, Uri Shaham, Alexander Cloninger, Jonathan Bates, Tingting Jiang, Yuval Kluger",
+              "year": 2018,
+              "tag": "SOTA",
+              "description": "Married deep learning with Cox regression by replacing the linear predictor with a neural network. Includes framework for personalized treatment recommendations—identifying which retention interventions work best for which users. The bridge between survival analysis and modern recommender systems.",
+              "url": "https://bmcmedresmethodol.biomedcentral.com/articles/10.1186/s12874-018-0482-1",
+              "tags": [
+                "Statistics",
+                "Survival Analysis & Time-to-Event Models"
+              ],
+              "citations": 1400
+            }
+          ]
         }
       ]
     }
