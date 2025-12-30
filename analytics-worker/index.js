@@ -122,13 +122,21 @@ async function handleStats(request, env, origin) {
     do {
       const list = await env.ANALYTICS_EVENTS.list({ prefix: 'events:', cursor, limit: 1000 });
 
-      for (const key of list.keys) {
-        const data = await env.ANALYTICS_EVENTS.get(key.name);
-        if (data) {
-          try {
-            const events = JSON.parse(data);
-            allEvents.push(...events);
-          } catch (e) {}
+      // Fetch all keys in parallel (batch of 50 to avoid overwhelming)
+      const BATCH_SIZE = 50;
+      for (let i = 0; i < list.keys.length; i += BATCH_SIZE) {
+        const batch = list.keys.slice(i, i + BATCH_SIZE);
+        const results = await Promise.all(
+          batch.map(key => env.ANALYTICS_EVENTS.get(key.name))
+        );
+
+        for (const data of results) {
+          if (data) {
+            try {
+              const events = JSON.parse(data);
+              allEvents.push(...events);
+            } catch (e) {}
+          }
         }
       }
 
