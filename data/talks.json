@@ -3832,5 +3832,85 @@
     "url": "https://bookdown.org/stanfordgsbsilab/ml-ci-tutorial/",
     "type": "Course",
     "tags": ["Causal Inference", "Machine Learning", "Course"]
+  },
+  {
+    "name": "Peter Frazier: Signaling with Surge Pricing (Simons 2018)",
+    "description": "Natural experiment from surge heatmap outage proving 10-60% of driver repositioning comes from surge visibility. Foundational work on information design in marketplaces.",
+    "category": "Pricing & Market Design",
+    "url": "https://simons.berkeley.edu/talks/peter-frazier-3-29-18",
+    "type": "Video",
+    "tags": ["Dynamic Pricing", "Surge Pricing", "Information Design"]
+  },
+  {
+    "name": "Jonathan Hall: Reflections of an Economist Who Manages People (Stanford 2024)",
+    "description": "Uber's Chief Economist on transitioning from research to leadership. Bay Area Tech Economics Seminar at Stanford.",
+    "category": "Strategy & Digital Platforms",
+    "url": "https://datascience.stanford.edu/events/causal-science-center/bay-area-tech-economics-seminar-jonathan-hall-uber",
+    "type": "Video",
+    "tags": ["Tech Economics", "Career", "Leadership"]
+  },
+  {
+    "name": "New Books in Economics: Discovering Prices (Paul Milgrom)",
+    "description": "Inside the FCC's $7 billion spectrum auction design. Nobel laureate explains how auction theory became real-world policy.",
+    "category": "Market Design & Auctions",
+    "url": "https://newbooksnetwork.com/discovering-prices",
+    "type": "Podcast",
+    "tags": ["Auction Design", "Spectrum Auctions", "Nobel Prize"]
+  },
+  {
+    "name": "a16z Podcast: The Marketplace Rules",
+    "description": "Jeff Jordan (former OpenTable CEO) on trust management and community dynamics in marketplaces. Essential for marketplace builders.",
+    "category": "Strategy & Digital Platforms",
+    "url": "https://a16z.com/podcast/a16z-podcast-the-marketplace-rules/",
+    "type": "Podcast",
+    "tags": ["Marketplaces", "Trust", "Platform Strategy"]
+  },
+  {
+    "name": "Acquired: The Uber IPO",
+    "description": "Multi-hour unit economics analysis; surge pricing evolution. Deep-dive into Uber's business model and marketplace dynamics.",
+    "category": "Strategy & Digital Platforms",
+    "url": "https://www.acquired.fm/episodes/the-uber-ipo",
+    "type": "Podcast",
+    "tags": ["Uber", "Unit Economics", "IPO Analysis"]
+  },
+  {
+    "name": "Acquired: Airbnb",
+    "description": "Payment structure innovation; platform-favorable cashflow. How Airbnb built a marketplace that works financially.",
+    "category": "Strategy & Digital Platforms",
+    "url": "https://www.acquired.fm/episodes/airbnb",
+    "type": "Podcast",
+    "tags": ["Airbnb", "Marketplace", "Business Model"]
+  },
+  {
+    "name": "a16z Podcast: Pricing, Pricing, Pricing",
+    "description": "Martin Casado and Mark Cranney on why pricing is 'the single decision that impacts valuation most'. Practical pricing strategy for startups.",
+    "category": "Pricing & Market Design",
+    "url": "https://a16z.com/podcast/a16z-podcast-pricing-pricing-pricing/",
+    "type": "Podcast",
+    "tags": ["Pricing Strategy", "SaaS", "Startups"]
+  },
+  {
+    "name": "The Mixtape: Chris Nosko Interview",
+    "description": "Uber VP on transitioning from academia to industry; two-sided matching through prices. Scott Cunningham's podcast with the academic-turned-practitioner.",
+    "category": "Strategy & Digital Platforms",
+    "url": "https://causalinf.substack.com/p/s1e23-interview-with-chris-nosko",
+    "type": "Podcast",
+    "tags": ["Tech Economics", "Career", "Marketplaces"]
+  },
+  {
+    "name": "NFX Podcast: Scott Cook on Network Effects",
+    "description": "Intuit founder on how network effects saved eBay from Bezos; common two-sided marketplace mistakes. Lessons from a legendary entrepreneur.",
+    "category": "Strategy & Digital Platforms",
+    "url": "https://www.nfx.com/post/top-founders-network-effects-scott-cook",
+    "type": "Podcast",
+    "tags": ["Network Effects", "Marketplaces", "Founder Insights"]
+  },
+  {
+    "name": "Lenny's Podcast: Ramesh Johari on Marketplace Lessons",
+    "description": "Stanford professor and advisor to Uber, Airbnb, Bumble, Stripe. Marketplace lessons from advising the biggest platforms.",
+    "category": "Strategy & Digital Platforms",
+    "url": "https://www.lennysnewsletter.com/p/marketplace-lessons-from-uber-airbnb",
+    "type": "Podcast",
+    "tags": ["Marketplaces", "A/B Testing", "Platform Strategy"]
   }
 ]

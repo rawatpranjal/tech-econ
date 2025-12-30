@@ -9777,5 +9777,140 @@
     "type": "Article",
     "tags": ["Causal Inference", "Instrumental Variables", "Machine Learning"],
     "level": "Hard"
+  },
+  {
+    "name": "Uber: Driver Surge Pricing",
+    "description": "Shows why multiplicative surge is NOT incentive-compatible; presents the additive driver surge mechanism now in production. Foundational work on incentive design for gig economy platforms.",
+    "category": "Pricing & Revenue",
+    "url": "https://eng.uber.com/research/driver-surge-pricing/",
+    "type": "Article",
+    "tags": ["Dynamic Pricing", "Incentive Design", "Marketplace"],
+    "level": "Hard"
+  },
+  {
+    "name": "Uber: Reinforcement Learning for Marketplace Balance",
+    "description": "Largest RL deployment for matching in ridesharing—400+ cities globally. How Uber uses reinforcement learning to balance supply and demand in real-time.",
+    "category": "Platform Economics",
+    "url": "https://www.uber.com/blog/reinforcement-learning-for-modeling-marketplace-balance/",
+    "type": "Article",
+    "tags": ["Marketplace", "Reinforcement Learning", "Matching"],
+    "level": "Hard"
+  },
+  {
+    "name": "Uber: Simulated Marketplace with ML",
+    "description": "Agent-based discrete event simulation for testing dispatch algorithms safely. How Uber builds digital twins of their marketplace to test pricing and matching changes.",
+    "category": "Platform Economics",
+    "url": "https://www.uber.com/blog/simulated-marketplace/",
+    "type": "Article",
+    "tags": ["Marketplace", "Simulation", "Testing"],
+    "level": "Hard"
+  },
+  {
+    "name": "Lyft: Dynamic Pricing to Sustain Marketplace Balance",
+    "description": "Evolution of Lyft's PrimeTime surge algorithm. Explains undersupply spirals and iterative fixes for two-sided marketplace pricing.",
+    "category": "Pricing & Revenue",
+    "url": "https://eng.lyft.com/dynamic-pricing-to-sustain-marketplace-balance-1d23a8d1be90",
+    "type": "Article",
+    "tags": ["Dynamic Pricing", "Marketplace", "Ridesharing"],
+    "level": "Hard"
+  },
+  {
+    "name": "Lyft: Solving Dispatch in a Ridesharing Problem Space",
+    "description": "Hungarian algorithm and LP relaxation for real-time bipartite matching. Technical deep-dive on driver-rider matching optimization.",
+    "category": "Platform Economics",
+    "url": "https://eng.lyft.com/solving-dispatch-in-a-ridesharing-problem-space-821d9606c3ff",
+    "type": "Article",
+    "tags": ["Matching Algorithms", "Optimization", "Ridesharing"],
+    "level": "Hard"
+  },
+  {
+    "name": "Airbnb: Aerosolve - ML for Humans",
+    "description": "Open-source interpretable ML showing price-demand elasticity curves. How Airbnb built interpretable pricing models that hosts can understand.",
+    "category": "Pricing & Revenue",
+    "url": "https://medium.com/airbnb-engineering/aerosolve-machine-learning-for-humans-55efcf602665",
+    "type": "Article",
+    "tags": ["Pricing", "Machine Learning", "Interpretability"],
+    "level": "Medium"
+  },
+  {
+    "name": "Airbnb: Measuring Listing Lifetime Value",
+    "description": "Production function approach modeling incrementality based on supply-demand balance. How Airbnb values new listings in their marketplace.",
+    "category": "Platform Economics",
+    "url": "https://medium.com/airbnb-engineering/how-airbnb-measures-listing-lifetime-value-a603bf05142c",
+    "type": "Article",
+    "tags": ["Marketplace", "Lifetime Value", "Economics"],
+    "level": "Hard"
+  },
+  {
+    "name": "Instacart: Building for Balance (SAGE v2)",
+    "description": "Unique four-sided marketplace perspective (consumers, shoppers, retailers, brands). How Instacart balances all sides of their complex marketplace.",
+    "category": "Platform Economics",
+    "url": "https://www.instacart.com/company/how-its-made/building-for-balance",
+    "type": "Article",
+    "tags": ["Marketplace", "Multi-sided Platforms", "Balancing"],
+    "level": "Medium"
+  },
+  {
+    "name": "Meta: Andromeda - Next-Gen Personalized Ads Retrieval",
+    "description": "10,000x model capacity increase with sub-linear inference costs. December 2024 deep-dive on Meta's ad auction retrieval architecture.",
+    "category": "Advertising & Attention",
+    "url": "https://engineering.fb.com/2024/12/02/production-engineering/meta-andromeda-advantage-automation-next-gen-personalized-ads-retrieval-engine/",
+    "type": "Article",
+    "tags": ["Ad Auctions", "Machine Learning", "Infrastructure"],
+    "level": "Hard"
+  },
+  {
+    "name": "Meta: Ads Fairness Variance Reduction System",
+    "description": "Technical discussion of Total Value = Bid × Estimated Action Rate × Quality. How Meta ensures fairness in ad auctions while reducing variance.",
+    "category": "Advertising & Attention",
+    "url": "https://ai.meta.com/blog/advertising-fairness-variance-reduction-system-vrs/",
+    "type": "Article",
+    "tags": ["Ad Auctions", "Fairness", "Variance Reduction"],
+    "level": "Hard"
+  },
+  {
+    "name": "Netflix: Decision Making at Netflix",
+    "description": "Scientific method for pricing decisions at 150M+ subscriber scale. How Netflix approaches experimentation for subscription pricing and content decisions.",
+    "category": "AB Testing",
+    "url": "https://netflixtechblog.com/decision-making-at-netflix-33065fa06481",
+    "type": "Article",
+    "tags": ["Experimentation", "Decision Making", "Subscription"],
+    "level": "Medium"
+  },
+  {
+    "name": "LinkedIn: Economic Graph to Economic Insights",
+    "description": "LinkedIn Hiring Rate computation; partnerships with World Bank, IMF. Building infrastructure to derive economic insights from professional network data.",
+    "category": "Platform Economics",
+    "url": "https://engineering.linkedin.com/blog/2023/from-the-economic-graph-to-economic-insights--building-the-infra",
+    "type": "Article",
+    "tags": ["Platform Economics", "Data Infrastructure", "Labor Markets"],
+    "level": "Medium"
+  },
+  {
+    "name": "Etsy: Personalized Recommendations",
+    "description": "Shop diversity constraints for fair seller representation; anti-popularity bias. How Etsy balances personalization with marketplace fairness.",
+    "category": "Platform Economics",
+    "url": "https://www.etsy.com/codeascraft/personalized-recommendations-at-etsy",
+    "type": "Article",
+    "tags": ["Recommendations", "Marketplace Fairness", "Personalization"],
+    "level": "Medium"
+  },
+  {
+    "name": "IEEE Spectrum: The Secret of Airbnb's Pricing Algorithm",
+    "description": "How Aerosolve handles unique inventory; neighborhood boundary mapping. External analysis of Airbnb's approach to pricing heterogeneous listings.",
+    "category": "Pricing & Revenue",
+    "url": "https://spectrum.ieee.org/the-secret-of-airbnbs-pricing-algorithm",
+    "type": "Article",
+    "tags": ["Pricing", "Airbnb", "Machine Learning"],
+    "level": "Medium"
+  },
+  {
+    "name": "HBR IdeaCast: How to Build Dynamic Pricing That Works",
+    "description": "Price fairness communication; cross-subsidization strategies. Harvard Business Review podcast on implementing dynamic pricing customers accept.",
+    "category": "Pricing & Revenue",
+    "url": "https://hbr.org/podcast/2024/08/how-to-build-a-dynamic-pricing-strategy-that-works",
+    "type": "Podcast",
+    "tags": ["Dynamic Pricing", "Strategy", "Consumer Psychology"],
+    "level": "Easy"
   }
 ]
