@@ -217,6 +217,11 @@
                     <button class="sector-pill" data-sector="retail">Retail</button>
                 </div>
 
+                <!-- Sector Descriptions -->
+                <div class="sector-description" id="sector-desc-hardware" style="display: none;">
+                    <p>These companies increasingly need data scientists and economists. You could be the first on your team or secure an internship—always valuable experience in an emerging space.</p>
+                </div>
+
                 <div class="companies-grid">
                     {{ range .Site.Data.career }}
                     {{ if and (eq .tab "find-jobs") (eq .subtab "companies") }}
@@ -451,6 +456,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Sector filtering
     const sectorPills = document.querySelectorAll('.sector-pill');
     const companyCards = document.querySelectorAll('.company-card');
+    const hardwareDesc = document.getElementById('sector-desc-hardware');
 
     sectorPills.forEach(pill => {
         pill.addEventListener('click', function() {
@@ -465,6 +471,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     card.style.display = 'none';
                 }
             });
+
+            // Show/hide sector descriptions
+            if (hardwareDesc) {
+                hardwareDesc.style.display = sector === 'hardware' ? 'block' : 'none';
+            }
         });
     });
 
@@ -498,6 +509,22 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <style>
+/* Sector Descriptions */
+.sector-description {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--accent-color);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.sector-description p {
+    margin: 0;
+}
+
 /* Role Models Grid */
 .role-models-grid {
     display: grid;
