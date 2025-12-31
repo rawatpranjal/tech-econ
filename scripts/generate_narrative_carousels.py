@@ -105,10 +105,17 @@ def find_items_by_tags(lookup: Dict, tags: List[str], item_type: Optional[str] =
     return results
 
 
-def find_items_by_text(lookup: Dict, keywords: List[str], item_type: Optional[str] = None) -> List[Dict]:
-    """Find items with keywords in name/title/description."""
+def find_items_by_text(lookup: Dict, keywords: List[str], item_type: Optional[str] = None, min_matches: int = 1) -> List[Dict]:
+    """Find items with keywords in name/title/description.
+
+    Args:
+        lookup: Item lookup dictionary
+        keywords: List of keywords to search for
+        item_type: Optional filter by item type
+        min_matches: Minimum number of keywords that must match (default 1)
+    """
     results = []
-    keywords_lower = [k.lower() for k in keywords]
+    keywords_lower = [k.lower() for k in keywords if k]  # Filter empty keywords
 
     for item_id, item in lookup.items():
         if item_type and item.get('_type') != item_type:
@@ -121,9 +128,18 @@ def find_items_by_text(lookup: Dict, keywords: List[str], item_type: Optional[st
             str(item.get('summary', ''))
         ]).lower()
 
-        if any(kw in text for kw in keywords_lower):
+        # Count how many keywords match
+        match_count = sum(1 for kw in keywords_lower if kw in text)
+
+        # Require minimum matches (but at least 1)
+        required = min(min_matches, len(keywords_lower)) if keywords_lower else 1
+        if match_count >= required:
+            # Store match quality for sorting
+            item['_match_score'] = match_count
             results.append(item)
 
+    # Sort by match quality (most matches first)
+    results.sort(key=lambda x: x.get('_match_score', 0), reverse=True)
     return results
 
 
@@ -151,6 +167,15 @@ def select_diverse_items(items: List[Dict], max_count: int = 6) -> List[Dict]:
     return selected
 
 
+def has_person_name(item: Dict, name: str) -> bool:
+    """Check if item title/name contains the person's name."""
+    text = (item.get('name', '') + ' ' + item.get('title', '')).lower()
+    # Check for full name or last name
+    name_lower = name.lower()
+    last_name = name.split()[-1].lower() if name.split() else ''
+    return name_lower in text or (last_name and last_name in text)
+
+
 def generate_person_carousels(leading_lights: List[Dict], lookup: Dict) -> List[Dict]:
     """Generate carousels for each leading light."""
     carousels = []
@@ -161,8 +186,11 @@ def generate_person_carousels(leading_lights: List[Dict], lookup: Dict) -> List[
         specialties = person.get('specialty', [])
         company = person.get('company', '')
 
-        # Find related items
-        search_terms = [name.split()[0], name.split()[-1]] + specialties
+        # Find related items - search for full name first, then parts
+        search_terms = [name]  # Full name first
+        if len(name.split()) > 1:
+            search_terms.extend([name.split()[0], name.split()[-1]])
+        search_terms.extend(specialties)
         if company:
             search_terms.append(company)
 
@@ -180,16 +208,25 @@ def generate_person_carousels(leading_lights: List[Dict], lookup: Dict) -> List[
         if len(unique_related) < MIN_ITEMS_PER_CAROUSEL - 1:
             continue
 
-        # Select hero (prefer talk, then paper, then resource)
+        # Select hero - MUST mention this person's name
         hero = None
+        # First: find items that actually mention this person
+        person_items = [i for i in unique_related if has_person_name(i, name)]
+
+        # Prefer talk > paper > resource among items mentioning the person
         for pref_type in ['talk', 'paper', 'resource']:
-            for item in unique_related:
+            for item in person_items:
                 if item.get('_type') == pref_type:
                     hero = item
                     break
             if hero:
                 break
 
+        # Fallback to any item mentioning the person
+        if not hero and person_items:
+            hero = person_items[0]
+
+        # Last resort: first item from related (but this is not ideal)
         if not hero and unique_related:
             hero = unique_related[0]
 
@@ -215,7 +252,7 @@ def generate_person_carousels(leading_lights: List[Dict], lookup: Dict) -> List[
                 "url": hero.get('url', '')
             },
             "items": [
-                {"id": i['_id'], "type": i['_type'], "title": i.get('name', i.get('title', ''))}
+                {"id": i['_id'], "type": i['_type'], "title": i.get('name', i.get('title', '')), "url": i.get('url', '')}
                 for i in cast
             ],
             "seed": {"type": "person", "name": name, "company": company}
@@ -281,7 +318,7 @@ def generate_journey_carousels(roadmaps: List[Dict], lookup: Dict) -> List[Dict]
                 "url": hero.get('url', '')
             },
             "items": [
-                {"id": i.get('_id', ''), "type": i.get('_type', 'resource'), "title": i.get('name', '')}
+                {"id": i.get('_id', ''), "type": i.get('_type', 'resource'), "title": i.get('name', ''), "url": i.get('url', '')}
                 for i in cast
             ],
             "seed": {"type": "journey", "name": name}
@@ -333,10 +370,10 @@ def generate_tool_carousels(packages: List[Dict], lookup: Dict) -> List[Dict]:
                 "url": hero_pkg.get('url', hero_pkg.get('github_url', ''))
             },
             "items": [
-                {"id": f"package-{slugify(p.get('name', ''))}", "type": "package", "title": p.get('name', '')}
+                {"id": f"package-{slugify(p.get('name', ''))}", "type": "package", "title": p.get('name', ''), "url": p.get('url', p.get('github_url', ''))}
                 for p in cast_pkgs
             ] + [
-                {"id": r['_id'], "type": r['_type'], "title": r.get('name', r.get('title', ''))}
+                {"id": r['_id'], "type": r['_type'], "title": r.get('name', r.get('title', '')), "url": r.get('url', '')}
                 for r in related
             ],
             "seed": {"type": "tool", "category": category}
@@ -350,23 +387,42 @@ def generate_method_carousels(papers: List[Dict], lookup: Dict) -> List[Dict]:
     """Generate carousels for high-citation method papers."""
     carousels = []
 
+    # Common words to filter out from title search
+    STOP_WORDS = {'the', 'a', 'an', 'of', 'for', 'and', 'or', 'in', 'on', 'to', 'with', 'by', 'from', 'is', 'are', 'as', 'at'}
+
     # Filter high-citation papers
     high_citation = [
         p for p in papers
         if (p.get('citations') or 0) >= MIN_CITATION_FOR_METHOD
     ]
 
-    # Sort by citations
+    # Sort by citations and dedupe by title
     high_citation.sort(key=lambda p: p.get('citations') or 0, reverse=True)
+    seen_titles = set()
+    unique_papers = []
+    for p in high_citation:
+        title_key = slugify(p.get('title', ''))[:30]
+        if title_key not in seen_titles:
+            seen_titles.add(title_key)
+            unique_papers.append(p)
+    high_citation = unique_papers
 
     for paper in high_citation[:40]:  # Top 40
         title = paper.get('title', paper.get('name', ''))
         citations = paper.get('citations') or 0
         topic_tags = paper.get('topic_tags', [])
 
-        # Find related items
-        keywords = title.split()[:5] + topic_tags
-        related = find_items_by_text(lookup, keywords)
+        # Use topic/subtopic info if available
+        topic = paper.get('_topic', '')
+        subtopic = paper.get('_subtopic', '')
+
+        # Build keywords: filter stop words, use significant title words + tags + topic info
+        title_words = [w for w in title.split()[:8] if w.lower() not in STOP_WORDS]
+        keywords = title_words + topic_tags + [topic, subtopic]
+        keywords = [k for k in keywords if k and k not in ['method-tag', 'domain-tag', 'application-tag']]
+
+        # Find related items with stricter matching (require 2+ keyword matches)
+        related = find_items_by_text(lookup, keywords, min_matches=2)
         related = [r for r in related if r.get('_id') != f"paper-{slugify(title)}"]
 
         # Add by tags
@@ -381,15 +437,16 @@ def generate_method_carousels(papers: List[Dict], lookup: Dict) -> List[Dict]:
         if len(related) < MIN_ITEMS_PER_CAROUSEL - 1:
             continue
 
-        # Create catchy name
+        # Create catchy name (avoid double "The")
         short_title = ' '.join(title.split()[:6])
         if len(title.split()) > 6:
             short_title += '...'
+        prefix = "" if short_title.lower().startswith("the ") else "The "
 
         carousel = {
             "id": f"method-{slugify(title)[:40]}",
             "template": "method",
-            "name": f"The {short_title} Legacy",
+            "name": f"{prefix}{short_title} Legacy",
             "description": f"A foundational paper with {citations:,}+ citations and its ecosystem",
             "hero": {
                 "id": f"paper-{slugify(title)}",
@@ -398,7 +455,7 @@ def generate_method_carousels(papers: List[Dict], lookup: Dict) -> List[Dict]:
                 "citations": citations
             },
             "items": [
-                {"id": r['_id'], "type": r['_type'], "title": r.get('name', r.get('title', ''))}
+                {"id": r['_id'], "type": r['_type'], "title": r.get('name', r.get('title', '')), "url": r.get('url', '')}
                 for r in related
             ],
             "seed": {"type": "method", "paper": title}
@@ -409,10 +466,16 @@ def generate_method_carousels(papers: List[Dict], lookup: Dict) -> List[Dict]:
 
 
 def load_existing_manual_carousels() -> List[Dict]:
-    """Load existing manually curated carousels."""
+    """Load existing manually curated carousels (only those without generated flag)."""
     existing = load_json("narrative_carousels.json")
     if existing and 'carousels' in existing:
-        return existing['carousels']
+        # Only keep manually created carousels (identified by specific IDs or lack of generated flag)
+        manual_ids = {
+            'susan-athey-universe', 'bus-engine-paper', 'how-uber-does-pricing',
+            'peeking-problem', 'econml-ecosystem', 'netflix-prize', 'ols-to-causal-forests',
+            'credibility-revolution', 'cold-start-problem', 'hal-varian-playbook'
+        }
+        return [c for c in existing['carousels'] if c.get('id') in manual_ids]
     return []
 
 
