@@ -271,7 +271,7 @@
     "description": "Sequential testing with always-valid inference. Supports continuous monitoring of A/B tests.",
     "category": "Adaptive Experimentation & Bandits",
     "docs_url": "https://pypi.org/project/abracadabra/",
-    "github_url": "https://web.archive.org/web/20210601/https://github.com/quizlet/abracadabra",
+    "github_url": "https://github.com/quizlet/abracadabra",
     "url": "https://pypi.org/project/abracadabra/",
     "install": "pip install abracadabra",
     "tags": [
@@ -1267,8 +1267,8 @@
     "description": "Causal inference using graphical models (DAGs), including identification theory and effect estimation.",
     "category": "Causal Discovery & Graphical Models",
     "docs_url": "https://ananke.readthedocs.io/",
-    "github_url": "[https://github.com/py-why/Ananke](https://github.com/ghosthamlet/ananke",
-    "url": "[https://github.com/py-why/Ananke](https://github.com/ghosthamlet/ananke",
+    "github_url": "https://gitlab.com/causal/ananke",
+    "url": "https://gitlab.com/causal/ananke",
     "install": "pip install ananke-causal",
     "tags": [
       "causal inference",

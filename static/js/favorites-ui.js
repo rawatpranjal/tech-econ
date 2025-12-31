@@ -479,12 +479,20 @@
                 if (favorites.length === 0 && playlists.length === 0) {
                     container.innerHTML = `
                         <div class="empty-state">
-                            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <svg viewBox="0 0 24 24" width="56" height="56" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity: 0.8;">
                                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                             </svg>
-                            <h3>Your collection is empty</h3>
-                            <p>Click the heart icon on any resource to save it here</p>
-                            <a href="/learning/" class="btn btn-primary">Browse Resources</a>
+                            <h3>Your library awaits</h3>
+                            <p>Heart the resources you love, and they'll appear here.</p>
+                            <div class="quick-start" style="margin: 1.5rem 0;">
+                                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.75rem;">Popular starting points:</p>
+                                <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; justify-content: center;">
+                                    <a href="/packages/" class="btn btn-outline" style="font-size: 0.85rem;">Python Packages</a>
+                                    <a href="/learning/" class="btn btn-outline" style="font-size: 0.85rem;">Learning Resources</a>
+                                    <a href="/papers/" class="btn btn-outline" style="font-size: 0.85rem;">Papers</a>
+                                </div>
+                            </div>
+                            <a href="/discover/" class="btn btn-primary">Start Exploring</a>
                         </div>
                     `;
                     return;
