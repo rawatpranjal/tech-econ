@@ -1086,5 +1086,115 @@
     "type": "Book",
     "url": "https://www.amazon.com/Handbook-Economics-Elgar-Original-Reference/dp/1843766086",
     "tags": ["Sports Economics & Analytics", "Economics", "Reference"]
+  },
+  {
+    "name": "Loss Models: From Data to Decisions",
+    "author": "Stuart A. Klugman, Harry H. Panjer, Gordon E. Willmot",
+    "year": 2019,
+    "isbn": "1119523788",
+    "description": "The definitive actuarial textbook covering loss distributions, credibility, simulation, and risk measures. Used for SOA Exam STAM preparation and professional practice.",
+    "category": "Insurance & Actuarial",
+    "type": "Book",
+    "url": "https://www.wiley.com/en-us/Loss+Models%3A+From+Data+to+Decisions%2C+5th+Edition-p-9781119523789",
+    "tags": ["Insurance & Actuarial", "Loss Distributions", "Credibility Theory"]
+  },
+  {
+    "name": "Actuarial Mathematics for Life Contingent Risks",
+    "author": "David C.M. Dickson, Mary R. Hardy, Howard R. Waters",
+    "year": 2020,
+    "isbn": "1108478085",
+    "description": "Modern approach to life insurance mathematics covering survival models, life tables, premium calculation, and reserving. Standard text for SOA exams.",
+    "category": "Insurance & Actuarial",
+    "type": "Book",
+    "url": "https://www.cambridge.org/core/books/actuarial-mathematics-for-life-contingent-risks/FF9C41CEE1D83E8C0B9A2D6E2E1C8F1F",
+    "tags": ["Insurance & Actuarial", "Life Insurance", "Actuarial Mathematics"]
+  },
+  {
+    "name": "Regression Modeling with Actuarial and Financial Applications",
+    "author": "Edward W. Frees",
+    "year": 2009,
+    "isbn": "0521135966",
+    "description": "Bridges actuarial science and modern statistics with focus on regression for insurance applications. Covers GLMs, credibility, and longitudinal data.",
+    "category": "Insurance & Actuarial",
+    "type": "Book",
+    "url": "https://www.cambridge.org/core/books/regression-modeling-with-actuarial-and-financial-applications/A81CFD79F8F2F6D2AF02B4D8E1F17C23",
+    "tags": ["Insurance & Actuarial", "Regression", "GLM"]
+  },
+  {
+    "name": "Handbook of Insurance",
+    "author": "Georges Dionne (ed.)",
+    "year": 2013,
+    "isbn": "1461401542",
+    "description": "Comprehensive academic reference covering insurance economics theory and empirical research. 30 chapters on adverse selection, moral hazard, regulation, and corporate insurance.",
+    "category": "Insurance & Actuarial",
+    "type": "Book",
+    "url": "https://link.springer.com/book/10.1007/978-1-4614-0155-1",
+    "tags": ["Insurance & Actuarial", "Insurance Economics", "Reference"]
+  },
+  {
+    "name": "Financial Economics of Insurance",
+    "author": "Ralph S.J. Koijen, Motohiro Yogo",
+    "year": 2023,
+    "isbn": "0226822044",
+    "description": "New framework analyzing insurance companies through modern asset pricing theory. Covers life insurance, variable annuities, and systemic risk in insurance.",
+    "category": "Insurance & Actuarial",
+    "type": "Book",
+    "url": "https://press.uchicago.edu/ucp/books/book/chicago/F/bo182892012.html",
+    "tags": ["Insurance & Actuarial", "Financial Economics", "Asset Pricing"]
+  },
+  {
+    "name": "Computational Actuarial Science with R",
+    "author": "Arthur Charpentier (ed.)",
+    "year": 2014,
+    "isbn": "1466592591",
+    "description": "Practical guide to actuarial computing covering simulation, GLMs, loss reserving, and mortality modeling with complete R code examples.",
+    "category": "Insurance & Actuarial",
+    "type": "Book",
+    "url": "https://www.routledge.com/Computational-Actuarial-Science-with-R/Charpentier/p/book/9781466592599",
+    "tags": ["Insurance & Actuarial", "R Programming", "Computational Methods"]
+  },
+  {
+    "name": "Predictive Modeling Applications in Actuarial Science",
+    "author": "Edward W. Frees, Richard A. Derrig, Glenn Meyers (eds.)",
+    "year": 2014,
+    "isbn": "1107029872",
+    "description": "Two-volume set covering machine learning applications in insurance. Volume 1 covers methods, Volume 2 covers case studies in pricing, underwriting, and reserving.",
+    "category": "Insurance & Actuarial",
+    "type": "Book",
+    "url": "https://www.cambridge.org/core/books/predictive-modeling-applications-in-actuarial-science/D7FEA71F1B8F0F1F1F1F1F1F1F1F1F1F",
+    "tags": ["Insurance & Actuarial", "Machine Learning", "Predictive Modeling"]
+  },
+  {
+    "name": "Statistical Foundations of Actuarial Learning and its Applications",
+    "author": "Mario V. Wuthrich, Michael Merz",
+    "year": 2023,
+    "isbn": "3031123557",
+    "description": "Bridges traditional actuarial methods and modern machine learning. Covers neural networks for pricing, telematics, and interpretability in insurance models.",
+    "category": "Insurance & Actuarial",
+    "type": "Book",
+    "url": "https://link.springer.com/book/10.1007/978-3-031-12409-9",
+    "tags": ["Insurance & Actuarial", "Machine Learning", "Neural Networks"]
+  },
+  {
+    "name": "The INSURTECH Book",
+    "author": "Sabine VanderLinden, Shân Millie, Nico Anderson",
+    "year": 2018,
+    "isbn": "1119362210",
+    "description": "Industry overview of digital disruption in insurance. Covers blockchain, IoT, AI applications, and business model innovation from 80+ InsurTech executives.",
+    "category": "Insurance & Actuarial",
+    "type": "Book",
+    "url": "https://www.wiley.com/en-us/The+INSURTECH+Book-p-9781119362210",
+    "tags": ["Insurance & Actuarial", "InsurTech", "Digital Transformation"]
+  },
+  {
+    "name": "Navigating Insurtech",
+    "author": "Manh Kaenprakhamroy",
+    "year": 2023,
+    "isbn": "1119895650",
+    "description": "Practical guide to building InsurTech ventures covering product development, distribution, regulation, and scaling from the CEO of Bolttech.",
+    "category": "Insurance & Actuarial",
+    "type": "Book",
+    "url": "https://www.wiley.com/en-us/Navigating+Insurtech-p-9781119895657",
+    "tags": ["Insurance & Actuarial", "InsurTech", "Entrepreneurship"]
   }
 ]

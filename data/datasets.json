@@ -10534,5 +10534,125 @@
     "github_url": "https://github.com/JeffSackmann/tennis_atp",
     "tags": ["tennis", "ATP", "WTA", "match-results", "point-by-point"],
     "best_for": "Tennis analytics, player performance analysis, and tournament prediction"
+  },
+  {
+    "name": "MEPS (Medical Expenditure Panel Survey)",
+    "description": "Nationally representative survey of healthcare utilization, expenditures, insurance coverage, and health status for the US civilian population",
+    "category": "Insurance & Actuarial",
+    "url": "https://meps.ahrq.gov/mepsweb/",
+    "docs_url": "https://meps.ahrq.gov/mepsweb/data_stats/download_data_files.jsp",
+    "github_url": null,
+    "tags": ["health-insurance", "healthcare-costs", "expenditure-data", "survey-data", "panel-data"],
+    "best_for": "Health insurance research, healthcare cost modeling, and demand analysis"
+  },
+  {
+    "name": "CMS Medicare & Medicaid Data",
+    "description": "Public use files from Centers for Medicare & Medicaid Services including claims data, provider statistics, and program enrollment",
+    "category": "Insurance & Actuarial",
+    "url": "https://data.cms.gov/",
+    "docs_url": "https://www.cms.gov/Research-Statistics-Data-and-Systems/Research-Statistics-Data-and-Systems",
+    "github_url": null,
+    "tags": ["medicare", "medicaid", "claims-data", "healthcare", "government-programs"],
+    "best_for": "Healthcare policy research, reimbursement modeling, and population health analysis"
+  },
+  {
+    "name": "HCUP (Healthcare Cost and Utilization Project)",
+    "description": "Largest collection of longitudinal hospital care data in the US with 100+ million records per year covering inpatient and emergency visits",
+    "category": "Insurance & Actuarial",
+    "url": "https://hcup-us.ahrq.gov/",
+    "docs_url": "https://hcup-us.ahrq.gov/databases.jsp",
+    "github_url": null,
+    "tags": ["hospital-data", "inpatient", "emergency", "healthcare-utilization", "cost-data"],
+    "best_for": "Hospital cost analysis, readmission prediction, and healthcare ML applications"
+  },
+  {
+    "name": "French Motor TPL (freMTPL2)",
+    "description": "French motor third-party liability insurance dataset with 678K policies and claims - the standard benchmark for insurance ML papers",
+    "category": "Insurance & Actuarial",
+    "url": "https://cran.r-project.org/package=CASdatasets",
+    "docs_url": "https://freakonometrics.github.io/CASdatasets/",
+    "github_url": null,
+    "tags": ["motor-insurance", "claims-frequency", "pricing", "benchmark", "actuarial"],
+    "best_for": "Insurance pricing models, GLM vs ML comparisons, and actuarial research"
+  },
+  {
+    "name": "NHTSA FARS (Fatality Analysis Reporting System)",
+    "description": "Complete census of fatal traffic crashes in the United States since 1975 with vehicle, person, and crash-level details",
+    "category": "Insurance & Actuarial",
+    "url": "https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars",
+    "docs_url": "https://crashstats.nhtsa.dot.gov/",
+    "github_url": null,
+    "tags": ["traffic-safety", "auto-insurance", "crash-data", "fatality-data", "vehicle-safety"],
+    "best_for": "Auto insurance risk modeling, safety analysis, and claims severity research"
+  },
+  {
+    "name": "FEMA NFIP Claims & Policies",
+    "description": "National Flood Insurance Program data with 2M+ claims since 1978 and policy-level information for flood risk modeling",
+    "category": "Insurance & Actuarial",
+    "url": "https://www.fema.gov/openfema-data-page/fima-nfip-redacted-claims-v2",
+    "docs_url": "https://www.fema.gov/about/openfema/data-sets",
+    "github_url": null,
+    "tags": ["flood-insurance", "catastrophe", "claims-data", "natural-disasters", "property-insurance"],
+    "best_for": "Catastrophe modeling, flood risk analysis, and climate-related insurance research"
+  },
+  {
+    "name": "NOAA Storm Events Database",
+    "description": "Detailed records of significant weather events including property and crop damage estimates from 1950-present",
+    "category": "Insurance & Actuarial",
+    "url": "https://www.ncdc.noaa.gov/stormevents/",
+    "docs_url": "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/",
+    "github_url": null,
+    "tags": ["weather-data", "catastrophe", "natural-disasters", "property-damage", "climate"],
+    "best_for": "Catastrophe modeling, climate risk assessment, and property insurance pricing"
+  },
+  {
+    "name": "EM-DAT International Disaster Database",
+    "description": "Global database of 26K+ natural and technological disasters since 1900 with human and economic impact data",
+    "category": "Insurance & Actuarial",
+    "url": "https://www.emdat.be/",
+    "docs_url": "https://doc.emdat.be/",
+    "github_url": null,
+    "tags": ["disasters", "catastrophe", "global-data", "economic-losses", "humanitarian"],
+    "best_for": "Global catastrophe analysis, reinsurance pricing, and disaster trend research"
+  },
+  {
+    "name": "Human Mortality Database",
+    "description": "Detailed mortality and population data for 40+ countries with life tables and exposure-to-risk calculations",
+    "category": "Insurance & Actuarial",
+    "url": "https://www.mortality.org/",
+    "docs_url": "https://www.mortality.org/Data/DataAvailability",
+    "github_url": null,
+    "tags": ["mortality", "life-insurance", "demographics", "life-tables", "longevity"],
+    "best_for": "Life insurance pricing, longevity research, and demographic modeling"
+  },
+  {
+    "name": "SOA Mortality Tables",
+    "description": "Society of Actuaries mortality tables and experience studies used as industry standards for life insurance pricing",
+    "category": "Insurance & Actuarial",
+    "url": "https://mort.soa.org/",
+    "docs_url": "https://www.soa.org/resources/experience-studies/",
+    "github_url": null,
+    "tags": ["mortality-tables", "life-insurance", "actuarial", "experience-studies", "annuities"],
+    "best_for": "Life insurance product development, reserving, and mortality assumption setting"
+  },
+  {
+    "name": "AXA Driver Telematics (Kaggle)",
+    "description": "Driving behavior dataset with 50K driver trips characterized by second-by-second GPS coordinates for usage-based insurance",
+    "category": "Insurance & Actuarial",
+    "url": "https://www.kaggle.com/c/axa-driver-telematics-analysis",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["telematics", "UBI", "driving-behavior", "auto-insurance", "GPS-data"],
+    "best_for": "Usage-based insurance pricing, driver risk scoring, and behavior analysis"
+  },
+  {
+    "name": "CASdatasets R Package",
+    "description": "Collection of 40+ actuarial datasets for P&C insurance including freMTPL, ausautoBI, and loss triangles for teaching and research",
+    "category": "Insurance & Actuarial",
+    "url": "https://cran.r-project.org/package=CASdatasets",
+    "docs_url": "https://freakonometrics.github.io/CASdatasets/",
+    "github_url": "https://github.com/freakonometrics/CASdatasets",
+    "tags": ["actuarial", "P&C-insurance", "loss-triangles", "claims-data", "teaching-datasets"],
+    "best_for": "Learning actuarial methods, pricing model development, and reserving exercises"
   }
 ]
