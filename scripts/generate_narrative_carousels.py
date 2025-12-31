@@ -226,11 +226,12 @@ def generate_person_carousels(leading_lights: List[Dict], lookup: Dict) -> List[
         if not hero and person_items:
             hero = person_items[0]
 
-        # Last resort: first item from related (but this is not ideal)
-        if not hero and unique_related:
-            hero = unique_related[0]
-
+        # Skip if no hero mentions this person - don't use unrelated content
         if not hero:
+            continue
+
+        # Validate hero actually mentions the person's name (skip if it doesn't)
+        if not has_person_name(hero, name):
             continue
 
         # Select cast (exclude hero)
@@ -441,7 +442,7 @@ def generate_method_carousels(papers: List[Dict], lookup: Dict) -> List[Dict]:
         short_title = ' '.join(title.split()[:6])
         if len(title.split()) > 6:
             short_title += '...'
-        prefix = "" if short_title.lower().startswith("the ") else "The "
+        prefix = "" if short_title.lower().startswith(("the ", "a ", "an ")) else "The "
 
         carousel = {
             "id": f"method-{slugify(title)[:40]}",

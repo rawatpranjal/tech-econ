@@ -3,11 +3,11 @@
   "generated_at": "2024-12-31",
   "description": "Narrative-driven carousels for Netflix-style discovery",
   "stats": {
-    "total": 104,
+    "total": 96,
     "manual": 8,
-    "generated": 97,
+    "generated": 89,
     "by_template": {
-      "person": 21,
+      "person": 13,
       "method": 33,
       "tool": 31,
       "journey": 15,
@@ -348,67 +348,6 @@
       }
     },
     {
-      "id": "andrey-fradkin-universe",
-      "template": "person",
-      "name": "Andrey Fradkin's Universe",
-      "description": "Andrey Fradkin studies online marketplaces and platform economics. His research on Airbnb helped sha...",
-      "hero": {
-        "id": "resource-uber-engineering",
-        "type": "resource",
-        "title": "Uber Engineering",
-        "url": "https://www.uber.com/blog/engineering/"
-      },
-      "items": [
-        {
-          "id": "resource-nfx-network-effects-bible",
-          "type": "resource",
-          "title": "NFX Network Effects Bible",
-          "url": "https://www.nfx.com/post/network-effects-bible"
-        },
-        {
-          "id": "talk-susan-athey-applied-researchers-wanted",
-          "type": "talk",
-          "title": "Susan Athey: applied researchers Wanted",
-          "url": "https://www.aeaweb.org/research/athey-luca-interview-tech-economics"
-        },
-        {
-          "id": "book-matchmakers",
-          "type": "book",
-          "title": "Matchmakers",
-          "url": "https://www.amazon.com/Matchmakers-New-Economics-Multisided-Platforms/dp/1633691721"
-        },
-        {
-          "id": "paper-search-matching-and-the-role-of-digital-marketplace-design-in-enabling-trade-evidence-from-airbnb",
-          "type": "paper",
-          "title": "Search, Matching, and the Role of Digital Marketplace Design in Enabling Trade: Evidence from Airbnb",
-          "url": "https://andreyfradkin.com/assets/Fradkin_JMP.pdf"
-        },
-        {
-          "id": "resource-nfx-network-effects-manual-16-types",
-          "type": "resource",
-          "title": "NFX Network Effects Manual: 16 Types",
-          "url": "https://www.nfx.com/post/network-effects-manual"
-        },
-        {
-          "id": "talk-chiara-farronato-beyond-chicken-and-egg-hbs",
-          "type": "talk",
-          "title": "Chiara Farronato: Beyond Chicken and Egg (HBS)",
-          "url": "https://hbswk.hbs.edu/item/the-most-pressing-issues-for-platform-providers-in-the-sharing-economy"
-        },
-        {
-          "id": "book-platform-revolution",
-          "type": "book",
-          "title": "Platform Revolution",
-          "url": "https://www.amazon.com/Platform-Revolution-Networked-Markets-Transforming/dp/0393249131"
-        }
-      ],
-      "seed": {
-        "type": "person",
-        "name": "Andrey Fradkin",
-        "company": "Boston University"
-      }
-    },
-    {
       "id": "chris-nosko-universe",
       "template": "person",
       "name": "Chris Nosko's Universe",
@@ -467,67 +406,6 @@
         "type": "person",
         "name": "Chris Nosko",
         "company": "Uber"
-      }
-    },
-    {
-      "id": "colin-gray-universe",
-      "template": "person",
-      "name": "Colin Gray's Universe",
-      "description": "Colin Gray leads economics and data science at Netflix, where he applies causal inference and machin...",
-      "hero": {
-        "id": "resource-netflix-heterogeneous-treatment-effects",
-        "type": "resource",
-        "title": "Netflix: Heterogeneous Treatment Effects",
-        "url": "https://netflixtechblog.medium.com/heterogeneous-treatment-effects-at-netflix-da5c3dd58833"
-      },
-      "items": [
-        {
-          "id": "resource-netflix-a-survey-of-causal-inference-applications",
-          "type": "resource",
-          "title": "Netflix: A Survey of Causal Inference Applications",
-          "url": "https://netflixtechblog.com/a-survey-of-causal-inference-applications-at-netflix-b62d25175e6f"
-        },
-        {
-          "id": "package-dagitty",
-          "type": "package",
-          "title": "dagitty",
-          "url": "https://cran.r-project.org/package=dagitty"
-        },
-        {
-          "id": "talk-susan-athey-applied-researchers-causation",
-          "type": "talk",
-          "title": "Susan Athey: applied researchers & Causation",
-          "url": "https://www.youtube.com/watch?v=q4hWBep5RIc"
-        },
-        {
-          "id": "dataset-stanford-gsb-experiment-collection",
-          "type": "dataset",
-          "title": "Stanford GSB Experiment Collection",
-          "url": "https://github.com/gsbDBI/ExperimentData"
-        },
-        {
-          "id": "book-mostly-harmless-econometrics",
-          "type": "book",
-          "title": "Mostly Harmless Econometrics",
-          "url": "https://www.amazon.com/Mostly-Harmless-Econometrics-Empiricists-Companion/dp/0691120358"
-        },
-        {
-          "id": "resource-netflix-computational-causal-inference",
-          "type": "resource",
-          "title": "Netflix: Computational Causal Inference",
-          "url": "https://netflixtechblog.com/computational-causal-inference-at-netflix-293591691c62"
-        },
-        {
-          "id": "package-pcalg",
-          "type": "package",
-          "title": "pcalg",
-          "url": "https://cran.r-project.org/package=pcalg"
-        }
-      ],
-      "seed": {
-        "type": "person",
-        "name": "Colin Gray",
-        "company": "Netflix"
       }
     },
     {
@@ -836,67 +714,6 @@
       }
     },
     {
-      "id": "liran-einav-universe",
-      "template": "person",
-      "name": "Liran Einav's Universe",
-      "description": "Liran Einav pioneered the use of large-scale private sector data for economics research. His collabo...",
-      "hero": {
-        "id": "resource-stanford-ee364a-youtube",
-        "type": "resource",
-        "title": "Stanford EE364A (YouTube)",
-        "url": "https://www.youtube.com/playlist?list=PL3940DD956CDF0622"
-      },
-      "items": [
-        {
-          "id": "resource-stanford-fintech-lab-rob-wang-block",
-          "type": "resource",
-          "title": "Stanford FinTech Lab: Rob Wang (Block)",
-          "url": "https://fintech.stanford.edu/events/aftlab-seminars/rob-wang-square-machine-learning-financial-fraud-detection"
-        },
-        {
-          "id": "talk-susan-athey-economics-ai",
-          "type": "talk",
-          "title": "Susan Athey: Economics & AI",
-          "url": "https://www.youtube.com/watch?v=lNsl76AD1kE"
-        },
-        {
-          "id": "dataset-stanford-gsb-experiment-collection",
-          "type": "dataset",
-          "title": "Stanford GSB Experiment Collection",
-          "url": "https://github.com/gsbDBI/ExperimentData"
-        },
-        {
-          "id": "paper-approximating-purchase-propensities-and-reservation-prices-from-broad-consumer-tracking",
-          "type": "paper",
-          "title": "Approximating Purchase Propensities and Reservation Prices from Broad Consumer Tracking",
-          "url": "https://onlinelibrary.wiley.com/doi/10.1111/iere.12441"
-        },
-        {
-          "id": "resource-stanford-ml-causal-inference-short-course",
-          "type": "resource",
-          "title": "Stanford ML & Causal Inference Short Course",
-          "url": "https://www.gsb.stanford.edu/faculty-research/labs-initiatives/sil/research/methods/ai-machine-learning/short-course"
-        },
-        {
-          "id": "talk-guido-imbens-nobel-lecture-2021",
-          "type": "talk",
-          "title": "Guido Imbens: Nobel Lecture 2021",
-          "url": "https://www.youtube.com/watch?v=yTrVg-t8O8A"
-        },
-        {
-          "id": "dataset-stanford-amazonbeer",
-          "type": "dataset",
-          "title": "Stanford Amazon/Beer",
-          "url": "https://snap.stanford.edu/data/#amazon"
-        }
-      ],
-      "seed": {
-        "type": "person",
-        "name": "Liran Einav",
-        "company": "Stanford"
-      }
-    },
-    {
       "id": "michael-luca-universe",
       "template": "person",
       "name": "Michael Luca's Universe",
@@ -955,67 +772,6 @@
         "type": "person",
         "name": "Michael Luca",
         "company": "Harvard Business School"
-      }
-    },
-    {
-      "id": "michael-ostrovsky-universe",
-      "template": "person",
-      "name": "Michael Ostrovsky's Universe",
-      "description": "Michael Ostrovsky is the theorist behind modern ad auctions. His work with Schwarz on generalized se...",
-      "hero": {
-        "id": "talk-michael-schwarz-the-mixtape-interview",
-        "type": "talk",
-        "title": "Michael Schwarz: The Mixtape Interview",
-        "url": "https://causalinf.substack.com/p/interview-with-michael-schwarz-chief-c61"
-      },
-      "items": [
-        {
-          "id": "package-matching",
-          "type": "package",
-          "title": "matching",
-          "url": "https://github.com/daffidwilde/matching"
-        },
-        {
-          "id": "resource-gsp-auction-paper-edelman-et-al-aer-2007",
-          "type": "resource",
-          "title": "GSP Auction Paper (Edelman et al., AER 2007)",
-          "url": "https://www.benedelman.org/publications/gsp-060801.pdf"
-        },
-        {
-          "id": "talk-susan-athey-economics-ai",
-          "type": "talk",
-          "title": "Susan Athey: Economics & AI",
-          "url": "https://www.youtube.com/watch?v=lNsl76AD1kE"
-        },
-        {
-          "id": "dataset-stanford-gsb-experiment-collection",
-          "type": "dataset",
-          "title": "Stanford GSB Experiment Collection",
-          "url": "https://github.com/gsbDBI/ExperimentData"
-        },
-        {
-          "id": "book-who-gets-what-and-why",
-          "type": "book",
-          "title": "Who Gets What and Why",
-          "url": "https://www.amazon.com/Who-Gets-What-Why-Matchmaking/dp/0544291131"
-        },
-        {
-          "id": "paper-auctions-and-bidding-a-guide-for-computer-scientists",
-          "type": "paper",
-          "title": "Auctions and Bidding: A Guide for Computer Scientists",
-          "url": "https://dl.acm.org/doi/10.1145/1922649.1922653"
-        },
-        {
-          "id": "package-scarfmatch",
-          "type": "package",
-          "title": "scarfmatch",
-          "url": "https://pypi.org/project/scarfmatch/"
-        }
-      ],
-      "seed": {
-        "type": "person",
-        "name": "Michael Ostrovsky",
-        "company": "Stanford GSB"
       }
     },
     {
@@ -1141,128 +897,6 @@
       }
     },
     {
-      "id": "patrick-hummel-universe",
-      "template": "person",
-      "name": "Patrick Hummel's Universe",
-      "description": "Patrick Hummel leads economics for Microsoft Cloud, working on pricing, capacity planning, and marke...",
-      "hero": {
-        "id": "resource-cepr-voxeu-doing-economics-at-google",
-        "type": "resource",
-        "title": "CEPR VoxEU: Doing Economics at Google",
-        "url": "https://cepr.org/multimedia/doing-economics-google"
-      },
-      "items": [
-        {
-          "id": "talk-ml-for-pricing-auctions-icml",
-          "type": "talk",
-          "title": "ML for Pricing & Auctions (ICML)",
-          "url": "https://www.youtube.com/watch?v=gsPWQqVhb74"
-        },
-        {
-          "id": "package-deep-opt-auctions",
-          "type": "package",
-          "title": "deep-opt-auctions",
-          "url": "https://github.com/saisrivatsan/deep-opt-auctions"
-        },
-        {
-          "id": "dataset-brazilian-ecommerce",
-          "type": "dataset",
-          "title": "Brazilian eCommerce",
-          "url": "https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce"
-        },
-        {
-          "id": "book-who-gets-what-and-why",
-          "type": "book",
-          "title": "Who Gets What and Why",
-          "url": "https://www.amazon.com/Who-Gets-What-Why-Matchmaking/dp/0544291131"
-        },
-        {
-          "id": "paper-personalized-dynamic-pricing-with-machine-learning-high-dimensional-features-and-heterogeneous-elasticity",
-          "type": "paper",
-          "title": "Personalized Dynamic Pricing with Machine Learning: High-Dimensional Features and Heterogeneous Elasticity",
-          "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2020.3680"
-        },
-        {
-          "id": "talk-hal-varian-chief-scientist-at-google",
-          "type": "talk",
-          "title": "Hal Varian: Chief Scientist at Google",
-          "url": "https://www.youtube.com/watch?v=d3CtB_gVV18"
-        },
-        {
-          "id": "resource-the-theory-and-practice-of-revenue-management",
-          "type": "resource",
-          "title": "The Theory and Practice of Revenue Management",
-          "url": "http://ndl.ethernet.edu.et/bitstream/123456789/21707/1/306.pdf"
-        }
-      ],
-      "seed": {
-        "type": "person",
-        "name": "Patrick Hummel",
-        "company": "Microsoft Cloud"
-      }
-    },
-    {
-      "id": "peter-coles-universe",
-      "template": "person",
-      "name": "Peter Coles's Universe",
-      "description": "Peter Coles leads economics at Airbnb, applying market design to the sharing economy. Previously Hea...",
-      "hero": {
-        "id": "talk-alvin-roth-nobel-lecture-2012",
-        "type": "talk",
-        "title": "Alvin Roth: Nobel Lecture 2012",
-        "url": "https://www.youtube.com/watch?v=A2XXItBvQi8"
-      },
-      "items": [
-        {
-          "id": "talk-alvin-roth-google-tech-talk-on-matching",
-          "type": "talk",
-          "title": "Alvin Roth: Google Tech Talk on Matching",
-          "url": "https://www.youtube.com/watch?v=4tdOY-HHC7s"
-        },
-        {
-          "id": "book-who-gets-what-and-why",
-          "type": "book",
-          "title": "Who Gets What and Why",
-          "url": "https://www.amazon.com/Who-Gets-What-Why-Matchmaking/dp/0544291131"
-        },
-        {
-          "id": "paper-managing-congestion-in-matching-markets",
-          "type": "paper",
-          "title": "Managing Congestion in Matching Markets",
-          "url": "https://pubsonline.informs.org/doi/10.1287/msom.2020.0907"
-        },
-        {
-          "id": "package-matching",
-          "type": "package",
-          "title": "matching",
-          "url": "https://github.com/daffidwilde/matching"
-        },
-        {
-          "id": "resource-gsp-auction-paper-edelman-et-al-aer-2007",
-          "type": "resource",
-          "title": "GSP Auction Paper (Edelman et al., AER 2007)",
-          "url": "https://www.benedelman.org/publications/gsp-060801.pdf"
-        },
-        {
-          "id": "dataset-airbnb-inside-airbnb",
-          "type": "dataset",
-          "title": "AirBnb (Inside Airbnb)",
-          "url": "http://insideairbnb.com/explore"
-        },
-        {
-          "id": "talk-market-design-roth",
-          "type": "talk",
-          "title": "Market Design (Roth)",
-          "url": "https://www.nobelprize.org/uploads/2018/06/roth-lecture.pdf"
-        }
-      ],
-      "seed": {
-        "type": "person",
-        "name": "Peter Coles",
-        "company": "Airbnb"
-      }
-    },
-    {
       "id": "preston-mcafee-universe",
       "template": "person",
       "name": "Preston McAfee's Universe",
@@ -1321,128 +955,6 @@
         "type": "person",
         "name": "Preston McAfee",
         "company": "Google (prev. Microsoft, Yahoo)"
-      }
-    },
-    {
-      "id": "scott-kominers-universe",
-      "template": "person",
-      "name": "Scott Kominers's Universe",
-      "description": "Scott Kominers bridges market design theory and crypto/Web3 practice. He's a professor at Harvard Bu...",
-      "hero": {
-        "id": "talk-a16z-marketplace-podcast-business-of-marketplaces",
-        "type": "talk",
-        "title": "a16z Marketplace Podcast: Business of Marketplaces",
-        "url": "https://a16z.com/podcasts/"
-      },
-      "items": [
-        {
-          "id": "package-matching",
-          "type": "package",
-          "title": "matching",
-          "url": "https://github.com/daffidwilde/matching"
-        },
-        {
-          "id": "resource-gsp-auction-paper-edelman-et-al-aer-2007",
-          "type": "resource",
-          "title": "GSP Auction Paper (Edelman et al., AER 2007)",
-          "url": "https://www.benedelman.org/publications/gsp-060801.pdf"
-        },
-        {
-          "id": "talk-hal-varian-chief-scientist-at-google",
-          "type": "talk",
-          "title": "Hal Varian: Chief Scientist at Google",
-          "url": "https://www.youtube.com/watch?v=d3CtB_gVV18"
-        },
-        {
-          "id": "dataset-optn-organ-transplant",
-          "type": "dataset",
-          "title": "OPTN Organ Transplant",
-          "url": "https://optn.transplant.hrsa.gov/data/"
-        },
-        {
-          "id": "paper-nobel-prize-scientific-background-dmp-model",
-          "type": "paper",
-          "title": "Nobel Prize Scientific Background: DMP Model",
-          "url": "https://www.nobelprize.org/uploads/2018/06/advanced-economicsciences2010.pdf"
-        },
-        {
-          "id": "package-scarfmatch",
-          "type": "package",
-          "title": "scarfmatch",
-          "url": "https://pypi.org/project/scarfmatch/"
-        },
-        {
-          "id": "resource-causal-inference-the-mixtape",
-          "type": "resource",
-          "title": "Causal Inference: The Mixtape",
-          "url": "https://mixtape.scunning.com/"
-        }
-      ],
-      "seed": {
-        "type": "person",
-        "name": "Scott Kominers",
-        "company": "Harvard & a16z crypto"
-      }
-    },
-    {
-      "id": "sonia-jaffe-universe",
-      "template": "person",
-      "name": "Sonia Jaffe's Universe",
-      "description": "Sonia Jaffe works in Microsoft's Office of the Chief Economist on antitrust, labor, and health econo...",
-      "hero": {
-        "id": "resource-microsoft-research-adversarial-ml-and-instrumental-variables",
-        "type": "resource",
-        "title": "Microsoft Research: Adversarial ML and Instrumental Variables",
-        "url": "https://www.microsoft.com/en-us/research/blog/adversarial-machine-learning-and-instrumental-variables-for-flexible-causal-modeling/"
-      },
-      "items": [
-        {
-          "id": "resource-microsoft-research-end-to-end-causal-inference-at-scale-demo",
-          "type": "resource",
-          "title": "Microsoft Research: End-to-End Causal Inference at Scale Demo",
-          "url": "https://www.microsoft.com/en-us/research/video/demo-enabling-end-to-end-causal-inference-at-scale/"
-        },
-        {
-          "id": "dataset-microsoft-research",
-          "type": "dataset",
-          "title": "Microsoft Research",
-          "url": "https://www.microsoft.com/en-us/research/tools/"
-        },
-        {
-          "id": "paper-artificial-intelligence-algorithmic-pricing-and-collusion",
-          "type": "paper",
-          "title": "Artificial Intelligence, Algorithmic Pricing, and Collusion",
-          "url": "https://www.aeaweb.org/articles?id=10.1257/aer.20190623"
-        },
-        {
-          "id": "talk-nikhil-devanur-lagrangian-duality-in-mechanism-design",
-          "type": "talk",
-          "title": "Nikhil Devanur: Lagrangian Duality in Mechanism Design",
-          "url": "https://mediaspace.gatech.edu/media/Nikhil+Devanur+-+Lagrangian+Duality+in+Mechanism+Design/1_oj4qzj8x"
-        },
-        {
-          "id": "book-the-age-of-surveillance-capitalism",
-          "type": "book",
-          "title": "The Age of Surveillance Capitalism",
-          "url": "https://www.amazon.com/Age-Surveillance-Capitalism-Future-Frontier/dp/1610395697"
-        },
-        {
-          "id": "paper-sustainable-and-unchallenged-algorithmic-tacit-collusion",
-          "type": "paper",
-          "title": "Sustainable and Unchallenged Algorithmic Tacit Collusion",
-          "url": "https://scholarlycommons.law.northwestern.edu/njtip/vol17/iss2/1/"
-        },
-        {
-          "id": "talk-jean-tirole-nobel-lecture-2014",
-          "type": "talk",
-          "title": "Jean Tirole: Nobel Lecture 2014",
-          "url": "https://www.youtube.com/watch?v=vYPWe_S-BeY"
-        }
-      ],
-      "seed": {
-        "type": "person",
-        "name": "Sonia Jaffe",
-        "company": "Microsoft Research"
       }
     },
     {
@@ -4389,7 +3901,7 @@
     {
       "id": "method-a-simple-sequentially-rejective-multiple",
       "template": "method",
-      "name": "The A Simple Sequentially Rejective Multiple Test... Legacy",
+      "name": "A Simple Sequentially Rejective Multiple Test... Legacy",
       "description": "A foundational paper with 21,731+ citations and its ecosystem",
       "hero": {
         "id": "paper-a-simple-sequentially-rejective-multiple-test-procedure",
@@ -4509,7 +4021,7 @@
     {
       "id": "method-a-density-based-algorithm-for-discoverin",
       "template": "method",
-      "name": "The A Density-Based Algorithm for Discovering Clusters... Legacy",
+      "name": "A Density-Based Algorithm for Discovering Clusters... Legacy",
       "description": "A foundational paper with 19,113+ citations and its ecosystem",
       "hero": {
         "id": "paper-a-density-based-algorithm-for-discovering-clusters-dbscan",
@@ -4773,7 +4285,7 @@
     {
       "id": "method-a-proportional-hazards-model-for-the-sub",
       "template": "method",
-      "name": "The A Proportional Hazards Model for the... Legacy",
+      "name": "A Proportional Hazards Model for the... Legacy",
       "description": "A foundational paper with 12,984+ citations and its ecosystem",
       "hero": {
         "id": "paper-a-proportional-hazards-model-for-the-subdistribution-of-a-competing-risk",
@@ -5511,7 +5023,7 @@
     {
       "id": "method-a-unified-approach-to-interpreting-model",
       "template": "method",
-      "name": "The A Unified Approach to Interpreting Model... Legacy",
+      "name": "A Unified Approach to Interpreting Model... Legacy",
       "description": "A foundational paper with 7,621+ citations and its ecosystem",
       "hero": {
         "id": "paper-a-unified-approach-to-interpreting-model-predictions-shap",
@@ -5859,7 +5371,7 @@
     {
       "id": "method-a-simple-model-of-herd-behavior",
       "template": "method",
-      "name": "The A Simple Model of Herd Behavior Legacy",
+      "name": "A Simple Model of Herd Behavior Legacy",
       "description": "A foundational paper with 6,368+ citations and its ecosystem",
       "hero": {
         "id": "paper-a-simple-model-of-herd-behavior",
