@@ -1,0 +1,2426 @@
+{
+  "updated": "2025-12-31T20:52:30.284822Z",
+  "weights": {
+    "ctr": 0.3,
+    "dwell": 0.25,
+    "viewability": 0.2,
+    "popularity": 0.15,
+    "confidence": 0.1
+  },
+  "total_items": 127,
+  "rankings": [
+    {
+      "name": "google research: market algorithms team",
+      "section": "Auction Theory",
+      "clicks": 2,
+      "impressions": 1,
+      "ctr": 1.1111,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.6178,
+      "components": {
+        "ctr": 1.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.239,
+        "confidence": 0.81
+      },
+      "rank": 1
+    },
+    {
+      "name": "scikit-learn",
+      "section": "packages",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.8333,
+      "dwell_ms": 8000,
+      "viewable_seconds": 6.5,
+      "reading_ratio": 0.65,
+      "score": 0.4352,
+      "components": {
+        "ctr": 0.75,
+        "dwell": 0.533,
+        "viewability": 0.385,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 2
+    },
+    {
+      "name": "seeing theory (brown)",
+      "section": "Probability & Inference",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.125,
+      "dwell_ms": 11460,
+      "viewable_seconds": 14.7,
+      "reading_ratio": 13637.4,
+      "score": 0.3987,
+      "components": {
+        "ctr": 0.113,
+        "dwell": 0.764,
+        "viewability": 0.87,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 3
+    },
+    {
+      "name": "pandas",
+      "section": "packages",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": 15000,
+      "viewable_seconds": 12.5,
+      "reading_ratio": 0.8,
+      "score": 0.3979,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 1.0,
+        "viewability": 0.74,
+        "popularity": 0.0,
+        "confidence": 0
+      },
+      "rank": 4
+    },
+    {
+      "name": "coding for economists (arthur turrell)",
+      "section": "Causal Inference & ML",
+      "clicks": 1,
+      "impressions": 1,
+      "ctr": 0.65,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.3216,
+      "components": {
+        "ctr": 0.585,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0.207
+      },
+      "rank": 5
+    },
+    {
+      "name": "impression-test-v1",
+      "section": "packages",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.8333,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.3187,
+      "components": {
+        "ctr": 0.75,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 6
+    },
+    {
+      "name": "beyond jupyter",
+      "section": "Software Engineering",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": 1916,
+      "viewable_seconds": 16.9,
+      "reading_ratio": 1140.02,
+      "score": 0.2319,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0.128,
+        "viewability": 1.0,
+        "popularity": 0.0,
+        "confidence": 0
+      },
+      "rank": 7
+    },
+    {
+      "name": "scott cunningham: causal inference substack",
+      "section": "Causal Inference & ML",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "dwell_ms": 4431,
+      "viewable_seconds": 9.3,
+      "reading_ratio": 2181.89,
+      "score": 0.1839,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0.295,
+        "viewability": 0.55,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 8
+    },
+    {
+      "name": "crewai",
+      "section": "Agentic AI",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": 2486,
+      "viewable_seconds": 8.6,
+      "reading_ratio": 1972.23,
+      "score": 0.1432,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0.166,
+        "viewability": 0.509,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 9
+    },
+    {
+      "name": "sqlbolt",
+      "section": "SQL",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": 1214,
+      "viewable_seconds": 9.1,
+      "reading_ratio": 825.52,
+      "score": 0.1279,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0.081,
+        "viewability": 0.538,
+        "popularity": 0.0,
+        "confidence": 0
+      },
+      "rank": 10
+    },
+    {
+      "name": "abracadabra",
+      "section": "Adaptive Experimentation & Bandits",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": 1005,
+      "viewable_seconds": 6.9,
+      "reading_ratio": 683.4,
+      "score": 0.0984,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0.067,
+        "viewability": 0.408,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 11
+    },
+    {
+      "name": "a/b testing on social networks",
+      "section": "A/B Testing Fundamentals",
+      "clicks": 4,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0926,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.349,
+        "confidence": 0
+      },
+      "rank": 12
+    },
+    {
+      "name": "pyxab",
+      "section": "Adaptive Experimentation & Bandits",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": 1550,
+      "viewable_seconds": 5.3,
+      "reading_ratio": 1054,
+      "score": 0.0886,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0.103,
+        "viewability": 0.314,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 13
+    },
+    {
+      "name": "bestbuy",
+      "section": "other",
+      "clicks": 3,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0798,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.301,
+        "confidence": 0
+      },
+      "rank": 14
+    },
+    {
+      "name": "causal inference for the brave and true",
+      "section": "other",
+      "clicks": 3,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0798,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.301,
+        "confidence": 0
+      },
+      "rank": 15
+    },
+    {
+      "name": "spacy",
+      "section": "other",
+      "clicks": 3,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0798,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.301,
+        "confidence": 0
+      },
+      "rank": 16
+    },
+    {
+      "name": "click-test-v2",
+      "section": "packages",
+      "clicks": 3,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0798,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.301,
+        "confidence": 0
+      },
+      "rank": 17
+    },
+    {
+      "name": "bsts",
+      "section": "Bayesian Causal Inference",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": 2287,
+      "viewable_seconds": 2.7,
+      "reading_ratio": 1020.57,
+      "score": 0.0701,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0.152,
+        "viewability": 0.16,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 18
+    },
+    {
+      "name": "jd.com 2020 (msom-20)",
+      "section": "E-Commerce",
+      "clicks": 2,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0632,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.239,
+        "confidence": 0
+      },
+      "rank": 19
+    },
+    {
+      "name": "econml",
+      "section": "Double/Debiased Machine Learning (DML)",
+      "clicks": 2,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0632,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.239,
+        "confidence": 0
+      },
+      "rank": 20
+    },
+    {
+      "name": "netflix causal inference",
+      "section": "other",
+      "clicks": 2,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0632,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.239,
+        "confidence": 0
+      },
+      "rank": 21
+    },
+    {
+      "name": "open e-commerce 1.0 (mit)",
+      "section": "other",
+      "clicks": 2,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0632,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.239,
+        "confidence": 0
+      },
+      "rank": 22
+    },
+    {
+      "name": "diqad",
+      "section": "AI & LLM",
+      "clicks": 2,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0632,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.239,
+        "confidence": 0
+      },
+      "rank": 23
+    },
+    {
+      "name": "lmsys-chat-1m",
+      "section": "AI & LLM",
+      "clicks": 2,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0632,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.239,
+        "confidence": 0
+      },
+      "rank": 24
+    },
+    {
+      "name": "ananke",
+      "section": "Causal Discovery & Graphical Models",
+      "clicks": 2,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0632,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.239,
+        "confidence": 0
+      },
+      "rank": 25
+    },
+    {
+      "name": "athey's course datasets",
+      "section": "Education",
+      "clicks": 2,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0632,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.239,
+        "confidence": 0
+      },
+      "rank": 26
+    },
+    {
+      "name": "mode sql tutorial",
+      "section": "SQL",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": 1625,
+      "viewable_seconds": 2.9,
+      "reading_ratio": 1008.91,
+      "score": 0.0614,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0.108,
+        "viewability": 0.172,
+        "popularity": 0.0,
+        "confidence": 0
+      },
+      "rank": 27
+    },
+    {
+      "name": "how superhuman built an engine to find pmf (first round)",
+      "section": "Probability & Inference",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.125,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0478,
+      "components": {
+        "ctr": 0.113,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 28
+    },
+    {
+      "name": "how to measure cohort retention (lenny's newsletter)",
+      "section": "Probability & Inference",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.125,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0478,
+      "components": {
+        "ctr": 0.113,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 29
+    },
+    {
+      "name": "scipy.stats documentation",
+      "section": "Probability & Inference",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.125,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0478,
+      "components": {
+        "ctr": 0.113,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 30
+    },
+    {
+      "name": "tim roughgarden's cs364a: mechanism design",
+      "section": "Auction Theory",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.1111,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0425,
+      "components": {
+        "ctr": 0.1,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 31
+    },
+    {
+      "name": "easley & kleinberg: sponsored search markets",
+      "section": "Auction Theory",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.1111,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0425,
+      "components": {
+        "ctr": 0.1,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 32
+    },
+    {
+      "name": "jonathan levin's revenue equivalence notes",
+      "section": "Auction Theory",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.1111,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0425,
+      "components": {
+        "ctr": 0.1,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 33
+    },
+    {
+      "name": "kevin leyton-brown's vcg mechanism lectures",
+      "section": "Auction Theory",
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0.1111,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0425,
+      "components": {
+        "ctr": 0.1,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 34
+    },
+    {
+      "name": "a/b testing on social networks",
+      "section": "learning",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 35
+    },
+    {
+      "name": "nick singh's 40 stats questions",
+      "section": "Stats & Probability",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 36
+    },
+    {
+      "name": "measuringu",
+      "section": "Probability & Inference",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 37
+    },
+    {
+      "name": "deep-test-package",
+      "section": "packages",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 38
+    },
+    {
+      "name": "sean taylor: when do we need causal inference?",
+      "section": "Causal Inference & ML",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 39
+    },
+    {
+      "name": "blp us car data",
+      "section": "Automotive",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 40
+    },
+    {
+      "name": "amazon sessions (kdd cup 23)",
+      "section": "other",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 41
+    },
+    {
+      "name": "uber movement",
+      "section": "datasets",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 42
+    },
+    {
+      "name": "jd.com 2020 (msom-20)",
+      "section": "other",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 43
+    },
+    {
+      "name": "test-package",
+      "section": "packages",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 44
+    },
+    {
+      "name": "applied econometrics notes (lal)",
+      "section": "other",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 45
+    },
+    {
+      "name": "instacart",
+      "section": "Food & Delivery",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 46
+    },
+    {
+      "name": "instacart",
+      "section": "other",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 47
+    },
+    {
+      "name": "amazon science economics",
+      "section": "other",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 48
+    },
+    {
+      "name": "causalmatch",
+      "section": "Causal Inference & Matching",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 49
+    },
+    {
+      "name": "cms hospital price transparency",
+      "section": "Healthcare",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 50
+    },
+    {
+      "name": "pat bajari: building applied analytics at amazon",
+      "section": "Strategy & Digital Platforms",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 51
+    },
+    {
+      "name": "chicago tnc trips",
+      "section": "datasets",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 52
+    },
+    {
+      "name": "evan miller: how not to run an a/b test",
+      "section": "A/B Testing Fundamentals",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 53
+    },
+    {
+      "name": "ieee-cis fraud detection",
+      "section": "datasets",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 54
+    },
+    {
+      "name": "empirical io: coding blp",
+      "section": "Causal Inference Fundamentals",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 55
+    },
+    {
+      "name": "doubleml",
+      "section": "Double/Debiased Machine Learning (DML)",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 56
+    },
+    {
+      "name": "medicare provider utilization",
+      "section": "Healthcare",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 57
+    },
+    {
+      "name": "jonathan.interviews: data science careers & causal inference",
+      "section": "Causal Inference & ML",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 58
+    },
+    {
+      "name": "ace the data science interview",
+      "section": "General Prep",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 59
+    },
+    {
+      "name": "optn organ transplant",
+      "section": "Healthcare",
+      "clicks": 1,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0399,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.151,
+        "confidence": 0
+      },
+      "rank": 60
+    },
+    {
+      "name": "datalemur",
+      "section": "SQL",
+      "clicks": 0,
+      "impressions": 0,
+      "ctr": 0,
+      "dwell_ms": 1107,
+      "viewable_seconds": 1.3,
+      "reading_ratio": 1756.44,
+      "score": 0.0338,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0.074,
+        "viewability": 0.077,
+        "popularity": 0.0,
+        "confidence": 0
+      },
+      "rank": 61
+    },
+    {
+      "name": "display advertising with real-time bidding",
+      "section": "Ads & Attribution",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 62
+    },
+    {
+      "name": "haus blog: synthetic control & geo-experimentation",
+      "section": "Ads & Attribution",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 63
+    },
+    {
+      "name": "brms",
+      "section": "Bayesian Inference",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 64
+    },
+    {
+      "name": "jeffrey kantor: pyomo cookbook",
+      "section": "Linear Programming",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 65
+    },
+    {
+      "name": "fwildclusterboot",
+      "section": "Bootstrap & Inference",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 66
+    },
+    {
+      "name": "frank pinter's demand estimation notes",
+      "section": "Computational Economics",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 67
+    },
+    {
+      "name": "growth accounting & backtraced growth accounting",
+      "section": "Growth & Retention",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 68
+    },
+    {
+      "name": "rstan",
+      "section": "Bayesian Inference",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 69
+    },
+    {
+      "name": "open source economics: structural estimation",
+      "section": "Computational Economics",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 70
+    },
+    {
+      "name": "ahead of ai (sebastian raschka)",
+      "section": "Machine Learning",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 71
+    },
+    {
+      "name": "modeling discrete optimization (coursera)",
+      "section": "Convex Optimization",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 72
+    },
+    {
+      "name": "scrapy documentation",
+      "section": "Python",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 73
+    },
+    {
+      "name": "auctions in ad tech (sanjiv das)",
+      "section": "Ads & Attribution",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 74
+    },
+    {
+      "name": "remerge findings: incrementality testing approaches",
+      "section": "Ads & Attribution",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 75
+    },
+    {
+      "name": "mit ocw: dynamic programming (bertsekas)",
+      "section": "Computational Economics",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 76
+    },
+    {
+      "name": "bayesplot",
+      "section": "Bayesian Inference",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 77
+    },
+    {
+      "name": "pymc-marketing clv quickstart",
+      "section": "Bayesian Methods",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 78
+    },
+    {
+      "name": "numpyro",
+      "section": "Bayesian Econometrics",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 79
+    },
+    {
+      "name": "mstl multi-seasonal decomposition in python",
+      "section": "Classical Methods",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 80
+    },
+    {
+      "name": "bambi",
+      "section": "Bayesian Econometrics",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 81
+    },
+    {
+      "name": "ryan o'neil: real-time optimization",
+      "section": "Operations Research",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 82
+    },
+    {
+      "name": "real python: web scraping",
+      "section": "Python",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 83
+    },
+    {
+      "name": "bruce hardie's clv papers",
+      "section": "Growth & Retention",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 84
+    },
+    {
+      "name": "mobile dev memo: post-att marketing measurement",
+      "section": "Ads & Attribution",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 85
+    },
+    {
+      "name": "statistical rethinking",
+      "section": "Bayesian Methods",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 86
+    },
+    {
+      "name": "cvxpy short course",
+      "section": "Convex Optimization",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 87
+    },
+    {
+      "name": "langchain",
+      "section": "Agentic AI",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 88
+    },
+    {
+      "name": "mabwiser",
+      "section": "Adaptive Experimentation & Bandits",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 89
+    },
+    {
+      "name": "python for econometrics",
+      "section": "Python",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 90
+    },
+    {
+      "name": "python data science handbook",
+      "section": "Python",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 91
+    },
+    {
+      "name": "pymc labs blog",
+      "section": "Bayesian Methods",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 92
+    },
+    {
+      "name": "scipy lecture notes: mathematical optimization",
+      "section": "Convex Optimization",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 93
+    },
+    {
+      "name": "mit 15.053: optimization methods in management science",
+      "section": "Convex Optimization",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 94
+    },
+    {
+      "name": "pymc",
+      "section": "Bayesian Econometrics",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 95
+    },
+    {
+      "name": "causal inference: the mixtape",
+      "section": "Causal Inference & ML",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 96
+    },
+    {
+      "name": "matteo courthoud's blp demand estimation",
+      "section": "Computational Economics",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 97
+    },
+    {
+      "name": "ritvikmath time series youtube + github",
+      "section": "Classical Methods",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 98
+    },
+    {
+      "name": "boot",
+      "section": "Bootstrap & Inference",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 99
+    },
+    {
+      "name": "stanford ee364a (youtube)",
+      "section": "Convex Optimization",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 100
+    },
+    {
+      "name": "interpreting acf and pacf plots",
+      "section": "Classical Methods",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 101
+    },
+    {
+      "name": "open bandit pipeline (obp)",
+      "section": "Adaptive Experimentation & Bandits",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 102
+    },
+    {
+      "name": "nathan brixius: ml + optimization",
+      "section": "Operations Research",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 103
+    },
+    {
+      "name": "smpybandits",
+      "section": "Adaptive Experimentation & Bandits",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 104
+    },
+    {
+      "name": "langgraph",
+      "section": "Agentic AI",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 105
+    },
+    {
+      "name": "coding for practitioners",
+      "section": "Python",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 106
+    },
+    {
+      "name": "adkdd workshop papers",
+      "section": "Ads & Attribution",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 107
+    },
+    {
+      "name": "adjust blog: mobile attribution & privacy",
+      "section": "Ads & Attribution",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 108
+    },
+    {
+      "name": "rsample",
+      "section": "Bootstrap & Inference",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 109
+    },
+    {
+      "name": "automate the boring stuff with python",
+      "section": "Python",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 110
+    },
+    {
+      "name": "gsp auction paper (edelman et al., aer 2007)",
+      "section": "Ads & Attribution",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 111
+    },
+    {
+      "name": "ax (meta adaptive experimentation)",
+      "section": "Adaptive Experimentation & Bandits",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 112
+    },
+    {
+      "name": "openai-agents",
+      "section": "Agentic AI",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 113
+    },
+    {
+      "name": "lightweightmmm",
+      "section": "Bayesian Econometrics",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 114
+    },
+    {
+      "name": "aea: machine learning and econometrics (athey/imbens)",
+      "section": "Computational Economics",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 115
+    },
+    {
+      "name": "quantecon: discrete state dynamic programming",
+      "section": "Computational Economics",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 116
+    },
+    {
+      "name": "bayesianbandits",
+      "section": "Adaptive Experimentation & Bandits",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 117
+    },
+    {
+      "name": "convex optimization (boyd & vandenberghe)",
+      "section": "Convex Optimization",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 118
+    },
+    {
+      "name": "erwin kalvelagen: yet another math programming consultant",
+      "section": "Operations Research",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 119
+    },
+    {
+      "name": "rstanarm",
+      "section": "Bayesian Inference",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 120
+    },
+    {
+      "name": "alain chabrier: column generation with cplex",
+      "section": "Operations Research",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 121
+    },
+    {
+      "name": "lenny's newsletter: how duolingo reignited user growth",
+      "section": "Growth & Retention",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 122
+    },
+    {
+      "name": "hands-on mathematical optimization with python (mo-book)",
+      "section": "Linear Programming",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 123
+    },
+    {
+      "name": "contextualbandits",
+      "section": "Adaptive Experimentation & Bandits",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 124
+    },
+    {
+      "name": "causal inference for the brave and true",
+      "section": "Causal Inference & ML",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 125
+    },
+    {
+      "name": "guide to product metrics",
+      "section": "Growth & Retention",
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 126
+    },
+    {
+      "name": "pymc-marketing documentation",
+      "section": "Bayesian Methods",
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0.0,
+      "dwell_ms": null,
+      "viewable_seconds": null,
+      "reading_ratio": null,
+      "score": 0.0,
+      "components": {
+        "ctr": 0.0,
+        "dwell": 0,
+        "viewability": 0,
+        "popularity": 0.0,
+        "confidence": 0.0
+      },
+      "rank": 127
+    }
+  ]
+}
