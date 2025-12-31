@@ -1,14 +1,15 @@
 {{ define "main" }}
 <div class="about-page">
-    <header class="about-header">
-        <h1>Subscribe</h1>
+    <header class="form-hero form-hero--subscribe">
+        <div class="form-hero__blobs"></div>
+        <div class="form-hero__content">
+            <h1>Subscribe</h1>
+            <p>Get quarterly updates on new packages & resources</p>
+        </div>
     </header>
 
     <div class="about-content">
         <section class="about-section">
-            <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
-                We never send mail, except on major updates, likely quarterly.
-            </p>
 
             <form action="https://formspree.io/f/xnjqdebp" method="POST" class="subscribe-form">
                 <div class="subscribe-input-group">
@@ -27,6 +28,83 @@
 </div>
 
 <style>
+/* Hero with gradient background */
+.form-hero {
+    position: relative;
+    padding: 3rem 2rem;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+
+.form-hero__content {
+    position: relative;
+    z-index: 1;
+}
+
+.form-hero__content h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: var(--text-primary);
+}
+
+.form-hero__content p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.form-hero__blobs {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.form-hero__blobs::before,
+.form-hero__blobs::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.5;
+}
+
+/* Subscribe: Purple/Blue theme */
+.form-hero--subscribe {
+    background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 50%, #e0e7ff 100%);
+}
+
+.form-hero--subscribe .form-hero__blobs::before {
+    width: 200px;
+    height: 200px;
+    background: #8b5cf6;
+    top: -50px;
+    right: -30px;
+}
+
+.form-hero--subscribe .form-hero__blobs::after {
+    width: 150px;
+    height: 150px;
+    background: #3b82f6;
+    bottom: -40px;
+    left: -20px;
+}
+
+/* Dark mode */
+[data-theme="dark"] .form-hero--subscribe {
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #1e3a5f 100%);
+}
+
+[data-theme="dark"] .form-hero--subscribe .form-hero__blobs::before {
+    opacity: 0.3;
+}
+
+[data-theme="dark"] .form-hero--subscribe .form-hero__blobs::after {
+    opacity: 0.3;
+}
+
 .subscribe-form {
     max-width: 400px;
 }
@@ -40,14 +118,16 @@
     flex: 1;
     padding: 0.75rem 1rem;
     font-size: 1rem;
-    border: 1px solid #e5e5e5;
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     outline: none;
     transition: border-color 0.2s;
+    background: var(--bg-input);
+    color: var(--text-primary);
 }
 
 .subscribe-input:focus {
-    border-color: #0066cc;
+    border-color: var(--accent);
 }
 
 .subscribe-button {
@@ -55,7 +135,7 @@
     font-size: 1rem;
     font-weight: 500;
     color: white;
-    background: #0066cc;
+    background: var(--accent);
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -63,7 +143,7 @@
 }
 
 .subscribe-button:hover {
-    background: #0052a3;
+    background: var(--accent-hover);
 }
 
 @media (max-width: 480px) {

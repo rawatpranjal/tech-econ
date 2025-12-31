@@ -1,14 +1,15 @@
 {{ define "main" }}
 <div class="about-page">
-    <header class="about-header">
-        <h1>Feedback</h1>
+    <header class="form-hero form-hero--feedback">
+        <div class="form-hero__blobs"></div>
+        <div class="form-hero__content">
+            <h1>Feedback</h1>
+            <p>Help us improve tech-econ</p>
+        </div>
     </header>
 
     <div class="about-content">
         <section class="about-section">
-            <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2rem;">
-                Have suggestions, found a bug, or want to share your thoughts? Let us know!
-            </p>
 
             <form action="https://formspree.io/f/xaqyorzo" method="POST" class="feedback-form">
                 <div class="form-group">
@@ -28,6 +29,83 @@
 </div>
 
 <style>
+/* Hero with gradient background */
+.form-hero {
+    position: relative;
+    padding: 3rem 2rem;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+
+.form-hero__content {
+    position: relative;
+    z-index: 1;
+}
+
+.form-hero__content h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: var(--text-primary);
+}
+
+.form-hero__content p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.form-hero__blobs {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.form-hero__blobs::before,
+.form-hero__blobs::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.5;
+}
+
+/* Feedback: Teal/Emerald theme */
+.form-hero--feedback {
+    background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 50%, #d1fae5 100%);
+}
+
+.form-hero--feedback .form-hero__blobs::before {
+    width: 180px;
+    height: 180px;
+    background: #14b8a6;
+    top: -40px;
+    left: -30px;
+}
+
+.form-hero--feedback .form-hero__blobs::after {
+    width: 160px;
+    height: 160px;
+    background: #10b981;
+    bottom: -50px;
+    right: -40px;
+}
+
+/* Dark mode */
+[data-theme="dark"] .form-hero--feedback {
+    background: linear-gradient(135deg, #042f2e 0%, #134e4a 50%, #064e3b 100%);
+}
+
+[data-theme="dark"] .form-hero--feedback .form-hero__blobs::before {
+    opacity: 0.3;
+}
+
+[data-theme="dark"] .form-hero--feedback .form-hero__blobs::after {
+    opacity: 0.3;
+}
+
 .feedback-form {
     max-width: 500px;
 }

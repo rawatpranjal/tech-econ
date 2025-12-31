@@ -1,14 +1,15 @@
 {{ define "main" }}
 <div class="about-page">
-    <header class="about-header">
-        <h1>Submit a Package</h1>
+    <header class="form-hero form-hero--submit">
+        <div class="form-hero__blobs"></div>
+        <div class="form-hero__content">
+            <h1>Submit a Package</h1>
+            <p>Suggest a tool for the community</p>
+        </div>
     </header>
 
     <div class="about-content">
         <section class="about-section">
-            <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem;">
-                Know a Python package for econometrics or data science that should be listed? Submit it here!
-            </p>
 
             <form action="https://formspree.io/f/mqekqrob" method="POST" class="feedback-form">
                 <div class="form-group">
@@ -43,6 +44,83 @@
 </div>
 
 <style>
+/* Hero with gradient background */
+.form-hero {
+    position: relative;
+    padding: 3rem 2rem;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+
+.form-hero__content {
+    position: relative;
+    z-index: 1;
+}
+
+.form-hero__content h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: var(--text-primary);
+}
+
+.form-hero__content p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.form-hero__blobs {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.form-hero__blobs::before,
+.form-hero__blobs::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.5;
+}
+
+/* Submit: Amber/Orange theme */
+.form-hero--submit {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 50%, #ffedd5 100%);
+}
+
+.form-hero--submit .form-hero__blobs::before {
+    width: 190px;
+    height: 190px;
+    background: #f59e0b;
+    top: -60px;
+    right: -40px;
+}
+
+.form-hero--submit .form-hero__blobs::after {
+    width: 140px;
+    height: 140px;
+    background: #f97316;
+    bottom: -30px;
+    left: -30px;
+}
+
+/* Dark mode */
+[data-theme="dark"] .form-hero--submit {
+    background: linear-gradient(135deg, #451a03 0%, #78350f 50%, #7c2d12 100%);
+}
+
+[data-theme="dark"] .form-hero--submit .form-hero__blobs::before {
+    opacity: 0.3;
+}
+
+[data-theme="dark"] .form-hero--submit .form-hero__blobs::after {
+    opacity: 0.3;
+}
+
 .feedback-form {
     max-width: 500px;
 }
@@ -55,7 +133,7 @@
     display: block;
     font-weight: 500;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: var(--text-primary);
 }
 
 .form-group input,
@@ -63,16 +141,18 @@
     width: 100%;
     padding: 0.75rem 1rem;
     font-size: 1rem;
-    border: 1px solid #e5e5e5;
+    border: 1px solid var(--border-color);
     border-radius: 6px;
     outline: none;
     transition: border-color 0.2s;
     font-family: inherit;
+    background: var(--bg-input);
+    color: var(--text-primary);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
-    border-color: #0066cc;
+    border-color: var(--accent);
 }
 
 .form-group textarea {
@@ -85,7 +165,7 @@
     font-size: 1rem;
     font-weight: 500;
     color: white;
-    background: #0066cc;
+    background: var(--accent);
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -93,7 +173,7 @@
 }
 
 .submit-button:hover {
-    background: #0052a3;
+    background: var(--accent-hover);
 }
 </style>
 {{ end }}
