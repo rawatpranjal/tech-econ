@@ -1,132 +1,48 @@
 {{ define "main" }}
-<div class="about-page">
-    <header class="form-hero form-hero--submit">
-        <div class="form-hero__blobs"></div>
-        <div class="form-hero__content">
-            <h1>Submit a Package</h1>
-            <p>Suggest a tool for the community</p>
+<header class="hero hero-with-image hero-submit">
+    <h1 class="hero-title">Submit a Package</h1>
+    <p class="hero-tagline">Suggest a tool for the community</p>
+</header>
+
+<div class="container" style="max-width: 600px; margin: 0 auto; padding: 2rem;">
+    <form action="https://formspree.io/f/mqekqrob" method="POST" class="submit-form">
+        <div class="form-group">
+            <label for="package_name">Package Name <span class="required">*</span></label>
+            <input type="text" id="package_name" name="package_name" placeholder="e.g., statsmodels" required>
         </div>
-    </header>
 
-    <div class="about-content">
-        <section class="about-section">
+        <div class="form-group">
+            <label for="url">GitHub or PyPI URL <span class="required">*</span></label>
+            <input type="url" id="url" name="url" placeholder="https://github.com/..." required>
+        </div>
 
-            <form action="https://formspree.io/f/mqekqrob" method="POST" class="feedback-form">
-                <div class="form-group">
-                    <label for="package_name">Package Name *</label>
-                    <input type="text" id="package_name" name="package_name" placeholder="e.g., statsmodels" required>
-                </div>
+        <div class="form-group">
+            <label for="category">Category <span class="optional">(optional)</span></label>
+            <input type="text" id="category" name="category" placeholder="e.g., Causal Inference, Time Series">
+        </div>
 
-                <div class="form-group">
-                    <label for="url">GitHub or PyPI URL *</label>
-                    <input type="url" id="url" name="url" placeholder="https://github.com/..." required>
-                </div>
+        <div class="form-group">
+            <label for="description">Brief Description <span class="optional">(optional)</span></label>
+            <textarea id="description" name="description" placeholder="What does this package do?" rows="3"></textarea>
+        </div>
 
-                <div class="form-group">
-                    <label for="category">Category</label>
-                    <input type="text" id="category" name="category" placeholder="e.g., Causal Inference, Time Series">
-                </div>
+        <div class="form-group">
+            <label for="email">Your Email <span class="optional">(optional)</span></label>
+            <input type="email" id="email" name="email" placeholder="your@email.com">
+        </div>
 
-                <div class="form-group">
-                    <label for="description">Brief Description</label>
-                    <textarea id="description" name="description" placeholder="What does this package do?" rows="3"></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Your Email (optional)</label>
-                    <input type="email" id="email" name="email" placeholder="your@email.com">
-                </div>
-
-                <button type="submit" class="submit-button">Submit Package</button>
-            </form>
-        </section>
-    </div>
+        <button type="submit" class="submit-button">Submit Package</button>
+    </form>
 </div>
 
 <style>
-/* Hero with gradient background */
-.form-hero {
-    position: relative;
-    padding: 3rem 2rem;
-    text-align: center;
-    overflow: hidden;
-    border-radius: 16px;
-    margin-bottom: 2rem;
-}
-
-.form-hero__content {
-    position: relative;
-    z-index: 1;
-}
-
-.form-hero__content h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 0 0 0.5rem;
-    color: var(--text-primary);
-}
-
-.form-hero__content p {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    margin: 0;
-}
-
-.form-hero__blobs {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-}
-
-.form-hero__blobs::before,
-.form-hero__blobs::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(60px);
-    opacity: 0.5;
-}
-
-/* Submit: Amber/Orange theme */
-.form-hero--submit {
-    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 50%, #ffedd5 100%);
-}
-
-.form-hero--submit .form-hero__blobs::before {
-    width: 190px;
-    height: 190px;
-    background: #f59e0b;
-    top: -60px;
-    right: -40px;
-}
-
-.form-hero--submit .form-hero__blobs::after {
-    width: 140px;
-    height: 140px;
-    background: #f97316;
-    bottom: -30px;
-    left: -30px;
-}
-
-/* Dark mode */
-[data-theme="dark"] .form-hero--submit {
-    background: linear-gradient(135deg, #451a03 0%, #78350f 50%, #7c2d12 100%);
-}
-
-[data-theme="dark"] .form-hero--submit .form-hero__blobs::before {
-    opacity: 0.3;
-}
-
-[data-theme="dark"] .form-hero--submit .form-hero__blobs::after {
-    opacity: 0.3;
-}
-
-.feedback-form {
+.submit-form {
     max-width: 500px;
+    margin: 0 auto;
 }
 
 .form-group {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
 }
 
 .form-group label {
@@ -134,6 +50,16 @@
     font-weight: 500;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
+}
+
+.form-group .required {
+    color: #ef4444;
+}
+
+.form-group .optional {
+    font-weight: 400;
+    color: var(--text-muted);
+    font-size: 0.9rem;
 }
 
 .form-group input,
@@ -161,7 +87,8 @@
 }
 
 .submit-button {
-    padding: 0.75rem 2rem;
+    width: 100%;
+    padding: 0.875rem 2rem;
     font-size: 1rem;
     font-weight: 500;
     color: white;

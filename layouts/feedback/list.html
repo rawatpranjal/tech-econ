@@ -1,117 +1,70 @@
 {{ define "main" }}
-<div class="about-page">
-    <header class="form-hero form-hero--feedback">
-        <div class="form-hero__blobs"></div>
-        <div class="form-hero__content">
-            <h1>Feedback</h1>
-            <p>Help us improve tech-econ</p>
+<header class="hero hero-with-image hero-feedback">
+    <h1 class="hero-title">Feedback</h1>
+    <p class="hero-tagline">Help us improve tech-econ</p>
+</header>
+
+<div class="container" style="max-width: 600px; margin: 0 auto; padding: 2rem;">
+    <form action="https://formspree.io/f/xaqyorzo" method="POST" class="feedback-form">
+        <!-- Rating -->
+        <div class="form-group">
+            <label>How would you rate tech-econ?</label>
+            <div class="star-rating">
+                <input type="radio" name="rating" value="5" id="star5">
+                <label for="star5" title="Excellent">★</label>
+                <input type="radio" name="rating" value="4" id="star4">
+                <label for="star4" title="Good">★</label>
+                <input type="radio" name="rating" value="3" id="star3">
+                <label for="star3" title="Average">★</label>
+                <input type="radio" name="rating" value="2" id="star2">
+                <label for="star2" title="Poor">★</label>
+                <input type="radio" name="rating" value="1" id="star1">
+                <label for="star1" title="Terrible">★</label>
+            </div>
         </div>
-    </header>
 
-    <div class="about-content">
-        <section class="about-section">
+        <!-- Category -->
+        <div class="form-group">
+            <label for="category">Category</label>
+            <select id="category" name="category" class="form-select">
+                <option value="">Select a category...</option>
+                <option value="bug">Bug Report</option>
+                <option value="feature">Feature Request</option>
+                <option value="content">Content Suggestion</option>
+                <option value="general">General Feedback</option>
+            </select>
+        </div>
 
-            <form action="https://formspree.io/f/xaqyorzo" method="POST" class="feedback-form">
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                </div>
+        <!-- Name -->
+        <div class="form-group">
+            <label for="name">Your Name <span class="optional">(optional)</span></label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe">
+        </div>
 
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" placeholder="Your feedback..." rows="5" required></textarea>
-                </div>
+        <!-- Email -->
+        <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+        </div>
 
-                <button type="submit" class="submit-button">Send Feedback</button>
-            </form>
-        </section>
-    </div>
+        <!-- Message -->
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your feedback..." rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">Send Feedback</button>
+    </form>
 </div>
 
 <style>
-/* Hero with gradient background */
-.form-hero {
-    position: relative;
-    padding: 3rem 2rem;
-    text-align: center;
-    overflow: hidden;
-    border-radius: 16px;
-    margin-bottom: 2rem;
-}
-
-.form-hero__content {
-    position: relative;
-    z-index: 1;
-}
-
-.form-hero__content h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 0 0 0.5rem;
-    color: var(--text-primary);
-}
-
-.form-hero__content p {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    margin: 0;
-}
-
-.form-hero__blobs {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-}
-
-.form-hero__blobs::before,
-.form-hero__blobs::after {
-    content: '';
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(60px);
-    opacity: 0.5;
-}
-
-/* Feedback: Teal/Emerald theme */
-.form-hero--feedback {
-    background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 50%, #d1fae5 100%);
-}
-
-.form-hero--feedback .form-hero__blobs::before {
-    width: 180px;
-    height: 180px;
-    background: #14b8a6;
-    top: -40px;
-    left: -30px;
-}
-
-.form-hero--feedback .form-hero__blobs::after {
-    width: 160px;
-    height: 160px;
-    background: #10b981;
-    bottom: -50px;
-    right: -40px;
-}
-
-/* Dark mode */
-[data-theme="dark"] .form-hero--feedback {
-    background: linear-gradient(135deg, #042f2e 0%, #134e4a 50%, #064e3b 100%);
-}
-
-[data-theme="dark"] .form-hero--feedback .form-hero__blobs::before {
-    opacity: 0.3;
-}
-
-[data-theme="dark"] .form-hero--feedback .form-hero__blobs::after {
-    opacity: 0.3;
-}
-
 .feedback-form {
     max-width: 500px;
+    margin: 0 auto;
 }
 
 .form-group {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
 }
 
 .form-group label {
@@ -121,8 +74,15 @@
     color: var(--text-primary);
 }
 
+.form-group .optional {
+    font-weight: 400;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     width: 100%;
     padding: 0.75rem 1rem;
     font-size: 1rem;
@@ -136,7 +96,8 @@
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
     border-color: var(--accent);
 }
 
@@ -145,8 +106,44 @@
     min-height: 120px;
 }
 
+.form-select {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    padding-right: 2.5rem;
+}
+
+/* Star Rating */
+.star-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 0.25rem;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    font-size: 1.75rem;
+    color: var(--border-color);
+    cursor: pointer;
+    transition: color 0.2s;
+    margin-bottom: 0;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label,
+.star-rating input:checked ~ label {
+    color: #f59e0b;
+}
+
 .submit-button {
-    padding: 0.75rem 2rem;
+    width: 100%;
+    padding: 0.875rem 2rem;
     font-size: 1rem;
     font-weight: 500;
     color: white;

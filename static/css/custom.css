@@ -5547,6 +5547,11 @@ mark.partial {
 .hero-about { background-image: url('/images/hero/about-hero.webp'); }
 .hero-discover { background-image: url('/images/hero/discover-hero.webp'); }
 
+/* Form page heroes - reuse existing images */
+.hero-subscribe { background-image: url('/images/hero/community-hero.webp'); }
+.hero-feedback { background-image: url('/images/hero/about-hero.webp'); }
+.hero-submit { background-image: url('/images/hero/packages-hero.webp'); }
+
 /* Book author styling */
 .resource-author {
     font-size: 0.9rem;
