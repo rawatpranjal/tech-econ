@@ -226,15 +226,126 @@ def compute_relevance_scores(cluster_item_ids, all_items, id_to_idx, embeddings,
     return scores
 
 
-def select_hero(cluster_item_ids, all_items, id_to_idx, relevance_scores):
+# Hero scoring weights (Netflix-style multi-signal)
+HERO_WEIGHTS = {
+    'media_richness': 0.20,   # video=1.0, audio=0.75, text=0.4
+    'authority': 0.25,        # citations, speaker fame
+    'engagement_proxy': 0.30, # stars, views (or type average)
+    'recency': 0.25           # exponential decay
+}
+
+# Media richness scores by content type
+MEDIA_RICHNESS = {
+    'talk': 1.0,      # Video content
+    'resource': 0.5,  # Mixed (some video tutorials)
+    'book': 0.4,      # Text
+    'paper': 0.4,     # Text
+    'package': 0.3,   # Code
+    'dataset': 0.3,   # Data
+    'community': 0.2, # Links
+    'career': 0.1,    # Job postings
+}
+
+# Default engagement scores by type (when no explicit data)
+TYPE_ENGAGEMENT_DEFAULTS = {
+    'talk': 0.8,
+    'resource': 0.6,
+    'paper': 0.5,
+    'book': 0.5,
+    'package': 0.4,
+    'dataset': 0.3,
+    'community': 0.2,
+    'career': 0.1,
+}
+
+
+def compute_hero_score(item, item_id, citations_data, relevance_scores):
     """
-    Select the hero item for a cluster based on type priority and relevance.
+    Compute multi-signal hero score for an item.
+
+    Components:
+    1. Media richness (0.20): video > audio > text
+    2. Authority (0.25): citations, type-based
+    3. Engagement proxy (0.30): stars, or type default
+    4. Recency (0.25): exponential decay from 2024
+
+    Returns:
+        Float score in [0, 1]
+    """
+    item_type = item.get('type', 'resource')
+
+    # Component 1: Media richness
+    media_score = MEDIA_RICHNESS.get(item_type, 0.4)
+
+    # Component 2: Authority (citations + type boost)
+    authority_score = 0.3  # Default
+    if item_type == 'paper' and item_id in citations_data:
+        citations = citations_data.get(item_id) or 0
+        # Log-scale: 1000 citations = 1.0
+        if citations > 0:
+            authority_score = min(1.0, np.log1p(citations) / np.log1p(1000))
+    elif item_type == 'talk':
+        # Talks from known speakers get boost
+        authority_score = 0.6
+    elif item_type == 'book':
+        authority_score = 0.5
+
+    # Component 3: Engagement proxy
+    # Use stars if available, otherwise type default
+    stars = item.get('stars', item.get('github_stars', 0)) or 0
+    if stars > 0:
+        # Log-scale: 10k stars = 1.0
+        engagement_score = min(1.0, np.log1p(stars) / np.log1p(10000))
+    else:
+        engagement_score = TYPE_ENGAGEMENT_DEFAULTS.get(item_type, 0.3)
+
+    # Component 4: Recency
+    # Parse year from date field or default
+    year = 2020  # Default
+    if 'date' in item and item['date']:
+        try:
+            year = int(str(item['date'])[:4])
+        except:
+            pass
+    elif 'year' in item and item['year']:
+        try:
+            year = int(item['year'])
+        except:
+            pass
+
+    # Exponential decay: items from 2024 get 1.0, 2020 gets ~0.5
+    years_old = max(0, 2024 - year)
+    recency_score = np.exp(-0.15 * years_old)
+
+    # Weighted combination
+    hero_score = (
+        HERO_WEIGHTS['media_richness'] * media_score +
+        HERO_WEIGHTS['authority'] * authority_score +
+        HERO_WEIGHTS['engagement_proxy'] * engagement_score +
+        HERO_WEIGHTS['recency'] * recency_score
+    )
+
+    return hero_score
+
+
+def select_hero(cluster_item_ids, all_items, id_to_idx, relevance_scores, citations_data=None):
+    """
+    Select the hero item for a cluster using multi-signal scoring.
+
+    Signals:
+    1. Media richness: video > audio > text
+    2. Authority: citations, speaker fame
+    3. Engagement proxy: stars, views, or type average
+    4. Recency: exponential decay
 
     Returns:
         Item ID of the hero, or None if cluster is empty
     """
     if not cluster_item_ids:
         return None
+
+    if citations_data is None:
+        citations_data = {}
 
     best_hero = None
     best_score = float('-inf')
@@ -244,14 +355,7 @@ def select_hero(cluster_item_ids, all_items, id_to_idx, relevance_scores):
             continue
 
         item = all_items[id_to_idx[item_id]]
-        item_type = item.get('type', 'resource')
-
-        # Combined score: type priority + relevance boost
-        type_priority = HERO_TYPE_PRIORITY.get(item_type, 30)
-        relevance = relevance_scores.get(item_id, 0.0)
-
-        # Hero score: primarily type-driven, relevance as tiebreaker
-        hero_score = type_priority + (relevance * 10)
+        hero_score = compute_hero_score(item, item_id, citations_data, relevance_scores)
 
         if hero_score > best_score:
             best_score = hero_score
@@ -260,38 +364,72 @@ def select_hero(cluster_item_ids, all_items, id_to_idx, relevance_scores):
     return best_hero
 
 
-def ensure_type_coverage(cluster_item_ids, all_items, id_to_idx, relevance_scores):
+# Minimum items per type for constrained selection
+MIN_PER_TYPE = {
+    'paper': 2,      # Want variety in academic content
+    'talk': 1,       # Engaging video content
+    'resource': 1,   # Tutorials/guides
+    'package': 1,    # Tools
+    'book': 1,       # In-depth content
+    'dataset': 0,    # Optional
+    'community': 0,  # Optional
+    'career': 0,     # Deprioritized
+}
+
+
+def ensure_type_coverage(cluster_item_ids, all_items, id_to_idx, relevance_scores,
+                         min_per_type=None, embeddings=None):
     """
-    Select one best item per content type to ensure diversity.
+    Select items with minimum constraints per content type.
+
+    Phase 1: Satisfy minimum constraints per type (use MMR within each type)
+    Phase 2: Remaining slots filled by MMR across all types (in select_diverse_items)
 
     Returns:
-        List of item IDs (one per type present in cluster)
+        List of item IDs satisfying type minimums
     """
-    type_best = {}  # type -> (item_id, relevance_score)
+    if min_per_type is None:
+        min_per_type = MIN_PER_TYPE
 
+    # Group items by type
+    items_by_type = {}
     for item_id in cluster_item_ids:
         if item_id not in id_to_idx:
             continue
-
         item = all_items[id_to_idx[item_id]]
         item_type = item.get('type', 'resource')
-        relevance = relevance_scores.get(item_id, 0.0)
+        if item_type not in items_by_type:
+            items_by_type[item_type] = []
+        items_by_type[item_type].append(item_id)
 
-        if item_type not in type_best or relevance > type_best[item_type][1]:
-            type_best[item_type] = (item_id, relevance)
-
-    # Return in priority order
-    type_order = ['talk', 'resource', 'book', 'paper', 'package', 'dataset', 'community', 'career']
     coverage = []
-    for t in type_order:
-        if t in type_best:
-            coverage.append(type_best[t][0])
+    type_order = ['talk', 'resource', 'book', 'paper', 'package', 'dataset', 'community', 'career']
+
+    for item_type in type_order:
+        min_count = min_per_type.get(item_type, 0)
+        type_items = items_by_type.get(item_type, [])
+
+        if not type_items or min_count == 0:
+            continue
+
+        # Select up to min_count items from this type
+        # Use relevance score ordering for diversity within type
+        type_items_with_scores = [
+            (item_id, relevance_scores.get(item_id, 0.0))
+            for item_id in type_items
+        ]
+        type_items_with_scores.sort(key=lambda x: -x[1])  # Highest relevance first
+
+        # Take top items for this type, respecting minimum
+        for item_id, _ in type_items_with_scores[:min_count]:
+            if item_id not in coverage:
+                coverage.append(item_id)
 
     return coverage
 
 
 def mmr_select(candidate_ids, embeddings, id_to_idx, relevance_scores,
-               num_select, lambda_param=0.5):
+               num_select, lambda_param=0.6):
     """
     Select items using Maximal Marginal Relevance.
 
@@ -356,6 +494,44 @@ def mmr_select(candidate_ids, embeddings, id_to_idx, relevance_scores,
     return selected
 
 
+def calculate_ild(item_ids, embeddings, id_to_idx):
+    """
+    Calculate Intra-List Diversity (ILD) score for a list of items.
+
+    ILD = average pairwise distance between items in the list.
+    Higher values (0.3-0.7) indicate more diverse selections.
+
+    Args:
+        item_ids: List of item IDs in the carousel
+        embeddings: Numpy array of all embeddings
+        id_to_idx: Mapping from item_id to embedding index
+
+    Returns:
+        Float ILD score in [0, 1], or 0.0 if insufficient items
+    """
+    # Get embeddings for items in the list
+    item_embeddings = []
+    for item_id in item_ids:
+        if item_id in id_to_idx:
+            item_embeddings.append(embeddings[id_to_idx[item_id]])
+
+    n = len(item_embeddings)
+    if n < 2:
+        return 0.0
+
+    # Calculate average pairwise cosine distance
+    distances = []
+    for i in range(n):
+        for j in range(i + 1, n):
+            # Cosine distance = 1 - cosine_similarity
+            sim = np.dot(item_embeddings[i], item_embeddings[j])
+            sim /= (np.linalg.norm(item_embeddings[i]) * np.linalg.norm(item_embeddings[j]))
+            dist = 1 - sim
+            distances.append(dist)
+
+    return float(np.mean(distances))
+
+
 def select_diverse_items(cluster_id, cluster_item_ids, embeddings, all_items,
                          id_to_idx, citations_data, max_items=15):
     """
@@ -369,7 +545,7 @@ def select_diverse_items(cluster_id, cluster_item_ids, embeddings, all_items,
         Dict with 'hero', 'type_coverage', 'ordered_items' keys
     """
     if not cluster_item_ids:
-        return {'hero': None, 'type_coverage': [], 'ordered_items': []}
+        return {'hero': None, 'type_coverage': [], 'ordered_items': [], 'ild_score': 0.0}
 
     # Compute cluster centroid
     cluster_embeddings = []
@@ -378,7 +554,7 @@ def select_diverse_items(cluster_id, cluster_item_ids, embeddings, all_items,
             cluster_embeddings.append(embeddings[id_to_idx[item_id]])
 
     if not cluster_embeddings:
-        return {'hero': None, 'type_coverage': [], 'ordered_items': list(cluster_item_ids)[:max_items]}
+        return {'hero': None, 'type_coverage': [], 'ordered_items': list(cluster_item_ids)[:max_items], 'ild_score': 0.0}
 
     centroid = np.mean(cluster_embeddings, axis=0)
 
@@ -388,7 +564,7 @@ def select_diverse_items(cluster_id, cluster_item_ids, embeddings, all_items,
     )
 
     # Phase 1: Select hero
-    hero = select_hero(cluster_item_ids, all_items, id_to_idx, relevance_scores)
+    hero = select_hero(cluster_item_ids, all_items, id_to_idx, relevance_scores, citations_data)
 
     # Phase 2: Type coverage
     type_coverage = ensure_type_coverage(
@@ -407,7 +583,7 @@ def select_diverse_items(cluster_id, cluster_item_ids, embeddings, all_items,
             id_to_idx,
             relevance_scores,
             num_select=slots_remaining,
-            lambda_param=0.5
+            lambda_param=0.6
         )
     else:
         mmr_selected = []
@@ -429,10 +605,14 @@ def select_diverse_items(cluster_id, cluster_item_ids, embeddings, all_items,
         if item_id in id_to_idx:
             types_in_carousel.add(all_items[id_to_idx[item_id]].get('type', 'resource'))
 
+    # Calculate ILD (Intra-List Diversity)
+    ild_score = calculate_ild(ordered_items, embeddings, id_to_idx)
+
     return {
         'hero': hero,
         'type_coverage': list(types_in_carousel),
-        'ordered_items': ordered_items
+        'ordered_items': ordered_items,
+        'ild_score': round(ild_score, 3)
     }
 
 
@@ -785,6 +965,7 @@ def main():
         cluster['hero_item'] = selection['hero']
         cluster['carousel_items'] = selection['ordered_items']
         cluster['type_coverage'] = selection['type_coverage']
+        cluster['ild_score'] = selection['ild_score']
 
         # Track hero type stats
         if selection['hero'] and selection['hero'] in id_to_idx:
@@ -794,9 +975,18 @@ def main():
             else:
                 mmr_stats['other'] += 1
 
+    # Calculate ILD statistics
+    ild_scores = [c.get('ild_score', 0) for c in final_clusters if c.get('ild_score')]
+    avg_ild = np.mean(ild_scores) if ild_scores else 0
+    min_ild = min(ild_scores) if ild_scores else 0
+    max_ild = max(ild_scores) if ild_scores else 0
+    good_ild = sum(1 for s in ild_scores if 0.3 <= s <= 0.7)
+
     print(f"  Processed {len(final_clusters)} clusters")
     print(f"  Hero types: talk={mmr_stats['talk']}, resource={mmr_stats['resource']}, "
           f"paper={mmr_stats['paper']}, package={mmr_stats['package']}, other={mmr_stats['other']}")
+    print(f"  ILD scores: avg={avg_ild:.3f}, min={min_ild:.3f}, max={max_ild:.3f}")
+    print(f"  Clusters with optimal ILD (0.3-0.7): {good_ild}/{len(ild_scores)}")
 
     # Step 7: Quality filtering and reordering
     print("\n" + "="*60)
@@ -888,7 +1078,7 @@ def main():
         "num_clusters": len(final_clusters),
         "num_items": len(item_to_cluster),
         "mmr_config": {
-            "lambda": 0.5,
+            "lambda": 0.6,
             "max_items_per_cluster": 15,
             "relevance_weights": {
                 "citations": 0.3,

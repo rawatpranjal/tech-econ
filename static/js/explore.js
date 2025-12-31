@@ -269,11 +269,12 @@
         row.className = 'explore-row';
         row.dataset.clusterId = cluster.id;
 
-        // Header
+        // Header - use creative_name if available, fallback to label
+        const displayName = cluster.creative_name || cluster.label;
         const header = document.createElement('div');
         header.className = 'explore-row-header';
         header.innerHTML = `
-            <h2 class="explore-row-title">${escapeHtml(cluster.label)}</h2>
+            <h2 class="explore-row-title">${escapeHtml(displayName)}</h2>
             <span class="explore-row-count">${cluster.item_count} items</span>
         `;
         row.appendChild(header);
