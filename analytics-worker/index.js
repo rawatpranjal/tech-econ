@@ -17,7 +17,7 @@ const RATE_LIMIT = {
   MAX_REQUESTS_PER_MINUTE: 60,    // Per IP
   MAX_EVENTS_PER_REQUEST: 50,     // Per payload
   MAX_PAYLOAD_SIZE: 50000,        // 50KB
-  RETENTION_DAYS: 90              // Auto-delete events older than this
+  RETENTION_DAYS: 0               // 0 = keep forever (D1 free tier is 5GB, ~90 years at current rate)
 };
 
 export default {
@@ -1179,20 +1179,20 @@ function hashIP(ip) {
 async function cleanupOldEvents(env) {
   if (!env.DB) return;
 
-  const cutoff = Date.now() - (RATE_LIMIT.RETENTION_DAYS * 24 * 60 * 60 * 1000);
-
   try {
-    // Delete old raw events (keep aggregates forever)
-    const result = await env.DB.prepare(`
-      DELETE FROM events WHERE timestamp < ?
-    `).bind(cutoff).run();
+    // Only delete old events if retention is configured
+    if (RATE_LIMIT.RETENTION_DAYS > 0) {
+      const cutoff = Date.now() - (RATE_LIMIT.RETENTION_DAYS * 24 * 60 * 60 * 1000);
+      const result = await env.DB.prepare(`
+        DELETE FROM events WHERE timestamp < ?
+      `).bind(cutoff).run();
+      console.log(`Cleanup: deleted ${result.meta?.changes || 0} old events`);
+    }
 
-    // Also clean expired cache entries
+    // Always clean expired cache/rate-limit entries
     await env.DB.prepare(`
       DELETE FROM cache_meta WHERE expires_at < ?
     `).bind(Date.now()).run();
-
-    console.log(`Cleanup: deleted ${result.meta?.changes || 0} old events`);
 
   } catch (err) {
     console.error('Cleanup error:', err);
