@@ -1,3 +1,3 @@
 ---
-title: "Submit Package"
+title: "Submit Resource"
 ---
