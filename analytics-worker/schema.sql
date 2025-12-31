@@ -46,6 +46,20 @@ CREATE TABLE IF NOT EXISTS content_clicks (
 CREATE INDEX IF NOT EXISTS idx_clicks_section ON content_clicks(section);
 CREATE INDEX IF NOT EXISTS idx_clicks_count ON content_clicks(click_count DESC);
 
+-- Content impression tracking (views/visibility)
+CREATE TABLE IF NOT EXISTS content_impressions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT NOT NULL,
+    section TEXT,
+    impression_count INTEGER DEFAULT 1,
+    first_seen DATETIME DEFAULT CURRENT_TIMESTAMP,
+    last_seen DATETIME DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(name, section)
+);
+
+CREATE INDEX IF NOT EXISTS idx_impressions_section ON content_impressions(section);
+CREATE INDEX IF NOT EXISTS idx_impressions_count ON content_impressions(impression_count DESC);
+
 -- Search query tracking
 CREATE TABLE IF NOT EXISTS search_queries (
     query TEXT PRIMARY KEY,

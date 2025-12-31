@@ -175,15 +175,34 @@ async function processEvents(env, events, country, receivedAt) {
 
       case 'click':
         if (event.d?.type === 'card' && event.d?.name) {
-          const key = `${event.d.name}:${event.d.section || 'other'}`;
-          aggregates.clicks[key] = {
-            name: event.d.name,
-            section: event.d.section || 'other',
-            category: event.d.category || null
-          };
+          const key = `${event.d.name}|||${event.d.section || 'other'}`;
+          if (!aggregates.clicks[key]) {
+            aggregates.clicks[key] = {
+              name: event.d.name,
+              section: event.d.section || 'other',
+              category: event.d.category || null,
+              count: 0
+            };
+          }
+          aggregates.clicks[key].count++;
         }
         aggregates.hourly[hourBucket] = aggregates.hourly[hourBucket] || { pageviews: 0, clicks: 0 };
         aggregates.hourly[hourBucket].clicks++;
+        break;
+
+      case 'impression':
+        if (event.d?.name) {
+          const key = `${event.d.name}|||${event.d.section || 'other'}`;
+          if (!aggregates.impressions) aggregates.impressions = {};
+          if (!aggregates.impressions[key]) {
+            aggregates.impressions[key] = {
+              name: event.d.name,
+              section: event.d.section || 'other',
+              count: 0
+            };
+          }
+          aggregates.impressions[key].count++;
+        }
         break;
 
       case 'search':
@@ -229,15 +248,28 @@ async function updateAggregates(env, aggregates, country) {
     `).bind(date, count, aggregates.sessions.size));
   }
 
-  // Update content clicks
+  // Update content clicks (with correct count)
   for (const click of Object.values(aggregates.clicks)) {
     updates.push(env.DB.prepare(`
       INSERT INTO content_clicks (name, section, category, click_count, last_clicked)
-      VALUES (?, ?, ?, 1, datetime('now'))
+      VALUES (?, ?, ?, ?, datetime('now'))
       ON CONFLICT(name, section) DO UPDATE SET
-        click_count = click_count + 1,
+        click_count = click_count + ?,
         last_clicked = datetime('now')
-    `).bind(click.name, click.section, click.category));
+    `).bind(click.name, click.section, click.category, click.count, click.count));
+  }
+
+  // Update impressions
+  if (aggregates.impressions) {
+    for (const imp of Object.values(aggregates.impressions)) {
+      updates.push(env.DB.prepare(`
+        INSERT INTO content_impressions (name, section, impression_count, last_seen)
+        VALUES (?, ?, ?, datetime('now'))
+        ON CONFLICT(name, section) DO UPDATE SET
+          impression_count = impression_count + ?,
+          last_seen = datetime('now')
+      `).bind(imp.name, imp.section, imp.count, imp.count));
+    }
   }
 
   // Update search queries

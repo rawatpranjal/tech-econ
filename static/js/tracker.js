@@ -34,6 +34,7 @@
     // Set up tracking
     initSearchTracking();
     initClickTracking();
+    initImpressionTracking();
     initPerformanceTracking();
     initErrorTracking();
     initEngagementTracking();
@@ -211,6 +212,95 @@
     if (path.includes('/books')) return 'books';
     if (path.includes('/talks')) return 'talks';
     return 'other';
+  }
+
+  // ============================================
+  // Impression Tracking (content visibility)
+  // ============================================
+
+  function initImpressionTracking() {
+    if (!('IntersectionObserver' in window)) return;
+
+    var seenItems = new Set();
+    var pendingImpressions = [];
+    var flushTimeout = null;
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          var el = entry.target;
+          var name = el.dataset.name;
+          var key = name + '|' + getSection(el);
+
+          // Only track each item once per session
+          if (name && !seenItems.has(key)) {
+            seenItems.add(key);
+            pendingImpressions.push({
+              name: name,
+              section: getSection(el),
+              category: el.dataset.category || null
+            });
+
+            // Batch impressions - flush after 2 seconds of no new impressions
+            clearTimeout(flushTimeout);
+            flushTimeout = setTimeout(flushImpressions, 2000);
+          }
+        }
+      });
+    }, {
+      threshold: 0.5,  // 50% visible
+      rootMargin: '0px'
+    });
+
+    function flushImpressions() {
+      if (pendingImpressions.length === 0) return;
+
+      // Send all pending impressions
+      pendingImpressions.forEach(function(imp) {
+        track('impression', imp);
+      });
+      pendingImpressions = [];
+    }
+
+    // Observe all elements with data-name
+    function observeItems() {
+      document.querySelectorAll('[data-name]').forEach(function(el) {
+        observer.observe(el);
+      });
+    }
+
+    // Initial observation
+    observeItems();
+
+    // Re-observe when new content is added (for dynamic pages)
+    var mutationObserver = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        mutation.addedNodes.forEach(function(node) {
+          if (node.nodeType === 1) {
+            if (node.dataset && node.dataset.name) {
+              observer.observe(node);
+            }
+            if (node.querySelectorAll) {
+              node.querySelectorAll('[data-name]').forEach(function(el) {
+                observer.observe(el);
+              });
+            }
+          }
+        });
+      });
+    });
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+
+    // Flush on page hide
+    document.addEventListener('visibilitychange', function() {
+      if (document.visibilityState === 'hidden') {
+        flushImpressions();
+      }
+    });
   }
 
   // ============================================
