@@ -107,6 +107,7 @@ async function handleEvents(request, env, ctx, origin) {
   }
 
   const clientIP = request.headers.get('CF-Connecting-IP') || 'unknown';
+  const userAgent = request.headers.get('User-Agent') || '';
 
   try {
     // Check payload size
@@ -115,9 +116,9 @@ async function handleEvents(request, env, ctx, origin) {
       return new Response('Payload too large', { status: 413 });
     }
 
-    // Rate limiting (using D1)
+    // Rate limiting (using D1 with daily-rotating salt for privacy)
     if (env.DB) {
-      const isRateLimited = await checkRateLimit(env, clientIP);
+      const isRateLimited = await checkRateLimit(env, clientIP, userAgent);
       if (isRateLimited) {
         return new Response('Rate limit exceeded', { status: 429 });
       }
@@ -264,6 +265,80 @@ async function processEvents(env, events, country, receivedAt) {
           aggregates.engageTimes.push(event.d.timeOnPage);
         }
         break;
+
+      // ML Events
+      case 'sequence':
+        if (!aggregates.sequences) aggregates.sequences = [];
+        aggregates.sequences.push({
+          sid: event.sid,
+          pages: event.d?.pages || [],
+          items: event.d?.items || [],
+          clicks: event.d?.clicks || [],
+          searches: event.d?.searches || [],
+          duration: event.d?.duration || 0
+        });
+        break;
+
+      case 'dwell':
+        if (!aggregates.dwells) aggregates.dwells = [];
+        if (event.d?.name) {
+          aggregates.dwells.push({
+            sid: event.sid,
+            name: event.d.name,
+            section: event.d.section || 'other',
+            dwellMs: event.d.dwellMs || 0,
+            viewableSec: event.d.viewableSec || 0,
+            readingRatio: event.d.readingRatio || null,
+            ts: timestamp
+          });
+        }
+        break;
+
+      case 'scroll_milestone':
+        if (!aggregates.milestones) aggregates.milestones = [];
+        if (event.d?.milestone) {
+          aggregates.milestones.push({
+            sid: event.sid,
+            path: event.p,
+            milestone: event.d.milestone,
+            ts: timestamp
+          });
+        }
+        break;
+
+      case 'search_click':
+        if (!aggregates.searchClicks) aggregates.searchClicks = [];
+        aggregates.searchClicks.push({
+          sid: event.sid,
+          qid: event.d?.qid,
+          position: event.d?.position,
+          resultId: event.d?.resultId,
+          ts: timestamp
+        });
+        break;
+
+      case 'search_abandon':
+        if (!aggregates.searchAbandons) aggregates.searchAbandons = [];
+        aggregates.searchAbandons.push({
+          sid: event.sid,
+          qid: event.d?.qid,
+          type: event.d?.type,
+          dwellMs: event.d?.dwellMs,
+          scrollDepth: event.d?.scrollDepth,
+          ts: timestamp
+        });
+        break;
+
+      case 'frustration':
+        if (!aggregates.frustrations) aggregates.frustrations = [];
+        aggregates.frustrations.push({
+          sid: event.sid,
+          path: event.p,
+          type: event.d?.type,
+          element: event.d?.element || null,
+          ts: timestamp
+        });
+        break;
     }
   }
 
@@ -362,6 +437,108 @@ async function updateAggregates(env, aggregates, country) {
         session_count = session_count + excluded.session_count,
         last_seen = datetime('now')
     `).bind(country, aggregates.sessions.size));
+  }
+
+  // ============================================
+  // ML Aggregates
+  // ============================================
+
+  // Store session sequences
+  if (aggregates.sequences) {
+    for (const seq of aggregates.sequences) {
+      updates.push(env.DB.prepare(`
+        INSERT INTO session_sequences (session_id, page_sequence, click_sequence, item_sequence, search_sequence, duration_ms, updated_at)
+        VALUES (?, ?, ?, ?, ?, ?, datetime('now'))
+        ON CONFLICT(session_id) DO UPDATE SET
+          page_sequence = excluded.page_sequence,
+          click_sequence = excluded.click_sequence,
+          item_sequence = excluded.item_sequence,
+          search_sequence = excluded.search_sequence,
+          duration_ms = excluded.duration_ms,
+          updated_at = datetime('now')
+      `).bind(
+        seq.sid,
+        JSON.stringify(seq.pages),
+        JSON.stringify(seq.clicks),
+        JSON.stringify(seq.items),
+        JSON.stringify(seq.searches),
+        seq.duration
+      ));
+
+      // Update session features
+      const itemSeq = seq.items.map(i => i.name);
+      const engagementTier = seq.duration < 10000 ? 'bounce' :
+                             seq.duration < 30000 ? 'skim' :
+                             seq.duration < 120000 ? 'read' : 'deep';
+      updates.push(env.DB.prepare(`
+        INSERT INTO session_features (session_id, pageviews, unique_items, unique_pages, duration_ms, engagement_tier, content_sequence, last_seen)
+        VALUES (?, ?, ?, ?, ?, ?, ?, datetime('now'))
+        ON CONFLICT(session_id) DO UPDATE SET
+          pageviews = excluded.pageviews,
+          unique_items = excluded.unique_items,
+          unique_pages = excluded.unique_pages,
+          duration_ms = excluded.duration_ms,
+          engagement_tier = excluded.engagement_tier,
+          content_sequence = excluded.content_sequence,
+          last_seen = datetime('now')
+      `).bind(
+        seq.sid,
+        seq.pages.length,
+        seq.items.length,
+        new Set(seq.pages.map(p => p.pid)).size,
+        seq.duration,
+        engagementTier,
+        JSON.stringify(itemSeq)
+      ));
+    }
+  }
+
+  // Store dwell times
+  if (aggregates.dwells) {
+    for (const dwell of aggregates.dwells) {
+      updates.push(env.DB.prepare(`
+        INSERT INTO content_dwell (session_id, name, section, dwell_ms, viewable_seconds, reading_ratio, timestamp)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+        ON CONFLICT(session_id, name, section) DO UPDATE SET
+          dwell_ms = dwell_ms + excluded.dwell_ms,
+          viewable_seconds = viewable_seconds + excluded.viewable_seconds,
+          reading_ratio = excluded.reading_ratio
+      `).bind(dwell.sid, dwell.name, dwell.section, dwell.dwellMs, dwell.viewableSec, dwell.readingRatio, dwell.ts));
+    }
+  }
+
+  // Store scroll milestones
+  if (aggregates.milestones) {
+    for (const m of aggregates.milestones) {
+      updates.push(env.DB.prepare(`
+        INSERT OR IGNORE INTO scroll_milestones (session_id, path, milestone, timestamp)
+        VALUES (?, ?, ?, ?)
+      `).bind(m.sid, m.path, m.milestone, m.ts));
+    }
+  }
+
+  // Store search abandonment
+  if (aggregates.searchAbandons) {
+    for (const sa of aggregates.searchAbandons) {
+      updates.push(env.DB.prepare(`
+        INSERT INTO search_sessions (session_id, query_id, abandonment_type, dwell_ms, scroll_depth, timestamp)
+        VALUES (?, ?, ?, ?, ?, ?)
+        ON CONFLICT(query_id) DO UPDATE SET
+          abandonment_type = excluded.abandonment_type,
+          dwell_ms = excluded.dwell_ms,
+          scroll_depth = excluded.scroll_depth
+      `).bind(sa.sid, sa.qid, sa.type, sa.dwellMs, sa.scrollDepth, sa.ts));
+    }
+  }
+
+  // Store frustration events
+  if (aggregates.frustrations) {
+    for (const f of aggregates.frustrations) {
+      updates.push(env.DB.prepare(`
+        INSERT INTO frustration_events (session_id, path, event_type, element, timestamp)
+        VALUES (?, ?, ?, ?, ?)
+      `).bind(f.sid, f.path, f.type, f.element, f.ts));
+    }
   }
 
   if (updates.length > 0) {
@@ -1129,28 +1306,22 @@ async function handleMigrate(request, env) {
 // Rate Limiting & Cleanup
 // ============================================
 
-async function checkRateLimit(env, clientIP) {
+async function checkRateLimit(env, clientIP, userAgent) {
   if (!env.DB) return false;
 
   const now = Date.now();
-  const windowStart = now - 60000; // 1 minute window
-  const ipHash = hashIP(clientIP);
+  // Use daily-rotating salt for privacy-preserving IP hash
+  const ipHash = await hashIPWithSalt(env, clientIP, userAgent);
 
   try {
-    // Count recent requests from this IP
-    const result = await env.DB.prepare(`
-      SELECT COUNT(*) as count FROM events
-      WHERE timestamp > ? AND session_id LIKE ?
-    `).bind(windowStart, `%${ipHash}%`).first();
-
-    // Also store the check itself
+    // Store and increment request count
     await env.DB.prepare(`
       INSERT INTO cache_meta (key, value, expires_at)
       VALUES (?, ?, ?)
       ON CONFLICT(key) DO UPDATE SET
         value = CAST(CAST(value AS INTEGER) + 1 AS TEXT),
-        expires_at = excluded.expires_at
-    `).bind(`ratelimit:${ipHash}`, '1', now + 60000).run();
+        expires_at = CASE WHEN expires_at < ? THEN ? ELSE expires_at END
+    `).bind(`ratelimit:${ipHash}`, '1', now + 60000, now, now + 60000).run();
 
     // Check rate limit from cache
     const cached = await env.DB.prepare(
@@ -1166,8 +1337,67 @@ async function checkRateLimit(env, clientIP) {
   }
 }
 
+// Daily rotating salt for privacy-preserving IP hashing
+let dailySaltCache = { date: null, salt: null };
+
+async function getDailySalt(env) {
+  const today = new Date().toISOString().split('T')[0];
+
+  // Use cached salt if still today
+  if (dailySaltCache.date === today && dailySaltCache.salt) {
+    return dailySaltCache.salt;
+  }
+
+  try {
+    // Try to get existing salt for today
+    const existing = await env.DB.prepare(
+      'SELECT salt FROM daily_salts WHERE date = ?'
+    ).bind(today).first();
+
+    if (existing?.salt) {
+      dailySaltCache = { date: today, salt: existing.salt };
+      return existing.salt;
+    }
+
+    // Generate new salt for today
+    const salt = crypto.randomUUID() + crypto.randomUUID();
+    await env.DB.prepare(
+      'INSERT OR IGNORE INTO daily_salts (date, salt) VALUES (?, ?)'
+    ).bind(today, salt).run();
+
+    // Delete old salts (privacy requirement: don't keep historical salts)
+    await env.DB.prepare(
+      'DELETE FROM daily_salts WHERE date < ?'
+    ).bind(today).run();
+
+    dailySaltCache = { date: today, salt };
+    return salt;
+
+  } catch (err) {
+    console.error('Daily salt error:', err);
+    // Fallback to in-memory salt (still rotates daily via cache)
+    if (!dailySaltCache.salt || dailySaltCache.date !== today) {
+      dailySaltCache = { date: today, salt: crypto.randomUUID() };
+    }
+    return dailySaltCache.salt;
+  }
+}
+
+async function hashIPWithSalt(env, ip, userAgent) {
+  const salt = await getDailySalt(env);
+  const domain = 'tech-econ.com';
+  const data = `${salt}|${domain}|${ip}|${userAgent || ''}`;
+
+  // Use Web Crypto API for secure hashing
+  const encoder = new TextEncoder();
+  const dataBuffer = encoder.encode(data);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', dataBuffer);
+  const hashArray = Array.from(new Uint8Array(hashBuffer));
+  return hashArray.slice(0, 8).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
 function hashIP(ip) {
-  // Simple hash for privacy
+  // Fallback simple hash (used when async not available)
   let hash = 0;
   for (let i = 0; i < ip.length; i++) {
     hash = ((hash << 5) - hash) + ip.charCodeAt(i);
