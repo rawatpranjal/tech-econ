@@ -2,8 +2,10 @@
  * Explore Page - Netflix-style topic browsing
  * Features:
  * - Horizontal scrolling rows per cluster
- * - Client-side shuffle (random order)
+ * - MMR-based diversity selection (pre-computed at build time)
+ * - Hero content prioritization (talks > tutorials > papers)
  * - Lazy loading of rows as user scrolls
+ * - Shuffle button for cluster order variety
  * - Keyboard and touch navigation
  */
 
@@ -284,13 +286,19 @@
         const scroller = document.createElement('div');
         scroller.className = 'explore-scroller';
 
-        // Get all items for this cluster and shuffle
-        const itemIds = getClusterItems(cluster.id);
-        const shuffledIds = shuffleArray(itemIds);
-        const displayItems = shuffledIds.slice(0, ITEMS_PER_ROW);
+        // Use pre-computed diverse selection if available (MMR-based)
+        let displayItemIds;
+        if (cluster.carousel_items && cluster.carousel_items.length > 0) {
+            // Use MMR-computed diverse selection from build time
+            displayItemIds = cluster.carousel_items.slice(0, ITEMS_PER_ROW);
+        } else {
+            // Fallback: legacy shuffle behavior for backwards compatibility
+            const itemIds = getClusterItems(cluster.id);
+            displayItemIds = shuffleArray(itemIds).slice(0, ITEMS_PER_ROW);
+        }
 
         // Check if row is homogeneous (all same type) - hide badges if so
-        const items = displayItems.map(id => itemLookup[id]).filter(Boolean);
+        const items = displayItemIds.map(id => itemLookup[id]).filter(Boolean);
         const types = new Set(items.map(i => i._type));
         const isHomogeneous = types.size === 1;
 

@@ -115,6 +115,327 @@ def cosine_similarity(a, b):
     return np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
 
 
+# ============================================================================
+# MMR-BASED DIVERSITY SELECTION
+# ============================================================================
+
+# Media type priority for hero selection (higher = preferred)
+HERO_TYPE_PRIORITY = {
+    'talk': 100,      # Highest - engaging video content
+    'resource': 80,   # Tutorials, guides
+    'book': 70,       # In-depth content
+    'paper': 60,      # Academic reference
+    'package': 50,    # Tools
+    'dataset': 40,    # Data resources
+    'community': 30,  # Community links
+    'career': 20,     # Career portals (lowest)
+    'roadmap': 10,    # Learning paths
+    'domain': 5,      # Domain pages
+}
+
+# Difficulty level scores
+DIFFICULTY_SCORES = {
+    'beginner': 0.2,
+    'intermediate': 0.5,
+    'advanced': 0.8
+}
+
+
+def load_papers_citations():
+    """Load citations data from papers_flat.json."""
+    papers_file = PROJECT_ROOT / "data" / "papers_flat.json"
+    if not papers_file.exists():
+        return {}
+
+    with open(papers_file) as f:
+        papers = json.load(f)
+
+    # Build id -> citations mapping
+    citations = {}
+    for paper in papers:
+        paper_id = f"paper-{paper.get('slug', '')}"
+        if not paper_id or paper_id == 'paper-':
+            # Try building from name
+            name = paper.get('name', paper.get('title', ''))
+            if name:
+                slug = name.lower().replace(' ', '-').replace(':', '').replace(',', '')[:50]
+                paper_id = f"paper-{slug}"
+        citations[paper_id] = paper.get('citations', 0)
+
+    return citations
+
+
+def compute_relevance_scores(cluster_item_ids, all_items, id_to_idx, embeddings,
+                              cluster_centroid, citations_data):
+    """
+    Compute composite relevance score for each item in a cluster.
+
+    Components (normalized to 0-1 range):
+    1. Citations (papers only): log-normalized citations (30%)
+    2. Difficulty: beginner=0.2, intermediate=0.5, advanced=0.8 (20%)
+    3. Centrality: cosine similarity to cluster centroid (50%)
+
+    Returns:
+        Dict mapping item_id -> relevance score (0-1)
+    """
+    scores = {}
+
+    # Find max citations for normalization (across all papers in cluster)
+    max_log_citations = 1.0
+    for item_id in cluster_item_ids:
+        if item_id in citations_data:
+            cit = citations_data.get(item_id) or 0
+            if cit and cit > 0:
+                max_log_citations = max(max_log_citations, np.log1p(cit))
+
+    for item_id in cluster_item_ids:
+        if item_id not in id_to_idx:
+            scores[item_id] = 0.0
+            continue
+
+        idx = id_to_idx[item_id]
+        item = all_items[idx]
+        item_type = item.get('type', 'resource')
+
+        # Component 1: Citations (papers only, 0-1)
+        citation_score = 0.5  # Default for non-papers
+        if item_type == 'paper' and item_id in citations_data:
+            citations = citations_data.get(item_id) or 0
+            if max_log_citations > 0 and citations and citations > 0:
+                citation_score = np.log1p(citations) / max_log_citations
+
+        # Component 2: Difficulty (0.2-0.8)
+        difficulty = item.get('difficulty', 'intermediate')
+        difficulty_score = DIFFICULTY_SCORES.get(difficulty, 0.5)
+
+        # Component 3: Centrality (0-1)
+        item_embedding = embeddings[idx]
+        centrality = cosine_similarity(item_embedding, cluster_centroid)
+        # Normalize from [-1,1] to [0,1]
+        centrality_score = (centrality + 1) / 2
+
+        # Weighted combination: 30% citations, 20% difficulty, 50% centrality
+        final_score = (
+            0.3 * citation_score +
+            0.2 * difficulty_score +
+            0.5 * centrality_score
+        )
+
+        scores[item_id] = final_score
+
+    return scores
+
+
+def select_hero(cluster_item_ids, all_items, id_to_idx, relevance_scores):
+    """
+    Select the hero item for a cluster based on type priority and relevance.
+
+    Returns:
+        Item ID of the hero, or None if cluster is empty
+    """
+    if not cluster_item_ids:
+        return None
+
+    best_hero = None
+    best_score = float('-inf')
+
+    for item_id in cluster_item_ids:
+        if item_id not in id_to_idx:
+            continue
+
+        item = all_items[id_to_idx[item_id]]
+        item_type = item.get('type', 'resource')
+
+        # Combined score: type priority + relevance boost
+        type_priority = HERO_TYPE_PRIORITY.get(item_type, 30)
+        relevance = relevance_scores.get(item_id, 0.0)
+
+        # Hero score: primarily type-driven, relevance as tiebreaker
+        hero_score = type_priority + (relevance * 10)
+
+        if hero_score > best_score:
+            best_score = hero_score
+            best_hero = item_id
+
+    return best_hero
+
+
+def ensure_type_coverage(cluster_item_ids, all_items, id_to_idx, relevance_scores):
+    """
+    Select one best item per content type to ensure diversity.
+
+    Returns:
+        List of item IDs (one per type present in cluster)
+    """
+    type_best = {}  # type -> (item_id, relevance_score)
+
+    for item_id in cluster_item_ids:
+        if item_id not in id_to_idx:
+            continue
+
+        item = all_items[id_to_idx[item_id]]
+        item_type = item.get('type', 'resource')
+        relevance = relevance_scores.get(item_id, 0.0)
+
+        if item_type not in type_best or relevance > type_best[item_type][1]:
+            type_best[item_type] = (item_id, relevance)
+
+    # Return in priority order
+    type_order = ['talk', 'resource', 'book', 'paper', 'package', 'dataset', 'community', 'career']
+    coverage = []
+    for t in type_order:
+        if t in type_best:
+            coverage.append(type_best[t][0])
+
+    return coverage
+
+
+def mmr_select(candidate_ids, embeddings, id_to_idx, relevance_scores,
+               num_select, lambda_param=0.5):
+    """
+    Select items using Maximal Marginal Relevance.
+
+    MMR = lambda * Relevance(item) - (1 - lambda) * max(Similarity(item, selected))
+
+    Args:
+        candidate_ids: List of item IDs to select from
+        embeddings: Numpy array of all embeddings (n_items x dim)
+        id_to_idx: Mapping from item_id to embedding index
+        relevance_scores: Pre-computed relevance score for each item
+        num_select: Number of items to select
+        lambda_param: Balance between relevance (1.0) and diversity (0.0)
+
+    Returns:
+        List of selected item IDs in MMR order
+    """
+    if len(candidate_ids) <= num_select:
+        return list(candidate_ids)
+
+    selected = []
+    remaining = set(candidate_ids)
+
+    # Get embeddings for candidates
+    candidate_embeddings = {}
+    for item_id in candidate_ids:
+        if item_id in id_to_idx:
+            candidate_embeddings[item_id] = embeddings[id_to_idx[item_id]]
+
+    while len(selected) < num_select and remaining:
+        best_item = None
+        best_mmr_score = float('-inf')
+
+        for item_id in remaining:
+            if item_id not in candidate_embeddings:
+                continue
+
+            # Relevance component
+            rel_score = relevance_scores.get(item_id, 0.0)
+
+            # Diversity component: max similarity to already selected items
+            max_sim = 0.0
+            if selected:
+                item_emb = candidate_embeddings[item_id]
+                for sel_id in selected:
+                    if sel_id in candidate_embeddings:
+                        sim = cosine_similarity(item_emb, candidate_embeddings[sel_id])
+                        max_sim = max(max_sim, sim)
+
+            # MMR score
+            mmr_score = lambda_param * rel_score - (1 - lambda_param) * max_sim
+
+            if mmr_score > best_mmr_score:
+                best_mmr_score = mmr_score
+                best_item = item_id
+
+        if best_item:
+            selected.append(best_item)
+            remaining.remove(best_item)
+        else:
+            break
+
+    return selected
+
+
+def select_diverse_items(cluster_id, cluster_item_ids, embeddings, all_items,
+                         id_to_idx, citations_data, max_items=15):
+    """
+    Full diversity selection pipeline for a cluster.
+
+    Two-phase approach:
+    1. Type coverage: Ensure one of each content type
+    2. MMR fill: Fill remaining slots with MMR-selected items
+
+    Returns:
+        Dict with 'hero', 'type_coverage', 'ordered_items' keys
+    """
+    if not cluster_item_ids:
+        return {'hero': None, 'type_coverage': [], 'ordered_items': []}
+
+    # Compute cluster centroid
+    cluster_embeddings = []
+    for item_id in cluster_item_ids:
+        if item_id in id_to_idx:
+            cluster_embeddings.append(embeddings[id_to_idx[item_id]])
+
+    if not cluster_embeddings:
+        return {'hero': None, 'type_coverage': [], 'ordered_items': list(cluster_item_ids)[:max_items]}
+
+    centroid = np.mean(cluster_embeddings, axis=0)
+
+    # Compute relevance scores
+    relevance_scores = compute_relevance_scores(
+        cluster_item_ids, all_items, id_to_idx, embeddings, centroid, citations_data
+    )
+
+    # Phase 1: Select hero
+    hero = select_hero(cluster_item_ids, all_items, id_to_idx, relevance_scores)
+
+    # Phase 2: Type coverage
+    type_coverage = ensure_type_coverage(
+        cluster_item_ids, all_items, id_to_idx, relevance_scores
+    )
+
+    # Phase 3: MMR for remaining slots
+    already_selected = set(type_coverage)
+    remaining_candidates = [id for id in cluster_item_ids if id not in already_selected]
+
+    slots_remaining = max_items - len(type_coverage)
+    if slots_remaining > 0 and remaining_candidates:
+        mmr_selected = mmr_select(
+            remaining_candidates,
+            embeddings,
+            id_to_idx,
+            relevance_scores,
+            num_select=slots_remaining,
+            lambda_param=0.5
+        )
+    else:
+        mmr_selected = []
+
+    # Final ordered list: type_coverage first, then MMR items
+    ordered_items = type_coverage + mmr_selected
+
+    # Move hero to front if not already there
+    if hero and hero in ordered_items:
+        ordered_items.remove(hero)
+        ordered_items.insert(0, hero)
+    elif hero:
+        ordered_items.insert(0, hero)
+        ordered_items = ordered_items[:max_items]
+
+    # Get types represented
+    types_in_carousel = set()
+    for item_id in ordered_items:
+        if item_id in id_to_idx:
+            types_in_carousel.add(all_items[id_to_idx[item_id]].get('type', 'resource'))
+
+    return {
+        'hero': hero,
+        'type_coverage': list(types_in_carousel),
+        'ordered_items': ordered_items
+    }
+
+
 def is_career_cluster(cluster):
     """Check if cluster is career-related."""
     label_lower = cluster['label'].lower()
@@ -234,6 +555,10 @@ def main():
     print("\nLoading embeddings...")
     embeddings, all_items, id_to_idx = load_embeddings()
     print(f"  Loaded {len(all_items)} items")
+
+    print("\nLoading citations data...")
+    citations_data = load_papers_citations()
+    print(f"  Loaded citations for {len(citations_data)} papers")
 
     if OPENAI_AVAILABLE:
         print("\nLLM: ENABLED (GPT-4o-mini)")
@@ -435,12 +760,60 @@ def main():
 
     print(f"  Final cluster count: {len(final_clusters)}")
 
+    # Step 6: Compute MMR diverse selections
+    print("\n" + "="*60)
+    print("STEP 6: Computing MMR diverse selections")
+    print("="*60)
+
+    mmr_stats = {'talk': 0, 'resource': 0, 'paper': 0, 'package': 0, 'other': 0}
+
+    for cluster in final_clusters:
+        cluster_id = cluster['id']
+        cluster_item_ids = [item_id for item_id, cid in item_to_cluster.items()
+                           if cid == cluster_id]
+
+        selection = select_diverse_items(
+            cluster_id=cluster_id,
+            cluster_item_ids=cluster_item_ids,
+            embeddings=embeddings,
+            all_items=all_items,
+            id_to_idx=id_to_idx,
+            citations_data=citations_data,
+            max_items=15
+        )
+
+        cluster['hero_item'] = selection['hero']
+        cluster['carousel_items'] = selection['ordered_items']
+        cluster['type_coverage'] = selection['type_coverage']
+
+        # Track hero type stats
+        if selection['hero'] and selection['hero'] in id_to_idx:
+            hero_type = all_items[id_to_idx[selection['hero']]].get('type', 'other')
+            if hero_type in mmr_stats:
+                mmr_stats[hero_type] += 1
+            else:
+                mmr_stats['other'] += 1
+
+    print(f"  Processed {len(final_clusters)} clusters")
+    print(f"  Hero types: talk={mmr_stats['talk']}, resource={mmr_stats['resource']}, "
+          f"paper={mmr_stats['paper']}, package={mmr_stats['package']}, other={mmr_stats['other']}")
+
     # Save
     output = {
         "generated_at": data.get('generated_at', ''),
         "postprocessed_at": str(np.datetime64('now')),
+        "mmr_generated_at": str(np.datetime64('now')),
         "num_clusters": len(final_clusters),
         "num_items": len(item_to_cluster),
+        "mmr_config": {
+            "lambda": 0.5,
+            "max_items_per_cluster": 15,
+            "relevance_weights": {
+                "citations": 0.3,
+                "difficulty": 0.2,
+                "centrality": 0.5
+            }
+        },
         "clusters": final_clusters,
         "item_to_cluster": item_to_cluster
     }
