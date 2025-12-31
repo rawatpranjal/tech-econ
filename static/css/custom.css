@@ -2292,7 +2292,7 @@ a:hover {
 /* Hero Section */
 .hero {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .hero-logo {
@@ -2356,7 +2356,7 @@ a:hover {
 /* Homepage Search Bar */
 .homepage-search {
     max-width: 600px;
-    margin: 2rem auto;
+    margin: 1rem auto;
 }
 
 .homepage-search .search-input-wrapper {
@@ -2399,8 +2399,8 @@ a:hover {
 .cta-banner {
     background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
     border-radius: 12px;
-    padding: 2rem;
-    margin-bottom: 3rem;
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
     color: white;
 }
 
@@ -2518,7 +2518,7 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.25rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 .section-card {
@@ -9105,7 +9105,7 @@ mark.partial {
 
 /* Homepage Trending Section */
 .home-trending {
-    margin: 2rem 0;
+    margin: 1rem 0;
     padding: 0 1rem;
 }
 
