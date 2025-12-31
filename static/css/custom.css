@@ -9123,10 +9123,16 @@ mark.partial {
 }
 
 .home-trending .explore-card {
-    flex: 0 0 220px;
-    min-width: 220px;
-    max-width: 220px;
-    height: 140px;
+    flex: 0 0 240px;
+    min-width: 240px;
+    max-width: 240px;
+    height: 160px;
+}
+
+.home-trending .explore-card-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .home-trending .explore-card h3 {
@@ -9139,10 +9145,14 @@ mark.partial {
     overflow: hidden;
 }
 
-.explore-card-stat {
-    font-size: 0.7rem;
+.explore-card-category {
+    font-size: 0.75rem;
     color: var(--text-muted);
     margin-top: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* Hero card styling */
