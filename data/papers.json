@@ -46859,6 +46859,209 @@
           ]
         }
       ]
+    },
+    {
+      "id": "sports-economics-analytics",
+      "name": "Sports Economics & Analytics",
+      "description": "Economic analysis of professional sports leagues, game theory in athletic competition, and data-driven decision making in sports",
+      "image_url": "/images/topics/sports-economics.webp",
+      "subtopics": [
+        {
+          "id": "foundational-sports-economics",
+          "name": "Foundational Sports Economics",
+          "application": "Understand labor markets, competitive balance, and the economic structure of professional sports leagues",
+          "papers": [
+            {
+              "title": "The Baseball Players' Labor Market",
+              "authors": "Simon Rottenberg",
+              "year": 1956,
+              "tag": "Classic",
+              "description": "THE birth certificate of sports economics. Introduced the Invariance Principle (predating Coase's Theorem) showing talent allocation would be identical under free agency or the reserve clause. Also articulated the Uncertainty of Outcome Hypothesis: competitive balance matters for fan interest.",
+              "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/257790",
+              "tags": ["Sports Economics", "Labor Markets", "Competitive Balance"],
+              "citations": 0
+            },
+            {
+              "title": "An Economic Model of a Professional Sports League",
+              "authors": "Mohamed El-Hodiri, James Quirk",
+              "year": 1971,
+              "tag": "Classic",
+              "description": "First mathematically rigorous league model. Key finding: equalization of playing strengths is inconsistent with profit maximization under standard rules—challenged assumptions about natural competitive balance.",
+              "url": "https://www.jstor.org/stable/1830103",
+              "tags": ["Sports Economics", "League Design", "Game Theory"],
+              "citations": 0
+            },
+            {
+              "title": "Pay and Performance in Major League Baseball",
+              "authors": "Gerald W. Scully",
+              "year": 1974,
+              "tag": "Classic",
+              "description": "Pioneered empirical estimation of player marginal revenue product (MRP). Using two-stage regression (performance→wins→revenue), demonstrated players earned just 10-20% of their MRP under the reserve clause—empirical ammunition for free agency litigation.",
+              "url": "https://www.jstor.org/stable/1815242",
+              "tags": ["Sports Economics", "Labor Markets", "Marginal Revenue Product"],
+              "citations": 0
+            },
+            {
+              "title": "Cross-Subsidization, Incentives, and Outcomes in Professional Team Sports Leagues",
+              "authors": "Rodney Fort, James Quirk",
+              "year": 1995,
+              "tag": "Classic",
+              "description": "Synthesized 40 years of sports economics research into the definitive framework. Striking finding: revenue sharing generally has no impact on competitive balance (reinforcing Rottenberg's invariance), though salary caps do affect balance.",
+              "url": "https://ideas.repec.org/a/aea/jeclit/v33y1995i3p1265-1299.html",
+              "tags": ["Sports Economics", "Revenue Sharing", "Competitive Balance"],
+              "citations": 0
+            }
+          ]
+        },
+        {
+          "id": "game-theory-sports",
+          "name": "Game Theory in Sports",
+          "application": "Test mixed-strategy Nash equilibrium predictions using high-stakes athletic competition as a natural laboratory",
+          "papers": [
+            {
+              "title": "Professionals Play Minimax",
+              "authors": "Ignacio Palacios-Huerta",
+              "year": 2003,
+              "tag": "Classic",
+              "description": "Analyzed 1,417 penalty kicks from top European leagues. Kickers and goalkeepers play exactly according to mixed-strategy Nash equilibrium: success probabilities are statistically identical across strategies, and choices show true serial independence. First field support for both implications of von Neumann's Minimax Theorem.",
+              "url": "https://academic.oup.com/restud/article-abstract/70/2/395/1586790",
+              "tags": ["Game Theory", "Sports Analytics", "Nash Equilibrium"],
+              "citations": 0
+            },
+            {
+              "title": "Minimax Play at Wimbledon",
+              "authors": "Mark Walker, John Wooders",
+              "year": 2001,
+              "tag": "Classic",
+              "description": "Confirmed equilibrium behavior in tennis serves using championship matches featuring McEnroe, Borg, Becker, and Sampras. The same statistical tests that soundly reject equilibrium play in experimental data confirm equilibrium behavior among elite professionals.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/aer.91.5.1521",
+              "tags": ["Game Theory", "Sports Analytics", "Tennis"],
+              "citations": 0
+            },
+            {
+              "title": "Expertise, Gender, and Equilibrium Play",
+              "authors": "Romain Gauriot, Lionel Page, John Wooders",
+              "year": 2023,
+              "tag": "Methodological",
+              "description": "Extended minimax analysis to nearly 500,000 serves across 3,000 matches. Found higher-ranked players conform more closely to equilibrium theory, and substantial differences in degree to which men and women conform to equilibrium predictions.",
+              "url": "https://onlinelibrary.wiley.com/doi/full/10.3982/QE1563",
+              "tags": ["Game Theory", "Sports Analytics", "Tennis"],
+              "citations": 0
+            },
+            {
+              "title": "Professionals Do Not Play Minimax: Evidence from Major League Baseball and the National Football League",
+              "authors": "Kenneth Kovash, Steven D. Levitt",
+              "year": 2009,
+              "tag": "Methodological",
+              "description": "Found minimax violations in baseball pitch selection and football play-calling. Pitchers throw too many fastballs; football teams pass less than they should. Suggests the strategic simplicity of penalty kicks and tennis serves may be key to equilibrium play.",
+              "url": "https://www.nber.org/papers/w15347",
+              "tags": ["Game Theory", "Sports Analytics", "Baseball", "Football"],
+              "citations": 0
+            }
+          ]
+        },
+        {
+          "id": "betting-markets-behavioral",
+          "name": "Betting Markets & Behavioral Economics",
+          "application": "Use sports betting markets as natural tests of market efficiency and behavioral biases",
+          "papers": [
+            {
+              "title": "Anomalies: Parimutuel Betting Markets: Racetracks and Lotteries",
+              "authors": "Richard H. Thaler, William T. Ziemba",
+              "year": 1988,
+              "tag": "Classic",
+              "description": "Established betting markets as legitimate venues for testing rationality. Despite quick feedback that should facilitate learning, the favorite-longshot bias persists—bettors systematically overweight longshots.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/jep.2.2.161",
+              "tags": ["Behavioral Economics", "Betting Markets", "Market Efficiency"],
+              "citations": 0
+            },
+            {
+              "title": "Explaining the Favorite-Longshot Bias: Is it Risk-Love or Misperceptions?",
+              "authors": "Erik Snowberg, Justin Wolfers",
+              "year": 2010,
+              "tag": "Methodological",
+              "description": "Used 5.6 million horse race starts and exotic bet pricing to discriminate between competing theories. Evidence favors probability misperceptions (prospect theory) over risk-love: longshots return about -61% while favorites return approximately -5%.",
+              "url": "https://www.nber.org/papers/w15923",
+              "tags": ["Behavioral Economics", "Betting Markets", "Prospect Theory"],
+              "citations": 0
+            },
+            {
+              "title": "Why Are Gambling Markets Organised So Differently from Financial Markets?",
+              "authors": "Steven D. Levitt",
+              "year": 2004,
+              "tag": "Methodological",
+              "description": "Explains why bookmakers set prices rather than equilibrating supply and demand. Bookmakers are more skilled at predicting outcomes than bettors and systematically exploit bettor biases by choosing prices that deviate from market clearing.",
+              "url": "https://academic.oup.com/ej/article-abstract/114/495/223/5086012",
+              "tags": ["Behavioral Economics", "Betting Markets", "Market Design"],
+              "citations": 0
+            }
+          ]
+        },
+        {
+          "id": "contest-theory-tournament-design",
+          "name": "Contest Theory & Tournament Design",
+          "application": "Understand optimal prize structures and incentive design in competitive settings",
+          "papers": [
+            {
+              "title": "Rank-Order Tournaments as Optimum Labor Contracts",
+              "authors": "Edward P. Lazear, Sherwin Rosen",
+              "year": 1981,
+              "tag": "Classic",
+              "description": "Provides the theoretical foundation for understanding prize structures in sports. Key predictions: effort increases with the spread between winning and losing prizes, and only the difference matters, not absolute prize sizes. Introduced competitive handicapping for efficient competition among heterogeneous abilities.",
+              "url": "https://ideas.repec.org/a/ucp/jpolec/v89y1981i5p841-64.html",
+              "tags": ["Contest Theory", "Labor Economics", "Incentive Design"],
+              "citations": 0
+            },
+            {
+              "title": "The Economic Design of Sporting Contests",
+              "authors": "Stefan Szymanski",
+              "year": 2003,
+              "tag": "Survey",
+              "description": "Comprehensive review covering optimal prize structures, incentive-balance tradeoffs, and revenue sharing effects. Draws together research on individualistic sports (golf, footraces) with team sports (baseball, soccer) through the lens of contest theory.",
+              "url": "https://www.aeaweb.org/articles?id=10.1257/002205103771800004",
+              "tags": ["Contest Theory", "Sports Economics", "League Design"],
+              "citations": 0
+            }
+          ]
+        },
+        {
+          "id": "sports-analytics-methods",
+          "name": "Sports Analytics Methods",
+          "application": "Apply data-driven decision making to optimize team performance and player evaluation",
+          "papers": [
+            {
+              "title": "The Loser's Curse: Decision Making and Market Efficiency in the National Football League Draft",
+              "authors": "Cade Massey, Richard H. Thaler",
+              "year": 2013,
+              "tag": "Industry",
+              "description": "Demonstrated NFL draft picks are systematically overvalued. Top picks generate less surplus value than late first-rounders, teams exhibit overconfidence and the winner's curse. Implied discount rate in multi-year trades reached 136%. Influenced teams like New England to trade down systematically.",
+              "url": "https://pubsonline.informs.org/doi/abs/10.1287/mnsc.1120.1657",
+              "tags": ["Sports Analytics", "Behavioral Economics", "NFL Draft"],
+              "citations": 0
+            },
+            {
+              "title": "Do Firms Maximize? Evidence from Professional Football",
+              "authors": "David Romer",
+              "year": 2006,
+              "tag": "Classic",
+              "description": "Used dynamic programming to show NFL teams punt and kick field goals far too often. Going for a touchdown from the opponent's 2-yard line instead of taking the field goal increases win probability by approximately 3%. Originally titled 'It's Fourth Down and What Does the Bellman Equation Say?'",
+              "url": "https://eml.berkeley.edu/~dromer/papers/JPE_April06.pdf",
+              "tags": ["Sports Analytics", "Decision Theory", "Football"],
+              "citations": 0
+            },
+            {
+              "title": "A Multiresolution Stochastic Process Model for Predicting Basketball Possession Outcomes",
+              "authors": "Daniel Cervone, Alexander D'Amour, Luke Bornn, Kirk Goldsberry",
+              "year": 2016,
+              "tag": "SOTA",
+              "description": "Introduced Expected Possession Value (EPV) using player tracking data—the foundation for real-time decision valuation in basketball. Models possessions at multiple resolution levels, differentiating continuous player movements from discrete events like shots and turnovers.",
+              "url": "https://arxiv.org/abs/1408.0777",
+              "tags": ["Sports Analytics", "Basketball", "Machine Learning"],
+              "citations": 0
+            }
+          ]
+        }
+      ]
     }
   ]
 }

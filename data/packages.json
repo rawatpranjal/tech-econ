@@ -16444,5 +16444,125 @@
       "respy"
     ],
     "maintenance_status": "active"
+  },
+  {
+    "name": "pybaseball",
+    "description": "Python library for pulling baseball data from Statcast, FanGraphs, Baseball Reference, and the Lahman database with easy-to-use functions",
+    "category": "Sports Analytics",
+    "docs_url": "https://github.com/jldbc/pybaseball#readme",
+    "github_url": "https://github.com/jldbc/pybaseball",
+    "url": "https://github.com/jldbc/pybaseball",
+    "install": "pip install pybaseball",
+    "tags": ["baseball", "sports-analytics", "Statcast", "sabermetrics"],
+    "best_for": "Baseball analytics, Statcast data access, and sabermetric research",
+    "language": "Python"
+  },
+  {
+    "name": "nba_api",
+    "description": "Full NBA Stats API wrapper with 127+ endpoints for accessing shot charts, player tracking, play-by-play, and historical data",
+    "category": "Sports Analytics",
+    "docs_url": "https://github.com/swar/nba_api/blob/master/docs/table_of_contents.md",
+    "github_url": "https://github.com/swar/nba_api",
+    "url": "https://github.com/swar/nba_api",
+    "install": "pip install nba_api",
+    "tags": ["basketball", "sports-analytics", "NBA", "shot-charts"],
+    "best_for": "Basketball analytics, player performance analysis, and shot chart visualization",
+    "language": "Python"
+  },
+  {
+    "name": "statsbombpy",
+    "description": "Official Python API client for StatsBomb open data with 360 freeze-frame support for detailed soccer event analysis",
+    "category": "Sports Analytics",
+    "docs_url": "https://github.com/statsbomb/statsbombpy#readme",
+    "github_url": "https://github.com/statsbomb/statsbombpy",
+    "url": "https://github.com/statsbomb/statsbombpy",
+    "install": "pip install statsbombpy",
+    "tags": ["soccer", "football", "sports-analytics", "xG", "event-data"],
+    "best_for": "Soccer analytics, expected goals modeling, and tactical analysis",
+    "language": "Python"
+  },
+  {
+    "name": "nfl-data-py",
+    "description": "Python package for accessing nflverse NFL play-by-play data with built-in EPA and win probability models",
+    "category": "Sports Analytics",
+    "docs_url": "https://nfl-data-py.readthedocs.io/",
+    "github_url": "https://github.com/nflverse/nfl_data_py",
+    "url": "https://github.com/nflverse/nfl_data_py",
+    "install": "pip install nfl_data_py",
+    "tags": ["football", "sports-analytics", "NFL", "EPA", "play-by-play"],
+    "best_for": "NFL analytics, expected points analysis, and fourth-down decision modeling",
+    "language": "Python"
+  },
+  {
+    "name": "mplsoccer",
+    "description": "Python library for football/soccer pitch visualization with support for heat maps, shot maps, pass maps, and event plotting",
+    "category": "Sports Analytics",
+    "docs_url": "https://mplsoccer.readthedocs.io/",
+    "github_url": "https://github.com/andrewRowlinson/mplsoccer",
+    "url": "https://github.com/andrewRowlinson/mplsoccer",
+    "install": "pip install mplsoccer",
+    "tags": ["soccer", "football", "visualization", "sports-analytics"],
+    "best_for": "Soccer data visualization, pitch plotting, and tactical analysis presentation",
+    "language": "Python"
+  },
+  {
+    "name": "Lahman",
+    "description": "R package providing the complete Lahman Baseball Database as native R data frames for seamless analysis",
+    "category": "Sports Analytics",
+    "docs_url": "https://cran.r-project.org/web/packages/Lahman/index.html",
+    "github_url": "https://github.com/cdalzell/Lahman",
+    "url": "https://cran.r-project.org/package=Lahman",
+    "install": "install.packages(\"Lahman\")",
+    "tags": ["baseball", "sports-analytics", "R", "sabermetrics", "historical"],
+    "best_for": "Baseball analytics in R, historical trend analysis, and teaching sabermetrics",
+    "language": "R"
+  },
+  {
+    "name": "nflfastR",
+    "description": "R package for NFL play-by-play data with built-in expected points (EPA) and win probability models from 1999-present",
+    "category": "Sports Analytics",
+    "docs_url": "https://www.nflfastr.com/",
+    "github_url": "https://github.com/nflverse/nflfastR",
+    "url": "https://github.com/nflverse/nflfastR",
+    "install": "install.packages(\"nflfastR\")",
+    "tags": ["football", "sports-analytics", "R", "NFL", "EPA"],
+    "best_for": "NFL analytics in R, expected points analysis, and game strategy research",
+    "language": "R"
+  },
+  {
+    "name": "hoopR",
+    "description": "R package for accessing NBA Stats API plus ESPN and KenPom data for comprehensive basketball analytics",
+    "category": "Sports Analytics",
+    "docs_url": "https://hoopr.sportsdataverse.org/",
+    "github_url": "https://github.com/sportsdataverse/hoopR",
+    "url": "https://github.com/sportsdataverse/hoopR",
+    "install": "install.packages(\"hoopR\")",
+    "tags": ["basketball", "sports-analytics", "R", "NBA", "college-basketball"],
+    "best_for": "Basketball analytics in R, combining NBA and college basketball data",
+    "language": "R"
+  },
+  {
+    "name": "worldfootballR",
+    "description": "R package for scraping FBref, Transfermarkt, and Understat soccer data including xG, player values, and match statistics",
+    "category": "Sports Analytics",
+    "docs_url": "https://jaseziv.github.io/worldfootballR/",
+    "github_url": "https://github.com/JaseZiv/worldfootballR",
+    "url": "https://github.com/JaseZiv/worldfootballR",
+    "install": "devtools::install_github(\"JaseZiv/worldfootballR\")",
+    "tags": ["soccer", "football", "sports-analytics", "R", "xG", "Transfermarkt"],
+    "best_for": "Soccer analytics in R, player valuation, and cross-league analysis",
+    "language": "R"
+  },
+  {
+    "name": "hockeyR",
+    "description": "R package for NHL play-by-play data with built-in expected goals models and player tracking statistics",
+    "category": "Sports Analytics",
+    "docs_url": "https://hockeyr.netlify.app/",
+    "github_url": "https://github.com/danmorse314/hockeyR",
+    "url": "https://github.com/danmorse314/hockeyR",
+    "install": "devtools::install_github(\"danmorse314/hockeyR\")",
+    "tags": ["hockey", "sports-analytics", "R", "NHL", "xG"],
+    "best_for": "Hockey analytics in R, expected goals modeling, and player evaluation",
+    "language": "R"
   }
 ]

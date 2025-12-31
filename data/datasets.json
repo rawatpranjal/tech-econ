@@ -10454,5 +10454,85 @@
     ],
     "data_modality": "tabular",
     "size_category": "massive"
+  },
+  {
+    "name": "Lahman Baseball Database",
+    "description": "Complete historical baseball statistics from 1871-2024 including batting, pitching, fielding, and salaries for every MLB player and team",
+    "category": "Sports & Athletics",
+    "url": "https://www.seanlahman.com/baseball-archive/statistics/",
+    "docs_url": "https://www.seanlahman.com/baseball-archive/statistics/",
+    "github_url": "https://github.com/chadwickbureau/baseballdatabank",
+    "tags": ["baseball", "historical", "MLB", "player-statistics", "sabermetrics"],
+    "best_for": "Learning baseball analytics, historical trend analysis, and player valuation"
+  },
+  {
+    "name": "Retrosheet",
+    "description": "Play-by-play data for MLB games from 1911-2024 including detailed event files, game logs, and transaction records",
+    "category": "Sports & Athletics",
+    "url": "https://www.retrosheet.org/",
+    "docs_url": "https://www.retrosheet.org/datause.htm",
+    "github_url": null,
+    "tags": ["baseball", "play-by-play", "MLB", "game-logs", "historical"],
+    "best_for": "Granular game analysis, situational statistics, and historical baseball research"
+  },
+  {
+    "name": "Statcast / Baseball Savant",
+    "description": "MLB's official tracking data including pitch velocity, spin rate, exit velocity, launch angle, and player positioning from 2015-present",
+    "category": "Sports & Athletics",
+    "url": "https://baseballsavant.mlb.com/",
+    "docs_url": "https://baseballsavant.mlb.com/csv-docs",
+    "github_url": null,
+    "tags": ["baseball", "tracking-data", "MLB", "pitch-tracking", "batted-ball"],
+    "best_for": "Modern baseball analytics, player evaluation, and biomechanical analysis"
+  },
+  {
+    "name": "NBA Stats API",
+    "description": "Official NBA statistics including shot charts, play-by-play, player tracking data, and historical records",
+    "category": "Sports & Athletics",
+    "url": "https://www.nba.com/stats/",
+    "docs_url": "https://github.com/swar/nba_api/blob/master/docs/table_of_contents.md",
+    "github_url": null,
+    "tags": ["basketball", "NBA", "shot-charts", "tracking-data", "play-by-play"],
+    "best_for": "Basketball analytics, shot analysis, and player performance evaluation"
+  },
+  {
+    "name": "StatsBomb Open Data",
+    "description": "Free soccer event data with 3,400+ events per match including xG, freeze-frame data, and 360 player positioning. Includes Messi's complete La Liga career and multiple World Cups",
+    "category": "Sports & Athletics",
+    "url": "https://github.com/statsbomb/open-data",
+    "docs_url": "https://github.com/statsbomb/open-data/tree/master/doc",
+    "github_url": "https://github.com/statsbomb/open-data",
+    "tags": ["soccer", "football", "event-data", "xG", "tracking-data"],
+    "best_for": "Soccer analytics, expected goals modeling, and tactical analysis"
+  },
+  {
+    "name": "nflverse",
+    "description": "Comprehensive NFL play-by-play data from 1999-present with EPA, win probability, and player participation data",
+    "category": "Sports & Athletics",
+    "url": "https://github.com/nflverse/nflverse-data",
+    "docs_url": "https://nflreadr.nflverse.com/",
+    "github_url": "https://github.com/nflverse/nflverse-data",
+    "tags": ["football", "NFL", "play-by-play", "EPA", "win-probability"],
+    "best_for": "NFL analytics, expected points analysis, and game strategy optimization"
+  },
+  {
+    "name": "NHL API",
+    "description": "Official NHL statistics and play-by-play data from 2010-present including shot locations, player stats, and game events",
+    "category": "Sports & Athletics",
+    "url": "https://api-web.nhle.com/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": ["hockey", "NHL", "play-by-play", "shot-locations", "player-stats"],
+    "best_for": "Hockey analytics, expected goals modeling, and player evaluation"
+  },
+  {
+    "name": "Jeff Sackmann Tennis Data",
+    "description": "Comprehensive tennis match results and point-by-point data from 1973-present for ATP, WTA, and Grand Slam tournaments",
+    "category": "Sports & Athletics",
+    "url": "https://github.com/JeffSackmann/tennis_atp",
+    "docs_url": null,
+    "github_url": "https://github.com/JeffSackmann/tennis_atp",
+    "tags": ["tennis", "ATP", "WTA", "match-results", "point-by-point"],
+    "best_for": "Tennis analytics, player performance analysis, and tournament prediction"
   }
 ]
