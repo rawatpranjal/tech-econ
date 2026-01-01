@@ -59,11 +59,11 @@
     <!-- Cards View -->
     <div id="cards-view" class="package-grid">
         {{ range $cat := $categories }}
+        {{ $catDatasets := where $.Site.Data.datasets "category" $cat }}
         <div class="category-section" data-section-category="{{ $cat }}">
             <h2 class="category-title">{{ $cat }}</h2>
             <div class="cards-row">
-                {{ range $.Site.Data.datasets }}
-                {{ if eq .category $cat }}
+                {{ range sort $catDatasets "model_score" "desc" }}
                 <div class="package-card dataset-card"
                      data-name="{{ .name | lower }}"
                      data-description="{{ .description | lower }}"
@@ -103,7 +103,6 @@
                         </div>
                     </div>
                 </div>
-                {{ end }}
                 {{ end }}
             </div>
         </div>

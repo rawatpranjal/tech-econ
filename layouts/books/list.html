@@ -48,11 +48,11 @@
     <!-- Books Grid -->
     <div id="books-view" class="resources-grid">
         {{ range $cat := $categoryOrder }}
+        {{ $catBooks := where $.Site.Data.books "category" $cat }}
         <div class="category-section" data-section-category="{{ $cat }}">
             <h2 class="category-title">{{ $cat }}</h2>
             <div class="cards-row">
-                {{ range $.Site.Data.books }}
-                {{ if eq .category $cat }}
+                {{ range sort $catBooks "model_score" "desc" }}
                 <div class="resource-card" data-aos="fade-up"
                      data-name="{{ .name | lower }}"
                      data-description="{{ .description | lower }}"
@@ -75,7 +75,6 @@
                         <a href="{{ .url }}" target="_blank" class="link-btn">Amazon</a>
                     </div>
                 </div>
-                {{ end }}
                 {{ end }}
             </div>
         </div>

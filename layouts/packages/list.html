@@ -77,7 +77,7 @@
         <div class="category-section" data-section-category="{{ $cat }}">
             <h2 class="category-title">{{ $cat }}</h2>
             <div class="cards-row">
-                {{ range $catPackages }}
+                {{ range sort $catPackages "model_score" "desc" }}
                 <div class="package-card"
                      data-name="{{ .name | lower }}"
                      data-description="{{ .description | lower }}"

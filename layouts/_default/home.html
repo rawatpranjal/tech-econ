@@ -36,7 +36,7 @@
             </h2>
             <div class="explore-scroller">
                 {{ range .items }}
-                <a href="{{ .url }}" target="_blank" rel="noopener" class="explore-card explore-card-trending">
+                <a href="{{ .url }}" target="_blank" rel="noopener" class="explore-card explore-card-trending" data-score="{{ .score }}" data-name="{{ .name }}">
                     <div class="explore-card-header">
                         <div class="explore-card-icon">
                             {{ if findRE "github\\.com" .url }}
@@ -264,6 +264,37 @@
             }
         })
         .catch(function() {});
+})();
+
+// Weighted shuffle for Trending Now section
+(function() {
+    var items = document.querySelectorAll('.explore-card-trending');
+    if (items.length < 2) return;
+
+    var parent = items[0].parentElement;
+    var arr = Array.from(items);
+
+    // Weighted shuffle: higher scores more likely to stay near top
+    // Fisher-Yates with score-weighted swap probability
+    for (var i = arr.length - 1; i > 0; i--) {
+        // Random position, but biased towards keeping high-score items up
+        var scoreI = parseFloat(arr[i].dataset.score) || 0;
+        var j = Math.floor(Math.random() * (i + 1));
+        var scoreJ = parseFloat(arr[j].dataset.score) || 0;
+
+        // Swap only if random check passes (higher score = less likely to swap down)
+        var swapProb = scoreI / (scoreI + scoreJ + 0.1);
+        if (Math.random() > swapProb) {
+            var temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+        }
+    }
+
+    // Re-append in shuffled order
+    arr.forEach(function(el) {
+        parent.appendChild(el);
+    });
 })();
 </script>
 {{ end }}

@@ -61,11 +61,11 @@
 
         <div class="resources-grid">
             {{ range $cat := $videoCategories }}
+            {{ $catVideos := where $videos "category" $cat }}
             <div class="category-section" data-section-category="{{ $cat }}">
                 <h2 class="category-title">{{ $cat }}</h2>
                 <div class="cards-row">
-                    {{ range $videos }}
-                    {{ if eq .category $cat }}
+                    {{ range sort $catVideos "model_score" "desc" }}
                     <div class="resource-card" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="{{ .category }}">
                         {{ if .image_url }}
                         <a href="{{ .url }}" target="_blank" class="talk-thumbnail-link">
@@ -104,7 +104,6 @@
                         </div>
                     </div>
                     {{ end }}
-                    {{ end }}
                 </div>
             </div>
             {{ end }}
@@ -142,11 +141,11 @@
 
         <div class="resources-grid">
             {{ range $cat := $podcastCategories }}
+            {{ $catPodcasts := where $podcasts "category" $cat }}
             <div class="category-section" data-section-category="{{ $cat }}">
                 <h2 class="category-title">{{ $cat }}</h2>
                 <div class="cards-row">
-                    {{ range $podcasts }}
-                    {{ if eq .category $cat }}
+                    {{ range sort $catPodcasts "model_score" "desc" }}
                     <div class="resource-card" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="{{ .category }}">
                         <div class="card-header">
                             <img class="resource-favicon" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
@@ -161,7 +160,6 @@
                             <a href="{{ .url }}" target="_blank" class="link-btn">Listen</a>
                         </div>
                     </div>
-                    {{ end }}
                     {{ end }}
                 </div>
             </div>
@@ -271,11 +269,11 @@
 
         <div class="resources-grid">
             {{ range $cat := $bookCategories }}
+            {{ $catBooks := where $books "category" $cat }}
             <div class="category-section" data-section-category="{{ $cat }}">
                 <h2 class="category-title">{{ $cat }}</h2>
                 <div class="cards-row">
-                    {{ range $books }}
-                    {{ if eq .category $cat }}
+                    {{ range sort $catBooks "model_score" "desc" }}
                     <div class="resource-card" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="{{ .category }}">
                         <a href="{{ .url }}" target="_blank" class="book-cover-link">
                             <img src="https://covers.openlibrary.org/b/isbn/{{ .isbn }}-M.jpg"
@@ -298,7 +296,6 @@
                         </div>
                     </div>
                     {{ end }}
-                    {{ end }}
                 </div>
             </div>
             {{ end }}
@@ -307,7 +304,7 @@
             <div class="category-section" data-section-category="Free Online">
                 <h2 class="category-title">Free Online Monographs</h2>
                 <div class="cards-row">
-                    {{ range $monographs }}
+                    {{ range sort $monographs "model_score" "desc" }}
                     <div class="resource-card" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="Free Online">
                         <div class="card-header">
                             <img class="resource-favicon" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">

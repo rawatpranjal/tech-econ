@@ -118,11 +118,12 @@
                 {{ end }}
 
                 {{ range $cat := sort $domainCategories }}
+                {{ $domainResources := where $.Site.Data.resources "domain" $domain }}
+                {{ $catResources := where $domainResources "category" $cat }}
                 <div class="category-section" data-section-category="{{ $cat }}" data-domain="{{ $domain }}">
                     <h3 class="category-title">{{ $cat }}</h3>
                     <div class="cards-row">
-                        {{ range $.Site.Data.resources }}
-                        {{ if and .domain (eq .domain $domain) (eq .category $cat) }}
+                        {{ range sort $catResources "model_score" "desc" }}
                         <div class="resource-card"
                              data-name="{{ .name | lower }}"
                              data-description="{{ .description | lower }}"
@@ -145,7 +146,6 @@
                                 <a href="{{ .url }}" target="_blank" class="link-btn">Visit</a>
                             </div>
                         </div>
-                        {{ end }}
                         {{ end }}
                     </div>
                 </div>
