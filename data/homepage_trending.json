@@ -1,7 +1,23 @@
 {
-  "updated": "2026-01-01T00:42:11.222638Z",
+  "updated": "2026-01-01T00:46:59.557128Z",
   "count": 12,
   "items": [
+    {
+      "name": "A/B Testing on Social Networks",
+      "type": "paper",
+      "category": "Experimentation > A/B Test Design & Analysis",
+      "description": "LinkedIn's landmark paper on network interference in A/B tests. Shows how social connections violate SUTVA, proposes cluster-based randomization and graph cluster metrics, and introduces the 'network A/B test' framework now used across social platforms.",
+      "url": "https://content.linkedin.com/content/dam/engineering/site-assets/pdfs/ABTestingSocialNetwork_share.pdf",
+      "score": 1.0,
+      "cold_start": false,
+      "signals": {
+        "clicks": 5,
+        "impressions": 0,
+        "dwell_ms": 0
+      },
+      "citations": 200,
+      "rank": 1
+    },
     {
       "name": "Causal Inference for the Brave and True",
       "type": "package",
@@ -15,7 +31,7 @@
         "impressions": 3,
         "dwell_ms": 0
       },
-      "rank": 1
+      "rank": 5
     },
     {
       "name": "Retail Rocket",
@@ -30,7 +46,7 @@
         "impressions": 0,
         "dwell_ms": 23919
       },
-      "rank": 2
+      "rank": 11
     },
     {
       "name": "JD.com 2020 (MSOM-20)",
@@ -45,7 +61,7 @@
         "impressions": 0,
         "dwell_ms": 4284
       },
-      "rank": 3
+      "rank": 13
     },
     {
       "name": "spaCy",
@@ -60,7 +76,7 @@
         "impressions": 0,
         "dwell_ms": 0
       },
-      "rank": 4
+      "rank": 15
     },
     {
       "name": "BestBuy",
@@ -75,7 +91,7 @@
         "impressions": 0,
         "dwell_ms": 0
       },
-      "rank": 5
+      "rank": 16
     },
     {
       "name": "Scott Cunningham: Causal Inference Substack",
@@ -90,7 +106,7 @@
         "impressions": 3,
         "dwell_ms": 11820
       },
-      "rank": 30
+      "rank": 66
     },
     {
       "name": "Ax (Meta Adaptive Experimentation)",
@@ -105,7 +121,7 @@
         "impressions": 1,
         "dwell_ms": 7881
       },
-      "rank": 75
+      "rank": 134
     },
     {
       "name": "Google Research: Market Algorithms Team",
@@ -120,7 +136,7 @@
         "impressions": 1,
         "dwell_ms": 0
       },
-      "rank": 83
+      "rank": 145
     },
     {
       "name": "Open E-Commerce 1.0 (MIT)",
@@ -135,7 +151,7 @@
         "impressions": 0,
         "dwell_ms": 4319
       },
-      "rank": 120
+      "rank": 193
     },
     {
       "name": "LMSYS-Chat-1M",
@@ -150,7 +166,7 @@
         "impressions": 0,
         "dwell_ms": 1406
       },
-      "rank": 125
+      "rank": 201
     },
     {
       "name": "DiQAD",
@@ -165,22 +181,7 @@
         "impressions": 0,
         "dwell_ms": 1406
       },
-      "rank": 126
-    },
-    {
-      "name": "Ananke",
-      "type": "package",
-      "category": "Causal Discovery & Graphical Models",
-      "description": "Causal inference using graphical models (DAGs), including identification theory and effect estimation.",
-      "url": "https://gitlab.com/causal/ananke",
-      "score": 0.3993,
-      "cold_start": false,
-      "signals": {
-        "clicks": 2,
-        "impressions": 0,
-        "dwell_ms": 0
-      },
-      "rank": 128
+      "rank": 202
     }
   ]
 }

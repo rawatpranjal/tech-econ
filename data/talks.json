@@ -10500,5 +10500,101 @@
       "Financial protection effects are strong",
       "Physical health improvements harder to detect"
     ]
+  },
+  {
+    "name": "Severin Borenstein: The Economics of Electricity Markets",
+    "description": "Berkeley's Borenstein explains how electricity markets work, why they're different from other commodities, and challenges posed by renewable integration and decarbonization.",
+    "category": "Energy & Utilities Economics",
+    "url": "https://www.youtube.com/watch?v=5C4jLw2R0Vs",
+    "type": "Talk",
+    "tags": [
+      "Energy",
+      "Electricity",
+      "Markets",
+      "Accessible"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "energy",
+      "electricity-markets",
+      "economics"
+    ],
+    "summary": "Borenstein provides an accessible introduction to electricity market economics, covering what makes electricity unique, how wholesale markets work, and current policy challenges.",
+    "use_cases": [
+      "Introduction to electricity economics",
+      "Policy context",
+      "General understanding"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "electricity markets explained",
+      "Borenstein electricity talk",
+      "how electricity markets work",
+      "power market economics"
+    ],
+    "speaker_expertise": [
+      "Electricity Markets",
+      "Energy Policy",
+      "California Electricity"
+    ],
+    "key_insights": [
+      "Electricity can't be stored economically",
+      "Prices vary dramatically by time and location",
+      "Market design affects efficiency and reliability"
+    ]
+  },
+  {
+    "name": "Paul Joskow: Lessons from Electricity Restructuring",
+    "description": "MIT's Joskow reflects on 20+ years of electricity market liberalization, what worked, what failed, and lessons for ongoing grid transformation and decarbonization.",
+    "category": "Energy & Utilities Economics",
+    "url": "https://www.youtube.com/watch?v=Lx7G_V1qkT8",
+    "type": "Talk",
+    "tags": [
+      "Energy",
+      "Restructuring",
+      "Policy",
+      "History"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "market basics"
+    ],
+    "topic_tags": [
+      "energy",
+      "restructuring",
+      "policy"
+    ],
+    "summary": "Joskow provides the authoritative assessment of electricity market liberalization from one of the field's founders. Covers successes, failures, and implications for clean energy transition.",
+    "use_cases": [
+      "Historical context",
+      "Policy lessons",
+      "Reform evaluation"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "electricity restructuring lessons",
+      "Joskow restructuring talk",
+      "power sector liberalization",
+      "electricity market reform"
+    ],
+    "speaker_expertise": [
+      "Electricity Restructuring",
+      "Regulatory Economics",
+      "Energy Policy"
+    ],
+    "key_insights": [
+      "Restructuring improved efficiency but reliability challenges emerged",
+      "Wholesale markets work but retail competition has mixed results",
+      "Capacity mechanisms remain controversial"
+    ]
   }
 ]

@@ -1847,5 +1847,248 @@
       "analytical methods",
       "applications"
     ]
+  },
+  {
+    "name": "Power System Economics: Designing Markets for Electricity",
+    "author": "Steven Stoft",
+    "year": 2002,
+    "isbn": "0471150401",
+    "description": "THE foundational text for electricity market design. Covers market architecture, reliability, day-ahead/real-time markets, LMP, and market power. Written for engineers, economists, and regulators.",
+    "category": "Energy & Utilities Economics",
+    "type": "Book",
+    "url": "https://www.wiley.com/en-us/Power+System+Economics%3A+Designing+Markets+for+Electricity-p-9780471150404",
+    "tags": [
+      "Energy",
+      "Markets",
+      "Electricity",
+      "Essential"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "economics basics"
+    ],
+    "topic_tags": [
+      "energy",
+      "electricity-markets",
+      "market-design"
+    ],
+    "summary": "Stoft's book is the essential reference for understanding electricity market design. 496 pages covering everything from basic market concepts to LMP derivation and capacity market theory.",
+    "use_cases": [
+      "Market design understanding",
+      "Regulatory context",
+      "Industry fundamentals"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "electricity market design book",
+      "Stoft power systems",
+      "LMP book",
+      "wholesale electricity markets"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "market basics",
+      "reliability",
+      "pricing mechanisms",
+      "market power"
+    ]
+  },
+  {
+    "name": "Fundamentals of Power System Economics",
+    "author": "Daniel S. Kirschen & Goran Strbac",
+    "year": 2019,
+    "isbn": "1119213240",
+    "description": "Bridges engineering and economics for power systems. Assumes no prior economics knowledge. Covers microeconomics, market organization, ancillary services, and renewable integration.",
+    "category": "Energy & Utilities Economics",
+    "type": "Book",
+    "url": "https://www.wiley.com/en-us/Fundamentals+of+Power+System+Economics%2C+2nd+Edition-p-9781119213246",
+    "tags": [
+      "Energy",
+      "Economics",
+      "Power Systems",
+      "Textbook"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "power systems basics"
+    ],
+    "topic_tags": [
+      "energy",
+      "power-systems",
+      "economics"
+    ],
+    "summary": "Kirschen and Strbac's textbook is ideal for engineers learning electricity economics. The 2nd edition adds substantial coverage of renewable integration and storage economics.",
+    "use_cases": [
+      "Engineering-to-economics transition",
+      "Graduate coursework",
+      "Self-study"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "power system economics textbook",
+      "Kirschen Strbac",
+      "electricity economics for engineers",
+      "power markets book"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "microeconomics basics",
+      "market structures",
+      "pricing",
+      "ancillary services"
+    ]
+  },
+  {
+    "name": "International Energy Markets",
+    "author": "Carol Dahl",
+    "year": 2015,
+    "isbn": "1593703970",
+    "description": "Definitive textbook covering oil, coal, natural gas, and electricity markets with practical models and institutional context. Author received IAEE Outstanding Contributions Award.",
+    "category": "Energy & Utilities Economics",
+    "type": "Book",
+    "url": "https://www.pennwellbooks.com/international-energy-markets-2nd-edition/",
+    "tags": [
+      "Energy",
+      "Markets",
+      "Comprehensive",
+      "Textbook"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "economics basics"
+    ],
+    "topic_tags": [
+      "energy",
+      "oil-gas",
+      "electricity",
+      "coal"
+    ],
+    "summary": "Carol Dahl's comprehensive textbook covers all major energy commodities with emphasis on market structure, pricing, and policy. Essential for understanding cross-commodity energy economics.",
+    "use_cases": [
+      "Comprehensive energy education",
+      "Multi-commodity analysis",
+      "Policy context"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "energy markets textbook",
+      "Carol Dahl book",
+      "oil gas electricity markets",
+      "energy economics comprehensive"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "commodity basics",
+      "pricing mechanisms",
+      "market structures",
+      "policy analysis"
+    ]
+  },
+  {
+    "name": "How Solar Energy Became Cheap",
+    "author": "Gregory F. Nemet",
+    "year": 2019,
+    "isbn": "0367136597",
+    "description": "Documents the policy, technological, and market dynamics behind solar's 99% cost decline. Essential for understanding technology learning curves and clean energy innovation.",
+    "category": "Energy & Utilities Economics",
+    "type": "Book",
+    "url": "https://www.routledge.com/How-Solar-Energy-Became-Cheap/Nemet/p/book/9780367136598",
+    "tags": [
+      "Energy",
+      "Solar",
+      "Innovation",
+      "History"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "energy",
+      "solar",
+      "innovation",
+      "learning-curves"
+    ],
+    "summary": "Nemet's book tells the remarkable story of how solar went from space-program curiosity to the cheapest source of electricity. Essential for understanding clean energy technology dynamics.",
+    "use_cases": [
+      "Innovation policy",
+      "Technology forecasting",
+      "Historical context"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "solar cost decline book",
+      "Nemet solar",
+      "renewable energy innovation",
+      "how solar got cheap"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "technology history",
+      "learning curves",
+      "policy impacts"
+    ]
+  },
+  {
+    "name": "Spot Pricing of Electricity",
+    "author": "Fred C. Schweppe, Michael C. Caramanis, Richard D. Tabors & Roger E. Bohn",
+    "year": 1988,
+    "isbn": "0898382602",
+    "description": "The original book proposing real-time pricing and what became LMP-based markets. Foundational work that influenced all modern wholesale electricity market designs.",
+    "category": "Energy & Utilities Economics",
+    "type": "Book",
+    "url": "https://link.springer.com/book/10.1007/978-1-4613-1683-1",
+    "tags": [
+      "Energy",
+      "Pricing",
+      "Classic",
+      "Foundational"
+    ],
+    "difficulty": "advanced",
+    "prerequisites": [
+      "economics",
+      "power systems"
+    ],
+    "topic_tags": [
+      "energy",
+      "pricing",
+      "market-design"
+    ],
+    "summary": "Schweppe et al.'s 1988 book laid the intellectual foundation for nodal pricing and real-time electricity markets. Essential historical reference for understanding modern market design origins.",
+    "use_cases": [
+      "Historical context",
+      "Market design foundations",
+      "Academic reference"
+    ],
+    "audience": [
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "spot pricing electricity book",
+      "Schweppe electricity",
+      "real-time pricing origins",
+      "nodal pricing history"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "pricing theory",
+      "market design",
+      "implementation concepts"
+    ]
   }
 ]

@@ -1026,6 +1026,25 @@
     "subtopic": "A/B Test Design & Analysis"
   },
   {
+    "id": "paper-a-b-testing-on-social-networks",
+    "name": "A/B Testing on Social Networks",
+    "title": "A/B Testing Challenges in Large Scale Social Networks",
+    "authors": "Ya Xu, Nanyu Chen, Addrian Fernandez, Omar Sinno, Anmol Bhasin",
+    "year": 2015,
+    "url": "https://content.linkedin.com/content/dam/engineering/site-assets/pdfs/ABTestingSocialNetwork_share.pdf",
+    "description": "LinkedIn's landmark paper on network interference in A/B tests. Shows how social connections violate SUTVA, proposes cluster-based randomization and graph cluster metrics, and introduces the 'network A/B test' framework now used across social platforms.",
+    "citations": 200,
+    "tag": "Industry",
+    "tags": [
+      "Experimentation",
+      "A/B Test Design & Analysis"
+    ],
+    "type": "paper",
+    "category": "Experimentation > A/B Test Design & Analysis",
+    "topic": "Experimentation",
+    "subtopic": "A/B Test Design & Analysis"
+  },
+  {
     "id": "paper-overlapping-experiment-infrastructure-more-better-faster-experimentation",
     "name": "Overlapping Experiment Infrastructure: More, Better, Faster Experimentation",
     "title": "Overlapping Experiment Infrastructure: More, Better, Faster Experimentation",

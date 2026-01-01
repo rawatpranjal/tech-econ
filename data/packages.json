@@ -18203,5 +18203,535 @@
       "msm"
     ],
     "maintenance_status": "active"
+  },
+  {
+    "name": "PyPSA",
+    "description": "Python for Power System Analysis - the workhorse for large-scale power system optimization. Static power flow, linear OPF, capacity expansion, unit commitment, and storage modeling.",
+    "category": "Energy & Utilities Economics",
+    "docs_url": "https://pypsa.org/",
+    "github_url": "https://github.com/PyPSA/PyPSA",
+    "url": "https://pypsa.org/",
+    "install": "pip install pypsa",
+    "tags": [
+      "power systems",
+      "optimization",
+      "capacity expansion"
+    ],
+    "best_for": "Large-scale power system modeling and capacity expansion",
+    "language": "Python",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "optimization basics",
+      "power systems"
+    ],
+    "topic_tags": [
+      "energy",
+      "power-systems",
+      "optimization"
+    ],
+    "summary": "PyPSA is the leading open-source package for power system analysis and capacity expansion modeling. Used for Net-Zero pathway studies and renewable integration analysis.",
+    "use_cases": [
+      "Capacity expansion",
+      "Unit commitment",
+      "Transmission planning",
+      "Storage optimization"
+    ],
+    "audience": [
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "power system optimization Python",
+      "capacity expansion model",
+      "PyPSA tutorial",
+      "energy system modeling"
+    ],
+    "primary_use_cases": [
+      "Power system modeling"
+    ],
+    "api_complexity": "advanced",
+    "related_packages": [
+      "pandapower",
+      "GenX",
+      "PowerModels.jl"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "pandapower",
+    "description": "Power system analysis for distribution networks. Newton-Raphson power flow, state estimation, short circuit calculations, and network visualization.",
+    "category": "Energy & Utilities Economics",
+    "docs_url": "https://www.pandapower.org/",
+    "github_url": "https://github.com/e2nIEE/pandapower",
+    "url": "https://www.pandapower.org/",
+    "install": "pip install pandapower",
+    "tags": [
+      "power flow",
+      "distribution",
+      "networks"
+    ],
+    "best_for": "Distribution system analysis and power flow calculations",
+    "language": "Python",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "power systems basics"
+    ],
+    "topic_tags": [
+      "energy",
+      "distribution",
+      "power-flow"
+    ],
+    "summary": "pandapower excels at distribution system analysis with comprehensive power flow, short circuit, and optimal power flow capabilities. Integrates with PyPSA for transmission-distribution coupling.",
+    "use_cases": [
+      "Distribution planning",
+      "DER integration",
+      "Voltage analysis",
+      "Network optimization"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "distribution power flow Python",
+      "pandapower tutorial",
+      "power flow analysis",
+      "distribution network modeling"
+    ],
+    "primary_use_cases": [
+      "Distribution analysis"
+    ],
+    "api_complexity": "intermediate",
+    "related_packages": [
+      "PyPSA",
+      "OpenDSS",
+      "GridLAB-D"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "Pyomo",
+    "description": "General-purpose algebraic optimization modeling in Python. Supports LP, MILP, NLP, and stochastic programming with interfaces to major solvers including HiGHS, Gurobi, and CPLEX.",
+    "category": "Energy & Utilities Economics",
+    "docs_url": "https://www.pyomo.org/",
+    "github_url": "https://github.com/Pyomo/pyomo",
+    "url": "https://www.pyomo.org/",
+    "install": "pip install pyomo",
+    "tags": [
+      "optimization",
+      "mathematical programming",
+      "modeling"
+    ],
+    "best_for": "Building custom optimization models for energy systems",
+    "language": "Python",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "optimization basics"
+    ],
+    "topic_tags": [
+      "optimization",
+      "modeling",
+      "operations-research"
+    ],
+    "summary": "Pyomo is the standard Python package for optimization modeling. Essential for building custom energy system optimization models, unit commitment, and economic dispatch.",
+    "use_cases": [
+      "Custom optimization",
+      "Unit commitment",
+      "Economic dispatch",
+      "Capacity planning"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "Python optimization modeling",
+      "Pyomo tutorial",
+      "MILP Python",
+      "energy optimization"
+    ],
+    "primary_use_cases": [
+      "Optimization modeling"
+    ],
+    "api_complexity": "intermediate",
+    "related_packages": [
+      "CVXPY",
+      "PuLP",
+      "JuMP"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "HiGHS",
+    "description": "State-of-the-art open-source LP/MIP solver. Now the default solver in PyPSA, JuMP, and SciPy. Competitive with commercial solvers on many problem types.",
+    "category": "Energy & Utilities Economics",
+    "docs_url": "https://highs.dev/",
+    "github_url": "https://github.com/ERGO-Code/HiGHS",
+    "url": "https://highs.dev/",
+    "install": "pip install highspy",
+    "tags": [
+      "solver",
+      "optimization",
+      "LP",
+      "MIP"
+    ],
+    "best_for": "Free, high-performance linear and mixed-integer optimization",
+    "language": "C++/Python",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "optimization",
+      "solver",
+      "open-source"
+    ],
+    "summary": "HiGHS is the leading open-source LP/MIP solver, providing commercial-grade performance for free. Essential for energy system optimization without commercial solver licenses.",
+    "use_cases": [
+      "LP/MIP solving",
+      "Production use",
+      "Academic research",
+      "Teaching"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "open source LP solver",
+      "HiGHS solver",
+      "free MIP solver",
+      "optimization solver Python"
+    ],
+    "primary_use_cases": [
+      "Optimization solving"
+    ],
+    "api_complexity": "beginner",
+    "related_packages": [
+      "Gurobi",
+      "CPLEX",
+      "CBC"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "GenX",
+    "description": "Capacity expansion model from MIT/Princeton in Julia. Highly configurable with unit commitment, long-duration storage, and transmission expansion. Used for Net-Zero America.",
+    "category": "Energy & Utilities Economics",
+    "docs_url": "https://genxproject.github.io/GenX/",
+    "github_url": "https://github.com/GenXProject/GenX",
+    "url": "https://genxproject.github.io/GenX/",
+    "install": "Julia package",
+    "tags": [
+      "capacity expansion",
+      "Julia",
+      "decarbonization"
+    ],
+    "best_for": "Policy-relevant capacity expansion with detailed operational constraints",
+    "language": "Julia",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "Julia",
+      "optimization"
+    ],
+    "topic_tags": [
+      "energy",
+      "capacity-expansion",
+      "julia"
+    ],
+    "summary": "GenX is the leading Julia-based capacity expansion model, providing detailed operational representation for decarbonization pathway analysis. Powers REPEAT Project and Net-Zero America.",
+    "use_cases": [
+      "Decarbonization pathways",
+      "Storage analysis",
+      "Policy modeling",
+      "Regional planning"
+    ],
+    "audience": [
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "capacity expansion Julia",
+      "GenX model",
+      "decarbonization modeling",
+      "power sector planning"
+    ],
+    "primary_use_cases": [
+      "Capacity expansion"
+    ],
+    "api_complexity": "advanced",
+    "related_packages": [
+      "PyPSA",
+      "SWITCH",
+      "ReEDS"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "PowerModels.jl",
+    "description": "Power network optimization in Julia. Supports AC/DC optimal power flow, transmission expansion, and custom formulations with strong mathematical rigor.",
+    "category": "Energy & Utilities Economics",
+    "docs_url": "https://lanl-ansi.github.io/PowerModels.jl/stable/",
+    "github_url": "https://github.com/lanl-ansi/PowerModels.jl",
+    "url": "https://lanl-ansi.github.io/PowerModels.jl/stable/",
+    "install": "Julia package",
+    "tags": [
+      "power flow",
+      "Julia",
+      "OPF",
+      "optimization"
+    ],
+    "best_for": "Research-grade power flow and OPF with custom formulations",
+    "language": "Julia",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "Julia",
+      "power systems",
+      "optimization"
+    ],
+    "topic_tags": [
+      "energy",
+      "power-flow",
+      "julia"
+    ],
+    "summary": "PowerModels.jl provides flexible, research-grade power network optimization in Julia. Excellent for developing new OPF formulations and transmission expansion models.",
+    "use_cases": [
+      "OPF research",
+      "Custom formulations",
+      "Transmission planning",
+      "Benchmarking"
+    ],
+    "audience": [
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "optimal power flow Julia",
+      "PowerModels tutorial",
+      "AC OPF",
+      "power network optimization"
+    ],
+    "primary_use_cases": [
+      "Power flow optimization"
+    ],
+    "api_complexity": "advanced",
+    "related_packages": [
+      "GenX",
+      "JuMP",
+      "PyPSA"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "OpenDSS",
+    "description": "EPRI's open-source distribution system simulator. Quasi-static time-series analysis, DER integration, and comprehensive distribution modeling. Industry standard.",
+    "category": "Energy & Utilities Economics",
+    "docs_url": "https://www.epri.com/pages/sa/opendss",
+    "github_url": "https://github.com/dss-extensions",
+    "url": "https://www.epri.com/pages/sa/opendss",
+    "install": "pip install opendssdirect.py",
+    "tags": [
+      "distribution",
+      "simulation",
+      "DER",
+      "EPRI"
+    ],
+    "best_for": "Distribution system simulation with high DER penetration",
+    "language": "COM/Python",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "distribution systems"
+    ],
+    "topic_tags": [
+      "energy",
+      "distribution",
+      "simulation"
+    ],
+    "summary": "OpenDSS is the industry standard for distribution system simulation, widely used by utilities for hosting capacity analysis, DER integration studies, and voltage analysis.",
+    "use_cases": [
+      "Hosting capacity",
+      "DER studies",
+      "Voltage analysis",
+      "Loss calculation"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "distribution simulation",
+      "OpenDSS Python",
+      "DER integration modeling",
+      "hosting capacity analysis"
+    ],
+    "primary_use_cases": [
+      "Distribution simulation"
+    ],
+    "api_complexity": "intermediate",
+    "related_packages": [
+      "pandapower",
+      "GridLAB-D",
+      "CYME"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "Prophet",
+    "description": "Facebook/Meta's time series forecasting with trend, seasonality, and holiday effects. Excellent for electricity load forecasting with automatic changepoint detection.",
+    "category": "Energy & Utilities Economics",
+    "docs_url": "https://facebook.github.io/prophet/",
+    "github_url": "https://github.com/facebook/prophet",
+    "url": "https://facebook.github.io/prophet/",
+    "install": "pip install prophet",
+    "tags": [
+      "forecasting",
+      "time series",
+      "load forecasting"
+    ],
+    "best_for": "Load forecasting with seasonality and trend decomposition",
+    "language": "Python/R",
+    "difficulty": "beginner",
+    "prerequisites": [
+      "time series basics"
+    ],
+    "topic_tags": [
+      "forecasting",
+      "time-series",
+      "energy"
+    ],
+    "summary": "Prophet provides accessible time series forecasting with automatic handling of seasonality, trends, and holidays. Widely used for electricity load and renewable generation forecasting.",
+    "use_cases": [
+      "Load forecasting",
+      "Generation forecasting",
+      "Demand planning",
+      "Trend analysis"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "electricity load forecasting",
+      "Prophet tutorial",
+      "time series forecasting Python",
+      "demand forecasting"
+    ],
+    "primary_use_cases": [
+      "Time series forecasting"
+    ],
+    "api_complexity": "beginner",
+    "related_packages": [
+      "NeuralProphet",
+      "GluonTS",
+      "statsmodels"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "eiapy",
+    "description": "Python wrapper for the EIA Open Data API. Access generation, consumption, prices, and other energy data programmatically.",
+    "category": "Energy & Utilities Economics",
+    "docs_url": "https://github.com/rneal3/eiapy",
+    "github_url": "https://github.com/rneal3/eiapy",
+    "url": "https://github.com/rneal3/eiapy",
+    "install": "pip install eiapy",
+    "tags": [
+      "EIA",
+      "API",
+      "energy data"
+    ],
+    "best_for": "Programmatic access to EIA energy data",
+    "language": "Python",
+    "difficulty": "beginner",
+    "prerequisites": [
+      "Python basics"
+    ],
+    "topic_tags": [
+      "energy",
+      "data-access",
+      "api"
+    ],
+    "summary": "eiapy provides clean Python access to EIA's extensive energy database including electricity generation, fuel prices, and consumption data across all sectors.",
+    "use_cases": [
+      "Data pipelines",
+      "Automated analysis",
+      "Dashboard building",
+      "Research"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "EIA API Python",
+      "energy data API",
+      "electricity data Python",
+      "eiapy tutorial"
+    ],
+    "primary_use_cases": [
+      "Data access"
+    ],
+    "api_complexity": "beginner",
+    "related_packages": [
+      "gridstatus",
+      "PUDL"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "catalystcoop-pudl",
+    "description": "Public Utility Data Liberation - cleaned, integrated U.S. energy data. Combines EIA, FERC, and EPA data into analysis-ready formats with comprehensive documentation.",
+    "category": "Energy & Utilities Economics",
+    "docs_url": "https://catalystcoop-pudl.readthedocs.io/",
+    "github_url": "https://github.com/catalyst-cooperative/pudl",
+    "url": "https://catalyst.coop/pudl/",
+    "install": "pip install catalystcoop.pudl",
+    "tags": [
+      "data integration",
+      "EIA",
+      "FERC",
+      "EPA",
+      "open source"
+    ],
+    "best_for": "Integrated U.S. energy data analysis",
+    "language": "Python",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "SQL or pandas"
+    ],
+    "topic_tags": [
+      "energy",
+      "data-integration",
+      "open-source"
+    ],
+    "summary": "PUDL provides the most comprehensive cleaned and integrated U.S. energy dataset, linking generation, capacity, emissions, and utility financials in a reproducible pipeline.",
+    "use_cases": [
+      "Cross-source analysis",
+      "Reproducible research",
+      "Emissions-generation linkage",
+      "Financial analysis"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "integrated energy data Python",
+      "PUDL package",
+      "cleaned EIA data",
+      "FERC data Python"
+    ],
+    "primary_use_cases": [
+      "Integrated data access"
+    ],
+    "api_complexity": "intermediate",
+    "related_packages": [
+      "eiapy",
+      "gridstatus"
+    ],
+    "maintenance_status": "active"
   }
 ]
