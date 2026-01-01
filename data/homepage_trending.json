@@ -1,187 +1,186 @@
 {
-  "updated": "2026-01-01T19:19:10.600126Z",
+  "updated": "2026-01-01T19:23:33.775879Z",
   "count": 12,
   "items": [
     {
-      "name": "A/B Testing on Social Networks",
-      "type": "paper",
-      "category": "Experimentation > A/B Test Design & Analysis",
-      "description": "LinkedIn's landmark paper on network interference in A/B tests. Shows how social connections violate SUTVA, proposes cluster-based randomization and graph cluster metrics, and introduces the 'network A/B test' framework now used across social platforms.",
-      "url": "https://content.linkedin.com/content/dam/engineering/site-assets/pdfs/ABTestingSocialNetwork_share.pdf",
+      "name": "Alibaba Ads (IJCAI-18)",
+      "type": "dataset",
+      "category": "E-Commerce",
+      "description": "6 billion display ad/click logs over 8 days from 100M users",
+      "url": "https://tianchi.aliyun.com/dataset/147588",
       "score": 1.0,
       "cold_start": false,
       "signals": {
-        "clicks": 5,
+        "clicks": 0,
         "impressions": 0,
-        "dwell_ms": 0
+        "dwell_ms": 4284
       },
-      "citations": 200,
       "rank": 1
     },
     {
-      "name": "Causal Inference for the Brave and True",
+      "name": "Benchpress",
       "type": "package",
-      "category": "Standard Errors, Bootstrapping & Reporting",
-      "description": "Modern introduction to causal inference methods (DiD, IV, RDD, Synth, ML-based) with Python code examples.",
-      "url": "https://matheusfacure.github.io/python-causality-handbook/",
-      "score": 0.9199,
+      "category": "Causal Discovery & Graphical Models",
+      "description": "Benchmarking 41+ structure learning algorithms for causal discovery. Standardized evaluation framework.",
+      "url": "https://github.com/felixleopoldo/benchpress",
+      "score": 0.9541,
       "cold_start": false,
       "signals": {
-        "clicks": 3,
-        "impressions": 8,
+        "clicks": 0,
+        "impressions": 1,
         "dwell_ms": 0
       },
       "rank": 2
     },
     {
-      "name": "Scott Cunningham: Causal Inference Substack",
+      "name": "Abdul Bari (YouTube)",
       "type": "resource",
-      "category": "Causal Inference & ML",
-      "description": "Substack and podcast 'The Mixtape with Scott' featuring interviews with leading causal inference researchers. Bridges academic methods and practical application.",
-      "url": "https://causalinf.substack.com/",
-      "score": 0.7323,
+      "category": "Software Engineering",
+      "description": "Exceptional whiteboard DSA explanations",
+      "url": "https://www.youtube.com/@abdul_bari",
+      "score": 0.953,
       "cold_start": false,
       "signals": {
-        "clicks": 2,
-        "impressions": 8,
-        "dwell_ms": 18783
+        "clicks": 0,
+        "impressions": 2,
+        "dwell_ms": 40531
       },
       "rank": 3
     },
     {
-      "name": "causal-learn",
-      "type": "package",
-      "category": "Causal Discovery & Graphical Models",
-      "description": "Comprehensive Python package serving as Python translation and extension of Java-based Tetrad toolkit for causal discovery algorithms.",
-      "url": "https://github.com/py-why/causal-learn",
-      "score": 0.6436,
+      "name": "Auctions in Ad Tech (Sanjiv Das)",
+      "type": "resource",
+      "category": "Ads & Attribution",
+      "description": "GSP auctions, quality scores, AdRank \u2014 how Google/Meta ad auctions actually work. Chapter 21.",
+      "url": "https://srdas.github.io/MLBook/Auctions.html",
+      "score": 0.9222,
       "cold_start": false,
       "signals": {
-        "clicks": 3,
-        "impressions": 1,
-        "dwell_ms": 5887
+        "clicks": 0,
+        "impressions": 2,
+        "dwell_ms": 0
       },
       "rank": 4
     },
     {
-      "name": "Lyft Engineering",
+      "name": "Ahead of AI (Sebastian Raschka)",
       "type": "resource",
-      "category": "Marketplace Economics",
-      "description": "Rideshare economics, forecasting, and marketplace efficiency. Technical deep-dives on pricing, dispatch, and causal inference.",
-      "url": "https://eng.lyft.com/",
-      "score": 0.6413,
+      "category": "Machine Learning",
+      "description": "ML & AI research newsletter from Sebastian Raschka. Deep technical coverage of LLMs, model architectures, training techniques, and AI trends. Author of 'Build a Large Language Model From Scratch'.",
+      "url": "https://magazine.sebastianraschka.com/",
+      "score": 0.91,
       "cold_start": false,
       "signals": {
-        "clicks": 3,
-        "impressions": 1,
-        "dwell_ms": 2430
+        "clicks": 0,
+        "impressions": 3,
+        "dwell_ms": 1721
       },
       "rank": 5
     },
     {
-      "name": "Retail Rocket",
-      "type": "dataset",
-      "category": "E-Commerce",
-      "description": "2.76M events (views, carts, purchases) from 1.4M visitors",
-      "url": "https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset",
-      "score": 0.6156,
+      "name": "Abhishek Thakur: ML YouTube Channel",
+      "type": "talk",
+      "category": "Machine Learning",
+      "description": "4x Kaggle Grandmaster teaching practical ML. Cross-validation, feature engineering, competition strategies with code walkthroughs.",
+      "url": "https://www.youtube.com/@abhaboraML",
+      "score": 0.8949,
       "cold_start": false,
       "signals": {
-        "clicks": 3,
-        "impressions": 0,
-        "dwell_ms": 23919
+        "clicks": 0,
+        "impressions": 1,
+        "dwell_ms": 0
       },
       "rank": 6
     },
     {
-      "name": "JD.com 2020 (MSOM-20)",
-      "type": "dataset",
-      "category": "E-Commerce",
-      "description": "2.5M customers (457k purchasers) and 31,868 SKUs from JD.com",
-      "url": "https://connect.informs.org/msom/events/datadriven2020",
-      "score": 0.6025,
+      "name": "Automate the Boring Stuff with Python",
+      "type": "resource",
+      "category": "Python",
+      "description": "The best free Python book for non-programmers. Web scraping, Excel automation, file management \u2014 practical skills for data work.",
+      "url": "https://automatetheboringstuff.com/",
+      "score": 0.8843,
       "cold_start": false,
       "signals": {
-        "clicks": 3,
-        "impressions": 0,
-        "dwell_ms": 4284
+        "clicks": 0,
+        "impressions": 3,
+        "dwell_ms": 2336
       },
       "rank": 7
     },
     {
-      "name": "spaCy",
-      "type": "package",
-      "category": "Natural Language Processing for Economics",
-      "description": "Industrial-strength NLP library for efficient text processing pipelines (NER, POS tagging, etc.).",
-      "url": "https://github.com/explosion/spaCy",
-      "score": 0.5996,
+      "name": "Alberto Abadie's NBER Methods Lecture",
+      "type": "resource",
+      "category": "Synthetic Control",
+      "description": "Directly from the inventor of synthetic control methods. NBER Summer Institute lecture on foundational theory, best practices, when to use SCM vs. alternatives, and recent developments.",
+      "url": "https://www.nber.org/research/videos/2021-methods-lecture-alberto-abadie-synthetic-controls-methods-and-practice",
+      "score": 0.8437,
       "cold_start": false,
       "signals": {
-        "clicks": 3,
-        "impressions": 0,
+        "clicks": 0,
+        "impressions": 1,
         "dwell_ms": 0
       },
       "rank": 8
     },
     {
-      "name": "BestBuy",
+      "name": "Brazilian eCommerce",
       "type": "dataset",
       "category": "E-Commerce",
-      "description": "Mobile website clicks (~42k) for Xbox games from BestBuy",
-      "url": "https://www.kaggle.com/competitions/acm-sf-chapter-hackathon-big",
-      "score": 0.5996,
+      "description": "100,000 orders (2016-2018) structured in 9 relational tables from Olist",
+      "url": "https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce",
+      "score": 0.8205,
       "cold_start": false,
       "signals": {
-        "clicks": 3,
+        "clicks": 0,
         "impressions": 0,
-        "dwell_ms": 0
+        "dwell_ms": 4284
       },
       "rank": 9
     },
     {
-      "name": "Ax (Meta Adaptive Experimentation)",
-      "type": "package",
-      "category": "Adaptive Experimentation & Bandits",
-      "description": "Meta's open-source platform for adaptive experimentation. Bayesian optimization, multi-objective optimization, and automated experiment design. Built on BoTorch for AI-assisted experimentation.",
-      "url": "https://ax.dev",
-      "score": 0.5693,
+      "name": "A Quantitative Approach to Product-Market Fit (Tribe Capital)",
+      "type": "resource",
+      "category": "Growth & Retention",
+      "description": "The foundational text on growth accounting. MAU growth accounting AND revenue growth accounting. Quick Ratio, Gross Retention, Net Churn explained by the team that pioneered it.",
+      "url": "https://tribecap.co/a-quantitative-approach-to-product-market-fit/",
+      "score": 0.8164,
       "cold_start": false,
       "signals": {
-        "clicks": 2,
-        "impressions": 4,
-        "dwell_ms": 14628
+        "clicks": 0,
+        "impressions": 1,
+        "dwell_ms": 0
       },
       "rank": 10
     },
     {
-      "name": "Coding for Economists (Arthur Turrell)",
-      "type": "resource",
-      "category": "Causal Inference & ML",
-      "description": "Python workflow for economists covering data transformation, econometrics, Bayesian inference, and ML. Modern Python-first approach.",
-      "url": "https://aeturrell.github.io/coding-for-economists/",
-      "score": 0.5342,
+      "name": "boot",
+      "type": "package",
+      "category": "Bootstrap & Inference",
+      "description": "Classic bootstrap methods implementing the approaches described in Davison & Hinkley (1997). Provides functions for both parametric and nonparametric resampling with various confidence interval methods.",
+      "url": "https://cran.r-project.org/package=boot",
+      "score": 0.8108,
       "cold_start": false,
       "signals": {
-        "clicks": 2,
-        "impressions": 3,
-        "dwell_ms": 22011
+        "clicks": 0,
+        "impressions": 2,
+        "dwell_ms": 1233
       },
-      "rank": 14
+      "rank": 11
     },
     {
-      "name": "Causal Inference: The Mixtape",
+      "name": "Alain Chabrier: Column Generation with CPLEX",
       "type": "resource",
-      "category": "Causal Inference & ML",
-      "description": "Scott Cunningham's academic-quality but accessible methodology covering causal methods essential for marketing measurement.",
-      "url": "https://mixtape.scunning.com/",
-      "score": 0.5235,
+      "category": "Operations Research",
+      "description": "Former IBM Decision Optimization Senior Technical Staff Member. Authoritative content on column generation with docplex/CPLEX. His PhD solved 17 previously open Solomon VRP benchmark instances.",
+      "url": "https://medium.com/@AlainChabrier",
+      "score": 0.7958,
       "cold_start": false,
       "signals": {
-        "clicks": 1,
-        "impressions": 8,
-        "dwell_ms": 5906
+        "clicks": 0,
+        "impressions": 1,
+        "dwell_ms": 0
       },
-      "rank": 16
+      "rank": 12
     }
   ]
 }
