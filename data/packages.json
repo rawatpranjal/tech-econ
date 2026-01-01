@@ -18733,5 +18733,509 @@
       "gridstatus"
     ],
     "maintenance_status": "active"
+  },
+  {
+    "name": "PyPSA",
+    "description": "Python for Power System Analysis - open-source toolbox for simulating and optimizing power systems",
+    "category": "Energy Systems Modeling",
+    "docs_url": "https://pypsa.readthedocs.io/",
+    "github_url": "https://github.com/PyPSA/PyPSA",
+    "url": "https://pypsa.org/",
+    "install": "pip install pypsa",
+    "tags": [
+      "power systems",
+      "optimization",
+      "grid modeling",
+      "renewable integration"
+    ],
+    "best_for": "Modeling power system operations and planning with renewable energy",
+    "language": "Python",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "optimization",
+      "power-systems"
+    ],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "PyPSA is a comprehensive toolbox for simulating and optimizing modern power systems. Supports unit commitment, optimal power flow, and capacity expansion with a focus on high renewable scenarios.",
+    "use_cases": [
+      "Capacity expansion planning",
+      "Optimal power flow analysis",
+      "Renewable integration studies"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Researcher"
+    ],
+    "synthetic_questions": [
+      "PyPSA power system",
+      "Python power system optimization",
+      "renewable energy modeling Python"
+    ],
+    "primary_use_cases": [
+      "Power system optimization",
+      "Grid planning"
+    ],
+    "api_complexity": "high",
+    "related_packages": [
+      "pandapower",
+      "Pyomo"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "pandapower",
+    "description": "Easy-to-use Python library for power system modeling, analysis, and optimization",
+    "category": "Energy Systems Modeling",
+    "docs_url": "https://pandapower.readthedocs.io/",
+    "github_url": "https://github.com/e2nIEE/pandapower",
+    "url": "https://www.pandapower.org/",
+    "install": "pip install pandapower",
+    "tags": [
+      "power flow",
+      "short circuit",
+      "optimal power flow",
+      "distribution"
+    ],
+    "best_for": "Power flow calculations and distribution network analysis",
+    "language": "Python",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "power-systems-basics"
+    ],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "pandapower combines the data analysis power of pandas with power system analysis. Supports power flow, optimal power flow, short circuit calculations, and state estimation.",
+    "use_cases": [
+      "Distribution network analysis",
+      "Power flow studies",
+      "Network planning"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "pandapower Python",
+      "power flow Python",
+      "distribution network analysis"
+    ],
+    "primary_use_cases": [
+      "Power flow",
+      "Network analysis"
+    ],
+    "api_complexity": "medium",
+    "related_packages": [
+      "PyPSA",
+      "networkx"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "Pyomo",
+    "description": "Python-based open-source optimization modeling language supporting linear, mixed-integer, nonlinear programming",
+    "category": "Optimization",
+    "docs_url": "https://pyomo.readthedocs.io/",
+    "github_url": "https://github.com/Pyomo/pyomo",
+    "url": "https://www.pyomo.org/",
+    "install": "pip install pyomo",
+    "tags": [
+      "optimization",
+      "linear programming",
+      "MILP",
+      "nonlinear"
+    ],
+    "best_for": "Building and solving mathematical optimization models for energy systems",
+    "language": "Python",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "optimization-basics"
+    ],
+    "topic_tags": [
+      "energy-utilities-economics",
+      "operations-research"
+    ],
+    "summary": "Pyomo is a powerful algebraic modeling language for optimization. Widely used in energy research for unit commitment, capacity expansion, and market modeling.",
+    "use_cases": [
+      "Unit commitment models",
+      "Energy system optimization",
+      "Resource scheduling"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "Researcher"
+    ],
+    "synthetic_questions": [
+      "Pyomo optimization",
+      "Python optimization modeling",
+      "MILP Python"
+    ],
+    "primary_use_cases": [
+      "Mathematical optimization",
+      "Energy modeling"
+    ],
+    "api_complexity": "medium",
+    "related_packages": [
+      "PuLP",
+      "CVXPY",
+      "HiGHS"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "HiGHS",
+    "description": "High-performance open-source linear and mixed-integer programming solver",
+    "category": "Optimization",
+    "docs_url": "https://highs.dev/",
+    "github_url": "https://github.com/ERGO-Code/HiGHS",
+    "url": "https://highs.dev/",
+    "install": "pip install highspy",
+    "tags": [
+      "solver",
+      "LP",
+      "MIP",
+      "optimization",
+      "open-source"
+    ],
+    "best_for": "Solving large-scale linear and mixed-integer programs for energy optimization",
+    "language": "Python",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "optimization-basics"
+    ],
+    "topic_tags": [
+      "energy-utilities-economics",
+      "operations-research"
+    ],
+    "summary": "HiGHS is a state-of-the-art open-source solver for linear programming (LP), mixed-integer programming (MIP), and quadratic programming. Competitive with commercial solvers.",
+    "use_cases": [
+      "Solving unit commitment problems",
+      "Capacity expansion models",
+      "Production cost modeling"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "Researcher"
+    ],
+    "synthetic_questions": [
+      "HiGHS solver",
+      "open source LP solver",
+      "free MIP solver"
+    ],
+    "primary_use_cases": [
+      "LP/MIP solving",
+      "Energy optimization"
+    ],
+    "api_complexity": "low",
+    "related_packages": [
+      "Pyomo",
+      "PuLP",
+      "CPLEX"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "GenX",
+    "description": "Julia-based capacity expansion model for electricity systems with detailed operational constraints",
+    "category": "Energy Systems Modeling",
+    "docs_url": "https://genxproject.github.io/GenX/",
+    "github_url": "https://github.com/GenXProject/GenX",
+    "url": "https://genxproject.github.io/GenX/",
+    "install": "using Pkg; Pkg.add(\"GenX\")",
+    "tags": [
+      "capacity expansion",
+      "Julia",
+      "electricity planning",
+      "decarbonization"
+    ],
+    "best_for": "Long-term electricity system planning and decarbonization pathway analysis",
+    "language": "Julia",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "Julia",
+      "energy-systems"
+    ],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "GenX is a highly configurable capacity expansion model developed at MIT. Models investment and operational decisions in electricity systems with detailed treatment of renewables, storage, and flexibility.",
+    "use_cases": [
+      "Decarbonization pathway studies",
+      "Capacity planning",
+      "Policy scenario analysis"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Researcher"
+    ],
+    "synthetic_questions": [
+      "GenX capacity expansion",
+      "Julia electricity model",
+      "MIT GenX"
+    ],
+    "primary_use_cases": [
+      "Capacity expansion",
+      "Long-term planning"
+    ],
+    "api_complexity": "high",
+    "related_packages": [
+      "PowerModels.jl",
+      "JuMP"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "PowerModels.jl",
+    "description": "Julia/JuMP package for power flow and optimal power flow problems",
+    "category": "Energy Systems Modeling",
+    "docs_url": "https://lanl-ansi.github.io/PowerModels.jl/",
+    "github_url": "https://github.com/lanl-ansi/PowerModels.jl",
+    "url": "https://lanl-ansi.github.io/PowerModels.jl/",
+    "install": "using Pkg; Pkg.add(\"PowerModels\")",
+    "tags": [
+      "power flow",
+      "optimal power flow",
+      "Julia",
+      "JuMP"
+    ],
+    "best_for": "Research on power flow formulations and optimization algorithms",
+    "language": "Julia",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "Julia",
+      "power-systems",
+      "optimization"
+    ],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "PowerModels.jl provides a platform for comparing and evaluating emerging power flow formulations. Supports AC, DC, and various relaxations of optimal power flow problems.",
+    "use_cases": [
+      "OPF algorithm research",
+      "Power flow studies",
+      "Transmission planning"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Researcher"
+    ],
+    "synthetic_questions": [
+      "PowerModels Julia",
+      "optimal power flow Julia",
+      "JuMP power systems"
+    ],
+    "primary_use_cases": [
+      "Power flow",
+      "Algorithm research"
+    ],
+    "api_complexity": "high",
+    "related_packages": [
+      "GenX",
+      "JuMP"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "OpenDSS",
+    "description": "Electric power distribution system simulator for distributed energy resources and smart grid",
+    "category": "Energy Systems Modeling",
+    "docs_url": "https://opendss.epri.com/",
+    "github_url": "https://sourceforge.net/projects/electricdss/",
+    "url": "https://www.epri.com/pages/sa/opendss",
+    "install": "pip install OpenDSSDirect.py",
+    "tags": [
+      "distribution",
+      "DER",
+      "smart grid",
+      "EPRI"
+    ],
+    "best_for": "Distribution system analysis with high penetration of distributed energy resources",
+    "language": "Python",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "distribution-systems"
+    ],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "OpenDSS is EPRI's comprehensive distribution system simulator. Excels at modeling distributed energy resources, storage, and smart grid technologies. Industry standard for DER integration studies.",
+    "use_cases": [
+      "DER hosting capacity",
+      "Distribution planning",
+      "Volt-VAR optimization"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Researcher"
+    ],
+    "synthetic_questions": [
+      "OpenDSS Python",
+      "distribution system simulator",
+      "DER modeling"
+    ],
+    "primary_use_cases": [
+      "Distribution simulation",
+      "DER analysis"
+    ],
+    "api_complexity": "high",
+    "related_packages": [
+      "pandapower",
+      "GridLAB-D"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "eiapy",
+    "description": "Python wrapper for the U.S. Energy Information Administration (EIA) API",
+    "category": "Data Access",
+    "docs_url": "https://github.com/mra1385/eiapy",
+    "github_url": "https://github.com/mra1385/eiapy",
+    "url": "https://github.com/mra1385/eiapy",
+    "install": "pip install eiapy",
+    "tags": [
+      "EIA",
+      "API",
+      "energy data",
+      "government data"
+    ],
+    "best_for": "Accessing EIA energy statistics programmatically",
+    "language": "Python",
+    "difficulty": "beginner",
+    "prerequisites": [
+      "python-basics"
+    ],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "Simple Python wrapper for EIA's API providing access to comprehensive U.S. energy statistics including production, consumption, prices, and forecasts.",
+    "use_cases": [
+      "Energy data retrieval",
+      "Price analysis",
+      "Production tracking"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "EIA API Python",
+      "energy data Python",
+      "eiapy"
+    ],
+    "primary_use_cases": [
+      "Data access",
+      "Energy statistics"
+    ],
+    "api_complexity": "low",
+    "related_packages": [
+      "pandas",
+      "requests"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "catalystcoop-pudl",
+    "description": "Public Utility Data Liberation - integrated energy data from EIA, FERC, and EPA",
+    "category": "Data Access",
+    "docs_url": "https://catalystcoop-pudl.readthedocs.io/",
+    "github_url": "https://github.com/catalyst-cooperative/pudl",
+    "url": "https://catalyst.coop/pudl/",
+    "install": "pip install catalystcoop-pudl",
+    "tags": [
+      "EIA",
+      "FERC",
+      "EPA",
+      "integrated data",
+      "ETL"
+    ],
+    "best_for": "Working with clean, integrated U.S. utility and energy data",
+    "language": "Python",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "python",
+      "sql-basics"
+    ],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "PUDL integrates and cleans public energy data from EIA, FERC, and EPA into analysis-ready datasets. Saves significant data wrangling time for energy researchers.",
+    "use_cases": [
+      "Utility cost analysis",
+      "Power plant research",
+      "Regulatory analysis"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "Researcher"
+    ],
+    "synthetic_questions": [
+      "PUDL Python",
+      "EIA data integration",
+      "utility data Python"
+    ],
+    "primary_use_cases": [
+      "Data integration",
+      "Energy research"
+    ],
+    "api_complexity": "medium",
+    "related_packages": [
+      "pandas",
+      "sqlalchemy"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "gridstatus",
+    "description": "Unified Python interface for U.S. electricity grid data from all major ISOs",
+    "category": "Data Access",
+    "docs_url": "https://docs.gridstatus.io/",
+    "github_url": "https://github.com/gridstatus/gridstatus",
+    "url": "https://www.gridstatus.io/",
+    "install": "pip install gridstatus",
+    "tags": [
+      "ISO",
+      "electricity markets",
+      "real-time data",
+      "unified API"
+    ],
+    "best_for": "Accessing standardized data across multiple U.S. electricity markets",
+    "language": "Python",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "python"
+    ],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "gridstatus provides a unified interface to access data from CAISO, ERCOT, ISONE, MISO, NYISO, PJM, and SPP with consistent formatting across all ISOs.",
+    "use_cases": [
+      "Cross-market analysis",
+      "Real-time monitoring",
+      "Price forecasting"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "gridstatus Python",
+      "ISO data Python",
+      "electricity market data"
+    ],
+    "primary_use_cases": [
+      "Market data access",
+      "Grid monitoring"
+    ],
+    "api_complexity": "low",
+    "related_packages": [
+      "pandas",
+      "requests"
+    ],
+    "maintenance_status": "active"
   }
 ]

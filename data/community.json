@@ -18734,5 +18734,135 @@
     "event_format": "research_network",
     "geographic_focus": "Cambridge, MA",
     "frequency": "ongoing"
+  },
+  {
+    "name": "USAEE/IAEE North American Conference",
+    "description": "Annual conference of the United States Association for Energy Economics bringing together researchers, practitioners, and policymakers",
+    "category": "Conference",
+    "subcategory": "Energy Economics",
+    "url": "https://www.usaee.org/",
+    "type": "conference",
+    "location": "Various US cities",
+    "dates": "Annual, Fall",
+    "attendees": "500+",
+    "best_for": "Presenting energy economics research and networking with energy economists",
+    "tags": [
+      "energy economics",
+      "research",
+      "networking",
+      "USAEE",
+      "IAEE"
+    ],
+    "start_date": null,
+    "end_date": null,
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "Premier North American conference for energy economics. Brings together academics, industry professionals, and policymakers to discuss energy markets, climate policy, and technological change.",
+    "use_cases": [
+      "Presenting research",
+      "Networking with energy economists",
+      "Learning industry trends"
+    ],
+    "audience": [
+      "Researcher",
+      "Practitioner",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "USAEE conference",
+      "energy economics conference",
+      "IAEE North America"
+    ],
+    "event_format": "academic-conference",
+    "geographic_focus": "North America",
+    "frequency": "annual"
+  },
+  {
+    "name": "POWER Conference (Berkeley)",
+    "description": "Annual UC Berkeley conference on electricity market design, renewable integration, and grid modernization",
+    "category": "Conference",
+    "subcategory": "Energy Economics",
+    "url": "https://haas.berkeley.edu/energy-institute/events/power-conference/",
+    "type": "conference",
+    "location": "Berkeley, CA",
+    "dates": "Annual, Spring",
+    "attendees": "200+",
+    "best_for": "Cutting-edge research on electricity markets and clean energy transition",
+    "tags": [
+      "electricity markets",
+      "Berkeley",
+      "renewable energy",
+      "research"
+    ],
+    "start_date": null,
+    "end_date": null,
+    "difficulty": "advanced",
+    "prerequisites": [],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "Berkeley's flagship electricity conference organized by the Energy Institute at Haas. Features leading researchers presenting on market design, renewable integration, storage, and grid modernization.",
+    "use_cases": [
+      "Learning cutting-edge electricity research",
+      "Networking with leading researchers",
+      "Understanding policy debates"
+    ],
+    "audience": [
+      "Researcher",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "Berkeley POWER conference",
+      "electricity markets conference",
+      "Haas energy conference"
+    ],
+    "event_format": "academic-conference",
+    "geographic_focus": "International",
+    "frequency": "annual"
+  },
+  {
+    "name": "NBER Environment and Energy Economics Program",
+    "description": "NBER working group advancing research on environmental and energy economics with regular meetings and working papers",
+    "category": "Research Group",
+    "subcategory": "Energy Economics",
+    "url": "https://www.nber.org/programs-projects/programs-working-groups/environment-and-energy-economics",
+    "type": "research-group",
+    "location": "Cambridge, MA / Virtual",
+    "dates": "Multiple meetings per year",
+    "attendees": "100+",
+    "best_for": "Following frontier research in environmental and energy economics",
+    "tags": [
+      "NBER",
+      "research",
+      "working papers",
+      "environmental economics"
+    ],
+    "start_date": null,
+    "end_date": null,
+    "difficulty": "advanced",
+    "prerequisites": [],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "NBER's program for environmental and energy economics research. Organizes meetings and distributes working papers from leading economists on climate, energy markets, and environmental policy.",
+    "use_cases": [
+      "Accessing frontier research",
+      "Attending research presentations",
+      "Networking with top economists"
+    ],
+    "audience": [
+      "Researcher"
+    ],
+    "synthetic_questions": [
+      "NBER energy economics",
+      "NBER environment program",
+      "energy economics working papers"
+    ],
+    "event_format": "research-meetings",
+    "geographic_focus": "International",
+    "frequency": "multiple-per-year"
   }
 ]

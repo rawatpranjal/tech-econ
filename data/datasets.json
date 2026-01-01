@@ -11843,5 +11843,460 @@
     ],
     "update_frequency": "Real-time",
     "geographic_coverage": "United States (all ISOs)"
+  },
+  {
+    "name": "EIA-923 Power Plant Operations",
+    "description": "Monthly power plant fuel consumption, generation, and emissions data for all U.S. generators",
+    "category": "Energy",
+    "url": "https://www.eia.gov/electricity/data/eia923/",
+    "docs_url": "https://www.eia.gov/electricity/data/eia923/",
+    "github_url": null,
+    "tags": [
+      "power plants",
+      "generation",
+      "fuel",
+      "emissions",
+      "monthly"
+    ],
+    "best_for": "Analyzing power plant operations, fuel mix trends, and emissions patterns",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "data-wrangling"
+    ],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "Comprehensive monthly data on U.S. power plant operations including fuel consumption, electricity generation, and emissions. Essential for energy market analysis and environmental studies.",
+    "use_cases": [
+      "Analyzing fuel cost trends",
+      "Modeling power plant efficiency",
+      "Tracking emissions over time"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "EIA 923 data",
+      "power plant generation data",
+      "US electricity generation monthly",
+      "power plant fuel consumption"
+    ],
+    "domain_tags": [
+      "energy"
+    ],
+    "data_modality": "tabular",
+    "temporal_coverage": "2001-present",
+    "geographic_scope": "United States",
+    "size_category": "large"
+  },
+  {
+    "name": "EIA-860 Generator Inventory",
+    "description": "Annual survey of all U.S. electric generators including capacity, technology, ownership, and location",
+    "category": "Energy",
+    "url": "https://www.eia.gov/electricity/data/eia860/",
+    "docs_url": "https://www.eia.gov/electricity/data/eia860/",
+    "github_url": null,
+    "tags": [
+      "generators",
+      "capacity",
+      "technology",
+      "annual"
+    ],
+    "best_for": "Understanding the U.S. electricity generation fleet composition and trends",
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "Complete inventory of U.S. electric generators with detailed information on capacity, technology type, fuel source, ownership, and retirement status.",
+    "use_cases": [
+      "Tracking renewable capacity growth",
+      "Analyzing generator age and retirement",
+      "Mapping power plant locations"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "EIA 860 generator data",
+      "US power plant capacity data",
+      "electric generator inventory"
+    ],
+    "domain_tags": [
+      "energy"
+    ],
+    "data_modality": "tabular",
+    "temporal_coverage": "2001-present",
+    "geographic_scope": "United States",
+    "size_category": "medium"
+  },
+  {
+    "name": "FERC Form 714",
+    "description": "Hourly electricity load data from major U.S. utilities and regional transmission organizations",
+    "category": "Energy",
+    "url": "https://www.ferc.gov/industries-data/electric/general-information/electric-industry-forms/form-714-annual-electric",
+    "docs_url": "https://www.ferc.gov/industries-data/electric/general-information/electric-industry-forms/form-714-annual-electric",
+    "github_url": null,
+    "tags": [
+      "load",
+      "demand",
+      "hourly",
+      "utilities"
+    ],
+    "best_for": "Hourly demand analysis, load forecasting, and peak demand studies",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "time-series"
+    ],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "Hourly electricity demand data from U.S. utilities and regional transmission organizations. Critical for load forecasting and demand response analysis.",
+    "use_cases": [
+      "Load forecasting models",
+      "Peak demand analysis",
+      "Demand response evaluation"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "FERC 714 hourly load data",
+      "US electricity demand hourly",
+      "utility load data"
+    ],
+    "domain_tags": [
+      "energy"
+    ],
+    "data_modality": "time-series",
+    "temporal_coverage": "2006-present",
+    "geographic_scope": "United States",
+    "size_category": "large"
+  },
+  {
+    "name": "PUDL (Public Utility Data Liberation)",
+    "description": "Cleaned and integrated dataset combining EIA, FERC, and EPA energy data into a unified database",
+    "category": "Energy",
+    "url": "https://catalyst.coop/pudl/",
+    "docs_url": "https://catalystcoop-pudl.readthedocs.io/",
+    "github_url": "https://github.com/catalyst-cooperative/pudl",
+    "tags": [
+      "integrated",
+      "cleaned",
+      "EIA",
+      "FERC",
+      "EPA"
+    ],
+    "best_for": "Research requiring integrated energy data without extensive cleaning",
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "The Public Utility Data Liberation project integrates and cleans data from EIA, FERC, and EPA into a unified, analysis-ready database. Saves significant data wrangling time.",
+    "use_cases": [
+      "Power plant cost analysis",
+      "Utility financial research",
+      "Cross-dataset integration"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "Researcher"
+    ],
+    "synthetic_questions": [
+      "PUDL energy data",
+      "cleaned EIA data",
+      "integrated utility data",
+      "Catalyst Cooperative data"
+    ],
+    "domain_tags": [
+      "energy"
+    ],
+    "data_modality": "tabular",
+    "temporal_coverage": "1994-present",
+    "geographic_scope": "United States",
+    "size_category": "large"
+  },
+  {
+    "name": "EPA CEMS (Continuous Emissions Monitoring)",
+    "description": "Hourly emissions and generation data from U.S. power plants since 1995",
+    "category": "Energy",
+    "url": "https://campd.epa.gov/",
+    "docs_url": "https://www.epa.gov/power-sector/about-continuous-emissions-monitoring-system-cems",
+    "github_url": null,
+    "tags": [
+      "emissions",
+      "hourly",
+      "CO2",
+      "SO2",
+      "NOx"
+    ],
+    "best_for": "Analyzing power plant emissions patterns and environmental impacts",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "data-wrangling"
+    ],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "Continuous emissions monitoring data from U.S. power plants including hourly CO2, SO2, and NOx emissions. Essential for emissions analysis and carbon pricing research.",
+    "use_cases": [
+      "Carbon emissions analysis",
+      "Air quality research",
+      "Marginal emissions factors"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "Researcher"
+    ],
+    "synthetic_questions": [
+      "EPA CEMS data",
+      "power plant emissions data",
+      "hourly emissions US",
+      "continuous emissions monitoring"
+    ],
+    "domain_tags": [
+      "energy",
+      "environment"
+    ],
+    "data_modality": "time-series",
+    "temporal_coverage": "1995-present",
+    "geographic_scope": "United States",
+    "size_category": "very-large"
+  },
+  {
+    "name": "CAISO OASIS",
+    "description": "California ISO market data including prices, generation, demand, and transmission",
+    "category": "Energy",
+    "url": "http://oasis.caiso.com/",
+    "docs_url": "http://www.caiso.com/market/Pages/MarketProcesses.aspx",
+    "github_url": null,
+    "tags": [
+      "California",
+      "prices",
+      "wholesale",
+      "real-time",
+      "day-ahead"
+    ],
+    "best_for": "Studying wholesale electricity market dynamics and renewable integration",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "energy-markets"
+    ],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "Open Access Same-time Information System (OASIS) provides California ISO market data including locational marginal prices, generation mix, and grid conditions.",
+    "use_cases": [
+      "Price forecasting",
+      "Renewable integration analysis",
+      "Market power studies"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Researcher"
+    ],
+    "synthetic_questions": [
+      "CAISO prices",
+      "California electricity prices",
+      "California ISO data",
+      "CAISO OASIS API"
+    ],
+    "domain_tags": [
+      "energy"
+    ],
+    "data_modality": "time-series",
+    "temporal_coverage": "2009-present",
+    "geographic_scope": "California",
+    "size_category": "large"
+  },
+  {
+    "name": "PJM Data Miner",
+    "description": "Comprehensive market data from PJM, the largest U.S. regional transmission organization",
+    "category": "Energy",
+    "url": "https://dataminer2.pjm.com/",
+    "docs_url": "https://www.pjm.com/markets-and-operations/data-dictionary",
+    "github_url": null,
+    "tags": [
+      "PJM",
+      "Eastern US",
+      "prices",
+      "wholesale",
+      "capacity"
+    ],
+    "best_for": "Analyzing the largest U.S. electricity market covering 13 states",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "energy-markets"
+    ],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "PJM Data Miner provides access to market data from the largest regional transmission organization in the U.S., serving 65 million people across 13 states.",
+    "use_cases": [
+      "Capacity market analysis",
+      "Congestion pricing studies",
+      "Demand response research"
+    ],
+    "audience": [
+      "Senior-DS",
+      "Researcher"
+    ],
+    "synthetic_questions": [
+      "PJM data",
+      "PJM prices",
+      "Eastern US electricity market",
+      "PJM Data Miner"
+    ],
+    "domain_tags": [
+      "energy"
+    ],
+    "data_modality": "time-series",
+    "temporal_coverage": "1999-present",
+    "geographic_scope": "Eastern United States",
+    "size_category": "large"
+  },
+  {
+    "name": "NREL NSRDB (National Solar Radiation Database)",
+    "description": "High-resolution solar irradiance data covering the Americas with 30-minute temporal resolution",
+    "category": "Energy",
+    "url": "https://nsrdb.nrel.gov/",
+    "docs_url": "https://nsrdb.nrel.gov/data-sets/api-instructions.html",
+    "github_url": null,
+    "tags": [
+      "solar",
+      "irradiance",
+      "renewable",
+      "weather",
+      "API"
+    ],
+    "best_for": "Solar energy potential assessment and renewable energy forecasting",
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "The National Solar Radiation Database provides modeled and measured solar irradiance data at high spatial and temporal resolution. Essential for solar project development and grid integration studies.",
+    "use_cases": [
+      "Solar site assessment",
+      "PV output modeling",
+      "Renewable forecasting"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "Researcher"
+    ],
+    "synthetic_questions": [
+      "NREL solar data",
+      "solar irradiance data",
+      "NSRDB API",
+      "solar radiation database"
+    ],
+    "domain_tags": [
+      "energy",
+      "environment"
+    ],
+    "data_modality": "spatiotemporal",
+    "temporal_coverage": "1998-present",
+    "geographic_scope": "Americas",
+    "size_category": "very-large"
+  },
+  {
+    "name": "Ember Global Electricity Data",
+    "description": "Monthly electricity generation, capacity, and emissions data for 200+ countries",
+    "category": "Energy",
+    "url": "https://ember-climate.org/data/",
+    "docs_url": "https://ember-climate.org/data-catalogue/",
+    "github_url": "https://github.com/ember-climate/data-guidelines",
+    "tags": [
+      "global",
+      "electricity",
+      "emissions",
+      "monthly",
+      "countries"
+    ],
+    "best_for": "Cross-country energy transition analysis and global electricity trends",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "Ember provides free, regularly updated global electricity data covering generation, capacity, and emissions across 200+ countries. Excellent for international energy transition research.",
+    "use_cases": [
+      "Global energy transition tracking",
+      "Cross-country comparisons",
+      "Emissions analysis"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Researcher"
+    ],
+    "synthetic_questions": [
+      "Ember electricity data",
+      "global electricity generation",
+      "country electricity data",
+      "Ember climate data"
+    ],
+    "domain_tags": [
+      "energy",
+      "environment"
+    ],
+    "data_modality": "tabular",
+    "temporal_coverage": "2000-present",
+    "geographic_scope": "Global",
+    "size_category": "medium"
+  },
+  {
+    "name": "gridstatus",
+    "description": "Unified Python API for accessing real-time and historical data from all major U.S. ISOs",
+    "category": "Energy",
+    "url": "https://www.gridstatus.io/",
+    "docs_url": "https://docs.gridstatus.io/",
+    "github_url": "https://github.com/gridstatus/gridstatus",
+    "tags": [
+      "ISO",
+      "API",
+      "real-time",
+      "Python",
+      "unified"
+    ],
+    "best_for": "Accessing standardized data across multiple U.S. electricity markets",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "python"
+    ],
+    "topic_tags": [
+      "energy-utilities-economics"
+    ],
+    "summary": "gridstatus provides a unified Python interface for accessing data from CAISO, ERCOT, ISONE, MISO, NYISO, PJM, and SPP. Simplifies cross-market analysis with consistent data formats.",
+    "use_cases": [
+      "Multi-market analysis",
+      "Real-time monitoring",
+      "Historical price research"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "gridstatus Python",
+      "ISO data API",
+      "electricity market API",
+      "multi-ISO data"
+    ],
+    "domain_tags": [
+      "energy"
+    ],
+    "data_modality": "time-series",
+    "temporal_coverage": "varies by ISO",
+    "geographic_scope": "United States",
+    "size_category": "large"
   }
 ]
