@@ -19,8 +19,8 @@ from urllib.parse import urlparse
 
 import numpy as np
 from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import cross_val_predict
-from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
+from sklearn.model_selection import cross_val_predict, train_test_split
+from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score, roc_auc_score
 from sentence_transformers import SentenceTransformer
 
 try:
@@ -315,16 +315,22 @@ def train_regression_model(items, item_signals):
         print("  Not enough samples with engagement for training")
         return None, None, encoders
 
-    print("\n  Evaluating with 5-fold cross-validation...")
+    # Proper train/test split on ALL data (including zeros)
+    print("\n  Train/test split (80/20)...")
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=42, stratify=(y > 0)
+    )
 
-    # Cross-validation on items with engagement only (more meaningful)
-    has_engagement = y > 0
-    X_engaged = X[has_engagement]
-    y_engaged = y[has_engagement]
+    n_train_engaged = np.sum(y_train > 0)
+    n_test_engaged = np.sum(y_test > 0)
+    print(f"  Train: {len(y_train)} items ({n_train_engaged} with engagement)")
+    print(f"  Test:  {len(y_test)} items ({n_test_engaged} with engagement)")
 
     if HAS_LIGHTGBM:
-        # Use LightGBM for gradient boosting
+        # Use LightGBM with Tweedie loss for zero-inflated data
         model = lgb.LGBMRegressor(
+            objective='tweedie',
+            tweedie_variance_power=1.5,  # Between Poisson(1) and Gamma(2)
             n_estimators=100,
             max_depth=5,
             learning_rate=0.05,
@@ -337,41 +343,55 @@ def train_regression_model(items, item_signals):
             random_state=42,
             verbose=-1
         )
-        model_name = "LightGBM"
+        model_name = "LightGBM-Tweedie"
     else:
         from sklearn.linear_model import Ridge
         scaler = StandardScaler()
+        X_train = scaler.fit_transform(X_train)
+        X_test = scaler.transform(X_test)
         X = scaler.fit_transform(X)
-        X_engaged = X[has_engagement]
         model = Ridge(alpha=10.0)
         encoders['scaler'] = scaler
         model_name = "Ridge"
 
-    # Cross-validation predictions for evaluation
-    y_pred_cv = cross_val_predict(model, X_engaged, y_engaged, cv=5)
+    # Train on training set
+    model.fit(X_train, y_train)
 
-    # Compute comprehensive metrics
-    cv_rmse = np.sqrt(mean_squared_error(y_engaged, y_pred_cv))
-    cv_mae = mean_absolute_error(y_engaged, y_pred_cv)
-    cv_r2 = r2_score(y_engaged, y_pred_cv)
+    # Evaluate on holdout test set
+    y_pred_test = model.predict(X_test)
+    y_pred_test = np.maximum(y_pred_test, 0)  # Clip negatives
+
+    # Regression metrics on test set
+    test_rmse = np.sqrt(mean_squared_error(y_test, y_pred_test))
+    test_mae = mean_absolute_error(y_test, y_pred_test)
+    test_r2 = r2_score(y_test, y_pred_test)
 
     # Baseline comparison (predicting mean)
-    baseline_pred = np.full_like(y_engaged, y_engaged.mean())
-    baseline_rmse = np.sqrt(mean_squared_error(y_engaged, baseline_pred))
+    baseline_pred = np.full_like(y_test, y_train.mean())
+    baseline_rmse = np.sqrt(mean_squared_error(y_test, baseline_pred))
 
-    print(f"  CV RMSE: {cv_rmse:.3f}")
-    print(f"  CV MAE: {cv_mae:.3f}")
-    print(f"  CV R²: {cv_r2:.3f}")
-    print(f"  Baseline RMSE (mean): {baseline_rmse:.3f}")
+    # Classification metric: can model rank engaged vs non-engaged?
+    test_binary = (y_test > 0).astype(int)
+    if len(np.unique(test_binary)) > 1:
+        test_auc = roc_auc_score(test_binary, y_pred_test)
+    else:
+        test_auc = 0.5
+
+    print(f"\n  === HOLDOUT TEST METRICS ===")
+    print(f"  Test RMSE: {test_rmse:.3f}")
+    print(f"  Test MAE:  {test_mae:.3f}")
+    print(f"  Test R²:   {test_r2:.3f}")
+    print(f"  Baseline RMSE (train mean): {baseline_rmse:.3f}")
     if baseline_rmse > 0:
-        print(f"  RMSE vs baseline: {(cv_rmse/baseline_rmse)*100:.1f}% (lower is better)")
+        print(f"  RMSE vs baseline: {(test_rmse/baseline_rmse)*100:.1f}%")
+    print(f"  AUC (engaged vs not): {test_auc:.3f}")
 
-    # Train on full data
+    # Retrain on full data for final model
+    print(f"\n  Retraining on full data...")
+    if not HAS_LIGHTGBM:
+        X = scaler.fit_transform(X)
     model.fit(X, y)
-    train_preds = model.predict(X)
-    train_r2 = r2_score(y, train_preds)
-    print(f"  Train R²: {train_r2:.3f}")
-    print(f"  {model_name} trained")
+    print(f"  {model_name} trained on {len(y)} items")
 
     # Get predicted scores for all items
     predictions = model.predict(X)
@@ -747,7 +767,9 @@ def main():
     print("=" * 60)
     print(f"Scoring method: {scoring_method.upper()}")
     if model:
-        if hasattr(model, 'n_estimators'):
+        if hasattr(model, 'objective') and 'tweedie' in str(model.objective):
+            print(f"  LightGBM-Tweedie: {model.n_estimators} trees, power={model.tweedie_variance_power}")
+        elif hasattr(model, 'n_estimators'):
             print(f"  LightGBM: {model.n_estimators} trees, max_depth={model.max_depth}")
         elif hasattr(model, 'alpha'):
             print(f"  Ridge alpha: {model.alpha}")
