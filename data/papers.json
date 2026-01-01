@@ -46862,8 +46862,8 @@
     },
     {
       "id": "insurance-economics-insurtech",
-      "name": "Insurance Economics & InsurTech",
-      "description": "Economic analysis of insurance markets, actuarial methods, and digital transformation of the insurance industry",
+      "name": "Insurtech & Insurance Economics",
+      "description": "Price risk accurately, detect fraud, and build digital insurance products",
       "image_url": "/images/topics/insurance.webp",
       "subtopics": [
         {
@@ -47061,7 +47061,7 @@
     {
       "id": "sports-economics",
       "name": "Sports Economics & Analytics",
-      "description": "Economic analysis of professional sports leagues, player markets, betting, and athletic competition",
+      "description": "Analyze player value, predict game outcomes, and optimize team decisions",
       "image_url": "/images/topics/sports.webp",
       "subtopics": [
         {
@@ -47321,8 +47321,8 @@
     },
     {
       "id": "transportation-economics",
-      "name": "Transportation Economics & Analytics",
-      "description": "Economic analysis of transportation systems including congestion pricing, mode choice, transit, ridesharing, and aviation",
+      "name": "Transportation Economics & Technology",
+      "description": "Model travel demand, optimize transit networks, and price congestion",
       "image_url": "/images/topics/transportation.webp",
       "subtopics": [
         {
@@ -47735,6 +47735,644 @@
                 "Consumer Preferences"
               ],
               "citations": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "healthcare-economics",
+      "name": "Healthcare Economics & Health-Tech",
+      "description": "Analyze healthcare markets, evaluate digital health interventions, and build clinical prediction models",
+      "image_url": "/images/topics/healthcare.webp",
+      "subtopics": [
+        {
+          "id": "health-economics-foundations",
+          "name": "Health Economics Foundations",
+          "description": "Foundational papers establishing health economics as a distinct field",
+          "papers": [
+            {
+              "title": "Uncertainty and the Welfare Economics of Medical Care",
+              "authors": [
+                "Kenneth J. Arrow"
+              ],
+              "year": 1963,
+              "venue": "American Economic Review",
+              "url": "https://www.jstor.org/stable/1812044",
+              "abstract": "The founding document of health economics explaining why healthcare markets differ fundamentally from others due to information asymmetry, uncertainty, and externalities. Established the intellectual framework for understanding moral hazard, adverse selection, and the role of institutions in healthcare.",
+              "tags": [
+                "Classic"
+              ],
+              "citations": 20000,
+              "topic_tags": [
+                "health-economics",
+                "information-asymmetry",
+                "market-failure"
+              ]
+            },
+            {
+              "title": "On the Concept of Health Capital and the Demand for Health",
+              "authors": [
+                "Michael Grossman"
+              ],
+              "year": 1972,
+              "venue": "Journal of Political Economy",
+              "url": "https://www.jstor.org/stable/1830580",
+              "abstract": "Introduced the model treating health as durable capital that depreciates over time. People demand health (not healthcare itself), and invest in it through medical care, diet, and exercise. Foundation for understanding health behaviors and human capital.",
+              "tags": [
+                "Classic"
+              ],
+              "citations": 8000,
+              "topic_tags": [
+                "health-economics",
+                "human-capital",
+                "demand-modeling"
+              ]
+            },
+            {
+              "title": "Health Insurance and the Demand for Medical Care: Evidence from a Randomized Experiment",
+              "authors": [
+                "Willard G. Manning",
+                "Joseph P. Newhouse",
+                "Naihua Duan",
+                "Emmett B. Keeler",
+                "Arleen Leibowitz",
+                "M. Susan Marquis"
+              ],
+              "year": 1987,
+              "venue": "American Economic Review",
+              "url": "https://www.jstor.org/stable/1804094",
+              "abstract": "Results from the RAND Health Insurance Experiment (1974-1982) establishing price elasticity of demand for medical care at approximately -0.2. Cost-sharing reduces utilization by 31% with minimal health effects for average population.",
+              "tags": [
+                "Classic"
+              ],
+              "citations": 5000,
+              "topic_tags": [
+                "health-economics",
+                "insurance",
+                "randomized-experiment"
+              ]
+            },
+            {
+              "title": "Equilibrium in Competitive Insurance Markets: An Essay on the Economics of Imperfect Information",
+              "authors": [
+                "Michael Rothschild",
+                "Joseph Stiglitz"
+              ],
+              "year": 1976,
+              "venue": "Quarterly Journal of Economics",
+              "url": "https://doi.org/10.2307/1885326",
+              "abstract": "Foundational theory of adverse selection in insurance markets. High-risk individuals drive out low-risk through self-selection, potentially leading to market failure. Essential for understanding health insurance market design.",
+              "tags": [
+                "Classic"
+              ],
+              "citations": 15000,
+              "topic_tags": [
+                "health-economics",
+                "adverse-selection",
+                "insurance",
+                "information-economics"
+              ]
+            },
+            {
+              "title": "Adverse Selection in Health Insurance",
+              "authors": [
+                "David M. Cutler",
+                "Sarah J. Reber"
+              ],
+              "year": 1998,
+              "venue": "Quarterly Journal of Economics",
+              "url": "https://doi.org/10.1162/003355398555649",
+              "abstract": "Empirical evidence of adverse selection death spirals using Harvard employee health plan data. When Harvard shifted to employee choice, generous plans experienced adverse selection leading to 25% premium increases and enrollment declines.",
+              "tags": [],
+              "citations": 1500,
+              "topic_tags": [
+                "health-economics",
+                "adverse-selection",
+                "empirical"
+              ]
+            },
+            {
+              "title": "Selection in Insurance Markets: Theory and Empirics in Pictures",
+              "authors": [
+                "Liran Einav",
+                "Amy Finkelstein"
+              ],
+              "year": 2011,
+              "venue": "Journal of Economic Perspectives",
+              "url": "https://doi.org/10.1257/jep.25.1.115",
+              "abstract": "Accessible graphical framework unifying theoretical and empirical approaches to measuring selection in insurance. Shows how to identify adverse vs. advantageous selection and quantify welfare effects using demand and cost curves.",
+              "tags": [
+                "Methodological"
+              ],
+              "citations": 1200,
+              "topic_tags": [
+                "health-economics",
+                "selection",
+                "methodology"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "healthcare-experiments",
+          "name": "Healthcare Experiments & Natural Experiments",
+          "description": "Landmark randomized and natural experiments in health economics",
+          "papers": [
+            {
+              "title": "The Oregon Health Insurance Experiment: Evidence from the First Year",
+              "authors": [
+                "Amy Finkelstein",
+                "Sarah Taubman",
+                "Bill Wright",
+                "Mira Bernstein",
+                "Jonathan Gruber",
+                "Joseph P. Newhouse",
+                "Heidi Allen",
+                "Katherine Baicker"
+              ],
+              "year": 2012,
+              "venue": "Quarterly Journal of Economics",
+              "url": "https://doi.org/10.1093/qje/qjs020",
+              "abstract": "First results from the only modern randomized evaluation of Medicaid. Oregon's 2008 lottery created random assignment to Medicaid. Found increased utilization, reduced financial strain, and improved self-reported health but no significant improvements in measured physical health outcomes.",
+              "tags": [
+                "SOTA"
+              ],
+              "citations": 2500,
+              "topic_tags": [
+                "health-economics",
+                "medicaid",
+                "randomized-experiment"
+              ]
+            },
+            {
+              "title": "The Oregon Experiment \u2014 Effects of Medicaid on Clinical Outcomes",
+              "authors": [
+                "Katherine Baicker",
+                "Sarah Taubman",
+                "Heidi Allen",
+                "Mira Bernstein",
+                "Jonathan Gruber",
+                "Joseph P. Newhouse",
+                "Eric Schneider",
+                "Bill Wright",
+                "Alan Zaslavsky",
+                "Amy Finkelstein"
+              ],
+              "year": 2013,
+              "venue": "New England Journal of Medicine",
+              "url": "https://doi.org/10.1056/NEJMsa1212321",
+              "abstract": "Two-year follow-up of Oregon Health Insurance Experiment. Medicaid increased healthcare utilization, reduced depression, and eliminated catastrophic medical expenditures but did not produce significant improvements in measured physical health outcomes (blood pressure, cholesterol, HbA1c).",
+              "tags": [],
+              "citations": 3000,
+              "topic_tags": [
+                "health-economics",
+                "medicaid",
+                "clinical-outcomes"
+              ]
+            },
+            {
+              "title": "The Impact of Nearly Universal Insurance Coverage on Health Care Utilization: Evidence from Medicare",
+              "authors": [
+                "David Card",
+                "Carlos Dobkin",
+                "Nicole Maestas"
+              ],
+              "year": 2008,
+              "venue": "American Economic Review",
+              "url": "https://doi.org/10.1257/aer.98.5.2242",
+              "abstract": "Uses the sharp age-65 Medicare eligibility threshold as a regression discontinuity design. Finds 10% increase in hospital admission rates at 65 with larger effects for those previously uninsured. Demonstrates RDD methodology for health policy research.",
+              "tags": [
+                "Methodological"
+              ],
+              "citations": 600,
+              "topic_tags": [
+                "health-economics",
+                "medicare",
+                "regression-discontinuity"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "hospital-provider-economics",
+          "name": "Hospital & Provider Economics",
+          "description": "Research on hospital competition, market power, and provider behavior",
+          "papers": [
+            {
+              "title": "Competition in Health Care Markets",
+              "authors": [
+                "Martin Gaynor",
+                "Robert Town"
+              ],
+              "year": 2011,
+              "venue": "Handbook of Health Economics, Volume 2",
+              "url": "https://doi.org/10.1016/B978-0-444-53592-4.00009-8",
+              "abstract": "Definitive survey of hospital competition research covering market definition, merger analysis, and effects of competition on prices, costs, and quality. Essential reference for understanding healthcare market structure.",
+              "tags": [
+                "Survey"
+              ],
+              "citations": 800,
+              "topic_tags": [
+                "health-economics",
+                "hospital-competition",
+                "antitrust"
+              ]
+            },
+            {
+              "title": "The Price Ain't Right? Hospital Prices and Health Spending on the Privately Insured",
+              "authors": [
+                "Zack Cooper",
+                "Stuart V. Craig",
+                "Martin Gaynor",
+                "John Van Reenen"
+              ],
+              "year": 2019,
+              "venue": "Quarterly Journal of Economics",
+              "url": "https://doi.org/10.1093/qje/qjy020",
+              "abstract": "Documents that hospital prices for the same procedures vary by a factor of 12 nationally and that monopoly hospitals charge 12% higher prices than competitive markets. Uses claims data from 28% of Americans with employer-sponsored insurance.",
+              "tags": [
+                "SOTA"
+              ],
+              "citations": 700,
+              "topic_tags": [
+                "health-economics",
+                "hospital-prices",
+                "market-power"
+              ]
+            },
+            {
+              "title": "Are Health Insurance Markets Competitive?",
+              "authors": [
+                "Leemore Dafny"
+              ],
+              "year": 2010,
+              "venue": "American Economic Review",
+              "url": "https://doi.org/10.1257/aer.100.4.1399",
+              "abstract": "Tests for market power in health insurance using exogenous shocks to employer demand. Finds insurers capture 21% of cost savings through price increases, suggesting significant market power in employer-sponsored insurance markets.",
+              "tags": [],
+              "citations": 500,
+              "topic_tags": [
+                "health-economics",
+                "insurance-markets",
+                "market-power"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "digital-health-telemedicine",
+          "name": "Digital Health & Telemedicine",
+          "description": "Economics of telemedicine, EHRs, mobile health, and wearables",
+          "papers": [
+            {
+              "title": "HITECH at 10 Years \u2014 What Have We Achieved?",
+              "authors": [
+                "Julia Adler-Milstein",
+                "Ashish K. Jha"
+              ],
+              "year": 2017,
+              "venue": "Health Affairs",
+              "url": "https://doi.org/10.1377/hlthaff.2016.1651",
+              "abstract": "Evaluates HITECH Act subsidies for EHR adoption. Accelerated adoption from 3.2% to 14.2% annually among eligible hospitals\u2014a 7.9 percentage point difference-in-differences. Discusses challenges in achieving interoperability and clinical benefits.",
+              "tags": [],
+              "citations": 400,
+              "topic_tags": [
+                "digital-health",
+                "ehr",
+                "policy-evaluation"
+              ]
+            },
+            {
+              "title": "The Effects of Health Information Technology on the Costs and Quality of Medical Care",
+              "authors": [
+                "Leila Agha"
+              ],
+              "year": 2014,
+              "venue": "Journal of Health Economics",
+              "url": "https://doi.org/10.1016/j.jhealeco.2013.10.006",
+              "abstract": "Rigorous analysis finding HIT associated with 1.3% cost increases and no evidence of quality improvement in an analysis of 2.5 million Medicare admissions. Provides important counterpoint to optimistic policy narratives about health IT.",
+              "tags": [],
+              "citations": 350,
+              "topic_tags": [
+                "digital-health",
+                "health-it",
+                "productivity"
+              ]
+            },
+            {
+              "title": "Trends in Ambulatory Care Visits During the COVID-19 Pandemic: A National Study of 16.7 Million Individuals",
+              "authors": [
+                "Sadiq Y. Patel",
+                "Ateev Mehrotra",
+                "Haiden A. Huskamp",
+                "Lori Uscher-Pines",
+                "Ishani Ganguli",
+                "Michael Lawrence Barnett"
+              ],
+              "year": 2021,
+              "venue": "Health Affairs",
+              "url": "https://doi.org/10.1377/hlthaff.2020.01995",
+              "abstract": "Examined 16.7 million commercially insured enrollees during COVID-19 finding 30.1% of visits via telemedicine\u2014a 23-fold increase from pre-pandemic. Notable disparities by poverty levels with lower telemedicine use in high-poverty areas.",
+              "tags": [
+                "Industry"
+              ],
+              "citations": 300,
+              "topic_tags": [
+                "digital-health",
+                "telemedicine",
+                "covid-19"
+              ]
+            },
+            {
+              "title": "Do mHealth Applications Improve Clinical Outcomes of Patients with Cancer? A Critical Appraisal of the Literature",
+              "authors": [
+                "Santino J. Iribarren",
+                "Kasey Cato",
+                "Louise Falzon",
+                "Patricia W. Stone"
+              ],
+              "year": 2017,
+              "venue": "Supportive Care in Cancer",
+              "url": "https://doi.org/10.1007/s00520-016-3524-2",
+              "abstract": "Systematic review of mHealth economic evaluations across 19 countries finding 74.3% reported cost-effective or cost-saving outcomes. Higher-quality studies were less likely to show positive findings, suggesting publication bias.",
+              "tags": [
+                "Survey"
+              ],
+              "citations": 200,
+              "topic_tags": [
+                "digital-health",
+                "mhealth",
+                "cost-effectiveness"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "healthcare-ai-ml",
+          "name": "Healthcare AI & Clinical Machine Learning",
+          "description": "Clinical prediction models, algorithmic fairness, and AI in medicine",
+          "papers": [
+            {
+              "title": "Scalable and Accurate Deep Learning with Electronic Health Records",
+              "authors": [
+                "Alvin Rajkomar",
+                "Eyal Oren",
+                "Kai Chen",
+                "Andrew M. Dai",
+                "Nissan Hajaj",
+                "Michaela Hardt",
+                "Peter J. Liu",
+                "Xiaobing Liu",
+                "Jake Marcus",
+                "Mimi Sun",
+                "Patrik Sundberg",
+                "Hector Yee",
+                "Kun Zhang",
+                "Yi Zhang",
+                "Gerardo Flores",
+                "Gavin E. Duggan",
+                "Jamie Irvine",
+                "Quoc Le",
+                "Kurt Litsch",
+                "Alexander Mossin",
+                "Justin Tansuwan",
+                "De Wang",
+                "James Wexler",
+                "Jimbo Wilson",
+                "Dana Ludwig",
+                "Samuel L. Volchenboum",
+                "Katherine Chou",
+                "Michael Pearson",
+                "Srinivasan Madabushi",
+                "Nigam H. Shah",
+                "Atul J. Butte",
+                "Michael D. Howell",
+                "Claire Cui",
+                "Greg S. Corrado",
+                "Jeffrey Dean"
+              ],
+              "year": 2018,
+              "venue": "npj Digital Medicine",
+              "url": "https://doi.org/10.1038/s41746-018-0029-1",
+              "abstract": "Demonstrated deep learning using raw EHR data (no manual feature engineering) achieving AUROC 0.93-0.94 for in-hospital mortality prediction across 216,221 patients with 46 billion data points. Established potential for end-to-end clinical prediction.",
+              "tags": [
+                "SOTA"
+              ],
+              "citations": 2500,
+              "topic_tags": [
+                "healthcare-ai",
+                "deep-learning",
+                "ehr",
+                "clinical-prediction"
+              ]
+            },
+            {
+              "title": "Machine Learning in Medicine",
+              "authors": [
+                "Alvin Rajkomar",
+                "Jeffrey Dean",
+                "Isaac Kohane"
+              ],
+              "year": 2019,
+              "venue": "New England Journal of Medicine",
+              "url": "https://doi.org/10.1056/NEJMra1814259",
+              "abstract": "Authoritative review of machine learning applications in medicine covering diagnosis, prognosis, and treatment. Discusses data requirements, model validation, regulatory considerations, and implementation challenges.",
+              "tags": [
+                "Survey"
+              ],
+              "citations": 2000,
+              "topic_tags": [
+                "healthcare-ai",
+                "machine-learning",
+                "clinical-applications"
+              ]
+            },
+            {
+              "title": "Dissecting Racial Bias in an Algorithm Used to Manage the Health of Populations",
+              "authors": [
+                "Ziad Obermeyer",
+                "Brian Powers",
+                "Christine Vogeli",
+                "Sendhil Mullainathan"
+              ],
+              "year": 2019,
+              "venue": "Science",
+              "url": "https://doi.org/10.1126/science.aax2342",
+              "abstract": "Exposed significant racial bias in a widely-used algorithm affecting ~200 million patients. Black patients were considerably sicker than White patients at the same risk score because the algorithm used healthcare costs as a proxy for health needs. Essential reading for healthcare AI.",
+              "tags": [
+                "SOTA"
+              ],
+              "citations": 4000,
+              "topic_tags": [
+                "healthcare-ai",
+                "algorithmic-bias",
+                "fairness",
+                "health-disparities"
+              ]
+            },
+            {
+              "title": "Dermatologist-level Classification of Skin Cancer with Deep Neural Networks",
+              "authors": [
+                "Andre Esteva",
+                "Brett Kuprel",
+                "Roberto A. Novoa",
+                "Justin Ko",
+                "Susan M. Swetter",
+                "Helen M. Blau",
+                "Sebastian Thrun"
+              ],
+              "year": 2017,
+              "venue": "Nature",
+              "url": "https://doi.org/10.1038/nature21056",
+              "abstract": "Demonstrated CNN achieving dermatologist-level classification of skin cancer from clinical images. Trained on 129,450 images and tested against 21 dermatologists. Landmark paper establishing feasibility of clinical-grade image AI.",
+              "tags": [
+                "SOTA"
+              ],
+              "citations": 5000,
+              "topic_tags": [
+                "healthcare-ai",
+                "deep-learning",
+                "dermatology",
+                "computer-vision"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "medical-technology-hta",
+          "name": "Medical Technology & Health Technology Assessment",
+          "description": "Economics of medical devices, cost-effectiveness analysis, and HTA",
+          "papers": [
+            {
+              "title": "Is Technological Change in Medicine Worth It?",
+              "authors": [
+                "David M. Cutler",
+                "Mark McClellan"
+              ],
+              "year": 2001,
+              "venue": "Health Affairs",
+              "url": "https://doi.org/10.1377/hlthaff.20.5.11",
+              "abstract": "Landmark analysis showing technological benefits exceeded costs in four of five conditions studied (heart attacks, low-birthweight infants, depression, cataracts). Established framework for evaluating medical technology value.",
+              "tags": [
+                "Classic"
+              ],
+              "citations": 1200,
+              "topic_tags": [
+                "health-economics",
+                "medical-technology",
+                "cost-benefit"
+              ]
+            },
+            {
+              "title": "Technology Diffusion and Productivity Growth in Health Care",
+              "authors": [
+                "Jonathan Skinner",
+                "Douglas Staiger"
+              ],
+              "year": 2007,
+              "venue": "Review of Economics and Statistics",
+              "url": "https://doi.org/10.1162/rest.89.3.468",
+              "abstract": "Found survival gains from heart attack technology flattened after 1996, with uneven diffusion of cost-effective innovations driving regional variation. Suggests technology assessment should focus on diffusion patterns.",
+              "tags": [],
+              "citations": 300,
+              "topic_tags": [
+                "health-economics",
+                "technology-diffusion",
+                "productivity"
+              ]
+            },
+            {
+              "title": "Estimation of US Health Opportunity Costs",
+              "authors": [
+                "David J. Vanness",
+                "James F. Lomas",
+                "Hua Zhu",
+                "Behrouz Mehdizadeh",
+                "Karl Claxton"
+              ],
+              "year": 2020,
+              "venue": "Annals of Internal Medicine",
+              "url": "https://doi.org/10.7326/M20-1392",
+              "abstract": "Provides rigorous US-specific empirical estimate of the health opportunity cost threshold at $104,000 per QALY (95% UI: $51,000-$209,000). Important for cost-effectiveness analysis and coverage decisions.",
+              "tags": [
+                "Methodological"
+              ],
+              "citations": 150,
+              "topic_tags": [
+                "health-economics",
+                "cost-effectiveness",
+                "hta"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "causal-inference-health",
+          "name": "Causal Inference Methods for Health Research",
+          "description": "Econometric and statistical methods for causal inference in health",
+          "papers": [
+            {
+              "title": "Causal Inference: What If",
+              "authors": [
+                "Miguel A. Hern\u00e1n",
+                "James M. Robins"
+              ],
+              "year": 2020,
+              "venue": "Chapman & Hall/CRC",
+              "url": "https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/",
+              "abstract": "The standard graduate textbook for causal inference in health sciences. Covers potential outcomes, DAGs, confounding, selection bias, and complex longitudinal settings. Freely available online.",
+              "tags": [
+                "Methodological"
+              ],
+              "citations": 3000,
+              "topic_tags": [
+                "causal-inference",
+                "methodology",
+                "epidemiology"
+              ]
+            },
+            {
+              "title": "Regression Discontinuity Designs Are Underutilized in Medicine, Epidemiology, and Public Health: A Review of Current and Best Practice",
+              "authors": [
+                "Emily Moscoe",
+                "Heather Bor",
+                "Till B\u00e4rnighausen"
+              ],
+              "year": 2015,
+              "venue": "Journal of Clinical Epidemiology",
+              "url": "https://doi.org/10.1016/j.jclinepi.2014.06.016",
+              "abstract": "Argues RDD is 'tailor-made' for healthcare given clinical threshold decisions (age cutoffs, test thresholds) but remains underutilized. Provides guidance for applying RDD in medical research.",
+              "tags": [
+                "Methodological"
+              ],
+              "citations": 400,
+              "topic_tags": [
+                "causal-inference",
+                "regression-discontinuity",
+                "methodology"
+              ]
+            },
+            {
+              "title": "Using Differences in Knowledge Across Neighborhoods to Uncover the Impacts of the EITC on Earnings",
+              "authors": [
+                "Raj Chetty",
+                "John N. Friedman",
+                "Emmanuel Saez"
+              ],
+              "year": 2013,
+              "venue": "American Economic Review",
+              "url": "https://doi.org/10.1257/aer.103.7.2683",
+              "abstract": "While focused on EITC, this paper demonstrates spatial variation in policy knowledge as an identification strategy applicable to health policy. Influential methodology for studying behavioral responses to complex policies.",
+              "tags": [
+                "Methodological"
+              ],
+              "citations": 1500,
+              "topic_tags": [
+                "causal-inference",
+                "policy-evaluation",
+                "methodology"
+              ]
             }
           ]
         }

@@ -18046,7 +18046,7 @@
   {
     "name": "MIT OCW: Transportation Systems Analysis",
     "description": "MIT's classic graduate course on demand modeling, networks, and intelligent transportation systems. Covers discrete choice theory, traffic flow, and transit planning.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "url": "https://ocw.mit.edu/courses/1-201j-transportation-systems-analysis-demand-and-economics-fall-2008/",
     "type": "Course",
     "level": "Advanced",
@@ -18094,7 +18094,7 @@
   {
     "name": "Foundations of Transportation Network Analysis (edX)",
     "description": "MIT MicroMasters course on network modeling, traffic assignment, and transportation optimization. Part of the Transportation specialization on edX.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "url": "https://www.edx.org/learn/engineering/massachusetts-institute-of-technology-principles-of-modeling-simulating-and-controlling-traffic-flow",
     "type": "Course",
     "level": "Advanced",
@@ -18144,7 +18144,7 @@
   {
     "name": "Class Central: Transportation Courses",
     "description": "Aggregated list of online transportation courses from universities worldwide. Filter by level, platform, and topic to find the right course.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "url": "https://www.classcentral.com/subject/transportation",
     "type": "Course Aggregator",
     "level": "All Levels",
@@ -18184,6 +18184,147 @@
       "finding courses",
       "comparing platforms",
       "structured learning"
+    ]
+  },
+  {
+    "name": "MIT OCW: Principles of Microeconomics (Healthcare Unit)",
+    "description": "Jonathan Gruber's acclaimed MIT course includes a healthcare economics unit covering the ACA, moral hazard, adverse selection, and healthcare market failures. Free with full lecture videos.",
+    "category": "Healthcare Economics & Health-Tech",
+    "url": "https://ocw.mit.edu/courses/14-01sc-principles-of-microeconomics-fall-2011/",
+    "type": "Course",
+    "level": "Intermediate",
+    "tags": [
+      "Healthcare",
+      "Economics",
+      "MIT",
+      "OCW",
+      "Free"
+    ],
+    "domain": "Healthcare Economics",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "basic economics"
+    ],
+    "topic_tags": [
+      "health-economics",
+      "microeconomics",
+      "policy"
+    ],
+    "summary": "Gruber's microeconomics course provides excellent healthcare economics coverage including insurance markets, moral hazard, and the ACA. Gruber was key architect of Massachusetts Romneycare and the ACA.",
+    "use_cases": [
+      "Healthcare economics foundations",
+      "Policy understanding",
+      "Self-study"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "healthcare economics course free",
+      "Gruber MIT course",
+      "health insurance economics",
+      "ACA economics"
+    ],
+    "content_format": "course",
+    "skill_progression": [
+      "market fundamentals",
+      "insurance economics",
+      "policy analysis"
+    ]
+  },
+  {
+    "name": "Coursera: The Economics of Health Care Delivery",
+    "description": "UPenn course by Professors Ezekiel Emanuel and Guy David covering insurance economics, physician and hospital economics, and value-based care. Certificate available.",
+    "category": "Healthcare Economics & Health-Tech",
+    "url": "https://www.coursera.org/learn/health-economics-us-healthcare-systems",
+    "type": "Course",
+    "level": "Intermediate",
+    "tags": [
+      "Healthcare",
+      "Economics",
+      "Coursera",
+      "Certificate"
+    ],
+    "domain": "Healthcare Economics",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "basic economics"
+    ],
+    "topic_tags": [
+      "health-economics",
+      "healthcare-delivery",
+      "policy"
+    ],
+    "summary": "Led by Ezekiel Emanuel (former Obama health policy advisor), this course covers the economics of healthcare delivery with focus on insurance, providers, and value-based care models.",
+    "use_cases": [
+      "Healthcare economics introduction",
+      "Industry understanding",
+      "Career transition"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "healthcare economics Coursera",
+      "Ezekiel Emanuel course",
+      "healthcare delivery economics",
+      "health policy course"
+    ],
+    "content_format": "course",
+    "skill_progression": [
+      "healthcare system basics",
+      "insurance economics",
+      "value-based care"
+    ]
+  },
+  {
+    "name": "SHEPRD - R Packages for Health Economic Decision Science",
+    "description": "Navigation resource for choosing appropriate R packages in health economics. Curated guidance on hesim, heemod, BCEA, survHE, and other HE-specific tools.",
+    "category": "Healthcare Economics & Health-Tech",
+    "url": "https://hermes-sheprd.netlify.app/",
+    "type": "Resource Guide",
+    "level": "Intermediate",
+    "tags": [
+      "R",
+      "Health Economics",
+      "Packages",
+      "Guide"
+    ],
+    "domain": "Healthcare Economics",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "R basics",
+      "health economics"
+    ],
+    "topic_tags": [
+      "health-economics",
+      "r-packages",
+      "tools"
+    ],
+    "summary": "SHEPRD helps health economists navigate the R package ecosystem. Provides structured guidance on selecting appropriate tools for cost-effectiveness analysis, survival modeling, and decision modeling.",
+    "use_cases": [
+      "Package selection",
+      "Learning R for HE",
+      "Tool comparison"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "health economics R packages",
+      "SHEPRD guide",
+      "which R package CEA",
+      "cost-effectiveness R tools"
+    ],
+    "content_format": "guide",
+    "skill_progression": [
+      "package overview",
+      "tool selection",
+      "workflow design"
     ]
   }
 ]

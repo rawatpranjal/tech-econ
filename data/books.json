@@ -1278,7 +1278,7 @@
     "year": 2024,
     "isbn": "0367456451",
     "description": "The definitive graduate textbook on urban transportation economics. Covers congestion pricing, mode choice, land use interactions, and policy evaluation with rigorous economic modeling.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "type": "Book",
     "url": "https://www.routledge.com/The-Economics-of-Urban-Transportation/Small-Verhoef-Lindsey/p/book/9780367456450",
     "tags": [
@@ -1326,7 +1326,7 @@
     "year": 1985,
     "isbn": "0262022176",
     "description": "The foundational text on discrete choice modeling in transportation. Developed the random utility framework that underpins modern mode choice and demand forecasting.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "type": "Book",
     "url": "https://mitpress.mit.edu/9780262022170/discrete-choice-analysis/",
     "tags": [
@@ -1376,7 +1376,7 @@
     "year": 2009,
     "isbn": "0521766559",
     "description": "Essential guide to modern discrete choice methods including mixed logit, probit simulation, and Bayesian approaches. Free PDF available from the author's website.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "type": "Book",
     "url": "https://eml.berkeley.edu/books/choice2.html",
     "tags": [
@@ -1426,7 +1426,7 @@
     "year": 2010,
     "isbn": "1840641916",
     "description": "Comprehensive undergraduate/MBA textbook covering all transport modes (road, rail, air, maritime) with accessible economic analysis and policy discussions.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "type": "Book",
     "url": "https://www.e-elgar.com/shop/usd/transport-economics-9781840641912.html",
     "tags": [
@@ -1475,7 +1475,7 @@
     "year": 2011,
     "isbn": "0262016362",
     "description": "Graduate text connecting urban economics with transportation. Covers land use, housing markets, urban spatial structure, and transport infrastructure with elegant models.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "type": "Book",
     "url": "https://mitpress.mit.edu/9780262016360/lectures-on-urban-economics/",
     "tags": [
@@ -1524,7 +1524,7 @@
     "year": 2018,
     "isbn": "1610919076",
     "description": "Forward-looking analysis of how autonomous vehicles, shared mobility, and electrification will transform transportation. By the founder of UC Davis ITS.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "type": "Book",
     "url": "https://islandpress.org/books/three-revolutions",
     "tags": [
@@ -1563,6 +1563,289 @@
       "understanding AV technology",
       "shared mobility models",
       "policy scenarios"
+    ]
+  },
+  {
+    "name": "Health Economics",
+    "author": "Charles E. Phelps",
+    "year": 2017,
+    "isbn": "0132948532",
+    "description": "The gold standard health economics textbook according to Stanford's Alan Garber. Theory-focused with rigorous coverage of uncertainty, information asymmetry, insurance, and the ACA.",
+    "category": "Healthcare Economics & Health-Tech",
+    "type": "Book",
+    "url": "https://www.routledge.com/Health-Economics/Phelps/p/book/9780132948531",
+    "tags": [
+      "Health Economics",
+      "Textbook",
+      "Theory"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "microeconomics"
+    ],
+    "topic_tags": [
+      "health-economics",
+      "insurance",
+      "healthcare-markets"
+    ],
+    "summary": "Phelps' Health Economics is the leading theory-focused textbook. Covers demand for health and healthcare, insurance markets, provider behavior, and policy analysis with rigorous economic modeling.",
+    "use_cases": [
+      "Graduate coursework",
+      "Health economics foundations",
+      "Policy analysis training"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "health economics textbook",
+      "Phelps health economics",
+      "graduate health economics",
+      "healthcare markets textbook"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "health demand theory",
+      "insurance economics",
+      "provider behavior",
+      "policy analysis"
+    ]
+  },
+  {
+    "name": "The Economics of Health and Health Care",
+    "author": "Sherman Folland, Allen C. Goodman, Miron Stano & Merianos Danagoulian",
+    "year": 2024,
+    "isbn": "1032476958",
+    "description": "Market-leading comprehensive textbook now in 9th edition. Includes new chapters on health disparities and pandemic economics. Balanced theory and empirical focus.",
+    "category": "Healthcare Economics & Health-Tech",
+    "type": "Book",
+    "url": "https://www.routledge.com/The-Economics-of-Health-and-Health-Care/Folland-Goodman-Stano-Danagoulian/p/book/9781032476957",
+    "tags": [
+      "Health Economics",
+      "Textbook",
+      "Comprehensive"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "basic economics"
+    ],
+    "topic_tags": [
+      "health-economics",
+      "healthcare-policy",
+      "disparities"
+    ],
+    "summary": "Folland et al. is the most widely adopted health economics textbook, balancing theory with real-world applications. The 9th edition adds critical coverage of health disparities and COVID-19 economics.",
+    "use_cases": [
+      "Undergraduate/graduate courses",
+      "Broad health economics foundation",
+      "Policy context"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "health economics textbook undergraduate",
+      "Folland health economics",
+      "comprehensive health economics book",
+      "healthcare economics introduction"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "healthcare markets basics",
+      "insurance economics",
+      "provider markets",
+      "health policy"
+    ]
+  },
+  {
+    "name": "Handbook of Health Economics",
+    "author": "Anthony J. Culyer & Joseph P. Newhouse (eds.)",
+    "year": 2000,
+    "isbn": "0444504710",
+    "description": "Definitive graduate-level reference with authoritative chapters on all major health economics topics. Volumes 1-2 cover demand, supply, insurance, and policy. Essential reference for researchers.",
+    "category": "Healthcare Economics & Health-Tech",
+    "type": "Book",
+    "url": "https://www.sciencedirect.com/handbook/handbook-of-health-economics",
+    "tags": [
+      "Health Economics",
+      "Reference",
+      "Graduate",
+      "Handbook"
+    ],
+    "difficulty": "advanced",
+    "prerequisites": [
+      "graduate economics"
+    ],
+    "topic_tags": [
+      "health-economics",
+      "research-reference",
+      "academic"
+    ],
+    "summary": "The Handbook of Health Economics provides definitive survey chapters on all major topics from leading researchers. Essential reference for PhD students and researchers requiring comprehensive field coverage.",
+    "use_cases": [
+      "PhD reading lists",
+      "Research reference",
+      "Comprehensive field coverage"
+    ],
+    "audience": [
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "health economics handbook",
+      "graduate health economics reference",
+      "Newhouse health economics",
+      "comprehensive health econ review"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "field overview",
+      "research frontiers",
+      "methodology"
+    ]
+  },
+  {
+    "name": "Deep Medicine: How Artificial Intelligence Can Make Healthcare Human Again",
+    "author": "Eric Topol",
+    "year": 2019,
+    "isbn": "1541644638",
+    "description": "Essential vision for AI in healthcare by the most-cited researcher in medicine. Argues AI will free physicians for meaningful human connection while covering deep learning applications in radiology, pathology, and beyond.",
+    "category": "Healthcare Economics & Health-Tech",
+    "type": "Book",
+    "url": "https://www.basicbooks.com/titles/eric-topol/deep-medicine/9781541644632/",
+    "tags": [
+      "Healthcare AI",
+      "Digital Health",
+      "Vision"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "healthcare-ai",
+      "digital-health",
+      "future-of-medicine"
+    ],
+    "summary": "Eric Topol's Deep Medicine, endorsed by Andrew Ng, Fei-Fei Li, and Kai-Fu Lee, provides an accessible yet rigorous vision for AI in medicine. Covers applications from imaging to clinical decision support.",
+    "use_cases": [
+      "Understanding healthcare AI landscape",
+      "Strategic vision",
+      "Industry context"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "Eric Topol book",
+      "AI healthcare book",
+      "deep medicine book",
+      "future of medical AI"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "healthcare AI landscape",
+      "clinical applications",
+      "implementation challenges"
+    ]
+  },
+  {
+    "name": "Causal Inference: What If",
+    "author": "Miguel A. Hern\u00e1n & James M. Robins",
+    "year": 2020,
+    "isbn": "N/A",
+    "description": "The standard graduate textbook for causal inference in health sciences. Covers potential outcomes, DAGs, confounding, selection bias, and complex longitudinal settings. Freely available online.",
+    "category": "Healthcare Economics & Health-Tech",
+    "type": "Book",
+    "url": "https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/",
+    "tags": [
+      "Causal Inference",
+      "Epidemiology",
+      "Free",
+      "Methodological"
+    ],
+    "difficulty": "advanced",
+    "prerequisites": [
+      "statistics",
+      "epidemiology basics"
+    ],
+    "topic_tags": [
+      "causal-inference",
+      "epidemiology",
+      "methodology"
+    ],
+    "summary": "Hern\u00e1n and Robins' Causal Inference is the definitive textbook for causal reasoning in health. Covers DAGs, potential outcomes, time-varying confounding, and modern methods. Free PDF from Harvard.",
+    "use_cases": [
+      "PhD methodology training",
+      "Causal inference foundations",
+      "Research methods"
+    ],
+    "audience": [
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "causal inference textbook",
+      "Hernan Robins book",
+      "free causal inference book",
+      "epidemiology methods book"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "causal graphs",
+      "confounding control",
+      "time-varying methods"
+    ]
+  },
+  {
+    "name": "Healthcare Data Analytics",
+    "author": "Chandan K. Reddy & Charu C. Aggarwal",
+    "year": 2015,
+    "isbn": "1482232111",
+    "description": "Comprehensive 760-page reference covering healthcare data sources, advanced analytical methods, and applications from clinical prediction to fraud detection.",
+    "category": "Healthcare Economics & Health-Tech",
+    "type": "Book",
+    "url": "https://www.routledge.com/Healthcare-Data-Analytics/Reddy-Aggarwal/p/book/9781482232110",
+    "tags": [
+      "Healthcare Analytics",
+      "Data Science",
+      "Reference"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "data science basics"
+    ],
+    "topic_tags": [
+      "healthcare-analytics",
+      "data-science",
+      "applied-ml"
+    ],
+    "summary": "Healthcare Data Analytics provides comprehensive coverage of methods for analyzing healthcare data including EHRs, claims, genomics, and imaging. Essential reference for applied healthcare data scientists.",
+    "use_cases": [
+      "Healthcare data science training",
+      "Method selection",
+      "Applied reference"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "healthcare data analytics book",
+      "medical data science book",
+      "clinical analytics reference",
+      "healthcare ML book"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "healthcare data types",
+      "analytical methods",
+      "applications"
     ]
   }
 ]

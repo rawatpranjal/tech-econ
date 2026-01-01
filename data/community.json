@@ -18309,7 +18309,7 @@
     "name": "TRB Annual Meeting",
     "description": "Transportation Research Board Annual Meeting. The largest transportation research conference globally with 13,000+ attendees, 5,000+ presentations, and sessions covering all transportation modes and disciplines.",
     "category": "Conferences",
-    "subcategory": "Transportation Economics & Analytics",
+    "subcategory": "Transportation Economics & Technology",
     "url": "https://www.trb.org/AnnualMeeting/AnnualMeeting.aspx",
     "type": "Annual Conference",
     "location": "Washington, DC",
@@ -18358,7 +18358,7 @@
     "name": "ITEA Annual Conference",
     "description": "International Transportation Economics Association annual conference. Academic focus on transportation economics research including pricing, mode choice, environmental policy, and network modeling.",
     "category": "Conferences",
-    "subcategory": "Transportation Economics & Analytics",
+    "subcategory": "Transportation Economics & Technology",
     "url": "https://www.itea-org.net/",
     "type": "Annual Conference",
     "location": "Various (rotating)",
@@ -18406,7 +18406,7 @@
     "name": "UC Berkeley Institute of Transportation Studies",
     "description": "Leading transportation research center with faculty spanning economics, engineering, and planning. Hosts seminars, publishes working papers, and trains the next generation of transportation researchers.",
     "category": "Research Centers",
-    "subcategory": "Transportation Economics & Analytics",
+    "subcategory": "Transportation Economics & Technology",
     "url": "https://its.berkeley.edu/",
     "type": "Research Center",
     "location": "Berkeley, CA",
@@ -18449,5 +18449,147 @@
     "event_format": "research_center",
     "geographic_focus": "Berkeley, CA",
     "frequency": "ongoing"
+  },
+  {
+    "name": "ASHEcon (American Society of Health Economists)",
+    "description": "Premier U.S. health economics research conference with ~1,000 participants and 180 sessions. Annual meetings feature cutting-edge research on healthcare markets, policy, and outcomes.",
+    "category": "Conferences",
+    "subcategory": "Healthcare Economics & Health-Tech",
+    "url": "https://www.ashecon.org/",
+    "type": "Annual Conference",
+    "location": "Various US cities",
+    "dates": "June (annually)",
+    "attendees": "1,000+",
+    "best_for": "Academic health economists and health services researchers",
+    "tags": [
+      "Healthcare",
+      "Economics",
+      "Academic",
+      "Research"
+    ],
+    "start_date": "2025-06-22",
+    "end_date": "2025-06-25",
+    "difficulty": null,
+    "prerequisites": [
+      "health economics background"
+    ],
+    "topic_tags": [
+      "health-economics",
+      "conference",
+      "academic"
+    ],
+    "summary": "ASHEcon is the leading U.S. academic conference for health economics research. Features paper presentations, keynote lectures, and networking for researchers focused on healthcare markets and policy.",
+    "use_cases": [
+      "Present research",
+      "Network with health economists",
+      "Learn cutting-edge methods"
+    ],
+    "audience": [
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "health economics conference",
+      "ASHEcon meeting",
+      "academic health economics",
+      "healthcare research conference"
+    ],
+    "event_format": "conference",
+    "geographic_focus": "Nashville (2025)",
+    "frequency": "annual"
+  },
+  {
+    "name": "AMIA Annual Symposium",
+    "description": "World's premier biomedical and health informatics meeting with 2,000+ attendees. 2025 theme: 'Informatics in the Age of Generative AI'. Covers clinical informatics, data science, and AI.",
+    "category": "Conferences",
+    "subcategory": "Healthcare Economics & Health-Tech",
+    "url": "https://amia.org/education-events/amia-2025-annual-symposium",
+    "type": "Annual Conference",
+    "location": "San Francisco, CA",
+    "dates": "November (annually)",
+    "attendees": "2,000+",
+    "best_for": "Health informaticians, clinical data scientists, healthcare AI researchers",
+    "tags": [
+      "Healthcare",
+      "Informatics",
+      "AI",
+      "Data Science"
+    ],
+    "start_date": "2025-11-08",
+    "end_date": "2025-11-12",
+    "difficulty": null,
+    "prerequisites": [],
+    "topic_tags": [
+      "health-informatics",
+      "healthcare-ai",
+      "conference"
+    ],
+    "summary": "AMIA is the leading conference for biomedical informatics bringing together researchers, clinicians, and industry. 2025 focuses on generative AI applications in healthcare.",
+    "use_cases": [
+      "Healthcare AI research",
+      "Clinical informatics networking",
+      "Industry connections"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "health informatics conference",
+      "AMIA symposium",
+      "clinical AI conference",
+      "biomedical informatics meeting"
+    ],
+    "event_format": "conference",
+    "geographic_focus": "San Francisco, CA",
+    "frequency": "annual"
+  },
+  {
+    "name": "ISPOR (International Society for Pharmacoeconomics and Outcomes Research)",
+    "description": "Global health economics and outcomes research conference. Focus on cost-effectiveness, HTA, real-world evidence, and drug pricing. Strong industry and regulatory presence.",
+    "category": "Conferences",
+    "subcategory": "Healthcare Economics & Health-Tech",
+    "url": "https://www.ispor.org/",
+    "type": "Annual Conference",
+    "location": "Montreal (2025)",
+    "dates": "May (annually)",
+    "attendees": "4,000+",
+    "best_for": "Health economists, HTA professionals, pharmaceutical industry researchers",
+    "tags": [
+      "Healthcare",
+      "HEOR",
+      "Pharma",
+      "HTA"
+    ],
+    "start_date": "2025-05-13",
+    "end_date": "2025-05-16",
+    "difficulty": null,
+    "prerequisites": [],
+    "topic_tags": [
+      "health-economics",
+      "hta",
+      "outcomes-research"
+    ],
+    "summary": "ISPOR is the leading conference for health economics and outcomes research with strong industry and HTA agency participation. Focuses on cost-effectiveness, real-world evidence, and pricing.",
+    "use_cases": [
+      "HEOR networking",
+      "HTA methodology",
+      "Industry connections"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "HEOR conference",
+      "ISPOR meeting",
+      "health technology assessment conference",
+      "pharmacoeconomics conference"
+    ],
+    "event_format": "conference",
+    "geographic_focus": "Montreal (2025)",
+    "frequency": "annual (plus European meeting)"
   }
 ]

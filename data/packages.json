@@ -16932,7 +16932,7 @@
   {
     "name": "Biogeme",
     "description": "The reference Python package for discrete choice model estimation (logit, nested logit, mixed logit). Developed by Michel Bierlaire at EPFL, widely used in transportation research.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "docs_url": "https://biogeme.epfl.ch/",
     "github_url": "https://github.com/michelbierlaire/biogeme",
     "url": "https://biogeme.epfl.ch/",
@@ -16986,7 +16986,7 @@
   {
     "name": "xlogit",
     "description": "GPU-accelerated estimation of mixed logit models using CuPy/NumPy. Orders of magnitude faster than traditional packages for large datasets.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "docs_url": "https://xlogit.readthedocs.io/",
     "github_url": "https://github.com/arteagac/xlogit",
     "url": "https://github.com/arteagac/xlogit",
@@ -17038,7 +17038,7 @@
   {
     "name": "PyLogit",
     "description": "Sklearn-style API for discrete choice models (MNL, nested, mixed logit). Integrates well with pandas DataFrames and scikit-learn workflows.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "docs_url": "https://github.com/timothyb0912/pylogit",
     "github_url": "https://github.com/timothyb0912/pylogit",
     "url": "https://github.com/timothyb0912/pylogit",
@@ -17091,7 +17091,7 @@
   {
     "name": "OSMnx",
     "description": "Download, model, analyze, and visualize street networks and urban infrastructure from OpenStreetMap. Essential for transportation network analysis.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "docs_url": "https://osmnx.readthedocs.io/",
     "github_url": "https://github.com/gboeing/osmnx",
     "url": "https://geoffboeing.com/publications/osmnx-complex-street-networks/",
@@ -17148,7 +17148,7 @@
   {
     "name": "gtfs-kit",
     "description": "Analyze General Transit Feed Specification (GTFS) data. Compute route statistics, service frequencies, and visualize transit networks.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "docs_url": "https://mrcagney.github.io/gtfs_kit_docs/",
     "github_url": "https://github.com/mrcagney/gtfs_kit",
     "url": "https://github.com/mrcagney/gtfs_kit",
@@ -17201,7 +17201,7 @@
   {
     "name": "Apollo",
     "description": "Comprehensive R package for advanced choice modeling including mixed logit, latent class, hybrid choice, and integrated choice-latent variable models.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "docs_url": "http://www.apollochoicemodelling.com/",
     "github_url": "https://github.com/apollochoicemodelling/apollo",
     "url": "http://www.apollochoicemodelling.com/",
@@ -17253,7 +17253,7 @@
   {
     "name": "mlogit",
     "description": "The standard R package for multinomial logit estimation. Clean formula interface, nested logit support, and integration with R's modeling ecosystem.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "docs_url": "https://cran.r-project.org/web/packages/mlogit/",
     "github_url": "https://github.com/ycroissant/mlogit",
     "url": "https://cran.r-project.org/web/packages/mlogit/",
@@ -17305,7 +17305,7 @@
   {
     "name": "gmnl",
     "description": "R package for generalized multinomial logit models including G-MNL, LC-MNL, and MM-MNL for flexible preference heterogeneity.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "docs_url": "https://cran.r-project.org/web/packages/gmnl/",
     "github_url": "https://github.com/edsandorf/gmnl",
     "url": "https://cran.r-project.org/web/packages/gmnl/",
@@ -17356,7 +17356,7 @@
   {
     "name": "mixl",
     "description": "Fast maximum simulated likelihood estimation of mixed logit models in R. Optimized for speed with large datasets.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "docs_url": "https://cran.r-project.org/web/packages/mixl/",
     "github_url": "https://github.com/joemolloy/mixl",
     "url": "https://cran.r-project.org/web/packages/mixl/",
@@ -17408,7 +17408,7 @@
   {
     "name": "tidytransit",
     "description": "Read and analyze GTFS transit feeds in the tidyverse style. Integrates with sf for spatial analysis and dplyr for data manipulation.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "docs_url": "https://r-transit.github.io/tidytransit/",
     "github_url": "https://github.com/r-transit/tidytransit",
     "url": "https://r-transit.github.io/tidytransit/",
@@ -17463,7 +17463,7 @@
   {
     "name": "SUMO",
     "description": "Simulation of Urban Mobility - open source traffic simulation suite for modeling road networks, public transit, pedestrians, and multimodal scenarios.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "docs_url": "https://sumo.dlr.de/docs/",
     "github_url": "https://github.com/eclipse/sumo",
     "url": "https://eclipse.dev/sumo/",
@@ -17513,7 +17513,7 @@
   {
     "name": "OpenTripPlanner",
     "description": "Open source multimodal trip planning engine. Combines GTFS transit, OpenStreetMap streets, and bike-share for routing and isochrone analysis.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "docs_url": "https://docs.opentripplanner.org/",
     "github_url": "https://github.com/opentripplanner/OpenTripPlanner",
     "url": "https://www.opentripplanner.org/",
@@ -17562,6 +17562,645 @@
       "r5",
       "Valhalla",
       "OSRM"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "scikit-survival",
+    "description": "Survival analysis compatible with scikit-learn. Includes Cox proportional hazards, random survival forests, gradient boosting survival, and evaluation metrics (C-index, Brier score).",
+    "category": "Healthcare Economics & Health-Tech",
+    "docs_url": "https://scikit-survival.readthedocs.io/",
+    "github_url": "https://github.com/sebp/scikit-survival",
+    "url": "https://scikit-survival.readthedocs.io/",
+    "install": "pip install scikit-survival",
+    "tags": [
+      "survival analysis",
+      "machine learning",
+      "clinical prediction"
+    ],
+    "best_for": "ML-based survival analysis with scikit-learn integration",
+    "language": "Python",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "scikit-learn",
+      "numpy"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "survival-analysis",
+      "machine-learning"
+    ],
+    "summary": "scikit-survival brings machine learning to survival analysis with familiar scikit-learn API. Includes modern methods like random survival forests and gradient boosted survival models.",
+    "use_cases": [
+      "Clinical outcome prediction",
+      "Time-to-event modeling",
+      "Risk stratification"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "python survival analysis ML",
+      "scikit-learn survival",
+      "random survival forest python",
+      "gradient boosting survival"
+    ],
+    "primary_use_cases": [
+      "Survival analysis"
+    ],
+    "api_complexity": "intermediate",
+    "related_packages": [
+      "lifelines",
+      "survival",
+      "pycox"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "lifelines",
+    "description": "Pure Python survival analysis library. Kaplan-Meier estimation, Cox PH regression, parametric models (Weibull, log-normal), and time-varying covariates. Excellent documentation.",
+    "category": "Healthcare Economics & Health-Tech",
+    "docs_url": "https://lifelines.readthedocs.io/",
+    "github_url": "https://github.com/CamDavidsonPilon/lifelines",
+    "url": "https://lifelines.readthedocs.io/",
+    "install": "pip install lifelines",
+    "tags": [
+      "survival analysis",
+      "Kaplan-Meier",
+      "Cox regression"
+    ],
+    "best_for": "Classical survival analysis with intuitive API",
+    "language": "Python",
+    "difficulty": "beginner",
+    "prerequisites": [
+      "pandas",
+      "numpy"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "survival-analysis",
+      "statistics"
+    ],
+    "summary": "lifelines is the go-to Python package for classical survival analysis. Clean API, excellent documentation, and full implementation of standard methods from Kaplan-Meier to Cox regression.",
+    "use_cases": [
+      "Survival curve estimation",
+      "Hazard modeling",
+      "Clinical trial analysis"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "python Kaplan-Meier",
+      "Cox regression python",
+      "lifelines tutorial",
+      "survival analysis python"
+    ],
+    "primary_use_cases": [
+      "Survival analysis"
+    ],
+    "api_complexity": "beginner",
+    "related_packages": [
+      "scikit-survival",
+      "survival",
+      "statsmodels"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "CausalML",
+    "description": "Uber's package for uplift modeling and causal inference. Includes meta-learners (S, T, X, R), tree-based methods, and propensity score approaches. Focus on heterogeneous treatment effects.",
+    "category": "Healthcare Economics & Health-Tech",
+    "docs_url": "https://causalml.readthedocs.io/",
+    "github_url": "https://github.com/uber/causalml",
+    "url": "https://github.com/uber/causalml",
+    "install": "pip install causalml",
+    "tags": [
+      "causal inference",
+      "uplift modeling",
+      "treatment effects"
+    ],
+    "best_for": "Heterogeneous treatment effect estimation and uplift modeling",
+    "language": "Python",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "scikit-learn",
+      "causal inference basics"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "causal-inference",
+      "treatment-effects"
+    ],
+    "summary": "CausalML from Uber provides production-ready implementations of meta-learners and tree-based methods for estimating heterogeneous treatment effects. Strong for personalized medicine applications.",
+    "use_cases": [
+      "Treatment effect heterogeneity",
+      "Personalized medicine",
+      "Clinical trial subgroup analysis"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "uplift modeling python",
+      "heterogeneous treatment effects",
+      "CausalML tutorial",
+      "meta-learners python"
+    ],
+    "primary_use_cases": [
+      "Causal inference"
+    ],
+    "api_complexity": "intermediate",
+    "related_packages": [
+      "EconML",
+      "DoWhy",
+      "grf"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "EconML",
+    "description": "Microsoft's package for ML-based causal inference. Double ML, causal forests, instrumental variables, and dynamic treatment regimes. Strong theoretical foundations.",
+    "category": "Healthcare Economics & Health-Tech",
+    "docs_url": "https://econml.azurewebsites.net/",
+    "github_url": "https://github.com/py-why/EconML",
+    "url": "https://econml.azurewebsites.net/",
+    "install": "pip install econml",
+    "tags": [
+      "causal inference",
+      "double ML",
+      "causal forests"
+    ],
+    "best_for": "Rigorous ML-based causal inference with econometric foundations",
+    "language": "Python",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "econometrics",
+      "machine learning"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "causal-inference",
+      "econometrics"
+    ],
+    "summary": "EconML from Microsoft Research implements state-of-the-art methods combining machine learning with causal inference. Includes double/debiased ML, causal forests, and policy learning.",
+    "use_cases": [
+      "Policy evaluation",
+      "Causal effect estimation",
+      "Optimal treatment rules"
+    ],
+    "audience": [
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "double machine learning python",
+      "causal forests EconML",
+      "ML causal inference",
+      "treatment effect estimation"
+    ],
+    "primary_use_cases": [
+      "Causal inference"
+    ],
+    "api_complexity": "advanced",
+    "related_packages": [
+      "CausalML",
+      "DoWhy",
+      "grf"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "MONAI",
+    "description": "Medical Open Network for AI - PyTorch-based framework for deep learning in healthcare imaging. Domain-specific transforms, pre-built architectures (UNet, SegResNet), and MONAI Label for annotation.",
+    "category": "Healthcare Economics & Health-Tech",
+    "docs_url": "https://docs.monai.io/",
+    "github_url": "https://github.com/Project-MONAI/MONAI",
+    "url": "https://monai.io/",
+    "install": "pip install monai",
+    "tags": [
+      "medical imaging",
+      "deep learning",
+      "PyTorch",
+      "segmentation"
+    ],
+    "best_for": "Medical image analysis and deep learning in radiology",
+    "language": "Python",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "PyTorch",
+      "deep learning",
+      "medical imaging basics"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "medical-imaging",
+      "deep-learning"
+    ],
+    "summary": "MONAI is the leading open-source framework for healthcare AI imaging. Provides medical imaging-specific data transforms, network architectures, and training workflows built on PyTorch.",
+    "use_cases": [
+      "Medical image segmentation",
+      "Classification",
+      "Detection",
+      "Registration"
+    ],
+    "audience": [
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "medical imaging deep learning",
+      "MONAI tutorial",
+      "PyTorch medical AI",
+      "radiology AI python"
+    ],
+    "primary_use_cases": [
+      "Medical imaging"
+    ],
+    "api_complexity": "advanced",
+    "related_packages": [
+      "SimpleITK",
+      "nibabel",
+      "TorchIO"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "fhirclient",
+    "description": "Official SMART on FHIR Python client. OAuth 2.0 authentication, resource CRUD operations, and search. Essential for building apps that connect to EHR systems.",
+    "category": "Healthcare Economics & Health-Tech",
+    "docs_url": "https://github.com/smart-on-fhir/client-py",
+    "github_url": "https://github.com/smart-on-fhir/client-py",
+    "url": "https://github.com/smart-on-fhir/client-py",
+    "install": "pip install fhirclient",
+    "tags": [
+      "FHIR",
+      "interoperability",
+      "EHR",
+      "API"
+    ],
+    "best_for": "Building SMART on FHIR applications that connect to EHRs",
+    "language": "Python",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "REST APIs",
+      "OAuth basics"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "fhir",
+      "interoperability"
+    ],
+    "summary": "fhirclient is the official Python client for SMART on FHIR, enabling Python applications to authenticate with and access EHR data through standardized FHIR APIs.",
+    "use_cases": [
+      "EHR integration",
+      "Clinical app development",
+      "Patient data access"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "FHIR python client",
+      "SMART on FHIR",
+      "EHR API python",
+      "healthcare interoperability"
+    ],
+    "primary_use_cases": [
+      "Healthcare interoperability"
+    ],
+    "api_complexity": "intermediate",
+    "related_packages": [
+      "fhir.resources",
+      "fhir-py"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "hesim",
+    "description": "R package for health economic simulation modeling. Cohort discrete-time state transition models, partitioned survival analysis, and probabilistic sensitivity analysis with parallelization.",
+    "category": "Healthcare Economics & Health-Tech",
+    "docs_url": "https://hesim-dev.github.io/hesim/",
+    "github_url": "https://github.com/hesim-dev/hesim",
+    "url": "https://hesim-dev.github.io/hesim/",
+    "install": "install.packages('hesim')",
+    "tags": [
+      "health economics",
+      "simulation",
+      "cost-effectiveness",
+      "R"
+    ],
+    "best_for": "Health economic decision modeling and cost-effectiveness analysis",
+    "language": "R",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "health economics",
+      "R programming"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "health-economics",
+      "simulation"
+    ],
+    "summary": "hesim is a modern R package for health economic simulation with excellent performance through C++ backend. Supports state transition models, PSA, and value of information analysis.",
+    "use_cases": [
+      "Cost-effectiveness models",
+      "HTA submissions",
+      "Decision modeling"
+    ],
+    "audience": [
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "health economics R package",
+      "cost-effectiveness modeling R",
+      "hesim tutorial",
+      "Markov model health economics"
+    ],
+    "primary_use_cases": [
+      "Health economic modeling"
+    ],
+    "api_complexity": "advanced",
+    "related_packages": [
+      "heemod",
+      "BCEA",
+      "dampack"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "heemod",
+    "description": "Markov models for cost-effectiveness analysis in R. Define states, transitions, and costs/utilities with intuitive syntax. Includes DSA, PSA, and scenario analysis.",
+    "category": "Healthcare Economics & Health-Tech",
+    "docs_url": "https://pierucci.org/heemod/",
+    "github_url": "https://github.com/pierucci/heemod",
+    "url": "https://pierucci.org/heemod/",
+    "install": "install.packages('heemod')",
+    "tags": [
+      "health economics",
+      "Markov models",
+      "cost-effectiveness",
+      "R"
+    ],
+    "best_for": "Building Markov cost-effectiveness models with clean syntax",
+    "language": "R",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "health economics basics",
+      "R basics"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "health-economics",
+      "markov-models"
+    ],
+    "summary": "heemod provides an accessible framework for Markov cost-effectiveness models in R. Clean syntax for defining health states, transition probabilities, and economic outcomes.",
+    "use_cases": [
+      "Markov CEA models",
+      "Chronic disease modeling",
+      "Treatment comparison"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "Markov model R",
+      "heemod tutorial",
+      "cost-effectiveness R package",
+      "health state transition model"
+    ],
+    "primary_use_cases": [
+      "Cost-effectiveness analysis"
+    ],
+    "api_complexity": "intermediate",
+    "related_packages": [
+      "hesim",
+      "BCEA",
+      "dampack"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "survHE",
+    "description": "Survival analysis for health economics in R. Fits multiple parametric distributions, extrapolates survival curves, and integrates with cost-effectiveness models.",
+    "category": "Healthcare Economics & Health-Tech",
+    "docs_url": "https://cran.r-project.org/web/packages/survHE/",
+    "github_url": "https://github.com/giabaio/survHE",
+    "url": "https://cran.r-project.org/web/packages/survHE/",
+    "install": "install.packages('survHE')",
+    "tags": [
+      "survival analysis",
+      "health economics",
+      "extrapolation",
+      "R"
+    ],
+    "best_for": "Survival extrapolation for health technology assessment",
+    "language": "R",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "survival analysis",
+      "health economics"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "survival-analysis",
+      "hta"
+    ],
+    "summary": "survHE addresses survival analysis needs specific to HTA: fitting multiple distributions, model selection, extrapolation beyond trial data, and integration with economic models.",
+    "use_cases": [
+      "Survival extrapolation",
+      "Model selection",
+      "HTA submissions"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "survival extrapolation R",
+      "survHE tutorial",
+      "HTA survival analysis",
+      "parametric survival health economics"
+    ],
+    "primary_use_cases": [
+      "Survival analysis for HTA"
+    ],
+    "api_complexity": "intermediate",
+    "related_packages": [
+      "flexsurv",
+      "survival",
+      "hesim"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "BCEA",
+    "description": "Bayesian Cost-Effectiveness Analysis in R. Processes MCMC output from JAGS/Stan, generates CEACs, CEAFs, and expected value of information calculations.",
+    "category": "Healthcare Economics & Health-Tech",
+    "docs_url": "https://cran.r-project.org/web/packages/BCEA/",
+    "github_url": "https://github.com/giabaio/BCEA",
+    "url": "https://cran.r-project.org/web/packages/BCEA/",
+    "install": "install.packages('BCEA')",
+    "tags": [
+      "Bayesian",
+      "cost-effectiveness",
+      "VOI",
+      "R"
+    ],
+    "best_for": "Bayesian cost-effectiveness analysis and value of information",
+    "language": "R",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "Bayesian statistics",
+      "health economics"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "bayesian",
+      "cost-effectiveness"
+    ],
+    "summary": "BCEA is the standard R package for Bayesian cost-effectiveness analysis. Generates publication-quality CEACs, performs EVPI/EVPPI calculations, and integrates with JAGS/Stan.",
+    "use_cases": [
+      "Bayesian CEA",
+      "Value of information",
+      "Decision uncertainty"
+    ],
+    "audience": [
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "Bayesian cost-effectiveness R",
+      "BCEA tutorial",
+      "EVPI calculation R",
+      "CEAC R package"
+    ],
+    "primary_use_cases": [
+      "Bayesian CEA"
+    ],
+    "api_complexity": "advanced",
+    "related_packages": [
+      "hesim",
+      "heemod",
+      "rjags"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "survival",
+    "description": "Core survival analysis package in R. Kaplan-Meier, Cox regression, parametric models, and diagnostic tools. Foundation for most R survival packages.",
+    "category": "Healthcare Economics & Health-Tech",
+    "docs_url": "https://cran.r-project.org/web/packages/survival/",
+    "github_url": "https://github.com/therneau/survival",
+    "url": "https://cran.r-project.org/web/packages/survival/",
+    "install": "install.packages('survival')",
+    "tags": [
+      "survival analysis",
+      "Cox regression",
+      "Kaplan-Meier",
+      "R"
+    ],
+    "best_for": "Core survival analysis in R",
+    "language": "R",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "R basics",
+      "statistics"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "survival-analysis",
+      "statistics"
+    ],
+    "summary": "The survival package by Terry Therneau is the foundation of survival analysis in R. Implements all standard methods and serves as the backbone for specialized packages.",
+    "use_cases": [
+      "Survival curve estimation",
+      "Cox regression",
+      "Time-to-event analysis"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "R survival analysis",
+      "Cox regression R",
+      "Kaplan-Meier R",
+      "survival package tutorial"
+    ],
+    "primary_use_cases": [
+      "Survival analysis"
+    ],
+    "api_complexity": "intermediate",
+    "related_packages": [
+      "survminer",
+      "flexsurv",
+      "survHE"
+    ],
+    "maintenance_status": "active"
+  },
+  {
+    "name": "mstate",
+    "description": "Multi-state models in R. Handles competing risks, illness-death models, and complex disease progressions. Estimation, prediction, and visualization.",
+    "category": "Healthcare Economics & Health-Tech",
+    "docs_url": "https://cran.r-project.org/web/packages/mstate/",
+    "github_url": "https://github.com/hputter/mstate",
+    "url": "https://cran.r-project.org/web/packages/mstate/",
+    "install": "install.packages('mstate')",
+    "tags": [
+      "multi-state models",
+      "competing risks",
+      "survival",
+      "R"
+    ],
+    "best_for": "Multi-state and competing risks survival models",
+    "language": "R",
+    "difficulty": "advanced",
+    "prerequisites": [
+      "survival analysis",
+      "R"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "multi-state-models",
+      "survival-analysis"
+    ],
+    "summary": "mstate provides tools for fitting and visualizing multi-state models including competing risks and illness-death models. Essential for complex disease progression modeling.",
+    "use_cases": [
+      "Competing risks",
+      "Disease progression",
+      "Multi-state CEA"
+    ],
+    "audience": [
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "multi-state model R",
+      "competing risks R",
+      "mstate tutorial",
+      "illness-death model"
+    ],
+    "primary_use_cases": [
+      "Multi-state modeling"
+    ],
+    "api_complexity": "advanced",
+    "related_packages": [
+      "survival",
+      "flexsurv",
+      "msm"
     ],
     "maintenance_status": "active"
   }

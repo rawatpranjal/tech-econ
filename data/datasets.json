@@ -10462,7 +10462,13 @@
     "url": "https://www.seanlahman.com/baseball-archive/statistics/",
     "docs_url": "https://www.seanlahman.com/baseball-archive/statistics/",
     "github_url": "https://github.com/chadwickbureau/baseballdatabank",
-    "tags": ["baseball", "historical", "MLB", "player-statistics", "sabermetrics"],
+    "tags": [
+      "baseball",
+      "historical",
+      "MLB",
+      "player-statistics",
+      "sabermetrics"
+    ],
     "best_for": "Learning baseball analytics, historical trend analysis, and player valuation"
   },
   {
@@ -10472,7 +10478,13 @@
     "url": "https://www.retrosheet.org/",
     "docs_url": "https://www.retrosheet.org/datause.htm",
     "github_url": null,
-    "tags": ["baseball", "play-by-play", "MLB", "game-logs", "historical"],
+    "tags": [
+      "baseball",
+      "play-by-play",
+      "MLB",
+      "game-logs",
+      "historical"
+    ],
     "best_for": "Granular game analysis, situational statistics, and historical baseball research"
   },
   {
@@ -10482,7 +10494,13 @@
     "url": "https://baseballsavant.mlb.com/",
     "docs_url": "https://baseballsavant.mlb.com/csv-docs",
     "github_url": null,
-    "tags": ["baseball", "tracking-data", "MLB", "pitch-tracking", "batted-ball"],
+    "tags": [
+      "baseball",
+      "tracking-data",
+      "MLB",
+      "pitch-tracking",
+      "batted-ball"
+    ],
     "best_for": "Modern baseball analytics, player evaluation, and biomechanical analysis"
   },
   {
@@ -10492,7 +10510,13 @@
     "url": "https://www.nba.com/stats/",
     "docs_url": "https://github.com/swar/nba_api/blob/master/docs/table_of_contents.md",
     "github_url": null,
-    "tags": ["basketball", "NBA", "shot-charts", "tracking-data", "play-by-play"],
+    "tags": [
+      "basketball",
+      "NBA",
+      "shot-charts",
+      "tracking-data",
+      "play-by-play"
+    ],
     "best_for": "Basketball analytics, shot analysis, and player performance evaluation"
   },
   {
@@ -10502,7 +10526,13 @@
     "url": "https://github.com/statsbomb/open-data",
     "docs_url": "https://github.com/statsbomb/open-data/tree/master/doc",
     "github_url": "https://github.com/statsbomb/open-data",
-    "tags": ["soccer", "football", "event-data", "xG", "tracking-data"],
+    "tags": [
+      "soccer",
+      "football",
+      "event-data",
+      "xG",
+      "tracking-data"
+    ],
     "best_for": "Soccer analytics, expected goals modeling, and tactical analysis"
   },
   {
@@ -10512,7 +10542,13 @@
     "url": "https://github.com/nflverse/nflverse-data",
     "docs_url": "https://nflreadr.nflverse.com/",
     "github_url": "https://github.com/nflverse/nflverse-data",
-    "tags": ["football", "NFL", "play-by-play", "EPA", "win-probability"],
+    "tags": [
+      "football",
+      "NFL",
+      "play-by-play",
+      "EPA",
+      "win-probability"
+    ],
     "best_for": "NFL analytics, expected points analysis, and game strategy optimization"
   },
   {
@@ -10522,7 +10558,13 @@
     "url": "https://api-web.nhle.com/",
     "docs_url": null,
     "github_url": null,
-    "tags": ["hockey", "NHL", "play-by-play", "shot-locations", "player-stats"],
+    "tags": [
+      "hockey",
+      "NHL",
+      "play-by-play",
+      "shot-locations",
+      "player-stats"
+    ],
     "best_for": "Hockey analytics, expected goals modeling, and player evaluation"
   },
   {
@@ -10532,7 +10574,13 @@
     "url": "https://github.com/JeffSackmann/tennis_atp",
     "docs_url": null,
     "github_url": "https://github.com/JeffSackmann/tennis_atp",
-    "tags": ["tennis", "ATP", "WTA", "match-results", "point-by-point"],
+    "tags": [
+      "tennis",
+      "ATP",
+      "WTA",
+      "match-results",
+      "point-by-point"
+    ],
     "best_for": "Tennis analytics, player performance analysis, and tournament prediction"
   },
   {
@@ -10542,7 +10590,13 @@
     "url": "https://meps.ahrq.gov/mepsweb/",
     "docs_url": "https://meps.ahrq.gov/mepsweb/data_stats/download_data_files.jsp",
     "github_url": null,
-    "tags": ["health-insurance", "healthcare-costs", "expenditure-data", "survey-data", "panel-data"],
+    "tags": [
+      "health-insurance",
+      "healthcare-costs",
+      "expenditure-data",
+      "survey-data",
+      "panel-data"
+    ],
     "best_for": "Health insurance research, healthcare cost modeling, and demand analysis"
   },
   {
@@ -10552,7 +10606,13 @@
     "url": "https://data.cms.gov/",
     "docs_url": "https://www.cms.gov/Research-Statistics-Data-and-Systems/Research-Statistics-Data-and-Systems",
     "github_url": null,
-    "tags": ["medicare", "medicaid", "claims-data", "healthcare", "government-programs"],
+    "tags": [
+      "medicare",
+      "medicaid",
+      "claims-data",
+      "healthcare",
+      "government-programs"
+    ],
     "best_for": "Healthcare policy research, reimbursement modeling, and population health analysis"
   },
   {
@@ -10562,7 +10622,13 @@
     "url": "https://hcup-us.ahrq.gov/",
     "docs_url": "https://hcup-us.ahrq.gov/databases.jsp",
     "github_url": null,
-    "tags": ["hospital-data", "inpatient", "emergency", "healthcare-utilization", "cost-data"],
+    "tags": [
+      "hospital-data",
+      "inpatient",
+      "emergency",
+      "healthcare-utilization",
+      "cost-data"
+    ],
     "best_for": "Hospital cost analysis, readmission prediction, and healthcare ML applications"
   },
   {
@@ -10572,7 +10638,13 @@
     "url": "https://cran.r-project.org/package=CASdatasets",
     "docs_url": "https://freakonometrics.github.io/CASdatasets/",
     "github_url": null,
-    "tags": ["motor-insurance", "claims-frequency", "pricing", "benchmark", "actuarial"],
+    "tags": [
+      "motor-insurance",
+      "claims-frequency",
+      "pricing",
+      "benchmark",
+      "actuarial"
+    ],
     "best_for": "Insurance pricing models, GLM vs ML comparisons, and actuarial research"
   },
   {
@@ -10582,7 +10654,13 @@
     "url": "https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars",
     "docs_url": "https://crashstats.nhtsa.dot.gov/",
     "github_url": null,
-    "tags": ["traffic-safety", "auto-insurance", "crash-data", "fatality-data", "vehicle-safety"],
+    "tags": [
+      "traffic-safety",
+      "auto-insurance",
+      "crash-data",
+      "fatality-data",
+      "vehicle-safety"
+    ],
     "best_for": "Auto insurance risk modeling, safety analysis, and claims severity research"
   },
   {
@@ -10592,7 +10670,13 @@
     "url": "https://www.fema.gov/openfema-data-page/fima-nfip-redacted-claims-v2",
     "docs_url": "https://www.fema.gov/about/openfema/data-sets",
     "github_url": null,
-    "tags": ["flood-insurance", "catastrophe", "claims-data", "natural-disasters", "property-insurance"],
+    "tags": [
+      "flood-insurance",
+      "catastrophe",
+      "claims-data",
+      "natural-disasters",
+      "property-insurance"
+    ],
     "best_for": "Catastrophe modeling, flood risk analysis, and climate-related insurance research"
   },
   {
@@ -10602,7 +10686,13 @@
     "url": "https://www.ncdc.noaa.gov/stormevents/",
     "docs_url": "https://www.ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/",
     "github_url": null,
-    "tags": ["weather-data", "catastrophe", "natural-disasters", "property-damage", "climate"],
+    "tags": [
+      "weather-data",
+      "catastrophe",
+      "natural-disasters",
+      "property-damage",
+      "climate"
+    ],
     "best_for": "Catastrophe modeling, climate risk assessment, and property insurance pricing"
   },
   {
@@ -10612,7 +10702,13 @@
     "url": "https://www.emdat.be/",
     "docs_url": "https://doc.emdat.be/",
     "github_url": null,
-    "tags": ["disasters", "catastrophe", "global-data", "economic-losses", "humanitarian"],
+    "tags": [
+      "disasters",
+      "catastrophe",
+      "global-data",
+      "economic-losses",
+      "humanitarian"
+    ],
     "best_for": "Global catastrophe analysis, reinsurance pricing, and disaster trend research"
   },
   {
@@ -10622,7 +10718,13 @@
     "url": "https://www.mortality.org/",
     "docs_url": "https://www.mortality.org/Data/DataAvailability",
     "github_url": null,
-    "tags": ["mortality", "life-insurance", "demographics", "life-tables", "longevity"],
+    "tags": [
+      "mortality",
+      "life-insurance",
+      "demographics",
+      "life-tables",
+      "longevity"
+    ],
     "best_for": "Life insurance pricing, longevity research, and demographic modeling"
   },
   {
@@ -10632,7 +10734,13 @@
     "url": "https://mort.soa.org/",
     "docs_url": "https://www.soa.org/resources/experience-studies/",
     "github_url": null,
-    "tags": ["mortality-tables", "life-insurance", "actuarial", "experience-studies", "annuities"],
+    "tags": [
+      "mortality-tables",
+      "life-insurance",
+      "actuarial",
+      "experience-studies",
+      "annuities"
+    ],
     "best_for": "Life insurance product development, reserving, and mortality assumption setting"
   },
   {
@@ -10642,7 +10750,13 @@
     "url": "https://www.kaggle.com/c/axa-driver-telematics-analysis",
     "docs_url": null,
     "github_url": null,
-    "tags": ["telematics", "UBI", "driving-behavior", "auto-insurance", "GPS-data"],
+    "tags": [
+      "telematics",
+      "UBI",
+      "driving-behavior",
+      "auto-insurance",
+      "GPS-data"
+    ],
     "best_for": "Usage-based insurance pricing, driver risk scoring, and behavior analysis"
   },
   {
@@ -10652,107 +10766,630 @@
     "url": "https://cran.r-project.org/package=CASdatasets",
     "docs_url": "https://freakonometrics.github.io/CASdatasets/",
     "github_url": "https://github.com/freakonometrics/CASdatasets",
-    "tags": ["actuarial", "P&C-insurance", "loss-triangles", "claims-data", "teaching-datasets"],
+    "tags": [
+      "actuarial",
+      "P&C-insurance",
+      "loss-triangles",
+      "claims-data",
+      "teaching-datasets"
+    ],
     "best_for": "Learning actuarial methods, pricing model development, and reserving exercises"
   },
   {
     "name": "National Household Travel Survey (NHTS)",
     "description": "Comprehensive US travel behavior data since 1969 capturing daily non-commercial travel by all modes. The authoritative source on American travel patterns.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "url": "https://nhts.ornl.gov/",
     "docs_url": "https://nhts.ornl.gov/documentation",
     "github_url": null,
-    "tags": ["travel-behavior", "survey", "mode-choice", "demographics", "commuting"],
+    "tags": [
+      "travel-behavior",
+      "survey",
+      "mode-choice",
+      "demographics",
+      "commuting"
+    ],
     "best_for": "Understanding travel demand patterns, mode choice analysis, and transportation planning"
   },
   {
     "name": "NYC TLC Trip Records",
     "description": "Complete trip-level data for all NYC taxi and for-hire vehicle trips including Uber and Lyft. Billions of records since 2009 with pickups, dropoffs, fares, and tips.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "url": "https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page",
     "docs_url": "https://www.nyc.gov/assets/tlc/downloads/pdf/data_dictionary_trip_records.pdf",
     "github_url": null,
-    "tags": ["taxi", "rideshare", "NYC", "trip-data", "surge-pricing"],
+    "tags": [
+      "taxi",
+      "rideshare",
+      "NYC",
+      "trip-data",
+      "surge-pricing"
+    ],
     "best_for": "Ridesharing analysis, surge pricing research, and urban mobility patterns"
   },
   {
     "name": "Transitland GTFS Feeds",
     "description": "Aggregated GTFS data from 2,500+ transit agencies across 55+ countries. The largest open transit data aggregator with REST and GraphQL APIs.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "url": "https://www.transit.land/",
     "docs_url": "https://www.transit.land/documentation",
     "github_url": "https://github.com/transitland",
-    "tags": ["transit", "GTFS", "schedules", "public-transportation", "global"],
+    "tags": [
+      "transit",
+      "GTFS",
+      "schedules",
+      "public-transportation",
+      "global"
+    ],
     "best_for": "Transit network analysis, accessibility research, and cross-city comparisons"
   },
   {
     "name": "MobilityData GTFS Catalog",
     "description": "Curated directory of 1,327+ GTFS feeds from transit agencies globally with quality metrics, update frequency, and standardized metadata.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "url": "https://database.mobilitydata.org/",
     "docs_url": "https://mobilitydata.org/",
     "github_url": null,
-    "tags": ["transit", "GTFS", "open-data", "schedules", "catalog"],
+    "tags": [
+      "transit",
+      "GTFS",
+      "open-data",
+      "schedules",
+      "catalog"
+    ],
     "best_for": "Finding and comparing transit data quality across cities and agencies"
   },
   {
     "name": "Chicago Rideshare Data",
     "description": "Trip-level data for all Transportation Network Provider (Uber/Lyft) trips in Chicago since 2018. Includes ~57 million trips annually with origins, destinations, and fares.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "url": "https://data.cityofchicago.org/Transportation/Transportation-Network-Providers-Trips/m6dm-c72p",
     "docs_url": null,
     "github_url": null,
-    "tags": ["rideshare", "Chicago", "trip-data", "urban-mobility", "Uber", "Lyft"],
+    "tags": [
+      "rideshare",
+      "Chicago",
+      "trip-data",
+      "urban-mobility",
+      "Uber",
+      "Lyft"
+    ],
     "best_for": "Ridesharing market analysis, platform competition, and urban transportation research"
   },
   {
     "name": "DB1B Airline Origin and Destination Survey",
     "description": "10% random sample of all US airline tickets with origin, destination, fare, and itinerary details. Quarterly since 1993. The gold standard for airline pricing research.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "url": "https://www.transtats.bts.gov/DatabaseInfo.asp?QO_VQ=EFI",
     "docs_url": "https://www.transtats.bts.gov/Fields.asp?gnoession_VQ=FHK",
     "github_url": null,
-    "tags": ["airlines", "fares", "routes", "BTS", "pricing"],
+    "tags": [
+      "airlines",
+      "fares",
+      "routes",
+      "BTS",
+      "pricing"
+    ],
     "best_for": "Airline pricing research, competition analysis, and route economics"
   },
   {
     "name": "National Transit Database (NTD)",
     "description": "Definitive source for US transit statistics since 2002. Ridership, operating expenses, capital expenses, safety incidents for all federally-funded transit agencies.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "url": "https://www.transit.dot.gov/ntd",
     "docs_url": "https://www.transit.dot.gov/ntd/ntd-data",
     "github_url": null,
-    "tags": ["transit", "ridership", "financials", "safety", "US"],
+    "tags": [
+      "transit",
+      "ridership",
+      "financials",
+      "safety",
+      "US"
+    ],
     "best_for": "Transit system performance analysis, cost benchmarking, and ridership trends"
   },
   {
     "name": "FHWA Highway Statistics",
     "description": "Annual data on US highway system including vehicle miles traveled, fuel consumption, road infrastructure, and highway financing since 1945.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "url": "https://www.fhwa.dot.gov/policyinformation/statistics.cfm",
     "docs_url": null,
     "github_url": null,
-    "tags": ["highways", "VMT", "infrastructure", "federal", "fuel"],
+    "tags": [
+      "highways",
+      "VMT",
+      "infrastructure",
+      "federal",
+      "fuel"
+    ],
     "best_for": "Aggregate transportation trends, infrastructure analysis, and policy research"
   },
   {
     "name": "OpenStreetMap Road Network",
     "description": "Open-source global road network data including road types, speeds, and connectivity. Downloadable via Overpass API or pre-processed extracts.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "url": "https://www.openstreetmap.org/",
     "docs_url": "https://wiki.openstreetmap.org/wiki/Main_Page",
     "github_url": "https://github.com/openstreetmap",
-    "tags": ["road-network", "open-data", "global", "GIS", "routing"],
+    "tags": [
+      "road-network",
+      "open-data",
+      "global",
+      "GIS",
+      "routing"
+    ],
     "best_for": "Road network analysis, routing, accessibility studies, and urban form research"
   },
   {
     "name": "Citi Bike System Data",
     "description": "Trip-level records for NYC's bike-share system since 2013. ~2 million trips monthly in peak season with station-level origin-destination and duration data.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "url": "https://citibikenyc.com/system-data",
     "docs_url": null,
     "github_url": null,
-    "tags": ["bike-share", "NYC", "micromobility", "trip-data", "cycling"],
+    "tags": [
+      "bike-share",
+      "NYC",
+      "micromobility",
+      "trip-data",
+      "cycling"
+    ],
     "best_for": "Bike-share demand analysis, first/last mile research, and micromobility studies"
+  },
+  {
+    "name": "MIMIC-IV",
+    "description": "Gold standard for freely accessible critical care EHR data from MIT/Beth Israel. Contains 364,627 unique patients, 546,028 hospitalizations, and 94,458 ICU stays (2008-2022). Includes demographics, vitals, labs, medications, procedures, and clinical notes.",
+    "category": "Healthcare Economics & Health-Tech",
+    "url": "https://mimic.mit.edu/",
+    "source": "MIT Laboratory for Computational Physiology",
+    "type": "EHR Database",
+    "access": "Free (PhysioNet credentialing required)",
+    "format": "PostgreSQL/CSV",
+    "tags": [
+      "Healthcare",
+      "EHR",
+      "ICU",
+      "Clinical",
+      "Free"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "SQL",
+      "clinical terminology"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "ehr",
+      "clinical-data"
+    ],
+    "summary": "MIMIC-IV is the most widely used freely available clinical database for healthcare AI and outcomes research. Requires CITI training and PhysioNet credentialing but is free to access.",
+    "use_cases": [
+      "Clinical prediction models",
+      "Mortality prediction",
+      "Sepsis detection",
+      "Treatment effect estimation"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "free clinical data",
+      "MIMIC database",
+      "ICU EHR data",
+      "healthcare ML dataset"
+    ],
+    "update_frequency": "Periodic releases",
+    "geographic_coverage": "Boston, MA (single hospital)"
+  },
+  {
+    "name": "Medicare Claims (ResDAC)",
+    "description": "Comprehensive claims data covering 98%+ of adults 65+ in the United States. Includes inpatient, outpatient, physician, and prescription drug claims. Research Identifiable Files require 6-12 month DUA approval.",
+    "category": "Healthcare Economics & Health-Tech",
+    "url": "https://resdac.org/",
+    "source": "CMS via Research Data Assistance Center",
+    "type": "Claims Database",
+    "access": "Fee-based (DUA required)",
+    "format": "SAS/CSV",
+    "tags": [
+      "Healthcare",
+      "Claims",
+      "Medicare",
+      "Administrative"
+    ],
+    "difficulty": "advanced",
+    "prerequisites": [
+      "claims data experience",
+      "DUA process"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "medicare",
+      "claims"
+    ],
+    "summary": "Medicare claims are the richest U.S. administrative healthcare data. Public Use Files are free; Research Identifiable Files require multi-month approval and fees ranging from hundreds to $10,000+ annually.",
+    "use_cases": [
+      "Health services research",
+      "Policy evaluation",
+      "Provider analysis",
+      "Drug utilization studies"
+    ],
+    "audience": [
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "Medicare claims data",
+      "ResDAC data access",
+      "CMS research files",
+      "Medicare utilization data"
+    ],
+    "update_frequency": "Annual",
+    "geographic_coverage": "United States (national)"
+  },
+  {
+    "name": "Merative MarketScan",
+    "description": "De-identified commercial claims from 273+ million unique patients since 1995. Includes Commercial Claims, Medicare Supplemental, and Multi-State Medicaid databases. Cited in 2,650+ peer-reviewed studies.",
+    "category": "Healthcare Economics & Health-Tech",
+    "url": "https://www.merative.com/real-world-evidence",
+    "source": "Merative (formerly IBM Watson Health)",
+    "type": "Claims Database",
+    "access": "Institutional license required",
+    "format": "SAS",
+    "tags": [
+      "Healthcare",
+      "Claims",
+      "Commercial",
+      "Longitudinal"
+    ],
+    "difficulty": "advanced",
+    "prerequisites": [
+      "claims data experience"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "commercial-insurance",
+      "claims"
+    ],
+    "summary": "MarketScan is the most widely used commercial claims database in health economics research. Requires institutional licensing but provides longitudinal tracking of insured populations.",
+    "use_cases": [
+      "Drug effectiveness studies",
+      "Cost analyses",
+      "Treatment patterns",
+      "Real-world evidence"
+    ],
+    "audience": [
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "commercial claims data",
+      "MarketScan database",
+      "employer insurance data",
+      "private insurance claims"
+    ],
+    "update_frequency": "Quarterly",
+    "geographic_coverage": "United States (employer-insured)"
+  },
+  {
+    "name": "Medical Expenditure Panel Survey (MEPS)",
+    "description": "Definitive U.S. data on healthcare expenditures, utilization, and insurance coverage. Surveys ~15,000 households annually with detailed spending by payer and service type. Free public use files.",
+    "category": "Healthcare Economics & Health-Tech",
+    "url": "https://meps.ahrq.gov/mepsweb/",
+    "source": "Agency for Healthcare Research and Quality (AHRQ)",
+    "type": "Survey",
+    "access": "Free public use files",
+    "format": "SAS/Stata/CSV",
+    "tags": [
+      "Healthcare",
+      "Expenditures",
+      "Survey",
+      "Free"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "survey data analysis"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "expenditures",
+      "insurance"
+    ],
+    "summary": "MEPS is the gold standard for U.S. healthcare spending research. Links to NHIS and provides nationally representative expenditure estimates with detailed service and payer breakdowns.",
+    "use_cases": [
+      "Healthcare spending analysis",
+      "Insurance coverage research",
+      "Access disparities",
+      "Cost burden studies"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "healthcare spending data",
+      "MEPS data",
+      "medical expenditure survey",
+      "healthcare costs data"
+    ],
+    "update_frequency": "Annual",
+    "geographic_coverage": "United States (national)"
+  },
+  {
+    "name": "National Health Interview Survey (NHIS)",
+    "description": "CDC's flagship health survey covering ~35,000 households annually since 1957. Monitors health status, healthcare access, and health behaviors. Free public use files with extensive documentation.",
+    "category": "Healthcare Economics & Health-Tech",
+    "url": "https://www.cdc.gov/nchs/nhis/",
+    "source": "CDC National Center for Health Statistics",
+    "type": "Survey",
+    "access": "Free public use files",
+    "format": "SAS/Stata/CSV",
+    "tags": [
+      "Healthcare",
+      "Survey",
+      "Health Status",
+      "Free"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "survey data basics"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "health-status",
+      "access"
+    ],
+    "summary": "NHIS is the principal source for tracking U.S. health status and healthcare access. Redesigned in 2019 with improved measurement of disability, functioning, and social determinants.",
+    "use_cases": [
+      "Health trends analysis",
+      "Access disparities",
+      "Health behavior research",
+      "Policy monitoring"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "national health survey",
+      "NHIS data",
+      "health interview survey",
+      "population health data"
+    ],
+    "update_frequency": "Annual",
+    "geographic_coverage": "United States (national)"
+  },
+  {
+    "name": "Behavioral Risk Factor Surveillance System (BRFSS)",
+    "description": "World's largest ongoing health survey with 400,000+ adults annually across all states. Covers chronic conditions, risk behaviors, and preventive health. State-level estimates available.",
+    "category": "Healthcare Economics & Health-Tech",
+    "url": "https://www.cdc.gov/brfss/",
+    "source": "CDC",
+    "type": "Survey",
+    "access": "Free public use files",
+    "format": "SAS/ASCII",
+    "tags": [
+      "Healthcare",
+      "Survey",
+      "Behavioral",
+      "State-level",
+      "Free"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [
+      "survey data basics"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "behavioral-health",
+      "chronic-disease"
+    ],
+    "summary": "BRFSS enables state and local health surveillance with consistent methodology since 1984. Essential for geographic variation studies and state-level policy evaluation.",
+    "use_cases": [
+      "State health comparisons",
+      "Chronic disease surveillance",
+      "Health behavior tracking",
+      "Policy evaluation"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "state health data",
+      "BRFSS survey",
+      "behavioral risk factors",
+      "chronic disease data"
+    ],
+    "update_frequency": "Annual",
+    "geographic_coverage": "United States (state-level)"
+  },
+  {
+    "name": "NHANES (National Health and Nutrition Examination Survey)",
+    "description": "Unique combination of interviews and physical examinations including blood/urine samples. Covers nutrition, chronic diseases, and environmental exposures. ~5,000 participants annually.",
+    "category": "Healthcare Economics & Health-Tech",
+    "url": "https://www.cdc.gov/nchs/nhanes/",
+    "source": "CDC National Center for Health Statistics",
+    "type": "Survey + Biomarkers",
+    "access": "Free public use files",
+    "format": "SAS/XPT",
+    "tags": [
+      "Healthcare",
+      "Survey",
+      "Biomarkers",
+      "Nutrition",
+      "Free"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "biomarker data",
+      "survey methods"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "biomarkers",
+      "nutrition"
+    ],
+    "summary": "NHANES uniquely combines survey data with clinical measurements and biomarkers. Essential for research on undiagnosed conditions, environmental exposures, and nutrition.",
+    "use_cases": [
+      "Biomarker research",
+      "Undiagnosed disease prevalence",
+      "Nutrition studies",
+      "Environmental health"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "NHANES data",
+      "health examination survey",
+      "biomarker data",
+      "nutrition survey"
+    ],
+    "update_frequency": "Biennial cycles",
+    "geographic_coverage": "United States (national)"
+  },
+  {
+    "name": "UK Biobank",
+    "description": "Prospective cohort of 500,000 UK participants aged 40-69 with genetic data, imaging, and longitudinal health records. Extensive phenotyping including MRI, accelerometry, and linked hospital records.",
+    "category": "Healthcare Economics & Health-Tech",
+    "url": "https://www.ukbiobank.ac.uk/",
+    "source": "UK Biobank",
+    "type": "Cohort + Biobank",
+    "access": "Application required (fees apply)",
+    "format": "Various",
+    "tags": [
+      "Healthcare",
+      "Genomics",
+      "Imaging",
+      "Longitudinal"
+    ],
+    "difficulty": "advanced",
+    "prerequisites": [
+      "genomics basics",
+      "large-scale data"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "genomics",
+      "precision-medicine"
+    ],
+    "summary": "UK Biobank is the world's most comprehensive population biobank linking genetics, imaging, and health outcomes. Essential for genomic medicine and precision health research.",
+    "use_cases": [
+      "Genetic association studies",
+      "Imaging-genetics",
+      "Disease prediction",
+      "Drug target identification"
+    ],
+    "audience": [
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "UK Biobank data",
+      "genetic cohort data",
+      "population biobank",
+      "imaging genetics dataset"
+    ],
+    "update_frequency": "Ongoing linkage",
+    "geographic_coverage": "United Kingdom"
+  },
+  {
+    "name": "All of Us Research Program",
+    "description": "NIH precision medicine initiative enrolling 1+ million diverse U.S. participants. Includes EHR, surveys, wearables, and genomics. Cloud-based Researcher Workbench provides secure access.",
+    "category": "Healthcare Economics & Health-Tech",
+    "url": "https://allofus.nih.gov/",
+    "source": "NIH",
+    "type": "Cohort + Multi-modal",
+    "access": "Free (registration required)",
+    "format": "Cloud-based (BigQuery)",
+    "tags": [
+      "Healthcare",
+      "Precision Medicine",
+      "Diverse",
+      "Wearables",
+      "Free"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "cloud computing basics"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "precision-medicine",
+      "diversity"
+    ],
+    "summary": "All of Us prioritizes diversity with 50%+ participants from underrepresented groups. Combines genomics, EHR, wearables, and surveys in a cloud research environment.",
+    "use_cases": [
+      "Health disparities research",
+      "Precision medicine",
+      "Wearables research",
+      "Diverse population studies"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "All of Us data",
+      "NIH precision medicine",
+      "diverse health cohort",
+      "wearables health data"
+    ],
+    "update_frequency": "Ongoing enrollment",
+    "geographic_coverage": "United States (national)"
+  },
+  {
+    "name": "FDA Adverse Event Reporting System (FAERS)",
+    "description": "Database of 21+ million adverse event reports for drugs and therapeutic biologics. Free API access through openFDA. Supports pharmacovigilance and drug safety research.",
+    "category": "Healthcare Economics & Health-Tech",
+    "url": "https://open.fda.gov/data/faers/",
+    "source": "FDA",
+    "type": "Adverse Event Database",
+    "access": "Free (API available)",
+    "format": "JSON API/Downloads",
+    "tags": [
+      "Healthcare",
+      "Drug Safety",
+      "Pharmacovigilance",
+      "Free",
+      "API"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "API basics",
+      "drug terminology"
+    ],
+    "topic_tags": [
+      "healthcare",
+      "drug-safety",
+      "pharmacovigilance"
+    ],
+    "summary": "FAERS is essential for drug safety research and signal detection. OpenFDA provides modern API access with standardized drug and reaction coding.",
+    "use_cases": [
+      "Drug safety signals",
+      "Adverse event analysis",
+      "Pharmacovigilance",
+      "Drug-drug interactions"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "FDA adverse events",
+      "FAERS database",
+      "drug safety data",
+      "pharmacovigilance data"
+    ],
+    "update_frequency": "Quarterly",
+    "geographic_coverage": "United States (primarily)"
   }
 ]

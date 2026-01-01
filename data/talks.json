@@ -10310,7 +10310,7 @@
   {
     "name": "Daniel McFadden Nobel Prize Lecture: Economic Choices",
     "description": "2000 Nobel Lecture on discrete choice theory and its origins in transportation research. McFadden explains how analyzing BART ridership led to foundational econometric methods now used across economics.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "url": "https://www.nobelprize.org/prizes/economic-sciences/2000/mcfadden/lecture/",
     "type": "Lecture",
     "tags": [
@@ -10359,7 +10359,7 @@
   {
     "name": "Susan Shaheen: Shared Mobility and the Transformation of Transportation",
     "description": "UC Berkeley ITS director discusses how carsharing, bikesharing, and ridehailing are reshaping urban mobility. Covers research on adoption patterns, environmental impacts, and policy implications.",
-    "category": "Transportation Economics & Analytics",
+    "category": "Transportation Economics & Technology",
     "url": "https://www.youtube.com/watch?v=8FBbPsXEFos",
     "type": "Talk",
     "tags": [
@@ -10402,6 +10402,103 @@
       "Shared mobility reduces vehicle ownership",
       "Regulatory frameworks lag innovation",
       "Environmental benefits depend on mode substitution"
+    ]
+  },
+  {
+    "name": "Ziad Obermeyer: Dissecting Racial Bias in Healthcare Algorithms",
+    "description": "Obermeyer presents the landmark Science 2019 paper exposing racial bias in a widely-used algorithm affecting 200 million patients. Essential viewing for anyone working on healthcare AI.",
+    "category": "Healthcare Economics & Health-Tech",
+    "url": "https://www.youtube.com/watch?v=ukXqEQu_qx4",
+    "type": "Talk",
+    "tags": [
+      "Healthcare AI",
+      "Algorithmic Bias",
+      "Fairness",
+      "SOTA"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "healthcare-ai",
+      "algorithmic-bias",
+      "fairness"
+    ],
+    "summary": "Obermeyer explains how using healthcare costs as a proxy for health needs led to significant racial bias in risk prediction. The algorithm required Black patients to be considerably sicker to receive the same risk scores as White patients.",
+    "use_cases": [
+      "Understanding AI bias",
+      "Healthcare AI ethics",
+      "Algorithm design lessons"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "Obermeyer algorithmic bias",
+      "healthcare AI bias talk",
+      "racial bias algorithm",
+      "Science 2019 healthcare"
+    ],
+    "speaker_expertise": [
+      "Healthcare AI",
+      "Algorithmic Fairness",
+      "Health Policy"
+    ],
+    "key_insights": [
+      "Cost-based predictions can embed disparities",
+      "Outcome variable selection matters critically",
+      "Bias can affect 200+ million patients"
+    ]
+  },
+  {
+    "name": "Amy Finkelstein: The Oregon Health Insurance Experiment",
+    "description": "Finkelstein presents findings from the Oregon Health Insurance Experiment - the only modern randomized evaluation of Medicaid. Covers methodology, results, and policy implications.",
+    "category": "Healthcare Economics & Health-Tech",
+    "url": "https://www.youtube.com/watch?v=WBaEfXVeEYU",
+    "type": "Talk",
+    "tags": [
+      "Health Economics",
+      "RCT",
+      "Medicaid",
+      "Policy"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "basic economics"
+    ],
+    "topic_tags": [
+      "health-economics",
+      "medicaid",
+      "policy-evaluation"
+    ],
+    "summary": "Amy Finkelstein, MacArthur Fellow and Clark Medal winner, explains how Oregon's 2008 Medicaid lottery created a unique natural experiment. Results showed increased utilization and reduced financial strain but no significant measured physical health improvements.",
+    "use_cases": [
+      "Understanding health insurance effects",
+      "RCT methodology",
+      "Policy evaluation"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "PhD"
+    ],
+    "synthetic_questions": [
+      "Oregon experiment talk",
+      "Finkelstein Medicaid",
+      "health insurance RCT",
+      "Oregon health study results"
+    ],
+    "speaker_expertise": [
+      "Health Economics",
+      "Insurance",
+      "Randomized Experiments"
+    ],
+    "key_insights": [
+      "Medicaid increases utilization",
+      "Financial protection effects are strong",
+      "Physical health improvements harder to detect"
     ]
   }
 ]
