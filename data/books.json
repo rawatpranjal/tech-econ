@@ -1830,37 +1830,34 @@
       "Congestion"
     ],
     "difficulty": "advanced",
-    "prerequisites": [
-      "microeconomics",
-      "calculus"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "transportation",
       "urban-economics",
-      "congestion-pricing",
-      "mode-choice"
+      "transportation-economics"
     ],
-    "summary": "The third edition of this classic textbook provides comprehensive coverage of urban transportation economics, from basic demand theory to advanced congestion models, environmental externalities, and policy evaluation.",
+    "summary": "This textbook provides a comprehensive understanding of urban transportation economics, focusing on key concepts such as congestion pricing and policy evaluation. It is designed for graduate students and professionals in the field of transportation economics.",
     "use_cases": [
-      "Graduate coursework",
-      "Transportation policy analysis",
-      "Research reference"
+      "for graduate studies in transportation economics",
+      "for understanding urban transportation policies"
     ],
     "audience": [
-      "Senior-DS",
-      "PhD"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "transportation economics textbook",
-      "congestion pricing theory",
-      "urban transportation economics book",
-      "Kenneth Small transportation"
+      "What is congestion pricing?",
+      "How does land use interact with transportation?",
+      "What are the economic models used in urban transportation?",
+      "What policies can be evaluated in urban transportation?",
+      "How does mode choice affect urban transportation?",
+      "What are the key concepts in urban transportation economics?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "understanding transport demand",
-      "modeling congestion",
-      "evaluating transport policies"
+      "understanding of urban transportation economics",
+      "ability to evaluate transportation policies",
+      "knowledge of economic modeling in transportation"
     ]
   },
   {
@@ -1878,39 +1875,36 @@
       "Econometrics",
       "Classic"
     ],
-    "difficulty": "advanced",
-    "prerequisites": [
-      "probability",
-      "statistics",
-      "econometrics"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
+      "econometrics",
       "transportation",
-      "discrete-choice",
-      "demand-modeling",
-      "econometrics"
+      "choice modeling"
     ],
-    "summary": "This classic text developed the theoretical foundations of discrete choice modeling for travel demand. Covers random utility theory, logit/probit models, nested structures, and estimation methods that remain the basis of transport planning.",
+    "summary": "This book provides a comprehensive introduction to discrete choice modeling and its applications in transportation demand forecasting. It is suitable for those interested in understanding the theoretical foundations and practical applications of these models.",
     "use_cases": [
-      "Learning discrete choice theory",
-      "Travel demand modeling",
-      "Academic research"
+      "When to apply discrete choice modeling in transportation studies"
     ],
     "audience": [
-      "Senior-DS",
-      "PhD"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "discrete choice theory book",
-      "Ben-Akiva Lerman",
-      "random utility model book",
-      "travel demand modeling textbook"
+      "What is discrete choice analysis?",
+      "How does the random utility framework work?",
+      "What are the applications of discrete choice modeling in transportation?",
+      "What are the key concepts in transportation economics?",
+      "How can discrete choice models inform demand forecasting?",
+      "What are the foundational texts on econometrics?",
+      "What skills do I need to understand discrete choice analysis?",
+      "What are the classic texts in transportation economics?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "random utility theory",
-      "logit model derivation",
-      "nested choice structures"
+      "Understanding discrete choice models",
+      "Applying econometric techniques to transportation demand"
     ]
   },
   {
@@ -1929,38 +1923,36 @@
       "Free"
     ],
     "difficulty": "intermediate",
-    "prerequisites": [
-      "probability",
-      "basic econometrics"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "transportation",
-      "discrete-choice",
-      "simulation",
-      "mixed-logit"
+      "transportation-economics",
+      "statistics"
     ],
-    "summary": "Kenneth Train's accessible guide to simulated discrete choice methods covers mixed logit, probit simulation, and Bayesian techniques. The second edition is freely available online, making it the go-to resource for researchers.",
+    "summary": "This resource provides an essential guide to modern discrete choice methods including mixed logit, probit simulation, and Bayesian approaches. It is suitable for those looking to deepen their understanding of discrete choice modeling techniques.",
     "use_cases": [
-      "Learning mixed logit",
-      "Simulation-based estimation",
-      "Applied choice modeling"
+      "When to apply discrete choice methods in research",
+      "Understanding consumer choice behavior"
     ],
     "audience": [
-      "Mid-DS",
-      "Senior-DS",
-      "PhD"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "Kenneth Train discrete choice",
-      "mixed logit textbook",
-      "free choice modeling book",
-      "simulation based estimation book"
+      "What are discrete choice methods?",
+      "How to implement mixed logit models?",
+      "What is probit simulation?",
+      "What are Bayesian approaches in discrete choice?",
+      "Where can I find free PDFs on discrete choice methods?",
+      "What are the applications of discrete choice methods in transportation?",
+      "How to analyze choice data?",
+      "What resources are available for learning discrete choice modeling?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "simulation methods",
-      "mixed logit estimation",
-      "Bayesian choice models"
+      "Understanding discrete choice models",
+      "Applying mixed logit and probit methods",
+      "Utilizing Bayesian approaches in analysis"
     ]
   },
   {
@@ -1978,38 +1970,36 @@
       "Policy",
       "Textbook"
     ],
-    "difficulty": "beginner",
-    "prerequisites": [
-      "basic economics"
-    ],
+    "difficulty": "beginner|intermediate",
+    "prerequisites": [],
     "topic_tags": [
       "transportation",
       "economics",
-      "policy",
-      "regulation"
+      "policy"
     ],
-    "summary": "Kenneth Button's widely-used textbook provides accessible introduction to transport economics across all modes. Covers market structure, pricing, externalities, regulation, and policy for roads, rail, aviation, and shipping.",
+    "summary": "This textbook provides a comprehensive overview of transport economics, covering various modes of transport with accessible economic analysis and policy discussions. It is designed for undergraduate and MBA students interested in understanding the economic aspects of transportation.",
     "use_cases": [
-      "Undergraduate courses",
-      "MBA programs",
-      "Policy overview"
+      "Understanding transport economics for academic purposes",
+      "Developing transport policy",
+      "Analyzing economic impacts of transportation projects"
     ],
     "audience": [
       "Junior-DS",
-      "Mid-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "transport economics textbook",
-      "introduction to transportation economics",
-      "Kenneth Button book",
-      "multimodal transport economics"
+      "What are the economic impacts of different transport modes?",
+      "How does transport policy affect economic growth?",
+      "What are the key concepts in transport economics?",
+      "How can I apply economic analysis to transportation issues?",
+      "What are the challenges in transport policy?",
+      "What is the role of government in transportation economics?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "transport market basics",
-      "pricing and costs",
-      "regulatory frameworks"
+      "Understanding transport modes",
+      "Analyzing transport policies",
+      "Applying economic principles to transportation"
     ]
   },
   {
@@ -2028,37 +2018,38 @@
       "Graduate"
     ],
     "difficulty": "advanced",
-    "prerequisites": [
-      "microeconomics",
-      "calculus"
-    ],
+    "prerequisites": [],
     "topic_tags": [
       "urban-economics",
       "transportation",
-      "land-use",
-      "spatial"
+      "land-use"
     ],
-    "summary": "Jan Brueckner's graduate textbook develops the monocentric city model and its extensions, connecting transportation costs to land use patterns, housing markets, and urban spatial structure.",
+    "summary": "This resource provides a comprehensive understanding of urban economics and its connection to transportation. It is designed for graduate students and professionals interested in the intricate relationships between land use, housing markets, and transport infrastructure.",
     "use_cases": [
-      "Graduate urban economics",
-      "Land use-transport research",
-      "Academic reference"
+      "Understanding urban economic principles",
+      "Analyzing transportation impacts on cities",
+      "Researching land use policies"
     ],
     "audience": [
-      "Senior-DS",
-      "PhD"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "urban economics textbook",
-      "monocentric city model book",
-      "land use transportation book",
-      "Jan Brueckner"
+      "What are the key models in urban economics?",
+      "How does transportation affect urban spatial structure?",
+      "What is the relationship between land use and housing markets?",
+      "What are the implications of transport infrastructure on urban development?",
+      "How can urban economics inform public policy?",
+      "What are the challenges in urban transportation planning?",
+      "What are the latest trends in urban economics research?",
+      "How do different cities approach urban economics?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "monocentric model",
-      "land rent gradients",
-      "urban spatial equilibrium"
+      "Understanding urban economic models",
+      "Analyzing transportation systems",
+      "Evaluating land use policies"
     ]
   },
   {
@@ -2076,36 +2067,36 @@
       "Electric Vehicles",
       "Future"
     ],
-    "difficulty": "beginner",
+    "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "transportation",
-      "autonomous-vehicles",
-      "shared-mobility",
-      "electric-vehicles"
+      "Transportation Economics",
+      "Autonomous Vehicles",
+      "Shared Mobility",
+      "Electric Vehicles"
     ],
-    "summary": "Daniel Sperling examines how the convergence of autonomous vehicles, shared mobility, and electrification could reshape transportation and cities\u2014for better or worse depending on policy choices.",
+    "summary": "This resource provides a forward-looking analysis of how autonomous vehicles, shared mobility, and electrification will transform transportation. It is aimed at individuals interested in the future of transportation technology and its economic implications.",
     "use_cases": [
-      "Understanding mobility futures",
-      "Policy thinking",
-      "Industry trends"
+      "Understanding the future of transportation technology",
+      "Analyzing the economic impact of new mobility solutions"
     ],
     "audience": [
-      "Junior-DS",
-      "Mid-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "autonomous vehicles future book",
-      "shared mobility book",
-      "Daniel Sperling",
-      "transportation disruption"
+      "What are the impacts of autonomous vehicles on transportation?",
+      "How will shared mobility change urban planning?",
+      "What role do electric vehicles play in sustainable transport?",
+      "What are the economic implications of electrification in transportation?",
+      "Who is the founder of UC Davis ITS?",
+      "What are the three revolutions in transportation?",
+      "How can we steer automated vehicles towards a better future?",
+      "What trends are shaping the future of transportation?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "understanding AV technology",
-      "shared mobility models",
-      "policy scenarios"
+      "Understanding of transportation economics",
+      "Knowledge of emerging transportation technologies"
     ]
   },
   {
@@ -2122,38 +2113,37 @@
       "Textbook",
       "Theory"
     ],
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "microeconomics"
-    ],
+    "difficulty": "advanced",
+    "prerequisites": [],
     "topic_tags": [
       "health-economics",
       "insurance",
-      "healthcare-markets"
+      "ACA"
     ],
-    "summary": "Phelps' Health Economics is the leading theory-focused textbook. Covers demand for health and healthcare, insurance markets, provider behavior, and policy analysis with rigorous economic modeling.",
+    "summary": "This textbook provides a rigorous theoretical foundation in health economics, focusing on key concepts such as uncertainty and information asymmetry. It is ideal for advanced learners and professionals seeking a deep understanding of health economics.",
     "use_cases": [
-      "Graduate coursework",
-      "Health economics foundations",
-      "Policy analysis training"
+      "when studying health economics",
+      "for advanced coursework in health policy",
+      "to understand the implications of the ACA"
     ],
     "audience": [
-      "Mid-DS",
-      "Senior-DS",
-      "PhD"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "health economics textbook",
-      "Phelps health economics",
-      "graduate health economics",
-      "healthcare markets textbook"
+      "What is health economics?",
+      "How does uncertainty affect health economics?",
+      "What are the key theories in health economics?",
+      "How does the ACA impact health economics?",
+      "What is information asymmetry in healthcare?",
+      "What are the applications of health economics in policy making?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "health demand theory",
-      "insurance economics",
-      "provider behavior",
-      "policy analysis"
+      "theoretical understanding of health economics",
+      "analysis of health policies",
+      "application of economic theories to healthcare"
     ]
   },
   {
@@ -2171,37 +2161,36 @@
       "Comprehensive"
     ],
     "difficulty": "intermediate",
-    "prerequisites": [
-      "basic economics"
-    ],
+    "prerequisites": [],
     "topic_tags": [
       "health-economics",
-      "healthcare-policy",
-      "disparities"
+      "health-disparities",
+      "pandemic-economics"
     ],
-    "summary": "Folland et al. is the most widely adopted health economics textbook, balancing theory with real-world applications. The 9th edition adds critical coverage of health disparities and COVID-19 economics.",
+    "summary": "This textbook provides a comprehensive overview of health economics, focusing on both theoretical and empirical aspects. It is suitable for students and professionals seeking to understand the economic factors influencing health care and public health.",
     "use_cases": [
-      "Undergraduate/graduate courses",
-      "Broad health economics foundation",
-      "Policy context"
+      "understanding health care policies",
+      "analyzing economic impacts of health disparities",
+      "studying pandemic responses in health economics"
     ],
     "audience": [
+      "Early-PhD",
       "Junior-DS",
-      "Mid-DS",
-      "Senior-DS"
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "health economics textbook undergraduate",
-      "Folland health economics",
-      "comprehensive health economics book",
-      "healthcare economics introduction"
+      "What are the key concepts in health economics?",
+      "How do health disparities affect economic outcomes?",
+      "What is the impact of pandemics on health care economics?",
+      "What theoretical frameworks are used in health economics?",
+      "How can empirical data inform health policy?",
+      "What are the latest trends in health care economics?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "healthcare markets basics",
-      "insurance economics",
-      "provider markets",
-      "health policy"
+      "understanding health care economics",
+      "analyzing health disparities",
+      "applying economic theory to health care"
     ]
   },
   {
@@ -2220,35 +2209,35 @@
       "Handbook"
     ],
     "difficulty": "advanced",
-    "prerequisites": [
-      "graduate economics"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "health-economics",
-      "research-reference",
-      "academic"
+      "health-economics"
     ],
-    "summary": "The Handbook of Health Economics provides definitive survey chapters on all major topics from leading researchers. Essential reference for PhD students and researchers requiring comprehensive field coverage.",
+    "summary": "The Handbook of Health Economics provides a comprehensive overview of major topics in health economics, making it an essential reference for researchers and graduate-level students in the field.",
     "use_cases": [
-      "PhD reading lists",
-      "Research reference",
-      "Comprehensive field coverage"
+      "reference for health economics research",
+      "graduate-level study",
+      "understanding health policy implications"
     ],
     "audience": [
-      "Senior-DS",
-      "PhD"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "health economics handbook",
-      "graduate health economics reference",
-      "Newhouse health economics",
-      "comprehensive health econ review"
+      "What are the key topics covered in health economics?",
+      "How does health insurance impact demand and supply?",
+      "What policies are discussed in health economics?",
+      "What are the authoritative chapters in the Handbook of Health Economics?",
+      "Who should use the Handbook of Health Economics?",
+      "What is the structure of the Handbook of Health Economics?",
+      "How can this handbook assist in health policy research?",
+      "What are the essential references in health economics?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "field overview",
-      "research frontiers",
-      "methodology"
+      "understanding of health economics principles",
+      "knowledge of health policy and insurance mechanisms"
     ]
   },
   {
@@ -2265,30 +2254,26 @@
       "Digital Health",
       "Vision"
     ],
-    "difficulty": "beginner",
+    "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "healthcare-ai",
-      "digital-health",
-      "future-of-medicine"
+      "healthcare",
+      "artificial-intelligence",
+      "deep-learning"
     ],
-    "summary": "Eric Topol's Deep Medicine, endorsed by Andrew Ng, Fei-Fei Li, and Kai-Fu Lee, provides an accessible yet rigorous vision for AI in medicine. Covers applications from imaging to clinical decision support.",
-    "use_cases": [
-      "Understanding healthcare AI landscape",
-      "Strategic vision",
-      "Industry context"
-    ],
+    "summary": "This book explores how AI can enhance the human aspect of healthcare by allowing physicians to focus on meaningful connections with patients. It is aimed at healthcare professionals and those interested in the intersection of technology and medicine.",
+    "use_cases": [],
     "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "Eric Topol book",
-      "AI healthcare book",
-      "deep medicine book",
-      "future of medical AI"
+      "How can AI improve healthcare?",
+      "What are the applications of deep learning in medicine?",
+      "How does AI impact physician-patient relationships?",
+      "What insights does the most-cited researcher in medicine provide?",
+      "What is the vision for AI in healthcare?",
+      "How can digital health transform patient care?",
+      "What are the challenges of implementing AI in healthcare?"
     ],
     "content_format": "book",
     "skill_progression": [
@@ -2312,37 +2297,38 @@
       "Free",
       "Methodological"
     ],
-    "difficulty": "advanced",
-    "prerequisites": [
-      "statistics",
-      "epidemiology basics"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
       "causal-inference",
-      "epidemiology",
-      "methodology"
+      "epidemiology"
     ],
-    "summary": "Hern\u00e1n and Robins' Causal Inference is the definitive textbook for causal reasoning in health. Covers DAGs, potential outcomes, time-varying confounding, and modern methods. Free PDF from Harvard.",
+    "summary": "This textbook provides a comprehensive understanding of causal inference in health sciences, focusing on potential outcomes and confounding factors. It is suitable for graduate students and professionals in the field of healthcare economics and health technology.",
     "use_cases": [
-      "PhD methodology training",
-      "Causal inference foundations",
-      "Research methods"
+      "Understanding causal relationships in health studies",
+      "Analyzing epidemiological data",
+      "Designing health interventions"
     ],
     "audience": [
-      "Senior-DS",
-      "PhD"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "causal inference textbook",
-      "Hernan Robins book",
-      "free causal inference book",
-      "epidemiology methods book"
+      "What is causal inference?",
+      "How to address confounding in health studies?",
+      "What are DAGs in epidemiology?",
+      "How to analyze selection bias?",
+      "What are potential outcomes?",
+      "How to handle complex longitudinal data?",
+      "Where can I find free resources on causal inference?",
+      "What are the key methodologies in health economics?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "causal graphs",
-      "confounding control",
-      "time-varying methods"
+      "Understanding of causal inference concepts",
+      "Ability to identify and address confounding",
+      "Skills in analyzing longitudinal data"
     ]
   },
   {
@@ -2360,35 +2346,33 @@
       "Reference"
     ],
     "difficulty": "intermediate",
-    "prerequisites": [
-      "data science basics"
-    ],
+    "prerequisites": [],
     "topic_tags": [
       "healthcare-analytics",
-      "data-science",
-      "applied-ml"
+      "data-science"
     ],
-    "summary": "Healthcare Data Analytics provides comprehensive coverage of methods for analyzing healthcare data including EHRs, claims, genomics, and imaging. Essential reference for applied healthcare data scientists.",
+    "summary": "This resource provides a comprehensive overview of healthcare data sources and advanced analytical methods, making it suitable for those interested in applying data science in healthcare settings. It is ideal for professionals and students looking to enhance their understanding of healthcare analytics.",
     "use_cases": [
-      "Healthcare data science training",
-      "Method selection",
-      "Applied reference"
+      "When to apply advanced analytical methods in healthcare",
+      "Understanding healthcare data sources for research"
     ],
     "audience": [
+      "Junior-DS",
       "Mid-DS",
       "Senior-DS"
     ],
     "synthetic_questions": [
-      "healthcare data analytics book",
-      "medical data science book",
-      "clinical analytics reference",
-      "healthcare ML book"
+      "What are the key healthcare data sources?",
+      "How can advanced analytical methods be applied in healthcare?",
+      "What are the applications of healthcare data analytics?",
+      "How does healthcare data analytics help in clinical prediction?",
+      "What methods are used for fraud detection in healthcare?",
+      "What skills are needed for healthcare data analytics?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "healthcare data types",
-      "analytical methods",
-      "applications"
+      "Understanding healthcare data sources",
+      "Applying analytical methods in healthcare"
     ]
   },
   {
@@ -2407,37 +2391,35 @@
       "Essential"
     ],
     "difficulty": "intermediate",
-    "prerequisites": [
-      "economics basics"
-    ],
+    "prerequisites": [],
     "topic_tags": [
       "energy",
-      "electricity-markets",
-      "market-design"
+      "market design",
+      "electricity"
     ],
-    "summary": "Stoft's book is the essential reference for understanding electricity market design. 496 pages covering everything from basic market concepts to LMP derivation and capacity market theory.",
+    "summary": "This book provides a comprehensive overview of electricity market design, focusing on market architecture and reliability. It is intended for engineers, economists, and regulators involved in the energy sector.",
     "use_cases": [
-      "Market design understanding",
-      "Regulatory context",
-      "Industry fundamentals"
+      "Understanding electricity market structures",
+      "Designing efficient energy markets"
     ],
     "audience": [
-      "Mid-DS",
-      "Senior-DS",
-      "PhD"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "electricity market design book",
-      "Stoft power systems",
-      "LMP book",
-      "wholesale electricity markets"
+      "What is electricity market design?",
+      "How does market architecture affect reliability?",
+      "What are day-ahead and real-time markets?",
+      "What is LMP in electricity markets?",
+      "How to analyze market power in energy?",
+      "What are the essential concepts in energy economics?",
+      "Who should read Power System Economics?",
+      "What topics are covered in Power System Economics?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "market basics",
-      "reliability",
-      "pricing mechanisms",
-      "market power"
+      "Understanding of electricity markets",
+      "Knowledge of market design principles",
+      "Ability to analyze market reliability"
     ]
   },
   {
@@ -2455,38 +2437,37 @@
       "Power Systems",
       "Textbook"
     ],
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "power systems basics"
-    ],
+    "difficulty": "beginner",
+    "prerequisites": [],
     "topic_tags": [
-      "energy",
-      "power-systems",
-      "economics"
+      "economics",
+      "power systems"
     ],
-    "summary": "Kirschen and Strbac's textbook is ideal for engineers learning electricity economics. The 2nd edition adds substantial coverage of renewable integration and storage economics.",
+    "summary": "This resource bridges engineering and economics for power systems, covering essential topics like microeconomics, market organization, ancillary services, and renewable integration. It is designed for individuals with no prior economics knowledge.",
     "use_cases": [
-      "Engineering-to-economics transition",
-      "Graduate coursework",
-      "Self-study"
+      "Understanding the economic principles behind power systems",
+      "Learning about market organization in energy",
+      "Exploring renewable energy integration"
     ],
     "audience": [
-      "Mid-DS",
-      "Senior-DS",
-      "PhD"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "power system economics textbook",
-      "Kirschen Strbac",
-      "electricity economics for engineers",
-      "power markets book"
+      "What are the fundamentals of power system economics?",
+      "How does microeconomics apply to power systems?",
+      "What is market organization in the context of energy?",
+      "What are ancillary services in power systems?",
+      "How can renewable integration be achieved in power systems?",
+      "What knowledge is required to understand power system economics?",
+      "What topics are covered in a textbook on power system economics?",
+      "Who should read 'Fundamentals of Power System Economics'?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "microeconomics basics",
-      "market structures",
-      "pricing",
-      "ancillary services"
+      "Understanding of microeconomics",
+      "Knowledge of market organization",
+      "Insights into ancillary services",
+      "Familiarity with renewable energy integration"
     ]
   },
   {
@@ -2505,38 +2486,34 @@
       "Textbook"
     ],
     "difficulty": "intermediate",
-    "prerequisites": [
-      "economics basics"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "energy",
-      "oil-gas",
-      "electricity",
-      "coal"
+      "energy-markets",
+      "economics",
+      "institutional-context"
     ],
-    "summary": "Carol Dahl's comprehensive textbook covers all major energy commodities with emphasis on market structure, pricing, and policy. Essential for understanding cross-commodity energy economics.",
+    "summary": "This textbook provides a comprehensive understanding of oil, coal, natural gas, and electricity markets, along with practical models. It is suitable for students and professionals interested in energy economics.",
     "use_cases": [
-      "Comprehensive energy education",
-      "Multi-commodity analysis",
-      "Policy context"
+      "Understanding energy market dynamics",
+      "Applying economic models to energy resources"
     ],
     "audience": [
-      "Mid-DS",
-      "Senior-DS",
-      "PhD"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "energy markets textbook",
-      "Carol Dahl book",
-      "oil gas electricity markets",
-      "energy economics comprehensive"
+      "What are the key components of international energy markets?",
+      "How do practical models apply to energy economics?",
+      "What institutional contexts influence energy markets?",
+      "What are the differences between oil, coal, natural gas, and electricity markets?",
+      "What are the latest trends in energy market economics?",
+      "How can I apply economic theories to real-world energy markets?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "commodity basics",
-      "pricing mechanisms",
-      "market structures",
-      "policy analysis"
+      "Understanding of energy markets",
+      "Application of economic models in energy contexts"
     ]
   },
   {
@@ -2554,36 +2531,34 @@
       "Innovation",
       "History"
     ],
-    "difficulty": "beginner",
+    "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "energy",
-      "solar",
-      "innovation",
-      "learning-curves"
+      "energy-economics",
+      "clean-energy",
+      "innovation"
     ],
-    "summary": "Nemet's book tells the remarkable story of how solar went from space-program curiosity to the cheapest source of electricity. Essential for understanding clean energy technology dynamics.",
+    "summary": "This resource explores the significant decline in solar energy costs and the factors driving this change. It is essential for those interested in understanding the dynamics of clean energy innovation.",
     "use_cases": [
-      "Innovation policy",
-      "Technology forecasting",
-      "Historical context"
+      "Understanding the economics of solar energy",
+      "Researching clean energy innovations"
     ],
     "audience": [
-      "Junior-DS",
-      "Mid-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "solar cost decline book",
-      "Nemet solar",
-      "renewable energy innovation",
-      "how solar got cheap"
+      "What are the key factors behind the decline in solar energy costs?",
+      "How do technology learning curves apply to solar energy?",
+      "What policies have influenced the solar market?",
+      "What technological advancements have contributed to cheaper solar energy?",
+      "How does solar energy innovation impact the economy?",
+      "What historical events shaped the solar energy industry?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "technology history",
-      "learning curves",
-      "policy impacts"
+      "Understanding energy economics",
+      "Analyzing market dynamics",
+      "Evaluating technological innovations"
     ]
   },
   {
@@ -2601,31 +2576,23 @@
       "Classic",
       "Foundational"
     ],
-    "difficulty": "advanced",
-    "prerequisites": [
-      "economics",
-      "power systems"
-    ],
-    "topic_tags": [
-      "energy",
-      "pricing",
-      "market-design"
-    ],
-    "summary": "Schweppe et al.'s 1988 book laid the intellectual foundation for nodal pricing and real-time electricity markets. Essential historical reference for understanding modern market design origins.",
-    "use_cases": [
-      "Historical context",
-      "Market design foundations",
-      "Academic reference"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This book introduces the concept of real-time pricing in electricity markets and discusses its foundational influence on modern wholesale electricity market designs. It is suitable for those interested in energy economics and market structures.",
+    "use_cases": [],
     "audience": [
-      "Senior-DS",
-      "PhD"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "spot pricing electricity book",
-      "Schweppe electricity",
-      "real-time pricing origins",
-      "nodal pricing history"
+      "What is spot pricing of electricity?",
+      "How does real-time pricing influence electricity markets?",
+      "What are LMP-based markets?",
+      "What foundational works exist in energy economics?",
+      "How has spot pricing evolved over time?",
+      "What are the implications of real-time pricing for consumers?",
+      "How do modern wholesale electricity markets operate?",
+      "What are the benefits of LMP-based market designs?"
     ],
     "content_format": "book",
     "skill_progression": [
@@ -2649,33 +2616,36 @@
       "pricing",
       "regulation"
     ],
-    "difficulty": "advanced",
-    "prerequisites": [
-      "microeconomics",
-      "basic-calculus"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "energy-utilities-economics"
+      "electricity markets",
+      "market design",
+      "pricing",
+      "regulation"
     ],
-    "summary": "The definitive text on electricity market economics. Stoft explains market design principles, locational marginal pricing, capacity markets, and market power issues. Essential reading for anyone working on electricity market design or analysis.",
+    "summary": "This foundational text covers electricity market design, pricing theory, and market power in restructured power markets. It is intended for students and professionals interested in energy economics.",
     "use_cases": [
-      "Understanding electricity market design",
-      "Market power analysis",
-      "Pricing mechanism design"
+      "when studying electricity market design",
+      "for understanding pricing in energy markets"
     ],
     "audience": [
-      "Senior-DS",
-      "Researcher",
-      "Practitioner"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "Stoft power economics",
-      "electricity market design book",
-      "LMP textbook"
+      "What is electricity market design?",
+      "How does pricing theory apply to power markets?",
+      "What are the implications of market power in restructured power markets?",
+      "What are the key concepts in energy economics?",
+      "How do regulations affect electricity markets?",
+      "What foundational knowledge is needed for understanding power system economics?"
     ],
-    "content_format": "academic-textbook",
+    "content_format": "book",
     "skill_progression": [
-      "Beginner to Advanced"
+      "understanding of electricity market dynamics",
+      "knowledge of pricing strategies in energy markets"
     ]
   },
   {
@@ -2694,32 +2664,33 @@
       "textbook"
     ],
     "difficulty": "intermediate",
-    "prerequisites": [
-      "basic-economics",
-      "basic-engineering"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "energy-utilities-economics"
+      "electricity markets",
+      "power systems",
+      "economics"
     ],
-    "summary": "Accessible introduction to power system economics covering both engineering and economic perspectives. The second edition includes expanded coverage of renewable integration and storage.",
+    "summary": "This textbook provides a comprehensive overview of electricity market economics, covering both fundamental concepts and advanced market design. It is suitable for students and professionals interested in understanding the economic principles governing power systems.",
     "use_cases": [
-      "Learning electricity market fundamentals",
-      "Teaching power economics",
-      "Industry training"
+      "to understand the economic principles of electricity markets",
+      "to learn about market design in power systems"
     ],
     "audience": [
-      "Mid-DS",
-      "Senior-DS",
-      "Practitioner"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Kirschen Strbac power economics",
-      "power system economics textbook",
-      "electricity markets textbook"
+      "What are the basic concepts of electricity market economics?",
+      "How do advanced market designs impact power systems?",
+      "What is the role of economics in electricity markets?",
+      "What are the key principles of power system economics?",
+      "How can I apply economic theories to electricity markets?",
+      "What are the latest trends in electricity market design?"
     ],
-    "content_format": "academic-textbook",
+    "content_format": "book",
     "skill_progression": [
-      "Beginner to Intermediate"
+      "understanding electricity market dynamics",
+      "analyzing power system economics",
+      "designing market structures"
     ]
   },
   {
@@ -2738,29 +2709,24 @@
       "international"
     ],
     "difficulty": "intermediate",
-    "prerequisites": [
-      "basic-economics"
-    ],
-    "topic_tags": [
-      "energy-utilities-economics"
-    ],
-    "summary": "Broad coverage of global energy markets including oil, natural gas, coal, and electricity. Dahl provides institutional context, market structure analysis, and policy discussion for all major energy commodities.",
-    "use_cases": [
-      "Understanding global energy markets",
-      "Energy policy analysis",
-      "Commodity market research"
-    ],
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides a comprehensive overview of global oil, gas, coal, and electricity markets from an economic perspective. It is suitable for individuals interested in understanding the complexities of international energy markets.",
+    "use_cases": [],
     "audience": [
-      "Mid-DS",
-      "Senior-DS",
-      "Practitioner"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Dahl energy markets book",
-      "international energy economics",
-      "oil gas markets book"
+      "What are the key factors influencing global oil prices?",
+      "How do gas markets operate internationally?",
+      "What economic principles govern electricity markets?",
+      "What trends are shaping the coal industry today?",
+      "How do energy markets impact global economies?",
+      "What role do government policies play in energy markets?",
+      "What are the challenges facing international energy markets?",
+      "How can I analyze energy market data?"
     ],
-    "content_format": "academic-textbook",
+    "content_format": "book",
     "skill_progression": [
       "Beginner to Intermediate"
     ]
@@ -2783,27 +2749,33 @@
     "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [
-      "energy-utilities-economics"
+      "energy economics",
+      "renewable energy",
+      "climate policy"
     ],
-    "summary": "Nemet traces the remarkable 99% cost decline in solar PV, identifying the key drivers including R&D, learning-by-doing, scale economies, and knowledge spillovers. Essential for understanding technology policy and clean energy economics.",
+    "summary": "This resource explores the history and economics behind the cost reductions of solar PV technology, providing insights into effective climate technology policy. It is suitable for anyone interested in understanding the economic aspects of renewable energy.",
     "use_cases": [
-      "Understanding clean energy transitions",
-      "Innovation policy research",
-      "Technology cost analysis"
+      "to understand the economics of solar energy",
+      "to learn about policy implications for renewable energy",
+      "for insights into innovation in energy technology"
     ],
     "audience": [
-      "Junior-DS",
-      "Mid-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "Nemet solar book",
-      "solar cost decline book",
-      "renewable energy history"
+      "What are the cost reductions in solar energy?",
+      "How has solar PV technology evolved?",
+      "What lessons can be learned for climate technology policy?",
+      "What factors contributed to the decrease in solar energy costs?",
+      "How does innovation impact renewable energy economics?",
+      "What role does policy play in solar energy adoption?",
+      "What are the historical trends in solar energy pricing?",
+      "How can understanding solar economics inform future energy policies?"
     ],
-    "content_format": "popular-science",
+    "content_format": "article",
     "skill_progression": [
-      "Beginner"
+      "understanding of solar energy economics",
+      "insights into climate technology policy"
     ]
   },
   {
@@ -2821,30 +2793,27 @@
       "electricity markets",
       "classic"
     ],
-    "difficulty": "advanced",
-    "prerequisites": [
-      "economics",
-      "power-systems"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "energy-utilities-economics"
+      "energy-economics"
     ],
-    "summary": "The foundational text that developed locational marginal pricing (LMP) theory. Schweppe et al.'s work became the basis for modern wholesale electricity market design in the U.S. and globally.",
-    "use_cases": [
-      "Understanding LMP theory",
-      "Market design research",
-      "Historical perspective"
-    ],
+    "summary": "This resource explores the theory of locational marginal pricing in electricity markets, providing insights into how pricing mechanisms work. It is suitable for those interested in understanding the economic principles behind electricity pricing.",
+    "use_cases": [],
     "audience": [
-      "Senior-DS",
-      "Researcher"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Schweppe spot pricing",
-      "LMP book",
-      "electricity pricing theory"
+      "What is locational marginal pricing?",
+      "How does spot pricing work in electricity markets?",
+      "What are the implications of locational marginal pricing?",
+      "Who developed the theory of locational marginal pricing?",
+      "What are the benefits of understanding electricity markets?",
+      "How does this theory apply to modern energy economics?",
+      "What are classic texts in energy economics?",
+      "What is the significance of spot pricing?"
     ],
-    "content_format": "academic-classic",
+    "content_format": "book",
     "skill_progression": [
       "Advanced"
     ]
@@ -2864,30 +2833,30 @@
       "reference",
       "academic"
     ],
-    "difficulty": "advanced",
-    "prerequisites": [
-      "microeconomics",
-      "game-theory"
-    ],
+    "difficulty": null,
+    "prerequisites": [],
     "topic_tags": [
-      "defense-security-economics"
+      "defense economics"
     ],
-    "summary": "The authoritative Elsevier handbook covering all aspects of defense economics. Volume 1 (1995) covers theory; Volume 2 (2007) adds empirical work. Essential reference for any serious defense economics research.",
+    "summary": "This handbook provides a comprehensive overview of key topics in defense economics, including alliances, arms races, and military spending. It is intended for academics and practitioners interested in the economic aspects of defense.",
     "use_cases": [
-      "Research reference",
-      "Graduate study",
-      "Comprehensive overview"
+      "reference for academic research",
+      "understanding military economic policies"
     ],
     "audience": [
-      "Senior-DS",
-      "Researcher"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Hartley Sandler handbook",
-      "defense economics textbook",
-      "military economics reference"
+      "What are the key themes in defense economics?",
+      "How does military spending impact economic growth?",
+      "What is the role of alliances in defense economics?",
+      "How are arms races analyzed in economic terms?",
+      "What are the implications of procurement in defense?",
+      "What is conversion economics in the context of defense?",
+      "Where can I find a comprehensive reference on defense economics?",
+      "What are the latest academic insights in defense economics?"
     ],
-    "content_format": "academic-handbook",
+    "content_format": "book",
     "skill_progression": [
       "Advanced"
     ]
@@ -2908,31 +2877,33 @@
       "Nobel Prize"
     ],
     "difficulty": "intermediate",
-    "prerequisites": [
-      "basic-game-theory"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "defense-security-economics"
+      "defense economics",
+      "international relations",
+      "coercion",
+      "deterrence"
     ],
-    "summary": "Schelling's foundational work on the economics and strategy of military coercion. Earned him the 2005 Nobel Prize alongside Aumann for contributions to game theory.",
+    "summary": "This resource provides a classic analysis of the role of violence in international relations, focusing on coercion and deterrence strategies. It is suitable for those interested in understanding the economic aspects of defense and international conflict.",
     "use_cases": [
-      "Understanding deterrence theory",
-      "Strategic analysis",
-      "Policy research"
+      "to understand the economic analysis of international conflict",
+      "to explore theories of deterrence and coercion"
     ],
     "audience": [
-      "Mid-DS",
-      "Senior-DS",
-      "Researcher"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Schelling Arms and Influence",
-      "deterrence theory book",
-      "coercion economics"
+      "What is the role of coercion in international relations?",
+      "How does deterrence theory apply to modern conflicts?",
+      "What insights does a Nobel laureate provide on violence?",
+      "What are the economic implications of defense strategies?",
+      "How can game theory be applied to international relations?",
+      "What are the key concepts in defense economics?"
     ],
-    "content_format": "academic-classic",
+    "content_format": "book",
     "skill_progression": [
-      "Intermediate to Advanced"
+      "understanding of deterrence theory",
+      "insights into coercion in international relations"
     ]
   },
   {
@@ -2953,27 +2924,30 @@
     "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "defense-security-economics"
+      "game theory",
+      "bargaining"
     ],
-    "summary": "Schelling's earlier work that introduced focal points (Schelling points), commitment, and mixed-motive games to strategic thinking. Foundation for modern strategic analysis.",
+    "summary": "This resource introduces key concepts in strategic analysis, including focal points and commitment devices. It is suitable for those interested in understanding the foundations of bargaining theory and its applications in economics.",
     "use_cases": [
-      "Game theory applications",
-      "Negotiation analysis",
-      "Strategic thinking"
+      "when analyzing strategic interactions in economics"
     ],
     "audience": [
-      "Mid-DS",
-      "Senior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "Schelling Strategy of Conflict",
-      "Schelling points book",
-      "bargaining game theory"
+      "What are focal points in game theory?",
+      "How does bargaining theory apply to conflict resolution?",
+      "What are commitment devices in strategic analysis?",
+      "Who won the Nobel Prize for the Strategy of Conflict?",
+      "What is the significance of game theory in economics?",
+      "How can strategic analysis improve negotiation outcomes?",
+      "What are the main concepts introduced in The Strategy of Conflict?",
+      "How does The Strategy of Conflict relate to defense economics?"
     ],
-    "content_format": "academic-classic",
+    "content_format": "book",
     "skill_progression": [
-      "Intermediate"
+      "understanding of game theory concepts",
+      "insight into bargaining strategies"
     ]
   },
   {
@@ -2994,27 +2968,34 @@
     "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "defense-security-economics"
+      "security",
+      "economics",
+      "psychology",
+      "policy"
     ],
-    "summary": "Anderson created the field of security economics. This 3rd edition covers technical security plus the economics, psychology, and policy that explain why security fails. Free chapter PDFs available.",
+    "summary": "This resource provides a comprehensive guide to building dependable distributed systems with a focus on information security. It is suitable for individuals interested in the intersection of technical security and broader economic and psychological factors.",
     "use_cases": [
-      "Security fundamentals",
-      "Economics of security",
-      "Policy analysis"
+      "when to understand the fundamentals of security engineering",
+      "when to explore the intersection of security and economics"
     ],
     "audience": [
-      "Mid-DS",
-      "Senior-DS",
-      "Practitioner"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Ross Anderson Security Engineering",
-      "security economics book",
-      "information security textbook"
+      "What is security engineering?",
+      "How does economics influence security?",
+      "What are the psychological aspects of security?",
+      "What policies are relevant to cybersecurity?",
+      "How to build dependable distributed systems?",
+      "What are the best practices in cryptography?",
+      "What is the role of security in distributed systems?",
+      "What are the challenges in security engineering?"
     ],
-    "content_format": "technical-textbook",
+    "content_format": "book",
     "skill_progression": [
-      "Beginner to Advanced"
+      "understanding of security principles",
+      "knowledge of economic factors in security",
+      "awareness of psychological impacts on security policies"
     ]
   },
   {
@@ -3032,28 +3013,29 @@
       "Silicon Valley",
       "Pentagon"
     ],
-    "difficulty": "beginner",
+    "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "defense-security-economics"
+      "defense-innovation",
+      "technology",
+      "military-strategy"
     ],
-    "summary": "The definitive account of how the Defense Innovation Unit bridges Silicon Valley and the Pentagon. Shortlisted for FT Business Book of the Year 2024.",
-    "use_cases": [
-      "Understanding defense innovation",
-      "Tech-defense integration",
-      "Policy insights"
-    ],
+    "summary": "This resource explores the intersection of defense and technology through the lens of the Defense Innovation Unit. It is suitable for readers interested in understanding how Silicon Valley influences modern warfare.",
+    "use_cases": [],
     "audience": [
-      "Junior-DS",
-      "Mid-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "Unit X book",
-      "Defense Innovation Unit history",
-      "Pentagon Silicon Valley"
+      "What is the Defense Innovation Unit?",
+      "How is Silicon Valley impacting the Pentagon?",
+      "What are the key innovations in defense technology?",
+      "Who founded the Defense Innovation Unit?",
+      "What is the significance of the 2024 Financial Times Business Book of the Year?",
+      "How does defense innovation affect future warfare?",
+      "What lessons can be learned from the Pentagon's collaboration with tech companies?",
+      "What are the challenges faced by the Defense Innovation Unit?"
     ],
-    "content_format": "popular-science",
+    "content_format": "book",
     "skill_progression": [
       "Beginner"
     ]
@@ -3073,28 +3055,33 @@
       "China",
       "innovation"
     ],
-    "difficulty": "beginner",
+    "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "defense-security-economics"
+      "defense technology",
+      "military strategy",
+      "innovation"
     ],
-    "summary": "Brose argues America is losing its military-technological edge. Written from deep policy experience as Senate Armed Services Committee Staff Director. Essential reading on great power competition.",
+    "summary": "This resource provides a critical analysis of U.S. military technological vulnerabilities and explores the implications for future warfare. It is aimed at individuals interested in defense technology and military strategy.",
     "use_cases": [
-      "Defense policy understanding",
-      "Tech competition analysis",
-      "Strategy insights"
+      "to understand U.S. military vulnerabilities",
+      "to learn about defense technology",
+      "to explore military strategy in the context of innovation"
     ],
     "audience": [
-      "Junior-DS",
-      "Mid-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "Kill Chain book",
-      "Christian Brose defense",
-      "US China military technology"
+      "What are the technological vulnerabilities of the U.S. military?",
+      "How does China influence military strategy?",
+      "What innovations are shaping future warfare?",
+      "What is the Kill Chain concept?",
+      "How can the U.S. defend against high-tech warfare?",
+      "What are the implications of military technology on defense strategy?",
+      "Who authored The Kill Chain?",
+      "What insights does a former Senate Armed Services Committee Staff Director provide?"
     ],
-    "content_format": "popular-science",
+    "content_format": "book",
     "skill_progression": [
       "Beginner"
     ]
@@ -3114,30 +3101,34 @@
       "China",
       "supply chains"
     ],
-    "difficulty": "beginner",
+    "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "defense-security-economics"
+      "semiconductors",
+      "geopolitics",
+      "supply chains"
     ],
-    "summary": "Winner of the 2022 FT Business Book of the Year. Miller traces how semiconductors became the world's most fought-over resource. Essential for understanding defense industrial base vulnerabilities.",
+    "summary": "This resource explores the critical role of semiconductors in global defense supply chains and the geopolitical tensions surrounding them. It is essential for those interested in understanding the vulnerabilities in defense technology and supply chains.",
     "use_cases": [
-      "Supply chain analysis",
-      "Geopolitics understanding",
-      "Technology policy"
+      "to understand the geopolitical landscape of technology",
+      "to analyze supply chain vulnerabilities in defense"
     ],
     "audience": [
-      "Junior-DS",
-      "Mid-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "Chip War book",
-      "semiconductor geopolitics",
-      "Taiwan chips defense"
+      "What is the significance of semiconductors in defense technology?",
+      "How do geopolitical tensions affect supply chains?",
+      "What vulnerabilities exist in the semiconductor supply chain?",
+      "Why is Taiwan critical to semiconductor production?",
+      "What are the implications of semiconductor shortages?",
+      "How does China influence global semiconductor markets?"
     ],
-    "content_format": "popular-science",
+    "content_format": "book",
     "skill_progression": [
-      "Beginner"
+      "understanding of semiconductor technology",
+      "insight into defense supply chain dynamics",
+      "awareness of geopolitical factors affecting technology"
     ]
   },
   {
@@ -3156,31 +3147,38 @@
       "textbook"
     ],
     "difficulty": "advanced",
-    "prerequisites": [
-      "game-theory",
-      "microeconomics"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "adtech-advertising-economics"
+      "auction theory",
+      "mechanism design",
+      "game theory"
     ],
-    "summary": "The definitive graduate textbook on auction theory. 2nd edition includes chapter on position auctions (Chapter 14) directly applicable to ad auctions. Essential for understanding RTB theory.",
+    "summary": "This textbook provides a comprehensive overview of auction theory, covering topics from private values to multi-unit auctions, including a chapter on position auctions. It is suitable for graduate students and researchers interested in understanding the complexities of auction mechanisms.",
     "use_cases": [
-      "Auction theory foundations",
-      "Mechanism design",
-      "Ad auction research"
+      "Understanding auction mechanisms",
+      "Applying auction theory in economic research",
+      "Designing auctions for various applications"
     ],
     "audience": [
-      "Senior-DS",
-      "Researcher"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "Krishna Auction Theory",
-      "auction theory textbook",
-      "position auctions book"
+      "What is auction theory?",
+      "How do multi-unit auctions work?",
+      "What are private values in auctions?",
+      "What is mechanism design?",
+      "How do position auctions differ from traditional auctions?",
+      "What are the applications of auction theory?",
+      "What are the key concepts in game theory related to auctions?",
+      "How can auction theory be applied in real-world scenarios?"
     ],
-    "content_format": "academic-textbook",
+    "content_format": "book",
     "skill_progression": [
-      "Advanced"
+      "Understanding auction mechanisms",
+      "Analyzing auction strategies",
+      "Applying game theory to auctions"
     ]
   },
   {
@@ -3198,32 +3196,34 @@
       "spectrum auctions",
       "Nobel Prize"
     ],
-    "difficulty": "advanced",
-    "prerequisites": [
-      "microeconomics"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "adtech-advertising-economics"
+      "auction theory",
+      "market design"
     ],
-    "summary": "Milgrom designed the FCC spectrum auctions and won the 2020 Nobel Prize. This book bridges theory and practice, essential for understanding how auction design affects outcomes.",
+    "summary": "This resource explores the application of auction theory in real-world scenarios, particularly in the context of spectrum auctions designed by a Nobel laureate. It is suitable for individuals interested in understanding the practical implications of auction theory.",
     "use_cases": [
-      "Practical auction design",
-      "Market mechanisms",
-      "Policy applications"
+      "when to understand auction mechanisms",
+      "when designing market strategies"
     ],
     "audience": [
-      "Senior-DS",
-      "Researcher",
-      "Practitioner"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Milgrom auction book",
-      "auction design practice",
-      "spectrum auctions"
+      "What is auction theory?",
+      "How are spectrum auctions designed?",
+      "What are the practical applications of auction theory?",
+      "Who is the Nobel laureate in auction theory?",
+      "What is market design?",
+      "How does auction theory influence economic policies?",
+      "What are the key concepts in auction theory?",
+      "What can I learn from 'Putting Auction Theory to Work'?"
     ],
-    "content_format": "academic-textbook",
+    "content_format": "book",
     "skill_progression": [
-      "Intermediate to Advanced"
+      "understanding auction mechanisms",
+      "applying auction theory to real-world scenarios"
     ]
   },
   {
@@ -3241,32 +3241,36 @@
       "handbook",
       "theory"
     ],
-    "difficulty": "advanced",
-    "prerequisites": [
-      "microeconomics",
-      "industrial-organization"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "adtech-advertising-economics"
+      "advertising",
+      "economics",
+      "empirical-evidence"
     ],
-    "summary": "The authoritative academic survey of advertising economics. Covers informative vs persuasive debate, signaling models, and empirical evidence. Essential theoretical foundation.",
+    "summary": "This handbook chapter provides a comprehensive overview of the economics of advertising, focusing on the differences between informative and persuasive advertising, as well as the underlying theories and empirical evidence. It is suitable for students and professionals interested in understanding the economic principles that govern advertising practices.",
     "use_cases": [
-      "Literature review",
-      "Theory foundations",
-      "Academic research"
+      "Understanding advertising strategies",
+      "Analyzing market behavior",
+      "Researching advertising effectiveness"
     ],
     "audience": [
-      "Senior-DS",
-      "Researcher"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "Bagwell advertising economics",
-      "advertising economics survey",
-      "IO advertising chapter"
+      "What is the difference between informative and persuasive advertising?",
+      "How does signaling work in advertising?",
+      "What empirical evidence supports advertising theories?",
+      "What are the economic implications of advertising?",
+      "How can advertising strategies be analyzed from an economic perspective?",
+      "What role does advertising play in market dynamics?"
     ],
     "content_format": "handbook-chapter",
     "skill_progression": [
-      "Advanced"
+      "Understanding advertising economics",
+      "Analyzing empirical evidence in advertising"
     ]
   },
   {
@@ -3284,29 +3288,23 @@
       "advertising",
       "handbook"
     ],
-    "difficulty": "advanced",
-    "prerequisites": [
-      "microeconomics"
-    ],
-    "topic_tags": [
-      "adtech-advertising-economics"
-    ],
-    "summary": "Modern handbook covering digital media economics. Includes chapters on advertising-supported media, platform competition, and targeting. More recent complement to Bagwell's survey.",
-    "use_cases": [
-      "Platform economics",
-      "Media markets",
-      "Modern advertising research"
-    ],
-    "audience": [
-      "Senior-DS",
-      "Researcher"
-    ],
+    "difficulty": null,
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This comprehensive handbook covers modern chapters on advertising platforms, targeting, and media markets. It is suitable for those interested in media economics.",
+    "use_cases": [],
+    "audience": [],
     "synthetic_questions": [
-      "Handbook Media Economics",
-      "media economics textbook",
-      "platform advertising handbook"
+      "What are the key concepts in media economics?",
+      "How do advertising platforms operate?",
+      "What is the impact of targeting on media markets?",
+      "What trends are shaping media economics today?",
+      "How can I apply media economics in my research?",
+      "What are the challenges in advertising platforms?",
+      "What methodologies are used in media economics studies?",
+      "Where can I find case studies on media markets?"
     ],
-    "content_format": "academic-handbook",
+    "content_format": "handbook",
     "skill_progression": [
       "Advanced"
     ]
@@ -3330,27 +3328,33 @@
     "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [
-      "adtech-advertising-economics"
+      "ad-tech",
+      "programmatic-advertising"
     ],
-    "summary": "Accessible introduction to programmatic advertising for practitioners. Covers RTB mechanics, exchange dynamics, DSPs, SSPs, and header bidding. Good starting point for industry understanding.",
+    "summary": "This resource provides a comprehensive introduction to the programmatic advertising ecosystem, including real-time bidding and various platforms involved. It is suitable for practitioners looking to understand the fundamentals of programmatic advertising.",
     "use_cases": [
-      "Industry introduction",
-      "Ad tech fundamentals",
-      "Career transition"
+      "When to understand the basics of programmatic advertising",
+      "When to explore real-time bidding mechanisms"
     ],
     "audience": [
       "Junior-DS",
-      "Mid-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "programmatic advertising book",
-      "RTB introduction",
-      "ad tech ecosystem guide"
+      "What is programmatic advertising?",
+      "How does real-time bidding work?",
+      "What are SSPs and DSPs?",
+      "What is header bidding?",
+      "What is the programmatic advertising ecosystem?",
+      "How to get started with programmatic advertising?",
+      "What are the benefits of programmatic advertising?",
+      "Who should learn about programmatic advertising?"
     ],
     "content_format": "practitioner-guide",
     "skill_progression": [
-      "Beginner"
+      "Understanding of programmatic advertising",
+      "Familiarity with SSPs and DSPs",
+      "Knowledge of real-time bidding processes"
     ]
   },
   {
@@ -3369,28 +3373,21 @@
     ],
     "difficulty": "beginner",
     "prerequisites": [],
-    "topic_tags": [
-      "martech-customer-analytics",
-      "clv",
-      "customer-strategy"
-    ],
-    "summary": "Peter Fader's manifesto on customer centricity. Argues that the traditional product-centric approach is obsolete and shows how to build strategy around customer lifetime value. Essential reading for any marketing data scientist.",
-    "use_cases": [
-      "Understanding CLV-based strategy",
-      "Building customer-centric organizations",
-      "Prioritizing marketing investments"
-    ],
+    "topic_tags": [],
+    "summary": "This book teaches the importance of focusing on high-value customers for strategic advantage. It is aimed at business professionals and strategists interested in customer lifetime value-driven strategies.",
+    "use_cases": [],
     "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
       "What is customer centricity?",
-      "How do I prioritize customers by value?",
-      "Peter Fader CLV book",
-      "Best book on customer lifetime value strategy"
+      "How can businesses identify high-value customers?",
+      "What is CLV-driven strategy?",
+      "Why should businesses focus on certain customers?",
+      "What are the benefits of customer segmentation?",
+      "How does customer value impact business strategy?",
+      "What strategies can enhance customer loyalty?",
+      "What are the key concepts in customer analytics?"
     ],
     "content_format": "book",
     "skill_progression": [
@@ -3414,35 +3411,36 @@
       "Implementation"
     ],
     "difficulty": "intermediate",
-    "prerequisites": [
-      "clv-basics"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "martech-customer-analytics",
-      "clv",
-      "implementation"
+      "customer-centricity",
+      "CLV",
+      "market-valuation"
     ],
-    "summary": "The practical companion to Customer Centricity. Provides step-by-step playbook for implementing CLV-based strategy including organizational alignment, metrics, and real-world case studies.",
+    "summary": "This playbook provides practical frameworks and metrics for implementing customer centricity linked to customer lifetime value (CLV). It is designed for professionals looking to operationalize CLV-based strategies.",
     "use_cases": [
-      "Implementing customer-centric strategy",
-      "Building CLV measurement systems",
-      "Aligning organization around customer value"
+      "when developing a customer-centric strategy",
+      "for understanding CLV in business valuation"
     ],
     "audience": [
       "Mid-DS",
       "Senior-DS"
     ],
     "synthetic_questions": [
-      "How do I implement customer centricity?",
-      "CLV implementation guide",
-      "Customer-centric metrics",
-      "Operationalizing CLV"
+      "What is customer centricity?",
+      "How does CLV impact market valuation?",
+      "What frameworks can be used for implementing CLV-based strategies?",
+      "What metrics are essential for customer centricity?",
+      "Can you provide case studies on customer centricity?",
+      "How to operationalize a CLV-based strategy?",
+      "What are the benefits of customer centricity?",
+      "What are the challenges in implementing customer centricity?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "CLV fundamentals",
-      "implementation planning",
-      "organizational execution"
+      "understanding customer-centric strategies",
+      "applying CLV metrics",
+      "operationalizing marketing frameworks"
     ]
   },
   {
@@ -3462,31 +3460,36 @@
     "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "martech-customer-analytics",
-      "clv",
-      "customer-audit"
+      "customer-analytics",
+      "customer-behavior",
+      "CLV"
     ],
-    "summary": "The diagnostic companion to Fader's CLV work. Introduces five lenses for auditing customer base health: cohort analysis, customer concentration, customer migration, monetary value evolution, and customer lifetime value distribution.",
+    "summary": "This resource teaches how to assess customer portfolio health using five analytical lenses. It is aimed at professionals looking to understand customer behavior metrics and build customer lifetime value models.",
     "use_cases": [
-      "Diagnosing customer base health",
-      "Identifying customer trends",
-      "Setting up CLV analytics"
+      "assessing customer portfolio health",
+      "diagnosing customer base composition",
+      "analyzing customer behavior trends"
     ],
     "audience": [
+      "Junior-DS",
       "Mid-DS",
       "Senior-DS"
     ],
     "synthetic_questions": [
-      "How do I analyze customer base health?",
-      "Customer cohort analysis frameworks",
-      "Customer concentration metrics",
-      "Customer migration analysis"
+      "What are the five analytical lenses for customer portfolio health?",
+      "How can I diagnose customer base composition?",
+      "What metrics are used to assess customer behavior?",
+      "How do I build CLV models?",
+      "What is customer centricity?",
+      "Why is it important to analyze customer trends?",
+      "What skills will I gain from this book?",
+      "Who should read 'The Customer-Base Audit'?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "cohort analysis",
-      "concentration metrics",
-      "CLV diagnostics"
+      "customer behavior analysis",
+      "customer lifetime value modeling",
+      "analytical thinking"
     ]
   },
   {
@@ -3503,37 +3506,36 @@
       "CRM",
       "Statistics"
     ],
-    "difficulty": "advanced",
-    "prerequisites": [
-      "statistics",
-      "regression"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "martech-customer-analytics",
-      "clv",
-      "crm-analytics"
+      "statistics"
     ],
-    "summary": "The academic reference for quantitative CRM. Provides rigorous statistical methodology for customer acquisition, retention, cross-selling, and CLV-based resource allocation. Essential for building production CRM analytics.",
+    "summary": "This book provides a rigorous statistical treatment of the entire customer lifecycle, focusing on acquisition modeling, CLV estimation, retention management, and resource allocation. It is suitable for practitioners and researchers interested in applying statistical methods to customer relationship management.",
     "use_cases": [
-      "Building CRM prediction models",
-      "Statistical methodology for customer analytics",
-      "Resource allocation optimization"
+      "When to apply statistical methods in CRM",
+      "Understanding customer lifecycle management"
     ],
     "audience": [
+      "Junior-DS",
       "Mid-DS",
       "Senior-DS"
     ],
     "synthetic_questions": [
-      "Statistics for CRM",
-      "Academic book on customer analytics",
-      "CLV statistical methods",
-      "V. Kumar CRM book"
+      "What are the statistical methods used in customer relationship management?",
+      "How to estimate customer lifetime value?",
+      "What is retention management in CRM?",
+      "How to model customer acquisition?",
+      "What methodologies are covered in the book?",
+      "How to allocate resources effectively in CRM?",
+      "What is the importance of statistics in MarTech?",
+      "Who should read Statistical Methods in Customer Relationship Management?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "CRM fundamentals",
-      "statistical methods",
-      "optimization"
+      "Statistical modeling",
+      "Customer lifecycle analysis",
+      "Resource allocation strategies"
     ]
   },
   {
@@ -3551,36 +3553,39 @@
       "Analytics"
     ],
     "difficulty": "intermediate",
-    "prerequisites": [
-      "basic-statistics"
-    ],
+    "prerequisites": [],
     "topic_tags": [
-      "martech-customer-analytics",
       "marketing-models",
-      "choice-modeling"
+      "segmentation",
+      "pricing",
+      "analytics"
     ],
-    "summary": "The standard graduate textbook for quantitative marketing. Covers the full toolkit: segmentation, choice models, conjoint analysis, pricing, CLV, and resource allocation. Includes hands-on exercises with marketing engineering software.",
+    "summary": "This textbook provides a comprehensive understanding of marketing models, focusing on practical applications in Excel and R. It is designed for those interested in marketing analytics and engineering.",
     "use_cases": [
-      "Learning marketing analytics foundations",
-      "Building marketing models",
-      "Graduate marketing courses"
+      "When to analyze customer segmentation",
+      "When to apply choice models in marketing decisions"
     ],
     "audience": [
       "Junior-DS",
       "Mid-DS",
-      "Senior-DS"
+      "Senior-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Marketing analytics textbook",
-      "Best book for marketing science",
-      "Choice modeling textbook",
-      "Conjoint analysis book"
+      "What are the key marketing models?",
+      "How to apply marketing analytics in Excel?",
+      "What is customer lifetime value?",
+      "How to segment a market effectively?",
+      "What are choice models in marketing?",
+      "How to allocate resources in marketing?",
+      "What is the importance of positioning in marketing?",
+      "How to use R for marketing analytics?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "marketing fundamentals",
-      "analytical models",
-      "decision tools"
+      "Understanding of marketing models",
+      "Ability to apply analytics in marketing",
+      "Skills in resource allocation and pricing strategies"
     ]
   },
   {
@@ -3600,34 +3605,40 @@
     ],
     "difficulty": "intermediate",
     "prerequisites": [
-      "python-or-r"
+      "python-basics",
+      "r-basics"
     ],
     "topic_tags": [
-      "martech-customer-analytics",
-      "implementation",
-      "coding"
+      "predictive-analytics",
+      "marketing-analytics",
+      "web-analytics"
     ],
-    "summary": "Hands-on marketing analytics with code. Each chapter provides R and Python implementations for choice models, recommenders, CLV, text mining, and web analytics\u2014bridging theory and practice.",
+    "summary": "This resource provides practical implementations of marketing analytics using R and Python, covering various modeling techniques. It is suitable for those looking to enhance their skills in marketing data science.",
     "use_cases": [
-      "Implementing marketing analytics",
-      "Learning marketing data science",
-      "Code examples for marketing models"
+      "When implementing marketing analytics projects",
+      "For learning predictive modeling techniques",
+      "When analyzing customer data"
     ],
     "audience": [
       "Junior-DS",
-      "Mid-DS"
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "Marketing analytics with Python",
-      "R code for marketing models",
-      "Hands-on marketing data science book",
-      "Practical marketing analytics implementation"
+      "What are the modeling techniques in predictive analytics?",
+      "How can I implement choice modeling in R?",
+      "What is customer lifetime value (CLV) analysis?",
+      "How do I perform text analytics with Python?",
+      "What are the best practices for web analytics?",
+      "How can I apply recommendations systems in marketing?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "R/Python basics",
-      "marketing models",
-      "end-to-end implementation"
+      "Predictive analytics techniques",
+      "Choice modeling",
+      "Customer lifetime value analysis",
+      "Text analytics",
+      "Web analytics"
     ]
   },
   {
@@ -3644,36 +3655,36 @@
       "Metrics",
       "Measurement"
     ],
-    "difficulty": "beginner",
+    "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "martech-customer-analytics",
-      "marketing-metrics",
+      "metrics",
       "measurement"
     ],
-    "summary": "The encyclopedia of marketing metrics. Defines and explains 50+ metrics including CLV, CAC, retention rate, NPS, ROMI, and brand metrics. Essential reference for any marketing analytics role.",
+    "summary": "This resource provides a comprehensive guide to over 50 essential marketing metrics, detailing their formulas and applications. It is ideal for marketing professionals looking to enhance their measurement skills.",
     "use_cases": [
-      "Understanding marketing metrics",
-      "Building measurement frameworks",
-      "Communicating marketing performance"
+      "When to evaluate marketing performance",
+      "When to apply metrics for decision making"
     ],
     "audience": [
       "Junior-DS",
       "Mid-DS",
-      "Senior-DS",
-      "Curious-browser"
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "Marketing metrics reference book",
-      "How to measure marketing performance",
-      "What metrics should I track for marketing?",
-      "CLV, CAC, ROMI definitions"
+      "What are the essential marketing metrics?",
+      "How to measure marketing performance effectively?",
+      "What formulas are used in marketing measurement?",
+      "What applications do marketing metrics have?",
+      "How can I improve my marketing analytics skills?",
+      "What metrics should I focus on for customer analysis?",
+      "How do financial metrics impact marketing strategies?",
+      "What are the best practices for measuring advertising effectiveness?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "metric definitions",
-      "calculation methods",
-      "interpretation"
+      "Understanding of marketing metrics",
+      "Ability to apply measurement techniques"
     ]
   }
 ]

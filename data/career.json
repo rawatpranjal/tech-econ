@@ -1009,7 +1009,7 @@
   },
   {
     "name": "Applied Econ Jobs",
-    "description": "Substack newsletter by Zoë Plakias curating job opportunities for applied economists. Regular postings across academia, tech, government, and consulting.",
+    "description": "Substack newsletter by Zo\u00eb Plakias curating job opportunities for applied economists. Regular postings across academia, tech, government, and consulting.",
     "stage": "Discovery",
     "category": "Job Boards",
     "url": "https://appliedeconjobs.substack.com/",
@@ -1025,33 +1025,33 @@
     "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [
-      "job-opportunities",
-      "applied-economics",
-      "career"
+      "job-search"
     ],
-    "summary": "Applied Econ Jobs is a curated Substack newsletter featuring job opportunities for applied economists across various sectors including academia, tech companies, government agencies, and consulting firms.",
+    "summary": "Applied Econ Jobs is a Substack newsletter that curates job opportunities specifically for applied economists, providing a valuable resource for those seeking positions across various sectors including academia, tech, government, and consulting.",
     "use_cases": [
-      "when looking for job opportunities in applied economics",
-      "when exploring career options across academia, tech, and government"
+      "to find job postings for applied economists",
+      "to stay updated on job opportunities in various sectors"
     ],
     "audience": [
       "Early-PhD",
       "Junior-DS",
       "Mid-DS",
-      "Senior-DS",
-      "Curious-browser"
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "Where can I find applied economics job postings?",
-      "What newsletter tracks economist job openings?",
-      "How to find jobs for applied economists?",
-      "What are the latest economist job opportunities?",
-      "Where do tech companies post economist jobs?"
+      "What job opportunities are available for applied economists?",
+      "How can I find jobs in academia for economists?",
+      "What roles are available in tech for applied economists?",
+      "What consulting opportunities exist for applied economists?",
+      "How often are job postings updated?",
+      "What types of organizations hire applied economists?",
+      "What skills are in demand for applied economists?",
+      "How can I subscribe to the Applied Econ Jobs newsletter?"
     ],
     "role_type": [
       "economist"
     ],
-    "experience_level": "entry"
+    "experience_level": "entry|mid"
   },
   {
     "name": "Amazon",
@@ -1632,23 +1632,23 @@
     "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [],
-    "summary": "Spotify's career portal provides information and resources for individuals interested in pursuing careers within the company, particularly welcoming those with a PhD in economics. It serves as a platform for job seekers to explore various roles and opportunities available at Spotify.",
+    "summary": "Spotify's career portal provides information about job opportunities and insights for potential candidates, particularly those with a background in economics or related fields. It serves as a resource for individuals looking to understand the application process and available positions within the company.",
     "use_cases": [
       "when looking for job opportunities at Spotify",
-      "when exploring internships for PhD students"
+      "when researching company culture and values"
     ],
     "audience": [
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "What career opportunities are available at Spotify?",
-      "How can I apply for a PhD internship at Spotify?",
-      "What roles does Spotify offer for economists?",
-      "What is the application process for jobs at Spotify?",
-      "Are there specific qualifications needed for data science roles at Spotify?",
-      "What is the work culture like at Spotify?",
+      "What internships does Spotify offer for PhD students?",
+      "How can I apply for a position at Spotify?",
+      "What is the company culture like at Spotify?",
+      "Are there opportunities for economists at Spotify?",
+      "What qualifications does Spotify look for in candidates?",
       "How does Spotify support career development?",
-      "What types of projects do interns work on at Spotify?"
+      "What roles are available for data scientists at Spotify?",
+      "What is the salary range for economists at Spotify?"
     ],
     "role_type": [
       "economist"
@@ -2747,22 +2747,18 @@
     "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [],
-    "summary": "Notion serves as a career portal that provides resources and information for individuals seeking career opportunities. It is particularly useful for those looking to explore various companies and roles in the tech industry.",
-    "use_cases": [
-      "when looking for company lists and career opportunities"
-    ],
-    "audience": [
-      "Curious-browser"
-    ],
+    "summary": "Notion serves as a career portal that provides resources and connections for individuals seeking opportunities in various fields. It aims to assist users in navigating their career paths effectively.",
+    "use_cases": [],
+    "audience": [],
     "synthetic_questions": [
       "What companies are listed on Notion?",
       "How can I find internships through Notion?",
       "What resources does Notion offer for job searching?",
-      "Are there career tips available on Notion?",
+      "Is Notion suitable for PhD candidates?",
+      "What types of jobs can I find on Notion?",
       "How does Notion help with career planning?",
-      "What types of roles can I find on Notion?",
-      "Is Notion useful for PhD candidates?",
-      "What are the emerging companies listed on Notion?"
+      "What are the benefits of using Notion for career development?",
+      "Can I find general internships on Notion?"
     ],
     "experience_level": "entry"
   },
@@ -7930,22 +7926,23 @@
     "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [],
-    "summary": "Intel's career portal provides resources and information for individuals seeking careers in the technology and hardware sectors. It serves as a platform for job seekers to explore opportunities and gain insights into the industry.",
+    "summary": "Intel's career portal provides resources and information for individuals looking to explore career opportunities within the company, particularly in hardware and related fields.",
     "use_cases": [
-      "when looking for job opportunities in hardware technology"
+      "when looking for job opportunities at Intel",
+      "when researching company culture and career paths"
     ],
     "audience": [
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "What job opportunities are available at Intel?",
-      "How can I prepare for an interview at Intel?",
-      "What are the salary ranges for positions at Intel?",
-      "What career paths are available in hardware technology?",
-      "How does Intel support career development?",
-      "What skills are needed to work in hardware at Intel?",
+      "What career opportunities are available at Intel?",
+      "How can I apply for a job at Intel?",
+      "What skills are needed for a career in hardware?",
       "What is the company culture like at Intel?",
-      "How can I network with professionals at Intel?"
+      "What career paths are available for economists at Intel?",
+      "How does Intel support employee development?",
+      "What are the benefits of working at Intel?",
+      "What is the hiring process like at Intel?"
     ],
     "role_type": [
       "economist"
@@ -8018,23 +8015,24 @@
     "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [],
-    "summary": "NVIDIA's career portal provides resources and information for individuals seeking careers in the tech industry, particularly in hardware and research fields. It serves as a platform for job seekers to explore opportunities within the company.",
+    "summary": "NVIDIA's career portal provides resources and information for individuals seeking careers in the tech industry, particularly in hardware and research roles. It serves as a platform for job seekers to explore opportunities within the company.",
     "use_cases": [
-      "when looking for job opportunities at NVIDIA",
-      "when researching company culture and career paths in tech"
+      "when looking for job opportunities in tech",
+      "when researching company culture",
+      "when preparing for a job application"
     ],
     "audience": [
       "Curious-browser"
     ],
     "synthetic_questions": [
       "What careers are available at NVIDIA?",
-      "How can I prepare for an interview at NVIDIA?",
-      "What is the salary range for positions at NVIDIA?",
-      "What skills are needed to work at NVIDIA?",
-      "How does NVIDIA support career development?",
-      "What is the company culture like at NVIDIA?",
-      "What research opportunities are available at NVIDIA?",
-      "How can I apply for a job at NVIDIA?"
+      "How can I apply for a job at NVIDIA?",
+      "What skills are needed for a career in hardware?",
+      "What is the work culture like at NVIDIA?",
+      "Are there internship opportunities at NVIDIA?",
+      "How does NVIDIA support employee growth?",
+      "What research initiatives does NVIDIA focus on?",
+      "What are the benefits of working at NVIDIA?"
     ],
     "role_type": [
       "hardware",
@@ -8105,11 +8103,9 @@
     "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [],
-    "summary": "Qualcomm's career portal provides resources and information for individuals interested in pursuing a career in the tech industry, particularly in hardware and AI. It serves as a platform for job seekers to explore opportunities within the company.",
+    "summary": "Qualcomm's career portal provides resources and information for individuals seeking to explore career opportunities within the company, particularly in the fields of hardware and AI.",
     "use_cases": [
-      "when looking for job opportunities in tech",
-      "when researching company culture",
-      "when preparing for interviews"
+      "when looking for job opportunities in hardware and AI"
     ],
     "audience": [
       "Curious-browser"
@@ -8117,12 +8113,12 @@
     "synthetic_questions": [
       "What career opportunities are available at Qualcomm?",
       "How can I prepare for an interview at Qualcomm?",
-      "What skills are needed to work in hardware at Qualcomm?",
       "What is the company culture like at Qualcomm?",
-      "How does Qualcomm support career development?",
+      "What skills are needed for a job at Qualcomm?",
+      "What is the salary range for positions at Qualcomm?",
+      "How does Qualcomm support employee development?",
       "What are the benefits of working at Qualcomm?",
-      "What roles are available for AI professionals at Qualcomm?",
-      "How can I apply for a job at Qualcomm?"
+      "What is the application process like at Qualcomm?"
     ],
     "role_type": [
       "hardware",
@@ -8130,7 +8126,7 @@
     ],
     "experience_level": "entry",
     "company_context": [
-      "startup"
+      "hardware"
     ]
   },
   {
@@ -9057,23 +9053,23 @@
     "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [],
-    "summary": "Upstart is a career portal that provides resources and information for individuals looking to advance their careers in the fintech sector. It serves as a platform for exploring various company lists and opportunities within the economic landscape.",
+    "summary": "Upstart is a career portal that provides resources and information for individuals seeking to advance their careers in the fintech sector. It offers insights into job opportunities and company listings relevant to the economics field.",
     "use_cases": [
-      "when looking for career opportunities in fintech",
-      "when researching companies in the economic sector"
+      "when looking for job opportunities in fintech",
+      "when researching companies in the fintech sector"
     ],
     "audience": [
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "What companies are in the fintech sector?",
+      "What are the best fintech companies to work for?",
       "How can I find job opportunities in fintech?",
-      "What resources are available for career advancement in economics?",
-      "What are the best practices for job searching in tech?",
-      "How do I negotiate my salary in fintech?",
-      "What career paths are available in economics?",
       "What skills are needed for a career in fintech?",
-      "How can I prepare for interviews in the tech industry?"
+      "How do I prepare for interviews in fintech?",
+      "What is the salary range for fintech positions?",
+      "How can I negotiate my salary in the fintech industry?",
+      "What are the career paths in fintech?",
+      "What resources can help me in my job search in fintech?"
     ],
     "experience_level": "entry",
     "company_context": [
@@ -9582,24 +9578,24 @@
     "summary": "CVS Health's career portal provides resources and information for individuals seeking careers in the pharmaceutical and analytics sectors. It serves as a gateway for job seekers to explore opportunities within the company.",
     "use_cases": [
       "when looking for job opportunities in the pharmaceutical sector",
-      "when researching company culture and values"
+      "when exploring analytics roles within a large company"
     ],
     "audience": [
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "What careers are available at CVS Health?",
+      "What career opportunities are available at CVS Health?",
       "How can I apply for a job at CVS Health?",
-      "What is the company culture at CVS Health?",
-      "What skills are needed for analytics roles at CVS Health?",
-      "What is the hiring process like at CVS Health?",
-      "What benefits does CVS Health offer to employees?",
+      "What skills are needed for a career in pharma?",
+      "What analytics roles does CVS Health offer?",
       "How does CVS Health support career development?",
-      "What are common interview questions for CVS Health?"
+      "What is the company culture like at CVS Health?",
+      "What benefits does CVS Health provide to employees?",
+      "What are the typical career paths at CVS Health?"
     ],
     "role_type": [
-      "data-scientist",
-      "economist"
+      "pharma",
+      "analytics"
     ],
     "experience_level": "entry",
     "company_context": [
@@ -10672,23 +10668,22 @@
     "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [],
-    "summary": "Supercell's career portal provides insights into career opportunities within the gaming industry, focusing on roles related to econometrics and game development. It serves as a resource for individuals looking to explore careers in a dynamic and innovative company.",
+    "summary": "Supercell's career portal provides insights into career opportunities within the gaming industry, focusing on roles available at the company. It serves as a resource for individuals interested in pursuing a career in gaming and related fields.",
     "use_cases": [
-      "when exploring career options in the gaming industry",
-      "when seeking information about job roles at Supercell"
+      "when exploring career options in the gaming industry"
     ],
     "audience": [
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "What career opportunities are available at Supercell?",
-      "How can I prepare for a job at a gaming company?",
-      "What skills are needed for a career in gaming?",
-      "What is the job application process at Supercell?",
-      "How does Supercell support career development?",
-      "What are the typical roles in the gaming industry?",
+      "What career opportunities does Supercell offer?",
+      "How can I prepare for a job at Supercell?",
+      "What skills are needed to work in the gaming industry?",
       "What is the company culture like at Supercell?",
-      "What are the salary ranges for positions at Supercell?"
+      "How does Supercell support career development?",
+      "What roles are available for data scientists at Supercell?",
+      "What is the hiring process like at Supercell?",
+      "What are the benefits of working at Supercell?"
     ],
     "experience_level": "entry",
     "company_context": [
@@ -11771,18 +11766,18 @@
     "difficulty": null,
     "prerequisites": [],
     "topic_tags": [],
-    "summary": "Revolut's career portal provides insights and resources for job seekers in the fintech industry, particularly in Europe and the UK. It offers information on various career paths and opportunities within the company.",
+    "summary": "Revolut's career portal provides insights into job opportunities within the fintech sector, particularly in Europe and the UK. It serves as a resource for individuals looking to explore career paths in a rapidly growing industry.",
     "use_cases": [],
-    "audience": [],
+    "audience": null,
     "synthetic_questions": [
-      "What job opportunities are available at Revolut?",
-      "How can I prepare for an interview at Revolut?",
-      "What is the salary range for positions at Revolut?",
-      "What skills are needed to work at Revolut?",
-      "How does Revolut support career development?",
+      "What career opportunities are available at Revolut?",
+      "How can I apply for a job at Revolut?",
       "What is the company culture like at Revolut?",
-      "Are there internship opportunities at Revolut?",
-      "What benefits does Revolut offer to employees?"
+      "What skills are valued at Revolut?",
+      "How does Revolut support employee growth?",
+      "What are the benefits of working at a fintech company like Revolut?",
+      "What roles are commonly available at Revolut?",
+      "How does Revolut compare to other fintech companies in Europe?"
     ],
     "company_context": [
       "fintech"
@@ -11889,17 +11884,21 @@
     "prerequisites": [],
     "topic_tags": [],
     "summary": "N26 is a career portal that provides resources and information for individuals interested in pursuing careers in the fintech industry, particularly in Europe and Germany.",
-    "use_cases": [],
-    "audience": [],
+    "use_cases": [
+      "when looking for career opportunities in fintech"
+    ],
+    "audience": [
+      "Curious-browser"
+    ],
     "synthetic_questions": [
       "What career opportunities are available at N26?",
-      "How can I apply for a job at N26?",
-      "What is the company culture like at N26?",
+      "How can I prepare for an interview at N26?",
+      "What is the salary range for positions at N26?",
       "What skills are needed to work in fintech?",
-      "How does N26 support employee career growth?",
-      "What are the benefits of working at N26?",
-      "What is the interview process like at N26?",
-      "What roles does N26 offer for recent graduates?"
+      "How does N26 support career development?",
+      "What is the company culture like at N26?",
+      "What roles are available in the fintech sector?",
+      "How can I network with professionals in fintech?"
     ],
     "experience_level": "entry",
     "company_context": [
@@ -13218,24 +13217,24 @@
     "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [],
-    "summary": "Hopper is a career portal that provides resources and information for individuals seeking opportunities in the travel industry. It focuses on connecting users with companies and roles that align with their career aspirations.",
+    "summary": "Hopper is a career portal that provides resources for individuals looking to explore job opportunities, particularly in the travel sector. It connects users with various companies and offers insights into the job market.",
     "use_cases": [
-      "when to explore career opportunities in travel",
-      "when seeking company lists for job applications"
+      "when to use this resource"
     ],
     "audience": [
       "Curious-browser"
     ],
     "synthetic_questions": [
       "What companies are listed on Hopper?",
-      "How can I find job opportunities in the travel industry?",
-      "What resources does Hopper provide for career advancement?",
-      "How do I navigate the job market as an economist?",
-      "What are the best practices for job searching in tech?",
-      "How can I prepare for interviews in the travel sector?",
-      "What salary negotiation tips are available?",
-      "What roles can I find in the marketplace category?"
-    ]
+      "How can I find job opportunities in travel?",
+      "What resources does Hopper provide for job seekers?",
+      "How does Hopper help with career advancement?",
+      "What is the focus of Hopper's career portal?",
+      "Can I find economist roles on Hopper?",
+      "What types of jobs are available in the marketplace?",
+      "How does Hopper support travel professionals?"
+    ],
+    "experience_level": "entry"
   },
   {
     "name": "Tripadvisor",

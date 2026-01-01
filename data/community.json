@@ -1385,11 +1385,11 @@
       "marketing-mix-models",
       "performance-measurement"
     ],
-    "summary": "The ARF Marketing Analytics Accelerator is an annual conference focused on marketing analytics, specifically attribution, marketing mix models, and performance measurement. It attracts professionals interested in advanced methodologies for analyzing marketing performance.",
+    "summary": "The ARF Marketing Analytics Accelerator is focused exclusively on attribution, marketing mix models, and performance measurement. It attracts professionals interested in advanced marketing analytics methodologies.",
     "use_cases": [
-      "Learn about attribution techniques",
-      "Understand marketing mix modeling",
-      "Network with industry professionals"
+      "Learn about advanced marketing analytics techniques",
+      "Network with industry professionals",
+      "Gain insights into performance measurement strategies"
     ],
     "audience": [
       "Mid-DS",
@@ -1397,14 +1397,14 @@
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "What is the focus of the ARF Marketing Analytics Accelerator?",
+      "What is marketing mix modeling?",
+      "How to measure marketing performance?",
+      "What is multi-touch attribution?",
+      "What are the latest trends in attribution?",
+      "How to analyze incrementality?",
+      "What methodologies are used in marketing analytics?",
       "Who should attend the ARF Marketing Analytics Accelerator?",
-      "What topics are covered at the ARF Marketing Analytics Accelerator?",
-      "How does the ARF Marketing Analytics Accelerator address marketing mix models?",
-      "What methodologies are discussed at the ARF Marketing Analytics Accelerator?",
-      "What is the location of the ARF Marketing Analytics Accelerator?",
-      "When is the ARF Marketing Analytics Accelerator held?",
-      "What are the benefits of attending the ARF Marketing Analytics Accelerator?"
+      "What topics will be covered at the conference?"
     ],
     "event_format": "conference",
     "geographic_focus": "New York, NY",
@@ -6626,18 +6626,17 @@
       "Blogs",
       "Personal Blog"
     ],
-    "difficulty": "intermediate",
+    "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [
       "blogs",
-      "technology",
-      "society"
+      "personal-blog"
     ],
-    "summary": "Michael Luca is a professor and director at Johns Hopkins Carey Business School, focusing on platform design and online marketplace mechanisms. This personal blog may attract readers interested in experimentation methodology and the intersection of technology and society.",
+    "summary": "Michael Luca is a professor and director at Johns Hopkins Carey Business School, focusing on platform design and online marketplace mechanisms. This personal blog is likely to attract those interested in technology and society, particularly in the context of experimentation methodology.",
     "use_cases": [
       "to learn about platform design",
-      "to explore online marketplace mechanisms",
-      "to understand experimentation methodology",
+      "to understand online marketplace mechanisms",
+      "to explore experimentation methodology",
       "to gain insights from an academic perspective"
     ],
     "audience": [
@@ -6646,12 +6645,12 @@
     "synthetic_questions": [
       "What is the Technology and Society Initiative?",
       "How does platform design impact online marketplaces?",
-      "What are the key findings in 'The Power of Experiments'?",
+      "What methodologies are used in experimentation?",
       "Who is Michael Luca?",
-      "What methodologies are used in online marketplace research?",
-      "How can experimentation improve technology design?",
-      "What topics are covered in Michael Luca's blog?",
-      "Why is understanding technology and society important?"
+      "What are the key themes in 'The Power of Experiments'?",
+      "How can I learn about online marketplace mechanisms?",
+      "What insights can I gain from Michael Luca's blog?",
+      "What is the role of technology in society?"
     ],
     "event_format": "online"
   },
@@ -6752,18 +6751,18 @@
       "Blogs",
       "Substack"
     ],
-    "difficulty": "intermediate",
+    "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [
       "platform-economics",
       "network-effects",
       "BigTech-strategy"
     ],
-    "summary": "Sangeet Paul Choudary is the founder of Platform Thinking Labs, focusing on platform economics and competitive strategies in the tech industry. This online event is likely to attract individuals interested in understanding the mechanics of network effects and platform strategies.",
+    "summary": "Sangeet Paul Choudary is the founder of Platform Thinking Labs, focusing on platform economics and competitive strategies of BigTech. This online event is likely attended by individuals interested in understanding network effects and platform strategies.",
     "use_cases": [
       "to learn about platform economics",
       "to understand network effects",
-      "to explore BigTech strategies"
+      "to gain insights into BigTech strategies"
     ],
     "audience": [
       "Curious-browser"
@@ -6773,10 +6772,10 @@
       "How do network effects work?",
       "What strategies do BigTech companies use?",
       "Who is Sangeet Paul Choudary?",
-      "What is the Platform Revolution about?",
-      "How can I subscribe to Sangeet's content?",
-      "What are the benefits of platform thinking?",
-      "What is the significance of platform scale?"
+      "What is the Platform Revolution?",
+      "What is the significance of platform scale?",
+      "How to leverage platform thinking?",
+      "What are the benefits of subscribing to Sangeet's content?"
     ],
     "event_format": "online"
   },
@@ -7244,11 +7243,11 @@
       "analytics",
       "media-mix-modeling"
     ],
-    "summary": "Michael Kaminsky, co-founder of Recast, shares insights on media mix modeling and causal inference in marketing. This event is suitable for those interested in marketing analytics and validation techniques.",
+    "summary": "Michael Kaminsky, co-founder of Recast, shares insights on media mix modeling and analytics. The event is suitable for those interested in marketing analytics and causal inference.",
     "use_cases": [
-      "Learn about marketing analytics techniques",
-      "Understand media mix modeling",
-      "Network with professionals in marketing analytics"
+      "to learn about marketing mix modeling",
+      "to understand causal inference in marketing",
+      "to explore incrementality testing techniques"
     ],
     "audience": [
       "Junior-DS",
@@ -7259,12 +7258,12 @@
     "synthetic_questions": [
       "What is media mix modeling?",
       "How does causal inference apply to marketing?",
-      "What are the best practices for incrementality testing?",
+      "What are the benefits of incrementality testing?",
       "How to validate MMM results?",
-      "What insights can be gained from marketing analytics?",
+      "What tools are used for marketing analytics?",
       "Who is Michael Kaminsky?",
       "What is Recast?",
-      "What are the challenges in marketing mix modeling?"
+      "What are the latest trends in marketing analytics?"
     ],
     "event_format": "online",
     "frequency": "one-time"
@@ -7402,36 +7401,31 @@
       "single-cell",
       "genomics"
     ],
-    "difficulty": "intermediate",
+    "difficulty": "beginner|intermediate",
     "prerequisites": [],
     "topic_tags": [
       "bioinformatics",
-      "single-cell-rnaseq",
-      "scatacseq",
       "genomics",
-      "computational-biology"
+      "single-cell",
+      "education"
     ],
-    "summary": "Ming Tommy Tang is a computational biologist and Director of Bioinformatics at AstraZeneca. His blog and YouTube channel 'chatomics' provide practical tutorials on single-cell analysis, genomics, R, Python, and reproducible research. Known as 'crazyhottommy' in the bioinformatics community.",
+    "summary": "Ming Tommy Tang is a computational biologist who shares tutorials on bioinformatics topics such as single-cell RNAseq and scATACseq through his YouTube channel 'chatomics'. This event is aimed at individuals interested in learning about bioinformatics and genomics.",
     "use_cases": [
-      "Learn single-cell RNAseq analysis with Seurat",
-      "Understand scATACseq data processing",
-      "Follow bioinformatics career advice",
-      "Learn reproducible research practices"
+      "to learn about bioinformatics techniques",
+      "to access educational resources in genomics"
     ],
     "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "How to analyze single-cell RNAseq data?",
-      "What is scATACseq and how to process it?",
-      "How to transition from wet lab to computational biology?",
-      "What are best practices for reproducible bioinformatics?",
-      "How to use Seurat for single-cell analysis?",
-      "What are common mistakes in bioinformatics?",
-      "How to build a bioinformatics career?"
+      "What is single-cell RNAseq?",
+      "How can I learn about bioinformatics?",
+      "What tutorials does chatomics offer?",
+      "Who is Ming Tommy Tang?",
+      "What is scATACseq?",
+      "Where can I find bioinformatics education resources?",
+      "What is the book 'From Cell Line to Command Line' about?",
+      "Which journals has Ming Tommy Tang published in?"
     ],
     "event_format": "online"
   },
@@ -16271,16 +16265,12 @@
     "best_for": "PyMC, Bayesian business applications, probabilistic programming, marketing mix modeling",
     "difficulty": "intermediate",
     "prerequisites": [],
-    "topic_tags": [
-      "Bayesian programming",
-      "data science",
-      "business applications"
-    ],
-    "summary": "Thomas Wiecki, CEO of PyMC Labs and former Director of Data Science at Quantopian, will discuss the applications of Bayesian probabilistic programming in business. This event is suitable for professionals interested in advanced data science methodologies.",
+    "topic_tags": [],
+    "summary": "Thomas Wiecki is a leading voice in Bayesian probabilistic programming for business applications. This event is likely to attract professionals interested in data science and Bayesian methods.",
     "use_cases": [
-      "to learn about Bayesian programming",
-      "to network with industry leaders",
-      "to gain insights into data science applications in business"
+      "Gain insights from an industry leader",
+      "Learn about Bayesian programming applications",
+      "Network with professionals in data science"
     ],
     "audience": [
       "Mid-DS",
@@ -16288,16 +16278,16 @@
       "Curious-browser"
     ],
     "synthetic_questions": [
+      "Who is Thomas Wiecki?",
       "What is Bayesian probabilistic programming?",
       "How can Bayesian methods be applied in business?",
-      "Who is Thomas Wiecki?",
-      "What are the benefits of attending this event?",
-      "What is PyMC Labs?",
-      "What topics will be covered in the talk?",
-      "How does data science impact business decisions?",
-      "What is the role of a Director of Data Science?"
+      "What is the role of a CEO in a data science company?",
+      "What are the latest trends in data science?",
+      "How does PyMC Labs contribute to data science?",
+      "What was Quantopian's impact on the data science community?",
+      "What can I learn from industry leaders like Thomas Wiecki?"
     ],
-    "event_format": "conference",
+    "event_format": "meetup",
     "geographic_focus": "Berlin, Germany"
   },
   {
@@ -18201,25 +18191,40 @@
     "type": "Conference",
     "location": "Las Vegas, USA",
     "best_for": "InsurTech trends, startup networking, incumbent-startup partnerships, digital insurance innovation",
-    "difficulty": "intermediate",
+    "difficulty": "beginner|intermediate|advanced",
     "prerequisites": [],
     "topic_tags": [
-      "insurtech",
-      "insurance-innovation",
-      "digital-transformation"
+      "insurance",
+      "innovation",
+      "digital-transformation",
+      "networking",
+      "industry-event"
     ],
-    "summary": "ITC Vegas is the world's largest gathering of insurance innovation, featuring keynotes from industry leaders, startup showcases, and networking with investors and executives.",
+    "summary": "ITC Vegas is the largest InsurTech conference globally, bringing together over 8,000 insurance executives, investors, and entrepreneurs. It serves as the premier event for insurance innovation and digital transformation.",
     "use_cases": [
-      "networking with InsurTech leaders",
-      "discovering insurance startups",
-      "learning about digital transformation"
+      "to learn about insurance innovation",
+      "to network with industry leaders",
+      "to explore digital transformation in insurance"
     ],
     "audience": [
+      "Junior-DS",
+      "Mid-DS",
       "Senior-DS",
-      "Mid-DS"
+      "Curious-browser"
     ],
     "event_format": "conference",
-    "geographic_focus": "Las Vegas, USA"
+    "geographic_focus": "Las Vegas, USA",
+    "synthetic_questions": [
+      "What is ITC Vegas?",
+      "Who attends ITC Vegas?",
+      "What topics are covered at ITC Vegas?",
+      "How can I network at ITC Vegas?",
+      "What innovations are showcased at ITC Vegas?",
+      "Is ITC Vegas suitable for beginners?",
+      "What are the benefits of attending ITC Vegas?",
+      "When is ITC Vegas held?"
+    ],
+    "frequency": "annual"
   },
   {
     "name": "Insurtech Insights",
@@ -18232,22 +18237,38 @@
     "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "insurtech",
-      "embedded-insurance",
-      "AI-insurance"
+      "networking",
+      "industry-event"
     ],
-    "summary": "Insurtech Insights is a global conference series bringing together insurance industry leaders and innovators across multiple regions.",
+    "summary": "Insurtech Insights is a global conference series that connects insurance carriers, brokers, and InsurTech startups across the USA, Europe, and Asia. The event features dedicated tracks focusing on AI, claims automation, and embedded insurance, attracting professionals from the insurance and technology sectors.",
     "use_cases": [
-      "regional InsurTech networking",
-      "learning about embedded insurance",
-      "claims automation insights"
+      "networking with industry professionals",
+      "learning about the latest trends in InsurTech",
+      "exploring opportunities for collaboration"
     ],
     "audience": [
+      "Junior-DS",
+      "Mid-DS",
       "Senior-DS",
-      "Mid-DS"
+      "Curious-browser"
     ],
     "event_format": "conference",
-    "geographic_focus": "Global"
+    "geographic_focus": [
+      "USA",
+      "Europe",
+      "Asia"
+    ],
+    "synthetic_questions": [
+      "What is Insurtech Insights?",
+      "Who attends Insurtech Insights?",
+      "What topics are covered at Insurtech Insights?",
+      "Where is Insurtech Insights held?",
+      "How can I network at Insurtech Insights?",
+      "What are the benefits of attending Insurtech Insights?",
+      "Is Insurtech Insights suitable for beginners?",
+      "What industries are represented at Insurtech Insights?"
+    ],
+    "frequency": "annual"
   },
   {
     "name": "Insurance Data Science Conference",
@@ -18257,25 +18278,39 @@
     "type": "Conference",
     "location": "Zurich, Switzerland",
     "best_for": "Insurance ML research, actuarial data science, academic-industry collaboration",
-    "difficulty": "advanced",
+    "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "insurance-ML",
-      "actuarial-data-science",
-      "research"
+      "machine-learning",
+      "data-science",
+      "insurance",
+      "academic-conference"
     ],
-    "summary": "The Insurance Data Science Conference at ETH Zurich brings together researchers and practitioners to discuss cutting-edge ML applications in insurance.",
+    "summary": "The Insurance Data Science Conference is an academic event held at ETH Zurich that focuses on the application of machine learning and data science in the insurance sector. Attendees include researchers, practitioners, and industry professionals interested in the latest advancements in pricing, reserving, and risk management.",
     "use_cases": [
-      "learning insurance ML research",
-      "academic networking",
-      "presenting actuarial research"
+      "to learn about the latest research in insurance data science",
+      "to network with industry professionals",
+      "to explore machine learning applications in insurance"
     ],
     "audience": [
       "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
       "Senior-DS"
     ],
     "event_format": "conference",
-    "geographic_focus": "Zurich, Switzerland"
+    "geographic_focus": "Zurich, Switzerland",
+    "synthetic_questions": [
+      "What is the Insurance Data Science Conference?",
+      "Who should attend the Insurance Data Science Conference?",
+      "What topics are covered at the Insurance Data Science Conference?",
+      "Where is the Insurance Data Science Conference held?",
+      "When does the Insurance Data Science Conference take place?",
+      "What are the benefits of attending the Insurance Data Science Conference?",
+      "How can I register for the Insurance Data Science Conference?",
+      "What kind of research is presented at the Insurance Data Science Conference?"
+    ],
+    "frequency": "annual"
   },
   {
     "name": "SOA Annual Meeting",
@@ -18285,25 +18320,42 @@
     "type": "Conference",
     "location": "Various US cities",
     "best_for": "Actuarial professional development, life insurance practice, pension actuarial topics",
-    "difficulty": "intermediate",
+    "difficulty": "beginner|intermediate|advanced",
     "prerequisites": [],
     "topic_tags": [
-      "actuarial",
-      "life-insurance",
-      "professional-development"
+      "networking",
+      "continuing-education",
+      "career-development",
+      "insurance",
+      "actuarial-science"
     ],
-    "summary": "The SOA Annual Meeting is the premier gathering for actuaries focusing on life, health, and pension practice areas.",
+    "summary": "The SOA Annual Meeting is the Society of Actuaries' flagship conference, attracting over 3,000 attendees. It covers various topics in life, health, pension, and general insurance, providing opportunities for continuing education and networking.",
     "use_cases": [
-      "actuarial continuing education",
-      "professional networking",
-      "career development"
+      "to learn about the latest trends in actuarial science",
+      "to network with industry professionals",
+      "to gain continuing education credits",
+      "to explore career development opportunities"
     ],
     "audience": [
+      "Early-PhD",
+      "Junior-DS",
       "Mid-DS",
-      "Senior-DS"
+      "Senior-DS",
+      "Curious-browser"
     ],
     "event_format": "conference",
-    "geographic_focus": "USA"
+    "geographic_focus": "US",
+    "synthetic_questions": [
+      "What is the SOA Annual Meeting?",
+      "Who should attend the SOA Annual Meeting?",
+      "What topics are covered at the SOA Annual Meeting?",
+      "How can I network at the SOA Annual Meeting?",
+      "What are the benefits of attending the SOA Annual Meeting?",
+      "Where is the SOA Annual Meeting held?",
+      "When does the SOA Annual Meeting take place?",
+      "What is the size of the SOA Annual Meeting?"
+    ],
+    "frequency": "annual"
   },
   {
     "name": "TRB Annual Meeting",
@@ -18327,28 +18379,31 @@
     "difficulty": null,
     "prerequisites": [],
     "topic_tags": [
-      "transportation",
-      "conference",
-      "policy",
-      "research"
+      "academic-conference",
+      "industry-event",
+      "transportation"
     ],
-    "summary": "TRB Annual Meeting is the world's largest transportation research gathering. Sessions cover economics, planning, engineering, safety, and policy across road, rail, transit, aviation, and maritime modes.",
+    "summary": "The TRB Annual Meeting is the largest transportation research conference globally, featuring over 13,000 attendees and more than 5,000 presentations. It covers all transportation modes and disciplines, attracting professionals and researchers in the field.",
     "use_cases": [
-      "Present research",
-      "Network with practitioners",
-      "Learn about policy developments",
-      "Find collaborators"
+      "To learn about the latest research in transportation",
+      "To network with professionals in the transportation field"
     ],
     "audience": [
+      "Early-PhD",
+      "Junior-DS",
       "Mid-DS",
       "Senior-DS",
-      "PhD"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "TRB conference",
-      "transportation research conference",
-      "TRB annual meeting registration",
-      "transportation conference DC"
+      "What is the TRB Annual Meeting?",
+      "How many attendees does the TRB Annual Meeting attract?",
+      "What topics are covered at the TRB Annual Meeting?",
+      "Who should attend the TRB Annual Meeting?",
+      "What is the significance of the TRB Annual Meeting in transportation research?",
+      "How can I participate in the TRB Annual Meeting?",
+      "What networking opportunities are available at the TRB Annual Meeting?",
+      "When is the TRB Annual Meeting held?"
     ],
     "event_format": "conference",
     "geographic_focus": "Washington, DC",
@@ -18373,30 +18428,35 @@
     ],
     "start_date": "2025-06-15",
     "end_date": "2025-06-17",
-    "difficulty": null,
-    "prerequisites": [
-      "economics background"
-    ],
+    "difficulty": "beginner",
+    "prerequisites": [],
     "topic_tags": [
       "transportation",
       "economics",
-      "academic-conference"
+      "academic-conference",
+      "research"
     ],
-    "summary": "ITEA conference brings together academic transportation economists for rigorous research presentations on congestion pricing, demand modeling, environmental economics, and infrastructure policy.",
+    "summary": "The ITEA Annual Conference is the premier event for researchers and practitioners in transportation economics. Attendees include academics, policymakers, and industry professionals focused on topics such as pricing, mode choice, and environmental policy.",
     "use_cases": [
-      "Present academic research",
-      "Get feedback from experts",
-      "Build academic network"
+      "to learn about transportation economics",
+      "to network with industry professionals",
+      "to present research findings"
     ],
     "audience": [
-      "Senior-DS",
-      "PhD"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "ITEA conference",
-      "transportation economics conference",
-      "academic transport conference",
-      "transport economics association"
+      "What is the focus of the ITEA Annual Conference?",
+      "Who should attend the ITEA Annual Conference?",
+      "What topics are covered at the ITEA Annual Conference?",
+      "How can I participate in the ITEA Annual Conference?",
+      "What are the key themes of the ITEA Annual Conference?",
+      "Where is the ITEA Annual Conference held?",
+      "What is the frequency of the ITEA Annual Conference?",
+      "What networking opportunities are available at the ITEA Annual Conference?"
     ],
     "event_format": "conference",
     "geographic_focus": "International (rotating)",
@@ -18421,32 +18481,36 @@
     ],
     "start_date": null,
     "end_date": null,
-    "difficulty": null,
+    "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
       "transportation",
-      "research-center",
-      "academia"
+      "research",
+      "academic"
     ],
-    "summary": "UC Berkeley ITS is one of the world's premier transportation research institutes. Home to leading scholars in transportation economics, policy, and engineering with active seminar series and working paper publications.",
+    "summary": "The UC Berkeley Institute of Transportation Studies is a leading research center focused on transportation, bringing together faculty from economics, engineering, and planning. It hosts seminars and publishes working papers, attracting attendees who are interested in advancing their knowledge in transportation research.",
     "use_cases": [
-      "Find working papers",
-      "Attend seminars",
-      "Explore PhD programs",
-      "Seek collaborations"
+      "to learn about transportation research",
+      "to network with researchers and academics",
+      "to gain insights into transportation policy and planning"
     ],
     "audience": [
+      "Early-PhD",
+      "Junior-DS",
       "Mid-DS",
-      "Senior-DS",
-      "PhD"
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "Berkeley transportation research",
-      "ITS Berkeley",
-      "transportation PhD Berkeley",
-      "transportation research center"
+      "What research is conducted at the UC Berkeley Institute of Transportation Studies?",
+      "Who can attend the seminars at the transportation research center?",
+      "What topics are covered in the working papers published by the institute?",
+      "How does the institute train future transportation researchers?",
+      "What is the significance of transportation research in academia?",
+      "What events does the UC Berkeley Institute of Transportation Studies host?",
+      "How can I get involved with the transportation research community?",
+      "What are the benefits of attending seminars at this research center?"
     ],
-    "event_format": "research_center",
+    "event_format": "hybrid",
     "geographic_focus": "Berkeley, CA",
     "frequency": "ongoing"
   },
@@ -18469,33 +18533,38 @@
     ],
     "start_date": "2025-06-22",
     "end_date": "2025-06-25",
-    "difficulty": null,
-    "prerequisites": [
-      "health economics background"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "health-economics",
-      "conference",
-      "academic"
+      "healthcare",
+      "economics",
+      "academic-conference",
+      "research"
     ],
-    "summary": "ASHEcon is the leading U.S. academic conference for health economics research. Features paper presentations, keynote lectures, and networking for researchers focused on healthcare markets and policy.",
+    "summary": "ASHEcon is the premier U.S. health economics research conference, featuring cutting-edge research on healthcare markets, policy, and outcomes. It attracts around 1,000 participants and includes 180 sessions, making it a significant event for professionals in the field.",
     "use_cases": [
-      "Present research",
-      "Network with health economists",
-      "Learn cutting-edge methods"
+      "networking with health economists",
+      "learning about healthcare policy",
+      "exploring research outcomes in health economics"
     ],
     "audience": [
-      "Senior-DS",
-      "PhD"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "health economics conference",
-      "ASHEcon meeting",
-      "academic health economics",
-      "healthcare research conference"
+      "What is ASHEcon?",
+      "Who attends ASHEcon?",
+      "What topics are covered at ASHEcon?",
+      "How can I participate in ASHEcon?",
+      "What is the significance of health economics?",
+      "Where is ASHEcon held?",
+      "What research is presented at ASHEcon?",
+      "How many sessions are at ASHEcon?"
     ],
     "event_format": "conference",
-    "geographic_focus": "Nashville (2025)",
+    "geographic_focus": "United States",
     "frequency": "annual"
   },
   {
@@ -18517,29 +18586,36 @@
     ],
     "start_date": "2025-11-08",
     "end_date": "2025-11-12",
-    "difficulty": null,
+    "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "health-informatics",
-      "healthcare-ai",
-      "conference"
+      "academic-conference",
+      "industry-event",
+      "healthcare",
+      "informatics",
+      "AI",
+      "data-science"
     ],
-    "summary": "AMIA is the leading conference for biomedical informatics bringing together researchers, clinicians, and industry. 2025 focuses on generative AI applications in healthcare.",
+    "summary": "The AMIA Annual Symposium is the world's premier biomedical and health informatics meeting, attracting over 2,000 attendees. The 2025 theme is 'Informatics in the Age of Generative AI', focusing on clinical informatics, data science, and AI.",
     "use_cases": [
-      "Healthcare AI research",
-      "Clinical informatics networking",
-      "Industry connections"
+      "networking with professionals in healthcare informatics",
+      "learning about the latest trends in AI and data science",
+      "gaining insights into clinical informatics"
     ],
     "audience": [
       "Mid-DS",
       "Senior-DS",
-      "PhD"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "health informatics conference",
-      "AMIA symposium",
-      "clinical AI conference",
-      "biomedical informatics meeting"
+      "What is the AMIA Annual Symposium?",
+      "Who should attend the AMIA Annual Symposium?",
+      "What topics are covered at the AMIA Annual Symposium?",
+      "When is the AMIA Annual Symposium held?",
+      "Where is the AMIA Annual Symposium located?",
+      "What is the theme of the 2025 AMIA Annual Symposium?",
+      "How many attendees are expected at the AMIA Annual Symposium?",
+      "What are the benefits of attending the AMIA Annual Symposium?"
     ],
     "event_format": "conference",
     "geographic_focus": "San Francisco, CA",
@@ -18564,33 +18640,39 @@
     ],
     "start_date": "2025-05-13",
     "end_date": "2025-05-16",
-    "difficulty": null,
+    "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "health-economics",
-      "hta",
-      "outcomes-research"
+      "healthcare",
+      "economics",
+      "outcomes-research",
+      "drug-pricing",
+      "HTA"
     ],
-    "summary": "ISPOR is the leading conference for health economics and outcomes research with strong industry and HTA agency participation. Focuses on cost-effectiveness, real-world evidence, and pricing.",
+    "summary": "ISPOR is a global conference focused on health economics and outcomes research, emphasizing cost-effectiveness, health technology assessment, real-world evidence, and drug pricing. It attracts a strong presence from industry professionals and regulatory bodies.",
     "use_cases": [
-      "HEOR networking",
-      "HTA methodology",
-      "Industry connections"
+      "networking with industry leaders",
+      "learning about the latest in HEOR",
+      "understanding drug pricing strategies"
     ],
     "audience": [
       "Mid-DS",
       "Senior-DS",
-      "PhD"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "HEOR conference",
-      "ISPOR meeting",
-      "health technology assessment conference",
-      "pharmacoeconomics conference"
+      "What is ISPOR?",
+      "Who should attend the ISPOR conference?",
+      "What topics are covered at ISPOR?",
+      "How does ISPOR impact healthcare policy?",
+      "What are the benefits of attending ISPOR?",
+      "When and where is ISPOR 2025 held?",
+      "What is the focus of ISPOR in terms of research?",
+      "Who are the key speakers at ISPOR?"
     ],
     "event_format": "conference",
-    "geographic_focus": "Montreal (2025)",
-    "frequency": "annual (plus European meeting)"
+    "geographic_focus": "Montreal",
+    "frequency": "annual"
   },
   {
     "name": "USAEE/IAEE North American Conference",
@@ -18611,32 +18693,40 @@
     ],
     "start_date": "2025-11-02",
     "end_date": "2025-11-05",
-    "difficulty": null,
+    "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [
       "energy",
       "economics",
-      "conference"
+      "academic-conference",
+      "networking"
     ],
-    "summary": "USAEE is the premier North American conference for energy economists. Features student paper awards, job market events, and presentations spanning all energy sectors.",
+    "summary": "The USAEE/IAEE North American Conference is the largest gathering of U.S. energy economists, featuring student paper competitions, networking opportunities, and presentations on various topics including electricity, oil/gas, and environmental economics. It attracts a diverse audience of professionals and students interested in the intersection of energy and economics.",
     "use_cases": [
-      "Present research",
-      "Network",
-      "Job market",
-      "Student competitions"
+      "to learn about the latest trends in energy economics",
+      "to network with professionals in the field",
+      "to participate in student paper competitions",
+      "to gain insights from expert presentations"
     ],
     "audience": [
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
       "Senior-DS",
-      "PhD"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "energy economics conference",
-      "USAEE conference",
-      "IAEE North America",
-      "energy economist networking"
+      "What topics are covered at the USAEE/IAEE North American Conference?",
+      "How can students participate in the paper competitions?",
+      "What networking opportunities are available at the conference?",
+      "Who are the key speakers at the USAEE/IAEE conference?",
+      "What is the significance of energy economics?",
+      "Where is the USAEE/IAEE North American Conference held?",
+      "How often does the conference take place?",
+      "What are the benefits of attending the USAEE/IAEE conference?"
     ],
     "event_format": "conference",
-    "geographic_focus": "Fort Worth (2025)",
+    "geographic_focus": "Various US cities",
     "frequency": "annual"
   },
   {
@@ -18658,30 +18748,35 @@
     ],
     "start_date": "2025-03-14",
     "end_date": "2025-03-14",
-    "difficulty": null,
-    "prerequisites": [
-      "electricity research interest"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
+      "academic-conference",
+      "research",
       "energy",
-      "electricity",
-      "research"
+      "electricity"
     ],
-    "summary": "POWER Conference brings together leading electricity economics researchers for a focused one-day event. Intimate setting with strong networking opportunities.",
+    "summary": "The POWER Conference is an annual one-day event at UC Berkeley that showcases leading researchers in electricity economics. Attendees include academics and industry professionals interested in power sector research.",
     "use_cases": [
-      "Cutting-edge research",
-      "Networking",
-      "PhD students"
+      "networking with researchers",
+      "learning about electricity economics",
+      "exploring power sector research"
     ],
     "audience": [
-      "Senior-DS",
-      "PhD"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "electricity economics conference",
-      "POWER conference Berkeley",
-      "Borenstein conference",
-      "power sector research"
+      "What is the POWER Conference?",
+      "Who are the speakers at the POWER Conference?",
+      "What topics are covered at the POWER Conference?",
+      "When does the POWER Conference take place?",
+      "How can I attend the POWER Conference?",
+      "What is the focus of the POWER Conference?",
+      "Who should attend the POWER Conference?",
+      "What is the location of the POWER Conference?"
     ],
     "event_format": "conference",
     "geographic_focus": "Berkeley, CA",
@@ -18706,34 +18801,38 @@
     ],
     "start_date": null,
     "end_date": null,
-    "difficulty": null,
-    "prerequisites": [
-      "PhD-level research"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
+      "academic-conference",
+      "research",
       "energy",
-      "environment",
-      "research"
+      "environment"
     ],
-    "summary": "NBER's Environment and Energy Economics program sets the research agenda for the field. Working papers provide early access to influential research.",
+    "summary": "The NBER Environment and Energy Economics event serves as a top academic research setting for environmental and energy economics, featuring Summer Institute sessions and a working paper series that showcase frontier research. It attracts researchers and academics focused on these critical areas.",
     "use_cases": [
-      "Stay current",
-      "Research agenda",
-      "Working paper access"
+      "to engage with leading research in environmental and energy economics",
+      "to network with academics and researchers in the field"
     ],
     "audience": [
-      "Senior-DS",
-      "PhD"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "NBER energy working papers",
-      "environment economics research",
-      "energy economics frontier",
-      "NBER summer institute"
+      "What is the NBER Environment and Energy Economics event?",
+      "Who can attend the NBER Summer Institute?",
+      "What topics are covered in the working paper series?",
+      "How does NBER contribute to environmental and energy economics?",
+      "What is the format of the NBER Environment and Energy Economics sessions?",
+      "When does the NBER Summer Institute take place?",
+      "What kind of research is presented at the NBER event?",
+      "How can I participate in the NBER Environment and Energy Economics?"
     ],
-    "event_format": "research_network",
+    "event_format": "conference",
     "geographic_focus": "Cambridge, MA",
-    "frequency": "ongoing"
+    "frequency": "annual"
   },
   {
     "name": "USAEE/IAEE North American Conference",
@@ -18755,29 +18854,40 @@
     ],
     "start_date": null,
     "end_date": null,
-    "difficulty": "intermediate",
+    "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [
-      "energy-utilities-economics"
+      "energy economics",
+      "research",
+      "networking",
+      "USAEE",
+      "IAEE"
     ],
-    "summary": "Premier North American conference for energy economics. Brings together academics, industry professionals, and policymakers to discuss energy markets, climate policy, and technological change.",
+    "summary": "The USAEE/IAEE North American Conference is an annual gathering of the United States Association for Energy Economics that brings together researchers, practitioners, and policymakers. Attendees include professionals interested in energy economics and related fields.",
     "use_cases": [
-      "Presenting research",
-      "Networking with energy economists",
-      "Learning industry trends"
+      "To learn about the latest research in energy economics",
+      "To network with professionals in the field",
+      "To engage with policymakers on energy issues"
     ],
     "audience": [
-      "Researcher",
-      "Practitioner",
-      "Senior-DS"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "USAEE conference",
-      "energy economics conference",
-      "IAEE North America"
+      "What is the USAEE/IAEE North American Conference?",
+      "Who attends the USAEE/IAEE conference?",
+      "What topics are covered at the USAEE/IAEE conference?",
+      "How can I network at the USAEE/IAEE conference?",
+      "What are the benefits of attending the USAEE/IAEE conference?",
+      "Where is the USAEE/IAEE North American Conference held?",
+      "When does the USAEE/IAEE conference take place?",
+      "What is the focus of the USAEE/IAEE conference?"
     ],
-    "event_format": "academic-conference",
-    "geographic_focus": "North America",
+    "event_format": "conference",
+    "geographic_focus": "Various US cities",
     "frequency": "annual"
   },
   {
@@ -18799,28 +18909,39 @@
     ],
     "start_date": null,
     "end_date": null,
-    "difficulty": "advanced",
+    "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [
-      "energy-utilities-economics"
+      "electricity markets",
+      "renewable energy",
+      "grid modernization",
+      "academic-conference"
     ],
-    "summary": "Berkeley's flagship electricity conference organized by the Energy Institute at Haas. Features leading researchers presenting on market design, renewable integration, storage, and grid modernization.",
+    "summary": "The POWER Conference is an annual event at UC Berkeley focusing on electricity market design, renewable integration, and grid modernization. It attracts researchers, industry professionals, and students interested in the future of energy systems.",
     "use_cases": [
-      "Learning cutting-edge electricity research",
-      "Networking with leading researchers",
-      "Understanding policy debates"
+      "networking with industry professionals",
+      "learning about electricity market design",
+      "exploring renewable integration strategies"
     ],
     "audience": [
-      "Researcher",
-      "Senior-DS"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Berkeley POWER conference",
-      "electricity markets conference",
-      "Haas energy conference"
+      "What is the POWER Conference?",
+      "Who attends the POWER Conference?",
+      "What topics are covered at the POWER Conference?",
+      "How does the POWER Conference address renewable energy?",
+      "What is the focus of the POWER Conference?",
+      "When is the POWER Conference held?",
+      "Where is the POWER Conference located?",
+      "What are the benefits of attending the POWER Conference?"
     ],
-    "event_format": "academic-conference",
-    "geographic_focus": "International",
+    "event_format": "conference",
+    "geographic_focus": "Berkeley, CA",
     "frequency": "annual"
   },
   {
@@ -18842,27 +18963,36 @@
     ],
     "start_date": null,
     "end_date": null,
-    "difficulty": "advanced",
+    "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "energy-utilities-economics"
+      "research",
+      "environmental-economics",
+      "energy-economics"
     ],
-    "summary": "NBER's program for environmental and energy economics research. Organizes meetings and distributes working papers from leading economists on climate, energy markets, and environmental policy.",
+    "summary": "The NBER Environment and Energy Economics Program is a working group focused on advancing research in the fields of environmental and energy economics. It attracts researchers and academics who are interested in discussing and developing working papers on these topics.",
     "use_cases": [
-      "Accessing frontier research",
-      "Attending research presentations",
-      "Networking with top economists"
+      "to engage with leading research in environmental economics",
+      "to network with other researchers in the field"
     ],
     "audience": [
-      "Researcher"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "NBER energy economics",
-      "NBER environment program",
-      "energy economics working papers"
+      "What is the NBER Environment and Energy Economics Program?",
+      "How does the NBER advance research in environmental economics?",
+      "What types of working papers are produced by the NBER?",
+      "Who can attend the NBER working group meetings?",
+      "What is the focus of discussions in the NBER Environment and Energy Economics Program?",
+      "How often does the NBER Environment and Energy Economics Program meet?",
+      "What are the benefits of participating in the NBER working group?",
+      "Is the NBER Environment and Energy Economics Program available virtually?"
     ],
-    "event_format": "research-meetings",
-    "geographic_focus": "International",
+    "event_format": "hybrid",
+    "geographic_focus": "Cambridge, MA",
     "frequency": "multiple-per-year"
   },
   {
@@ -18884,26 +19014,37 @@
     ],
     "start_date": null,
     "end_date": null,
-    "difficulty": "advanced",
+    "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "defense-security-economics"
+      "security economics",
+      "cybersecurity",
+      "interdisciplinary",
+      "academic-conference"
     ],
-    "summary": "Running for over 20 years, WEIS is the essential venue for security economics. Papers publish in partnership with Oxford's Journal of Cybersecurity. Founded by Ross Anderson.",
+    "summary": "The Workshop on the Economics of Information Security (WEIS) is a premier interdisciplinary forum that combines perspectives from economics, social science, business, law, and computer science on security. It attracts researchers and practitioners interested in the economic aspects of cybersecurity.",
     "use_cases": [
-      "Research presentation",
-      "Networking",
-      "Field building"
+      "to learn about interdisciplinary approaches to security",
+      "to network with experts in security economics",
+      "to present research on cybersecurity"
     ],
     "audience": [
-      "Researcher"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "WEIS conference",
-      "security economics conference",
-      "cybersecurity economics workshop"
+      "What is the focus of the WEIS workshop?",
+      "Who can attend the Workshop on the Economics of Information Security?",
+      "What topics are covered at WEIS?",
+      "How does WEIS integrate different disciplines?",
+      "What is the significance of economics in cybersecurity?",
+      "When and where is the WEIS workshop held?",
+      "What are the benefits of attending WEIS?",
+      "How can I participate in the WEIS workshop?"
     ],
-    "event_format": "academic-conference",
+    "event_format": "conference",
     "geographic_focus": "International",
     "frequency": "annual"
   },
@@ -18926,26 +19067,37 @@
     ],
     "start_date": null,
     "end_date": null,
-    "difficulty": "advanced",
+    "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "defense-security-economics"
+      "academic-journal",
+      "defense-economics",
+      "peer-review"
     ],
-    "summary": "The primary outlet for defense economics research. Founded by Keith Hartley, publishes theoretical and empirical work on military spending, arms races, and conflict economics.",
+    "summary": "The Defence and Peace Economics Journal is a leading academic journal that publishes empirical and theoretical research on defense economics, conflict, and peace. It is attended by researchers, academics, and practitioners interested in the fields of defense and peace studies.",
     "use_cases": [
-      "Publishing research",
-      "Literature review",
-      "Field tracking"
+      "to publish research",
+      "to stay updated on defense economics",
+      "to read peer-reviewed articles",
+      "to engage with academic discourse"
     ],
     "audience": [
-      "Researcher"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "defense economics journal",
-      "military economics publications",
-      "peace economics research"
+      "What is the focus of the Defence and Peace Economics Journal?",
+      "How can I submit a paper to the journal?",
+      "What topics are covered in defense economics?",
+      "Who publishes research in the field of peace studies?",
+      "What is the peer-review process for this journal?",
+      "Where can I access articles from the Defence and Peace Economics Journal?",
+      "What are the benefits of publishing in an academic journal?",
+      "How often is the Defence and Peace Economics Journal published?"
     ],
-    "event_format": "academic-journal",
+    "event_format": "online",
     "geographic_focus": "International",
     "frequency": "continuous"
   },
@@ -18968,30 +19120,35 @@
     ],
     "start_date": null,
     "end_date": null,
-    "difficulty": "intermediate",
+    "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [
-      "defense-security-economics"
+      "policy",
+      "defense",
+      "national-security"
     ],
-    "summary": "CSIS hosts frequent events on defense, technology, and national security. Many available virtually. Good for understanding policy context and meeting practitioners.",
+    "summary": "CSIS Defense and Security Events are regular briefings and events organized by the leading defense and national security think tank. These events attract a diverse audience interested in policy discussions and defense-related topics.",
     "use_cases": [
-      "Policy insights",
-      "Networking",
-      "Current events"
+      "to learn about defense policy",
+      "to network with professionals in national security",
+      "to stay informed on security issues"
     ],
     "audience": [
-      "Mid-DS",
-      "Senior-DS",
-      "Practitioner"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "CSIS events",
-      "defense policy events DC",
-      "national security briefings"
+      "What are the upcoming CSIS Defense and Security Events?",
+      "How can I attend CSIS events?",
+      "What topics are covered in CSIS briefings?",
+      "Who speaks at CSIS Defense and Security Events?",
+      "What is the CSIS think tank?",
+      "How often does CSIS hold events?",
+      "What is the format of CSIS events?",
+      "Where are CSIS events held?"
     ],
-    "event_format": "policy-events",
-    "geographic_focus": "United States",
-    "frequency": "multiple-per-week"
+    "event_format": "hybrid",
+    "geographic_focus": "Washington, DC",
+    "frequency": "monthly"
   },
   {
     "name": "RAND Events and Seminars",
@@ -19012,28 +19169,34 @@
     ],
     "start_date": null,
     "end_date": null,
-    "difficulty": "intermediate",
+    "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [
-      "defense-security-economics"
+      "research",
+      "policy",
+      "defense",
+      "analysis"
     ],
-    "summary": "RAND hosts regular research presentations and policy discussions. Their seminars provide insight into defense analysis methodology and current research.",
+    "summary": "RAND Events and Seminars feature research presentations and policy discussions led by experts from the nation's leading defense analysis organization. These events attract a diverse audience interested in defense policy and research.",
     "use_cases": [
-      "Research methodology",
-      "Policy understanding",
-      "Professional development"
+      "to learn about defense analysis",
+      "to engage in policy discussions",
+      "to network with experts in the field"
     ],
     "audience": [
-      "Mid-DS",
-      "Senior-DS",
-      "Researcher"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "RAND seminars",
-      "defense analysis events",
-      "RAND presentations"
+      "What are RAND Events and Seminars?",
+      "Who presents at RAND Events?",
+      "What topics are covered in RAND Seminars?",
+      "How can I attend RAND Events?",
+      "Are RAND Events virtual?",
+      "What is the purpose of RAND policy discussions?",
+      "Who should attend RAND Events?",
+      "What is the format of RAND Seminars?"
     ],
-    "event_format": "research-seminars",
+    "event_format": "online",
     "geographic_focus": "United States",
     "frequency": "weekly"
   },
@@ -19056,27 +19219,37 @@
     ],
     "start_date": null,
     "end_date": null,
-    "difficulty": "advanced",
+    "difficulty": null,
     "prerequisites": [],
     "topic_tags": [
-      "defense-security-economics"
+      "research",
+      "national security",
+      "economics"
     ],
-    "summary": "NBER's National Security working group applies rigorous economics methodology to defense and security questions. Distributes working papers and organizes research meetings.",
+    "summary": "The NBER National Security Working Group is a platform where researchers apply economic methodologies to address national security issues. It attracts economists and researchers interested in the intersection of economics and security.",
     "use_cases": [
-      "Frontier research access",
-      "Networking with economists",
-      "Working paper access"
+      "to learn about the application of economics in national security",
+      "to network with researchers in the field",
+      "to participate in discussions on national security methodologies"
     ],
     "audience": [
-      "Researcher"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "NBER national security",
-      "economics defense research",
-      "security economics working papers"
+      "What is the NBER National Security Working Group?",
+      "How does economics apply to national security?",
+      "Who can join the NBER working group?",
+      "What methodologies are used in national security research?",
+      "What topics are discussed in the NBER National Security Working Group?",
+      "How often does the NBER National Security Working Group meet?",
+      "What is the location of the NBER National Security Working Group?",
+      "What are the benefits of attending the NBER National Security Working Group?"
     ],
-    "event_format": "research-meetings",
-    "geographic_focus": "United States",
+    "event_format": "hybrid",
+    "geographic_focus": "Cambridge, MA",
     "frequency": "multiple-per-year"
   },
   {
@@ -19098,26 +19271,38 @@
     ],
     "start_date": null,
     "end_date": null,
-    "difficulty": "advanced",
+    "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "adtech-advertising-economics"
+      "marketing science",
+      "advertising effectiveness",
+      "digital marketing",
+      "causal inference"
     ],
-    "summary": "The premier academic venue for marketing science research. Strong focus on advertising effectiveness, digital marketing, and causal inference methods. Papers often published in Marketing Science and JMR.",
+    "summary": "The ISMS Marketing Science Conference is a premier academic event focused on the latest research in marketing science, particularly in areas such as advertising effectiveness and digital marketing. It attracts academics, researchers, and industry professionals interested in advancing their knowledge in these fields.",
     "use_cases": [
-      "Research presentation",
-      "Academic networking",
-      "Industry-academia connection"
+      "to learn about the latest research in marketing science",
+      "to network with academics and industry professionals",
+      "to improve advertising effectiveness strategies",
+      "to gain insights into digital marketing trends"
     ],
     "audience": [
-      "Researcher"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "ISMS conference",
-      "Marketing Science conference",
-      "academic advertising research"
+      "What is the focus of the ISMS Marketing Science Conference?",
+      "Who should attend the ISMS Marketing Science Conference?",
+      "What topics are covered at the ISMS Marketing Science Conference?",
+      "How does the ISMS Marketing Science Conference support advertising effectiveness?",
+      "What are the benefits of attending the ISMS Marketing Science Conference?",
+      "When and where is the ISMS Marketing Science Conference held?",
+      "What type of networking opportunities are available at the ISMS Marketing Science Conference?",
+      "What is the significance of causal inference in marketing science?"
     ],
-    "event_format": "academic-conference",
+    "event_format": "conference",
     "geographic_focus": "International",
     "frequency": "annual"
   },
@@ -19141,26 +19326,39 @@
     ],
     "start_date": null,
     "end_date": null,
-    "difficulty": "advanced",
+    "difficulty": null,
     "prerequisites": [],
     "topic_tags": [
-      "adtech-advertising-economics"
+      "academic-conference",
+      "economics",
+      "computation",
+      "auctions",
+      "mechanism design"
     ],
-    "summary": "ACM's flagship venue for computational economics. Many foundational ad auction papers (Varian, Edelman-Ostrovsky-Schwarz) published here. Essential for auction theory research.",
+    "summary": "The ACM Conference on Economics and Computation (EC) is a leading venue for research at the intersection of computer science and economics, focusing on topics such as ad auctions and mechanism design. It attracts researchers and practitioners interested in computational economics.",
     "use_cases": [
-      "Auction research",
-      "Mechanism design",
-      "Algorithmic economics"
+      "To learn about the latest research in economics and computation",
+      "To network with experts in the field",
+      "To present research findings",
+      "To explore new ideas in mechanism design"
     ],
     "audience": [
-      "Researcher"
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
     ],
     "synthetic_questions": [
-      "ACM EC conference",
-      "economics computation conference",
-      "ad auction research venue"
+      "What is the ACM Conference on Economics and Computation?",
+      "Who should attend the EC conference?",
+      "What topics are covered at the EC conference?",
+      "How does the EC conference relate to ad auctions?",
+      "What is mechanism design in computational economics?",
+      "When is the next ACM EC conference?",
+      "Where is the ACM EC conference held?",
+      "What are the benefits of attending the ACM EC conference?"
     ],
-    "event_format": "academic-conference",
+    "event_format": "conference",
     "geographic_focus": "International",
     "frequency": "annual"
   },
@@ -19183,30 +19381,34 @@
     ],
     "start_date": null,
     "end_date": null,
-    "difficulty": "beginner",
+    "difficulty": null,
     "prerequisites": [],
     "topic_tags": [
-      "adtech-advertising-economics"
+      "programmatic",
+      "industry",
+      "networking"
     ],
-    "summary": "AdExchanger's flagship industry event. Brings together buy-side, sell-side, and ad tech platforms. Good for understanding practitioner pain points and industry developments.",
+    "summary": "Programmatic I/O is the world's largest programmatic advertising conference that brings together brands, agencies, publishers, and ad tech providers. It serves as a platform for networking and discussions on the latest trends in programmatic advertising.",
     "use_cases": [
-      "Industry networking",
-      "Trend awareness",
-      "Practitioner perspectives"
+      "networking opportunities",
+      "learning about programmatic advertising trends"
     ],
     "audience": [
-      "Mid-DS",
-      "Senior-DS",
-      "Practitioner"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Programmatic I/O",
-      "AdExchanger conference",
-      "ad tech industry event"
+      "What is Programmatic I/O?",
+      "Who attends the Programmatic I/O conference?",
+      "What topics are covered at Programmatic I/O?",
+      "How can I network at Programmatic I/O?",
+      "What is the significance of programmatic advertising?",
+      "Where is Programmatic I/O held?",
+      "When does Programmatic I/O take place?",
+      "What are the benefits of attending Programmatic I/O?"
     ],
-    "event_format": "industry-conference",
-    "geographic_focus": "United States",
-    "frequency": "twice-yearly"
+    "event_format": "conference",
+    "geographic_focus": "New York / San Francisco",
+    "frequency": "annual"
   },
   {
     "name": "Google Ad Tech Antitrust Case Documents",
@@ -19227,28 +19429,33 @@
     ],
     "start_date": null,
     "end_date": null,
-    "difficulty": "intermediate",
+    "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [
-      "adtech-advertising-economics"
+      "legal-proceedings",
+      "antitrust",
+      "market-structure"
     ],
-    "summary": "DOJ's antitrust case against Google's ad tech business provides unprecedented public access to internal documents, market data, and expert testimony on programmatic advertising market structure.",
+    "summary": "The event provides access to public court filings and exhibits from the US v. Google antitrust case, offering insights into the ad tech market structure. It is relevant for those interested in legal proceedings and antitrust issues.",
     "use_cases": [
-      "Market structure research",
-      "Competition analysis",
-      "Industry understanding"
+      "to understand the legal implications of antitrust in tech",
+      "to gain insights into market structure",
+      "to follow the developments in the Google antitrust case"
     ],
     "audience": [
-      "Mid-DS",
-      "Senior-DS",
-      "Researcher"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Google ad tech antitrust",
-      "DOJ Google case",
-      "ad tech monopoly"
+      "What are the key documents in the Google Ad Tech Antitrust case?",
+      "How does the US v. Google case impact the ad tech industry?",
+      "What insights can be gained from the court filings?",
+      "Who are the main parties involved in the case?",
+      "What are the implications of antitrust laws on tech companies?",
+      "Where can I find the latest updates on the Google antitrust case?",
+      "What is the significance of market structure in antitrust cases?",
+      "How does the DOJ approach antitrust cases against large tech firms?"
     ],
-    "event_format": "legal-proceedings",
+    "event_format": "online",
     "geographic_focus": "United States",
     "frequency": "ongoing"
   },
@@ -19264,31 +19471,38 @@
       "Academic"
     ],
     "domain": "Marketing",
-    "difficulty": "advanced",
-    "prerequisites": [
-      "research-background"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "martech-customer-analytics",
-      "marketing-science"
+      "marketing-science",
+      "customer-analytics",
+      "academic-conference",
+      "industry-event"
     ],
-    "summary": "Annual academic conference for marketing science research. Features cutting-edge research on CLV, pricing, advertising, and marketing analytics with both academic and industry attendees.",
+    "summary": "The INFORMS Marketing Science Conference is a premier academic event focusing on quantitative marketing research. It attracts attendees from academia and industry who are interested in customer analytics, pricing, advertising, and marketing models.",
     "use_cases": [
-      "Present marketing science research",
-      "Network with marketing academics and practitioners",
-      "Learn about latest marketing analytics methods"
+      "Gain insights into quantitative marketing research",
+      "Network with industry professionals",
+      "Learn about the latest trends in customer analytics"
     ],
     "audience": [
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
       "Senior-DS"
     ],
     "synthetic_questions": [
-      "Marketing science academic conference",
-      "Where to present marketing research",
-      "INFORMS marketing conference",
-      "Quantitative marketing conference"
+      "What is the INFORMS Marketing Science Conference?",
+      "Who should attend the Marketing Science Conference?",
+      "What topics are covered at the INFORMS conference?",
+      "How does the conference benefit industry professionals?",
+      "What networking opportunities are available at the conference?",
+      "When is the next Marketing Science Conference?"
     ],
     "community_type": "conference",
-    "engagement_level": "professional"
+    "engagement_level": "professional",
+    "event_format": "conference",
+    "frequency": "annual"
   },
   {
     "name": "ACM RecSys Conference",
@@ -19302,32 +19516,38 @@
       "ACM"
     ],
     "domain": "Computer Science",
-    "difficulty": "advanced",
-    "prerequisites": [
-      "machine-learning"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "martech-customer-analytics",
-      "recommendations"
+      "recommendations",
+      "academic-conference",
+      "industry-event"
     ],
-    "summary": "Top-tier academic conference for recommendation systems. Features the latest research on collaborative filtering, deep learning recommendations, and evaluation methods with strong industry presence.",
+    "summary": "The ACM RecSys Conference is the premier event focused on recommender systems, featuring topics such as collaborative filtering, content-based methods, and deep learning. It attracts strong industry participation from companies like Netflix, Spotify, and Amazon.",
     "use_cases": [
-      "Learn about cutting-edge recommendation research",
-      "Network with recommendation practitioners",
-      "Present recommendation systems work"
+      "Learn about the latest advancements in recommender systems",
+      "Network with industry leaders and researchers",
+      "Gain insights into practical applications of recommendation technologies"
     ],
     "audience": [
       "Mid-DS",
-      "Senior-DS"
+      "Senior-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Recommendation systems conference",
-      "Where to present recsys research",
-      "ACM RecSys conference",
-      "Top recommender systems venue"
+      "What are the latest trends in recommender systems?",
+      "How do industry leaders like Netflix and Amazon use recommendations?",
+      "What are the key topics covered at the ACM RecSys Conference?",
+      "Who should attend the ACM RecSys Conference?",
+      "What methods are discussed for evaluating recommender systems?",
+      "What is the significance of deep learning in recommendations?",
+      "How does collaborative filtering work?",
+      "What networking opportunities are available at the conference?"
     ],
     "community_type": "conference",
-    "engagement_level": "professional"
+    "engagement_level": "professional",
+    "event_format": "conference",
+    "frequency": "annual"
   },
   {
     "name": "Wharton Customer Analytics Initiative (WCAI)",
@@ -19341,28 +19561,30 @@
       "Industry-Academic"
     ],
     "domain": "Marketing",
-    "difficulty": "intermediate",
+    "difficulty": null,
     "prerequisites": [],
     "topic_tags": [
-      "martech-customer-analytics",
-      "clv",
-      "research"
+      "research",
+      "customer-analytics",
+      "industry-academic"
     ],
-    "summary": "The leading research center connecting customer analytics academics and practitioners. Founded by Peter Fader and Eric Bradlow, WCAI provides datasets, hosts conferences, and publishes applied research.",
+    "summary": "The Wharton Customer Analytics Initiative (WCAI) is a leading research center that connects academic research with industry practice in customer analytics. It attracts attendees from both academia and industry who are interested in the latest developments in customer analytics.",
     "use_cases": [
-      "Access industry-relevant research",
-      "Find customer analytics datasets",
-      "Connect with customer analytics community"
+      "To learn about customer analytics research",
+      "To network with industry professionals and academics"
     ],
     "audience": [
-      "Mid-DS",
-      "Senior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Customer analytics research community",
-      "Industry-academic marketing research",
-      "Where to find CLV datasets",
-      "Customer analytics practitioners"
+      "What is the Wharton Customer Analytics Initiative?",
+      "How does WCAI bridge academic research and industry practice?",
+      "What types of datasets does WCAI provide?",
+      "What kind of research does WCAI publish?",
+      "Who can benefit from attending WCAI events?",
+      "What are the main focus areas of WCAI?",
+      "How can I get involved with WCAI?",
+      "What events does WCAI host?"
     ],
     "community_type": "research-center",
     "engagement_level": "professional"
@@ -19379,29 +19601,34 @@
       "Industry"
     ],
     "domain": "Marketing",
-    "difficulty": "intermediate",
+    "difficulty": null,
     "prerequisites": [],
     "topic_tags": [
-      "martech-customer-analytics",
-      "marketing-science"
+      "academic-conference",
+      "industry-event",
+      "research"
     ],
-    "summary": "Central organization connecting marketing academics and practitioners. Annual research priorities influence academic agendas, and working papers provide early access to impactful research.",
+    "summary": "The Marketing Science Institute (MSI) serves as a crucial link between marketing academia and industry, setting annual research priorities and publishing working papers that inform both fields. This event attracts attendees from academia and industry who are interested in the latest research and practices in marketing science.",
     "use_cases": [
-      "Understand industry research priorities",
-      "Access marketing working papers",
-      "Guide research agenda"
+      "to learn about the latest research in marketing",
+      "to network with professionals in marketing and academia",
+      "to understand industry practices based on academic research"
     ],
     "audience": [
-      "Mid-DS",
-      "Senior-DS"
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "Marketing research organization",
-      "Where to find marketing priorities",
-      "Academic-industry marketing bridge",
-      "Marketing working papers"
+      "What is the Marketing Science Institute?",
+      "How does MSI connect academia and industry?",
+      "What are the annual research priorities set by MSI?",
+      "What types of working papers does MSI publish?",
+      "Who should attend MSI events?",
+      "What is the focus of marketing science research?",
+      "How can industry professionals benefit from MSI?",
+      "What role does MSI play in marketing education?"
     ],
     "community_type": "professional-org",
-    "engagement_level": "professional"
+    "engagement_level": "professional",
+    "frequency": "annual"
   }
 ]
