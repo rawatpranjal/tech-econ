@@ -283,8 +283,13 @@ def load_all_items(data_dir: Path) -> List[Dict[str, Any]]:
 
         # Build tags from authors and year
         tags_parts = ["paper"]
-        if paper.get("authors"):
-            tags_parts.append(paper["authors"])
+        authors = paper.get("authors")
+        if authors:
+            # Handle both string and list formats
+            if isinstance(authors, list):
+                tags_parts.append(", ".join(authors))
+            else:
+                tags_parts.append(authors)
         if paper.get("year"):
             tags_parts.append(str(paper["year"]))
         tags_str = ", ".join(tags_parts)
@@ -299,7 +304,7 @@ def load_all_items(data_dir: Path) -> List[Dict[str, Any]]:
             "subtopic": paper.get("subtopic", ""),
             "url": paper.get("url", ""),
             "tags": tags_str,
-            "authors": paper.get("authors", ""),
+            "authors": ", ".join(authors) if isinstance(authors, list) else (authors or ""),
             "year": paper.get("year"),  # Integer or None
             "best_for": "",
             "text_for_embedding": combine_text_for_embedding(paper)
