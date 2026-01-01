@@ -1,5 +1,5 @@
 {
-  "updated": "2026-01-01T07:06:30.040033Z",
+  "updated": "2026-01-01T19:16:34.118185Z",
   "count": 12,
   "items": [
     {
@@ -24,89 +24,14 @@
       "category": "Standard Errors, Bootstrapping & Reporting",
       "description": "Modern introduction to causal inference methods (DiD, IV, RDD, Synth, ML-based) with Python code examples.",
       "url": "https://matheusfacure.github.io/python-causality-handbook/",
-      "score": 0.6996,
+      "score": 0.9199,
       "cold_start": false,
       "signals": {
         "clicks": 3,
-        "impressions": 3,
+        "impressions": 8,
         "dwell_ms": 0
       },
-      "rank": 4
-    },
-    {
-      "name": "Retail Rocket",
-      "type": "dataset",
-      "category": "E-Commerce",
-      "description": "2.76M events (views, carts, purchases) from 1.4M visitors",
-      "url": "https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset",
-      "score": 0.6261,
-      "cold_start": false,
-      "signals": {
-        "clicks": 3,
-        "impressions": 0,
-        "dwell_ms": 23919
-      },
-      "rank": 13
-    },
-    {
-      "name": "JD.com 2020 (MSOM-20)",
-      "type": "dataset",
-      "category": "E-Commerce",
-      "description": "2.5M customers (457k purchasers) and 31,868 SKUs from JD.com",
-      "url": "https://connect.informs.org/msom/events/datadriven2020",
-      "score": 0.6043,
-      "cold_start": false,
-      "signals": {
-        "clicks": 3,
-        "impressions": 0,
-        "dwell_ms": 4284
-      },
-      "rank": 16
-    },
-    {
-      "name": "spaCy",
-      "type": "package",
-      "category": "Natural Language Processing for Economics",
-      "description": "Industrial-strength NLP library for efficient text processing pipelines (NER, POS tagging, etc.).",
-      "url": "https://github.com/explosion/spaCy",
-      "score": 0.5995,
-      "cold_start": false,
-      "signals": {
-        "clicks": 3,
-        "impressions": 0,
-        "dwell_ms": 0
-      },
-      "rank": 18
-    },
-    {
-      "name": "BestBuy",
-      "type": "dataset",
-      "category": "E-Commerce",
-      "description": "Mobile website clicks (~42k) for Xbox games from BestBuy",
-      "url": "https://www.kaggle.com/competitions/acm-sf-chapter-hackathon-big",
-      "score": 0.5995,
-      "cold_start": false,
-      "signals": {
-        "clicks": 3,
-        "impressions": 0,
-        "dwell_ms": 0
-      },
-      "rank": 19
-    },
-    {
-      "name": "Ax (Meta Adaptive Experimentation)",
-      "type": "package",
-      "category": "Adaptive Experimentation & Bandits",
-      "description": "Meta's open-source platform for adaptive experimentation. Bayesian optimization, multi-objective optimization, and automated experiment design. Built on BoTorch for AI-assisted experimentation.",
-      "url": "https://ax.dev",
-      "score": 0.5157,
-      "cold_start": false,
-      "signals": {
-        "clicks": 2,
-        "impressions": 3,
-        "dwell_ms": 14628
-      },
-      "rank": 58
+      "rank": 2
     },
     {
       "name": "Scott Cunningham: Causal Inference Substack",
@@ -114,74 +39,149 @@
       "category": "Causal Inference & ML",
       "description": "Substack and podcast 'The Mixtape with Scott' featuring interviews with leading causal inference researchers. Bridges academic methods and practical application.",
       "url": "https://causalinf.substack.com/",
-      "score": 0.5125,
+      "score": 0.7323,
+      "cold_start": false,
+      "signals": {
+        "clicks": 2,
+        "impressions": 8,
+        "dwell_ms": 18783
+      },
+      "rank": 3
+    },
+    {
+      "name": "causal-learn",
+      "type": "package",
+      "category": "Causal Discovery & Graphical Models",
+      "description": "Comprehensive Python package serving as Python translation and extension of Java-based Tetrad toolkit for causal discovery algorithms.",
+      "url": "https://github.com/py-why/causal-learn",
+      "score": 0.6436,
+      "cold_start": false,
+      "signals": {
+        "clicks": 3,
+        "impressions": 1,
+        "dwell_ms": 5887
+      },
+      "rank": 4
+    },
+    {
+      "name": "Lyft Engineering",
+      "type": "resource",
+      "category": "Marketplace Economics",
+      "description": "Rideshare economics, forecasting, and marketplace efficiency. Technical deep-dives on pricing, dispatch, and causal inference.",
+      "url": "https://eng.lyft.com/",
+      "score": 0.6413,
+      "cold_start": false,
+      "signals": {
+        "clicks": 3,
+        "impressions": 1,
+        "dwell_ms": 2430
+      },
+      "rank": 5
+    },
+    {
+      "name": "Retail Rocket",
+      "type": "dataset",
+      "category": "E-Commerce",
+      "description": "2.76M events (views, carts, purchases) from 1.4M visitors",
+      "url": "https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset",
+      "score": 0.6156,
+      "cold_start": false,
+      "signals": {
+        "clicks": 3,
+        "impressions": 0,
+        "dwell_ms": 23919
+      },
+      "rank": 6
+    },
+    {
+      "name": "JD.com 2020 (MSOM-20)",
+      "type": "dataset",
+      "category": "E-Commerce",
+      "description": "2.5M customers (457k purchasers) and 31,868 SKUs from JD.com",
+      "url": "https://connect.informs.org/msom/events/datadriven2020",
+      "score": 0.6025,
+      "cold_start": false,
+      "signals": {
+        "clicks": 3,
+        "impressions": 0,
+        "dwell_ms": 4284
+      },
+      "rank": 7
+    },
+    {
+      "name": "spaCy",
+      "type": "package",
+      "category": "Natural Language Processing for Economics",
+      "description": "Industrial-strength NLP library for efficient text processing pipelines (NER, POS tagging, etc.).",
+      "url": "https://github.com/explosion/spaCy",
+      "score": 0.5996,
+      "cold_start": false,
+      "signals": {
+        "clicks": 3,
+        "impressions": 0,
+        "dwell_ms": 0
+      },
+      "rank": 8
+    },
+    {
+      "name": "BestBuy",
+      "type": "dataset",
+      "category": "E-Commerce",
+      "description": "Mobile website clicks (~42k) for Xbox games from BestBuy",
+      "url": "https://www.kaggle.com/competitions/acm-sf-chapter-hackathon-big",
+      "score": 0.5996,
+      "cold_start": false,
+      "signals": {
+        "clicks": 3,
+        "impressions": 0,
+        "dwell_ms": 0
+      },
+      "rank": 9
+    },
+    {
+      "name": "Ax (Meta Adaptive Experimentation)",
+      "type": "package",
+      "category": "Adaptive Experimentation & Bandits",
+      "description": "Meta's open-source platform for adaptive experimentation. Bayesian optimization, multi-objective optimization, and automated experiment design. Built on BoTorch for AI-assisted experimentation.",
+      "url": "https://ax.dev",
+      "score": 0.5693,
+      "cold_start": false,
+      "signals": {
+        "clicks": 2,
+        "impressions": 4,
+        "dwell_ms": 14628
+      },
+      "rank": 10
+    },
+    {
+      "name": "Coding for Economists (Arthur Turrell)",
+      "type": "resource",
+      "category": "Causal Inference & ML",
+      "description": "Python workflow for economists covering data transformation, econometrics, Bayesian inference, and ML. Modern Python-first approach.",
+      "url": "https://aeturrell.github.io/coding-for-economists/",
+      "score": 0.5342,
       "cold_start": false,
       "signals": {
         "clicks": 2,
         "impressions": 3,
-        "dwell_ms": 11820
+        "dwell_ms": 22011
       },
-      "rank": 63
+      "rank": 14
     },
     {
-      "name": "LMSYS-Chat-1M",
-      "type": "dataset",
-      "category": "AI & LLM",
-      "description": "1M real-world conversations with 25 state-of-the-art LLMs spanning 154 languages",
-      "url": "https://huggingface.co/datasets/lmsys/lmsys-chat-1m",
-      "score": 0.4421,
-      "cold_start": false,
-      "signals": {
-        "clicks": 2,
-        "impressions": 1,
-        "dwell_ms": 8517
-      },
-      "rank": 128
-    },
-    {
-      "name": "Google Research: Market Algorithms Team",
+      "name": "Causal Inference: The Mixtape",
       "type": "resource",
-      "category": "Auction Theory",
-      "description": "Direct from engineers designing Google's auction systems. Ad exchange design, budget-constrained mechanisms, autobidding formulas, Price of Anarchy. Collaboration between Roughgarden, Tardos, and Google engineers.",
-      "url": "https://research.google/teams/market-algorithms/",
-      "score": 0.4326,
+      "category": "Causal Inference & ML",
+      "description": "Scott Cunningham's academic-quality but accessible methodology covering causal methods essential for marketing measurement.",
+      "url": "https://mixtape.scunning.com/",
+      "score": 0.5235,
       "cold_start": false,
       "signals": {
-        "clicks": 2,
-        "impressions": 1,
-        "dwell_ms": 0
+        "clicks": 1,
+        "impressions": 8,
+        "dwell_ms": 5906
       },
-      "rank": 149
-    },
-    {
-      "name": "Open E-Commerce 1.0 (MIT)",
-      "type": "dataset",
-      "category": "E-Commerce",
-      "description": "1.8M Amazon purchases with demographics (age, gender, location). Real household e-commerce behavior at scale",
-      "url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/YGAVK9",
-      "score": 0.4041,
-      "cold_start": false,
-      "signals": {
-        "clicks": 2,
-        "impressions": 0,
-        "dwell_ms": 4319
-      },
-      "rank": 190
-    },
-    {
-      "name": "DiQAD",
-      "type": "dataset",
-      "category": "AI & LLM",
-      "description": "100K real-world user dialogues with comprehensive 6-dimension quality assessment",
-      "url": "https://github.com/yukunZhao/Dataset_Dialogue_quality_evaluation",
-      "score": 0.4008,
-      "cold_start": false,
-      "signals": {
-        "clicks": 2,
-        "impressions": 0,
-        "dwell_ms": 1406
-      },
-      "rank": 198
+      "rank": 16
     }
   ]
 }

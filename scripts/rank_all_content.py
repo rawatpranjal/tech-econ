@@ -22,10 +22,10 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 
 # Signal weights for engagement scoring
-CLICK_WEIGHT = 3.0
-IMPRESSION_WEIGHT = 0.5
+CLICK_WEIGHT = 5.0
+IMPRESSION_WEIGHT = 1.0
 DWELL_WEIGHT = 1.0  # per minute
-CITATION_WEIGHT = 0.3  # for papers
+CITATION_WEIGHT = 0  # disabled
 
 
 def fetch_d1_data(query):
