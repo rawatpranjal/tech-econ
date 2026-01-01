@@ -38,10 +38,9 @@
                 {{ range .items }}
                 <a href="{{ .url }}" target="_blank" rel="noopener" class="explore-card explore-card-trending">
                     <div class="explore-card-content">
-                        <span class="explore-card-type">{{ .type }}</span>
                         <h3>{{ .name }}</h3>
                         {{ if .description }}<p class="explore-card-desc">{{ .description }}</p>{{ end }}
-                        <span class="explore-card-category">{{ .category }}</span>
+                        <span class="explore-card-type">{{ .type }}</span>
                     </div>
                 </a>
                 {{ end }}
