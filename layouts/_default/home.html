@@ -37,6 +37,14 @@
             <div class="explore-scroller">
                 {{ range .items }}
                 <a href="{{ .url }}" target="_blank" rel="noopener" class="explore-card explore-card-trending">
+                    <div class="explore-card-icon">
+                        {{ if findRE "github\\.com" .url }}
+                        {{ $owner := replaceRE "https://github.com/([^/]+).*" "$1" .url }}
+                        <img src="https://github.com/{{ $owner }}.png?size=48" alt="" loading="lazy" onerror="this.style.display='none'">
+                        {{ else }}
+                        <img src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE `^https?://([^/]+).*` `$1` }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
+                        {{ end }}
+                    </div>
                     <div class="explore-card-content">
                         <h3>{{ .name }}</h3>
                         {{ if .description }}<p class="explore-card-desc">{{ .description }}</p>{{ end }}

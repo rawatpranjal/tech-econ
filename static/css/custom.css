@@ -9137,9 +9137,35 @@ mark.partial {
     flex-grow: 0;
 }
 
+.home-trending .explore-card {
+    flex-direction: row;
+    gap: 0.75rem;
+    align-items: flex-start;
+}
+
+.home-trending .explore-card-icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: var(--bg-hover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-trending .explore-card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .home-trending .explore-card-content {
     display: flex;
     flex-direction: column;
+    flex: 1;
+    min-width: 0;
     height: 100%;
 }
 
