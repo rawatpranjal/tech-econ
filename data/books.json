@@ -13,42 +13,36 @@
       "Econometrics"
     ],
     "difficulty": "intermediate",
-    "prerequisites": [
-      "regression",
-      "statistics"
-    ],
+    "prerequisites": [],
     "topic_tags": [
       "causal-inference",
-      "econometrics",
-      "instrumental-variables",
-      "difference-in-differences",
-      "regression-discontinuity"
+      "econometrics"
     ],
-    "summary": "This is the definitive guide to applied econometrics, covering regression, instrumental variables, difference-in-differences, and regression discontinuity designs. Co-authored by 2021 Nobel laureate Joshua Angrist, it emphasizes practical identification strategies.",
+    "summary": "This book provides a comprehensive guide to applied econometrics, focusing on clean identification methods. It is ideal for those looking to understand credible causal inference.",
     "use_cases": [
-      "learning causal inference methods",
-      "understanding identification strategies",
-      "applying econometric techniques to policy evaluation"
+      "When to apply regression analysis",
+      "Understanding causal relationships in data"
     ],
     "audience": [
+      "Early-PhD",
       "Junior-DS",
-      "Mid-DS",
-      "Senior-DS",
-      "Curious-browser"
+      "Mid-DS"
     ],
     "synthetic_questions": [
-      "What is the best book for learning econometrics?",
-      "How to learn causal inference?",
-      "What are instrumental variables?",
-      "How does difference-in-differences work?",
-      "What is regression discontinuity design?",
-      "Joshua Angrist econometrics book"
+      "What is causal inference?",
+      "How to apply regression in econometrics?",
+      "What are the key concepts in IV and RDD?",
+      "Who is Angrist and why is his work important?",
+      "What are the practical applications of econometrics?",
+      "How to achieve clean identification in econometric studies?",
+      "What methods are covered in Mostly Harmless Econometrics?",
+      "What makes this book a go-to resource for econometrics?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "understanding regression",
-      "applying IV methods",
-      "using DiD for policy evaluation"
+      "Understanding of regression techniques",
+      "Ability to apply IV and RDD methods",
+      "Skills in identifying causal relationships"
     ]
   },
   {
@@ -65,36 +59,36 @@
       "Network Effects",
       "Growth"
     ],
-    "difficulty": "beginner",
+    "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
-      "network-effects",
       "platform-economics",
-      "marketplace-design",
+      "network-effects",
       "growth"
     ],
-    "summary": "Andrew Chen draws on his experience at Uber and interviews with founders of LinkedIn, Twitch, Zoom, Dropbox, Tinder, and Airbnb to explain how to start and scale network effects.",
+    "summary": "This resource explores how successful tech products overcame the cold start problem through the use of network effects. It is aimed at individuals interested in understanding the dynamics of platform economics and growth strategies.",
     "use_cases": [
-      "understanding marketplace dynamics",
-      "launching two-sided platforms",
-      "scaling network-effect businesses"
+      "Understanding growth strategies in tech products",
+      "Learning about network effects in platform economics"
     ],
     "audience": [
-      "Junior-DS",
-      "Mid-DS",
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "How do marketplaces solve the chicken-and-egg problem?",
       "What is the cold start problem?",
-      "How did Uber scale?",
-      "Andrew Chen network effects book",
-      "How to bootstrap a two-sided marketplace?"
+      "How do network effects influence product growth?",
+      "What strategies did Uber use for rider growth?",
+      "What lessons can be learned from successful tech products?",
+      "Who is the author of The Cold Start Problem?",
+      "What is platform economics?",
+      "How can I apply network effects to my product?",
+      "What are the key takeaways from The Cold Start Problem?"
     ],
     "content_format": "book",
     "skill_progression": [
-      "understanding network effects",
-      "applying growth frameworks"
+      "Understanding network effects",
+      "Applying platform economics concepts",
+      "Analyzing growth strategies"
     ]
   },
   {
@@ -1015,6 +1009,33 @@
       "Sports Economics & Analytics",
       "Baseball",
       "Sabermetrics"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "sports-economics",
+      "analytics",
+      "statistics"
+    ],
+    "summary": "This book explores how the Oakland A's utilized statistical analysis to reshape baseball player evaluation. It is ideal for those interested in sports analytics and the intersection of economics and sports.",
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is Moneyball about?",
+      "How did the Oakland A's use statistics?",
+      "What impact did Moneyball have on baseball?",
+      "What are the key concepts in sports analytics?",
+      "Who is the author of Moneyball?",
+      "What are sabermetrics?",
+      "How can statistical analysis change sports management?",
+      "What are the main themes of Moneyball?"
+    ],
+    "use_cases": [],
+    "content_format": "book",
+    "skill_progression": [
+      "understanding of sports analytics",
+      "knowledge of statistical methods in sports"
     ]
   },
   {
@@ -1030,6 +1051,37 @@
       "Sports Economics & Analytics",
       "Baseball",
       "Sabermetrics"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "statistics",
+      "sports-analytics"
+    ],
+    "summary": "This book provides a comprehensive understanding of baseball analytics, focusing on practical applications of statistical analysis in various aspects of the game. It is suitable for those interested in deepening their knowledge of sports economics and analytics.",
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are the key concepts in baseball analytics?",
+      "How can lineup optimization improve team performance?",
+      "What are platoon splits in baseball?",
+      "How does clutch hitting affect game outcomes?",
+      "What statistical methods are used in defensive positioning?",
+      "What is sabermetrics and why is it important?",
+      "How can I apply analytics in sports management?",
+      "What resources are available for learning about sports analytics?"
+    ],
+    "use_cases": [
+      "when analyzing baseball performance",
+      "for improving team strategy",
+      "in academic research on sports economics"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "understanding of baseball analytics",
+      "ability to apply statistical methods to sports",
+      "knowledge of sabermetrics"
     ]
   },
   {
@@ -1045,7 +1097,28 @@
       "Sports Economics & Analytics",
       "Basketball",
       "Four Factors"
-    ]
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "statistics"
+    ],
+    "summary": "This resource introduces the Four Factors framework for basketball analytics, focusing on key statistical elements such as shooting, turnovers, rebounding, and free throws. It is ideal for those looking to understand basketball through a statistical lens.",
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are the Four Factors in basketball analytics?",
+      "How can statistics improve basketball performance?",
+      "What is the foundational text for basketball analytics?",
+      "What are the key metrics in basketball statistics?",
+      "How do shooting and turnovers affect game outcomes?",
+      "What is the importance of rebounding in basketball?",
+      "How can free throws influence a basketball game?",
+      "Where can I learn more about sports economics?"
+    ],
+    "use_cases": [],
+    "content_format": "book"
   },
   {
     "name": "Sprawlball: A Visual Tour of the New Era of the NBA",
@@ -1060,6 +1133,34 @@
       "Sports Economics & Analytics",
       "Basketball",
       "Visualization"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "sports-economics",
+      "data-visualization",
+      "analytics"
+    ],
+    "summary": "This resource explores modern basketball analytics and how the three-point revolution has transformed NBA strategy through data visualization. It is suitable for those interested in sports economics and analytics.",
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is Sprawlball about?",
+      "How has the three-point revolution changed NBA strategy?",
+      "What types of data visualization are used in basketball analytics?",
+      "Who is the target audience for Sprawlball?",
+      "What can I learn from Sprawlball?",
+      "What are the key concepts in sports economics related to basketball?",
+      "How does spatial analysis apply to basketball?",
+      "What are shot charts and how are they used in NBA analytics?"
+    ],
+    "use_cases": [],
+    "content_format": "book",
+    "skill_progression": [
+      "understanding basketball analytics",
+      "data visualization techniques",
+      "spatial analysis in sports"
     ]
   },
   {
@@ -1075,6 +1176,36 @@
       "Sports Economics & Analytics",
       "Mathematics",
       "Multi-Sport"
+    ],
+    "difficulty": "beginner|intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "sports-analytics",
+      "mathematics"
+    ],
+    "summary": "This resource provides a comprehensive overview of how mathematics is applied in various sports, making it ideal for those interested in sports analytics. It is suitable for anyone looking to understand the mathematical concepts used in baseball, basketball, and football.",
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "How is mathematics used in sports analytics?",
+      "What are the key mathematical concepts in baseball?",
+      "How do gamblers use math in sports?",
+      "What can managers learn from sports analytics?",
+      "What sports are covered in Mathletics?",
+      "Who endorses the book Mathletics?",
+      "What is the general overview of sports analytics?",
+      "How accessible are the mathematical explanations in Mathletics?"
+    ],
+    "use_cases": [
+      "to gain a foundational understanding of sports analytics",
+      "to learn about the application of mathematics in sports",
+      "to explore the intersection of sports and mathematics"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "understanding of sports analytics",
+      "application of mathematical concepts in sports"
     ]
   },
   {
@@ -1090,6 +1221,28 @@
       "Sports Economics & Analytics",
       "Economics",
       "Labor Markets"
+    ],
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This book provides an introduction to the economics of modern sports, covering key topics such as labor markets, franchise values, and stadium subsidies. It is suitable for anyone interested in understanding the economic aspects of sports.",
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are the key concepts in sports economics?",
+      "How do labor markets function in the sports industry?",
+      "What factors influence franchise values in sports?",
+      "What are stadium subsidies and their economic impact?",
+      "How does competitive balance affect sports leagues?",
+      "What is the importance of sports analytics in economics?"
+    ],
+    "use_cases": [
+      "To gain foundational knowledge in sports economics"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "Understanding of sports economics principles"
     ]
   },
   {
@@ -1105,6 +1258,35 @@
       "Sports Economics & Analytics",
       "Soccer",
       "Economics"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "sports-economics",
+      "analytics"
+    ],
+    "summary": "Soccernomics applies economic analysis to global football, exploring topics such as the reasons behind England's losses and optimal strategies for penalty kicks. This book is for those interested in understanding the economics behind sports, particularly football.",
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What economic factors influence football success?",
+      "How does hosting a World Cup affect a country's economy?",
+      "What strategies can improve penalty kick success rates?",
+      "Why does England struggle in international football?",
+      "What are the economic implications of football analytics?",
+      "How can economic analysis be applied to sports?",
+      "What lessons can be learned from football economics?",
+      "How to buy success in football?"
+    ],
+    "use_cases": [
+      "to gain insights into sports economics",
+      "to understand the intersection of economics and football"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "understanding sports economics",
+      "applying economic principles to sports analysis"
     ]
   },
   {
@@ -1120,6 +1302,45 @@
       "Sports Economics & Analytics",
       "Economics",
       "Reference"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "sports-economics",
+      "labor-markets",
+      "league-design",
+      "broadcasting",
+      "betting",
+      "doping",
+      "Olympic-Games"
+    ],
+    "summary": "This handbook provides a comprehensive overview of various aspects of sports economics, making it suitable for academics and practitioners interested in the economic factors influencing sports. Readers will gain insights into labor markets, league structures, and other critical topics in the field.",
+    "audience": [
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "What are the key concepts in sports economics?",
+      "How does labor market dynamics affect sports leagues?",
+      "What is the impact of broadcasting on sports economics?",
+      "How do betting markets operate in sports?",
+      "What are the economic implications of doping in sports?",
+      "How do the Olympic Games influence local economies?",
+      "What are the trends in sports economics research?",
+      "What methodologies are used in sports economics studies?"
+    ],
+    "use_cases": [
+      "reference for academic research",
+      "understanding economic principles in sports",
+      "analyzing sports market trends"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "understanding of sports economics",
+      "ability to analyze economic factors in sports",
+      "knowledge of labor market dynamics in sports"
     ]
   },
   {
@@ -1135,6 +1356,41 @@
       "Insurance & Actuarial",
       "Loss Distributions",
       "Credibility Theory"
+    ],
+    "difficulty": "advanced",
+    "prerequisites": [],
+    "topic_tags": [
+      "insurance",
+      "actuarial science",
+      "risk management"
+    ],
+    "summary": "This textbook provides a comprehensive understanding of loss distributions, credibility, simulation, and risk measures. It is intended for individuals preparing for the SOA Exam STAM and those involved in professional actuarial practice.",
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "What are loss distributions?",
+      "How to prepare for SOA Exam STAM?",
+      "What is credibility theory?",
+      "What are the key risk measures in actuarial science?",
+      "How to apply simulation in loss modeling?",
+      "What topics are covered in Loss Models: From Data to Decisions?",
+      "Who should read Loss Models: From Data to Decisions?",
+      "What is the significance of actuarial textbooks?"
+    ],
+    "use_cases": [
+      "preparing for SOA Exam STAM",
+      "professional actuarial practice",
+      "understanding loss distributions"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "understanding of loss distributions",
+      "knowledge of credibility theory",
+      "ability to apply risk measures",
+      "skills in simulation techniques"
     ]
   },
   {
@@ -1150,6 +1406,40 @@
       "Insurance & Actuarial",
       "Life Insurance",
       "Actuarial Mathematics"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "actuarial-mathematics",
+      "life-insurance",
+      "survival-models"
+    ],
+    "summary": "This resource covers modern approaches to life insurance mathematics, including survival models and premium calculations. It is suitable for those preparing for SOA exams or anyone interested in actuarial science.",
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are survival models in actuarial mathematics?",
+      "How do you calculate premiums for life insurance?",
+      "What is the role of life tables in insurance?",
+      "What are the key concepts in reserving for life contingent risks?",
+      "How does actuarial mathematics apply to life insurance?",
+      "What topics are covered in SOA exams related to actuarial mathematics?",
+      "What modern approaches are used in life insurance mathematics?",
+      "Who should study actuarial mathematics for life contingent risks?"
+    ],
+    "use_cases": [
+      "Preparing for SOA exams",
+      "Understanding life insurance mathematics",
+      "Learning about survival models"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "Understanding of life insurance mathematics",
+      "Ability to apply survival models",
+      "Knowledge of premium calculation techniques"
     ]
   },
   {
@@ -1165,6 +1455,38 @@
       "Insurance & Actuarial",
       "Regression",
       "GLM"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "regression",
+      "statistics",
+      "actuarial-science"
+    ],
+    "summary": "This resource focuses on bridging actuarial science and modern statistics, specifically through regression modeling for insurance applications. It is suitable for those interested in applying statistical methods in the insurance field.",
+    "audience": [
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are GLMs in actuarial science?",
+      "How is regression used in insurance applications?",
+      "What is credibility in the context of actuarial science?",
+      "What are longitudinal data techniques?",
+      "How can I apply regression modeling to financial applications?",
+      "What statistical methods are essential for insurance professionals?",
+      "What skills do I need to understand regression modeling?",
+      "Where can I learn about actuarial science and statistics?"
+    ],
+    "use_cases": [
+      "When applying statistical methods to insurance problems",
+      "For understanding regression techniques in financial contexts"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "Understanding of GLMs",
+      "Application of regression techniques",
+      "Knowledge of credibility theory"
     ]
   },
   {
@@ -1180,6 +1502,42 @@
       "Insurance & Actuarial",
       "Insurance Economics",
       "Reference"
+    ],
+    "difficulty": "advanced",
+    "prerequisites": [],
+    "topic_tags": [
+      "insurance-economics",
+      "adverse-selection",
+      "moral-hazard",
+      "regulation",
+      "corporate-insurance"
+    ],
+    "summary": "This handbook provides a comprehensive overview of insurance economics, covering both theoretical and empirical research. It is suitable for advanced learners and professionals in the field of insurance and actuarial science.",
+    "audience": [
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "What are the key concepts in insurance economics?",
+      "How does adverse selection impact insurance markets?",
+      "What is moral hazard and how is it addressed in insurance?",
+      "What regulatory frameworks exist for insurance companies?",
+      "How does corporate insurance function?",
+      "What empirical research has been conducted in insurance economics?",
+      "What are the main themes covered in the Handbook of Insurance?"
+    ],
+    "use_cases": [
+      "Understanding insurance economics theory",
+      "Researching empirical studies in insurance",
+      "Learning about regulation in the insurance industry"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "Advanced understanding of insurance economics",
+      "Ability to analyze empirical research in insurance",
+      "Knowledge of regulatory issues in insurance"
     ]
   },
   {
@@ -1195,6 +1553,37 @@
       "Insurance & Actuarial",
       "Financial Economics",
       "Asset Pricing"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "Financial Economics",
+      "Asset Pricing",
+      "Insurance"
+    ],
+    "summary": "This resource provides a new framework for analyzing insurance companies using modern asset pricing theory. It is suitable for those interested in the financial aspects of insurance, including life insurance and systemic risk.",
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is the financial economics of insurance?",
+      "How does asset pricing theory apply to insurance companies?",
+      "What are the systemic risks in insurance?",
+      "What are variable annuities in financial economics?",
+      "How can modern asset pricing theory be used in insurance analysis?",
+      "What frameworks exist for analyzing life insurance?",
+      "What is the relationship between insurance and financial economics?",
+      "How do insurance companies manage systemic risk?"
+    ],
+    "use_cases": [
+      "Understanding financial aspects of insurance",
+      "Analyzing insurance company performance"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "Understanding of asset pricing theory",
+      "Analysis of insurance products",
+      "Knowledge of systemic risk in finance"
     ]
   },
   {
@@ -1210,6 +1599,35 @@
       "Insurance & Actuarial",
       "R Programming",
       "Computational Methods"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "statistics",
+      "computational-methods"
+    ],
+    "summary": "This resource provides a practical guide to actuarial computing, focusing on simulation, GLMs, loss reserving, and mortality modeling using R. It is suitable for those looking to enhance their skills in actuarial science and R programming.",
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "What is actuarial computing?",
+      "How to perform loss reserving in R?",
+      "What are GLMs in actuarial science?",
+      "How to model mortality using R?",
+      "What are the best practices for simulation in R?",
+      "How can R be used in insurance analytics?"
+    ],
+    "use_cases": [
+      "When to apply actuarial methods in R for insurance analysis"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "Actuarial computing skills",
+      "R programming proficiency",
+      "Understanding of GLMs and mortality modeling"
     ]
   },
   {
@@ -1225,6 +1643,41 @@
       "Insurance & Actuarial",
       "Machine Learning",
       "Predictive Modeling"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "machine-learning",
+      "statistics"
+    ],
+    "topic_tags": [
+      "machine-learning",
+      "predictive-modeling",
+      "insurance"
+    ],
+    "summary": "This two-volume set provides insights into machine learning applications within the insurance sector, focusing on methods and practical case studies. It is suitable for professionals and students interested in the intersection of data science and actuarial science.",
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "What are predictive modeling applications in actuarial science?",
+      "How does machine learning apply to insurance pricing?",
+      "What methods are covered in Volume 1 of the book?",
+      "What case studies are included in Volume 2?",
+      "Who should read Predictive Modeling Applications in Actuarial Science?",
+      "What skills can I gain from this two-volume set?",
+      "How can predictive modeling improve underwriting processes?",
+      "What is the importance of reserving in insurance?"
+    ],
+    "use_cases": [
+      "when to apply machine learning in insurance",
+      "understanding predictive modeling in actuarial science"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "understanding of machine learning methods",
+      "application of predictive modeling in insurance"
     ]
   },
   {
@@ -1240,6 +1693,42 @@
       "Insurance & Actuarial",
       "Machine Learning",
       "Neural Networks"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "python-basics"
+    ],
+    "topic_tags": [
+      "machine-learning",
+      "neural-networks",
+      "insurance"
+    ],
+    "summary": "This resource bridges traditional actuarial methods with modern machine learning techniques, focusing on applications such as pricing and telematics in insurance. It is aimed at those looking to enhance their understanding of both actuarial science and machine learning.",
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "What are the applications of neural networks in insurance?",
+      "How does machine learning improve actuarial methods?",
+      "What is telematics in the context of insurance?",
+      "How can I interpret machine learning models in insurance?",
+      "What skills do I need to understand actuarial learning?",
+      "What is the relationship between traditional actuarial methods and modern machine learning?",
+      "What topics are covered in the Statistical Foundations of Actuarial Learning?",
+      "Who should read this book on actuarial learning?"
+    ],
+    "use_cases": [
+      "When looking to integrate machine learning into actuarial practices",
+      "When studying pricing models in insurance",
+      "When exploring telematics applications in insurance"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "Understanding of neural networks",
+      "Application of machine learning in insurance",
+      "Interpretability of models in actuarial science"
     ]
   },
   {
@@ -1255,7 +1744,32 @@
       "Insurance & Actuarial",
       "InsurTech",
       "Digital Transformation"
-    ]
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "digital-transformation",
+      "blockchain",
+      "IoT",
+      "AI",
+      "business-model-innovation"
+    ],
+    "summary": "The INSURTECH Book provides an overview of how digital technologies are disrupting the insurance industry. It is aimed at professionals and enthusiasts interested in understanding the impact of InsurTech innovations.",
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is InsurTech?",
+      "How is blockchain used in insurance?",
+      "What are the applications of AI in the insurance industry?",
+      "What role does IoT play in InsurTech?",
+      "What business model innovations are emerging in insurance?",
+      "Who are the key executives in the InsurTech space?",
+      "What are the challenges of digital transformation in insurance?",
+      "How can traditional insurance companies adapt to digital disruption?"
+    ],
+    "use_cases": [],
+    "content_format": "book"
   },
   {
     "name": "Navigating Insurtech",
@@ -1270,6 +1784,35 @@
       "Insurance & Actuarial",
       "InsurTech",
       "Entrepreneurship"
+    ],
+    "difficulty": "beginner|intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "InsurTech",
+      "Entrepreneurship"
+    ],
+    "summary": "This resource provides a practical guide for building InsurTech ventures, focusing on product development, distribution, regulation, and scaling. It is aimed at entrepreneurs and professionals interested in the insurance technology sector.",
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is InsurTech?",
+      "How to develop InsurTech products?",
+      "What are the regulations in InsurTech?",
+      "How to scale an InsurTech venture?",
+      "What are the challenges in InsurTech?",
+      "Who is Bolttech?",
+      "What is the future of InsurTech?",
+      "How to distribute InsurTech products?"
+    ],
+    "use_cases": [
+      "When starting an InsurTech venture",
+      "For understanding the InsurTech landscape"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "Understanding of InsurTech concepts",
+      "Knowledge of product development in insurance"
     ]
   },
   {

@@ -19242,36 +19242,36 @@
       "Tutorial"
     ],
     "domain": "Marketing Science",
-    "difficulty": "advanced",
-    "prerequisites": [
-      "probability-theory",
-      "maximum-likelihood"
-    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
     "topic_tags": [
-      "martech-customer-analytics",
-      "btyd",
-      "clv"
+      "mathematics",
+      "customer-analytics"
     ],
-    "summary": "The definitive technical resource for BTYD models. Bruce Hardie's notes provide complete mathematical derivations of Pareto/NBD, BG/NBD, and extensions\u2014essential for understanding the models beyond black-box usage.",
+    "summary": "This resource provides step-by-step mathematical derivations of various BTYD models, making it essential for those looking to implement CLV models from scratch. It is aimed at practitioners and researchers interested in customer lifetime value analytics.",
     "use_cases": [
-      "Understand BTYD model mathematics",
-      "Implement CLV models from scratch",
-      "Debug CLV model implementations"
+      "When implementing customer lifetime value models",
+      "For understanding mathematical foundations of BTYD models"
     ],
     "audience": [
-      "Senior-DS"
+      "Mid-DS",
+      "Senior-DS",
+      "Curious-browser"
     ],
     "synthetic_questions": [
-      "How does BG/NBD model work mathematically?",
-      "Pareto/NBD derivation",
-      "Bruce Hardie BTYD notes",
-      "Mathematical foundation of CLV models"
+      "What are BTYD models?",
+      "How to implement CLV models?",
+      "What is the Pareto/NBD model?",
+      "What are the mathematical derivations for BG/NBD?",
+      "Who is Bruce Hardie?",
+      "Where can I find tutorials on customer analytics?",
+      "What resources are available for learning CLV?",
+      "How to apply BTYD models in marketing?"
     ],
     "content_format": "tutorial",
     "skill_progression": [
-      "model foundations",
-      "likelihood derivation",
-      "implementation"
+      "Understanding of BTYD models",
+      "Ability to implement CLV models from scratch"
     ]
   },
   {
@@ -19288,28 +19288,21 @@
       "Industry"
     ],
     "domain": "Marketing Science",
-    "difficulty": "intermediate",
+    "difficulty": null,
     "prerequisites": [],
-    "topic_tags": [
-      "martech-customer-analytics",
-      "research",
-      "industry-academic"
-    ],
-    "summary": "The leading research center for customer analytics, founded by Peter Fader and Eric Bradlow. Bridges academic research and industry practice with conferences, datasets, and working papers.",
-    "use_cases": [
-      "Access cutting-edge customer analytics research",
-      "Find industry-relevant datasets",
-      "Connect with customer analytics community"
-    ],
-    "audience": [
-      "Mid-DS",
-      "Senior-DS"
-    ],
+    "topic_tags": [],
+    "summary": "The Wharton Customer Analytics Initiative (WCAI) is a leading research center focused on customer analytics, providing access to proprietary datasets and practitioner-oriented research. It is designed for those interested in understanding customer behavior through data-driven insights.",
+    "use_cases": [],
+    "audience": [],
     "synthetic_questions": [
-      "Customer analytics research center",
-      "Academic customer analytics resources",
-      "Where to find CLV research",
-      "Industry-academic marketing research"
+      "What is the Wharton Customer Analytics Initiative?",
+      "How does WCAI collaborate with industry?",
+      "What types of datasets are available at WCAI?",
+      "What research topics are covered by WCAI?",
+      "Who can benefit from WCAI's resources?",
+      "What is customer analytics?",
+      "How can I access WCAI's research?",
+      "What are the benefits of industry-academic collaboration in analytics?"
     ],
     "content_format": "website",
     "skill_progression": [
@@ -19332,28 +19325,19 @@
       "Working Papers"
     ],
     "domain": "Marketing Science",
-    "difficulty": "intermediate",
+    "difficulty": null,
     "prerequisites": [],
-    "topic_tags": [
-      "martech-customer-analytics",
-      "research",
-      "marketing-science"
-    ],
-    "summary": "The primary organization connecting marketing academics and practitioners. Annual research priorities guide the field, and working papers provide early access to cutting-edge research.",
-    "use_cases": [
-      "Stay current on marketing research",
-      "Understand industry research priorities",
-      "Access working papers before publication"
-    ],
-    "audience": [
-      "Mid-DS",
-      "Senior-DS"
-    ],
+    "topic_tags": [],
+    "summary": "The Marketing Science Institute (MSI) serves as a bridge between marketing academia and industry, focusing on research priorities and publishing working papers on various marketing topics. This resource is valuable for those interested in the intersection of marketing research and practical applications.",
+    "use_cases": [],
+    "audience": [],
     "synthetic_questions": [
-      "Marketing research priorities",
-      "Marketing science organization",
-      "Where to find marketing working papers",
-      "Academic marketing research"
+      "What is the Marketing Science Institute?",
+      "How does MSI contribute to marketing research?",
+      "What types of working papers does MSI publish?",
+      "Who can benefit from MSI's research?",
+      "What are the annual research priorities set by MSI?",
+      "How does MSI connect academia and industry in marketing?"
     ],
     "content_format": "website",
     "skill_progression": [
