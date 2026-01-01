@@ -46,18 +46,19 @@
 
   // Intent detection patterns - classify queries to boost relevant types
   var INTENT_PATTERNS = {
+    // Content type intents
     tutorial: {
-      pattern: /how to|guide|beginner|intro|learn|getting started|tutorial|walkthrough/i,
+      pattern: /how to|guide|beginner|intro|learn|getting started|tutorial|walkthrough|step by step|hands-on|quickstart|example|crash course|101\b|basics/i,
       boostTypes: ['resource', 'roadmap', 'book'],
       boostFactor: 1.5
     },
     research: {
-      pattern: /paper|study|evidence|finding|analysis|research|literature|empirical/i,
+      pattern: /paper|study|evidence|finding|analysis|research|literature|empirical|methodology|framework|theory|survey|review|meta-analysis|systematic/i,
       boostTypes: ['paper'],
       boostFactor: 1.8
     },
     dataset: {
-      pattern: /\bdataset\b|download data|csv|benchmark data|corpus|training data/i,
+      pattern: /\bdataset\b|download data|csv|benchmark data|corpus|training data|data source|open data|public data|kaggle/i,
       boostTypes: ['dataset'],
       boostFactor: 1.8
     },
@@ -88,12 +89,12 @@
     },
     // Domain-specific intents
     causal: {
-      pattern: /causal|RCT|experiment|A\/B test|treatment effect|DiD|diff-in-diff|regression discontinuity|instrumental variable|IV\b/i,
+      pattern: /causal|RCT|A\/B test|treatment effect|DiD|diff-in-diff|regression discontinuity|instrumental variable|IV\b|propensity|confounder|identification|natural experiment|quasi-experiment/i,
       boostTypes: ['paper', 'package'],
       boostFactor: 1.6
     },
     pricing: {
-      pattern: /pricing|revenue|demand estimation|elasticity|willingness to pay|conjoint|auction/i,
+      pattern: /pricing|revenue|demand estimation|elasticity|willingness to pay|conjoint/i,
       boostTypes: ['paper', 'package'],
       boostFactor: 1.6
     },
@@ -108,7 +109,7 @@
       boostFactor: 1.6
     },
     advertising: {
-      pattern: /advertis|ad tech|RTB|programmatic|attribution|ad auction|bidding|impression/i,
+      pattern: /advertis|ad tech|RTB|programmatic|ad auction|bidding|impression|click-through/i,
       boostTypes: ['paper', 'package'],
       boostFactor: 1.6
     },
@@ -135,6 +136,92 @@
     },
     timeseries: {
       pattern: /time series|forecast|ARIMA|prophet|seasonality|trend/i,
+      boostTypes: ['paper', 'package'],
+      boostFactor: 1.5
+    },
+    // Additional domain intents
+    fraud: {
+      pattern: /fraud|anomaly detection|risk scoring|outlier|suspicious|anti-fraud/i,
+      boostTypes: ['paper', 'package', 'dataset'],
+      boostFactor: 1.6
+    },
+    matching: {
+      pattern: /matching|marketplace|two-sided|platform|gig economy|uber|airbnb/i,
+      boostTypes: ['paper', 'package'],
+      boostFactor: 1.5
+    },
+    auctions: {
+      pattern: /auction|bidding|VCG|GSP|mechanism design|reserve price|second price/i,
+      boostTypes: ['paper', 'package'],
+      boostFactor: 1.6
+    },
+    healthcare: {
+      pattern: /health|medical|clinical|patient|hospital|pharma|drug/i,
+      boostTypes: ['paper', 'dataset', 'package'],
+      boostFactor: 1.5
+    },
+    insurance: {
+      pattern: /insurance|actuarial|underwriting|claims|loss ratio|mortality|morbidity/i,
+      boostTypes: ['paper', 'package', 'dataset'],
+      boostFactor: 1.5
+    },
+    sports: {
+      pattern: /sports|baseball|basketball|football|soccer|sabermetrics|player value|WAR\b/i,
+      boostTypes: ['paper', 'dataset', 'package'],
+      boostFactor: 1.5
+    },
+    logistics: {
+      pattern: /logistics|supply chain|inventory|fulfillment|routing|delivery|last mile/i,
+      boostTypes: ['paper', 'package', 'dataset'],
+      boostFactor: 1.5
+    },
+    privacy: {
+      pattern: /privacy|differential privacy|GDPR|anonymization|federated|secure/i,
+      boostTypes: ['paper', 'package'],
+      boostFactor: 1.5
+    },
+    ranking: {
+      pattern: /ranking|learn to rank|NDCG|position bias|click model|search engine/i,
+      boostTypes: ['paper', 'package'],
+      boostFactor: 1.5
+    },
+    embeddings: {
+      pattern: /embedding|representation learning|word2vec|node2vec|graph neural/i,
+      boostTypes: ['paper', 'package'],
+      boostFactor: 1.4
+    },
+    survival: {
+      pattern: /survival|hazard|cox regression|kaplan-meier|time-to-event|censored/i,
+      boostTypes: ['paper', 'package'],
+      boostFactor: 1.5
+    },
+    segmentation: {
+      pattern: /segment|cluster|k-means|DBSCAN|cohort|persona|customer segment/i,
+      boostTypes: ['paper', 'package'],
+      boostFactor: 1.5
+    },
+    attribution: {
+      pattern: /attribution|marketing mix|MMM|incrementality|media mix|channel/i,
+      boostTypes: ['paper', 'package', 'book'],
+      boostFactor: 1.6
+    },
+    choice: {
+      pattern: /choice model|discrete choice|logit|multinomial|conjoint|stated preference/i,
+      boostTypes: ['paper', 'package', 'book'],
+      boostFactor: 1.5
+    },
+    optimization: {
+      pattern: /optim|linear programming|convex|gradient descent|solver|constraint/i,
+      boostTypes: ['paper', 'package'],
+      boostFactor: 1.4
+    },
+    nlp: {
+      pattern: /NLP|text|sentiment|topic model|LDA|named entity|tokeniz/i,
+      boostTypes: ['paper', 'package'],
+      boostFactor: 1.4
+    },
+    experimentation: {
+      pattern: /experiment|sample size|power analysis|sequential test|bandit|MAB/i,
       boostTypes: ['paper', 'package'],
       boostFactor: 1.5
     }
@@ -179,6 +266,7 @@
     this.isModelLoaded = false;
     this.isModelLoading = false;
     this.searchIndex = null;
+    this.boostDisabled = false;  // User can toggle to disable intent boosting
 
     // Global search UI state
     this.modal = null;
@@ -1369,9 +1457,9 @@
     // Apply facet filters (topics, years, difficulty)
     var filteredResults = this.applyFilters(results);
 
-    // Apply intent-based boosting (rerank by detected intent)
+    // Apply intent-based boosting (rerank by detected intent) - unless user disabled it
     var intent = detectIntent(query);
-    if (intent) {
+    if (intent && !this.boostDisabled) {
       filteredResults = filteredResults.map(function(result) {
         var boosted = Object.assign({}, result);
         if (intent.boostTypes.indexOf(result.type) !== -1) {
@@ -1938,6 +2026,7 @@
 
     // Intent display labels with icons
     var intentLabels = {
+      // Content type
       tutorial: { icon: '📚', label: 'Tutorial', desc: 'Guides & learning resources boosted' },
       research: { icon: '📄', label: 'Research', desc: 'Academic papers boosted' },
       dataset: { icon: '📊', label: 'Dataset', desc: 'Data sources boosted' },
@@ -1957,18 +2046,59 @@
       // Methodology
       ml: { icon: '🤖', label: 'ML', desc: 'Machine learning content boosted' },
       bayesian: { icon: '📈', label: 'Bayesian', desc: 'Bayesian methods boosted' },
-      timeseries: { icon: '📉', label: 'TimeSeries', desc: 'Time series content boosted' }
+      timeseries: { icon: '📉', label: 'TimeSeries', desc: 'Time series content boosted' },
+      // Additional domains
+      fraud: { icon: '🚨', label: 'Fraud', desc: 'Fraud detection content boosted' },
+      matching: { icon: '🔗', label: 'Matching', desc: 'Marketplace & matching boosted' },
+      auctions: { icon: '🔨', label: 'Auctions', desc: 'Auction & bidding content boosted' },
+      healthcare: { icon: '🏥', label: 'Healthcare', desc: 'Healthcare economics boosted' },
+      insurance: { icon: '🛡️', label: 'Insurance', desc: 'Insurance & actuarial boosted' },
+      sports: { icon: '⚽', label: 'Sports', desc: 'Sports analytics boosted' },
+      logistics: { icon: '🚚', label: 'Logistics', desc: 'Supply chain content boosted' },
+      privacy: { icon: '🔒', label: 'Privacy', desc: 'Privacy & security boosted' },
+      ranking: { icon: '📊', label: 'Ranking', desc: 'Search ranking content boosted' },
+      embeddings: { icon: '🧮', label: 'Embeddings', desc: 'Embeddings & representations boosted' },
+      survival: { icon: '⏱️', label: 'Survival', desc: 'Survival analysis boosted' },
+      segmentation: { icon: '🎯', label: 'Segment', desc: 'Clustering & segmentation boosted' },
+      attribution: { icon: '📈', label: 'Attribution', desc: 'Marketing attribution boosted' },
+      choice: { icon: '🔀', label: 'Choice', desc: 'Choice modeling boosted' },
+      optimization: { icon: '⚙️', label: 'Optimize', desc: 'Optimization content boosted' },
+      nlp: { icon: '💬', label: 'NLP', desc: 'Text & NLP content boosted' },
+      experimentation: { icon: '🧪', label: 'Experiment', desc: 'Experimentation content boosted' }
     };
 
     var display = intentLabels[intent.name] || { icon: '🔍', label: intent.name, desc: 'Related results boosted' };
+    var self = this;
 
-    var html = '<span class="intent-chip">';
-    html += '<span class="intent-icon">' + display.icon + '</span>';
-    html += '<span class="intent-text">' + display.desc + '</span>';
+    // Check if boost is disabled
+    var isDisabled = this.boostDisabled === true;
+    var chipClass = isDisabled ? 'intent-chip disabled' : 'intent-chip';
+
+    var html = '<span class="' + chipClass + '" title="Click to toggle boost">';
+    if (isDisabled) {
+      html += '<span class="intent-icon">❌</span>';
+      html += '<span class="intent-text">Boost disabled (click to enable)</span>';
+    } else {
+      html += '<span class="intent-icon">' + display.icon + '</span>';
+      html += '<span class="intent-text">' + display.desc + ' (click to disable)</span>';
+    }
     html += '</span>';
 
     intentContainer.innerHTML = html;
     intentContainer.style.display = 'block';
+
+    // Add click handler for toggle
+    var chip = intentContainer.querySelector('.intent-chip');
+    if (chip) {
+      chip.style.cursor = 'pointer';
+      chip.addEventListener('click', function() {
+        self.boostDisabled = !self.boostDisabled;
+        // Re-run search with current query
+        if (self.input && self.input.value) {
+          self.performSearch(self.input.value.trim());
+        }
+      });
+    }
   };
 
   /**
