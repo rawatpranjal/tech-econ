@@ -2,8 +2,8 @@
 """
 Build ALS recommendation model from user interaction data.
 
-Uses session dwell time and clicks from D1 database to train
-an Alternating Least Squares model for item-item recommendations.
+Uses ALL interaction types from D1 database (dwell, clicks, impressions,
+search queries) to train an ALS model for item-item recommendations.
 """
 
 import subprocess
@@ -38,62 +38,133 @@ def fetch_d1_data(query):
 
 
 def main():
-    print("Fetching interaction data from D1...")
+    print("Fetching ALL interaction data from D1...")
 
-    # Fetch dwell data (has session_id)
+    # Fetch all interaction types
     dwell = fetch_d1_data("SELECT session_id, name, dwell_ms FROM content_dwell")
     print(f"  Dwell records: {len(dwell)}")
 
-    # Fetch click data
     clicks = fetch_d1_data("SELECT name, click_count FROM content_clicks")
     print(f"  Click records: {len(clicks)}")
 
-    if len(dwell) < 5:
-        print("Not enough dwell data to train model (need at least 5 records)")
+    impressions = fetch_d1_data("SELECT name, impression_count FROM content_impressions")
+    print(f"  Impression records: {len(impressions)}")
+
+    search_queries = fetch_d1_data("SELECT session_id, query, click_name FROM search_queries")
+    print(f"  Search query records: {len(search_queries)}")
+
+    # Collect all items from all sources
+    all_items = set()
+    for d in dwell:
+        if d.get('name'):
+            all_items.add(d['name'].lower())
+    for c in clicks:
+        if c.get('name'):
+            all_items.add(c['name'].lower())
+    for i in impressions:
+        if i.get('name'):
+            all_items.add(i['name'].lower())
+    for s in search_queries:
+        if s.get('click_name'):
+            all_items.add(s['click_name'].lower())
+
+    items = sorted(all_items)
+    print(f"\n  Total unique items across all interactions: {len(items)}")
+
+    if len(items) < 5:
+        print("Not enough interaction data to train model")
         return
 
-    # Build user (session) and item indices
-    sessions = sorted(set(d['session_id'] for d in dwell if d.get('session_id')))
-    items_from_dwell = set(d['name'].lower() for d in dwell if d.get('name'))
-    items_from_clicks = set(c['name'].lower() for c in clicks if c.get('name'))
-    items = sorted(items_from_dwell | items_from_clicks)
+    # Build session indices from all sources
+    sessions_set = set()
+    for d in dwell:
+        if d.get('session_id'):
+            sessions_set.add(d['session_id'])
+    for s in search_queries:
+        if s.get('session_id'):
+            sessions_set.add(s['session_id'])
 
-    print(f"\nBuilding matrix: {len(sessions)} sessions x {len(items)} items")
+    # Create synthetic sessions for click/impression aggregates
+    # Each item with clicks/impressions gets a pseudo-session
+    synthetic_session_counter = 0
+    click_sessions = {}  # item -> synthetic session
+    impression_sessions = {}
+
+    for c in clicks:
+        name = c.get('name', '').lower()
+        if name and name not in click_sessions:
+            click_sessions[name] = f"__click_session_{synthetic_session_counter}"
+            sessions_set.add(click_sessions[name])
+            synthetic_session_counter += 1
+
+    for i in impressions:
+        name = i.get('name', '').lower()
+        if name and name not in impression_sessions:
+            impression_sessions[name] = f"__imp_session_{synthetic_session_counter}"
+            sessions_set.add(impression_sessions[name])
+            synthetic_session_counter += 1
+
+    sessions = sorted(sessions_set)
+    print(f"  Total sessions (real + synthetic): {len(sessions)}")
 
     session_idx = {s: i for i, s in enumerate(sessions)}
     item_idx = {it: i for i, it in enumerate(items)}
     idx_to_item = {i: it for it, i in item_idx.items()}
 
-    # Build click weights per item (aggregate across all sessions)
-    click_weights = defaultdict(float)
-    for c in clicks:
-        name = c.get('name', '').lower()
-        count = c.get('click_count', 0) or 0
-        click_weights[name] += count * 5  # Weight clicks higher
+    # Build user-item matrix from ALL interaction types
+    interactions = defaultdict(float)  # (session_idx, item_idx) -> score
 
-    # Build user-item matrix from dwell data
-    data, rows, cols = [], [], []
-
+    # 1. Dwell data (strongest signal)
     for d in dwell:
         session = d.get('session_id')
         name = d.get('name', '').lower()
         dwell_ms = d.get('dwell_ms', 0) or 0
 
-        if session not in session_idx or name not in item_idx:
-            continue
+        if session in session_idx and name in item_idx:
+            key = (session_idx[session], item_idx[name])
+            interactions[key] += dwell_ms / 1000.0  # seconds
 
-        # Engagement score = dwell (seconds) + click bonus
-        score = dwell_ms / 1000.0 + click_weights.get(name, 0)
+    # 2. Click data (strong signal, use synthetic sessions)
+    for c in clicks:
+        name = c.get('name', '').lower()
+        count = c.get('click_count', 0) or 0
 
-        rows.append(session_idx[session])
-        cols.append(item_idx[name])
+        if name in click_sessions and name in item_idx:
+            session = click_sessions[name]
+            key = (session_idx[session], item_idx[name])
+            interactions[key] += count * 10  # Weight clicks heavily
+
+    # 3. Impression data (weak signal, use synthetic sessions)
+    for i in impressions:
+        name = i.get('name', '').lower()
+        count = i.get('impression_count', 0) or 0
+
+        if name in impression_sessions and name in item_idx:
+            session = impression_sessions[name]
+            key = (session_idx[session], item_idx[name])
+            interactions[key] += count * 0.5  # Weak positive
+
+    # 4. Search query clicks (strong signal)
+    for s in search_queries:
+        session = s.get('session_id')
+        click_name = s.get('click_name', '').lower() if s.get('click_name') else None
+
+        if session and click_name and session in session_idx and click_name in item_idx:
+            key = (session_idx[session], item_idx[click_name])
+            interactions[key] += 5.0  # Search click is strong intent
+
+    # Convert to sparse matrix
+    data, rows, cols = [], [], []
+    for (row, col), score in interactions.items():
+        rows.append(row)
+        cols.append(col)
         data.append(score)
 
-    # Create sparse matrix
     n_users = len(sessions)
     n_items = len(items)
     user_item_matrix = csr_matrix((data, (rows, cols)), shape=(n_users, n_items))
 
+    print(f"\nBuilding matrix: {n_users} sessions x {n_items} items")
     print(f"  Non-zero entries: {user_item_matrix.nnz}")
     print(f"  Sparsity: {100 * (1 - user_item_matrix.nnz / (n_users * n_items)):.2f}%")
 
@@ -120,28 +191,35 @@ def main():
     # Generate item-item recommendations
     print("\nGenerating item recommendations...")
     recommendations = {}
+    failed_items = []
 
     for item_name, idx in item_idx.items():
         try:
-            # Get similar items
-            similar_ids, scores = model.similar_items(idx, N=6)
+            # Get similar items (request more to have buffer after filtering)
+            similar_ids, scores = model.similar_items(idx, N=10)
 
             # Filter out self and format
             similar_items = []
             for sim_idx, score in zip(similar_ids, scores):
                 if sim_idx != idx and sim_idx in idx_to_item:
-                    similar_items.append({
-                        "name": idx_to_item[sim_idx],
-                        "score": round(float(score), 4)
-                    })
+                    # Only include if score is positive
+                    if float(score) > 0:
+                        similar_items.append({
+                            "name": idx_to_item[sim_idx],
+                            "score": round(float(score), 4)
+                        })
 
             if similar_items:
                 recommendations[item_name] = similar_items[:5]
+            else:
+                failed_items.append(item_name)
         except Exception as e:
-            # Skip items that cause issues
+            failed_items.append(f"{item_name}: {str(e)}")
             continue
 
     print(f"  Generated recommendations for {len(recommendations)} items")
+    if failed_items:
+        print(f"  Items without recommendations: {len(failed_items)}")
 
     # Save output
     output_path = os.path.join(

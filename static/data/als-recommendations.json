@@ -1,222 +1,3214 @@
 {
   "a/b testing on social networks": [
     {
-      "name": "arena human preference (55k)",
-      "score": 0.242
+      "name": "amazon science economics",
+      "score": 0.1832
     },
     {
-      "name": "ananke",
-      "score": 0.2337
+      "name": "ahead of ai (sebastian raschka)",
+      "score": 0.1528
     },
     {
       "name": "applied econometrics notes (lal)",
-      "score": 0.0825
+      "score": 0.1287
     },
     {
-      "name": "abracadabra",
-      "score": 0.0296
+      "name": "brms",
+      "score": 0.1252
     },
     {
-      "name": "amazon science economics",
-      "score": 0.0125
+      "name": "boot",
+      "score": 0.1237
     }
   ],
   "abracadabra": [
     {
-      "name": "amazon science economics",
-      "score": 0.323
+      "name": "boot",
+      "score": 0.1907
     },
     {
-      "name": "ananke",
-      "score": 0.2826
+      "name": "contextualbandits",
+      "score": 0.1481
     },
     {
-      "name": "applied econometrics notes (lal)",
-      "score": 0.233
+      "name": "convex optimization (boyd & vandenberghe)",
+      "score": 0.1401
     },
     {
-      "name": "a/b testing on social networks",
-      "score": 0.0296
+      "name": "alibaba ads (ijcai-18)",
+      "score": 0.1268
     },
     {
-      "name": "arena human preference (55k)",
-      "score": 0.0243
+      "name": "hands-on mathematical optimization with python (mo-book)",
+      "score": 0.1257
     }
   ],
   "ace the data science interview": [
     {
-      "name": "apollo",
-      "score": 0.0459
+      "name": "modeling discrete optimization (coursera)",
+      "score": 0.4179
     },
+    {
+      "name": "scikit-learn",
+      "score": 0.4019
+    },
+    {
+      "name": "mit 15.053: optimization methods in management science",
+      "score": 0.3898
+    },
+    {
+      "name": "quantecon: discrete state dynamic programming",
+      "score": 0.3839
+    },
+    {
+      "name": "econml",
+      "score": 0.3802
+    }
+  ],
+  "adjust blog: mobile attribution & privacy": [
+    {
+      "name": "ace the data science interview",
+      "score": 0.363
+    },
+    {
+      "name": "ahead of ai (sebastian raschka)",
+      "score": 0.2737
+    },
+    {
+      "name": "bruce hardie's clv papers",
+      "score": 0.2706
+    },
+    {
+      "name": "click-test-v2",
+      "score": 0.2048
+    },
+    {
+      "name": "bayesianbandits",
+      "score": 0.1982
+    }
+  ],
+  "adkdd workshop papers": [
+    {
+      "name": "blp us car data",
+      "score": 0.358
+    },
+    {
+      "name": "ace the data science interview",
+      "score": 0.3233
+    },
+    {
+      "name": "brms",
+      "score": 0.3046
+    },
+    {
+      "name": "boot",
+      "score": 0.1829
+    },
+    {
+      "name": "coding for practitioners",
+      "score": 0.1799
+    }
+  ],
+  "aea: machine learning and econometrics (athey/imbens)": [
+    {
+      "name": "mlogit",
+      "score": 0.5167
+    },
+    {
+      "name": "easley & kleinberg: sponsored search markets",
+      "score": 0.5054
+    },
+    {
+      "name": "remerge findings: incrementality testing approaches",
+      "score": 0.5054
+    },
+    {
+      "name": "mixl",
+      "score": 0.4944
+    },
+    {
+      "name": "python for econometrics",
+      "score": 0.4713
+    }
+  ],
+  "ahead of ai (sebastian raschka)": [
+    {
+      "name": "bambi",
+      "score": 0.2807
+    },
+    {
+      "name": "apollo",
+      "score": 0.2801
+    },
+    {
+      "name": "adjust blog: mobile attribution & privacy",
+      "score": 0.2737
+    },
+    {
+      "name": "causal inference: the mixtape",
+      "score": 0.271
+    },
+    {
+      "name": "glen weyl: radical markets",
+      "score": 0.2708
+    }
+  ],
+  "alain chabrier: column generation with cplex": [
     {
       "name": "alibaba ads (ijcai-18)",
-      "score": 0.0362
-    },
-    {
-      "name": "amazon sessions (kdd cup 23)",
-      "score": 0.0152
+      "score": 0.196
     },
     {
       "name": "arena human preference (55k)",
-      "score": -0.0247
+      "score": 0.1903
     },
     {
-      "name": "a/b testing on social networks",
-      "score": -0.0293
+      "name": "automate the boring stuff with python",
+      "score": 0.1868
+    },
+    {
+      "name": "tidytransit",
+      "score": 0.1675
+    },
+    {
+      "name": "ax (meta adaptive experimentation)",
+      "score": 0.1553
     }
   ],
   "alibaba ads (ijcai-18)": [
     {
-      "name": "ananke",
-      "score": 0.2983
+      "name": "convex optimization (boyd & vandenberghe)",
+      "score": 0.454
     },
     {
-      "name": "amazon sessions (kdd cup 23)",
-      "score": 0.1012
+      "name": "brms",
+      "score": 0.2234
     },
     {
-      "name": "ace the data science interview",
-      "score": 0.0362
+      "name": "alain chabrier: column generation with cplex",
+      "score": 0.196
     },
     {
-      "name": "arena human preference (55k)",
-      "score": 0.0276
+      "name": "pymc-marketing documentation",
+      "score": 0.1703
     },
     {
-      "name": "abracadabra",
-      "score": -0.0096
+      "name": "apollo",
+      "score": 0.1366
     }
   ],
   "amazon science economics": [
     {
-      "name": "abracadabra",
-      "score": 0.323
+      "name": "blp us car data",
+      "score": 0.2552
     },
     {
-      "name": "ananke",
-      "score": 0.1857
+      "name": "brazilian ecommerce",
+      "score": 0.2306
     },
     {
-      "name": "applied econometrics notes (lal)",
-      "score": 0.1471
+      "name": "automate the boring stuff with python",
+      "score": 0.2133
     },
     {
-      "name": "apollo",
-      "score": 0.0261
+      "name": "brms",
+      "score": 0.2075
     },
     {
-      "name": "a/b testing on social networks",
-      "score": 0.0125
+      "name": "bayesianbandits",
+      "score": 0.1935
     }
   ],
   "amazon sessions (kdd cup 23)": [
     {
-      "name": "apollo",
-      "score": 0.1281
+      "name": "bayesplot",
+      "score": 0.3081
     },
     {
-      "name": "alibaba ads (ijcai-18)",
-      "score": 0.1012
+      "name": "beyond jupyter",
+      "score": 0.2
     },
     {
-      "name": "ananke",
-      "score": 0.0167
+      "name": "guide to product metrics",
+      "score": 0.165
     },
     {
-      "name": "ace the data science interview",
-      "score": 0.0152
+      "name": "spacy",
+      "score": 0.1647
     },
     {
-      "name": "arena human preference (55k)",
-      "score": 0.0148
+      "name": "adjust blog: mobile attribution & privacy",
+      "score": 0.1638
     }
   ],
   "ananke": [
     {
-      "name": "apollo",
-      "score": 0.3347
+      "name": "coding for practitioners",
+      "score": 0.1796
     },
     {
-      "name": "alibaba ads (ijcai-18)",
-      "score": 0.2983
+      "name": "convex optimization (boyd & vandenberghe)",
+      "score": 0.1748
     },
     {
-      "name": "abracadabra",
-      "score": 0.2826
+      "name": "bayesianbandits",
+      "score": 0.1672
     },
     {
-      "name": "a/b testing on social networks",
-      "score": 0.2337
+      "name": "glen weyl: radical markets",
+      "score": 0.1639
     },
     {
-      "name": "amazon science economics",
-      "score": 0.1857
+      "name": "causal inference: the mixtape",
+      "score": 0.1633
     }
   ],
   "apollo": [
     {
-      "name": "ananke",
-      "score": 0.3347
+      "name": "ahead of ai (sebastian raschka)",
+      "score": 0.2801
     },
     {
-      "name": "arena human preference (55k)",
-      "score": 0.3187
+      "name": "scrapy documentation",
+      "score": 0.1798
     },
     {
-      "name": "amazon sessions (kdd cup 23)",
-      "score": 0.1281
+      "name": "scott cunningham: causal inference substack",
+      "score": 0.1793
     },
     {
-      "name": "applied econometrics notes (lal)",
-      "score": 0.0575
+      "name": "pandas",
+      "score": 0.1586
     },
     {
-      "name": "ace the data science interview",
-      "score": 0.0459
+      "name": "pyxab",
+      "score": 0.146
     }
   ],
   "applied econometrics notes (lal)": [
     {
-      "name": "abracadabra",
-      "score": 0.233
+      "name": "bayesplot",
+      "score": 0.2253
     },
     {
-      "name": "amazon science economics",
-      "score": 0.1471
+      "name": "ax (meta adaptive experimentation)",
+      "score": 0.1981
     },
     {
-      "name": "a/b testing on social networks",
-      "score": 0.0825
+      "name": "blp us car data",
+      "score": 0.1542
     },
     {
-      "name": "apollo",
-      "score": 0.0575
+      "name": "causal inference for the brave and true",
+      "score": 0.1428
     },
     {
-      "name": "ananke",
-      "score": 0.0403
+      "name": "osmnx",
+      "score": 0.1425
     }
   ],
   "arena human preference (55k)": [
     {
-      "name": "apollo",
-      "score": 0.3187
+      "name": "pat bajari: building applied analytics at amazon",
+      "score": 0.5269
     },
     {
-      "name": "a/b testing on social networks",
-      "score": 0.242
+      "name": "google merchandise",
+      "score": 0.5222
     },
     {
-      "name": "alibaba ads (ijcai-18)",
-      "score": 0.0276
+      "name": "mit ocw: dynamic programming (bertsekas)",
+      "score": 0.5214
     },
     {
-      "name": "abracadabra",
-      "score": 0.0243
+      "name": "mit 15.053: optimization methods in management science",
+      "score": 0.5126
+    },
+    {
+      "name": "open bandit pipeline (obp)",
+      "score": 0.5125
+    }
+  ],
+  "athey's course datasets": [
+    {
+      "name": "test-item",
+      "score": 1.0
+    },
+    {
+      "name": "haus blog: synthetic control & geo-experimentation",
+      "score": 1.0
+    },
+    {
+      "name": "susan athey: applied researchers wanted",
+      "score": 0.1493
+    },
+    {
+      "name": "datalemur",
+      "score": 0.1212
+    },
+    {
+      "name": "mode sql tutorial",
+      "score": 0.0883
+    }
+  ],
+  "auctions in ad tech (sanjiv das)": [
+    {
+      "name": "bambi",
+      "score": 0.189
+    },
+    {
+      "name": "scrapy documentation",
+      "score": 0.1846
+    },
+    {
+      "name": "scott cunningham: causal inference substack",
+      "score": 0.1819
+    },
+    {
+      "name": "click-test-v2",
+      "score": 0.1815
+    },
+    {
+      "name": "susan athey: applied researchers wanted",
+      "score": 0.1676
+    }
+  ],
+  "automate the boring stuff with python": [
+    {
+      "name": "brazilian ecommerce",
+      "score": 0.3411
+    },
+    {
+      "name": "ax (meta adaptive experimentation)",
+      "score": 0.2975
+    },
+    {
+      "name": "remerge findings: incrementality testing approaches",
+      "score": 0.2575
+    },
+    {
+      "name": "bruce hardie's clv papers",
+      "score": 0.2518
+    },
+    {
+      "name": "scrapy documentation",
+      "score": 0.2393
+    }
+  ],
+  "ax (meta adaptive experimentation)": [
+    {
+      "name": "automate the boring stuff with python",
+      "score": 0.2975
+    },
+    {
+      "name": "ace the data science interview",
+      "score": 0.2327
+    },
+    {
+      "name": "beyond jupyter",
+      "score": 0.2093
+    },
+    {
+      "name": "applied econometrics notes (lal)",
+      "score": 0.1981
+    },
+    {
+      "name": "lmsys-chat-1m",
+      "score": 0.1752
+    }
+  ],
+  "bambi": [
+    {
+      "name": "ahead of ai (sebastian raschka)",
+      "score": 0.2807
+    },
+    {
+      "name": "auctions in ad tech (sanjiv das)",
+      "score": 0.189
+    },
+    {
+      "name": "ax (meta adaptive experimentation)",
+      "score": 0.1709
+    },
+    {
+      "name": "bruce hardie's clv papers",
+      "score": 0.1467
+    },
+    {
+      "name": "adjust blog: mobile attribution & privacy",
+      "score": 0.136
+    }
+  ],
+  "bayesianbandits": [
+    {
+      "name": "automate the boring stuff with python",
+      "score": 0.2211
+    },
+    {
+      "name": "adjust blog: mobile attribution & privacy",
+      "score": 0.1982
+    },
+    {
+      "name": "amazon science economics",
+      "score": 0.1935
+    },
+    {
+      "name": "remerge findings: incrementality testing approaches",
+      "score": 0.1736
+    },
+    {
+      "name": "ananke",
+      "score": 0.1672
+    }
+  ],
+  "bayesplot": [
+    {
+      "name": "beyond jupyter",
+      "score": 0.3677
     },
     {
       "name": "amazon sessions (kdd cup 23)",
-      "score": 0.0148
+      "score": 0.3081
+    },
+    {
+      "name": "brms",
+      "score": 0.2302
+    },
+    {
+      "name": "applied econometrics notes (lal)",
+      "score": 0.2253
+    },
+    {
+      "name": "brazilian ecommerce",
+      "score": 0.1975
+    }
+  ],
+  "bestbuy": [
+    {
+      "name": "measuringu",
+      "score": 0.7099
+    },
+    {
+      "name": "remerge findings: incrementality testing approaches",
+      "score": 0.4681
+    },
+    {
+      "name": "easley & kleinberg: sponsored search markets",
+      "score": 0.4673
+    },
+    {
+      "name": "sqlbolt",
+      "score": 0.4354
+    },
+    {
+      "name": "medicare provider utilization",
+      "score": 0.3813
+    }
+  ],
+  "beyond jupyter": [
+    {
+      "name": "bayesplot",
+      "score": 0.3677
+    },
+    {
+      "name": "openai-agents",
+      "score": 0.3369
+    },
+    {
+      "name": "scott cunningham: causal inference substack",
+      "score": 0.3081
+    },
+    {
+      "name": "google merchandise",
+      "score": 0.3028
+    },
+    {
+      "name": "scrapy documentation",
+      "score": 0.3018
+    }
+  ],
+  "blp us car data": [
+    {
+      "name": "adkdd workshop papers",
+      "score": 0.358
+    },
+    {
+      "name": "convai dataset",
+      "score": 0.3026
+    },
+    {
+      "name": "amazon science economics",
+      "score": 0.2552
+    },
+    {
+      "name": "beyond jupyter",
+      "score": 0.2194
+    },
+    {
+      "name": "glen weyl: radical markets",
+      "score": 0.2001
+    }
+  ],
+  "boot": [
+    {
+      "name": "bruce hardie's clv papers",
+      "score": 0.2028
+    },
+    {
+      "name": "abracadabra",
+      "score": 0.1907
+    },
+    {
+      "name": "adkdd workshop papers",
+      "score": 0.1829
+    },
+    {
+      "name": "guide to product metrics",
+      "score": 0.1481
+    },
+    {
+      "name": "spacy",
+      "score": 0.1475
+    }
+  ],
+  "brazilian ecommerce": [
+    {
+      "name": "automate the boring stuff with python",
+      "score": 0.3411
+    },
+    {
+      "name": "amazon science economics",
+      "score": 0.2306
+    },
+    {
+      "name": "bayesplot",
+      "score": 0.1975
+    },
+    {
+      "name": "mabwiser",
+      "score": 0.182
+    },
+    {
+      "name": "chicago tnc trips",
+      "score": 0.182
+    }
+  ],
+  "brms": [
+    {
+      "name": "easley & kleinberg: sponsored search markets",
+      "score": 0.3479
+    },
+    {
+      "name": "openai-agents",
+      "score": 0.3237
+    },
+    {
+      "name": "adkdd workshop papers",
+      "score": 0.3046
+    },
+    {
+      "name": "google merchandise",
+      "score": 0.3013
+    },
+    {
+      "name": "mit ocw: dynamic programming (bertsekas)",
+      "score": 0.2996
+    }
+  ],
+  "bruce hardie's clv papers": [
+    {
+      "name": "convex optimization (boyd & vandenberghe)",
+      "score": 0.3132
+    },
+    {
+      "name": "adjust blog: mobile attribution & privacy",
+      "score": 0.2706
+    },
+    {
+      "name": "causal inference: the mixtape",
+      "score": 0.2526
+    },
+    {
+      "name": "glen weyl: radical markets",
+      "score": 0.2525
+    },
+    {
+      "name": "automate the boring stuff with python",
+      "score": 0.2518
+    }
+  ],
+  "bsts": [
+    {
+      "name": "python for econometrics",
+      "score": 0.2523
+    },
+    {
+      "name": "adjust blog: mobile attribution & privacy",
+      "score": 0.1905
+    },
+    {
+      "name": "chicago tnc trips",
+      "score": 0.1463
+    },
+    {
+      "name": "mabwiser",
+      "score": 0.1457
+    },
+    {
+      "name": "open source economics: structural estimation",
+      "score": 0.1346
+    }
+  ],
+  "causal inference for the brave and true": [
+    {
+      "name": "osmnx",
+      "score": 1.0
+    },
+    {
+      "name": "tidytransit",
+      "score": 0.2636
+    },
+    {
+      "name": "bruce hardie's clv papers",
+      "score": 0.1506
+    },
+    {
+      "name": "applied econometrics notes (lal)",
+      "score": 0.1428
+    },
+    {
+      "name": "glen weyl: radical markets",
+      "score": 0.1137
+    }
+  ],
+  "causal inference: the mixtape": [
+    {
+      "name": "glen weyl: radical markets",
+      "score": 1.0
+    },
+    {
+      "name": "ahead of ai (sebastian raschka)",
+      "score": 0.271
+    },
+    {
+      "name": "bruce hardie's clv papers",
+      "score": 0.2526
+    },
+    {
+      "name": "convex optimization (boyd & vandenberghe)",
+      "score": 0.2504
+    },
+    {
+      "name": "arena human preference (55k)",
+      "score": 0.2067
+    }
+  ],
+  "causalmatch": [
+    {
+      "name": "scipy lecture notes: mathematical optimization",
+      "score": 1.0
+    },
+    {
+      "name": "statistical rethinking",
+      "score": 0.6801
+    },
+    {
+      "name": "scipy.stats documentation",
+      "score": 0.6089
+    },
+    {
+      "name": "growth accounting & backtraced growth accounting",
+      "score": 0.3225
+    },
+    {
+      "name": "gtfs-kit",
+      "score": 0.2569
+    }
+  ],
+  "chicago tnc trips": [
+    {
+      "name": "mabwiser",
+      "score": 1.0
+    },
+    {
+      "name": "sumo",
+      "score": 0.413
+    },
+    {
+      "name": "optn organ transplant",
+      "score": 0.2808
+    },
+    {
+      "name": "lmsys-chat-1m",
+      "score": 0.2724
+    },
+    {
+      "name": "python data science handbook",
+      "score": 0.2573
+    }
+  ],
+  "click-test-v2": [
+    {
+      "name": "adjust blog: mobile attribution & privacy",
+      "score": 0.2048
+    },
+    {
+      "name": "auctions in ad tech (sanjiv das)",
+      "score": 0.1815
+    },
+    {
+      "name": "evan miller: how not to run an a/b test",
+      "score": 0.1536
+    },
+    {
+      "name": "gsp auction paper (edelman et al., aer 2007)",
+      "score": 0.1493
+    },
+    {
+      "name": "lenny's newsletter: how duolingo reignited user growth",
+      "score": 0.1448
+    }
+  ],
+  "cms hospital price transparency": [
+    {
+      "name": "remerge findings: incrementality testing approaches",
+      "score": 0.1663
+    },
+    {
+      "name": "frank pinter's demand estimation notes",
+      "score": 0.1651
+    },
+    {
+      "name": "ryan o'neil: real-time optimization",
+      "score": 0.1564
+    },
+    {
+      "name": "rstanarm",
+      "score": 0.1453
+    },
+    {
+      "name": "easley & kleinberg: sponsored search markets",
+      "score": 0.1444
+    }
+  ],
+  "coding for economists (arthur turrell)": [
+    {
+      "name": "lightweightmmm",
+      "score": 1.0
+    },
+    {
+      "name": "python for econometrics",
+      "score": 0.1262
+    },
+    {
+      "name": "nathan brixius: ml + optimization",
+      "score": 0.1192
+    },
+    {
+      "name": "numpyro",
+      "score": 0.1162
+    },
+    {
+      "name": "evan miller: how not to run an a/b test",
+      "score": 0.0949
+    }
+  ],
+  "coding for practitioners": [
+    {
+      "name": "spacy",
+      "score": 0.3436
+    },
+    {
+      "name": "guide to product metrics",
+      "score": 0.3435
+    },
+    {
+      "name": "pymc-marketing documentation",
+      "score": 0.3434
+    },
+    {
+      "name": "pymc labs blog",
+      "score": 0.3193
+    },
+    {
+      "name": "rstanarm",
+      "score": 0.3166
+    }
+  ],
+  "contextualbandits": [
+    {
+      "name": "abracadabra",
+      "score": 0.1481
+    },
+    {
+      "name": "ahead of ai (sebastian raschka)",
+      "score": 0.1354
+    },
+    {
+      "name": "python for econometrics",
+      "score": 0.1298
+    },
+    {
+      "name": "aea: machine learning and econometrics (athey/imbens)",
+      "score": 0.1107
+    },
+    {
+      "name": "brazilian ecommerce",
+      "score": 0.1104
+    }
+  ],
+  "convai dataset": [
+    {
+      "name": "blp us car data",
+      "score": 0.3026
+    },
+    {
+      "name": "ahead of ai (sebastian raschka)",
+      "score": 0.2597
+    },
+    {
+      "name": "bruce hardie's clv papers",
+      "score": 0.1942
+    },
+    {
+      "name": "automate the boring stuff with python",
+      "score": 0.1467
+    },
+    {
+      "name": "scott cunningham: causal inference substack",
+      "score": 0.1365
+    }
+  ],
+  "convex optimization (boyd & vandenberghe)": [
+    {
+      "name": "alibaba ads (ijcai-18)",
+      "score": 0.454
+    },
+    {
+      "name": "bruce hardie's clv papers",
+      "score": 0.3132
+    },
+    {
+      "name": "causal inference: the mixtape",
+      "score": 0.2504
+    },
+    {
+      "name": "glen weyl: radical markets",
+      "score": 0.2499
+    },
+    {
+      "name": "lenny's newsletter: how duolingo reignited user growth",
+      "score": 0.1988
+    }
+  ],
+  "coveo shopping (sigir-21)": [
+    {
+      "name": "deep-test-package",
+      "score": 1.0
+    },
+    {
+      "name": "smpybandits",
+      "score": 1.0
+    },
+    {
+      "name": "stanford ee364a (youtube)",
+      "score": 0.9734
+    },
+    {
+      "name": "seeing theory (brown)",
+      "score": 0.7738
+    },
+    {
+      "name": "medicare provider utilization",
+      "score": 0.7046
+    }
+  ],
+  "crewai": [
+    {
+      "name": "diqad",
+      "score": 0.9471
+    },
+    {
+      "name": "open source economics: structural estimation",
+      "score": 0.9398
+    },
+    {
+      "name": "rstanarm",
+      "score": 0.9264
+    },
+    {
+      "name": "pakistan e-commerce",
+      "score": 0.9167
+    },
+    {
+      "name": "retail rocket",
+      "score": 0.9095
+    }
+  ],
+  "cvxpy short course": [
+    {
+      "name": "evan miller: how not to run an a/b test",
+      "score": 0.9362
+    },
+    {
+      "name": "mlogit",
+      "score": 0.9329
+    },
+    {
+      "name": "optn organ transplant",
+      "score": 0.9222
+    },
+    {
+      "name": "jonathan.interviews: data science careers & causal inference",
+      "score": 0.9133
+    },
+    {
+      "name": "mixl",
+      "score": 0.8984
+    }
+  ],
+  "datalemur": [
+    {
+      "name": "rstan",
+      "score": 0.9645
+    },
+    {
+      "name": "gmnl",
+      "score": 0.9506
+    },
+    {
+      "name": "mode sql tutorial",
+      "score": 0.9402
+    },
+    {
+      "name": "pyxab",
+      "score": 0.9166
+    },
+    {
+      "name": "mobile dev memo: post-att marketing measurement",
+      "score": 0.8454
+    }
+  ],
+  "deep-test-package": [
+    {
+      "name": "coveo shopping (sigir-21)",
+      "score": 1.0
+    },
+    {
+      "name": "smpybandits",
+      "score": 1.0
+    },
+    {
+      "name": "stanford ee364a (youtube)",
+      "score": 0.9734
+    },
+    {
+      "name": "seeing theory (brown)",
+      "score": 0.7738
+    },
+    {
+      "name": "medicare provider utilization",
+      "score": 0.7046
+    }
+  ],
+  "diqad": [
+    {
+      "name": "open source economics: structural estimation",
+      "score": 0.973
+    },
+    {
+      "name": "retail rocket",
+      "score": 0.9563
+    },
+    {
+      "name": "crewai",
+      "score": 0.9471
+    },
+    {
+      "name": "rstanarm",
+      "score": 0.944
+    },
+    {
+      "name": "pymc labs blog",
+      "score": 0.9335
+    }
+  ],
+  "display advertising with real-time bidding": [
+    {
+      "name": "growth accounting & backtraced growth accounting",
+      "score": 0.9472
+    },
+    {
+      "name": "gsp auction paper (edelman et al., aer 2007)",
+      "score": 0.9312
+    },
+    {
+      "name": "ryan o'neil: real-time optimization",
+      "score": 0.9243
+    },
+    {
+      "name": "real python: web scraping",
+      "score": 0.9168
+    },
+    {
+      "name": "frank pinter's demand estimation notes",
+      "score": 0.8675
+    }
+  ],
+  "doubleml": [
+    {
+      "name": "real python: web scraping",
+      "score": 0.9056
+    },
+    {
+      "name": "pymc-marketing documentation",
+      "score": 0.8969
+    },
+    {
+      "name": "ryan o'neil: real-time optimization",
+      "score": 0.866
+    },
+    {
+      "name": "frank pinter's demand estimation notes",
+      "score": 0.8546
+    },
+    {
+      "name": "display advertising with real-time bidding",
+      "score": 0.8476
+    }
+  ],
+  "easley & kleinberg: sponsored search markets": [
+    {
+      "name": "remerge findings: incrementality testing approaches",
+      "score": 0.9005
+    },
+    {
+      "name": "pymc-marketing documentation",
+      "score": 0.5428
+    },
+    {
+      "name": "aea: machine learning and econometrics (athey/imbens)",
+      "score": 0.5054
+    },
+    {
+      "name": "bestbuy",
+      "score": 0.4673
+    },
+    {
+      "name": "growth accounting & backtraced growth accounting",
+      "score": 0.4426
+    }
+  ],
+  "econml": [
+    {
+      "name": "fwildclusterboot",
+      "score": 0.982
+    },
+    {
+      "name": "pat bajari: building applied analytics at amazon",
+      "score": 0.9768
+    },
+    {
+      "name": "google merchandise",
+      "score": 0.9739
+    },
+    {
+      "name": "pymc-marketing clv quickstart",
+      "score": 0.971
+    },
+    {
+      "name": "rsample",
+      "score": 0.9606
+    }
+  ],
+  "empirical io: coding blp": [
+    {
+      "name": "open e-commerce 1.0 (mit)",
+      "score": 0.9941
+    },
+    {
+      "name": "gtfs-kit",
+      "score": 0.9472
+    },
+    {
+      "name": "opentripplanner",
+      "score": 0.9349
+    },
+    {
+      "name": "numpyro",
+      "score": 0.934
+    },
+    {
+      "name": "mobile dev memo: post-att marketing measurement",
+      "score": 0.9203
+    }
+  ],
+  "erwin kalvelagen: yet another math programming consultant": [
+    {
+      "name": "mstl multi-seasonal decomposition in python",
+      "score": 0.9738
+    },
+    {
+      "name": "open cdp",
+      "score": 0.9596
+    },
+    {
+      "name": "pymc",
+      "score": 0.9573
+    },
+    {
+      "name": "open bandit pipeline (obp)",
+      "score": 0.954
+    },
+    {
+      "name": "optn organ transplant",
+      "score": 0.9135
+    }
+  ],
+  "evan miller: how not to run an a/b test": [
+    {
+      "name": "optn organ transplant",
+      "score": 0.986
+    },
+    {
+      "name": "mstl multi-seasonal decomposition in python",
+      "score": 0.9494
+    },
+    {
+      "name": "pymc",
+      "score": 0.9469
+    },
+    {
+      "name": "cvxpy short course",
+      "score": 0.9362
+    },
+    {
+      "name": "open bandit pipeline (obp)",
+      "score": 0.9225
+    }
+  ],
+  "flipkart": [
+    {
+      "name": "pat bajari: building applied analytics at amazon",
+      "score": 0.9448
+    },
+    {
+      "name": "mit ocw: dynamic programming (bertsekas)",
+      "score": 0.9412
+    },
+    {
+      "name": "pymc-marketing clv quickstart",
+      "score": 0.9292
+    },
+    {
+      "name": "mixl",
+      "score": 0.9256
+    },
+    {
+      "name": "rsample",
+      "score": 0.9239
+    }
+  ],
+  "frank pinter's demand estimation notes": [
+    {
+      "name": "real python: web scraping",
+      "score": 0.9178
+    },
+    {
+      "name": "diqad",
+      "score": 0.9053
+    },
+    {
+      "name": "ryan o'neil: real-time optimization",
+      "score": 0.8785
+    },
+    {
+      "name": "open source economics: structural estimation",
+      "score": 0.8722
+    },
+    {
+      "name": "gsp auction paper (edelman et al., aer 2007)",
+      "score": 0.8693
+    }
+  ],
+  "fwildclusterboot": [
+    {
+      "name": "econml",
+      "score": 0.982
+    },
+    {
+      "name": "pymc-marketing clv quickstart",
+      "score": 0.9777
+    },
+    {
+      "name": "pat bajari: building applied analytics at amazon",
+      "score": 0.9753
+    },
+    {
+      "name": "rsample",
+      "score": 0.9639
+    },
+    {
+      "name": "google merchandise",
+      "score": 0.9531
+    }
+  ],
+  "glen weyl: radical markets": [
+    {
+      "name": "causal inference: the mixtape",
+      "score": 1.0
+    },
+    {
+      "name": "ahead of ai (sebastian raschka)",
+      "score": 0.2708
+    },
+    {
+      "name": "bruce hardie's clv papers",
+      "score": 0.2525
+    },
+    {
+      "name": "convex optimization (boyd & vandenberghe)",
+      "score": 0.2499
+    },
+    {
+      "name": "arena human preference (55k)",
+      "score": 0.2061
+    }
+  ],
+  "gmnl": [
+    {
+      "name": "rstan",
+      "score": 0.9882
+    },
+    {
+      "name": "datalemur",
+      "score": 0.9506
+    },
+    {
+      "name": "mode sql tutorial",
+      "score": 0.9294
+    },
+    {
+      "name": "mobile dev memo: post-att marketing measurement",
+      "score": 0.896
+    },
+    {
+      "name": "pyxab",
+      "score": 0.8953
+    }
+  ],
+  "google merchandise": [
+    {
+      "name": "econml",
+      "score": 0.9739
+    },
+    {
+      "name": "fwildclusterboot",
+      "score": 0.9531
+    },
+    {
+      "name": "mit ocw: dynamic programming (bertsekas)",
+      "score": 0.9383
+    },
+    {
+      "name": "pat bajari: building applied analytics at amazon",
+      "score": 0.935
+    },
+    {
+      "name": "pymc-marketing clv quickstart",
+      "score": 0.9306
+    }
+  ],
+  "google research: market algorithms team": [
+    {
+      "name": "python data science handbook",
+      "score": 0.9002
+    },
+    {
+      "name": "nick singh's 40 stats questions",
+      "score": 0.896
+    },
+    {
+      "name": "netflix causal inference",
+      "score": 0.8906
+    },
+    {
+      "name": "mit 15.053: optimization methods in management science",
+      "score": 0.8844
+    },
+    {
+      "name": "modeling discrete optimization (coursera)",
+      "score": 0.8493
+    }
+  ],
+  "growth accounting & backtraced growth accounting": [
+    {
+      "name": "display advertising with real-time bidding",
+      "score": 0.9472
+    },
+    {
+      "name": "ryan o'neil: real-time optimization",
+      "score": 0.9297
+    },
+    {
+      "name": "gsp auction paper (edelman et al., aer 2007)",
+      "score": 0.884
+    },
+    {
+      "name": "real python: web scraping",
+      "score": 0.8776
+    },
+    {
+      "name": "doubleml",
+      "score": 0.8338
+    }
+  ],
+  "gsp auction paper (edelman et al., aer 2007)": [
+    {
+      "name": "display advertising with real-time bidding",
+      "score": 0.9312
+    },
+    {
+      "name": "real python: web scraping",
+      "score": 0.93
+    },
+    {
+      "name": "ryan o'neil: real-time optimization",
+      "score": 0.9282
+    },
+    {
+      "name": "crewai",
+      "score": 0.8981
+    },
+    {
+      "name": "growth accounting & backtraced growth accounting",
+      "score": 0.884
+    }
+  ],
+  "gtfs-kit": [
+    {
+      "name": "open e-commerce 1.0 (mit)",
+      "score": 0.9473
+    },
+    {
+      "name": "empirical io: coding blp",
+      "score": 0.9472
+    },
+    {
+      "name": "opentripplanner",
+      "score": 0.9411
+    },
+    {
+      "name": "mobile dev memo: post-att marketing measurement",
+      "score": 0.9148
+    },
+    {
+      "name": "numpyro",
+      "score": 0.9037
+    }
+  ],
+  "guide to product metrics": [
+    {
+      "name": "spacy",
+      "score": 1.0
+    },
+    {
+      "name": "real python: web scraping",
+      "score": 0.8549
+    },
+    {
+      "name": "open e-commerce 1.0 (mit)",
+      "score": 0.8259
+    },
+    {
+      "name": "empirical io: coding blp",
+      "score": 0.8245
+    },
+    {
+      "name": "gtfs-kit",
+      "score": 0.8242
+    }
+  ],
+  "hands-on mathematical optimization with python (mo-book)": [
+    {
+      "name": "nick singh's 40 stats questions",
+      "score": 0.938
+    },
+    {
+      "name": "python data science handbook",
+      "score": 0.9355
+    },
+    {
+      "name": "modeling discrete optimization (coursera)",
+      "score": 0.8448
+    },
+    {
+      "name": "google research: market algorithms team",
+      "score": 0.8405
+    },
+    {
+      "name": "netflix causal inference",
+      "score": 0.7401
+    }
+  ],
+  "haus blog: synthetic control & geo-experimentation": [
+    {
+      "name": "test-item",
+      "score": 1.0
+    },
+    {
+      "name": "athey's course datasets",
+      "score": 1.0
+    },
+    {
+      "name": "susan athey: applied researchers wanted",
+      "score": 0.1497
+    },
+    {
+      "name": "datalemur",
+      "score": 0.1224
+    },
+    {
+      "name": "mode sql tutorial",
+      "score": 0.0896
+    }
+  ],
+  "how superhuman built an engine to find pmf (first round)": [
+    {
+      "name": "jonathan levin's revenue equivalence notes",
+      "score": 1.0
+    },
+    {
+      "name": "jeffrey kantor: pyomo cookbook",
+      "score": 1.0
+    },
+    {
+      "name": "instacart",
+      "score": 1.0
+    },
+    {
+      "name": "impression-test-v1",
+      "score": 1.0
+    },
+    {
+      "name": "ieee-cis fraud detection",
+      "score": 1.0
+    }
+  ],
+  "how to measure cohort retention (lenny's newsletter)": [
+    {
+      "name": "jeffrey kantor: pyomo cookbook",
+      "score": 1.0
+    },
+    {
+      "name": "interpreting acf and pacf plots",
+      "score": 1.0
+    },
+    {
+      "name": "instacart",
+      "score": 1.0
+    },
+    {
+      "name": "impression-test-v1",
+      "score": 1.0
+    },
+    {
+      "name": "jonathan levin's revenue equivalence notes",
+      "score": 1.0
+    }
+  ],
+  "ieee-cis fraud detection": [
+    {
+      "name": "jonathan levin's revenue equivalence notes",
+      "score": 1.0
+    },
+    {
+      "name": "jeffrey kantor: pyomo cookbook",
+      "score": 1.0
+    },
+    {
+      "name": "jd.com 2020 (msom-20)",
+      "score": 1.0
+    },
+    {
+      "name": "instacart",
+      "score": 1.0
+    },
+    {
+      "name": "impression-test-v1",
+      "score": 1.0
+    }
+  ],
+  "impression-test-v1": [
+    {
+      "name": "jonathan levin's revenue equivalence notes",
+      "score": 1.0
+    },
+    {
+      "name": "jeffrey kantor: pyomo cookbook",
+      "score": 1.0
+    },
+    {
+      "name": "instacart",
+      "score": 1.0
+    },
+    {
+      "name": "ieee-cis fraud detection",
+      "score": 1.0
+    },
+    {
+      "name": "how to measure cohort retention (lenny's newsletter)",
+      "score": 1.0
+    }
+  ],
+  "instacart": [
+    {
+      "name": "jonathan levin's revenue equivalence notes",
+      "score": 1.0
+    },
+    {
+      "name": "jeffrey kantor: pyomo cookbook",
+      "score": 1.0
+    },
+    {
+      "name": "interpreting acf and pacf plots",
+      "score": 1.0
+    },
+    {
+      "name": "jean tirole: richmond fed interview",
+      "score": 1.0
+    },
+    {
+      "name": "jd.com 2020 (msom-20)",
+      "score": 1.0
+    }
+  ],
+  "interpreting acf and pacf plots": [
+    {
+      "name": "instacart",
+      "score": 1.0
+    },
+    {
+      "name": "how to measure cohort retention (lenny's newsletter)",
+      "score": 1.0
+    },
+    {
+      "name": "jonathan levin's revenue equivalence notes",
+      "score": 1.0
+    },
+    {
+      "name": "jeffrey kantor: pyomo cookbook",
+      "score": 1.0
+    },
+    {
+      "name": "jd.com 2020 (msom-20)",
+      "score": 1.0
+    }
+  ],
+  "jd.com 2020 (msom-20)": [
+    {
+      "name": "jean tirole: richmond fed interview",
+      "score": 1.0
+    },
+    {
+      "name": "jonathan levin's revenue equivalence notes",
+      "score": 1.0
+    },
+    {
+      "name": "jeffrey kantor: pyomo cookbook",
+      "score": 1.0
+    },
+    {
+      "name": "interpreting acf and pacf plots",
+      "score": 1.0
+    },
+    {
+      "name": "instacart",
+      "score": 1.0
+    }
+  ],
+  "jean tirole: richmond fed interview": [
+    {
+      "name": "jd.com 2020 (msom-20)",
+      "score": 1.0
+    },
+    {
+      "name": "jonathan levin's revenue equivalence notes",
+      "score": 1.0
+    },
+    {
+      "name": "jeffrey kantor: pyomo cookbook",
+      "score": 1.0
+    },
+    {
+      "name": "instacart",
+      "score": 1.0
+    },
+    {
+      "name": "interpreting acf and pacf plots",
+      "score": 1.0
+    }
+  ],
+  "jeffrey kantor: pyomo cookbook": [
+    {
+      "name": "jonathan levin's revenue equivalence notes",
+      "score": 1.0
+    },
+    {
+      "name": "instacart",
+      "score": 1.0
+    },
+    {
+      "name": "impression-test-v1",
+      "score": 1.0
+    },
+    {
+      "name": "ieee-cis fraud detection",
+      "score": 1.0
+    },
+    {
+      "name": "how to measure cohort retention (lenny's newsletter)",
+      "score": 1.0
+    }
+  ],
+  "jonathan levin's revenue equivalence notes": [
+    {
+      "name": "jeffrey kantor: pyomo cookbook",
+      "score": 1.0
+    },
+    {
+      "name": "instacart",
+      "score": 1.0
+    },
+    {
+      "name": "impression-test-v1",
+      "score": 1.0
+    },
+    {
+      "name": "ieee-cis fraud detection",
+      "score": 1.0
+    },
+    {
+      "name": "how superhuman built an engine to find pmf (first round)",
+      "score": 1.0
+    }
+  ],
+  "jonathan.interviews: data science careers & causal inference": [
+    {
+      "name": "mlogit",
+      "score": 0.9696
+    },
+    {
+      "name": "mixl",
+      "score": 0.965
+    },
+    {
+      "name": "mit ocw: dynamic programming (bertsekas)",
+      "score": 0.9636
+    },
+    {
+      "name": "quantecon: discrete state dynamic programming",
+      "score": 0.9315
+    },
+    {
+      "name": "open bandit pipeline (obp)",
+      "score": 0.9253
+    }
+  ],
+  "kevin leyton-brown's vcg mechanism lectures": [
+    {
+      "name": "susan athey: economics of transformative ai",
+      "score": 0.8339
+    },
+    {
+      "name": "statistical rethinking",
+      "score": 0.8196
+    },
+    {
+      "name": "langchain",
+      "score": 0.6752
+    },
+    {
+      "name": "scipy.stats documentation",
+      "score": 0.6696
+    },
+    {
+      "name": "langgraph",
+      "score": 0.4718
+    }
+  ],
+  "langchain": [
+    {
+      "name": "susan athey: economics of transformative ai",
+      "score": 0.9211
+    },
+    {
+      "name": "langgraph",
+      "score": 0.7204
+    },
+    {
+      "name": "kevin leyton-brown's vcg mechanism lectures",
+      "score": 0.6752
+    },
+    {
+      "name": "flipkart",
+      "score": 0.4659
+    },
+    {
+      "name": "netflix causal inference",
+      "score": 0.4483
+    }
+  ],
+  "langgraph": [
+    {
+      "name": "susan athey: economics of transformative ai",
+      "score": 0.8399
+    },
+    {
+      "name": "langchain",
+      "score": 0.7204
+    },
+    {
+      "name": "sumo",
+      "score": 0.5806
+    },
+    {
+      "name": "kevin leyton-brown's vcg mechanism lectures",
+      "score": 0.4718
+    },
+    {
+      "name": "lmsys-chat-1m",
+      "score": 0.3863
+    }
+  ],
+  "lenny's newsletter: how duolingo reignited user growth": [
+    {
+      "name": "matteo courthoud's blp demand estimation",
+      "score": 0.978
+    },
+    {
+      "name": "sumo",
+      "score": 0.7949
+    },
+    {
+      "name": "lmsys-chat-1m",
+      "score": 0.7578
+    },
+    {
+      "name": "measuringu",
+      "score": 0.4529
+    },
+    {
+      "name": "retail rocket",
+      "score": 0.4478
+    }
+  ],
+  "lightweightmmm": [
+    {
+      "name": "coding for economists (arthur turrell)",
+      "score": 1.0
+    },
+    {
+      "name": "python for econometrics",
+      "score": 0.1257
+    },
+    {
+      "name": "nathan brixius: ml + optimization",
+      "score": 0.1188
+    },
+    {
+      "name": "numpyro",
+      "score": 0.1166
+    },
+    {
+      "name": "evan miller: how not to run an a/b test",
+      "score": 0.0945
+    }
+  ],
+  "lmsys-chat-1m": [
+    {
+      "name": "sumo",
+      "score": 0.8857
+    },
+    {
+      "name": "lenny's newsletter: how duolingo reignited user growth",
+      "score": 0.7578
+    },
+    {
+      "name": "matteo courthoud's blp demand estimation",
+      "score": 0.6827
+    },
+    {
+      "name": "langgraph",
+      "score": 0.3863
+    },
+    {
+      "name": "numpyro",
+      "score": 0.3358
+    }
+  ],
+  "mabwiser": [
+    {
+      "name": "chicago tnc trips",
+      "score": 1.0
+    },
+    {
+      "name": "sumo",
+      "score": 0.4133
+    },
+    {
+      "name": "optn organ transplant",
+      "score": 0.2801
+    },
+    {
+      "name": "lmsys-chat-1m",
+      "score": 0.273
+    },
+    {
+      "name": "python data science handbook",
+      "score": 0.2573
+    }
+  ],
+  "matteo courthoud's blp demand estimation": [
+    {
+      "name": "lenny's newsletter: how duolingo reignited user growth",
+      "score": 0.978
+    },
+    {
+      "name": "sumo",
+      "score": 0.8142
+    },
+    {
+      "name": "lmsys-chat-1m",
+      "score": 0.6827
+    },
+    {
+      "name": "sqlbolt",
+      "score": 0.583
+    },
+    {
+      "name": "measuringu",
+      "score": 0.5469
+    }
+  ],
+  "measuringu": [
+    {
+      "name": "sqlbolt",
+      "score": 0.8671
+    },
+    {
+      "name": "bestbuy",
+      "score": 0.7099
+    },
+    {
+      "name": "medicare provider utilization",
+      "score": 0.6826
+    },
+    {
+      "name": "matteo courthoud's blp demand estimation",
+      "score": 0.5469
+    },
+    {
+      "name": "lenny's newsletter: how duolingo reignited user growth",
+      "score": 0.4529
+    }
+  ],
+  "medicare provider utilization": [
+    {
+      "name": "smpybandits",
+      "score": 0.7051
+    },
+    {
+      "name": "deep-test-package",
+      "score": 0.7046
+    },
+    {
+      "name": "coveo shopping (sigir-21)",
+      "score": 0.7046
+    },
+    {
+      "name": "stanford ee364a (youtube)",
+      "score": 0.7016
+    },
+    {
+      "name": "measuringu",
+      "score": 0.6826
+    }
+  ],
+  "mit 15.053: optimization methods in management science": [
+    {
+      "name": "netflix causal inference",
+      "score": 0.9221
+    },
+    {
+      "name": "google research: market algorithms team",
+      "score": 0.8844
+    },
+    {
+      "name": "modeling discrete optimization (coursera)",
+      "score": 0.8476
+    },
+    {
+      "name": "google merchandise",
+      "score": 0.7631
+    },
+    {
+      "name": "fwildclusterboot",
+      "score": 0.7558
+    }
+  ],
+  "mit ocw: dynamic programming (bertsekas)": [
+    {
+      "name": "jonathan.interviews: data science careers & causal inference",
+      "score": 0.9636
+    },
+    {
+      "name": "mixl",
+      "score": 0.9628
+    },
+    {
+      "name": "mlogit",
+      "score": 0.9524
+    },
+    {
+      "name": "openai-agents",
+      "score": 0.9475
+    },
+    {
+      "name": "flipkart",
+      "score": 0.9412
+    }
+  ],
+  "mixl": [
+    {
+      "name": "mlogit",
+      "score": 0.9651
+    },
+    {
+      "name": "jonathan.interviews: data science careers & causal inference",
+      "score": 0.965
+    },
+    {
+      "name": "mit ocw: dynamic programming (bertsekas)",
+      "score": 0.9628
+    },
+    {
+      "name": "nathan brixius: ml + optimization",
+      "score": 0.9418
+    },
+    {
+      "name": "flipkart",
+      "score": 0.9256
+    }
+  ],
+  "mlogit": [
+    {
+      "name": "jonathan.interviews: data science careers & causal inference",
+      "score": 0.9696
+    },
+    {
+      "name": "mixl",
+      "score": 0.9651
+    },
+    {
+      "name": "mit ocw: dynamic programming (bertsekas)",
+      "score": 0.9524
+    },
+    {
+      "name": "cvxpy short course",
+      "score": 0.9329
+    },
+    {
+      "name": "quantecon: discrete state dynamic programming",
+      "score": 0.9141
+    }
+  ],
+  "mobile dev memo: post-att marketing measurement": [
+    {
+      "name": "opentripplanner",
+      "score": 0.9312
+    },
+    {
+      "name": "open e-commerce 1.0 (mit)",
+      "score": 0.9204
+    },
+    {
+      "name": "empirical io: coding blp",
+      "score": 0.9203
+    },
+    {
+      "name": "gtfs-kit",
+      "score": 0.9148
+    },
+    {
+      "name": "numpyro",
+      "score": 0.9085
+    }
+  ],
+  "mode sql tutorial": [
+    {
+      "name": "datalemur",
+      "score": 0.9402
+    },
+    {
+      "name": "rstan",
+      "score": 0.9401
+    },
+    {
+      "name": "gmnl",
+      "score": 0.9294
+    },
+    {
+      "name": "opentripplanner",
+      "score": 0.8854
+    },
+    {
+      "name": "mobile dev memo: post-att marketing measurement",
+      "score": 0.8545
+    }
+  ],
+  "modeling discrete optimization (coursera)": [
+    {
+      "name": "nick singh's 40 stats questions",
+      "score": 0.8951
+    },
+    {
+      "name": "python data science handbook",
+      "score": 0.8724
+    },
+    {
+      "name": "google research: market algorithms team",
+      "score": 0.8493
+    },
+    {
+      "name": "mit 15.053: optimization methods in management science",
+      "score": 0.8476
+    },
+    {
+      "name": "hands-on mathematical optimization with python (mo-book)",
+      "score": 0.8448
+    }
+  ],
+  "mstl multi-seasonal decomposition in python": [
+    {
+      "name": "pymc",
+      "score": 0.9906
+    },
+    {
+      "name": "open bandit pipeline (obp)",
+      "score": 0.9834
+    },
+    {
+      "name": "erwin kalvelagen: yet another math programming consultant",
+      "score": 0.9738
+    },
+    {
+      "name": "open cdp",
+      "score": 0.9728
+    },
+    {
+      "name": "optn organ transplant",
+      "score": 0.9539
+    }
+  ],
+  "nathan brixius: ml + optimization": [
+    {
+      "name": "pymc",
+      "score": 0.9552
+    },
+    {
+      "name": "open bandit pipeline (obp)",
+      "score": 0.9552
+    },
+    {
+      "name": "openai-agents",
+      "score": 0.9494
+    },
+    {
+      "name": "mstl multi-seasonal decomposition in python",
+      "score": 0.9445
+    },
+    {
+      "name": "mixl",
+      "score": 0.9418
+    }
+  ],
+  "netflix causal inference": [
+    {
+      "name": "mit 15.053: optimization methods in management science",
+      "score": 0.9221
+    },
+    {
+      "name": "google research: market algorithms team",
+      "score": 0.8906
+    },
+    {
+      "name": "modeling discrete optimization (coursera)",
+      "score": 0.7727
+    },
+    {
+      "name": "python data science handbook",
+      "score": 0.7716
+    },
+    {
+      "name": "nick singh's 40 stats questions",
+      "score": 0.7561
+    }
+  ],
+  "nick singh's 40 stats questions": [
+    {
+      "name": "python data science handbook",
+      "score": 0.9815
+    },
+    {
+      "name": "hands-on mathematical optimization with python (mo-book)",
+      "score": 0.938
+    },
+    {
+      "name": "google research: market algorithms team",
+      "score": 0.896
+    },
+    {
+      "name": "modeling discrete optimization (coursera)",
+      "score": 0.8951
+    },
+    {
+      "name": "netflix causal inference",
+      "score": 0.7561
+    }
+  ],
+  "numpyro": [
+    {
+      "name": "open e-commerce 1.0 (mit)",
+      "score": 0.935
+    },
+    {
+      "name": "empirical io: coding blp",
+      "score": 0.934
+    },
+    {
+      "name": "opentripplanner",
+      "score": 0.9158
+    },
+    {
+      "name": "mobile dev memo: post-att marketing measurement",
+      "score": 0.9085
+    },
+    {
+      "name": "gtfs-kit",
+      "score": 0.9037
+    }
+  ],
+  "open bandit pipeline (obp)": [
+    {
+      "name": "pymc",
+      "score": 0.9912
+    },
+    {
+      "name": "mstl multi-seasonal decomposition in python",
+      "score": 0.9834
+    },
+    {
+      "name": "open cdp",
+      "score": 0.9729
+    },
+    {
+      "name": "openai-agents",
+      "score": 0.9687
+    },
+    {
+      "name": "nathan brixius: ml + optimization",
+      "score": 0.9552
+    }
+  ],
+  "open cdp": [
+    {
+      "name": "pymc",
+      "score": 0.9817
+    },
+    {
+      "name": "open bandit pipeline (obp)",
+      "score": 0.9729
+    },
+    {
+      "name": "mstl multi-seasonal decomposition in python",
+      "score": 0.9728
+    },
+    {
+      "name": "erwin kalvelagen: yet another math programming consultant",
+      "score": 0.9596
+    },
+    {
+      "name": "openai-agents",
+      "score": 0.9436
+    }
+  ],
+  "open e-commerce 1.0 (mit)": [
+    {
+      "name": "empirical io: coding blp",
+      "score": 0.9941
+    },
+    {
+      "name": "gtfs-kit",
+      "score": 0.9473
+    },
+    {
+      "name": "numpyro",
+      "score": 0.935
+    },
+    {
+      "name": "opentripplanner",
+      "score": 0.9292
+    },
+    {
+      "name": "mobile dev memo: post-att marketing measurement",
+      "score": 0.9204
+    }
+  ],
+  "open source economics: structural estimation": [
+    {
+      "name": "diqad",
+      "score": 0.973
+    },
+    {
+      "name": "pymc labs blog",
+      "score": 0.9558
+    },
+    {
+      "name": "pakistan e-commerce",
+      "score": 0.9504
+    },
+    {
+      "name": "python for econometrics",
+      "score": 0.9456
+    },
+    {
+      "name": "crewai",
+      "score": 0.9398
+    }
+  ],
+  "openai-agents": [
+    {
+      "name": "open bandit pipeline (obp)",
+      "score": 0.9687
+    },
+    {
+      "name": "pymc",
+      "score": 0.9572
+    },
+    {
+      "name": "nathan brixius: ml + optimization",
+      "score": 0.9494
+    },
+    {
+      "name": "mit ocw: dynamic programming (bertsekas)",
+      "score": 0.9475
+    },
+    {
+      "name": "open cdp",
+      "score": 0.9436
+    }
+  ],
+  "opentripplanner": [
+    {
+      "name": "gtfs-kit",
+      "score": 0.9411
+    },
+    {
+      "name": "empirical io: coding blp",
+      "score": 0.9349
+    },
+    {
+      "name": "mobile dev memo: post-att marketing measurement",
+      "score": 0.9312
+    },
+    {
+      "name": "open e-commerce 1.0 (mit)",
+      "score": 0.9292
+    },
+    {
+      "name": "numpyro",
+      "score": 0.9158
+    }
+  ],
+  "optn organ transplant": [
+    {
+      "name": "evan miller: how not to run an a/b test",
+      "score": 0.986
+    },
+    {
+      "name": "mstl multi-seasonal decomposition in python",
+      "score": 0.9539
+    },
+    {
+      "name": "pymc",
+      "score": 0.9463
+    },
+    {
+      "name": "cvxpy short course",
+      "score": 0.9222
+    },
+    {
+      "name": "open bandit pipeline (obp)",
+      "score": 0.9213
+    }
+  ],
+  "osmnx": [
+    {
+      "name": "causal inference for the brave and true",
+      "score": 1.0
+    },
+    {
+      "name": "tidytransit",
+      "score": 0.2637
+    },
+    {
+      "name": "bruce hardie's clv papers",
+      "score": 0.1505
+    },
+    {
+      "name": "applied econometrics notes (lal)",
+      "score": 0.1425
+    },
+    {
+      "name": "glen weyl: radical markets",
+      "score": 0.1135
+    }
+  ],
+  "pakistan e-commerce": [
+    {
+      "name": "open source economics: structural estimation",
+      "score": 0.9504
+    },
+    {
+      "name": "pymc labs blog",
+      "score": 0.9332
+    },
+    {
+      "name": "python for econometrics",
+      "score": 0.9279
+    },
+    {
+      "name": "crewai",
+      "score": 0.9167
+    },
+    {
+      "name": "retail rocket",
+      "score": 0.9082
+    }
+  ],
+  "pandas": [
+    {
+      "name": "pakistan e-commerce",
+      "score": 0.8842
+    },
+    {
+      "name": "open source economics: structural estimation",
+      "score": 0.8722
+    },
+    {
+      "name": "diqad",
+      "score": 0.8679
+    },
+    {
+      "name": "gsp auction paper (edelman et al., aer 2007)",
+      "score": 0.8623
+    },
+    {
+      "name": "python for econometrics",
+      "score": 0.8608
+    }
+  ],
+  "pat bajari: building applied analytics at amazon": [
+    {
+      "name": "pymc-marketing clv quickstart",
+      "score": 0.9896
+    },
+    {
+      "name": "rsample",
+      "score": 0.9848
+    },
+    {
+      "name": "econml",
+      "score": 0.9768
+    },
+    {
+      "name": "fwildclusterboot",
+      "score": 0.9753
+    },
+    {
+      "name": "flipkart",
+      "score": 0.9448
+    }
+  ],
+  "pymc": [
+    {
+      "name": "open bandit pipeline (obp)",
+      "score": 0.9912
+    },
+    {
+      "name": "mstl multi-seasonal decomposition in python",
+      "score": 0.9906
+    },
+    {
+      "name": "open cdp",
+      "score": 0.9817
+    },
+    {
+      "name": "erwin kalvelagen: yet another math programming consultant",
+      "score": 0.9573
+    },
+    {
+      "name": "openai-agents",
+      "score": 0.9572
+    }
+  ],
+  "pymc labs blog": [
+    {
+      "name": "open source economics: structural estimation",
+      "score": 0.9558
+    },
+    {
+      "name": "retail rocket",
+      "score": 0.9424
+    },
+    {
+      "name": "rstanarm",
+      "score": 0.9353
+    },
+    {
+      "name": "diqad",
+      "score": 0.9335
+    },
+    {
+      "name": "pakistan e-commerce",
+      "score": 0.9332
+    }
+  ],
+  "pymc-marketing clv quickstart": [
+    {
+      "name": "rsample",
+      "score": 0.9926
+    },
+    {
+      "name": "pat bajari: building applied analytics at amazon",
+      "score": 0.9896
+    },
+    {
+      "name": "fwildclusterboot",
+      "score": 0.9777
+    },
+    {
+      "name": "econml",
+      "score": 0.971
+    },
+    {
+      "name": "scikit-learn",
+      "score": 0.9355
+    }
+  ],
+  "pymc-marketing documentation": [
+    {
+      "name": "doubleml",
+      "score": 0.8969
+    },
+    {
+      "name": "rstanarm",
+      "score": 0.842
+    },
+    {
+      "name": "remerge findings: incrementality testing approaches",
+      "score": 0.7784
+    },
+    {
+      "name": "ryan o'neil: real-time optimization",
+      "score": 0.7721
+    },
+    {
+      "name": "real python: web scraping",
+      "score": 0.7622
+    }
+  ],
+  "python data science handbook": [
+    {
+      "name": "nick singh's 40 stats questions",
+      "score": 0.9815
+    },
+    {
+      "name": "hands-on mathematical optimization with python (mo-book)",
+      "score": 0.9355
+    },
+    {
+      "name": "google research: market algorithms team",
+      "score": 0.9002
+    },
+    {
+      "name": "modeling discrete optimization (coursera)",
+      "score": 0.8724
+    },
+    {
+      "name": "netflix causal inference",
+      "score": 0.7716
+    }
+  ],
+  "python for econometrics": [
+    {
+      "name": "open source economics: structural estimation",
+      "score": 0.9456
+    },
+    {
+      "name": "pakistan e-commerce",
+      "score": 0.9279
+    },
+    {
+      "name": "diqad",
+      "score": 0.9112
+    },
+    {
+      "name": "retail rocket",
+      "score": 0.8938
+    },
+    {
+      "name": "pymc labs blog",
+      "score": 0.8864
+    }
+  ],
+  "pyxab": [
+    {
+      "name": "datalemur",
+      "score": 0.9166
+    },
+    {
+      "name": "gmnl",
+      "score": 0.8953
+    },
+    {
+      "name": "rstan",
+      "score": 0.8914
+    },
+    {
+      "name": "mobile dev memo: post-att marketing measurement",
+      "score": 0.8588
+    },
+    {
+      "name": "mode sql tutorial",
+      "score": 0.8245
+    }
+  ],
+  "quantecon: discrete state dynamic programming": [
+    {
+      "name": "jonathan.interviews: data science careers & causal inference",
+      "score": 0.9315
+    },
+    {
+      "name": "mlogit",
+      "score": 0.9141
+    },
+    {
+      "name": "mit ocw: dynamic programming (bertsekas)",
+      "score": 0.909
+    },
+    {
+      "name": "openai-agents",
+      "score": 0.8984
+    },
+    {
+      "name": "open bandit pipeline (obp)",
+      "score": 0.8943
+    }
+  ],
+  "real python: web scraping": [
+    {
+      "name": "gsp auction paper (edelman et al., aer 2007)",
+      "score": 0.93
+    },
+    {
+      "name": "ryan o'neil: real-time optimization",
+      "score": 0.9276
+    },
+    {
+      "name": "frank pinter's demand estimation notes",
+      "score": 0.9178
+    },
+    {
+      "name": "display advertising with real-time bidding",
+      "score": 0.9168
+    },
+    {
+      "name": "doubleml",
+      "score": 0.9056
+    }
+  ],
+  "remerge findings: incrementality testing approaches": [
+    {
+      "name": "easley & kleinberg: sponsored search markets",
+      "score": 0.9005
+    },
+    {
+      "name": "pymc-marketing documentation",
+      "score": 0.7784
+    },
+    {
+      "name": "growth accounting & backtraced growth accounting",
+      "score": 0.7213
+    },
+    {
+      "name": "display advertising with real-time bidding",
+      "score": 0.6902
+    },
+    {
+      "name": "doubleml",
+      "score": 0.6662
+    }
+  ],
+  "retail rocket": [
+    {
+      "name": "diqad",
+      "score": 0.9563
+    },
+    {
+      "name": "rstanarm",
+      "score": 0.9478
+    },
+    {
+      "name": "pymc labs blog",
+      "score": 0.9424
+    },
+    {
+      "name": "open source economics: structural estimation",
+      "score": 0.9373
+    },
+    {
+      "name": "crewai",
+      "score": 0.9095
+    }
+  ],
+  "ritvikmath time series youtube + github": [
+    {
+      "name": "fwildclusterboot",
+      "score": 0.9302
+    },
+    {
+      "name": "econml",
+      "score": 0.9063
+    },
+    {
+      "name": "pat bajari: building applied analytics at amazon",
+      "score": 0.8941
+    },
+    {
+      "name": "pymc-marketing clv quickstart",
+      "score": 0.892
+    },
+    {
+      "name": "rsample",
+      "score": 0.8887
+    }
+  ],
+  "rsample": [
+    {
+      "name": "pymc-marketing clv quickstart",
+      "score": 0.9926
+    },
+    {
+      "name": "pat bajari: building applied analytics at amazon",
+      "score": 0.9848
+    },
+    {
+      "name": "fwildclusterboot",
+      "score": 0.9639
+    },
+    {
+      "name": "econml",
+      "score": 0.9606
+    },
+    {
+      "name": "scikit-learn",
+      "score": 0.9291
+    }
+  ],
+  "rstan": [
+    {
+      "name": "gmnl",
+      "score": 0.9882
+    },
+    {
+      "name": "datalemur",
+      "score": 0.9645
+    },
+    {
+      "name": "mode sql tutorial",
+      "score": 0.9401
+    },
+    {
+      "name": "pyxab",
+      "score": 0.8914
+    },
+    {
+      "name": "mobile dev memo: post-att marketing measurement",
+      "score": 0.8809
+    }
+  ],
+  "rstanarm": [
+    {
+      "name": "retail rocket",
+      "score": 0.9478
+    },
+    {
+      "name": "diqad",
+      "score": 0.944
+    },
+    {
+      "name": "open source economics: structural estimation",
+      "score": 0.9383
+    },
+    {
+      "name": "pymc labs blog",
+      "score": 0.9353
+    },
+    {
+      "name": "crewai",
+      "score": 0.9264
+    }
+  ],
+  "ryan o'neil: real-time optimization": [
+    {
+      "name": "growth accounting & backtraced growth accounting",
+      "score": 0.9297
+    },
+    {
+      "name": "gsp auction paper (edelman et al., aer 2007)",
+      "score": 0.9282
+    },
+    {
+      "name": "real python: web scraping",
+      "score": 0.9276
+    },
+    {
+      "name": "display advertising with real-time bidding",
+      "score": 0.9243
+    },
+    {
+      "name": "frank pinter's demand estimation notes",
+      "score": 0.8785
+    }
+  ],
+  "scikit-learn": [
+    {
+      "name": "econml",
+      "score": 0.9442
+    },
+    {
+      "name": "pat bajari: building applied analytics at amazon",
+      "score": 0.9403
+    },
+    {
+      "name": "fwildclusterboot",
+      "score": 0.9382
+    },
+    {
+      "name": "pymc-marketing clv quickstart",
+      "score": 0.9355
+    },
+    {
+      "name": "mit ocw: dynamic programming (bertsekas)",
+      "score": 0.9348
+    }
+  ],
+  "scipy lecture notes: mathematical optimization": [
+    {
+      "name": "causalmatch",
+      "score": 1.0
+    },
+    {
+      "name": "statistical rethinking",
+      "score": 0.6802
+    },
+    {
+      "name": "scipy.stats documentation",
+      "score": 0.6096
+    },
+    {
+      "name": "growth accounting & backtraced growth accounting",
+      "score": 0.324
+    },
+    {
+      "name": "gtfs-kit",
+      "score": 0.2583
+    }
+  ],
+  "scipy.stats documentation": [
+    {
+      "name": "statistical rethinking",
+      "score": 0.9302
+    },
+    {
+      "name": "kevin leyton-brown's vcg mechanism lectures",
+      "score": 0.6696
+    },
+    {
+      "name": "scipy lecture notes: mathematical optimization",
+      "score": 0.6096
+    },
+    {
+      "name": "causalmatch",
+      "score": 0.6089
+    },
+    {
+      "name": "susan athey: applied researchers wanted",
+      "score": 0.2119
+    }
+  ],
+  "scott cunningham: causal inference substack": [
+    {
+      "name": "scrapy documentation",
+      "score": 0.9999
+    },
+    {
+      "name": "susan athey: applied researchers wanted",
+      "score": 0.676
+    },
+    {
+      "name": "beyond jupyter",
+      "score": 0.3081
+    },
+    {
+      "name": "automate the boring stuff with python",
+      "score": 0.2388
+    },
+    {
+      "name": "auctions in ad tech (sanjiv das)",
+      "score": 0.1819
+    }
+  ],
+  "scrapy documentation": [
+    {
+      "name": "scott cunningham: causal inference substack",
+      "score": 0.9999
+    },
+    {
+      "name": "susan athey: applied researchers wanted",
+      "score": 0.6759
+    },
+    {
+      "name": "beyond jupyter",
+      "score": 0.3018
+    },
+    {
+      "name": "automate the boring stuff with python",
+      "score": 0.2393
+    },
+    {
+      "name": "auctions in ad tech (sanjiv das)",
+      "score": 0.1846
+    }
+  ],
+  "sean taylor: when do we need causal inference?": [
+    {
+      "name": "shopee",
+      "score": 1.0
+    },
+    {
+      "name": "instacart",
+      "score": 0.9989
+    },
+    {
+      "name": "jd.com 2020 (msom-20)",
+      "score": 0.9989
+    },
+    {
+      "name": "impression-test-v1",
+      "score": 0.9989
+    },
+    {
+      "name": "how to measure cohort retention (lenny's newsletter)",
+      "score": 0.9989
+    }
+  ],
+  "seeing theory (brown)": [
+    {
+      "name": "stanford ee364a (youtube)",
+      "score": 0.796
+    },
+    {
+      "name": "smpybandits",
+      "score": 0.7738
+    },
+    {
+      "name": "deep-test-package",
+      "score": 0.7738
+    },
+    {
+      "name": "coveo shopping (sigir-21)",
+      "score": 0.7738
+    },
+    {
+      "name": "test-package",
+      "score": 0.581
+    }
+  ],
+  "shopee": [
+    {
+      "name": "sean taylor: when do we need causal inference?",
+      "score": 1.0
+    },
+    {
+      "name": "instacart",
+      "score": 0.9989
+    },
+    {
+      "name": "jd.com 2020 (msom-20)",
+      "score": 0.9989
+    },
+    {
+      "name": "impression-test-v1",
+      "score": 0.9989
+    },
+    {
+      "name": "how to measure cohort retention (lenny's newsletter)",
+      "score": 0.9989
+    }
+  ],
+  "smpybandits": [
+    {
+      "name": "deep-test-package",
+      "score": 1.0
+    },
+    {
+      "name": "coveo shopping (sigir-21)",
+      "score": 1.0
+    },
+    {
+      "name": "stanford ee364a (youtube)",
+      "score": 0.9734
+    },
+    {
+      "name": "seeing theory (brown)",
+      "score": 0.7738
+    },
+    {
+      "name": "medicare provider utilization",
+      "score": 0.7051
+    }
+  ],
+  "spacy": [
+    {
+      "name": "guide to product metrics",
+      "score": 1.0
+    },
+    {
+      "name": "real python: web scraping",
+      "score": 0.8556
+    },
+    {
+      "name": "open e-commerce 1.0 (mit)",
+      "score": 0.8263
+    },
+    {
+      "name": "empirical io: coding blp",
+      "score": 0.8249
+    },
+    {
+      "name": "gtfs-kit",
+      "score": 0.8247
+    }
+  ],
+  "sqlbolt": [
+    {
+      "name": "measuringu",
+      "score": 0.8671
+    },
+    {
+      "name": "matteo courthoud's blp demand estimation",
+      "score": 0.583
+    },
+    {
+      "name": "medicare provider utilization",
+      "score": 0.5765
+    },
+    {
+      "name": "lenny's newsletter: how duolingo reignited user growth",
+      "score": 0.4367
+    },
+    {
+      "name": "bestbuy",
+      "score": 0.4354
+    }
+  ],
+  "stanford ee364a (youtube)": [
+    {
+      "name": "smpybandits",
+      "score": 0.9734
+    },
+    {
+      "name": "coveo shopping (sigir-21)",
+      "score": 0.9734
+    },
+    {
+      "name": "deep-test-package",
+      "score": 0.9734
+    },
+    {
+      "name": "seeing theory (brown)",
+      "score": 0.796
+    },
+    {
+      "name": "medicare provider utilization",
+      "score": 0.7016
+    }
+  ],
+  "statistical rethinking": [
+    {
+      "name": "scipy.stats documentation",
+      "score": 0.9302
+    },
+    {
+      "name": "kevin leyton-brown's vcg mechanism lectures",
+      "score": 0.8196
+    },
+    {
+      "name": "scipy lecture notes: mathematical optimization",
+      "score": 0.6802
+    },
+    {
+      "name": "causalmatch",
+      "score": 0.6801
+    },
+    {
+      "name": "susan athey: economics of transformative ai",
+      "score": 0.4344
+    }
+  ],
+  "sumo": [
+    {
+      "name": "lmsys-chat-1m",
+      "score": 0.8857
+    },
+    {
+      "name": "matteo courthoud's blp demand estimation",
+      "score": 0.8142
+    },
+    {
+      "name": "lenny's newsletter: how duolingo reignited user growth",
+      "score": 0.7949
+    },
+    {
+      "name": "langgraph",
+      "score": 0.5806
+    },
+    {
+      "name": "mabwiser",
+      "score": 0.4133
+    }
+  ],
+  "susan athey: applied researchers wanted": [
+    {
+      "name": "scott cunningham: causal inference substack",
+      "score": 0.676
+    },
+    {
+      "name": "scrapy documentation",
+      "score": 0.6759
+    },
+    {
+      "name": "scipy.stats documentation",
+      "score": 0.2119
+    },
+    {
+      "name": "auctions in ad tech (sanjiv das)",
+      "score": 0.1676
+    },
+    {
+      "name": "beyond jupyter",
+      "score": 0.1577
+    }
+  ],
+  "susan athey: economics of transformative ai": [
+    {
+      "name": "langchain",
+      "score": 0.9211
+    },
+    {
+      "name": "langgraph",
+      "score": 0.8399
+    },
+    {
+      "name": "kevin leyton-brown's vcg mechanism lectures",
+      "score": 0.8339
+    },
+    {
+      "name": "statistical rethinking",
+      "score": 0.4344
+    },
+    {
+      "name": "netflix causal inference",
+      "score": 0.4225
+    }
+  ],
+  "test-item": [
+    {
+      "name": "athey's course datasets",
+      "score": 1.0
+    },
+    {
+      "name": "haus blog: synthetic control & geo-experimentation",
+      "score": 1.0
+    },
+    {
+      "name": "susan athey: applied researchers wanted",
+      "score": 0.1493
+    },
+    {
+      "name": "datalemur",
+      "score": 0.1213
+    },
+    {
+      "name": "mode sql tutorial",
+      "score": 0.0884
+    }
+  ],
+  "test-package": [
+    {
+      "name": "how superhuman built an engine to find pmf (first round)",
+      "score": 0.9699
+    },
+    {
+      "name": "jonathan levin's revenue equivalence notes",
+      "score": 0.9699
+    },
+    {
+      "name": "ieee-cis fraud detection",
+      "score": 0.9699
+    },
+    {
+      "name": "jeffrey kantor: pyomo cookbook",
+      "score": 0.9699
+    },
+    {
+      "name": "interpreting acf and pacf plots",
+      "score": 0.9699
+    }
+  ],
+  "tidytransit": [
+    {
+      "name": "osmnx",
+      "score": 0.2637
+    },
+    {
+      "name": "causal inference for the brave and true",
+      "score": 0.2636
+    },
+    {
+      "name": "ahead of ai (sebastian raschka)",
+      "score": 0.2451
+    },
+    {
+      "name": "alain chabrier: column generation with cplex",
+      "score": 0.1675
+    },
+    {
+      "name": "coding for practitioners",
+      "score": 0.1541
     }
   ]
 }
