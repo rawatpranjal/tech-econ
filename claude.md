@@ -7,6 +7,7 @@
    - If something seems outdated, find a new home for it
    - Archive to `data/archive/` rather than delete
 3. **Use `template.txt`** for content schemas when adding new entries
+4. **Update `CHANGELOG.md`** after making changes - 1-2 line summary per day
 
 ---
 
