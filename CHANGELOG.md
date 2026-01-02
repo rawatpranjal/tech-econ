@@ -3,6 +3,7 @@
 ## 2026-01-02
 - Split Blogs tab into "Bloggers" (54 personal) + "Industry Blogs" (126 company) tabs
 - Added subtopic categorization for personal bloggers (9 topics: Causal Inference, ML & AI, etc.)
+- Added sector-based subtopics to Industry Blogs (10 sectors: Marketplaces, Streaming, Social Media, E-commerce, AdTech, etc.)
 - Limited carousel rows to 8 items max for cleaner browsing
 - Added Reveal.js portfolio slide deck at /slides/ with cinematic dark theme
 - 7 slides showcasing site stats, features, tech stack with animated counters

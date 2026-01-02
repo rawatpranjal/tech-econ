@@ -602,11 +602,11 @@
 
     <!-- ========== INDUSTRY BLOGS TAB ========== -->
     <div id="tab-industry-blogs" class="tab-content">
-        {{/* Get unique macro_categories for rows */}}
-        {{ $industryMacros := slice }}
+        {{/* Get unique sectors (subtopics) for rows */}}
+        {{ $industrySectors := slice }}
         {{ range $industryBlogsFromResources }}
-            {{ if and .macro_category (not (in $industryMacros .macro_category)) }}
-                {{ $industryMacros = $industryMacros | append .macro_category }}
+            {{ if and .subtopic (not (in $industrySectors .subtopic)) }}
+                {{ $industrySectors = $industrySectors | append .subtopic }}
             {{ end }}
         {{ end }}
 
@@ -622,9 +622,9 @@
                 </div>
             </div>
             <select id="industry-blogs-macro" class="filter-select">
-                <option value="all">All Topics</option>
-                {{ range $macro := sort $industryMacros }}
-                <option value="{{ $macro }}">{{ $macro }}</option>
+                <option value="all">All Sectors</option>
+                {{ range $sector := sort $industrySectors }}
+                <option value="{{ $sector }}">{{ $sector }}</option>
                 {{ end }}
             </select>
         </div>
@@ -633,39 +633,39 @@
             <span id="industry-blogs-count" class="result-count">{{ len $industryBlogsFromResources }} blogs</span>
         </div>
 
-        <!-- Netflix-style Macro Category Rows (sorted by top item score, limited to 8 per row) -->
+        <!-- Netflix-style Sector Rows (sorted by top item score, limited to 8 per row) -->
         <div class="explore-rows" id="industry-blogs-rows">
-            {{/* Build macro list with scores for sorting */}}
-            {{ $macroScores := slice }}
-            {{ range $macro := $industryMacros }}
-                {{ $items := where $industryBlogsFromResources "macro_category" $macro }}
+            {{/* Build sector list with scores for sorting */}}
+            {{ $sectorScores := slice }}
+            {{ range $sector := $industrySectors }}
+                {{ $items := where $industryBlogsFromResources "subtopic" $sector }}
                 {{ $sortedItems := sort $items "model_score" "desc" }}
                 {{ $topScore := 0.0 }}
                 {{ with index $sortedItems 0 }}
                     {{ $topScore = .model_score | default 0 }}
                 {{ end }}
-                {{ $macroScores = $macroScores | append (dict "name" $macro "score" $topScore) }}
+                {{ $sectorScores = $sectorScores | append (dict "name" $sector "score" $topScore) }}
             {{ end }}
 
-            {{ range sort $macroScores "score" "desc" }}
-            {{ $macro := .name }}
-            {{ $macroBlogs := where $industryBlogsFromResources "macro_category" $macro }}
-            {{ if gt (len $macroBlogs) 0 }}
+            {{ range sort $sectorScores "score" "desc" }}
+            {{ $sector := .name }}
+            {{ $sectorBlogs := where $industryBlogsFromResources "subtopic" $sector }}
+            {{ if gt (len $sectorBlogs) 0 }}
             <div class="explore-row subtopic-row"
-                 data-subtopic="{{ $macro }}"
-                 data-macro="{{ $macro }}">
+                 data-subtopic="{{ $sector }}"
+                 data-macro="{{ $sector }}">
                 <div class="explore-row-header">
-                    <h2 class="explore-row-title">{{ $macro }}</h2>
-                    <span class="explore-row-count">{{ len $macroBlogs }} blogs</span>
+                    <h2 class="explore-row-title">{{ $sector }}</h2>
+                    <span class="explore-row-count">{{ len $sectorBlogs }} blogs</span>
                 </div>
                 <div class="explore-scroller-wrapper">
                     <div class="explore-scroller">
-                        {{ range first 8 (sort $macroBlogs "model_score" "desc") }}
+                        {{ range first 8 (sort $sectorBlogs "model_score" "desc") }}
                         <a href="{{ .url }}" target="_blank" rel="noopener"
                            class="talk-card"
                            data-name="{{ .name | lower }}"
                            data-desc="{{ .description | lower }}"
-                           data-macro="{{ .macro_category }}">
+                           data-macro="{{ .subtopic }}">
                             {{ if .image_url }}
                             <div class="talk-card-thumbnail">
                                 <img src="{{ .image_url }}" alt="{{ .name }}" loading="lazy">
