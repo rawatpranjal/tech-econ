@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-01-02
+- Added analytics D1 query reference to CLAUDE.md for checking recent clicks/impressions/searches
+
 ## 2026-01-01 (Learning page Netflix-style redesign)
 - Reorganized resources.json: 64→48 categories, 80→10 types, added macro_category field
 - Rebuilt /learning with Netflix-style horizontal scrollers per category
