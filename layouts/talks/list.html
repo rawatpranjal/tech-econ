@@ -253,8 +253,11 @@
         <button class="main-tab" data-tab="podcasts">
             Podcasts <span class="tab-count">{{ len $podcasts }}</span>
         </button>
-        <button class="main-tab" data-tab="blogs">
-            Blogs <span class="tab-count">{{ add (len $blogs) (len $industryBlogsFromResources) }}</span>
+        <button class="main-tab" data-tab="bloggers">
+            Bloggers <span class="tab-count">{{ len $blogs }}</span>
+        </button>
+        <button class="main-tab" data-tab="industry-blogs">
+            Industry Blogs <span class="tab-count">{{ len $industryBlogsFromResources }}</span>
         </button>
         <button class="main-tab" data-tab="books">
             Books <span class="tab-count">{{ add (len $books) (len $monographs) }}</span>
@@ -498,8 +501,16 @@
         </div>
     </div>
 
-    <!-- ========== BLOGS TAB ========== -->
-    <div id="tab-blogs" class="tab-content">
+    <!-- ========== BLOGGERS TAB ========== -->
+    <div id="tab-bloggers" class="tab-content">
+        {{/* Get unique subtopics for rows */}}
+        {{ $bloggerSubtopics := slice }}
+        {{ range $blogs }}
+            {{ if and .subtopic (not (in $bloggerSubtopics .subtopic)) }}
+                {{ $bloggerSubtopics = $bloggerSubtopics | append .subtopic }}
+            {{ end }}
+        {{ end }}
+
         <!-- Filter Bar -->
         <div class="talks-filters">
             <div class="search-container">
@@ -508,79 +519,54 @@
                         <circle cx="11" cy="11" r="8"></circle>
                         <path d="m21 21-4.35-4.35"></path>
                     </svg>
-                    <input type="text" id="blogs-search" class="search-input" placeholder="Search blogs..." autocomplete="off">
+                    <input type="text" id="bloggers-search" class="search-input" placeholder="Search bloggers..." autocomplete="off">
                 </div>
             </div>
-            <select id="blogs-macro" class="filter-select">
-                <option value="all">All Blogs</option>
-                <option value="Personal">Personal Blogs</option>
-                <option value="Company">Company Blogs</option>
+            <select id="bloggers-macro" class="filter-select">
+                <option value="all">All Topics</option>
+                {{ range $subtopic := sort $bloggerSubtopics }}
+                <option value="{{ $subtopic }}">{{ $subtopic }}</option>
+                {{ end }}
             </select>
         </div>
 
         <div class="talks-meta">
-            <span id="blogs-count" class="result-count">{{ add (len $blogs) (len $industryBlogsFromResources) }} blogs</span>
+            <span id="bloggers-count" class="result-count">{{ len $blogs }} bloggers</span>
         </div>
 
-        <!-- Netflix-style Rows -->
-        <div class="explore-rows" id="blogs-rows">
-            <!-- Personal Blogs Row -->
-            <div class="explore-row subtopic-row" data-subtopic="Personal" data-macro="Personal">
-                <div class="explore-row-header">
-                    <h2 class="explore-row-title">Personal Blogs</h2>
-                    <span class="explore-row-count">{{ len $blogs }} blogs</span>
-                </div>
-                <div class="explore-scroller-wrapper">
-                    <div class="explore-scroller">
-                        {{ range sort $blogs "model_score" "desc" }}
-                        <a href="{{ .url }}" target="_blank" rel="noopener"
-                           class="talk-card"
-                           data-name="{{ .name | lower }}"
-                           data-desc="{{ .description | lower }}"
-                           data-macro="Personal">
-                            {{ if .image_url }}
-                            <div class="talk-card-thumbnail">
-                                <img src="{{ .image_url }}" alt="{{ .name }}" loading="lazy">
-                            </div>
-                            {{ else }}
-                            <div class="talk-card-thumbnail no-image">
-                                <img class="favicon-large" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=64" alt="" loading="lazy">
-                            </div>
-                            {{ end }}
-                            <div class="talk-card-content">
-                                <h3 class="talk-card-title">{{ .name }}</h3>
-                                <p class="talk-card-desc">{{ .description }}</p>
-                            </div>
-                        </a>
-                        {{ end }}
-                    </div>
-                    <button class="scroller-nav prev" aria-label="Scroll left">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M15 18l-6-6 6-6"/>
-                        </svg>
-                    </button>
-                    <button class="scroller-nav next" aria-label="Scroll right">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M9 18l6-6-6-6"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
+        <!-- Netflix-style Subtopic Rows (sorted by top item score, limited to 8 per row) -->
+        <div class="explore-rows" id="bloggers-rows">
+            {{/* Build subtopic list with scores for sorting */}}
+            {{ $subtopicScores := slice }}
+            {{ range $subtopic := $bloggerSubtopics }}
+                {{ $items := where $blogs "subtopic" $subtopic }}
+                {{ $sortedItems := sort $items "model_score" "desc" }}
+                {{ $topScore := 0.0 }}
+                {{ with index $sortedItems 0 }}
+                    {{ $topScore = .model_score | default 0 }}
+                {{ end }}
+                {{ $subtopicScores = $subtopicScores | append (dict "name" $subtopic "score" $topScore) }}
+            {{ end }}
 
-            <!-- Company Blogs Row -->
-            <div class="explore-row subtopic-row" data-subtopic="Company" data-macro="Company">
+            {{ range sort $subtopicScores "score" "desc" }}
+            {{ $subtopic := .name }}
+            {{ $subtopicBloggers := where $blogs "subtopic" $subtopic }}
+            {{ if gt (len $subtopicBloggers) 0 }}
+            <div class="explore-row subtopic-row"
+                 data-subtopic="{{ $subtopic }}"
+                 data-macro="{{ $subtopic }}">
                 <div class="explore-row-header">
-                    <h2 class="explore-row-title">Company Blogs</h2>
-                    <span class="explore-row-count">{{ len $industryBlogsFromResources }} blogs</span>
+                    <h2 class="explore-row-title">{{ $subtopic }}</h2>
+                    <span class="explore-row-count">{{ len $subtopicBloggers }} bloggers</span>
                 </div>
                 <div class="explore-scroller-wrapper">
                     <div class="explore-scroller">
-                        {{ range sort $industryBlogsFromResources "model_score" "desc" }}
+                        {{ range first 8 (sort $subtopicBloggers "model_score" "desc") }}
                         <a href="{{ .url }}" target="_blank" rel="noopener"
                            class="talk-card"
                            data-name="{{ .name | lower }}"
                            data-desc="{{ .description | lower }}"
-                           data-macro="Company">
+                           data-macro="{{ .subtopic }}">
                             {{ if .image_url }}
                             <div class="talk-card-thumbnail">
                                 <img src="{{ .image_url }}" alt="{{ .name }}" loading="lazy">
@@ -609,6 +595,107 @@
                     </button>
                 </div>
             </div>
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+
+    <!-- ========== INDUSTRY BLOGS TAB ========== -->
+    <div id="tab-industry-blogs" class="tab-content">
+        {{/* Get unique macro_categories for rows */}}
+        {{ $industryMacros := slice }}
+        {{ range $industryBlogsFromResources }}
+            {{ if and .macro_category (not (in $industryMacros .macro_category)) }}
+                {{ $industryMacros = $industryMacros | append .macro_category }}
+            {{ end }}
+        {{ end }}
+
+        <!-- Filter Bar -->
+        <div class="talks-filters">
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                    <input type="text" id="industry-blogs-search" class="search-input" placeholder="Search industry blogs..." autocomplete="off">
+                </div>
+            </div>
+            <select id="industry-blogs-macro" class="filter-select">
+                <option value="all">All Topics</option>
+                {{ range $macro := sort $industryMacros }}
+                <option value="{{ $macro }}">{{ $macro }}</option>
+                {{ end }}
+            </select>
+        </div>
+
+        <div class="talks-meta">
+            <span id="industry-blogs-count" class="result-count">{{ len $industryBlogsFromResources }} blogs</span>
+        </div>
+
+        <!-- Netflix-style Macro Category Rows (sorted by top item score, limited to 8 per row) -->
+        <div class="explore-rows" id="industry-blogs-rows">
+            {{/* Build macro list with scores for sorting */}}
+            {{ $macroScores := slice }}
+            {{ range $macro := $industryMacros }}
+                {{ $items := where $industryBlogsFromResources "macro_category" $macro }}
+                {{ $sortedItems := sort $items "model_score" "desc" }}
+                {{ $topScore := 0.0 }}
+                {{ with index $sortedItems 0 }}
+                    {{ $topScore = .model_score | default 0 }}
+                {{ end }}
+                {{ $macroScores = $macroScores | append (dict "name" $macro "score" $topScore) }}
+            {{ end }}
+
+            {{ range sort $macroScores "score" "desc" }}
+            {{ $macro := .name }}
+            {{ $macroBlogs := where $industryBlogsFromResources "macro_category" $macro }}
+            {{ if gt (len $macroBlogs) 0 }}
+            <div class="explore-row subtopic-row"
+                 data-subtopic="{{ $macro }}"
+                 data-macro="{{ $macro }}">
+                <div class="explore-row-header">
+                    <h2 class="explore-row-title">{{ $macro }}</h2>
+                    <span class="explore-row-count">{{ len $macroBlogs }} blogs</span>
+                </div>
+                <div class="explore-scroller-wrapper">
+                    <div class="explore-scroller">
+                        {{ range first 8 (sort $macroBlogs "model_score" "desc") }}
+                        <a href="{{ .url }}" target="_blank" rel="noopener"
+                           class="talk-card"
+                           data-name="{{ .name | lower }}"
+                           data-desc="{{ .description | lower }}"
+                           data-macro="{{ .macro_category }}">
+                            {{ if .image_url }}
+                            <div class="talk-card-thumbnail">
+                                <img src="{{ .image_url }}" alt="{{ .name }}" loading="lazy">
+                            </div>
+                            {{ else }}
+                            <div class="talk-card-thumbnail no-image">
+                                <img class="favicon-large" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=64" alt="" loading="lazy">
+                            </div>
+                            {{ end }}
+                            <div class="talk-card-content">
+                                <h3 class="talk-card-title">{{ .name }}</h3>
+                                <p class="talk-card-desc">{{ .description }}</p>
+                            </div>
+                        </a>
+                        {{ end }}
+                    </div>
+                    <button class="scroller-nav prev" aria-label="Scroll left">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <button class="scroller-nav next" aria-label="Scroll right">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            {{ end }}
+            {{ end }}
         </div>
     </div>
 
@@ -857,7 +944,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     setupTabFilters('videos', 'videos-search', 'videos-macro', 'videos-count', 'videos');
     setupTabFilters('podcasts', 'podcasts-search', 'podcasts-macro', 'podcasts-count', 'podcasts');
-    setupTabFilters('blogs', 'blogs-search', 'blogs-macro', 'blogs-count', 'blogs');
+    setupTabFilters('bloggers', 'bloggers-search', 'bloggers-macro', 'bloggers-count', 'bloggers');
+    setupTabFilters('industry-blogs', 'industry-blogs-search', 'industry-blogs-macro', 'industry-blogs-count', 'blogs');
     setupTabFilters('books', 'books-search', 'books-macro', 'books-count', 'books');
 
     // Scroller navigation

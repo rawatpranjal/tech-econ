@@ -1,6 +1,11 @@
 # Changelog
 
 ## 2026-01-02
+- Split Blogs tab into "Bloggers" (54 personal) + "Industry Blogs" (126 company) tabs
+- Added subtopic categorization for personal bloggers (9 topics: Causal Inference, ML & AI, etc.)
+- Limited carousel rows to 8 items max for cleaner browsing
+- Added Reveal.js portfolio slide deck at /slides/ with cinematic dark theme
+- 7 slides showcasing site stats, features, tech stack with animated counters
 - Downloaded 54 blogger images locally to /static/images/bloggers/ (previously external URLs)
 - Talks page Netflix-style redesign with horizontal scrollers per subtopic
 - Carousel rows now sorted by top item's model_score (highest-scoring content first)
