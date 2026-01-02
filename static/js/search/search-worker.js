@@ -27,7 +27,8 @@ var CONFIG = {
   MODEL_ID: 'Xenova/gte-small',
   RRF_K: 60,  // RRF constant
   KEYWORD_WEIGHT: 1.0,
-  SEMANTIC_WEIGHT: 1.0
+  SEMANTIC_WEIGHT: 1.0,
+  MODEL_SCORE_WEIGHT: 0.4  // Engagement boost weight (0.3-0.5 range)
 };
 
 // Audience detection patterns
@@ -93,6 +94,32 @@ function getAudienceBoost(item, query) {
   }
 
   return 1.0;
+}
+
+/**
+ * Get model score boost multiplier based on engagement prediction
+ * Applies a weighted multiplier to surface popular/engaged content
+ *
+ * @param {Object} item - Search result item
+ * @param {number} weight - Weight for model_score influence (0-1)
+ * @returns {number} Multiplier between 1.0 and 1.0 + weight
+ */
+function getModelScoreBoost(item, weight) {
+  var modelScore = item.model_score;
+
+  // Handle missing/invalid scores gracefully (cold start items get neutral boost)
+  if (typeof modelScore !== 'number' || isNaN(modelScore)) {
+    return 1.0;
+  }
+
+  // Clamp to valid range [0, 1]
+  modelScore = Math.max(0, Math.min(1, modelScore));
+
+  // Formula: 1.0 + (model_score * weight)
+  // With weight=0.4 and score=1.0: multiplier = 1.4 (40% boost)
+  // With weight=0.4 and score=0.5: multiplier = 1.2 (20% boost)
+  // With weight=0.4 and score=0.0: multiplier = 1.0 (no boost)
+  return 1.0 + (modelScore * weight);
 }
 
 /**
@@ -827,7 +854,10 @@ function reciprocalRankFusion(keywordResults, semanticResults, topK, query) {
     // Apply audience boost multiplier (0.85-1.25x)
     var audienceMultiplier = getAudienceBoost(item, query);
 
-    var finalScore = (baseScore + syntheticBonus) * audienceMultiplier;
+    // Apply model score boost multiplier (1.0-1.4x based on engagement)
+    var modelScoreMultiplier = getModelScoreBoost(item, CONFIG.MODEL_SCORE_WEIGHT);
+
+    var finalScore = (baseScore + syntheticBonus) * audienceMultiplier * modelScoreMultiplier;
 
     return Object.assign({}, item, {
       rrfScore: finalScore,

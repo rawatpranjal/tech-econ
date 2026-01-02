@@ -41,7 +41,8 @@ DATA_FILES = [
     "community.json",
     "roadmaps.json",
     "books.json",
-    "domains.json"
+    "domains.json",
+    "papers_flat.json"  # Use flat version (has model_score)
 ]
 
 # Map file to type
@@ -54,11 +55,13 @@ FILE_TO_TYPE = {
     "community.json": "community",
     "roadmaps.json": "roadmap",
     "books.json": "book",
-    "domains.json": "domain"
+    "domains.json": "domain",
+    "papers_flat.json": "paper"
 }
 
 # Files with nested structure (require special handling)
-NESTED_FILES = ["papers.json"]
+# Note: Using papers_flat.json instead for model_score support
+NESTED_FILES = []
 
 
 def compute_content_hash(data_dir: Path) -> str:
@@ -73,7 +76,11 @@ def compute_content_hash(data_dir: Path) -> str:
 
 
 def load_papers(data_dir: Path) -> List[Dict[str, Any]]:
-    """Load papers from nested papers.json structure (topics -> subtopics -> papers)."""
+    """Load papers from nested papers.json structure (topics -> subtopics -> papers).
+
+    DEPRECATED: Now using papers_flat.json via DATA_FILES instead (has model_score).
+    Kept for reference/compatibility.
+    """
     filepath = data_dir / "papers.json"
     if not filepath.exists():
         print(f"Warning: papers.json not found, skipping")
@@ -246,7 +253,8 @@ def load_all_items(data_dir: Path) -> List[Dict[str, Any]]:
             audience_str = ", ".join(str(a) for a in audience) if isinstance(audience, list) else ""
             synthetic_questions = item.get("synthetic_questions", [])
 
-            all_items.append({
+            # Build item dict with common fields
+            item_dict = {
                 "id": item_id,
                 "type": item_type,
                 "name": item.get("name", ""),
@@ -263,52 +271,26 @@ def load_all_items(data_dir: Path) -> List[Dict[str, Any]]:
                 "use_cases": use_cases_str,
                 "audience": audience_str,
                 "synthetic_questions": synthetic_questions,
+                # Engagement-based ranking score from ranking model
+                "model_score": item.get("model_score", 0.0),
                 "text_for_embedding": combine_text_for_embedding(item)
-            })
+            }
 
-    # Load papers (nested structure)
-    papers = load_papers(data_dir)
-    for paper in papers:
-        # Create a unique ID for each paper (using slugify to match JS)
-        paper_name = paper.get('name', 'unknown')
-        base_id = f"paper-{slugify(paper_name)}"
+            # Add paper-specific fields if present (for papers_flat.json)
+            if item.get("topic"):
+                item_dict["topic"] = item["topic"]
+            if item.get("subtopic"):
+                item_dict["subtopic"] = item["subtopic"]
+            if item.get("authors"):
+                authors = item["authors"]
+                item_dict["authors"] = ", ".join(authors) if isinstance(authors, list) else authors
+            if item.get("year") is not None:
+                item_dict["year"] = item["year"]
 
-        # Handle duplicate IDs by appending a counter
-        item_id = base_id
-        if base_id in seen_ids:
-            seen_ids[base_id] += 1
-            item_id = f"{base_id}-{seen_ids[base_id]}"
-        else:
-            seen_ids[base_id] = 0
+            all_items.append(item_dict)
 
-        # Build tags from authors and year
-        tags_parts = ["paper"]
-        authors = paper.get("authors")
-        if authors:
-            # Handle both string and list formats
-            if isinstance(authors, list):
-                tags_parts.append(", ".join(authors))
-            else:
-                tags_parts.append(authors)
-        if paper.get("year"):
-            tags_parts.append(str(paper["year"]))
-        tags_str = ", ".join(tags_parts)
-
-        all_items.append({
-            "id": item_id,
-            "type": "paper",
-            "name": paper.get("name", ""),
-            "description": paper.get("description", ""),
-            "category": paper.get("category", ""),
-            "topic": paper.get("topic", ""),
-            "subtopic": paper.get("subtopic", ""),
-            "url": paper.get("url", ""),
-            "tags": tags_str,
-            "authors": ", ".join(authors) if isinstance(authors, list) else (authors or ""),
-            "year": paper.get("year"),  # Integer or None
-            "best_for": "",
-            "text_for_embedding": combine_text_for_embedding(paper)
-        })
+    # Note: Papers are now loaded from papers_flat.json via DATA_FILES
+    # (previously loaded separately from nested papers.json)
 
     return all_items
 
@@ -367,16 +349,20 @@ def generate_minisearch_index(items: List[Dict[str, Any]]) -> Dict[str, Any]:
             if isinstance(synthetic_q, list) and len(synthetic_q) > 0:
                 doc["synthetic_questions"] = " ".join(str(q) for q in synthetic_q)
 
+        # Add model_score for search ranking boost (engagement-based)
+        if item.get("model_score") is not None:
+            doc["model_score"] = item["model_score"]
+
         documents.append(doc)
 
     # Return the documents array - MiniSearch will index them on the client side
     return {
-        "version": 4,  # Bumped for new enriched fields
+        "version": 5,  # Bumped for model_score support
         "generatedAt": datetime.utcnow().isoformat() + "Z",
         "documents": documents,
         "config": {
             "fields": ["name", "description", "category", "tags", "best_for", "authors", "summary", "use_cases", "topic_tags", "synthetic_questions"],
-            "storeFields": ["name", "description", "category", "url", "type", "tags", "best_for", "topic", "subtopic", "authors", "year", "difficulty", "prerequisites", "topic_tags", "summary", "use_cases", "audience"],
+            "storeFields": ["name", "description", "category", "url", "type", "tags", "best_for", "topic", "subtopic", "authors", "year", "difficulty", "prerequisites", "topic_tags", "summary", "use_cases", "audience", "model_score"],
             "searchOptions": {
                 "boost": {"name": 3, "tags": 2, "topic_tags": 2, "authors": 1.5, "use_cases": 1.3, "best_for": 1.2, "synthetic_questions": 1.2, "summary": 1.1, "description": 1, "category": 0.8},
                 "fuzzy": 0.2,
