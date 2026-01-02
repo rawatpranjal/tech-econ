@@ -277,7 +277,7 @@
       "economist"
     ],
     "experience_level": "entry",
-    "model_score": 0.0011
+    "model_score": 0.0009
   },
   {
     "name": "Statsig",
@@ -355,7 +355,7 @@
       "data-scientist"
     ],
     "experience_level": "entry|mid",
-    "model_score": 0.0004
+    "model_score": 0.0005
   },
   {
     "name": "Netflix: Experimentation Focus",
@@ -405,46 +405,6 @@
     "model_score": 0.0001
   },
   {
-    "name": "Google Research Careers",
-    "description": "Research environment with focus on product impact at Google.",
-    "stage": "Strategy",
-    "category": "Role Landscape",
-    "url": "https://research.google/careers/",
-    "type": "Career Portal",
-    "tags": [
-      "Google",
-      "research"
-    ],
-    "archived": true,
-    "difficulty": null,
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "Google Research Careers provides insights into working in a research environment that emphasizes product impact. It offers guidance for individuals interested in pursuing a career in research at Google.",
-    "use_cases": [
-      "when considering a career in research at Google"
-    ],
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is it like to work in research at Google?",
-      "What skills are needed for a research career?",
-      "How does research impact product development at Google?",
-      "What are the career paths in Google Research?",
-      "What is the work culture like in Google Research?",
-      "How can I prepare for a research role at Google?",
-      "What are the benefits of working in research at Google?",
-      "What types of projects are undertaken in Google Research?"
-    ],
-    "role_type": [
-      "research"
-    ],
-    "company_context": [
-      "FAANG"
-    ],
-    "model_score": 0.0
-  },
-  {
     "name": "Trustworthy Online Controlled Experiments (Kohavi)",
     "description": "The industry bible by Kohavi, Tang, Xu (Microsoft/LinkedIn/Google). Design, analysis, pitfalls of A/B testing at scale. Only 1/3 of well-designed experiments improve metrics. Free site: experimentguide.com",
     "stage": "Interview Prep",
@@ -484,6 +444,46 @@
       "data-scientist"
     ],
     "experience_level": "mid|senior",
+    "model_score": 0.0001
+  },
+  {
+    "name": "Google Research Careers",
+    "description": "Research environment with focus on product impact at Google.",
+    "stage": "Strategy",
+    "category": "Role Landscape",
+    "url": "https://research.google/careers/",
+    "type": "Career Portal",
+    "tags": [
+      "Google",
+      "research"
+    ],
+    "archived": true,
+    "difficulty": null,
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Google Research Careers provides insights into working in a research environment that emphasizes product impact. It offers guidance for individuals interested in pursuing a career in research at Google.",
+    "use_cases": [
+      "when considering a career in research at Google"
+    ],
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is it like to work in research at Google?",
+      "What skills are needed for a research career?",
+      "How does research impact product development at Google?",
+      "What are the career paths in Google Research?",
+      "What is the work culture like in Google Research?",
+      "How can I prepare for a research role at Google?",
+      "What are the benefits of working in research at Google?",
+      "What types of projects are undertaken in Google Research?"
+    ],
+    "role_type": [
+      "research"
+    ],
+    "company_context": [
+      "FAANG"
+    ],
     "model_score": 0.0
   },
   {
