@@ -1,6 +1,10 @@
 # Changelog
 
 ## 2026-01-02
+- Talks page Netflix-style redesign with horizontal scrollers per subtopic
+- Carousel rows now sorted by top item's model_score (highest-scoring content first)
+- Added macro_category + subtopic fields to talks.json (8 macro categories, 36 subtopics)
+- Created OG image fetching script; 181/264 talks now have thumbnails
 - Added analytics D1 query reference to CLAUDE.md for checking recent clicks/impressions/searches
 - Fixed 9 INFORMS login-wall links → public URLs (conferences, chapters, datasets)
 

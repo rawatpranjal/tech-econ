@@ -48,7 +48,7 @@
     "data_modality": "tabular",
     "temporal_coverage": "2020",
     "size_category": "medium",
-    "model_score": 0.0285
+    "model_score": 0.0303
   },
   {
     "name": "Retail Rocket",
@@ -95,7 +95,7 @@
     ],
     "data_modality": "tabular",
     "size_category": "medium",
-    "model_score": 0.028
+    "model_score": 0.0297
   },
   {
     "name": "BestBuy",
@@ -1052,6 +1052,57 @@
     "model_score": 0.0041
   },
   {
+    "name": "Amazon ShopBench (KDD Cup 2024)",
+    "description": "57 tasks, 20K questions derived from real Amazon shopping data for LLM shopping assistants",
+    "category": "Data Portals",
+    "url": "https://www.aicrowd.com/challenges/amazon-kdd-cup-2024-multi-task-online-shopping-challenge-for-llms",
+    "docs_url": null,
+    "github_url": "https://github.com/fzp0424/ec-guide-kddup-2024",
+    "tags": [
+      "KDD",
+      "Amazon",
+      "e-commerce",
+      "LLM",
+      "2024",
+      "multi-task"
+    ],
+    "best_for": "Learning data portals analytics and modeling",
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "e-commerce",
+      "consumer-behavior"
+    ],
+    "summary": "The Amazon ShopBench dataset consists of 57 tasks and 20,000 questions derived from real Amazon shopping data, specifically designed for training large language model shopping assistants. It can be used to evaluate and enhance the performance of LLMs in e-commerce contexts.",
+    "use_cases": [
+      "Training LLMs for shopping assistance",
+      "Evaluating LLM performance on e-commerce tasks",
+      "Developing multi-task learning models",
+      "Analyzing consumer behavior in online shopping"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "What is the Amazon ShopBench dataset?",
+      "How can I use Amazon shopping data for LLM training?",
+      "What tasks are included in the KDD Cup 2024 dataset?",
+      "Where can I find the Amazon ShopBench dataset?",
+      "What types of questions are in the Amazon ShopBench?",
+      "How does the Amazon ShopBench support multi-task learning?",
+      "What is the purpose of the KDD Cup 2024?",
+      "What are the applications of LLM in e-commerce?"
+    ],
+    "domain_tags": [
+      "retail"
+    ],
+    "data_modality": "mixed",
+    "size_category": "medium",
+    "model_score": 0.0034
+  },
+  {
     "name": "Flipkart",
     "description": "Sales dataset from Indian e-commerce platform Flipkart",
     "category": "E-Commerce",
@@ -1148,57 +1199,6 @@
     "model_score": 0.0026
   },
   {
-    "name": "Amazon ShopBench (KDD Cup 2024)",
-    "description": "57 tasks, 20K questions derived from real Amazon shopping data for LLM shopping assistants",
-    "category": "Data Portals",
-    "url": "https://www.aicrowd.com/challenges/amazon-kdd-cup-2024-multi-task-online-shopping-challenge-for-llms",
-    "docs_url": null,
-    "github_url": "https://github.com/fzp0424/ec-guide-kddup-2024",
-    "tags": [
-      "KDD",
-      "Amazon",
-      "e-commerce",
-      "LLM",
-      "2024",
-      "multi-task"
-    ],
-    "best_for": "Learning data portals analytics and modeling",
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [
-      "e-commerce",
-      "consumer-behavior"
-    ],
-    "summary": "The Amazon ShopBench dataset consists of 57 tasks and 20,000 questions derived from real Amazon shopping data, specifically designed for training large language model shopping assistants. It can be used to evaluate and enhance the performance of LLMs in e-commerce contexts.",
-    "use_cases": [
-      "Training LLMs for shopping assistance",
-      "Evaluating LLM performance on e-commerce tasks",
-      "Developing multi-task learning models",
-      "Analyzing consumer behavior in online shopping"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS"
-    ],
-    "synthetic_questions": [
-      "What is the Amazon ShopBench dataset?",
-      "How can I use Amazon shopping data for LLM training?",
-      "What tasks are included in the KDD Cup 2024 dataset?",
-      "Where can I find the Amazon ShopBench dataset?",
-      "What types of questions are in the Amazon ShopBench?",
-      "How does the Amazon ShopBench support multi-task learning?",
-      "What is the purpose of the KDD Cup 2024?",
-      "What are the applications of LLM in e-commerce?"
-    ],
-    "domain_tags": [
-      "retail"
-    ],
-    "data_modality": "mixed",
-    "size_category": "medium",
-    "model_score": 0.0019
-  },
-  {
     "name": "Arena Human Preference (55K)",
     "description": "55K+ real-world conversations with human preference labels from Chatbot Arena",
     "category": "AI & LLM",
@@ -1289,7 +1289,7 @@
     "data_modality": "tabular",
     "temporal_coverage": "2018",
     "size_category": "massive",
-    "model_score": 0.0015
+    "model_score": 0.0014
   },
   {
     "name": "Open e-commerce 1.0",
@@ -1392,6 +1392,111 @@
     "model_score": 0.0008
   },
   {
+    "name": "ASOS Digital Experiments",
+    "description": "99 real A/B experiments with 24,153 time-granular snapshots for adaptive stopping research",
+    "category": "E-Commerce",
+    "url": "https://osf.io/64jsb/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "A/B testing",
+      "experiments",
+      "adaptive",
+      "fashion"
+    ],
+    "best_for": "Practicing customer analytics, demand forecasting, and recommendation systems",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "e-commerce",
+      "experimentation",
+      "data-analysis"
+    ],
+    "summary": "The ASOS Digital Experiments dataset contains 99 real A/B experiments with 24,153 time-granular snapshots, making it a valuable resource for researchers interested in adaptive stopping methods. Users can analyze the impact of various factors on consumer behavior in the fashion industry.",
+    "use_cases": [
+      "Analyzing the effectiveness of different marketing strategies.",
+      "Studying consumer behavior changes based on website design variations.",
+      "Evaluating the impact of pricing changes on sales.",
+      "Researching adaptive stopping techniques in experimental design."
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are the ASOS Digital Experiments?",
+      "How can I access A/B testing datasets?",
+      "What insights can be gained from ASOS's A/B experiments?",
+      "What is adaptive stopping in A/B testing?",
+      "Where can I find datasets for e-commerce experiments?",
+      "What are the key findings from ASOS's A/B testing?",
+      "How to analyze A/B test results in fashion?",
+      "What tools can be used for A/B testing analysis?"
+    ],
+    "domain_tags": [
+      "retail",
+      "fashion"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "model_score": 0.0008
+  },
+  {
+    "name": "Twitch Gamers Social Network",
+    "description": "168K nodes with mutual follower relationships. 6 ML tasks including churn, affiliate status, view count prediction",
+    "category": "Entertainment & Media",
+    "url": "https://snap.stanford.edu/data/twitch-social-networks.html",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "Twitch",
+      "social network",
+      "gaming",
+      "followers",
+      "SNAP"
+    ],
+    "best_for": "Learning entertainment & media analytics and modeling",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "pandas-dataframes",
+      "regression-analysis"
+    ],
+    "topic_tags": [
+      "gaming",
+      "social-network-analysis"
+    ],
+    "summary": "This dataset contains a social network of Twitch gamers with 168K nodes representing mutual follower relationships. It can be used for various machine learning tasks, including churn prediction and view count forecasting.",
+    "use_cases": [
+      "Predicting churn among Twitch gamers",
+      "Analyzing follower relationships in social networks",
+      "Forecasting view counts for Twitch streams",
+      "Determining affiliate status based on social connections"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "What is the Twitch Gamers Social Network dataset?",
+      "How can I analyze mutual follower relationships on Twitch?",
+      "What machine learning tasks can be performed with Twitch social network data?",
+      "Where can I find datasets related to gaming and social networks?",
+      "What are the characteristics of Twitch gamers' social networks?",
+      "How to predict churn in social networks using Twitch data?",
+      "What is the size of the Twitch Gamers Social Network dataset?",
+      "What tags are associated with the Twitch Gamers Social Network dataset?"
+    ],
+    "domain_tags": [
+      "entertainment",
+      "media"
+    ],
+    "data_modality": "graph",
+    "size_category": "medium",
+    "model_score": 0.0008
+  },
+  {
     "name": "Used Car Auction (PakWheels)",
     "description": "Listings from PakWheels Pakistani automobile marketplace",
     "category": "Auctions & Marketplaces",
@@ -1436,7 +1541,7 @@
     "data_modality": "tabular",
     "geographic_scope": "Pakistan",
     "size_category": "medium",
-    "model_score": 0.0007
+    "model_score": 0.0006
   },
   {
     "name": "USS (User Satisfaction Simulation)",
@@ -1522,32 +1627,29 @@
     "model_score": 0.0006
   },
   {
-    "name": "ASOS Digital Experiments",
-    "description": "99 real A/B experiments with 24,153 time-granular snapshots for adaptive stopping research",
-    "category": "E-Commerce",
-    "url": "https://osf.io/64jsb/",
+    "name": "Tesco Grocery 1.0",
+    "description": "Grocery purchases from Tesco stores via loyalty cards",
+    "category": "Grocery & Supermarkets",
+    "url": "https://figshare.com/collections/Tesco_Grocery_1_0/4769354",
     "docs_url": null,
     "github_url": null,
     "tags": [
-      "A/B testing",
-      "experiments",
-      "adaptive",
-      "fashion"
+      "grocery",
+      "loyalty cards",
+      "UK",
+      "Tesco"
     ],
-    "best_for": "Practicing customer analytics, demand forecasting, and recommendation systems",
+    "best_for": "Learning grocery & supermarkets analytics and modeling",
     "difficulty": "beginner",
     "prerequisites": [],
     "topic_tags": [
       "e-commerce",
-      "experimentation",
-      "data-analysis"
+      "consumer-behavior"
     ],
-    "summary": "The ASOS Digital Experiments dataset contains 99 real A/B experiments with 24,153 time-granular snapshots, making it a valuable resource for researchers interested in adaptive stopping methods. Users can analyze the impact of various factors on consumer behavior in the fashion industry.",
+    "summary": "The Tesco Grocery 1.0 dataset contains grocery purchase data collected from Tesco stores through loyalty cards. This dataset can be used to analyze consumer purchasing patterns and loyalty program effectiveness.",
     "use_cases": [
-      "Analyzing the effectiveness of different marketing strategies.",
-      "Studying consumer behavior changes based on website design variations.",
-      "Evaluating the impact of pricing changes on sales.",
-      "Researching adaptive stopping techniques in experimental design."
+      "Analyzing customer loyalty trends",
+      "Studying purchasing behavior in grocery shopping"
     ],
     "audience": [
       "Junior-DS",
@@ -1555,22 +1657,70 @@
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "What are the ASOS Digital Experiments?",
-      "How can I access A/B testing datasets?",
-      "What insights can be gained from ASOS's A/B experiments?",
-      "What is adaptive stopping in A/B testing?",
-      "Where can I find datasets for e-commerce experiments?",
-      "What are the key findings from ASOS's A/B testing?",
-      "How to analyze A/B test results in fashion?",
-      "What tools can be used for A/B testing analysis?"
+      "Tesco grocery purchase data",
+      "Tesco loyalty card transactions",
+      "UK grocery shopping data",
+      "Tesco supermarket analytics",
+      "grocery purchases dataset",
+      "consumer behavior in grocery shopping"
     ],
     "domain_tags": [
-      "retail",
-      "fashion"
+      "retail"
+    ],
+    "data_modality": "tabular",
+    "geographic_scope": "UK",
+    "size_category": "medium",
+    "model_score": 0.0006
+  },
+  {
+    "name": "MicroLens",
+    "description": "1 billion interactions from 34 million users on 1 million micro-videos",
+    "category": "Entertainment & Media",
+    "url": "https://github.com/westlake-repl/MicroLens",
+    "docs_url": null,
+    "github_url": "https://github.com/westlake-repl/MicroLens",
+    "tags": [
+      "video",
+      "micro-video",
+      "large-scale",
+      "recommendations"
+    ],
+    "best_for": "Learning entertainment & media analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "consumer-behavior",
+      "recommendations"
+    ],
+    "summary": "MicroLens contains 1 billion interactions from 34 million users on 1 million micro-videos. This dataset can be used to analyze user engagement and develop recommendation systems for video content.",
+    "use_cases": [
+      "Analyzing user engagement patterns in micro-videos",
+      "Developing personalized video recommendations",
+      "Studying trends in micro-video consumption",
+      "Evaluating the effectiveness of marketing strategies in video content"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is the MicroLens dataset?",
+      "How can I access the MicroLens dataset?",
+      "What types of analyses can be performed on the MicroLens dataset?",
+      "What are the user demographics in the MicroLens dataset?",
+      "How many interactions are recorded in the MicroLens dataset?",
+      "What is the focus of the MicroLens dataset?",
+      "What insights can be gained from the MicroLens dataset?",
+      "What are the applications of the MicroLens dataset in recommendations?"
+    ],
+    "domain_tags": [
+      "entertainment",
+      "media"
     ],
     "data_modality": "tabular",
     "size_category": "medium",
-    "model_score": 0.0006
+    "model_score": 0.0005
   },
   {
     "name": "LaDe (Cainiao)",
@@ -1621,113 +1771,7 @@
     ],
     "data_modality": "tabular",
     "size_category": "massive",
-    "model_score": 0.0006
-  },
-  {
-    "name": "AXA Driver Telematics (Kaggle)",
-    "description": "Driving behavior dataset with 50K driver trips characterized by second-by-second GPS coordinates for usage-based insurance",
-    "category": "Insurance & Actuarial",
-    "url": "https://www.kaggle.com/c/axa-driver-telematics-analysis",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "telematics",
-      "UBI",
-      "driving-behavior",
-      "auto-insurance",
-      "GPS-data"
-    ],
-    "best_for": "Usage-based insurance pricing, driver risk scoring, and behavior analysis",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "driving-behavior",
-      "insurance",
-      "data-analysis"
-    ],
-    "summary": "The AXA Driver Telematics dataset contains detailed information on driving behavior, including second-by-second GPS coordinates from 50,000 driver trips. This dataset can be used to analyze driving patterns, assess risk for usage-based insurance, and improve auto insurance models.",
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS"
-    ],
-    "synthetic_questions": [
-      "What is the AXA Driver Telematics dataset?",
-      "How can I analyze driving behavior using the AXA dataset?",
-      "What insights can be gained from GPS data in telematics?",
-      "Where can I find the AXA Driver Telematics dataset?",
-      "What are the applications of telematics in auto insurance?",
-      "How does driving behavior affect usage-based insurance models?",
-      "What tools can I use to analyze telematics data?",
-      "What is the significance of second-by-second GPS data in driving analysis?"
-    ],
-    "use_cases": [
-      "Analyzing risk factors for usage-based insurance.",
-      "Identifying patterns in driving behavior for insurance pricing.",
-      "Developing predictive models for driver safety.",
-      "Assessing the impact of driving habits on insurance claims."
-    ],
-    "domain_tags": [
-      "insurance",
-      "automotive"
-    ],
-    "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0006
-  },
-  {
-    "name": "Twitch Gamers Social Network",
-    "description": "168K nodes with mutual follower relationships. 6 ML tasks including churn, affiliate status, view count prediction",
-    "category": "Entertainment & Media",
-    "url": "https://snap.stanford.edu/data/twitch-social-networks.html",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "Twitch",
-      "social network",
-      "gaming",
-      "followers",
-      "SNAP"
-    ],
-    "best_for": "Learning entertainment & media analytics and modeling",
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "pandas-dataframes",
-      "regression-analysis"
-    ],
-    "topic_tags": [
-      "gaming",
-      "social-network-analysis"
-    ],
-    "summary": "This dataset contains a social network of Twitch gamers with 168K nodes representing mutual follower relationships. It can be used for various machine learning tasks, including churn prediction and view count forecasting.",
-    "use_cases": [
-      "Predicting churn among Twitch gamers",
-      "Analyzing follower relationships in social networks",
-      "Forecasting view counts for Twitch streams",
-      "Determining affiliate status based on social connections"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS"
-    ],
-    "synthetic_questions": [
-      "What is the Twitch Gamers Social Network dataset?",
-      "How can I analyze mutual follower relationships on Twitch?",
-      "What machine learning tasks can be performed with Twitch social network data?",
-      "Where can I find datasets related to gaming and social networks?",
-      "What are the characteristics of Twitch gamers' social networks?",
-      "How to predict churn in social networks using Twitch data?",
-      "What is the size of the Twitch Gamers Social Network dataset?",
-      "What tags are associated with the Twitch Gamers Social Network dataset?"
-    ],
-    "domain_tags": [
-      "entertainment",
-      "media"
-    ],
-    "data_modality": "graph",
-    "size_category": "medium",
-    "model_score": 0.0005
+    "model_score": 0.0004
   },
   {
     "name": "Avazu Click-Through Rate Dataset",
@@ -1775,57 +1819,7 @@
     "temporal_coverage": "10 days",
     "geographic_scope": "Global",
     "size_category": "medium",
-    "model_score": 0.0005
-  },
-  {
-    "name": "Crypto Art (SuperRare)",
-    "description": "Bids and transactions from SuperRare NFT platform",
-    "category": "Auctions & Marketplaces",
-    "url": "https://www.kaggle.com/datasets/franceschet/superrare",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "NFT",
-      "crypto",
-      "art",
-      "auctions"
-    ],
-    "best_for": "Learning auctions & marketplaces analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "e-commerce",
-      "consumer-behavior",
-      "pricing"
-    ],
-    "summary": "This dataset contains bids and transactions from the SuperRare NFT platform, which focuses on the buying and selling of digital art as NFTs. It can be used to analyze market trends, pricing strategies, and consumer behavior in the crypto art space.",
-    "use_cases": [
-      "Analyzing price trends of NFTs over time",
-      "Studying consumer behavior in the crypto art market",
-      "Evaluating the impact of auctions on NFT prices",
-      "Comparing transaction volumes across different NFT categories"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are the latest bids on SuperRare?",
-      "How do transaction volumes on SuperRare compare over time?",
-      "What types of art are most frequently sold on SuperRare?",
-      "What is the average price of NFTs sold on SuperRare?",
-      "How has the market for crypto art evolved on SuperRare?",
-      "What are the trends in bidding behavior on SuperRare?"
-    ],
-    "domain_tags": [
-      "art",
-      "technology",
-      "finance"
-    ],
-    "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0005
+    "model_score": 0.0004
   },
   {
     "name": "CMS Medicare & Medicaid Data",
@@ -1973,56 +1967,6 @@
     "model_score": 0.0004
   },
   {
-    "name": "MicroLens",
-    "description": "1 billion interactions from 34 million users on 1 million micro-videos",
-    "category": "Entertainment & Media",
-    "url": "https://github.com/westlake-repl/MicroLens",
-    "docs_url": null,
-    "github_url": "https://github.com/westlake-repl/MicroLens",
-    "tags": [
-      "video",
-      "micro-video",
-      "large-scale",
-      "recommendations"
-    ],
-    "best_for": "Learning entertainment & media analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "consumer-behavior",
-      "recommendations"
-    ],
-    "summary": "MicroLens contains 1 billion interactions from 34 million users on 1 million micro-videos. This dataset can be used to analyze user engagement and develop recommendation systems for video content.",
-    "use_cases": [
-      "Analyzing user engagement patterns in micro-videos",
-      "Developing personalized video recommendations",
-      "Studying trends in micro-video consumption",
-      "Evaluating the effectiveness of marketing strategies in video content"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is the MicroLens dataset?",
-      "How can I access the MicroLens dataset?",
-      "What types of analyses can be performed on the MicroLens dataset?",
-      "What are the user demographics in the MicroLens dataset?",
-      "How many interactions are recorded in the MicroLens dataset?",
-      "What is the focus of the MicroLens dataset?",
-      "What insights can be gained from the MicroLens dataset?",
-      "What are the applications of the MicroLens dataset in recommendations?"
-    ],
-    "domain_tags": [
-      "entertainment",
-      "media"
-    ],
-    "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0004
-  },
-  {
     "name": "iPinYou RTB Dataset",
     "description": "Real-time bidding dataset from Chinese DSP with ~35GB of bid requests, impressions, clicks, and conversions with bidding prices",
     "category": "Advertising",
@@ -2076,6 +2020,348 @@
     "model_score": 0.0004
   },
   {
+    "name": "Alibaba Mobile 2021",
+    "description": "Mobile user behavior data from Alibaba (2021)",
+    "category": "E-Commerce",
+    "url": "https://tianchi.aliyun.com/dataset/109858",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "mobile",
+      "user behavior",
+      "Alibaba"
+    ],
+    "best_for": "Practicing customer analytics, demand forecasting, and recommendation systems",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "e-commerce",
+      "consumer-behavior"
+    ],
+    "summary": "This dataset contains mobile user behavior data from Alibaba for the year 2021. It can be used to analyze trends in mobile shopping and consumer interactions on the Alibaba platform.",
+    "use_cases": [
+      "Analyzing mobile shopping trends",
+      "Understanding consumer behavior on Alibaba",
+      "Evaluating user engagement metrics",
+      "Comparing mobile vs desktop user behavior"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is Alibaba Mobile 2021 dataset?",
+      "Where can I find mobile user behavior data from Alibaba?",
+      "How to analyze Alibaba user behavior data?",
+      "What insights can be gained from Alibaba Mobile 2021?",
+      "Is there a dataset for Alibaba mobile users?",
+      "What are the trends in mobile shopping on Alibaba in 2021?",
+      "How does Alibaba's mobile user behavior compare to other platforms?",
+      "What tools can I use to analyze Alibaba Mobile 2021 data?"
+    ],
+    "domain_tags": [
+      "e-commerce"
+    ],
+    "data_modality": "tabular",
+    "temporal_coverage": "2021",
+    "size_category": "medium",
+    "model_score": 0.0004
+  },
+  {
+    "name": "PaySim Synthetic Transactions",
+    "description": "6M+ mobile money transactions simulating real fraud patterns. Agent-based model calibrated on real African mobile money logs",
+    "category": "Financial Services",
+    "url": "https://www.kaggle.com/datasets/ealaxi/paysim1",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "fraud detection",
+      "mobile payments",
+      "transactions",
+      "large-scale",
+      "synthetic"
+    ],
+    "best_for": "Learning financial services analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "fraud detection",
+      "mobile payments",
+      "transactions"
+    ],
+    "summary": "The PaySim Synthetic Transactions dataset contains over 6 million mobile money transactions that simulate real fraud patterns. It can be used to analyze and detect fraudulent activities in mobile payment systems.",
+    "use_cases": [
+      "Fraud detection analysis",
+      "Simulation of mobile payment scenarios",
+      "Testing machine learning models for fraud detection"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "PaySim dataset for fraud detection",
+      "synthetic transactions dataset",
+      "mobile money transaction simulation",
+      "fraud patterns in mobile payments",
+      "agent-based model for transactions",
+      "large-scale mobile money dataset",
+      "African mobile money logs"
+    ],
+    "domain_tags": [
+      "fintech"
+    ],
+    "data_modality": "tabular",
+    "geographic_scope": "Africa",
+    "size_category": "massive",
+    "model_score": 0.0004
+  },
+  {
+    "name": "European Car Market",
+    "description": "Car information including prices and attributes (1970-1999)",
+    "category": "Automotive",
+    "url": "https://sites.google.com/site/frankverbo/data-and-software/data-set-on-the-european-car-market",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "cars",
+      "Europe",
+      "prices",
+      "IO"
+    ],
+    "best_for": "Learning automotive analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "automotive",
+      "pricing"
+    ],
+    "summary": "The European Car Market dataset contains information about cars, including their prices and various attributes from 1970 to 1999. This dataset can be used to analyze trends in car pricing and attributes over time in Europe.",
+    "use_cases": [
+      "Analyzing price trends of European cars over time",
+      "Comparing car attributes across different models",
+      "Studying the impact of economic factors on car prices"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "European car prices from 1970 to 1999",
+      "attributes of cars in Europe",
+      "car market trends in Europe",
+      "historical car pricing data",
+      "automotive data analysis Europe",
+      "car attributes dataset 1970-1999"
+    ],
+    "domain_tags": [
+      "automotive"
+    ],
+    "data_modality": "tabular",
+    "temporal_coverage": "1970-1999",
+    "geographic_scope": "Europe",
+    "size_category": "medium",
+    "model_score": 0.0004
+  },
+  {
+    "name": "Fliggy Transfers",
+    "description": "Transfer-related data (flights, ground transport) from Fliggy",
+    "category": "Travel & Hospitality",
+    "url": "https://tianchi.aliyun.com/dataset/140721",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "travel",
+      "transfers",
+      "transportation"
+    ],
+    "best_for": "Learning travel & hospitality analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "travel",
+      "transfers",
+      "transportation"
+    ],
+    "summary": "Fliggy Transfers provides data related to various modes of transport, including flights and ground transport. This dataset can be utilized for analyzing travel patterns, optimizing transportation logistics, and understanding consumer preferences in the travel sector.",
+    "use_cases": [
+      "Analyzing travel trends",
+      "Optimizing ground transport logistics",
+      "Studying consumer behavior in travel"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is Fliggy Transfers data?",
+      "How to analyze Fliggy transport data?",
+      "What types of transfers does Fliggy offer?",
+      "Where can I find Fliggy flight data?",
+      "What insights can be gained from Fliggy Transfers?",
+      "How to visualize transportation data from Fliggy?"
+    ],
+    "domain_tags": [
+      "travel",
+      "hospitality"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "model_score": 0.0004
+  },
+  {
+    "name": "Indian Grocery (Flipkart Supermart)",
+    "description": "Flipkart Supermart transaction and product details",
+    "category": "Grocery & Supermarkets",
+    "url": "https://www.kaggle.com/datasets/aryansingh95/flipkart-grocery-transaction-and-product-details",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "grocery",
+      "India",
+      "Flipkart"
+    ],
+    "best_for": "Learning grocery & supermarkets analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "e-commerce",
+      "consumer-behavior"
+    ],
+    "summary": "The Indian Grocery dataset contains transaction and product details from Flipkart Supermart. It can be used to analyze consumer purchasing patterns and pricing strategies in the grocery sector.",
+    "use_cases": [
+      "Analyzing consumer purchasing patterns",
+      "Evaluating pricing strategies",
+      "Identifying popular grocery items"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are the transaction details in the Indian Grocery dataset?",
+      "How can I analyze product details from Flipkart Supermart?",
+      "What insights can be gained from grocery transactions in India?",
+      "What consumer behavior trends can be identified in the Indian Grocery dataset?",
+      "How does pricing vary in the Flipkart Supermart transactions?",
+      "What products are most frequently purchased in the Indian Grocery dataset?"
+    ],
+    "domain_tags": [
+      "retail"
+    ],
+    "data_modality": "tabular",
+    "geographic_scope": "India",
+    "size_category": "medium",
+    "model_score": 0.0004
+  },
+  {
+    "name": "AXA Driver Telematics (Kaggle)",
+    "description": "Driving behavior dataset with 50K driver trips characterized by second-by-second GPS coordinates for usage-based insurance",
+    "category": "Insurance & Actuarial",
+    "url": "https://www.kaggle.com/c/axa-driver-telematics-analysis",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "telematics",
+      "UBI",
+      "driving-behavior",
+      "auto-insurance",
+      "GPS-data"
+    ],
+    "best_for": "Usage-based insurance pricing, driver risk scoring, and behavior analysis",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "driving-behavior",
+      "insurance",
+      "data-analysis"
+    ],
+    "summary": "The AXA Driver Telematics dataset contains detailed information on driving behavior, including second-by-second GPS coordinates from 50,000 driver trips. This dataset can be used to analyze driving patterns, assess risk for usage-based insurance, and improve auto insurance models.",
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "What is the AXA Driver Telematics dataset?",
+      "How can I analyze driving behavior using the AXA dataset?",
+      "What insights can be gained from GPS data in telematics?",
+      "Where can I find the AXA Driver Telematics dataset?",
+      "What are the applications of telematics in auto insurance?",
+      "How does driving behavior affect usage-based insurance models?",
+      "What tools can I use to analyze telematics data?",
+      "What is the significance of second-by-second GPS data in driving analysis?"
+    ],
+    "use_cases": [
+      "Analyzing risk factors for usage-based insurance.",
+      "Identifying patterns in driving behavior for insurance pricing.",
+      "Developing predictive models for driver safety.",
+      "Assessing the impact of driving habits on insurance claims."
+    ],
+    "domain_tags": [
+      "insurance",
+      "automotive"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "model_score": 0.0003
+  },
+  {
+    "name": "Crypto Art (SuperRare)",
+    "description": "Bids and transactions from SuperRare NFT platform",
+    "category": "Auctions & Marketplaces",
+    "url": "https://www.kaggle.com/datasets/franceschet/superrare",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "NFT",
+      "crypto",
+      "art",
+      "auctions"
+    ],
+    "best_for": "Learning auctions & marketplaces analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "e-commerce",
+      "consumer-behavior",
+      "pricing"
+    ],
+    "summary": "This dataset contains bids and transactions from the SuperRare NFT platform, which focuses on the buying and selling of digital art as NFTs. It can be used to analyze market trends, pricing strategies, and consumer behavior in the crypto art space.",
+    "use_cases": [
+      "Analyzing price trends of NFTs over time",
+      "Studying consumer behavior in the crypto art market",
+      "Evaluating the impact of auctions on NFT prices",
+      "Comparing transaction volumes across different NFT categories"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are the latest bids on SuperRare?",
+      "How do transaction volumes on SuperRare compare over time?",
+      "What types of art are most frequently sold on SuperRare?",
+      "What is the average price of NFTs sold on SuperRare?",
+      "How has the market for crypto art evolved on SuperRare?",
+      "What are the trends in bidding behavior on SuperRare?"
+    ],
+    "domain_tags": [
+      "art",
+      "technology",
+      "finance"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "model_score": 0.0003
+  },
+  {
     "name": "Harvard Dataverse Auctions",
     "description": "Auction-related replication datasets from Harvard Dataverse",
     "category": "Advertising",
@@ -2119,7 +2405,7 @@
     ],
     "data_modality": "tabular",
     "size_category": "medium",
-    "model_score": 0.0004
+    "model_score": 0.0003
   },
   {
     "name": "Nasdaq Data Link",
@@ -2168,7 +2454,7 @@
     ],
     "data_modality": "tabular",
     "size_category": "medium",
-    "model_score": 0.0004
+    "model_score": 0.0003
   },
   {
     "name": "Art Auction (Artists for Lahaina)",
@@ -2214,7 +2500,7 @@
     "data_modality": "tabular",
     "temporal_coverage": "2023",
     "size_category": "medium",
-    "model_score": 0.0004
+    "model_score": 0.0003
   },
   {
     "name": "Mendeley Food Delivery Reviews",
@@ -2267,55 +2553,6 @@
       "gig economy"
     ],
     "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0004
-  },
-  {
-    "name": "Alibaba Mobile 2021",
-    "description": "Mobile user behavior data from Alibaba (2021)",
-    "category": "E-Commerce",
-    "url": "https://tianchi.aliyun.com/dataset/109858",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "mobile",
-      "user behavior",
-      "Alibaba"
-    ],
-    "best_for": "Practicing customer analytics, demand forecasting, and recommendation systems",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "e-commerce",
-      "consumer-behavior"
-    ],
-    "summary": "This dataset contains mobile user behavior data from Alibaba for the year 2021. It can be used to analyze trends in mobile shopping and consumer interactions on the Alibaba platform.",
-    "use_cases": [
-      "Analyzing mobile shopping trends",
-      "Understanding consumer behavior on Alibaba",
-      "Evaluating user engagement metrics",
-      "Comparing mobile vs desktop user behavior"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is Alibaba Mobile 2021 dataset?",
-      "Where can I find mobile user behavior data from Alibaba?",
-      "How to analyze Alibaba user behavior data?",
-      "What insights can be gained from Alibaba Mobile 2021?",
-      "Is there a dataset for Alibaba mobile users?",
-      "What are the trends in mobile shopping on Alibaba in 2021?",
-      "How does Alibaba's mobile user behavior compare to other platforms?",
-      "What tools can I use to analyze Alibaba Mobile 2021 data?"
-    ],
-    "domain_tags": [
-      "e-commerce"
-    ],
-    "data_modality": "tabular",
-    "temporal_coverage": "2021",
     "size_category": "medium",
     "model_score": 0.0003
   },
@@ -2412,54 +2649,6 @@
     "model_score": 0.0003
   },
   {
-    "name": "WRDS (Wharton Research Data Services)",
-    "description": "350+ terabytes from CRSP, Compustat, TAQ - de facto standard for academic finance",
-    "category": "Dataset Aggregators",
-    "url": "https://wrds-www.wharton.upenn.edu",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "finance",
-      "CRSP",
-      "Compustat",
-      "academic",
-      "premium"
-    ],
-    "best_for": "Publication in top finance journals - requires institutional subscription",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "finance"
-    ],
-    "summary": "WRDS (Wharton Research Data Services) provides access to over 350 terabytes of data from CRSP, Compustat, and TAQ, making it the de facto standard for academic finance research. Researchers can utilize this extensive dataset for financial analysis, modeling, and empirical research.",
-    "use_cases": [
-      "Conducting empirical research in finance using CRSP data.",
-      "Analyzing corporate financial performance with Compustat.",
-      "Performing high-frequency trading analysis with TAQ data."
-    ],
-    "audience": [
-      "Early-PhD",
-      "Junior-DS",
-      "Mid-DS"
-    ],
-    "synthetic_questions": [
-      "What is WRDS?",
-      "How to access CRSP data from WRDS?",
-      "What datasets are included in WRDS?",
-      "How can I use Compustat data for financial analysis?",
-      "What is the size of the WRDS dataset?",
-      "What types of analysis can be performed with TAQ data?",
-      "Is WRDS suitable for academic research?",
-      "What are the benefits of using WRDS for finance studies?"
-    ],
-    "domain_tags": [
-      "finance"
-    ],
-    "data_modality": "tabular",
-    "size_category": "massive",
-    "model_score": 0.0003
-  },
-  {
     "name": "Online Shopping Intention",
     "description": "12,330 user sessions with numerical and categorical features for purchase prediction",
     "category": "E-Commerce",
@@ -2504,56 +2693,6 @@
     ],
     "data_modality": "tabular",
     "size_category": "medium",
-    "model_score": 0.0003
-  },
-  {
-    "name": "PaySim Synthetic Transactions",
-    "description": "6M+ mobile money transactions simulating real fraud patterns. Agent-based model calibrated on real African mobile money logs",
-    "category": "Financial Services",
-    "url": "https://www.kaggle.com/datasets/ealaxi/paysim1",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "fraud detection",
-      "mobile payments",
-      "transactions",
-      "large-scale",
-      "synthetic"
-    ],
-    "best_for": "Learning financial services analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "fraud detection",
-      "mobile payments",
-      "transactions"
-    ],
-    "summary": "The PaySim Synthetic Transactions dataset contains over 6 million mobile money transactions that simulate real fraud patterns. It can be used to analyze and detect fraudulent activities in mobile payment systems.",
-    "use_cases": [
-      "Fraud detection analysis",
-      "Simulation of mobile payment scenarios",
-      "Testing machine learning models for fraud detection"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS"
-    ],
-    "synthetic_questions": [
-      "PaySim dataset for fraud detection",
-      "synthetic transactions dataset",
-      "mobile money transaction simulation",
-      "fraud patterns in mobile payments",
-      "agent-based model for transactions",
-      "large-scale mobile money dataset",
-      "African mobile money logs"
-    ],
-    "domain_tags": [
-      "fintech"
-    ],
-    "data_modality": "tabular",
-    "geographic_scope": "Africa",
-    "size_category": "massive",
     "model_score": 0.0003
   },
   {
@@ -2655,54 +2794,6 @@
     "model_score": 0.0003
   },
   {
-    "name": "European Car Market",
-    "description": "Car information including prices and attributes (1970-1999)",
-    "category": "Automotive",
-    "url": "https://sites.google.com/site/frankverbo/data-and-software/data-set-on-the-european-car-market",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "cars",
-      "Europe",
-      "prices",
-      "IO"
-    ],
-    "best_for": "Learning automotive analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "automotive",
-      "pricing"
-    ],
-    "summary": "The European Car Market dataset contains information about cars, including their prices and various attributes from 1970 to 1999. This dataset can be used to analyze trends in car pricing and attributes over time in Europe.",
-    "use_cases": [
-      "Analyzing price trends of European cars over time",
-      "Comparing car attributes across different models",
-      "Studying the impact of economic factors on car prices"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "European car prices from 1970 to 1999",
-      "attributes of cars in Europe",
-      "car market trends in Europe",
-      "historical car pricing data",
-      "automotive data analysis Europe",
-      "car attributes dataset 1970-1999"
-    ],
-    "domain_tags": [
-      "automotive"
-    ],
-    "data_modality": "tabular",
-    "temporal_coverage": "1970-1999",
-    "geographic_scope": "Europe",
-    "size_category": "medium",
-    "model_score": 0.0003
-  },
-  {
     "name": "Apple App Store Dataset",
     "description": "7,200 iOS apps with pricing, ratings, genres, in-app purchases. Apple app marketplace analysis",
     "category": "App Stores",
@@ -2754,6 +2845,254 @@
     "model_score": 0.0003
   },
   {
+    "name": "Online Auctions Collection",
+    "description": "Collection of datasets from eBay and experimental auctions",
+    "category": "Auctions & Marketplaces",
+    "url": "https://www.modelingonlineauctions.com/datasets",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "auctions",
+      "eBay",
+      "bidding"
+    ],
+    "best_for": "Learning auctions & marketplaces analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "e-commerce",
+      "consumer-behavior",
+      "pricing"
+    ],
+    "summary": "The Online Auctions Collection includes datasets from eBay and experimental auctions, providing insights into bidding behavior and auction dynamics. Researchers and analysts can use this data to study market trends and consumer behavior in online auctions.",
+    "use_cases": [
+      "Analyzing bidding strategies in online auctions",
+      "Studying the effects of auction design on consumer behavior"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What datasets are available on eBay auctions?",
+      "How can I analyze bidding patterns in online auctions?",
+      "What is the impact of auction formats on bidding behavior?",
+      "Where can I find datasets for experimental auctions?",
+      "What data is included in the Online Auctions Collection?",
+      "How to access eBay auction datasets for research?"
+    ],
+    "domain_tags": [
+      "retail"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "model_score": 0.0003
+  },
+  {
+    "name": "ORBITAAL Bitcoin Transactions",
+    "description": "13 years of Bitcoin transaction graphs (2009-2022). Complete blockchain with labeled entities. network analysis at scale",
+    "category": "Financial Services",
+    "url": "https://zenodo.org/records/7958648",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "Bitcoin",
+      "blockchain",
+      "transactions",
+      "network analysis",
+      "cryptocurrency"
+    ],
+    "best_for": "Learning financial services analytics and modeling",
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "financial services",
+      "cryptocurrency",
+      "network analysis"
+    ],
+    "summary": "The ORBITAAL Bitcoin Transactions dataset provides 13 years of Bitcoin transaction graphs from 2009 to 2022, including a complete blockchain with labeled entities. This dataset allows for extensive network analysis of Bitcoin transactions at scale.",
+    "use_cases": [
+      "Analyzing transaction patterns in Bitcoin over time",
+      "Identifying key entities in the Bitcoin blockchain",
+      "Conducting network analysis to understand transaction flows",
+      "Studying the impact of Bitcoin transactions on financial markets"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "What are the Bitcoin transaction graphs from 2009 to 2022?",
+      "How can I analyze Bitcoin transactions using the ORBITAAL dataset?",
+      "What labeled entities are included in the complete blockchain?",
+      "What insights can be gained from network analysis of Bitcoin transactions?",
+      "Where can I find a dataset for Bitcoin transaction analysis?",
+      "What is the structure of the ORBITAAL Bitcoin Transactions dataset?",
+      "How to perform network analysis on cryptocurrency transactions?",
+      "What time period does the ORBITAAL Bitcoin dataset cover?"
+    ],
+    "domain_tags": [
+      "fintech"
+    ],
+    "data_modality": "graph",
+    "temporal_coverage": "2009-2022",
+    "size_category": "medium",
+    "model_score": 0.0003
+  },
+  {
+    "name": "CAISO OASIS",
+    "description": "California ISO market data including prices, generation, demand, and transmission",
+    "category": "Energy",
+    "url": "http://oasis.caiso.com/",
+    "docs_url": "http://www.caiso.com/market/Pages/MarketProcesses.aspx",
+    "github_url": null,
+    "tags": [
+      "California",
+      "prices",
+      "wholesale",
+      "real-time",
+      "day-ahead"
+    ],
+    "best_for": "Studying wholesale electricity market dynamics and renewable integration",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "energy",
+      "market-analysis",
+      "pricing"
+    ],
+    "summary": "The CAISO OASIS dataset provides comprehensive market data from the California ISO, including prices, generation, demand, and transmission information. This data can be used for analyzing market trends, forecasting energy prices, and evaluating supply and demand dynamics in the energy sector.",
+    "use_cases": [
+      "Analyzing price trends in the California energy market",
+      "Forecasting future energy demand based on historical data",
+      "Evaluating the impact of generation sources on market prices",
+      "Studying the relationship between demand and transmission capacity"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is the CAISO OASIS dataset?",
+      "How can I access California ISO market data?",
+      "What types of data are included in CAISO OASIS?",
+      "Where can I find real-time energy prices in California?",
+      "What is the significance of day-ahead market data?",
+      "How does generation and demand data affect energy pricing?",
+      "What are the key components of California ISO market data?",
+      "How can I analyze transmission data from CAISO OASIS?"
+    ],
+    "domain_tags": [
+      "energy"
+    ],
+    "data_modality": "tabular",
+    "temporal_coverage": "2009-present",
+    "geographic_scope": "California",
+    "size_category": "medium",
+    "model_score": 0.0003
+  },
+  {
+    "name": "Criteo 1TB Click Logs",
+    "description": "World's largest public ML advertising dataset with 4+ billion events, 13 integer and 26 categorical features across 24 days",
+    "category": "Advertising",
+    "url": "https://ailab.criteo.com/download-criteo-1tb-click-logs-dataset/",
+    "docs_url": "https://ailab.criteo.com/download-criteo-1tb-click-logs-dataset/",
+    "github_url": null,
+    "tags": [
+      "CTR prediction",
+      "click logs",
+      "large-scale",
+      "Criteo"
+    ],
+    "best_for": "Training and benchmarking large-scale CTR prediction models",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "advertising",
+      "machine-learning"
+    ],
+    "summary": "The Criteo 1TB Click Logs is the world's largest public machine learning advertising dataset, containing over 4 billion events with various features. It can be used for training models to predict click-through rates and analyze user behavior in advertising.",
+    "use_cases": [
+      "Click-through rate prediction",
+      "User behavior analysis",
+      "Ad performance evaluation"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "Criteo click logs dataset",
+      "public ML advertising datasets",
+      "large-scale click logs",
+      "CTR prediction datasets",
+      "Criteo dataset for machine learning",
+      "advertising datasets for research",
+      "big data click logs",
+      "Criteo 1TB dataset"
+    ],
+    "domain_tags": [
+      "advertising"
+    ],
+    "data_modality": "tabular",
+    "temporal_coverage": "24 days",
+    "geographic_scope": "Global",
+    "size_category": "massive",
+    "model_score": 0.0003
+  },
+  {
+    "name": "WRDS (Wharton Research Data Services)",
+    "description": "350+ terabytes from CRSP, Compustat, TAQ - de facto standard for academic finance",
+    "category": "Dataset Aggregators",
+    "url": "https://wrds-www.wharton.upenn.edu",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "finance",
+      "CRSP",
+      "Compustat",
+      "academic",
+      "premium"
+    ],
+    "best_for": "Publication in top finance journals - requires institutional subscription",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "finance"
+    ],
+    "summary": "WRDS (Wharton Research Data Services) provides access to over 350 terabytes of data from CRSP, Compustat, and TAQ, making it the de facto standard for academic finance research. Researchers can utilize this extensive dataset for financial analysis, modeling, and empirical research.",
+    "use_cases": [
+      "Conducting empirical research in finance using CRSP data.",
+      "Analyzing corporate financial performance with Compustat.",
+      "Performing high-frequency trading analysis with TAQ data."
+    ],
+    "audience": [
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "What is WRDS?",
+      "How to access CRSP data from WRDS?",
+      "What datasets are included in WRDS?",
+      "How can I use Compustat data for financial analysis?",
+      "What is the size of the WRDS dataset?",
+      "What types of analysis can be performed with TAQ data?",
+      "Is WRDS suitable for academic research?",
+      "What are the benefits of using WRDS for finance studies?"
+    ],
+    "domain_tags": [
+      "finance"
+    ],
+    "data_modality": "tabular",
+    "size_category": "massive",
+    "model_score": 0.0002
+  },
+  {
     "name": "Netflix Viewing Behavior",
     "description": "1.7M episodes/movies watched by 1,060 users over 1 year. Watch patterns, session length, preferences, predictability metrics",
     "category": "Entertainment & Media",
@@ -2803,98 +3142,7 @@
     "data_modality": "tabular",
     "temporal_coverage": "1 year",
     "size_category": "medium",
-    "model_score": 0.0003
-  },
-  {
-    "name": "Online Auctions Collection",
-    "description": "Collection of datasets from eBay and experimental auctions",
-    "category": "Auctions & Marketplaces",
-    "url": "https://www.modelingonlineauctions.com/datasets",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "auctions",
-      "eBay",
-      "bidding"
-    ],
-    "best_for": "Learning auctions & marketplaces analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "e-commerce",
-      "consumer-behavior",
-      "pricing"
-    ],
-    "summary": "The Online Auctions Collection includes datasets from eBay and experimental auctions, providing insights into bidding behavior and auction dynamics. Researchers and analysts can use this data to study market trends and consumer behavior in online auctions.",
-    "use_cases": [
-      "Analyzing bidding strategies in online auctions",
-      "Studying the effects of auction design on consumer behavior"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What datasets are available on eBay auctions?",
-      "How can I analyze bidding patterns in online auctions?",
-      "What is the impact of auction formats on bidding behavior?",
-      "Where can I find datasets for experimental auctions?",
-      "What data is included in the Online Auctions Collection?",
-      "How to access eBay auction datasets for research?"
-    ],
-    "domain_tags": [
-      "retail"
-    ],
-    "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0003
-  },
-  {
-    "name": "Tesco Grocery 1.0",
-    "description": "Grocery purchases from Tesco stores via loyalty cards",
-    "category": "Grocery & Supermarkets",
-    "url": "https://figshare.com/collections/Tesco_Grocery_1_0/4769354",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "grocery",
-      "loyalty cards",
-      "UK",
-      "Tesco"
-    ],
-    "best_for": "Learning grocery & supermarkets analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "e-commerce",
-      "consumer-behavior"
-    ],
-    "summary": "The Tesco Grocery 1.0 dataset contains grocery purchase data collected from Tesco stores through loyalty cards. This dataset can be used to analyze consumer purchasing patterns and loyalty program effectiveness.",
-    "use_cases": [
-      "Analyzing customer loyalty trends",
-      "Studying purchasing behavior in grocery shopping"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "Tesco grocery purchase data",
-      "Tesco loyalty card transactions",
-      "UK grocery shopping data",
-      "Tesco supermarket analytics",
-      "grocery purchases dataset",
-      "consumer behavior in grocery shopping"
-    ],
-    "domain_tags": [
-      "retail"
-    ],
-    "data_modality": "tabular",
-    "geographic_scope": "UK",
-    "size_category": "medium",
-    "model_score": 0.0003
+    "model_score": 0.0002
   },
   {
     "name": "JD.com Open Datasets",
@@ -2946,103 +3194,6 @@
     "model_score": 0.0002
   },
   {
-    "name": "Chicago Rideshare Data",
-    "description": "Trip-level data for all Transportation Network Provider (Uber/Lyft) trips in Chicago since 2018. Includes ~57 million trips annually with origins, destinations, and fares.",
-    "category": "Transportation Economics & Technology",
-    "url": "https://data.cityofchicago.org/Transportation/Transportation-Network-Providers-Trips/m6dm-c72p",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "rideshare",
-      "Chicago",
-      "trip-data",
-      "urban-mobility",
-      "Uber",
-      "Lyft"
-    ],
-    "best_for": "Ridesharing market analysis, platform competition, and urban transportation research",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "transportation",
-      "urban-mobility"
-    ],
-    "summary": "The Chicago Rideshare Data provides trip-level information for all Uber and Lyft rides in Chicago since 2018. This dataset can be used to analyze transportation patterns, fare structures, and urban mobility trends.",
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is the Chicago Rideshare Data?",
-      "How to access trip-level data for Uber and Lyft in Chicago?",
-      "What insights can be gained from Chicago rideshare data?",
-      "Where can I find transportation network provider data for Chicago?",
-      "What are the trends in rideshare usage in Chicago since 2018?",
-      "How many rides were completed by Uber and Lyft in Chicago annually?"
-    ],
-    "use_cases": [
-      "Analyzing fare trends over time",
-      "Studying the impact of rideshare services on urban traffic",
-      "Evaluating the distribution of rides across different neighborhoods"
-    ],
-    "domain_tags": [
-      "transportation"
-    ],
-    "data_modality": "tabular",
-    "temporal_coverage": "2018-present",
-    "geographic_scope": "Chicago",
-    "size_category": "massive",
-    "model_score": 0.0002
-  },
-  {
-    "name": "Fliggy Transfers",
-    "description": "Transfer-related data (flights, ground transport) from Fliggy",
-    "category": "Travel & Hospitality",
-    "url": "https://tianchi.aliyun.com/dataset/140721",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "travel",
-      "transfers",
-      "transportation"
-    ],
-    "best_for": "Learning travel & hospitality analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "travel",
-      "transfers",
-      "transportation"
-    ],
-    "summary": "Fliggy Transfers provides data related to various modes of transport, including flights and ground transport. This dataset can be utilized for analyzing travel patterns, optimizing transportation logistics, and understanding consumer preferences in the travel sector.",
-    "use_cases": [
-      "Analyzing travel trends",
-      "Optimizing ground transport logistics",
-      "Studying consumer behavior in travel"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is Fliggy Transfers data?",
-      "How to analyze Fliggy transport data?",
-      "What types of transfers does Fliggy offer?",
-      "Where can I find Fliggy flight data?",
-      "What insights can be gained from Fliggy Transfers?",
-      "How to visualize transportation data from Fliggy?"
-    ],
-    "domain_tags": [
-      "travel",
-      "hospitality"
-    ],
-    "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0002
-  },
-  {
     "name": "RecSys Challenge 2025 (Synerise)",
     "description": "1M users, 6 months of real e-commerce behavior logs with 5 event types for universal behavioral modeling",
     "category": "Data Portals",
@@ -3090,58 +3241,6 @@
       "retail"
     ],
     "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0002
-  },
-  {
-    "name": "ORBITAAL Bitcoin Transactions",
-    "description": "13 years of Bitcoin transaction graphs (2009-2022). Complete blockchain with labeled entities. network analysis at scale",
-    "category": "Financial Services",
-    "url": "https://zenodo.org/records/7958648",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "Bitcoin",
-      "blockchain",
-      "transactions",
-      "network analysis",
-      "cryptocurrency"
-    ],
-    "best_for": "Learning financial services analytics and modeling",
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [
-      "financial services",
-      "cryptocurrency",
-      "network analysis"
-    ],
-    "summary": "The ORBITAAL Bitcoin Transactions dataset provides 13 years of Bitcoin transaction graphs from 2009 to 2022, including a complete blockchain with labeled entities. This dataset allows for extensive network analysis of Bitcoin transactions at scale.",
-    "use_cases": [
-      "Analyzing transaction patterns in Bitcoin over time",
-      "Identifying key entities in the Bitcoin blockchain",
-      "Conducting network analysis to understand transaction flows",
-      "Studying the impact of Bitcoin transactions on financial markets"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS"
-    ],
-    "synthetic_questions": [
-      "What are the Bitcoin transaction graphs from 2009 to 2022?",
-      "How can I analyze Bitcoin transactions using the ORBITAAL dataset?",
-      "What labeled entities are included in the complete blockchain?",
-      "What insights can be gained from network analysis of Bitcoin transactions?",
-      "Where can I find a dataset for Bitcoin transaction analysis?",
-      "What is the structure of the ORBITAAL Bitcoin Transactions dataset?",
-      "How to perform network analysis on cryptocurrency transactions?",
-      "What time period does the ORBITAAL Bitcoin dataset cover?"
-    ],
-    "domain_tags": [
-      "fintech"
-    ],
-    "data_modality": "graph",
-    "temporal_coverage": "2009-2022",
     "size_category": "medium",
     "model_score": 0.0002
   },
@@ -3236,91 +3335,6 @@
     ],
     "data_modality": "tabular",
     "geographic_scope": "Germany",
-    "size_category": "medium",
-    "model_score": 0.0002
-  },
-  {
-    "name": "CAISO OASIS",
-    "description": "California ISO market data including prices, generation, demand, and transmission",
-    "category": "Energy",
-    "url": "http://oasis.caiso.com/",
-    "docs_url": "http://www.caiso.com/market/Pages/MarketProcesses.aspx",
-    "github_url": null,
-    "tags": [
-      "California",
-      "prices",
-      "wholesale",
-      "real-time",
-      "day-ahead"
-    ],
-    "best_for": "Studying wholesale electricity market dynamics and renewable integration",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "energy",
-      "market-analysis",
-      "pricing"
-    ],
-    "summary": "The CAISO OASIS dataset provides comprehensive market data from the California ISO, including prices, generation, demand, and transmission information. This data can be used for analyzing market trends, forecasting energy prices, and evaluating supply and demand dynamics in the energy sector.",
-    "use_cases": [
-      "Analyzing price trends in the California energy market",
-      "Forecasting future energy demand based on historical data",
-      "Evaluating the impact of generation sources on market prices",
-      "Studying the relationship between demand and transmission capacity"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is the CAISO OASIS dataset?",
-      "How can I access California ISO market data?",
-      "What types of data are included in CAISO OASIS?",
-      "Where can I find real-time energy prices in California?",
-      "What is the significance of day-ahead market data?",
-      "How does generation and demand data affect energy pricing?",
-      "What are the key components of California ISO market data?",
-      "How can I analyze transmission data from CAISO OASIS?"
-    ],
-    "domain_tags": [
-      "energy"
-    ],
-    "data_modality": "tabular",
-    "temporal_coverage": "2009-present",
-    "geographic_scope": "California",
-    "size_category": "medium",
-    "model_score": 0.0002
-  },
-  {
-    "name": "Microsoft Research",
-    "description": "Research tools and datasets across multiple domains",
-    "category": "Data Portals",
-    "url": "https://www.microsoft.com/en-us/research/tools/",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "Microsoft",
-      "research",
-      "various domains"
-    ],
-    "best_for": "Learning data portals analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "Microsoft Research provides a variety of research tools and datasets across multiple domains, enabling users to explore and analyze data in various fields. This platform is ideal for researchers and data scientists looking for diverse datasets to support their work.",
-    "use_cases": [],
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What datasets does Microsoft Research offer?",
-      "How can I access Microsoft Research tools?",
-      "What domains are covered by Microsoft Research?",
-      "Are there any datasets for data science on Microsoft Research?",
-      "What research tools are available at Microsoft Research?",
-      "Can I find datasets related to various domains on Microsoft Research?"
-    ],
     "size_category": "medium",
     "model_score": 0.0002
   },
@@ -3764,147 +3778,6 @@
     "model_score": 0.0002
   },
   {
-    "name": "Indian Grocery (Flipkart Supermart)",
-    "description": "Flipkart Supermart transaction and product details",
-    "category": "Grocery & Supermarkets",
-    "url": "https://www.kaggle.com/datasets/aryansingh95/flipkart-grocery-transaction-and-product-details",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "grocery",
-      "India",
-      "Flipkart"
-    ],
-    "best_for": "Learning grocery & supermarkets analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "e-commerce",
-      "consumer-behavior"
-    ],
-    "summary": "The Indian Grocery dataset contains transaction and product details from Flipkart Supermart. It can be used to analyze consumer purchasing patterns and pricing strategies in the grocery sector.",
-    "use_cases": [
-      "Analyzing consumer purchasing patterns",
-      "Evaluating pricing strategies",
-      "Identifying popular grocery items"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are the transaction details in the Indian Grocery dataset?",
-      "How can I analyze product details from Flipkart Supermart?",
-      "What insights can be gained from grocery transactions in India?",
-      "What consumer behavior trends can be identified in the Indian Grocery dataset?",
-      "How does pricing vary in the Flipkart Supermart transactions?",
-      "What products are most frequently purchased in the Indian Grocery dataset?"
-    ],
-    "domain_tags": [
-      "retail"
-    ],
-    "data_modality": "tabular",
-    "geographic_scope": "India",
-    "size_category": "medium",
-    "model_score": 0.0002
-  },
-  {
-    "name": "Hugging Face Datasets",
-    "description": "ML/NLP datasets hub with 100K+ datasets. Easy loading via Python library. Community-driven repository",
-    "category": "Data Portals",
-    "url": "https://huggingface.co/datasets",
-    "docs_url": "https://huggingface.co/docs/datasets",
-    "github_url": null,
-    "tags": [
-      "ML",
-      "NLP",
-      "datasets",
-      "Hugging Face",
-      "community"
-    ],
-    "best_for": "Learning data portals analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "ML",
-      "NLP"
-    ],
-    "summary": "Hugging Face Datasets is a hub for machine learning and natural language processing datasets, featuring over 100,000 datasets. Users can easily load these datasets via a Python library, making it accessible for various ML/NLP tasks.",
-    "use_cases": [
-      "Training NLP models",
-      "Benchmarking ML algorithms",
-      "Exploring community-contributed datasets"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are the available datasets on Hugging Face?",
-      "How can I load datasets from Hugging Face using Python?",
-      "What types of ML datasets does Hugging Face offer?",
-      "Where can I find community-driven datasets for NLP?",
-      "What is the Hugging Face Datasets hub?",
-      "How many datasets are available on Hugging Face?"
-    ],
-    "domain_tags": [
-      "technology"
-    ],
-    "data_modality": "mixed",
-    "size_category": "medium",
-    "model_score": 0.0002
-  },
-  {
-    "name": "Hugging Face Datasets",
-    "description": "659,000+ datasets across text, image, audio, and tabular with one-line data loaders",
-    "category": "Dataset Aggregators",
-    "url": "https://huggingface.co/datasets",
-    "docs_url": "https://huggingface.co/docs/datasets",
-    "github_url": "https://github.com/huggingface/datasets",
-    "tags": [
-      "NLP",
-      "AI",
-      "ML",
-      "transformers",
-      "streaming"
-    ],
-    "best_for": "Modern AI/NLP research with seamless ML framework integration",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "NLP",
-      "AI",
-      "ML"
-    ],
-    "summary": "Hugging Face Datasets is a collection of over 659,000 datasets that cover various modalities including text, image, audio, and tabular data. It provides one-line data loaders to facilitate easy access and utilization of these datasets for machine learning and AI applications.",
-    "use_cases": [],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are Hugging Face Datasets?",
-      "How can I access datasets from Hugging Face?",
-      "What types of data are available on Hugging Face Datasets?",
-      "Are there datasets for NLP on Hugging Face?",
-      "How many datasets does Hugging Face offer?",
-      "What is the purpose of Hugging Face Datasets?",
-      "Can I find image datasets on Hugging Face?",
-      "What are the data loaders provided by Hugging Face?"
-    ],
-    "domain_tags": [
-      "AI",
-      "NLP"
-    ],
-    "data_modality": "mixed",
-    "size_category": "medium",
-    "model_score": 0.0002
-  },
-  {
     "name": "AirBnb (Inside Airbnb)",
     "description": "6M+ listings, 190M+ reviews with pricing and amenities",
     "category": "Real Estate",
@@ -4004,51 +3877,6 @@
     "model_score": 0.0002
   },
   {
-    "name": "Diginetica Fashion",
-    "description": "Clickstream and purchase data for fashion e-commerce",
-    "category": "Fashion & Apparel",
-    "url": "https://competitions.codalab.org/competitions/11161",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "fashion",
-      "clickstream",
-      "competition"
-    ],
-    "best_for": "Learning fashion & apparel analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "e-commerce",
-      "consumer-behavior"
-    ],
-    "summary": "Diginetica Fashion provides clickstream and purchase data for fashion e-commerce, allowing analysis of consumer behavior and competition in the online retail space. This dataset can be used to understand shopping patterns and optimize marketing strategies.",
-    "use_cases": [
-      "Analyzing consumer purchase patterns",
-      "Evaluating the impact of clickstream data on sales",
-      "Comparing competition strategies in fashion e-commerce"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is Diginetica Fashion dataset?",
-      "How to analyze clickstream data for fashion e-commerce?",
-      "What insights can be derived from fashion purchase data?",
-      "How does competition affect online fashion sales?",
-      "What are the trends in consumer behavior in fashion e-commerce?",
-      "How to use Diginetica Fashion for market analysis?"
-    ],
-    "domain_tags": [
-      "retail"
-    ],
-    "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0002
-  },
-  {
     "name": "Soso (KDD Cup 2012)",
     "description": "KDD Cup 2012 Track 2 for sponsored search CTR prediction",
     "category": "Advertising",
@@ -4093,55 +3921,6 @@
     "model_score": 0.0002
   },
   {
-    "name": "UK Gift Shop (Online Retail)",
-    "description": "Online retail transactions (2010-2011) from UK gift retailer",
-    "category": "Grocery & Supermarkets",
-    "url": "http://archive.ics.uci.edu/dataset/352/online+retail",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "retail",
-      "UK",
-      "UCI",
-      "transactions"
-    ],
-    "best_for": "Learning grocery & supermarkets analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "e-commerce",
-      "consumer-behavior",
-      "pricing"
-    ],
-    "summary": "The UK Gift Shop dataset contains online retail transactions from a UK gift retailer during the years 2010-2011. It can be used to analyze consumer purchasing behavior and trends in online retail.",
-    "use_cases": [
-      "Analyzing seasonal trends in gift purchases",
-      "Examining consumer behavior during holidays",
-      "Evaluating pricing strategies for online retail"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "UK online retail transactions dataset",
-      "gift shop sales data 2010-2011",
-      "UK retail transaction analysis",
-      "e-commerce data for UK gift shops",
-      "consumer behavior in online retail UK",
-      "2010 UK gift shop sales trends"
-    ],
-    "domain_tags": [
-      "retail"
-    ],
-    "data_modality": "tabular",
-    "temporal_coverage": "2010-2011",
-    "geographic_scope": "UK",
-    "size_category": "medium",
-    "model_score": 0.0002
-  },
-  {
     "name": "Outbrain Click Prediction",
     "description": "Click prediction based on browsing history from Outbrain",
     "category": "Advertising",
@@ -4180,151 +3959,6 @@
     ],
     "domain_tags": [
       "advertising"
-    ],
-    "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0002
-  },
-  {
-    "name": "Yelp Dataset",
-    "description": "Business attributes, reviews, user data, and check-ins",
-    "category": "Social & Web",
-    "url": "https://www.yelp.com/dataset",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "reviews",
-      "businesses",
-      "local",
-      "NLP"
-    ],
-    "best_for": "Learning social & web analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "e-commerce",
-      "consumer-behavior"
-    ],
-    "summary": "The Yelp Dataset contains business attributes, user reviews, and check-in data from local businesses. It can be used for sentiment analysis, recommendation systems, and understanding consumer behavior in local markets.",
-    "use_cases": [
-      "Sentiment analysis of user reviews",
-      "Building a recommendation system for local businesses",
-      "Analyzing trends in consumer behavior",
-      "Comparing business performance based on reviews"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are the business attributes in the Yelp Dataset?",
-      "How can I analyze user reviews from Yelp?",
-      "What insights can I gain from check-in data in the Yelp Dataset?",
-      "How does Yelp data reflect local consumer behavior?",
-      "What types of businesses are included in the Yelp Dataset?",
-      "Can I use Yelp data for NLP projects?",
-      "What are the common attributes of businesses in the Yelp Dataset?",
-      "How do user reviews vary across different categories in Yelp?"
-    ],
-    "domain_tags": [
-      "retail"
-    ],
-    "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0002
-  },
-  {
-    "name": "Criteo 1TB Click Logs",
-    "description": "World's largest public ML advertising dataset with 4+ billion events, 13 integer and 26 categorical features across 24 days",
-    "category": "Advertising",
-    "url": "https://ailab.criteo.com/download-criteo-1tb-click-logs-dataset/",
-    "docs_url": "https://ailab.criteo.com/download-criteo-1tb-click-logs-dataset/",
-    "github_url": null,
-    "tags": [
-      "CTR prediction",
-      "click logs",
-      "large-scale",
-      "Criteo"
-    ],
-    "best_for": "Training and benchmarking large-scale CTR prediction models",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "advertising",
-      "machine-learning"
-    ],
-    "summary": "The Criteo 1TB Click Logs is the world's largest public machine learning advertising dataset, containing over 4 billion events with various features. It can be used for training models to predict click-through rates and analyze user behavior in advertising.",
-    "use_cases": [
-      "Click-through rate prediction",
-      "User behavior analysis",
-      "Ad performance evaluation"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "Criteo click logs dataset",
-      "public ML advertising datasets",
-      "large-scale click logs",
-      "CTR prediction datasets",
-      "Criteo dataset for machine learning",
-      "advertising datasets for research",
-      "big data click logs",
-      "Criteo 1TB dataset"
-    ],
-    "domain_tags": [
-      "advertising"
-    ],
-    "data_modality": "tabular",
-    "temporal_coverage": "24 days",
-    "geographic_scope": "Global",
-    "size_category": "massive",
-    "model_score": 0.0002
-  },
-  {
-    "name": "Alibaba Personalized Re-Ranking",
-    "description": "Mobile shopping user click data on recommended items",
-    "category": "E-Commerce",
-    "url": "http://yongfeng.me/dataset/",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "re-ranking",
-      "personalization",
-      "recommendations"
-    ],
-    "best_for": "Practicing customer analytics, demand forecasting, and recommendation systems",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "e-commerce",
-      "consumer-behavior",
-      "recommendations"
-    ],
-    "summary": "This dataset contains mobile shopping user click data on recommended items, allowing for analysis of user behavior and preferences in e-commerce. It can be used to improve recommendation systems and enhance personalization strategies.",
-    "use_cases": [
-      "Improving recommendation algorithms",
-      "Analyzing user engagement with personalized content",
-      "Studying the impact of re-ranking on sales"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is the Alibaba Personalized Re-Ranking dataset?",
-      "How can I analyze mobile shopping user click data?",
-      "What are the applications of recommendation systems in e-commerce?",
-      "How does personalization affect user engagement?",
-      "Where can I find datasets on user click behavior?",
-      "What insights can be gained from re-ranking algorithms?"
-    ],
-    "domain_tags": [
-      "retail"
     ],
     "data_modality": "tabular",
     "size_category": "medium",
@@ -4381,51 +4015,6 @@
     "data_modality": "tabular",
     "temporal_coverage": "30 days",
     "geographic_scope": "Global",
-    "size_category": "medium",
-    "model_score": 0.0002
-  },
-  {
-    "name": "German Used Cars",
-    "description": "Used car listings or sales in Germany",
-    "category": "Automotive",
-    "url": "https://www.kaggle.com/datasets/gogotchuri/myautogecardetails",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "used cars",
-      "Germany",
-      "listings"
-    ],
-    "best_for": "Learning automotive analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "automotive",
-      "e-commerce"
-    ],
-    "summary": "This dataset contains listings or sales of used cars in Germany. It can be used to analyze trends in the automotive market, consumer preferences, and pricing strategies.",
-    "use_cases": [
-      "Analyze pricing trends for used cars",
-      "Explore consumer preferences in the automotive sector"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "used cars listings in Germany",
-      "German used car sales data",
-      "automotive market trends Germany",
-      "analyze used car prices Germany",
-      "consumer behavior in used car market",
-      "Germany used car statistics"
-    ],
-    "domain_tags": [
-      "automotive"
-    ],
-    "data_modality": "tabular",
-    "geographic_scope": "Germany",
     "size_category": "medium",
     "model_score": 0.0002
   },
@@ -4573,6 +4162,659 @@
     "model_score": 0.0002
   },
   {
+    "name": "Fliggy Travel",
+    "description": "Travel-related data from Alibaba's online travel platform",
+    "category": "Travel & Hospitality",
+    "url": "https://tianchi.aliyun.com/dataset/113649",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "travel",
+      "Alibaba",
+      "bookings"
+    ],
+    "best_for": "Learning travel & hospitality analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "e-commerce",
+      "consumer-behavior",
+      "travel"
+    ],
+    "summary": "Fliggy Travel provides travel-related data from Alibaba's online travel platform, enabling analysis of consumer behavior and booking trends. This dataset can be used to explore travel patterns and preferences among users.",
+    "use_cases": [
+      "Analyzing booking trends over time",
+      "Exploring consumer preferences in travel",
+      "Comparing travel data across different demographics"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What data does Fliggy Travel provide?",
+      "How can I analyze travel bookings from Alibaba?",
+      "What insights can be gained from Fliggy Travel data?",
+      "Where can I find travel-related datasets?",
+      "What are the trends in online travel bookings?",
+      "How does consumer behavior vary in travel?",
+      "What is Fliggy Travel's impact on the travel industry?",
+      "What travel data is available from Alibaba?"
+    ],
+    "domain_tags": [
+      "travel",
+      "e-commerce"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "model_score": 0.0002
+  },
+  {
+    "name": "Walmart Sales",
+    "description": "General sales data including CPI and unemployment rate",
+    "category": "Grocery & Supermarkets",
+    "url": "https://www.kaggle.com/datasets/yasserh/walmart-dataset",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "Walmart",
+      "macro",
+      "sales"
+    ],
+    "best_for": "Learning grocery & supermarkets analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "e-commerce",
+      "consumer-behavior",
+      "pricing"
+    ],
+    "summary": "This dataset contains general sales data from Walmart, including economic indicators such as the Consumer Price Index (CPI) and unemployment rate. It can be used to analyze sales trends in relation to macroeconomic factors.",
+    "use_cases": [
+      "Analyzing the impact of CPI on sales",
+      "Studying the relationship between unemployment rates and grocery sales",
+      "Forecasting future sales trends based on economic indicators"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "Walmart sales data analysis",
+      "CPI impact on Walmart sales",
+      "unemployment rate and grocery sales",
+      "Walmart sales trends",
+      "macro factors affecting Walmart sales",
+      "Walmart sales dataset download"
+    ],
+    "domain_tags": [
+      "retail"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "model_score": 0.0002
+  },
+  {
+    "name": "OTTO Session-based Recommendations",
+    "description": "12M+ e-commerce sessions with click \u2192 cart \u2192 order sequences. Real multi-stage conversion funnel data from German retailer",
+    "category": "E-Commerce",
+    "url": "https://www.kaggle.com/datasets/otto/recsys-dataset",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "sessions",
+      "conversion funnel",
+      "Kaggle",
+      "recommendations",
+      "e-commerce"
+    ],
+    "best_for": "Practicing customer analytics, demand forecasting, and recommendation systems",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "e-commerce",
+      "consumer-behavior",
+      "recommendations"
+    ],
+    "summary": "The OTTO Session-based Recommendations dataset contains over 12 million e-commerce sessions detailing click, cart, and order sequences. This data can be used to analyze consumer behavior and improve recommendation systems.",
+    "use_cases": [
+      "Analyzing consumer behavior patterns",
+      "Improving recommendation algorithms",
+      "Studying conversion funnel efficiency",
+      "Evaluating the impact of marketing strategies"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is the OTTO Session-based Recommendations dataset?",
+      "How can I analyze e-commerce session data?",
+      "What insights can be gained from click to cart sequences?",
+      "Where can I find datasets for recommendations?",
+      "What are the use cases for conversion funnel data?",
+      "How to use session data for e-commerce analysis?",
+      "What is the significance of multi-stage conversion funnels?",
+      "How to access the OTTO dataset on Kaggle?"
+    ],
+    "domain_tags": [
+      "retail"
+    ],
+    "data_modality": "tabular",
+    "geographic_scope": "Germany",
+    "size_category": "massive",
+    "model_score": 0.0002
+  },
+  {
+    "name": "Inside Airbnb Raw Data",
+    "description": "Raw data files from Inside Airbnb project",
+    "category": "Data Portals",
+    "url": "http://insideairbnb.com/get-the-data/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "Airbnb",
+      "raw data",
+      "rentals"
+    ],
+    "best_for": "Learning data portals analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "e-commerce",
+      "consumer-behavior",
+      "pricing"
+    ],
+    "summary": "The Inside Airbnb Raw Data consists of raw data files from the Inside Airbnb project, which provides insights into Airbnb rentals. This dataset can be used for various analyses related to rental pricing, occupancy rates, and consumer behavior in the short-term rental market.",
+    "use_cases": [
+      "Analyzing rental pricing trends",
+      "Studying consumer behavior in short-term rentals",
+      "Evaluating occupancy rates of Airbnb listings"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "Inside Airbnb raw data",
+      "Airbnb rental data analysis",
+      "Airbnb dataset for research",
+      "Inside Airbnb project data",
+      "Airbnb data files",
+      "Airbnb raw data download"
+    ],
+    "domain_tags": [
+      "retail"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "model_score": 0.0002
+  },
+  {
+    "name": "Meta (Facebook) Research",
+    "description": "1.1B+ public FB/IG posts with engagement metrics",
+    "category": "Social & Web",
+    "url": "https://fort.fb.com/researcher-datasets",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "social media",
+      "Facebook",
+      "Instagram",
+      "engagement"
+    ],
+    "best_for": "Learning social & web analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "social media",
+      "engagement"
+    ],
+    "summary": "This dataset contains over 1.1 billion public posts from Facebook and Instagram, along with their engagement metrics. It can be used to analyze social media trends, user engagement, and the impact of posts on audience interaction.",
+    "use_cases": [
+      "Analyzing user engagement trends over time",
+      "Comparing engagement metrics between Facebook and Instagram",
+      "Identifying the most effective types of social media content",
+      "Studying the impact of social media posts on audience behavior"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are the engagement metrics for Facebook posts?",
+      "How can I analyze Instagram post interactions?",
+      "What trends can be identified in public Facebook posts?",
+      "How does engagement vary across different social media platforms?",
+      "What insights can be drawn from 1.1B public FB/IG posts?",
+      "How to access public posts data from Facebook and Instagram?",
+      "What are the most engaging types of posts on social media?",
+      "How to visualize engagement metrics from social media data?"
+    ],
+    "domain_tags": [
+      "social media"
+    ],
+    "data_modality": "mixed",
+    "size_category": "massive",
+    "model_score": 0.0002
+  },
+  {
+    "name": "Chicago Rideshare Data",
+    "description": "Trip-level data for all Transportation Network Provider (Uber/Lyft) trips in Chicago since 2018. Includes ~57 million trips annually with origins, destinations, and fares.",
+    "category": "Transportation Economics & Technology",
+    "url": "https://data.cityofchicago.org/Transportation/Transportation-Network-Providers-Trips/m6dm-c72p",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "rideshare",
+      "Chicago",
+      "trip-data",
+      "urban-mobility",
+      "Uber",
+      "Lyft"
+    ],
+    "best_for": "Ridesharing market analysis, platform competition, and urban transportation research",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "transportation",
+      "urban-mobility"
+    ],
+    "summary": "The Chicago Rideshare Data provides trip-level information for all Uber and Lyft rides in Chicago since 2018. This dataset can be used to analyze transportation patterns, fare structures, and urban mobility trends.",
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is the Chicago Rideshare Data?",
+      "How to access trip-level data for Uber and Lyft in Chicago?",
+      "What insights can be gained from Chicago rideshare data?",
+      "Where can I find transportation network provider data for Chicago?",
+      "What are the trends in rideshare usage in Chicago since 2018?",
+      "How many rides were completed by Uber and Lyft in Chicago annually?"
+    ],
+    "use_cases": [
+      "Analyzing fare trends over time",
+      "Studying the impact of rideshare services on urban traffic",
+      "Evaluating the distribution of rides across different neighborhoods"
+    ],
+    "domain_tags": [
+      "transportation"
+    ],
+    "data_modality": "tabular",
+    "temporal_coverage": "2018-present",
+    "geographic_scope": "Chicago",
+    "size_category": "massive",
+    "model_score": 0.0001
+  },
+  {
+    "name": "Microsoft Research",
+    "description": "Research tools and datasets across multiple domains",
+    "category": "Data Portals",
+    "url": "https://www.microsoft.com/en-us/research/tools/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "Microsoft",
+      "research",
+      "various domains"
+    ],
+    "best_for": "Learning data portals analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Microsoft Research provides a variety of research tools and datasets across multiple domains, enabling users to explore and analyze data in various fields. This platform is ideal for researchers and data scientists looking for diverse datasets to support their work.",
+    "use_cases": [],
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What datasets does Microsoft Research offer?",
+      "How can I access Microsoft Research tools?",
+      "What domains are covered by Microsoft Research?",
+      "Are there any datasets for data science on Microsoft Research?",
+      "What research tools are available at Microsoft Research?",
+      "Can I find datasets related to various domains on Microsoft Research?"
+    ],
+    "size_category": "medium",
+    "model_score": 0.0001
+  },
+  {
+    "name": "Hugging Face Datasets",
+    "description": "ML/NLP datasets hub with 100K+ datasets. Easy loading via Python library. Community-driven repository",
+    "category": "Data Portals",
+    "url": "https://huggingface.co/datasets",
+    "docs_url": "https://huggingface.co/docs/datasets",
+    "github_url": null,
+    "tags": [
+      "ML",
+      "NLP",
+      "datasets",
+      "Hugging Face",
+      "community"
+    ],
+    "best_for": "Learning data portals analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "ML",
+      "NLP"
+    ],
+    "summary": "Hugging Face Datasets is a hub for machine learning and natural language processing datasets, featuring over 100,000 datasets. Users can easily load these datasets via a Python library, making it accessible for various ML/NLP tasks.",
+    "use_cases": [
+      "Training NLP models",
+      "Benchmarking ML algorithms",
+      "Exploring community-contributed datasets"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are the available datasets on Hugging Face?",
+      "How can I load datasets from Hugging Face using Python?",
+      "What types of ML datasets does Hugging Face offer?",
+      "Where can I find community-driven datasets for NLP?",
+      "What is the Hugging Face Datasets hub?",
+      "How many datasets are available on Hugging Face?"
+    ],
+    "domain_tags": [
+      "technology"
+    ],
+    "data_modality": "mixed",
+    "size_category": "medium",
+    "model_score": 0.0001
+  },
+  {
+    "name": "Hugging Face Datasets",
+    "description": "659,000+ datasets across text, image, audio, and tabular with one-line data loaders",
+    "category": "Dataset Aggregators",
+    "url": "https://huggingface.co/datasets",
+    "docs_url": "https://huggingface.co/docs/datasets",
+    "github_url": "https://github.com/huggingface/datasets",
+    "tags": [
+      "NLP",
+      "AI",
+      "ML",
+      "transformers",
+      "streaming"
+    ],
+    "best_for": "Modern AI/NLP research with seamless ML framework integration",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "NLP",
+      "AI",
+      "ML"
+    ],
+    "summary": "Hugging Face Datasets is a collection of over 659,000 datasets that cover various modalities including text, image, audio, and tabular data. It provides one-line data loaders to facilitate easy access and utilization of these datasets for machine learning and AI applications.",
+    "use_cases": [],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are Hugging Face Datasets?",
+      "How can I access datasets from Hugging Face?",
+      "What types of data are available on Hugging Face Datasets?",
+      "Are there datasets for NLP on Hugging Face?",
+      "How many datasets does Hugging Face offer?",
+      "What is the purpose of Hugging Face Datasets?",
+      "Can I find image datasets on Hugging Face?",
+      "What are the data loaders provided by Hugging Face?"
+    ],
+    "domain_tags": [
+      "AI",
+      "NLP"
+    ],
+    "data_modality": "mixed",
+    "size_category": "medium",
+    "model_score": 0.0001
+  },
+  {
+    "name": "Diginetica Fashion",
+    "description": "Clickstream and purchase data for fashion e-commerce",
+    "category": "Fashion & Apparel",
+    "url": "https://competitions.codalab.org/competitions/11161",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "fashion",
+      "clickstream",
+      "competition"
+    ],
+    "best_for": "Learning fashion & apparel analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "e-commerce",
+      "consumer-behavior"
+    ],
+    "summary": "Diginetica Fashion provides clickstream and purchase data for fashion e-commerce, allowing analysis of consumer behavior and competition in the online retail space. This dataset can be used to understand shopping patterns and optimize marketing strategies.",
+    "use_cases": [
+      "Analyzing consumer purchase patterns",
+      "Evaluating the impact of clickstream data on sales",
+      "Comparing competition strategies in fashion e-commerce"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is Diginetica Fashion dataset?",
+      "How to analyze clickstream data for fashion e-commerce?",
+      "What insights can be derived from fashion purchase data?",
+      "How does competition affect online fashion sales?",
+      "What are the trends in consumer behavior in fashion e-commerce?",
+      "How to use Diginetica Fashion for market analysis?"
+    ],
+    "domain_tags": [
+      "retail"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "model_score": 0.0001
+  },
+  {
+    "name": "UK Gift Shop (Online Retail)",
+    "description": "Online retail transactions (2010-2011) from UK gift retailer",
+    "category": "Grocery & Supermarkets",
+    "url": "http://archive.ics.uci.edu/dataset/352/online+retail",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "retail",
+      "UK",
+      "UCI",
+      "transactions"
+    ],
+    "best_for": "Learning grocery & supermarkets analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "e-commerce",
+      "consumer-behavior",
+      "pricing"
+    ],
+    "summary": "The UK Gift Shop dataset contains online retail transactions from a UK gift retailer during the years 2010-2011. It can be used to analyze consumer purchasing behavior and trends in online retail.",
+    "use_cases": [
+      "Analyzing seasonal trends in gift purchases",
+      "Examining consumer behavior during holidays",
+      "Evaluating pricing strategies for online retail"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "UK online retail transactions dataset",
+      "gift shop sales data 2010-2011",
+      "UK retail transaction analysis",
+      "e-commerce data for UK gift shops",
+      "consumer behavior in online retail UK",
+      "2010 UK gift shop sales trends"
+    ],
+    "domain_tags": [
+      "retail"
+    ],
+    "data_modality": "tabular",
+    "temporal_coverage": "2010-2011",
+    "geographic_scope": "UK",
+    "size_category": "medium",
+    "model_score": 0.0001
+  },
+  {
+    "name": "Yelp Dataset",
+    "description": "Business attributes, reviews, user data, and check-ins",
+    "category": "Social & Web",
+    "url": "https://www.yelp.com/dataset",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "reviews",
+      "businesses",
+      "local",
+      "NLP"
+    ],
+    "best_for": "Learning social & web analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "e-commerce",
+      "consumer-behavior"
+    ],
+    "summary": "The Yelp Dataset contains business attributes, user reviews, and check-in data from local businesses. It can be used for sentiment analysis, recommendation systems, and understanding consumer behavior in local markets.",
+    "use_cases": [
+      "Sentiment analysis of user reviews",
+      "Building a recommendation system for local businesses",
+      "Analyzing trends in consumer behavior",
+      "Comparing business performance based on reviews"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are the business attributes in the Yelp Dataset?",
+      "How can I analyze user reviews from Yelp?",
+      "What insights can I gain from check-in data in the Yelp Dataset?",
+      "How does Yelp data reflect local consumer behavior?",
+      "What types of businesses are included in the Yelp Dataset?",
+      "Can I use Yelp data for NLP projects?",
+      "What are the common attributes of businesses in the Yelp Dataset?",
+      "How do user reviews vary across different categories in Yelp?"
+    ],
+    "domain_tags": [
+      "retail"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "model_score": 0.0001
+  },
+  {
+    "name": "Alibaba Personalized Re-Ranking",
+    "description": "Mobile shopping user click data on recommended items",
+    "category": "E-Commerce",
+    "url": "http://yongfeng.me/dataset/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "re-ranking",
+      "personalization",
+      "recommendations"
+    ],
+    "best_for": "Practicing customer analytics, demand forecasting, and recommendation systems",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "e-commerce",
+      "consumer-behavior",
+      "recommendations"
+    ],
+    "summary": "This dataset contains mobile shopping user click data on recommended items, allowing for analysis of user behavior and preferences in e-commerce. It can be used to improve recommendation systems and enhance personalization strategies.",
+    "use_cases": [
+      "Improving recommendation algorithms",
+      "Analyzing user engagement with personalized content",
+      "Studying the impact of re-ranking on sales"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is the Alibaba Personalized Re-Ranking dataset?",
+      "How can I analyze mobile shopping user click data?",
+      "What are the applications of recommendation systems in e-commerce?",
+      "How does personalization affect user engagement?",
+      "Where can I find datasets on user click behavior?",
+      "What insights can be gained from re-ranking algorithms?"
+    ],
+    "domain_tags": [
+      "retail"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "model_score": 0.0001
+  },
+  {
+    "name": "German Used Cars",
+    "description": "Used car listings or sales in Germany",
+    "category": "Automotive",
+    "url": "https://www.kaggle.com/datasets/gogotchuri/myautogecardetails",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "used cars",
+      "Germany",
+      "listings"
+    ],
+    "best_for": "Learning automotive analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "automotive",
+      "e-commerce"
+    ],
+    "summary": "This dataset contains listings or sales of used cars in Germany. It can be used to analyze trends in the automotive market, consumer preferences, and pricing strategies.",
+    "use_cases": [
+      "Analyze pricing trends for used cars",
+      "Explore consumer preferences in the automotive sector"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "used cars listings in Germany",
+      "German used car sales data",
+      "automotive market trends Germany",
+      "analyze used car prices Germany",
+      "consumer behavior in used car market",
+      "Germany used car statistics"
+    ],
+    "domain_tags": [
+      "automotive"
+    ],
+    "data_modality": "tabular",
+    "geographic_scope": "Germany",
+    "size_category": "medium",
+    "model_score": 0.0001
+  },
+  {
     "name": "Alibaba Industrial Dump (150GB)",
     "description": "Large-scale industrial dataset from Alibaba (150GB)",
     "category": "E-Commerce",
@@ -4615,7 +4857,7 @@
     ],
     "data_modality": "tabular",
     "size_category": "large",
-    "model_score": 0.0002
+    "model_score": 0.0001
   },
   {
     "name": "Gamified Learning",
@@ -4785,101 +5027,6 @@
     "domain_tags": [
       "media",
       "technology"
-    ],
-    "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0001
-  },
-  {
-    "name": "Fliggy Travel",
-    "description": "Travel-related data from Alibaba's online travel platform",
-    "category": "Travel & Hospitality",
-    "url": "https://tianchi.aliyun.com/dataset/113649",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "travel",
-      "Alibaba",
-      "bookings"
-    ],
-    "best_for": "Learning travel & hospitality analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "e-commerce",
-      "consumer-behavior",
-      "travel"
-    ],
-    "summary": "Fliggy Travel provides travel-related data from Alibaba's online travel platform, enabling analysis of consumer behavior and booking trends. This dataset can be used to explore travel patterns and preferences among users.",
-    "use_cases": [
-      "Analyzing booking trends over time",
-      "Exploring consumer preferences in travel",
-      "Comparing travel data across different demographics"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What data does Fliggy Travel provide?",
-      "How can I analyze travel bookings from Alibaba?",
-      "What insights can be gained from Fliggy Travel data?",
-      "Where can I find travel-related datasets?",
-      "What are the trends in online travel bookings?",
-      "How does consumer behavior vary in travel?",
-      "What is Fliggy Travel's impact on the travel industry?",
-      "What travel data is available from Alibaba?"
-    ],
-    "domain_tags": [
-      "travel",
-      "e-commerce"
-    ],
-    "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0001
-  },
-  {
-    "name": "Walmart Sales",
-    "description": "General sales data including CPI and unemployment rate",
-    "category": "Grocery & Supermarkets",
-    "url": "https://www.kaggle.com/datasets/yasserh/walmart-dataset",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "Walmart",
-      "macro",
-      "sales"
-    ],
-    "best_for": "Learning grocery & supermarkets analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "e-commerce",
-      "consumer-behavior",
-      "pricing"
-    ],
-    "summary": "This dataset contains general sales data from Walmart, including economic indicators such as the Consumer Price Index (CPI) and unemployment rate. It can be used to analyze sales trends in relation to macroeconomic factors.",
-    "use_cases": [
-      "Analyzing the impact of CPI on sales",
-      "Studying the relationship between unemployment rates and grocery sales",
-      "Forecasting future sales trends based on economic indicators"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "Walmart sales data analysis",
-      "CPI impact on Walmart sales",
-      "unemployment rate and grocery sales",
-      "Walmart sales trends",
-      "macro factors affecting Walmart sales",
-      "Walmart sales dataset download"
-    ],
-    "domain_tags": [
-      "retail"
     ],
     "data_modality": "tabular",
     "size_category": "medium",
@@ -5067,58 +5214,6 @@
       "e-commerce"
     ],
     "data_modality": "mixed",
-    "size_category": "massive",
-    "model_score": 0.0001
-  },
-  {
-    "name": "OTTO Session-based Recommendations",
-    "description": "12M+ e-commerce sessions with click \u2192 cart \u2192 order sequences. Real multi-stage conversion funnel data from German retailer",
-    "category": "E-Commerce",
-    "url": "https://www.kaggle.com/datasets/otto/recsys-dataset",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "sessions",
-      "conversion funnel",
-      "Kaggle",
-      "recommendations",
-      "e-commerce"
-    ],
-    "best_for": "Practicing customer analytics, demand forecasting, and recommendation systems",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "e-commerce",
-      "consumer-behavior",
-      "recommendations"
-    ],
-    "summary": "The OTTO Session-based Recommendations dataset contains over 12 million e-commerce sessions detailing click, cart, and order sequences. This data can be used to analyze consumer behavior and improve recommendation systems.",
-    "use_cases": [
-      "Analyzing consumer behavior patterns",
-      "Improving recommendation algorithms",
-      "Studying conversion funnel efficiency",
-      "Evaluating the impact of marketing strategies"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is the OTTO Session-based Recommendations dataset?",
-      "How can I analyze e-commerce session data?",
-      "What insights can be gained from click to cart sequences?",
-      "Where can I find datasets for recommendations?",
-      "What are the use cases for conversion funnel data?",
-      "How to use session data for e-commerce analysis?",
-      "What is the significance of multi-stage conversion funnels?",
-      "How to access the OTTO dataset on Kaggle?"
-    ],
-    "domain_tags": [
-      "retail"
-    ],
-    "data_modality": "tabular",
-    "geographic_scope": "Germany",
     "size_category": "massive",
     "model_score": 0.0001
   },
@@ -5507,55 +5602,6 @@
     ],
     "data_modality": "tabular",
     "geographic_scope": "Iowa",
-    "size_category": "medium",
-    "model_score": 0.0001
-  },
-  {
-    "name": "DiDi GAIA Open Data",
-    "description": "Billions of GPS points and ride trajectories from China's largest ride-hailing platform. Driver behavior and urban mobility patterns",
-    "category": "Transportation & Mobility",
-    "url": "https://gaia.didichuxing.com/",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "rideshare",
-      "GPS",
-      "trajectories",
-      "China",
-      "DiDi",
-      "mobility"
-    ],
-    "best_for": "Learning transportation & mobility analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "urban-mobility",
-      "data-analysis"
-    ],
-    "summary": "The DiDi GAIA Open Data consists of billions of GPS points and ride trajectories from China's largest ride-hailing platform. This dataset can be used to analyze driver behavior and urban mobility patterns in Chinese cities.",
-    "use_cases": [
-      "Analyzing urban mobility trends",
-      "Studying driver behavior patterns",
-      "Evaluating the impact of ride-hailing on traffic",
-      "Understanding GPS data for transportation studies"
-    ],
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is DiDi GAIA Open Data?",
-      "How to analyze ride trajectories from DiDi?",
-      "What insights can be gained from DiDi's GPS data?",
-      "Where can I find DiDi ride-hailing data?",
-      "What are the urban mobility patterns in China?",
-      "How does DiDi's driver behavior compare to other platforms?"
-    ],
-    "domain_tags": [
-      "transportation",
-      "mobility"
-    ],
-    "data_modality": "tabular",
-    "geographic_scope": "China",
     "size_category": "medium",
     "model_score": 0.0001
   },
@@ -6317,52 +6363,6 @@
     "model_score": 0.0001
   },
   {
-    "name": "Inside Airbnb Raw Data",
-    "description": "Raw data files from Inside Airbnb project",
-    "category": "Data Portals",
-    "url": "http://insideairbnb.com/get-the-data/",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "Airbnb",
-      "raw data",
-      "rentals"
-    ],
-    "best_for": "Learning data portals analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "e-commerce",
-      "consumer-behavior",
-      "pricing"
-    ],
-    "summary": "The Inside Airbnb Raw Data consists of raw data files from the Inside Airbnb project, which provides insights into Airbnb rentals. This dataset can be used for various analyses related to rental pricing, occupancy rates, and consumer behavior in the short-term rental market.",
-    "use_cases": [
-      "Analyzing rental pricing trends",
-      "Studying consumer behavior in short-term rentals",
-      "Evaluating occupancy rates of Airbnb listings"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "Inside Airbnb raw data",
-      "Airbnb rental data analysis",
-      "Airbnb dataset for research",
-      "Inside Airbnb project data",
-      "Airbnb data files",
-      "Airbnb raw data download"
-    ],
-    "domain_tags": [
-      "retail"
-    ],
-    "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0001
-  },
-  {
     "name": "Instacart Market Basket Analysis",
     "description": "3 million grocery orders from 200,000 Instacart users with product details and order sequences. Released for a Kaggle competition to predict which products users will reorder.",
     "category": "MarTech & Customer Analytics",
@@ -6705,50 +6705,6 @@
     "model_score": 0.0001
   },
   {
-    "name": "Alpha Vantage",
-    "description": "NASDAQ-licensed stock data for 200,000+ tickers with free tier (25 requests/day)",
-    "category": "Dataset Aggregators",
-    "url": "https://www.alphavantage.co",
-    "docs_url": "https://www.alphavantage.co/documentation/",
-    "github_url": null,
-    "tags": [
-      "stocks",
-      "free",
-      "API",
-      "technical indicators"
-    ],
-    "best_for": "Individual researchers needing free stock data with 50+ technical indicators",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "Alpha Vantage provides NASDAQ-licensed stock data for over 200,000 tickers, allowing users to access stock information and technical indicators. With a free tier offering 25 requests per day, it is suitable for those looking to analyze stock market trends.",
-    "use_cases": [
-      "Analyzing stock market trends using historical data",
-      "Building a stock price prediction model",
-      "Creating visualizations of stock performance",
-      "Comparing technical indicators across different stocks"
-    ],
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is Alpha Vantage stock data?",
-      "How to access NASDAQ stock data using Alpha Vantage?",
-      "What are the features of Alpha Vantage API?",
-      "How many tickers does Alpha Vantage cover?",
-      "Is Alpha Vantage free to use?",
-      "What are technical indicators available in Alpha Vantage?",
-      "How to make requests to Alpha Vantage API?",
-      "What is the daily request limit for Alpha Vantage?"
-    ],
-    "domain_tags": [
-      "fintech"
-    ],
-    "data_modality": "time-series",
-    "size_category": "medium",
-    "model_score": 0.0001
-  },
-  {
     "name": "Goodreads",
     "description": "Book information and user reviews from Goodreads platform",
     "category": "Entertainment & Media",
@@ -6834,55 +6790,6 @@
     ],
     "data_modality": "tabular",
     "size_category": "medium",
-    "model_score": 0.0001
-  },
-  {
-    "name": "Meta (Facebook) Research",
-    "description": "1.1B+ public FB/IG posts with engagement metrics",
-    "category": "Social & Web",
-    "url": "https://fort.fb.com/researcher-datasets",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "social media",
-      "Facebook",
-      "Instagram",
-      "engagement"
-    ],
-    "best_for": "Learning social & web analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "social media",
-      "engagement"
-    ],
-    "summary": "This dataset contains over 1.1 billion public posts from Facebook and Instagram, along with their engagement metrics. It can be used to analyze social media trends, user engagement, and the impact of posts on audience interaction.",
-    "use_cases": [
-      "Analyzing user engagement trends over time",
-      "Comparing engagement metrics between Facebook and Instagram",
-      "Identifying the most effective types of social media content",
-      "Studying the impact of social media posts on audience behavior"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are the engagement metrics for Facebook posts?",
-      "How can I analyze Instagram post interactions?",
-      "What trends can be identified in public Facebook posts?",
-      "How does engagement vary across different social media platforms?",
-      "What insights can be drawn from 1.1B public FB/IG posts?",
-      "How to access public posts data from Facebook and Instagram?",
-      "What are the most engaging types of posts on social media?",
-      "How to visualize engagement metrics from social media data?"
-    ],
-    "domain_tags": [
-      "social media"
-    ],
-    "data_modality": "mixed",
-    "size_category": "massive",
     "model_score": 0.0001
   },
   {
@@ -7446,105 +7353,6 @@
     "data_modality": "tabular",
     "temporal_coverage": "1994-present",
     "size_category": "medium",
-    "model_score": 0.0001
-  },
-  {
-    "name": "Telco Customer Churn (IBM)",
-    "description": "7,043 customers from a telecommunications company with 21 features including demographics, services, account information, and churn status. Industry-standard dataset for churn prediction benchmarking.",
-    "category": "MarTech & Customer Analytics",
-    "url": "https://www.kaggle.com/datasets/blastchar/telco-customer-churn",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "churn",
-      "classification",
-      "telecom",
-      "customer-analytics"
-    ],
-    "best_for": "Learning churn prediction, classification algorithms, and retention analysis",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "customer-analytics"
-    ],
-    "summary": "This dataset contains information on 7,043 customers from a telecommunications company, including demographics, services, account information, and churn status. It is commonly used for benchmarking churn prediction models.",
-    "use_cases": [
-      "Predicting customer churn",
-      "Analyzing factors contributing to churn",
-      "Benchmarking churn prediction models"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "Telco Customer Churn dataset",
-      "IBM churn prediction dataset",
-      "telecom customer analytics data",
-      "churn classification dataset",
-      "customer churn analysis dataset",
-      "telecommunications churn data"
-    ],
-    "domain_tags": [
-      "telecom"
-    ],
-    "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0001
-  },
-  {
-    "name": "KDD Cup 2009 Customer Relationship Prediction",
-    "description": "Orange Telecom CRM dataset with 50,000 customers and 230 anonymized features. Predict churn, appetency (propensity to buy), and up-selling. Classic benchmark for CRM analytics.",
-    "category": "MarTech & Customer Analytics",
-    "url": "https://www.kdd.org/kdd-cup/view/kdd-cup-2009/Data",
-    "docs_url": "https://www.kdd.org/kdd-cup/view/kdd-cup-2009",
-    "github_url": null,
-    "tags": [
-      "CRM",
-      "churn",
-      "uplift",
-      "classification"
-    ],
-    "best_for": "Learning CRM analytics, multi-task learning, and handling messy real-world data",
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [
-      "CRM",
-      "customer-analytics",
-      "churn-prediction"
-    ],
-    "summary": "The KDD Cup 2009 Customer Relationship Prediction dataset contains information on 50,000 customers with 230 anonymized features. It is used to predict customer churn, appetency to buy, and up-selling opportunities, making it a classic benchmark for CRM analytics.",
-    "use_cases": [
-      "Analyzing customer churn rates",
-      "Predicting customer buying behavior",
-      "Developing up-selling strategies",
-      "Benchmarking CRM analytics techniques"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS"
-    ],
-    "synthetic_questions": [
-      "KDD Cup 2009 Customer Relationship Prediction dataset",
-      "Orange Telecom CRM dataset download",
-      "customer churn prediction dataset",
-      "CRM analytics benchmark dataset",
-      "KDD Cup 2009 data for analysis",
-      "customer relationship management datasets",
-      "predicting customer appetency dataset",
-      "up-selling prediction dataset"
-    ],
-    "domain_tags": [
-      "telecommunications",
-      "marketing"
-    ],
-    "data_modality": "tabular",
-    "size_category": "medium",
-    "benchmark_usage": [
-      "Classic benchmark for CRM analytics"
-    ],
     "model_score": 0.0001
   },
   {
@@ -8122,53 +7930,6 @@
     "model_score": 0.0001
   },
   {
-    "name": "Expedia Hotel",
-    "description": "Hotel booking and search data from Expedia",
-    "category": "Travel & Hospitality",
-    "url": "https://www.kaggle.com/datasets/vijeetnigam26/expedia-hotel",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "hotels",
-      "bookings",
-      "travel search"
-    ],
-    "best_for": "Learning travel & hospitality analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "e-commerce",
-      "consumer-behavior",
-      "pricing"
-    ],
-    "summary": "The Expedia Hotel dataset contains hotel booking and search data from Expedia, allowing users to analyze trends in travel and hospitality. It can be used for various analyses, including understanding consumer behavior and pricing strategies in the hotel industry.",
-    "use_cases": [
-      "Analyzing consumer booking patterns over time",
-      "Comparing hotel prices across different regions",
-      "Studying the impact of seasonality on hotel bookings"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is the Expedia Hotel dataset?",
-      "Where can I find hotel booking data from Expedia?",
-      "How to access Expedia search data for analysis?",
-      "What insights can be derived from Expedia Hotel dataset?",
-      "Is there a dataset for hotel bookings on Expedia?",
-      "What are the trends in hotel bookings from Expedia data?"
-    ],
-    "domain_tags": [
-      "travel",
-      "hospitality"
-    ],
-    "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0001
-  },
-  {
     "name": "Alibaba Cloud Theme",
     "description": "Themed dataset related to Alibaba Cloud services",
     "category": "E-Commerce",
@@ -8307,47 +8068,6 @@
     "model_score": 0.0001
   },
   {
-    "name": "YouTube Engagement Dataset",
-    "description": "5M videos with watch percentage, engagement maps, Freebase topic labels. Video-level engagement metrics for content research",
-    "category": "Entertainment & Media",
-    "url": "https://github.com/avalanchesiqi/youtube-engagement",
-    "docs_url": null,
-    "github_url": "https://github.com/avalanchesiqi/youtube-engagement",
-    "tags": [
-      "YouTube",
-      "engagement",
-      "video",
-      "watch time",
-      "topics"
-    ],
-    "best_for": "Learning entertainment & media analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "The YouTube Engagement Dataset contains video-level engagement metrics for 5 million videos, including watch percentage and engagement maps. This dataset can be used for content research and analysis of viewer engagement on YouTube.",
-    "use_cases": [],
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is the YouTube Engagement Dataset?",
-      "How can I analyze video engagement metrics?",
-      "What are the engagement maps in the YouTube Engagement Dataset?",
-      "Where can I find data on YouTube watch percentage?",
-      "What topics are covered in the YouTube Engagement Dataset?",
-      "How many videos are included in the YouTube Engagement Dataset?",
-      "What metrics are available in the YouTube Engagement Dataset?",
-      "How to use the YouTube Engagement Dataset for content research?"
-    ],
-    "domain_tags": [
-      "entertainment",
-      "media"
-    ],
-    "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0001
-  },
-  {
     "name": "Alibaba Ads Dataset",
     "description": "Advertising dataset from Alibaba for ad targeting and prediction",
     "category": "Advertising",
@@ -8387,49 +8107,6 @@
     ],
     "domain_tags": [
       "advertising"
-    ],
-    "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0001
-  },
-  {
-    "name": "Hashed Multimodal Banking",
-    "description": "Banking transactions and product purchases with hashed identifiers",
-    "category": "Financial Services",
-    "url": "https://github.com/dzhambo/mbd",
-    "docs_url": null,
-    "github_url": "https://github.com/dzhambo/mbd",
-    "tags": [
-      "banking",
-      "transactions",
-      "privacy-preserving"
-    ],
-    "best_for": "Learning financial services analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "This dataset contains banking transactions and product purchases that are anonymized using hashed identifiers, ensuring privacy. It can be used to analyze consumer behavior and transaction patterns while maintaining confidentiality.",
-    "use_cases": [
-      "Analyzing consumer spending patterns while preserving privacy",
-      "Studying the impact of financial products on transaction behavior",
-      "Evaluating transaction trends in a privacy-preserving manner"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS"
-    ],
-    "synthetic_questions": [
-      "What are hashed identifiers in banking transactions?",
-      "How can I analyze privacy-preserving banking data?",
-      "What insights can be gained from multimodal banking transactions?",
-      "Where can I find datasets on banking transactions?",
-      "What are the benefits of using hashed identifiers in financial data?",
-      "How to conduct analysis on product purchases in banking?",
-      "What tools are needed for analyzing banking transaction data?",
-      "What are the privacy implications of banking data analysis?"
-    ],
-    "domain_tags": [
-      "financial services"
     ],
     "data_modality": "tabular",
     "size_category": "medium",
@@ -8854,56 +8531,6 @@
     "model_score": 0.0001
   },
   {
-    "name": "Ecuador Grocery (Favorita)",
-    "description": "Unit sales data with store/item metadata and oil prices from Ecuador",
-    "category": "Grocery & Supermarkets",
-    "url": "https://www.kaggle.com/competitions/favorita-grocery-sales-forecasting",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "grocery",
-      "sales forecasting",
-      "Ecuador",
-      "Kaggle"
-    ],
-    "best_for": "Learning grocery & supermarkets analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "grocery",
-      "sales forecasting",
-      "Ecuador"
-    ],
-    "summary": "This dataset contains unit sales data along with store and item metadata, as well as oil prices from Ecuador. It can be used for sales forecasting and analyzing consumer behavior in the grocery sector.",
-    "use_cases": [
-      "Sales forecasting for grocery items",
-      "Analyzing the impact of oil prices on grocery sales",
-      "Comparative analysis of store performance",
-      "Identifying sales trends over time"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "Ecuador grocery sales dataset",
-      "unit sales data Ecuador",
-      "grocery sales forecasting dataset",
-      "oil prices impact on grocery sales",
-      "Favorita grocery dataset",
-      "Ecuador supermarket sales analysis",
-      "Kaggle grocery datasets"
-    ],
-    "domain_tags": [
-      "retail"
-    ],
-    "data_modality": "tabular",
-    "geographic_scope": "Ecuador",
-    "size_category": "medium",
-    "model_score": 0.0001
-  },
-  {
     "name": "Fashion-MNIST",
     "description": "70,000 28x28 grayscale images of 10 fashion categories from Zalando",
     "category": "Fashion & Apparel",
@@ -9288,53 +8915,6 @@
     "model_score": 0.0001
   },
   {
-    "name": "Lahman Baseball Database",
-    "description": "Complete historical baseball statistics from 1871-2024 including batting, pitching, fielding, and salaries for every MLB player and team",
-    "category": "Sports & Athletics",
-    "url": "https://www.seanlahman.com/baseball-archive/statistics/",
-    "docs_url": "https://www.seanlahman.com/baseball-archive/statistics/",
-    "github_url": "https://github.com/chadwickbureau/baseballdatabank",
-    "tags": [
-      "baseball",
-      "historical",
-      "MLB",
-      "player-statistics",
-      "sabermetrics"
-    ],
-    "best_for": "Learning baseball analytics, historical trend analysis, and player valuation",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "The Lahman Baseball Database contains complete historical baseball statistics from 1871 to 2024, including batting, pitching, fielding, and salaries for every MLB player and team. This dataset can be used for various analyses in sports statistics and sabermetrics.",
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are the historical batting statistics in the Lahman Baseball Database?",
-      "How can I access MLB player salaries from the Lahman Baseball Database?",
-      "What pitching statistics are available in the Lahman Baseball Database?",
-      "Where can I find historical baseball statistics for every MLB player?",
-      "What is included in the Lahman Baseball Database?",
-      "How does the Lahman Baseball Database support sabermetrics?",
-      "Is there a dataset for historical fielding statistics in baseball?",
-      "What years does the Lahman Baseball Database cover?"
-    ],
-    "use_cases": [
-      "Analyzing player performance trends over time",
-      "Comparing team statistics across different seasons",
-      "Conducting sabermetric analyses for player evaluation",
-      "Studying the impact of player salaries on team performance"
-    ],
-    "domain_tags": [
-      "sports",
-      "athletics"
-    ],
-    "data_modality": "tabular",
-    "temporal_coverage": "1871-2024",
-    "size_category": "medium",
-    "model_score": 0.0001
-  },
-  {
     "name": "OpenStreetMap Road Network",
     "description": "Open-source global road network data including road types, speeds, and connectivity. Downloadable via Overpass API or pre-processed extracts.",
     "category": "Transportation Economics & Technology",
@@ -9471,49 +9051,6 @@
     "data_modality": "tabular",
     "temporal_coverage": "14 days",
     "geographic_scope": "Global",
-    "size_category": "medium",
-    "model_score": 0.0001
-  },
-  {
-    "name": "Google Cloud Public Datasets",
-    "description": "20+ petabytes across 200+ datasets with 1TB free BigQuery queries monthly",
-    "category": "Dataset Aggregators",
-    "url": "https://cloud.google.com/datasets",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "cloud",
-      "BigQuery",
-      "climate",
-      "blockchain",
-      "COVID"
-    ],
-    "best_for": "SQL-based analysis of climate, blockchain, and Google Trends data",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "Google Cloud Public Datasets provides access to over 20 petabytes of data across more than 200 datasets. Users can utilize this extensive data repository for various analyses, including cloud computing, climate studies, and more.",
-    "use_cases": [],
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are Google Cloud Public Datasets?",
-      "How to access Google Cloud Public Datasets?",
-      "What types of data are available in Google Cloud Public Datasets?",
-      "Can I use BigQuery with Google Cloud Public Datasets?",
-      "What is the size of Google Cloud Public Datasets?",
-      "Are there free queries available for Google Cloud Public Datasets?",
-      "What topics do Google Cloud Public Datasets cover?",
-      "How many datasets are included in Google Cloud Public Datasets?"
-    ],
-    "domain_tags": [
-      "cloud",
-      "climate",
-      "blockchain",
-      "healthcare"
-    ],
-    "data_modality": "mixed",
     "size_category": "medium",
     "model_score": 0.0001
   },
@@ -9930,54 +9467,6 @@
     "model_score": 0.0001
   },
   {
-    "name": "Polish Grocery",
-    "description": "Yearly sales data (2018) from Polish grocery shop",
-    "category": "Grocery & Supermarkets",
-    "url": "https://www.kaggle.com/datasets/agatii/total-sale-2018-yearly-data-of-grocery-shop",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "grocery",
-      "Poland",
-      "yearly data"
-    ],
-    "best_for": "Learning grocery & supermarkets analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "grocery",
-      "sales data",
-      "Poland"
-    ],
-    "summary": "This dataset contains yearly sales data from a Polish grocery shop for the year 2018. It can be used to analyze consumer purchasing patterns, sales trends, and inventory management in the grocery sector.",
-    "use_cases": [
-      "Analyzing sales trends over the year",
-      "Understanding consumer behavior in grocery shopping",
-      "Forecasting future sales based on past data"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "Polish grocery sales data 2018",
-      "yearly sales data Poland",
-      "grocery shop sales analysis",
-      "Poland grocery market trends",
-      "2018 grocery sales dataset",
-      "Polish supermarket sales data"
-    ],
-    "domain_tags": [
-      "retail"
-    ],
-    "data_modality": "tabular",
-    "temporal_coverage": "2018",
-    "geographic_scope": "Poland",
-    "size_category": "medium",
-    "model_score": 0.0001
-  },
-  {
     "name": "EIA-923 Power Plant Operations",
     "description": "Monthly power plant fuel consumption, generation, and emissions data for all U.S. generators",
     "category": "Energy",
@@ -10077,46 +9566,7 @@
     "temporal_coverage": "2002-present",
     "geographic_scope": "United States",
     "size_category": "medium",
-    "model_score": 0.0
-  },
-  {
-    "name": "Google BigQuery Crypto",
-    "description": "8 complete blockchain histories (Bitcoin, Ethereum, etc.) with daily updates. Transaction-level data for crypto analytics research",
-    "category": "Financial Services",
-    "url": "https://cloud.google.com/bigquery/public-data",
-    "docs_url": "https://cloud.google.com/blog/products/data-analytics/introducing-six-new-cryptocurrencies-in-bigquery-public-datasets",
-    "github_url": null,
-    "tags": [
-      "blockchain",
-      "cryptocurrency",
-      "Bitcoin",
-      "Ethereum",
-      "BigQuery"
-    ],
-    "best_for": "Learning financial services analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "This dataset contains complete blockchain histories for cryptocurrencies such as Bitcoin and Ethereum, updated daily. It provides transaction-level data that can be utilized for various crypto analytics research purposes.",
-    "use_cases": [],
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is the Google BigQuery Crypto dataset?",
-      "How can I access blockchain histories for Bitcoin and Ethereum?",
-      "What transaction-level data is available for crypto analytics?",
-      "Where can I find daily updates on cryptocurrency data?",
-      "What are the use cases for Google BigQuery Crypto?",
-      "How to analyze blockchain data using Google BigQuery?"
-    ],
-    "domain_tags": [
-      "financial services",
-      "fintech"
-    ],
-    "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0
+    "model_score": 0.0001
   },
   {
     "name": "Stanford GSB Experiment Collection",
@@ -10154,6 +9604,918 @@
     ],
     "domain_tags": [
       "education"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "model_score": 0.0001
+  },
+  {
+    "name": "Facebook URL Shares",
+    "description": "38M URLs with 10T exposure numbers, fact-checking flags, interaction types (2017-2019). Social Science One initiative",
+    "category": "Social & Web",
+    "url": "https://socialscience.one/our-facebook-partnership",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "Facebook",
+      "URL sharing",
+      "misinformation",
+      "fact-checking",
+      "social media"
+    ],
+    "best_for": "Learning social & web analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This dataset contains 38 million URLs along with exposure numbers and interaction types related to Facebook shares from 2017 to 2019. It can be used to analyze misinformation trends and the effectiveness of fact-checking efforts on social media.",
+    "use_cases": [
+      "Analyzing the impact of fact-checking on misinformation spread.",
+      "Studying user interaction patterns with shared URLs on Facebook.",
+      "Evaluating the effectiveness of social media campaigns.",
+      "Investigating trends in URL sharing over time."
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are the most shared URLs on Facebook?",
+      "How does fact-checking influence URL sharing on Facebook?",
+      "What types of interactions are associated with Facebook URL shares?",
+      "How many URLs were flagged for misinformation on Facebook?",
+      "What is the exposure number for a specific URL shared on Facebook?",
+      "What trends can be observed in Facebook URL sharing from 2017 to 2019?",
+      "How do different interaction types vary in relation to URL shares on Facebook?",
+      "What is the impact of social media on misinformation dissemination?"
+    ],
+    "domain_tags": [
+      "social media",
+      "information technology"
+    ],
+    "data_modality": "tabular",
+    "temporal_coverage": "2017-2019",
+    "size_category": "medium",
+    "model_score": 0.0001
+  },
+  {
+    "name": "Natural Driving in Ohio",
+    "description": "ADAS-equipped vehicles with driving behavior events",
+    "category": "Transportation & Mobility",
+    "url": "https://data.transportation.gov/Automobiles/Advanced-Driver-Assistance-System-ADAS-Equipped-Si/iie8-uenj/about_data",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "driving",
+      "ADAS",
+      "behavior",
+      "government"
+    ],
+    "best_for": "Learning transportation & mobility analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This dataset contains information on ADAS-equipped vehicles and their driving behavior events in Ohio. It can be used to analyze driving patterns and behaviors influenced by advanced driver-assistance systems.",
+    "use_cases": [
+      "Analyzing the impact of ADAS on driving behavior",
+      "Studying government regulations on vehicle behavior",
+      "Evaluating safety features of ADAS-equipped vehicles"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "ADAS driving behavior events in Ohio",
+      "Natural driving dataset Ohio",
+      "Driving patterns of ADAS vehicles",
+      "Ohio ADAS vehicle data",
+      "Behavior analysis of driving events",
+      "Transportation data for ADAS vehicles"
+    ],
+    "domain_tags": [
+      "transportation",
+      "government"
+    ],
+    "data_modality": "tabular",
+    "geographic_scope": "Ohio",
+    "size_category": "medium",
+    "model_score": 0.0001
+  },
+  {
+    "name": "Prosper Loan Data",
+    "description": "113K P2P loans with borrower characteristics and outcomes",
+    "category": "Financial Services",
+    "url": "https://www.kaggle.com/datasets/henryokam/prosper-loan-data",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "P2P",
+      "lending",
+      "loans"
+    ],
+    "best_for": "Learning financial services analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Prosper Loan Data consists of 113,000 peer-to-peer loans, providing insights into borrower characteristics and their outcomes. This dataset can be used to analyze lending patterns, borrower behavior, and loan performance.",
+    "use_cases": [
+      "Analyzing borrower default rates",
+      "Investigating the impact of borrower characteristics on loan performance",
+      "Comparing loan outcomes across different demographics"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is the Prosper Loan Data?",
+      "How can I analyze P2P loans?",
+      "What borrower characteristics are available in the Prosper dataset?",
+      "What outcomes can be derived from the Prosper Loan Data?",
+      "Where can I find P2P lending datasets?",
+      "What insights can be gained from analyzing peer-to-peer loans?",
+      "How do borrower characteristics affect loan outcomes?",
+      "What trends exist in P2P lending?"
+    ],
+    "domain_tags": [
+      "fintech"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "model_score": 0.0001
+  },
+  {
+    "name": "Prosper Loans",
+    "description": "113K P2P loans with borrower characteristics, credit grades, and loan outcomes. Alternative to LendingClub for P2P lending research",
+    "category": "Financial Services",
+    "url": "https://www.prosper.com/plp/about/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "P2P lending",
+      "loans",
+      "credit",
+      "fintech"
+    ],
+    "best_for": "Learning financial services analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Prosper Loans dataset contains 113K peer-to-peer loans, including borrower characteristics, credit grades, and loan outcomes. This dataset serves as an alternative to LendingClub for research in P2P lending.",
+    "use_cases": [
+      "Analyzing borrower characteristics to improve lending criteria.",
+      "Studying the impact of credit grades on loan outcomes.",
+      "Comparing P2P lending platforms based on loan performance.",
+      "Identifying trends in loan defaults and approvals."
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "What are the characteristics of borrowers in the Prosper Loans dataset?",
+      "How do credit grades affect loan outcomes in P2P lending?",
+      "What insights can be drawn from analyzing 113K P2P loans?",
+      "How does Prosper compare to LendingClub in terms of loan performance?",
+      "What factors influence loan approval rates in the Prosper Loans dataset?",
+      "Can borrower characteristics predict loan defaults in P2P lending?",
+      "What trends can be identified in the Prosper Loans dataset over time?",
+      "How does the interest rate vary across different credit grades in P2P loans?"
+    ],
+    "domain_tags": [
+      "fintech"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "model_score": 0.0001
+  },
+  {
+    "name": "Indian Sales",
+    "description": "Sales forecasting dataset for small basket items in India",
+    "category": "Grocery & Supermarkets",
+    "url": "https://www.kaggle.com/datasets/girishvutukuri/sales-forecasting-for-small-basket",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "India",
+      "forecasting",
+      "retail"
+    ],
+    "best_for": "Learning grocery & supermarkets analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "e-commerce",
+      "retail"
+    ],
+    "summary": "The Indian Sales dataset is designed for sales forecasting of small basket items in India. It can be used to analyze sales trends and develop predictive models for retail performance.",
+    "use_cases": [
+      "Sales trend analysis",
+      "Predictive modeling for retail",
+      "Inventory management optimization"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "Indian sales forecasting dataset",
+      "sales data for small basket items in India",
+      "retail sales analysis India",
+      "forecasting grocery sales India",
+      "small basket item sales dataset",
+      "India retail sales forecasting"
+    ],
+    "domain_tags": [
+      "retail"
+    ],
+    "data_modality": "tabular",
+    "geographic_scope": "India",
+    "size_category": "medium",
+    "model_score": 0.0001
+  },
+  {
+    "name": "Drone Delivery",
+    "description": "Drone delivery logistics and operations dataset",
+    "category": "Logistics & Supply Chain",
+    "url": "https://tianchi.aliyun.com/dataset/89726",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "drones",
+      "delivery",
+      "autonomous"
+    ],
+    "best_for": "Learning logistics & supply chain analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Drone Delivery dataset provides insights into logistics and operations related to drone delivery systems. It can be used to analyze efficiency, optimize routes, and understand operational challenges in autonomous delivery.",
+    "use_cases": [
+      "Analyze delivery efficiency of drones",
+      "Optimize drone delivery routes",
+      "Study operational challenges in drone logistics"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "drone delivery logistics dataset",
+      "autonomous delivery operations data",
+      "logistics dataset for drones",
+      "drone delivery analysis",
+      "dataset on drone logistics",
+      "operations dataset for drone delivery"
+    ],
+    "domain_tags": [
+      "logistics",
+      "supply chain"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "model_score": 0.0001
+  },
+  {
+    "name": "MEPS (Medical Expenditure Panel Survey)",
+    "description": "Nationally representative survey of healthcare utilization, expenditures, insurance coverage, and health status for the US civilian population",
+    "category": "Insurance & Actuarial",
+    "url": "https://meps.ahrq.gov/mepsweb/",
+    "docs_url": "https://meps.ahrq.gov/mepsweb/data_stats/download_data_files.jsp",
+    "github_url": null,
+    "tags": [
+      "health-insurance",
+      "healthcare-costs",
+      "expenditure-data",
+      "survey-data",
+      "panel-data"
+    ],
+    "best_for": "Health insurance research, healthcare cost modeling, and demand analysis",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The MEPS dataset provides a nationally representative survey of healthcare utilization, expenditures, insurance coverage, and health status for the US civilian population. Researchers can analyze trends in healthcare costs and insurance coverage, as well as assess the impact of health status on expenditures.",
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is the Medical Expenditure Panel Survey?",
+      "How to access MEPS healthcare expenditure data?",
+      "What insights can be gained from MEPS survey data?",
+      "What are the key findings from the MEPS on health insurance coverage?",
+      "How does MEPS data inform healthcare policy?",
+      "What is included in the MEPS dataset?",
+      "How to analyze MEPS data using Python?",
+      "What are the trends in healthcare costs according to MEPS?"
+    ],
+    "use_cases": [
+      "Analyzing the impact of insurance coverage on healthcare expenditures.",
+      "Examining trends in healthcare utilization over time.",
+      "Assessing the relationship between health status and medical costs."
+    ],
+    "domain_tags": [
+      "healthcare",
+      "insurance"
+    ],
+    "data_modality": "tabular",
+    "geographic_scope": "United States",
+    "size_category": "medium",
+    "model_score": 0.0001
+  },
+  {
+    "name": "Hate Speech Data Catalogue",
+    "description": "50+ hate speech datasets across languages compiled at hatespeechdata.com. Meta-resource for content moderation research",
+    "category": "Content Moderation",
+    "url": "https://hatespeechdata.com/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "hate speech",
+      "catalogue",
+      "multilingual",
+      "meta-dataset"
+    ],
+    "best_for": "Learning content moderation analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Hate Speech Data Catalogue is a compilation of over 50 datasets related to hate speech across various languages. It serves as a meta-resource for researchers focusing on content moderation and the analysis of hate speech.",
+    "use_cases": [
+      "Analyzing hate speech trends across languages",
+      "Developing content moderation algorithms",
+      "Researching the impact of hate speech on social media",
+      "Comparative analysis of hate speech in different cultures"
+    ],
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are the available hate speech datasets?",
+      "How can I access multilingual hate speech data?",
+      "What is the Hate Speech Data Catalogue?",
+      "What datasets are included in content moderation research?",
+      "Where can I find hate speech datasets?",
+      "What languages are covered in the hate speech datasets?"
+    ],
+    "domain_tags": [
+      "content moderation"
+    ],
+    "data_modality": "mixed",
+    "size_category": "medium",
+    "model_score": 0.0001
+  },
+  {
+    "name": "DiDi GAIA Open Data",
+    "description": "Billions of GPS points and ride trajectories from China's largest ride-hailing platform. Driver behavior and urban mobility patterns",
+    "category": "Transportation & Mobility",
+    "url": "https://gaia.didichuxing.com/",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "rideshare",
+      "GPS",
+      "trajectories",
+      "China",
+      "DiDi",
+      "mobility"
+    ],
+    "best_for": "Learning transportation & mobility analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "urban-mobility",
+      "data-analysis"
+    ],
+    "summary": "The DiDi GAIA Open Data consists of billions of GPS points and ride trajectories from China's largest ride-hailing platform. This dataset can be used to analyze driver behavior and urban mobility patterns in Chinese cities.",
+    "use_cases": [
+      "Analyzing urban mobility trends",
+      "Studying driver behavior patterns",
+      "Evaluating the impact of ride-hailing on traffic",
+      "Understanding GPS data for transportation studies"
+    ],
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is DiDi GAIA Open Data?",
+      "How to analyze ride trajectories from DiDi?",
+      "What insights can be gained from DiDi's GPS data?",
+      "Where can I find DiDi ride-hailing data?",
+      "What are the urban mobility patterns in China?",
+      "How does DiDi's driver behavior compare to other platforms?"
+    ],
+    "domain_tags": [
+      "transportation",
+      "mobility"
+    ],
+    "data_modality": "tabular",
+    "geographic_scope": "China",
+    "size_category": "medium",
+    "model_score": 0.0
+  },
+  {
+    "name": "Alpha Vantage",
+    "description": "NASDAQ-licensed stock data for 200,000+ tickers with free tier (25 requests/day)",
+    "category": "Dataset Aggregators",
+    "url": "https://www.alphavantage.co",
+    "docs_url": "https://www.alphavantage.co/documentation/",
+    "github_url": null,
+    "tags": [
+      "stocks",
+      "free",
+      "API",
+      "technical indicators"
+    ],
+    "best_for": "Individual researchers needing free stock data with 50+ technical indicators",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Alpha Vantage provides NASDAQ-licensed stock data for over 200,000 tickers, allowing users to access stock information and technical indicators. With a free tier offering 25 requests per day, it is suitable for those looking to analyze stock market trends.",
+    "use_cases": [
+      "Analyzing stock market trends using historical data",
+      "Building a stock price prediction model",
+      "Creating visualizations of stock performance",
+      "Comparing technical indicators across different stocks"
+    ],
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is Alpha Vantage stock data?",
+      "How to access NASDAQ stock data using Alpha Vantage?",
+      "What are the features of Alpha Vantage API?",
+      "How many tickers does Alpha Vantage cover?",
+      "Is Alpha Vantage free to use?",
+      "What are technical indicators available in Alpha Vantage?",
+      "How to make requests to Alpha Vantage API?",
+      "What is the daily request limit for Alpha Vantage?"
+    ],
+    "domain_tags": [
+      "fintech"
+    ],
+    "data_modality": "time-series",
+    "size_category": "medium",
+    "model_score": 0.0
+  },
+  {
+    "name": "Telco Customer Churn (IBM)",
+    "description": "7,043 customers from a telecommunications company with 21 features including demographics, services, account information, and churn status. Industry-standard dataset for churn prediction benchmarking.",
+    "category": "MarTech & Customer Analytics",
+    "url": "https://www.kaggle.com/datasets/blastchar/telco-customer-churn",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "churn",
+      "classification",
+      "telecom",
+      "customer-analytics"
+    ],
+    "best_for": "Learning churn prediction, classification algorithms, and retention analysis",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "customer-analytics"
+    ],
+    "summary": "This dataset contains information on 7,043 customers from a telecommunications company, including demographics, services, account information, and churn status. It is commonly used for benchmarking churn prediction models.",
+    "use_cases": [
+      "Predicting customer churn",
+      "Analyzing factors contributing to churn",
+      "Benchmarking churn prediction models"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "Telco Customer Churn dataset",
+      "IBM churn prediction dataset",
+      "telecom customer analytics data",
+      "churn classification dataset",
+      "customer churn analysis dataset",
+      "telecommunications churn data"
+    ],
+    "domain_tags": [
+      "telecom"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "model_score": 0.0
+  },
+  {
+    "name": "KDD Cup 2009 Customer Relationship Prediction",
+    "description": "Orange Telecom CRM dataset with 50,000 customers and 230 anonymized features. Predict churn, appetency (propensity to buy), and up-selling. Classic benchmark for CRM analytics.",
+    "category": "MarTech & Customer Analytics",
+    "url": "https://www.kdd.org/kdd-cup/view/kdd-cup-2009/Data",
+    "docs_url": "https://www.kdd.org/kdd-cup/view/kdd-cup-2009",
+    "github_url": null,
+    "tags": [
+      "CRM",
+      "churn",
+      "uplift",
+      "classification"
+    ],
+    "best_for": "Learning CRM analytics, multi-task learning, and handling messy real-world data",
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "CRM",
+      "customer-analytics",
+      "churn-prediction"
+    ],
+    "summary": "The KDD Cup 2009 Customer Relationship Prediction dataset contains information on 50,000 customers with 230 anonymized features. It is used to predict customer churn, appetency to buy, and up-selling opportunities, making it a classic benchmark for CRM analytics.",
+    "use_cases": [
+      "Analyzing customer churn rates",
+      "Predicting customer buying behavior",
+      "Developing up-selling strategies",
+      "Benchmarking CRM analytics techniques"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "KDD Cup 2009 Customer Relationship Prediction dataset",
+      "Orange Telecom CRM dataset download",
+      "customer churn prediction dataset",
+      "CRM analytics benchmark dataset",
+      "KDD Cup 2009 data for analysis",
+      "customer relationship management datasets",
+      "predicting customer appetency dataset",
+      "up-selling prediction dataset"
+    ],
+    "domain_tags": [
+      "telecommunications",
+      "marketing"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "benchmark_usage": [
+      "Classic benchmark for CRM analytics"
+    ],
+    "model_score": 0.0
+  },
+  {
+    "name": "Expedia Hotel",
+    "description": "Hotel booking and search data from Expedia",
+    "category": "Travel & Hospitality",
+    "url": "https://www.kaggle.com/datasets/vijeetnigam26/expedia-hotel",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "hotels",
+      "bookings",
+      "travel search"
+    ],
+    "best_for": "Learning travel & hospitality analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "e-commerce",
+      "consumer-behavior",
+      "pricing"
+    ],
+    "summary": "The Expedia Hotel dataset contains hotel booking and search data from Expedia, allowing users to analyze trends in travel and hospitality. It can be used for various analyses, including understanding consumer behavior and pricing strategies in the hotel industry.",
+    "use_cases": [
+      "Analyzing consumer booking patterns over time",
+      "Comparing hotel prices across different regions",
+      "Studying the impact of seasonality on hotel bookings"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is the Expedia Hotel dataset?",
+      "Where can I find hotel booking data from Expedia?",
+      "How to access Expedia search data for analysis?",
+      "What insights can be derived from Expedia Hotel dataset?",
+      "Is there a dataset for hotel bookings on Expedia?",
+      "What are the trends in hotel bookings from Expedia data?"
+    ],
+    "domain_tags": [
+      "travel",
+      "hospitality"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "model_score": 0.0
+  },
+  {
+    "name": "YouTube Engagement Dataset",
+    "description": "5M videos with watch percentage, engagement maps, Freebase topic labels. Video-level engagement metrics for content research",
+    "category": "Entertainment & Media",
+    "url": "https://github.com/avalanchesiqi/youtube-engagement",
+    "docs_url": null,
+    "github_url": "https://github.com/avalanchesiqi/youtube-engagement",
+    "tags": [
+      "YouTube",
+      "engagement",
+      "video",
+      "watch time",
+      "topics"
+    ],
+    "best_for": "Learning entertainment & media analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The YouTube Engagement Dataset contains video-level engagement metrics for 5 million videos, including watch percentage and engagement maps. This dataset can be used for content research and analysis of viewer engagement on YouTube.",
+    "use_cases": [],
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is the YouTube Engagement Dataset?",
+      "How can I analyze video engagement metrics?",
+      "What are the engagement maps in the YouTube Engagement Dataset?",
+      "Where can I find data on YouTube watch percentage?",
+      "What topics are covered in the YouTube Engagement Dataset?",
+      "How many videos are included in the YouTube Engagement Dataset?",
+      "What metrics are available in the YouTube Engagement Dataset?",
+      "How to use the YouTube Engagement Dataset for content research?"
+    ],
+    "domain_tags": [
+      "entertainment",
+      "media"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "model_score": 0.0
+  },
+  {
+    "name": "Hashed Multimodal Banking",
+    "description": "Banking transactions and product purchases with hashed identifiers",
+    "category": "Financial Services",
+    "url": "https://github.com/dzhambo/mbd",
+    "docs_url": null,
+    "github_url": "https://github.com/dzhambo/mbd",
+    "tags": [
+      "banking",
+      "transactions",
+      "privacy-preserving"
+    ],
+    "best_for": "Learning financial services analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This dataset contains banking transactions and product purchases that are anonymized using hashed identifiers, ensuring privacy. It can be used to analyze consumer behavior and transaction patterns while maintaining confidentiality.",
+    "use_cases": [
+      "Analyzing consumer spending patterns while preserving privacy",
+      "Studying the impact of financial products on transaction behavior",
+      "Evaluating transaction trends in a privacy-preserving manner"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "What are hashed identifiers in banking transactions?",
+      "How can I analyze privacy-preserving banking data?",
+      "What insights can be gained from multimodal banking transactions?",
+      "Where can I find datasets on banking transactions?",
+      "What are the benefits of using hashed identifiers in financial data?",
+      "How to conduct analysis on product purchases in banking?",
+      "What tools are needed for analyzing banking transaction data?",
+      "What are the privacy implications of banking data analysis?"
+    ],
+    "domain_tags": [
+      "financial services"
+    ],
+    "data_modality": "tabular",
+    "size_category": "medium",
+    "model_score": 0.0
+  },
+  {
+    "name": "Ecuador Grocery (Favorita)",
+    "description": "Unit sales data with store/item metadata and oil prices from Ecuador",
+    "category": "Grocery & Supermarkets",
+    "url": "https://www.kaggle.com/competitions/favorita-grocery-sales-forecasting",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "grocery",
+      "sales forecasting",
+      "Ecuador",
+      "Kaggle"
+    ],
+    "best_for": "Learning grocery & supermarkets analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "grocery",
+      "sales forecasting",
+      "Ecuador"
+    ],
+    "summary": "This dataset contains unit sales data along with store and item metadata, as well as oil prices from Ecuador. It can be used for sales forecasting and analyzing consumer behavior in the grocery sector.",
+    "use_cases": [
+      "Sales forecasting for grocery items",
+      "Analyzing the impact of oil prices on grocery sales",
+      "Comparative analysis of store performance",
+      "Identifying sales trends over time"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "Ecuador grocery sales dataset",
+      "unit sales data Ecuador",
+      "grocery sales forecasting dataset",
+      "oil prices impact on grocery sales",
+      "Favorita grocery dataset",
+      "Ecuador supermarket sales analysis",
+      "Kaggle grocery datasets"
+    ],
+    "domain_tags": [
+      "retail"
+    ],
+    "data_modality": "tabular",
+    "geographic_scope": "Ecuador",
+    "size_category": "medium",
+    "model_score": 0.0
+  },
+  {
+    "name": "Lahman Baseball Database",
+    "description": "Complete historical baseball statistics from 1871-2024 including batting, pitching, fielding, and salaries for every MLB player and team",
+    "category": "Sports & Athletics",
+    "url": "https://www.seanlahman.com/baseball-archive/statistics/",
+    "docs_url": "https://www.seanlahman.com/baseball-archive/statistics/",
+    "github_url": "https://github.com/chadwickbureau/baseballdatabank",
+    "tags": [
+      "baseball",
+      "historical",
+      "MLB",
+      "player-statistics",
+      "sabermetrics"
+    ],
+    "best_for": "Learning baseball analytics, historical trend analysis, and player valuation",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "The Lahman Baseball Database contains complete historical baseball statistics from 1871 to 2024, including batting, pitching, fielding, and salaries for every MLB player and team. This dataset can be used for various analyses in sports statistics and sabermetrics.",
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are the historical batting statistics in the Lahman Baseball Database?",
+      "How can I access MLB player salaries from the Lahman Baseball Database?",
+      "What pitching statistics are available in the Lahman Baseball Database?",
+      "Where can I find historical baseball statistics for every MLB player?",
+      "What is included in the Lahman Baseball Database?",
+      "How does the Lahman Baseball Database support sabermetrics?",
+      "Is there a dataset for historical fielding statistics in baseball?",
+      "What years does the Lahman Baseball Database cover?"
+    ],
+    "use_cases": [
+      "Analyzing player performance trends over time",
+      "Comparing team statistics across different seasons",
+      "Conducting sabermetric analyses for player evaluation",
+      "Studying the impact of player salaries on team performance"
+    ],
+    "domain_tags": [
+      "sports",
+      "athletics"
+    ],
+    "data_modality": "tabular",
+    "temporal_coverage": "1871-2024",
+    "size_category": "medium",
+    "model_score": 0.0
+  },
+  {
+    "name": "Google Cloud Public Datasets",
+    "description": "20+ petabytes across 200+ datasets with 1TB free BigQuery queries monthly",
+    "category": "Dataset Aggregators",
+    "url": "https://cloud.google.com/datasets",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "cloud",
+      "BigQuery",
+      "climate",
+      "blockchain",
+      "COVID"
+    ],
+    "best_for": "SQL-based analysis of climate, blockchain, and Google Trends data",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Google Cloud Public Datasets provides access to over 20 petabytes of data across more than 200 datasets. Users can utilize this extensive data repository for various analyses, including cloud computing, climate studies, and more.",
+    "use_cases": [],
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are Google Cloud Public Datasets?",
+      "How to access Google Cloud Public Datasets?",
+      "What types of data are available in Google Cloud Public Datasets?",
+      "Can I use BigQuery with Google Cloud Public Datasets?",
+      "What is the size of Google Cloud Public Datasets?",
+      "Are there free queries available for Google Cloud Public Datasets?",
+      "What topics do Google Cloud Public Datasets cover?",
+      "How many datasets are included in Google Cloud Public Datasets?"
+    ],
+    "domain_tags": [
+      "cloud",
+      "climate",
+      "blockchain",
+      "healthcare"
+    ],
+    "data_modality": "mixed",
+    "size_category": "medium",
+    "model_score": 0.0
+  },
+  {
+    "name": "Polish Grocery",
+    "description": "Yearly sales data (2018) from Polish grocery shop",
+    "category": "Grocery & Supermarkets",
+    "url": "https://www.kaggle.com/datasets/agatii/total-sale-2018-yearly-data-of-grocery-shop",
+    "docs_url": null,
+    "github_url": null,
+    "tags": [
+      "grocery",
+      "Poland",
+      "yearly data"
+    ],
+    "best_for": "Learning grocery & supermarkets analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "grocery",
+      "sales data",
+      "Poland"
+    ],
+    "summary": "This dataset contains yearly sales data from a Polish grocery shop for the year 2018. It can be used to analyze consumer purchasing patterns, sales trends, and inventory management in the grocery sector.",
+    "use_cases": [
+      "Analyzing sales trends over the year",
+      "Understanding consumer behavior in grocery shopping",
+      "Forecasting future sales based on past data"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "Polish grocery sales data 2018",
+      "yearly sales data Poland",
+      "grocery shop sales analysis",
+      "Poland grocery market trends",
+      "2018 grocery sales dataset",
+      "Polish supermarket sales data"
+    ],
+    "domain_tags": [
+      "retail"
+    ],
+    "data_modality": "tabular",
+    "temporal_coverage": "2018",
+    "geographic_scope": "Poland",
+    "size_category": "medium",
+    "model_score": 0.0
+  },
+  {
+    "name": "Google BigQuery Crypto",
+    "description": "8 complete blockchain histories (Bitcoin, Ethereum, etc.) with daily updates. Transaction-level data for crypto analytics research",
+    "category": "Financial Services",
+    "url": "https://cloud.google.com/bigquery/public-data",
+    "docs_url": "https://cloud.google.com/blog/products/data-analytics/introducing-six-new-cryptocurrencies-in-bigquery-public-datasets",
+    "github_url": null,
+    "tags": [
+      "blockchain",
+      "cryptocurrency",
+      "Bitcoin",
+      "Ethereum",
+      "BigQuery"
+    ],
+    "best_for": "Learning financial services analytics and modeling",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This dataset contains complete blockchain histories for cryptocurrencies such as Bitcoin and Ethereum, updated daily. It provides transaction-level data that can be utilized for various crypto analytics research purposes.",
+    "use_cases": [],
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is the Google BigQuery Crypto dataset?",
+      "How can I access blockchain histories for Bitcoin and Ethereum?",
+      "What transaction-level data is available for crypto analytics?",
+      "Where can I find daily updates on cryptocurrency data?",
+      "What are the use cases for Google BigQuery Crypto?",
+      "How to analyze blockchain data using Google BigQuery?"
+    ],
+    "domain_tags": [
+      "financial services",
+      "fintech"
     ],
     "data_modality": "tabular",
     "size_category": "medium",
@@ -10205,55 +10567,6 @@
     "data_modality": "mixed",
     "temporal_coverage": "1994-2023",
     "size_category": "massive",
-    "model_score": 0.0
-  },
-  {
-    "name": "Facebook URL Shares",
-    "description": "38M URLs with 10T exposure numbers, fact-checking flags, interaction types (2017-2019). Social Science One initiative",
-    "category": "Social & Web",
-    "url": "https://socialscience.one/our-facebook-partnership",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "Facebook",
-      "URL sharing",
-      "misinformation",
-      "fact-checking",
-      "social media"
-    ],
-    "best_for": "Learning social & web analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "This dataset contains 38 million URLs along with exposure numbers and interaction types related to Facebook shares from 2017 to 2019. It can be used to analyze misinformation trends and the effectiveness of fact-checking efforts on social media.",
-    "use_cases": [
-      "Analyzing the impact of fact-checking on misinformation spread.",
-      "Studying user interaction patterns with shared URLs on Facebook.",
-      "Evaluating the effectiveness of social media campaigns.",
-      "Investigating trends in URL sharing over time."
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are the most shared URLs on Facebook?",
-      "How does fact-checking influence URL sharing on Facebook?",
-      "What types of interactions are associated with Facebook URL shares?",
-      "How many URLs were flagged for misinformation on Facebook?",
-      "What is the exposure number for a specific URL shared on Facebook?",
-      "What trends can be observed in Facebook URL sharing from 2017 to 2019?",
-      "How do different interaction types vary in relation to URL shares on Facebook?",
-      "What is the impact of social media on misinformation dissemination?"
-    ],
-    "domain_tags": [
-      "social media",
-      "information technology"
-    ],
-    "data_modality": "tabular",
-    "temporal_coverage": "2017-2019",
-    "size_category": "medium",
     "model_score": 0.0
   },
   {
@@ -10579,94 +10892,6 @@
     "data_modality": "tabular",
     "temporal_coverage": "2007-2016",
     "geographic_scope": "Romania",
-    "size_category": "medium",
-    "model_score": 0.0
-  },
-  {
-    "name": "Natural Driving in Ohio",
-    "description": "ADAS-equipped vehicles with driving behavior events",
-    "category": "Transportation & Mobility",
-    "url": "https://data.transportation.gov/Automobiles/Advanced-Driver-Assistance-System-ADAS-Equipped-Si/iie8-uenj/about_data",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "driving",
-      "ADAS",
-      "behavior",
-      "government"
-    ],
-    "best_for": "Learning transportation & mobility analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "This dataset contains information on ADAS-equipped vehicles and their driving behavior events in Ohio. It can be used to analyze driving patterns and behaviors influenced by advanced driver-assistance systems.",
-    "use_cases": [
-      "Analyzing the impact of ADAS on driving behavior",
-      "Studying government regulations on vehicle behavior",
-      "Evaluating safety features of ADAS-equipped vehicles"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS"
-    ],
-    "synthetic_questions": [
-      "ADAS driving behavior events in Ohio",
-      "Natural driving dataset Ohio",
-      "Driving patterns of ADAS vehicles",
-      "Ohio ADAS vehicle data",
-      "Behavior analysis of driving events",
-      "Transportation data for ADAS vehicles"
-    ],
-    "domain_tags": [
-      "transportation",
-      "government"
-    ],
-    "data_modality": "tabular",
-    "geographic_scope": "Ohio",
-    "size_category": "medium",
-    "model_score": 0.0
-  },
-  {
-    "name": "Prosper Loan Data",
-    "description": "113K P2P loans with borrower characteristics and outcomes",
-    "category": "Financial Services",
-    "url": "https://www.kaggle.com/datasets/henryokam/prosper-loan-data",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "P2P",
-      "lending",
-      "loans"
-    ],
-    "best_for": "Learning financial services analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "The Prosper Loan Data consists of 113,000 peer-to-peer loans, providing insights into borrower characteristics and their outcomes. This dataset can be used to analyze lending patterns, borrower behavior, and loan performance.",
-    "use_cases": [
-      "Analyzing borrower default rates",
-      "Investigating the impact of borrower characteristics on loan performance",
-      "Comparing loan outcomes across different demographics"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is the Prosper Loan Data?",
-      "How can I analyze P2P loans?",
-      "What borrower characteristics are available in the Prosper dataset?",
-      "What outcomes can be derived from the Prosper Loan Data?",
-      "Where can I find P2P lending datasets?",
-      "What insights can be gained from analyzing peer-to-peer loans?",
-      "How do borrower characteristics affect loan outcomes?",
-      "What trends exist in P2P lending?"
-    ],
-    "domain_tags": [
-      "fintech"
-    ],
-    "data_modality": "tabular",
     "size_category": "medium",
     "model_score": 0.0
   },
@@ -11209,51 +11434,6 @@
     "model_score": 0.0
   },
   {
-    "name": "Prosper Loans",
-    "description": "113K P2P loans with borrower characteristics, credit grades, and loan outcomes. Alternative to LendingClub for P2P lending research",
-    "category": "Financial Services",
-    "url": "https://www.prosper.com/plp/about/",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "P2P lending",
-      "loans",
-      "credit",
-      "fintech"
-    ],
-    "best_for": "Learning financial services analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "The Prosper Loans dataset contains 113K peer-to-peer loans, including borrower characteristics, credit grades, and loan outcomes. This dataset serves as an alternative to LendingClub for research in P2P lending.",
-    "use_cases": [
-      "Analyzing borrower characteristics to improve lending criteria.",
-      "Studying the impact of credit grades on loan outcomes.",
-      "Comparing P2P lending platforms based on loan performance.",
-      "Identifying trends in loan defaults and approvals."
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS"
-    ],
-    "synthetic_questions": [
-      "What are the characteristics of borrowers in the Prosper Loans dataset?",
-      "How do credit grades affect loan outcomes in P2P lending?",
-      "What insights can be drawn from analyzing 113K P2P loans?",
-      "How does Prosper compare to LendingClub in terms of loan performance?",
-      "What factors influence loan approval rates in the Prosper Loans dataset?",
-      "Can borrower characteristics predict loan defaults in P2P lending?",
-      "What trends can be identified in the Prosper Loans dataset over time?",
-      "How does the interest rate vary across different credit grades in P2P loans?"
-    ],
-    "domain_tags": [
-      "fintech"
-    ],
-    "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0
-  },
-  {
     "name": "Transitland GTFS Feeds",
     "description": "Aggregated GTFS data from 2,500+ transit agencies across 55+ countries. The largest open transit data aggregator with REST and GraphQL APIs.",
     "category": "Transportation Economics & Technology",
@@ -11392,52 +11572,6 @@
     "model_score": 0.0
   },
   {
-    "name": "Indian Sales",
-    "description": "Sales forecasting dataset for small basket items in India",
-    "category": "Grocery & Supermarkets",
-    "url": "https://www.kaggle.com/datasets/girishvutukuri/sales-forecasting-for-small-basket",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "India",
-      "forecasting",
-      "retail"
-    ],
-    "best_for": "Learning grocery & supermarkets analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "e-commerce",
-      "retail"
-    ],
-    "summary": "The Indian Sales dataset is designed for sales forecasting of small basket items in India. It can be used to analyze sales trends and develop predictive models for retail performance.",
-    "use_cases": [
-      "Sales trend analysis",
-      "Predictive modeling for retail",
-      "Inventory management optimization"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "Indian sales forecasting dataset",
-      "sales data for small basket items in India",
-      "retail sales analysis India",
-      "forecasting grocery sales India",
-      "small basket item sales dataset",
-      "India retail sales forecasting"
-    ],
-    "domain_tags": [
-      "retail"
-    ],
-    "data_modality": "tabular",
-    "geographic_scope": "India",
-    "size_category": "medium",
-    "model_score": 0.0
-  },
-  {
     "name": "Italian Grocers",
     "description": "Receipt-level sales data from Italian grocery stores",
     "category": "Grocery & Supermarkets",
@@ -11525,49 +11659,6 @@
     ],
     "data_modality": "tabular",
     "geographic_scope": "China",
-    "size_category": "medium",
-    "model_score": 0.0
-  },
-  {
-    "name": "Drone Delivery",
-    "description": "Drone delivery logistics and operations dataset",
-    "category": "Logistics & Supply Chain",
-    "url": "https://tianchi.aliyun.com/dataset/89726",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "drones",
-      "delivery",
-      "autonomous"
-    ],
-    "best_for": "Learning logistics & supply chain analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "The Drone Delivery dataset provides insights into logistics and operations related to drone delivery systems. It can be used to analyze efficiency, optimize routes, and understand operational challenges in autonomous delivery.",
-    "use_cases": [
-      "Analyze delivery efficiency of drones",
-      "Optimize drone delivery routes",
-      "Study operational challenges in drone logistics"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "drone delivery logistics dataset",
-      "autonomous delivery operations data",
-      "logistics dataset for drones",
-      "drone delivery analysis",
-      "dataset on drone logistics",
-      "operations dataset for drone delivery"
-    ],
-    "domain_tags": [
-      "logistics",
-      "supply chain"
-    ],
-    "data_modality": "tabular",
     "size_category": "medium",
     "model_score": 0.0
   },
@@ -11848,55 +11939,6 @@
       "content moderation"
     ],
     "data_modality": "text",
-    "size_category": "medium",
-    "model_score": 0.0
-  },
-  {
-    "name": "MEPS (Medical Expenditure Panel Survey)",
-    "description": "Nationally representative survey of healthcare utilization, expenditures, insurance coverage, and health status for the US civilian population",
-    "category": "Insurance & Actuarial",
-    "url": "https://meps.ahrq.gov/mepsweb/",
-    "docs_url": "https://meps.ahrq.gov/mepsweb/data_stats/download_data_files.jsp",
-    "github_url": null,
-    "tags": [
-      "health-insurance",
-      "healthcare-costs",
-      "expenditure-data",
-      "survey-data",
-      "panel-data"
-    ],
-    "best_for": "Health insurance research, healthcare cost modeling, and demand analysis",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "The MEPS dataset provides a nationally representative survey of healthcare utilization, expenditures, insurance coverage, and health status for the US civilian population. Researchers can analyze trends in healthcare costs and insurance coverage, as well as assess the impact of health status on expenditures.",
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is the Medical Expenditure Panel Survey?",
-      "How to access MEPS healthcare expenditure data?",
-      "What insights can be gained from MEPS survey data?",
-      "What are the key findings from the MEPS on health insurance coverage?",
-      "How does MEPS data inform healthcare policy?",
-      "What is included in the MEPS dataset?",
-      "How to analyze MEPS data using Python?",
-      "What are the trends in healthcare costs according to MEPS?"
-    ],
-    "use_cases": [
-      "Analyzing the impact of insurance coverage on healthcare expenditures.",
-      "Examining trends in healthcare utilization over time.",
-      "Assessing the relationship between health status and medical costs."
-    ],
-    "domain_tags": [
-      "healthcare",
-      "insurance"
-    ],
-    "data_modality": "tabular",
-    "geographic_scope": "United States",
     "size_category": "medium",
     "model_score": 0.0
   },
@@ -13084,48 +13126,6 @@
       "NLP"
     ],
     "data_modality": "text",
-    "size_category": "medium",
-    "model_score": 0.0
-  },
-  {
-    "name": "Hate Speech Data Catalogue",
-    "description": "50+ hate speech datasets across languages compiled at hatespeechdata.com. Meta-resource for content moderation research",
-    "category": "Content Moderation",
-    "url": "https://hatespeechdata.com/",
-    "docs_url": null,
-    "github_url": null,
-    "tags": [
-      "hate speech",
-      "catalogue",
-      "multilingual",
-      "meta-dataset"
-    ],
-    "best_for": "Learning content moderation analytics and modeling",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "The Hate Speech Data Catalogue is a compilation of over 50 datasets related to hate speech across various languages. It serves as a meta-resource for researchers focusing on content moderation and the analysis of hate speech.",
-    "use_cases": [
-      "Analyzing hate speech trends across languages",
-      "Developing content moderation algorithms",
-      "Researching the impact of hate speech on social media",
-      "Comparative analysis of hate speech in different cultures"
-    ],
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are the available hate speech datasets?",
-      "How can I access multilingual hate speech data?",
-      "What is the Hate Speech Data Catalogue?",
-      "What datasets are included in content moderation research?",
-      "Where can I find hate speech datasets?",
-      "What languages are covered in the hate speech datasets?"
-    ],
-    "domain_tags": [
-      "content moderation"
-    ],
-    "data_modality": "mixed",
     "size_category": "medium",
     "model_score": 0.0
   },

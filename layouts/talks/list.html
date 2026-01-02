@@ -1,4 +1,235 @@
 {{ define "main" }}
+<!-- Preconnect for faster loading -->
+<link rel="preconnect" href="https://www.google.com" crossorigin>
+<link rel="preconnect" href="https://img.youtube.com" crossorigin>
+
+<style>
+/* Talk card with thumbnail - Netflix style */
+.talk-card {
+    flex: 0 0 300px;
+    min-width: 300px;
+    max-width: 300px;
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.15s;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    will-change: transform;
+    contain: layout style paint;
+}
+
+.talk-card:hover {
+    transform: scale(1.03) translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    border-color: var(--accent);
+    z-index: 5;
+}
+
+.talk-card-thumbnail {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    background: var(--bg-hover);
+}
+
+.talk-card-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.talk-card-thumbnail .play-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 56px;
+    height: 56px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+}
+
+.talk-card:hover .play-overlay {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.talk-card-thumbnail.yt-channel {
+    background: linear-gradient(135deg, #FF0000 0%, #CC0000 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.talk-card-thumbnail.no-image {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--bg-hover) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.talk-card-thumbnail.no-image .favicon-large {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+}
+
+.talk-card-content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.talk-card-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 0.5rem 0;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.talk-card-desc {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1;
+    margin: 0;
+}
+
+/* Filter bar for each tab */
+.talks-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 60px;
+    z-index: 50;
+}
+
+.talks-filters .search-container {
+    flex: 1;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+.talks-filters .filter-select {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--background);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+.talks-filters .filter-select:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+/* Result count */
+.talks-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 2rem;
+}
+
+/* Hidden row */
+.subtopic-row.hidden {
+    display: none;
+}
+
+/* Book card (portrait orientation) */
+.book-card {
+    flex: 0 0 180px;
+    min-width: 180px;
+    max-width: 180px;
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.15s;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.book-card:hover {
+    transform: scale(1.03) translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    border-color: var(--accent);
+    z-index: 5;
+}
+
+.book-card-cover {
+    width: 100%;
+    aspect-ratio: 2/3;
+    overflow: hidden;
+    background: var(--bg-hover);
+}
+
+.book-card-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.book-card-content {
+    padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.book-card-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0 0 0.25rem 0;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.book-card-author {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+</style>
+
 <!-- Hero Section -->
 <header class="hero hero-with-image hero-talks">
     <h1 class="hero-title">Talks</h1>
@@ -32,14 +263,24 @@
 
     <!-- ========== VIDEOS TAB ========== -->
     <div id="tab-videos" class="tab-content active">
-        {{ $videoCategories := slice }}
+        {{/* Get unique macro categories for filter */}}
+        {{ $videoMacros := slice }}
         {{ range $videos }}
-            {{ if not (in $videoCategories .category) }}
-                {{ $videoCategories = $videoCategories | append .category }}
+            {{ if and .macro_category (not (in $videoMacros .macro_category)) }}
+                {{ $videoMacros = $videoMacros | append .macro_category }}
             {{ end }}
         {{ end }}
 
-        <div class="search-filters-row">
+        {{/* Get unique subtopics for rows */}}
+        {{ $videoSubtopics := slice }}
+        {{ range $videos }}
+            {{ if and .subtopic (not (in $videoSubtopics .subtopic)) }}
+                {{ $videoSubtopics = $videoSubtopics | append .subtopic }}
+            {{ end }}
+        {{ end }}
+
+        <!-- Filter Bar -->
+        <div class="talks-filters">
             <div class="search-container">
                 <div class="search-input-wrapper">
                     <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
@@ -49,85 +290,126 @@
                     <input type="text" id="videos-search" class="search-input" placeholder="Search videos..." autocomplete="off">
                 </div>
             </div>
-            <select id="videos-category" class="category-select">
+            <select id="videos-macro" class="filter-select">
                 <option value="all">All Topics</option>
-                {{ range $cat := sort $videoCategories }}
-                <option value="{{ $cat }}">{{ $cat }}</option>
+                {{ range $macro := sort $videoMacros }}
+                <option value="{{ $macro }}">{{ $macro }}</option>
                 {{ end }}
             </select>
         </div>
 
-        <div id="videos-count" class="result-count">{{ len $videos }} videos</div>
+        <div class="talks-meta">
+            <span id="videos-count" class="result-count">{{ len $videos }} videos</span>
+        </div>
 
-        <div class="resources-grid">
-            {{ range $cat := $videoCategories }}
-            {{ $catVideos := where $videos "category" $cat }}
-            <div class="category-section" data-section-category="{{ $cat }}">
-                <h2 class="category-title">{{ $cat }}</h2>
-                <div class="cards-row">
-                    {{ range sort $catVideos "model_score" "desc" }}
-                    {{ $scoreInt := int (mul (default 0 .model_score) 1000) }}
-                    <div class="resource-card" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="{{ .category }}"
-                         data-pagefind-sort="score:{{ $scoreInt }}"
-                         data-pagefind-filter="type:{{ .type | default "video" }}"
-                         data-pagefind-filter="category:{{ .category }}"
-                         {{ with .difficulty }}data-pagefind-filter="difficulty:{{ . }}"{{ end }}
-                         {{ with .audience }}{{ range . }}data-pagefind-filter="audience:{{ . }}" {{ end }}{{ end }}>
-                        <span data-pagefind-weight="10" style="display:none;">{{ .name }}</span>
-                        <span data-pagefind-weight="5" style="display:none;">{{ .description }}</span>
-                        {{ if .image_url }}
-                        <a href="{{ .url }}" target="_blank" class="talk-thumbnail-link">
-                            <img src="{{ .image_url }}" alt="{{ .name }}" class="talk-thumbnail" loading="lazy">
-                        </a>
-                        {{ else if findRE "youtube\\.com/@|youtube\\.com/c/|youtube\\.com/channel/" .url }}
-                        <a href="{{ .url }}" target="_blank" class="talk-thumbnail-link talk-thumbnail-yt-channel">
-                            <div class="yt-channel-placeholder">
+        <!-- Netflix-style Subtopic Rows (sorted by top item score) -->
+        <div class="explore-rows" id="videos-rows">
+            {{/* Build subtopic list with scores for sorting */}}
+            {{ $subtopicScores := slice }}
+            {{ range $subtopic := $videoSubtopics }}
+                {{ $items := where $videos "subtopic" $subtopic }}
+                {{ $sortedItems := sort $items "model_score" "desc" }}
+                {{ $topScore := 0.0 }}
+                {{ with index $sortedItems 0 }}
+                    {{ $topScore = .model_score | default 0 }}
+                {{ end }}
+                {{ $subtopicScores = $subtopicScores | append (dict "name" $subtopic "score" $topScore) }}
+            {{ end }}
+
+            {{ range sort $subtopicScores "score" "desc" }}
+            {{ $subtopic := .name }}
+            {{ $subtopicVideos := where $videos "subtopic" $subtopic }}
+            {{ if gt (len $subtopicVideos) 0 }}
+            {{ $firstVideo := index (sort $subtopicVideos "model_score" "desc") 0 }}
+            <div class="explore-row subtopic-row"
+                 data-subtopic="{{ $subtopic }}"
+                 data-macro="{{ $firstVideo.macro_category }}">
+                <div class="explore-row-header">
+                    <h2 class="explore-row-title">{{ $subtopic }}</h2>
+                    <span class="explore-row-count">{{ len $subtopicVideos }} videos</span>
+                </div>
+                <div class="explore-scroller-wrapper">
+                    <div class="explore-scroller">
+                        {{ range sort $subtopicVideos "model_score" "desc" }}
+                        <a href="{{ .url }}" target="_blank" rel="noopener"
+                           class="talk-card"
+                           data-name="{{ .name | lower }}"
+                           data-desc="{{ .description | lower }}"
+                           data-macro="{{ .macro_category }}">
+                            {{ if .image_url }}
+                            <div class="talk-card-thumbnail">
+                                <img src="{{ .image_url }}" alt="{{ .name }}" loading="lazy">
+                                <div class="play-overlay">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" fill="white">
+                                        <polygon points="5,3 19,12 5,21"></polygon>
+                                    </svg>
+                                </div>
+                            </div>
+                            {{ else if findRE "youtube\\.com/@|youtube\\.com/c/|youtube\\.com/channel/" .url }}
+                            <div class="talk-card-thumbnail yt-channel">
                                 <svg viewBox="0 0 24 24" width="48" height="48" fill="white">
                                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                                 </svg>
                             </div>
-                        </a>
-                        {{ else if findRE "youtube\\.com|youtu\\.be" .url }}
-                        {{ $videoId := replaceRE ".*(?:v=|youtu\\.be/)([^&?]+).*" "$1" .url }}
-                        <a href="{{ .url }}" target="_blank" class="talk-thumbnail-link">
-                            <img src="https://img.youtube.com/vi/{{ $videoId }}/mqdefault.jpg" alt="{{ .name }}" class="talk-thumbnail" loading="lazy">
-                            <div class="play-overlay">
-                                <svg viewBox="0 0 24 24" width="48" height="48" fill="white">
-                                    <polygon points="5,3 19,12 5,21"></polygon>
-                                </svg>
+                            {{ else if findRE "youtube\\.com|youtu\\.be" .url }}
+                            {{ $videoId := replaceRE ".*(?:v=|youtu\\.be/)([^&?]+).*" "$1" .url }}
+                            <div class="talk-card-thumbnail">
+                                <img src="https://img.youtube.com/vi/{{ $videoId }}/hqdefault.jpg" alt="{{ .name }}" loading="lazy">
+                                <div class="play-overlay">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" fill="white">
+                                        <polygon points="5,3 19,12 5,21"></polygon>
+                                    </svg>
+                                </div>
+                            </div>
+                            {{ else }}
+                            <div class="talk-card-thumbnail no-image">
+                                <img class="favicon-large" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=64" alt="" loading="lazy">
+                            </div>
+                            {{ end }}
+                            <div class="talk-card-content">
+                                <h3 class="talk-card-title">{{ .name }}</h3>
+                                <p class="talk-card-desc">{{ .description }}</p>
                             </div>
                         </a>
                         {{ end }}
-                        <div class="card-header">
-                            <img class="resource-favicon" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
-                            <h3 class="resource-name">
-                                <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
-                            </h3>
-                            <span class="resource-type">{{ .type }}</span>
-                        </div>
-                        <p class="resource-desc">{{ .description }}</p>
-                        <div class="card-footer">
-                            <span class="category-badge">{{ .category }}</span>
-                            <a href="{{ .url }}" target="_blank" class="link-btn">Watch</a>
-                        </div>
                     </div>
-                    {{ end }}
+                    <button class="scroller-nav prev" aria-label="Scroll left">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <button class="scroller-nav next" aria-label="Scroll right">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
+            {{ end }}
             {{ end }}
         </div>
     </div>
 
     <!-- ========== PODCASTS TAB ========== -->
     <div id="tab-podcasts" class="tab-content">
-        {{ $podcastCategories := slice }}
+        {{/* Get unique macro categories for filter */}}
+        {{ $podcastMacros := slice }}
         {{ range $podcasts }}
-            {{ if not (in $podcastCategories .category) }}
-                {{ $podcastCategories = $podcastCategories | append .category }}
+            {{ if and .macro_category (not (in $podcastMacros .macro_category)) }}
+                {{ $podcastMacros = $podcastMacros | append .macro_category }}
             {{ end }}
         {{ end }}
 
-        <div class="search-filters-row">
+        {{/* Get unique subtopics for rows */}}
+        {{ $podcastSubtopics := slice }}
+        {{ range $podcasts }}
+            {{ if and .subtopic (not (in $podcastSubtopics .subtopic)) }}
+                {{ $podcastSubtopics = $podcastSubtopics | append .subtopic }}
+            {{ end }}
+        {{ end }}
+
+        <!-- Filter Bar -->
+        <div class="talks-filters">
             <div class="search-container">
                 <div class="search-input-wrapper">
                     <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
@@ -137,55 +419,89 @@
                     <input type="text" id="podcasts-search" class="search-input" placeholder="Search podcasts..." autocomplete="off">
                 </div>
             </div>
-            <select id="podcasts-category" class="category-select">
+            <select id="podcasts-macro" class="filter-select">
                 <option value="all">All Topics</option>
-                {{ range $cat := sort $podcastCategories }}
-                <option value="{{ $cat }}">{{ $cat }}</option>
+                {{ range $macro := sort $podcastMacros }}
+                <option value="{{ $macro }}">{{ $macro }}</option>
                 {{ end }}
             </select>
         </div>
 
-        <div id="podcasts-count" class="result-count">{{ len $podcasts }} podcasts</div>
+        <div class="talks-meta">
+            <span id="podcasts-count" class="result-count">{{ len $podcasts }} podcasts</span>
+        </div>
 
-        <div class="resources-grid">
-            {{ range $cat := $podcastCategories }}
-            {{ $catPodcasts := where $podcasts "category" $cat }}
-            <div class="category-section" data-section-category="{{ $cat }}">
-                <h2 class="category-title">{{ $cat }}</h2>
-                <div class="cards-row">
-                    {{ range sort $catPodcasts "model_score" "desc" }}
-                    {{ $scoreInt := int (mul (default 0 .model_score) 1000) }}
-                    <div class="resource-card" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="{{ .category }}"
-                         data-pagefind-sort="score:{{ $scoreInt }}"
-                         data-pagefind-filter="type:{{ .type | default "podcast" }}"
-                         data-pagefind-filter="category:{{ .category }}"
-                         {{ with .difficulty }}data-pagefind-filter="difficulty:{{ . }}"{{ end }}
-                         {{ with .audience }}{{ range . }}data-pagefind-filter="audience:{{ . }}" {{ end }}{{ end }}>
-                        <span data-pagefind-weight="10" style="display:none;">{{ .name }}</span>
-                        <span data-pagefind-weight="5" style="display:none;">{{ .description }}</span>
-                        <div class="card-header">
-                            <img class="resource-favicon" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
-                            <h3 class="resource-name">
-                                <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
-                            </h3>
-                            <span class="resource-type">{{ .type }}</span>
-                        </div>
-                        <p class="resource-desc">{{ .description }}</p>
-                        <div class="card-footer">
-                            <span class="category-badge">{{ .category }}</span>
-                            <a href="{{ .url }}" target="_blank" class="link-btn">Listen</a>
-                        </div>
+        <!-- Netflix-style Subtopic Rows (sorted by top item score) -->
+        <div class="explore-rows" id="podcasts-rows">
+            {{/* Build subtopic list with scores for sorting */}}
+            {{ $subtopicScores := slice }}
+            {{ range $subtopic := $podcastSubtopics }}
+                {{ $items := where $podcasts "subtopic" $subtopic }}
+                {{ $sortedItems := sort $items "model_score" "desc" }}
+                {{ $topScore := 0.0 }}
+                {{ with index $sortedItems 0 }}
+                    {{ $topScore = .model_score | default 0 }}
+                {{ end }}
+                {{ $subtopicScores = $subtopicScores | append (dict "name" $subtopic "score" $topScore) }}
+            {{ end }}
+
+            {{ range sort $subtopicScores "score" "desc" }}
+            {{ $subtopic := .name }}
+            {{ $subtopicPodcasts := where $podcasts "subtopic" $subtopic }}
+            {{ if gt (len $subtopicPodcasts) 0 }}
+            {{ $firstPodcast := index (sort $subtopicPodcasts "model_score" "desc") 0 }}
+            <div class="explore-row subtopic-row"
+                 data-subtopic="{{ $subtopic }}"
+                 data-macro="{{ $firstPodcast.macro_category }}">
+                <div class="explore-row-header">
+                    <h2 class="explore-row-title">{{ $subtopic }}</h2>
+                    <span class="explore-row-count">{{ len $subtopicPodcasts }} podcasts</span>
+                </div>
+                <div class="explore-scroller-wrapper">
+                    <div class="explore-scroller">
+                        {{ range sort $subtopicPodcasts "model_score" "desc" }}
+                        <a href="{{ .url }}" target="_blank" rel="noopener"
+                           class="talk-card"
+                           data-name="{{ .name | lower }}"
+                           data-desc="{{ .description | lower }}"
+                           data-macro="{{ .macro_category }}">
+                            {{ if .image_url }}
+                            <div class="talk-card-thumbnail">
+                                <img src="{{ .image_url }}" alt="{{ .name }}" loading="lazy">
+                            </div>
+                            {{ else }}
+                            <div class="talk-card-thumbnail no-image">
+                                <img class="favicon-large" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=64" alt="" loading="lazy">
+                            </div>
+                            {{ end }}
+                            <div class="talk-card-content">
+                                <h3 class="talk-card-title">{{ .name }}</h3>
+                                <p class="talk-card-desc">{{ .description }}</p>
+                            </div>
+                        </a>
+                        {{ end }}
                     </div>
-                    {{ end }}
+                    <button class="scroller-nav prev" aria-label="Scroll left">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <button class="scroller-nav next" aria-label="Scroll right">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
+            {{ end }}
             {{ end }}
         </div>
     </div>
 
     <!-- ========== BLOGS TAB ========== -->
     <div id="tab-blogs" class="tab-content">
-        <div class="search-filters-row">
+        <!-- Filter Bar -->
+        <div class="talks-filters">
             <div class="search-container">
                 <div class="search-input-wrapper">
                     <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
@@ -195,75 +511,102 @@
                     <input type="text" id="blogs-search" class="search-input" placeholder="Search blogs..." autocomplete="off">
                 </div>
             </div>
-            <select id="blogs-category" class="category-select">
+            <select id="blogs-macro" class="filter-select">
                 <option value="all">All Blogs</option>
                 <option value="Personal">Personal Blogs</option>
                 <option value="Company">Company Blogs</option>
             </select>
         </div>
 
-        <div id="blogs-count" class="result-count">{{ add (len $blogs) (len $industryBlogsFromResources) }} blogs</div>
+        <div class="talks-meta">
+            <span id="blogs-count" class="result-count">{{ add (len $blogs) (len $industryBlogsFromResources) }} blogs</span>
+        </div>
 
-        <div class="resources-grid">
-            <div class="category-section" data-section-category="Personal">
-                <h2 class="category-title">Personal Blogs</h2>
-                <div class="cards-row">
-                    {{ range $blogs }}
-                    {{ $scoreInt := int (mul (default 0 .model_score) 1000) }}
-                    <div class="resource-card" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="Personal"
-                         data-pagefind-sort="score:{{ $scoreInt }}"
-                         data-pagefind-filter="type:blog"
-                         data-pagefind-filter="category:Personal"
-                         {{ with .difficulty }}data-pagefind-filter="difficulty:{{ . }}"{{ end }}
-                         {{ with .audience }}{{ range . }}data-pagefind-filter="audience:{{ . }}" {{ end }}{{ end }}>
-                        <span data-pagefind-weight="10" style="display:none;">{{ .name }}</span>
-                        <span data-pagefind-weight="5" style="display:none;">{{ .description }}</span>
-                        {{ if .image_url }}
-                        <a href="{{ .url }}" target="_blank" class="blog-thumbnail-link">
-                            <img src="{{ .image_url }}" alt="{{ .name }}" class="blog-thumbnail" loading="lazy">
+        <!-- Netflix-style Rows -->
+        <div class="explore-rows" id="blogs-rows">
+            <!-- Personal Blogs Row -->
+            <div class="explore-row subtopic-row" data-subtopic="Personal" data-macro="Personal">
+                <div class="explore-row-header">
+                    <h2 class="explore-row-title">Personal Blogs</h2>
+                    <span class="explore-row-count">{{ len $blogs }} blogs</span>
+                </div>
+                <div class="explore-scroller-wrapper">
+                    <div class="explore-scroller">
+                        {{ range sort $blogs "model_score" "desc" }}
+                        <a href="{{ .url }}" target="_blank" rel="noopener"
+                           class="talk-card"
+                           data-name="{{ .name | lower }}"
+                           data-desc="{{ .description | lower }}"
+                           data-macro="Personal">
+                            {{ if .image_url }}
+                            <div class="talk-card-thumbnail">
+                                <img src="{{ .image_url }}" alt="{{ .name }}" loading="lazy">
+                            </div>
+                            {{ else }}
+                            <div class="talk-card-thumbnail no-image">
+                                <img class="favicon-large" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=64" alt="" loading="lazy">
+                            </div>
+                            {{ end }}
+                            <div class="talk-card-content">
+                                <h3 class="talk-card-title">{{ .name }}</h3>
+                                <p class="talk-card-desc">{{ .description }}</p>
+                            </div>
                         </a>
                         {{ end }}
-                        <div class="card-header">
-                            <img class="resource-favicon" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
-                            <h3 class="resource-name">
-                                <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
-                            </h3>
-                        </div>
-                        <p class="resource-desc">{{ .description }}</p>
-                        <div class="card-footer">
-                            <span class="category-badge">Personal</span>
-                            <a href="{{ .url }}" target="_blank" class="link-btn">Read</a>
-                        </div>
                     </div>
-                    {{ end }}
+                    <button class="scroller-nav prev" aria-label="Scroll left">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <button class="scroller-nav next" aria-label="Scroll right">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
-            <div class="category-section" data-section-category="Company">
-                <h2 class="category-title">Company Blogs</h2>
-                <div class="cards-row">
-                    {{ range $industryBlogsFromResources }}
-                    {{ $scoreInt := int (mul (default 0 .model_score) 1000) }}
-                    <div class="resource-card" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="Company"
-                         data-pagefind-sort="score:{{ $scoreInt }}"
-                         data-pagefind-filter="type:blog"
-                         data-pagefind-filter="category:Company"
-                         {{ with .difficulty }}data-pagefind-filter="difficulty:{{ . }}"{{ end }}
-                         {{ with .audience }}{{ range . }}data-pagefind-filter="audience:{{ . }}" {{ end }}{{ end }}>
-                        <span data-pagefind-weight="10" style="display:none;">{{ .name }}</span>
-                        <span data-pagefind-weight="5" style="display:none;">{{ .description }}</span>
-                        <div class="card-header">
-                            <img class="resource-favicon" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
-                            <h3 class="resource-name">
-                                <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
-                            </h3>
-                        </div>
-                        <p class="resource-desc">{{ .description }}</p>
-                        <div class="card-footer">
-                            <span class="category-badge">Company</span>
-                            <a href="{{ .url }}" target="_blank" class="link-btn">Read</a>
-                        </div>
+
+            <!-- Company Blogs Row -->
+            <div class="explore-row subtopic-row" data-subtopic="Company" data-macro="Company">
+                <div class="explore-row-header">
+                    <h2 class="explore-row-title">Company Blogs</h2>
+                    <span class="explore-row-count">{{ len $industryBlogsFromResources }} blogs</span>
+                </div>
+                <div class="explore-scroller-wrapper">
+                    <div class="explore-scroller">
+                        {{ range sort $industryBlogsFromResources "model_score" "desc" }}
+                        <a href="{{ .url }}" target="_blank" rel="noopener"
+                           class="talk-card"
+                           data-name="{{ .name | lower }}"
+                           data-desc="{{ .description | lower }}"
+                           data-macro="Company">
+                            {{ if .image_url }}
+                            <div class="talk-card-thumbnail">
+                                <img src="{{ .image_url }}" alt="{{ .name }}" loading="lazy">
+                            </div>
+                            {{ else }}
+                            <div class="talk-card-thumbnail no-image">
+                                <img class="favicon-large" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=64" alt="" loading="lazy">
+                            </div>
+                            {{ end }}
+                            <div class="talk-card-content">
+                                <h3 class="talk-card-title">{{ .name }}</h3>
+                                <p class="talk-card-desc">{{ .description }}</p>
+                            </div>
+                        </a>
+                        {{ end }}
                     </div>
-                    {{ end }}
+                    <button class="scroller-nav prev" aria-label="Scroll left">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <button class="scroller-nav next" aria-label="Scroll right">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -271,14 +614,16 @@
 
     <!-- ========== BOOKS TAB ========== -->
     <div id="tab-books" class="tab-content">
+        {{/* Get unique categories */}}
         {{ $bookCategories := slice }}
         {{ range $books }}
-            {{ if not (in $bookCategories .category) }}
+            {{ if and .category (not (in $bookCategories .category)) }}
                 {{ $bookCategories = $bookCategories | append .category }}
             {{ end }}
         {{ end }}
 
-        <div class="search-filters-row">
+        <!-- Filter Bar -->
+        <div class="talks-filters">
             <div class="search-container">
                 <div class="search-input-wrapper">
                     <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
@@ -288,94 +633,122 @@
                     <input type="text" id="books-search" class="search-input" placeholder="Search books..." autocomplete="off">
                 </div>
             </div>
-            <select id="books-category" class="category-select">
+            <select id="books-macro" class="filter-select">
                 <option value="all">All Topics</option>
                 {{ range $cat := sort $bookCategories }}
                 <option value="{{ $cat }}">{{ $cat }}</option>
                 {{ end }}
-                <option value="Free Online">Free Online Monographs</option>
+                <option value="Free Online">Free Online</option>
             </select>
         </div>
 
-        <div id="books-count" class="result-count">{{ add (len $books) (len $monographs) }} books</div>
+        <div class="talks-meta">
+            <span id="books-count" class="result-count">{{ add (len $books) (len $monographs) }} books</span>
+        </div>
 
-        <div class="resources-grid">
+        <!-- Netflix-style Rows (sorted by top item score) -->
+        <div class="explore-rows" id="books-rows">
+            {{/* Build category list with scores for sorting */}}
+            {{ $categoryScores := slice }}
             {{ range $cat := $bookCategories }}
+                {{ $items := where $books "category" $cat }}
+                {{ $sortedItems := sort $items "model_score" "desc" }}
+                {{ $topScore := 0.0 }}
+                {{ with index $sortedItems 0 }}
+                    {{ $topScore = .model_score | default 0 }}
+                {{ end }}
+                {{ $categoryScores = $categoryScores | append (dict "name" $cat "score" $topScore) }}
+            {{ end }}
+
+            {{ range sort $categoryScores "score" "desc" }}
+            {{ $cat := .name }}
             {{ $catBooks := where $books "category" $cat }}
-            <div class="category-section" data-section-category="{{ $cat }}">
-                <h2 class="category-title">{{ $cat }}</h2>
-                <div class="cards-row">
-                    {{ range sort $catBooks "model_score" "desc" }}
-                    {{ $scoreInt := int (mul (default 0 .model_score) 1000) }}
-                    <div class="resource-card" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="{{ .category }}"
-                         data-pagefind-sort="score:{{ $scoreInt }}"
-                         data-pagefind-filter="type:book"
-                         data-pagefind-filter="category:{{ .category }}"
-                         {{ with .difficulty }}data-pagefind-filter="difficulty:{{ . }}"{{ end }}
-                         {{ with .audience }}{{ range . }}data-pagefind-filter="audience:{{ . }}" {{ end }}{{ end }}>
-                        <span data-pagefind-weight="10" style="display:none;">{{ .name }}</span>
-                        <span data-pagefind-weight="5" style="display:none;">{{ .description }}</span>
-                        <a href="{{ .url }}" target="_blank" class="book-cover-link">
-                            <img src="https://covers.openlibrary.org/b/isbn/{{ .isbn }}-M.jpg"
-                                 alt="{{ .name }}"
-                                 class="book-cover"
-                                 loading="lazy"
-                                 onerror="this.style.display='none'">
+            {{ if gt (len $catBooks) 0 }}
+            <div class="explore-row subtopic-row" data-subtopic="{{ $cat }}" data-macro="{{ $cat }}">
+                <div class="explore-row-header">
+                    <h2 class="explore-row-title">{{ $cat }}</h2>
+                    <span class="explore-row-count">{{ len $catBooks }} books</span>
+                </div>
+                <div class="explore-scroller-wrapper">
+                    <div class="explore-scroller">
+                        {{ range sort $catBooks "model_score" "desc" }}
+                        <a href="{{ .url }}" target="_blank" rel="noopener"
+                           class="book-card"
+                           data-name="{{ .name | lower }}"
+                           data-desc="{{ .description | lower }}"
+                           data-macro="{{ .category }}">
+                            <div class="book-card-cover">
+                                <img src="https://covers.openlibrary.org/b/isbn/{{ .isbn }}-M.jpg"
+                                     alt="{{ .name }}"
+                                     loading="lazy"
+                                     onerror="this.parentElement.style.background='var(--bg-hover)'">
+                            </div>
+                            <div class="book-card-content">
+                                <h3 class="book-card-title">{{ .name }}</h3>
+                                <p class="book-card-author">{{ .author }}</p>
+                            </div>
                         </a>
-                        <div class="card-header">
-                            <h3 class="resource-name">
-                                <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
-                            </h3>
-                            <span class="resource-type">{{ .year }}</span>
-                        </div>
-                        <p class="resource-author">{{ .author }}</p>
-                        <p class="resource-desc">{{ .description }}</p>
-                        <div class="card-footer">
-                            <span class="category-badge">{{ .category }}</span>
-                            <a href="{{ .url }}" target="_blank" class="link-btn">Amazon</a>
-                        </div>
+                        {{ end }}
                     </div>
-                    {{ end }}
+                    <button class="scroller-nav prev" aria-label="Scroll left">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <button class="scroller-nav next" aria-label="Scroll right">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
             {{ end }}
+            {{ end }}
 
-            <!-- Free Online Monographs Section -->
-            <div class="category-section" data-section-category="Free Online">
-                <h2 class="category-title">Free Online Monographs</h2>
-                <div class="cards-row">
-                    {{ range sort $monographs "model_score" "desc" }}
-                    {{ $scoreInt := int (mul (default 0 .model_score) 1000) }}
-                    <div class="resource-card" data-name="{{ .name | lower }}" data-description="{{ .description | lower }}" data-category="Free Online"
-                         data-pagefind-sort="score:{{ $scoreInt }}"
-                         data-pagefind-filter="type:{{ .type | default "monograph" }}"
-                         data-pagefind-filter="category:Free Online"
-                         {{ with .difficulty }}data-pagefind-filter="difficulty:{{ . }}"{{ end }}
-                         {{ with .audience }}{{ range . }}data-pagefind-filter="audience:{{ . }}" {{ end }}{{ end }}>
-                        <span data-pagefind-weight="10" style="display:none;">{{ .name }}</span>
-                        <span data-pagefind-weight="5" style="display:none;">{{ .description }}</span>
-                        <div class="card-header">
-                            <img class="resource-favicon" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32" alt="" loading="lazy" onerror="this.style.display='none'">
-                            <h3 class="resource-name">
-                                <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
-                            </h3>
-                            <span class="resource-type">{{ .type }}</span>
-                        </div>
-                        <p class="resource-desc">{{ .description }}</p>
-                        <div class="card-footer">
-                            <span class="category-badge">{{ .category }}</span>
-                            <a href="{{ .url }}" target="_blank" class="link-btn">Read Free</a>
-                        </div>
+            <!-- Free Online Monographs Row -->
+            {{ if gt (len $monographs) 0 }}
+            <div class="explore-row subtopic-row" data-subtopic="Free Online" data-macro="Free Online">
+                <div class="explore-row-header">
+                    <h2 class="explore-row-title">Free Online Monographs</h2>
+                    <span class="explore-row-count">{{ len $monographs }} resources</span>
+                </div>
+                <div class="explore-scroller-wrapper">
+                    <div class="explore-scroller">
+                        {{ range sort $monographs "model_score" "desc" }}
+                        <a href="{{ .url }}" target="_blank" rel="noopener"
+                           class="talk-card"
+                           data-name="{{ .name | lower }}"
+                           data-desc="{{ .description | lower }}"
+                           data-macro="Free Online">
+                            <div class="talk-card-thumbnail no-image">
+                                <img class="favicon-large" src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=64" alt="" loading="lazy">
+                            </div>
+                            <div class="talk-card-content">
+                                <h3 class="talk-card-title">{{ .name }}</h3>
+                                <p class="talk-card-desc">{{ .description }}</p>
+                            </div>
+                        </a>
+                        {{ end }}
                     </div>
-                    {{ end }}
+                    <button class="scroller-nav prev" aria-label="Scroll left">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M15 18l-6-6 6-6"/>
+                        </svg>
+                    </button>
+                    <button class="scroller-nav next" aria-label="Scroll right">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 18l6-6-6-6"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
+            {{ end }}
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="footer">
-        <p>Curated learning resources for tech economists</p>
+    <footer class="footer" style="padding: 2rem; text-align: center;">
+        <p style="color: var(--text-muted);">Curated learning resources for tech economists</p>
     </footer>
 </div>
 
@@ -394,6 +767,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Update URL hash
         history.replaceState(null, null, `#${tabId}`);
+
+        // Initialize scrollers for new tab
+        initScrollers(document.getElementById(`tab-${tabId}`));
     }
 
     tabs.forEach(tab => {
@@ -406,55 +782,115 @@ document.addEventListener('DOMContentLoaded', function() {
         switchTab(hash);
     }
 
-    // Simple search and filter for each tab
-    function setupTabSearch(searchId, categoryId, countId, itemLabel) {
-        const searchInput = document.getElementById(searchId);
-        const categorySelect = categoryId ? document.getElementById(categoryId) : null;
-        const countEl = document.getElementById(countId);
-        const tabContent = searchInput.closest('.tab-content');
-        const cards = tabContent.querySelectorAll('.resource-card');
-        const sections = tabContent.querySelectorAll('.category-section');
+    // Debounce helper
+    function debounce(func, wait) {
+        let timeout;
+        return function(...args) {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+    }
 
-        function filterItems() {
-            const searchTerm = searchInput.value.toLowerCase();
-            const selectedCategory = categorySelect ? categorySelect.value : 'all';
+    // Setup filtering for each tab
+    function setupTabFilters(tabId, searchId, macroId, countId, itemLabel) {
+        const tabContent = document.getElementById(`tab-${tabId}`);
+        const searchInput = document.getElementById(searchId);
+        const macroFilter = document.getElementById(macroId);
+        const countEl = document.getElementById(countId);
+        const rows = tabContent.querySelectorAll('.subtopic-row');
+
+        function filterAll() {
+            const searchTerm = searchInput.value.toLowerCase().trim();
+            const selectedMacro = macroFilter.value;
             let visibleCount = 0;
 
-            cards.forEach(card => {
-                const name = card.dataset.name || '';
-                const desc = card.dataset.description || '';
-                const category = card.dataset.category || '';
+            rows.forEach(row => {
+                const rowMacro = row.dataset.macro;
 
-                const matchesSearch = !searchTerm || name.includes(searchTerm) || desc.includes(searchTerm);
-                const matchesCategory = selectedCategory === 'all' || category === selectedCategory;
+                // Hide row if macro doesn't match
+                if (selectedMacro !== 'all' && rowMacro !== selectedMacro) {
+                    row.classList.add('hidden');
+                    return;
+                }
 
-                if (matchesSearch && matchesCategory) {
-                    card.style.display = '';
-                    visibleCount++;
+                // Filter cards within row
+                const cards = row.querySelectorAll('.talk-card, .book-card');
+                let visibleInRow = 0;
+
+                cards.forEach(card => {
+                    const cardName = card.dataset.name || '';
+                    const cardDesc = card.dataset.desc || '';
+
+                    let show = true;
+
+                    // Search filter
+                    if (searchTerm && !cardName.includes(searchTerm) && !cardDesc.includes(searchTerm)) {
+                        show = false;
+                    }
+
+                    card.style.display = show ? '' : 'none';
+                    if (show) {
+                        visibleInRow++;
+                        visibleCount++;
+                    }
+                });
+
+                // Hide row if no visible cards
+                if (visibleInRow === 0) {
+                    row.classList.add('hidden');
                 } else {
-                    card.style.display = 'none';
+                    row.classList.remove('hidden');
+                    // Update row count
+                    const countSpan = row.querySelector('.explore-row-count');
+                    if (countSpan) {
+                        countSpan.textContent = visibleInRow + ' ' + itemLabel;
+                    }
                 }
             });
 
-            // Hide empty sections
-            sections.forEach(section => {
-                const visibleCards = section.querySelectorAll('.resource-card:not([style*="display: none"])');
-                section.style.display = visibleCards.length ? '' : 'none';
-            });
-
-            countEl.textContent = `${visibleCount} ${itemLabel}`;
+            countEl.textContent = visibleCount + ' ' + itemLabel;
         }
 
-        searchInput.addEventListener('input', filterItems);
-        if (categorySelect) {
-            categorySelect.addEventListener('change', filterItems);
-        }
+        searchInput.addEventListener('input', debounce(filterAll, 150));
+        macroFilter.addEventListener('change', filterAll);
     }
 
-    setupTabSearch('videos-search', 'videos-category', 'videos-count', 'videos');
-    setupTabSearch('podcasts-search', 'podcasts-category', 'podcasts-count', 'podcasts');
-    setupTabSearch('blogs-search', 'blogs-category', 'blogs-count', 'blogs');
-    setupTabSearch('books-search', 'books-category', 'books-count', 'books');
+    setupTabFilters('videos', 'videos-search', 'videos-macro', 'videos-count', 'videos');
+    setupTabFilters('podcasts', 'podcasts-search', 'podcasts-macro', 'podcasts-count', 'podcasts');
+    setupTabFilters('blogs', 'blogs-search', 'blogs-macro', 'blogs-count', 'blogs');
+    setupTabFilters('books', 'books-search', 'books-macro', 'books-count', 'books');
+
+    // Scroller navigation
+    function initScrollers(container) {
+        container.querySelectorAll('.explore-row').forEach(row => {
+            const scroller = row.querySelector('.explore-scroller');
+            const prevBtn = row.querySelector('.scroller-nav.prev');
+            const nextBtn = row.querySelector('.scroller-nav.next');
+
+            if (!scroller || !prevBtn || !nextBtn) return;
+
+            function updateNavState() {
+                const atStart = scroller.scrollLeft <= 0;
+                const atEnd = scroller.scrollLeft >= scroller.scrollWidth - scroller.clientWidth - 10;
+                prevBtn.classList.toggle('disabled', atStart);
+                nextBtn.classList.toggle('disabled', atEnd);
+            }
+
+            prevBtn.addEventListener('click', () => {
+                scroller.scrollBy({ left: -340, behavior: 'smooth' });
+            });
+
+            nextBtn.addEventListener('click', () => {
+                scroller.scrollBy({ left: 340, behavior: 'smooth' });
+            });
+
+            scroller.addEventListener('scroll', debounce(updateNavState, 50));
+            updateNavState();
+        });
+    }
+
+    // Initialize scrollers for active tab
+    initScrollers(document.querySelector('.tab-content.active'));
 });
 </script>
 {{ end }}

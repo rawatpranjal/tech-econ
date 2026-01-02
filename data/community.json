@@ -277,43 +277,6 @@
     "model_score": 0.0024
   },
   {
-    "name": "Vincent Arel-Bundock",
-    "description": "Professor at Universit\u00e9 de Montr\u00e9al. Creator of the marginaleffects R/Python package. Causal inference including frontdoor adjustment, marginal effects interpretation. Author of 'Model to Meaning.'",
-    "category": "Blogs",
-    "url": "https://arelbundock.com/",
-    "image_url": "https://arelbundock.com/files/vincent.jpg",
-    "type": "Personal Blog",
-    "location": "Online",
-    "dates": "Ongoing",
-    "tags": [
-      "Blogs",
-      "Personal Blog"
-    ],
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "Vincent Arel-Bundock is a professor at Universit\u00e9 de Montr\u00e9al who specializes in causal inference and has created the marginaleffects R/Python package. This personal blog is likely attended by those interested in statistical methods and causal analysis.",
-    "use_cases": [
-      "Learn about causal inference techniques",
-      "Explore statistical programming with R/Python",
-      "Understand marginal effects interpretation"
-    ],
-    "audience": [
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is causal inference?",
-      "How to use the marginaleffects package?",
-      "What is frontdoor adjustment?",
-      "What are marginal effects?",
-      "Who is Vincent Arel-Bundock?",
-      "What topics are covered in 'Model to Meaning'?"
-    ],
-    "event_format": "online",
-    "model_score": 0.0001
-  },
-  {
     "name": "Nick Huntington-Klein",
     "description": "'The Effect' author. Animated causal inference plots, Library of Statistical Techniques founder.",
     "category": "Blogs",
@@ -347,6 +310,82 @@
       "What are the main themes of Nick Huntington-Klein's blog?",
       "How can I apply causal inference in my research?",
       "What resources are available for learning about statistical techniques?"
+    ],
+    "event_format": "online",
+    "model_score": 0.0001
+  },
+  {
+    "name": "Alex Deng",
+    "description": "Co-author 'Trustworthy Online Controlled Experiments'. Deep A/B testing statistics \u2014 variance reduction, sequential testing, stopping rules without p-hacking.",
+    "category": "Blogs",
+    "url": "https://alexdeng.github.io/",
+    "image_url": "https://alexdeng.github.io/public/profile2_mono_sq.jpg",
+    "type": "Personal Blog",
+    "location": "Online",
+    "dates": "Ongoing",
+    "tags": [
+      "Blogs",
+      "Personal Blog"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "blogs"
+    ],
+    "summary": "This personal blog by Alex Deng discusses advanced topics in A/B testing statistics, including variance reduction and sequential testing. It is likely to attract readers interested in statistical methods and experimental design.",
+    "use_cases": [
+      "to learn about advanced A/B testing techniques",
+      "to understand statistical methods in online experiments"
+    ],
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are trustworthy online controlled experiments?",
+      "How can I reduce variance in A/B testing?",
+      "What are the stopping rules in sequential testing?",
+      "What is p-hacking and how can it be avoided?",
+      "Who is Alex Deng?",
+      "What are the best practices for deep A/B testing?",
+      "How does sequential testing work?",
+      "What are the implications of variance reduction in experiments?"
+    ],
+    "event_format": "online",
+    "model_score": 0.0001
+  },
+  {
+    "name": "Vincent Arel-Bundock",
+    "description": "Professor at Universit\u00e9 de Montr\u00e9al. Creator of the marginaleffects R/Python package. Causal inference including frontdoor adjustment, marginal effects interpretation. Author of 'Model to Meaning.'",
+    "category": "Blogs",
+    "url": "https://arelbundock.com/",
+    "image_url": "https://arelbundock.com/files/vincent.jpg",
+    "type": "Personal Blog",
+    "location": "Online",
+    "dates": "Ongoing",
+    "tags": [
+      "Blogs",
+      "Personal Blog"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Vincent Arel-Bundock is a professor at Universit\u00e9 de Montr\u00e9al who specializes in causal inference and has created the marginaleffects R/Python package. This personal blog is likely attended by those interested in statistical methods and causal analysis.",
+    "use_cases": [
+      "Learn about causal inference techniques",
+      "Explore statistical programming with R/Python",
+      "Understand marginal effects interpretation"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is causal inference?",
+      "How to use the marginaleffects package?",
+      "What is frontdoor adjustment?",
+      "What are marginal effects?",
+      "Who is Vincent Arel-Bundock?",
+      "What topics are covered in 'Model to Meaning'?"
     ],
     "event_format": "online",
     "model_score": 0.0
@@ -636,45 +675,6 @@
     "event_format": "conference",
     "geographic_focus": "Detroit, MI",
     "frequency": "annual",
-    "model_score": 0.0
-  },
-  {
-    "name": "Alex Deng",
-    "description": "Co-author 'Trustworthy Online Controlled Experiments'. Deep A/B testing statistics \u2014 variance reduction, sequential testing, stopping rules without p-hacking.",
-    "category": "Blogs",
-    "url": "https://alexdeng.github.io/",
-    "image_url": "https://alexdeng.github.io/public/profile2_mono_sq.jpg",
-    "type": "Personal Blog",
-    "location": "Online",
-    "dates": "Ongoing",
-    "tags": [
-      "Blogs",
-      "Personal Blog"
-    ],
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [
-      "blogs"
-    ],
-    "summary": "This personal blog by Alex Deng discusses advanced topics in A/B testing statistics, including variance reduction and sequential testing. It is likely to attract readers interested in statistical methods and experimental design.",
-    "use_cases": [
-      "to learn about advanced A/B testing techniques",
-      "to understand statistical methods in online experiments"
-    ],
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are trustworthy online controlled experiments?",
-      "How can I reduce variance in A/B testing?",
-      "What are the stopping rules in sequential testing?",
-      "What is p-hacking and how can it be avoided?",
-      "Who is Alex Deng?",
-      "What are the best practices for deep A/B testing?",
-      "How does sequential testing work?",
-      "What are the implications of variance reduction in experiments?"
-    ],
-    "event_format": "online",
     "model_score": 0.0
   },
   {
