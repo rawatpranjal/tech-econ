@@ -119,7 +119,7 @@ python3 scripts/enrich_metadata.py       # LLM-enriched fields
 # Tech Stack Quick Reference
 
 - **Static Site**: Hugo
-- **Search**: Fuse.js (client), Pagefind (index), bge-large-en-v1.5 (embeddings)
-- **Ranking**: LightGBM-Tweedie model
+- **Search**: Hybrid keyword (MiniSearch) + semantic (bge-large-en-v1.5) with RRF fusion
+- **Ranking**: LightGBM-Tweedie (clicks×5 + impressions×0.5 + viewability×0.1 + dwell×1) → `model_score`
 - **Backend**: Cloudflare Workers + D1 Database
 - **Frontend**: Vanilla JS, Leaflet maps, AOS animations
