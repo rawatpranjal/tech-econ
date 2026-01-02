@@ -91,6 +91,28 @@ python3 scripts/rank_all_content.py      # ML-based rankings
 python3 scripts/enrich_metadata.py       # LLM-enriched fields
 ```
 
+## Check Analytics
+```bash
+# Run from analytics-worker/ directory
+cd analytics-worker
+
+# Recent page views (last 6 hours)
+npx wrangler d1 execute tech-econ-analytics-db --remote --command \
+  "SELECT path, view_count, last_viewed FROM page_views WHERE last_viewed > datetime('now', '-6 hours') ORDER BY last_viewed DESC"
+
+# Recent clicks
+npx wrangler d1 execute tech-econ-analytics-db --remote --command \
+  "SELECT name, section, click_count, last_clicked FROM content_clicks WHERE last_clicked > datetime('now', '-6 hours') ORDER BY last_clicked DESC LIMIT 20"
+
+# Recent impressions
+npx wrangler d1 execute tech-econ-analytics-db --remote --command \
+  "SELECT name, section, impression_count, last_seen FROM content_impressions WHERE last_seen > datetime('now', '-6 hours') ORDER BY last_seen DESC LIMIT 20"
+
+# Recent searches
+npx wrangler d1 execute tech-econ-analytics-db --remote --command \
+  "SELECT * FROM search_queries ORDER BY last_searched DESC LIMIT 10"
+```
+
 ---
 
 # Key Files Reference
