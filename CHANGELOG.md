@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-01-01 (Learning page Netflix-style redesign)
+- Reorganized resources.json: 64→48 categories, 80→10 types, added macro_category field
+- Rebuilt /learning with Netflix-style horizontal scrollers per category
+- Added filters: macro category (11), type (10), level pills (beginner/intermediate/advanced)
+- Cards sorted by model_score within each row, scrollable with nav arrows
+
 ## 2026-01-01 (UChicago Causal Inference course)
 - Added UChicago "Causal Models in Data Science" course by Jeong-Yoon Lee
 - Added 8 industry speaker talks: Facure (Nubank), Lal (Netflix), Zheng (Meta), Chen (Snap), Pan (Snap), Sinha (Lyft), Harinen (Toyota), Mercurio (Netflix)

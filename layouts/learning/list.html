@@ -3,18 +3,212 @@
 <link rel="preconnect" href="https://www.google.com" crossorigin>
 
 <style>
-/* Accordion styles for domain sections */
-.domain-content.collapsed { display: none; }
-.domain-toggle { cursor: pointer; user-select: none; }
-.domain-toggle:hover { opacity: 0.8; }
-.toggle-icon {
-    display: inline-block;
-    transition: transform 0.2s ease;
-    font-size: 0.7em;
-    margin-left: 0.5em;
+/* Filter bar styles */
+.learning-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 60px;
+    z-index: 100;
 }
-.domain-content:not(.collapsed) ~ .domain-title .toggle-icon,
-.domain-section:has(.domain-content:not(.collapsed)) .toggle-icon { transform: rotate(90deg); }
+
+.learning-filters .search-container {
+    flex: 1;
+    min-width: 200px;
+    max-width: 400px;
+}
+
+.learning-filters .filter-select {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--background);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+.learning-filters .filter-select:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+/* Level filter pills */
+.level-pills {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.level-pill {
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    background: var(--background);
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.level-pill:hover {
+    border-color: var(--accent);
+}
+
+.level-pill.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+/* Result count */
+.learning-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.result-count {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Learning card (based on explore-card) */
+.learning-card {
+    flex: 0 0 280px;
+    min-width: 280px;
+    max-width: 280px;
+    height: 180px;
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 1.25rem;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.15s;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    will-change: transform;
+    contain: layout style paint;
+    text-decoration: none;
+    color: inherit;
+}
+
+.learning-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.learning-card:hover {
+    transform: scale(1.03) translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    border-color: var(--accent);
+    z-index: 5;
+}
+
+.learning-card:hover::before {
+    opacity: 1;
+}
+
+.learning-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.learning-card-favicon {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.learning-card-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+    flex: 1;
+}
+
+.learning-card-desc {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1;
+    margin: 0;
+}
+
+.learning-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+
+.learning-card-type {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    background: var(--bg-hover);
+    color: var(--text-muted);
+}
+
+.learning-card-level {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.learning-card-level.beginner {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.learning-card-level.intermediate {
+    background: #fff3e0;
+    color: #ef6c00;
+}
+
+.learning-card-level.advanced {
+    background: #ffebee;
+    color: #c62828;
+}
+
+/* Empty state for filtered rows */
+.category-row.hidden {
+    display: none;
+}
+
+.category-row.empty {
+    display: none;
+}
 </style>
 
 <!-- Hero Section -->
@@ -23,248 +217,262 @@
     <p class="hero-tagline">{{ len .Site.Data.resources }} books, courses, and blogs to level up your skills.</p>
 </header>
 
-<!-- Search Index Data for Fuse.js -->
-<script id="search-data" type="application/json">
-[{{ range $i, $item := .Site.Data.resources }}{{ if $i }},{{ end }}{"name":"{{ .name }}","description":"{{ .description | htmlEscape }}","domain":"{{ .domain }}","category":"{{ .category }}","type":"{{ .type }}"}{{ end }}]
-</script>
+<!-- Filter Bar -->
+<div class="learning-filters">
+    <!-- Search -->
+    <div class="search-container">
+        <div class="search-input-wrapper">
+            <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            <input type="text" id="learning-search" class="search-input" placeholder="Search resources..." autocomplete="off">
+        </div>
+    </div>
 
-<!-- Domain-Category Mapping for Cascade Filter -->
-<script id="domain-categories" type="application/json">
-{{ $domainCats := dict }}
-{{ range .Site.Data.resources }}
-    {{ $domain := .domain | default "" }}
-    {{ $cat := .category }}
-    {{ if and $domain (not (index $domainCats $domain)) }}
-        {{ $domainCats = merge $domainCats (dict $domain (slice $cat)) }}
-    {{ else if $domain }}
-        {{ $existing := index $domainCats $domain }}
-        {{ if not (in $existing $cat) }}
-            {{ $domainCats = merge $domainCats (dict $domain ($existing | append $cat)) }}
+    <!-- Macro Category Filter -->
+    {{ $macros := slice }}
+    {{ range .Site.Data.resources }}
+        {{ if and .macro_category (not (in $macros .macro_category)) }}
+            {{ $macros = $macros | append .macro_category }}
         {{ end }}
     {{ end }}
-{{ end }}
-{{ $domainCats | jsonify }}
-</script>
+    <select id="macro-filter" class="filter-select">
+        <option value="all">All Topics</option>
+        {{ range $macro := sort $macros }}
+        <option value="{{ $macro }}">{{ $macro }}</option>
+        {{ end }}
+    </select>
 
-<div class="container">
-    <!-- Search and Filters Row -->
-    <div class="search-filters-row">
-        <!-- Search Bar -->
-        <div class="search-container">
-            <div class="search-input-wrapper">
-                <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                </svg>
-                <input type="text"
-                       id="resource-search"
-                       class="search-input"
-                       placeholder="Search resources..."
-                       autocomplete="off">
-                <button id="clear-search" class="clear-btn" type="button" aria-label="Clear search">
-                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M18 6L6 18M6 6l12 12"></path>
-                    </svg>
-                </button>
-            </div>
+    <!-- Type Filter -->
+    {{ $types := slice }}
+    {{ range .Site.Data.resources }}
+        {{ if and .type (not (in $types .type)) }}
+            {{ $types = $types | append .type }}
+        {{ end }}
+    {{ end }}
+    <select id="type-filter" class="filter-select">
+        <option value="all">All Types</option>
+        {{ range $t := sort $types }}
+        <option value="{{ $t }}">{{ $t }}</option>
+        {{ end }}
+    </select>
+
+    <!-- Level Pills -->
+    <div class="level-pills">
+        <button class="level-pill active" data-level="all">All Levels</button>
+        <button class="level-pill" data-level="beginner">Beginner</button>
+        <button class="level-pill" data-level="intermediate">Intermediate</button>
+        <button class="level-pill" data-level="advanced">Advanced</button>
+    </div>
+</div>
+
+<!-- Meta info -->
+<div class="learning-meta">
+    <span id="result-count" class="result-count">{{ len .Site.Data.resources }} resources</span>
+</div>
+
+<!-- Netflix-style Category Rows -->
+<div class="explore-rows" id="learning-rows">
+    {{ $categories := slice }}
+    {{ range .Site.Data.resources }}
+        {{ if and .category (not (in $categories .category)) }}
+            {{ $categories = $categories | append .category }}
+        {{ end }}
+    {{ end }}
+
+    {{ range $cat := sort $categories }}
+    {{ $catResources := where $.Site.Data.resources "category" $cat }}
+    {{ if gt (len $catResources) 0 }}
+    {{ $firstResource := index $catResources 0 }}
+    <div class="explore-row category-row"
+         data-category="{{ $cat }}"
+         data-macro="{{ $firstResource.macro_category }}">
+        <div class="explore-row-header">
+            <h2 class="explore-row-title">{{ $cat }}</h2>
+            <span class="explore-row-count">{{ len $catResources }} resources</span>
         </div>
-
-        <!-- Domain Dropdown -->
-        {{ $domains := slice }}
-        {{ range .Site.Data.resources }}
-            {{ if and .domain (not (in $domains .domain)) }}
-                {{ $domains = $domains | append .domain }}
-            {{ end }}
-        {{ end }}
-        <select id="domain-select" class="domain-select">
-            <option value="all">All Domains</option>
-            {{ range $dom := sort $domains }}
-            <option value="{{ $dom }}">{{ $dom }}</option>
-            {{ end }}
-        </select>
-
-        <!-- Category Dropdown -->
-        {{ $categories := slice }}
-        {{ range .Site.Data.resources }}
-            {{ if not (in $categories .category) }}
-                {{ $categories = $categories | append .category }}
-            {{ end }}
-        {{ end }}
-        <select id="category-select" class="category-select">
-            <option value="all">All Categories</option>
-            {{ range $cat := sort $categories }}
-            <option value="{{ $cat }}">{{ $cat }}</option>
-            {{ end }}
-        </select>
-    </div>
-
-    <div class="learning-meta-row">
-        <div id="result-count" class="result-count">{{ len .Site.Data.resources }} resources</div>
-    </div>
-
-    <!-- Resources Grid - Grouped by Domain then Category -->
-    <div id="resources-view" class="resources-grid">
-        {{ range $domain := $domains }}
-        <div class="domain-section" data-domain="{{ $domain }}">
-            <h2 class="domain-title domain-toggle">{{ $domain }} <span class="toggle-icon">▶</span></h2>
-            <div class="domain-content collapsed">
-                {{ $domainCategories := slice }}
-                {{ range $.Site.Data.resources }}
-                    {{ if eq .domain $domain }}
-                        {{ if not (in $domainCategories .category) }}
-                            {{ $domainCategories = $domainCategories | append .category }}
-                        {{ end }}
-                    {{ end }}
-                {{ end }}
-
-                {{ range $cat := sort $domainCategories }}
-                {{ $domainResources := where $.Site.Data.resources "domain" $domain }}
-                {{ $catResources := where $domainResources "category" $cat }}
-                <div class="category-section" data-section-category="{{ $cat }}" data-domain="{{ $domain }}">
-                    <h3 class="category-title">{{ $cat }}</h3>
-                    <div class="cards-row">
-                        {{ range sort $catResources "model_score" "desc" }}
-                        {{ $scoreInt := int (mul (default 0 .model_score) 1000) }}
-                        <div class="resource-card"
-                             data-name="{{ .name | lower }}"
-                             data-description="{{ .description | lower }}"
-                             data-category="{{ .category }}"
-                             data-domain="{{ .domain }}"
-                             data-pagefind-sort="score:{{ $scoreInt }}"
-                             data-pagefind-filter="type:{{ .type | default "resource" }}"
-                             data-pagefind-filter="category:{{ .category }}"
-                             {{ with .difficulty }}data-pagefind-filter="difficulty:{{ . }}"{{ end }}
-                             {{ with .audience }}{{ range . }}data-pagefind-filter="audience:{{ . }}" {{ end }}{{ end }}>
-                            <span data-pagefind-weight="10" style="display:none;">{{ .name }}</span>
-                            <span data-pagefind-weight="5" style="display:none;">{{ .description }}</span>
-                            <div class="card-header">
-                                <img class="resource-favicon lazy-favicon"
-                                     src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-                                     data-src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32"
-                                     alt=""
-                                     onerror="this.style.display='none'">
-                                <h3 class="resource-name">
-                                    <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
-                                </h3>
-                                <span class="resource-type">{{ .type }}</span>
-                            </div>
-                            <p class="resource-desc">{{ .description }}</p>
-                            <div class="card-footer">
-                                <span class="category-badge">{{ .category }}</span>
-                                <a href="{{ .url }}" target="_blank" class="link-btn">Visit</a>
-                            </div>
-                        </div>
+        <div class="explore-scroller-wrapper">
+            <div class="explore-scroller">
+                {{ range sort $catResources "model_score" "desc" }}
+                <a href="{{ .url }}" target="_blank" rel="noopener"
+                   class="learning-card"
+                   data-name="{{ .name | lower }}"
+                   data-desc="{{ .description | lower }}"
+                   data-type="{{ .type }}"
+                   data-level="{{ .difficulty | default "all" }}"
+                   data-macro="{{ .macro_category }}">
+                    <div class="learning-card-header">
+                        <img class="learning-card-favicon lazy-favicon"
+                             src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                             data-src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32"
+                             alt=""
+                             onerror="this.style.display='none'">
+                        <h3 class="learning-card-title">{{ .name }}</h3>
+                    </div>
+                    <p class="learning-card-desc">{{ .description }}</p>
+                    <div class="learning-card-footer">
+                        <span class="learning-card-type">{{ .type }}</span>
+                        {{ with .difficulty }}
+                        <span class="learning-card-level {{ . }}">{{ . | title }}</span>
                         {{ end }}
                     </div>
-                </div>
+                </a>
                 {{ end }}
             </div>
+            <button class="scroller-nav prev" aria-label="Scroll left">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg>
+            </button>
+            <button class="scroller-nav next" aria-label="Scroll right">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </button>
         </div>
-        {{ end }}
     </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <p>Curated learning resources for practitioners and data scientists</p>
-    </footer>
+    {{ end }}
+    {{ end }}
 </div>
+
+<!-- Footer -->
+<footer class="footer" style="padding: 2rem; text-align: center;">
+    <p style="color: var(--text-muted);">Curated learning resources for practitioners and data scientists</p>
+</footer>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Domain section accordion toggle
-    document.querySelectorAll('.domain-toggle').forEach(function(title, index) {
-        title.addEventListener('click', function() {
-            var content = this.nextElementSibling;
-            content.classList.toggle('collapsed');
-            var icon = this.querySelector('.toggle-icon');
-            if (icon) {
-                icon.style.transform = content.classList.contains('collapsed') ? '' : 'rotate(90deg)';
-            }
+    // Elements
+    const searchInput = document.getElementById('learning-search');
+    const macroFilter = document.getElementById('macro-filter');
+    const typeFilter = document.getElementById('type-filter');
+    const levelPills = document.querySelectorAll('.level-pill');
+    const categoryRows = document.querySelectorAll('.category-row');
+    const resultCount = document.getElementById('result-count');
+
+    let currentLevel = 'all';
+
+    // Level pill click handlers
+    levelPills.forEach(pill => {
+        pill.addEventListener('click', function() {
+            levelPills.forEach(p => p.classList.remove('active'));
+            this.classList.add('active');
+            currentLevel = this.dataset.level;
+            filterAll();
         });
-        // Auto-expand first domain on page load
-        if (index === 0) {
-            var content = title.nextElementSibling;
-            content.classList.remove('collapsed');
-            var icon = title.querySelector('.toggle-icon');
-            if (icon) icon.style.transform = 'rotate(90deg)';
-        }
     });
 
-    // Domain-Category cascade filter
-    var domainSelect = document.getElementById('domain-select');
-    var categorySelect = document.getElementById('category-select');
-    var domainCategoriesData = JSON.parse(document.getElementById('domain-categories').textContent);
-    var allCategoryOptions = Array.from(categorySelect.options).slice(1).map(function(opt) {
-        return { value: opt.value, text: opt.text };
-    });
+    // Filter handlers
+    macroFilter.addEventListener('change', filterAll);
+    typeFilter.addEventListener('change', filterAll);
+    searchInput.addEventListener('input', debounce(filterAll, 150));
 
-    domainSelect.addEventListener('change', function() {
-        var selectedDomain = this.value;
+    function filterAll() {
+        const searchTerm = searchInput.value.toLowerCase().trim();
+        const selectedMacro = macroFilter.value;
+        const selectedType = typeFilter.value;
+        let visibleCount = 0;
 
-        // Reset category dropdown
-        categorySelect.innerHTML = '<option value="all">All Categories</option>';
+        categoryRows.forEach(row => {
+            const rowMacro = row.dataset.macro;
 
-        if (selectedDomain === 'all') {
-            // Restore all categories
-            allCategoryOptions.forEach(function(opt) {
-                var option = document.createElement('option');
-                option.value = opt.value;
-                option.text = opt.text;
-                categorySelect.appendChild(option);
-            });
-        } else {
-            // Filter categories for selected domain
-            var domainCategories = domainCategoriesData[selectedDomain] || [];
-            allCategoryOptions.forEach(function(opt) {
-                if (domainCategories.indexOf(opt.value) !== -1) {
-                    var option = document.createElement('option');
-                    option.value = opt.value;
-                    option.text = opt.text;
-                    categorySelect.appendChild(option);
+            // First check if macro matches (hide entire row if not)
+            if (selectedMacro !== 'all' && rowMacro !== selectedMacro) {
+                row.classList.add('hidden');
+                return;
+            }
+
+            // Filter cards within row
+            const cards = row.querySelectorAll('.learning-card');
+            let visibleInRow = 0;
+
+            cards.forEach(card => {
+                const cardType = card.dataset.type;
+                const cardLevel = card.dataset.level;
+                const cardName = card.dataset.name;
+                const cardDesc = card.dataset.desc;
+
+                let show = true;
+
+                // Type filter
+                if (selectedType !== 'all' && cardType !== selectedType) {
+                    show = false;
+                }
+
+                // Level filter
+                if (currentLevel !== 'all' && cardLevel !== currentLevel && cardLevel !== 'all') {
+                    show = false;
+                }
+
+                // Search filter
+                if (searchTerm && !cardName.includes(searchTerm) && !cardDesc.includes(searchTerm)) {
+                    show = false;
+                }
+
+                card.style.display = show ? '' : 'none';
+                if (show) {
+                    visibleInRow++;
+                    visibleCount++;
                 }
             });
-        }
 
-        // Filter domain sections
-        filterResources();
-    });
-
-    categorySelect.addEventListener('change', filterResources);
-
-    function filterResources() {
-        var selectedDomain = domainSelect.value;
-        var selectedCategory = categorySelect.value;
-        var visibleCount = 0;
-
-        // Show/hide domain sections
-        document.querySelectorAll('.domain-section').forEach(function(section) {
-            var domainName = section.dataset.domain;
-            var shouldShowDomain = selectedDomain === 'all' || domainName === selectedDomain;
-            section.style.display = shouldShowDomain ? '' : 'none';
-
-            if (shouldShowDomain) {
-                // Show/hide category sections within domain
-                section.querySelectorAll('.category-section').forEach(function(catSection) {
-                    var catName = catSection.dataset.sectionCategory;
-                    var shouldShowCat = selectedCategory === 'all' || catName === selectedCategory;
-                    catSection.style.display = shouldShowCat ? '' : 'none';
-
-                    if (shouldShowCat) {
-                        visibleCount += catSection.querySelectorAll('.resource-card').length;
-                    }
-                });
+            // Hide row if no visible cards
+            if (visibleInRow === 0) {
+                row.classList.add('hidden');
+            } else {
+                row.classList.remove('hidden');
+                // Update row count
+                const countEl = row.querySelector('.explore-row-count');
+                if (countEl) {
+                    countEl.textContent = visibleInRow + ' resources';
+                }
             }
         });
 
-        // Update result count
-        document.getElementById('result-count').textContent = visibleCount + ' resources';
+        resultCount.textContent = visibleCount + ' resources';
     }
 
-    // Lazy load favicons with Intersection Observer
-    var faviconObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
+    function debounce(func, wait) {
+        let timeout;
+        return function(...args) {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+    }
+
+    // Scroller navigation
+    document.querySelectorAll('.explore-row').forEach(row => {
+        const scroller = row.querySelector('.explore-scroller');
+        const prevBtn = row.querySelector('.scroller-nav.prev');
+        const nextBtn = row.querySelector('.scroller-nav.next');
+
+        if (!scroller || !prevBtn || !nextBtn) return;
+
+        function updateNavState() {
+            const atStart = scroller.scrollLeft <= 0;
+            const atEnd = scroller.scrollLeft >= scroller.scrollWidth - scroller.clientWidth - 10;
+            prevBtn.classList.toggle('disabled', atStart);
+            nextBtn.classList.toggle('disabled', atEnd);
+        }
+
+        prevBtn.addEventListener('click', () => {
+            scroller.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', () => {
+            scroller.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+
+        scroller.addEventListener('scroll', debounce(updateNavState, 50));
+        updateNavState();
+    });
+
+    // Lazy load favicons
+    const faviconObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
-                var img = entry.target;
+                const img = entry.target;
                 if (img.dataset.src) {
                     img.src = img.dataset.src;
                     img.removeAttribute('data-src');
@@ -274,42 +482,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, { rootMargin: '500px' });
 
-    document.querySelectorAll('.lazy-favicon').forEach(function(img) {
+    document.querySelectorAll('.lazy-favicon').forEach(img => {
         faviconObserver.observe(img);
     });
-
-    // Defer PageSearch initialization until idle
-    var pageSearchConfig = {
-        searchInputId: 'resource-search',
-        cardSelector: '.resource-card',
-        sectionSelector: '.category-section',
-        domainSectionSelector: '.domain-section',
-        itemLabel: 'resources',
-        fuseKeys: [
-            { name: 'name', weight: 2 },
-            { name: 'description', weight: 1 },
-            { name: 'type', weight: 0.8 },
-            { name: 'domain', weight: 0.5 },
-            { name: 'category', weight: 0.5 }
-        ]
-    };
-
-    var pageSearchInstance = null;
-    function initPageSearch() {
-        if (!pageSearchInstance) {
-            pageSearchInstance = new PageSearch(pageSearchConfig);
-        }
-    }
-
-    // Initialize on idle or when user focuses search
-    if ('requestIdleCallback' in window) {
-        requestIdleCallback(initPageSearch, { timeout: 2000 });
-    } else {
-        setTimeout(initPageSearch, 100);
-    }
-
-    // Also init immediately if user interacts with search
-    document.getElementById('resource-search').addEventListener('focus', initPageSearch, { once: true });
 });
 </script>
 {{ end }}
