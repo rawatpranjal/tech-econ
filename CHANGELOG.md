@@ -1,5 +1,9 @@
 # Changelog
 
+## 2026-01-01 (UChicago Causal Inference course)
+- Added UChicago "Causal Models in Data Science" course by Jeong-Yoon Lee
+- Added 8 industry speaker talks: Facure (Nubank), Lal (Netflix), Zheng (Meta), Chen (Snap), Pan (Snap), Sinha (Lyft), Harinen (Toyota), Mercurio (Netflix)
+
 ## 2026-01-01 (Simulation & Synthetic Data content expansion)
 - Added ~80 new entries covering simulation, synthetic data, and computational economics
 - New packages: Mesa, AgentPy, ABCE, Gymnasium, Stable-Baselines3, RLlib, ABIDES, AuctionGym, CTGAN, Faker, CausalPy, PyMC
