@@ -41,6 +41,17 @@ IMPRESSION_WEIGHT = 0.5  # Reduced since viewability adds quality signal
 VIEWABLE_WEIGHT = 0.1    # Per viewable second (IAB 50%+ visible)
 DWELL_WEIGHT = 1.0       # Per minute
 
+# New signal weights (from ML tables)
+SCROLL_90_WEIGHT = 2.0   # Reached 90% = high quality read
+SCROLL_75_WEIGHT = 1.0   # Good engagement
+SCROLL_50_WEIGHT = 0.5   # Moderate engagement
+SEARCH_CLICK_WEIGHT = 3.0  # Clicked from search = high intent
+RAGE_CLICK_WEIGHT = -2.0   # Frustration = negative signal
+QUICK_BOUNCE_WEIGHT = -1.0 # Left quickly = not useful
+DEEP_SESSION_WEIGHT = 1.5  # Part of "deep" engagement session
+COVIEW_WEIGHT = 0.1        # Co-viewed with engaged items
+COCLICK_WEIGHT = 0.3       # Co-clicked with engaged items
+
 
 def fetch_d1_data(query):
     """Execute D1 query via wrangler and return results."""
@@ -160,13 +171,83 @@ def fetch_engagement_data():
     )
     print(f"  Dwell + Viewability: {len(dwell)} items")
 
-    return clicks, impressions, dwell
+    # NEW: Fetch scroll depth milestones
+    scroll = fetch_d1_data(
+        "SELECT path, milestone, COUNT(*) as count "
+        "FROM scroll_milestones GROUP BY path, milestone"
+    )
+    print(f"  Scroll milestones: {len(scroll)} entries")
+
+    # NEW: Fetch search-to-click attribution
+    search_clicks = fetch_d1_data(
+        "SELECT query, clicks FROM search_sessions WHERE clicks IS NOT NULL AND clicks != '[]'"
+    )
+    print(f"  Search clicks: {len(search_clicks)} sessions")
+
+    # NEW: Fetch session engagement tiers
+    session_tiers = fetch_d1_data(
+        "SELECT content_sequence, engagement_tier FROM session_features "
+        "WHERE engagement_tier = 'deep' AND content_sequence IS NOT NULL"
+    )
+    print(f"  Deep sessions: {len(session_tiers)} sessions")
+
+    # NEW: Fetch frustration signals
+    frustration = fetch_d1_data(
+        "SELECT path, event_type, COUNT(*) as count "
+        "FROM frustration_events GROUP BY path, event_type"
+    )
+    print(f"  Frustration events: {len(frustration)} entries")
+
+    # NEW: Fetch item co-occurrence
+    cooccurrence = fetch_d1_data(
+        "SELECT item_a, item_b, coview_count, coclick_count "
+        "FROM item_cooccurrence WHERE coview_count > 0 OR coclick_count > 0"
+    )
+    print(f"  Co-occurrence pairs: {len(cooccurrence)} pairs")
+
+    return {
+        'clicks': clicks,
+        'impressions': impressions,
+        'dwell': dwell,
+        'scroll': scroll,
+        'search_clicks': search_clicks,
+        'session_tiers': session_tiers,
+        'frustration': frustration,
+        'cooccurrence': cooccurrence,
+    }
 
 
-def build_engagement_scores(clicks, impressions, dwell):
+def extract_item_name_from_path(path):
+    """Extract item name from a URL path like /packages/foo or /papers/bar."""
+    if not path:
+        return None
+    # Remove leading slash and split
+    parts = path.strip('/').split('/')
+    if len(parts) >= 2:
+        # Return the last meaningful segment
+        return parts[-1].lower().replace('-', ' ').replace('_', ' ')
+    return None
+
+
+def build_engagement_scores(engagement_data):
     """Build weighted engagement scores for observed items."""
+    clicks = engagement_data.get('clicks', [])
+    impressions = engagement_data.get('impressions', [])
+    dwell = engagement_data.get('dwell', [])
+    scroll = engagement_data.get('scroll', [])
+    search_clicks = engagement_data.get('search_clicks', [])
+    session_tiers = engagement_data.get('session_tiers', [])
+    frustration = engagement_data.get('frustration', [])
+    cooccurrence = engagement_data.get('cooccurrence', [])
+
     scores = defaultdict(float)
-    item_signals = defaultdict(lambda: {'clicks': 0, 'impressions': 0, 'dwell_ms': 0, 'viewable_sec': 0})
+    item_signals = defaultdict(lambda: {
+        'clicks': 0, 'impressions': 0, 'dwell_ms': 0, 'viewable_sec': 0,
+        'scroll_90': 0, 'scroll_75': 0, 'scroll_50': 0,
+        'search_clicks': 0, 'deep_sessions': 0,
+        'rage_clicks': 0, 'quick_bounces': 0,
+        'coviews': 0, 'coclicks': 0
+    })
 
     # Aggregate clicks
     for row in clicks:
@@ -195,7 +276,95 @@ def build_engagement_scores(clicks, impressions, dwell):
         scores[name] += viewable * VIEWABLE_WEIGHT
         item_signals[name]['viewable_sec'] += viewable
 
-    return dict(scores), dict(item_signals)
+    # NEW: Aggregate scroll depth milestones
+    for row in scroll:
+        path = row.get('path', '')
+        milestone = row.get('milestone', 0)
+        count = row.get('count', 0) or 0
+        name = extract_item_name_from_path(path)
+        if name:
+            if milestone >= 90:
+                scores[name] += count * SCROLL_90_WEIGHT
+                item_signals[name]['scroll_90'] += count
+            elif milestone >= 75:
+                scores[name] += count * SCROLL_75_WEIGHT
+                item_signals[name]['scroll_75'] += count
+            elif milestone >= 50:
+                scores[name] += count * SCROLL_50_WEIGHT
+                item_signals[name]['scroll_50'] += count
+
+    # NEW: Aggregate search-to-click attribution
+    for row in search_clicks:
+        clicks_json = row.get('clicks', '[]')
+        try:
+            click_list = json.loads(clicks_json) if isinstance(clicks_json, str) else clicks_json
+            for click in click_list:
+                # click might be {id: "item name", position: 1, dwellMs: 5000}
+                if isinstance(click, dict):
+                    name = click.get('id', '').lower().strip()
+                elif isinstance(click, str):
+                    name = click.lower().strip()
+                else:
+                    continue
+                if name:
+                    scores[name] += SEARCH_CLICK_WEIGHT
+                    item_signals[name]['search_clicks'] += 1
+        except (json.JSONDecodeError, TypeError):
+            pass
+
+    # NEW: Aggregate deep session content
+    for row in session_tiers:
+        content_seq = row.get('content_sequence', '[]')
+        try:
+            items_list = json.loads(content_seq) if isinstance(content_seq, str) else content_seq
+            for item_name in items_list:
+                if isinstance(item_name, str):
+                    name = item_name.lower().strip()
+                    scores[name] += DEEP_SESSION_WEIGHT
+                    item_signals[name]['deep_sessions'] += 1
+        except (json.JSONDecodeError, TypeError):
+            pass
+
+    # NEW: Aggregate frustration signals (negative weight)
+    for row in frustration:
+        path = row.get('path', '')
+        event_type = row.get('event_type', '')
+        count = row.get('count', 0) or 0
+        name = extract_item_name_from_path(path)
+        if name:
+            if event_type == 'rage_click':
+                scores[name] += count * RAGE_CLICK_WEIGHT  # Negative
+                item_signals[name]['rage_clicks'] += count
+            elif event_type == 'quick_bounce':
+                scores[name] += count * QUICK_BOUNCE_WEIGHT  # Negative
+                item_signals[name]['quick_bounces'] += count
+
+    # NEW: Build co-occurrence lookup (for cold-start enhancement)
+    cooccur_scores = defaultdict(float)
+    for row in cooccurrence:
+        item_a = row.get('item_a', '').lower().strip()
+        item_b = row.get('item_b', '').lower().strip()
+        coviews = row.get('coview_count', 0) or 0
+        coclicks = row.get('coclick_count', 0) or 0
+
+        # Boost both items based on co-occurrence
+        boost = coviews * COVIEW_WEIGHT + coclicks * COCLICK_WEIGHT
+        cooccur_scores[item_a] += boost
+        cooccur_scores[item_b] += boost
+        item_signals[item_a]['coviews'] += coviews
+        item_signals[item_a]['coclicks'] += coclicks
+        item_signals[item_b]['coviews'] += coviews
+        item_signals[item_b]['coclicks'] += coclicks
+
+    # Add co-occurrence scores to main scores
+    for name, boost in cooccur_scores.items():
+        scores[name] += boost
+
+    # Ensure scores don't go negative (from frustration signals)
+    for name in scores:
+        scores[name] = max(0, scores[name])
+
+    return dict(scores), dict(item_signals), cooccurrence
 
 
 def extract_url_domain(url):
@@ -668,15 +837,37 @@ def main():
     # Create name -> item lookup
     item_lookup = {item['name']: item for item in items}
 
-    # Step 2: Fetch engagement data
-    clicks, impressions, dwell = fetch_engagement_data()
+    # Step 2: Fetch engagement data (now returns dict with all signal types)
+    engagement_data = fetch_engagement_data()
 
     # Calculate coverage stats
+    clicks = engagement_data.get('clicks', [])
+    impressions = engagement_data.get('impressions', [])
+    dwell = engagement_data.get('dwell', [])
+    scroll = engagement_data.get('scroll', [])
+    search_clicks = engagement_data.get('search_clicks', [])
+    frustration = engagement_data.get('frustration', [])
+
     click_names = {row['name'].lower().strip() for row in clicks}
     impression_names = {row['name'].lower().strip() for row in impressions}
     dwell_names = {row['name'].lower().strip() for row in dwell}
     viewable_names = {row['name'].lower().strip() for row in dwell if (row.get('total_viewable') or 0) > 0}
-    any_interaction_names = click_names | impression_names | dwell_names
+    scroll_names = {extract_item_name_from_path(row.get('path', '')) for row in scroll if row.get('path')}
+    scroll_names.discard(None)
+    search_click_names = set()
+    for row in search_clicks:
+        try:
+            click_list = json.loads(row.get('clicks', '[]')) if isinstance(row.get('clicks'), str) else row.get('clicks', [])
+            for c in click_list:
+                if isinstance(c, dict):
+                    search_click_names.add(c.get('id', '').lower().strip())
+                elif isinstance(c, str):
+                    search_click_names.add(c.lower().strip())
+        except:
+            pass
+    search_click_names.discard('')
+
+    any_interaction_names = click_names | impression_names | dwell_names | scroll_names | search_click_names
 
     coverage = {
         'total_items': len(items),
@@ -684,13 +875,15 @@ def main():
         'items_with_impressions': len(impression_names),
         'items_with_dwell': len(dwell_names),
         'items_with_viewability': len(viewable_names),
+        'items_with_scroll': len(scroll_names),
+        'items_with_search_clicks': len(search_click_names),
         'items_with_any': len(any_interaction_names),
         'coverage_pct': round(len(any_interaction_names) / len(items) * 100, 1) if items else 0,
     }
 
     # Step 3: Build engagement scores (for item_signals tracking)
     print("\nBuilding engagement scores...")
-    raw_scores, item_signals = build_engagement_scores(clicks, impressions, dwell)
+    raw_scores, item_signals, cooccurrence = build_engagement_scores(engagement_data)
     print(f"  Items with engagement data: {len(raw_scores)}")
 
     # Step 4: Train regression model to predict engagement scores
@@ -791,6 +984,15 @@ def main():
                 'impressions': IMPRESSION_WEIGHT,
                 'viewable_per_second': VIEWABLE_WEIGHT,
                 'dwell_per_minute': DWELL_WEIGHT,
+                'scroll_90': SCROLL_90_WEIGHT,
+                'scroll_75': SCROLL_75_WEIGHT,
+                'scroll_50': SCROLL_50_WEIGHT,
+                'search_click': SEARCH_CLICK_WEIGHT,
+                'rage_click': RAGE_CLICK_WEIGHT,
+                'quick_bounce': QUICK_BOUNCE_WEIGHT,
+                'deep_session': DEEP_SESSION_WEIGHT,
+                'coview': COVIEW_WEIGHT,
+                'coclick': COCLICK_WEIGHT,
             },
         },
         'metadata_fields': [
@@ -824,11 +1026,13 @@ def main():
     print("\n" + "-" * 60)
     print("INTERACTION COVERAGE")
     print("-" * 60)
-    print(f"Items with clicks:      {coverage['items_with_clicks']:>5} ({coverage['items_with_clicks']/len(items)*100:.1f}%)")
-    print(f"Items with impressions: {coverage['items_with_impressions']:>5} ({coverage['items_with_impressions']/len(items)*100:.1f}%)")
-    print(f"Items with dwell:       {coverage['items_with_dwell']:>5} ({coverage['items_with_dwell']/len(items)*100:.1f}%)")
-    print(f"Items with viewability: {coverage['items_with_viewability']:>5} ({coverage['items_with_viewability']/len(items)*100:.1f}%)")
-    print(f"Items with ANY:         {coverage['items_with_any']:>5} ({coverage['coverage_pct']:.1f}%)")
+    print(f"Items with clicks:        {coverage['items_with_clicks']:>5} ({coverage['items_with_clicks']/len(items)*100:.1f}%)")
+    print(f"Items with impressions:   {coverage['items_with_impressions']:>5} ({coverage['items_with_impressions']/len(items)*100:.1f}%)")
+    print(f"Items with dwell:         {coverage['items_with_dwell']:>5} ({coverage['items_with_dwell']/len(items)*100:.1f}%)")
+    print(f"Items with viewability:   {coverage['items_with_viewability']:>5} ({coverage['items_with_viewability']/len(items)*100:.1f}%)")
+    print(f"Items with scroll depth:  {coverage.get('items_with_scroll', 0):>5} ({coverage.get('items_with_scroll', 0)/len(items)*100:.1f}%)")
+    print(f"Items with search clicks: {coverage.get('items_with_search_clicks', 0):>5} ({coverage.get('items_with_search_clicks', 0)/len(items)*100:.1f}%)")
+    print(f"Items with ANY:           {coverage['items_with_any']:>5} ({coverage['coverage_pct']:.1f}%)")
 
     print("\n" + "-" * 60)
     print("TOP 20 ITEMS")
