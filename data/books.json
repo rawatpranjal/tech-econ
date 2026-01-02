@@ -3857,5 +3857,27 @@
     "type": "Book",
     "url": "https://www.nowpublishers.com/article/Details/ECO-040",
     "tags": ["Monte Carlo", "Econometrics", "Simulation", "Inference"]
+  },
+  {
+    "name": "Causal Inference in Python",
+    "author": "Matheus Facure",
+    "year": 2023,
+    "isbn": "978-1098140250",
+    "description": "O'Reilly book on applying causal inference in Python. Covers randomized experiments, regression, matching, instrumental variables, DiD, synthetic control, and double ML with practical code examples.",
+    "category": "Causal Inference & ML",
+    "type": "Book",
+    "url": "https://www.oreilly.com/library/view/causal-inference-in/9781098140243/",
+    "tags": ["Causal Inference", "Python", "DiD", "Synthetic Control", "Double ML"]
+  },
+  {
+    "name": "Causal Inference for Statistics, Social, and Biomedical Sciences",
+    "author": "Guido Imbens, Donald Rubin",
+    "year": 2015,
+    "isbn": "978-0521885881",
+    "description": "Authoritative textbook on causal inference from the potential outcomes perspective. Covers randomization, matching, propensity scores, instrumental variables, and regression discontinuity.",
+    "category": "Causal Inference & ML",
+    "type": "Book",
+    "url": "https://www.cambridge.org/core/books/causal-inference-for-statistics-social-and-biomedical-sciences/71126BE90C58F1A431FE9B2DD07938AB",
+    "tags": ["Causal Inference", "Potential Outcomes", "Rubin", "Classic"]
   }
 ]
