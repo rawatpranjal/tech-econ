@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <meta name="description" content="{{ .Description }}">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
+
+    <!-- Google Fonts: Inter (Professional Corporate Font) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css">
+
+    <style>
+        /* ============================================
+           TECH-ECON CINEMATIC DARK THEME
+           ============================================ */
+
+        /* CRITICAL: Reveal.js requires full viewport height */
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        :root {
+            --te-accent: #0066cc;
+            --te-accent-light: #60a5fa;
+            --te-accent-glow: rgba(96, 165, 250, 0.2);
+            --te-bg-dark: #0f0f0f;
+            --te-bg-card: #1a1a1a;
+            --te-text-primary: #e8e8e8;
+            --te-text-muted: #9ca3af;
+            --te-border: rgba(255, 255, 255, 0.08);
+        }
+
+        /* Base Reveal overrides */
+        .reveal-viewport {
+            background: var(--te-bg-dark);
+        }
+
+        .reveal {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        .reveal .slides {
+            text-align: left;
+        }
+
+        .reveal .slides section {
+            padding: 3rem;
+        }
+
+        /* Typography - Professional Corporate */
+        .reveal h1, .reveal h2, .reveal h3 {
+            font-weight: 600;
+            color: var(--te-text-primary);
+            text-transform: none;
+            letter-spacing: -0.03em;
+        }
+
+        .reveal h1 {
+            font-size: 3em;
+            font-weight: 700;
+        }
+
+        .reveal h2 {
+            font-size: 2em;
+            color: var(--te-accent-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .reveal h3 {
+            font-size: 1.25em;
+            font-weight: 600;
+            color: var(--te-text-primary);
+        }
+
+        .reveal p, .reveal li {
+            color: var(--te-text-primary);
+            font-size: 1.1em;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .reveal .muted {
+            color: var(--te-text-muted);
+            font-size: 0.875em;
+            font-weight: 400;
+        }
+
+        .reveal ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .reveal li {
+            margin-bottom: 0.875rem;
+            padding-left: 1.25em;
+            position: relative;
+        }
+
+        .reveal li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.55em;
+            width: 6px;
+            height: 6px;
+            background: var(--te-accent);
+            border-radius: 50%;
+        }
+
+        /* Title slide */
+        .title-slide {
+            text-align: center !important;
+        }
+
+        .title-slide h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.5em !important;
+            color: var(--te-text-muted) !important;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1em !important;
+            color: var(--te-text-muted) !important;
+            opacity: 0.6;
+        }
+
+        /* Stats grid */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--te-bg-card);
+            border-radius: 8px;
+            border: 1px solid var(--te-border);
+            transition: all 0.2s ease;
+        }
+
+        .stat-item:hover {
+            border-color: rgba(96, 165, 250, 0.3);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--te-accent-light);
+            font-variant-numeric: tabular-nums;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--te-text-muted);
+            margin-top: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-weight: 500;
+        }
+
+        /* Section showcase cards */
+        .section-showcase {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            background: var(--te-bg-card);
+            border-radius: 8px;
+            border: 1px solid var(--te-border);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .section-icon {
+            width: 72px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(96, 165, 250, 0.1);
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .section-icon svg {
+            width: 36px;
+            height: 36px;
+            stroke: var(--te-accent-light);
+            stroke-width: 1.5;
+        }
+
+        .section-content h3 {
+            margin: 0 0 0.25rem 0;
+            font-size: 1.5em;
+        }
+
+        .section-content p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        .section-content .muted {
+            margin-top: 0.25rem;
+        }
+
+        /* Features grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .feature {
+            padding: 1.5rem;
+            background: var(--te-bg-card);
+            border-radius: 8px;
+            border: 1px solid var(--te-border);
+            text-align: center;
+        }
+
+        .feature h3 {
+            color: var(--te-accent-light);
+            margin-bottom: 0.5rem;
+            font-size: 1.1em;
+        }
+
+        .feature p {
+            font-size: 0.9em !important;
+            color: var(--te-text-muted);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Tech stack code */
+        .reveal pre {
+            width: 100%;
+            max-width: 600px;
+            margin: 1.5rem auto;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .reveal pre code {
+            font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+            font-size: 0.85em;
+            padding: 1.25rem;
+            border-radius: 8px;
+            background: #0d1117;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* CTA buttons */
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 0.875rem 2rem;
+            background: var(--te-accent);
+            color: white !important;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: 1px solid var(--te-accent);
+        }
+
+        .cta-button:hover {
+            background: #0052a3;
+            border-color: #0052a3;
+        }
+
+        .cta-button.cta-secondary {
+            background: transparent;
+            border: 1px solid var(--te-accent-light);
+            color: var(--te-accent-light) !important;
+        }
+
+        .cta-button.cta-secondary:hover {
+            background: rgba(96, 165, 250, 0.1);
+        }
+
+        /* Back link */
+        .back-link {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            color: var(--te-text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        .back-link:hover {
+            opacity: 1;
+            color: var(--te-accent-light);
+        }
+
+        .back-link svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Vertical slide indicator */
+        .reveal .controls-arrow {
+            color: var(--te-accent-light);
+        }
+
+        .reveal .progress {
+            background: var(--te-border);
+        }
+
+        .reveal .progress span {
+            background: var(--te-accent);
+        }
+
+        /* Centered slides */
+        .centered {
+            text-align: center !important;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .reveal .slides section {
+                padding: 1.5rem;
+            }
+
+            .stat-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+
+            .stat-number {
+                font-size: 2rem;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .section-showcase {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
+            }
+
+            .reveal h1 {
+                font-size: 2em;
+            }
+
+            .reveal h2 {
+                font-size: 1.5em;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Back to site link -->
+    <a href="{{ "/" | relURL }}" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Back to tech-econ
+    </a>
+
+    <div class="reveal">
+        <div class="slides">
+
+            <!-- ==================== SLIDE 1: TITLE ==================== -->
+            <section class="title-slide" data-background-gradient="linear-gradient(135deg, #0a0a0a 0%, #0d1a2d 50%, #0a0a0a 100%)">
+                <h1>tech-econ</h1>
+                <p class="tagline">The largest curated library for tech economists</p>
+                <p class="subtitle">Packages, datasets, papers, and learning resources</p>
+            </section>
+
+            <!-- ==================== SLIDE 2: THE CHALLENGE ==================== -->
+            <section>
+                <h2>The Challenge</h2>
+                <ul>
+                    <li class="fragment fade-up">Tech economists need specialized tools</li>
+                    <li class="fragment fade-up">Resources scattered across GitHub, papers, blogs, courses</li>
+                    <li class="fragment fade-up">No central hub for applied researchers</li>
+                    <li class="fragment fade-up">Hard to know what's worth your time</li>
+                </ul>
+            </section>
+
+            <!-- ==================== SLIDE 3: STATS ==================== -->
+            {{ $paperCount := 0 }}
+            {{ range .Site.Data.papers.topics }}
+                {{ range .subtopics }}
+                    {{ $paperCount = add $paperCount (len .papers) }}
+                {{ end }}
+            {{ end }}
+            {{ $total := add (len .Site.Data.packages) (add (len .Site.Data.datasets) (add (len .Site.Data.resources) (add (len .Site.Data.talks) $paperCount))) }}
+
+            <section class="centered">
+                <h2>One Place. Curated. Complete.</h2>
+                <div class="stat-grid">
+                    <div class="stat-item fragment fade-up" data-fragment-index="1">
+                        <div class="stat-number" data-count-to="{{ len .Site.Data.packages }}">0</div>
+                        <div class="stat-label">Packages</div>
+                    </div>
+                    <div class="stat-item fragment fade-up" data-fragment-index="2">
+                        <div class="stat-number" data-count-to="{{ len .Site.Data.datasets }}">0</div>
+                        <div class="stat-label">Datasets</div>
+                    </div>
+                    <div class="stat-item fragment fade-up" data-fragment-index="3">
+                        <div class="stat-number" data-count-to="{{ $paperCount }}">0</div>
+                        <div class="stat-label">Papers</div>
+                    </div>
+                    <div class="stat-item fragment fade-up" data-fragment-index="4">
+                        <div class="stat-number" data-count-to="{{ len .Site.Data.resources }}">0</div>
+                        <div class="stat-label">Learning Resources</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== SLIDE 4: WHAT'S INSIDE (Vertical Stack) ==================== -->
+            <section>
+                <section class="centered">
+                    <h2>What's Inside</h2>
+                    <p class="muted" style="font-size: 1.2em;">Press <kbd style="background:#333;padding:0.2em 0.5em;border-radius:4px;">&#8595;</kbd> to explore each section</p>
+                </section>
+
+                <!-- Packages -->
+                <section>
+                    <div class="section-showcase">
+                        <div class="section-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <div class="section-content">
+                            <h3>Packages</h3>
+                            <p>{{ len .Site.Data.packages }} Python & R libraries</p>
+                            <p class="muted">Causal inference, ML, time series, experimentation, econometrics</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Datasets -->
+                <section>
+                    <div class="section-showcase">
+                        <div class="section-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            </svg>
+                        </div>
+                        <div class="section-content">
+                            <h3>Datasets</h3>
+                            <p>{{ len .Site.Data.datasets }} industry datasets</p>
+                            <p class="muted">E-commerce, rideshare, advertising, pricing, experiments</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Papers -->
+                <section>
+                    <div class="section-showcase">
+                        <div class="section-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                            </svg>
+                        </div>
+                        <div class="section-content">
+                            <h3>Papers</h3>
+                            <p>{{ $paperCount }} curated papers across {{ len .Site.Data.papers.topics }} topics</p>
+                            <p class="muted">Experimentation, pricing, recommenders, marketplaces, causal inference</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Learning -->
+                <section>
+                    <div class="section-showcase">
+                        <div class="section-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="section-content">
+                            <h3>Learning</h3>
+                            <p>{{ len .Site.Data.resources }} courses, tutorials, and blogs</p>
+                            <p class="muted">From beginner guides to advanced research methods</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Community -->
+                <section>
+                    <div class="section-showcase">
+                        <div class="section-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div class="section-content">
+                            <h3>Community</h3>
+                            <p>{{ len .Site.Data.community }} conferences & events</p>
+                            <p class="muted">CODE, ASSA, INFORMS + interactive global map</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- ==================== SLIDE 5: SMART FEATURES ==================== -->
+            <section class="centered">
+                <h2>Built for Discovery</h2>
+                <div class="features-grid">
+                    <div class="feature fragment fade-up">
+                        <h3>Hybrid Search</h3>
+                        <p>Keyword + Semantic search powered by bge-large-en-v1.5 embeddings</p>
+                    </div>
+                    <div class="feature fragment fade-up">
+                        <h3>ML Ranking</h3>
+                        <p>LightGBM model ranks content by engagement and relevance</p>
+                    </div>
+                    <div class="feature fragment fade-up">
+                        <h3>Personalization</h3>
+                        <p>Save favorites, track reading history, get recommendations</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== SLIDE 6: TECH STACK ==================== -->
+            <section class="centered">
+                <h2>Under the Hood</h2>
+                <pre><code class="language-yaml" data-trim data-noescape>
+Frontend:    Hugo Static Site Generator
+Search:      MiniSearch + Transformers.js (hybrid)
+Embeddings:  bge-large-en-v1.5 vectors
+Ranking:     LightGBM-Tweedie model
+Backend:     Cloudflare Workers + D1 SQLite
+Analytics:   GoatCounter (privacy-first)
+Hosting:     Cloudflare Pages (global CDN)
+                </code></pre>
+            </section>
+
+            <!-- ==================== SLIDE 7: CTA ==================== -->
+            <section class="centered" data-background-gradient="linear-gradient(135deg, #0d1a2d 0%, #0a0a0a 50%, #0d1a2d 100%)">
+                <h2>Start Exploring</h2>
+                <div class="cta-buttons">
+                    <a href="{{ "packages/" | relURL }}" class="cta-button">Browse Packages</a>
+                    <a href="{{ "papers/" | relURL }}" class="cta-button">Explore Papers</a>
+                    <a href="https://github.com/rawatpranjal/tech-econ" target="_blank" class="cta-button cta-secondary">View on GitHub</a>
+                </div>
+                <p class="muted" style="margin-top: 3rem; font-size: 1.5em;">tech-econ.com</p>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Reveal.js Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+
+    <script>
+        // Initialize Reveal.js
+        Reveal.initialize({
+            hash: true,
+            slideNumber: 'c/t',
+            transition: 'slide',
+            transitionSpeed: 'default',
+            backgroundTransition: 'fade',
+            center: true,
+            controls: true,
+            controlsTutorial: true,
+            progress: true,
+            keyboard: true,
+            overview: true,
+            plugins: [RevealHighlight, RevealNotes]
+        });
+
+        // Animated counter function
+        function animateCounter(el, target) {
+            const duration = 1500;
+            const start = performance.now();
+            const startValue = 0;
+
+            function update(currentTime) {
+                const elapsed = currentTime - start;
+                const progress = Math.min(elapsed / duration, 1);
+
+                // Easing function (ease-out cubic)
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+                const current = Math.floor(startValue + (target - startValue) * easeOut);
+
+                el.textContent = current.toLocaleString();
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    el.textContent = target.toLocaleString();
+                }
+            }
+
+            requestAnimationFrame(update);
+        }
+
+        // Trigger counter animation when fragment is shown
+        Reveal.on('fragmentshown', function(event) {
+            const statItem = event.fragment;
+            const statNumber = statItem.querySelector('.stat-number');
+
+            if (statNumber && statNumber.dataset.countTo) {
+                const target = parseInt(statNumber.dataset.countTo);
+                animateCounter(statNumber, target);
+            }
+        });
+
+        // Also animate on slide shown (if already revealed)
+        Reveal.on('slidechanged', function(event) {
+            const statNumbers = event.currentSlide.querySelectorAll('.stat-number[data-count-to]');
+            statNumbers.forEach(function(el) {
+                if (el.closest('.fragment.visible')) {
+                    const target = parseInt(el.dataset.countTo);
+                    if (el.textContent === '0') {
+                        animateCounter(el, target);
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -10,8 +10,8 @@
 - Downloaded 54 blogger images locally to /static/images/bloggers/ (previously external URLs)
 - Talks page Netflix-style redesign with horizontal scrollers per subtopic
 - Carousel rows now sorted by top item's model_score (highest-scoring content first)
-- Added macro_category + subtopic fields to talks.json (8 macro categories, 38 subtopics)
-- Manually re-categorized all 264 talks with granular subtopics matching Learning page style
+- Added macro_category + subtopic fields to talks.json (8 macro categories, 55 subtopics)
+- Further granular categorization: Susan Athey Work, Marketplace Case Studies, Chief Economists, etc.
 - Created OG image fetching script; 181/264 talks now have thumbnails
 - Added analytics D1 query reference to CLAUDE.md for checking recent clicks/impressions/searches
 - Fixed 9 INFORMS login-wall links → public URLs (conferences, chapters, datasets)
