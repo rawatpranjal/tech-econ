@@ -86,7 +86,7 @@
     ],
     "event_format": "workshop",
     "geographic_focus": "Amazon",
-    "model_score": 0.0071
+    "model_score": 0.007
   },
   {
     "name": "MeasuringU",
@@ -124,7 +124,7 @@
       "What are the benefits of attending MeasuringU?"
     ],
     "event_format": "online",
-    "model_score": 0.0071
+    "model_score": 0.007
   },
   {
     "name": "ASSA Annual Meeting",
@@ -277,6 +277,87 @@
     "model_score": 0.0024
   },
   {
+    "name": "Vincent Arel-Bundock",
+    "description": "Professor at Universit\u00e9 de Montr\u00e9al. Creator of the marginaleffects R/Python package. Causal inference including frontdoor adjustment, marginal effects interpretation. Author of 'Model to Meaning.'",
+    "category": "Blogs",
+    "url": "https://arelbundock.com/",
+    "image_url": "https://arelbundock.com/files/vincent.jpg",
+    "type": "Personal Blog",
+    "location": "Online",
+    "dates": "Ongoing",
+    "tags": [
+      "Blogs",
+      "Personal Blog"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Vincent Arel-Bundock is a professor at Universit\u00e9 de Montr\u00e9al who specializes in causal inference and has created the marginaleffects R/Python package. This personal blog is likely attended by those interested in statistical methods and causal analysis.",
+    "use_cases": [
+      "Learn about causal inference techniques",
+      "Explore statistical programming with R/Python",
+      "Understand marginal effects interpretation"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is causal inference?",
+      "How to use the marginaleffects package?",
+      "What is frontdoor adjustment?",
+      "What are marginal effects?",
+      "Who is Vincent Arel-Bundock?",
+      "What topics are covered in 'Model to Meaning'?"
+    ],
+    "event_format": "online",
+    "model_score": 0.0001
+  },
+  {
+    "name": "Christoph Molnar",
+    "description": "'Interpretable Machine Learning' author. Opens black-box models to understand feature importance (Shapley values) \u2014 the ML equivalent of regression coefficients.",
+    "category": "Blogs",
+    "url": "https://christophm.github.io/",
+    "image_url": "https://avatars.githubusercontent.com/u/1632100?v=4",
+    "type": "Personal Blog",
+    "location": "Online",
+    "dates": "Ongoing",
+    "tags": [
+      "Blogs",
+      "Personal Blog"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "machine learning",
+      "interpretability",
+      "feature importance"
+    ],
+    "summary": "Christoph Molnar, author of 'Interpretable Machine Learning', discusses methods to understand black-box models, focusing on feature importance through Shapley values. This event is suitable for those interested in machine learning interpretability.",
+    "use_cases": [
+      "to learn about feature importance",
+      "to understand black-box models",
+      "to explore machine learning interpretability"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is interpretable machine learning?",
+      "How do Shapley values work?",
+      "Why is feature importance important?",
+      "What are black-box models?",
+      "Who is Christoph Molnar?",
+      "How can I understand machine learning models better?",
+      "What resources are available for learning about interpretability?",
+      "What are the applications of interpretable machine learning?"
+    ],
+    "event_format": "online",
+    "model_score": 0.0001
+  },
+  {
     "name": "Nick Huntington-Klein",
     "description": "'The Effect' author. Animated causal inference plots, Library of Statistical Techniques founder.",
     "category": "Blogs",
@@ -312,7 +393,7 @@
       "What resources are available for learning about statistical techniques?"
     ],
     "event_format": "online",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "name": "Alex Deng",
@@ -349,43 +430,6 @@
       "What are the best practices for deep A/B testing?",
       "How does sequential testing work?",
       "What are the implications of variance reduction in experiments?"
-    ],
-    "event_format": "online",
-    "model_score": 0.0001
-  },
-  {
-    "name": "Vincent Arel-Bundock",
-    "description": "Professor at Universit\u00e9 de Montr\u00e9al. Creator of the marginaleffects R/Python package. Causal inference including frontdoor adjustment, marginal effects interpretation. Author of 'Model to Meaning.'",
-    "category": "Blogs",
-    "url": "https://arelbundock.com/",
-    "image_url": "https://arelbundock.com/files/vincent.jpg",
-    "type": "Personal Blog",
-    "location": "Online",
-    "dates": "Ongoing",
-    "tags": [
-      "Blogs",
-      "Personal Blog"
-    ],
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "Vincent Arel-Bundock is a professor at Universit\u00e9 de Montr\u00e9al who specializes in causal inference and has created the marginaleffects R/Python package. This personal blog is likely attended by those interested in statistical methods and causal analysis.",
-    "use_cases": [
-      "Learn about causal inference techniques",
-      "Explore statistical programming with R/Python",
-      "Understand marginal effects interpretation"
-    ],
-    "audience": [
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is causal inference?",
-      "How to use the marginaleffects package?",
-      "What is frontdoor adjustment?",
-      "What are marginal effects?",
-      "Who is Vincent Arel-Bundock?",
-      "What topics are covered in 'Model to Meaning'?"
     ],
     "event_format": "online",
     "model_score": 0.0
@@ -480,50 +524,6 @@
       "What is Prophet and how is it used?",
       "What are the latest trends in data science?",
       "How can I apply causal inference in my work?"
-    ],
-    "event_format": "online",
-    "model_score": 0.0
-  },
-  {
-    "name": "Christoph Molnar",
-    "description": "'Interpretable Machine Learning' author. Opens black-box models to understand feature importance (Shapley values) \u2014 the ML equivalent of regression coefficients.",
-    "category": "Blogs",
-    "url": "https://christophm.github.io/",
-    "image_url": "https://avatars.githubusercontent.com/u/1632100?v=4",
-    "type": "Personal Blog",
-    "location": "Online",
-    "dates": "Ongoing",
-    "tags": [
-      "Blogs",
-      "Personal Blog"
-    ],
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [
-      "machine learning",
-      "interpretability",
-      "feature importance"
-    ],
-    "summary": "Christoph Molnar, author of 'Interpretable Machine Learning', discusses methods to understand black-box models, focusing on feature importance through Shapley values. This event is suitable for those interested in machine learning interpretability.",
-    "use_cases": [
-      "to learn about feature importance",
-      "to understand black-box models",
-      "to explore machine learning interpretability"
-    ],
-    "audience": [
-      "Mid-DS",
-      "Senior-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is interpretable machine learning?",
-      "How do Shapley values work?",
-      "Why is feature importance important?",
-      "What are black-box models?",
-      "Who is Christoph Molnar?",
-      "How can I understand machine learning models better?",
-      "What resources are available for learning about interpretability?",
-      "What are the applications of interpretable machine learning?"
     ],
     "event_format": "online",
     "model_score": 0.0

@@ -46,7 +46,7 @@
     "company_context": [
       "startup"
     ],
-    "model_score": 0.0149
+    "model_score": 0.0156
   },
   {
     "name": "Ace the Data Science Interview",
@@ -96,7 +96,7 @@
       "FAANG",
       "startup"
     ],
-    "model_score": 0.0071
+    "model_score": 0.007
   },
   {
     "name": "Nick Singh's 40 Stats Questions",
@@ -143,7 +143,7 @@
       "FAANG",
       "Wall-Street"
     ],
-    "model_score": 0.0071
+    "model_score": 0.007
   },
   {
     "name": "Shopee",
@@ -188,7 +188,7 @@
     "company_context": [
       "startup"
     ],
-    "model_score": 0.0044
+    "model_score": 0.0051
   },
   {
     "name": "Flipkart",
@@ -233,7 +233,7 @@
     "company_context": [
       "e-commerce"
     ],
-    "model_score": 0.0026
+    "model_score": 0.0038
   },
   {
     "name": "StatQuest with Josh Starmer",
@@ -277,7 +277,42 @@
       "economist"
     ],
     "experience_level": "entry",
-    "model_score": 0.0006
+    "model_score": 0.0011
+  },
+  {
+    "name": "Statsig",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://www.statsig.com/careers",
+    "type": "Career Portal",
+    "tags": [
+      "experimentation",
+      "a-b-testing"
+    ],
+    "section": "companies",
+    "sector": "saas",
+    "tab": "find-jobs",
+    "subtab": "companies",
+    "vertical": "experimentation",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Statsig serves as a career portal that provides resources and information for individuals looking to advance their careers in tech. It focuses on experimentation and A/B testing, which can be beneficial for those interested in data-driven decision-making.",
+    "use_cases": [],
+    "audience": [],
+    "synthetic_questions": [
+      "What are the best practices for A/B testing?",
+      "How can experimentation improve my career prospects?",
+      "What resources are available for learning about data science?",
+      "How do I prepare for a job in tech?",
+      "What skills are needed for a career in experimentation?",
+      "What are the latest trends in A/B testing?",
+      "How can I leverage data in my job search?",
+      "What companies are known for their experimentation culture?"
+    ],
+    "experience_level": "entry",
+    "model_score": 0.0008
   },
   {
     "name": "Made With ML",
@@ -320,7 +355,7 @@
       "data-scientist"
     ],
     "experience_level": "entry|mid",
-    "model_score": 0.0003
+    "model_score": 0.0004
   },
   {
     "name": "Netflix: Experimentation Focus",
@@ -625,41 +660,6 @@
     "company_context": [
       "Amazon"
     ],
-    "model_score": 0.0
-  },
-  {
-    "name": "Statsig",
-    "description": "Career portal",
-    "stage": "Discovery",
-    "category": "Company Lists",
-    "url": "https://www.statsig.com/careers",
-    "type": "Career Portal",
-    "tags": [
-      "experimentation",
-      "a-b-testing"
-    ],
-    "section": "companies",
-    "sector": "saas",
-    "tab": "find-jobs",
-    "subtab": "companies",
-    "vertical": "experimentation",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "Statsig serves as a career portal that provides resources and information for individuals looking to advance their careers in tech. It focuses on experimentation and A/B testing, which can be beneficial for those interested in data-driven decision-making.",
-    "use_cases": [],
-    "audience": [],
-    "synthetic_questions": [
-      "What are the best practices for A/B testing?",
-      "How can experimentation improve my career prospects?",
-      "What resources are available for learning about data science?",
-      "How do I prepare for a job in tech?",
-      "What skills are needed for a career in experimentation?",
-      "What are the latest trends in A/B testing?",
-      "How can I leverage data in my job search?",
-      "What companies are known for their experimentation culture?"
-    ],
-    "experience_level": "entry",
     "model_score": 0.0
   },
   {
