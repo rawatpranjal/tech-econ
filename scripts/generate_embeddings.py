@@ -377,18 +377,38 @@ def generate_minisearch_index(items: List[Dict[str, Any]]) -> Dict[str, Any]:
         if item.get("model_score") is not None:
             doc["model_score"] = item["model_score"]
 
+        # Add new clustering/search fields (from v2.2 enrichment)
+        if item.get("tfidf_keywords"):
+            keywords = item["tfidf_keywords"]
+            if isinstance(keywords, list) and len(keywords) > 0:
+                doc["tfidf_keywords"] = " ".join(str(k) for k in keywords)
+        if item.get("semantic_cluster"):
+            doc["semantic_cluster"] = item["semantic_cluster"]
+        if item.get("content_format"):
+            doc["content_format"] = item["content_format"]
+        if item.get("depth_level"):
+            doc["depth_level"] = item["depth_level"]
+        if item.get("related_concepts"):
+            concepts = item["related_concepts"]
+            if isinstance(concepts, list) and len(concepts) > 0:
+                doc["related_concepts"] = " ".join(str(c) for c in concepts)
+        if item.get("canonical_topics"):
+            topics = item["canonical_topics"]
+            if isinstance(topics, list) and len(topics) > 0:
+                doc["canonical_topics"] = " ".join(str(t) for t in topics)
+
         documents.append(doc)
 
     # Return the documents array - MiniSearch will index them on the client side
     return {
-        "version": 5,  # Bumped for model_score support
+        "version": 6,  # Bumped for clustering/search fields
         "generatedAt": datetime.utcnow().isoformat() + "Z",
         "documents": documents,
         "config": {
-            "fields": ["name", "description", "category", "tags", "best_for", "authors", "summary", "use_cases", "topic_tags", "synthetic_questions"],
-            "storeFields": ["name", "description", "category", "url", "type", "tags", "best_for", "topic", "subtopic", "authors", "year", "difficulty", "prerequisites", "topic_tags", "summary", "use_cases", "audience", "model_score"],
+            "fields": ["name", "description", "category", "tags", "best_for", "authors", "summary", "use_cases", "topic_tags", "synthetic_questions", "tfidf_keywords", "semantic_cluster", "related_concepts", "canonical_topics"],
+            "storeFields": ["name", "description", "category", "url", "type", "tags", "best_for", "topic", "subtopic", "authors", "year", "difficulty", "prerequisites", "topic_tags", "summary", "use_cases", "audience", "model_score", "tfidf_keywords", "semantic_cluster", "content_format", "depth_level", "related_concepts", "canonical_topics"],
             "searchOptions": {
-                "boost": {"name": 3, "tags": 2, "topic_tags": 2, "authors": 1.5, "use_cases": 1.3, "best_for": 1.2, "synthetic_questions": 1.2, "summary": 1.1, "description": 1, "category": 0.8},
+                "boost": {"name": 3, "tfidf_keywords": 2.5, "tags": 2, "topic_tags": 2, "canonical_topics": 2, "semantic_cluster": 1.8, "authors": 1.5, "related_concepts": 1.4, "use_cases": 1.3, "best_for": 1.2, "synthetic_questions": 1.2, "summary": 1.1, "description": 1, "category": 0.8},
                 "fuzzy": 0.2,
                 "prefix": True
             }

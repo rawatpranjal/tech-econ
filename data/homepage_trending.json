@@ -1,5 +1,5 @@
 {
-  "updated": "2026-01-03T14:19:38.054976Z",
+  "updated": "2026-01-03T17:32:37.844918Z",
   "count": 12,
   "items": [
     {
@@ -83,13 +83,13 @@
       "category": "Causal Inference",
       "description": "Substack and podcast 'The Mixtape with Scott' featuring interviews with leading causal inference researchers. Bridges academic methods and practical application.",
       "url": "https://causalinf.substack.com/",
-      "score": 0.0986,
+      "score": 0.1,
       "cold_start": false,
       "signals": {
         "clicks": 2,
-        "impressions": 21,
-        "dwell_ms": 260844,
-        "viewable_sec": 260.09999999999997,
+        "impressions": 22,
+        "dwell_ms": 265019,
+        "viewable_sec": 263.59999999999997,
         "scroll_90": 0,
         "scroll_75": 0,
         "scroll_50": 0,
@@ -101,6 +101,31 @@
         "coclicks": 0
       },
       "rank": 4
+    },
+    {
+      "name": "Statistical Rethinking",
+      "type": "resource",
+      "category": "Bayesian Methods",
+      "description": "Richard McElreath's Bayesian approach to statistics. PyMC3 translations available. The book that changed how many think about inference.",
+      "url": "https://xcelab.net/rm/statistical-rethinking/",
+      "score": 0.0863,
+      "cold_start": false,
+      "signals": {
+        "clicks": 1,
+        "impressions": 31,
+        "dwell_ms": 121514,
+        "viewable_sec": 143.9,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 13,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0
+      },
+      "rank": 5
     },
     {
       "name": "Causal Inference for the Brave and True",
@@ -120,31 +145,6 @@
         "scroll_50": 0,
         "search_clicks": 0,
         "deep_sessions": 9,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0
-      },
-      "rank": 5
-    },
-    {
-      "name": "Statistical Rethinking",
-      "type": "resource",
-      "category": "Bayesian Methods",
-      "description": "Richard McElreath's Bayesian approach to statistics. PyMC3 translations available. The book that changed how many think about inference.",
-      "url": "https://xcelab.net/rm/statistical-rethinking/",
-      "score": 0.0769,
-      "cold_start": false,
-      "signals": {
-        "clicks": 0,
-        "impressions": 30,
-        "dwell_ms": 115746,
-        "viewable_sec": 138.8,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 13,
         "rage_clicks": 0,
         "quick_bounces": 0,
         "coviews": 0,

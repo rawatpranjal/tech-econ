@@ -50,7 +50,7 @@ DATA_DIR = Path(__file__).parent.parent / "data"
 STATE_FILE = DATA_DIR / ".enrichment_state.json"
 REVIEW_FILE = DATA_DIR / ".enrichment_review.json"
 
-SCHEMA_VERSION = "2.1"
+SCHEMA_VERSION = "2.2"  # Added clustering/search/reco fields
 MODEL_VERSION = "gpt-4o-mini"
 
 # Rate limiting - GPT-4o-mini has generous limits
@@ -199,11 +199,60 @@ EMBEDDING_TEXT_MAP = {
 }
 
 # =============================================================================
+# Clustering, Search & Recommendation Fields Instruction
+# =============================================================================
+
+CLUSTERING_FIELDS_INSTRUCTION = """
+ADDITIONAL FIELDS FOR CLUSTERING & SEARCH:
+
+"tfidf_keywords": Extract 10-15 highly discriminative terms that would help identify this content.
+  - Include technical terms, method names, domain-specific jargon
+  - Avoid generic words like "data", "analysis", "method"
+  - Example: ["difference-in-differences", "synthetic-control", "parallel-trends", "TWFE", "staggered-adoption"]
+
+"semantic_cluster": Assign a descriptive cluster label (2-4 words, hyphenated).
+  - Examples: "causal-ml-methods", "marketplace-experimentation", "pricing-optimization", "nlp-for-economics", "ab-testing-infrastructure"
+  - Be specific but not overly narrow
+
+"content_format": One of: article, tutorial, course, video, book, tool, dataset, paper, talk, career, community
+
+"depth_level": One of:
+  - "intro": Overview, accessible to beginners
+  - "intermediate": Requires some background knowledge
+  - "deep-dive": Technical deep-dive, assumes expertise
+  - "reference": Reference material, documentation-style
+
+"related_concepts": List 5-10 concepts/methods this content connects to.
+  - Example for a DiD paper: ["causal-inference", "treatment-effects", "panel-data", "parallel-trends", "event-study", "TWFE"]
+
+"canonical_topics": Choose 1-5 from this controlled vocabulary:
+  causal-inference, experimentation, machine-learning, econometrics, pricing, marketplaces,
+  recommendation-systems, forecasting, natural-language-processing, computer-vision,
+  reinforcement-learning, optimization, statistics, data-engineering, product-analytics,
+  consumer-behavior, labor-economics, industrial-organization, behavioral-economics,
+  finance, healthcare, policy-evaluation
+"""
+
+# =============================================================================
 # Pydantic Schemas - Section Specific
 # =============================================================================
 
 AudienceType = Literal["Early-PhD", "Junior-DS", "Mid-DS", "Senior-DS", "Curious-browser"]
 DifficultyType = Literal["beginner", "intermediate", "advanced"]
+
+
+# Controlled vocabulary for canonical topics (for consistent clustering)
+CANONICAL_TOPICS = [
+    "causal-inference", "experimentation", "machine-learning", "econometrics",
+    "pricing", "marketplaces", "recommendation-systems", "forecasting",
+    "natural-language-processing", "computer-vision", "reinforcement-learning",
+    "optimization", "statistics", "data-engineering", "product-analytics",
+    "consumer-behavior", "labor-economics", "industrial-organization",
+    "behavioral-economics", "finance", "healthcare", "policy-evaluation"
+]
+
+DepthType = Literal["intro", "intermediate", "deep-dive", "reference"]
+ContentFormatType = Literal["article", "tutorial", "course", "video", "book", "tool", "dataset", "paper", "talk", "career", "community"]
 
 
 class BaseEnrichment(BaseModel):
@@ -216,6 +265,14 @@ class BaseEnrichment(BaseModel):
     synthetic_questions: list[str] = Field(default_factory=list, min_length=4, max_length=8)
     use_cases: list[str] = Field(default_factory=list, max_length=4)
     embedding_text: str = Field(default="", max_length=6000)  # ~1000 words for semantic search
+
+    # New fields for clustering, search & recommendations
+    tfidf_keywords: list[str] = Field(default_factory=list, max_length=15)  # Discriminative terms for keyword search
+    semantic_cluster: str = Field(default="")  # LLM-assigned cluster (e.g., "causal-ml", "marketplace-experimentation")
+    content_format: ContentFormatType = "article"  # Content type for filtering
+    depth_level: DepthType = "intermediate"  # How deep the content goes
+    related_concepts: list[str] = Field(default_factory=list, max_length=10)  # For graph-based reco
+    canonical_topics: list[str] = Field(default_factory=list, max_length=5)  # From controlled vocab
 
 
 class PaperEnrichment(BaseEnrichment):
@@ -318,7 +375,13 @@ Return JSON:
   "datasets_used": ["Only if explicitly mentioned in description, else empty array"],
   "implements_method": "Name of new method if this paper introduces one, else null",
   "builds_on": ["Only well-known foundational papers if clearly referenced, else empty"],
-  "embedding_text": "500-1000 word dense description for semantic search (see instructions below)"
+  "embedding_text": "500-1000 word dense description for semantic search (see instructions below)",
+  "tfidf_keywords": ["10-15 discriminative technical terms"],
+  "semantic_cluster": "cluster-label-here",
+  "content_format": "paper",
+  "depth_level": "intro|intermediate|deep-dive|reference",
+  "related_concepts": ["5-10 connected concepts/methods"],
+  "canonical_topics": ["1-5 from controlled vocabulary"]
 }}
 
 RULES:
@@ -329,6 +392,8 @@ RULES:
 {anti_hallucination}
 
 {embedding_text_instruction}
+
+{clustering_fields_instruction}
 
 JSON only, no markdown."""
 
@@ -357,7 +422,13 @@ Return JSON:
   "implements_paper": "Author (Year) only if clearly documented, else null",
   "related_packages": ["Only well-known similar packages you're confident exist"],
   "maintenance_status": "active|stable|unmaintained",
-  "embedding_text": "500-1000 word dense description for semantic search (see instructions below)"
+  "embedding_text": "500-1000 word dense description for semantic search (see instructions below)",
+  "tfidf_keywords": ["10-15 discriminative technical terms"],
+  "semantic_cluster": "cluster-label-here",
+  "content_format": "tool",
+  "depth_level": "intro|intermediate|deep-dive|reference",
+  "related_concepts": ["5-10 connected concepts/methods"],
+  "canonical_topics": ["1-5 from controlled vocabulary"]
 }}
 
 RULES:
@@ -368,6 +439,8 @@ RULES:
 {anti_hallucination}
 
 {embedding_text_instruction}
+
+{clustering_fields_instruction}
 
 JSON only, no markdown."""
 
@@ -395,7 +468,13 @@ Return JSON:
   "geographic_scope": "Only if explicitly mentioned, else null",
   "size_category": "small|medium|large|massive - only if inferable, default medium",
   "benchmark_usage": ["Common uses if mentioned in description"],
-  "embedding_text": "500-1000 word dense description for semantic search (see instructions below)"
+  "embedding_text": "500-1000 word dense description for semantic search (see instructions below)",
+  "tfidf_keywords": ["10-15 discriminative technical terms"],
+  "semantic_cluster": "cluster-label-here",
+  "content_format": "dataset",
+  "depth_level": "intro|intermediate|deep-dive|reference",
+  "related_concepts": ["5-10 connected concepts/methods"],
+  "canonical_topics": ["1-5 from controlled vocabulary"]
 }}
 
 RULES:
@@ -406,6 +485,8 @@ RULES:
 {anti_hallucination}
 
 {embedding_text_instruction}
+
+{clustering_fields_instruction}
 
 JSON only, no markdown."""
 
@@ -431,11 +512,18 @@ Return JSON:
   "content_format": "article|tutorial|course|video|book|newsletter",
   "estimated_duration": "Only if inferable from description, else null",
   "skill_progression": ["skills you'll gain based on description"],
-  "embedding_text": "500-1000 word dense description for semantic search (see instructions below)"
+  "embedding_text": "500-1000 word dense description for semantic search (see instructions below)",
+  "tfidf_keywords": ["10-15 discriminative technical terms"],
+  "semantic_cluster": "cluster-label-here",
+  "depth_level": "intro|intermediate|deep-dive|reference",
+  "related_concepts": ["5-10 connected concepts/methods"],
+  "canonical_topics": ["1-5 from controlled vocabulary"]
 }}
 {anti_hallucination}
 
 {embedding_text_instruction}
+
+{clustering_fields_instruction}
 
 JSON only, no markdown."""
 
@@ -461,11 +549,19 @@ Return JSON:
   "speaker_expertise": ["areas mentioned in description"],
   "key_insights": ["Only insights explicitly mentioned in description"],
   "mentioned_tools": ["Only tools/methods explicitly mentioned"],
-  "embedding_text": "500-1000 word dense description for semantic search (see instructions below)"
+  "embedding_text": "500-1000 word dense description for semantic search (see instructions below)",
+  "tfidf_keywords": ["10-15 discriminative technical terms"],
+  "semantic_cluster": "cluster-label-here",
+  "content_format": "talk",
+  "depth_level": "intro|intermediate|deep-dive|reference",
+  "related_concepts": ["5-10 connected concepts/methods"],
+  "canonical_topics": ["1-5 from controlled vocabulary"]
 }}
 {anti_hallucination}
 
 {embedding_text_instruction}
+
+{clustering_fields_instruction}
 
 JSON only, no markdown."""
 
@@ -490,11 +586,19 @@ Return JSON:
   "role_type": ["data-scientist", "economist", "ML-engineer", etc.],
   "experience_level": "entry|mid|senior|executive",
   "company_context": ["Only if mentioned: FAANG, startup, finance, etc."],
-  "embedding_text": "500-1000 word dense description for semantic search (see instructions below)"
+  "embedding_text": "500-1000 word dense description for semantic search (see instructions below)",
+  "tfidf_keywords": ["10-15 discriminative technical terms"],
+  "semantic_cluster": "cluster-label-here",
+  "content_format": "career",
+  "depth_level": "intro|intermediate|deep-dive|reference",
+  "related_concepts": ["5-10 connected concepts/methods"],
+  "canonical_topics": ["1-5 from controlled vocabulary"]
 }}
 {anti_hallucination}
 
 {embedding_text_instruction}
+
+{clustering_fields_instruction}
 
 JSON only, no markdown."""
 
@@ -521,11 +625,19 @@ Return JSON:
   "event_format": "conference|meetup|workshop|online|hybrid",
   "geographic_focus": "Only if location is mentioned, else null",
   "frequency": "annual|biannual|quarterly|monthly|one-time",
-  "embedding_text": "500-1000 word dense description for semantic search (see instructions below)"
+  "embedding_text": "500-1000 word dense description for semantic search (see instructions below)",
+  "tfidf_keywords": ["10-15 discriminative technical terms"],
+  "semantic_cluster": "cluster-label-here",
+  "content_format": "community",
+  "depth_level": "intro|intermediate|deep-dive|reference",
+  "related_concepts": ["5-10 connected concepts/methods"],
+  "canonical_topics": ["1-5 from controlled vocabulary"]
 }}
 {anti_hallucination}
 
 {embedding_text_instruction}
+
+{clustering_fields_instruction}
 
 JSON only, no markdown."""
 
@@ -724,6 +836,8 @@ def format_prompt(item: dict, content_type: str) -> str:
         "anti_hallucination": ANTI_HALLUCINATION,
         # Get content-type specific embedding text instruction
         "embedding_text_instruction": EMBEDDING_TEXT_MAP.get(content_type, EMBEDDING_TEXT_BASE),
+        # Clustering fields instruction
+        "clustering_fields_instruction": CLUSTERING_FIELDS_INSTRUCTION,
     }
 
     return template.format(**format_dict)
@@ -841,7 +955,10 @@ def apply_enrichment(item: dict, enrichment: dict, content_type: str) -> None:
     # Base fields (all content types)
     base_fields = [
         "difficulty", "prerequisites", "topic_tags", "summary",
-        "audience", "synthetic_questions", "use_cases", "embedding_text"
+        "audience", "synthetic_questions", "use_cases", "embedding_text",
+        # New clustering/search/reco fields
+        "tfidf_keywords", "semantic_cluster", "content_format", "depth_level",
+        "related_concepts", "canonical_topics"
     ]
 
     # Extended fields per content type

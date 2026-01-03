@@ -48,6 +48,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 from enrich_metadata_v2 import (
     DATA_DIR, DATA_FILES, PAPERS_FILE, MODEL_VERSION, SCHEMA_VERSION,
     PROMPT_MAP, EMBEDDING_TEXT_MAP, EMBEDDING_TEXT_BASE, ANTI_HALLUCINATION,
+    CLUSTERING_FIELDS_INSTRUCTION,
     load_state, save_state, needs_enrichment, get_item_id, compute_hash,
     apply_enrichment, update_state, calculate_confidence,
     BaseEnrichment, SCHEMA_MAP
@@ -112,6 +113,7 @@ def format_prompt_for_batch(item: dict, content_type: str) -> list:
         "tags": ", ".join(item.get("tags", [])) if isinstance(item.get("tags"), list) else item.get("tags", ""),
         "anti_hallucination": ANTI_HALLUCINATION,
         "embedding_text_instruction": EMBEDDING_TEXT_MAP.get(content_type, EMBEDDING_TEXT_BASE),
+        "clustering_fields_instruction": CLUSTERING_FIELDS_INSTRUCTION,
     }
 
     prompt = template.format(**format_dict)
