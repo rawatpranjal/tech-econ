@@ -18,6 +18,7 @@ Usage:
 """
 
 import argparse
+import asyncio
 import hashlib
 import json
 import os
@@ -35,7 +36,7 @@ except ImportError:
     sys.exit(1)
 
 try:
-    from openai import OpenAI
+    from openai import OpenAI, AsyncOpenAI
 except ImportError:
     print("Error: openai package not installed")
     print("Install with: pip install openai")
@@ -56,6 +57,9 @@ MODEL_VERSION = "gpt-4o-mini"
 REQUESTS_PER_MINUTE = 60
 REQUEST_DELAY = 60.0 / REQUESTS_PER_MINUTE
 SAVE_EVERY_N = 10
+
+# Async batch processing settings
+BATCH_SIZE = 10  # Concurrent requests per batch (safe for 60 RPM limit)
 
 # Files to process (in order)
 DATA_FILES = [
@@ -768,6 +772,70 @@ def enrich_item(client: Any, item: dict, content_type: str) -> tuple[dict | None
         return None, 0.0
 
 
+async def enrich_item_async(client: AsyncOpenAI, item: dict, content_type: str) -> tuple[dict | None, float]:
+    """Async version: Enrich a single item with LLM-generated metadata."""
+    prompt = format_prompt(item, content_type)
+
+    try:
+        response = await client.chat.completions.create(
+            model=MODEL_VERSION,
+            messages=[
+                {
+                    "role": "system",
+                    "content": "You are a metadata enrichment assistant. Return only valid JSON. Never fabricate information - use null or empty arrays when data is not available."
+                },
+                {"role": "user", "content": prompt}
+            ],
+            max_tokens=2000,
+            temperature=0.3,
+            response_format={"type": "json_object"}
+        )
+
+        text = response.choices[0].message.content.strip()
+        enrichment = json.loads(text)
+
+        # Validate with Pydantic schema
+        schema_class = SCHEMA_MAP.get(content_type, BaseEnrichment)
+        try:
+            validated = schema_class(**enrichment)
+            enrichment = validated.model_dump()
+        except ValidationError:
+            pass  # Use raw enrichment if validation fails
+
+        # Calculate confidence
+        confidence = calculate_confidence(enrichment, item, content_type)
+
+        return enrichment, confidence
+
+    except json.JSONDecodeError:
+        return None, 0.0
+    except Exception:
+        return None, 0.0
+
+
+async def process_batch_async(
+    client: AsyncOpenAI,
+    items: list[dict],
+    content_type: str,
+    batch_size: int = BATCH_SIZE
+) -> list[tuple[dict | None, float]]:
+    """Process a batch of items concurrently with rate limiting."""
+    semaphore = asyncio.Semaphore(batch_size)
+
+    async def process_with_semaphore(item: dict) -> tuple[dict | None, float]:
+        async with semaphore:
+            return await enrich_item_async(client, item, content_type)
+
+    tasks = [process_with_semaphore(item) for item in items]
+    results = await asyncio.gather(*tasks, return_exceptions=True)
+
+    # Convert exceptions to (None, 0.0)
+    return [
+        r if isinstance(r, tuple) else (None, 0.0)
+        for r in results
+    ]
+
+
 def apply_enrichment(item: dict, enrichment: dict, content_type: str) -> None:
     """Apply enrichment data to item."""
     # Base fields (all content types)
@@ -895,6 +963,78 @@ def process_flat_file(
     return enriched_count
 
 
+async def process_flat_file_async(
+    client: AsyncOpenAI,
+    filepath: Path,
+    state: dict,
+    dry_run: bool = False,
+    limit: int | None = None,
+    force: bool = False
+) -> int:
+    """Async version: Process a flat JSON file with batch parallelism."""
+    if not filepath.exists():
+        print(f"Skipping {filepath.name} (not found)")
+        return 0
+
+    with open(filepath) as f:
+        data = json.load(f)
+
+    if not isinstance(data, list):
+        print(f"Skipping {filepath.name} (not a list)")
+        return 0
+
+    content_type = filepath.stem.rstrip("s")  # packages -> package
+    file_key = filepath.name
+
+    # Collect items needing enrichment
+    items_to_enrich = [(i, data[i]) for i, item in enumerate(data)
+                       if needs_enrichment(item, state, file_key, force)]
+
+    print(f"\n{'='*60}")
+    print(f"Processing {filepath.name}: {len(data) - len(items_to_enrich)}/{len(data)} done, {len(items_to_enrich)} remaining")
+    print(f"{'='*60}")
+
+    if limit:
+        items_to_enrich = items_to_enrich[:limit]
+
+    if dry_run:
+        print(f"  [DRY RUN] Would process {len(items_to_enrich)} items")
+        return len(items_to_enrich)
+
+    enriched_count = 0
+    failed_count = 0
+
+    # Process in batches
+    for batch_start in range(0, len(items_to_enrich), BATCH_SIZE):
+        batch = items_to_enrich[batch_start:batch_start + BATCH_SIZE]
+        batch_items = [item for _, item in batch]
+
+        print(f"  Batch {batch_start // BATCH_SIZE + 1}: processing {len(batch)} items...")
+
+        # Process batch concurrently
+        results = await process_batch_async(client, batch_items, content_type)
+
+        # Apply results
+        for (item_idx, item), (enrichment, confidence) in zip(batch, results):
+            if enrichment:
+                apply_enrichment(item, enrichment, content_type)
+                update_state(state, file_key, item, confidence)
+                enriched_count += 1
+
+                if confidence < 0.7:
+                    log_for_review(item, enrichment, confidence, "low_confidence")
+            else:
+                failed_count += 1
+
+        # Save after each batch
+        save_file(filepath, data)
+        save_state(state)
+        print(f"    [Saved batch: {enriched_count} enriched, {failed_count} failed]")
+
+    print(f"  Done: {enriched_count} enriched, {failed_count} failed")
+    return enriched_count
+
+
 def process_papers_file(
     client: Any,
     filepath: Path,
@@ -987,6 +1127,120 @@ def process_papers_file(
     return enriched_count
 
 
+async def process_papers_file_async(
+    client: AsyncOpenAI,
+    filepath: Path,
+    state: dict,
+    dry_run: bool = False,
+    limit: int | None = None,
+    force: bool = False
+) -> int:
+    """Async version: Process the nested papers.json file with batch parallelism."""
+    if not filepath.exists():
+        print(f"Skipping {filepath.name} (not found)")
+        return 0
+
+    with open(filepath) as f:
+        data = json.load(f)
+
+    if "topics" not in data:
+        print(f"Skipping {filepath.name} (no topics)")
+        return 0
+
+    file_key = filepath.name
+    content_type = "paper"
+
+    # Collect all papers needing enrichment
+    papers_to_enrich = []
+    for topic in data["topics"]:
+        for subtopic in topic.get("subtopics", []):
+            for paper_idx, paper in enumerate(subtopic.get("papers", [])):
+                if needs_enrichment(paper, state, file_key, force):
+                    papers_to_enrich.append({
+                        "topic_id": topic["id"],
+                        "subtopic_id": subtopic["id"],
+                        "paper_idx": paper_idx,
+                        "paper": paper
+                    })
+
+    total_papers = sum(
+        len(st.get("papers", []))
+        for t in data["topics"]
+        for st in t.get("subtopics", [])
+    )
+
+    print(f"\n{'='*60}")
+    print(f"Processing {filepath.name}: {total_papers - len(papers_to_enrich)}/{total_papers} done, {len(papers_to_enrich)} remaining")
+    print(f"{'='*60}")
+
+    if limit:
+        papers_to_enrich = papers_to_enrich[:limit]
+
+    if dry_run:
+        print(f"  [DRY RUN] Would process {len(papers_to_enrich)} papers")
+        return len(papers_to_enrich)
+
+    enriched_count = 0
+    failed_count = 0
+
+    # Process in batches
+    for batch_start in range(0, len(papers_to_enrich), BATCH_SIZE):
+        batch = papers_to_enrich[batch_start:batch_start + BATCH_SIZE]
+        batch_papers = [info["paper"] for info in batch]
+
+        print(f"  Batch {batch_start // BATCH_SIZE + 1}: processing {len(batch)} papers...")
+
+        # Process batch concurrently
+        results = await process_batch_async(client, batch_papers, content_type)
+
+        # Apply results
+        for paper_info, (enrichment, confidence) in zip(batch, results):
+            paper = paper_info["paper"]
+            if enrichment:
+                apply_enrichment(paper, enrichment, content_type)
+                update_state(state, file_key, paper, confidence)
+                enriched_count += 1
+
+                if confidence < 0.7:
+                    log_for_review(paper, enrichment, confidence, "low_confidence")
+            else:
+                failed_count += 1
+
+        # Save after each batch
+        save_file(filepath, data)
+        save_state(state)
+        print(f"    [Saved batch: {enriched_count} enriched, {failed_count} failed]")
+
+    print(f"  Done: {enriched_count} enriched, {failed_count} failed")
+    return enriched_count
+
+
+async def run_all_async(
+    client: AsyncOpenAI,
+    state: dict,
+    files_to_process: list[str],
+    dry_run: bool = False,
+    limit: int | None = None,
+    force: bool = False
+) -> int:
+    """Run all file processing asynchronously."""
+    total_enriched = 0
+
+    for filename in files_to_process:
+        filepath = DATA_DIR / filename
+
+        if filename == PAPERS_FILE:
+            total_enriched += await process_papers_file_async(
+                client, filepath, state, dry_run, limit, force
+            )
+        else:
+            total_enriched += await process_flat_file_async(
+                client, filepath, state, dry_run, limit, force
+            )
+
+    return total_enriched
+
+
 # =============================================================================
 # Main
 # =============================================================================
@@ -1003,6 +1257,8 @@ def main():
                         help="Max items to enrich per file")
     parser.add_argument("--force", action="store_true",
                         help="Re-enrich all items (ignore content hashes)")
+    parser.add_argument("--sync", action="store_true",
+                        help="Use synchronous processing (slower, for debugging)")
     args = parser.parse_args()
 
     api_key = os.environ.get("OPENAI_API_KEY")
@@ -1011,13 +1267,12 @@ def main():
         print("Set with: export OPENAI_API_KEY=sk-...")
         sys.exit(1)
 
-    client = OpenAI(api_key=api_key) if api_key else None
-
     # Load state
     state = load_state()
 
     print(f"Advanced Enrichment v{SCHEMA_VERSION}")
     print(f"Model: {MODEL_VERSION} (cost: ~$0.15/1M input, $0.60/1M output)")
+    print(f"Mode: {'SYNC' if args.sync else 'ASYNC'} (batch size: {BATCH_SIZE})")
     if args.force:
         print("Mode: FORCE (re-enriching all items)")
     if args.limit:
@@ -1025,25 +1280,35 @@ def main():
     if args.dry_run:
         print("Mode: DRY RUN")
 
-    total_enriched = 0
-
     # Determine files to process
     if args.file:
         files_to_process = [args.file]
     else:
         files_to_process = DATA_FILES + [PAPERS_FILE]
 
-    for filename in files_to_process:
-        filepath = DATA_DIR / filename
+    # Use async processing by default (much faster)
+    if args.sync:
+        # Legacy sync mode for debugging
+        client = OpenAI(api_key=api_key) if api_key else None
+        total_enriched = 0
 
-        if filename == PAPERS_FILE:
-            total_enriched += process_papers_file(
-                client, filepath, state, args.dry_run, args.limit, args.force
-            )
-        else:
-            total_enriched += process_flat_file(
-                client, filepath, state, args.dry_run, args.limit, args.force
-            )
+        for filename in files_to_process:
+            filepath = DATA_DIR / filename
+
+            if filename == PAPERS_FILE:
+                total_enriched += process_papers_file(
+                    client, filepath, state, args.dry_run, args.limit, args.force
+                )
+            else:
+                total_enriched += process_flat_file(
+                    client, filepath, state, args.dry_run, args.limit, args.force
+                )
+    else:
+        # Async mode (default) - 10x faster with batch processing
+        client = AsyncOpenAI(api_key=api_key) if api_key else None
+        total_enriched = asyncio.run(
+            run_all_async(client, state, files_to_process, args.dry_run, args.limit, args.force)
+        )
 
     # Final state save
     if not args.dry_run:
