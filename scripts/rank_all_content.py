@@ -20,7 +20,7 @@ from urllib.parse import urlparse
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import cross_val_predict, train_test_split
-from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score, roc_auc_score
+from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score, roc_auc_score, average_precision_score
 from sentence_transformers import SentenceTransformer
 
 try:
@@ -569,8 +569,10 @@ def train_regression_model(items, item_signals):
     test_binary = (y_test > 0).astype(int)
     if len(np.unique(test_binary)) > 1:
         test_auc = roc_auc_score(test_binary, y_pred_test)
+        test_ap = average_precision_score(test_binary, y_pred_test)
     else:
         test_auc = 0.5
+        test_ap = test_binary.mean()  # baseline for constant predictions
 
     print(f"\n  === HOLDOUT TEST METRICS ===")
     print(f"  Test RMSE: {test_rmse:.3f}")
@@ -579,9 +581,10 @@ def train_regression_model(items, item_signals):
     print(f"  Baseline RMSE (train mean): {baseline_rmse:.3f}")
     if baseline_rmse > 0:
         print(f"  RMSE vs baseline: {(test_rmse/baseline_rmse)*100:.1f}%")
-    print(f"  AUC (any engagement): {test_auc:.3f}")
+    print(f"  AUC-ROC (any engagement): {test_auc:.3f}")
+    print(f"  AUC-PR (any engagement):  {test_ap:.3f}")
 
-    # Per-interaction AUC
+    # Per-interaction AUC-ROC and AUC-PR
     for signal_name, signal_key in [('clicks', 'clicks'), ('impressions', 'impressions'), ('dwell', 'dwell_ms')]:
         signal_binary = np.array([
             1 if item_signals.get(items[i]['name'], {}).get(signal_key, 0) > 0 else 0
@@ -589,7 +592,8 @@ def train_regression_model(items, item_signals):
         ])
         if signal_binary.sum() > 0 and signal_binary.sum() < len(signal_binary):
             signal_auc = roc_auc_score(signal_binary, y_pred_test)
-            print(f"  AUC ({signal_name}): {signal_auc:.3f}")
+            signal_ap = average_precision_score(signal_binary, y_pred_test)
+            print(f"  AUC-ROC ({signal_name}): {signal_auc:.3f} | AUC-PR: {signal_ap:.3f}")
 
     # Retrain on full data for final model
     print(f"\n  Retraining on full data...")
