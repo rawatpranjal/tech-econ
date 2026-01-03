@@ -99,6 +99,7 @@ class BaseEnrichment(BaseModel):
     audience: list[AudienceType] = Field(default_factory=list)
     synthetic_questions: list[str] = Field(default_factory=list, min_length=4, max_length=8)
     use_cases: list[str] = Field(default_factory=list, max_length=4)
+    embedding_text: str = Field(default="", max_length=6000)  # ~1000 words for semantic search
 
 
 class PaperEnrichment(BaseEnrichment):
