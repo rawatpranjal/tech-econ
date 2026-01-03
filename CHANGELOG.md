@@ -19,6 +19,8 @@
   - `content_format`, `depth_level`: content type and depth filters
   - `related_concepts`, `canonical_topics`: graph edges and controlled vocabulary
 - Search index v6: Added new fields with boosts (tfidf_keywords: 2.5, canonical_topics: 2.0, semantic_cluster: 1.8)
+- Search metadata v5: New fields now included for client-side filtering and display
+- Updated unified-search.js to use index config with new field boosts
 - Content-type specific prompts for papers, packages, datasets, resources, talks, career, community
 - **Async batch processing**: 10x faster enrichment using asyncio (batch size 10, semaphore rate limiting)
 - **OpenAI Batch API**: New `enrich_batch.py` script - 50% cheaper with CLI commands (prepare, submit, status, apply, run)

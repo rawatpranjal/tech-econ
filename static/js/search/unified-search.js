@@ -491,19 +491,20 @@
       })
       .then(function(data) {
         console.log('[UnifiedSearch] Fetched search index:', data.documents ? data.documents.length : 0, 'documents');
-        // Wrap with config (same format as fallback)
+        // Use config from search-index.json if available, with fallback
+        var config = data.config || {
+          fields: ['name', 'description', 'category', 'tags', 'best_for', 'tfidf_keywords', 'semantic_cluster', 'canonical_topics', 'related_concepts'],
+          storeFields: ['name', 'description', 'category', 'url', 'type', 'tags', 'best_for', 'tfidf_keywords', 'semantic_cluster', 'content_format', 'depth_level', 'canonical_topics'],
+          searchOptions: {
+            boost: { name: 3, tfidf_keywords: 2.5, tags: 2, canonical_topics: 2, semantic_cluster: 1.8, related_concepts: 1.4, best_for: 1.2, description: 1, category: 0.8 },
+            fuzzy: 0.2,
+            prefix: true
+          }
+        };
         var indexData = {
           version: data.version || 1,
           documents: data.documents,
-          config: {
-            fields: ['name', 'description', 'category', 'tags', 'best_for'],
-            storeFields: ['name', 'description', 'category', 'url', 'type', 'tags', 'best_for'],
-            searchOptions: {
-              boost: { name: 3, tags: 2, best_for: 1.2, description: 1, category: 0.8 },
-              fuzzy: 0.2,
-              prefix: true
-            }
-          }
+          config: config
         };
         self.searchIndex = indexData;
         if (self.workerReady) {
@@ -545,10 +546,10 @@
           version: 1,
           documents: data,
           config: {
-            fields: ['name', 'description', 'category', 'tags', 'best_for'],
-            storeFields: ['name', 'description', 'category', 'url', 'type', 'tags', 'best_for'],
+            fields: ['name', 'description', 'category', 'tags', 'best_for', 'tfidf_keywords', 'semantic_cluster', 'canonical_topics', 'related_concepts'],
+            storeFields: ['name', 'description', 'category', 'url', 'type', 'tags', 'best_for', 'tfidf_keywords', 'semantic_cluster', 'content_format', 'depth_level', 'canonical_topics'],
             searchOptions: {
-              boost: { name: 3, tags: 2, best_for: 1.2, description: 1, category: 0.8 },
+              boost: { name: 3, tfidf_keywords: 2.5, tags: 2, canonical_topics: 2, semantic_cluster: 1.8, related_concepts: 1.4, best_for: 1.2, description: 1, category: 0.8 },
               fuzzy: 0.2,
               prefix: true
             }

@@ -297,7 +297,14 @@ def load_all_items(data_dir: Path) -> List[Dict[str, Any]]:
                 "synthetic_questions": synthetic_questions,
                 # Engagement-based ranking score from ranking model
                 "model_score": item.get("model_score", 0.0),
-                "text_for_embedding": combine_text_for_embedding(item)
+                "text_for_embedding": combine_text_for_embedding(item),
+                # New clustering/search fields (v2.2)
+                "tfidf_keywords": item.get("tfidf_keywords", []),
+                "semantic_cluster": item.get("semantic_cluster", ""),
+                "content_format": item.get("content_format", ""),
+                "depth_level": item.get("depth_level", ""),
+                "related_concepts": item.get("related_concepts", []),
+                "canonical_topics": item.get("canonical_topics", []),
             }
 
             # Add paper-specific fields if present (for papers_flat.json)
@@ -544,7 +551,7 @@ def generate_all_outputs(items: List[Dict[str, Any]], model, output_dir: Path, c
 
     # 2. Build metadata (items without embeddings, for client-side matching)
     metadata = {
-        "version": 4,  # Bumped for all enriched fields
+        "version": 5,  # Bumped for clustering/search fields
         "model": "bge-large-en-v1.5",
         "dimensions": 1024,
         "count": len(items),
@@ -565,6 +572,13 @@ def generate_all_outputs(items: List[Dict[str, Any]], model, output_dir: Path, c
             **({"use_cases": item["use_cases"]} if item.get("use_cases") else {}),
             **({"audience": item["audience"]} if item.get("audience") else {}),
             **({"synthetic_questions": item["synthetic_questions"]} if item.get("synthetic_questions") else {}),
+            # Clustering/search fields (v5)
+            **({"tfidf_keywords": item["tfidf_keywords"]} if item.get("tfidf_keywords") else {}),
+            **({"semantic_cluster": item["semantic_cluster"]} if item.get("semantic_cluster") else {}),
+            **({"content_format": item["content_format"]} if item.get("content_format") else {}),
+            **({"depth_level": item["depth_level"]} if item.get("depth_level") else {}),
+            **({"related_concepts": item["related_concepts"]} if item.get("related_concepts") else {}),
+            **({"canonical_topics": item["canonical_topics"]} if item.get("canonical_topics") else {}),
         } for item in items]
     }
 
