@@ -551,7 +551,7 @@
                 <p class="subtitle">Packages, datasets, papers, and learning resources</p>
             </section>
 
-            <!-- ==================== SLIDE 2: STATS ==================== -->
+            <!-- ==================== SLIDE 2: COVERAGE ==================== -->
             {{ $paperCount := 0 }}
             {{ range .Site.Data.papers.topics }}
                 {{ range .subtopics }}
@@ -561,163 +561,167 @@
             {{ $total := add (len .Site.Data.packages) (add (len .Site.Data.datasets) (add (len .Site.Data.resources) (add (len .Site.Data.talks) $paperCount))) }}
 
             <section class="centered">
-                <h2>One Place. Curated. Complete.</h2>
-                <div class="stat-grid">
-                    <div class="stat-item fragment fade-up" data-fragment-index="1">
-                        <div class="stat-number" data-count-to="{{ len .Site.Data.packages }}">0</div>
+                <h2>Coverage</h2>
+                <div class="stat-grid" style="max-width: 600px;">
+                    <div class="stat-item">
+                        <div class="stat-number">{{ len .Site.Data.packages }}</div>
                         <div class="stat-label">Packages</div>
                     </div>
-                    <div class="stat-item fragment fade-up" data-fragment-index="2">
-                        <div class="stat-number" data-count-to="{{ len .Site.Data.datasets }}">0</div>
+                    <div class="stat-item">
+                        <div class="stat-number">{{ len .Site.Data.datasets }}</div>
                         <div class="stat-label">Datasets</div>
                     </div>
-                    <div class="stat-item fragment fade-up" data-fragment-index="3">
-                        <div class="stat-number" data-count-to="{{ $paperCount }}">0</div>
+                    <div class="stat-item">
+                        <div class="stat-number">{{ $paperCount }}</div>
                         <div class="stat-label">Papers</div>
                     </div>
-                    <div class="stat-item fragment fade-up" data-fragment-index="4">
-                        <div class="stat-number" data-count-to="{{ len .Site.Data.resources }}">0</div>
-                        <div class="stat-label">Learning Resources</div>
+                    <div class="stat-item">
+                        <div class="stat-number">{{ len .Site.Data.resources }}</div>
+                        <div class="stat-label">Resources</div>
                     </div>
                 </div>
+                <p class="muted" style="margin-top: 1rem; font-size: 0.65em;">Curated from 500+ sources across causal inference, experimentation, pricing, ML, and econometrics</p>
             </section>
 
             <!-- ==================== SLIDE 3: SEARCH PIPELINE ==================== -->
             <section class="centered compact">
-                <h2>Hybrid Search Pipeline</h2>
+                <h2>Hybrid Search Architecture</h2>
 
-                <div class="pipeline-row">
-                    <div class="pipeline-box accent">
-                        <h4>Query</h4>
-                        <p>User input</p>
+                <div class="pipeline-split" style="margin-bottom: 0.5rem;">
+                    <div class="pipeline-box">
+                        <h4>Lexical</h4>
+                        <p>MiniSearch (BM25)<br>client-side, ~10ms</p>
                     </div>
-                </div>
-
-                <div class="pipeline-arrow">↓</div>
-
-                <div class="pipeline-split">
-                    <div class="pipeline-box fragment fade-up">
-                        <h4>Keyword</h4>
-                        <p>MiniSearch<br>BM25 · ~10ms</p>
-                    </div>
-                    <div class="pipeline-box fragment fade-up">
+                    <div class="pipeline-box">
                         <h4>Semantic</h4>
-                        <p>GTE-Small<br>384-dim vectors</p>
+                        <p>GTE-Small ONNX<br>384-dim, quantized</p>
                     </div>
                 </div>
 
                 <div class="pipeline-arrow">↓</div>
-
-                <div class="pipeline-row">
-                    <div class="pipeline-box accent fragment fade-up">
-                        <h4>RRF Fusion</h4>
-                        <p>k=60 · adaptive weights</p>
-                    </div>
-                </div>
-
-                <div class="pipeline-arrow">↓</div>
-
-                <div class="pipeline-row">
-                    <div class="pipeline-box fragment fade-up">
-                        <h4>Ranked Results</h4>
-                        <p>Top 20 · model score boost</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ==================== SLIDE 7: RANKING SYSTEM ==================== -->
-            <section class="centered compact">
-                <h2>ML Ranking System</h2>
 
                 <div class="pipeline-row">
                     <div class="pipeline-box accent">
-                        <h4>Engagement Signals</h4>
-                        <p>clicks ×5 · dwell ×1 · scroll ×2 · impressions ×0.5</p>
+                        <h4>Reciprocal Rank Fusion</h4>
+                        <p class="formula" style="font-size: 0.55em; padding: 0.4rem 0.8rem;">score(d) = Σ 1/(k + rank<sub>i</sub>(d)), k=60</p>
                     </div>
                 </div>
 
                 <div class="pipeline-arrow">↓</div>
 
                 <div class="pipeline-row">
-                    <div class="pipeline-box fragment fade-up">
-                        <h4>LightGBM Tweedie</h4>
-                        <p>18 categorical + 384-dim embeddings</p>
+                    <div class="pipeline-box">
+                        <h4>Re-ranking</h4>
+                        <p>score × (1 + 0.4 × model_score)</p>
+                    </div>
+                </div>
+
+                <div class="spec-item" style="max-width: 400px; margin: 0.75rem auto 0;">
+                    <span class="spec-label">Latency</span>
+                    <span class="spec-value">&lt;50ms total (client-side)</span>
+                </div>
+            </section>
+
+            <!-- ==================== SLIDE 4: RANKING SYSTEM ==================== -->
+            <section class="centered compact">
+                <h2>Learning-to-Rank Model</h2>
+
+                <div class="pipeline-row">
+                    <div class="pipeline-box accent">
+                        <h4>Target Variable</h4>
+                        <p class="formula" style="font-size: 0.5em; padding: 0.3rem 0.6rem;">y = 5·clicks + 1·dwell + 2·scroll + 0.5·impressions</p>
                     </div>
                 </div>
 
                 <div class="pipeline-arrow">↓</div>
 
                 <div class="pipeline-split">
-                    <div class="pipeline-box fragment fade-up">
-                        <h4>Warm Items</h4>
-                        <p>Real engagement<br>scores</p>
+                    <div class="pipeline-box">
+                        <h4>Categorical</h4>
+                        <p>18 features<br>section, type, level...</p>
                     </div>
-                    <div class="pipeline-box fragment fade-up">
-                        <h4>Cold Start</h4>
-                        <p>Predicted × 0.3<br>conservative</p>
+                    <div class="pipeline-box">
+                        <h4>Semantic</h4>
+                        <p>384-dim embeddings<br>GTE-Small</p>
                     </div>
                 </div>
 
                 <div class="pipeline-arrow">↓</div>
 
                 <div class="pipeline-row">
-                    <div class="pipeline-box accent fragment fade-up">
-                        <h4>Model Score</h4>
-                        <p>0–1 normalized · powers search ranking</p>
+                    <div class="pipeline-box accent">
+                        <h4>LightGBM Tweedie</h4>
+                        <p>100 trees · max_depth=5 · p=1.5</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-arrow">↓</div>
+
+                <div class="pipeline-split">
+                    <div class="pipeline-box">
+                        <h4>Warm</h4>
+                        <p>Observed engagement</p>
+                    </div>
+                    <div class="pipeline-box">
+                        <h4>Cold</h4>
+                        <p>Predicted × 0.3</p>
                     </div>
                 </div>
             </section>
 
-            <!-- ==================== SLIDE 8: DISCOVER ==================== -->
+            <!-- ==================== SLIDE 5: RECOMMENDATIONS ==================== -->
             <section class="centered compact">
-                <h2>Discover & Recommendations</h2>
+                <h2>Recommendation System</h2>
 
                 <div class="pipeline-row">
                     <div class="pipeline-box accent">
                         <h4>Item Embeddings</h4>
-                        <p>bge-large-en-v1.5 · 1024-dim</p>
-                    </div>
-                </div>
-
-                <div class="pipeline-arrow">↓</div>
-
-                <div class="pipeline-split">
-                    <div class="pipeline-box fragment fade-up">
-                        <h4>Cosine Similarity</h4>
-                        <p>All-pairs comparison<br>threshold > 0.3</p>
-                    </div>
-                    <div class="pipeline-box fragment fade-up">
-                        <h4>Reading History</h4>
-                        <p>Local storage<br>weighted recency</p>
+                        <p>bge-large-en-v1.5 · 1024 dimensions</p>
                     </div>
                 </div>
 
                 <div class="pipeline-arrow">↓</div>
 
                 <div class="pipeline-row">
-                    <div class="pipeline-box fragment fade-up">
+                    <div class="pipeline-box">
+                        <h4>Similarity</h4>
+                        <p class="formula" style="font-size: 0.5em; padding: 0.3rem 0.6rem;">sim(a,b) = (a·b) / (‖a‖·‖b‖)</p>
+                    </div>
+                </div>
+
+                <div class="pipeline-arrow">↓</div>
+
+                <div class="pipeline-split">
+                    <div class="pipeline-box">
                         <h4>Related Items</h4>
-                        <p>Top-5 semantic neighbors per item</p>
+                        <p>Top-5 neighbors<br>threshold > 0.3</p>
                     </div>
-                    <div class="pipeline-box fragment fade-up">
+                    <div class="pipeline-box">
                         <h4>For You</h4>
-                        <p>Personalized from history + favorites</p>
+                        <p>History + favorites<br>recency-weighted</p>
                     </div>
+                </div>
+
+                <div class="spec-item" style="max-width: 400px; margin: 0.75rem auto 0;">
+                    <span class="spec-label">Storage</span>
+                    <span class="spec-value">Client-side (localStorage)</span>
                 </div>
             </section>
 
-            <!-- ==================== SLIDE 9: TECH STACK ==================== -->
+            <!-- ==================== SLIDE 6: ARCHITECTURE ==================== -->
             <section class="centered">
-                <h2>Under the Hood</h2>
+                <h2>System Architecture</h2>
                 <pre><code class="language-yaml" data-trim data-noescape>
-Frontend:    Hugo Static Site Generator
-Search:      MiniSearch + Transformers.js (hybrid)
-Embeddings:  bge-large-en-v1.5 vectors
-Ranking:     LightGBM-Tweedie model
-Backend:     Cloudflare Workers + D1 SQLite
-Analytics:   GoatCounter (privacy-first)
-Hosting:     Cloudflare Pages (global CDN)
+Static Site:     Hugo → Cloudflare Pages (275+ PoPs)
+Search Index:    MiniSearch (BM25) + ONNX Runtime
+Embeddings:      bge-large-en-v1.5 (1024d) / GTE-Small (384d)
+Ranking Model:   LightGBM Tweedie (offline trained)
+Analytics:       Cloudflare Workers + D1 SQLite
+Privacy:         No cookies, DoNotTrack respected
                 </code></pre>
+                <p class="muted" style="margin-top: 0.75rem; font-size: 0.6em;">
+                    {{ $total }} items · {{ len .Site.Data.packages }} packages · {{ $paperCount }} papers · {{ len .Site.Data.datasets }} datasets
+                </p>
             </section>
 
         </div>
