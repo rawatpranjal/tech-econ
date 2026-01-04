@@ -37323,5 +37323,79 @@
     ],
     "level": "Hard",
     "model_score": 0.0
+  },
+  {
+    "name": "Conformal Prediction Tutorial (Angelopoulos & Bates)",
+    "description": "Comprehensive tutorial on conformal prediction providing distribution-free prediction intervals with finite-sample guarantees. Works as a post-hoc wrapper on any model including neural networks.",
+    "category": "Machine Learning",
+    "url": "https://arxiv.org/abs/2107.07511",
+    "type": "Tutorial",
+    "tags": [
+      "conformal-prediction",
+      "uncertainty",
+      "intervals",
+      "distribution-free"
+    ],
+    "level": "Medium"
+  },
+  {
+    "name": "An Introduction to Statistical Learning of Extreme Values (Coles)",
+    "description": "Foundational textbook on extreme value theory covering GEV and GPD distributions for tail modeling in climate, finance, and insurance.",
+    "category": "Statistics",
+    "url": "https://link.springer.com/book/10.1007/978-1-4471-3675-0",
+    "type": "Online Book",
+    "tags": [
+      "extreme-value",
+      "GEV",
+      "GPD",
+      "tail-risk",
+      "statistics"
+    ],
+    "level": "Hard"
+  },
+  {
+    "name": "Modelling Extremal Events (Embrechts, Kl\u00fcppelberg, Mikosch)",
+    "description": "Comprehensive treatment of extreme value theory with 8,000+ citations. Covers applications in insurance and finance with rigorous mathematical foundations.",
+    "category": "Statistics",
+    "url": "https://link.springer.com/book/10.1007/978-3-642-33483-2",
+    "type": "Online Book",
+    "tags": [
+      "extreme-value",
+      "insurance",
+      "finance",
+      "risk",
+      "statistics"
+    ],
+    "level": "Hard"
+  },
+  {
+    "name": "Deep Learning for Single-Cell Analysis (scverse tutorials)",
+    "description": "Tutorials on deep generative models for single-cell genomics. Covers scVI, totalVI, and related ZINB autoencoder approaches for sparse count data.",
+    "category": "Machine Learning",
+    "url": "https://scvi-tools.org/tutorials",
+    "type": "Tutorial",
+    "tags": [
+      "single-cell",
+      "deep-learning",
+      "VAE",
+      "genomics",
+      "zero-inflated"
+    ],
+    "level": "Hard"
+  },
+  {
+    "name": "Neural Survival Analysis with pycox",
+    "description": "Documentation and tutorials for PyTorch survival analysis. Implements DeepSurv, DeepHit, Cox-Time with neural network architectures.",
+    "category": "Machine Learning",
+    "url": "https://github.com/havakv/pycox",
+    "type": "Tutorial",
+    "tags": [
+      "survival",
+      "deep-learning",
+      "Cox",
+      "PyTorch",
+      "censored"
+    ],
+    "level": "Hard"
   }
 ]

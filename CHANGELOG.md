@@ -2,6 +2,11 @@
 
 ## 2026-01-04
 - Re-scored rankings with latest engagement data (820 items with engagement, 2,971 cold-start)
+- **Deep Learning + Statistical Models landscape** (~43 new entries):
+  - 18 datasets (dSprite, MIMIC-CXR, TCGA, French MTPL, GHCN-Daily, etc.)
+  - 7 packages (pycox, Pyro, scVI-tools, VaDE, causal-bert-pytorch, etc.)
+  - 13 papers (DeepHit, Cox 1972, MC-Dropout, Normalizing Flows, MoE, etc.)
+  - 5 resources (conformal prediction, extreme value, survival tutorials)
 
 ## 2026-01-03
 - **Comprehensive Queueing Theory Resources Directory** (~70 new entries):

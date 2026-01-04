@@ -21598,5 +21598,252 @@
     "topic": "Spatial & Geo",
     "subtopic": "Mobility & Movement Patterns",
     "model_score": 0.0
+  },
+  {
+    "id": "paper-adapting-text-embeddings-for-causal-inference",
+    "name": "Adapting Text Embeddings for Causal Inference",
+    "title": "Adapting Text Embeddings for Causal Inference",
+    "authors": "Victor Veitch, Dhanya Sridhar, David Blei",
+    "year": 2020,
+    "url": "https://arxiv.org/abs/1905.12741",
+    "description": "Shows standard BERT embeddings are insufficient for causal inference\u2014representations must be supervised to predict treatment and outcome. CausalBERT approach.",
+    "citations": 400,
+    "tag": "Methodological",
+    "tags": [
+      "Machine Learning",
+      "Causal Inference from Text"
+    ],
+    "type": "paper",
+    "category": "Machine Learning > Causal Inference from Text",
+    "topic": "Machine Learning",
+    "subtopic": "Causal Inference from Text"
+  },
+  {
+    "id": "paper-flexible-covariate-adjustments-in-regression-disco",
+    "name": "Flexible covariate adjustments in regression discontinuity designs",
+    "title": "Flexible covariate adjustments in regression discontinuity designs",
+    "authors": "Flexible covariate adjustments in regression discontinuity designs",
+    "year": 2010,
+    "url": "https://rmets.onlinelibrary.wiley.com/doi/10.1002/joc.2054",
+    "description": "GEVcdn: Neural network-based non-stationary GEV analysis with parameters as MLP functions of covariates. Pioneered deep learning for extreme value analysis.",
+    "citations": 200,
+    "tag": "Methodological",
+    "tags": [
+      "Machine Learning",
+      "Extreme Value Models"
+    ],
+    "type": "paper",
+    "category": "Machine Learning > Extreme Value Models",
+    "topic": "Machine Learning",
+    "subtopic": "Extreme Value Models"
+  },
+  {
+    "id": "paper-normalizing-flows-for-probabilistic-modeling-and-i",
+    "name": "Normalizing Flows for Probabilistic Modeling and Inference",
+    "title": "Normalizing Flows for Probabilistic Modeling and Inference",
+    "authors": "George Papamakarios, Eric Nalisnick, Danilo Jimenez Rezende, Shakir Mohamed, Balaji Lakshminarayanan",
+    "year": 2021,
+    "url": "https://jmlr.org/papers/v22/19-1028.html",
+    "description": "Comprehensive JMLR review of normalizing flows enabling flexible distributional modeling. Covers Real-NVP, MAF, IAF architectures.",
+    "citations": 3000,
+    "tag": "Survey",
+    "tags": [
+      "Machine Learning",
+      "Deep Generative Models"
+    ],
+    "type": "paper",
+    "category": "Machine Learning > Deep Generative Models",
+    "topic": "Machine Learning",
+    "subtopic": "Deep Generative Models"
+  },
+  {
+    "id": "paper-dropout-as-a-bayesian-approximation-representing",
+    "name": "Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning",
+    "title": "Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning",
+    "authors": "Yarin Gal, Zoubin Ghahramani",
+    "year": 2016,
+    "url": "https://arxiv.org/abs/1506.02142",
+    "description": "MC-Dropout: Shows dropout training approximates Bayesian inference. Foundational for uncertainty quantification in neural networks.",
+    "citations": 10000,
+    "tag": "Classic",
+    "tags": [
+      "Machine Learning",
+      "Uncertainty Quantification"
+    ],
+    "type": "paper",
+    "category": "Machine Learning > Uncertainty Quantification",
+    "topic": "Machine Learning",
+    "subtopic": "Uncertainty Quantification"
+  },
+  {
+    "id": "paper-outrageously-large-neural-networks-the-sparsely-g",
+    "name": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer",
+    "title": "Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer",
+    "authors": "Noam Shazeer, Azalia Mirhoseini, Krzysztof Maziarz, Andy Davis, Quoc Le, Geoffrey Hinton, Jeff Dean",
+    "year": 2017,
+    "url": "https://arxiv.org/abs/1701.06538",
+    "description": "Sparsely-gated Mixture of Experts enabling models like Switch Transformer (1.6T params), GLaM, and Mixtral-8x7B. Neural gating routes inputs to specialist networks.",
+    "citations": 5000,
+    "tag": "Classic",
+    "tags": [
+      "Machine Learning",
+      "Mixture of Experts"
+    ],
+    "type": "paper",
+    "category": "Machine Learning > Mixture of Experts",
+    "topic": "Machine Learning",
+    "subtopic": "Mixture of Experts"
+  },
+  {
+    "id": "paper-regression-models-and-life-tables",
+    "name": "Regression Models and Life Tables",
+    "title": "Regression Models and Life Tables",
+    "authors": "David R. Cox",
+    "year": 1972,
+    "url": "https://www.jstor.org/stable/2985181",
+    "description": "The Cox proportional hazards model\u2014one of the most cited statistical methods ever. Foundation for survival analysis across oncology, cardiology, and reliability.",
+    "citations": 70000,
+    "tag": "Classic",
+    "tags": [
+      "Machine Learning",
+      "Neural Survival Models"
+    ],
+    "type": "paper",
+    "category": "Machine Learning > Neural Survival Models",
+    "topic": "Machine Learning",
+    "subtopic": "Neural Survival Models"
+  },
+  {
+    "id": "paper-deep-survival-analysis",
+    "name": "Deep Survival Analysis",
+    "title": "Deep Survival Analysis",
+    "authors": "Rajesh Ranganath, Adler Perotte, No\u00e9mie Elhadad, David Blei",
+    "year": 2016,
+    "url": "https://arxiv.org/abs/1608.02158",
+    "description": "Early work on deep learning for survival analysis combining latent representations with survival distributions.",
+    "citations": 300,
+    "tag": "Methodological",
+    "tags": [
+      "Machine Learning",
+      "Neural Survival Models"
+    ],
+    "type": "paper",
+    "category": "Machine Learning > Neural Survival Models",
+    "topic": "Machine Learning",
+    "subtopic": "Neural Survival Models"
+  },
+  {
+    "id": "paper-deephit-a-deep-learning-approach-to-survival-anal",
+    "name": "DeepHit: A Deep Learning Approach to Survival Analysis with Competing Risks",
+    "title": "DeepHit: A Deep Learning Approach to Survival Analysis with Competing Risks",
+    "authors": "Changhee Lee, William R. Zame, Jinsung Yoon, Mihaela van der Schaar",
+    "year": 2018,
+    "url": "https://aaai.org/papers/11842-deephit-a-deep-learning-approach-to-survival-analysis-with-competing-risks/",
+    "description": "Direct survival distribution estimation without proportional hazards assumption. Handles competing risks with deep learning.",
+    "citations": 1500,
+    "tag": "SOTA",
+    "tags": [
+      "Machine Learning",
+      "Neural Survival Models"
+    ],
+    "type": "paper",
+    "category": "Machine Learning > Neural Survival Models",
+    "topic": "Machine Learning",
+    "subtopic": "Neural Survival Models"
+  },
+  {
+    "id": "paper-conformal-prediction-a-gentle-introduction",
+    "name": "Conformal Prediction: A Gentle Introduction",
+    "title": "Conformal Prediction: A Gentle Introduction",
+    "authors": "Anastasios N. Angelopoulos, Stephen Bates",
+    "year": 2021,
+    "url": "https://arxiv.org/abs/2107.07511",
+    "description": "Tutorial on conformal prediction providing distribution-free prediction intervals with finite-sample guarantees. Works as post-hoc wrapper on any model.",
+    "citations": 1000,
+    "tag": "Survey",
+    "tags": [
+      "Machine Learning",
+      "Uncertainty Quantification"
+    ],
+    "type": "paper",
+    "category": "Machine Learning > Uncertainty Quantification",
+    "topic": "Machine Learning",
+    "subtopic": "Uncertainty Quantification"
+  },
+  {
+    "id": "paper-a-survey-of-parameter-and-state-estimation-in-queu",
+    "name": "A Survey of Parameter and State Estimation in Queues",
+    "title": "A Survey of Parameter and State Estimation in Queues",
+    "authors": "Azam Asanjarani, Yoni Nazarathy, Peter Taylor",
+    "year": 2021,
+    "url": "https://link.springer.com/article/10.1007/s11134-021-09712-z",
+    "description": "Key survey on statistical inference for queueing parameters\u2014a specialized but growing field. Traditional queueing theory assumes known parameters.",
+    "citations": 50,
+    "tag": "Survey",
+    "tags": [
+      "Operations Research",
+      "Queueing Theory"
+    ],
+    "type": "paper",
+    "category": "Operations Research > Queueing Theory",
+    "topic": "Operations Research",
+    "subtopic": "Queueing Theory"
+  },
+  {
+    "id": "paper-causal-inference-and-counterfactual-prediction-in",
+    "name": "Causal Inference and Counterfactual Prediction in Machine Learning for Actionable Healthcare",
+    "title": "Causal Inference and Counterfactual Prediction in Machine Learning for Actionable Healthcare",
+    "authors": "Uri Shalit",
+    "year": 2020,
+    "url": "https://arxiv.org/abs/2002.06060",
+    "description": "Review connecting causal inference methods with healthcare ML applications. TARNet, CFRNet architectures for treatment effects.",
+    "citations": 200,
+    "tag": "Survey",
+    "tags": [
+      "Machine Learning",
+      "Heterogeneous Treatment Effects"
+    ],
+    "type": "paper",
+    "category": "Machine Learning > Heterogeneous Treatment Effects",
+    "topic": "Machine Learning",
+    "subtopic": "Heterogeneous Treatment Effects"
+  },
+  {
+    "id": "paper-estimating-individual-treatment-effect-generaliza",
+    "name": "Estimating individual treatment effect: generalization bounds and algorithms",
+    "title": "Estimating individual treatment effect: generalization bounds and algorithms",
+    "authors": "Uri Shalit, Fredrik D. Johansson, David Sontag",
+    "year": 2017,
+    "url": "https://arxiv.org/abs/1606.03976",
+    "description": "TARNet and CFRNet\u2014foundational neural architectures for treatment effect estimation. Representation learning for causal inference.",
+    "citations": 2000,
+    "tag": "Classic",
+    "tags": [
+      "Machine Learning",
+      "Heterogeneous Treatment Effects"
+    ],
+    "type": "paper",
+    "category": "Machine Learning > Heterogeneous Treatment Effects",
+    "topic": "Machine Learning",
+    "subtopic": "Heterogeneous Treatment Effects"
+  },
+  {
+    "id": "paper-learning-representations-for-counterfactual-infere",
+    "name": "Learning Representations for Counterfactual Inference",
+    "title": "Learning Representations for Counterfactual Inference",
+    "authors": "Fredrik D. Johansson, Uri Shalit, David Sontag",
+    "year": 2016,
+    "url": "https://arxiv.org/abs/1605.03661",
+    "description": "Balancing neural networks for counterfactual inference. Introduces the News dataset benchmark for text-based HTE.",
+    "citations": 1500,
+    "tag": "Classic",
+    "tags": [
+      "Machine Learning",
+      "Heterogeneous Treatment Effects"
+    ],
+    "type": "paper",
+    "category": "Machine Learning > Heterogeneous Treatment Effects",
+    "topic": "Machine Learning",
+    "subtopic": "Heterogeneous Treatment Effects"
   }
 ]

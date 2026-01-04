@@ -30134,5 +30134,252 @@
       "econometrics",
       "machine-learning"
     ]
+  },
+  {
+    "name": "dSprite Causal Benchmark",
+    "description": "64\u00d764 heart-shaped sprite images (4,096 dimensions) with fully synthetic data and known treatment effect functions. Supports backdoor, front-door, IV, and proxy causal learning identification strategies.",
+    "category": "Causal Inference",
+    "url": "https://github.com/google-deepmind/dsprites-dataset",
+    "tags": [
+      "causal-inference",
+      "images",
+      "HTE",
+      "benchmark",
+      "synthetic"
+    ],
+    "best_for": "Benchmarking heterogeneous treatment effect methods on image data"
+  },
+  {
+    "name": "GiveDirectly Kenya (Satellite Imagery)",
+    "description": "High-resolution satellite imagery with CNN-extracted features for 4,578 households in a cash transfer RCT. Provides genuine ground truth from randomized experimental design.",
+    "category": "Causal Inference",
+    "url": "https://www.givedirectly.org/research-on-cash-transfers/",
+    "tags": [
+      "causal-inference",
+      "satellite-imagery",
+      "RCT",
+      "development-economics"
+    ],
+    "best_for": "Validating causal inference methods with real experimental ground truth"
+  },
+  {
+    "name": "MIMIC-CXR",
+    "description": "473,000 chest X-rays from 45,561 patients linked to treatments, outcomes, and clinical notes. Largest medical imaging dataset for causal analysis.",
+    "category": "Healthcare",
+    "url": "https://physionet.org/content/mimic-cxr/2.0.0/",
+    "tags": [
+      "medical-imaging",
+      "chest-xray",
+      "multimodal",
+      "healthcare",
+      "causal-inference"
+    ],
+    "best_for": "Multimodal causal inference in healthcare (images + text + EHR)"
+  },
+  {
+    "name": "News (Johansson et al.)",
+    "description": "Bag-of-words text benchmark with thousands of word features for HTE estimation. Semi-synthetic outcomes (real text covariates, simulated treatment/outcomes) with known CATE functions.",
+    "category": "Causal Inference",
+    "url": "https://www.fredjo.com/",
+    "tags": [
+      "text",
+      "NLP",
+      "HTE",
+      "semi-synthetic",
+      "benchmark"
+    ],
+    "best_for": "Benchmarking text-based heterogeneous treatment effect methods"
+  },
+  {
+    "name": "Amazon Reviews (CausalNLP)",
+    "description": "~5,000 product reviews with simulated treatment-outcome relationships and documented confounders for causal inference from text.",
+    "category": "Causal Inference",
+    "url": "https://github.com/causalNLP/causal-text-papers",
+    "tags": [
+      "text",
+      "NLP",
+      "reviews",
+      "semi-synthetic",
+      "e-commerce"
+    ],
+    "best_for": "Causal inference on text data with known confounding structure"
+  },
+  {
+    "name": "News Headlines A/B Test Dataset",
+    "description": "Real A/B test outcomes on click-through rates paired with BERT embeddings of headline text. From Columbia Business School.",
+    "category": "Causal Inference",
+    "url": "https://www.gsb.columbia.edu/faculty-research/divisions/decision-risk-operations",
+    "tags": [
+      "A/B-testing",
+      "headlines",
+      "CTR",
+      "BERT",
+      "real-experiment"
+    ],
+    "best_for": "Validating causal methods with real experimental data on text"
+  },
+  {
+    "name": "ACIC Competition Series (2016-2023)",
+    "description": "Competition-validated causal inference benchmarks with 50-200 covariates and known treatment effects. ACIC 2022 used Medicare expenditure data across 200 realizations.",
+    "category": "Causal Inference",
+    "url": "https://sites.google.com/view/acic2022/home",
+    "tags": [
+      "competition",
+      "benchmark",
+      "ground-truth",
+      "HTE",
+      "Medicare"
+    ],
+    "best_for": "Rigorous benchmarking of causal inference methods"
+  },
+  {
+    "name": "IBM LBIDD Benchmark",
+    "description": "Scalable semi-synthetic causal inference data from birth records (~100 covariates) with various link functions for treatment effect estimation.",
+    "category": "Causal Inference",
+    "url": "https://github.com/IBM/causallib",
+    "tags": [
+      "semi-synthetic",
+      "birth-records",
+      "benchmark",
+      "scalable"
+    ],
+    "best_for": "Large-scale causal inference benchmarking"
+  },
+  {
+    "name": "TCGA (The Cancer Genome Atlas)",
+    "description": "11,000+ tumor samples across 33 cancer types with ~20,000 gene expression features per sample. Over 3M Cox models fit identifying 100K+ prognostic biomarkers.",
+    "category": "Healthcare",
+    "url": "https://www.cancer.gov/tcga",
+    "tags": [
+      "genomics",
+      "cancer",
+      "survival",
+      "high-dimensional",
+      "gene-expression"
+    ],
+    "best_for": "High-dimensional survival analysis and biomarker discovery"
+  },
+  {
+    "name": "NASA C-MAPSS Turbofan",
+    "description": "Run-to-failure sensor data from turbofan engines. 21 sensors over time for predictive maintenance and remaining useful life estimation.",
+    "category": "Manufacturing",
+    "url": "https://data.nasa.gov/Aerospace/CMAPSS-Jet-Engine-Simulated-Data/ff5v-kuh6",
+    "tags": [
+      "predictive-maintenance",
+      "sensors",
+      "time-series",
+      "reliability",
+      "aerospace"
+    ],
+    "best_for": "Predictive maintenance and equipment reliability analysis"
+  },
+  {
+    "name": "SUPPORT Study",
+    "description": "8,873 seriously ill hospitalized patients with ~40 clinical variables. Standard survival analysis benchmark.",
+    "category": "Healthcare",
+    "url": "https://hbiostat.org/data/repo/support",
+    "tags": [
+      "survival",
+      "clinical",
+      "benchmark",
+      "mortality"
+    ],
+    "best_for": "Survival analysis method benchmarking"
+  },
+  {
+    "name": "10X Genomics PBMC",
+    "description": "Single-cell RNA sequencing datasets (3k, 4k, 8k, 68k cells) with 80-95% zero entries. Standard benchmark for zero-inflated count models.",
+    "category": "Healthcare",
+    "url": "https://www.10xgenomics.com/resources/datasets",
+    "tags": [
+      "single-cell",
+      "RNA-seq",
+      "genomics",
+      "zero-inflated",
+      "count-data"
+    ],
+    "best_for": "Zero-inflated count models and single-cell analysis"
+  },
+  {
+    "name": "French Motor Third Party Liability (MTPL)",
+    "description": "678,000 motor insurance policies with 9 features and highly zero-inflated claim counts. Canonical insurance benchmark in CASdatasets and sklearn.",
+    "category": "Insurance & Actuarial",
+    "url": "https://www.openml.org/search?type=data&sort=runs&id=41214&status=active",
+    "tags": [
+      "insurance",
+      "claims",
+      "zero-inflated",
+      "Poisson",
+      "GLM"
+    ],
+    "best_for": "Count regression and zero-inflated models for insurance"
+  },
+  {
+    "name": "GHCN-Daily",
+    "description": "Global Historical Climatology Network with 100,000+ weather stations globally, records from 1832-present. Primary source for extreme value analysis.",
+    "category": "Geospatial",
+    "url": "https://www.ncei.noaa.gov/products/land-based-station/global-historical-climatology-network-daily",
+    "tags": [
+      "climate",
+      "weather",
+      "extreme-value",
+      "time-series",
+      "global"
+    ],
+    "best_for": "Climate extreme value analysis and trend detection"
+  },
+  {
+    "name": "HYADES",
+    "description": "39,206 weather stations with annual maxima precipitation spanning 16-200 years per station. Purpose-built for extreme precipitation analysis.",
+    "category": "Geospatial",
+    "url": "https://www.ncei.noaa.gov/",
+    "tags": [
+      "precipitation",
+      "extreme-value",
+      "climate",
+      "annual-maxima"
+    ],
+    "best_for": "Extreme precipitation modeling and GEV analysis"
+  },
+  {
+    "name": "ERA5 Reanalysis",
+    "description": "Hourly global climate fields from 1950-present at 0.25\u00b0 resolution. ECMWF's state-of-the-art reanalysis product.",
+    "category": "Geospatial",
+    "url": "https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels",
+    "tags": [
+      "climate",
+      "reanalysis",
+      "global",
+      "hourly",
+      "ECMWF"
+    ],
+    "best_for": "Spatiotemporal climate modeling and extreme event analysis"
+  },
+  {
+    "name": "NYC TLC Trip Data",
+    "description": "3+ billion taxi and rideshare trips since 2009 with pickup/dropoff times, 262 zones, and fares. Enables queueing inference for ride-matching systems.",
+    "category": "Transportation & Mobility",
+    "url": "https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page",
+    "tags": [
+      "taxi",
+      "rideshare",
+      "queueing",
+      "urban",
+      "time-series"
+    ],
+    "best_for": "Queueing models and urban transportation analysis"
+  },
+  {
+    "name": "Israeli Bank Call Center (Technion)",
+    "description": "12 months of call center data with customer arrivals, service times, and agent IDs. Standard queueing inference benchmark.",
+    "category": "Operations & Service",
+    "url": "https://ie.technion.ac.il/serveng/callcenterdata/",
+    "tags": [
+      "call-center",
+      "queueing",
+      "service-times",
+      "arrivals"
+    ],
+    "best_for": "Queueing parameter estimation and service system analysis"
   }
 ]

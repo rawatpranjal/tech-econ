@@ -41010,5 +41010,123 @@
       "econometrics",
       "statistics"
     ]
+  },
+  {
+    "name": "causal-bert-pytorch",
+    "description": "BERT-based causal inference from text. Implements methods from Veitch et al. (2020) showing representations must predict both treatment and outcome.",
+    "category": "Causal Inference (ML)",
+    "url": "https://github.com/rpryzant/causal-bert-pytorch",
+    "language": "Python",
+    "github_url": "https://github.com/rpryzant/causal-bert-pytorch",
+    "tags": [
+      "causal-inference",
+      "BERT",
+      "NLP",
+      "text",
+      "deep-learning"
+    ],
+    "install": "pip install causal-bert",
+    "best_for": "Causal inference from text data"
+  },
+  {
+    "name": "bartCause",
+    "description": "Bayesian Additive Regression Trees for causal inference. Strong ACIC competition performer with sparsity-inducing priors for multilevel/grouped data.",
+    "category": "Bayesian Causal Inference",
+    "url": "https://github.com/vdorie/bartCause",
+    "language": "R",
+    "github_url": "https://github.com/vdorie/bartCause",
+    "tags": [
+      "causal-inference",
+      "BART",
+      "Bayesian",
+      "HTE",
+      "R"
+    ],
+    "install": "install.packages('bartCause')",
+    "best_for": "Bayesian heterogeneous treatment effects with uncertainty"
+  },
+  {
+    "name": "pycox",
+    "description": "PyTorch-based survival analysis. Implements DeepSurv, DeepHit, Cox-Time, and other neural survival models with partial likelihood and direct prediction approaches.",
+    "category": "Survival Analysis",
+    "url": "https://github.com/havakv/pycox",
+    "language": "Python",
+    "github_url": "https://github.com/havakv/pycox",
+    "tags": [
+      "survival",
+      "deep-learning",
+      "PyTorch",
+      "DeepSurv",
+      "neural"
+    ],
+    "install": "pip install pycox",
+    "best_for": "Deep learning survival models"
+  },
+  {
+    "name": "Pyro",
+    "description": "Deep universal probabilistic programming on PyTorch. Special support for Bayesian neural networks, normalizing flows, and stochastic variational inference.",
+    "category": "Bayesian Inference",
+    "url": "https://pyro.ai/",
+    "language": "Python",
+    "github_url": "https://github.com/pyro-ppl/pyro",
+    "tags": [
+      "probabilistic-programming",
+      "Bayesian",
+      "PyTorch",
+      "variational-inference"
+    ],
+    "install": "pip install pyro-ppl",
+    "best_for": "Bayesian deep learning and probabilistic modeling"
+  },
+  {
+    "name": "scVI-tools",
+    "description": "Single-cell Variational Inference. Deep generative models for single-cell RNA-seq with ZINB likelihood handling 80-95% zero entries.",
+    "category": "Machine Learning",
+    "url": "https://scvi-tools.org/",
+    "language": "Python",
+    "github_url": "https://github.com/scverse/scvi-tools",
+    "tags": [
+      "single-cell",
+      "VAE",
+      "genomics",
+      "zero-inflated",
+      "deep-learning"
+    ],
+    "install": "pip install scvi-tools",
+    "best_for": "Deep learning for single-cell genomics"
+  },
+  {
+    "name": "DCA (Deep Count Autoencoder)",
+    "description": "Denoising autoencoder for single-cell RNA-seq with ZINB output layer. Handles extreme sparsity in gene expression data.",
+    "category": "Machine Learning",
+    "url": "https://github.com/theislab/dca",
+    "language": "Python",
+    "github_url": "https://github.com/theislab/dca",
+    "tags": [
+      "single-cell",
+      "autoencoder",
+      "denoising",
+      "ZINB",
+      "genomics"
+    ],
+    "install": "pip install dca",
+    "best_for": "Denoising sparse single-cell count data"
+  },
+  {
+    "name": "VaDE",
+    "description": "Variational Deep Embedding. VAE with Gaussian Mixture Model prior in latent space for deep clustering.",
+    "category": "Machine Learning",
+    "url": "https://github.com/slim1017/VaDE",
+    "language": "Python",
+    "github_url": "https://github.com/slim1017/VaDE",
+    "tags": [
+      "VAE",
+      "clustering",
+      "GMM",
+      "deep-learning",
+      "unsupervised"
+    ],
+    "install": null,
+    "best_for": "Deep probabilistic clustering"
   }
 ]
