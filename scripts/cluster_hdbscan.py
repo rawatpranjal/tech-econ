@@ -51,7 +51,8 @@ MAX_CLUSTER_SIZE = 20  # Recursively split clusters larger than this
 MIN_CLUSTER_SIZE = 5   # Don't split clusters smaller than this
 
 # All sections to process
-ALL_SECTIONS = ['package', 'dataset', 'resource', 'paper', 'talk', 'career', 'community', 'book']
+# Note: 'career' excluded - job portals/interview prep don't cluster well with technical content
+ALL_SECTIONS = ['package', 'dataset', 'resource', 'paper', 'talk', 'community', 'book']
 
 
 def get_openai_client():
