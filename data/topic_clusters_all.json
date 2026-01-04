@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-04T13:08:45.739722",
+  "generated_at": "2026-01-04T13:47:13.809435",
   "algorithm": "hdbscan",
   "algorithm_params": {
     "package": {
@@ -46,7 +46,7 @@
       "clusters": [
         {
           "id": 0,
-          "label": "Reinforcement Learning & Rl",
+          "label": "Reinforcement & Rl",
           "top_tags": [
             "reinforcement-learning",
             "multi-agent-systems",
@@ -220,7 +220,7 @@
         },
         {
           "id": 6,
-          "label": "Panel Data & Econometrics",
+          "label": "Panel & Econometrics",
           "top_tags": [
             "panel-data",
             "causal-inference",
@@ -336,7 +336,7 @@
         },
         {
           "id": 10,
-          "label": "Experimentation & Statistics: Experimentation",
+          "label": "Experimentation & Statistics",
           "top_tags": [
             "causal-inference",
             "experimentation",
@@ -423,7 +423,7 @@
         },
         {
           "id": 13,
-          "label": "Statistics Machine-Learning Data-Engineering & Sports",
+          "label": "Sports & Play-By-Play",
           "top_tags": [
             "sports-analytics",
             "NFL",
@@ -452,7 +452,7 @@
         },
         {
           "id": 14,
-          "label": "Rust & Library Rust",
+          "label": "Rust & Statistics",
           "top_tags": [
             "time-series",
             "statistics",
@@ -481,7 +481,7 @@
         },
         {
           "id": 15,
-          "label": "Data-Engineering & Network: Graphical Models",
+          "label": "Network & Visualization: Graphical Models",
           "top_tags": [
             "causal-inference",
             "graphical-models",
@@ -510,7 +510,7 @@
         },
         {
           "id": 16,
-          "label": "Data-Engineering & Network: Graphs: Graphs",
+          "label": "Network & Visualization: Graphs",
           "top_tags": [
             "causal-inference",
             "graphs",
@@ -797,7 +797,7 @@
         },
         {
           "id": 26,
-          "label": "Natural-Language-Processing Machine-Learning & Embeddings",
+          "label": "Natural-Language-Processing & Embeddings",
           "top_tags": [
             "nlp",
             "text-analysis",
@@ -850,7 +850,7 @@
         },
         {
           "id": 28,
-          "label": "Interference & Network Interference",
+          "label": "Interference & Network",
           "top_tags": [
             "causal-inference",
             "spillovers",
@@ -1005,7 +1005,7 @@
         },
         {
           "id": 34,
-          "label": "Causal & Inference: Treatment Effects: Treatment Effects",
+          "label": "Causal & Inference: Treatment Effects",
           "top_tags": [
             "causal-inference",
             "treatment-effects",
@@ -1053,7 +1053,7 @@
         },
         {
           "id": 36,
-          "label": "Data-Engineering & Network: Graphs: Text Mining",
+          "label": "Network & Visualization: Graphs: Text Mining",
           "top_tags": [
             "text-mining",
             "NLP",
@@ -1077,7 +1077,7 @@
         },
         {
           "id": 37,
-          "label": "Statistics & Data-Engineering",
+          "label": "Statistics & Types",
           "top_tags": [],
           "top_categories": [
             "Regression Output",
@@ -1235,7 +1235,7 @@
         },
         {
           "id": 44,
-          "label": "Netlogo & Experimentation Machine-Learning Econometrics",
+          "label": "Netlogo & Mesa",
           "top_tags": [
             "simulation",
             "agent-based-modeling",
@@ -1255,7 +1255,7 @@
         },
         {
           "id": 45,
-          "label": "Data-Engineering & Network: Graphs: Event Study",
+          "label": "Network & Visualization: Graphs: Event Study",
           "top_tags": [
             "causal-inference",
             "event-study"
@@ -1332,7 +1332,7 @@
         },
         {
           "id": 49,
-          "label": "Survival Analysis & Lifelines",
+          "label": "Survival & Lifelines",
           "top_tags": [
             "survival-analysis",
             "censored-data",
@@ -1354,7 +1354,7 @@
         },
         {
           "id": 50,
-          "label": "Forecasting & Time Series Forecasting",
+          "label": "Forecasting & Seasonality",
           "top_tags": [
             "time-series",
             "forecasting",
@@ -1373,7 +1373,7 @@
         },
         {
           "id": 51,
-          "label": "Data-Engineering & Network: Visualization",
+          "label": "Network & Visualization",
           "top_tags": [
             "visualization",
             "ggplot2"
@@ -1939,7 +1939,7 @@
         },
         {
           "id": 1,
-          "label": "Commerce & Behavior: E Commerce: E Commerce",
+          "label": "Commerce & Behavior: E",
           "top_tags": [
             "e-commerce",
             "consumer-behavior",
@@ -1997,7 +1997,7 @@
         },
         {
           "id": 3,
-          "label": "Pricing & Sales: Consumer Behavior: Consumer Behavior",
+          "label": "Pricing & Sales: Consumer Behavior: Grocery Supermarkets",
           "top_tags": [
             "consumer-behavior",
             "e-commerce",
@@ -2026,7 +2026,7 @@
         },
         {
           "id": 4,
-          "label": "Healthcare & Policy-Evaluation: Healthcare: Pricing",
+          "label": "Healthcare & Policy-Evaluation: Pricing",
           "top_tags": [
             "pricing",
             "healthcare",
@@ -2055,7 +2055,7 @@
         },
         {
           "id": 5,
-          "label": "Healthcare & Emergency: Healthcare",
+          "label": "Healthcare & Emergency",
           "top_tags": [
             "healthcare",
             "emergency-services",
@@ -2113,7 +2113,7 @@
         },
         {
           "id": 7,
-          "label": "Transportation & Trips: Transportation: Transportation & Mobility",
+          "label": "Transportation & Trips: Mobility",
           "top_tags": [
             "transportation",
             "mobility",
@@ -2200,7 +2200,7 @@
         },
         {
           "id": 10,
-          "label": "Natural-Language-Processing & Machine-Learning Natural-Language-Processing",
+          "label": "Natural-Language-Processing & Ai",
           "top_tags": [
             "AI",
             "NLP",
@@ -2229,7 +2229,7 @@
         },
         {
           "id": 11,
-          "label": "Transportation & Trips: Transportation: Insurance & Actuarial",
+          "label": "Transportation & Trips: Insurance Actuarial",
           "top_tags": [
             "transportation",
             "data-analysis",
@@ -2287,7 +2287,7 @@
         },
         {
           "id": 13,
-          "label": "Finance & Order Book",
+          "label": "Finance & Limit Order",
           "top_tags": [
             "financial-services",
             "finance",
@@ -2509,7 +2509,7 @@
         },
         {
           "id": 21,
-          "label": "Healthcare & Policy-Evaluation: Healthcare: Healthcare",
+          "label": "Healthcare & Policy-Evaluation",
           "top_tags": [
             "healthcare",
             "government-programs",
@@ -2534,7 +2534,7 @@
         },
         {
           "id": 22,
-          "label": "Alibaba & Advertising: E Commerce: Fashion & Apparel",
+          "label": "Alibaba & Advertising: E Commerce: Fashion Apparel",
           "top_tags": [
             "e-commerce",
             "consumer-behavior",
@@ -2629,7 +2629,7 @@
         },
         {
           "id": 26,
-          "label": "Engagement & Social: Social Media",
+          "label": "Engagement & Social: Media",
           "top_tags": [
             "social media",
             "consumer-behavior",
@@ -2669,7 +2669,7 @@
         },
         {
           "id": 28,
-          "label": "Pricing & Sales: Consumer Behavior: Grocery & Supermarkets",
+          "label": "Pricing & Sales: Consumer Behavior: MarTech Customer Analytics",
           "top_tags": [
             "consumer-behavior",
             "pricing",
@@ -2756,7 +2756,7 @@
         },
         {
           "id": 32,
-          "label": "Hate & Hate Speech",
+          "label": "Hate & Speech",
           "top_tags": [],
           "top_categories": [
             "Content Moderation"
@@ -2855,7 +2855,7 @@
         },
         {
           "id": 37,
-          "label": "Jd Com & Jd",
+          "label": "Jd Com & Search Queries",
           "top_tags": [
             "e-commerce",
             "consumer-behavior",
@@ -2970,7 +2970,7 @@
         },
         {
           "id": 43,
-          "label": "Pricing & Sales: Consumer Behavior: MarTech & Customer Analytics",
+          "label": "Pricing & Sales: Consumer Behavior: Causal Inference",
           "top_tags": [],
           "top_categories": [
             "MarTech & Customer Analytics",
@@ -2984,7 +2984,7 @@
         },
         {
           "id": 44,
-          "label": "Commerce & Behavior: E Commerce: Customer Relationship Management",
+          "label": "Commerce & Behavior: E: Customer Relationship Management",
           "top_tags": [
             "customer-relationship-management",
             "predictive-analytics"
@@ -3442,7 +3442,7 @@
         },
         {
           "id": 1,
-          "label": "Machine Learning & Ai",
+          "label": "Machine & Ai",
           "top_tags": [
             "machine-learning",
             "deep-learning",
@@ -3500,7 +3500,7 @@
         },
         {
           "id": 3,
-          "label": "Causal & Inference: Causal Inference: Causal Inference",
+          "label": "Causal & Inference",
           "top_tags": [
             "causal-inference",
             "machine-learning",
@@ -3529,7 +3529,7 @@
         },
         {
           "id": 4,
-          "label": "Growth & Product: Product Analytics",
+          "label": "Growth & Product: Analytics",
           "top_tags": [
             "product-analytics",
             "case-study",
@@ -3587,7 +3587,7 @@
         },
         {
           "id": 6,
-          "label": "Optimization & Operations: Optimization: Optimization: Linear Programming",
+          "label": "Optimization & Operations: Linear Programming",
           "top_tags": [
             "optimization",
             "linear-programming",
@@ -3638,7 +3638,7 @@
         },
         {
           "id": 8,
-          "label": "Optimization & Operations: Optimization: Operations Research",
+          "label": "Optimization & Operations: Research",
           "top_tags": [
             "operations-research",
             "optimization",
@@ -3695,7 +3695,7 @@
         },
         {
           "id": 10,
-          "label": "Causal & Inference: Causal Ml: Causal Ml: Causal Ml",
+          "label": "Causal & Inference: Ml",
           "top_tags": [
             "causal-inference",
             "machine-learning",
@@ -3723,7 +3723,7 @@
         },
         {
           "id": 11,
-          "label": "Scraping & Web Scraping",
+          "label": "Scraping & Automation",
           "top_tags": [
             "automation",
             "web-scraping",
@@ -3778,7 +3778,7 @@
         },
         {
           "id": 13,
-          "label": "Platform & Marketplaces: Platform Economics",
+          "label": "Platform & Marketplaces: Economics",
           "top_tags": [
             "platform-economics",
             "internet-dominance",
@@ -4009,7 +4009,7 @@
         },
         {
           "id": 21,
-          "label": "Analytics & Customer Analytics",
+          "label": "Analytics & Customer",
           "top_tags": [
             "segmentation",
             "causal-inference",
@@ -4179,7 +4179,7 @@
         },
         {
           "id": 27,
-          "label": "Athey & Machine Learning",
+          "label": "Athey & Machine",
           "top_tags": [
             "machine-learning",
             "causal-inference",
@@ -4261,7 +4261,7 @@
         },
         {
           "id": 30,
-          "label": "Causal & Inference: Causal Ml: Causal Ml: Experimentation",
+          "label": "Causal & Inference: Ml: Experimentation",
           "top_tags": [
             "causal-inference",
             "machine-learning",
@@ -4364,7 +4364,7 @@
         },
         {
           "id": 34,
-          "label": "Mesa & Agent-Based",
+          "label": "Mesa & Modeling",
           "top_tags": [
             "agent-based-modeling",
             "simulation",
@@ -4437,7 +4437,7 @@
         },
         {
           "id": 37,
-          "label": "Growth & Product: Growth Strategies",
+          "label": "Growth & Product: Strategies",
           "top_tags": [
             "growth-strategies",
             "product-analytics",
@@ -4482,7 +4482,7 @@
         },
         {
           "id": 39,
-          "label": "Optimization & Operations: Optimization: Optimization: Routing & Logistics",
+          "label": "Optimization & Operations: Routing Logistics",
           "top_tags": [
             "optimization"
           ],
@@ -4570,7 +4570,7 @@
         },
         {
           "id": 43,
-          "label": "Hal Varian & Hal",
+          "label": "Hal Varian & Econometrics",
           "top_tags": [
             "causal-inference",
             "machine-learning",
@@ -4593,7 +4593,7 @@
         },
         {
           "id": 44,
-          "label": "Causal & Inference: Causal Inference: Difference In Differences",
+          "label": "Causal & Inference: Difference In Differences",
           "top_tags": [
             "causal-inference",
             "difference-in-differences",
@@ -4684,7 +4684,7 @@
         },
         {
           "id": 48,
-          "label": "Optimization & Operations: Optimization: Software Design",
+          "label": "Optimization & Operations: Software Design",
           "top_tags": [
             "machine-learning",
             "software-design",
@@ -4752,7 +4752,7 @@
         },
         {
           "id": 51,
-          "label": "Prompting & Machine-Learning Natural-Language-Processing",
+          "label": "Prompting & Natural-Language-Processing",
           "top_tags": [
             "machine-learning",
             "natural-language-processing",
@@ -4771,7 +4771,7 @@
         },
         {
           "id": 52,
-          "label": "Causal & Inference: Causal Ml: Bayesian Methods",
+          "label": "Causal & Inference: Ml: Bayesian Methods",
           "top_tags": [
             "statistics",
             "bayesian-methods",
@@ -4791,7 +4791,7 @@
         },
         {
           "id": 53,
-          "label": "Causal & Inference: Causal Inference: Synthetic Control",
+          "label": "Causal & Inference: Synthetic Control",
           "top_tags": [
             "causal-inference",
             "synthetic-control",
@@ -5431,7 +5431,7 @@
         },
         {
           "id": 1,
-          "label": "Forecasting & Series: Deep Learning for Forecasting",
+          "label": "Forecasting & Series: Deep Learning for",
           "top_tags": [],
           "top_categories": [
             "Forecasting > Transformers & MLPs for Forecasting",
@@ -5546,7 +5546,7 @@
         },
         {
           "id": 6,
-          "label": "Platform & Two-Sided: Two-Sided: Two-Sided",
+          "label": "Platform & Two-Sided",
           "top_tags": [],
           "top_categories": [
             "Matching & Marketplaces > Two-Sided Markets",
@@ -5569,7 +5569,7 @@
         },
         {
           "id": 7,
-          "label": "Privacy & Differential Privacy",
+          "label": "Privacy & Differential",
           "top_tags": [],
           "top_categories": [
             "Privacy > Differential Privacy",
@@ -5638,7 +5638,7 @@
         },
         {
           "id": 10,
-          "label": "Credit & Scoring: Financial: Financial",
+          "label": "Credit & Scoring: Financial: Risk Models",
           "top_tags": [],
           "top_categories": [
             "Credit & Lending > Credit Scoring & Risk Models",
@@ -5845,7 +5845,7 @@
         },
         {
           "id": 19,
-          "label": "Forecasting & Series: Time Series Foundations",
+          "label": "Forecasting & Series: Time Foundations",
           "top_tags": [],
           "top_categories": [
             "Forecasting > Foundation Models for Time Series",
@@ -5891,7 +5891,7 @@
         },
         {
           "id": 21,
-          "label": "Planning & Inventory",
+          "label": "Planning & Inventory: Fulfillment",
           "top_tags": [],
           "top_categories": [
             "Logistics & Operations > Warehouse Robotics & Automation",
@@ -5960,7 +5960,7 @@
         },
         {
           "id": 24,
-          "label": "Reward & Inverse: Learning: Imitation Learning",
+          "label": "Reward & Inverse: Learning: Imitation",
           "top_tags": [],
           "top_categories": [
             "Inverse RL & Preference Learning > Reward Inference from Behavior",
@@ -6075,7 +6075,7 @@
         },
         {
           "id": 29,
-          "label": "Reward & Inverse: Learning: Human Feedback & RLHF",
+          "label": "Reward & Inverse: Learning: Human Feedback RLHF",
           "top_tags": [],
           "top_categories": [
             "Inverse RL & Preference Learning > Human Feedback & RLHF",
@@ -6121,7 +6121,7 @@
         },
         {
           "id": 31,
-          "label": "Auctions & Pacing: Auctions",
+          "label": "Auctions & Pacing",
           "top_tags": [],
           "top_categories": [
             "Advertising > Autobidding & Budget Pacing",
@@ -6144,7 +6144,7 @@
         },
         {
           "id": 32,
-          "label": "Pricing & Dynamic Pricing: Price Experimentation",
+          "label": "Pricing & Regret",
           "top_tags": [],
           "top_categories": [
             "Pricing > Price Experimentation",
@@ -6351,7 +6351,7 @@
         },
         {
           "id": 41,
-          "label": "Search & Price: Search",
+          "label": "Search & Price",
           "top_tags": [],
           "top_categories": [
             "Choice Models & Dynamic Choice > Search & Sequential Choice",
@@ -6581,7 +6581,7 @@
         },
         {
           "id": 51,
-          "label": "Delivery & Crowdsourced Delivery",
+          "label": "Delivery & Drones",
           "top_tags": [],
           "top_categories": [
             "Logistics & Operations > Last-Mile Optimization",
@@ -6736,7 +6736,7 @@
         },
         {
           "id": 58,
-          "label": "Interference & Peer: Peer",
+          "label": "Interference & Peer",
           "top_tags": [],
           "top_categories": [
             "Structural Estimation > Platform & Network Effects Estimation",
@@ -6780,7 +6780,7 @@
         },
         {
           "id": 60,
-          "label": "Continuous Monitoring & Monitoring",
+          "label": "Continuous Monitoring & Testing",
           "top_tags": [],
           "top_categories": [
             "Experimentation > Sequential & Adaptive Testing",
@@ -6922,7 +6922,7 @@
         },
         {
           "id": 67,
-          "label": "Planning & Inventory: Inventory",
+          "label": "Planning & Inventory: Markdown Clearance",
           "top_tags": [],
           "top_categories": [
             "Logistics & Operations > Inventory & Fulfillment",
@@ -6943,7 +6943,7 @@
         },
         {
           "id": 68,
-          "label": "Discontinuity & Regression Discontinuity",
+          "label": "Discontinuity & Rdd",
           "top_tags": [],
           "top_categories": [
             "Observational Causal Inference > Regression Discontinuity",
@@ -6964,7 +6964,7 @@
         },
         {
           "id": 69,
-          "label": "Cold-Start & Meta-Learning",
+          "label": "Cold-Start & Domain",
           "top_tags": [],
           "top_categories": [
             "Recommender Systems > Cold Start",
@@ -6984,7 +6984,7 @@
         },
         {
           "id": 70,
-          "label": "Satisfaction & User Satisfaction",
+          "label": "Satisfaction & User",
           "top_tags": [],
           "top_categories": [
             "Search & Ranking > Relevance vs. Engagement",
@@ -7046,7 +7046,7 @@
         },
         {
           "id": 73,
-          "label": "Sampling & Thompson: Sampling",
+          "label": "Sampling & Thompson",
           "top_tags": [],
           "top_categories": [
             "Reinforcement Learning > Thompson Sampling & Bayesian Bandits",
@@ -7125,7 +7125,7 @@
         },
         {
           "id": 77,
-          "label": "Pricing & Dynamic Pricing: Personalized Pricing",
+          "label": "Pricing & Dynamic",
           "top_tags": [],
           "top_categories": [
             "Pricing > Dynamic Pricing & Revenue Management",
@@ -7243,7 +7243,7 @@
         },
         {
           "id": 83,
-          "label": "Learning Logged & Logged",
+          "label": "Logged & Off-Policy",
           "top_tags": [],
           "top_categories": [
             "Reinforcement Learning > Off-Policy Evaluation",
@@ -7279,7 +7279,7 @@
         },
         {
           "id": 85,
-          "label": "Controlled Experiments & Experiments",
+          "label": "Controlled Experiments & Oec",
           "top_tags": [],
           "top_categories": [
             "Experimentation > A/B Test Design & Analysis",
@@ -7297,7 +7297,7 @@
         },
         {
           "id": 86,
-          "label": "Reinforcement Learning & Offline",
+          "label": "Reinforcement & Offline",
           "top_tags": [],
           "top_categories": [
             "Reinforcement Learning > Batch/Offline RL"
@@ -7314,7 +7314,7 @@
         },
         {
           "id": 87,
-          "label": "Bayesian Structural & Structural Time-Series",
+          "label": "Bayesian Structural & Causal",
           "top_tags": [],
           "top_categories": [
             "Experimentation > Switchback & Geo-Experiments",
@@ -7416,7 +7416,7 @@
         },
         {
           "id": 93,
-          "label": "Graph & User-Item",
+          "label": "Graph & Graphs",
           "top_tags": [],
           "top_categories": [
             "Recommender Systems > Graph Neural Networks for Recommendations",
@@ -7433,7 +7433,7 @@
         },
         {
           "id": 94,
-          "label": "Persuasion & Bayesian Persuasion",
+          "label": "Persuasion & Information",
           "top_tags": [],
           "top_categories": [
             "Mechanism Design & Auctions > Information Design & Signaling"
@@ -7483,7 +7483,7 @@
         },
         {
           "id": 97,
-          "label": "Credit & Scoring: Financial",
+          "label": "Credit & Scoring: Financial #2",
           "top_tags": [],
           "top_categories": [
             "Credit & Lending > Insurance Claims & Actuarial ML",
@@ -7499,7 +7499,7 @@
         },
         {
           "id": 98,
-          "label": "Credit & Scoring: Credit",
+          "label": "Credit & Scoring",
           "top_tags": [],
           "top_categories": [
             "Credit & Lending > Alternative Data"
@@ -7560,7 +7560,7 @@
         },
         {
           "id": 102,
-          "label": "Dueling Bandits & Bandits",
+          "label": "Dueling Bandits & Problem",
           "top_tags": [],
           "top_categories": [
             "Inverse RL & Preference Learning > Preference Elicitation & Active Learning"
@@ -7588,7 +7588,7 @@
         },
         {
           "id": 104,
-          "label": "Platform & Two-Sided: Two-Sided: Spot",
+          "label": "Platform & Two-Sided: Spot",
           "top_tags": [],
           "top_categories": [
             "Mechanism Design & Auctions > Cloud & Computing Resource Auctions"
@@ -8689,7 +8689,7 @@
       "clusters": [
         {
           "id": 0,
-          "label": "Experimentation & List: Industry Insights: Strategy & Digital Platforms",
+          "label": "Experimentation & List: Industry Insights: Strategy Digital Platforms",
           "top_tags": [
             "industry-insights",
             "career-advice",
@@ -8718,7 +8718,7 @@
         },
         {
           "id": 1,
-          "label": "Causal & Inference: Industry Insights: Causal Inference & ML",
+          "label": "Causal & Inference: Industry Insights: ML",
           "top_tags": [
             "industry-insights",
             "healthcare-ai",
@@ -8826,7 +8826,7 @@
         },
         {
           "id": 5,
-          "label": "Platform & Economics: Industry Insights: Platform Economics",
+          "label": "Platform & Economics: Industry Insights: AB Testing",
           "top_tags": [
             "industry-insights",
             "career-advice",
@@ -8855,7 +8855,7 @@
         },
         {
           "id": 6,
-          "label": "Varian & Hal Varian",
+          "label": "Varian & Hal",
           "top_tags": [
             "industry-insights",
             "career-advice",
@@ -8884,7 +8884,7 @@
         },
         {
           "id": 7,
-          "label": "Labor Market & Market",
+          "label": "Labor Market & Hiring",
           "top_tags": [
             "industry-insights",
             "career-advice",
@@ -8967,7 +8967,7 @@
         },
         {
           "id": 10,
-          "label": "Experimentation & List: Industry Insights: Causal Inference & ML",
+          "label": "Experimentation & List: Industry Insights: Causal Inference ML",
           "top_tags": [
             "industry-insights",
             "career-advice",
@@ -9019,7 +9019,7 @@
         },
         {
           "id": 12,
-          "label": "Platform & Economics: Industry Insights: Strategy & Digital Platforms",
+          "label": "Platform & Economics: Industry Insights: Strategy Digital",
           "top_tags": [
             "industry-insights",
             "career-advice",
@@ -9048,7 +9048,7 @@
         },
         {
           "id": 13,
-          "label": "Experimentation & Data Science",
+          "label": "Experimentation & Statistics",
           "top_tags": [
             "industry-insights",
             "career-advice",
@@ -9206,7 +9206,7 @@
         },
         {
           "id": 19,
-          "label": "Experimentation & List: Industry Insights: MarTech & Customer Analytics",
+          "label": "Experimentation & List: Industry Insights: MarTech Customer Analytics",
           "top_tags": [
             "industry-insights",
             "career-advice"
@@ -9327,7 +9327,7 @@
         },
         {
           "id": 25,
-          "label": "Erik & Erik Brynjolfsson",
+          "label": "Erik & Brynjolfsson",
           "top_tags": [
             "AI & Labor",
             "industry-insights",
@@ -9636,7 +9636,7 @@
       "clusters": [
         {
           "id": 0,
-          "label": "Portal & Career Portal: Job Search: Company Lists",
+          "label": "Portal & Labor-Economics: Job Search: Company Lists",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -9663,7 +9663,7 @@
         },
         {
           "id": 1,
-          "label": "Career Portal & Portal: Job Search: Company Lists",
+          "label": "Portal & Labor-Economics: Job Search: Salary Negotiation",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -9688,7 +9688,7 @@
         },
         {
           "id": 2,
-          "label": "Portal & Career Portal: Interview Prep: Interview Prep",
+          "label": "Portal & Labor-Economics: Interview Prep: Company Lists",
           "top_tags": [
             "interview-prep",
             "job-search",
@@ -9713,7 +9713,7 @@
         },
         {
           "id": 3,
-          "label": "Ml & Machine-Learning",
+          "label": "Ml & Design",
           "top_tags": [
             "interview-prep",
             "job-search"
@@ -9739,7 +9739,7 @@
         },
         {
           "id": 4,
-          "label": "Career Portal & Portal: Job Search: Career Development",
+          "label": "Portal & Labor-Economics: Job Search: Career Development",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -9765,7 +9765,7 @@
         },
         {
           "id": 5,
-          "label": "Airlines Career Portal & Portal: Job Search: Company Lists",
+          "label": "Airlines & Portal: Job Search: Company Lists",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -9791,7 +9791,7 @@
         },
         {
           "id": 6,
-          "label": "Portal & Career Portal: Job Search: Salary Negotiation",
+          "label": "Portal & Labor-Economics: Job Search #2",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -9816,7 +9816,7 @@
         },
         {
           "id": 7,
-          "label": "Career Portal & Portal: Job Search: Salary Negotiation",
+          "label": "Portal & Consumer-Behavior: Job Search: Company Lists",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -9843,7 +9843,7 @@
         },
         {
           "id": 8,
-          "label": "Portal & Career Portal: Interview Prep: Company Lists",
+          "label": "Portal & Labor-Economics: Interview Prep: Salary Negotiation",
           "top_tags": [
             "interview-prep",
             "job-search",
@@ -9868,7 +9868,7 @@
         },
         {
           "id": 9,
-          "label": "Career Portal & Portal: Job Search: Networking",
+          "label": "Portal & Labor-Economics: Job Search: Networking",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -9895,7 +9895,7 @@
         },
         {
           "id": 10,
-          "label": "Portal & Career Portal: Job Search: Career Development",
+          "label": "Portal & Labor-Economics: Job Search #3",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -9921,7 +9921,7 @@
         },
         {
           "id": 11,
-          "label": "Career Portal & Portal: Job Search: Job Search: Company Lists",
+          "label": "Portal & Labor-Economics: Job Search #4",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -9970,7 +9970,7 @@
         },
         {
           "id": 13,
-          "label": "Machine-Learning & Statistics: Role Landscape",
+          "label": "Statistics & Sql: Role Landscape",
           "top_tags": [],
           "top_categories": [
             "Role Landscape",
@@ -9993,7 +9993,7 @@
         },
         {
           "id": 14,
-          "label": "Career Portal & Portal: Company Lists",
+          "label": "Portal & Labor-Economics: Company Lists",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -10041,7 +10041,7 @@
         },
         {
           "id": 16,
-          "label": "Product-Analytics & Career Portal Product-Analytics",
+          "label": "Product-Analytics & Portal",
           "top_tags": [
             "interview-prep",
             "job-search"
@@ -10067,7 +10067,7 @@
         },
         {
           "id": 17,
-          "label": "Machine-Learning & Statistics: Interview Prep",
+          "label": "Statistics & Sql: Interview Prep",
           "top_tags": [
             "interview-prep",
             "job-search",
@@ -10096,7 +10096,7 @@
         },
         {
           "id": 18,
-          "label": "Healthcare & Labor-Economics Healthcare: Company Lists",
+          "label": "Healthcare & Policy-Evaluation",
           "top_tags": [
             "job-search",
             "internship",
@@ -10125,7 +10125,7 @@
         },
         {
           "id": 19,
-          "label": "Labor-Economics & Econometrics: Job Search: Company Lists",
+          "label": "Labor-Economics & Tech: Job Search: Company Lists",
           "top_tags": [
             "job-search",
             "career-advice",
@@ -10154,7 +10154,7 @@
         },
         {
           "id": 20,
-          "label": "Healthcare & Labor-Economics Healthcare: Salary Negotiation",
+          "label": "Healthcare & Portal",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -10179,7 +10179,7 @@
         },
         {
           "id": 21,
-          "label": "Career Portal & Portal: Job Search: Job Search: Salary Negotiation",
+          "label": "Portal & Labor-Economics: Job Search #5",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -10204,7 +10204,7 @@
         },
         {
           "id": 22,
-          "label": "Portal & Career Portal: Job Search: Staffing",
+          "label": "Portal & Labor-Economics: Job Search: Staffing",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -10231,7 +10231,7 @@
         },
         {
           "id": 23,
-          "label": "Career Portal & Portal: Career Advice",
+          "label": "Portal & Labor-Economics Consumer-Behavior: Company Lists",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -10257,7 +10257,7 @@
         },
         {
           "id": 24,
-          "label": "Career Portal & Portal: Interview Prep",
+          "label": "Portal & Labor-Economics: Interview Prep #2",
           "top_tags": [
             "interview-prep",
             "job-search",
@@ -10282,7 +10282,7 @@
         },
         {
           "id": 25,
-          "label": "Career Portal & Portal #2",
+          "label": "Portal & Labor-Economics Consumer-Behavior #2",
           "top_tags": [
             "job-search",
             "interview-prep"
@@ -10306,7 +10306,7 @@
         },
         {
           "id": 26,
-          "label": "Portal & Career Portal: Job Search #2",
+          "label": "Portal & Marketplaces: Job Search: Company Lists",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -10331,7 +10331,7 @@
         },
         {
           "id": 27,
-          "label": "Portal & Career Portal: Job Search: Job Search: Company Lists",
+          "label": "Portal & Labor-Economics Consumer-Behavior: Job Search: Company Lists",
           "top_tags": [
             "job-search",
             "interview-prep"
@@ -10432,7 +10432,7 @@
         },
         {
           "id": 31,
-          "label": "Career Portal & Portal: Salary Negotiation",
+          "label": "Portal & Labor-Economics Consumer-Behavior: Salary Negotiation",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -10457,7 +10457,7 @@
         },
         {
           "id": 32,
-          "label": "Portal & Career Portal: Job Search: Job Search: Salary Negotiation",
+          "label": "Portal & Labor-Economics Consumer-Behavior: Job Search: Salary Negotiation",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -10483,7 +10483,7 @@
         },
         {
           "id": 33,
-          "label": "Portal & Career Portal: Job Search #3",
+          "label": "Portal & Labor-Economics: Job Search #6",
           "top_tags": [
             "job-search",
             "interview-prep"
@@ -10507,7 +10507,7 @@
         },
         {
           "id": 34,
-          "label": "Career Portal & Portal #3",
+          "label": "Portal & Labor-Economics Finance",
           "top_tags": [
             "interview-prep",
             "job-search",
@@ -10557,7 +10557,7 @@
         },
         {
           "id": 36,
-          "label": "Career Portal & Portal: Job Search #2",
+          "label": "Portal & Labor-Economics: Job Search #7",
           "top_tags": [
             "job-search",
             "interview-prep"
@@ -10580,7 +10580,7 @@
         },
         {
           "id": 37,
-          "label": "Machine-Learning & Statistics: Company Lists",
+          "label": "Statistics & Sql: Company Lists",
           "top_tags": [],
           "top_categories": [
             "Company Lists"
@@ -10624,7 +10624,7 @@
         },
         {
           "id": 39,
-          "label": "Portal & Career Portal: Job Search #4",
+          "label": "Portal & Marketplaces: Job Search #2",
           "top_tags": [
             "job-search",
             "interview-prep"
@@ -10645,7 +10645,7 @@
         },
         {
           "id": 40,
-          "label": "Healthcare & Labor-Economics Healthcare: Job Boards",
+          "label": "Healthcare & Biostatistics Internships",
           "top_tags": [
             "job-search",
             "internship-opportunities",
@@ -10668,7 +10668,7 @@
         },
         {
           "id": 41,
-          "label": "Labor-Economics & Econometrics: Job Search: PhD Transition",
+          "label": "Labor-Economics & Tech: Job Search: PhD Transition",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -10716,7 +10716,7 @@
         },
         {
           "id": 43,
-          "label": "Machine-Learning & Statistics: Job Search",
+          "label": "Statistics & Sql: Job Search",
           "top_tags": [
             "job-search",
             "tech-postings",
@@ -10739,7 +10739,7 @@
         },
         {
           "id": 44,
-          "label": "Career Portal & Portal: Job Search: Interview Prep",
+          "label": "Portal & Labor-Economics: Job Search: Interview Prep",
           "top_tags": [
             "interview-prep",
             "job-search"
@@ -10759,7 +10759,7 @@
         },
         {
           "id": 45,
-          "label": "Career Portal & Portal: Job Search: Interview Prep",
+          "label": "Portal & Labor-Economics: Job Search: Interview Prep",
           "top_tags": [
             "job-search",
             "freelancing",
@@ -10800,7 +10800,7 @@
         },
         {
           "id": 47,
-          "label": "Portal & Career Portal: Company Lists",
+          "label": "Portal & Labor-Economics Consumer-Behavior #3",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -10860,7 +10860,7 @@
         },
         {
           "id": 50,
-          "label": "Labor-Economics & Econometrics",
+          "label": "Labor-Economics & Tech",
           "top_tags": [],
           "top_categories": [
             "Company Lists"
@@ -10876,7 +10876,7 @@
         },
         {
           "id": 51,
-          "label": "Airlines Career Portal & Portal: Job Search: Networking",
+          "label": "Airlines & Portal: Job Search: Networking",
           "top_tags": [
             "job-search",
             "career-development",
@@ -10896,7 +10896,7 @@
         },
         {
           "id": 52,
-          "label": "Career Portal & Portal: Job Search: Career Advice",
+          "label": "Portal & Consumer-Behavior: Job Search: Salary Negotiation",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -10918,7 +10918,7 @@
         },
         {
           "id": 53,
-          "label": "Portal & Career Portal: Interview Prep: Job Search",
+          "label": "Portal & Labor-Economics: Interview Prep: Job Search",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -10938,7 +10938,7 @@
         },
         {
           "id": 54,
-          "label": "Portal & Career Portal #2",
+          "label": "Portal & Labor-Economics #2",
           "top_tags": [],
           "top_categories": [
             "Company Lists"
@@ -10969,7 +10969,7 @@
         },
         {
           "id": 56,
-          "label": "Portal & Career Portal: Job Search #5",
+          "label": "Portal & Marketplaces: Job Search: Salary Negotiation",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -10988,7 +10988,7 @@
         },
         {
           "id": 57,
-          "label": "Portal & Career Portal: Career Development",
+          "label": "Portal & Labor-Economics: Career Development",
           "top_tags": [
             "job-search",
             "interview-prep",
@@ -11007,7 +11007,7 @@
         },
         {
           "id": 58,
-          "label": "Career Portal & Portal #4",
+          "label": "Portal & Labor-Economics #3",
           "top_tags": [],
           "top_categories": [
             "Company Lists"
@@ -11022,7 +11022,7 @@
         },
         {
           "id": 59,
-          "label": "Portal & Career Portal #3",
+          "label": "Portal & Labor-Economics #4",
           "top_tags": [],
           "top_categories": [
             "Company Lists"
@@ -11036,7 +11036,7 @@
         },
         {
           "id": 60,
-          "label": "Career Portal & Portal #5",
+          "label": "Portal & Labor-Economics #5",
           "top_tags": [],
           "top_categories": [
             "Company Lists"
@@ -11050,7 +11050,7 @@
         },
         {
           "id": 61,
-          "label": "Portal & Career Portal #4",
+          "label": "Portal & Labor-Economics Consumer-Behavior #4",
           "top_tags": [],
           "top_categories": [
             "Company Lists"
@@ -11064,7 +11064,7 @@
         },
         {
           "id": 62,
-          "label": "Career Portal & Portal #6",
+          "label": "Portal & Labor-Economics #6",
           "top_tags": [],
           "top_categories": [
             "Company Lists"
@@ -11078,7 +11078,7 @@
         },
         {
           "id": 63,
-          "label": "Career Portal & Portal #7",
+          "label": "Portal & Labor-Economics #7",
           "top_tags": [],
           "top_categories": [
             "Company Lists"
@@ -11091,7 +11091,7 @@
         },
         {
           "id": 64,
-          "label": "Portal & Career Portal: Interview Prep #2",
+          "label": "Portal & Labor-Economics: Interview Prep #3",
           "top_tags": [
             "interview-prep",
             "job-search"
@@ -11107,7 +11107,7 @@
         },
         {
           "id": 65,
-          "label": "Portal & Career Portal #5",
+          "label": "Portal & Labor-Economics #8",
           "top_tags": [],
           "top_categories": [
             "Company Lists"
@@ -11810,7 +11810,7 @@
         },
         {
           "id": 1,
-          "label": "Analytics & Marketing: Academic Conference: Academic Conference: Conferences",
+          "label": "Analytics & Marketing: Academic Conference: Notable Contributors",
           "top_tags": [
             "academic-conference",
             "networking",
@@ -11839,7 +11839,7 @@
         },
         {
           "id": 2,
-          "label": "Economist & Chief Economist: Industry Event",
+          "label": "Economist & Labor Market: Industry Event",
           "top_tags": [
             "industry-event",
             "academic-conference",
@@ -11868,7 +11868,7 @@
         },
         {
           "id": 3,
-          "label": "Causal & Inference: Academic Conference: Conferences",
+          "label": "Causal & Inference: Academic Conference: Notable Contributors",
           "top_tags": [
             "academic-conference",
             "industry-event",
@@ -11897,7 +11897,7 @@
         },
         {
           "id": 4,
-          "label": "Science & Data Science: Meetup: Meetup",
+          "label": "Science & Members: Meetup",
           "top_tags": [
             "networking",
             "data-science",
@@ -12238,7 +12238,7 @@
         },
         {
           "id": 16,
-          "label": "Analytics & Marketing: Academic Conference",
+          "label": "Analytics & Marketing: Academic Conference: MarTech Customer",
           "top_tags": [
             "networking",
             "academic-conference",
@@ -12295,7 +12295,7 @@
         },
         {
           "id": 18,
-          "label": "Members & Ml: Industry Event: Industry Event: Meetup",
+          "label": "Members & Ml: Industry Event: Meetup",
           "top_tags": [
             "networking",
             "meetup",
@@ -12377,7 +12377,7 @@
         },
         {
           "id": 21,
-          "label": "Science & Data Science: Industry Event",
+          "label": "Science & Members: Industry Event",
           "top_tags": [
             "networking",
             "industry-event",
@@ -12406,7 +12406,7 @@
         },
         {
           "id": 22,
-          "label": "Members & Ml: Industry Event: Industry Event: Industry Event",
+          "label": "Members & Ml: Industry Event: Meetups",
           "top_tags": [
             "networking",
             "industry-event",
@@ -12488,7 +12488,7 @@
         },
         {
           "id": 25,
-          "label": "Reinforcement-Learning & Optimization",
+          "label": "Optimization & Bandits",
           "top_tags": [],
           "top_categories": [
             "Blogs"
@@ -12507,7 +12507,7 @@
         },
         {
           "id": 26,
-          "label": "Insurance & Risk",
+          "label": "Insurance & Insurtech",
           "top_tags": [
             "networking",
             "industry-event",
@@ -12533,7 +12533,7 @@
         },
         {
           "id": 27,
-          "label": "Economics & Advertising: Academic Conference: Academic Conference",
+          "label": "Economics & Advertising: Academic Conference",
           "top_tags": [
             "academic-conference",
             "industry-event"
@@ -12635,7 +12635,7 @@
         },
         {
           "id": 31,
-          "label": "Analytics & Marketing: Academic Conference: Academic Conference: Notable Contributors",
+          "label": "Analytics & Marketing: Academic Conference: Industry Event",
           "top_tags": [
             "networking",
             "academic-conference",
@@ -12687,7 +12687,7 @@
         },
         {
           "id": 33,
-          "label": "Economist & Chief Economist: Research Labs",
+          "label": "Economist & Labor Market: Research Labs",
           "top_tags": [
             "research-labs",
             "academic-conference",
@@ -12756,7 +12756,7 @@
         },
         {
           "id": 36,
-          "label": "Science & Data Science: Meetup: Industry Event",
+          "label": "Science & Members: Meetup: Industry Event",
           "top_tags": [
             "networking",
             "industry-event",
@@ -12865,7 +12865,7 @@
         },
         {
           "id": 41,
-          "label": "Science & Data Science: Meetups",
+          "label": "Science & Members: Meetups",
           "top_tags": [
             "networking",
             "meetups",
@@ -12920,7 +12920,7 @@
         },
         {
           "id": 44,
-          "label": "Causal & Inference: Academic Conference: Notable Contributors",
+          "label": "Causal & Inference: Academic Conference: Blogs",
           "top_tags": [
             "academic-conference",
             "industry-event"
@@ -12958,7 +12958,7 @@
         },
         {
           "id": 46,
-          "label": "Members & Ml: Industry Event",
+          "label": "Members & Ml: Industry Event: Online",
           "top_tags": [
             "networking",
             "community",
@@ -13758,7 +13758,7 @@
         },
         {
           "id": 12,
-          "label": "Economics & Procurement Conversion Economics",
+          "label": "Economics & Spending",
           "top_tags": [
             "defense-economics",
             "military-spending",

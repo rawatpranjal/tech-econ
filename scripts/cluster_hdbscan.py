@@ -182,18 +182,28 @@ def format_ctfidf_label(terms: list) -> str:
     }
 
     filtered = []
-    seen_stems = set()
+    seen_normalized = set()
 
     for term in terms:
-        term_lower = term.lower()
-        if term_lower in SKIP:
+        # For n-grams, check each word
+        term_words = term.lower().replace('-', ' ').replace('_', ' ').split()
+
+        # Skip if any word is in SKIP set
+        if any(w in SKIP for w in term_words):
             continue
-        stem = term_lower[:5] if len(term_lower) > 5 else term_lower
-        if stem in seen_stems:
+
+        # Check for overlap with already-seen words
+        term_normalized = [w.replace('-', '').replace('_', '')[:6] for w in term_words]
+        if any(nw in seen_normalized for nw in term_normalized):
             continue
+
         if len(term) < 2:
             continue
-        seen_stems.add(stem)
+
+        # Add all words to seen set
+        for nw in term_normalized:
+            seen_normalized.add(nw)
+
         filtered.append(term)
         if len(filtered) >= 2:
             break
@@ -240,6 +250,39 @@ def assign_noise_to_nearest(noise_indices: list, embeddings: np.ndarray,
     return assignments
 
 
+def normalize_word(w: str) -> str:
+    """Normalize word for comparison (lowercase, strip hyphens)."""
+    return w.lower().replace('-', '').replace('_', '')
+
+
+def combine_labels(parent: str, suffix: str) -> str:
+    """Combine parent and suffix labels, removing redundant words."""
+    if not suffix:
+        return parent
+
+    # Extract words from parent (normalize: lowercase, no hyphens, first 6 chars)
+    parent_words = set()
+    for part in parent.replace('&', ' ').replace(':', ' ').split():
+        nw = part.lower().replace('-', '').replace('_', '')
+        parent_words.add(nw[:6] if len(nw) > 6 else nw)
+        parent_words.add(nw)  # Also add full word
+
+    # Filter suffix to only new words
+    suffix_parts = suffix.replace('&', ' ').split()
+    new_parts = []
+    for part in suffix_parts:
+        nw = part.lower().replace('-', '').replace('_', '')
+        stem = nw[:6] if len(nw) > 6 else nw
+        if stem not in parent_words and nw not in parent_words:
+            new_parts.append(part)
+
+    if not new_parts:
+        return parent
+
+    new_suffix = ' '.join(new_parts)
+    return f"{parent}: {new_suffix}"
+
+
 def split_large_cluster(cluster_local_indices: list, section_embeddings: np.ndarray,
                         section_items: list, parent_label: str, max_size: int = 20) -> list:
     """
@@ -284,7 +327,9 @@ def split_large_cluster(cluster_local_indices: list, section_embeddings: np.ndar
         # Generate sub-label from items
         sub_items = [section_items[i] for i in sub_indices]
         sub_label_suffix = generate_sublabel(sub_items)
-        full_label = f"{parent_label}: {sub_label_suffix}" if sub_label_suffix else parent_label
+
+        # Avoid redundant labels
+        full_label = combine_labels(parent_label, sub_label_suffix)
 
         # Recurse if still too large
         if len(sub_indices) > max_size:
@@ -362,20 +407,20 @@ def dedupe_labels(clusters: list) -> None:
             for cat in cats:
                 if cat and '>' in cat:
                     cat = cat.split('>')[-1].strip()
-                if cat and cat.lower() not in label.lower() and len(cat) < 30:
-                    candidate = f"{label}: {cat}"
-                    if candidate not in used_labels:
+                # Use combine_labels to avoid word-level redundancy
+                if cat and len(cat) < 30:
+                    candidate = combine_labels(label, cat)
+                    if candidate != label and candidate not in used_labels:
                         new_label = candidate
                         break
 
             if not new_label:
                 for tag in extra_tags:
                     tag_clean = tag.replace('-', ' ').title()
-                    if tag_clean.lower() not in label.lower():
-                        candidate = f"{label}: {tag_clean}"
-                        if candidate not in used_labels:
-                            new_label = candidate
-                            break
+                    candidate = combine_labels(label, tag_clean)
+                    if candidate != label and candidate not in used_labels:
+                        new_label = candidate
+                        break
 
             if not new_label:
                 num = 2
