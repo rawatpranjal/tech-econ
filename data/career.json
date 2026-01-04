@@ -51,7 +51,7 @@
     "company_context": [
       "startup"
     ],
-    "model_score": 0.015,
+    "model_score": 0.0179,
     "embedding_text": "Instacart's career portal serves as a comprehensive resource for individuals interested in pursuing careers within the company, particularly in roles that intersect with marketplace dynamics and pricing strategies. The portal outlines various career paths available, including positions for data scientists and economists, emphasizing the skills and qualifications necessary for success in these roles. Candidates are encouraged to familiarize themselves with the specific requirements for internships, especially those targeting PhD students, as these positions often demand a strong analytical background and familiarity with economic principles. The portal also provides valuable insights into the interview preparation process, offering tips on how to effectively present one's qualifications and experiences. Additionally, it highlights the importance of understanding salary expectations and compensation structures within the company, allowing potential candidates to negotiate effectively. Day-to-day responsibilities for roles at Instacart may include analyzing marketplace trends, developing pricing models, and collaborating with cross-functional teams to enhance product offerings. The portal discusses potential career progression paths, illustrating how entry-level positions can lead to more advanced roles within the organization. Networking strategies are also emphasized, guiding candidates on how to connect with current employees and industry professionals to enhance their job search efforts. Common challenges faced by interns and new hires are addressed, with suggestions on how to overcome these obstacles and thrive in a fast-paced startup environment. Overall, Instacart's career portal is a valuable tool for anyone looking to navigate their career in the tech and economics sectors.",
     "tfidf_keywords": [
       "marketplace",
@@ -234,6 +234,80 @@
     ]
   },
   {
+    "name": "Shopee",
+    "description": "Career portal",
+    "stage": "Discovery",
+    "category": "Company Lists",
+    "url": "https://careers.shopee.com/",
+    "type": "Career Portal",
+    "tags": [
+      "marketplace",
+      "Asia",
+      "Singapore",
+      "e-commerce"
+    ],
+    "section": "companies",
+    "sector": "marketplace",
+    "tab": "find-jobs",
+    "subtab": "companies",
+    "vertical": "retail",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Shopee's career portal provides insights into various career paths within the e-commerce marketplace, particularly in Asia. It offers guidance on job search strategies, interview preparation, and potential salary expectations for roles in this dynamic industry.",
+    "use_cases": [
+      "when exploring career options in e-commerce",
+      "when preparing for interviews at Shopee",
+      "when seeking salary information for roles in the marketplace"
+    ],
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What career opportunities are available at Shopee?",
+      "How can I prepare for an interview at Shopee?",
+      "What skills are needed for a career in e-commerce?",
+      "What is the salary range for roles at Shopee?",
+      "How does Shopee support career growth?",
+      "What are the day-to-day responsibilities of employees at Shopee?",
+      "What networking strategies can help me land a job at Shopee?",
+      "What challenges might I face when applying to Shopee?"
+    ],
+    "experience_level": "entry",
+    "company_context": [
+      "startup"
+    ],
+    "model_score": 0.0079,
+    "embedding_text": "Shopee is a leading e-commerce platform in Asia, particularly known for its marketplace model that connects buyers and sellers. The career portal offers a wealth of resources for job seekers interested in pursuing a career in this vibrant industry. It highlights various career paths available within the company, including roles in marketing, operations, logistics, and technology. The portal emphasizes the importance of skills such as digital marketing, data analysis, and customer service, which are crucial for success in the e-commerce sector. Additionally, Shopee provides insights into the interview process, offering tips on how to prepare effectively and what to expect during interviews. Salary and compensation insights are also available, giving potential candidates a clearer picture of what they can expect in terms of remuneration. The day-to-day responsibilities of employees at Shopee vary by role but often include tasks related to product management, customer engagement, and performance analysis. The portal also discusses career progression opportunities, outlining potential growth paths within the organization. Networking strategies are encouraged, as building connections within the industry can significantly enhance job prospects. Lastly, common challenges faced by applicants, such as competition and the need for relevant experience, are addressed, along with strategies to overcome these hurdles.",
+    "tfidf_keywords": [
+      "e-commerce",
+      "marketplace",
+      "career paths",
+      "interview preparation",
+      "salary insights",
+      "job responsibilities",
+      "career growth",
+      "networking strategies",
+      "digital marketing",
+      "customer service"
+    ],
+    "semantic_cluster": "ecommerce-career-paths",
+    "content_format": "career",
+    "depth_level": "intro",
+    "related_concepts": [
+      "digital-marketing",
+      "customer-engagement",
+      "logistics",
+      "operations-management",
+      "product-management"
+    ],
+    "canonical_topics": [
+      "consumer-behavior",
+      "labor-economics",
+      "marketplaces"
+    ]
+  },
+  {
     "name": "Ace the Data Science Interview",
     "description": "201 real questions from FAANG, startups, Wall Street. Industry-standard prep resource covering role expectations.",
     "stage": "Strategy",
@@ -397,80 +471,6 @@
     ]
   },
   {
-    "name": "Shopee",
-    "description": "Career portal",
-    "stage": "Discovery",
-    "category": "Company Lists",
-    "url": "https://careers.shopee.com/",
-    "type": "Career Portal",
-    "tags": [
-      "marketplace",
-      "Asia",
-      "Singapore",
-      "e-commerce"
-    ],
-    "section": "companies",
-    "sector": "marketplace",
-    "tab": "find-jobs",
-    "subtab": "companies",
-    "vertical": "retail",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "Shopee's career portal provides insights into various career paths within the e-commerce marketplace, particularly in Asia. It offers guidance on job search strategies, interview preparation, and potential salary expectations for roles in this dynamic industry.",
-    "use_cases": [
-      "when exploring career options in e-commerce",
-      "when preparing for interviews at Shopee",
-      "when seeking salary information for roles in the marketplace"
-    ],
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What career opportunities are available at Shopee?",
-      "How can I prepare for an interview at Shopee?",
-      "What skills are needed for a career in e-commerce?",
-      "What is the salary range for roles at Shopee?",
-      "How does Shopee support career growth?",
-      "What are the day-to-day responsibilities of employees at Shopee?",
-      "What networking strategies can help me land a job at Shopee?",
-      "What challenges might I face when applying to Shopee?"
-    ],
-    "experience_level": "entry",
-    "company_context": [
-      "startup"
-    ],
-    "model_score": 0.0049,
-    "embedding_text": "Shopee is a leading e-commerce platform in Asia, particularly known for its marketplace model that connects buyers and sellers. The career portal offers a wealth of resources for job seekers interested in pursuing a career in this vibrant industry. It highlights various career paths available within the company, including roles in marketing, operations, logistics, and technology. The portal emphasizes the importance of skills such as digital marketing, data analysis, and customer service, which are crucial for success in the e-commerce sector. Additionally, Shopee provides insights into the interview process, offering tips on how to prepare effectively and what to expect during interviews. Salary and compensation insights are also available, giving potential candidates a clearer picture of what they can expect in terms of remuneration. The day-to-day responsibilities of employees at Shopee vary by role but often include tasks related to product management, customer engagement, and performance analysis. The portal also discusses career progression opportunities, outlining potential growth paths within the organization. Networking strategies are encouraged, as building connections within the industry can significantly enhance job prospects. Lastly, common challenges faced by applicants, such as competition and the need for relevant experience, are addressed, along with strategies to overcome these hurdles.",
-    "tfidf_keywords": [
-      "e-commerce",
-      "marketplace",
-      "career paths",
-      "interview preparation",
-      "salary insights",
-      "job responsibilities",
-      "career growth",
-      "networking strategies",
-      "digital marketing",
-      "customer service"
-    ],
-    "semantic_cluster": "ecommerce-career-paths",
-    "content_format": "career",
-    "depth_level": "intro",
-    "related_concepts": [
-      "digital-marketing",
-      "customer-engagement",
-      "logistics",
-      "operations-management",
-      "product-management"
-    ],
-    "canonical_topics": [
-      "consumer-behavior",
-      "labor-economics",
-      "marketplaces"
-    ]
-  },
-  {
     "name": "Flipkart",
     "description": "Career portal",
     "stage": "Discovery",
@@ -518,7 +518,7 @@
     "company_context": [
       "e-commerce"
     ],
-    "model_score": 0.0036,
+    "model_score": 0.0066,
     "embedding_text": "Flipkart is a leading e-commerce platform in India, and its career portal serves as a gateway for aspiring professionals looking to build a career in this dynamic industry. The portal outlines various career paths available within the company, including roles in data science, product management, and software engineering. Candidates are encouraged to develop skills in data analysis, machine learning, and software development, which are crucial for success in these positions. The portal also provides valuable insights into the day-to-day responsibilities associated with these roles, highlighting the importance of analytical thinking and problem-solving abilities. Furthermore, Flipkart's career portal emphasizes the significance of interview preparation, offering tips and resources to help candidates present their best selves during the hiring process. Salary and compensation insights are also shared, giving potential applicants a clear understanding of what to expect in terms of remuneration. Networking strategies are discussed, encouraging candidates to connect with professionals in the industry to enhance their job search efforts. Common challenges faced by applicants, such as competition and the need for relevant experience, are addressed with practical advice on how to overcome these obstacles. Overall, Flipkart's career portal is a comprehensive resource for anyone looking to navigate the e-commerce job market effectively and build a successful career in this field.",
     "tfidf_keywords": [
       "e-commerce",

@@ -17,7 +17,7 @@
     "category": "Experimentation > A/B Test Design & Analysis",
     "topic": "Experimentation",
     "subtopic": "A/B Test Design & Analysis",
-    "model_score": 0.0628
+    "model_score": 0.0674
   },
   {
     "id": "paper-the-theory-and-practice-of-revenue-management",
@@ -40,6 +40,26 @@
     "model_score": 0.0093
   },
   {
+    "id": "paper-personalization-in-email-marketing-the-role-of-noninformative-advertising-content",
+    "name": "Personalization in Email Marketing: The Role of Noninformative Advertising Content",
+    "title": "Personalization in Email Marketing: The Role of Noninformative Advertising Content",
+    "authors": "Navdeep S. Sahni, S. Christian Wheeler, Pradeep Chintagunta",
+    "year": 2018,
+    "url": "https://pubsonline.informs.org/doi/abs/10.1287/mksc.2017.1066",
+    "description": "Field experiments showing adding recipient names increases open rates by 20%, sales leads by 31%\u2014even though names are non-informative. Gary Lilien Prize Finalist.",
+    "citations": 0,
+    "tag": "",
+    "tags": [
+      "Advertising",
+      "Targeting & Lookalikes"
+    ],
+    "type": "paper",
+    "category": "Advertising > Targeting & Lookalikes",
+    "topic": "Advertising",
+    "subtopic": "Targeting & Lookalikes",
+    "model_score": 0.0003
+  },
+  {
     "id": "paper-from-first-price-auctions-to-incentive-compatible-auctions",
     "name": "From First-Price Auctions to Incentive-Compatible Auctions",
     "title": "From First-Price Auctions to Incentive-Compatible Auctions",
@@ -60,46 +80,6 @@
     "model_score": 0.0002
   },
   {
-    "id": "paper-the-economic-consequences-of-apple-s-app-tracking-transparency",
-    "name": "The Economic Consequences of Apple's App Tracking Transparency",
-    "title": "The Economic Consequences of Apple's App Tracking Transparency",
-    "authors": "Guy Aridor, Yeon-Koo Che, Brett Hollenbeck, Daniel McCarthy, Maximilian Kaiser",
-    "year": 2024,
-    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4627585",
-    "description": "Quantifies ATT's economic effects: 37% reduction in CTR for Meta's conversion-optimized ads; firms with higher Meta dependence experienced 37% revenue decline. Smaller e-commerce firms disproportionately harmed.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Advertising",
-      "Privacy & Ad Effectiveness"
-    ],
-    "type": "paper",
-    "category": "Advertising > Privacy & Ad Effectiveness",
-    "topic": "Advertising",
-    "subtopic": "Privacy & Ad Effectiveness",
-    "model_score": 0.0002
-  },
-  {
-    "id": "paper-personalization-in-email-marketing-the-role-of-noninformative-advertising-content",
-    "name": "Personalization in Email Marketing: The Role of Noninformative Advertising Content",
-    "title": "Personalization in Email Marketing: The Role of Noninformative Advertising Content",
-    "authors": "Navdeep S. Sahni, S. Christian Wheeler, Pradeep Chintagunta",
-    "year": 2018,
-    "url": "https://pubsonline.informs.org/doi/abs/10.1287/mksc.2017.1066",
-    "description": "Field experiments showing adding recipient names increases open rates by 20%, sales leads by 31%\u2014even though names are non-informative. Gary Lilien Prize Finalist.",
-    "citations": 0,
-    "tag": "",
-    "tags": [
-      "Advertising",
-      "Targeting & Lookalikes"
-    ],
-    "type": "paper",
-    "category": "Advertising > Targeting & Lookalikes",
-    "topic": "Advertising",
-    "subtopic": "Targeting & Lookalikes",
-    "model_score": 0.0001
-  },
-  {
     "id": "paper-peeking-at-a-b-tests-why-it-matters-and-what-to-do-about-it",
     "name": "Peeking at A/B Tests: Why It Matters, and What to Do About It",
     "title": "Peeking at A/B Tests: Why It Matters, and What to Do About It",
@@ -117,7 +97,7 @@
     "category": "Experimentation > Sequential & Adaptive Testing",
     "topic": "Experimentation",
     "subtopic": "Sequential & Adaptive Testing",
-    "model_score": 0.0001
+    "model_score": 0.0002
   },
   {
     "id": "paper-discrete-choice-methods-with-simulation-2nd-ed",
@@ -137,26 +117,106 @@
     "category": "Choice Models & Dynamic Choice > Discrete Choice (Logit, Mixed Logit)",
     "topic": "Choice Models & Dynamic Choice",
     "subtopic": "Discrete Choice (Logit, Mixed Logit)",
-    "model_score": 0.0001
+    "model_score": 0.0002
   },
   {
-    "id": "paper-risk-based-authentication-practical-deployments-and-research-challenges",
-    "name": "Risk-Based Authentication: Practical Deployments and Research Challenges",
-    "title": "Risk-Based Authentication: Practical Deployments and Research Challenges",
-    "authors": "Stephan Wiefling, Luigi Lo Iacono, Markus D\u00fcrmuth",
-    "year": 2021,
-    "url": "https://riskbasedauthentication.org/publications/",
-    "description": "Analyzes RBA deployments at Google, Microsoft, Amazon; develops measurement framework.",
+    "id": "paper-forecasting-at-scale-prophet",
+    "name": "Forecasting at Scale (Prophet)",
+    "title": "Forecasting at Scale (Prophet)",
+    "authors": "Sean J. Taylor, Benjamin Letham",
+    "year": 2018,
+    "url": "https://peerj.com/preprints/3190/",
+    "description": "Meta's additive model with trend, seasonality, holidays; designed for analyst-in-the-loop forecasting.",
     "citations": null,
     "tag": "",
     "tags": [
-      "Trust & Safety",
-      "Account Security & Identity"
+      "Forecasting",
+      "Deep Learning for Forecasting"
     ],
     "type": "paper",
-    "category": "Trust & Safety > Account Security & Identity",
-    "topic": "Trust & Safety",
-    "subtopic": "Account Security & Identity",
+    "category": "Forecasting > Deep Learning for Forecasting",
+    "topic": "Forecasting",
+    "subtopic": "Deep Learning for Forecasting",
+    "model_score": 0.0002
+  },
+  {
+    "id": "paper-forecasting-at-scale-prophet-1",
+    "name": "Forecasting at Scale (Prophet)",
+    "title": "Forecasting at Scale (Prophet)",
+    "authors": "Sean J. Taylor, Benjamin Letham",
+    "year": 2018,
+    "url": "https://peerj.com/preprints/3190/",
+    "description": "Meta's production system enabling analysts to create reliable forecasts with domain knowledge.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Forecasting",
+      "Production Forecasting Systems"
+    ],
+    "type": "paper",
+    "category": "Forecasting > Production Forecasting Systems",
+    "topic": "Forecasting",
+    "subtopic": "Production Forecasting Systems",
+    "model_score": 0.0002
+  },
+  {
+    "id": "paper-use-of-alternative-data-in-credit-process",
+    "name": "Use of Alternative Data in Credit Process",
+    "title": "Use of Alternative Data in Credit Process",
+    "authors": "CFPB",
+    "year": 2017,
+    "url": "https://www.consumerfinance.gov/about-us/newsroom/cfpb-explores-impact-alternative-data-credit-access-consumers-who-are-credit-invisible/",
+    "description": "Documents 45 million 'credit invisible' Americans; foundational regulatory framework.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Credit & Lending",
+      "Alternative Data"
+    ],
+    "type": "paper",
+    "category": "Credit & Lending > Alternative Data",
+    "topic": "Credit & Lending",
+    "subtopic": "Alternative Data",
+    "model_score": 0.0002
+  },
+  {
+    "id": "paper-alibaba-vehicle-routing-algorithms-enable-rapid-pick-and-delivery",
+    "name": "Alibaba Vehicle Routing Algorithms Enable Rapid Pick and Delivery",
+    "title": "Alibaba Vehicle Routing Algorithms Enable Rapid Pick and Delivery",
+    "authors": "Jingwen Hu, Yifan Zhang, Yuxiang Wei, Yi Zhan, Fei Zhang, Shenghua Huang, Weiwei Ma, Zhun Deng, Zheren Jiang",
+    "year": 2022,
+    "url": "https://pubsonline.informs.org/doi/10.1287/inte.2022.1130",
+    "description": "Production algorithms enabling 30-minute grocery delivery across Alibaba subsidiaries in China. Franz Edelman Award finalist.",
+    "citations": 0,
+    "tag": "",
+    "tags": [
+      "Logistics & Operations",
+      "Routing & Dispatch"
+    ],
+    "type": "paper",
+    "category": "Logistics & Operations > Routing & Dispatch",
+    "topic": "Logistics & Operations",
+    "subtopic": "Routing & Dispatch",
+    "model_score": 0.0002
+  },
+  {
+    "id": "paper-the-economic-consequences-of-apple-s-app-tracking-transparency",
+    "name": "The Economic Consequences of Apple's App Tracking Transparency",
+    "title": "The Economic Consequences of Apple's App Tracking Transparency",
+    "authors": "Guy Aridor, Yeon-Koo Che, Brett Hollenbeck, Daniel McCarthy, Maximilian Kaiser",
+    "year": 2024,
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4627585",
+    "description": "Quantifies ATT's economic effects: 37% reduction in CTR for Meta's conversion-optimized ads; firms with higher Meta dependence experienced 37% revenue decline. Smaller e-commerce firms disproportionately harmed.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Advertising",
+      "Privacy & Ad Effectiveness"
+    ],
+    "type": "paper",
+    "category": "Advertising > Privacy & Ad Effectiveness",
+    "topic": "Advertising",
+    "subtopic": "Privacy & Ad Effectiveness",
     "model_score": 0.0001
   },
   {
@@ -397,46 +457,6 @@
     "category": "Forecasting > Time Series Foundations",
     "topic": "Forecasting",
     "subtopic": "Time Series Foundations",
-    "model_score": 0.0001
-  },
-  {
-    "id": "paper-forecasting-at-scale-prophet",
-    "name": "Forecasting at Scale (Prophet)",
-    "title": "Forecasting at Scale (Prophet)",
-    "authors": "Sean J. Taylor, Benjamin Letham",
-    "year": 2018,
-    "url": "https://peerj.com/preprints/3190/",
-    "description": "Meta's additive model with trend, seasonality, holidays; designed for analyst-in-the-loop forecasting.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Forecasting",
-      "Deep Learning for Forecasting"
-    ],
-    "type": "paper",
-    "category": "Forecasting > Deep Learning for Forecasting",
-    "topic": "Forecasting",
-    "subtopic": "Deep Learning for Forecasting",
-    "model_score": 0.0001
-  },
-  {
-    "id": "paper-forecasting-at-scale-prophet-1",
-    "name": "Forecasting at Scale (Prophet)",
-    "title": "Forecasting at Scale (Prophet)",
-    "authors": "Sean J. Taylor, Benjamin Letham",
-    "year": 2018,
-    "url": "https://peerj.com/preprints/3190/",
-    "description": "Meta's production system enabling analysts to create reliable forecasts with domain knowledge.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Forecasting",
-      "Production Forecasting Systems"
-    ],
-    "type": "paper",
-    "category": "Forecasting > Production Forecasting Systems",
-    "topic": "Forecasting",
-    "subtopic": "Production Forecasting Systems",
     "model_score": 0.0001
   },
   {
@@ -760,26 +780,6 @@
     "model_score": 0.0001
   },
   {
-    "id": "paper-what-happens-when-wal-mart-comes-to-town-an-empirical-analysis-of-the-discount-retailing-industry",
-    "name": "What Happens When Wal-Mart Comes to Town: An Empirical Analysis of the Discount Retailing Industry",
-    "title": "What Happens When Wal-Mart Comes to Town: An Empirical Analysis of the Discount Retailing Industry",
-    "authors": "Panle Jia",
-    "year": 2008,
-    "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1468-0262.2008.00854.x",
-    "description": "Develops computational methods for large-scale entry games; tractable approach for markets with many potential entrants relevant to platform expansion analysis.",
-    "citations": 0,
-    "tag": "",
-    "tags": [
-      "Structural Estimation",
-      "Entry & Competition"
-    ],
-    "type": "paper",
-    "category": "Structural Estimation > Entry & Competition",
-    "topic": "Structural Estimation",
-    "subtopic": "Entry & Competition",
-    "model_score": 0.0001
-  },
-  {
     "id": "paper-auctions-versus-posted-prices-in-online-markets",
     "name": "Auctions versus Posted Prices in Online Markets",
     "title": "Auctions versus Posted Prices in Online Markets",
@@ -880,46 +880,6 @@
     "model_score": 0.0001
   },
   {
-    "id": "paper-use-of-alternative-data-in-credit-process",
-    "name": "Use of Alternative Data in Credit Process",
-    "title": "Use of Alternative Data in Credit Process",
-    "authors": "CFPB",
-    "year": 2017,
-    "url": "https://www.consumerfinance.gov/about-us/newsroom/cfpb-explores-impact-alternative-data-credit-access-consumers-who-are-credit-invisible/",
-    "description": "Documents 45 million 'credit invisible' Americans; foundational regulatory framework.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Credit & Lending",
-      "Alternative Data"
-    ],
-    "type": "paper",
-    "category": "Credit & Lending > Alternative Data",
-    "topic": "Credit & Lending",
-    "subtopic": "Alternative Data",
-    "model_score": 0.0001
-  },
-  {
-    "id": "paper-alibaba-vehicle-routing-algorithms-enable-rapid-pick-and-delivery",
-    "name": "Alibaba Vehicle Routing Algorithms Enable Rapid Pick and Delivery",
-    "title": "Alibaba Vehicle Routing Algorithms Enable Rapid Pick and Delivery",
-    "authors": "Jingwen Hu, Yifan Zhang, Yuxiang Wei, Yi Zhan, Fei Zhang, Shenghua Huang, Weiwei Ma, Zhun Deng, Zheren Jiang",
-    "year": 2022,
-    "url": "https://pubsonline.informs.org/doi/10.1287/inte.2022.1130",
-    "description": "Production algorithms enabling 30-minute grocery delivery across Alibaba subsidiaries in China. Franz Edelman Award finalist.",
-    "citations": 0,
-    "tag": "",
-    "tags": [
-      "Logistics & Operations",
-      "Routing & Dispatch"
-    ],
-    "type": "paper",
-    "category": "Logistics & Operations > Routing & Dispatch",
-    "topic": "Logistics & Operations",
-    "subtopic": "Routing & Dispatch",
-    "model_score": 0.0001
-  },
-  {
     "id": "paper-jd-com-improves-fulfillment-efficiency-with-integrated-assortment-planning-and-inventory-allocation",
     "name": "JD.com Improves Fulfillment Efficiency with Integrated Assortment Planning and Inventory Allocation",
     "title": "JD.com Improves Fulfillment Efficiency with Integrated Assortment Planning and Inventory Allocation",
@@ -937,26 +897,6 @@
     "category": "Logistics & Operations > Inventory & Fulfillment",
     "topic": "Logistics & Operations",
     "subtopic": "Inventory & Fulfillment",
-    "model_score": 0.0001
-  },
-  {
-    "id": "paper-the-effects-of-uber-s-surge-pricing-a-case-study",
-    "name": "The Effects of Uber's Surge Pricing: A Case Study",
-    "title": "The Effects of Uber's Surge Pricing: A Case Study",
-    "authors": "Jonathan Hall, Cory Kendrick, Chris Nosko",
-    "year": 2015,
-    "url": "https://www.uber.com/blog/research/the-effects-of-ubers-surge-pricing-a-case-study/",
-    "description": "Natural experiment (NYE outage) showing dynamic pricing equilibrates supply/demand in real-time.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Logistics & Operations",
-      "Capacity Planning"
-    ],
-    "type": "paper",
-    "category": "Logistics & Operations > Capacity Planning",
-    "topic": "Logistics & Operations",
-    "subtopic": "Capacity Planning",
     "model_score": 0.0001
   },
   {
@@ -1020,26 +960,6 @@
     "model_score": 0.0001
   },
   {
-    "id": "paper-robust-de-anonymization-of-large-sparse-datasets-netflix",
-    "name": "Robust De-anonymization of Large Sparse Datasets (Netflix)",
-    "title": "Robust De-anonymization of Large Sparse Datasets (Netflix)",
-    "authors": "Arvind Narayanan, Vitaly Shmatikov",
-    "year": 2008,
-    "url": "https://arxiv.org/abs/cs/0610105",
-    "description": "Landmark attack demonstrating re-identification of Netflix users; showed k-anonymity fails on high-dimensional data.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Privacy",
-      "Anonymization & De-identification"
-    ],
-    "type": "paper",
-    "category": "Privacy > Anonymization & De-identification",
-    "topic": "Privacy",
-    "subtopic": "Anonymization & De-identification",
-    "model_score": 0.0001
-  },
-  {
     "id": "paper-t-closeness-privacy-beyond-k-anonymity-and-diversity",
     "name": "t-Closeness: Privacy Beyond k-Anonymity and \u2113-Diversity",
     "title": "t-Closeness: Privacy Beyond k-Anonymity and \u2113-Diversity",
@@ -1098,6 +1018,386 @@
     "topic": "Spatial & Geo",
     "subtopic": "Mobility & Movement Patterns",
     "model_score": 0.0001
+  },
+  {
+    "id": "paper-resampling-free-bootstrap-inference-for-quantiles",
+    "name": "Resampling-Free Bootstrap Inference for Quantiles",
+    "title": "Resampling-Free Bootstrap Inference for Quantiles",
+    "authors": "M\u00e5rten Schultzberg, Johan Ankargren",
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2202.10992",
+    "description": "A Spotify paper that achieves 828x speedup for quantile bootstrap by deriving the analytical distribution of bootstrap quantile indices. Enables bootstrap CIs for medians/percentiles on hundreds of millions of observations in milliseconds. Already deployed in production at Spotify.",
+    "citations": 0,
+    "tag": "Industry",
+    "tags": [
+      "Statistics",
+      "Bootstrap & Resampling Methods"
+    ],
+    "type": "paper",
+    "category": "Statistics > Bootstrap & Resampling Methods",
+    "topic": "Statistics",
+    "subtopic": "Bootstrap & Resampling Methods",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-causal-impact-a-new-approach-to-estimate-causal-effects",
+    "name": "Causal Impact: A New Approach to Estimate Causal Effects",
+    "title": "Causal Impact: A New Approach to Estimate Causal Effects",
+    "authors": "Kay Brodersen, Fabian Gallusser, Jim Koehler, et al.",
+    "year": 2015,
+    "url": "https://research.google/pubs/estimating-uncertainty-for-massive-data-streams/",
+    "description": "Google's Bayesian structural time-series approach for measuring impact of geo-level interventions.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Experimentation",
+      "Switchback & Geo-Experiments"
+    ],
+    "type": "paper",
+    "category": "Experimentation > Switchback & Geo-Experiments",
+    "topic": "Experimentation",
+    "subtopic": "Switchback & Geo-Experiments",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-what-s-trending-in-difference-in-differences-a-synthesis-of-the-recent-econometrics-literature",
+    "name": "What's Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature",
+    "title": "What's Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature",
+    "authors": "Jonathan Roth, Pedro Sant'Anna, Alyssa Bilinski, John Poe",
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2201.01194",
+    "description": "Comprehensive review of modern DiD methods including staggered adoption and heterogeneous effects.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Observational Causal Inference",
+      "Difference-in-Differences"
+    ],
+    "type": "paper",
+    "category": "Observational Causal Inference > Difference-in-Differences",
+    "topic": "Observational Causal Inference",
+    "subtopic": "Difference-in-Differences",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-dense-passage-retrieval-for-open-domain-qa-dpr",
+    "name": "Dense Passage Retrieval for Open-Domain QA (DPR)",
+    "title": "Dense Passage Retrieval for Open-Domain QA (DPR)",
+    "authors": "Vladimir Karpukhin, et al. (Facebook)",
+    "year": 2020,
+    "url": "https://arxiv.org/abs/2004.04906",
+    "description": "Foundational dual-encoder dense retrieval; outperforms BM25 by 9-19%; established the dense retrieval paradigm.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Search & Ranking",
+      "Semantic Search & Embeddings"
+    ],
+    "type": "paper",
+    "category": "Search & Ranking > Semantic Search & Embeddings",
+    "topic": "Search & Ranking",
+    "subtopic": "Semantic Search & Embeddings",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-what-s-trending-in-difference-in-differences-a-synthesis-of-the-recent-econometrics-literature-1",
+    "name": "What's Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature",
+    "title": "What's Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature",
+    "authors": "Jonathan Roth, Pedro H.C. Sant'Anna, Alyssa Bilinski, John Poe",
+    "year": 2023,
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0304407623001021",
+    "description": "Comprehensive synthesis of modern DiD developments; essential guide to recent methodological advances.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Forecasting",
+      "Causal Impact & Intervention"
+    ],
+    "type": "paper",
+    "category": "Forecasting > Causal Impact & Intervention",
+    "topic": "Forecasting",
+    "subtopic": "Causal Impact & Intervention",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-spotify-s-audio-features-and-track-analysis",
+    "name": "Spotify's Audio Features and Track Analysis",
+    "title": "Spotify's Audio Features and Track Analysis",
+    "authors": "Spotify Engineering",
+    "year": 2018,
+    "url": "https://developer.spotify.com/documentation/web-api/reference/get-audio-features",
+    "description": "Audio analysis API powering playlist generation and music clustering at scale.",
+    "citations": null,
+    "tag": "Industry",
+    "tags": [
+      "Clustering & Segmentation",
+      "Music & Audio Clustering"
+    ],
+    "type": "paper",
+    "category": "Clustering & Segmentation > Music & Audio Clustering",
+    "topic": "Clustering & Segmentation",
+    "subtopic": "Music & Audio Clustering",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-freemium-as-a-marketing-strategy",
+    "name": "Freemium as a Marketing Strategy",
+    "title": "Freemium as a Marketing Strategy",
+    "authors": "Clarence Lee, Vineet Kumar, Sunil Gupta",
+    "year": 2013,
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1748824",
+    "description": "Structural model of freemium conversion analyzing optimal feature restriction.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Subscriptions & Retention",
+      "Free-to-Paid Conversion"
+    ],
+    "type": "paper",
+    "category": "Subscriptions & Retention > Free-to-Paid Conversion",
+    "topic": "Subscriptions & Retention",
+    "subtopic": "Free-to-Paid Conversion",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-differential-response-analysis",
+    "name": "Differential Response Analysis",
+    "title": "Differential Response Analysis",
+    "authors": "Nicholas Radcliffe, Patrick Surry",
+    "year": 1999,
+    "url": "https://stochasticsolutions.com/papers.html",
+    "description": "Original uplift paper introducing the 'Persuadables' segmentation framework (Persuadables, Sure Things, Lost Causes, Sleeping Dogs).",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Marketing & Growth",
+      "Uplift Modeling"
+    ],
+    "type": "paper",
+    "category": "Marketing & Growth > Uplift Modeling",
+    "topic": "Marketing & Growth",
+    "subtopic": "Uplift Modeling",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-the-evolution-of-amazon-s-inventory-planning-system",
+    "name": "The Evolution of Amazon's Inventory Planning System",
+    "title": "The Evolution of Amazon's Inventory Planning System",
+    "authors": "Salal Humair et al. (Amazon SCOT Team)",
+    "year": 2023,
+    "url": "https://www.amazon.science/latest-news/the-evolution-of-amazons-inventory-planning-system",
+    "description": "Amazon's multi-echelon system with Lagrangian decomposition for real-time optimization across 175+ fulfillment centers.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Logistics & Operations",
+      "Inventory & Fulfillment"
+    ],
+    "type": "paper",
+    "category": "Logistics & Operations > Inventory & Fulfillment",
+    "topic": "Logistics & Operations",
+    "subtopic": "Inventory & Fulfillment",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-deepeta-how-uber-predicts-arrival-times-using-deep-learning",
+    "name": "DeepETA: How Uber Predicts Arrival Times Using Deep Learning",
+    "title": "DeepETA: How Uber Predicts Arrival Times Using Deep Learning",
+    "authors": "Xinyu Hu, Olcay Cirit, et al.",
+    "year": 2022,
+    "url": "https://www.uber.com/blog/deepeta-how-uber-predicts-arrival-times/",
+    "description": "Uber's production ETA using Transformers for tabular data; highest QPS system at Uber.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Logistics & Operations",
+      "ETA & Delivery Prediction"
+    ],
+    "type": "paper",
+    "category": "Logistics & Operations > ETA & Delivery Prediction",
+    "topic": "Logistics & Operations",
+    "subtopic": "ETA & Delivery Prediction",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-deep-gravity-large-scale-origin-destination-flows",
+    "name": "Deep Gravity: Large-Scale Origin-Destination Flows",
+    "title": "Deep Gravity: Large-Scale Origin-Destination Flows",
+    "authors": "Filippo Simini et al.",
+    "year": 2021,
+    "url": "https://www.nature.com/articles/s41467-021-24803-0",
+    "description": "Neural network predicting mobility flows, outperforming classic gravity models.",
+    "citations": null,
+    "tag": "SOTA",
+    "tags": [
+      "Spatial & Geo",
+      "Geospatial Demand Modeling"
+    ],
+    "type": "paper",
+    "category": "Spatial & Geo > Geospatial Demand Modeling",
+    "topic": "Spatial & Geo",
+    "subtopic": "Geospatial Demand Modeling",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-starbucks-store-locator-with-machine-learning",
+    "name": "Starbucks Store Locator with Machine Learning",
+    "title": "Starbucks Store Locator with Machine Learning",
+    "authors": "Starbucks Analytics",
+    "year": 2019,
+    "url": "https://stories.starbucks.com/stories/2019/how-starbucks-uses-data-to-site-new-stores/",
+    "description": "ML-driven site selection combining foot traffic, demographics, and competition.",
+    "citations": null,
+    "tag": "Industry",
+    "tags": [
+      "Spatial & Geo",
+      "Location Choice & Site Selection"
+    ],
+    "type": "paper",
+    "category": "Spatial & Geo > Location Choice & Site Selection",
+    "topic": "Spatial & Geo",
+    "subtopic": "Location Choice & Site Selection",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-spatial-spillovers-in-airbnb-pricing",
+    "name": "Spatial Spillovers in Airbnb Pricing",
+    "title": "Spatial Spillovers in Airbnb Pricing",
+    "authors": "Nils Kok, Edward Kopczuk, Maisy Wong",
+    "year": 2020,
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0094119020300310",
+    "description": "Demonstrates spatial lag effects in short-term rental markets using hedonic models.",
+    "citations": null,
+    "tag": "SOTA",
+    "tags": [
+      "Spatial & Geo",
+      "Spatial Econometrics"
+    ],
+    "type": "paper",
+    "category": "Spatial & Geo > Spatial Econometrics",
+    "topic": "Spatial & Geo",
+    "subtopic": "Spatial Econometrics",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-libpostal-international-address-parsing",
+    "name": "libpostal: International Address Parsing",
+    "title": "libpostal: International Address Parsing",
+    "authors": "Al Barrentine",
+    "year": 2017,
+    "url": "https://github.com/openvenues/libpostal",
+    "description": "NLP library parsing addresses in 60+ languages\u2014widely used in ride-sharing and logistics.",
+    "citations": null,
+    "tag": "Industry",
+    "tags": [
+      "Spatial & Geo",
+      "Mapping & Geocoding"
+    ],
+    "type": "paper",
+    "category": "Spatial & Geo > Mapping & Geocoding",
+    "topic": "Spatial & Geo",
+    "subtopic": "Mapping & Geocoding",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-safegraph-foot-traffic-data",
+    "name": "SafeGraph Foot Traffic Data",
+    "title": "SafeGraph Foot Traffic Data",
+    "authors": "SafeGraph",
+    "year": 2021,
+    "url": "https://www.safegraph.com/products/places",
+    "description": "Panel-based POI visit data enabling offline-to-online attribution and demand studies.",
+    "citations": null,
+    "tag": "Industry",
+    "tags": [
+      "Spatial & Geo",
+      "Mobility & Movement Patterns"
+    ],
+    "type": "paper",
+    "category": "Spatial & Geo > Mobility & Movement Patterns",
+    "topic": "Spatial & Geo",
+    "subtopic": "Mobility & Movement Patterns",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-risk-based-authentication-practical-deployments-and-research-challenges",
+    "name": "Risk-Based Authentication: Practical Deployments and Research Challenges",
+    "title": "Risk-Based Authentication: Practical Deployments and Research Challenges",
+    "authors": "Stephan Wiefling, Luigi Lo Iacono, Markus D\u00fcrmuth",
+    "year": 2021,
+    "url": "https://riskbasedauthentication.org/publications/",
+    "description": "Analyzes RBA deployments at Google, Microsoft, Amazon; develops measurement framework.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Trust & Safety",
+      "Account Security & Identity"
+    ],
+    "type": "paper",
+    "category": "Trust & Safety > Account Security & Identity",
+    "topic": "Trust & Safety",
+    "subtopic": "Account Security & Identity",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-what-happens-when-wal-mart-comes-to-town-an-empirical-analysis-of-the-discount-retailing-industry",
+    "name": "What Happens When Wal-Mart Comes to Town: An Empirical Analysis of the Discount Retailing Industry",
+    "title": "What Happens When Wal-Mart Comes to Town: An Empirical Analysis of the Discount Retailing Industry",
+    "authors": "Panle Jia",
+    "year": 2008,
+    "url": "https://onlinelibrary.wiley.com/doi/10.1111/j.1468-0262.2008.00854.x",
+    "description": "Develops computational methods for large-scale entry games; tractable approach for markets with many potential entrants relevant to platform expansion analysis.",
+    "citations": 0,
+    "tag": "",
+    "tags": [
+      "Structural Estimation",
+      "Entry & Competition"
+    ],
+    "type": "paper",
+    "category": "Structural Estimation > Entry & Competition",
+    "topic": "Structural Estimation",
+    "subtopic": "Entry & Competition",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-the-effects-of-uber-s-surge-pricing-a-case-study",
+    "name": "The Effects of Uber's Surge Pricing: A Case Study",
+    "title": "The Effects of Uber's Surge Pricing: A Case Study",
+    "authors": "Jonathan Hall, Cory Kendrick, Chris Nosko",
+    "year": 2015,
+    "url": "https://www.uber.com/blog/research/the-effects-of-ubers-surge-pricing-a-case-study/",
+    "description": "Natural experiment (NYE outage) showing dynamic pricing equilibrates supply/demand in real-time.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Logistics & Operations",
+      "Capacity Planning"
+    ],
+    "type": "paper",
+    "category": "Logistics & Operations > Capacity Planning",
+    "topic": "Logistics & Operations",
+    "subtopic": "Capacity Planning",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-robust-de-anonymization-of-large-sparse-datasets-netflix",
+    "name": "Robust De-anonymization of Large Sparse Datasets (Netflix)",
+    "title": "Robust De-anonymization of Large Sparse Datasets (Netflix)",
+    "authors": "Arvind Narayanan, Vitaly Shmatikov",
+    "year": 2008,
+    "url": "https://arxiv.org/abs/cs/0610105",
+    "description": "Landmark attack demonstrating re-identification of Netflix users; showed k-anonymity fails on high-dimensional data.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Privacy",
+      "Anonymization & De-identification"
+    ],
+    "type": "paper",
+    "category": "Privacy > Anonymization & De-identification",
+    "topic": "Privacy",
+    "subtopic": "Anonymization & De-identification",
+    "model_score": 0.0
   },
   {
     "id": "paper-bootstrap-methods-another-look-at-the-jackknife",
@@ -1189,26 +1489,6 @@
     "description": "The wild cluster bootstrap handles clustered/panel data (users within cities, sessions within users, days within experiments) and provides valid inference even with few clusters (5-30) where standard cluster-robust SEs severely over-reject. Essential for diff-in-diff, geographic experiments, and switchback designs.",
     "citations": 3726,
     "tag": "Classic",
-    "tags": [
-      "Statistics",
-      "Bootstrap & Resampling Methods"
-    ],
-    "type": "paper",
-    "category": "Statistics > Bootstrap & Resampling Methods",
-    "topic": "Statistics",
-    "subtopic": "Bootstrap & Resampling Methods",
-    "model_score": 0.0
-  },
-  {
-    "id": "paper-resampling-free-bootstrap-inference-for-quantiles",
-    "name": "Resampling-Free Bootstrap Inference for Quantiles",
-    "title": "Resampling-Free Bootstrap Inference for Quantiles",
-    "authors": "M\u00e5rten Schultzberg, Johan Ankargren",
-    "year": 2022,
-    "url": "https://arxiv.org/abs/2202.10992",
-    "description": "A Spotify paper that achieves 828x speedup for quantile bootstrap by deriving the analytical distribution of bootstrap quantile indices. Enables bootstrap CIs for medians/percentiles on hundreds of millions of observations in milliseconds. Already deployed in production at Spotify.",
-    "citations": 0,
-    "tag": "Industry",
     "tags": [
       "Statistics",
       "Bootstrap & Resampling Methods"
@@ -2560,26 +2840,6 @@
     "model_score": 0.0
   },
   {
-    "id": "paper-causal-impact-a-new-approach-to-estimate-causal-effects",
-    "name": "Causal Impact: A New Approach to Estimate Causal Effects",
-    "title": "Causal Impact: A New Approach to Estimate Causal Effects",
-    "authors": "Kay Brodersen, Fabian Gallusser, Jim Koehler, et al.",
-    "year": 2015,
-    "url": "https://research.google/pubs/estimating-uncertainty-for-massive-data-streams/",
-    "description": "Google's Bayesian structural time-series approach for measuring impact of geo-level interventions.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Experimentation",
-      "Switchback & Geo-Experiments"
-    ],
-    "type": "paper",
-    "category": "Experimentation > Switchback & Geo-Experiments",
-    "topic": "Experimentation",
-    "subtopic": "Switchback & Geo-Experiments",
-    "model_score": 0.0
-  },
-  {
     "id": "paper-design-and-analysis-of-switchback-experiments",
     "name": "Design and Analysis of Switchback Experiments",
     "title": "Design and Analysis of Switchback Experiments",
@@ -2837,26 +3097,6 @@
     "category": "Observational Causal Inference > Matching & Propensity Scores",
     "topic": "Observational Causal Inference",
     "subtopic": "Matching & Propensity Scores",
-    "model_score": 0.0
-  },
-  {
-    "id": "paper-what-s-trending-in-difference-in-differences-a-synthesis-of-the-recent-econometrics-literature",
-    "name": "What's Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature",
-    "title": "What's Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature",
-    "authors": "Jonathan Roth, Pedro Sant'Anna, Alyssa Bilinski, John Poe",
-    "year": 2023,
-    "url": "https://arxiv.org/abs/2201.01194",
-    "description": "Comprehensive review of modern DiD methods including staggered adoption and heterogeneous effects.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Observational Causal Inference",
-      "Difference-in-Differences"
-    ],
-    "type": "paper",
-    "category": "Observational Causal Inference > Difference-in-Differences",
-    "topic": "Observational Causal Inference",
-    "subtopic": "Difference-in-Differences",
     "model_score": 0.0
   },
   {
@@ -5057,26 +5297,6 @@
     "category": "Search & Ranking > Position Bias & Debiasing",
     "topic": "Search & Ranking",
     "subtopic": "Position Bias & Debiasing",
-    "model_score": 0.0
-  },
-  {
-    "id": "paper-dense-passage-retrieval-for-open-domain-qa-dpr",
-    "name": "Dense Passage Retrieval for Open-Domain QA (DPR)",
-    "title": "Dense Passage Retrieval for Open-Domain QA (DPR)",
-    "authors": "Vladimir Karpukhin, et al. (Facebook)",
-    "year": 2020,
-    "url": "https://arxiv.org/abs/2004.04906",
-    "description": "Foundational dual-encoder dense retrieval; outperforms BM25 by 9-19%; established the dense retrieval paradigm.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Search & Ranking",
-      "Semantic Search & Embeddings"
-    ],
-    "type": "paper",
-    "category": "Search & Ranking > Semantic Search & Embeddings",
-    "topic": "Search & Ranking",
-    "subtopic": "Semantic Search & Embeddings",
     "model_score": 0.0
   },
   {
@@ -8420,26 +8640,6 @@
     "model_score": 0.0
   },
   {
-    "id": "paper-what-s-trending-in-difference-in-differences-a-synthesis-of-the-recent-econometrics-literature-1",
-    "name": "What's Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature",
-    "title": "What's Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature",
-    "authors": "Jonathan Roth, Pedro H.C. Sant'Anna, Alyssa Bilinski, John Poe",
-    "year": 2023,
-    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0304407623001021",
-    "description": "Comprehensive synthesis of modern DiD developments; essential guide to recent methodological advances.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Forecasting",
-      "Causal Impact & Intervention"
-    ],
-    "type": "paper",
-    "category": "Forecasting > Causal Impact & Intervention",
-    "topic": "Forecasting",
-    "subtopic": "Causal Impact & Intervention",
-    "model_score": 0.0
-  },
-  {
     "id": "paper-orbit-probabilistic-forecast-with-exponential-smoothing",
     "name": "Orbit: Probabilistic Forecast with Exponential Smoothing",
     "title": "Orbit: Probabilistic Forecast with Exponential Smoothing",
@@ -9249,26 +9449,6 @@
     "description": "CNN for music auto-tagging enabling tag-based clustering and organization.",
     "citations": 221,
     "tag": "SOTA",
-    "tags": [
-      "Clustering & Segmentation",
-      "Music & Audio Clustering"
-    ],
-    "type": "paper",
-    "category": "Clustering & Segmentation > Music & Audio Clustering",
-    "topic": "Clustering & Segmentation",
-    "subtopic": "Music & Audio Clustering",
-    "model_score": 0.0
-  },
-  {
-    "id": "paper-spotify-s-audio-features-and-track-analysis",
-    "name": "Spotify's Audio Features and Track Analysis",
-    "title": "Spotify's Audio Features and Track Analysis",
-    "authors": "Spotify Engineering",
-    "year": 2018,
-    "url": "https://developer.spotify.com/documentation/web-api/reference/get-audio-features",
-    "description": "Audio analysis API powering playlist generation and music clustering at scale.",
-    "citations": null,
-    "tag": "Industry",
     "tags": [
       "Clustering & Segmentation",
       "Music & Audio Clustering"
@@ -10577,26 +10757,6 @@
     "category": "Subscriptions & Retention > Lifetime Value Estimation",
     "topic": "Subscriptions & Retention",
     "subtopic": "Lifetime Value Estimation",
-    "model_score": 0.0
-  },
-  {
-    "id": "paper-freemium-as-a-marketing-strategy",
-    "name": "Freemium as a Marketing Strategy",
-    "title": "Freemium as a Marketing Strategy",
-    "authors": "Clarence Lee, Vineet Kumar, Sunil Gupta",
-    "year": 2013,
-    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=1748824",
-    "description": "Structural model of freemium conversion analyzing optimal feature restriction.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Subscriptions & Retention",
-      "Free-to-Paid Conversion"
-    ],
-    "type": "paper",
-    "category": "Subscriptions & Retention > Free-to-Paid Conversion",
-    "topic": "Subscriptions & Retention",
-    "subtopic": "Free-to-Paid Conversion",
     "model_score": 0.0
   },
   {
@@ -12157,26 +12317,6 @@
     "category": "Marketing & Growth > Marketing Mix Modeling",
     "topic": "Marketing & Growth",
     "subtopic": "Marketing Mix Modeling",
-    "model_score": 0.0
-  },
-  {
-    "id": "paper-differential-response-analysis",
-    "name": "Differential Response Analysis",
-    "title": "Differential Response Analysis",
-    "authors": "Nicholas Radcliffe, Patrick Surry",
-    "year": 1999,
-    "url": "https://stochasticsolutions.com/papers.html",
-    "description": "Original uplift paper introducing the 'Persuadables' segmentation framework (Persuadables, Sure Things, Lost Causes, Sleeping Dogs).",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Marketing & Growth",
-      "Uplift Modeling"
-    ],
-    "type": "paper",
-    "category": "Marketing & Growth > Uplift Modeling",
-    "topic": "Marketing & Growth",
-    "subtopic": "Uplift Modeling",
     "model_score": 0.0
   },
   {
@@ -19000,26 +19140,6 @@
     "model_score": 0.0
   },
   {
-    "id": "paper-the-evolution-of-amazon-s-inventory-planning-system",
-    "name": "The Evolution of Amazon's Inventory Planning System",
-    "title": "The Evolution of Amazon's Inventory Planning System",
-    "authors": "Salal Humair et al. (Amazon SCOT Team)",
-    "year": 2023,
-    "url": "https://www.amazon.science/latest-news/the-evolution-of-amazons-inventory-planning-system",
-    "description": "Amazon's multi-echelon system with Lagrangian decomposition for real-time optimization across 175+ fulfillment centers.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Logistics & Operations",
-      "Inventory & Fulfillment"
-    ],
-    "type": "paper",
-    "category": "Logistics & Operations > Inventory & Fulfillment",
-    "topic": "Logistics & Operations",
-    "subtopic": "Inventory & Fulfillment",
-    "model_score": 0.0
-  },
-  {
     "id": "paper-alibaba-realizes-millions-in-cost-savings-through-integrated-demand-forecasting-and-inventory-manage",
     "name": "Alibaba Realizes Millions in Cost Savings Through Integrated Demand Forecasting and Inventory Management",
     "title": "Alibaba Realizes Millions in Cost Savings Through Integrated Demand Forecasting and Inventory Management",
@@ -19168,26 +19288,6 @@
     "url": "https://arxiv.org/abs/2108.11482",
     "description": "Deployed GNN for Google Maps ETA; reduced negative outcomes by 40%+ in major cities.",
     "citations": 184,
-    "tag": "",
-    "tags": [
-      "Logistics & Operations",
-      "ETA & Delivery Prediction"
-    ],
-    "type": "paper",
-    "category": "Logistics & Operations > ETA & Delivery Prediction",
-    "topic": "Logistics & Operations",
-    "subtopic": "ETA & Delivery Prediction",
-    "model_score": 0.0
-  },
-  {
-    "id": "paper-deepeta-how-uber-predicts-arrival-times-using-deep-learning",
-    "name": "DeepETA: How Uber Predicts Arrival Times Using Deep Learning",
-    "title": "DeepETA: How Uber Predicts Arrival Times Using Deep Learning",
-    "authors": "Xinyu Hu, Olcay Cirit, et al.",
-    "year": 2022,
-    "url": "https://www.uber.com/blog/deepeta-how-uber-predicts-arrival-times/",
-    "description": "Uber's production ETA using Transformers for tabular data; highest QPS system at Uber.",
-    "citations": null,
     "tag": "",
     "tags": [
       "Logistics & Operations",
@@ -21020,26 +21120,6 @@
     "model_score": 0.0
   },
   {
-    "id": "paper-deep-gravity-large-scale-origin-destination-flows",
-    "name": "Deep Gravity: Large-Scale Origin-Destination Flows",
-    "title": "Deep Gravity: Large-Scale Origin-Destination Flows",
-    "authors": "Filippo Simini et al.",
-    "year": 2021,
-    "url": "https://www.nature.com/articles/s41467-021-24803-0",
-    "description": "Neural network predicting mobility flows, outperforming classic gravity models.",
-    "citations": null,
-    "tag": "SOTA",
-    "tags": [
-      "Spatial & Geo",
-      "Geospatial Demand Modeling"
-    ],
-    "type": "paper",
-    "category": "Spatial & Geo > Geospatial Demand Modeling",
-    "topic": "Spatial & Geo",
-    "subtopic": "Geospatial Demand Modeling",
-    "model_score": 0.0
-  },
-  {
     "id": "paper-understanding-uber-demand",
     "name": "Understanding Uber Demand",
     "title": "Understanding Uber Demand",
@@ -21149,26 +21229,6 @@
     "description": "Entropy-maximization derivation of gravity and retail models.",
     "citations": 566,
     "tag": "Classic",
-    "tags": [
-      "Spatial & Geo",
-      "Location Choice & Site Selection"
-    ],
-    "type": "paper",
-    "category": "Spatial & Geo > Location Choice & Site Selection",
-    "topic": "Spatial & Geo",
-    "subtopic": "Location Choice & Site Selection",
-    "model_score": 0.0
-  },
-  {
-    "id": "paper-starbucks-store-locator-with-machine-learning",
-    "name": "Starbucks Store Locator with Machine Learning",
-    "title": "Starbucks Store Locator with Machine Learning",
-    "authors": "Starbucks Analytics",
-    "year": 2019,
-    "url": "https://stories.starbucks.com/stories/2019/how-starbucks-uses-data-to-site-new-stores/",
-    "description": "ML-driven site selection combining foot traffic, demographics, and competition.",
-    "citations": null,
-    "tag": "Industry",
     "tags": [
       "Spatial & Geo",
       "Location Choice & Site Selection"
@@ -21300,26 +21360,6 @@
     "model_score": 0.0
   },
   {
-    "id": "paper-spatial-spillovers-in-airbnb-pricing",
-    "name": "Spatial Spillovers in Airbnb Pricing",
-    "title": "Spatial Spillovers in Airbnb Pricing",
-    "authors": "Nils Kok, Edward Kopczuk, Maisy Wong",
-    "year": 2020,
-    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0094119020300310",
-    "description": "Demonstrates spatial lag effects in short-term rental markets using hedonic models.",
-    "citations": null,
-    "tag": "SOTA",
-    "tags": [
-      "Spatial & Geo",
-      "Spatial Econometrics"
-    ],
-    "type": "paper",
-    "category": "Spatial & Geo > Spatial Econometrics",
-    "topic": "Spatial & Geo",
-    "subtopic": "Spatial Econometrics",
-    "model_score": 0.0
-  },
-  {
     "id": "paper-gmm-estimation-with-cross-sectional-dependence",
     "name": "GMM Estimation with Cross Sectional Dependence",
     "title": "GMM Estimation with Cross Sectional Dependence",
@@ -21377,26 +21417,6 @@
     "category": "Spatial & Geo > Spatial Econometrics",
     "topic": "Spatial & Geo",
     "subtopic": "Spatial Econometrics",
-    "model_score": 0.0
-  },
-  {
-    "id": "paper-libpostal-international-address-parsing",
-    "name": "libpostal: International Address Parsing",
-    "title": "libpostal: International Address Parsing",
-    "authors": "Al Barrentine",
-    "year": 2017,
-    "url": "https://github.com/openvenues/libpostal",
-    "description": "NLP library parsing addresses in 60+ languages\u2014widely used in ride-sharing and logistics.",
-    "citations": null,
-    "tag": "Industry",
-    "tags": [
-      "Spatial & Geo",
-      "Mapping & Geocoding"
-    ],
-    "type": "paper",
-    "category": "Spatial & Geo > Mapping & Geocoding",
-    "topic": "Spatial & Geo",
-    "subtopic": "Mapping & Geocoding",
     "model_score": 0.0
   },
   {
@@ -21509,26 +21529,6 @@
     "description": "Attention-based RNN capturing periodicity and transition patterns in check-ins.",
     "citations": 617,
     "tag": "SOTA",
-    "tags": [
-      "Spatial & Geo",
-      "Mobility & Movement Patterns"
-    ],
-    "type": "paper",
-    "category": "Spatial & Geo > Mobility & Movement Patterns",
-    "topic": "Spatial & Geo",
-    "subtopic": "Mobility & Movement Patterns",
-    "model_score": 0.0
-  },
-  {
-    "id": "paper-safegraph-foot-traffic-data",
-    "name": "SafeGraph Foot Traffic Data",
-    "title": "SafeGraph Foot Traffic Data",
-    "authors": "SafeGraph",
-    "year": 2021,
-    "url": "https://www.safegraph.com/products/places",
-    "description": "Panel-based POI visit data enabling offline-to-online attribution and demand studies.",
-    "citations": null,
-    "tag": "Industry",
     "tags": [
       "Spatial & Geo",
       "Mobility & Movement Patterns"
