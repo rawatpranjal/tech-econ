@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-01-04
+- Re-scored rankings with latest engagement data (820 items with engagement, 2,971 cold-start)
+
 ## 2026-01-03
 - **Comprehensive Queueing Theory Resources Directory** (~70 new entries):
   - 7 simulation packages (SimPy, Ciw, simmer, queueing, AnyLogic, Arena, Simio)
