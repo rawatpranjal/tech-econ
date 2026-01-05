@@ -1069,8 +1069,37 @@ def main():
         json.dump(output, f, indent=2)
     print(f"\n\nRankings saved to: {args.output}")
 
-    # Generate homepage trending data (top 12 items with real engagement)
-    homepage_items = [r for r in rankings if not r['cold_start']][:12]
+    # Generate homepage trending data (top 12 items with real engagement + diversity)
+    def select_diverse_trending(rankings, n=12, max_per_type=2, max_per_category=2):
+        """Select top items with diversity constraints."""
+        selected = []
+        type_counts = {}
+        category_counts = {}
+
+        for item in rankings:
+            if item.get('cold_start', False):
+                continue
+
+            item_type = item.get('type', 'unknown')
+            item_category = item.get('category', 'unknown')
+
+            # Check limits
+            if type_counts.get(item_type, 0) >= max_per_type:
+                continue
+            if category_counts.get(item_category, 0) >= max_per_category:
+                continue
+
+            # Add item
+            selected.append(item)
+            type_counts[item_type] = type_counts.get(item_type, 0) + 1
+            category_counts[item_category] = category_counts.get(item_category, 0) + 1
+
+            if len(selected) >= n:
+                break
+
+        return selected
+
+    homepage_items = select_diverse_trending(rankings, n=12, max_per_type=2, max_per_category=2)
     homepage_data = {
         "updated": output['updated'],
         "count": len(homepage_items),

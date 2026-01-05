@@ -1,5 +1,5 @@
 {
-  "updated": "2026-01-05T16:26:26.577162Z",
+  "updated": "2026-01-05T16:54:21.344748Z",
   "count": 12,
   "items": [
     {
@@ -53,56 +53,6 @@
       "rank": 2
     },
     {
-      "name": "PyMC-Marketing CLV Quickstart",
-      "type": "resource",
-      "category": "Bayesian Methods",
-      "description": "CLV basics, RFM analysis, BG/NBD models \u2014 free official docs",
-      "url": "https://www.pymc-marketing.io/en/latest/notebooks/clv/clv_quickstart.html",
-      "score": 0.9823,
-      "cold_start": false,
-      "signals": {
-        "clicks": 0,
-        "impressions": 48,
-        "dwell_ms": 11743781,
-        "viewable_sec": 11768.300000000001,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 27,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0
-      },
-      "rank": 3
-    },
-    {
-      "name": "PyMC-Marketing Documentation",
-      "type": "resource",
-      "category": "Bayesian Methods",
-      "description": "BG/NBD and Gamma-Gamma CLV tutorials",
-      "url": "https://www.pymc-marketing.io/en/stable/",
-      "score": 0.9785,
-      "cold_start": false,
-      "signals": {
-        "clicks": 0,
-        "impressions": 43,
-        "dwell_ms": 11805775,
-        "viewable_sec": 11832.2,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 20,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0
-      },
-      "rank": 4
-    },
-    {
       "name": "Susan Athey: Economics of Transformative AI",
       "type": "talk",
       "category": "Strategy & Digital Platforms",
@@ -153,56 +103,6 @@
       "rank": 6
     },
     {
-      "name": "Susan Athey: applied researchers Wanted",
-      "type": "talk",
-      "category": "Strategy & Digital Platforms",
-      "description": "AEA Research Highlights. Why companies like Airbnb need researchers to solve marketplace design problems.",
-      "url": "https://www.aeaweb.org/research/athey-luca-interview-tech-economics",
-      "score": 0.4555,
-      "cold_start": false,
-      "signals": {
-        "clicks": 1,
-        "impressions": 25,
-        "dwell_ms": 5412576,
-        "viewable_sec": 5439.799999999999,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 10,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0
-      },
-      "rank": 7
-    },
-    {
-      "name": "Statistical Rethinking",
-      "type": "resource",
-      "category": "Bayesian Methods",
-      "description": "Richard McElreath's Bayesian approach to statistics. PyMC3 translations available. The book that changed how many think about inference.",
-      "url": "https://xcelab.net/rm/statistical-rethinking/",
-      "score": 0.0671,
-      "cold_start": false,
-      "signals": {
-        "clicks": 1,
-        "impressions": 56,
-        "dwell_ms": 166278,
-        "viewable_sec": 209.0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 28,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0
-      },
-      "rank": 8
-    },
-    {
       "name": "Diginetica Fashion",
       "type": "dataset",
       "category": "Fashion & Apparel",
@@ -226,31 +126,6 @@
         "coclicks": 0
       },
       "rank": 9
-    },
-    {
-      "name": "PyMC Labs Blog",
-      "type": "resource",
-      "category": "Bayesian Methods",
-      "description": "Bayesian causal inference done right. MCMC, probabilistic programming, and causal models from the PyMC team.",
-      "url": "https://www.pymc-labs.com/blog-posts/",
-      "score": 0.0604,
-      "cold_start": false,
-      "signals": {
-        "clicks": 0,
-        "impressions": 48,
-        "dwell_ms": 221674,
-        "viewable_sec": 266.09999999999997,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 23,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0
-      },
-      "rank": 10
     },
     {
       "name": "Alibaba Fashion Combo",
@@ -278,29 +153,156 @@
       "rank": 11
     },
     {
-      "name": "CMS Hospital Price Transparency",
-      "type": "dataset",
-      "category": "Healthcare",
-      "description": "Hospital pricing data mandated since 2021. Negotiated rates, chargemaster prices across 6,000+ hospitals. Healthcare pricing research",
-      "url": "https://www.cms.gov/hospital-price-transparency",
-      "score": 0.0538,
+      "name": "A/B Testing on Social Networks",
+      "type": "paper",
+      "category": "Experimentation > A/B Test Design & Analysis",
+      "description": "LinkedIn's landmark paper on network interference in A/B tests. Shows how social connections violate SUTVA, proposes cluster-based randomization and graph cluster metrics, and introduces the 'network A/B test' framework now used across social platforms.",
+      "url": "https://content.linkedin.com/content/dam/engineering/site-assets/pdfs/ABTestingSocialNetwork_share.pdf",
+      "score": 0.0412,
       "cold_start": false,
       "signals": {
-        "clicks": 5,
-        "impressions": 6,
-        "dwell_ms": 265741,
-        "viewable_sec": 406.9,
+        "clicks": 6,
+        "impressions": 23,
+        "dwell_ms": 70882,
+        "viewable_sec": 75.3,
         "scroll_90": 0,
         "scroll_75": 0,
         "scroll_50": 0,
         "search_clicks": 0,
-        "deep_sessions": 4,
+        "deep_sessions": 7,
         "rage_clicks": 0,
         "quick_bounces": 0,
         "coviews": 0,
         "coclicks": 0
       },
-      "rank": 12
+      "citations": 200,
+      "rank": 16
+    },
+    {
+      "name": "Ax (Meta Adaptive Experimentation)",
+      "type": "package",
+      "category": "Adaptive Experimentation & Bandits",
+      "description": "Meta's open-source platform for adaptive experimentation. Bayesian optimization, multi-objective optimization, and automated experiment design. Built on BoTorch for AI-assisted experimentation.",
+      "url": "https://ax.dev",
+      "score": 0.0217,
+      "cold_start": false,
+      "signals": {
+        "clicks": 2,
+        "impressions": 14,
+        "dwell_ms": 31040,
+        "viewable_sec": 42.6,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 7,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0
+      },
+      "rank": 23
+    },
+    {
+      "name": "Bambi",
+      "type": "package",
+      "category": "Bayesian Econometrics",
+      "description": "High-level interface for building Bayesian GLMMs, built on top of PyMC. Uses formula syntax similar to R's `lme4`.",
+      "url": "https://github.com/bambinos/bambi",
+      "score": 0.0203,
+      "cold_start": false,
+      "signals": {
+        "clicks": 2,
+        "impressions": 8,
+        "dwell_ms": 53396,
+        "viewable_sec": 77.3,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 5,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0
+      },
+      "rank": 25
+    },
+    {
+      "name": "Spotify",
+      "type": "career",
+      "category": "Company Lists",
+      "description": "Career portal",
+      "url": "https://www.lifeatspotify.com/jobs/",
+      "score": 0.0072,
+      "cold_start": false,
+      "signals": {
+        "clicks": 1,
+        "impressions": 1,
+        "dwell_ms": 37283,
+        "viewable_sec": 33.4,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 1,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0
+      },
+      "rank": 140
+    },
+    {
+      "name": "Netflix Causal Inference",
+      "type": "community",
+      "category": "Research Labs",
+      "description": "Causal inference for recommender systems. CompCI project, annual CIDER roundtable. Research advisor: Nathan Kallus (Cornell).",
+      "url": "https://research.netflix.com/research-area/experimentation-and-causal-inference",
+      "score": 0.0065,
+      "cold_start": false,
+      "signals": {
+        "clicks": 2,
+        "impressions": 0,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0
+      },
+      "rank": 158
+    },
+    {
+      "name": "The Theory and Practice of Revenue Management",
+      "type": "paper",
+      "category": "Pricing > Dynamic Pricing & Revenue Management",
+      "description": "The definitive textbook on revenue management covering pricing, capacity control, and overbooking.",
+      "url": "https://www.springer.com/gp/book/9781402077012",
+      "score": 0.0056,
+      "cold_start": false,
+      "signals": {
+        "clicks": 0,
+        "impressions": 4,
+        "dwell_ms": 11234,
+        "viewable_sec": 20.4,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 3,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0
+      },
+      "citations": 2223,
+      "rank": 189
     }
   ]
 }
