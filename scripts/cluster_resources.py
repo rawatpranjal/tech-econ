@@ -366,9 +366,9 @@ def main():
     for size in sorted(size_dist.keys()):
         print(f"    {size} items: {size_dist[size]} clusters")
 
-    # Phase 2: Merge small semantic_clusters with similar ones
+    # Phase 2: Group similar small semantic_clusters together
     print("\n" + "=" * 60)
-    print("PHASE 2: Merge small semantic_clusters (<{} items)".format(MIN_CLUSTER_SIZE))
+    print("PHASE 2: Group similar small semantic_clusters (<{} items)".format(MIN_CLUSTER_SIZE))
     print("=" * 60)
 
     # Group semantic_clusters by macro_category
@@ -389,46 +389,60 @@ def main():
         for sem, items in large_groups:
             merged_clusters.append((macro, format_label(sem), sem, items))
 
-        # Merge small groups with similar ones
+        # Group similar small clusters together (instead of merging into large ones)
         if small_groups:
-            # Compute centroids for large groups
-            large_centroids = []
-            for sem, items in large_groups:
-                centroid = compute_centroid(items, embeddings, id_to_idx)
-                large_centroids.append((sem, items, centroid))
-
-            # Try to merge each small group
-            unmerged_items = []
+            # Compute centroids for each small group
+            small_with_centroids = []
             for sem, items in small_groups:
                 centroid = compute_centroid(items, embeddings, id_to_idx)
-                if centroid is None:
-                    unmerged_items.extend(items)
+                if centroid is not None:
+                    small_with_centroids.append((sem, items, centroid))
+                else:
+                    orphans_by_macro[macro].extend(items)
+
+            # Greedy clustering of small groups by similarity
+            HIGH_SIM_THRESHOLD = 0.75  # High threshold for grouping
+            used = set()
+            new_small_clusters = []
+
+            for i, (sem1, items1, centroid1) in enumerate(small_with_centroids):
+                if i in used:
                     continue
 
-                # Find best matching large group
-                best_idx = None
-                best_sim = 0.5  # Minimum similarity threshold
+                # Start a new merged group
+                merged_items = list(items1)
+                merged_sems = [sem1]
+                used.add(i)
 
-                for i, (_, _, large_centroid) in enumerate(large_centroids):
-                    if large_centroid is not None:
-                        sim = np.dot(centroid, large_centroid)
-                        if sim > best_sim:
-                            best_sim = sim
-                            best_idx = i
+                # Find similar small groups to merge with
+                for j, (sem2, items2, centroid2) in enumerate(small_with_centroids):
+                    if j in used:
+                        continue
+                    sim = np.dot(centroid1, centroid2)
+                    if sim > HIGH_SIM_THRESHOLD:
+                        merged_items.extend(items2)
+                        merged_sems.append(sem2)
+                        used.add(j)
+                        # Stop if we have enough items
+                        if len(merged_items) >= MAX_CLUSTER_SIZE:
+                            break
 
-                if best_idx is not None:
-                    # Merge into large group
-                    large_sem, large_items, large_centroid = large_centroids[best_idx]
-                    large_items.extend(items)
-                    # Update centroid
-                    new_centroid = compute_centroid(large_items, embeddings, id_to_idx)
-                    large_centroids[best_idx] = (large_sem, large_items, new_centroid)
+                # Create cluster if large enough, otherwise add to orphans
+                if len(merged_items) >= MIN_CLUSTER_SIZE:
+                    # Use the first semantic_cluster as the base label
+                    label = format_label(merged_sems[0])
+                    if len(merged_sems) > 1:
+                        # Try to find a common theme
+                        label = generate_label_from_items(merged_items)
+                    new_small_clusters.append((macro, label, merged_sems[0], merged_items))
+                    print(f"    Created '{label}' ({len(merged_items)} items) from {len(merged_sems)} small clusters")
                 else:
-                    unmerged_items.extend(items)
+                    orphans_by_macro[macro].extend(merged_items)
 
-            # Add unmerged items to orphans
-            orphans_by_macro[macro].extend(unmerged_items)
-            print(f"    Added {len(unmerged_items)} unmerged items to orphans")
+            merged_clusters.extend(new_small_clusters)
+            orphan_count = sum(len(items) for sem, items, _ in small_with_centroids if small_with_centroids.index((sem, items, _)) not in used)
+            if orphan_count > 0:
+                print(f"    Added remaining items to orphans")
 
     print(f"\n  Merged clusters: {len(merged_clusters)}")
 
