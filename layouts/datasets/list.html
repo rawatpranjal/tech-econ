@@ -249,22 +249,10 @@
         <span id="datasets-count" class="result-count">{{ len .Site.Data.datasets }} datasets</span>
     </div>
 
-    <!-- Netflix-style Category Rows (sorted by top item score) -->
+    <!-- Netflix-style Category Rows (sorted by category score) -->
     <div class="explore-rows" id="datasets-rows">
-        {{/* Build category list with scores for sorting */}}
-        {{ $categoryScores := slice }}
-        {{ range $cat := $categories }}
-            {{ $items := where $.Site.Data.datasets "category" $cat }}
-            {{ $sortedItems := sort $items "model_score" "desc" }}
-            {{ $topScore := 0.0 }}
-            {{ with index $sortedItems 0 }}
-                {{ $topScore = .model_score | default 0 }}
-            {{ end }}
-            {{ $categoryScores = $categoryScores | append (dict "name" $cat "score" $topScore) }}
-        {{ end }}
-
-        {{ range sort $categoryScores "score" "desc" }}
-        {{ $cat := .name }}
+        {{ range $catData := .Site.Data.category_rankings.datasets }}
+        {{ $cat := $catData.category }}
         {{ $catDatasets := where $.Site.Data.datasets "category" $cat }}
         {{ if gt (len $catDatasets) 0 }}
         <div class="explore-row category-row" data-category="{{ $cat }}">

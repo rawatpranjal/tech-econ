@@ -72,7 +72,8 @@
 
     <!-- Cards View -->
     <div id="cards-view" class="package-grid">
-        {{ range $cat := $categories }}
+        {{ range $catData := .Site.Data.category_rankings.packages }}
+        {{ $cat := $catData.category }}
         {{ $catPackages := where $.Site.Data.packages "category" $cat }}
         <div class="category-section" data-section-category="{{ $cat }}">
             <h2 class="category-title">{{ $cat }}</h2>

@@ -274,14 +274,8 @@
 
 <!-- Netflix-style Category Rows -->
 <div class="explore-rows" id="learning-rows">
-    {{ $categories := slice }}
-    {{ range .Site.Data.resources }}
-        {{ if and .category (not (in $categories .category)) }}
-            {{ $categories = $categories | append .category }}
-        {{ end }}
-    {{ end }}
-
-    {{ range $cat := sort $categories }}
+    {{ range $catData := .Site.Data.category_rankings.resources }}
+    {{ $cat := $catData.category }}
     {{ $catResources := where $.Site.Data.resources "category" $cat }}
     {{ if gt (len $catResources) 0 }}
     {{ $firstResource := index $catResources 0 }}

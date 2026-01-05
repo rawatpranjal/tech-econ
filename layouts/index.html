@@ -83,12 +83,13 @@
 
     <!-- Cards View -->
     <div id="cards-view" class="package-grid">
-        {{ range $cat := $categories }}
+        {{ range $catData := .Site.Data.category_rankings.packages }}
+        {{ $cat := $catData.category }}
         {{ $catPackages := where $.Site.Data.packages "category" $cat }}
         <div class="category-section" data-section-category="{{ $cat }}">
             <h2 class="category-title">{{ $cat }}</h2>
             <div class="cards-row">
-                {{ range $catPackages }}
+                {{ range sort $catPackages "model_score" "desc" }}
                 <div class="package-card"
                      data-name="{{ .name | lower }}"
                      data-description="{{ .description | lower }}"

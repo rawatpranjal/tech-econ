@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-01-05
+- Re-scored rankings with latest engagement data (1,316 items with engagement)
+
 ## 2026-01-04
 - Added HDBSCAN clustering script for topic organization (per-section, c-TF-IDF labels, recursive splitting)
 - Fixed redundant cluster labels (94→1 issues) with word-level deduplication
