@@ -42,7 +42,7 @@
     "event_format": "conference",
     "geographic_focus": "Netflix",
     "frequency": "annual",
-    "model_score": 0.0142,
+    "model_score": 0.0139,
     "image_url": "",
     "embedding_text": "The Netflix Causal Inference event is a pivotal gathering that delves into the intricacies of causal inference as it pertains to recommender systems. This annual conference is part of the CompCI project and features the CIDER roundtable, where leading experts, including research advisor Nathan Kallus from Cornell, share their insights and findings. The event attracts a diverse audience, primarily consisting of mid-level and senior data scientists, along with curious browsers eager to expand their understanding of advanced methodologies in recommendation algorithms. Attendees can expect a mix of engaging talks, workshops, and networking opportunities that facilitate collaboration and knowledge exchange. The focus on causal inference positions this event at the intersection of academia and industry, making it a unique venue for discussing cutting-edge research and practical applications. Participants typically gain a deeper understanding of how causal inference can enhance recommendation systems, as well as the chance to connect with peers and leaders in the field. The event's accessibility and relevance to both researchers and practitioners make it a valuable experience for anyone interested in the future of recommendation technology.",
     "tfidf_keywords": [
@@ -114,7 +114,7 @@
     ],
     "event_format": "conference",
     "geographic_focus": "Amazon",
-    "model_score": 0.0067,
+    "model_score": 0.0066,
     "image_url": "https://assets.amazon.science/dims4/default/2eb32de/2147483647/strip/true/crop/1198x629+0+0/resize/1200x630!/quality/90/?url=http%3A%2F%2Famazon-topics-brightspot.s3.amazonaws.com%2Fscience%2Fa3%2Ff3%2F855c69f94f16a8803a91c00bdbbd%2Famazon-science-research-area-economics.jpg",
     "embedding_text": "The Amazon Science Economics event is a premier gathering that delves into the intricacies of pricing strategies through advanced methodologies such as A/B testing and switchback experiments. This event is designed for professionals and researchers who are keen on understanding how these techniques can be applied at scale within marketplace environments. Attendees can expect a mix of engaging talks, workshops, and networking opportunities that foster collaboration and knowledge sharing among peers from both academia and industry. The focus on pricing labs highlights the importance of empirical research in shaping effective pricing strategies, making it a valuable experience for those involved in data science and economic analysis. Participants typically include mid-level and senior data scientists, as well as curious individuals looking to expand their understanding of pricing dynamics in technology-driven marketplaces. The event also provides a platform for discussing the latest trends and innovations in marketplace analytics, making it a must-attend for anyone interested in the intersection of economics and technology. With its emphasis on practical applications and real-world scenarios, the Amazon Science Economics event stands out among similar gatherings by offering a unique blend of academic rigor and industry relevance.",
     "tfidf_keywords": [
@@ -182,7 +182,7 @@
       "What networking opportunities are available at MeasuringU?"
     ],
     "event_format": "online",
-    "model_score": 0.0067,
+    "model_score": 0.0066,
     "subtopic": "Experimentation",
     "embedding_text": "MeasuringU is an online event dedicated to the exploration of survey science, conjoint analysis, and quantitative UX research. It emphasizes the importance of statistical rigor in product research, making it an essential gathering for professionals aiming to enhance user experience through data-driven insights. Attendees typically include junior to senior data scientists, UX researchers, and curious individuals eager to learn about the latest methodologies in user experience research. The event features a variety of session formats, including talks and workshops, designed to cater to both academic and industry-oriented participants. While the event is accessible online, it draws a diverse audience from various geographic locations, allowing for a rich exchange of ideas and experiences. Notable tracks may include discussions on advanced statistical techniques and their applications in real-world scenarios, providing attendees with valuable networking opportunities. Participants can expect to gain practical knowledge that they can apply in their own work, making MeasuringU a unique platform for learning and collaboration in the field of UX research. Compared to similar events, MeasuringU stands out for its focus on quantitative methods and the integration of statistical rigor into UX practices.",
     "tfidf_keywords": [
@@ -213,6 +213,160 @@
       "consumer-behavior",
       "data-engineering",
       "product-analytics"
+    ]
+  },
+  {
+    "name": "Wharton Customer Analytics Initiative (WCAI)",
+    "description": "World's preeminent customer analytics research center bridging academic research and industry practice. Hosts conferences, provides datasets, and publishes practitioner-focused research.",
+    "category": "MarTech & Customer Analytics",
+    "url": "https://wcai.wharton.upenn.edu/",
+    "type": "Research Center",
+    "tags": [
+      "Research",
+      "Customer Analytics",
+      "Industry-Academic"
+    ],
+    "domain": "Marketing",
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "academic-conference",
+      "industry-event",
+      "networking"
+    ],
+    "summary": "The Wharton Customer Analytics Initiative (WCAI) is a leading research center focused on bridging the gap between academic research and industry practice in customer analytics. Attendees typically include professionals from both academia and industry, looking to enhance their understanding of customer behavior through data-driven insights.",
+    "use_cases": [
+      "Gain insights into customer behavior",
+      "Network with industry professionals",
+      "Learn about the latest research in customer analytics"
+    ],
+    "audience": [
+      "Mid-DS",
+      "Senior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is the focus of the Wharton Customer Analytics Initiative?",
+      "Who typically attends the WCAI conferences?",
+      "What types of sessions are offered at WCAI events?",
+      "How does WCAI bridge academic research and industry practice?",
+      "What networking opportunities are available at WCAI?",
+      "What insights can attendees gain from WCAI events?",
+      "How does WCAI compare to other customer analytics conferences?",
+      "What are the main themes of the WCAI conferences?"
+    ],
+    "community_type": "research-center",
+    "engagement_level": "professional",
+    "model_score": 0.0029,
+    "image_url": "https://ai.wharton.upenn.edu/wp-content/uploads/2025/04/WHAIR-featured-image-large-929x632.png",
+    "embedding_text": "The Wharton Customer Analytics Initiative (WCAI) stands as the world's preeminent research center dedicated to customer analytics, uniquely positioned to bridge the gap between academic research and industry practice. With a strong emphasis on fostering collaboration between scholars and practitioners, WCAI hosts annual conferences that attract a diverse audience of professionals from both academia and industry. Attendees typically include data scientists, marketing professionals, and researchers eager to explore the latest advancements in customer analytics. The event features a variety of session formats, including keynote talks from leading experts, interactive workshops, and panel discussions that encourage networking and knowledge sharing. This blend of academic rigor and practical application makes WCAI a vital platform for those looking to deepen their understanding of customer behavior through data-driven insights. The conference not only highlights cutting-edge research but also offers attendees the opportunity to engage with datasets and methodologies that are shaping the future of customer analytics. Networking opportunities abound, allowing participants to connect with peers, share ideas, and foster collaborations that extend beyond the event. Attendees leave with valuable insights and practical knowledge that can be applied directly to their work, making WCAI a must-attend event for anyone serious about customer analytics. Compared to similar events, WCAI's unique focus on the intersection of academia and industry sets it apart, providing a rich environment for learning and professional growth.",
+    "event_format": "conference",
+    "frequency": "annual",
+    "tfidf_keywords": [
+      "customer-analytics",
+      "data-driven-insights",
+      "academic-industry-bridge",
+      "networking-opportunities",
+      "research-practice",
+      "workshops",
+      "keynote-talks",
+      "panel-discussions",
+      "datasets",
+      "methodologies"
+    ],
+    "semantic_cluster": "customer-analytics-research",
+    "content_format": "community",
+    "depth_level": "intermediate",
+    "related_concepts": [
+      "consumer-behavior",
+      "data-science",
+      "marketing-analytics",
+      "behavioral-economics",
+      "statistical-methods"
+    ],
+    "canonical_topics": [
+      "consumer-behavior",
+      "data-engineering",
+      "machine-learning",
+      "econometrics",
+      "marketing-analytics"
+    ]
+  },
+  {
+    "name": "Marketing Science Institute (MSI)",
+    "description": "The primary bridge between marketing academia and industry. Sets annual research priorities and publishes working papers that guide both academic research and industry practice.",
+    "category": "MarTech & Customer Analytics",
+    "url": "https://www.msi.org/",
+    "type": "Research Organization",
+    "tags": [
+      "Research",
+      "Marketing Science",
+      "Industry"
+    ],
+    "domain": "Marketing",
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "academic-conference",
+      "industry-event",
+      "networking"
+    ],
+    "summary": "The Marketing Science Institute (MSI) serves as a vital link between marketing academia and industry, focusing on setting annual research priorities and publishing working papers that inform both academic research and industry practices. Attendees typically include marketing professionals, researchers, and academics interested in the latest developments in marketing science.",
+    "use_cases": [
+      "to learn about cutting-edge marketing research",
+      "to network with industry professionals",
+      "to gain insights into academic research that informs practice"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "What are the latest research priorities in marketing science?",
+      "How does MSI bridge the gap between academia and industry?",
+      "What types of working papers does MSI publish?",
+      "Who typically attends the Marketing Science Institute events?",
+      "What networking opportunities are available at MSI?",
+      "How can industry professionals benefit from MSI's research?",
+      "What is the focus of the Marketing Science Institute?",
+      "What is the relationship between marketing academia and industry?"
+    ],
+    "community_type": "professional-org",
+    "engagement_level": "professional",
+    "frequency": "annual",
+    "model_score": 0.0029,
+    "image_url": "https://www.msi.org/wp-content/uploads/2020/06/immersion_20181-scaled-e1594752119938.jpg",
+    "embedding_text": "The Marketing Science Institute (MSI) plays a crucial role in connecting the realms of marketing academia and industry, serving as a primary bridge that facilitates the exchange of ideas and research findings. With a focus on setting annual research priorities, MSI publishes working papers that guide both academic research and industry practice, making it a key player in the marketing landscape. Attendees of MSI events typically include a diverse mix of marketing professionals, researchers, and academics who are eager to engage with the latest developments in marketing science. The event features a variety of session formats, including talks, workshops, and networking opportunities, allowing participants to delve into the intricacies of marketing research while also fostering connections with peers and industry leaders. The orientation of the event leans towards both academic and industry perspectives, ensuring that discussions are relevant and applicable to real-world challenges faced by marketers today. While the specific geographic reach of MSI events may vary, they are designed to be accessible to a wide audience, drawing participants from various regions who are interested in advancing their understanding of marketing science. Notable tracks or special sessions often highlight emerging trends and innovative methodologies, providing attendees with valuable insights that can be directly applied to their work. Networking opportunities abound, allowing participants to connect with thought leaders and fellow attendees, facilitating collaborations and knowledge sharing. Ultimately, attendees leave MSI events with a deeper understanding of marketing science, equipped with new ideas and strategies that can enhance their professional practice. Compared to similar events, MSI stands out for its unique focus on the intersection of academic research and industry application, making it an essential gathering for those committed to advancing the field of marketing.",
+    "event_format": "conference",
+    "tfidf_keywords": [
+      "marketing science",
+      "working papers",
+      "research priorities",
+      "academic-industry bridge",
+      "networking opportunities",
+      "marketing professionals",
+      "industry practice",
+      "session formats",
+      "emerging trends",
+      "innovative methodologies"
+    ],
+    "semantic_cluster": "marketing-academia-industry",
+    "content_format": "community",
+    "depth_level": "intermediate",
+    "related_concepts": [
+      "consumer-behavior",
+      "industrial-organization",
+      "behavioral-economics",
+      "policy-evaluation",
+      "marketing-strategy"
+    ],
+    "canonical_topics": [
+      "consumer-behavior",
+      "industrial-organization",
+      "behavioral-economics",
+      "marketing"
     ]
   },
   {
@@ -264,7 +418,7 @@
     "event_format": "conference",
     "geographic_focus": "Various US cities",
     "frequency": "annual",
-    "model_score": 0.0029,
+    "model_score": 0.0028,
     "image_url": "/images/logos/aeaweb.png",
     "embedding_text": "The ASSA Annual Meeting, organized by the Allied Social Science Associations, represents the largest convergence of economists in the world. This prestigious event focuses on a variety of themes central to the field of economics, including applied analytics, market design, and causal inference. It attracts a diverse audience comprising economists from academia, industry professionals, and policymakers, all eager to engage in discussions that shape the future of economic research and practice. The meeting features a range of session formats, including keynote talks, panel discussions, and workshops, allowing for both formal presentations and informal exchanges of ideas. Notably, the event is characterized by its strong academic orientation, with significant participation from leading economic associations such as the American Economic Association (AEA) and the Econometric Society, alongside over 60 allied associations. This creates a rich environment for interdisciplinary collaboration and networking opportunities, enabling attendees to connect with peers, share insights, and explore potential partnerships. The ASSA Annual Meeting is held in various cities across the United States, making it accessible to a wide audience. Participants typically gain valuable knowledge about the latest research trends, methodologies, and applications in economics, enhancing their professional development and academic pursuits. Compared to similar events, the ASSA Annual Meeting stands out due to its scale, breadth of topics covered, and the caliber of speakers and attendees, making it a must-attend for anyone serious about economics.",
     "tfidf_keywords": [
@@ -431,7 +585,7 @@
     ],
     "event_format": "conference",
     "frequency": "annual",
-    "model_score": 0.0023,
+    "model_score": 0.0022,
     "image_url": "https://cdn.prod.website-files.com/6521956630a53cecc9e188c3/66ed22ea77fcd2bfa70d51b5_Artboard.png",
     "embedding_text": "The Causal Data Science Meeting is an annual conference that serves as a pivotal gathering for researchers and practitioners in the fields of causal inference and machine learning. Endorsed by Nobel laureate Guido Imbens, this event attracts a diverse audience, including academics, industry professionals, and graduate students, all eager to explore the latest advancements and applications of causal methodologies. The conference typically features a mix of keynote talks, panel discussions, and workshops that delve into both theoretical and practical aspects of causal data science. Attendees can expect to engage in rich discussions that bridge the gap between academic research and industry practices, making it an ideal venue for networking and collaboration. The event's strong industry presence from major tech companies highlights its relevance and importance in the current data landscape. Participants gain valuable insights into cutting-edge research, practical applications, and emerging trends, all while fostering connections with peers and leaders in the field. The Causal Data Science Meeting stands out among similar events by emphasizing the integration of causal inference with machine learning techniques, providing a unique perspective that is increasingly vital in today's data-driven world. With a focus on fostering an inclusive environment for learning and collaboration, this conference is a must-attend for anyone looking to deepen their understanding of causal methodologies and their applications in various domains.",
     "tfidf_keywords": [
@@ -537,160 +691,6 @@
       "econometrics",
       "statistics",
       "marketing-science"
-    ]
-  },
-  {
-    "name": "Wharton Customer Analytics Initiative (WCAI)",
-    "description": "World's preeminent customer analytics research center bridging academic research and industry practice. Hosts conferences, provides datasets, and publishes practitioner-focused research.",
-    "category": "MarTech & Customer Analytics",
-    "url": "https://wcai.wharton.upenn.edu/",
-    "type": "Research Center",
-    "tags": [
-      "Research",
-      "Customer Analytics",
-      "Industry-Academic"
-    ],
-    "domain": "Marketing",
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [
-      "academic-conference",
-      "industry-event",
-      "networking"
-    ],
-    "summary": "The Wharton Customer Analytics Initiative (WCAI) is a leading research center focused on bridging the gap between academic research and industry practice in customer analytics. Attendees typically include professionals from both academia and industry, looking to enhance their understanding of customer behavior through data-driven insights.",
-    "use_cases": [
-      "Gain insights into customer behavior",
-      "Network with industry professionals",
-      "Learn about the latest research in customer analytics"
-    ],
-    "audience": [
-      "Mid-DS",
-      "Senior-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is the focus of the Wharton Customer Analytics Initiative?",
-      "Who typically attends the WCAI conferences?",
-      "What types of sessions are offered at WCAI events?",
-      "How does WCAI bridge academic research and industry practice?",
-      "What networking opportunities are available at WCAI?",
-      "What insights can attendees gain from WCAI events?",
-      "How does WCAI compare to other customer analytics conferences?",
-      "What are the main themes of the WCAI conferences?"
-    ],
-    "community_type": "research-center",
-    "engagement_level": "professional",
-    "model_score": 0.0,
-    "image_url": "https://ai.wharton.upenn.edu/wp-content/uploads/2025/04/WHAIR-featured-image-large-929x632.png",
-    "embedding_text": "The Wharton Customer Analytics Initiative (WCAI) stands as the world's preeminent research center dedicated to customer analytics, uniquely positioned to bridge the gap between academic research and industry practice. With a strong emphasis on fostering collaboration between scholars and practitioners, WCAI hosts annual conferences that attract a diverse audience of professionals from both academia and industry. Attendees typically include data scientists, marketing professionals, and researchers eager to explore the latest advancements in customer analytics. The event features a variety of session formats, including keynote talks from leading experts, interactive workshops, and panel discussions that encourage networking and knowledge sharing. This blend of academic rigor and practical application makes WCAI a vital platform for those looking to deepen their understanding of customer behavior through data-driven insights. The conference not only highlights cutting-edge research but also offers attendees the opportunity to engage with datasets and methodologies that are shaping the future of customer analytics. Networking opportunities abound, allowing participants to connect with peers, share ideas, and foster collaborations that extend beyond the event. Attendees leave with valuable insights and practical knowledge that can be applied directly to their work, making WCAI a must-attend event for anyone serious about customer analytics. Compared to similar events, WCAI's unique focus on the intersection of academia and industry sets it apart, providing a rich environment for learning and professional growth.",
-    "event_format": "conference",
-    "frequency": "annual",
-    "tfidf_keywords": [
-      "customer-analytics",
-      "data-driven-insights",
-      "academic-industry-bridge",
-      "networking-opportunities",
-      "research-practice",
-      "workshops",
-      "keynote-talks",
-      "panel-discussions",
-      "datasets",
-      "methodologies"
-    ],
-    "semantic_cluster": "customer-analytics-research",
-    "content_format": "community",
-    "depth_level": "intermediate",
-    "related_concepts": [
-      "consumer-behavior",
-      "data-science",
-      "marketing-analytics",
-      "behavioral-economics",
-      "statistical-methods"
-    ],
-    "canonical_topics": [
-      "consumer-behavior",
-      "data-engineering",
-      "machine-learning",
-      "econometrics",
-      "marketing-analytics"
-    ]
-  },
-  {
-    "name": "Marketing Science Institute (MSI)",
-    "description": "The primary bridge between marketing academia and industry. Sets annual research priorities and publishes working papers that guide both academic research and industry practice.",
-    "category": "MarTech & Customer Analytics",
-    "url": "https://www.msi.org/",
-    "type": "Research Organization",
-    "tags": [
-      "Research",
-      "Marketing Science",
-      "Industry"
-    ],
-    "domain": "Marketing",
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [
-      "academic-conference",
-      "industry-event",
-      "networking"
-    ],
-    "summary": "The Marketing Science Institute (MSI) serves as a vital link between marketing academia and industry, focusing on setting annual research priorities and publishing working papers that inform both academic research and industry practices. Attendees typically include marketing professionals, researchers, and academics interested in the latest developments in marketing science.",
-    "use_cases": [
-      "to learn about cutting-edge marketing research",
-      "to network with industry professionals",
-      "to gain insights into academic research that informs practice"
-    ],
-    "audience": [
-      "Early-PhD",
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS"
-    ],
-    "synthetic_questions": [
-      "What are the latest research priorities in marketing science?",
-      "How does MSI bridge the gap between academia and industry?",
-      "What types of working papers does MSI publish?",
-      "Who typically attends the Marketing Science Institute events?",
-      "What networking opportunities are available at MSI?",
-      "How can industry professionals benefit from MSI's research?",
-      "What is the focus of the Marketing Science Institute?",
-      "What is the relationship between marketing academia and industry?"
-    ],
-    "community_type": "professional-org",
-    "engagement_level": "professional",
-    "frequency": "annual",
-    "model_score": 0.0,
-    "image_url": "https://www.msi.org/wp-content/uploads/2020/06/immersion_20181-scaled-e1594752119938.jpg",
-    "embedding_text": "The Marketing Science Institute (MSI) plays a crucial role in connecting the realms of marketing academia and industry, serving as a primary bridge that facilitates the exchange of ideas and research findings. With a focus on setting annual research priorities, MSI publishes working papers that guide both academic research and industry practice, making it a key player in the marketing landscape. Attendees of MSI events typically include a diverse mix of marketing professionals, researchers, and academics who are eager to engage with the latest developments in marketing science. The event features a variety of session formats, including talks, workshops, and networking opportunities, allowing participants to delve into the intricacies of marketing research while also fostering connections with peers and industry leaders. The orientation of the event leans towards both academic and industry perspectives, ensuring that discussions are relevant and applicable to real-world challenges faced by marketers today. While the specific geographic reach of MSI events may vary, they are designed to be accessible to a wide audience, drawing participants from various regions who are interested in advancing their understanding of marketing science. Notable tracks or special sessions often highlight emerging trends and innovative methodologies, providing attendees with valuable insights that can be directly applied to their work. Networking opportunities abound, allowing participants to connect with thought leaders and fellow attendees, facilitating collaborations and knowledge sharing. Ultimately, attendees leave MSI events with a deeper understanding of marketing science, equipped with new ideas and strategies that can enhance their professional practice. Compared to similar events, MSI stands out for its unique focus on the intersection of academic research and industry application, making it an essential gathering for those committed to advancing the field of marketing.",
-    "event_format": "conference",
-    "tfidf_keywords": [
-      "marketing science",
-      "working papers",
-      "research priorities",
-      "academic-industry bridge",
-      "networking opportunities",
-      "marketing professionals",
-      "industry practice",
-      "session formats",
-      "emerging trends",
-      "innovative methodologies"
-    ],
-    "semantic_cluster": "marketing-academia-industry",
-    "content_format": "community",
-    "depth_level": "intermediate",
-    "related_concepts": [
-      "consumer-behavior",
-      "industrial-organization",
-      "behavioral-economics",
-      "policy-evaluation",
-      "marketing-strategy"
-    ],
-    "canonical_topics": [
-      "consumer-behavior",
-      "industrial-organization",
-      "behavioral-economics",
-      "marketing"
     ]
   },
   {
