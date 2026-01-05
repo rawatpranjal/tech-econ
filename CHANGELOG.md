@@ -1,6 +1,12 @@
 # Changelog
 
 ## 2026-01-05
+- **Learning section niche clusters V3**: Method-specific topic clusters using `semantic_cluster` field
+  - 51 clusters, all in 4-10 item range (avg 6.7 items)
+  - Labels like "Causal Inference Methods: Statistics", "Marketplace Experimentation: A/B Testing"
+  - Cross-category merging within macro_category (IV & RDD + Causal Inference in same cluster)
+  - Recursive K-means splitting to enforce max cluster size
+- Updated `scripts/cluster_resources.py` V3 algorithm: semantic_cluster grouping → merge small → split large → cluster orphans
 - Re-scored rankings with latest engagement data (1,316 items with engagement)
 
 ## 2026-01-04

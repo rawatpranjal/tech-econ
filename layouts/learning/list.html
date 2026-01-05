@@ -272,23 +272,22 @@
     <span id="result-count" class="result-count">{{ len .Site.Data.resources }} resources</span>
 </div>
 
-<!-- Netflix-style Category Rows -->
+<!-- Netflix-style Cluster Rows (Niche Topics) -->
 <div class="explore-rows" id="learning-rows">
-    {{ range $catData := .Site.Data.category_rankings.resources }}
-    {{ $cat := $catData.category }}
-    {{ $catResources := where $.Site.Data.resources "category" $cat }}
-    {{ if gt (len $catResources) 0 }}
-    {{ $firstResource := index $catResources 0 }}
+    {{ range $cluster := .Site.Data.resource_clusters.clusters }}
+    {{ if ge $cluster.item_count 3 }}
     <div class="explore-row category-row"
-         data-category="{{ $cat }}"
-         data-macro="{{ $firstResource.macro_category }}">
+         data-category="{{ $cluster.original_category }}"
+         data-macro="{{ $cluster.macro_category }}">
         <div class="explore-row-header">
-            <h2 class="explore-row-title">{{ $cat }}</h2>
-            <span class="explore-row-count">{{ len $catResources }} resources</span>
+            <h2 class="explore-row-title">{{ $cluster.label }}</h2>
+            <span class="explore-row-count">{{ $cluster.item_count }} resources</span>
         </div>
         <div class="explore-scroller-wrapper">
             <div class="explore-scroller">
-                {{ range sort $catResources "model_score" "desc" }}
+                {{ range $itemId := $cluster.carousel_items }}
+                {{ $resource := index (where $.Site.Data.resources "id" $itemId) 0 }}
+                {{ with $resource }}
                 <a href="{{ .url }}" target="_blank" rel="noopener"
                    class="learning-card"
                    data-name="{{ .name | lower }}"
@@ -312,6 +311,7 @@
                         {{ end }}
                     </div>
                 </a>
+                {{ end }}
                 {{ end }}
             </div>
             <button class="scroller-nav prev" aria-label="Scroll left">
