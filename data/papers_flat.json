@@ -17,7 +17,7 @@
     "category": "Experimentation > A/B Test Design & Analysis",
     "topic": "Experimentation",
     "subtopic": "A/B Test Design & Analysis",
-    "model_score": 0.0842
+    "model_score": 0.0412
   },
   {
     "id": "paper-the-theory-and-practice-of-revenue-management",
@@ -37,7 +37,7 @@
     "category": "Pricing > Dynamic Pricing & Revenue Management",
     "topic": "Pricing",
     "subtopic": "Dynamic Pricing & Revenue Management",
-    "model_score": 0.0121
+    "model_score": 0.0056
   },
   {
     "id": "paper-from-first-price-auctions-to-incentive-compatible-auctions",
@@ -57,7 +57,7 @@
     "category": "Advertising > Autobidding & Budget Pacing",
     "topic": "Advertising",
     "subtopic": "Autobidding & Budget Pacing",
-    "model_score": 0.0004
+    "model_score": 0.0001
   },
   {
     "id": "paper-discrete-choice-methods-with-simulation-2nd-ed",
@@ -77,7 +77,7 @@
     "category": "Choice Models & Dynamic Choice > Discrete Choice (Logit, Mixed Logit)",
     "topic": "Choice Models & Dynamic Choice",
     "subtopic": "Discrete Choice (Logit, Mixed Logit)",
-    "model_score": 0.0004
+    "model_score": 0.0001
   },
   {
     "id": "paper-use-of-alternative-data-in-credit-process",
@@ -97,7 +97,7 @@
     "category": "Credit & Lending > Alternative Data",
     "topic": "Credit & Lending",
     "subtopic": "Alternative Data",
-    "model_score": 0.0004
+    "model_score": 0.0001
   },
   {
     "id": "paper-constitutional-ai-harmlessness-from-ai-feedback",
@@ -117,27 +117,7 @@
     "category": "Inverse RL & Preference Learning > Human Feedback & RLHF",
     "topic": "Inverse RL & Preference Learning",
     "subtopic": "Human Feedback & RLHF",
-    "model_score": 0.0004
-  },
-  {
-    "id": "paper-robyn-continuous-semi-automated-mmm",
-    "name": "Robyn: Continuous & Semi-Automated MMM",
-    "title": "Robyn: Continuous & Semi-Automated MMM",
-    "authors": "Julian Runge, et al. (Meta)",
-    "year": 2024,
-    "url": "https://arxiv.org/abs/2403.14674",
-    "description": "Technical documentation for Meta's open-source Robyn; covers ridge regression, evolutionary optimization, calibration.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Marketing & Growth",
-      "Marketing Mix Modeling"
-    ],
-    "type": "paper",
-    "category": "Marketing & Growth > Marketing Mix Modeling",
-    "topic": "Marketing & Growth",
-    "subtopic": "Marketing Mix Modeling",
-    "model_score": 0.0004
+    "model_score": 0.0001
   },
   {
     "id": "paper-personalization-in-email-marketing-the-role-of-noninformative-advertising-content",
@@ -157,7 +137,7 @@
     "category": "Advertising > Targeting & Lookalikes",
     "topic": "Advertising",
     "subtopic": "Targeting & Lookalikes",
-    "model_score": 0.0003
+    "model_score": 0.0001
   },
   {
     "id": "paper-alibaba-vehicle-routing-algorithms-enable-rapid-pick-and-delivery",
@@ -177,27 +157,7 @@
     "category": "Logistics & Operations > Routing & Dispatch",
     "topic": "Logistics & Operations",
     "subtopic": "Routing & Dispatch",
-    "model_score": 0.0003
-  },
-  {
-    "id": "paper-training-language-models-to-follow-instructions-with-human-feedback-instructgpt",
-    "name": "Training Language Models to Follow Instructions with Human Feedback (InstructGPT)",
-    "title": "Training Language Models to Follow Instructions with Human Feedback (InstructGPT)",
-    "authors": "Long Ouyang, Jeff Wu et al. (OpenAI)",
-    "year": 2022,
-    "url": "https://arxiv.org/abs/2203.02155",
-    "description": "1.3B InstructGPT outperforms 175B GPT-3 on human preferences; foundation for ChatGPT.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Inverse RL & Preference Learning",
-      "Human Feedback & RLHF"
-    ],
-    "type": "paper",
-    "category": "Inverse RL & Preference Learning > Human Feedback & RLHF",
-    "topic": "Inverse RL & Preference Learning",
-    "subtopic": "Human Feedback & RLHF",
-    "model_score": 0.0003
+    "model_score": 0.0001
   },
   {
     "id": "paper-direct-preference-optimization-dpo",
@@ -217,47 +177,7 @@
     "category": "Inverse RL & Preference Learning > Human Feedback & RLHF",
     "topic": "Inverse RL & Preference Learning",
     "subtopic": "Human Feedback & RLHF",
-    "model_score": 0.0003
-  },
-  {
-    "id": "paper-media-mix-model-calibration-with-bayesian-priors",
-    "name": "Media Mix Model Calibration With Bayesian Priors",
-    "title": "Media Mix Model Calibration With Bayesian Priors",
-    "authors": "Google Research",
-    "year": 2023,
-    "url": "https://research.google/pubs/media-mix-model-calibration-with-bayesian-priors/",
-    "description": "Methods for calibrating MMM with experiment results; bridges MMM and incrementality testing.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Marketing & Growth",
-      "Marketing Mix Modeling"
-    ],
-    "type": "paper",
-    "category": "Marketing & Growth > Marketing Mix Modeling",
-    "topic": "Marketing & Growth",
-    "subtopic": "Marketing Mix Modeling",
-    "model_score": 0.0003
-  },
-  {
-    "id": "paper-differential-response-analysis",
-    "name": "Differential Response Analysis",
-    "title": "Differential Response Analysis",
-    "authors": "Nicholas Radcliffe, Patrick Surry",
-    "year": 1999,
-    "url": "https://stochasticsolutions.com/papers.html",
-    "description": "Original uplift paper introducing the 'Persuadables' segmentation framework (Persuadables, Sure Things, Lost Causes, Sleeping Dogs).",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Marketing & Growth",
-      "Uplift Modeling"
-    ],
-    "type": "paper",
-    "category": "Marketing & Growth > Uplift Modeling",
-    "topic": "Marketing & Growth",
-    "subtopic": "Uplift Modeling",
-    "model_score": 0.0003
+    "model_score": 0.0001
   },
   {
     "id": "paper-peeking-at-a-b-tests-why-it-matters-and-what-to-do-about-it",
@@ -277,7 +197,7 @@
     "category": "Experimentation > Sequential & Adaptive Testing",
     "topic": "Experimentation",
     "subtopic": "Sequential & Adaptive Testing",
-    "model_score": 0.0002
+    "model_score": 0.0001
   },
   {
     "id": "paper-forecasting-at-scale-prophet",
@@ -297,7 +217,7 @@
     "category": "Forecasting > Deep Learning for Forecasting",
     "topic": "Forecasting",
     "subtopic": "Deep Learning for Forecasting",
-    "model_score": 0.0002
+    "model_score": 0.0001
   },
   {
     "id": "paper-forecasting-at-scale-prophet-1",
@@ -317,7 +237,7 @@
     "category": "Forecasting > Production Forecasting Systems",
     "topic": "Forecasting",
     "subtopic": "Production Forecasting Systems",
-    "model_score": 0.0002
+    "model_score": 0.0001
   },
   {
     "id": "paper-the-economic-consequences-of-apple-s-app-tracking-transparency",
@@ -337,87 +257,7 @@
     "category": "Advertising > Privacy & Ad Effectiveness",
     "topic": "Advertising",
     "subtopic": "Privacy & Ad Effectiveness",
-    "model_score": 0.0002
-  },
-  {
-    "id": "paper-regression-adjustments-for-analyzing-randomized-experiments",
-    "name": "Regression Adjustments for Analyzing Randomized Experiments",
-    "title": "Regression Adjustments for Analyzing Randomized Experiments",
-    "authors": "Winston Lin",
-    "year": 2013,
-    "url": "https://projecteuclid.org/journals/annals-of-applied-statistics/volume-7/issue-1/Agnostic-notes-on-regression-adjustments-to-experimental-data--Reexamining/10.1214/12-AOAS583.full",
-    "description": "Shows how regression adjustment in randomized experiments yields valid inference even with heterogeneous treatment effects.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Experimentation",
-      "Variance Reduction"
-    ],
-    "type": "paper",
-    "category": "Experimentation > Variance Reduction",
-    "topic": "Experimentation",
-    "subtopic": "Variance Reduction",
-    "model_score": 0.0002
-  },
-  {
-    "id": "paper-switchback-experiments-and-randomized-experiments-for-estimating-platform-level-effects",
-    "name": "Switchback Experiments and Randomized Experiments for Estimating Platform-Level Effects",
-    "title": "Switchback Experiments and Randomized Experiments for Estimating Platform-Level Effects",
-    "authors": "David Holtz, Ruben Lobel, Inessa Liskovich, Sinan Aral",
-    "year": 2020,
-    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3548162",
-    "description": "Design and analysis of switchback experiments for marketplace interventions at Airbnb.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Experimentation",
-      "Switchback & Geo-Experiments"
-    ],
-    "type": "paper",
-    "category": "Experimentation > Switchback & Geo-Experiments",
-    "topic": "Experimentation",
-    "subtopic": "Switchback & Geo-Experiments",
-    "model_score": 0.0002
-  },
-  {
-    "id": "paper-geolift-open-source-solution-for-measuring-incremental-impact",
-    "name": "GeoLift: Open Source Solution for Measuring Incremental Impact",
-    "title": "GeoLift: Open Source Solution for Measuring Incremental Impact",
-    "authors": "Arturo Esquerra, Nicolas Besasie",
-    "year": 2022,
-    "url": "https://github.com/facebookincubator/GeoLift",
-    "description": "Meta's open-source tool for geo-experiment design and measurement using synthetic control methods.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Experimentation",
-      "Switchback & Geo-Experiments"
-    ],
-    "type": "paper",
-    "category": "Experimentation > Switchback & Geo-Experiments",
-    "topic": "Experimentation",
-    "subtopic": "Switchback & Geo-Experiments",
-    "model_score": 0.0002
-  },
-  {
-    "id": "paper-generic-machine-learning-inference-on-heterogeneous-treatment-effects-in-randomized-experiments",
-    "name": "Generic Machine Learning Inference on Heterogeneous Treatment Effects in Randomized Experiments",
-    "title": "Generic Machine Learning Inference on Heterogeneous Treatment Effects in Randomized Experiments",
-    "authors": "Victor Chernozhukov, Mert Demirer, Esther Duflo, Ivan Fern\u00e1ndez-Val",
-    "year": 2020,
-    "url": "https://arxiv.org/abs/1712.04802",
-    "description": "Framework for using any ML method to find heterogeneous effects with valid inference.",
-    "citations": 0,
-    "tag": "",
-    "tags": [
-      "Observational Causal Inference",
-      "Double ML & Heterogeneous Effects"
-    ],
-    "type": "paper",
-    "category": "Observational Causal Inference > Double ML & Heterogeneous Effects",
-    "topic": "Observational Causal Inference",
-    "subtopic": "Double ML & Heterogeneous Effects",
-    "model_score": 0.0002
+    "model_score": 0.0001
   },
   {
     "id": "paper-nonparametric-engel-curves-and-revealed-preference",
@@ -437,27 +277,7 @@
     "category": "Inverse RL & Preference Learning > Revealed Preference at Scale",
     "topic": "Inverse RL & Preference Learning",
     "subtopic": "Revealed Preference at Scale",
-    "model_score": 0.0002
-  },
-  {
-    "id": "paper-the-m4-competition-100-000-time-series-and-61-forecasting-methods",
-    "name": "The M4 Competition: 100,000 Time Series and 61 Forecasting Methods",
-    "title": "The M4 Competition: 100,000 Time Series and 61 Forecasting Methods",
-    "authors": "Spyros Makridakis, Evangelos Spiliotis, Vassilios Assimakopoulos",
-    "year": 2020,
-    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0169207018300785",
-    "description": "100,000 series showing hybrid statistical-ML methods dominate; pure ML underperformed.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Forecasting",
-      "Time Series Foundations"
-    ],
-    "type": "paper",
-    "category": "Forecasting > Time Series Foundations",
-    "topic": "Forecasting",
-    "subtopic": "Time Series Foundations",
-    "model_score": 0.0002
+    "model_score": 0.0001
   },
   {
     "id": "paper-rfm-analysis-for-customer-segmentation",
@@ -477,47 +297,7 @@
     "category": "Clustering & Segmentation > Customer Segmentation",
     "topic": "Clustering & Segmentation",
     "subtopic": "Customer Segmentation",
-    "model_score": 0.0002
-  },
-  {
-    "id": "paper-pinterest-visual-search-the-evolution-and-beyond",
-    "name": "Pinterest Visual Search: The Evolution and Beyond",
-    "title": "Pinterest Visual Search: The Evolution and Beyond",
-    "authors": "Pinterest Engineering",
-    "year": 2020,
-    "url": "https://medium.com/pinterest-engineering/the-evolution-of-pinterest-visual-search-3d3b7d0f8f39",
-    "description": "Evolution of visual search and image clustering at Pinterest\u2014practical lessons at scale.",
-    "citations": null,
-    "tag": "Industry",
-    "tags": [
-      "Clustering & Segmentation",
-      "Visual Content Clustering"
-    ],
-    "type": "paper",
-    "category": "Clustering & Segmentation > Visual Content Clustering",
-    "topic": "Clustering & Segmentation",
-    "subtopic": "Visual Content Clustering",
-    "model_score": 0.0002
-  },
-  {
-    "id": "paper-personalized-pricing-and-consumer-welfare",
-    "name": "Personalized Pricing and Consumer Welfare",
-    "title": "Personalized Pricing and Consumer Welfare",
-    "authors": "Jean-Pierre Dub\u00e9, Sanjog Misra",
-    "year": 2023,
-    "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/722220",
-    "description": "Analyzes welfare effects of machine learning-based personalized pricing.",
-    "citations": 0,
-    "tag": "",
-    "tags": [
-      "Pricing",
-      "Personalized Pricing"
-    ],
-    "type": "paper",
-    "category": "Pricing > Personalized Pricing",
-    "topic": "Pricing",
-    "subtopic": "Personalized Pricing",
-    "model_score": 0.0002
+    "model_score": 0.0001
   },
   {
     "id": "paper-the-long-and-the-short-of-it-balancing-short-and-long-term-marketing-strategies",
@@ -537,27 +317,7 @@
     "category": "Advertising > Brand vs. Performance",
     "topic": "Advertising",
     "subtopic": "Brand vs. Performance",
-    "model_score": 0.0002
-  },
-  {
-    "id": "paper-auto-bidding-auctions-in-the-presence-of-user-costs",
-    "name": "Auto-bidding Auctions in the Presence of User Costs",
-    "title": "Auto-bidding Auctions in the Presence of User Costs",
-    "authors": "Gagan Aggarwal, et al. (Google)",
-    "year": 2024,
-    "url": "https://research.google/pubs/autobidding-auctions-in-the-presence-of-user-costs/",
-    "description": "Analyzes VCG with value-maximizing autobidders; shows cost multipliers improve welfare.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Mechanism Design & Auctions",
-      "Dynamic Auctions & Repeated Games"
-    ],
-    "type": "paper",
-    "category": "Mechanism Design & Auctions > Dynamic Auctions & Repeated Games",
-    "topic": "Mechanism Design & Auctions",
-    "subtopic": "Dynamic Auctions & Repeated Games",
-    "model_score": 0.0002
+    "model_score": 0.0001
   },
   {
     "id": "paper-equilibrium-effects-of-pay-transparency",
@@ -577,47 +337,7 @@
     "category": "Mechanism Design & Auctions > Platform Mechanism Design",
     "topic": "Mechanism Design & Auctions",
     "subtopic": "Platform Mechanism Design",
-    "model_score": 0.0002
-  },
-  {
-    "id": "paper-on-the-cluster-admission-problem-for-cloud-computing",
-    "name": "On the Cluster Admission Problem for Cloud Computing",
-    "title": "On the Cluster Admission Problem for Cloud Computing",
-    "authors": "Ludwig Dierks, Ian Kash, Sven Seuken",
-    "year": 2021,
-    "url": "https://www.jair.org/index.php/jair/article/view/12359",
-    "description": "Proposes admission control policies matching heterogeneous workloads to cloud resources via MDPs and information elicitation; significantly improves cluster utilization.",
-    "citations": 0,
-    "tag": "",
-    "tags": [
-      "Mechanism Design & Auctions",
-      "Cloud & Computing Resource Auctions"
-    ],
-    "type": "paper",
-    "category": "Mechanism Design & Auctions > Cloud & Computing Resource Auctions",
-    "topic": "Mechanism Design & Auctions",
-    "subtopic": "Cloud & Computing Resource Auctions",
-    "model_score": 0.0002
-  },
-  {
-    "id": "paper-auctions-versus-posted-prices-in-online-markets",
-    "name": "Auctions versus Posted Prices in Online Markets",
-    "title": "Auctions versus Posted Prices in Online Markets",
-    "authors": "Liran Einav, Chiara Farronato, Jonathan Levin, Neel Sundaresan",
-    "year": 2018,
-    "url": "https://www.journals.uchicago.edu/doi/10.1086/696569",
-    "description": "Explains eBay's shift from auctions to posted prices by estimating demand trade-offs between price discovery and convenience using millions of seller experiments.",
-    "citations": 0,
-    "tag": "",
-    "tags": [
-      "Structural Estimation",
-      "E-commerce & Online Retail"
-    ],
-    "type": "paper",
-    "category": "Structural Estimation > E-commerce & Online Retail",
-    "topic": "Structural Estimation",
-    "subtopic": "E-commerce & Online Retail",
-    "model_score": 0.0002
+    "model_score": 0.0001
   },
   {
     "id": "paper-intertemporal-price-discrimination-with-forward-looking-consumers-application-to-the-us-market-for-c",
@@ -637,87 +357,7 @@
     "category": "Choice Models & Dynamic Choice > Dynamic Discrete Choice",
     "topic": "Choice Models & Dynamic Choice",
     "subtopic": "Dynamic Discrete Choice",
-    "model_score": 0.0002
-  },
-  {
-    "id": "paper-intertemporal-price-discrimination-in-storable-goods-markets",
-    "name": "Intertemporal Price Discrimination in Storable Goods Markets",
-    "title": "Intertemporal Price Discrimination in Storable Goods Markets",
-    "authors": "Igal Hendel, Aviv Nevo",
-    "year": 2013,
-    "url": "https://www.aeaweb.org/articles?id=10.1257/aer.103.7.2722",
-    "description": "Models optimal pricing when consumers stockpile; sales capture 25-30% of price discrimination profits.",
-    "citations": 0,
-    "tag": "",
-    "tags": [
-      "Choice Models & Dynamic Choice",
-      "Intertemporal Substitution"
-    ],
-    "type": "paper",
-    "category": "Choice Models & Dynamic Choice > Intertemporal Substitution",
-    "topic": "Choice Models & Dynamic Choice",
-    "subtopic": "Intertemporal Substitution",
-    "model_score": 0.0002
-  },
-  {
-    "id": "paper-the-probit-choice-model-under-sequential-search-with-an-application-to-online-retailing",
-    "name": "The Probit Choice Model Under Sequential Search with an Application to Online Retailing",
-    "title": "The Probit Choice Model Under Sequential Search with an Application to Online Retailing",
-    "authors": "Jun B. Kim, Paulo Albuquerque, Bart J. Bronnenberg",
-    "year": 2017,
-    "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2016.2507",
-    "description": "Tractable probit search model combining Weitzman's framework with demand estimation; applied to Amazon camcorder data.",
-    "citations": 0,
-    "tag": "",
-    "tags": [
-      "Choice Models & Dynamic Choice",
-      "Search & Sequential Choice"
-    ],
-    "type": "paper",
-    "category": "Choice Models & Dynamic Choice > Search & Sequential Choice",
-    "topic": "Choice Models & Dynamic Choice",
-    "subtopic": "Search & Sequential Choice",
-    "model_score": 0.0002
-  },
-  {
-    "id": "paper-estimating-performance-in-a-robotic-mobile-fulfillment-system",
-    "name": "Estimating Performance in a Robotic Mobile Fulfillment System",
-    "title": "Estimating Performance in a Robotic Mobile Fulfillment System",
-    "authors": "Thibaud Lamballais, Debjit Roy, Ren\u00e9 de Koster",
-    "year": 2017,
-    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0377221717303144",
-    "description": "Highly-cited queueing network model for Amazon-style RMFS; foundational for warehouse layout optimization and throughput analysis.",
-    "citations": 0,
-    "tag": "",
-    "tags": [
-      "Logistics & Operations",
-      "Warehouse Robotics & Automation"
-    ],
-    "type": "paper",
-    "category": "Logistics & Operations > Warehouse Robotics & Automation",
-    "topic": "Logistics & Operations",
-    "subtopic": "Warehouse Robotics & Automation",
-    "model_score": 0.0002
-  },
-  {
-    "id": "paper-causal-impact-a-new-approach-to-estimate-causal-effects",
-    "name": "Causal Impact: A New Approach to Estimate Causal Effects",
-    "title": "Causal Impact: A New Approach to Estimate Causal Effects",
-    "authors": "Kay Brodersen, Fabian Gallusser, Jim Koehler, et al.",
-    "year": 2015,
-    "url": "https://research.google/pubs/estimating-uncertainty-for-massive-data-streams/",
-    "description": "Google's Bayesian structural time-series approach for measuring impact of geo-level interventions.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Experimentation",
-      "Switchback & Geo-Experiments"
-    ],
-    "type": "paper",
-    "category": "Experimentation > Switchback & Geo-Experiments",
-    "topic": "Experimentation",
-    "subtopic": "Switchback & Geo-Experiments",
-    "model_score": 0.0002
+    "model_score": 0.0001
   },
   {
     "id": "paper-libpostal-international-address-parsing",
@@ -737,106 +377,6 @@
     "category": "Spatial & Geo > Mapping & Geocoding",
     "topic": "Spatial & Geo",
     "subtopic": "Mapping & Geocoding",
-    "model_score": 0.0002
-  },
-  {
-    "id": "paper-risk-based-authentication-practical-deployments-and-research-challenges",
-    "name": "Risk-Based Authentication: Practical Deployments and Research Challenges",
-    "title": "Risk-Based Authentication: Practical Deployments and Research Challenges",
-    "authors": "Stephan Wiefling, Luigi Lo Iacono, Markus D\u00fcrmuth",
-    "year": 2021,
-    "url": "https://riskbasedauthentication.org/publications/",
-    "description": "Analyzes RBA deployments at Google, Microsoft, Amazon; develops measurement framework.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Trust & Safety",
-      "Account Security & Identity"
-    ],
-    "type": "paper",
-    "category": "Trust & Safety > Account Security & Identity",
-    "topic": "Trust & Safety",
-    "subtopic": "Account Security & Identity",
-    "model_score": 0.0002
-  },
-  {
-    "id": "paper-detecting-network-effects-randomizing-over-randomized-experiments",
-    "name": "Detecting Network Effects: Randomizing Over Randomized Experiments",
-    "title": "Detecting Network Effects: Randomizing Over Randomized Experiments",
-    "authors": "Dean Eckles, Brian Karrer, Johan Ugander",
-    "year": 2016,
-    "url": "https://arxiv.org/abs/1404.7530",
-    "description": "Graph cluster randomization and design-based methods for detecting interference in network experiments.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Experimentation",
-      "Interference & Spillovers"
-    ],
-    "type": "paper",
-    "category": "Experimentation > Interference & Spillovers",
-    "topic": "Experimentation",
-    "subtopic": "Interference & Spillovers",
-    "model_score": 0.0001
-  },
-  {
-    "id": "paper-evaluating-the-surrogate-index-as-a-decision-making-tool-using-200-a-b-tests-at-netflix",
-    "name": "Evaluating the Surrogate Index as a Decision-Making Tool Using 200 A/B Tests at Netflix",
-    "title": "Evaluating the Surrogate Index as a Decision-Making Tool Using 200 A/B Tests at Netflix",
-    "authors": "Di Zhang, Sophia Zhao, Maria Dimakopoulou, Diarle Le, Nathan Kallus",
-    "year": 2023,
-    "url": "https://arxiv.org/abs/2311.09857",
-    "description": "Largest empirical validation of surrogates\u201495% consistency between 14-day surrogate predictions and 63-day outcomes across 1,098 test arms.",
-    "citations": 0,
-    "tag": "",
-    "tags": [
-      "Experimentation",
-      "Long-run Effects & Surrogates"
-    ],
-    "type": "paper",
-    "category": "Experimentation > Long-run Effects & Surrogates",
-    "topic": "Experimentation",
-    "subtopic": "Long-run Effects & Surrogates",
-    "model_score": 0.0001
-  },
-  {
-    "id": "paper-a-general-theoretical-paradigm-to-understand-learning-from-human-preferences",
-    "name": "A General Theoretical Paradigm to Understand Learning from Human Preferences",
-    "title": "A General Theoretical Paradigm to Understand Learning from Human Preferences",
-    "authors": "Mohammad Gheshlaghi Azar, Mark Rowland, Bilal Piot et al. (DeepMind)",
-    "year": 2024,
-    "url": "https://proceedings.mlr.press/v238/azar24a.html",
-    "description": "Unifies RLHF/DPO theoretically; Identity Preference Optimization fixes DPO overfitting issues.",
-    "citations": 0,
-    "tag": "",
-    "tags": [
-      "Inverse RL & Preference Learning",
-      "Human Feedback & RLHF"
-    ],
-    "type": "paper",
-    "category": "Inverse RL & Preference Learning > Human Feedback & RLHF",
-    "topic": "Inverse RL & Preference Learning",
-    "subtopic": "Human Feedback & RLHF",
-    "model_score": 0.0001
-  },
-  {
-    "id": "paper-spotify-s-discover-weekly-machine-learning-meets-human-curation",
-    "name": "Spotify's Discover Weekly: Machine Learning Meets Human Curation",
-    "title": "Spotify's Discover Weekly: Machine Learning Meets Human Curation",
-    "authors": "Spotify Engineering",
-    "year": 2015,
-    "url": "https://engineering.atspotify.com/2015/09/the-story-behind-discover-weekly/",
-    "description": "Clustering taste profiles to power personalized playlists at scale.",
-    "citations": null,
-    "tag": "Industry",
-    "tags": [
-      "Clustering & Segmentation",
-      "Customer Segmentation"
-    ],
-    "type": "paper",
-    "category": "Clustering & Segmentation > Customer Segmentation",
-    "topic": "Clustering & Segmentation",
-    "subtopic": "Customer Segmentation",
     "model_score": 0.0001
   },
   {
@@ -860,46 +400,6 @@
     "model_score": 0.0001
   },
   {
-    "id": "paper-automobile-prices-in-market-equilibrium-blp",
-    "name": "Automobile Prices in Market Equilibrium (BLP)",
-    "title": "Automobile Prices in Market Equilibrium (BLP)",
-    "authors": "Steven Berry, James Levinsohn, Ariel Pakes",
-    "year": 1995,
-    "url": "https://www.jstor.org/stable/2171802",
-    "description": "The foundational random coefficients discrete choice model for demand estimation.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Pricing",
-      "Demand Estimation & Elasticity"
-    ],
-    "type": "paper",
-    "category": "Pricing > Demand Estimation & Elasticity",
-    "topic": "Pricing",
-    "subtopic": "Demand Estimation & Elasticity",
-    "model_score": 0.0001
-  },
-  {
-    "id": "paper-pyblp-blp-demand-estimation-in-python",
-    "name": "pyBLP: BLP Demand Estimation in Python",
-    "title": "pyBLP: BLP Demand Estimation in Python",
-    "authors": "Jeff Gortmaker, Chris Conlon",
-    "year": 2020,
-    "url": "https://pyblp.readthedocs.io/",
-    "description": "Modern implementation and extensions of BLP with diagnostics and best practices.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Pricing",
-      "Demand Estimation & Elasticity"
-    ],
-    "type": "paper",
-    "category": "Pricing > Demand Estimation & Elasticity",
-    "topic": "Pricing",
-    "subtopic": "Demand Estimation & Elasticity",
-    "model_score": 0.0001
-  },
-  {
     "id": "paper-freemium-as-optimal-menu-pricing",
     "name": "Freemium as Optimal Menu Pricing",
     "title": "Freemium as Optimal Menu Pricing",
@@ -920,46 +420,6 @@
     "model_score": 0.0001
   },
   {
-    "id": "paper-does-retaining-customers-pay-off",
-    "name": "Does Retaining Customers Pay Off?",
-    "title": "Does Retaining Customers Pay Off?",
-    "authors": "Werner Reinartz, V. Kumar",
-    "year": 2000,
-    "url": "https://sloanreview.mit.edu/article/the-mismanagement-of-customer-loyalty/",
-    "description": "Empirical analysis of the relationship between customer tenure and profitability.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Subscriptions & Retention",
-      "Renewal & Cancellation Dynamics"
-    ],
-    "type": "paper",
-    "category": "Subscriptions & Retention > Renewal & Cancellation Dynamics",
-    "topic": "Subscriptions & Retention",
-    "subtopic": "Renewal & Cancellation Dynamics",
-    "model_score": 0.0001
-  },
-  {
-    "id": "paper-nobel-prize-scientific-background-dmp-model",
-    "name": "Nobel Prize Scientific Background: DMP Model",
-    "title": "Nobel Prize Scientific Background: DMP Model",
-    "authors": "Peter Diamond, Dale Mortensen, Christopher Pissarides",
-    "year": 2010,
-    "url": "https://www.nobelprize.org/uploads/2018/06/advanced-economicsciences2010.pdf",
-    "description": "Comprehensive summary of canonical search-matching theory; matching function, wage bargaining, unemployment dynamics.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Matching & Marketplaces",
-      "Search & Matching Frictions"
-    ],
-    "type": "paper",
-    "category": "Matching & Marketplaces > Search & Matching Frictions",
-    "topic": "Matching & Marketplaces",
-    "subtopic": "Search & Matching Frictions",
-    "model_score": 0.0001
-  },
-  {
     "id": "paper-xgboost-a-scalable-tree-boosting-system",
     "name": "XGBoost: A Scalable Tree Boosting System",
     "title": "XGBoost: A Scalable Tree Boosting System",
@@ -977,86 +437,6 @@
     "category": "Credit & Lending > Credit Scoring & Risk Models",
     "topic": "Credit & Lending",
     "subtopic": "Credit Scoring & Risk Models",
-    "model_score": 0.0001
-  },
-  {
-    "id": "paper-jd-com-improves-fulfillment-efficiency-with-integrated-assortment-planning-and-inventory-allocation",
-    "name": "JD.com Improves Fulfillment Efficiency with Integrated Assortment Planning and Inventory Allocation",
-    "title": "JD.com Improves Fulfillment Efficiency with Integrated Assortment Planning and Inventory Allocation",
-    "authors": "Zhenyang Shen, Yang Zhang, Haomin Wang et al.",
-    "year": 2025,
-    "url": "https://pubsonline.informs.org/doi/10.1287/inte.2024.1301",
-    "description": "End-to-end algorithm improving local fulfillment rates by 0.54% across millions of weekly orders in two-echelon distribution. Franz Edelman Award finalist.",
-    "citations": 0,
-    "tag": "",
-    "tags": [
-      "Logistics & Operations",
-      "Inventory & Fulfillment"
-    ],
-    "type": "paper",
-    "category": "Logistics & Operations > Inventory & Fulfillment",
-    "topic": "Logistics & Operations",
-    "subtopic": "Inventory & Fulfillment",
-    "model_score": 0.0001
-  },
-  {
-    "id": "paper-dynamic-pricing-in-a-labor-market-surge-pricing-and-flexible-work-on-the-uber-platform",
-    "name": "Dynamic Pricing in a Labor Market: Surge Pricing and Flexible Work on the Uber Platform",
-    "title": "Dynamic Pricing in a Labor Market: Surge Pricing and Flexible Work on the Uber Platform",
-    "authors": "M. Keith Chen, Michael Sheldon",
-    "year": 2016,
-    "url": "https://www.anderson.ucla.edu/faculty/keith.chen/papers/SurgeAndFlexibleWork_WorkingPaper.pdf",
-    "description": "Studies driver labor supply response using 25 million Uber trips.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Logistics & Operations",
-      "Capacity Planning"
-    ],
-    "type": "paper",
-    "category": "Logistics & Operations > Capacity Planning",
-    "topic": "Logistics & Operations",
-    "subtopic": "Capacity Planning",
-    "model_score": 0.0001
-  },
-  {
-    "id": "paper-modeling-tabular-data-using-conditional-gan-ctgan",
-    "name": "Modeling Tabular Data using Conditional GAN (CTGAN)",
-    "title": "Modeling Tabular Data using Conditional GAN (CTGAN)",
-    "authors": "Lei Xu, Maria Skoularidou, Alfredo Cuesta-Infante, Kalyan Veeramachaneni",
-    "year": 2019,
-    "url": "https://arxiv.org/pdf/1907.00503",
-    "description": "State-of-the-art GAN for synthetic tabular data; handles mixed types with mode-specific normalization.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Privacy",
-      "Synthetic Data"
-    ],
-    "type": "paper",
-    "category": "Privacy > Synthetic Data",
-    "topic": "Privacy",
-    "subtopic": "Synthetic Data",
-    "model_score": 0.0001
-  },
-  {
-    "id": "paper-t-closeness-privacy-beyond-k-anonymity-and-diversity",
-    "name": "t-Closeness: Privacy Beyond k-Anonymity and \u2113-Diversity",
-    "title": "t-Closeness: Privacy Beyond k-Anonymity and \u2113-Diversity",
-    "authors": "Ninghui Li, Tiancheng Li, Suresh Venkatasubramanian",
-    "year": 2007,
-    "url": "https://www.cs.purdue.edu/homes/ninghui/papers/t_closeness_icde07.pdf",
-    "description": "Requires sensitive attribute distribution in each equivalence class be close to overall distribution.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Privacy",
-      "Anonymization & De-identification"
-    ],
-    "type": "paper",
-    "category": "Privacy > Anonymization & De-identification",
-    "topic": "Privacy",
-    "subtopic": "Anonymization & De-identification",
     "model_score": 0.0001
   },
   {
@@ -1100,6 +480,626 @@
     "model_score": 0.0001
   },
   {
+    "id": "paper-robyn-continuous-semi-automated-mmm",
+    "name": "Robyn: Continuous & Semi-Automated MMM",
+    "title": "Robyn: Continuous & Semi-Automated MMM",
+    "authors": "Julian Runge, et al. (Meta)",
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2403.14674",
+    "description": "Technical documentation for Meta's open-source Robyn; covers ridge regression, evolutionary optimization, calibration.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Marketing & Growth",
+      "Marketing Mix Modeling"
+    ],
+    "type": "paper",
+    "category": "Marketing & Growth > Marketing Mix Modeling",
+    "topic": "Marketing & Growth",
+    "subtopic": "Marketing Mix Modeling",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-training-language-models-to-follow-instructions-with-human-feedback-instructgpt",
+    "name": "Training Language Models to Follow Instructions with Human Feedback (InstructGPT)",
+    "title": "Training Language Models to Follow Instructions with Human Feedback (InstructGPT)",
+    "authors": "Long Ouyang, Jeff Wu et al. (OpenAI)",
+    "year": 2022,
+    "url": "https://arxiv.org/abs/2203.02155",
+    "description": "1.3B InstructGPT outperforms 175B GPT-3 on human preferences; foundation for ChatGPT.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Inverse RL & Preference Learning",
+      "Human Feedback & RLHF"
+    ],
+    "type": "paper",
+    "category": "Inverse RL & Preference Learning > Human Feedback & RLHF",
+    "topic": "Inverse RL & Preference Learning",
+    "subtopic": "Human Feedback & RLHF",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-media-mix-model-calibration-with-bayesian-priors",
+    "name": "Media Mix Model Calibration With Bayesian Priors",
+    "title": "Media Mix Model Calibration With Bayesian Priors",
+    "authors": "Google Research",
+    "year": 2023,
+    "url": "https://research.google/pubs/media-mix-model-calibration-with-bayesian-priors/",
+    "description": "Methods for calibrating MMM with experiment results; bridges MMM and incrementality testing.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Marketing & Growth",
+      "Marketing Mix Modeling"
+    ],
+    "type": "paper",
+    "category": "Marketing & Growth > Marketing Mix Modeling",
+    "topic": "Marketing & Growth",
+    "subtopic": "Marketing Mix Modeling",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-differential-response-analysis",
+    "name": "Differential Response Analysis",
+    "title": "Differential Response Analysis",
+    "authors": "Nicholas Radcliffe, Patrick Surry",
+    "year": 1999,
+    "url": "https://stochasticsolutions.com/papers.html",
+    "description": "Original uplift paper introducing the 'Persuadables' segmentation framework (Persuadables, Sure Things, Lost Causes, Sleeping Dogs).",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Marketing & Growth",
+      "Uplift Modeling"
+    ],
+    "type": "paper",
+    "category": "Marketing & Growth > Uplift Modeling",
+    "topic": "Marketing & Growth",
+    "subtopic": "Uplift Modeling",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-regression-adjustments-for-analyzing-randomized-experiments",
+    "name": "Regression Adjustments for Analyzing Randomized Experiments",
+    "title": "Regression Adjustments for Analyzing Randomized Experiments",
+    "authors": "Winston Lin",
+    "year": 2013,
+    "url": "https://projecteuclid.org/journals/annals-of-applied-statistics/volume-7/issue-1/Agnostic-notes-on-regression-adjustments-to-experimental-data--Reexamining/10.1214/12-AOAS583.full",
+    "description": "Shows how regression adjustment in randomized experiments yields valid inference even with heterogeneous treatment effects.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Experimentation",
+      "Variance Reduction"
+    ],
+    "type": "paper",
+    "category": "Experimentation > Variance Reduction",
+    "topic": "Experimentation",
+    "subtopic": "Variance Reduction",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-switchback-experiments-and-randomized-experiments-for-estimating-platform-level-effects",
+    "name": "Switchback Experiments and Randomized Experiments for Estimating Platform-Level Effects",
+    "title": "Switchback Experiments and Randomized Experiments for Estimating Platform-Level Effects",
+    "authors": "David Holtz, Ruben Lobel, Inessa Liskovich, Sinan Aral",
+    "year": 2020,
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3548162",
+    "description": "Design and analysis of switchback experiments for marketplace interventions at Airbnb.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Experimentation",
+      "Switchback & Geo-Experiments"
+    ],
+    "type": "paper",
+    "category": "Experimentation > Switchback & Geo-Experiments",
+    "topic": "Experimentation",
+    "subtopic": "Switchback & Geo-Experiments",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-geolift-open-source-solution-for-measuring-incremental-impact",
+    "name": "GeoLift: Open Source Solution for Measuring Incremental Impact",
+    "title": "GeoLift: Open Source Solution for Measuring Incremental Impact",
+    "authors": "Arturo Esquerra, Nicolas Besasie",
+    "year": 2022,
+    "url": "https://github.com/facebookincubator/GeoLift",
+    "description": "Meta's open-source tool for geo-experiment design and measurement using synthetic control methods.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Experimentation",
+      "Switchback & Geo-Experiments"
+    ],
+    "type": "paper",
+    "category": "Experimentation > Switchback & Geo-Experiments",
+    "topic": "Experimentation",
+    "subtopic": "Switchback & Geo-Experiments",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-generic-machine-learning-inference-on-heterogeneous-treatment-effects-in-randomized-experiments",
+    "name": "Generic Machine Learning Inference on Heterogeneous Treatment Effects in Randomized Experiments",
+    "title": "Generic Machine Learning Inference on Heterogeneous Treatment Effects in Randomized Experiments",
+    "authors": "Victor Chernozhukov, Mert Demirer, Esther Duflo, Ivan Fern\u00e1ndez-Val",
+    "year": 2020,
+    "url": "https://arxiv.org/abs/1712.04802",
+    "description": "Framework for using any ML method to find heterogeneous effects with valid inference.",
+    "citations": 0,
+    "tag": "",
+    "tags": [
+      "Observational Causal Inference",
+      "Double ML & Heterogeneous Effects"
+    ],
+    "type": "paper",
+    "category": "Observational Causal Inference > Double ML & Heterogeneous Effects",
+    "topic": "Observational Causal Inference",
+    "subtopic": "Double ML & Heterogeneous Effects",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-the-m4-competition-100-000-time-series-and-61-forecasting-methods",
+    "name": "The M4 Competition: 100,000 Time Series and 61 Forecasting Methods",
+    "title": "The M4 Competition: 100,000 Time Series and 61 Forecasting Methods",
+    "authors": "Spyros Makridakis, Evangelos Spiliotis, Vassilios Assimakopoulos",
+    "year": 2020,
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0169207018300785",
+    "description": "100,000 series showing hybrid statistical-ML methods dominate; pure ML underperformed.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Forecasting",
+      "Time Series Foundations"
+    ],
+    "type": "paper",
+    "category": "Forecasting > Time Series Foundations",
+    "topic": "Forecasting",
+    "subtopic": "Time Series Foundations",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-pinterest-visual-search-the-evolution-and-beyond",
+    "name": "Pinterest Visual Search: The Evolution and Beyond",
+    "title": "Pinterest Visual Search: The Evolution and Beyond",
+    "authors": "Pinterest Engineering",
+    "year": 2020,
+    "url": "https://medium.com/pinterest-engineering/the-evolution-of-pinterest-visual-search-3d3b7d0f8f39",
+    "description": "Evolution of visual search and image clustering at Pinterest\u2014practical lessons at scale.",
+    "citations": null,
+    "tag": "Industry",
+    "tags": [
+      "Clustering & Segmentation",
+      "Visual Content Clustering"
+    ],
+    "type": "paper",
+    "category": "Clustering & Segmentation > Visual Content Clustering",
+    "topic": "Clustering & Segmentation",
+    "subtopic": "Visual Content Clustering",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-personalized-pricing-and-consumer-welfare",
+    "name": "Personalized Pricing and Consumer Welfare",
+    "title": "Personalized Pricing and Consumer Welfare",
+    "authors": "Jean-Pierre Dub\u00e9, Sanjog Misra",
+    "year": 2023,
+    "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/722220",
+    "description": "Analyzes welfare effects of machine learning-based personalized pricing.",
+    "citations": 0,
+    "tag": "",
+    "tags": [
+      "Pricing",
+      "Personalized Pricing"
+    ],
+    "type": "paper",
+    "category": "Pricing > Personalized Pricing",
+    "topic": "Pricing",
+    "subtopic": "Personalized Pricing",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-auto-bidding-auctions-in-the-presence-of-user-costs",
+    "name": "Auto-bidding Auctions in the Presence of User Costs",
+    "title": "Auto-bidding Auctions in the Presence of User Costs",
+    "authors": "Gagan Aggarwal, et al. (Google)",
+    "year": 2024,
+    "url": "https://research.google/pubs/autobidding-auctions-in-the-presence-of-user-costs/",
+    "description": "Analyzes VCG with value-maximizing autobidders; shows cost multipliers improve welfare.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Mechanism Design & Auctions",
+      "Dynamic Auctions & Repeated Games"
+    ],
+    "type": "paper",
+    "category": "Mechanism Design & Auctions > Dynamic Auctions & Repeated Games",
+    "topic": "Mechanism Design & Auctions",
+    "subtopic": "Dynamic Auctions & Repeated Games",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-on-the-cluster-admission-problem-for-cloud-computing",
+    "name": "On the Cluster Admission Problem for Cloud Computing",
+    "title": "On the Cluster Admission Problem for Cloud Computing",
+    "authors": "Ludwig Dierks, Ian Kash, Sven Seuken",
+    "year": 2021,
+    "url": "https://www.jair.org/index.php/jair/article/view/12359",
+    "description": "Proposes admission control policies matching heterogeneous workloads to cloud resources via MDPs and information elicitation; significantly improves cluster utilization.",
+    "citations": 0,
+    "tag": "",
+    "tags": [
+      "Mechanism Design & Auctions",
+      "Cloud & Computing Resource Auctions"
+    ],
+    "type": "paper",
+    "category": "Mechanism Design & Auctions > Cloud & Computing Resource Auctions",
+    "topic": "Mechanism Design & Auctions",
+    "subtopic": "Cloud & Computing Resource Auctions",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-auctions-versus-posted-prices-in-online-markets",
+    "name": "Auctions versus Posted Prices in Online Markets",
+    "title": "Auctions versus Posted Prices in Online Markets",
+    "authors": "Liran Einav, Chiara Farronato, Jonathan Levin, Neel Sundaresan",
+    "year": 2018,
+    "url": "https://www.journals.uchicago.edu/doi/10.1086/696569",
+    "description": "Explains eBay's shift from auctions to posted prices by estimating demand trade-offs between price discovery and convenience using millions of seller experiments.",
+    "citations": 0,
+    "tag": "",
+    "tags": [
+      "Structural Estimation",
+      "E-commerce & Online Retail"
+    ],
+    "type": "paper",
+    "category": "Structural Estimation > E-commerce & Online Retail",
+    "topic": "Structural Estimation",
+    "subtopic": "E-commerce & Online Retail",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-intertemporal-price-discrimination-in-storable-goods-markets",
+    "name": "Intertemporal Price Discrimination in Storable Goods Markets",
+    "title": "Intertemporal Price Discrimination in Storable Goods Markets",
+    "authors": "Igal Hendel, Aviv Nevo",
+    "year": 2013,
+    "url": "https://www.aeaweb.org/articles?id=10.1257/aer.103.7.2722",
+    "description": "Models optimal pricing when consumers stockpile; sales capture 25-30% of price discrimination profits.",
+    "citations": 0,
+    "tag": "",
+    "tags": [
+      "Choice Models & Dynamic Choice",
+      "Intertemporal Substitution"
+    ],
+    "type": "paper",
+    "category": "Choice Models & Dynamic Choice > Intertemporal Substitution",
+    "topic": "Choice Models & Dynamic Choice",
+    "subtopic": "Intertemporal Substitution",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-the-probit-choice-model-under-sequential-search-with-an-application-to-online-retailing",
+    "name": "The Probit Choice Model Under Sequential Search with an Application to Online Retailing",
+    "title": "The Probit Choice Model Under Sequential Search with an Application to Online Retailing",
+    "authors": "Jun B. Kim, Paulo Albuquerque, Bart J. Bronnenberg",
+    "year": 2017,
+    "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2016.2507",
+    "description": "Tractable probit search model combining Weitzman's framework with demand estimation; applied to Amazon camcorder data.",
+    "citations": 0,
+    "tag": "",
+    "tags": [
+      "Choice Models & Dynamic Choice",
+      "Search & Sequential Choice"
+    ],
+    "type": "paper",
+    "category": "Choice Models & Dynamic Choice > Search & Sequential Choice",
+    "topic": "Choice Models & Dynamic Choice",
+    "subtopic": "Search & Sequential Choice",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-estimating-performance-in-a-robotic-mobile-fulfillment-system",
+    "name": "Estimating Performance in a Robotic Mobile Fulfillment System",
+    "title": "Estimating Performance in a Robotic Mobile Fulfillment System",
+    "authors": "Thibaud Lamballais, Debjit Roy, Ren\u00e9 de Koster",
+    "year": 2017,
+    "url": "https://www.sciencedirect.com/science/article/abs/pii/S0377221717303144",
+    "description": "Highly-cited queueing network model for Amazon-style RMFS; foundational for warehouse layout optimization and throughput analysis.",
+    "citations": 0,
+    "tag": "",
+    "tags": [
+      "Logistics & Operations",
+      "Warehouse Robotics & Automation"
+    ],
+    "type": "paper",
+    "category": "Logistics & Operations > Warehouse Robotics & Automation",
+    "topic": "Logistics & Operations",
+    "subtopic": "Warehouse Robotics & Automation",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-causal-impact-a-new-approach-to-estimate-causal-effects",
+    "name": "Causal Impact: A New Approach to Estimate Causal Effects",
+    "title": "Causal Impact: A New Approach to Estimate Causal Effects",
+    "authors": "Kay Brodersen, Fabian Gallusser, Jim Koehler, et al.",
+    "year": 2015,
+    "url": "https://research.google/pubs/estimating-uncertainty-for-massive-data-streams/",
+    "description": "Google's Bayesian structural time-series approach for measuring impact of geo-level interventions.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Experimentation",
+      "Switchback & Geo-Experiments"
+    ],
+    "type": "paper",
+    "category": "Experimentation > Switchback & Geo-Experiments",
+    "topic": "Experimentation",
+    "subtopic": "Switchback & Geo-Experiments",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-risk-based-authentication-practical-deployments-and-research-challenges",
+    "name": "Risk-Based Authentication: Practical Deployments and Research Challenges",
+    "title": "Risk-Based Authentication: Practical Deployments and Research Challenges",
+    "authors": "Stephan Wiefling, Luigi Lo Iacono, Markus D\u00fcrmuth",
+    "year": 2021,
+    "url": "https://riskbasedauthentication.org/publications/",
+    "description": "Analyzes RBA deployments at Google, Microsoft, Amazon; develops measurement framework.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Trust & Safety",
+      "Account Security & Identity"
+    ],
+    "type": "paper",
+    "category": "Trust & Safety > Account Security & Identity",
+    "topic": "Trust & Safety",
+    "subtopic": "Account Security & Identity",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-detecting-network-effects-randomizing-over-randomized-experiments",
+    "name": "Detecting Network Effects: Randomizing Over Randomized Experiments",
+    "title": "Detecting Network Effects: Randomizing Over Randomized Experiments",
+    "authors": "Dean Eckles, Brian Karrer, Johan Ugander",
+    "year": 2016,
+    "url": "https://arxiv.org/abs/1404.7530",
+    "description": "Graph cluster randomization and design-based methods for detecting interference in network experiments.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Experimentation",
+      "Interference & Spillovers"
+    ],
+    "type": "paper",
+    "category": "Experimentation > Interference & Spillovers",
+    "topic": "Experimentation",
+    "subtopic": "Interference & Spillovers",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-evaluating-the-surrogate-index-as-a-decision-making-tool-using-200-a-b-tests-at-netflix",
+    "name": "Evaluating the Surrogate Index as a Decision-Making Tool Using 200 A/B Tests at Netflix",
+    "title": "Evaluating the Surrogate Index as a Decision-Making Tool Using 200 A/B Tests at Netflix",
+    "authors": "Di Zhang, Sophia Zhao, Maria Dimakopoulou, Diarle Le, Nathan Kallus",
+    "year": 2023,
+    "url": "https://arxiv.org/abs/2311.09857",
+    "description": "Largest empirical validation of surrogates\u201495% consistency between 14-day surrogate predictions and 63-day outcomes across 1,098 test arms.",
+    "citations": 0,
+    "tag": "",
+    "tags": [
+      "Experimentation",
+      "Long-run Effects & Surrogates"
+    ],
+    "type": "paper",
+    "category": "Experimentation > Long-run Effects & Surrogates",
+    "topic": "Experimentation",
+    "subtopic": "Long-run Effects & Surrogates",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-a-general-theoretical-paradigm-to-understand-learning-from-human-preferences",
+    "name": "A General Theoretical Paradigm to Understand Learning from Human Preferences",
+    "title": "A General Theoretical Paradigm to Understand Learning from Human Preferences",
+    "authors": "Mohammad Gheshlaghi Azar, Mark Rowland, Bilal Piot et al. (DeepMind)",
+    "year": 2024,
+    "url": "https://proceedings.mlr.press/v238/azar24a.html",
+    "description": "Unifies RLHF/DPO theoretically; Identity Preference Optimization fixes DPO overfitting issues.",
+    "citations": 0,
+    "tag": "",
+    "tags": [
+      "Inverse RL & Preference Learning",
+      "Human Feedback & RLHF"
+    ],
+    "type": "paper",
+    "category": "Inverse RL & Preference Learning > Human Feedback & RLHF",
+    "topic": "Inverse RL & Preference Learning",
+    "subtopic": "Human Feedback & RLHF",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-spotify-s-discover-weekly-machine-learning-meets-human-curation",
+    "name": "Spotify's Discover Weekly: Machine Learning Meets Human Curation",
+    "title": "Spotify's Discover Weekly: Machine Learning Meets Human Curation",
+    "authors": "Spotify Engineering",
+    "year": 2015,
+    "url": "https://engineering.atspotify.com/2015/09/the-story-behind-discover-weekly/",
+    "description": "Clustering taste profiles to power personalized playlists at scale.",
+    "citations": null,
+    "tag": "Industry",
+    "tags": [
+      "Clustering & Segmentation",
+      "Customer Segmentation"
+    ],
+    "type": "paper",
+    "category": "Clustering & Segmentation > Customer Segmentation",
+    "topic": "Clustering & Segmentation",
+    "subtopic": "Customer Segmentation",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-automobile-prices-in-market-equilibrium-blp",
+    "name": "Automobile Prices in Market Equilibrium (BLP)",
+    "title": "Automobile Prices in Market Equilibrium (BLP)",
+    "authors": "Steven Berry, James Levinsohn, Ariel Pakes",
+    "year": 1995,
+    "url": "https://www.jstor.org/stable/2171802",
+    "description": "The foundational random coefficients discrete choice model for demand estimation.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Pricing",
+      "Demand Estimation & Elasticity"
+    ],
+    "type": "paper",
+    "category": "Pricing > Demand Estimation & Elasticity",
+    "topic": "Pricing",
+    "subtopic": "Demand Estimation & Elasticity",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-pyblp-blp-demand-estimation-in-python",
+    "name": "pyBLP: BLP Demand Estimation in Python",
+    "title": "pyBLP: BLP Demand Estimation in Python",
+    "authors": "Jeff Gortmaker, Chris Conlon",
+    "year": 2020,
+    "url": "https://pyblp.readthedocs.io/",
+    "description": "Modern implementation and extensions of BLP with diagnostics and best practices.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Pricing",
+      "Demand Estimation & Elasticity"
+    ],
+    "type": "paper",
+    "category": "Pricing > Demand Estimation & Elasticity",
+    "topic": "Pricing",
+    "subtopic": "Demand Estimation & Elasticity",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-does-retaining-customers-pay-off",
+    "name": "Does Retaining Customers Pay Off?",
+    "title": "Does Retaining Customers Pay Off?",
+    "authors": "Werner Reinartz, V. Kumar",
+    "year": 2000,
+    "url": "https://sloanreview.mit.edu/article/the-mismanagement-of-customer-loyalty/",
+    "description": "Empirical analysis of the relationship between customer tenure and profitability.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Subscriptions & Retention",
+      "Renewal & Cancellation Dynamics"
+    ],
+    "type": "paper",
+    "category": "Subscriptions & Retention > Renewal & Cancellation Dynamics",
+    "topic": "Subscriptions & Retention",
+    "subtopic": "Renewal & Cancellation Dynamics",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-nobel-prize-scientific-background-dmp-model",
+    "name": "Nobel Prize Scientific Background: DMP Model",
+    "title": "Nobel Prize Scientific Background: DMP Model",
+    "authors": "Peter Diamond, Dale Mortensen, Christopher Pissarides",
+    "year": 2010,
+    "url": "https://www.nobelprize.org/uploads/2018/06/advanced-economicsciences2010.pdf",
+    "description": "Comprehensive summary of canonical search-matching theory; matching function, wage bargaining, unemployment dynamics.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Matching & Marketplaces",
+      "Search & Matching Frictions"
+    ],
+    "type": "paper",
+    "category": "Matching & Marketplaces > Search & Matching Frictions",
+    "topic": "Matching & Marketplaces",
+    "subtopic": "Search & Matching Frictions",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-jd-com-improves-fulfillment-efficiency-with-integrated-assortment-planning-and-inventory-allocation",
+    "name": "JD.com Improves Fulfillment Efficiency with Integrated Assortment Planning and Inventory Allocation",
+    "title": "JD.com Improves Fulfillment Efficiency with Integrated Assortment Planning and Inventory Allocation",
+    "authors": "Zhenyang Shen, Yang Zhang, Haomin Wang et al.",
+    "year": 2025,
+    "url": "https://pubsonline.informs.org/doi/10.1287/inte.2024.1301",
+    "description": "End-to-end algorithm improving local fulfillment rates by 0.54% across millions of weekly orders in two-echelon distribution. Franz Edelman Award finalist.",
+    "citations": 0,
+    "tag": "",
+    "tags": [
+      "Logistics & Operations",
+      "Inventory & Fulfillment"
+    ],
+    "type": "paper",
+    "category": "Logistics & Operations > Inventory & Fulfillment",
+    "topic": "Logistics & Operations",
+    "subtopic": "Inventory & Fulfillment",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-dynamic-pricing-in-a-labor-market-surge-pricing-and-flexible-work-on-the-uber-platform",
+    "name": "Dynamic Pricing in a Labor Market: Surge Pricing and Flexible Work on the Uber Platform",
+    "title": "Dynamic Pricing in a Labor Market: Surge Pricing and Flexible Work on the Uber Platform",
+    "authors": "M. Keith Chen, Michael Sheldon",
+    "year": 2016,
+    "url": "https://www.anderson.ucla.edu/faculty/keith.chen/papers/SurgeAndFlexibleWork_WorkingPaper.pdf",
+    "description": "Studies driver labor supply response using 25 million Uber trips.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Logistics & Operations",
+      "Capacity Planning"
+    ],
+    "type": "paper",
+    "category": "Logistics & Operations > Capacity Planning",
+    "topic": "Logistics & Operations",
+    "subtopic": "Capacity Planning",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-modeling-tabular-data-using-conditional-gan-ctgan",
+    "name": "Modeling Tabular Data using Conditional GAN (CTGAN)",
+    "title": "Modeling Tabular Data using Conditional GAN (CTGAN)",
+    "authors": "Lei Xu, Maria Skoularidou, Alfredo Cuesta-Infante, Kalyan Veeramachaneni",
+    "year": 2019,
+    "url": "https://arxiv.org/pdf/1907.00503",
+    "description": "State-of-the-art GAN for synthetic tabular data; handles mixed types with mode-specific normalization.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Privacy",
+      "Synthetic Data"
+    ],
+    "type": "paper",
+    "category": "Privacy > Synthetic Data",
+    "topic": "Privacy",
+    "subtopic": "Synthetic Data",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-t-closeness-privacy-beyond-k-anonymity-and-diversity",
+    "name": "t-Closeness: Privacy Beyond k-Anonymity and \u2113-Diversity",
+    "title": "t-Closeness: Privacy Beyond k-Anonymity and \u2113-Diversity",
+    "authors": "Ninghui Li, Tiancheng Li, Suresh Venkatasubramanian",
+    "year": 2007,
+    "url": "https://www.cs.purdue.edu/homes/ninghui/papers/t_closeness_icde07.pdf",
+    "description": "Requires sensitive attribute distribution in each equivalence class be close to overall distribution.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Privacy",
+      "Anonymization & De-identification"
+    ],
+    "type": "paper",
+    "category": "Privacy > Anonymization & De-identification",
+    "topic": "Privacy",
+    "subtopic": "Anonymization & De-identification",
+    "model_score": 0.0
+  },
+  {
     "id": "paper-resampling-free-bootstrap-inference-for-quantiles",
     "name": "Resampling-Free Bootstrap Inference for Quantiles",
     "title": "Resampling-Free Bootstrap Inference for Quantiles",
@@ -1117,7 +1117,7 @@
     "category": "Statistics > Bootstrap & Resampling Methods",
     "topic": "Statistics",
     "subtopic": "Bootstrap & Resampling Methods",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-what-s-trending-in-difference-in-differences-a-synthesis-of-the-recent-econometrics-literature",
@@ -1137,7 +1137,7 @@
     "category": "Observational Causal Inference > Difference-in-Differences",
     "topic": "Observational Causal Inference",
     "subtopic": "Difference-in-Differences",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-dense-passage-retrieval-for-open-domain-qa-dpr",
@@ -1157,7 +1157,7 @@
     "category": "Search & Ranking > Semantic Search & Embeddings",
     "topic": "Search & Ranking",
     "subtopic": "Semantic Search & Embeddings",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-what-s-trending-in-difference-in-differences-a-synthesis-of-the-recent-econometrics-literature-1",
@@ -1177,7 +1177,7 @@
     "category": "Forecasting > Causal Impact & Intervention",
     "topic": "Forecasting",
     "subtopic": "Causal Impact & Intervention",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-spotify-s-audio-features-and-track-analysis",
@@ -1197,7 +1197,7 @@
     "category": "Clustering & Segmentation > Music & Audio Clustering",
     "topic": "Clustering & Segmentation",
     "subtopic": "Music & Audio Clustering",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-freemium-as-a-marketing-strategy",
@@ -1217,7 +1217,7 @@
     "category": "Subscriptions & Retention > Free-to-Paid Conversion",
     "topic": "Subscriptions & Retention",
     "subtopic": "Free-to-Paid Conversion",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-the-evolution-of-amazon-s-inventory-planning-system",
@@ -1237,7 +1237,7 @@
     "category": "Logistics & Operations > Inventory & Fulfillment",
     "topic": "Logistics & Operations",
     "subtopic": "Inventory & Fulfillment",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-deepeta-how-uber-predicts-arrival-times-using-deep-learning",
@@ -1257,7 +1257,7 @@
     "category": "Logistics & Operations > ETA & Delivery Prediction",
     "topic": "Logistics & Operations",
     "subtopic": "ETA & Delivery Prediction",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-deep-gravity-large-scale-origin-destination-flows",
@@ -1277,7 +1277,7 @@
     "category": "Spatial & Geo > Geospatial Demand Modeling",
     "topic": "Spatial & Geo",
     "subtopic": "Geospatial Demand Modeling",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-starbucks-store-locator-with-machine-learning",
@@ -1297,7 +1297,7 @@
     "category": "Spatial & Geo > Location Choice & Site Selection",
     "topic": "Spatial & Geo",
     "subtopic": "Location Choice & Site Selection",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-spatial-spillovers-in-airbnb-pricing",
@@ -1317,7 +1317,7 @@
     "category": "Spatial & Geo > Spatial Econometrics",
     "topic": "Spatial & Geo",
     "subtopic": "Spatial Econometrics",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-safegraph-foot-traffic-data",
@@ -1337,7 +1337,7 @@
     "category": "Spatial & Geo > Mobility & Movement Patterns",
     "topic": "Spatial & Geo",
     "subtopic": "Mobility & Movement Patterns",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-what-happens-when-wal-mart-comes-to-town-an-empirical-analysis-of-the-discount-retailing-industry",
@@ -1357,7 +1357,7 @@
     "category": "Structural Estimation > Entry & Competition",
     "topic": "Structural Estimation",
     "subtopic": "Entry & Competition",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-the-effects-of-uber-s-surge-pricing-a-case-study",
@@ -1377,7 +1377,7 @@
     "category": "Logistics & Operations > Capacity Planning",
     "topic": "Logistics & Operations",
     "subtopic": "Capacity Planning",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-robust-de-anonymization-of-large-sparse-datasets-netflix",
@@ -1397,7 +1397,7 @@
     "category": "Privacy > Anonymization & De-identification",
     "topic": "Privacy",
     "subtopic": "Anonymization & De-identification",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-learning-to-rank-using-gradient-descent-ranknet",
@@ -1417,7 +1417,7 @@
     "category": "Search & Ranking > Learning to Rank",
     "topic": "Search & Ranking",
     "subtopic": "Learning to Rank",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-off-policy-deep-reinforcement-learning-without-exploration-bcq",
@@ -1437,7 +1437,7 @@
     "category": "Reinforcement Learning > Batch/Offline RL",
     "topic": "Reinforcement Learning",
     "subtopic": "Batch/Offline RL",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-dynamic-pricing-without-knowing-the-demand-function-risk-bounds-and-near-optimal-algorithms",
@@ -1457,7 +1457,7 @@
     "category": "Pricing > Price Experimentation",
     "topic": "Pricing",
     "subtopic": "Price Experimentation",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-exploring-peer-effects-associated-with-user-retention-in-a-socially-connected-business",
@@ -1477,7 +1477,7 @@
     "category": "Subscriptions & Retention > Network Effects on Retention",
     "topic": "Subscriptions & Retention",
     "subtopic": "Network Effects on Retention",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-influencer-marketing-effectiveness",
@@ -1497,7 +1497,7 @@
     "category": "Marketing & Growth > Content & Social Media Marketing",
     "topic": "Marketing & Growth",
     "subtopic": "Content & Social Media Marketing",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-rappor-randomized-aggregatable-privacy-preserving-ordinal-response",
@@ -1517,7 +1517,7 @@
     "category": "Privacy > Differential Privacy",
     "topic": "Privacy",
     "subtopic": "Differential Privacy",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-rappor-randomized-aggregatable-privacy-preserving-ordinal-response-1",
@@ -1537,7 +1537,7 @@
     "category": "Privacy > Privacy-Preserving Measurement",
     "topic": "Privacy",
     "subtopic": "Privacy-Preserving Measurement",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-understanding-uber-demand",
@@ -1557,7 +1557,7 @@
     "category": "Spatial & Geo > Geospatial Demand Modeling",
     "topic": "Spatial & Geo",
     "subtopic": "Geospatial Demand Modeling",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-h3-uber-s-hexagonal-hierarchical-spatial-index",
@@ -1577,7 +1577,7 @@
     "category": "Spatial & Geo > Mapping & Geocoding",
     "topic": "Spatial & Geo",
     "subtopic": "Mapping & Geocoding",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-bootstrap-methods-another-look-at-the-jackknife",

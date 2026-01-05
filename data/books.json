@@ -1,5 +1,57 @@
 [
   {
+    "name": "Introduction to Probability Models",
+    "author": "Sheldon M. Ross",
+    "year": 2024,
+    "description": "Classic bestseller (13th edition) covering Markov chains, Poisson processes, and queueing theory (Chapter 8). Winner of TAA Textbook Excellence Awards.",
+    "category": "Statistics",
+    "type": "Book",
+    "url": "https://shop.elsevier.com/books/introduction-to-probability-models/ross/978-0-443-18761-2",
+    "isbn": "978-0-443-18761-2",
+    "tags": [
+      "probability",
+      "Markov-chains",
+      "Poisson-processes",
+      "queueing",
+      "classic"
+    ],
+    "model_score": 0.0003
+  },
+  {
+    "name": "Simulation Modeling and Analysis",
+    "author": "Averill M. Law",
+    "year": 2024,
+    "description": "The 'bible' of simulation (6th edition) with 172,000+ copies sold and 18,500+ citations. Comprehensive coverage of DES methodology.",
+    "category": "Operations Research",
+    "type": "Book",
+    "url": "https://www.averill-law.com/simulation-book/",
+    "tags": [
+      "simulation",
+      "discrete-event",
+      "methodology",
+      "classic",
+      "textbook"
+    ],
+    "model_score": 0.0003
+  },
+  {
+    "name": "Foundations and Methods of Stochastic Simulation",
+    "author": "Barry L. Nelson",
+    "year": 2021,
+    "description": "Graduate textbook with Python/PythonSim programming. Covers stochastic simulation from foundations to implementation.",
+    "category": "Operations Research",
+    "type": "Book",
+    "url": "https://link.springer.com/book/10.1007/978-3-030-86194-0",
+    "tags": [
+      "simulation",
+      "stochastic",
+      "Python",
+      "graduate",
+      "methodology"
+    ],
+    "model_score": 0.0002
+  },
+  {
     "name": "The Filter Bubble",
     "author": "Eli Pariser",
     "year": 2011,
@@ -6935,24 +6987,6 @@
     "model_score": 0.0
   },
   {
-    "name": "Introduction to Probability Models",
-    "author": "Sheldon M. Ross",
-    "year": 2024,
-    "description": "Classic bestseller (13th edition) covering Markov chains, Poisson processes, and queueing theory (Chapter 8). Winner of TAA Textbook Excellence Awards.",
-    "category": "Statistics",
-    "type": "Book",
-    "url": "https://shop.elsevier.com/books/introduction-to-probability-models/ross/978-0-443-18761-2",
-    "isbn": "978-0-443-18761-2",
-    "tags": [
-      "probability",
-      "Markov-chains",
-      "Poisson-processes",
-      "queueing",
-      "classic"
-    ],
-    "model_score": 0.0
-  },
-  {
     "name": "Introduction to Operations Research",
     "author": "Frederick S. Hillier, Gerald J. Lieberman",
     "year": 2021,
@@ -6967,40 +7001,6 @@
       "queueing",
       "simulation",
       "classic"
-    ],
-    "model_score": 0.0
-  },
-  {
-    "name": "Simulation Modeling and Analysis",
-    "author": "Averill M. Law",
-    "year": 2024,
-    "description": "The 'bible' of simulation (6th edition) with 172,000+ copies sold and 18,500+ citations. Comprehensive coverage of DES methodology.",
-    "category": "Operations Research",
-    "type": "Book",
-    "url": "https://www.averill-law.com/simulation-book/",
-    "tags": [
-      "simulation",
-      "discrete-event",
-      "methodology",
-      "classic",
-      "textbook"
-    ],
-    "model_score": 0.0
-  },
-  {
-    "name": "Foundations and Methods of Stochastic Simulation",
-    "author": "Barry L. Nelson",
-    "year": 2021,
-    "description": "Graduate textbook with Python/PythonSim programming. Covers stochastic simulation from foundations to implementation.",
-    "category": "Operations Research",
-    "type": "Book",
-    "url": "https://link.springer.com/book/10.1007/978-3-030-86194-0",
-    "tags": [
-      "simulation",
-      "stochastic",
-      "Python",
-      "graduate",
-      "methodology"
     ],
     "model_score": 0.0
   }
