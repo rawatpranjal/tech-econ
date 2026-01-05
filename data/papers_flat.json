@@ -17,7 +17,7 @@
     "category": "Experimentation > A/B Test Design & Analysis",
     "topic": "Experimentation",
     "subtopic": "A/B Test Design & Analysis",
-    "model_score": 0.0412
+    "model_score": 0.0427
   },
   {
     "id": "paper-the-theory-and-practice-of-revenue-management",
@@ -37,7 +37,7 @@
     "category": "Pricing > Dynamic Pricing & Revenue Management",
     "topic": "Pricing",
     "subtopic": "Dynamic Pricing & Revenue Management",
-    "model_score": 0.0056
+    "model_score": 0.0067
   },
   {
     "id": "paper-from-first-price-auctions-to-incentive-compatible-auctions",
@@ -140,26 +140,6 @@
     "model_score": 0.0001
   },
   {
-    "id": "paper-alibaba-vehicle-routing-algorithms-enable-rapid-pick-and-delivery",
-    "name": "Alibaba Vehicle Routing Algorithms Enable Rapid Pick and Delivery",
-    "title": "Alibaba Vehicle Routing Algorithms Enable Rapid Pick and Delivery",
-    "authors": "Jingwen Hu, Yifan Zhang, Yuxiang Wei, Yi Zhan, Fei Zhang, Shenghua Huang, Weiwei Ma, Zhun Deng, Zheren Jiang",
-    "year": 2022,
-    "url": "https://pubsonline.informs.org/doi/10.1287/inte.2022.1130",
-    "description": "Production algorithms enabling 30-minute grocery delivery across Alibaba subsidiaries in China. Franz Edelman Award finalist.",
-    "citations": 0,
-    "tag": "",
-    "tags": [
-      "Logistics & Operations",
-      "Routing & Dispatch"
-    ],
-    "type": "paper",
-    "category": "Logistics & Operations > Routing & Dispatch",
-    "topic": "Logistics & Operations",
-    "subtopic": "Routing & Dispatch",
-    "model_score": 0.0001
-  },
-  {
     "id": "paper-direct-preference-optimization-dpo",
     "name": "Direct Preference Optimization (DPO)",
     "title": "Direct Preference Optimization (DPO)",
@@ -177,26 +157,6 @@
     "category": "Inverse RL & Preference Learning > Human Feedback & RLHF",
     "topic": "Inverse RL & Preference Learning",
     "subtopic": "Human Feedback & RLHF",
-    "model_score": 0.0001
-  },
-  {
-    "id": "paper-peeking-at-a-b-tests-why-it-matters-and-what-to-do-about-it",
-    "name": "Peeking at A/B Tests: Why It Matters, and What to Do About It",
-    "title": "Peeking at A/B Tests: Why It Matters, and What to Do About It",
-    "authors": "Ramesh Johari, Pete Koomen, Leonid Pekelis, David Walsh",
-    "year": 2017,
-    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2925568",
-    "description": "Analyzes the peeking problem in A/B tests and introduces always-valid p-values for sequential testing.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Experimentation",
-      "Sequential & Adaptive Testing"
-    ],
-    "type": "paper",
-    "category": "Experimentation > Sequential & Adaptive Testing",
-    "topic": "Experimentation",
-    "subtopic": "Sequential & Adaptive Testing",
     "model_score": 0.0001
   },
   {
@@ -260,26 +220,6 @@
     "model_score": 0.0001
   },
   {
-    "id": "paper-nonparametric-engel-curves-and-revealed-preference",
-    "name": "Nonparametric Engel Curves and Revealed Preference",
-    "title": "Nonparametric Engel Curves and Revealed Preference",
-    "authors": "Richard Blundell, Martin Browning, Ian Crawford",
-    "year": 2008,
-    "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0262.2008.00854.x",
-    "description": "Combines revealed preference with nonparametric estimation; sharp bounds on counterfactual demands.",
-    "citations": 0,
-    "tag": "",
-    "tags": [
-      "Inverse RL & Preference Learning",
-      "Revealed Preference at Scale"
-    ],
-    "type": "paper",
-    "category": "Inverse RL & Preference Learning > Revealed Preference at Scale",
-    "topic": "Inverse RL & Preference Learning",
-    "subtopic": "Revealed Preference at Scale",
-    "model_score": 0.0001
-  },
-  {
     "id": "paper-rfm-analysis-for-customer-segmentation",
     "name": "RFM Analysis for Customer Segmentation",
     "title": "RFM Analysis for Customer Segmentation",
@@ -340,26 +280,6 @@
     "model_score": 0.0001
   },
   {
-    "id": "paper-intertemporal-price-discrimination-with-forward-looking-consumers-application-to-the-us-market-for-c",
-    "name": "Intertemporal Price Discrimination with Forward-Looking Consumers: Application to the US Market for Console Video-Games",
-    "title": "Intertemporal Price Discrimination with Forward-Looking Consumers: Application to the US Market for Console Video-Games",
-    "authors": "Harikesh Nair",
-    "year": 2007,
-    "url": "https://link.springer.com/article/10.1007/s11129-007-9027-x",
-    "description": "Dynamic pricing with strategic consumers anticipating price declines; Markov-perfect equilibrium applied to video game consoles.",
-    "citations": 0,
-    "tag": "",
-    "tags": [
-      "Choice Models & Dynamic Choice",
-      "Dynamic Discrete Choice"
-    ],
-    "type": "paper",
-    "category": "Choice Models & Dynamic Choice > Dynamic Discrete Choice",
-    "topic": "Choice Models & Dynamic Choice",
-    "subtopic": "Dynamic Discrete Choice",
-    "model_score": 0.0001
-  },
-  {
     "id": "paper-libpostal-international-address-parsing",
     "name": "libpostal: International Address Parsing",
     "title": "libpostal: International Address Parsing",
@@ -377,26 +297,6 @@
     "category": "Spatial & Geo > Mapping & Geocoding",
     "topic": "Spatial & Geo",
     "subtopic": "Mapping & Geocoding",
-    "model_score": 0.0001
-  },
-  {
-    "id": "paper-personalization-at-spotify-using-cassandra",
-    "name": "Personalization at Spotify Using Cassandra",
-    "title": "Personalization at Spotify Using Cassandra",
-    "authors": "Spotify Engineering",
-    "year": 2015,
-    "url": "https://engineering.atspotify.com/2015/01/personalization-at-spotify-using-cassandra/",
-    "description": "Large-scale user segmentation powering real-time recommendations.",
-    "citations": null,
-    "tag": "Industry",
-    "tags": [
-      "Clustering & Segmentation",
-      "Segmentation for Targeting"
-    ],
-    "type": "paper",
-    "category": "Clustering & Segmentation > Segmentation for Targeting",
-    "topic": "Clustering & Segmentation",
-    "subtopic": "Segmentation for Targeting",
     "model_score": 0.0001
   },
   {
@@ -420,6 +320,186 @@
     "model_score": 0.0001
   },
   {
+    "id": "paper-personalized-pricing-and-consumer-welfare",
+    "name": "Personalized Pricing and Consumer Welfare",
+    "title": "Personalized Pricing and Consumer Welfare",
+    "authors": "Jean-Pierre Dub\u00e9, Sanjog Misra",
+    "year": 2023,
+    "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/722220",
+    "description": "Analyzes welfare effects of machine learning-based personalized pricing.",
+    "citations": 0,
+    "tag": "",
+    "tags": [
+      "Pricing",
+      "Personalized Pricing"
+    ],
+    "type": "paper",
+    "category": "Pricing > Personalized Pricing",
+    "topic": "Pricing",
+    "subtopic": "Personalized Pricing",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-causal-impact-a-new-approach-to-estimate-causal-effects",
+    "name": "Causal Impact: A New Approach to Estimate Causal Effects",
+    "title": "Causal Impact: A New Approach to Estimate Causal Effects",
+    "authors": "Kay Brodersen, Fabian Gallusser, Jim Koehler, et al.",
+    "year": 2015,
+    "url": "https://research.google/pubs/estimating-uncertainty-for-massive-data-streams/",
+    "description": "Google's Bayesian structural time-series approach for measuring impact of geo-level interventions.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Experimentation",
+      "Switchback & Geo-Experiments"
+    ],
+    "type": "paper",
+    "category": "Experimentation > Switchback & Geo-Experiments",
+    "topic": "Experimentation",
+    "subtopic": "Switchback & Geo-Experiments",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-pyblp-blp-demand-estimation-in-python",
+    "name": "pyBLP: BLP Demand Estimation in Python",
+    "title": "pyBLP: BLP Demand Estimation in Python",
+    "authors": "Jeff Gortmaker, Chris Conlon",
+    "year": 2020,
+    "url": "https://pyblp.readthedocs.io/",
+    "description": "Modern implementation and extensions of BLP with diagnostics and best practices.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Pricing",
+      "Demand Estimation & Elasticity"
+    ],
+    "type": "paper",
+    "category": "Pricing > Demand Estimation & Elasticity",
+    "topic": "Pricing",
+    "subtopic": "Demand Estimation & Elasticity",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-dense-passage-retrieval-for-open-domain-qa-dpr",
+    "name": "Dense Passage Retrieval for Open-Domain QA (DPR)",
+    "title": "Dense Passage Retrieval for Open-Domain QA (DPR)",
+    "authors": "Vladimir Karpukhin, et al. (Facebook)",
+    "year": 2020,
+    "url": "https://arxiv.org/abs/2004.04906",
+    "description": "Foundational dual-encoder dense retrieval; outperforms BM25 by 9-19%; established the dense retrieval paradigm.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Search & Ranking",
+      "Semantic Search & Embeddings"
+    ],
+    "type": "paper",
+    "category": "Search & Ranking > Semantic Search & Embeddings",
+    "topic": "Search & Ranking",
+    "subtopic": "Semantic Search & Embeddings",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-alibaba-vehicle-routing-algorithms-enable-rapid-pick-and-delivery",
+    "name": "Alibaba Vehicle Routing Algorithms Enable Rapid Pick and Delivery",
+    "title": "Alibaba Vehicle Routing Algorithms Enable Rapid Pick and Delivery",
+    "authors": "Jingwen Hu, Yifan Zhang, Yuxiang Wei, Yi Zhan, Fei Zhang, Shenghua Huang, Weiwei Ma, Zhun Deng, Zheren Jiang",
+    "year": 2022,
+    "url": "https://pubsonline.informs.org/doi/10.1287/inte.2022.1130",
+    "description": "Production algorithms enabling 30-minute grocery delivery across Alibaba subsidiaries in China. Franz Edelman Award finalist.",
+    "citations": 0,
+    "tag": "",
+    "tags": [
+      "Logistics & Operations",
+      "Routing & Dispatch"
+    ],
+    "type": "paper",
+    "category": "Logistics & Operations > Routing & Dispatch",
+    "topic": "Logistics & Operations",
+    "subtopic": "Routing & Dispatch",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-peeking-at-a-b-tests-why-it-matters-and-what-to-do-about-it",
+    "name": "Peeking at A/B Tests: Why It Matters, and What to Do About It",
+    "title": "Peeking at A/B Tests: Why It Matters, and What to Do About It",
+    "authors": "Ramesh Johari, Pete Koomen, Leonid Pekelis, David Walsh",
+    "year": 2017,
+    "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2925568",
+    "description": "Analyzes the peeking problem in A/B tests and introduces always-valid p-values for sequential testing.",
+    "citations": null,
+    "tag": "",
+    "tags": [
+      "Experimentation",
+      "Sequential & Adaptive Testing"
+    ],
+    "type": "paper",
+    "category": "Experimentation > Sequential & Adaptive Testing",
+    "topic": "Experimentation",
+    "subtopic": "Sequential & Adaptive Testing",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-nonparametric-engel-curves-and-revealed-preference",
+    "name": "Nonparametric Engel Curves and Revealed Preference",
+    "title": "Nonparametric Engel Curves and Revealed Preference",
+    "authors": "Richard Blundell, Martin Browning, Ian Crawford",
+    "year": 2008,
+    "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0262.2008.00854.x",
+    "description": "Combines revealed preference with nonparametric estimation; sharp bounds on counterfactual demands.",
+    "citations": 0,
+    "tag": "",
+    "tags": [
+      "Inverse RL & Preference Learning",
+      "Revealed Preference at Scale"
+    ],
+    "type": "paper",
+    "category": "Inverse RL & Preference Learning > Revealed Preference at Scale",
+    "topic": "Inverse RL & Preference Learning",
+    "subtopic": "Revealed Preference at Scale",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-intertemporal-price-discrimination-with-forward-looking-consumers-application-to-the-us-market-for-c",
+    "name": "Intertemporal Price Discrimination with Forward-Looking Consumers: Application to the US Market for Console Video-Games",
+    "title": "Intertemporal Price Discrimination with Forward-Looking Consumers: Application to the US Market for Console Video-Games",
+    "authors": "Harikesh Nair",
+    "year": 2007,
+    "url": "https://link.springer.com/article/10.1007/s11129-007-9027-x",
+    "description": "Dynamic pricing with strategic consumers anticipating price declines; Markov-perfect equilibrium applied to video game consoles.",
+    "citations": 0,
+    "tag": "",
+    "tags": [
+      "Choice Models & Dynamic Choice",
+      "Dynamic Discrete Choice"
+    ],
+    "type": "paper",
+    "category": "Choice Models & Dynamic Choice > Dynamic Discrete Choice",
+    "topic": "Choice Models & Dynamic Choice",
+    "subtopic": "Dynamic Discrete Choice",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-personalization-at-spotify-using-cassandra",
+    "name": "Personalization at Spotify Using Cassandra",
+    "title": "Personalization at Spotify Using Cassandra",
+    "authors": "Spotify Engineering",
+    "year": 2015,
+    "url": "https://engineering.atspotify.com/2015/01/personalization-at-spotify-using-cassandra/",
+    "description": "Large-scale user segmentation powering real-time recommendations.",
+    "citations": null,
+    "tag": "Industry",
+    "tags": [
+      "Clustering & Segmentation",
+      "Segmentation for Targeting"
+    ],
+    "type": "paper",
+    "category": "Clustering & Segmentation > Segmentation for Targeting",
+    "topic": "Clustering & Segmentation",
+    "subtopic": "Segmentation for Targeting",
+    "model_score": 0.0
+  },
+  {
     "id": "paper-xgboost-a-scalable-tree-boosting-system",
     "name": "XGBoost: A Scalable Tree Boosting System",
     "title": "XGBoost: A Scalable Tree Boosting System",
@@ -437,7 +517,7 @@
     "category": "Credit & Lending > Credit Scoring & Risk Models",
     "topic": "Credit & Lending",
     "subtopic": "Credit Scoring & Risk Models",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-placekey-a-universal-place-identifier",
@@ -457,7 +537,7 @@
     "category": "Spatial & Geo > Mapping & Geocoding",
     "topic": "Spatial & Geo",
     "subtopic": "Mapping & Geocoding",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-google-mobility-reports",
@@ -477,7 +557,7 @@
     "category": "Spatial & Geo > Mobility & Movement Patterns",
     "topic": "Spatial & Geo",
     "subtopic": "Mobility & Movement Patterns",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-robyn-continuous-semi-automated-mmm",
@@ -680,26 +760,6 @@
     "model_score": 0.0
   },
   {
-    "id": "paper-personalized-pricing-and-consumer-welfare",
-    "name": "Personalized Pricing and Consumer Welfare",
-    "title": "Personalized Pricing and Consumer Welfare",
-    "authors": "Jean-Pierre Dub\u00e9, Sanjog Misra",
-    "year": 2023,
-    "url": "https://www.journals.uchicago.edu/doi/abs/10.1086/722220",
-    "description": "Analyzes welfare effects of machine learning-based personalized pricing.",
-    "citations": 0,
-    "tag": "",
-    "tags": [
-      "Pricing",
-      "Personalized Pricing"
-    ],
-    "type": "paper",
-    "category": "Pricing > Personalized Pricing",
-    "topic": "Pricing",
-    "subtopic": "Personalized Pricing",
-    "model_score": 0.0
-  },
-  {
     "id": "paper-auto-bidding-auctions-in-the-presence-of-user-costs",
     "name": "Auto-bidding Auctions in the Presence of User Costs",
     "title": "Auto-bidding Auctions in the Presence of User Costs",
@@ -820,26 +880,6 @@
     "model_score": 0.0
   },
   {
-    "id": "paper-causal-impact-a-new-approach-to-estimate-causal-effects",
-    "name": "Causal Impact: A New Approach to Estimate Causal Effects",
-    "title": "Causal Impact: A New Approach to Estimate Causal Effects",
-    "authors": "Kay Brodersen, Fabian Gallusser, Jim Koehler, et al.",
-    "year": 2015,
-    "url": "https://research.google/pubs/estimating-uncertainty-for-massive-data-streams/",
-    "description": "Google's Bayesian structural time-series approach for measuring impact of geo-level interventions.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Experimentation",
-      "Switchback & Geo-Experiments"
-    ],
-    "type": "paper",
-    "category": "Experimentation > Switchback & Geo-Experiments",
-    "topic": "Experimentation",
-    "subtopic": "Switchback & Geo-Experiments",
-    "model_score": 0.0
-  },
-  {
     "id": "paper-risk-based-authentication-practical-deployments-and-research-challenges",
     "name": "Risk-Based Authentication: Practical Deployments and Research Challenges",
     "title": "Risk-Based Authentication: Practical Deployments and Research Challenges",
@@ -947,26 +987,6 @@
     "year": 1995,
     "url": "https://www.jstor.org/stable/2171802",
     "description": "The foundational random coefficients discrete choice model for demand estimation.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Pricing",
-      "Demand Estimation & Elasticity"
-    ],
-    "type": "paper",
-    "category": "Pricing > Demand Estimation & Elasticity",
-    "topic": "Pricing",
-    "subtopic": "Demand Estimation & Elasticity",
-    "model_score": 0.0
-  },
-  {
-    "id": "paper-pyblp-blp-demand-estimation-in-python",
-    "name": "pyBLP: BLP Demand Estimation in Python",
-    "title": "pyBLP: BLP Demand Estimation in Python",
-    "authors": "Jeff Gortmaker, Chris Conlon",
-    "year": 2020,
-    "url": "https://pyblp.readthedocs.io/",
-    "description": "Modern implementation and extensions of BLP with diagnostics and best practices.",
     "citations": null,
     "tag": "",
     "tags": [
@@ -1137,26 +1157,6 @@
     "category": "Observational Causal Inference > Difference-in-Differences",
     "topic": "Observational Causal Inference",
     "subtopic": "Difference-in-Differences",
-    "model_score": 0.0
-  },
-  {
-    "id": "paper-dense-passage-retrieval-for-open-domain-qa-dpr",
-    "name": "Dense Passage Retrieval for Open-Domain QA (DPR)",
-    "title": "Dense Passage Retrieval for Open-Domain QA (DPR)",
-    "authors": "Vladimir Karpukhin, et al. (Facebook)",
-    "year": 2020,
-    "url": "https://arxiv.org/abs/2004.04906",
-    "description": "Foundational dual-encoder dense retrieval; outperforms BM25 by 9-19%; established the dense retrieval paradigm.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Search & Ranking",
-      "Semantic Search & Embeddings"
-    ],
-    "type": "paper",
-    "category": "Search & Ranking > Semantic Search & Embeddings",
-    "topic": "Search & Ranking",
-    "subtopic": "Semantic Search & Embeddings",
     "model_score": 0.0
   },
   {
