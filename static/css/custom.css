@@ -9367,3 +9367,214 @@ mark.partial {
         padding: 2rem 1rem;
     }
 }
+
+/* ===========================================
+   TASK 1.1: Engagement Badges (Popular/New)
+   =========================================== */
+
+/* Corner Ribbon Badges */
+.engagement-badge {
+    position: absolute;
+    top: 12px;
+    right: -30px;
+    transform: rotate(45deg);
+    font-size: 0.55rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 4px 35px;
+    z-index: 10;
+    animation: badge-fade-in 0.4s ease-out;
+}
+
+@keyframes badge-fade-in {
+    from {
+        opacity: 0;
+        transform: rotate(45deg) translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(45deg) translateY(0);
+    }
+}
+
+/* Popular Badge - Gold accent */
+.engagement-badge.badge-popular {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+}
+
+/* New Badge - Green accent */
+.engagement-badge.badge-new {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+}
+
+/* Dark mode badge colors */
+[data-theme="dark"] .engagement-badge.badge-popular {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    box-shadow: 0 2px 8px rgba(251, 191, 36, 0.3);
+}
+
+[data-theme="dark"] .engagement-badge.badge-new {
+    background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+    box-shadow: 0 2px 8px rgba(52, 211, 153, 0.3);
+}
+
+/* Mobile: Smaller badges */
+@media (max-width: 768px) {
+    .engagement-badge {
+        font-size: 0.45rem;
+        padding: 3px 28px;
+        top: 8px;
+        right: -25px;
+    }
+}
+
+/* ===========================================
+   TASK 1.2: Hero Card Layout (Narrative Only)
+   =========================================== */
+
+/* Narrative hero cards are 1.5x larger (420px vs 280px) */
+.narrative-row .hero-card {
+    flex: 0 0 420px;
+    min-width: 420px;
+    max-width: 420px;
+    height: 280px;
+    border: 2px solid var(--accent);
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-hover) 100%);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Hero star indicator (replaces old FEATURED text) */
+.narrative-row .hero-card .hero-indicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+/* Remove the old ::before content for narrative hero cards */
+.narrative-row .hero-card::before {
+    display: none;
+}
+
+/* Hero expanded metadata */
+.hero-card .hero-metadata {
+    margin-top: auto;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.hero-card .hero-metadata .metadata-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.hero-card .hero-metadata .metadata-label {
+    font-weight: 600;
+    color: var(--text-muted);
+    min-width: 75px;
+}
+
+/* Show more description lines on hero */
+.narrative-row .hero-card .explore-card-desc {
+    -webkit-line-clamp: 5;
+    font-size: 0.85rem;
+}
+
+/* Show more title lines on hero */
+.narrative-row .hero-card .explore-card-title {
+    -webkit-line-clamp: 3;
+    font-size: 1.05rem;
+}
+
+/* Dark mode hero card adjustments */
+[data-theme="dark"] .narrative-row .hero-card {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile: Hero cards scale down proportionally */
+@media (max-width: 768px) {
+    .narrative-row .hero-card {
+        flex: 0 0 320px;
+        min-width: 320px;
+        max-width: 320px;
+        height: 220px;
+    }
+
+    .narrative-row .hero-card .hero-indicator {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+
+    .narrative-row .hero-card .explore-card-desc {
+        -webkit-line-clamp: 3;
+    }
+}
+
+/* ===========================================
+   TASK 1.3: Narrative Carousel Styling
+   =========================================== */
+
+/* Enhanced narrative row with gradient background */
+.narrative-row {
+    border-left: 4px solid var(--accent);
+    padding-left: 0.75rem;
+    margin-left: 0.5rem;
+    background: linear-gradient(90deg,
+        rgba(99, 102, 241, 0.06) 0%,
+        transparent 60%);
+    border-radius: 0 8px 8px 0;
+    position: relative;
+}
+
+/* Position-based gradient colors (set via JS data-position attribute) */
+.narrative-row[data-position="0"] { border-left-color: #6366f1; background: linear-gradient(90deg, rgba(99, 102, 241, 0.08) 0%, transparent 60%); }
+.narrative-row[data-position="1"] { border-left-color: #8b5cf6; background: linear-gradient(90deg, rgba(139, 92, 246, 0.08) 0%, transparent 60%); }
+.narrative-row[data-position="2"] { border-left-color: #ec4899; background: linear-gradient(90deg, rgba(236, 72, 153, 0.08) 0%, transparent 60%); }
+.narrative-row[data-position="3"] { border-left-color: #f59e0b; background: linear-gradient(90deg, rgba(245, 158, 11, 0.08) 0%, transparent 60%); }
+.narrative-row[data-position="4"] { border-left-color: #10b981; background: linear-gradient(90deg, rgba(16, 185, 129, 0.08) 0%, transparent 60%); }
+.narrative-row[data-position="5"] { border-left-color: #06b6d4; background: linear-gradient(90deg, rgba(6, 182, 212, 0.08) 0%, transparent 60%); }
+
+/* Dark mode narrative row gradients */
+[data-theme="dark"] .narrative-row { background: linear-gradient(90deg, rgba(99, 102, 241, 0.12) 0%, transparent 60%); }
+[data-theme="dark"] .narrative-row[data-position="0"] { background: linear-gradient(90deg, rgba(99, 102, 241, 0.15) 0%, transparent 60%); }
+[data-theme="dark"] .narrative-row[data-position="1"] { background: linear-gradient(90deg, rgba(139, 92, 246, 0.15) 0%, transparent 60%); }
+[data-theme="dark"] .narrative-row[data-position="2"] { background: linear-gradient(90deg, rgba(236, 72, 153, 0.15) 0%, transparent 60%); }
+[data-theme="dark"] .narrative-row[data-position="3"] { background: linear-gradient(90deg, rgba(245, 158, 11, 0.15) 0%, transparent 60%); }
+[data-theme="dark"] .narrative-row[data-position="4"] { background: linear-gradient(90deg, rgba(16, 185, 129, 0.15) 0%, transparent 60%); }
+[data-theme="dark"] .narrative-row[data-position="5"] { background: linear-gradient(90deg, rgba(6, 182, 212, 0.15) 0%, transparent 60%); }
+
+/* Remove template badge from narrative rows (per requirements) */
+.narrative-row .template-badge {
+    display: none;
+}
+
+/* Mobile: Reduce gradient intensity */
+@media (max-width: 768px) {
+    .narrative-row {
+        margin-left: 0;
+        padding-left: 0.5rem;
+        border-left-width: 3px;
+    }
+}

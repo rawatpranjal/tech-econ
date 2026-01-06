@@ -1,0 +1,314 @@
+{
+  "version": "1.1",
+  "description": "Manually curated cluster definitions for Learning section",
+  "clusters": [
+    {
+      "id": "causal-forests",
+      "label": "Causal Forests & CATE",
+      "macro_category": "Causal Methods",
+      "description": "Tutorials on causal forests, heterogeneous treatment effects, and CATE estimation",
+      "keywords": ["causal forest", "CATE", "heterogeneous treatment", "econml", "grf", "causal tree", "double machine learning", "DML"]
+    },
+    {
+      "id": "did-synth-control",
+      "label": "DiD & Synthetic Control",
+      "macro_category": "Causal Methods",
+      "description": "Difference-in-differences and synthetic control methods",
+      "keywords": ["difference-in-differences", "did", "synthetic control", "causalimpact", "event study", "staggered", "parallel trends"]
+    },
+    {
+      "id": "rdd-iv",
+      "label": "RDD & IV Methods",
+      "macro_category": "Causal Methods",
+      "description": "Regression discontinuity and instrumental variables",
+      "keywords": ["RDD", "regression discontinuity", "instrumental variable", "IV", "2SLS", "fuzzy RDD", "sharp RDD"]
+    },
+    {
+      "id": "dags-causal-graphs",
+      "label": "DAGs & Causal Graphs",
+      "macro_category": "Causal Methods",
+      "description": "Directed acyclic graphs, causal discovery, and structural models",
+      "keywords": ["DAG", "causal graph", "causal discovery", "d-separation", "backdoor", "SCM", "structural causal model", "pywhy"]
+    },
+    {
+      "id": "mixtape-resources",
+      "label": "The Mixtape & Foundational Textbooks",
+      "macro_category": "Causal Methods",
+      "description": "Causal Inference: The Mixtape, Mostly Harmless, and foundational causal inference textbooks",
+      "keywords": ["mixtape", "cunningham", "mostly harmless", "angrist", "brave and true", "the effect", "nick huntington-klein"]
+    },
+    {
+      "id": "causal-libraries",
+      "label": "Causal Inference Libraries",
+      "macro_category": "Causal Methods",
+      "description": "Python/R libraries for causal inference: PyWhy, EconML, CausalML, DoWhy",
+      "keywords": ["pywhy", "econml", "causalml", "dowhy", "causalpy", "causal library", "adam kelleher"]
+    },
+    {
+      "id": "ab-testing-foundations",
+      "label": "A/B Testing Foundations",
+      "macro_category": "Experimentation",
+      "description": "Fundamentals of A/B testing, experiment design, and statistical testing",
+      "keywords": ["A/B test", "experiment design", "statistical significance", "sample size", "power analysis", "hypothesis testing", "t-test"]
+    },
+    {
+      "id": "variance-reduction",
+      "label": "Variance Reduction (CUPED)",
+      "macro_category": "Experimentation",
+      "description": "CUPED, CUPAC, and variance reduction techniques for experiments",
+      "keywords": ["CUPED", "CUPAC", "variance reduction", "pre-experiment", "covariate adjustment", "stratification"]
+    },
+    {
+      "id": "switchback-interference",
+      "label": "Switchback & Interference",
+      "macro_category": "Experimentation",
+      "description": "Switchback experiments, network effects, interference, and marketplace experiments",
+      "keywords": ["switchback", "interference", "network effects", "spillover", "marketplace experiment", "cluster randomization", "SUTVA"]
+    },
+    {
+      "id": "sequential-bandits",
+      "label": "Sequential Testing & Bandits",
+      "macro_category": "Experimentation",
+      "description": "Sequential testing, multi-armed bandits, and adaptive experimentation",
+      "keywords": ["sequential test", "bandit", "multi-armed", "adaptive", "Thompson sampling", "UCB", "always valid", "group sequential"]
+    },
+    {
+      "id": "geo-experiments",
+      "label": "Geo Experiments",
+      "macro_category": "Experimentation",
+      "description": "Geographic experiments and geo-level incrementality testing",
+      "keywords": ["geo experiment", "geo test", "geographic", "incrementality", "lift test", "matched market"]
+    },
+    {
+      "id": "mmm-attribution",
+      "label": "Marketing Mix Modeling",
+      "macro_category": "Marketing",
+      "description": "Marketing mix modeling, media mix, and Bayesian MMM",
+      "keywords": ["marketing mix", "MMM", "media mix", "robyn", "lightweight mmm", "pymc-marketing", "attribution model"]
+    },
+    {
+      "id": "ad-attribution",
+      "label": "Ad Attribution & Measurement",
+      "macro_category": "Marketing",
+      "description": "Ad attribution, mobile measurement, privacy-preserving attribution",
+      "keywords": ["attribution", "mobile attribution", "SKAdNetwork", "privacy sandbox", "incrementality", "MTA", "last click"]
+    },
+    {
+      "id": "clv-retention",
+      "label": "CLV & Retention",
+      "macro_category": "Marketing",
+      "description": "Customer lifetime value, retention analysis, and churn prediction",
+      "keywords": ["CLV", "lifetime value", "retention", "churn", "cohort", "survival", "BG/NBD", "growth accounting"]
+    },
+    {
+      "id": "network-effects",
+      "label": "Network Effects & Aggregation",
+      "macro_category": "Platform Economics",
+      "description": "Network effects, aggregation theory, and platform dynamics",
+      "keywords": ["network effect", "aggregation", "winner take all", "platform scale", "two-sided market", "Tirole"]
+    },
+    {
+      "id": "marketplace-design",
+      "label": "Marketplace Design",
+      "macro_category": "Platform Economics",
+      "description": "Marketplace economics, matching, liquidity, and platform strategy",
+      "keywords": ["marketplace", "matching", "liquidity", "take rate", "GMV", "cold start", "chicken egg", "a16z marketplace"]
+    },
+    {
+      "id": "auction-theory",
+      "label": "Auction Theory & Ad Tech",
+      "macro_category": "Platform Economics",
+      "description": "Auction theory, GSP, VCG, and ad tech auctions",
+      "keywords": ["auction", "GSP", "VCG", "second price", "RTB", "ad exchange", "bidding", "reserve price"]
+    },
+    {
+      "id": "pricing-revenue",
+      "label": "Pricing & Revenue Management",
+      "macro_category": "Platform Economics",
+      "description": "Dynamic pricing, revenue management, and pricing optimization",
+      "keywords": ["pricing", "revenue management", "dynamic pricing", "surge", "price optimization", "elasticity", "demand curve"]
+    },
+    {
+      "id": "ml-for-economists",
+      "label": "ML for Economists",
+      "macro_category": "Machine Learning",
+      "description": "Machine learning courses and resources for economists",
+      "keywords": ["ML for economists", "machine learning economist", "econML", "Athey", "Imbens", "prediction policy"]
+    },
+    {
+      "id": "recsys",
+      "label": "Recommender Systems",
+      "macro_category": "Machine Learning",
+      "description": "Recommendation systems, collaborative filtering, and personalization",
+      "keywords": ["recommender", "recommendation", "collaborative filtering", "matrix factorization", "personalization", "content-based"]
+    },
+    {
+      "id": "search-ranking",
+      "label": "Search & Ranking",
+      "macro_category": "Machine Learning",
+      "description": "Search ranking, learning to rank, and information retrieval",
+      "keywords": ["search ranking", "learning to rank", "LambdaMART", "BM25", "NDCG", "relevance", "retrieval"]
+    },
+    {
+      "id": "llms-rag",
+      "label": "LLMs & RAG",
+      "macro_category": "Machine Learning",
+      "description": "Large language models, RAG, and AI agents",
+      "keywords": ["LLM", "RAG", "retrieval augmented", "GPT", "Claude", "langchain", "embedding", "prompt engineering", "agent"]
+    },
+    {
+      "id": "forecasting-dl",
+      "label": "Deep Learning Forecasting",
+      "macro_category": "Machine Learning",
+      "description": "Deep learning for time series forecasting: TFT, N-BEATS, etc.",
+      "keywords": ["TFT", "temporal fusion", "N-BEATS", "transformer forecast", "deep learning forecast", "neural forecast", "Lag-Llama"]
+    },
+    {
+      "id": "linear-programming",
+      "label": "Linear Programming",
+      "macro_category": "Operations Research",
+      "description": "Linear programming, MIP, and optimization modeling",
+      "keywords": ["linear programming", "LP", "MIP", "integer programming", "PuLP", "Gurobi", "CPLEX", "optimization model"]
+    },
+    {
+      "id": "convex-optimization",
+      "label": "Convex Optimization",
+      "macro_category": "Operations Research",
+      "description": "Convex optimization, CVXPY, and Boyd's course",
+      "keywords": ["convex", "CVXPY", "Boyd", "semidefinite", "second order cone", "gradient descent", "optimization theory"]
+    },
+    {
+      "id": "vehicle-routing",
+      "label": "Vehicle Routing & Logistics",
+      "macro_category": "Operations Research",
+      "description": "Vehicle routing, dispatch, and logistics optimization",
+      "keywords": ["VRP", "vehicle routing", "dispatch", "logistics", "TSP", "last mile", "delivery", "routing"]
+    },
+    {
+      "id": "queueing-theory",
+      "label": "Queueing Theory",
+      "macro_category": "Operations Research",
+      "description": "Queueing theory, Erlang, and capacity planning",
+      "keywords": ["queueing", "queue", "Erlang", "M/M/1", "capacity planning", "waiting time", "service rate"]
+    },
+    {
+      "id": "python-economists",
+      "label": "Python for Economists",
+      "macro_category": "Programming",
+      "description": "Python programming for economists and data scientists",
+      "keywords": ["python economist", "coding for economists", "quantecon", "pandas", "numpy", "data science python"]
+    },
+    {
+      "id": "sql-tutorials",
+      "label": "SQL Tutorials",
+      "macro_category": "Programming",
+      "description": "SQL tutorials and practice platforms",
+      "keywords": ["SQL", "SQLBolt", "Mode SQL", "DataLemur", "DuckDB", "database", "query"]
+    },
+    {
+      "id": "dsa-interviews",
+      "label": "Data Structures & Algorithms",
+      "macro_category": "Programming",
+      "description": "Data structures, algorithms, and coding interview prep",
+      "keywords": ["data structure", "algorithm", "leetcode", "interview", "blind 75", "neetcode", "dynamic programming"]
+    },
+    {
+      "id": "agent-based-modeling",
+      "label": "Agent-Based Modeling",
+      "macro_category": "Industry",
+      "description": "Agent-based modeling, Mesa, and computational economics",
+      "keywords": ["agent-based", "ABM", "Mesa", "NetLogo", "simulation", "computational economics", "Santa Fe"]
+    },
+    {
+      "id": "insurance-actuarial",
+      "label": "Insurance & Actuarial",
+      "macro_category": "Industry",
+      "description": "Insurance analytics and actuarial science",
+      "keywords": ["insurance", "actuarial", "actuary", "claim", "underwriting", "loss model", "pricing insurance"]
+    },
+    {
+      "id": "sports-analytics",
+      "label": "Sports Analytics",
+      "macro_category": "Industry",
+      "description": "Sports analytics and sabermetrics",
+      "keywords": ["sports", "sabermetrics", "FanGraphs", "baseball", "basketball", "WAR", "expected goals"]
+    },
+    {
+      "id": "energy-economics",
+      "label": "Energy Economics",
+      "macro_category": "Industry",
+      "description": "Energy economics and utilities",
+      "keywords": ["energy", "electricity", "utilities", "grid", "renewable", "carbon", "Haas"]
+    },
+    {
+      "id": "product-metrics",
+      "label": "Product Metrics & Analytics",
+      "macro_category": "Strategy",
+      "description": "Product metrics, growth metrics, and data-informed product development",
+      "keywords": ["product metrics", "north star", "OKR", "DAU", "MAU", "engagement", "activation", "product analytics"]
+    },
+    {
+      "id": "fraud-detection",
+      "label": "Fraud Detection & Trust Safety",
+      "macro_category": "Strategy",
+      "description": "Fraud detection, anomaly detection, and trust & safety",
+      "keywords": ["fraud", "anomaly", "trust safety", "abuse", "bot detection", "outlier", "risk scoring"]
+    },
+    {
+      "id": "tech-strategy",
+      "label": "Tech Strategy & Newsletters",
+      "macro_category": "Strategy",
+      "description": "Tech strategy newsletters and analysis",
+      "keywords": ["stratechery", "newsletter", "tech strategy", "Byrne Hobart", "Ben Evans", "Not Boring", "venture"]
+    },
+    {
+      "id": "classical-forecasting",
+      "label": "Classical Forecasting",
+      "macro_category": "Time Series",
+      "description": "Classical time series forecasting: ARIMA, ETS, Prophet",
+      "keywords": ["ARIMA", "ETS", "Prophet", "exponential smoothing", "seasonality", "ACF", "PACF", "decomposition"]
+    },
+    {
+      "id": "bayesian-methods",
+      "label": "Bayesian Inference",
+      "macro_category": "Statistics",
+      "description": "Bayesian statistics, PyMC, Stan, and probabilistic programming",
+      "keywords": ["bayesian", "PyMC", "Stan", "prior", "posterior", "MCMC", "Statistical Rethinking", "probabilistic programming"]
+    },
+    {
+      "id": "tech-company-blogs",
+      "label": "Tech Company Engineering Blogs",
+      "macro_category": "Industry",
+      "description": "Engineering and data science blogs from tech companies",
+      "keywords": ["Uber engineering", "Netflix tech", "Airbnb data", "Stripe engineering", "Lyft", "DoorDash", "Instacart", "tech blog"]
+    },
+    {
+      "id": "econ-blogs",
+      "label": "Economics Blogs & Newsletters",
+      "macro_category": "Strategy",
+      "description": "Economics-focused blogs and newsletters",
+      "keywords": ["Apricitas", "Noahpinion", "Economic Forces", "Marginal Revolution", "economics blog", "econ newsletter"]
+    },
+    {
+      "id": "quant-finance",
+      "label": "Quantitative Finance",
+      "macro_category": "Industry",
+      "description": "Quantitative finance, trading, and financial modeling",
+      "keywords": ["quant", "trading", "finance", "portfolio", "risk management", "derivatives", "Black-Scholes", "awesome quant"]
+    },
+    {
+      "id": "healthcare-econ",
+      "label": "Healthcare Economics",
+      "macro_category": "Industry",
+      "description": "Healthcare economics, health policy, and medical decision-making",
+      "keywords": ["healthcare", "health economics", "medical", "hospital", "health policy", "pharmaceutical"]
+    },
+    {
+      "id": "transportation-econ",
+      "label": "Transportation & Rideshare",
+      "macro_category": "Industry",
+      "description": "Transportation economics, rideshare, and mobility",
+      "keywords": ["rideshare", "Uber economics", "Lyft economics", "transportation", "mobility", "ride-hailing", "taxi"]
+    }
+  ]
+}

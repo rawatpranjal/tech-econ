@@ -1,1530 +1,1662 @@
 {
-  "generated_at": "2026-01-05T18:07:53.110699",
-  "algorithm": "semantic_cluster_v3",
+  "generated_at": "2026-01-05T18:57:57.461957",
+  "algorithm": "manual_curation_v1",
   "params": {
     "min_cluster_size": 4,
-    "max_cluster_size": 10,
-    "target_cluster_size": 7
+    "max_cluster_size": 10
   },
-  "total_clusters": 54,
-  "total_items": 357,
+  "total_clusters": 41,
+  "total_items": 613,
   "clusters": [
     {
-      "id": "cluster-bayesian-methods",
-      "label": "Bayesian Methods",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Bayesian & Probability",
-      "original_categories": [
-        "Bayesian Methods"
-      ],
-      "item_count": 6,
-      "items": [
-        "resource-pymc-marketing-clv-quickstart",
-        "resource-pymc-marketing-documentation",
-        "resource-statistical-rethinking",
-        "resource-seeing-theory-brown",
-        "resource-pymc-labs-blog",
-        "resource-statquest-with-josh-starmer"
-      ],
-      "carousel_items": [
-        "resource-pymc-marketing-clv-quickstart",
-        "resource-pymc-marketing-documentation",
-        "resource-statistical-rethinking",
-        "resource-pymc-labs-blog",
-        "resource-seeing-theory-brown",
-        "resource-statquest-with-josh-starmer"
-      ]
-    },
-    {
-      "id": "cluster-python-for-economists",
-      "label": "Causal Inference",
-      "semantic_cluster": "python-for-economists",
+      "id": "cluster-did-synth-control",
+      "label": "DiD & Synthetic Control",
+      "cluster_id": "did-synth-control",
       "macro_category": "Causal Methods",
       "original_categories": [
-        "Synthetic Control",
-        "Causal Inference",
-        "Econometrics"
-      ],
-      "item_count": 10,
-      "items": [
-        "resource-coding-for-economists-arthur-turrell",
-        "resource-quantecon-lectures",
-        "resource-awesome-economics",
-        "resource-googles-causalimpact-blog-post",
-        "resource-adam-kelleher-causality-python-package",
-        "resource-first-course-in-causal-inference-python",
-        "resource-quantecon-datascience",
-        "resource-dario-sansone-ml-for-economists-resources",
-        "resource-apoorva-lal-applied-econometrics-notes",
-        "resource-econtalk-susan-athey-on-ml-big-data-and-causation"
-      ],
-      "carousel_items": [
-        "resource-coding-for-economists-arthur-turrell",
-        "resource-quantecon-lectures",
-        "resource-awesome-economics",
-        "resource-googles-causalimpact-blog-post",
-        "resource-adam-kelleher-causality-python-package",
-        "resource-first-course-in-causal-inference-python",
-        "resource-quantecon-datascience",
-        "resource-dario-sansone-ml-for-economists-resources",
-        "resource-apoorva-lal-applied-econometrics-notes",
-        "resource-econtalk-susan-athey-on-ml-big-data-and-causation"
-      ]
-    },
-    {
-      "id": "cluster-regression-discontinuity-desig",
-      "label": "Causal Inference",
-      "semantic_cluster": "regression-discontinuity-design",
-      "macro_category": "Causal Methods",
-      "original_categories": [
-        "Synthetic Control",
-        "Causal Inference",
-        "IV & RDD"
-      ],
-      "item_count": 10,
-      "items": [
-        "resource-tilburg-science-hub-rdd-tutorials",
-        "resource-nick-huntington-klein-animated-causal-graphs",
-        "resource-doubledebiased-machine-learning-guide",
-        "resource-lyft-causal-forecasting-at-lyft",
-        "resource-stitch-fix-market-matching-with-causalimpact",
-        "resource-netflix-a-survey-of-causal-inference-applications",
-        "resource-netflix-computational-causal-inference",
-        "resource-pywhy-causal-discovery-example",
-        "resource-doordash-leveraging-causal-inference-for-forecasts",
-        "resource-causal-econometrics-course"
-      ],
-      "carousel_items": [
-        "resource-tilburg-science-hub-rdd-tutorials",
-        "resource-nick-huntington-klein-animated-causal-graphs",
-        "resource-doubledebiased-machine-learning-guide",
-        "resource-stitch-fix-market-matching-with-causalimpact",
-        "resource-netflix-computational-causal-inference",
-        "resource-lyft-causal-forecasting-at-lyft",
-        "resource-pywhy-causal-discovery-example",
-        "resource-doordash-leveraging-causal-inference-for-forecasts",
-        "resource-causal-econometrics-course",
-        "resource-netflix-a-survey-of-causal-inference-applications"
-      ]
-    },
-    {
-      "id": "cluster-causal-ml-methods",
-      "label": "Causal ML Methods",
-      "semantic_cluster": "causal-ml-methods",
-      "macro_category": "Causal Methods",
-      "original_categories": [
-        "Causal Inference"
-      ],
-      "item_count": 9,
-      "items": [
-        "resource-mark-whites-practical-causal-forest-tutorial",
-        "resource-teconomics-machine-learning-meets-instrumental-var",
-        "resource-applied-causal-inference-book-chernozhukov-et-al",
-        "resource-lost-statistics-causal-forest-tutorial",
-        "resource-applied-causal-inference-powered-by-ml-and-ai",
-        "resource-stanford-stats-361-causal-inference-lecture-notes-",
-        "resource-airbnb-ace-artificial-counterfactual-estimation",
-        "resource-imf-cross-validation-for-economists",
-        "resource-microsoft-research-adversarial-ml-and-instrumental"
-      ],
-      "carousel_items": [
-        "resource-mark-whites-practical-causal-forest-tutorial",
-        "resource-teconomics-machine-learning-meets-instrumental-var",
-        "resource-applied-causal-inference-book-chernozhukov-et-al",
-        "resource-lost-statistics-causal-forest-tutorial",
-        "resource-applied-causal-inference-powered-by-ml-and-ai",
-        "resource-stanford-stats-361-causal-inference-lecture-notes-",
-        "resource-airbnb-ace-artificial-counterfactual-estimation",
-        "resource-imf-cross-validation-for-economists",
-        "resource-microsoft-research-adversarial-ml-and-instrumental"
-      ]
-    },
-    {
-      "id": "cluster-causal-inference-methods",
-      "label": "Causal Inference Methods",
-      "semantic_cluster": "causal-inference-methods",
-      "macro_category": "Causal Methods",
-      "original_categories": [
+        "Specialized Methods",
         "Difference-in-Differences",
+        "Synthetic Control",
+        "Causal Inference",
+        "Ads & Attribution"
+      ],
+      "item_count": 16,
+      "items": [
+        "resource-causal-inference-for-the-brave-and-true",
+        "resource-pedro-santannas-did-resources",
+        "resource-matteo-courthouds-synthetic-control-tutorial",
+        "resource-alberto-abadies-nber-methods-lecture",
+        "resource-andrew-heiss-synthetic-data-for-program-evaluation",
+        "resource-netflix-quasi-experimentation-at-netflix",
+        "resource-matteo-courthouds-did-tutorial",
+        "resource-jonathan-roths-did-resources",
+        "resource-lost-stats-event-study-designs",
+        "resource-haus-blog-synthetic-control-geo-experimentation",
+        "resource-googles-causalimpact-blog-post",
+        "resource-mixtape-sessions-github-repository",
+        "resource-asjad-naqvis-did-repository",
+        "resource-netflix-round-2-causal-inference-survey-synthetic-",
+        "resource-stitch-fix-market-matching-with-causalimpact",
+        "resource-causal-inference-for-the-brave-and-true-time-serie"
+      ],
+      "carousel_items": [
+        "resource-causal-inference-for-the-brave-and-true",
+        "resource-matteo-courthouds-did-tutorial",
+        "resource-mixtape-sessions-github-repository",
+        "resource-asjad-naqvis-did-repository",
+        "resource-pedro-santannas-did-resources",
+        "resource-jonathan-roths-did-resources",
+        "resource-googles-causalimpact-blog-post",
+        "resource-stitch-fix-market-matching-with-causalimpact",
+        "resource-causal-inference-for-the-brave-and-true-time-serie",
+        "resource-matteo-courthouds-synthetic-control-tutorial"
+      ]
+    },
+    {
+      "id": "cluster-mixtape-resources",
+      "label": "The Mixtape & Foundational Textbooks",
+      "cluster_id": "mixtape-resources",
+      "macro_category": "Causal Methods",
+      "original_categories": [
+        "Causal Inference"
+      ],
+      "item_count": 15,
+      "items": [
+        "resource-scott-cunningham-causal-inference-substack",
+        "resource-causal-inference-the-mixtape",
+        "resource-applied-causal-inference-powered-by-ml-and-ai",
+        "resource-ben-elsner-causal-inference-policy-evaluation",
+        "resource-shubhanshu-mishra-awesome-causality",
+        "resource-awesome-causal-inference-matteo-courthoud",
+        "resource-the-effect-nick-huntington-klein",
+        "resource-yanir-seroussi-curated-causal-inference-resources",
+        "resource-apoorva-lal-applied-econometrics-notes",
+        "resource-doubledebiased-machine-learning-guide",
+        "resource-first-course-in-causal-inference-python",
+        "resource-causal-econometrics-course",
+        "resource-google-research-causalimpact-paper",
+        "resource-causal-inference-a-statistical-learning-approach",
+        "resource-causal-wizard-reading-list"
+      ],
+      "carousel_items": [
+        "resource-scott-cunningham-causal-inference-substack",
+        "resource-causal-inference-the-mixtape",
+        "resource-doubledebiased-machine-learning-guide",
+        "resource-awesome-causal-inference-matteo-courthoud",
+        "resource-first-course-in-causal-inference-python",
+        "resource-causal-econometrics-course",
+        "resource-google-research-causalimpact-paper",
+        "resource-causal-inference-a-statistical-learning-approach",
+        "resource-causal-wizard-reading-list",
+        "resource-applied-causal-inference-powered-by-ml-and-ai"
+      ]
+    },
+    {
+      "id": "cluster-causal-forests",
+      "label": "Causal Forests & CATE",
+      "cluster_id": "causal-forests",
+      "macro_category": "Causal Methods",
+      "original_categories": [
+        "Machine Learning",
+        "Causal Inference",
+        "Computational Economics"
+      ],
+      "item_count": 11,
+      "items": [
+        "resource-mark-whites-practical-causal-forest-tutorial",
+        "resource-stanford-ml-causal-inference-short-course",
+        "resource-doordash-causal-modeling-to-get-value-from-flat-ex",
+        "resource-applied-causal-inference-powered-by-ml-and-ai",
+        "resource-stanford-stats-361-causal-inference-lecture-notes-",
+        "resource-stanford-gsb-machine-learning-causal-inference-sho",
+        "resource-netflix-heterogeneous-treatment-effects",
+        "resource-aea-machine-learning-and-econometrics-atheyimbens",
+        "resource-applied-causal-inference-book-chernozhukov-et-al",
+        "resource-lost-statistics-causal-forest-tutorial",
+        "resource-uber-engineering-uplift-modeling-for-multiple-trea"
+      ],
+      "carousel_items": [
+        "resource-mark-whites-practical-causal-forest-tutorial",
+        "resource-stanford-ml-causal-inference-short-course",
+        "resource-uber-engineering-uplift-modeling-for-multiple-trea",
+        "resource-stanford-gsb-machine-learning-causal-inference-sho",
+        "resource-aea-machine-learning-and-econometrics-atheyimbens",
+        "resource-applied-causal-inference-book-chernozhukov-et-al",
+        "resource-lost-statistics-causal-forest-tutorial",
+        "resource-doordash-causal-modeling-to-get-value-from-flat-ex",
+        "resource-applied-causal-inference-powered-by-ml-and-ai",
+        "resource-stanford-stats-361-causal-inference-lecture-notes-"
+      ]
+    },
+    {
+      "id": "cluster-rdd-iv",
+      "label": "RDD & IV Methods",
+      "cluster_id": "rdd-iv",
+      "macro_category": "Causal Methods",
+      "original_categories": [
+        "IV & RDD",
+        "Machine Learning",
+        "Causal Inference",
+        "Specialized Methods"
+      ],
+      "item_count": 10,
+      "items": [
+        "resource-matteo-courthouds-iv-tutorial",
+        "resource-andrew-heiss-synthetic-data-for-program-evaluation",
+        "resource-matteo-courthouds-rdd-tutorial",
+        "resource-andrew-heisss-rdd-course-examples",
+        "resource-tilburg-science-hub-rdd-tutorials",
+        "resource-spotify-encouragement-designs-and-instrumental-var",
+        "resource-uber-engineering-causal-inference-at-uber",
+        "resource-microsoft-research-adversarial-ml-and-instrumental",
+        "resource-teconomics-machine-learning-meets-instrumental-var",
+        "resource-causal-inference-for-the-brave-and-true-time-serie"
+      ],
+      "carousel_items": [
+        "resource-matteo-courthouds-iv-tutorial",
+        "resource-matteo-courthouds-rdd-tutorial",
+        "resource-andrew-heisss-rdd-course-examples",
+        "resource-tilburg-science-hub-rdd-tutorials",
+        "resource-uber-engineering-causal-inference-at-uber",
+        "resource-teconomics-machine-learning-meets-instrumental-var",
+        "resource-causal-inference-for-the-brave-and-true-time-serie",
+        "resource-andrew-heiss-synthetic-data-for-program-evaluation",
+        "resource-spotify-encouragement-designs-and-instrumental-var",
+        "resource-microsoft-research-adversarial-ml-and-instrumental"
+      ]
+    },
+    {
+      "id": "cluster-dags-causal-graphs",
+      "label": "DAGs & Causal Graphs",
+      "cluster_id": "dags-causal-graphs",
+      "macro_category": "Causal Methods",
+      "original_categories": [
+        "Machine Learning",
         "Causal Inference"
       ],
       "item_count": 8,
       "items": [
-        "resource-causal-inference-for-the-brave-and-true",
-        "resource-causal-inference-the-mixtape",
-        "resource-mixtape-sessions-github-repository",
-        "resource-netflix-quasi-experimentation-at-netflix",
+        "resource-brady-neals-introduction-to-causal-inference",
+        "resource-doordash-using-back-door-adjustment-for-pre-post-a",
+        "resource-lyft-causal-forecasting-at-lyft",
+        "resource-adam-kelleher-causal-data-science-medium-series",
+        "resource-nick-huntington-klein-animated-causal-graphs",
         "resource-r-causal-book-dag-construction-chapter",
-        "resource-google-research-causalimpact-paper",
-        "resource-causal-inference-a-statistical-learning-approach",
-        "resource-netflix-heterogeneous-treatment-effects"
+        "resource-andrew-heisss-dag-and-backdoor-tutorials",
+        "resource-pywhy-causal-discovery-example"
       ],
       "carousel_items": [
-        "resource-causal-inference-for-the-brave-and-true",
-        "resource-causal-inference-the-mixtape",
-        "resource-mixtape-sessions-github-repository",
-        "resource-netflix-quasi-experimentation-at-netflix",
+        "resource-andrew-heisss-dag-and-backdoor-tutorials",
+        "resource-brady-neals-introduction-to-causal-inference",
+        "resource-nick-huntington-klein-animated-causal-graphs",
+        "resource-lyft-causal-forecasting-at-lyft",
         "resource-r-causal-book-dag-construction-chapter",
-        "resource-google-research-causalimpact-paper",
-        "resource-causal-inference-a-statistical-learning-approach",
-        "resource-netflix-heterogeneous-treatment-effects"
-      ]
-    },
-    {
-      "id": "cluster-causal-inference-pathway",
-      "label": "Causal Inference",
-      "semantic_cluster": "causal-inference-pathway",
-      "macro_category": "Causal Methods",
-      "original_categories": [
-        "Causal Inference"
-      ],
-      "item_count": 5,
-      "items": [
-        "resource-causal-wizard-reading-list",
-        "resource-andrew-heiss-synthetic-data-for-program-evaluation",
-        "resource-ben-elsner-causal-inference-policy-evaluation",
-        "resource-the-effect-nick-huntington-klein",
-        "resource-adam-kelleher-causal-data-science-medium-series"
-      ],
-      "carousel_items": [
-        "resource-causal-wizard-reading-list",
-        "resource-andrew-heiss-synthetic-data-for-program-evaluation",
-        "resource-ben-elsner-causal-inference-policy-evaluation",
-        "resource-the-effect-nick-huntington-klein",
+        "resource-pywhy-causal-discovery-example",
+        "resource-doordash-using-back-door-adjustment-for-pre-post-a",
         "resource-adam-kelleher-causal-data-science-medium-series"
       ]
     },
     {
-      "id": "cluster-causal-inference-resources",
-      "label": "Causal Inference Resources",
-      "semantic_cluster": "causal-inference-resources",
+      "id": "cluster-causal-libraries",
+      "label": "Causal Inference Libraries",
+      "cluster_id": "causal-libraries",
       "macro_category": "Causal Methods",
       "original_categories": [
         "Causal Inference"
-      ],
-      "item_count": 4,
-      "items": [
-        "resource-scott-cunningham-causal-inference-substack",
-        "resource-awesome-causal-inference-matteo-courthoud",
-        "resource-shubhanshu-mishra-awesome-causality",
-        "resource-yanir-seroussi-curated-causal-inference-resources"
-      ],
-      "carousel_items": [
-        "resource-scott-cunningham-causal-inference-substack",
-        "resource-awesome-causal-inference-matteo-courthoud",
-        "resource-shubhanshu-mishra-awesome-causality",
-        "resource-yanir-seroussi-curated-causal-inference-resources"
-      ]
-    },
-    {
-      "id": "cluster-causal-inference-#8",
-      "label": "Causal Inference #8",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Causal Methods",
-      "original_categories": [
-        "Causal Inference"
-      ],
-      "item_count": 4,
-      "items": [
-        "resource-lost-stats-event-study-designs",
-        "resource-egap-learning-days-field-experiments",
-        "resource-world-of-daas-susan-athey-tech-economists-and-ml",
-        "resource-hal-varian-big-data-new-tricks-for-econometrics"
-      ],
-      "carousel_items": [
-        "resource-lost-stats-event-study-designs",
-        "resource-egap-learning-days-field-experiments",
-        "resource-world-of-daas-susan-athey-tech-economists-and-ml",
-        "resource-hal-varian-big-data-new-tricks-for-econometrics"
-      ]
-    },
-    {
-      "id": "cluster-marketplace-experimentation",
-      "label": "Marketplace Experimentation",
-      "semantic_cluster": "marketplace-experimentation",
-      "macro_category": "Experimentation",
-      "original_categories": [
-        "Interference & Switchback",
-        "A/B Testing"
-      ],
-      "item_count": 9,
-      "items": [
-        "resource-linkedin-our-evolution-towards-t-rex",
-        "resource-doordash-switchback-tests-under-network-effects",
-        "resource-lyft-experimentation-in-a-ridesharing-marketplace",
-        "resource-spotify-confidence",
-        "resource-exp-platform-microsoft-experimentation-resources",
-        "resource-spotify-new-experimentation-platform-part-1",
-        "resource-airbnb-experiments-at-airbnb",
-        "resource-lyft-challenges-in-experimentation",
-        "resource-netflix-decision-making-at-netflix"
-      ],
-      "carousel_items": [
-        "resource-linkedin-our-evolution-towards-t-rex",
-        "resource-doordash-switchback-tests-under-network-effects",
-        "resource-lyft-experimentation-in-a-ridesharing-marketplace",
-        "resource-spotify-confidence",
-        "resource-exp-platform-microsoft-experimentation-resources",
-        "resource-spotify-new-experimentation-platform-part-1",
-        "resource-airbnb-experiments-at-airbnb",
-        "resource-lyft-challenges-in-experimentation",
-        "resource-netflix-decision-making-at-netflix"
-      ]
-    },
-    {
-      "id": "cluster-experimentation-methods",
-      "label": "Experimentation",
-      "semantic_cluster": "experimentation-methods",
-      "macro_category": "Experimentation",
-      "original_categories": [
-        "Sequential Testing",
-        "Bandits & Adaptive",
-        "A/B Testing"
-      ],
-      "item_count": 6,
-      "items": [
-        "resource-eppo-bandit-vs-experiment-testing-decision-guide",
-        "resource-eugene-yan-bandits-for-recommender-systems",
-        "resource-netflix-return-aware-experimentation",
-        "resource-spotify-risk-aware-product-decisions-in-ab-tests",
-        "resource-netflix-page-simulator-for-better-offline-metrics",
-        "resource-matteo-courthoud-group-sequential-testing"
-      ],
-      "carousel_items": [
-        "resource-eppo-bandit-vs-experiment-testing-decision-guide",
-        "resource-eugene-yan-bandits-for-recommender-systems",
-        "resource-netflix-return-aware-experimentation",
-        "resource-netflix-page-simulator-for-better-offline-metrics",
-        "resource-spotify-risk-aware-product-decisions-in-ab-tests",
-        "resource-matteo-courthoud-group-sequential-testing"
-      ]
-    },
-    {
-      "id": "cluster-experiment-design-methods",
-      "label": "Causal Inference",
-      "semantic_cluster": "experiment-design-methods",
-      "macro_category": "Experimentation",
-      "original_categories": [
-        "Interference & Switchback",
-        "Variance Reduction"
-      ],
-      "item_count": 4,
-      "items": [
-        "resource-statsig-switchback-experiments-overview",
-        "resource-eppo-cuped++-for-extended-variance-reduction",
-        "resource-understanding-cuped-by-matteo-courthoud",
-        "resource-doordash-cupac-for-ml-enhanced-variance-reduction"
-      ],
-      "carousel_items": [
-        "resource-statsig-switchback-experiments-overview",
-        "resource-eppo-cuped++-for-extended-variance-reduction",
-        "resource-understanding-cuped-by-matteo-courthoud",
-        "resource-doordash-cupac-for-ml-enhanced-variance-reduction"
-      ]
-    },
-    {
-      "id": "cluster-causal-inference-#9",
-      "label": "Causal Inference #9",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Experimentation",
-      "original_categories": [
-        "Sequential Testing",
-        "Interference & Switchback",
-        "A/B Testing"
-      ],
-      "item_count": 4,
-      "items": [
-        "resource-wayfair-geo-experiments-for-incrementality",
-        "resource-microsoft-exp-deep-dive-into-variance-reduction",
-        "resource-spotify-choosing-a-sequential-testing-framework",
-        "resource-data-analysis-journal-olga-berezovsky"
-      ],
-      "carousel_items": [
-        "resource-wayfair-geo-experiments-for-incrementality",
-        "resource-microsoft-exp-deep-dive-into-variance-reduction",
-        "resource-spotify-choosing-a-sequential-testing-framework",
-        "resource-data-analysis-journal-olga-berezovsky"
-      ]
-    },
-    {
-      "id": "cluster-price-theory",
-      "label": "Price Theory",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Industry Economics",
-      "original_categories": [
-        "Computational Economics",
-        "Transportation Economics & Technology",
-        "Energy & Utilities Economics",
-        "Healthcare Economics & Health-Tech",
-        "Applied Economics"
-      ],
-      "item_count": 8,
-      "items": [
-        "resource-apricitas-economics-joseph-politano",
-        "resource-economic-forces-albrecht-hendrickson",
-        "resource-energy-institute-at-haas-blog",
-        "resource-coursera-the-economics-of-health-care-delivery",
-        "resource-foundations-of-transportation-network-analysis-edx",
-        "resource-mit-ocw-transportation-systems-analysis",
-        "resource-class-central-transportation-courses",
-        "resource-open-source-economics-structural-estimation"
-      ],
-      "carousel_items": [
-        "resource-apricitas-economics-joseph-politano",
-        "resource-economic-forces-albrecht-hendrickson",
-        "resource-energy-institute-at-haas-blog",
-        "resource-coursera-the-economics-of-health-care-delivery",
-        "resource-foundations-of-transportation-network-analysis-edx",
-        "resource-class-central-transportation-courses",
-        "resource-open-source-economics-structural-estimation",
-        "resource-mit-ocw-transportation-systems-analysis"
-      ]
-    },
-    {
-      "id": "cluster-machine-learning-#5",
-      "label": "Machine Learning #5",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Industry Economics",
-      "original_categories": [
-        "Insurance & Actuarial",
-        "Sports Analytics",
-        "Quantitative Finance"
       ],
       "item_count": 7,
       "items": [
-        "resource-coaching-actuaries",
-        "resource-freakonometrics-blog",
-        "resource-swiss-association-of-actuaries-tutorials",
-        "resource-awesome-quant",
-        "resource-great-learning-insurance-analytics-course",
-        "resource-fangraphs-sabermetrics-library",
-        "resource-sports-performance-analytics-specialization"
+        "resource-microsoft-research-end-to-end-causal-inference-at-",
+        "resource-netflix-computational-causal-inference",
+        "resource-adam-kelleher-causality-python-package",
+        "resource-matteo-courthouds-meta-learners-tutorial",
+        "resource-kdd-2021-tutorial-causal-inference-with-econml-and",
+        "resource-first-course-in-causal-inference-python",
+        "resource-pywhy-causal-discovery-example"
       ],
       "carousel_items": [
-        "resource-coaching-actuaries",
-        "resource-awesome-quant",
-        "resource-great-learning-insurance-analytics-course",
-        "resource-freakonometrics-blog",
-        "resource-swiss-association-of-actuaries-tutorials",
-        "resource-fangraphs-sabermetrics-library",
-        "resource-sports-performance-analytics-specialization"
+        "resource-matteo-courthouds-meta-learners-tutorial",
+        "resource-kdd-2021-tutorial-causal-inference-with-econml-and",
+        "resource-netflix-computational-causal-inference",
+        "resource-adam-kelleher-causality-python-package",
+        "resource-first-course-in-causal-inference-python",
+        "resource-pywhy-causal-discovery-example",
+        "resource-microsoft-research-end-to-end-causal-inference-at-"
+      ]
+    },
+    {
+      "id": "cluster-ab-testing-foundations",
+      "label": "A/B Testing Foundations",
+      "cluster_id": "ab-testing-foundations",
+      "macro_category": "Experimentation",
+      "original_categories": [
+        "AB Testing",
+        "Causal Inference",
+        "Marketing Science",
+        "A/B Testing",
+        "Case Studies",
+        "MarTech & Customer Analytics"
+      ],
+      "item_count": 31,
+      "items": [
+        "resource-evan-miller-how-not-to-run-an-ab-test",
+        "resource-matteo-courthouds-experimentation-series",
+        "resource-evan-miller-formulas-for-bayesian-ab-testing",
+        "resource-evan-millers-ab-testing-tools",
+        "resource-netflix-tech-blog-what-is-an-ab-test",
+        "resource-doordash-4-principles-to-boost-experimentation-by-",
+        "resource-uber-making-experiment-evaluation-engine-100x-fast",
+        "resource-practical-introduction-to-switchback-experiments",
+        "resource-ron-berman-p-hacking-in-ab-testing",
+        "resource-data-analysis-journal-olga-berezovsky",
+        "resource-spotify-confidence",
+        "resource-netflix-sequential-ab-testing-keeps-the-world-stre",
+        "resource-exp-platform-microsoft-experimentation-resources",
+        "resource-netflix-its-all-about-testing-the-experimentation-",
+        "resource-linkedin-building-inclusive-products-through-ab-te",
+        "resource-lukas-vermeer-building-experimentation-infrastruct",
+        "resource-ronny-kohavi-trustworthy-online-controlled-experim",
+        "resource-spotify-risk-aware-product-decisions-in-ab-tests",
+        "resource-ronny-kohavi-seven-rules-of-thumb-for-web-site-exp",
+        "resource-spotify-new-experimentation-platform-part-1",
+        "resource-airbnb-experiments-at-airbnb",
+        "resource-growthbooks-experimentation-fundamentals",
+        "resource-netflix-page-simulator-for-better-offline-metrics",
+        "resource-netflix-return-aware-experimentation",
+        "resource-egap-learning-days-field-experiments",
+        "resource-150-successful-ml-models-at-bookingcom-kdd-2019",
+        "resource-linkedin-ab-testing-variant-assignment-at-scale",
+        "resource-uber-analyzing-experiment-outcomes-beyond-average-",
+        "resource-linkedin-our-evolution-towards-t-rex",
+        "resource-netflix-a-survey-of-causal-inference-applications",
+        "resource-marketing-analytics-uva-dardencoursera"
+      ],
+      "carousel_items": [
+        "resource-evan-miller-how-not-to-run-an-ab-test",
+        "resource-matteo-courthouds-experimentation-series",
+        "resource-evan-millers-ab-testing-tools",
+        "resource-netflix-tech-blog-what-is-an-ab-test",
+        "resource-doordash-4-principles-to-boost-experimentation-by-",
+        "resource-practical-introduction-to-switchback-experiments",
+        "resource-150-successful-ml-models-at-bookingcom-kdd-2019",
+        "resource-linkedin-our-evolution-towards-t-rex",
+        "resource-marketing-analytics-uva-dardencoursera",
+        "resource-evan-miller-formulas-for-bayesian-ab-testing"
+      ]
+    },
+    {
+      "id": "cluster-variance-reduction",
+      "label": "Variance Reduction (CUPED)",
+      "cluster_id": "variance-reduction",
+      "macro_category": "Experimentation",
+      "original_categories": [
+        "A/B Testing",
+        "Variance Reduction"
+      ],
+      "item_count": 9,
+      "items": [
+        "resource-understanding-cuped-by-matteo-courthoud",
+        "resource-doordash-cupac-for-ml-enhanced-variance-reduction",
+        "resource-matteo-courthouds-experimentation-series",
+        "resource-exp-platform-microsoft-experimentation-resources",
+        "resource-bookingcom-increasing-power-with-cuped",
+        "resource-microsoft-exp-deep-dive-into-variance-reduction",
+        "resource-lyft-challenges-in-experimentation",
+        "resource-statsigs-cuped-deep-dive",
+        "resource-eppo-cuped++-for-extended-variance-reduction"
+      ],
+      "carousel_items": [
+        "resource-matteo-courthouds-experimentation-series",
+        "resource-bookingcom-increasing-power-with-cuped",
+        "resource-understanding-cuped-by-matteo-courthoud",
+        "resource-doordash-cupac-for-ml-enhanced-variance-reduction",
+        "resource-exp-platform-microsoft-experimentation-resources",
+        "resource-microsoft-exp-deep-dive-into-variance-reduction",
+        "resource-lyft-challenges-in-experimentation",
+        "resource-statsigs-cuped-deep-dive",
+        "resource-eppo-cuped++-for-extended-variance-reduction"
+      ]
+    },
+    {
+      "id": "cluster-switchback-interference",
+      "label": "Switchback & Interference",
+      "cluster_id": "switchback-interference",
+      "macro_category": "Experimentation",
+      "original_categories": [
+        "AB Testing",
+        "Interference & Switchback",
+        "A/B Testing"
+      ],
+      "item_count": 8,
+      "items": [
+        "resource-doordash-4-principles-to-boost-experimentation-by-",
+        "resource-practical-introduction-to-switchback-experiments",
+        "resource-lyft-experimentation-in-a-ridesharing-marketplace",
+        "resource-linkedin-detecting-interference-an-ab-test-of-ab-t",
+        "resource-meta-how-meta-tests-products-with-strong-network-e",
+        "resource-doordash-switchback-tests-under-network-effects",
+        "resource-statsig-switchback-experiments-overview",
+        "resource-doordash-statistical-analysis-for-switchback-exper"
+      ],
+      "carousel_items": [
+        "resource-doordash-4-principles-to-boost-experimentation-by-",
+        "resource-practical-introduction-to-switchback-experiments",
+        "resource-statsig-switchback-experiments-overview",
+        "resource-doordash-switchback-tests-under-network-effects",
+        "resource-doordash-statistical-analysis-for-switchback-exper",
+        "resource-lyft-experimentation-in-a-ridesharing-marketplace",
+        "resource-linkedin-detecting-interference-an-ab-test-of-ab-t",
+        "resource-meta-how-meta-tests-products-with-strong-network-e"
+      ]
+    },
+    {
+      "id": "cluster-sequential-bandits",
+      "label": "Sequential Testing & Bandits",
+      "cluster_id": "sequential-bandits",
+      "macro_category": "Experimentation",
+      "original_categories": [
+        "A/B Testing",
+        "Bandits & Adaptive",
+        "Sequential Testing"
+      ],
+      "item_count": 7,
+      "items": [
+        "resource-evan-miller-simple-sequential-ab-testing",
+        "resource-matteo-courthoud-group-sequential-testing",
+        "resource-spotify-choosing-a-sequential-testing-framework",
+        "resource-netflix-sequential-ab-testing-keeps-the-world-stre",
+        "resource-eppo-bandit-vs-experiment-testing-decision-guide",
+        "resource-eugene-yan-bandits-for-recommender-systems",
+        "resource-stitch-fix-multi-armed-bandits-experimentation-pla"
+      ],
+      "carousel_items": [
+        "resource-eppo-bandit-vs-experiment-testing-decision-guide",
+        "resource-eugene-yan-bandits-for-recommender-systems",
+        "resource-stitch-fix-multi-armed-bandits-experimentation-pla",
+        "resource-evan-miller-simple-sequential-ab-testing",
+        "resource-matteo-courthoud-group-sequential-testing",
+        "resource-spotify-choosing-a-sequential-testing-framework",
+        "resource-netflix-sequential-ab-testing-keeps-the-world-stre"
+      ]
+    },
+    {
+      "id": "cluster-geo-experiments",
+      "label": "Geo Experiments",
+      "cluster_id": "geo-experiments",
+      "macro_category": "Experimentation",
+      "original_categories": [
+        "Ads & Attribution",
+        "Interference & Switchback",
+        "Frameworks & Strategy"
+      ],
+      "item_count": 4,
+      "items": [
+        "resource-021-newsletter-marketing-data-teams-bridge",
+        "resource-haus-blog-synthetic-control-geo-experimentation",
+        "resource-remerge-findings-incrementality-testing-approaches",
+        "resource-wayfair-geo-experiments-for-incrementality"
+      ],
+      "carousel_items": [
+        "resource-wayfair-geo-experiments-for-incrementality",
+        "resource-haus-blog-synthetic-control-geo-experimentation",
+        "resource-remerge-findings-incrementality-testing-approaches",
+        "resource-021-newsletter-marketing-data-teams-bridge"
       ]
     },
     {
       "id": "cluster-agent-based-modeling",
-      "label": "Agent Based Modeling",
-      "semantic_cluster": "agent-based-modeling",
-      "macro_category": "Industry Economics",
+      "label": "Agent-Based Modeling",
+      "cluster_id": "agent-based-modeling",
+      "macro_category": "Industry",
       "original_categories": [
+        "Platform Economics",
         "Computational Economics"
       ],
-      "item_count": 4,
+      "item_count": 12,
       "items": [
+        "resource-eth-zurich-agent-based-modeling-of-economic-system",
+        "resource-econ-ark-demark-examples",
+        "resource-agent-based-models-with-python-an-introduction-to-",
+        "resource-quantecon-python-lectures",
+        "resource-matteo-courthouds-blp-demand-estimation",
+        "resource-frank-pinters-demand-estimation-notes",
+        "resource-mesa-documentation-tutorials",
+        "resource-rand-research-archive",
+        "resource-introduction-to-agent-based-modeling",
+        "resource-uber-simulated-marketplace-with-ml",
+        "resource-sipri-databases-and-research",
+        "resource-uber-gaining-insights-in-a-simulated-marketplace"
+      ],
+      "carousel_items": [
         "resource-introduction-to-agent-based-modeling",
         "resource-eth-zurich-agent-based-modeling-of-economic-system",
         "resource-agent-based-models-with-python-an-introduction-to-",
-        "resource-mesa-documentation-tutorials"
-      ],
-      "carousel_items": [
-        "resource-introduction-to-agent-based-modeling",
-        "resource-eth-zurich-agent-based-modeling-of-economic-system",
-        "resource-agent-based-models-with-python-an-introduction-to-",
-        "resource-mesa-documentation-tutorials"
-      ]
-    },
-    {
-      "id": "cluster-dynamic-programming-economics",
-      "label": "Dynamic Programming",
-      "semantic_cluster": "dynamic-programming-economics",
-      "macro_category": "Industry Economics",
-      "original_categories": [
-        "Computational Economics"
-      ],
-      "item_count": 4,
-      "items": [
-        "resource-quantecon-discrete-state-dynamic-programming",
-        "resource-mit-ocw-dynamic-programming-bertsekas",
+        "resource-matteo-courthouds-blp-demand-estimation",
+        "resource-frank-pinters-demand-estimation-notes",
+        "resource-mesa-documentation-tutorials",
         "resource-econ-ark-demark-examples",
-        "resource-quantecon-python-lectures"
-      ],
-      "carousel_items": [
-        "resource-quantecon-discrete-state-dynamic-programming",
-        "resource-mit-ocw-dynamic-programming-bertsekas",
-        "resource-econ-ark-demark-examples",
-        "resource-quantecon-python-lectures"
+        "resource-quantecon-python-lectures",
+        "resource-rand-research-archive",
+        "resource-uber-simulated-marketplace-with-ml"
       ]
     },
     {
-      "id": "cluster-deep-learning-economics",
-      "label": "Economics",
-      "semantic_cluster": "deep-learning-economics",
-      "macro_category": "Machine Learning",
+      "id": "cluster-transportation-econ",
+      "label": "Transportation & Rideshare",
+      "cluster_id": "transportation-econ",
+      "macro_category": "Industry",
       "original_categories": [
-        "Machine Learning"
+        "Routing & Logistics",
+        "Platform Economics",
+        "Marketplace Economics",
+        "Transportation Economics & Technology",
+        "A/B Testing",
+        "Interference & Switchback"
       ],
-      "item_count": 10,
+      "item_count": 11,
       "items": [
-        "resource-econdl-deep-learning-for-economists",
-        "resource-dario-sansones-ml-resources-for-economists",
-        "resource-aea-continuing-education-ml-and-econometrics-2018",
-        "resource-quantecon-ml-in-economics",
-        "resource-imf-machine-learning-for-economists-course",
-        "resource-anton-korinek-research",
-        "resource-machine-learning-for-economists-hebrew-university",
-        "resource-coding-for-economists-nlp-chapter",
-        "resource-genai-for-econ-substack",
-        "resource-nlp-for-economists-mgse"
-      ],
-      "carousel_items": [
-        "resource-econdl-deep-learning-for-economists",
-        "resource-dario-sansones-ml-resources-for-economists",
-        "resource-quantecon-ml-in-economics",
-        "resource-anton-korinek-research",
-        "resource-machine-learning-for-economists-hebrew-university",
-        "resource-aea-continuing-education-ml-and-econometrics-2018",
-        "resource-imf-machine-learning-for-economists-course",
-        "resource-coding-for-economists-nlp-chapter",
-        "resource-genai-for-econ-substack",
-        "resource-nlp-for-economists-mgse"
-      ]
-    },
-    {
-      "id": "cluster-deep-learning-forecasting",
-      "label": "Forecasting",
-      "semantic_cluster": "deep-learning-forecasting",
-      "macro_category": "Machine Learning",
-      "original_categories": [
-        "Recommender Systems",
-        "Machine Learning",
-        "Deep Learning"
-      ],
-      "item_count": 7,
-      "items": [
-        "resource-temporal-fusion-transformer-complete-tutorial",
-        "resource-tensorflow-time-series-forecasting-tutorial",
-        "resource-time-series-forecasting-with-lag-llama",
-        "resource-time-series-handbook-lightgbm-for-m5",
-        "resource-blocked-time-series-cross-validation",
-        "resource-tensorflow-recommenders-tutorials",
-        "resource-chronos-bolt-fast-zero-shot-forecasting-aws"
-      ],
-      "carousel_items": [
-        "resource-temporal-fusion-transformer-complete-tutorial",
-        "resource-time-series-forecasting-with-lag-llama",
-        "resource-time-series-handbook-lightgbm-for-m5",
-        "resource-blocked-time-series-cross-validation",
-        "resource-tensorflow-time-series-forecasting-tutorial",
-        "resource-tensorflow-recommenders-tutorials",
-        "resource-chronos-bolt-fast-zero-shot-forecasting-aws"
-      ]
-    },
-    {
-      "id": "cluster-machine-learning-#7",
-      "label": "Machine Learning #7",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Machine Learning",
-      "original_categories": [
-        "Machine Learning",
-        "LLMs & Agents"
-      ],
-      "item_count": 7,
-      "items": [
-        "resource-anthropic-prompt-engineering-documentation",
-        "resource-google-notebooklm",
-        "resource-ahead-of-ai-sebastian-raschka",
-        "resource-langchain-academy-intro-to-langgraph",
-        "resource-mit-ocw-energy-decisions-markets-and-policies",
-        "resource-gymnasium-documentation",
-        "resource-google-ai-blog"
-      ],
-      "carousel_items": [
-        "resource-google-notebooklm",
-        "resource-ahead-of-ai-sebastian-raschka",
-        "resource-langchain-academy-intro-to-langgraph",
-        "resource-mit-ocw-energy-decisions-markets-and-policies",
-        "resource-anthropic-prompt-engineering-documentation",
-        "resource-gymnasium-documentation",
-        "resource-google-ai-blog"
-      ]
-    },
-    {
-      "id": "cluster-machine-learning-#9",
-      "label": "Machine Learning #9",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Machine Learning",
-      "original_categories": [
-        "Search & Ranking",
-        "Machine Learning"
-      ],
-      "item_count": 6,
-      "items": [
-        "resource-stanford-ml-causal-inference-short-course",
-        "resource-uber-engineering-causal-inference-at-uber",
-        "resource-airbnb-ml-powered-search-ranking",
-        "resource-linkedin-ai-behind-recruiter-search",
-        "resource-linkedin-engineering",
-        "resource-netflix-tech-blog"
-      ],
-      "carousel_items": [
-        "resource-stanford-ml-causal-inference-short-course",
-        "resource-uber-engineering-causal-inference-at-uber",
-        "resource-airbnb-ml-powered-search-ranking",
-        "resource-linkedin-ai-behind-recruiter-search",
-        "resource-linkedin-engineering",
-        "resource-netflix-tech-blog"
-      ]
-    },
-    {
-      "id": "cluster-rag-advanced-techniques",
-      "label": "Machine Learning",
-      "semantic_cluster": "rag-advanced-techniques",
-      "macro_category": "Machine Learning",
-      "original_categories": [
-        "Machine Learning",
-        "LLMs & Agents"
-      ],
-      "item_count": 5,
-      "items": [
-        "resource-freecodecamp-rag-from-scratch",
-        "resource-eugene-yan-patterns-for-building-llm-based-systems",
-        "resource-google-machine-learning-crash-course",
-        "resource-made-with-ml",
-        "resource-andrew-ngs-machine-learning-specialization"
-      ],
-      "carousel_items": [
-        "resource-freecodecamp-rag-from-scratch",
-        "resource-eugene-yan-patterns-for-building-llm-based-systems",
-        "resource-google-machine-learning-crash-course",
-        "resource-made-with-ml",
-        "resource-andrew-ngs-machine-learning-specialization"
-      ]
-    },
-    {
-      "id": "cluster-machine-learning-#8",
-      "label": "Machine Learning #8",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Machine Learning",
-      "original_categories": [
-        "Search & Ranking",
-        "Machine Learning",
-        "Gradient Boosting"
-      ],
-      "item_count": 5,
-      "items": [
-        "resource-mljar-feature-importance-with-xgboost",
-        "resource-analytics-vidhya-hyperparameter-tuning-guide",
-        "resource-sdv-getting-started-guide",
-        "resource-openai-cookbook-semantic-search-with-embeddings",
-        "resource-stable-baselines3-documentation"
-      ],
-      "carousel_items": [
-        "resource-mljar-feature-importance-with-xgboost",
-        "resource-analytics-vidhya-hyperparameter-tuning-guide",
-        "resource-sdv-getting-started-guide",
-        "resource-openai-cookbook-semantic-search-with-embeddings",
-        "resource-stable-baselines3-documentation"
-      ]
-    },
-    {
-      "id": "cluster-recommender-systems-design",
-      "label": "Machine Learning",
-      "semantic_cluster": "recommender-systems-design",
-      "macro_category": "Machine Learning",
-      "original_categories": [
-        "Recommender Systems",
-        "Search & Ranking"
-      ],
-      "item_count": 4,
-      "items": [
-        "resource-eugene-yan-system-design-for-recommendations",
-        "resource-netflix-technology-blog-recommendation-systems",
-        "resource-olx-engineering-from-ranknet-to-lambdamart",
-        "resource-eugene-yan-position-bias-in-search"
-      ],
-      "carousel_items": [
-        "resource-eugene-yan-system-design-for-recommendations",
-        "resource-netflix-technology-blog-recommendation-systems",
-        "resource-olx-engineering-from-ranknet-to-lambdamart",
-        "resource-eugene-yan-position-bias-in-search"
-      ]
-    },
-    {
-      "id": "cluster-product-analytics",
-      "label": "Product Analytics",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Marketing & Growth",
-      "original_categories": [
-        "Ads & Attribution",
-        "Marketing Science",
-        "Growth & Retention"
-      ],
-      "item_count": 9,
-      "items": [
-        "resource-growth-accounting-backtraced-growth-accounting",
-        "resource-lumen-research-attention-metrics",
-        "resource-guide-to-product-metrics",
-        "resource-measuring-product-health-sequoia",
-        "resource-the-power-user-curve-a16z",
-        "resource-ultimate-guide-activation-aakash-gupta",
-        "resource-byron-sharp-how-brands-grow",
-        "resource-eva-ascarza-retention-futility-research",
-        "resource-koen-pauwels-marketing-and-metrics"
-      ],
-      "carousel_items": [
-        "resource-growth-accounting-backtraced-growth-accounting",
-        "resource-lumen-research-attention-metrics",
-        "resource-guide-to-product-metrics",
-        "resource-measuring-product-health-sequoia",
-        "resource-the-power-user-curve-a16z",
-        "resource-ultimate-guide-activation-aakash-gupta",
-        "resource-byron-sharp-how-brands-grow",
-        "resource-eva-ascarza-retention-futility-research",
-        "resource-koen-pauwels-marketing-and-metrics"
-      ]
-    },
-    {
-      "id": "cluster-pricing",
-      "label": "Pricing",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Marketing & Growth",
-      "original_categories": [
-        "Growth & Retention",
-        "Pricing & Revenue"
-      ],
-      "item_count": 7,
-      "items": [
-        "resource-chargebee-saas-pricing-models-guide",
-        "resource-openview-saas-pricing-guide",
-        "resource-revenuecat-sub-club-subscription-analytics",
-        "resource-growth-unhinged-saas-benchmarks-from-openview",
-        "resource-neil-hoyne-clv-focused-marketing",
-        "resource-uber-driver-surge-pricing",
-        "resource-airbnb-aerosolve-ml-for-humans"
-      ],
-      "carousel_items": [
-        "resource-chargebee-saas-pricing-models-guide",
-        "resource-openview-saas-pricing-guide",
-        "resource-revenuecat-sub-club-subscription-analytics",
-        "resource-growth-unhinged-saas-benchmarks-from-openview",
-        "resource-neil-hoyne-clv-focused-marketing",
-        "resource-uber-driver-surge-pricing",
-        "resource-airbnb-aerosolve-ml-for-humans"
-      ]
-    },
-    {
-      "id": "cluster-ads",
-      "label": "Ads",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Marketing & Growth",
-      "original_categories": [
-        "Ads & Attribution",
-        "Growth & Retention"
-      ],
-      "item_count": 7,
-      "items": [
-        "resource-appsflyer-privacy-sandbox-hub",
-        "resource-branch-resources-privacy-centric-measurement",
-        "resource-adjust-blog-mobile-attribution-privacy",
-        "resource-mobile-dev-memo-post-att-marketing-measurement",
-        "resource-haus-blog-synthetic-control-geo-experimentation",
-        "resource-remerge-findings-incrementality-testing-approaches",
-        "resource-kevin-hillstrom-minethatdata"
-      ],
-      "carousel_items": [
-        "resource-appsflyer-privacy-sandbox-hub",
-        "resource-branch-resources-privacy-centric-measurement",
-        "resource-mobile-dev-memo-post-att-marketing-measurement",
-        "resource-adjust-blog-mobile-attribution-privacy",
-        "resource-haus-blog-synthetic-control-geo-experimentation",
-        "resource-remerge-findings-incrementality-testing-approaches",
-        "resource-kevin-hillstrom-minethatdata"
-      ]
-    },
-    {
-      "id": "cluster-ad-auction-mechanisms",
-      "label": "Auctions",
-      "semantic_cluster": "ad-auction-mechanisms",
-      "macro_category": "Marketing & Growth",
-      "original_categories": [
-        "Ads & Attribution",
-        "Advertising & Attention"
-      ],
-      "item_count": 6,
-      "items": [
-        "resource-auctions-in-ad-tech-sanjiv-das",
-        "resource-meta-ads-fairness-variance-reduction-system",
-        "resource-display-advertising-with-real-time-bidding",
-        "resource-gsp-auction-paper-edelman-et-al-aer-2007",
-        "resource-adkdd-workshop-papers",
-        "resource-meta-andromeda-next-gen-personalized-ads-retrieval"
-      ],
-      "carousel_items": [
-        "resource-auctions-in-ad-tech-sanjiv-das",
-        "resource-meta-ads-fairness-variance-reduction-system",
-        "resource-display-advertising-with-real-time-bidding",
-        "resource-gsp-auction-paper-edelman-et-al-aer-2007",
-        "resource-adkdd-workshop-papers",
-        "resource-meta-andromeda-next-gen-personalized-ads-retrieval"
-      ]
-    },
-    {
-      "id": "cluster-pricing-optimization",
-      "label": "Pricing Optimization",
-      "semantic_cluster": "pricing-optimization",
-      "macro_category": "Marketing & Growth",
-      "original_categories": [
-        "Pricing & Revenue"
-      ],
-      "item_count": 5,
-      "items": [
-        "resource-the-theory-and-practice-of-revenue-management",
-        "resource-coursera-pricing-strategy-optimization-uvabcg",
-        "resource-monetizing-innovation-ramanujam",
-        "resource-ieee-spectrum-the-secret-of-airbnbs-pricing-algori",
-        "resource-airbnb-using-ml-to-predict-value-of-homes"
-      ],
-      "carousel_items": [
-        "resource-the-theory-and-practice-of-revenue-management",
-        "resource-coursera-pricing-strategy-optimization-uvabcg",
-        "resource-monetizing-innovation-ramanujam",
-        "resource-ieee-spectrum-the-secret-of-airbnbs-pricing-algori",
-        "resource-airbnb-using-ml-to-predict-value-of-homes"
-      ]
-    },
-    {
-      "id": "cluster-bayesian-marketing-methods",
-      "label": "Causal Inference",
-      "semantic_cluster": "bayesian-marketing-methods",
-      "macro_category": "Marketing & Growth",
-      "original_categories": [
-        "Marketing Science"
-      ],
-      "item_count": 4,
-      "items": [
-        "resource-juan-orduz-bayesian-marketing-methods",
-        "resource-recast-blog-mmm-verification",
-        "resource-mario-filho-forecastegy",
-        "resource-mike-taylor-vexpower-mmm-tutorials"
-      ],
-      "carousel_items": [
-        "resource-juan-orduz-bayesian-marketing-methods",
-        "resource-recast-blog-mmm-verification",
-        "resource-mario-filho-forecastegy",
-        "resource-mike-taylor-vexpower-mmm-tutorials"
-      ]
-    },
-    {
-      "id": "cluster-operations-research-#2",
-      "label": "Operations Research #2",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Operations Research",
-      "original_categories": [
-        "Operations Research",
-        "Routing & Logistics"
-      ],
-      "item_count": 10,
-      "items": [
+        "resource-mit-ocw-transportation-systems-analysis",
         "resource-afi-labs-ride-share-dispatch-algorithms",
-        "resource-vrpsolver-column-generation-for-vehicle-routing",
-        "resource-timefold-blog",
-        "resource-franco-peschiera-pulp-maintainer",
-        "resource-kuang-xu-newsletter",
-        "resource-tallys-yunes-or-by-the-beach",
-        "resource-kevin-gue-warehouse-design",
-        "resource-feasible-newsletter",
-        "resource-austin-buchanan-farkas-dilemma",
-        "resource-michael-trick-operations-research-blog"
-      ],
-      "carousel_items": [
-        "resource-afi-labs-ride-share-dispatch-algorithms",
-        "resource-vrpsolver-column-generation-for-vehicle-routing",
-        "resource-timefold-blog",
-        "resource-franco-peschiera-pulp-maintainer",
-        "resource-kuang-xu-newsletter",
-        "resource-tallys-yunes-or-by-the-beach",
-        "resource-kevin-gue-warehouse-design",
-        "resource-feasible-newsletter",
-        "resource-austin-buchanan-farkas-dilemma",
-        "resource-michael-trick-operations-research-blog"
-      ]
-    },
-    {
-      "id": "cluster-optimization-techniques",
-      "label": "Optimization Techniques",
-      "semantic_cluster": "optimization-techniques",
-      "macro_category": "Operations Research",
-      "original_categories": [
-        "Operations Research",
-        "Linear Programming"
-      ],
-      "item_count": 7,
-      "items": [
-        "resource-real-python-linear-programming-with-python",
-        "resource-pulp-official-documentation",
-        "resource-erwin-kalvelagen-yet-another-math-programming-cons",
-        "resource-google-or-tools-python-guide",
-        "resource-alain-chabrier-column-generation-with-cplex",
-        "resource-discrete-optimization-coursera",
-        "resource-dominik-krupke-cp-sat-primer"
-      ],
-      "carousel_items": [
-        "resource-real-python-linear-programming-with-python",
-        "resource-pulp-official-documentation",
-        "resource-erwin-kalvelagen-yet-another-math-programming-cons",
-        "resource-google-or-tools-python-guide",
-        "resource-alain-chabrier-column-generation-with-cplex",
-        "resource-discrete-optimization-coursera",
-        "resource-dominik-krupke-cp-sat-primer"
-      ]
-    },
-    {
-      "id": "cluster-machine-learning-#6",
-      "label": "Machine Learning #6",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Operations Research",
-      "original_categories": [
-        "Routing & Logistics"
-      ],
-      "item_count": 6,
-      "items": [
-        "resource-stitch-fix-algorithms-tour",
-        "resource-stitch-fix-algorithms-blog",
-        "resource-amazon-science",
-        "resource-walmart-global-tech",
-        "resource-doordash-engineering",
-        "resource-nextmv-blog"
-      ],
-      "carousel_items": [
-        "resource-stitch-fix-algorithms-tour",
-        "resource-stitch-fix-algorithms-blog",
-        "resource-amazon-science",
-        "resource-walmart-global-tech",
-        "resource-doordash-engineering",
-        "resource-nextmv-blog"
-      ]
-    },
-    {
-      "id": "cluster-mathematical-optimization",
-      "label": "Optimization",
-      "semantic_cluster": "mathematical-optimization",
-      "macro_category": "Operations Research",
-      "original_categories": [
-        "Operations Research",
-        "Convex Optimization",
-        "Linear Programming"
-      ],
-      "item_count": 5,
-      "items": [
-        "resource-scipy-lecture-notes-mathematical-optimization",
-        "resource-hands-on-mathematical-optimization-with-python-mo-",
-        "resource-solvermax-python-or-library-comparison",
-        "resource-jeffrey-kantor-pyomo-cookbook",
-        "resource-awesome-optimization"
-      ],
-      "carousel_items": [
-        "resource-scipy-lecture-notes-mathematical-optimization",
-        "resource-solvermax-python-or-library-comparison",
-        "resource-hands-on-mathematical-optimization-with-python-mo-",
-        "resource-jeffrey-kantor-pyomo-cookbook",
-        "resource-awesome-optimization"
-      ]
-    },
-    {
-      "id": "cluster-optimization-#4",
-      "label": "Optimization #4",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Operations Research",
-      "original_categories": [
-        "Convex Optimization",
-        "Linear Programming"
-      ],
-      "item_count": 5,
-      "items": [
-        "resource-quantecon-linear-programming-introduction",
-        "resource-convex-optimization-boyd-vandenberghe",
-        "resource-cvxpy-short-course",
-        "resource-stanford-ee364a-youtube",
-        "resource-modeling-discrete-optimization-coursera"
-      ],
-      "carousel_items": [
-        "resource-quantecon-linear-programming-introduction",
-        "resource-convex-optimization-boyd-vandenberghe",
-        "resource-stanford-ee364a-youtube",
-        "resource-modeling-discrete-optimization-coursera",
-        "resource-cvxpy-short-course"
-      ]
-    },
-    {
-      "id": "cluster-ai-in-operations-research",
-      "label": "Operations Research",
-      "semantic_cluster": "ai-in-operations-research",
-      "macro_category": "Operations Research",
-      "original_categories": [
-        "Operations Research"
-      ],
-      "item_count": 4,
-      "items": [
-        "resource-richard-oberdieck-modern-or-software-engineering",
-        "resource-stephen-maher-optimisation-in-the-real-world",
-        "resource-laura-albert-punk-rock-operations-research",
-        "resource-paul-rubin-or-in-an-ob-world"
-      ],
-      "carousel_items": [
-        "resource-richard-oberdieck-modern-or-software-engineering",
-        "resource-stephen-maher-optimisation-in-the-real-world",
-        "resource-laura-albert-punk-rock-operations-research",
-        "resource-paul-rubin-or-in-an-ob-world"
-      ]
-    },
-    {
-      "id": "cluster-platform-economics-#3",
-      "label": "Platform Economics #3",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Other",
-      "original_categories": [
-        "Operations Research",
-        "AB Testing",
-        "Platform Economics"
-      ],
-      "item_count": 9,
-      "items": [
-        "resource-practical-introduction-to-switchback-experiments",
-        "resource-erlang-c-calculator",
-        "resource-netflix-predictive-cpu-isolation-of-containers",
-        "resource-google-research-the-tail-at-scale",
-        "resource-stripe-scaling-your-api-with-rate-limiters",
-        "resource-shopify-capacity-planning-at-scale",
-        "resource-erlang-a-calculator",
-        "resource-kendall-notation-tutorial",
-        "resource-instacart-space-time-and-groceries"
-      ],
-      "carousel_items": [
-        "resource-practical-introduction-to-switchback-experiments",
-        "resource-erlang-c-calculator",
-        "resource-netflix-predictive-cpu-isolation-of-containers",
-        "resource-google-research-the-tail-at-scale",
-        "resource-stripe-scaling-your-api-with-rate-limiters",
-        "resource-shopify-capacity-planning-at-scale",
-        "resource-erlang-a-calculator",
-        "resource-kendall-notation-tutorial",
-        "resource-instacart-space-time-and-groceries"
-      ]
-    },
-    {
-      "id": "cluster-platform-economics-strategies",
-      "label": "Platform Economics",
-      "semantic_cluster": "platform-economics-strategies",
-      "macro_category": "Platform & Markets",
-      "original_categories": [
-        "Platform Economics"
-      ],
-      "item_count": 10,
-      "items": [
-        "resource-sangeet-choudary-platform-scale-blog",
-        "resource-eugene-wei-invisible-asymptotes",
-        "resource-bill-gurley-a-rake-too-far",
-        "resource-li-jin-building-for-the-creator-middle-class",
-        "resource-bill-gurley-how-to-miss-by-a-mile-uber-tam",
-        "resource-hagiu-wright-when-to-open-a-platform-hbr",
-        "resource-simon-rothman-a16z-how-to-build-a-marketplace",
-        "resource-jeff-jordan-a16z-marketplace-100",
-        "resource-platform-papers-joost-rietveld",
-        "resource-linkedin-economic-graph-to-economic-insights"
-      ],
-      "carousel_items": [
-        "resource-sangeet-choudary-platform-scale-blog",
-        "resource-eugene-wei-invisible-asymptotes",
-        "resource-bill-gurley-a-rake-too-far",
-        "resource-li-jin-building-for-the-creator-middle-class",
-        "resource-bill-gurley-how-to-miss-by-a-mile-uber-tam",
-        "resource-hagiu-wright-when-to-open-a-platform-hbr",
-        "resource-simon-rothman-a16z-how-to-build-a-marketplace",
-        "resource-jeff-jordan-a16z-marketplace-100",
-        "resource-platform-papers-joost-rietveld",
-        "resource-linkedin-economic-graph-to-economic-insights"
-      ]
-    },
-    {
-      "id": "cluster-platform-economics",
-      "label": "Platform Economics",
-      "semantic_cluster": "platform-economics",
-      "macro_category": "Platform & Markets",
-      "original_categories": [
-        "Platform Economics"
-      ],
-      "item_count": 9,
-      "items": [
-        "resource-stratechery-aggregation-theory",
-        "resource-a16z-measuring-network-effects",
-        "resource-eugene-wei-seeing-like-an-algorithm-tiktok",
-        "resource-li-jin-unbundling-work",
-        "resource-linkedin-the-economic-graph",
-        "resource-fiverr-engineering-blog",
-        "resource-rochet-tirole-two-sided-markets-rand",
-        "resource-jean-tirole-two-sided-markets-a-progress-report",
-        "resource-platform-revolution-book-overview"
-      ],
-      "carousel_items": [
-        "resource-stratechery-aggregation-theory",
-        "resource-a16z-measuring-network-effects",
-        "resource-eugene-wei-seeing-like-an-algorithm-tiktok",
-        "resource-li-jin-unbundling-work",
-        "resource-linkedin-the-economic-graph",
-        "resource-fiverr-engineering-blog",
-        "resource-rochet-tirole-two-sided-markets-rand",
-        "resource-jean-tirole-two-sided-markets-a-progress-report",
-        "resource-platform-revolution-book-overview"
-      ]
-    },
-    {
-      "id": "cluster-auction-theory-applications",
-      "label": "Simulation",
-      "semantic_cluster": "auction-theory-applications",
-      "macro_category": "Platform & Markets",
-      "original_categories": [
-        "Platform Economics",
-        "Auction Theory",
-        "Marketplace Economics"
-      ],
-      "item_count": 9,
-      "items": [
-        "resource-google-research-market-algorithms-team",
-        "resource-easley-kleinberg-sponsored-search-markets",
-        "resource-jonathan-levins-revenue-equivalence-notes",
-        "resource-lyft-quantifying-efficiency-in-ridesharing",
-        "resource-linkedin-engineering-marketplace-optimization",
-        "resource-uber-unleashing-the-power-of-ads-simulation",
-        "resource-uber-simulated-marketplace-with-ml",
-        "resource-uber-gaining-insights-in-a-simulated-marketplace",
-        "resource-cepr-voxeu-doing-economics-at-google"
-      ],
-      "carousel_items": [
-        "resource-google-research-market-algorithms-team",
-        "resource-easley-kleinberg-sponsored-search-markets",
-        "resource-lyft-quantifying-efficiency-in-ridesharing",
-        "resource-jonathan-levins-revenue-equivalence-notes",
-        "resource-linkedin-engineering-marketplace-optimization",
-        "resource-uber-unleashing-the-power-of-ads-simulation",
-        "resource-uber-simulated-marketplace-with-ml",
-        "resource-uber-gaining-insights-in-a-simulated-marketplace",
-        "resource-cepr-voxeu-doing-economics-at-google"
-      ]
-    },
-    {
-      "id": "cluster-internet-economics",
-      "label": "Internet Economics",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Platform & Markets",
-      "original_categories": [
-        "Platform Economics"
-      ],
-      "item_count": 9,
-      "items": [
-        "resource-bill-gurley-going-direct",
-        "resource-bill-gurley-all-markets-are-not-created-equal",
-        "resource-bill-gurley-in-defense-of-the-deck",
-        "resource-li-jin-100-true-fans",
-        "resource-li-jin-the-passion-economy-and-the-future-of-work",
-        "resource-econtalk-hal-varian-on-technology",
-        "resource-ebay-tech-blog",
-        "resource-eugene-wei-status-as-a-service-staas",
-        "resource-etsy-personalized-recommendations"
-      ],
-      "carousel_items": [
-        "resource-bill-gurley-going-direct",
-        "resource-bill-gurley-in-defense-of-the-deck",
-        "resource-li-jin-100-true-fans",
-        "resource-li-jin-the-passion-economy-and-the-future-of-work",
-        "resource-bill-gurley-all-markets-are-not-created-equal",
-        "resource-econtalk-hal-varian-on-technology",
-        "resource-ebay-tech-blog",
-        "resource-eugene-wei-status-as-a-service-staas",
-        "resource-etsy-personalized-recommendations"
-      ]
-    },
-    {
-      "id": "cluster-marketplace-economics",
-      "label": "Marketplace Economics",
-      "semantic_cluster": "marketplace-economics",
-      "macro_category": "Platform & Markets",
-      "original_categories": [
-        "Platform Economics",
-        "Marketplace Economics"
-      ],
-      "item_count": 7,
-      "items": [
-        "resource-uber-engineering",
-        "resource-instacart-tech-blog",
-        "resource-the-cold-start-problem-andrew-chen",
-        "resource-doordash-building-a-successful-three-sided-marketp",
-        "resource-upwork-engineering-blog",
-        "resource-airbnb-measuring-listing-lifetime-value",
-        "resource-instacart-building-for-balance-sage-v2"
-      ],
-      "carousel_items": [
-        "resource-uber-engineering",
-        "resource-instacart-tech-blog",
-        "resource-the-cold-start-problem-andrew-chen",
-        "resource-doordash-building-a-successful-three-sided-marketp",
-        "resource-upwork-engineering-blog",
-        "resource-airbnb-measuring-listing-lifetime-value",
-        "resource-instacart-building-for-balance-sage-v2"
-      ]
-    },
-    {
-      "id": "cluster-rideshare-economics",
-      "label": "Optimization",
-      "semantic_cluster": "rideshare-economics",
-      "macro_category": "Platform & Markets",
-      "original_categories": [
-        "Market Design & Matching",
-        "Platform Economics",
-        "Marketplace Economics"
-      ],
-      "item_count": 7,
-      "items": [
         "resource-lyft-engineering",
-        "resource-tim-roughgardens-cs364a-kidney-exchange",
-        "resource-uber-dynamic-pricing-and-matching-in-ride-hailing",
-        "resource-airbnb-engineering-two-sided-marketplace-matching",
+        "resource-foundations-of-transportation-network-analysis-edx",
         "resource-lyft-simulating-a-ridesharing-marketplace",
-        "resource-doordash-the-dasher-dispatch-system",
-        "resource-thumbtack-engineering-blog"
+        "resource-uber-reinforcement-learning-for-marketplace-balanc",
+        "resource-lyft-experimentation-in-a-ridesharing-marketplace",
+        "resource-class-central-transportation-courses",
+        "resource-lyft-quantifying-efficiency-in-ridesharing",
+        "resource-lyft-challenges-in-experimentation",
+        "resource-lyft-solving-dispatch-in-a-ridesharing-problem-spa"
       ],
       "carousel_items": [
         "resource-lyft-engineering",
-        "resource-tim-roughgardens-cs364a-kidney-exchange",
-        "resource-uber-dynamic-pricing-and-matching-in-ride-hailing",
-        "resource-airbnb-engineering-two-sided-marketplace-matching",
         "resource-lyft-simulating-a-ridesharing-marketplace",
-        "resource-doordash-the-dasher-dispatch-system",
-        "resource-thumbtack-engineering-blog"
-      ]
-    },
-    {
-      "id": "cluster-command-line",
-      "label": "Command Line",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Programming",
-      "original_categories": [
-        "Programming"
-      ],
-      "item_count": 8,
-      "items": [
-        "resource-the-missing-semester-mit",
-        "resource-the-missing-semester-of-your-cs-education-mit",
-        "resource-visualgo",
-        "resource-usf-data-structure-visualizations",
-        "resource-postman-academy",
-        "resource-freecodecamp-algorithms-course",
-        "resource-abdul-bari-youtube",
-        "resource-blind-75"
-      ],
-      "carousel_items": [
-        "resource-the-missing-semester-mit",
-        "resource-visualgo",
-        "resource-postman-academy",
-        "resource-usf-data-structure-visualizations",
-        "resource-freecodecamp-algorithms-course",
-        "resource-abdul-bari-youtube",
-        "resource-blind-75",
-        "resource-the-missing-semester-of-your-cs-education-mit"
-      ]
-    },
-    {
-      "id": "cluster-software-design",
-      "label": "Software Design",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Programming",
-      "original_categories": [
-        "Programming"
-      ],
-      "item_count": 7,
-      "items": [
-        "resource-beyond-jupyter",
-        "resource-beyond-jupyter-transferlab",
-        "resource-coding-for-practitioners",
-        "resource-coding-for-economists",
-        "resource-python-for-econometrics",
-        "resource-python-data-science-handbook",
-        "resource-datalemur"
-      ],
-      "carousel_items": [
-        "resource-beyond-jupyter",
-        "resource-coding-for-practitioners",
-        "resource-python-for-econometrics",
-        "resource-python-data-science-handbook",
-        "resource-datalemur",
-        "resource-beyond-jupyter-transferlab",
-        "resource-coding-for-economists"
-      ]
-    },
-    {
-      "id": "cluster-sql-learning-resources",
-      "label": "SQL",
-      "semantic_cluster": "sql-learning-resources",
-      "macro_category": "Programming",
-      "original_categories": [
-        "Programming"
-      ],
-      "item_count": 6,
-      "items": [
-        "resource-sqlbolt",
-        "resource-mode-sql-tutorial",
-        "resource-leetcode-sql-50",
-        "resource-duckdb-documentation",
-        "resource-select-star-sql",
-        "resource-8-week-sql-challenge-danny-ma"
-      ],
-      "carousel_items": [
-        "resource-sqlbolt",
-        "resource-mode-sql-tutorial",
-        "resource-leetcode-sql-50",
-        "resource-duckdb-documentation",
-        "resource-select-star-sql",
-        "resource-8-week-sql-challenge-danny-ma"
-      ]
-    },
-    {
-      "id": "cluster-data-structures-practice",
-      "label": "Programming",
-      "semantic_cluster": "data-structures-practice",
-      "macro_category": "Programming",
-      "original_categories": [
-        "Programming"
-      ],
-      "item_count": 4,
-      "items": [
-        "resource-leetcode-explore-data-structures",
-        "resource-real-python-data-structures",
-        "resource-neetcode",
-        "resource-leetcode-patterns"
-      ],
-      "carousel_items": [
-        "resource-leetcode-explore-data-structures",
-        "resource-real-python-data-structures",
-        "resource-neetcode",
-        "resource-leetcode-patterns"
-      ]
-    },
-    {
-      "id": "cluster-automation",
-      "label": "Automation",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Programming",
-      "original_categories": [
-        "Programming"
-      ],
-      "item_count": 4,
-      "items": [
-        "resource-playwright-for-python",
-        "resource-real-python-web-scraping",
-        "resource-scrapy-documentation",
-        "resource-automate-the-boring-stuff-with-python"
-      ],
-      "carousel_items": [
-        "resource-playwright-for-python",
-        "resource-real-python-web-scraping",
-        "resource-scrapy-documentation",
-        "resource-automate-the-boring-stuff-with-python"
+        "resource-lyft-quantifying-efficiency-in-ridesharing",
+        "resource-lyft-experimentation-in-a-ridesharing-marketplace",
+        "resource-afi-labs-ride-share-dispatch-algorithms",
+        "resource-foundations-of-transportation-network-analysis-edx",
+        "resource-class-central-transportation-courses",
+        "resource-mit-ocw-transportation-systems-analysis",
+        "resource-uber-reinforcement-learning-for-marketplace-balanc",
+        "resource-lyft-challenges-in-experimentation"
       ]
     },
     {
       "id": "cluster-energy-economics",
       "label": "Energy Economics",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Strategy",
+      "cluster_id": "energy-economics",
+      "macro_category": "Industry",
       "original_categories": [
-        "Tech Strategy",
+        "Operations Research",
+        "Energy & Utilities Economics",
+        "Machine Learning",
         "Frameworks & Strategy"
-      ],
-      "item_count": 9,
-      "items": [
-        "resource-energy-institute-at-haas-blog",
-        "resource-noahpinion-noah-smith",
-        "resource-semianalysis-dylan-patel",
-        "resource-not-boring-packy-mccormick",
-        "resource-aswath-damodaran-blog-valuation",
-        "resource-the-diff-byrne-hobart",
-        "resource-the-generalist-mario-gabriele",
-        "resource-full-stack-economics-timothy-lee",
-        "resource-ben-evans-newsletter"
-      ],
-      "carousel_items": [
-        "resource-energy-institute-at-haas-blog",
-        "resource-noahpinion-noah-smith",
-        "resource-semianalysis-dylan-patel",
-        "resource-not-boring-packy-mccormick",
-        "resource-aswath-damodaran-blog-valuation",
-        "resource-the-diff-byrne-hobart",
-        "resource-the-generalist-mario-gabriele",
-        "resource-full-stack-economics-timothy-lee",
-        "resource-ben-evans-newsletter"
-      ]
-    },
-    {
-      "id": "cluster-machine-learning-#4",
-      "label": "Machine Learning #4",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Strategy",
-      "original_categories": [
-        "Case Studies",
-        "Trust & Safety"
-      ],
-      "item_count": 9,
-      "items": [
-        "resource-stripe-how-we-built-radar",
-        "resource-stripe-ml-for-fraud-protection",
-        "resource-scikit-learn-outlier-detection",
-        "resource-netflix-rad-outlier-detection",
-        "resource-google-research-self-supervised-anomaly-detection",
-        "resource-stripe-engineering",
-        "resource-linkedin-defending-against-abuse-at-scale",
-        "resource-meta-few-shot-learner-for-harmful-content",
-        "resource-music-tomorrow-spotify-deep-dive"
-      ],
-      "carousel_items": [
-        "resource-stripe-how-we-built-radar",
-        "resource-scikit-learn-outlier-detection",
-        "resource-stripe-engineering",
-        "resource-stripe-ml-for-fraud-protection",
-        "resource-netflix-rad-outlier-detection",
-        "resource-google-research-self-supervised-anomaly-detection",
-        "resource-linkedin-defending-against-abuse-at-scale",
-        "resource-meta-few-shot-learner-for-harmful-content",
-        "resource-music-tomorrow-spotify-deep-dive"
-      ]
-    },
-    {
-      "id": "cluster-marketing",
-      "label": "Marketing",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Strategy",
-      "original_categories": [
-        "Metrics & Measurement",
-        "Case Studies",
-        "Frameworks & Strategy"
-      ],
-      "item_count": 8,
-      "items": [
-        "resource-meta-engineering-data-science",
-        "resource-google-analytics-for-marketing",
-        "resource-adam-fishman-newsletter",
-        "resource-atlassian-how-to-write-product-requirements",
-        "resource-clearcode-adtech-book",
-        "resource-021-newsletter-marketing-data-teams-bridge",
-        "resource-mkt1-b2b-marketing-frameworks",
-        "resource-marketing-bs-strategic-marketing-newsletter"
-      ],
-      "carousel_items": [
-        "resource-meta-engineering-data-science",
-        "resource-google-analytics-for-marketing",
-        "resource-adam-fishman-newsletter",
-        "resource-atlassian-how-to-write-product-requirements",
-        "resource-clearcode-adtech-book",
-        "resource-021-newsletter-marketing-data-teams-bridge",
-        "resource-mkt1-b2b-marketing-frameworks",
-        "resource-marketing-bs-strategic-marketing-newsletter"
-      ]
-    },
-    {
-      "id": "cluster-metrics",
-      "label": "Metrics",
-      "semantic_cluster": "orphan-cluster",
-      "macro_category": "Strategy",
-      "original_categories": [
-        "Metrics & Measurement",
-        "Frameworks & Strategy"
-      ],
-      "item_count": 6,
-      "items": [
-        "resource-sequoia-data-informed-product-building",
-        "resource-teresa-torres-opportunity-solution-trees",
-        "resource-marty-cagan-inspired",
-        "resource-svpg-product-management-start-here",
-        "resource-ken-norton-how-to-hire-a-product-manager",
-        "resource-intercom-rice-prioritization-framework"
-      ],
-      "carousel_items": [
-        "resource-sequoia-data-informed-product-building",
-        "resource-teresa-torres-opportunity-solution-trees",
-        "resource-marty-cagan-inspired",
-        "resource-svpg-product-management-start-here",
-        "resource-ken-norton-how-to-hire-a-product-manager",
-        "resource-intercom-rice-prioritization-framework"
-      ]
-    },
-    {
-      "id": "cluster-product-management-frameworks",
-      "label": "Frameworks & Strategy",
-      "semantic_cluster": "product-management-frameworks",
-      "macro_category": "Strategy",
-      "original_categories": [
-        "Frameworks & Strategy"
-      ],
-      "item_count": 4,
-      "items": [
-        "resource-shreyas-doshi-lno-framework",
-        "resource-amplitude-product-lessons-with-shreyas-doshi",
-        "resource-gibson-biddle-dhm-product-strategy-framework",
-        "resource-intercom-on-product-management-free-book"
-      ],
-      "carousel_items": [
-        "resource-shreyas-doshi-lno-framework",
-        "resource-amplitude-product-lessons-with-shreyas-doshi",
-        "resource-gibson-biddle-dhm-product-strategy-framework",
-        "resource-intercom-on-product-management-free-book"
-      ]
-    },
-    {
-      "id": "cluster-fraud-detection-methods",
-      "label": "Machine Learning",
-      "semantic_cluster": "fraud-detection-methods",
-      "macro_category": "Strategy",
-      "original_categories": [
-        "Trust & Safety"
-      ],
-      "item_count": 4,
-      "items": [
-        "resource-ieee-cis-fraud-1st-place-solution-chris-deotte",
-        "resource-fraud-detection-handbook-ulb",
-        "resource-paypal-graph-database-for-fraud",
-        "resource-stanford-fintech-lab-rob-wang-block"
-      ],
-      "carousel_items": [
-        "resource-ieee-cis-fraud-1st-place-solution-chris-deotte",
-        "resource-fraud-detection-handbook-ulb",
-        "resource-paypal-graph-database-for-fraud",
-        "resource-stanford-fintech-lab-rob-wang-block"
-      ]
-    },
-    {
-      "id": "cluster-time-series-analysis",
-      "label": "Forecasting",
-      "semantic_cluster": "time-series-analysis",
-      "macro_category": "Time Series",
-      "original_categories": [
-        "Specialized Methods",
-        "Production Systems",
-        "Classical Methods"
       ],
       "item_count": 7,
       "items": [
+        "resource-mit-ocw-energy-economics-1444",
+        "resource-stephen-maher-optimisation-in-the-real-world",
+        "resource-energy-institute-at-haas-blog",
+        "resource-energy-institute-at-haas-blog",
+        "resource-mit-ocw-energy-decisions-markets-and-policies",
+        "resource-mit-ocw-engineering-economics-and-regulation-of-el",
+        "resource-mit-ocw-engineering-economics-and-regulation-of-th"
+      ],
+      "carousel_items": [
+        "resource-mit-ocw-energy-economics-1444",
+        "resource-energy-institute-at-haas-blog",
+        "resource-energy-institute-at-haas-blog",
+        "resource-mit-ocw-engineering-economics-and-regulation-of-el",
+        "resource-mit-ocw-energy-decisions-markets-and-policies",
+        "resource-mit-ocw-engineering-economics-and-regulation-of-th",
+        "resource-stephen-maher-optimisation-in-the-real-world"
+      ]
+    },
+    {
+      "id": "cluster-insurance-actuarial",
+      "label": "Insurance & Actuarial",
+      "cluster_id": "insurance-actuarial",
+      "macro_category": "Industry",
+      "original_categories": [
+        "Insurance & Actuarial",
+        "Statistics"
+      ],
+      "item_count": 6,
+      "items": [
+        "resource-swiss-association-of-actuaries-tutorials",
+        "resource-an-introduction-to-statistical-learning-of-extreme",
+        "resource-modelling-extremal-events-embrechts-kl\u00fcppelberg-mi",
+        "resource-great-learning-insurance-analytics-course",
+        "resource-freakonometrics-blog",
+        "resource-coaching-actuaries"
+      ],
+      "carousel_items": [
+        "resource-coaching-actuaries",
+        "resource-great-learning-insurance-analytics-course",
+        "resource-freakonometrics-blog",
+        "resource-swiss-association-of-actuaries-tutorials",
+        "resource-modelling-extremal-events-embrechts-kl\u00fcppelberg-mi",
+        "resource-an-introduction-to-statistical-learning-of-extreme"
+      ]
+    },
+    {
+      "id": "cluster-tech-company-blogs",
+      "label": "Tech Company Engineering Blogs",
+      "cluster_id": "tech-company-blogs",
+      "macro_category": "Industry",
+      "original_categories": [
+        "Platform Economics",
+        "Case Studies",
+        "Production Systems"
+      ],
+      "item_count": 5,
+      "items": [
+        "resource-ebay-tech-blog",
+        "resource-uber-backtesting-at-scale",
+        "resource-meta-engineering-data-science",
+        "resource-stripe-how-we-built-radar",
+        "resource-netflix-predictive-cpu-isolation-of-containers"
+      ],
+      "carousel_items": [
+        "resource-meta-engineering-data-science",
+        "resource-uber-backtesting-at-scale",
+        "resource-stripe-how-we-built-radar",
+        "resource-ebay-tech-blog",
+        "resource-netflix-predictive-cpu-isolation-of-containers"
+      ]
+    },
+    {
+      "id": "cluster-ml-for-economists",
+      "label": "ML for Economists",
+      "cluster_id": "ml-for-economists",
+      "macro_category": "Machine Learning",
+      "original_categories": [
+        "Programming",
+        "Econometrics",
+        "Operations Research",
+        "Platform Economics",
+        "Machine Learning",
+        "Causal Inference",
+        "Computational Economics",
+        "Deep Learning",
+        "Gradient Boosting",
+        "Case Studies"
+      ],
+      "item_count": 57,
+      "items": [
+        "resource-kaggles-intermediate-machine-learning",
+        "resource-mljar-feature-importance-with-xgboost",
+        "resource-analytics-vidhya-hyperparameter-tuning-guide",
+        "resource-econdl-deep-learning-for-economists",
+        "resource-coding-for-economists-arthur-turrell",
+        "resource-brady-neals-introduction-to-causal-inference",
+        "resource-stanford-ml-causal-inference-short-course",
+        "resource-dario-sansones-ml-resources-for-economists",
+        "resource-deep-learning-for-single-cell-analysis-scverse-tut",
+        "resource-conformal-prediction-tutorial-angelopoulos-bates",
+        "resource-google-machine-learning-crash-course",
+        "resource-neural-survival-analysis-with-pycox",
+        "resource-awesome-economics",
+        "resource-beyond-jupyter",
+        "resource-quantecon-ml-in-economics",
+        "resource-instacart-predicting-availability-of-200m-grocery-",
+        "resource-hal-varian-machine-learning-and-econometrics-berke",
+        "resource-sdv-getting-started-guide",
+        "resource-beyond-jupyter-transferlab",
+        "resource-meta-instagram-notification-management-with-ml-and",
+        "resource-anton-korinek-research",
+        "resource-airbnb-ace-artificial-counterfactual-estimation",
+        "resource-neptuneai-when-to-choose-catboost-over-xgboost",
+        "resource-defense-acquisition-university-dau",
+        "resource-machine-learning-specialization-coursera",
+        "resource-capitalisnt-sendhil-mullainathan-on-who-controls-a",
+        "resource-aeaafa-2019-impact-of-machine-learning-on-economic",
+        "resource-dario-sansone-ml-for-economists-resources",
+        "resource-machine-learning-for-economists-hebrew-university",
+        "resource-aea-machine-learning-and-econometrics-atheyimbens",
+        "resource-uchicago-law-discrimination-by-algorithm-and-peopl",
+        "resource-mit-ocw-dynamic-programming-bertsekas",
+        "resource-stable-baselines3-documentation",
+        "resource-open-source-economics-structural-estimation",
+        "resource-gymnasium-documentation",
+        "resource-imf-cross-validation-for-economists",
+        "resource-richard-oberdieck-modern-or-software-engineering",
+        "resource-interpretable-machine-learning-book-christoph-moln",
+        "resource-econtalk-susan-athey-on-ml-big-data-and-causation",
+        "resource-made-with-ml",
+        "resource-coding-for-economists-nlp-chapter",
+        "resource-genai-for-econ-substack",
+        "resource-knowledge-project-#102-sendhil-mullainathan",
+        "resource-andrew-ngs-machine-learning-specialization",
+        "resource-nlp-for-economists-mgse",
+        "resource-imf-machine-learning-for-economists-course",
+        "resource-georgetown-ma-in-security-studies",
+        "resource-quantecon-lectures",
+        "resource-deep-learning-specialization-coursera",
+        "resource-stanford-fintech-sendhil-mullainathan-on-ml-as-too",
+        "resource-susan-atheys-stanford-gsb-courses",
+        "resource-quantecon-datascience",
+        "resource-aea-continuing-education-ml-and-econometrics-2018",
+        "resource-doordash-using-ml-and-optimization-to-solve-dispat",
+        "resource-andrew-ngs-deep-learning-specialization",
+        "resource-world-of-daas-susan-athey-tech-economists-and-ml",
+        "resource-hal-varian-big-data-new-tricks-for-econometrics"
+      ],
+      "carousel_items": [
+        "resource-coding-for-economists-arthur-turrell",
+        "resource-beyond-jupyter",
+        "resource-quantecon-lectures",
+        "resource-econdl-deep-learning-for-economists",
+        "resource-brady-neals-introduction-to-causal-inference",
+        "resource-stanford-ml-causal-inference-short-course",
+        "resource-dario-sansones-ml-resources-for-economists",
+        "resource-google-machine-learning-crash-course",
+        "resource-awesome-economics",
+        "resource-quantecon-ml-in-economics"
+      ]
+    },
+    {
+      "id": "cluster-recsys",
+      "label": "Recommender Systems",
+      "cluster_id": "recsys",
+      "macro_category": "Machine Learning",
+      "original_categories": [
+        "Routing & Logistics",
+        "Search & Ranking",
+        "Bandits & Adaptive",
+        "Platform Economics",
+        "Recommender Systems",
+        "Machine Learning",
+        "Deep Learning",
+        "Causal Inference",
+        "Case Studies",
+        "Frameworks & Strategy"
+      ],
+      "item_count": 15,
+      "items": [
+        "resource-netflix-tech-blog",
+        "resource-fastai-practical-deep-learning-for-coders",
+        "resource-music-tomorrow-spotify-deep-dive",
+        "resource-eugene-yan-bandits-for-recommender-systems",
+        "resource-etsy-personalized-recommendations",
+        "resource-netflix-technology-blog-recommendation-systems",
+        "resource-spotify-rd",
+        "resource-eugene-yan-system-design-for-recommendations",
+        "resource-andrew-ngs-machine-learning-specialization",
+        "resource-netflix-a-survey-of-causal-inference-applications",
+        "resource-eppo-how-netflix-lyft-and-yahoo-use-contextual-ban",
+        "resource-airbnb-listing-embeddings-for-similar-listing-reco",
+        "resource-stitch-fix-algorithms-blog",
+        "resource-googles-recommendation-systems-course",
+        "resource-tensorflow-recommenders-tutorials"
+      ],
+      "carousel_items": [
+        "resource-eugene-yan-bandits-for-recommender-systems",
+        "resource-eppo-how-netflix-lyft-and-yahoo-use-contextual-ban",
+        "resource-fastai-practical-deep-learning-for-coders",
+        "resource-eugene-yan-system-design-for-recommendations",
+        "resource-netflix-technology-blog-recommendation-systems",
+        "resource-andrew-ngs-machine-learning-specialization",
+        "resource-airbnb-listing-embeddings-for-similar-listing-reco",
+        "resource-stitch-fix-algorithms-blog",
+        "resource-googles-recommendation-systems-course",
+        "resource-tensorflow-recommenders-tutorials"
+      ]
+    },
+    {
+      "id": "cluster-llms-rag",
+      "label": "LLMs & RAG",
+      "cluster_id": "llms-rag",
+      "macro_category": "Machine Learning",
+      "original_categories": [
+        "LLMs & Agents",
+        "Machine Learning",
+        "Deep Learning"
+      ],
+      "item_count": 13,
+      "items": [
+        "resource-eugene-yan-patterns-for-building-llm-based-systems",
+        "resource-google-ai-blog",
+        "resource-anthropic-prompt-engineering-documentation",
+        "resource-deeplearningai-short-courses",
+        "resource-jay-alammars-illustrated-transformer",
+        "resource-dairai-prompt-engineering-guide",
+        "resource-anthropics-prompt-engineering-tutorial",
+        "resource-andrej-karpathys-neural-networks-zero-to-hero",
+        "resource-3blue1brown-neural-network-series",
+        "resource-google-notebooklm",
+        "resource-ahead-of-ai-sebastian-raschka",
+        "resource-langchain-academy-intro-to-langgraph",
+        "resource-freecodecamp-rag-from-scratch"
+      ],
+      "carousel_items": [
+        "resource-jay-alammars-illustrated-transformer",
+        "resource-anthropics-prompt-engineering-tutorial",
+        "resource-google-notebooklm",
+        "resource-ahead-of-ai-sebastian-raschka",
+        "resource-eugene-yan-patterns-for-building-llm-based-systems",
+        "resource-langchain-academy-intro-to-langgraph",
+        "resource-freecodecamp-rag-from-scratch",
+        "resource-deeplearningai-short-courses",
+        "resource-anthropic-prompt-engineering-documentation",
+        "resource-dairai-prompt-engineering-guide"
+      ]
+    },
+    {
+      "id": "cluster-forecasting-dl",
+      "label": "Deep Learning Forecasting",
+      "cluster_id": "forecasting-dl",
+      "macro_category": "Machine Learning",
+      "original_categories": [
+        "Machine Learning",
+        "Deep Learning",
+        "Production Systems",
+        "Causal Inference",
+        "Specialized Methods"
+      ],
+      "item_count": 12,
+      "items": [
+        "resource-doordash-elite-ensemble-learning",
+        "resource-time-series-forecasting-with-lag-llama",
+        "resource-time-series-handbook-lightgbm-for-m5",
+        "resource-blocked-time-series-cross-validation",
+        "resource-temporal-fusion-transformer-complete-tutorial",
+        "resource-tensorflow-time-series-forecasting-tutorial",
+        "resource-m5-competition-analysis-learnings-and-winning-solu",
+        "resource-chronos-bolt-fast-zero-shot-forecasting-aws",
+        "resource-doordash-leveraging-causal-inference-for-forecasts",
+        "resource-conformal-prediction-intervals-for-time-series",
+        "resource-instacart-anytime-data-science-paradigm",
+        "resource-uber-forecasting-introduction"
+      ],
+      "carousel_items": [
+        "resource-temporal-fusion-transformer-complete-tutorial",
+        "resource-doordash-elite-ensemble-learning",
+        "resource-instacart-anytime-data-science-paradigm",
+        "resource-uber-forecasting-introduction",
+        "resource-time-series-forecasting-with-lag-llama",
+        "resource-time-series-handbook-lightgbm-for-m5",
+        "resource-blocked-time-series-cross-validation",
+        "resource-tensorflow-time-series-forecasting-tutorial",
+        "resource-m5-competition-analysis-learnings-and-winning-solu",
+        "resource-conformal-prediction-intervals-for-time-series"
+      ]
+    },
+    {
+      "id": "cluster-search-ranking",
+      "label": "Search & Ranking",
+      "cluster_id": "search-ranking",
+      "macro_category": "Machine Learning",
+      "original_categories": [
+        "Platform Economics",
+        "Search & Ranking"
+      ],
+      "item_count": 8,
+      "items": [
+        "resource-airbnb-ml-powered-search-ranking",
+        "resource-eugene-yan-position-bias-in-search",
+        "resource-linkedin-ai-behind-recruiter-search",
+        "resource-linkedin-engineering",
+        "resource-netflix-tech-blog",
+        "resource-openai-cookbook-semantic-search-with-embeddings",
+        "resource-etsy-building-marketplace-search-and-personalizati",
+        "resource-olx-engineering-from-ranknet-to-lambdamart"
+      ],
+      "carousel_items": [
+        "resource-openai-cookbook-semantic-search-with-embeddings",
+        "resource-olx-engineering-from-ranknet-to-lambdamart",
+        "resource-airbnb-ml-powered-search-ranking",
+        "resource-eugene-yan-position-bias-in-search",
+        "resource-linkedin-ai-behind-recruiter-search",
+        "resource-linkedin-engineering",
+        "resource-netflix-tech-blog",
+        "resource-etsy-building-marketplace-search-and-personalizati"
+      ]
+    },
+    {
+      "id": "cluster-clv-retention",
+      "label": "CLV & Retention",
+      "cluster_id": "clv-retention",
+      "macro_category": "Marketing",
+      "original_categories": [
+        "Growth & Retention",
+        "Bayesian Methods",
+        "Platform Economics",
+        "Marketing Science",
+        "MarTech & Customer Analytics"
+      ],
+      "item_count": 23,
+      "items": [
+        "resource-pymc-marketing-clv-quickstart",
+        "resource-pymc-marketing-documentation",
+        "resource-how-to-measure-cohort-retention-lennys-newsletter",
+        "resource-bruce-hardies-clv-papers",
+        "resource-lennys-newsletter-how-duolingo-reignited-user-grow",
+        "resource-growth-accounting-backtraced-growth-accounting",
+        "resource-juan-orduz-bayesian-marketing-methods",
+        "resource-a-quantitative-approach-to-product-market-fit-trib",
+        "resource-the-power-user-curve-a16z",
+        "resource-airbnb-measuring-listing-lifetime-value",
+        "resource-ultimate-guide-activation-aakash-gupta",
+        "resource-wharton-customer-analytics-coursera",
+        "resource-bruce-hardies-btyd-tutorials",
+        "resource-slacks-2000-messages-activation-metric",
+        "resource-wharton-customer-analytics-initiative-wcai",
+        "resource-marketing-science-institute-msi",
+        "resource-marketing-analytics-uva-dardencoursera",
+        "resource-revenuecat-sub-club-subscription-analytics",
+        "resource-growth-unhinged-saas-benchmarks-from-openview",
+        "resource-eva-ascarza-retention-futility-research",
+        "resource-neil-hoyne-clv-focused-marketing",
+        "resource-lennys-newsletter-consumer-marketing-measurement",
+        "resource-kevin-hillstrom-minethatdata"
+      ],
+      "carousel_items": [
+        "resource-pymc-marketing-clv-quickstart",
+        "resource-pymc-marketing-documentation",
+        "resource-how-to-measure-cohort-retention-lennys-newsletter",
+        "resource-slacks-2000-messages-activation-metric",
+        "resource-bruce-hardies-clv-papers",
+        "resource-lennys-newsletter-how-duolingo-reignited-user-grow",
+        "resource-growth-accounting-backtraced-growth-accounting",
+        "resource-juan-orduz-bayesian-marketing-methods",
+        "resource-marketing-analytics-uva-dardencoursera",
+        "resource-a-quantitative-approach-to-product-market-fit-trib"
+      ]
+    },
+    {
+      "id": "cluster-mmm-attribution",
+      "label": "Marketing Mix Modeling",
+      "cluster_id": "mmm-attribution",
+      "macro_category": "Marketing",
+      "original_categories": [
+        "Marketing Science",
+        "Frameworks & Strategy",
+        "MarTech & Customer Analytics"
+      ],
+      "item_count": 9,
+      "items": [
+        "resource-021-newsletter-marketing-data-teams-bridge",
+        "resource-recast-blog-mmm-verification",
+        "resource-mario-filho-forecastegy",
+        "resource-mike-taylor-vexpower-mmm-tutorials",
+        "resource-juan-orduz-bayesian-marketing-methods",
+        "resource-google-analytics-for-marketing",
+        "resource-kevin-simler-ads-dont-work-that-way",
+        "resource-byron-sharp-how-brands-grow",
+        "resource-marketing-science-institute-msi"
+      ],
+      "carousel_items": [
+        "resource-juan-orduz-bayesian-marketing-methods",
+        "resource-google-analytics-for-marketing",
+        "resource-recast-blog-mmm-verification",
+        "resource-mario-filho-forecastegy",
+        "resource-mike-taylor-vexpower-mmm-tutorials",
+        "resource-marketing-science-institute-msi",
+        "resource-byron-sharp-how-brands-grow",
+        "resource-021-newsletter-marketing-data-teams-bridge",
+        "resource-kevin-simler-ads-dont-work-that-way"
+      ]
+    },
+    {
+      "id": "cluster-ad-attribution",
+      "label": "Ad Attribution & Measurement",
+      "cluster_id": "ad-attribution",
+      "macro_category": "Marketing",
+      "original_categories": [
+        "Operations Research",
+        "Ads & Attribution"
+      ],
+      "item_count": 8,
+      "items": [
+        "resource-branch-resources-privacy-centric-measurement",
+        "resource-mobile-dev-memo-post-att-marketing-measurement",
+        "resource-adkdd-workshop-papers",
+        "resource-media-rating-council-mrc",
+        "resource-remerge-findings-incrementality-testing-approaches",
+        "resource-adjust-blog-mobile-attribution-privacy",
+        "resource-appsflyer-privacy-sandbox-hub",
+        "resource-lumen-research-attention-metrics"
+      ],
+      "carousel_items": [
+        "resource-adkdd-workshop-papers",
+        "resource-lumen-research-attention-metrics",
+        "resource-appsflyer-privacy-sandbox-hub",
+        "resource-branch-resources-privacy-centric-measurement",
+        "resource-mobile-dev-memo-post-att-marketing-measurement",
+        "resource-remerge-findings-incrementality-testing-approaches",
+        "resource-adjust-blog-mobile-attribution-privacy",
+        "resource-media-rating-council-mrc"
+      ]
+    },
+    {
+      "id": "cluster-linear-programming",
+      "label": "Linear Programming",
+      "cluster_id": "linear-programming",
+      "macro_category": "Operations Research",
+      "original_categories": [
+        "Operations Research",
+        "Convex Optimization",
+        "Linear Programming",
+        "Platform Economics"
+      ],
+      "item_count": 27,
+      "items": [
+        "resource-dominik-krupke-cp-sat-primer",
+        "resource-tallys-yunes-or-by-the-beach",
+        "resource-google-or-tools-vrp-+-vrptw-tutorial",
+        "resource-real-python-linear-programming-with-python",
+        "resource-nathan-brixius-ml-+-optimization",
+        "resource-alain-chabrier-column-generation-with-cplex",
+        "resource-ryan-oneil-real-time-optimization",
+        "resource-austin-buchanan-farkas-dilemma",
+        "resource-nsplib-nurse-scheduling-benchmarks-ghent-universit",
+        "resource-quantecon-linear-programming-introduction",
+        "resource-paul-rubin-or-in-an-ob-world",
+        "resource-solvermax-python-or-library-comparison",
+        "resource-hands-on-mathematical-optimization-with-python-mo-",
+        "resource-jeffrey-kantor-pyomo-cookbook",
+        "resource-franco-peschiera-pulp-maintainer",
+        "resource-pulp-official-documentation",
+        "resource-doordash-next-generation-dasher-dispatch-optimizat",
+        "resource-richard-oberdieck-modern-or-software-engineering",
+        "resource-instacart-delivering-optimal-shopping-experiences-",
+        "resource-timefold-blog",
+        "resource-discrete-optimization-coursera",
+        "resource-erwin-kalvelagen-yet-another-math-programming-cons",
+        "resource-google-or-tools-python-guide",
+        "resource-mit-6046j-lecture-15-linear-programming",
+        "resource-gilp-geometric-interpretation-of-linear-programs-c",
+        "resource-doordash-next-generation-optimization-for-dasher-d",
+        "resource-modeling-discrete-optimization-coursera"
+      ],
+      "carousel_items": [
+        "resource-quantecon-linear-programming-introduction",
+        "resource-doordash-next-generation-dasher-dispatch-optimizat",
+        "resource-google-or-tools-vrp-+-vrptw-tutorial",
+        "resource-real-python-linear-programming-with-python",
+        "resource-pulp-official-documentation",
+        "resource-erwin-kalvelagen-yet-another-math-programming-cons",
+        "resource-google-or-tools-python-guide",
+        "resource-mit-6046j-lecture-15-linear-programming",
+        "resource-gilp-geometric-interpretation-of-linear-programs-c",
+        "resource-modeling-discrete-optimization-coursera"
+      ]
+    },
+    {
+      "id": "cluster-vehicle-routing",
+      "label": "Vehicle Routing & Logistics",
+      "cluster_id": "vehicle-routing",
+      "macro_category": "Operations Research",
+      "original_categories": [
+        "Operations Research",
+        "Routing & Logistics",
+        "Linear Programming",
+        "Platform Economics"
+      ],
+      "item_count": 23,
+      "items": [
+        "resource-afi-labs-ride-share-dispatch-algorithms",
+        "resource-doordash-engineering",
+        "resource-georgia-tech-ratliff-10-rules-for-supply-chain-opt",
+        "resource-doordash-ml-+-optimization-for-dispatch",
+        "resource-amazon-science-operations-research-and-optimizatio",
+        "resource-kevin-gue-warehouse-design",
+        "resource-google-or-tools-vrp-+-vrptw-tutorial",
+        "resource-feasible-newsletter",
+        "resource-nextmv-blog",
+        "resource-alain-chabrier-column-generation-with-cplex",
+        "resource-vrpsolver-column-generation-for-vehicle-routing",
+        "resource-ryan-oneil-real-time-optimization",
+        "resource-stephen-maher-optimisation-in-the-real-world",
+        "resource-doordash-next-generation-dasher-dispatch-optimizat",
+        "resource-laura-albert-punk-rock-operations-research",
+        "resource-doordash-the-dasher-dispatch-system",
+        "resource-lyft-solving-dispatch-in-a-ridesharing-problem-spa",
+        "resource-doordash-using-ml-and-optimization-to-solve-dispat",
+        "resource-stitch-fix-algorithms-tour",
+        "resource-amazon-science",
+        "resource-doordash-next-generation-optimization-for-dasher-d",
+        "resource-instacart-space-time-and-groceries",
+        "resource-walmart-global-tech"
+      ],
+      "carousel_items": [
+        "resource-doordash-next-generation-dasher-dispatch-optimizat",
+        "resource-google-or-tools-vrp-+-vrptw-tutorial",
+        "resource-stitch-fix-algorithms-tour",
+        "resource-alain-chabrier-column-generation-with-cplex",
+        "resource-ryan-oneil-real-time-optimization",
+        "resource-doordash-the-dasher-dispatch-system",
+        "resource-amazon-science",
+        "resource-walmart-global-tech",
+        "resource-afi-labs-ride-share-dispatch-algorithms",
+        "resource-doordash-engineering"
+      ]
+    },
+    {
+      "id": "cluster-queueing-theory",
+      "label": "Queueing Theory",
+      "cluster_id": "queueing-theory",
+      "macro_category": "Operations Research",
+      "original_categories": [
+        "Operations Research",
+        "Platform Economics"
+      ],
+      "item_count": 12,
+      "items": [
+        "resource-erlang-c-calculator",
+        "resource-mit-6262-discrete-stochastic-processes",
+        "resource-edx-queuing-theory-from-markov-chains-to-multi-ser",
+        "resource-mit-15070j-advanced-stochastic-processes",
+        "resource-aws-builders-library-avoiding-insurmountable-queue",
+        "resource-shopify-capacity-planning-at-scale",
+        "resource-erlang-a-calculator",
+        "resource-kendall-notation-tutorial",
+        "resource-kingmans-formula-tutorial",
+        "resource-littles-law-50th-anniversary-paper",
+        "resource-ward-whitts-papers-collection",
+        "resource-mor-harchol-balters-papers"
+      ],
+      "carousel_items": [
+        "resource-erlang-c-calculator",
+        "resource-mit-6262-discrete-stochastic-processes",
+        "resource-edx-queuing-theory-from-markov-chains-to-multi-ser",
+        "resource-mit-15070j-advanced-stochastic-processes",
+        "resource-aws-builders-library-avoiding-insurmountable-queue",
+        "resource-shopify-capacity-planning-at-scale",
+        "resource-erlang-a-calculator",
+        "resource-kendall-notation-tutorial",
+        "resource-kingmans-formula-tutorial",
+        "resource-littles-law-50th-anniversary-paper"
+      ]
+    },
+    {
+      "id": "cluster-convex-optimization",
+      "label": "Convex Optimization",
+      "cluster_id": "convex-optimization",
+      "macro_category": "Operations Research",
+      "original_categories": [
+        "Operations Research",
+        "Convex Optimization"
+      ],
+      "item_count": 10,
+      "items": [
+        "resource-tallys-yunes-or-by-the-beach",
+        "resource-nathan-brixius-ml-+-optimization",
+        "resource-stanford-ee364a-youtube",
+        "resource-mit-15053-optimization-methods-in-management-scien",
+        "resource-cvxpy-short-course",
+        "resource-solvermax-python-or-library-comparison",
+        "resource-awesome-optimization",
+        "resource-scipy-lecture-notes-mathematical-optimization",
+        "resource-modeling-discrete-optimization-coursera",
+        "resource-convex-optimization-boyd-vandenberghe"
+      ],
+      "carousel_items": [
+        "resource-mit-15053-optimization-methods-in-management-scien",
+        "resource-scipy-lecture-notes-mathematical-optimization",
+        "resource-convex-optimization-boyd-vandenberghe",
+        "resource-stanford-ee364a-youtube",
+        "resource-modeling-discrete-optimization-coursera",
+        "resource-nathan-brixius-ml-+-optimization",
+        "resource-cvxpy-short-course",
+        "resource-solvermax-python-or-library-comparison",
+        "resource-tallys-yunes-or-by-the-beach",
+        "resource-awesome-optimization"
+      ]
+    },
+    {
+      "id": "cluster-marketplace-design",
+      "label": "Marketplace Design",
+      "cluster_id": "marketplace-design",
+      "macro_category": "Platform Economics",
+      "original_categories": [
+        "Platform Economics",
+        "Pricing & Revenue",
+        "Marketplace Economics",
+        "Market Design & Matching"
+      ],
+      "item_count": 58,
+      "items": [
+        "resource-lyft-dynamic-pricing-to-sustain-marketplace-balanc",
+        "resource-airbnb-learning-market-dynamics-for-optimal-pricin",
+        "resource-tim-roughgardens-cs269i-incentives-in-computer-sci",
+        "resource-linkedin-the-economic-graph",
+        "resource-lyft-engineering",
+        "resource-doordash-building-a-successful-three-sided-marketp",
+        "resource-fiverr-engineering-blog",
+        "resource-hagiu-multi-sided-platforms-from-microfoundations-",
+        "resource-bill-gurley-how-to-miss-by-a-mile-uber-tam",
+        "resource-lyft-simulating-a-ridesharing-marketplace",
+        "resource-uber-reinforcement-learning-for-marketplace-balanc",
+        "resource-hagiu-wright-when-to-open-a-platform-hbr",
+        "resource-simon-rothman-a16z-how-to-build-a-marketplace",
+        "resource-rochet-tirole-two-sided-markets-rand",
+        "resource-upwork-engineering-blog",
+        "resource-jeff-jordan-a16z-marketplace-100",
+        "resource-platform-papers-joost-rietveld",
+        "resource-jean-tirole-two-sided-markets-a-progress-report",
+        "resource-andrei-hagiu-strategic-decisions-for-multisided-pl",
+        "resource-instacart-tech-blog",
+        "resource-airbnb-measuring-listing-lifetime-value",
+        "resource-lyft-quantifying-efficiency-in-ridesharing",
+        "resource-the-cold-start-problem-andrew-chen",
+        "resource-etsy-personalized-recommendations",
+        "resource-rochet-tirole-platform-competition-in-two-sided-ma",
+        "resource-platform-revolution-book-overview",
+        "resource-etsy-building-marketplace-search-and-personalizati",
+        "resource-doordash-real-time-optimization-of-delivery-operat",
+        "resource-parker-van-alstyne-choudary-pipelines-platforms-an",
+        "resource-linkedin-engineering-marketplace-optimization",
+        "resource-doordash-the-dasher-dispatch-system",
+        "resource-eugene-wei-seeing-like-an-algorithm-tiktok",
+        "resource-instacart-building-for-balance-sage-v2",
+        "resource-bill-gurley-all-markets-are-not-created-equal",
+        "resource-sangeet-choudary-platform-scale-blog",
+        "resource-bill-gurley-a-rake-too-far",
+        "resource-uber-engineering",
+        "resource-li-jin-the-creator-economy-needs-a-middle-class-hb",
+        "resource-hagiu-rothman-network-effects-arent-enough-hbr",
+        "resource-eugene-wei-invisible-asymptotes",
+        "resource-tim-roughgardens-cs364a-kidney-exchange",
+        "resource-bill-gurley-going-direct",
+        "resource-li-jin-unbundling-work",
+        "resource-li-jin-building-for-the-creator-middle-class",
+        "resource-uber-unleashing-the-power-of-ads-simulation",
+        "resource-bill-gurley-in-defense-of-the-deck",
+        "resource-cepr-voxeu-doing-economics-at-google",
+        "resource-li-jin-100-true-fans",
+        "resource-li-jin-the-passion-economy-and-the-future-of-work",
+        "resource-uber-simulated-marketplace-with-ml",
+        "resource-amazon-science-how-amazon-robots-navigate-congesti",
+        "resource-thumbtack-engineering-blog",
+        "resource-uber-gaining-insights-in-a-simulated-marketplace",
+        "resource-airbnb-engineering-two-sided-marketplace-matching",
+        "resource-instacart-no-order-left-behind;-no-shopper-left-id",
+        "resource-uber-dynamic-pricing-and-matching-in-ride-hailing",
+        "resource-econtalk-hal-varian-on-technology",
+        "resource-uber-driver-surge-pricing"
+      ],
+      "carousel_items": [
+        "resource-lyft-engineering",
+        "resource-uber-engineering",
+        "resource-tim-roughgardens-cs364a-kidney-exchange",
+        "resource-airbnb-engineering-two-sided-marketplace-matching",
+        "resource-uber-dynamic-pricing-and-matching-in-ride-hailing",
+        "resource-tim-roughgardens-cs269i-incentives-in-computer-sci",
+        "resource-lyft-simulating-a-ridesharing-marketplace",
+        "resource-instacart-tech-blog",
+        "resource-lyft-quantifying-efficiency-in-ridesharing",
+        "resource-the-cold-start-problem-andrew-chen"
+      ]
+    },
+    {
+      "id": "cluster-network-effects",
+      "label": "Network Effects & Aggregation",
+      "cluster_id": "network-effects",
+      "macro_category": "Platform Economics",
+      "original_categories": [
+        "Platform Economics",
+        "Causal Inference",
+        "Marketplace Economics",
+        "A/B Testing",
+        "Interference & Switchback"
+      ],
+      "item_count": 43,
+      "items": [
+        "resource-linkedin-the-economic-graph",
+        "resource-doordash-building-a-successful-three-sided-marketp",
+        "resource-fiverr-engineering-blog",
+        "resource-hagiu-multi-sided-platforms-from-microfoundations-",
+        "resource-dean-eckles-blog-on-network-experiments-and-social",
+        "resource-hagiu-wright-when-to-open-a-platform-hbr",
+        "resource-rochet-tirole-two-sided-markets-rand",
+        "resource-platform-papers-joost-rietveld",
+        "resource-jean-tirole-two-sided-markets-a-progress-report",
+        "resource-andrei-hagiu-strategic-decisions-for-multisided-pl",
+        "resource-eugene-wei-status-as-a-service-staas",
+        "resource-the-cold-start-problem-andrew-chen",
+        "resource-rochet-tirole-platform-competition-in-two-sided-ma",
+        "resource-platform-revolution-book-overview",
+        "resource-stratechery-aggregation-theory",
+        "resource-meta-how-meta-tests-products-with-strong-network-e",
+        "resource-linkedin-economic-graph-to-economic-insights",
+        "resource-a16z-measuring-network-effects",
+        "resource-doordash-real-time-optimization-of-delivery-operat",
+        "resource-nfx-network-effects-bible",
+        "resource-nfx-network-effects-masterclass",
+        "resource-parker-van-alstyne-choudary-pipelines-platforms-an",
+        "resource-doordash-switchback-tests-under-network-effects",
+        "resource-linkedin-engineering-marketplace-optimization",
+        "resource-eugene-wei-seeing-like-an-algorithm-tiktok",
+        "resource-instacart-building-for-balance-sage-v2",
+        "resource-sangeet-choudary-platform-scale-blog",
+        "resource-uber-engineering",
+        "resource-hagiu-rothman-network-effects-arent-enough-hbr",
+        "resource-eugene-wei-invisible-asymptotes",
+        "resource-bill-gurley-going-direct",
+        "resource-li-jin-unbundling-work",
+        "resource-netflix-keeping-netflix-reliable-using-prioritized",
+        "resource-li-jin-building-for-the-creator-middle-class",
+        "resource-bill-gurley-in-defense-of-the-deck",
+        "resource-li-jin-100-true-fans",
+        "resource-google-research-the-tail-at-scale",
+        "resource-li-jin-the-passion-economy-and-the-future-of-work",
+        "resource-amazon-science-how-amazon-robots-navigate-congesti",
+        "resource-stripe-scaling-your-api-with-rate-limiters",
+        "resource-nfx-network-effects-manual-16-types",
+        "resource-thumbtack-engineering-blog",
+        "resource-econtalk-hal-varian-on-technology"
+      ],
+      "carousel_items": [
+        "resource-uber-engineering",
+        "resource-the-cold-start-problem-andrew-chen",
+        "resource-doordash-switchback-tests-under-network-effects",
+        "resource-doordash-real-time-optimization-of-delivery-operat",
+        "resource-nfx-network-effects-bible",
+        "resource-nfx-network-effects-masterclass",
+        "resource-dean-eckles-blog-on-network-experiments-and-social",
+        "resource-stratechery-aggregation-theory",
+        "resource-a16z-measuring-network-effects",
+        "resource-linkedin-engineering-marketplace-optimization"
+      ]
+    },
+    {
+      "id": "cluster-pricing-revenue",
+      "label": "Pricing & Revenue Management",
+      "cluster_id": "pricing-revenue",
+      "macro_category": "Platform Economics",
+      "original_categories": [
+        "Routing & Logistics",
+        "Bandits & Adaptive",
+        "Pricing & Revenue",
+        "Growth & Retention",
+        "Platform Economics",
+        "Machine Learning",
+        "Market Design & Matching",
+        "A/B Testing"
+      ],
+      "item_count": 22,
+      "items": [
+        "resource-lyft-dynamic-pricing-to-sustain-marketplace-balanc",
+        "resource-ieee-spectrum-the-secret-of-airbnbs-pricing-algori",
+        "resource-airbnb-learning-market-dynamics-for-optimal-pricin",
+        "resource-doordash-engineering",
+        "resource-airbnb-aerosolve-ml-for-humans",
+        "resource-hbr-ideacast-how-to-build-dynamic-pricing-that-wor",
+        "resource-airbnb-using-ml-to-predict-value-of-homes",
+        "resource-airbnb-learning-market-dynamics-for-optimal-pricin",
+        "resource-coursera-pricing-strategy-optimization-uvabcg",
+        "resource-chargebee-saas-pricing-models-guide",
+        "resource-monetizing-innovation-ramanujam",
+        "resource-lennys-podcast-madhavan-ramanujam",
+        "resource-uber-engineering-causal-inference-at-uber",
+        "resource-bill-gurley-a-rake-too-far",
+        "resource-netflix-decision-making-at-netflix",
+        "resource-the-theory-and-practice-of-revenue-management",
+        "resource-eppo-how-netflix-lyft-and-yahoo-use-contextual-ban",
+        "resource-openview-saas-pricing-guide",
+        "resource-amazon-science",
+        "resource-uber-dynamic-pricing-and-matching-in-ride-hailing",
+        "resource-growth-unhinged-saas-benchmarks-from-openview",
+        "resource-uber-driver-surge-pricing"
+      ],
+      "carousel_items": [
+        "resource-the-theory-and-practice-of-revenue-management",
+        "resource-eppo-how-netflix-lyft-and-yahoo-use-contextual-ban",
+        "resource-uber-dynamic-pricing-and-matching-in-ride-hailing",
+        "resource-coursera-pricing-strategy-optimization-uvabcg",
+        "resource-chargebee-saas-pricing-models-guide",
+        "resource-monetizing-innovation-ramanujam",
+        "resource-uber-engineering-causal-inference-at-uber",
+        "resource-openview-saas-pricing-guide",
+        "resource-lennys-podcast-madhavan-ramanujam",
+        "resource-amazon-science"
+      ]
+    },
+    {
+      "id": "cluster-auction-theory",
+      "label": "Auction Theory & Ad Tech",
+      "cluster_id": "auction-theory",
+      "macro_category": "Platform Economics",
+      "original_categories": [
+        "Operations Research",
+        "Auction Theory",
+        "Platform Economics",
+        "Machine Learning",
+        "Frameworks & Strategy",
+        "Advertising & Attention",
+        "Ads & Attribution"
+      ],
+      "item_count": 15,
+      "items": [
+        "resource-dirk-bergemanns-yale-courses",
+        "resource-auctions-in-ad-tech-sanjiv-das",
+        "resource-google-research-market-algorithms-team",
+        "resource-iab-and-iab-tech-lab",
+        "resource-display-advertising-with-real-time-bidding",
+        "resource-meta-ads-fairness-variance-reduction-system",
+        "resource-gsp-auction-paper-edelman-et-al-aer-2007",
+        "resource-tim-roughgardens-cs364a-mechanism-design",
+        "resource-meta-andromeda-next-gen-personalized-ads-retrieval",
+        "resource-easley-kleinberg-sponsored-search-markets",
+        "resource-uber-unleashing-the-power-of-ads-simulation",
+        "resource-cepr-voxeu-doing-economics-at-google",
+        "resource-kevin-leyton-browns-vcg-mechanism-lectures",
+        "resource-jonathan-levins-revenue-equivalence-notes",
+        "resource-clearcode-adtech-book"
+      ],
+      "carousel_items": [
+        "resource-auctions-in-ad-tech-sanjiv-das",
+        "resource-google-research-market-algorithms-team",
+        "resource-meta-ads-fairness-variance-reduction-system",
+        "resource-display-advertising-with-real-time-bidding",
+        "resource-gsp-auction-paper-edelman-et-al-aer-2007",
+        "resource-tim-roughgardens-cs364a-mechanism-design",
+        "resource-meta-andromeda-next-gen-personalized-ads-retrieval",
+        "resource-easley-kleinberg-sponsored-search-markets",
+        "resource-kevin-leyton-browns-vcg-mechanism-lectures",
+        "resource-dirk-bergemanns-yale-courses"
+      ]
+    },
+    {
+      "id": "cluster-dsa-interviews",
+      "label": "Data Structures & Algorithms",
+      "cluster_id": "dsa-interviews",
+      "macro_category": "Programming",
+      "original_categories": [
+        "Programming"
+      ],
+      "item_count": 12,
+      "items": [
+        "resource-visualgo",
+        "resource-thealgorithmspython",
+        "resource-leetcode-explore-data-structures",
+        "resource-problem-solving-with-algorithms-data-structures-py",
+        "resource-real-python-data-structures",
+        "resource-usf-data-structure-visualizations",
+        "resource-freecodecamp-algorithms-course",
+        "resource-abdul-bari-youtube",
+        "resource-datalemur",
+        "resource-neetcode",
+        "resource-blind-75",
+        "resource-leetcode-patterns"
+      ],
+      "carousel_items": [
+        "resource-visualgo",
+        "resource-thealgorithmspython",
+        "resource-leetcode-explore-data-structures",
+        "resource-problem-solving-with-algorithms-data-structures-py",
+        "resource-real-python-data-structures",
+        "resource-usf-data-structure-visualizations",
+        "resource-freecodecamp-algorithms-course",
+        "resource-abdul-bari-youtube",
+        "resource-datalemur",
+        "resource-neetcode"
+      ]
+    },
+    {
+      "id": "cluster-python-economists",
+      "label": "Python for Economists",
+      "cluster_id": "python-economists",
+      "macro_category": "Programming",
+      "original_categories": [
+        "Programming",
+        "Computational Economics"
+      ],
+      "item_count": 9,
+      "items": [
+        "resource-python-data-science-handbook",
+        "resource-quantecon-discrete-state-dynamic-programming",
+        "resource-the-missing-semester-mit",
+        "resource-matteo-courthouds-blp-demand-estimation",
+        "resource-playwright-for-python",
+        "resource-coding-for-practitioners",
+        "resource-python-for-econometrics",
+        "resource-coding-for-economists",
+        "resource-automate-the-boring-stuff-with-python"
+      ],
+      "carousel_items": [
+        "resource-the-missing-semester-mit",
+        "resource-playwright-for-python",
+        "resource-coding-for-practitioners",
+        "resource-python-for-econometrics",
+        "resource-automate-the-boring-stuff-with-python",
+        "resource-python-data-science-handbook",
+        "resource-quantecon-discrete-state-dynamic-programming",
+        "resource-coding-for-economists",
+        "resource-matteo-courthouds-blp-demand-estimation"
+      ]
+    },
+    {
+      "id": "cluster-sql-tutorials",
+      "label": "SQL Tutorials",
+      "cluster_id": "sql-tutorials",
+      "macro_category": "Programming",
+      "original_categories": [
+        "Programming"
+      ],
+      "item_count": 6,
+      "items": [
+        "resource-mode-sql-tutorial",
+        "resource-leetcode-sql-50",
+        "resource-duckdb-documentation",
+        "resource-select-star-sql",
+        "resource-8-week-sql-challenge-danny-ma",
+        "resource-sqlbolt"
+      ],
+      "carousel_items": [
+        "resource-sqlbolt",
+        "resource-mode-sql-tutorial",
+        "resource-leetcode-sql-50",
+        "resource-duckdb-documentation",
+        "resource-select-star-sql",
+        "resource-8-week-sql-challenge-danny-ma"
+      ]
+    },
+    {
+      "id": "cluster-bayesian-methods",
+      "label": "Bayesian Inference",
+      "cluster_id": "bayesian-methods",
+      "macro_category": "Statistics",
+      "original_categories": [
+        "Bayesian Methods",
+        "A/B Testing"
+      ],
+      "item_count": 7,
+      "items": [
+        "resource-statistical-rethinking",
+        "resource-pymc-labs-blog",
+        "resource-pymc-marketing-documentation",
+        "resource-evan-miller-formulas-for-bayesian-ab-testing",
+        "resource-seeing-theory-brown",
+        "resource-scipystats-documentation",
+        "resource-statquest-with-josh-starmer"
+      ],
+      "carousel_items": [
+        "resource-pymc-marketing-documentation",
+        "resource-statistical-rethinking",
+        "resource-pymc-labs-blog",
+        "resource-seeing-theory-brown",
+        "resource-scipystats-documentation",
+        "resource-evan-miller-formulas-for-bayesian-ab-testing",
+        "resource-statquest-with-josh-starmer"
+      ]
+    },
+    {
+      "id": "cluster-tech-strategy",
+      "label": "Tech Strategy & Newsletters",
+      "cluster_id": "tech-strategy",
+      "macro_category": "Strategy",
+      "original_categories": [
+        "Operations Research",
+        "Platform Economics",
+        "Tech Strategy",
+        "Computational Economics",
+        "Marketing Science",
+        "Frameworks & Strategy"
+      ],
+      "item_count": 18,
+      "items": [
+        "resource-noahpinion-noah-smith",
+        "resource-ben-evans-newsletter",
+        "resource-full-stack-economics-timothy-lee",
+        "resource-money-stuff-matt-levine",
+        "resource-matt-levine-the-crypto-story-businessweek",
+        "resource-semianalysis-dylan-patel",
+        "resource-mkt1-b2b-marketing-frameworks",
+        "resource-not-boring-packy-mccormick",
+        "resource-bill-gurley-how-to-miss-by-a-mile-uber-tam",
+        "resource-shreyas-doshi-lno-framework",
+        "resource-marketing-bs-strategic-marketing-newsletter",
+        "resource-aswath-damodaran-blog-valuation",
+        "resource-the-diff-byrne-hobart",
+        "resource-adam-fishman-newsletter",
+        "resource-csis-strategic-technologies-program",
+        "resource-the-generalist-mario-gabriele",
+        "resource-koen-pauwels-marketing-and-metrics",
+        "resource-kuang-xu-newsletter"
+      ],
+      "carousel_items": [
+        "resource-csis-strategic-technologies-program",
+        "resource-shreyas-doshi-lno-framework",
+        "resource-adam-fishman-newsletter",
+        "resource-noahpinion-noah-smith",
+        "resource-semianalysis-dylan-patel",
+        "resource-not-boring-packy-mccormick",
+        "resource-aswath-damodaran-blog-valuation",
+        "resource-the-diff-byrne-hobart",
+        "resource-the-generalist-mario-gabriele",
+        "resource-ben-evans-newsletter"
+      ]
+    },
+    {
+      "id": "cluster-product-metrics",
+      "label": "Product Metrics & Analytics",
+      "cluster_id": "product-metrics",
+      "macro_category": "Strategy",
+      "original_categories": [
+        "Bayesian Methods",
+        "Metrics & Measurement",
+        "Growth & Retention",
+        "Frameworks & Strategy"
+      ],
+      "item_count": 18,
+      "items": [
+        "resource-gibson-biddle-dhm-product-strategy-framework",
+        "resource-marty-cagan-inspired",
+        "resource-sequoia-data-informed-product-building",
+        "resource-intercom-rice-prioritization-framework",
+        "resource-svpg-product-management-start-here",
+        "resource-ken-norton-how-to-hire-a-product-manager",
+        "resource-how-superhuman-built-an-engine-to-find-pmf-first-r",
+        "resource-adam-fishman-newsletter",
+        "resource-measuring-product-health-sequoia",
+        "resource-a-quantitative-approach-to-product-market-fit-trib",
+        "resource-ultimate-guide-activation-aakash-gupta",
+        "resource-amplitude-product-lessons-with-shreyas-doshi",
+        "resource-atlassian-how-to-write-product-requirements",
+        "resource-teresa-torres-opportunity-solution-trees",
+        "resource-intercom-on-product-management-free-book",
+        "resource-slacks-2000-messages-activation-metric",
+        "resource-guide-to-product-metrics",
+        "resource-lennys-newsletter-consumer-marketing-measurement"
+      ],
+      "carousel_items": [
+        "resource-how-superhuman-built-an-engine-to-find-pmf-first-r",
+        "resource-slacks-2000-messages-activation-metric",
+        "resource-adam-fishman-newsletter",
+        "resource-atlassian-how-to-write-product-requirements",
+        "resource-guide-to-product-metrics",
+        "resource-sequoia-data-informed-product-building",
+        "resource-measuring-product-health-sequoia",
+        "resource-a-quantitative-approach-to-product-market-fit-trib",
+        "resource-ultimate-guide-activation-aakash-gupta",
+        "resource-teresa-torres-opportunity-solution-trees"
+      ]
+    },
+    {
+      "id": "cluster-fraud-detection",
+      "label": "Fraud Detection & Trust Safety",
+      "cluster_id": "fraud-detection",
+      "macro_category": "Strategy",
+      "original_categories": [
+        "Trust & Safety",
+        "Insurance & Actuarial",
+        "Case Studies",
+        "Specialized Methods"
+      ],
+      "item_count": 13,
+      "items": [
+        "resource-linkedin-defending-against-abuse-at-scale",
+        "resource-netflix-rad-outlier-detection",
+        "resource-google-research-self-supervised-anomaly-detection",
+        "resource-stanford-fintech-lab-rob-wang-block",
+        "resource-stripe-engineering",
+        "resource-fraud-detection-handbook-ulb",
+        "resource-paypal-graph-database-for-fraud",
+        "resource-stripe-ml-for-fraud-protection",
+        "resource-anomaly-detection-in-time-series",
+        "resource-meta-few-shot-learner-for-harmful-content",
+        "resource-great-learning-insurance-analytics-course",
+        "resource-ieee-cis-fraud-1st-place-solution-chris-deotte",
+        "resource-scikit-learn-outlier-detection"
+      ],
+      "carousel_items": [
+        "resource-great-learning-insurance-analytics-course",
+        "resource-ieee-cis-fraud-1st-place-solution-chris-deotte",
+        "resource-scikit-learn-outlier-detection",
+        "resource-stripe-engineering",
+        "resource-fraud-detection-handbook-ulb",
+        "resource-paypal-graph-database-for-fraud",
+        "resource-stripe-ml-for-fraud-protection",
+        "resource-linkedin-defending-against-abuse-at-scale",
+        "resource-netflix-rad-outlier-detection",
+        "resource-google-research-self-supervised-anomaly-detection"
+      ]
+    },
+    {
+      "id": "cluster-econ-blogs",
+      "label": "Economics Blogs & Newsletters",
+      "cluster_id": "econ-blogs",
+      "macro_category": "Strategy",
+      "original_categories": [
+        "Machine Learning",
+        "Applied Economics"
+      ],
+      "item_count": 4,
+      "items": [
+        "resource-inside-data-mikkel-dengs\u00f8e",
+        "resource-apricitas-economics-joseph-politano",
+        "resource-economic-forces-albrecht-hendrickson",
+        "resource-genai-for-econ-substack"
+      ],
+      "carousel_items": [
+        "resource-inside-data-mikkel-dengs\u00f8e",
+        "resource-apricitas-economics-joseph-politano",
+        "resource-economic-forces-albrecht-hendrickson",
+        "resource-genai-for-econ-substack"
+      ]
+    },
+    {
+      "id": "cluster-classical-forecasting",
+      "label": "Classical Forecasting",
+      "cluster_id": "classical-forecasting",
+      "macro_category": "Time Series",
+      "original_categories": [
+        "Classical Methods",
+        "Specialized Methods"
+      ],
+      "item_count": 4,
+      "items": [
+        "resource-change-point-detection-in-time-series",
         "resource-ritvikmath-time-series-youtube-+-github",
         "resource-interpreting-acf-and-pacf-plots",
-        "resource-change-point-detection-in-time-series",
-        "resource-mstl-multi-seasonal-decomposition-in-python",
-        "resource-doordash-elite-ensemble-learning",
-        "resource-conformal-prediction-intervals-for-time-series",
-        "resource-anomaly-detection-in-time-series"
+        "resource-mstl-multi-seasonal-decomposition-in-python"
       ],
       "carousel_items": [
         "resource-ritvikmath-time-series-youtube-+-github",
         "resource-interpreting-acf-and-pacf-plots",
         "resource-mstl-multi-seasonal-decomposition-in-python",
-        "resource-doordash-elite-ensemble-learning",
-        "resource-conformal-prediction-intervals-for-time-series",
-        "resource-anomaly-detection-in-time-series",
         "resource-change-point-detection-in-time-series"
       ]
     }

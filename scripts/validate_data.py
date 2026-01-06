@@ -92,11 +92,16 @@ def validate_required_fields(files: dict) -> list:
 
 
 def find_duplicate_urls(files: dict) -> list:
-    """Find duplicate URLs within files (cross-file duplicates are allowed)."""
+    """Find duplicate URLs within files.
+
+    Cross-file duplicates are allowed.
+    Same URL with different category/topic is allowed (cross-category indexing).
+    Only flags true duplicates: same URL + same category/topic.
+    """
     errors = []
 
     for filename, data in files.items():
-        file_urls = {}  # Track URLs within this file only
+        file_keys = {}  # Track URL+category within this file only
         items = data if isinstance(data, list) else [data]
 
         for item in items:
@@ -108,10 +113,20 @@ def find_duplicate_urls(files: dict) -> list:
 
             name = item.get("name", item.get("title", "unknown"))
 
-            if url in file_urls:
-                errors.append(f"{filename}: Duplicate URL '{url}' - '{name}' and '{file_urls[url]}'")
+            # Get category/topic for composite key (allows cross-category duplicates)
+            # For papers: use topic field; for others: use category field
+            if filename == "papers_flat.json":
+                category = item.get("topic", "")
             else:
-                file_urls[url] = name
+                category = item.get("category", "")
+
+            # Composite key: URL + category
+            key = f"{url}|{category}"
+
+            if key in file_keys:
+                errors.append(f"{filename}: Duplicate URL '{url}' in category '{category}' - '{name}' and '{file_keys[key]}'")
+            else:
+                file_keys[key] = name
 
     return errors
 

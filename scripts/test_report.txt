@@ -1,0 +1,141 @@
+================================================================================
+                         TEST REPORT - tech-econ.com
+================================================================================
+Date: 2026-01-05
+Agent: Tester
+
+================================================================================
+                              SUMMARY
+================================================================================
+
+  Data Validation:  FAILED
+  Build:            PASSED
+
+================================================================================
+                         DATA VALIDATION DETAILS
+================================================================================
+
+1. Required Fields Check: PASSED
+   - All required fields present in all data files
+
+2. Duplicate URLs Check: FAILED (113 duplicates found)
+
+   These duplicate URLs within files are causing validation to fail:
+
+   datasets.json:
+   - 'Medical Cost Personal Dataset' and 'Insurance Charges Prediction' share URL
+   - 'Wine Quality Dataset' duplicated
+   - 'Avocado Prices' duplicated
+   - 'Credit Card Fraud Detection' duplicated
+   - 'NYC Taxi Trip Duration' duplicated
+   - 'Telco Customer Churn' duplicated
+   - 'House Prices: Advanced Regression Techniques' duplicated
+   - 'Titanic: Machine Learning from Disaster' duplicated
+   - 'Santander Customer Transaction Prediction' duplicated
+   - 'Instacart Market Basket Analysis' duplicated
+   - 'IEEE-CIS Fraud Detection' duplicated
+   - 'Google Analytics Customer Revenue Prediction' duplicated
+   - 'Rossmann Store Sales' duplicated
+   - 'Home Credit Default Risk' duplicated
+   - 'Corporación Favorita Grocery Sales Forecasting' duplicated
+   - 'Walmart Recruiting - Store Sales Forecasting' duplicated
+   - 'Recruit Restaurant Visitor Forecasting' duplicated
+   - 'Two Sigma: Using News to Predict Stock Movements' duplicated
+   - 'Jigsaw Toxic Comment Classification' duplicated
+   - 'Quora Insincere Questions Classification' duplicated
+   - 'New York City Taxi Fare Prediction' duplicated
+   - 'ASHRAE - Great Energy Predictor III' duplicated
+   - 'Elo Merchant Category Recommendation' duplicated
+   - 'M5 Forecasting - Accuracy' duplicated
+   - 'Predict Future Sales' duplicated
+
+   talks.json:
+   - 'David Silver: Introduction to Reinforcement Learning Course' duplicated
+   - 'Economics of Discrimination' duplicated
+   - 'Probability and Statistics: Stanford Online' duplicated
+   - 'Keith Rabois: How to Operate' duplicated
+   - 'Making Badass Developers' duplicated
+   - 'NVIDIA GTC Keynote' duplicated
+   - Various YouTube lecture URLs duplicated
+
+   resources.json:
+   - 'Causal Inference in Statistics: A Primer' duplicated
+   - 'Causal Inference: The Mixtape' duplicated
+   - 'The Effect: An Introduction to Research Design and Causality' duplicated
+   - 'The Art of Statistics: Learning from Data' duplicated
+   - 'What is Prompt Engineering?' duplicated
+   - 'Statsmodels Documentation' duplicated
+
+   career.json:
+   - 'Point72' duplicated
+   - 'American Express' duplicated
+
+   packages.json:
+   - 'mlxtend' duplicated
+   - 'networkx-guides' duplicated
+   - Multiple other duplicates
+
+   papers_flat.json:
+   - 'Deep Learning' duplicated
+   - 'The Efficient Market Hypothesis and Its Critics' duplicated
+   - 'The Economics of Artificial Intelligence' duplicated
+   - Multiple other duplicates
+
+3. Broken Links Check: 226 WARNINGS (not failing build)
+
+   Common patterns:
+   - HTTP 403: Academic publishers blocking bots (JSTOR, ACM, Oxford, Wiley, etc.)
+   - HTTP 404: Deleted GitHub repos, moved pages
+   - SSL/Connection errors: Various sites with certificate issues
+
+   Sites frequently returning 403 (consider adding to SKIP_DOMAINS):
+   - jstor.org
+   - dl.acm.org
+   - academic.oup.com
+   - onlinelibrary.wiley.com
+   - tandfonline.com
+   - journals.uchicago.edu
+   - direct.mit.edu
+
+================================================================================
+                            BUILD DETAILS
+================================================================================
+
+Hugo Build: PASSED
+  - Pages: 104
+  - Static files: 632
+  - Build time: 618ms
+
+Pagefind Index: PASSED
+  - Pages indexed: 77
+  - Words indexed: 15,571
+  - Languages: 1 (en-us)
+  - Build time: 0.552 seconds
+
+Warnings:
+  - Missing layout file for "taxonomy" kind
+  - Missing layout file for "term" kind
+
+================================================================================
+                         RECOMMENDED ACTIONS
+================================================================================
+
+CRITICAL (blocking pre-commit):
+1. Remove or deduplicate the 113 duplicate URLs in data files
+   - datasets.json has the most duplicates (Kaggle competition URLs)
+   - Consider if duplicates are intentional (same resource, different entries)
+   - If intentional, modify validate_data.py to allow cross-entry duplicates
+
+OPTIONAL:
+2. Add academic publisher domains to SKIP_DOMAINS in validate_data.py:
+   - jstor.org, dl.acm.org, academic.oup.com, etc.
+
+3. Create Hugo templates for taxonomy/term kinds to resolve warnings
+
+4. Review and fix or remove truly broken links (404s):
+   - GitHub repos that no longer exist
+   - Pages that have moved
+
+================================================================================
+                              END OF REPORT
+================================================================================

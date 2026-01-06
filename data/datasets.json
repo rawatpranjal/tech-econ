@@ -8830,94 +8830,6 @@
     ]
   },
   {
-    "name": "LOBSTER (Limit Order Book System)",
-    "description": "High-frequency limit order book tick data for NASDAQ stocks reconstructed from ITCH messages. Gold standard for market microstructure research.",
-    "category": "Financial Services",
-    "url": "https://lobsterdata.com/",
-    "docs_url": "https://lobsterdata.com/info/DataStructure.php",
-    "github_url": null,
-    "tags": [
-      "high-frequency",
-      "limit-order-book",
-      "NASDAQ",
-      "tick-data",
-      "market-microstructure"
-    ],
-    "best_for": "Market microstructure research, algorithmic trading backtesting, LOB simulation validation",
-    "model_score": 0.0014,
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "pandas-dataframes",
-      "time-series-analysis",
-      "market-microstructure"
-    ],
-    "topic_tags": [
-      "financial-services",
-      "high-frequency-trading",
-      "data-analysis"
-    ],
-    "summary": "The LOBSTER dataset provides high-frequency limit order book tick data for NASDAQ stocks, reconstructed from ITCH messages. It serves as a gold standard for market microstructure research, allowing researchers to analyze trading behaviors, order dynamics, and price formation processes.",
-    "audience": [
-      "Early-PhD",
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS"
-    ],
-    "synthetic_questions": [
-      "What is the LOBSTER dataset?",
-      "How can I analyze NASDAQ tick data?",
-      "What are the applications of limit order book data?",
-      "What methodologies are used in market microstructure research?",
-      "How does high-frequency trading affect market dynamics?",
-      "What variables are included in the LOBSTER dataset?",
-      "What preprocessing steps are needed for limit order book data?",
-      "What research questions can be addressed using LOBSTER data?"
-    ],
-    "use_cases": [
-      "Analyzing order book dynamics",
-      "Studying price impact of trades",
-      "Investigating market liquidity",
-      "Evaluating trading strategies"
-    ],
-    "embedding_text": "The LOBSTER (Limit Order Book System) dataset is a comprehensive collection of high-frequency limit order book tick data specifically for NASDAQ stocks, meticulously reconstructed from ITCH messages. This dataset is recognized as a gold standard in the realm of market microstructure research, providing invaluable insights into the intricate dynamics of financial markets. The data structure typically consists of rows representing individual trades and order book updates, with columns detailing key variables such as price, volume, order type, and timestamps. This rich dataset allows researchers to explore a multitude of research questions related to trading behaviors, order dynamics, and price formation processes.\n\nThe collection methodology involves aggregating and processing ITCH messages, which capture real-time trading activity on the NASDAQ exchange. This ensures that the dataset reflects the most accurate and detailed view of market transactions, making it an essential resource for understanding high-frequency trading mechanisms. While the dataset excels in providing detailed insights, researchers should be aware of potential limitations, such as data quality issues arising from market anomalies or system errors during data collection.\n\nCommon preprocessing steps include cleaning the data to remove any erroneous entries, normalizing timestamps for consistency, and structuring the data into a format suitable for analysis. Researchers typically employ various analytical techniques, including regression analysis, machine learning algorithms, and descriptive statistics, to extract meaningful patterns and insights from the data. The LOBSTER dataset supports a wide range of analyses, from studying the impact of high-frequency trading on market liquidity to evaluating the effectiveness of different trading strategies.\n\nIn conclusion, the LOBSTER dataset stands as a pivotal resource for academics and practitioners alike, facilitating a deeper understanding of market microstructure and the factors that influence trading behavior. Its detailed and high-frequency nature allows for sophisticated analyses that can inform both theoretical research and practical trading applications.",
-    "domain_tags": [
-      "fintech"
-    ],
-    "data_modality": "time-series",
-    "size_category": "medium",
-    "benchmark_usage": [
-      "Market microstructure research",
-      "High-frequency trading analysis"
-    ],
-    "tfidf_keywords": [
-      "limit-order-book",
-      "high-frequency-trading",
-      "NASDAQ",
-      "market-microstructure",
-      "order-dynamics",
-      "price-formation",
-      "trading-strategies",
-      "liquidity-analysis",
-      "tick-data",
-      "ITCH-messages"
-    ],
-    "semantic_cluster": "market-microstructure-research",
-    "content_format": "dataset",
-    "depth_level": "intermediate",
-    "related_concepts": [
-      "market-liquidity",
-      "order-execution",
-      "trade-impact",
-      "financial-markets",
-      "algorithmic-trading"
-    ],
-    "canonical_topics": [
-      "finance",
-      "econometrics",
-      "machine-learning"
-    ]
-  },
-  {
     "name": "AXA Driver Telematics (Kaggle)",
     "description": "Driving behavior dataset with 50K driver trips characterized by second-by-second GPS coordinates for usage-based insurance",
     "category": "Insurance & Actuarial",
@@ -22733,88 +22645,6 @@
     ]
   },
   {
-    "name": "CASdatasets R Package",
-    "description": "Collection of 40+ actuarial datasets for P&C insurance including freMTPL, ausautoBI, and loss triangles for teaching and research",
-    "category": "Insurance & Actuarial",
-    "url": "https://cran.r-project.org/package=CASdatasets",
-    "docs_url": "https://freakonometrics.github.io/CASdatasets/",
-    "github_url": "https://github.com/freakonometrics/CASdatasets",
-    "tags": [
-      "actuarial",
-      "P&C-insurance",
-      "loss-triangles",
-      "claims-data",
-      "teaching-datasets"
-    ],
-    "best_for": "Learning actuarial methods, pricing model development, and reserving exercises",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "The CASdatasets R Package provides a comprehensive collection of over 40 actuarial datasets specifically designed for property and casualty (P&C) insurance. It includes datasets such as freMTPL, ausautoBI, and various loss triangles, making it an invaluable resource for teaching and research in actuarial science and insurance analytics.",
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What datasets are included in the CASdatasets R Package?",
-      "How can I use the CASdatasets for teaching actuarial science?",
-      "What are loss triangles in insurance data?",
-      "Where can I find actuarial datasets for research?",
-      "What is the freMTPL dataset?",
-      "How can I analyze claims data using CASdatasets?",
-      "What is the purpose of the CASdatasets R Package?",
-      "What types of analyses can be performed with P&C insurance datasets?"
-    ],
-    "use_cases": [
-      "Analyzing loss triangles to understand claims development patterns.",
-      "Using freMTPL data for modeling and predicting motor insurance claims.",
-      "Teaching actuarial concepts through real-world datasets.",
-      "Conducting research on P&C insurance trends and claims behavior."
-    ],
-    "domain_tags": [
-      "Insurance",
-      "Actuarial"
-    ],
-    "data_modality": "tabular",
-    "size_category": "medium",
-    "model_score": 0.0002,
-    "image_url": "/images/datasets/casdatasets-r-package.png",
-    "embedding_text": "The CASdatasets R Package is a robust collection of over 40 actuarial datasets tailored for property and casualty (P&C) insurance, serving as a vital resource for both teaching and research purposes. This package includes notable datasets such as freMTPL, which focuses on motor third-party liability insurance, and ausautoBI, which pertains to Australian automobile bodily injury claims. Additionally, it features various loss triangles that are essential for understanding the development of insurance claims over time. The data structure typically comprises rows representing individual claims or aggregated data points, while columns may include variables such as claim amounts, dates, types of coverage, and other relevant actuarial metrics. These datasets are designed to support a wide range of analyses, including regression modeling, machine learning applications, and descriptive statistics, making them suitable for both novice and experienced data scientists. Researchers often utilize these datasets to address critical questions related to claims behavior, risk assessment, and pricing strategies in the insurance industry. Common preprocessing steps may involve cleaning the data, handling missing values, and transforming variables for analysis. However, users should be aware of potential limitations in data quality, such as biases in reporting or incomplete records. Overall, the CASdatasets R Package is a valuable tool for anyone looking to deepen their understanding of actuarial science and P&C insurance analytics.",
-    "tfidf_keywords": [
-      "actuarial",
-      "P&C-insurance",
-      "loss-triangles",
-      "claims-data",
-      "freMTPL",
-      "ausautoBI",
-      "data-analysis",
-      "insurance-modeling",
-      "risk-assessment",
-      "predictive-modeling",
-      "data-preprocessing",
-      "insurance-analytics",
-      "statistical-analysis",
-      "data-visualization"
-    ],
-    "semantic_cluster": "insurance-data-analysis",
-    "content_format": "dataset",
-    "depth_level": "intro",
-    "related_concepts": [
-      "risk-management",
-      "predictive-analytics",
-      "statistical-modeling",
-      "data-visualization",
-      "insurance-pricing"
-    ],
-    "canonical_topics": [
-      "econometrics",
-      "statistics",
-      "finance",
-      "consumer-behavior"
-    ]
-  },
-  {
     "name": "UK Biobank",
     "description": "Prospective cohort of 500,000 UK participants aged 40-69 with genetic data, imaging, and longitudinal health records. Extensive phenotyping including MRI, accelerometry, and linked hospital records.",
     "category": "Healthcare Economics & Health-Tech",
@@ -26288,21 +26118,6 @@
       "consumer-behavior",
       "econometrics"
     ]
-  },
-  {
-    "name": "NYC TLC Trip Data",
-    "description": "3+ billion taxi and rideshare trips since 2009 with pickup/dropoff times, 262 zones, and fares. Enables queueing inference for ride-matching systems.",
-    "category": "Transportation & Mobility",
-    "url": "https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page",
-    "tags": [
-      "taxi",
-      "rideshare",
-      "queueing",
-      "urban",
-      "time-series"
-    ],
-    "best_for": "Queueing models and urban transportation analysis",
-    "model_score": 0.0001
   },
   {
     "name": "SIPRI Arms Industry Database",

@@ -180,26 +180,6 @@
     "model_score": 0.0001
   },
   {
-    "id": "paper-forecasting-at-scale-prophet-1",
-    "name": "Forecasting at Scale (Prophet)",
-    "title": "Forecasting at Scale (Prophet)",
-    "authors": "Sean J. Taylor, Benjamin Letham",
-    "year": 2018,
-    "url": "https://peerj.com/preprints/3190/",
-    "description": "Meta's production system enabling analysts to create reliable forecasts with domain knowledge.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Forecasting",
-      "Production Forecasting Systems"
-    ],
-    "type": "paper",
-    "category": "Forecasting > Production Forecasting Systems",
-    "topic": "Forecasting",
-    "subtopic": "Production Forecasting Systems",
-    "model_score": 0.0001
-  },
-  {
     "id": "paper-the-economic-consequences-of-apple-s-app-tracking-transparency",
     "name": "The Economic Consequences of Apple's App Tracking Transparency",
     "title": "The Economic Consequences of Apple's App Tracking Transparency",
@@ -1517,26 +1497,6 @@
     "category": "Privacy > Differential Privacy",
     "topic": "Privacy",
     "subtopic": "Differential Privacy",
-    "model_score": 0.0
-  },
-  {
-    "id": "paper-rappor-randomized-aggregatable-privacy-preserving-ordinal-response-1",
-    "name": "RAPPOR: Randomized Aggregatable Privacy-Preserving Ordinal Response",
-    "title": "RAPPOR: Randomized Aggregatable Privacy-Preserving Ordinal Response",
-    "authors": "\u00dalfar Erlingsson, Vasyl Pihur, Aleksandra Korolova",
-    "year": 2014,
-    "url": "https://arxiv.org/abs/1407.6981",
-    "description": "Foundation for privacy-preserving telemetry with local DP guarantees for aggregate statistics.",
-    "citations": null,
-    "tag": "",
-    "tags": [
-      "Privacy",
-      "Privacy-Preserving Measurement"
-    ],
-    "type": "paper",
-    "category": "Privacy > Privacy-Preserving Measurement",
-    "topic": "Privacy",
-    "subtopic": "Privacy-Preserving Measurement",
     "model_score": 0.0
   },
   {
@@ -10660,26 +10620,6 @@
     "model_score": 0.0
   },
   {
-    "id": "paper-the-economics-of-privacy-1",
-    "name": "The Economics of Privacy",
-    "title": "The Economics of Privacy",
-    "authors": "Alessandro Acquisti, Curtis Taylor, Liad Wagman",
-    "year": 2016,
-    "url": "https://www.aeaweb.org/articles?id=10.1257/jel.54.2.442",
-    "description": "Definitive JEL survey on privacy economics\u2014essential for understanding personalized pricing and price discrimination enabled by algorithmic data collection.",
-    "citations": 1057,
-    "tag": "",
-    "tags": [
-      "Pricing",
-      "Algorithmic Pricing"
-    ],
-    "type": "paper",
-    "category": "Pricing > Algorithmic Pricing",
-    "topic": "Pricing",
-    "subtopic": "Algorithmic Pricing",
-    "model_score": 0.0
-  },
-  {
     "id": "paper-sustainable-and-unchallenged-algorithmic-tacit-collusion",
     "name": "Sustainable and Unchallenged Algorithmic Tacit Collusion",
     "title": "Sustainable and Unchallenged Algorithmic Tacit Collusion",
@@ -10827,26 +10767,6 @@
     "year": 2005,
     "url": "https://pubsonline.informs.org/doi/abs/10.1287/mksc.1040.0098",
     "description": "The BG/NBD model for customer lifetime value with transaction data.",
-    "citations": 448,
-    "tag": "",
-    "tags": [
-      "Subscriptions & Retention",
-      "Lifetime Value Estimation"
-    ],
-    "type": "paper",
-    "category": "Subscriptions & Retention > Lifetime Value Estimation",
-    "topic": "Subscriptions & Retention",
-    "subtopic": "Lifetime Value Estimation",
-    "model_score": 0.0
-  },
-  {
-    "id": "paper-counting-your-customers-the-easy-way-an-alternative-to-the-pareto-nbd-model",
-    "name": "'Counting Your Customers' the Easy Way: An Alternative to the Pareto/NBD Model",
-    "title": "'Counting Your Customers' the Easy Way: An Alternative to the Pareto/NBD Model",
-    "authors": "Peter Fader, Bruce Hardie, Ka Lok Lee",
-    "year": 2005,
-    "url": "https://pubsonline.informs.org/doi/abs/10.1287/mksc.1040.0098",
-    "description": "Simplified BG/NBD model that maintains predictive accuracy with easier estimation.",
     "citations": 448,
     "tag": "",
     "tags": [
@@ -20397,26 +20317,6 @@
     "category": "Privacy > Privacy-Preserving Measurement",
     "topic": "Privacy",
     "subtopic": "Privacy-Preserving Measurement",
-    "model_score": 0.0
-  },
-  {
-    "id": "paper-semi-supervised-knowledge-transfer-for-deep-learning-from-private-training-data-pate-1",
-    "name": "Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data (PATE)",
-    "title": "Semi-supervised Knowledge Transfer for Deep Learning from Private Training Data (PATE)",
-    "authors": "Nicolas Papernot, Mart\u00edn Abadi, \u00dalfar Erlingsson, Ian Goodfellow, Kunal Talwar",
-    "year": 2017,
-    "url": "https://research.google/pubs/pub45828/",
-    "description": "PATE enables training on synthetic/unlabeled data with DP guarantees transferred from teacher ensemble.",
-    "citations": 1,
-    "tag": "",
-    "tags": [
-      "Privacy",
-      "Synthetic Data"
-    ],
-    "type": "paper",
-    "category": "Privacy > Synthetic Data",
-    "topic": "Privacy",
-    "subtopic": "Synthetic Data",
     "model_score": 0.0
   },
   {

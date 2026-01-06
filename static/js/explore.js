@@ -229,35 +229,57 @@
         return result;
     }
 
+    // Task 1.3: Store narrative carousels for interspersion
+    let narrativeQueue = [];
+    let narrativePositionCounter = 0;
+    let totalRowsRendered = 0;
+    const NARRATIVE_INTERVAL = 4; // Insert narrative every 4 regular rows (3-4 range)
+
     function shuffleAndLoad() {
         const container = document.getElementById('explore-rows');
         container.innerHTML = '';
         loadedRowCount = 0;
+        narrativePositionCounter = 0;
+        totalRowsRendered = 0; // Reset for interspersion
 
-        // First: Render narrative carousels (curated content)
+        // Task 1.3: Prepare narrative carousels for interspersion (every 3-4 rows)
+        narrativeQueue = [];
         if (narrativeCarousels && narrativeCarousels.carousels) {
-            const shuffledNarrative = shuffleArray(narrativeCarousels.carousels);
-            shuffledNarrative.forEach(carousel => {
-                const rowEl = createNarrativeRow(carousel);
-                if (rowEl) container.appendChild(rowEl);
-            });
+            narrativeQueue = shuffleArray(narrativeCarousels.carousels);
         }
 
-        // Then: Filter and sort semantic clusters
+        // Filter and sort semantic clusters
         const filtered = clusterData.clusters.filter(c => c.item_count >= MIN_CLUSTER_SIZE);
         shuffledClusters = curatedSort(filtered);
 
-        // Load semantic cluster rows
+        // Load rows with interspersed narratives
         loadMoreRows();
     }
 
-    function createNarrativeRow(carousel) {
+    // Task 1.2: Get daily seed for hero rotation (same hero all day)
+    function getDailyHeroSeed() {
+        const today = new Date();
+        return today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate();
+    }
+
+    // Task 1.2: Select hero based on daily rotation
+    function selectDailyHero(items, carouselId) {
+        if (!items || items.length === 0) return null;
+        const seed = getDailyHeroSeed();
+        // Use carousel ID + date to get consistent but different hero per carousel per day
+        const hash = (seed + carouselId.split('').reduce((a, c) => a + c.charCodeAt(0), 0)) % items.length;
+        return items[hash];
+    }
+
+    function createNarrativeRow(carousel, position = 0) {
         const row = document.createElement('div');
         row.className = 'explore-row narrative-row';
         row.dataset.carouselId = carousel.id;
         row.dataset.template = carousel.template;
+        // Task 1.3: Position-based gradient styling (cycles through 6 colors)
+        row.dataset.position = String(position % 6);
 
-        // Header with template badge
+        // Header (template badge hidden via CSS - Task 1.3)
         const header = document.createElement('div');
         header.className = 'explore-row-header';
         const templateBadge = carousel.template ? `<span class="template-badge template-${carousel.template}">${carousel.template}</span>` : '';
@@ -282,25 +304,37 @@
         const scroller = document.createElement('div');
         scroller.className = 'explore-scroller';
 
-        // Add hero first (if exists)
+        // Task 1.2: Build list of all items for daily hero rotation
+        const allItems = [];
         if (carousel.hero) {
             const heroItem = itemLookup[carousel.hero.id] || carousel.hero;
             if (heroItem) {
-                const card = createExploreCard({...heroItem, _type: carousel.hero.type}, false, true);
-                scroller.appendChild(card);
+                allItems.push({ item: {...heroItem, _type: carousel.hero.type}, isOriginalHero: true });
             }
         }
-
-        // Add supporting items
         if (carousel.items) {
             carousel.items.forEach(item => {
                 const fullItem = itemLookup[item.id] || item;
                 if (fullItem) {
-                    const card = createExploreCard({...fullItem, _type: item.type}, false, false);
-                    scroller.appendChild(card);
+                    allItems.push({ item: {...fullItem, _type: item.type}, isOriginalHero: false });
                 }
             });
         }
+
+        // Task 1.2: Select daily hero (rotates based on date seed)
+        const dailyHeroIndex = allItems.length > 0 ? (getDailyHeroSeed() + carousel.id.split('').reduce((a, c) => a + c.charCodeAt(0), 0)) % allItems.length : 0;
+
+        // Add cards with hero first
+        allItems.forEach((entry, idx) => {
+            const isHero = idx === dailyHeroIndex;
+            const card = createExploreCard(entry.item, false, isHero, isHero);
+            if (isHero) {
+                // Insert hero at the beginning
+                scroller.insertBefore(card, scroller.firstChild);
+            } else {
+                scroller.appendChild(card);
+            }
+        });
 
         wrapper.appendChild(scroller);
 
@@ -336,8 +370,9 @@
         if (isLoading) return;
 
         const remaining = shuffledClusters.length - loadedRowCount;
+        const hasNarratives = narrativeQueue.length > 0;
 
-        if (remaining <= 0) {
+        if (remaining <= 0 && !hasNarratives) {
             document.getElementById('explore-loader').classList.remove('visible');
             return;
         }
@@ -353,9 +388,28 @@
             const fragment = document.createDocumentFragment();
 
             for (let i = 0; i < toLoad; i++) {
+                // Task 1.3: Insert narrative carousel every 4 regular rows
+                if (narrativeQueue.length > 0 && totalRowsRendered > 0 && totalRowsRendered % NARRATIVE_INTERVAL === 0) {
+                    const narrative = narrativeQueue.shift();
+                    const narrativeRow = createNarrativeRow(narrative, narrativePositionCounter);
+                    narrativePositionCounter++;
+                    fragment.appendChild(narrativeRow);
+                }
+
                 const cluster = shuffledClusters[loadedRowCount + i];
                 const rowEl = createClusterRow(cluster);
                 fragment.appendChild(rowEl);
+                totalRowsRendered++;
+            }
+
+            // Task 1.3: Append any remaining narratives at the end
+            if (loadedRowCount + toLoad >= shuffledClusters.length) {
+                while (narrativeQueue.length > 0) {
+                    const narrative = narrativeQueue.shift();
+                    const narrativeRow = createNarrativeRow(narrative, narrativePositionCounter);
+                    narrativePositionCounter++;
+                    fragment.appendChild(narrativeRow);
+                }
             }
 
             container.appendChild(fragment);
@@ -363,7 +417,7 @@
             isLoading = false;
 
             // Hide loader if all loaded
-            if (loadedRowCount >= shuffledClusters.length) {
+            if (loadedRowCount >= shuffledClusters.length && narrativeQueue.length === 0) {
                 document.getElementById('explore-loader').classList.remove('visible');
             }
         });
@@ -463,7 +517,32 @@
         return items;
     }
 
-    function createExploreCard(item, hideTypeBadge = false, isHero = false) {
+    // Task 1.1: Check if item is "New" (date_added within last 30 days)
+    function isNewItem(item) {
+        if (!item.date_added) return false;
+        const dateAdded = new Date(item.date_added);
+        const thirtyDaysAgo = new Date();
+        thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+        return dateAdded >= thirtyDaysAgo;
+    }
+
+    // Task 1.1: Check if item is "Popular" (model_score > 0.7)
+    function isPopularItem(item) {
+        return (item.model_score || 0) > 0.7;
+    }
+
+    // Task 1.1: Get engagement badge HTML (New takes priority over Popular)
+    function getEngagementBadge(item) {
+        if (isNewItem(item)) {
+            return '<span class="engagement-badge badge-new">New</span>';
+        }
+        if (isPopularItem(item)) {
+            return '<span class="engagement-badge badge-popular">Popular</span>';
+        }
+        return '';
+    }
+
+    function createExploreCard(item, hideTypeBadge = false, isHero = false, isNarrativeHero = false) {
         const card = document.createElement('div');
         card.className = 'explore-card' + (isHero ? ' hero-card' : '');
 
@@ -498,17 +577,47 @@
         // Format type label nicely
         const typeLabel = type.charAt(0).toUpperCase() + type.slice(1);
 
+        // Task 1.1: Get engagement badge
+        const badgeHtml = getEngagementBadge(item);
+
+        // Task 1.2: Hero indicator for narrative carousels only
+        const heroIndicatorHtml = isNarrativeHero ? '<div class="hero-indicator">★</div>' : '';
+
+        // Task 1.2: Extra metadata for narrative heroes
+        let heroMetadataHtml = '';
+        if (isNarrativeHero && isHero) {
+            const metadataRows = [];
+            if (item.prerequisites) {
+                metadataRows.push(`<div class="metadata-row"><span class="metadata-label">Prerequisites:</span> ${escapeHtml(truncate(item.prerequisites, 50))}</div>`);
+            }
+            if (item.best_for) {
+                metadataRows.push(`<div class="metadata-row"><span class="metadata-label">Best for:</span> ${escapeHtml(truncate(item.best_for, 50))}</div>`);
+            }
+            if (item.related && Array.isArray(item.related) && item.related.length > 0) {
+                metadataRows.push(`<div class="metadata-row"><span class="metadata-label">Related:</span> ${escapeHtml(item.related.slice(0, 2).join(', '))}</div>`);
+            }
+            if (metadataRows.length > 0) {
+                heroMetadataHtml = `<div class="hero-metadata">${metadataRows.join('')}</div>`;
+            }
+        }
+
+        // Adjust description length for narrative hero (show more)
+        const descLength = isNarrativeHero && isHero ? 220 : 140;
+
         card.innerHTML = `
+            ${badgeHtml}
+            ${heroIndicatorHtml}
             ${!hideTypeBadge ? `<span class="explore-card-type type-${type}">${typeLabel}</span>` : ''}
             <h3 class="explore-card-title">
                 <a href="${escapeHtml(url)}" target="_blank" rel="noopener">${escapeHtml(name)}</a>
             </h3>
-            <p class="explore-card-desc">${escapeHtml(truncate(description, 140))}</p>
-            ${tags.length > 0 ? `
+            <p class="explore-card-desc">${escapeHtml(truncate(description, descLength))}</p>
+            ${tags.length > 0 && !heroMetadataHtml ? `
                 <div class="explore-card-tags">
                     ${tags.slice(0, 3).map(t => `<span class="explore-card-tag">${escapeHtml(t)}</span>`).join('')}
                 </div>
             ` : ''}
+            ${heroMetadataHtml}
         `;
 
         // Make entire card clickable

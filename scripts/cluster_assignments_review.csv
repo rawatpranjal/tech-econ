@@ -1,0 +1,523 @@
+id,name,category,primary,secondary,confidence,status
+resource-doordash-elite-ensemble-learning,DoorDash: ELITE Ensemble Learning,Production Systems,forecasting-dl,,high,success
+resource-airbnb-ml-powered-search-ranking,Airbnb: ML-Powered Search Ranking,Search & Ranking,search-ranking,,high,success
+resource-understanding-cuped-by-matteo-courthoud,Understanding CUPED by Matteo Courthoud,Variance Reduction,variance-reduction,,high,success
+resource-lyft-dynamic-pricing-to-sustain-marketplace-balanc,Lyft: Dynamic Pricing to Sustain Marketplace Balance,Pricing & Revenue,pricing-revenue,marketplace-design,high,success
+resource-matteo-courthouds-iv-tutorial,Matteo Courthoud's IV Tutorial,IV & RDD,rdd-iv,,high,success
+resource-causal-inference-for-the-brave-and-true,Causal Inference for the Brave and True,Causal Inference,did-synth-control,,high,success
+resource-noahpinion-noah-smith,Noahpinion (Noah Smith),Frameworks & Strategy,tech-strategy,,high,success
+resource-mit-ocw-transportation-systems-analysis,MIT OCW: Transportation Systems Analysis,Transportation Economics & Technology,transportation-econ,,high,success
+resource-evan-miller-simple-sequential-ab-testing,Evan Miller: Simple Sequential A/B Testing,Sequential Testing,sequential-bandits,,high,success
+resource-ben-evans-newsletter,Ben Evans Newsletter,Frameworks & Strategy,tech-strategy,,high,success
+resource-eugene-yan-patterns-for-building-llm-based-systems,Eugene Yan: Patterns for Building LLM-based Systems,LLMs & Agents,llms-rag,,high,success
+resource-mit-ocw-energy-economics-1444,MIT OCW: Energy Economics (14.44),Energy & Utilities Economics,energy-economics,,high,success
+resource-time-series-forecasting-with-lag-llama,Time Series Forecasting with Lag-Llama,Deep Learning,forecasting-dl,,high,success
+resource-afi-labs-ride-share-dispatch-algorithms,Afi Labs: Ride-Share Dispatch Algorithms,Routing & Logistics,vehicle-routing,transportation-econ,high,success
+resource-matteo-courthoud-group-sequential-testing,Matteo Courthoud: Group Sequential Testing,Sequential Testing,sequential-bandits,,high,success
+resource-eugene-yan-position-bias-in-search,Eugene Yan: Position Bias in Search,Search & Ranking,search-ranking,,high,success
+resource-pymc-marketing-clv-quickstart,PyMC-Marketing CLV Quickstart,Bayesian Methods,clv-retention,,high,success
+resource-scott-cunningham-causal-inference-substack,Scott Cunningham: Causal Inference Substack,Causal Inference,mixtape-resources,,high,success
+resource-kaggles-intermediate-machine-learning,Kaggle's Intermediate Machine Learning,Gradient Boosting,ml-for-economists,,high,success
+resource-dirk-bergemanns-yale-courses,Dirk Bergemann's Yale Courses,Machine Learning,auction-theory,,high,success
+resource-ieee-spectrum-the-secret-of-airbnbs-pricing-algori,IEEE Spectrum: The Secret of Airbnb's Pricing Algorithm,Pricing & Revenue,pricing-revenue,,high,success
+resource-dominik-krupke-cp-sat-primer,Dominik Krupke: CP-SAT Primer,Operations Research,linear-programming,,high,success
+resource-change-point-detection-in-time-series,Change Point Detection in Time Series,Specialized Methods,classical-forecasting,,high,success
+resource-mljar-feature-importance-with-xgboost,MLJAR: Feature Importance with XGBoost,Gradient Boosting,ml-for-economists,,high,success
+resource-airbnb-learning-market-dynamics-for-optimal-pricin,Airbnb: Learning Market Dynamics for Optimal Pricing,Platform Economics,pricing-revenue,marketplace-design,high,success
+resource-doordash-engineering,DoorDash Engineering,Routing & Logistics,vehicle-routing,pricing-revenue,high,success
+resource-statistical-rethinking,Statistical Rethinking,Bayesian Methods,bayesian-methods,,high,success
+resource-doordash-cupac-for-ml-enhanced-variance-reduction,DoorDash: CUPAC for ML-Enhanced Variance Reduction,Variance Reduction,variance-reduction,,high,success
+resource-analytics-vidhya-hyperparameter-tuning-guide,Analytics Vidhya: Hyperparameter Tuning Guide,Gradient Boosting,ml-for-economists,,high,success
+resource-econdl-deep-learning-for-economists,EconDL: Deep Learning for Economists,Machine Learning,ml-for-economists,,high,success
+resource-linkedin-defending-against-abuse-at-scale,LinkedIn: Defending Against Abuse at Scale,Trust & Safety,fraud-detection,,high,success
+resource-tim-roughgardens-cs269i-incentives-in-computer-sci,Tim Roughgarden's CS269I: Incentives in Computer Science,Market Design & Matching,marketplace-design,,high,success
+resource-sheprd-r-packages-for-health-economic-decision-sci,SHEPRD - R Packages for Health Economic Decision Science,Healthcare Economics & Health-Tech,healthcare-econ,,high,success
+resource-eth-zurich-agent-based-modeling-of-economic-system,ETH Zurich: Agent-Based Modeling of Economic Systems,Computational Economics,agent-based-modeling,,high,success
+resource-pymc-labs-blog,PyMC Labs Blog,Bayesian Methods,bayesian-methods,,high,success
+resource-airbnb-aerosolve-ml-for-humans,Airbnb: Aerosolve - ML for Humans,Pricing & Revenue,pricing-revenue,,high,success
+resource-netflix-rad-outlier-detection,Netflix: RAD Outlier Detection,Trust & Safety,fraud-detection,,high,success
+resource-gibson-biddle-dhm-product-strategy-framework,Gibson Biddle: DHM Product Strategy Framework,Frameworks & Strategy,product-metrics,,high,success
+resource-pymc-marketing-documentation,PyMC-Marketing Documentation,Bayesian Methods,bayesian-methods,clv-retention,high,success
+resource-full-stack-economics-timothy-lee,Full Stack Economics (Timothy Lee),Tech Strategy,tech-strategy,,high,success
+resource-marty-cagan-inspired,Marty Cagan: INSPIRED,Frameworks & Strategy,product-metrics,,high,success
+resource-sports-performance-analytics-specialization,Sports Performance Analytics Specialization,Sports Analytics,sports-analytics,,high,success
+resource-swiss-association-of-actuaries-tutorials,Swiss Association of Actuaries Tutorials,Insurance & Actuarial,insurance-actuarial,,high,success
+resource-google-research-self-supervised-anomaly-detection,Google Research: Self-Supervised Anomaly Detection,Trust & Safety,fraud-detection,,high,success
+resource-mark-whites-practical-causal-forest-tutorial,Mark White's Practical Causal Forest Tutorial,Causal Inference,causal-forests,,high,success
+resource-causal-inference-the-mixtape,Causal Inference: The Mixtape,Causal Inference,mixtape-resources,,high,success
+resource-pedro-santannas-did-resources,Pedro Sant'Anna's DiD Resources,Difference-in-Differences,did-synth-control,,high,success
+resource-coding-for-economists-arthur-turrell,Coding for Economists (Arthur Turrell),Causal Inference,ml-for-economists,,high,success
+resource-mit-ocw-principles-of-microeconomics-healthcare-un,MIT OCW: Principles of Microeconomics (Healthcare Unit),Healthcare Economics & Health-Tech,healthcare-econ,,high,success
+resource-tallys-yunes-or-by-the-beach,Tallys Yunes: OR by the Beach,Operations Research,linear-programming,convex-optimization,high,success
+resource-stanford-fintech-lab-rob-wang-block,Stanford FinTech Lab: Rob Wang (Block),Trust & Safety,fraud-detection,,high,success
+resource-sequoia-data-informed-product-building,Sequoia: Data-Informed Product Building,Metrics & Measurement,product-metrics,,high,success
+resource-evan-miller-how-not-to-run-an-ab-test,Evan Miller: How Not To Run an A/B Test,A/B Testing,ab-testing-foundations,,high,success
+resource-021-newsletter-marketing-data-teams-bridge,021 Newsletter: Marketing & Data Teams Bridge,Frameworks & Strategy,mmm-attribution,geo-experiments,high,success
+resource-money-stuff-matt-levine,Money Stuff (Matt Levine),Tech Strategy,tech-strategy,,high,success
+resource-intercom-rice-prioritization-framework,Intercom: RICE Prioritization Framework,Frameworks & Strategy,product-metrics,,high,success
+resource-auctions-in-ad-tech-sanjiv-das,Auctions in Ad Tech (Sanjiv Das),Ads & Attribution,auction-theory,,high,success
+resource-brady-neals-introduction-to-causal-inference,Brady Neal's Introduction to Causal Inference,Machine Learning,dags-causal-graphs,ml-for-economists,high,success
+resource-hbr-ideacast-how-to-build-dynamic-pricing-that-wor,HBR IdeaCast: How to Build Dynamic Pricing That Works,Pricing & Revenue,pricing-revenue,,high,success
+resource-georgia-tech-ratliff-10-rules-for-supply-chain-opt,Georgia Tech (Ratliff): 10 Rules for Supply Chain Optimization,Routing & Logistics,vehicle-routing,,high,success
+resource-stanford-ml-causal-inference-short-course,Stanford ML & Causal Inference Short Course,Machine Learning,ml-for-economists,causal-forests,high,success
+resource-doordash-ml-+-optimization-for-dispatch,DoorDash: ML + Optimization for Dispatch,Routing & Logistics,vehicle-routing,,high,success
+resource-stripe-engineering,Stripe Engineering,Trust & Safety,fraud-detection,,high,success
+resource-matt-levine-the-crypto-story-businessweek,Matt Levine: The Crypto Story (Businessweek),Tech Strategy,tech-strategy,,high,success
+resource-ebay-tech-blog,eBay Tech Blog,Platform Economics,tech-company-blogs,,high,success
+resource-matteo-courthouds-experimentation-series,Matteo Courthoud's Experimentation Series,A/B Testing,variance-reduction,ab-testing-foundations,high,success
+resource-amazon-science-operations-research-and-optimizatio,Amazon Science: Operations Research and Optimization,Routing & Logistics,vehicle-routing,,high,success
+resource-fraud-detection-handbook-ulb,Fraud Detection Handbook (ULB),Trust & Safety,fraud-detection,,high,success
+resource-awesome-quant,Awesome Quant,Quantitative Finance,quant-finance,,high,success
+resource-kevin-gue-warehouse-design,Kevin Gue: Warehouse Design,Operations Research,vehicle-routing,,high,success
+resource-airbnb-using-ml-to-predict-value-of-homes,Airbnb: Using ML to Predict Value of Homes,Pricing & Revenue,pricing-revenue,,high,success
+resource-google-research-market-algorithms-team,Google Research: Market Algorithms Team,Auction Theory,auction-theory,,high,success
+resource-google-or-tools-vrp-+-vrptw-tutorial,Google OR-Tools: VRP + VRPTW Tutorial,Linear Programming,linear-programming,vehicle-routing,high,success
+resource-spotify-choosing-a-sequential-testing-framework,Spotify: Choosing a Sequential Testing Framework,Sequential Testing,sequential-bandits,,high,success
+resource-evan-miller-formulas-for-bayesian-ab-testing,Evan Miller: Formulas for Bayesian A/B Testing,A/B Testing,ab-testing-foundations,bayesian-methods,high,success
+resource-how-to-measure-cohort-retention-lennys-newsletter,How to Measure Cohort Retention (Lenny's Newsletter),Bayesian Methods,clv-retention,,high,success
+resource-matteo-courthouds-synthetic-control-tutorial,Matteo Courthoud's Synthetic Control Tutorial,Synthetic Control,did-synth-control,,high,success
+resource-real-python-linear-programming-with-python,Real Python: Linear Programming with Python,Linear Programming,linear-programming,,high,success
+resource-linkedin-the-economic-graph,LinkedIn: The Economic Graph,Platform Economics,network-effects,marketplace-design,high,success
+resource-alberto-abadies-nber-methods-lecture,Alberto Abadie's NBER Methods Lecture,Synthetic Control,did-synth-control,,high,success
+resource-linkedin-ai-behind-recruiter-search,LinkedIn: AI Behind Recruiter Search,Search & Ranking,search-ranking,,high,success
+resource-paypal-graph-database-for-fraud,PayPal: Graph Database for Fraud,Trust & Safety,fraud-detection,,high,success
+resource-svpg-product-management-start-here,SVPG: Product Management Start Here,Frameworks & Strategy,product-metrics,,high,success
+resource-python-data-science-handbook,Python Data Science Handbook,Programming,python-economists,,high,success
+resource-evan-millers-ab-testing-tools,Evan Miller's A/B Testing Tools,A/B Testing,ab-testing-foundations,,high,success
+resource-linkedin-engineering,LinkedIn Engineering,Search & Ranking,search-ranking,,high,success
+resource-semianalysis-dylan-patel,SemiAnalysis (Dylan Patel),Tech Strategy,tech-strategy,,high,success
+resource-lyft-engineering,Lyft Engineering,Marketplace Economics,marketplace-design,transportation-econ,high,success
+resource-dario-sansones-ml-resources-for-economists,Dario Sansone's ML Resources for Economists,Machine Learning,ml-for-economists,,high,success
+resource-deep-learning-for-single-cell-analysis-scverse-tut,Deep Learning for Single-Cell Analysis (scverse tutorials),Machine Learning,ml-for-economists,,high,success
+resource-feasible-newsletter,Feasible Newsletter,Operations Research,vehicle-routing,,high,success
+resource-stripe-ml-for-fraud-protection,Stripe: ML for Fraud Protection,Trust & Safety,fraud-detection,,high,success
+resource-netflix-tech-blog,Netflix Tech Blog,Search & Ranking,recsys,search-ranking,high,success
+resource-mkt1-b2b-marketing-frameworks,MKT1: B2B Marketing Frameworks,Frameworks & Strategy,tech-strategy,,high,success
+resource-conformal-prediction-tutorial-angelopoulos-bates,Conformal Prediction Tutorial (Angelopoulos & Bates),Machine Learning,ml-for-economists,,high,success
+resource-netflix-tech-blog-what-is-an-ab-test,Netflix Tech Blog: What is an A/B Test?,A/B Testing,ab-testing-foundations,,high,success
+resource-recast-blog-mmm-verification,Recast Blog: MMM Verification,Marketing Science,mmm-attribution,,high,success
+resource-google-machine-learning-crash-course,Google Machine Learning Crash Course,Machine Learning,ml-for-economists,,high,success
+resource-neural-survival-analysis-with-pycox,Neural Survival Analysis with pycox,Machine Learning,ml-for-economists,,high,success
+resource-uber-backtesting-at-scale,Uber: Backtesting at Scale,Production Systems,tech-company-blogs,,high,success
+resource-doordash-4-principles-to-boost-experimentation-by-,DoorDash: 4 Principles to Boost Experimentation by 1000%,AB Testing,ab-testing-foundations,switchback-interference,high,success
+resource-nextmv-blog,Nextmv Blog,Routing & Logistics,vehicle-routing,,high,success
+resource-an-introduction-to-statistical-learning-of-extreme,An Introduction to Statistical Learning of Extreme Values (Coles),Statistics,insurance-actuarial,,high,success
+resource-airbnb-learning-market-dynamics-for-optimal-pricin,Airbnb: Learning Market Dynamics for Optimal Pricing,Platform Economics,pricing-revenue,marketplace-design,high,success
+resource-doordash-building-a-successful-three-sided-marketp,DoorDash: Building a Successful Three-Sided Marketplace,Platform Economics,marketplace-design,network-effects,high,success
+resource-awesome-economics,Awesome Economics,Econometrics,ml-for-economists,,high,success
+resource-uber-making-experiment-evaluation-engine-100x-fast,Uber: Making Experiment Evaluation Engine 100x Faster,A/B Testing,ab-testing-foundations,,high,success
+resource-practical-introduction-to-switchback-experiments,Practical Introduction to Switchback Experiments,AB Testing,switchback-interference,ab-testing-foundations,high,success
+resource-mario-filho-forecastegy,Mario Filho: Forecastegy,Marketing Science,mmm-attribution,,high,success
+resource-microsoft-research-end-to-end-causal-inference-at-,Microsoft Research: End-to-End Causal Inference at Scale Demo,Causal Inference,causal-libraries,,high,success
+resource-nathan-brixius-ml-+-optimization,Nathan Brixius: ML + Optimization,Operations Research,linear-programming,convex-optimization,high,success
+resource-iab-and-iab-tech-lab,IAB and IAB Tech Lab,Operations Research,auction-theory,,high,success
+resource-anomaly-detection-in-time-series,Anomaly Detection in Time Series,Specialized Methods,fraud-detection,,high,success
+resource-beyond-jupyter,Beyond Jupyter,Programming,ml-for-economists,,high,success
+resource-meta-few-shot-learner-for-harmful-content,Meta: Few-Shot Learner for Harmful Content,Case Studies,fraud-detection,,high,success
+resource-alain-chabrier-column-generation-with-cplex,Alain Chabrier: Column Generation with CPLEX,Operations Research,linear-programming,vehicle-routing,high,success
+resource-fiverr-engineering-blog,Fiverr Engineering Blog,Platform Economics,marketplace-design,network-effects,high,success
+resource-andrew-heiss-synthetic-data-for-program-evaluation,Andrew Heiss: Synthetic Data for Program Evaluation,Causal Inference,did-synth-control,rdd-iv,high,success
+resource-quantecon-ml-in-economics,QuantEcon: ML in Economics,Machine Learning,ml-for-economists,,high,success
+resource-meta-engineering-data-science,Meta Engineering - Data Science,Case Studies,tech-company-blogs,,high,success
+resource-bruce-hardies-clv-papers,Bruce Hardie's CLV Papers,Growth & Retention,clv-retention,,high,success
+resource-instacart-predicting-availability-of-200m-grocery-,Instacart: Predicting Availability of 200M Grocery Items,Case Studies,ml-for-economists,,high,success
+resource-doordash-causal-modeling-to-get-value-from-flat-ex,DoorDash: Causal Modeling to Get Value from Flat Experiment Results,Causal Inference,causal-forests,,high,success
+resource-not-boring-packy-mccormick,Not Boring (Packy McCormick),Tech Strategy,tech-strategy,,high,success
+resource-ron-berman-p-hacking-in-ab-testing,Ron Berman: p-Hacking in A/B Testing,Marketing Science,ab-testing-foundations,,high,success
+resource-hagiu-multi-sided-platforms-from-microfoundations-,Hagiu: Multi-Sided Platforms - From Microfoundations to Design,Platform Economics,network-effects,marketplace-design,high,success
+resource-inside-data-mikkel-dengsøe,Inside Data (Mikkel Dengsøe),Applied Economics,econ-blogs,,high,success
+resource-lennys-newsletter-how-duolingo-reignited-user-grow,Lenny's Newsletter: How Duolingo Reignited User Growth,Growth & Retention,clv-retention,,high,success
+resource-hal-varian-machine-learning-and-econometrics-berke,Hal Varian: Machine Learning and Econometrics (Berkeley),Causal Inference,ml-for-economists,,high,success
+resource-vrpsolver-column-generation-for-vehicle-routing,VRPSolver: Column Generation for Vehicle Routing,Routing & Logistics,vehicle-routing,,high,success
+resource-mike-taylor-vexpower-mmm-tutorials,Mike Taylor: Vexpower MMM Tutorials,Marketing Science,mmm-attribution,,high,success
+resource-applied-causal-inference-powered-by-ml-and-ai,Applied Causal Inference Powered by ML and AI,Causal Inference,mixtape-resources,causal-forests,high,success
+resource-the-missing-semester-of-your-cs-education-mit,The Missing Semester of Your CS Education (MIT),Programming,none,,high,success
+resource-display-advertising-with-real-time-bidding,Display Advertising with Real-Time Bidding,Ads & Attribution,auction-theory,,high,success
+resource-ken-norton-how-to-hire-a-product-manager,Ken Norton: How to Hire a Product Manager,Frameworks & Strategy,product-metrics,,high,success
+resource-ben-elsner-causal-inference-policy-evaluation,Ben Elsner: Causal Inference & Policy Evaluation,Causal Inference,mixtape-resources,,high,success
+resource-growth-accounting-backtraced-growth-accounting,Growth Accounting & Backtraced Growth Accounting,Growth & Retention,clv-retention,,high,success
+resource-sdv-getting-started-guide,SDV Getting Started Guide,Machine Learning,ml-for-economists,,high,success
+resource-meta-ads-fairness-variance-reduction-system,Meta: Ads Fairness Variance Reduction System,Advertising & Attention,auction-theory,,high,success
+resource-data-analysis-journal-olga-berezovsky,Data Analysis Journal (Olga Berezovsky),A/B Testing,ab-testing-foundations,,high,success
+resource-fastai-practical-deep-learning-for-coders,Fast.ai Practical Deep Learning for Coders,Deep Learning,recsys,,high,success
+resource-netflix-computational-causal-inference,Netflix: Computational Causal Inference,Causal Inference,causal-libraries,,high,success
+resource-bill-gurley-how-to-miss-by-a-mile-uber-tam,Bill Gurley: How to Miss By a Mile (Uber TAM),Platform Economics,marketplace-design,tech-strategy,high,success
+resource-shreyas-doshi-lno-framework,Shreyas Doshi: LNO Framework,Frameworks & Strategy,tech-strategy,,high,success
+resource-gsp-auction-paper-edelman-et-al-aer-2007,"GSP Auction Paper (Edelman et al., AER 2007)",Ads & Attribution,auction-theory,,high,success
+resource-beyond-jupyter-transferlab,Beyond Jupyter (TransferLab),Programming,ml-for-economists,,high,success
+resource-foundations-of-transportation-network-analysis-edx,Foundations of Transportation Network Analysis (edX),Transportation Economics & Technology,transportation-econ,,high,success
+resource-spotify-confidence,Spotify Confidence,A/B Testing,ab-testing-foundations,,high,success
+resource-fangraphs-sabermetrics-library,FanGraphs Sabermetrics Library,Sports Analytics,sports-analytics,,high,success
+resource-coursera-pricing-strategy-optimization-uvabcg,Coursera Pricing Strategy Optimization (UVA/BCG),Pricing & Revenue,pricing-revenue,,high,success
+resource-netflix-sequential-ab-testing-keeps-the-world-stre,Netflix: Sequential A/B Testing Keeps the World Streaming,Sequential Testing,sequential-bandits,,high,success
+resource-quantecon-discrete-state-dynamic-programming,QuantEcon: Discrete State Dynamic Programming,Computational Economics,python-economists,,high,success
+resource-the-missing-semester-mit,The Missing Semester (MIT),Programming,python-economists,,high,success
+resource-netflix-sequential-ab-testing-keeps-the-world-stre,Netflix: Sequential A/B Testing Keeps the World Streaming,A/B Testing,ab-testing-foundations,sequential-bandits,high,success
+resource-ryan-oneil-real-time-optimization,Ryan O'Neil: Real-Time Optimization,Operations Research,linear-programming,vehicle-routing,high,success
+resource-exp-platform-microsoft-experimentation-resources,ExP Platform: Microsoft Experimentation Resources,A/B Testing,ab-testing-foundations,variance-reduction,high,success
+resource-chargebee-saas-pricing-models-guide,Chargebee: SaaS Pricing Models Guide,Pricing & Revenue,pricing-revenue,,high,success
+resource-eppo-bandit-vs-experiment-testing-decision-guide,Eppo: Bandit vs. Experiment Testing Decision Guide,Bandits & Adaptive,sequential-bandits,,high,success
+resource-branch-resources-privacy-centric-measurement,Branch Resources: Privacy-Centric Measurement,Ads & Attribution,ad-attribution,,high,success
+resource-seeing-theory-brown,Seeing Theory (Brown),Bayesian Methods,bayesian-methods,,high,success
+resource-stanford-stats-361-causal-inference-lecture-notes-,Stanford STATS 361: Causal Inference Lecture Notes (Wager),Causal Inference,causal-forests,,high,success
+resource-stanford-gsb-machine-learning-causal-inference-sho,Stanford GSB: Machine Learning & Causal Inference Short Course,Machine Learning,causal-forests,,high,success
+resource-mobile-dev-memo-post-att-marketing-measurement,Mobile Dev Memo: Post-ATT Marketing Measurement,Ads & Attribution,ad-attribution,,high,success
+resource-how-superhuman-built-an-engine-to-find-pmf-first-r,How Superhuman Built an Engine to Find PMF (First Round),Bayesian Methods,product-metrics,,high,success
+resource-marketing-bs-strategic-marketing-newsletter,Marketing BS: Strategic Marketing Newsletter,Frameworks & Strategy,tech-strategy,,high,success
+resource-shubhanshu-mishra-awesome-causality,Shubhanshu Mishra: Awesome Causality,Causal Inference,mixtape-resources,,high,success
+resource-monetizing-innovation-ramanujam,Monetizing Innovation (Ramanujam),Pricing & Revenue,pricing-revenue,,high,success
+resource-google-ai-blog,Google AI Blog,LLMs & Agents,llms-rag,,high,success
+resource-time-series-handbook-lightgbm-for-m5,Time Series Handbook: LightGBM for M5,Machine Learning,forecasting-dl,,high,success
+resource-meta-instagram-notification-management-with-ml-and,Meta: Instagram Notification Management with ML and Causal Inference,Causal Inference,ml-for-economists,,high,success
+resource-lyft-simulating-a-ridesharing-marketplace,Lyft: Simulating a Ridesharing Marketplace,Platform Economics,transportation-econ,marketplace-design,high,success
+resource-doordash-using-back-door-adjustment-for-pre-post-a,DoorDash: Using Back-Door Adjustment for Pre-Post Analysis,Causal Inference,dags-causal-graphs,,high,success
+resource-stephen-maher-optimisation-in-the-real-world,Stephen Maher: Optimisation in the Real World,Operations Research,energy-economics,vehicle-routing,high,success
+resource-bookingcom-increasing-power-with-cuped,Booking.com: Increasing Power with CUPED,Variance Reduction,variance-reduction,,high,success
+resource-stanford-ee364a-youtube,Stanford EE364A (YouTube),Convex Optimization,convex-optimization,,high,success
+resource-anton-korinek-research,Anton Korinek Research,Machine Learning,ml-for-economists,,high,success
+resource-austin-buchanan-farkas-dilemma,Austin Buchanan: Farkas' Dilemma,Operations Research,linear-programming,none,high,success
+resource-netflix-its-all-about-testing-the-experimentation-,Netflix: It's All A/Bout Testing - The Experimentation Platform,A/B Testing,ab-testing-foundations,,high,success
+resource-scipystats-documentation,Scipy.stats Documentation,Bayesian Methods,bayesian-methods,,high,success
+resource-energy-institute-at-haas-blog,Energy Institute at Haas Blog,Energy & Utilities Economics,energy-economics,,high,success
+resource-netflix-quasi-experimentation-at-netflix,Netflix: Quasi Experimentation at Netflix,Causal Inference,did-synth-control,,high,success
+resource-airbnb-ace-artificial-counterfactual-estimation,Airbnb: ACE - Artificial Counterfactual Estimation,Causal Inference,ml-for-economists,,high,success
+resource-modelling-extremal-events-embrechts-klüppelberg-mi,"Modelling Extremal Events (Embrechts, Klüppelberg, Mikosch)",Statistics,insurance-actuarial,quant-finance,high,success
+resource-dean-eckles-blog-on-network-experiments-and-social,Dean Eckles: Blog on Network Experiments and Social Influence,Causal Inference,network-effects,,high,success
+resource-uber-reinforcement-learning-for-marketplace-balanc,Uber: Reinforcement Learning for Marketplace Balance,Platform Economics,marketplace-design,transportation-econ,high,success
+resource-ritvikmath-time-series-youtube-+-github,ritvikmath Time Series YouTube + GitHub,Classical Methods,classical-forecasting,,high,success
+resource-energy-institute-at-haas-blog,Energy Institute at Haas Blog,Frameworks & Strategy,energy-economics,,high,success
+resource-linkedin-building-inclusive-products-through-ab-te,LinkedIn: Building Inclusive Products Through A/B Testing,A/B Testing,ab-testing-foundations,,high,success
+resource-lyft-experimentation-in-a-ridesharing-marketplace,Lyft: Experimentation in a Ridesharing Marketplace,Interference & Switchback,switchback-interference,transportation-econ,high,success
+resource-visualgo,VisuAlgo,Programming,dsa-interviews,,high,success
+resource-apricitas-economics-joseph-politano,Apricitas Economics (Joseph Politano),Applied Economics,econ-blogs,,high,success
+resource-neptuneai-when-to-choose-catboost-over-xgboost,Neptune.ai: When to Choose CatBoost Over XGBoost,Gradient Boosting,ml-for-economists,,high,success
+resource-awesome-causal-inference-matteo-courthoud,Awesome Causal Inference (Matteo Courthoud),Causal Inference,mixtape-resources,,high,success
+resource-lukas-vermeer-building-experimentation-infrastruct,Lukas Vermeer: Building Experimentation Infrastructure,A/B Testing,ab-testing-foundations,,high,success
+resource-defense-acquisition-university-dau,Defense Acquisition University (DAU),Machine Learning,ml-for-economists,,high,success
+resource-nsplib-nurse-scheduling-benchmarks-ghent-universit,NSPLib: Nurse Scheduling Benchmarks (Ghent University),Operations Research,linear-programming,,high,success
+resource-ronny-kohavi-trustworthy-online-controlled-experim,Ronny Kohavi: Trustworthy Online Controlled Experiments,A/B Testing,ab-testing-foundations,,high,success
+resource-blocked-time-series-cross-validation,Blocked Time Series Cross Validation,Machine Learning,forecasting-dl,,high,success
+resource-mit-15053-optimization-methods-in-management-scien,MIT 15.053: Optimization Methods in Management Science,Convex Optimization,convex-optimization,,high,success
+resource-coursera-the-economics-of-health-care-delivery,Coursera: The Economics of Health Care Delivery,Healthcare Economics & Health-Tech,healthcare-econ,,high,success
+resource-aswath-damodaran-blog-valuation,Aswath Damodaran Blog: Valuation,Tech Strategy,tech-strategy,,high,success
+resource-econ-ark-demark-examples,Econ-ARK DemARK Examples,Computational Economics,agent-based-modeling,,high,success
+resource-quantecon-linear-programming-introduction,QuantEcon: Linear Programming Introduction,Linear Programming,linear-programming,,high,success
+resource-hagiu-wright-when-to-open-a-platform-hbr,Hagiu & Wright: When to Open a Platform (HBR),Platform Economics,network-effects,marketplace-design,high,success
+resource-machine-learning-specialization-coursera,Machine Learning Specialization (Coursera),Machine Learning,ml-for-economists,,high,success
+resource-the-diff-byrne-hobart,The Diff (Byrne Hobart),Tech Strategy,tech-strategy,,high,success
+resource-simon-rothman-a16z-how-to-build-a-marketplace,Simon Rothman (a16z): How to Build a Marketplace,Platform Economics,marketplace-design,,high,success
+resource-juan-orduz-bayesian-marketing-methods,Juan Orduz: Bayesian Marketing Methods,Marketing Science,mmm-attribution,clv-retention,high,success
+resource-agent-based-models-with-python-an-introduction-to-,Agent-Based Models with Python: An Introduction to Mesa,Computational Economics,agent-based-modeling,,high,success
+resource-quantecon-python-lectures,QuantEcon Python Lectures,Computational Economics,agent-based-modeling,,high,success
+resource-thealgorithmspython,TheAlgorithms/Python,Programming,dsa-interviews,,high,success
+resource-lennys-podcast-madhavan-ramanujam,Lenny's Podcast: Madhavan Ramanujam,Pricing & Revenue,pricing-revenue,,high,success
+resource-adam-kelleher-causality-python-package,Adam Kelleher: Causality Python Package,Causal Inference,causal-libraries,,high,success
+resource-netflix-heterogeneous-treatment-effects,Netflix: Heterogeneous Treatment Effects,Causal Inference,causal-forests,,high,success
+resource-matteo-courthouds-did-tutorial,Matteo Courthoud's DiD Tutorial,Difference-in-Differences,did-synth-control,,high,success
+resource-spotify-risk-aware-product-decisions-in-ab-tests,Spotify: Risk-Aware Product Decisions in A/B Tests,A/B Testing,ab-testing-foundations,,high,success
+resource-lyft-causal-forecasting-at-lyft,Lyft: Causal Forecasting at Lyft,Causal Inference,dags-causal-graphs,,high,success
+resource-mit-ocw-energy-decisions-markets-and-policies,"MIT OCW: Energy Decisions, Markets, and Policies",Machine Learning,energy-economics,,high,success
+resource-class-central-transportation-courses,Class Central: Transportation Courses,Transportation Economics & Technology,transportation-econ,,high,success
+resource-statquest-with-josh-starmer,StatQuest with Josh Starmer,Bayesian Methods,bayesian-methods,,high,success
+resource-temporal-fusion-transformer-complete-tutorial,Temporal Fusion Transformer: Complete Tutorial,Deep Learning,forecasting-dl,,high,success
+resource-capitalisnt-sendhil-mullainathan-on-who-controls-a,Capitalisn't: Sendhil Mullainathan on Who Controls AI,Causal Inference,ml-for-economists,,high,success
+resource-economic-forces-albrecht-hendrickson,Economic Forces (Albrecht & Hendrickson),Applied Economics,econ-blogs,,high,success
+resource-jonathan-roths-did-resources,Jonathan Roth's DiD Resources,Difference-in-Differences,did-synth-control,,high,success
+resource-music-tomorrow-spotify-deep-dive,Music Tomorrow: Spotify Deep Dive,Case Studies,recsys,,high,success
+resource-erlang-c-calculator,Erlang C Calculator,Operations Research,queueing-theory,,high,success
+resource-matteo-courthouds-rdd-tutorial,Matteo Courthoud's RDD Tutorial,IV & RDD,rdd-iv,,high,success
+resource-adkdd-workshop-papers,AdKDD Workshop Papers,Ads & Attribution,ad-attribution,,high,success
+resource-matteo-courthouds-blp-demand-estimation,Matteo Courthoud's BLP Demand Estimation,Computational Economics,python-economists,agent-based-modeling,high,success
+resource-openai-cookbook-semantic-search-with-embeddings,OpenAI Cookbook: Semantic Search with Embeddings,Search & Ranking,search-ranking,,high,success
+resource-aeaafa-2019-impact-of-machine-learning-on-economic,AEA/AFA 2019: Impact of Machine Learning on Economics,Causal Inference,ml-for-economists,,high,success
+resource-media-rating-council-mrc,Media Rating Council (MRC),Operations Research,ad-attribution,,high,success
+resource-dario-sansone-ml-for-economists-resources,Dario Sansone: ML for Economists Resources,Causal Inference,ml-for-economists,,high,success
+resource-postman-academy,Postman Academy,Programming,none,,low,success
+resource-cvxpy-short-course,CVXPY Short Course,Convex Optimization,convex-optimization,,high,success
+resource-andrew-heisss-rdd-course-examples,Andrew Heiss's RDD Course Examples,IV & RDD,rdd-iv,,high,success
+resource-rochet-tirole-two-sided-markets-rand,Rochet & Tirole: Two-Sided Markets (RAND),Platform Economics,network-effects,marketplace-design,high,success
+resource-playwright-for-python,Playwright for Python,Programming,python-economists,,high,success
+resource-lost-stats-event-study-designs,LOST Stats: Event Study Designs,Causal Inference,did-synth-control,,high,success
+resource-machine-learning-for-economists-hebrew-university,Machine Learning for Economists (Hebrew University),Machine Learning,ml-for-economists,,high,success
+resource-frank-pinters-demand-estimation-notes,Frank Pinter's Demand Estimation Notes,Computational Economics,agent-based-modeling,,medium,success
+resource-aea-machine-learning-and-econometrics-atheyimbens,AEA: Machine Learning and Econometrics (Athey/Imbens),Computational Economics,ml-for-economists,causal-forests,high,success
+resource-tilburg-science-hub-rdd-tutorials,Tilburg Science Hub RDD Tutorials,IV & RDD,rdd-iv,,high,success
+resource-uchicago-law-discrimination-by-algorithm-and-peopl,UChicago Law: Discrimination by Algorithm and People,Causal Inference,ml-for-economists,,high,success
+resource-upwork-engineering-blog,Upwork Engineering Blog,Platform Economics,marketplace-design,,high,success
+resource-mit-ocw-dynamic-programming-bertsekas,MIT OCW: Dynamic Programming (Bertsekas),Computational Economics,ml-for-economists,,high,success
+resource-stable-baselines3-documentation,Stable-Baselines3 Documentation,Machine Learning,ml-for-economists,,high,success
+resource-paul-rubin-or-in-an-ob-world,Paul Rubin: OR in an OB World,Operations Research,linear-programming,,high,success
+resource-ronny-kohavi-seven-rules-of-thumb-for-web-site-exp,Ronny Kohavi: Seven Rules of Thumb for Web Site Experimenters,A/B Testing,ab-testing-foundations,,high,success
+resource-open-source-economics-structural-estimation,Open Source Economics: Structural Estimation,Computational Economics,ml-for-economists,,high,success
+resource-leetcode-explore-data-structures,LeetCode Explore: Data Structures,Programming,dsa-interviews,,high,success
+resource-adam-fishman-newsletter,Adam Fishman Newsletter,Frameworks & Strategy,product-metrics,tech-strategy,high,success
+resource-problem-solving-with-algorithms-data-structures-py,Problem Solving with Algorithms & Data Structures (Python),Programming,dsa-interviews,,high,success
+resource-google-analytics-for-marketing,Google Analytics for Marketing,Frameworks & Strategy,mmm-attribution,,high,success
+resource-solvermax-python-or-library-comparison,SolverMax: Python OR Library Comparison,Operations Research,linear-programming,convex-optimization,high,success
+resource-spotify-new-experimentation-platform-part-1,Spotify: New Experimentation Platform (Part 1),A/B Testing,ab-testing-foundations,,high,success
+resource-anthropic-prompt-engineering-documentation,Anthropic Prompt Engineering Documentation,Machine Learning,llms-rag,,high,success
+resource-hands-on-mathematical-optimization-with-python-mo-,Hands-On Mathematical Optimization with Python (MO-book),Linear Programming,linear-programming,,high,success
+resource-jeff-jordan-a16z-marketplace-100,Jeff Jordan (a16z): Marketplace 100,Platform Economics,marketplace-design,,high,success
+resource-the-effect-nick-huntington-klein,The Effect (Nick Huntington-Klein),Causal Inference,mixtape-resources,,high,success
+resource-real-python-data-structures,Real Python: Data Structures,Programming,dsa-interviews,,high,success
+resource-platform-papers-joost-rietveld,Platform Papers (Joost Rietveld),Platform Economics,network-effects,marketplace-design,high,success
+resource-gymnasium-documentation,Gymnasium Documentation,Machine Learning,ml-for-economists,,high,success
+resource-usf-data-structure-visualizations,USF Data Structure Visualizations,Programming,dsa-interviews,,high,success
+resource-stripe-how-we-built-radar,Stripe: How We Built Radar,Case Studies,tech-company-blogs,,high,success
+resource-jeffrey-kantor-pyomo-cookbook,Jeffrey Kantor: Pyomo Cookbook,Linear Programming,linear-programming,,high,success
+resource-great-learning-insurance-analytics-course,Great Learning Insurance Analytics Course,Insurance & Actuarial,insurance-actuarial,fraud-detection,high,success
+resource-jean-tirole-two-sided-markets-a-progress-report,Jean Tirole: Two-Sided Markets - A Progress Report,Platform Economics,network-effects,marketplace-design,high,success
+resource-yanir-seroussi-curated-causal-inference-resources,Yanir Seroussi: Curated Causal Inference Resources,Causal Inference,mixtape-resources,,high,success
+resource-tim-roughgardens-cs364a-mechanism-design,Tim Roughgarden's CS364A: Mechanism Design,Auction Theory,auction-theory,,high,success
+resource-adam-kelleher-causal-data-science-medium-series,Adam Kelleher: Causal Data Science Medium Series,Causal Inference,dags-causal-graphs,,high,success
+resource-meta-andromeda-next-gen-personalized-ads-retrieval,Meta: Andromeda - Next-Gen Personalized Ads Retrieval,Advertising & Attention,auction-theory,,high,success
+resource-measuring-product-health-sequoia,Measuring Product Health (Sequoia),Growth & Retention,product-metrics,,high,success
+resource-andrei-hagiu-strategic-decisions-for-multisided-pl,Andrei Hagiu: Strategic Decisions for Multisided Platforms,Platform Economics,network-effects,marketplace-design,high,success
+resource-instacart-tech-blog,Instacart Tech Blog,Marketplace Economics,marketplace-design,,high,success
+resource-haus-blog-synthetic-control-geo-experimentation,Haus Blog: Synthetic Control & Geo-Experimentation,Ads & Attribution,did-synth-control,geo-experiments,high,success
+resource-mit-ocw-engineering-economics-and-regulation-of-el,"MIT OCW: Engineering, Economics and Regulation of Electric Power",Energy & Utilities Economics,energy-economics,,high,success
+resource-a-quantitative-approach-to-product-market-fit-trib,A Quantitative Approach to Product-Market Fit (Tribe Capital),Growth & Retention,clv-retention,product-metrics,high,success
+resource-remerge-findings-incrementality-testing-approaches,Remerge Findings: Incrementality Testing Approaches,Ads & Attribution,geo-experiments,ad-attribution,high,success
+resource-microsoft-exp-deep-dive-into-variance-reduction,Microsoft ExP: Deep Dive into Variance Reduction,A/B Testing,variance-reduction,,high,success
+resource-csis-strategic-technologies-program,CSIS Strategic Technologies Program,Computational Economics,tech-strategy,,high,success
+resource-ieee-cis-fraud-1st-place-solution-chris-deotte,IEEE-CIS Fraud: 1st Place Solution (Chris Deotte),Trust & Safety,fraud-detection,,high,success
+resource-kevin-simler-ads-dont-work-that-way,Kevin Simler: Ads Don't Work That Way,Marketing Science,mmm-attribution,,high,success
+resource-the-power-user-curve-a16z,The Power User Curve (a16z),Growth & Retention,clv-retention,,high,success
+resource-nick-huntington-klein-animated-causal-graphs,Nick Huntington-Klein: Animated Causal Graphs,Causal Inference,dags-causal-graphs,,high,success
+resource-adjust-blog-mobile-attribution-privacy,Adjust Blog: Mobile Attribution & Privacy,Ads & Attribution,ad-attribution,,high,success
+resource-airbnb-measuring-listing-lifetime-value,Airbnb: Measuring Listing Lifetime Value,Platform Economics,clv-retention,marketplace-design,high,success
+resource-ultimate-guide-activation-aakash-gupta,Ultimate Guide: Activation (Aakash Gupta),Growth & Retention,clv-retention,product-metrics,high,success
+resource-easley-kleinberg-sponsored-search-markets,Easley & Kleinberg: Sponsored Search Markets,Auction Theory,auction-theory,,high,success
+resource-airbnb-experiments-at-airbnb,Airbnb: Experiments at Airbnb,A/B Testing,ab-testing-foundations,,high,success
+resource-the-generalist-mario-gabriele,The Generalist (Mario Gabriele),Tech Strategy,tech-strategy,,high,success
+resource-eugene-wei-status-as-a-service-staas,Eugene Wei: Status as a Service (StaaS),Platform Economics,network-effects,,high,success
+resource-lyft-quantifying-efficiency-in-ridesharing,Lyft: Quantifying Efficiency in Ridesharing,Marketplace Economics,marketplace-design,transportation-econ,high,success
+resource-googles-causalimpact-blog-post,Google's CausalImpact Blog Post,Synthetic Control,did-synth-control,,high,success
+resource-eugene-yan-bandits-for-recommender-systems,Eugene Yan: Bandits for Recommender Systems,Bandits & Adaptive,sequential-bandits,recsys,high,success
+resource-growthbooks-experimentation-fundamentals,GrowthBook's Experimentation Fundamentals,A/B Testing,ab-testing-foundations,,high,success
+resource-mit-15s08-fintech-gary-gensler,MIT 15.S08 FinTech (Gary Gensler),Case Studies,quant-finance,,high,success
+resource-linkedin-detecting-interference-an-ab-test-of-ab-t,LinkedIn: Detecting Interference - An A/B Test of A/B Tests,A/B Testing,switchback-interference,,high,success
+resource-franco-peschiera-pulp-maintainer,Franco Peschiera: PuLP Maintainer,Operations Research,linear-programming,,high,success
+resource-awesome-optimization,awesome-optimization,Operations Research,convex-optimization,,high,success
+resource-the-cold-start-problem-andrew-chen,The Cold Start Problem (Andrew Chen),Marketplace Economics,marketplace-design,network-effects,high,success
+resource-netflix-page-simulator-for-better-offline-metrics,Netflix: Page Simulator for Better Offline Metrics,A/B Testing,ab-testing-foundations,,high,success
+resource-pulp-official-documentation,PuLP Official Documentation,Linear Programming,linear-programming,,high,success
+resource-etsy-personalized-recommendations,Etsy: Personalized Recommendations,Platform Economics,recsys,marketplace-design,high,success
+resource-netflix-technology-blog-recommendation-systems,Netflix Technology Blog: Recommendation Systems,Recommender Systems,recsys,,high,success
+resource-spotify-rd,Spotify R&D,Frameworks & Strategy,recsys,,high,success
+resource-netflix-return-aware-experimentation,Netflix: Return-Aware Experimentation,A/B Testing,ab-testing-foundations,,high,success
+resource-coding-for-practitioners,Coding for practitioners,Programming,python-economists,,high,success
+resource-spotify-encouragement-designs-and-instrumental-var,Spotify: Encouragement Designs and Instrumental Variables for A/B Testing,Causal Inference,rdd-iv,,high,success
+resource-rochet-tirole-platform-competition-in-two-sided-ma,Rochet & Tirole: Platform Competition in Two-Sided Markets,Platform Economics,network-effects,marketplace-design,high,success
+resource-appsflyer-privacy-sandbox-hub,AppsFlyer Privacy Sandbox Hub,Ads & Attribution,ad-attribution,,high,success
+resource-imf-cross-validation-for-economists,IMF: Cross-Validation for Economists,Causal Inference,ml-for-economists,,high,success
+resource-doordash-next-generation-dasher-dispatch-optimizat,DoorDash: Next-Generation Dasher Dispatch Optimization,Linear Programming,linear-programming,vehicle-routing,high,success
+resource-interpreting-acf-and-pacf-plots,Interpreting ACF and PACF Plots,Classical Methods,classical-forecasting,,high,success
+resource-deeplearningai-short-courses,DeepLearning.AI Short Courses,LLMs & Agents,llms-rag,,high,success
+resource-platform-revolution-book-overview,Platform Revolution Book Overview,Platform Economics,network-effects,marketplace-design,high,success
+resource-amplitude-product-lessons-with-shreyas-doshi,Amplitude: Product Lessons with Shreyas Doshi,Frameworks & Strategy,product-metrics,,high,success
+resource-richard-oberdieck-modern-or-software-engineering,Richard Oberdieck: Modern OR Software Engineering,Operations Research,linear-programming,ml-for-economists,high,success
+resource-mesa-documentation-tutorials,Mesa Documentation Tutorials,Computational Economics,agent-based-modeling,,high,success
+resource-atlassian-how-to-write-product-requirements,Atlassian: How to Write Product Requirements,Metrics & Measurement,product-metrics,,high,success
+resource-instacart-delivering-optimal-shopping-experiences-,Instacart: Delivering Optimal Shopping Experiences (Gurobi),Linear Programming,linear-programming,,high,success
+resource-lyft-challenges-in-experimentation,Lyft: Challenges in Experimentation,A/B Testing,transportation-econ,variance-reduction,high,success
+resource-etsy-building-marketplace-search-and-personalizati,Etsy: Building Marketplace Search and Personalization,Platform Economics,marketplace-design,search-ranking,high,success
+resource-uber-engineering-causal-inference-at-uber,Uber Engineering: Causal Inference at Uber,Machine Learning,pricing-revenue,rdd-iv,high,success
+resource-stitch-fix-multi-armed-bandits-experimentation-pla,Stitch Fix: Multi-Armed Bandits Experimentation Platform,Bandits & Adaptive,sequential-bandits,,high,success
+resource-timefold-blog,Timefold Blog,Operations Research,linear-programming,none,high,success
+resource-laura-albert-punk-rock-operations-research,Laura Albert: Punk Rock Operations Research,Operations Research,vehicle-routing,,high,success
+resource-discrete-optimization-coursera,Discrete Optimization (Coursera),Linear Programming,linear-programming,,high,success
+resource-erwin-kalvelagen-yet-another-math-programming-cons,Erwin Kalvelagen: Yet Another Math Programming Consultant,Operations Research,linear-programming,,high,success
+resource-stratechery-aggregation-theory,Stratechery Aggregation Theory,Platform Economics,network-effects,,high,success
+resource-meta-how-meta-tests-products-with-strong-network-e,Meta: How Meta Tests Products with Strong Network Effects,A/B Testing,switchback-interference,network-effects,high,success
+resource-jay-alammars-illustrated-transformer,Jay Alammar's Illustrated Transformer,Deep Learning,llms-rag,,high,success
+resource-linkedin-economic-graph-to-economic-insights,LinkedIn: Economic Graph to Economic Insights,Platform Economics,network-effects,,high,success
+resource-egap-learning-days-field-experiments,EGAP Learning Days: Field Experiments,Causal Inference,ab-testing-foundations,,high,success
+resource-mixtape-sessions-github-repository,Mixtape Sessions GitHub Repository,Difference-in-Differences,did-synth-control,,high,success
+resource-a16z-measuring-network-effects,a16z: Measuring Network Effects,Platform Economics,network-effects,,high,success
+resource-wayfair-geo-experiments-for-incrementality,Wayfair: Geo Experiments for Incrementality,Interference & Switchback,geo-experiments,,high,success
+resource-michael-trick-operations-research-blog,Michael Trick: Operations Research Blog,Operations Research,sports-analytics,,high,success
+resource-doordash-real-time-optimization-of-delivery-operat,DoorDash: Real-Time Optimization of Delivery Operations,Platform Economics,network-effects,marketplace-design,high,success
+resource-nfx-network-effects-bible,NFX Network Effects Bible,Platform Economics,network-effects,,high,success
+resource-rand-research-archive,RAND Research Archive,Computational Economics,agent-based-modeling,,medium,success
+resource-nfx-network-effects-masterclass,NFX Network Effects Masterclass,Platform Economics,network-effects,,high,success
+resource-teresa-torres-opportunity-solution-trees,Teresa Torres: Opportunity Solution Trees,Frameworks & Strategy,product-metrics,,high,success
+resource-parker-van-alstyne-choudary-pipelines-platforms-an,"Parker, Van Alstyne & Choudary: Pipelines, Platforms, and the New Rules of Strategy",Platform Economics,network-effects,marketplace-design,high,success
+resource-doordash-switchback-tests-under-network-effects,DoorDash: Switchback Tests Under Network Effects,Interference & Switchback,switchback-interference,network-effects,high,success
+resource-freecodecamp-algorithms-course,freeCodeCamp: Algorithms Course,Programming,dsa-interviews,,high,success
+resource-mode-sql-tutorial,Mode SQL Tutorial,Programming,sql-tutorials,,high,success
+resource-abdul-bari-youtube,Abdul Bari (YouTube),Programming,dsa-interviews,,high,success
+resource-interpretable-machine-learning-book-christoph-moln,Interpretable Machine Learning Book (Christoph Molnar),Causal Inference,ml-for-economists,,high,success
+resource-linkedin-engineering-marketplace-optimization,LinkedIn Engineering: Marketplace Optimization,Platform Economics,marketplace-design,network-effects,high,success
+resource-150-successful-ml-models-at-bookingcom-kdd-2019,150 Successful ML Models at Booking.com (KDD 2019),Case Studies,ab-testing-foundations,,high,success
+resource-apoorva-lal-applied-econometrics-notes,Apoorva Lal: Applied Econometrics Notes,Causal Inference,mixtape-resources,,high,success
+resource-lumen-research-attention-metrics,Lumen Research: Attention Metrics,Ads & Attribution,ad-attribution,,high,success
+resource-doordash-the-dasher-dispatch-system,DoorDash: The Dasher Dispatch System,Platform Economics,vehicle-routing,marketplace-design,high,success
+resource-tensorflow-time-series-forecasting-tutorial,TensorFlow Time Series Forecasting Tutorial,Deep Learning,forecasting-dl,,high,success
+resource-eugene-wei-seeing-like-an-algorithm-tiktok,Eugene Wei: Seeing Like an Algorithm (TikTok),Platform Economics,network-effects,marketplace-design,high,success
+resource-instacart-building-for-balance-sage-v2,Instacart: Building for Balance (SAGE v2),Platform Economics,marketplace-design,network-effects,high,success
+resource-bill-gurley-all-markets-are-not-created-equal,Bill Gurley: All Markets Are Not Created Equal,Platform Economics,marketplace-design,,high,success
+resource-econtalk-susan-athey-on-ml-big-data-and-causation,"EconTalk: Susan Athey on ML, Big Data, and Causation",Causal Inference,ml-for-economists,,high,success
+resource-doubledebiased-machine-learning-guide,Double/Debiased Machine Learning Guide,Causal Inference,mixtape-resources,,high,success
+resource-sangeet-choudary-platform-scale-blog,Sangeet Choudary: Platform Scale Blog,Platform Economics,network-effects,marketplace-design,high,success
+resource-scipy-lecture-notes-mathematical-optimization,SciPy Lecture Notes: Mathematical Optimization,Convex Optimization,convex-optimization,,high,success
+resource-m5-competition-analysis-learnings-and-winning-solu,M5 Competition Analysis: Learnings and Winning Solutions,Machine Learning,forecasting-dl,,high,success
+resource-linkedin-ab-testing-variant-assignment-at-scale,LinkedIn: A/B Testing Variant Assignment at Scale,A/B Testing,ab-testing-foundations,,high,success
+resource-bill-gurley-a-rake-too-far,Bill Gurley: A Rake Too Far,Platform Economics,marketplace-design,pricing-revenue,high,success
+resource-made-with-ml,Made With ML,Machine Learning,ml-for-economists,,high,success
+resource-eugene-yan-system-design-for-recommendations,Eugene Yan: System Design for Recommendations,Recommender Systems,recsys,,high,success
+resource-uber-engineering,Uber Engineering,Marketplace Economics,marketplace-design,network-effects,high,success
+resource-koen-pauwels-marketing-and-metrics,Koen Pauwels: Marketing and Metrics,Marketing Science,tech-strategy,,high,success
+resource-li-jin-the-creator-economy-needs-a-middle-class-hb,Li Jin: The Creator Economy Needs a Middle Class (HBR),Platform Economics,marketplace-design,,high,success
+resource-lyft-solving-dispatch-in-a-ridesharing-problem-spa,Lyft: Solving Dispatch in a Ridesharing Problem Space,Platform Economics,transportation-econ,vehicle-routing,high,success
+resource-datalemur,DataLemur,Programming,dsa-interviews,,high,success
+resource-dairai-prompt-engineering-guide,DAIR.AI Prompt Engineering Guide,Machine Learning,llms-rag,,high,success
+resource-introduction-to-agent-based-modeling,Introduction to Agent-Based Modeling,Computational Economics,agent-based-modeling,,high,success
+resource-byron-sharp-how-brands-grow,Byron Sharp: How Brands Grow,Marketing Science,mmm-attribution,,high,success
+resource-anthropics-prompt-engineering-tutorial,Anthropic's Prompt Engineering Tutorial,LLMs & Agents,llms-rag,,high,success
+resource-coding-for-economists-nlp-chapter,Coding for Economists: NLP Chapter,Machine Learning,ml-for-economists,,high,success
+resource-scikit-learn-outlier-detection,scikit-learn: Outlier Detection,Trust & Safety,fraud-detection,,high,success
+resource-netflix-decision-making-at-netflix,Netflix: Decision Making at Netflix,A/B Testing,pricing-revenue,,high,success
+resource-hagiu-rothman-network-effects-arent-enough-hbr,Hagiu & Rothman: Network Effects Aren't Enough (HBR),Platform Economics,network-effects,marketplace-design,high,success
+resource-andrej-karpathys-neural-networks-zero-to-hero,Andrej Karpathy's Neural Networks: Zero to Hero,Deep Learning,llms-rag,,high,success
+resource-eugene-wei-invisible-asymptotes,Eugene Wei: Invisible Asymptotes,Platform Economics,network-effects,marketplace-design,high,success
+resource-mit-6262-discrete-stochastic-processes,MIT 6.262 Discrete Stochastic Processes,Operations Research,queueing-theory,,high,success
+resource-tim-roughgardens-cs364a-kidney-exchange,Tim Roughgarden's CS364A: Kidney Exchange,Market Design & Matching,marketplace-design,,high,success
+resource-genai-for-econ-substack,GenAI for Econ Substack,Machine Learning,ml-for-economists,econ-blogs,high,success
+resource-bill-gurley-going-direct,Bill Gurley: Going Direct,Platform Economics,network-effects,marketplace-design,high,success
+resource-matteo-courthouds-meta-learners-tutorial,Matteo Courthoud's Meta-Learners Tutorial,Causal Inference,causal-libraries,,high,success
+resource-asjad-naqvis-did-repository,Asjad Naqvi's DiD Repository,Difference-in-Differences,did-synth-control,,high,success
+resource-kdd-2021-tutorial-causal-inference-with-econml-and,KDD 2021 Tutorial: Causal Inference with EconML and CausalML,Causal Inference,causal-libraries,,high,success
+resource-edx-queuing-theory-from-markov-chains-to-multi-ser,edX Queuing Theory: from Markov Chains to Multi-Server Systems,Operations Research,queueing-theory,,high,success
+resource-knowledge-project-#102-sendhil-mullainathan,Knowledge Project #102: Sendhil Mullainathan,Causal Inference,ml-for-economists,,high,success
+resource-andrew-ngs-machine-learning-specialization,Andrew Ng's Machine Learning Specialization,Machine Learning,ml-for-economists,recsys,high,success
+resource-nlp-for-economists-mgse,NLP for Economists (MGSE),Machine Learning,ml-for-economists,,high,success
+resource-uber-analyzing-experiment-outcomes-beyond-average-,Uber: Analyzing Experiment Outcomes Beyond Average Treatment Effects,A/B Testing,ab-testing-foundations,,high,success
+resource-linkedin-our-evolution-towards-t-rex,LinkedIn: Our Evolution Towards T-REX,A/B Testing,ab-testing-foundations,,high,success
+resource-leetcode-sql-50,LeetCode SQL 50,Programming,sql-tutorials,,high,success
+resource-li-jin-unbundling-work,Li Jin: Unbundling Work,Platform Economics,network-effects,marketplace-design,high,success
+resource-mit-15070j-advanced-stochastic-processes,MIT 15.070J Advanced Stochastic Processes,Operations Research,queueing-theory,,high,success
+resource-netflix-keeping-netflix-reliable-using-prioritized,Netflix: Keeping Netflix Reliable Using Prioritized Load Shedding,Platform Economics,network-effects,,high,success
+resource-li-jin-building-for-the-creator-middle-class,Li Jin: Building for the Creator Middle Class,Platform Economics,network-effects,marketplace-design,high,success
+resource-uber-unleashing-the-power-of-ads-simulation,Uber: Unleashing the Power of Ads Simulation,Platform Economics,auction-theory,marketplace-design,high,success
+resource-statsig-switchback-experiments-overview,Statsig: Switchback Experiments Overview,Interference & Switchback,switchback-interference,,high,success
+resource-imf-machine-learning-for-economists-course,IMF Machine Learning for Economists Course,Machine Learning,ml-for-economists,,high,success
+resource-duckdb-documentation,DuckDB Documentation,Programming,sql-tutorials,,high,success
+resource-netflix-predictive-cpu-isolation-of-containers,Netflix: Predictive CPU Isolation of Containers,Platform Economics,tech-company-blogs,,high,success
+resource-neetcode,NeetCode,Programming,dsa-interviews,,high,success
+resource-the-theory-and-practice-of-revenue-management,The Theory and Practice of Revenue Management,Pricing & Revenue,pricing-revenue,,high,success
+resource-bill-gurley-in-defense-of-the-deck,Bill Gurley: In Defense of the Deck,Platform Economics,network-effects,marketplace-design,high,success
+resource-georgetown-ma-in-security-studies,Georgetown MA in Security Studies,Machine Learning,ml-for-economists,,high,success
+resource-cepr-voxeu-doing-economics-at-google,CEPR VoxEU: Doing Economics at Google,Platform Economics,marketplace-design,auction-theory,high,success
+resource-netflix-a-survey-of-causal-inference-applications,Netflix: A Survey of Causal Inference Applications,Causal Inference,ab-testing-foundations,recsys,high,success
+resource-li-jin-100-true-fans,Li Jin: 100 True Fans,Platform Economics,network-effects,marketplace-design,high,success
+resource-aws-builders-library-avoiding-insurmountable-queue,AWS Builders Library: Avoiding Insurmountable Queue Backlogs,Platform Economics,queueing-theory,,high,success
+resource-eppo-how-netflix-lyft-and-yahoo-use-contextual-ban,"Eppo: How Netflix, Lyft, and Yahoo Use Contextual Bandits",Bandits & Adaptive,pricing-revenue,recsys,high,success
+resource-blind-75,Blind 75,Programming,dsa-interviews,,high,success
+resource-intercom-on-product-management-free-book,Intercom: On Product Management (Free Book),Frameworks & Strategy,product-metrics,,high,success
+resource-wharton-customer-analytics-coursera,Wharton Customer Analytics (Coursera),MarTech & Customer Analytics,clv-retention,,high,success
+resource-google-research-the-tail-at-scale,Google Research: The Tail at Scale,Platform Economics,network-effects,,high,success
+resource-li-jin-the-passion-economy-and-the-future-of-work,Li Jin: The Passion Economy and the Future of Work,Platform Economics,network-effects,marketplace-design,high,success
+resource-quantecon-lectures,QuantEcon Lectures,Econometrics,ml-for-economists,,high,success
+resource-bruce-hardies-btyd-tutorials,Bruce Hardie's BTYD Tutorials,MarTech & Customer Analytics,clv-retention,,high,success
+resource-leetcode-patterns,LeetCode Patterns,Programming,dsa-interviews,,high,success
+resource-uber-simulated-marketplace-with-ml,Uber: Simulated Marketplace with ML,Platform Economics,marketplace-design,agent-based-modeling,high,success
+resource-first-course-in-causal-inference-python,First Course in Causal Inference (Python),Causal Inference,mixtape-resources,causal-libraries,high,success
+resource-amazon-science-how-amazon-robots-navigate-congesti,Amazon Science: How Amazon Robots Navigate Congestion,Platform Economics,network-effects,marketplace-design,high,success
+resource-select-star-sql,SELECT Star SQL,Programming,sql-tutorials,,high,success
+resource-slacks-2000-messages-activation-metric,Slack's 2000 Messages Activation Metric,Growth & Retention,clv-retention,product-metrics,high,success
+resource-deep-learning-specialization-coursera,Deep Learning Specialization (Coursera),Machine Learning,ml-for-economists,,high,success
+resource-stripe-scaling-your-api-with-rate-limiters,Stripe: Scaling Your API with Rate Limiters,Platform Economics,network-effects,,high,success
+resource-r-causal-book-dag-construction-chapter,R-causal Book: DAG Construction Chapter,Causal Inference,dags-causal-graphs,,high,success
+resource-stanford-fintech-sendhil-mullainathan-on-ml-as-too,Stanford Fintech: Sendhil Mullainathan on ML as Tool for Science,Causal Inference,ml-for-economists,,high,success
+resource-8-week-sql-challenge-danny-ma,8 Week SQL Challenge (Danny Ma),Programming,sql-tutorials,,high,success
+resource-susan-atheys-stanford-gsb-courses,Susan Athey's Stanford GSB Courses,Machine Learning,ml-for-economists,,high,success
+resource-andrew-heisss-dag-and-backdoor-tutorials,Andrew Heiss's DAG and Backdoor Tutorials,Machine Learning,dags-causal-graphs,,high,success
+resource-quantecon-datascience,QuantEcon DataScience,Causal Inference,ml-for-economists,,high,success
+resource-shopify-capacity-planning-at-scale,Shopify: Capacity Planning at Scale,Platform Economics,queueing-theory,,high,success
+resource-sipri-databases-and-research,SIPRI Databases and Research,Computational Economics,agent-based-modeling,,medium,success
+resource-chronos-bolt-fast-zero-shot-forecasting-aws,Chronos-Bolt: Fast Zero-Shot Forecasting (AWS),Deep Learning,forecasting-dl,,high,success
+resource-python-for-econometrics,Python for Econometrics,Programming,python-economists,,high,success
+resource-mit-ocw-engineering-economics-and-regulation-of-th,"MIT OCW: Engineering, Economics, and Regulation of the Electric Power Sector",Machine Learning,energy-economics,,high,success
+resource-pywhy-causal-discovery-example,PyWhy: Causal Discovery Example,Causal Inference,dags-causal-graphs,causal-libraries,high,success
+resource-erlang-a-calculator,Erlang A Calculator,Operations Research,queueing-theory,,high,success
+resource-google-or-tools-python-guide,Google OR-Tools Python Guide,Linear Programming,linear-programming,,high,success
+resource-guide-to-product-metrics,Guide to Product Metrics,Growth & Retention,product-metrics,,high,success
+resource-real-python-web-scraping,Real Python: Web Scraping,Programming,none,,low,success
+resource-wharton-customer-analytics-initiative-wcai,Wharton Customer Analytics Initiative (WCAI),MarTech & Customer Analytics,clv-retention,,high,success
+resource-microsoft-research-adversarial-ml-and-instrumental,Microsoft Research: Adversarial ML and Instrumental Variables,Causal Inference,rdd-iv,,high,success
+resource-scrapy-documentation,Scrapy Documentation,Programming,none,,low,success
+resource-kendall-notation-tutorial,Kendall Notation Tutorial,Operations Research,queueing-theory,,high,success
+resource-mit-6046j-lecture-15-linear-programming,MIT 6.046J Lecture 15: Linear Programming,Linear Programming,linear-programming,,high,success
+resource-aea-continuing-education-ml-and-econometrics-2018,AEA Continuing Education: ML and Econometrics (2018),Machine Learning,ml-for-economists,,high,success
+resource-doordash-leveraging-causal-inference-for-forecasts,DoorDash: Leveraging Causal Inference for Forecasts,Causal Inference,forecasting-dl,,high,success
+resource-causal-econometrics-course,Causal Econometrics Course,Causal Inference,mixtape-resources,,high,success
+resource-3blue1brown-neural-network-series,3Blue1Brown Neural Network Series,Deep Learning,llms-rag,,high,success
+resource-mstl-multi-seasonal-decomposition-in-python,MSTL Multi-Seasonal Decomposition in Python,Classical Methods,classical-forecasting,,high,success
+resource-kingmans-formula-tutorial,Kingman's Formula Tutorial,Operations Research,queueing-theory,,high,success
+resource-gilp-geometric-interpretation-of-linear-programs-c,GILP: Geometric Interpretation of Linear Programs (Cornell),Linear Programming,linear-programming,,high,success
+resource-google-research-causalimpact-paper,Google Research: CausalImpact Paper,Causal Inference,mixtape-resources,,high,success
+resource-nfx-network-effects-manual-16-types,NFX Network Effects Manual: 16 Types,Platform Economics,network-effects,,high,success
+resource-marketing-science-institute-msi,Marketing Science Institute (MSI),MarTech & Customer Analytics,clv-retention,mmm-attribution,high,success
+resource-littles-law-50th-anniversary-paper,Little's Law 50th Anniversary Paper,Operations Research,queueing-theory,,high,success
+resource-doordash-statistical-analysis-for-switchback-exper,DoorDash: Statistical Analysis for Switchback Experiments,Interference & Switchback,switchback-interference,,high,success
+resource-kevin-leyton-browns-vcg-mechanism-lectures,Kevin Leyton-Brown's VCG Mechanism Lectures,Auction Theory,auction-theory,,high,success
+resource-airbnb-listing-embeddings-for-similar-listing-reco,Airbnb: Listing Embeddings for Similar Listing Recommendations,Machine Learning,recsys,,high,success
+resource-google-notebooklm,Google NotebookLM,LLMs & Agents,llms-rag,,high,success
+resource-doordash-using-ml-and-optimization-to-solve-dispat,DoorDash: Using ML and Optimization to Solve Dispatch,Platform Economics,vehicle-routing,ml-for-economists,high,success
+resource-thumbtack-engineering-blog,Thumbtack Engineering Blog,Platform Economics,marketplace-design,network-effects,high,success
+resource-applied-causal-inference-book-chernozhukov-et-al,Applied Causal Inference Book (Chernozhukov et al.),Causal Inference,causal-forests,,high,success
+resource-openview-saas-pricing-guide,OpenView SaaS Pricing Guide,Pricing & Revenue,pricing-revenue,,high,success
+resource-stitch-fix-algorithms-blog,Stitch Fix Algorithms Blog,Routing & Logistics,recsys,,high,success
+resource-lost-statistics-causal-forest-tutorial,LOST Statistics: Causal Forest Tutorial,Causal Inference,causal-forests,,high,success
+resource-andrew-ngs-deep-learning-specialization,Andrew Ng's Deep Learning Specialization,Deep Learning,ml-for-economists,,high,success
+resource-stitch-fix-algorithms-tour,Stitch Fix: Algorithms Tour,Routing & Logistics,vehicle-routing,,high,success
+resource-amazon-science,Amazon Science,Routing & Logistics,pricing-revenue,vehicle-routing,high,success
+resource-doordash-next-generation-optimization-for-dasher-d,DoorDash: Next-Generation Optimization for Dasher Dispatch,Platform Economics,linear-programming,vehicle-routing,high,success
+resource-uber-gaining-insights-in-a-simulated-marketplace,Uber: Gaining Insights in a Simulated Marketplace,Platform Economics,marketplace-design,agent-based-modeling,high,success
+resource-ahead-of-ai-sebastian-raschka,Ahead of AI (Sebastian Raschka),Machine Learning,llms-rag,,high,success
+resource-instacart-space-time-and-groceries,"Instacart: Space, Time and Groceries",Platform Economics,vehicle-routing,,high,success
+resource-airbnb-engineering-two-sided-marketplace-matching,Airbnb Engineering: Two-Sided Marketplace Matching,Market Design & Matching,marketplace-design,,high,success
+resource-walmart-global-tech,Walmart Global Tech,Routing & Logistics,vehicle-routing,,high,success
+resource-netflix-round-2-causal-inference-survey-synthetic-,Netflix: Round 2 - Causal Inference Survey (Synthetic Control),Causal Inference,did-synth-control,,high,success
+resource-marketing-analytics-uva-dardencoursera,Marketing Analytics (UVA Darden/Coursera),MarTech & Customer Analytics,ab-testing-foundations,clv-retention,high,success
+resource-causal-inference-a-statistical-learning-approach,Causal Inference: A Statistical Learning Approach,Causal Inference,mixtape-resources,,high,success
+resource-causal-wizard-reading-list,Causal Wizard Reading List,Causal Inference,mixtape-resources,,high,success
+resource-instacart-no-order-left-behind;-no-shopper-left-id,Instacart: No Order Left Behind; No Shopper Left Idle,Platform Economics,marketplace-design,,high,success
+resource-stitch-fix-market-matching-with-causalimpact,Stitch Fix: Market Matching with CausalImpact,Synthetic Control,did-synth-control,,high,success
+resource-uber-dynamic-pricing-and-matching-in-ride-hailing,Uber: Dynamic Pricing and Matching in Ride-Hailing,Market Design & Matching,marketplace-design,pricing-revenue,high,success
+resource-modeling-discrete-optimization-coursera,Modeling Discrete Optimization (Coursera),Convex Optimization,linear-programming,convex-optimization,high,success
+resource-ward-whitts-papers-collection,Ward Whitt's Papers Collection,Operations Research,queueing-theory,,high,success
+resource-jonathan-levins-revenue-equivalence-notes,Jonathan Levin's Revenue Equivalence Notes,Auction Theory,auction-theory,,high,success
+resource-statsigs-cuped-deep-dive,Statsig's CUPED Deep Dive,Variance Reduction,variance-reduction,,high,success
+resource-revenuecat-sub-club-subscription-analytics,RevenueCat Sub Club: Subscription Analytics,Growth & Retention,clv-retention,,high,success
+resource-sqlbolt,SQLBolt,Programming,sql-tutorials,,high,success
+resource-coding-for-economists,Coding for Economists,Programming,python-economists,,high,success
+resource-growth-unhinged-saas-benchmarks-from-openview,Growth Unhinged: SaaS Benchmarks from OpenView,Growth & Retention,pricing-revenue,clv-retention,high,success
+resource-clearcode-adtech-book,Clearcode AdTech Book,Frameworks & Strategy,auction-theory,,high,success
+resource-eva-ascarza-retention-futility-research,Eva Ascarza: Retention Futility Research,Growth & Retention,clv-retention,,high,success
+resource-mor-harchol-balters-papers,Mor Harchol-Balter's Papers,Operations Research,queueing-theory,,high,success
+resource-automate-the-boring-stuff-with-python,Automate the Boring Stuff with Python,Programming,python-economists,,high,success
+resource-freakonometrics-blog,Freakonometrics Blog,Insurance & Actuarial,insurance-actuarial,,high,success
+resource-googles-recommendation-systems-course,Google's Recommendation Systems Course,Recommender Systems,recsys,,high,success
+resource-coaching-actuaries,Coaching Actuaries,Insurance & Actuarial,insurance-actuarial,,high,success
+resource-kuang-xu-newsletter,Kuang Xu Newsletter,Operations Research,tech-strategy,,high,success
+resource-teconomics-machine-learning-meets-instrumental-var,Teconomics: Machine Learning Meets Instrumental Variables,Causal Inference,rdd-iv,,high,success
+resource-tensorflow-recommenders-tutorials,TensorFlow Recommenders Tutorials,Recommender Systems,recsys,,high,success
+resource-neil-hoyne-clv-focused-marketing,Neil Hoyne: CLV-Focused Marketing,Growth & Retention,clv-retention,,high,success
+resource-uber-engineering-uplift-modeling-for-multiple-trea,Uber Engineering: Uplift Modeling for Multiple Treatments,Causal Inference,causal-forests,,high,success
+resource-econtalk-hal-varian-on-technology,EconTalk: Hal Varian on Technology,Platform Economics,network-effects,marketplace-design,high,success
+resource-langchain-academy-intro-to-langgraph,LangChain Academy: Intro to LangGraph,LLMs & Agents,llms-rag,,high,success
+resource-convex-optimization-boyd-vandenberghe,Convex Optimization (Boyd & Vandenberghe),Convex Optimization,convex-optimization,,high,success
+resource-olx-engineering-from-ranknet-to-lambdamart,OLX Engineering: From RankNet to LambdaMART,Search & Ranking,search-ranking,,high,success
+resource-lennys-newsletter-consumer-marketing-measurement,Lenny's Newsletter: Consumer Marketing Measurement,Growth & Retention,product-metrics,clv-retention,high,success
+resource-conformal-prediction-intervals-for-time-series,Conformal Prediction Intervals for Time Series,Specialized Methods,forecasting-dl,,high,success
+resource-instacart-anytime-data-science-paradigm,Instacart Anytime: Data Science Paradigm,Production Systems,forecasting-dl,,high,success
+resource-world-of-daas-susan-athey-tech-economists-and-ml,World of DaaS: Susan Athey - Tech Economists and ML,Causal Inference,ml-for-economists,,high,success
+resource-kevin-hillstrom-minethatdata,Kevin Hillstrom: MineThatData,Growth & Retention,clv-retention,,high,success
+resource-uber-forecasting-introduction,Uber: Forecasting Introduction,Production Systems,forecasting-dl,,high,success
+resource-freecodecamp-rag-from-scratch,FreeCodeCamp: RAG from Scratch,LLMs & Agents,llms-rag,,high,success
+resource-hal-varian-big-data-new-tricks-for-econometrics,Hal Varian: Big Data - New Tricks for Econometrics,Causal Inference,ml-for-economists,,high,success
+resource-causal-inference-for-the-brave-and-true-time-serie,Causal Inference for the Brave and True: Time Series,Specialized Methods,did-synth-control,rdd-iv,high,success
+resource-uber-driver-surge-pricing,Uber: Driver Surge Pricing,Pricing & Revenue,pricing-revenue,marketplace-design,high,success
+resource-eppo-cuped++-for-extended-variance-reduction,Eppo: CUPED++ for Extended Variance Reduction,Variance Reduction,variance-reduction,,high,success
