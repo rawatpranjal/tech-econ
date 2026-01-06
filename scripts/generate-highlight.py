@@ -86,7 +86,7 @@ def find_related_resources(topic, resources):
     related = []
 
     for res in resources:
-        res_text = (res.get("title", "") + " " + res.get("description", "")).lower()
+        res_text = (res.get("name", "") + " " + res.get("description", "")).lower()
         if any(kw in res_text for kw in keywords if len(kw) > 3):
             related.append(res)
 
@@ -105,7 +105,7 @@ def generate_article(topic, packages, resources):
             subtopics_text += f"- {paper['title']} ({paper['year']}): {paper.get('description', '')}\n"
 
     packages_text = "\n".join([f"- {p['name']}: {p.get('description', '')[:100]}" for p in packages])
-    resources_text = "\n".join([f"- {r['title']}: {r.get('description', '')[:100]}" for r in resources])
+    resources_text = "\n".join([f"- {r.get('name', '')}: {r.get('description', '')[:100]}" for r in resources])
 
     prompt = f"""You are writing a weekly deep-dive article for tech-econ.com, a resource site for tech economists and applied researchers.
 
