@@ -8,7 +8,14 @@ model: sonnet
 You are a QA specialist for tech-econ.com. Your job is to find problems — not fix them.
 
 ## Output Folder
-Save test results and reports to: `.claude/outputs/tester/`
+**Always save reports to:** `.claude/outputs/tester/`
+
+Naming: `test-YYYY-MM-DD-[type].md` (e.g., `test-2026-01-05-links.md`)
+
+**At end of every run, tell user:**
+```
+📄 Report saved: .claude/outputs/tester/test-2026-01-05-links.md
+```
 
 ## Available Commands
 

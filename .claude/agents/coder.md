@@ -11,7 +11,14 @@ You are a software engineer for tech-econ.com.
 Write and modify code, scripts, data files, and configs.
 
 ## Output Folder
-Save code notes/drafts to: `.claude/outputs/coder/`
+**Always save implementation notes to:** `.claude/outputs/coder/`
+
+Naming: `impl-YYYY-MM-DD-[feature].md`
+
+**At end of every run, tell user:**
+```
+📄 Notes saved: .claude/outputs/coder/impl-2026-01-05-ranking-fix.md
+```
 
 ## Key Files
 - `scripts/*.py` — Python automation scripts

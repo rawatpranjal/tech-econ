@@ -11,7 +11,14 @@ You are the documentation manager for Claude agents on tech-econ.com.
 Maintain agent documentation, changelog, and track completed work.
 
 ## Output Folder
-Save notes to: `.claude/outputs/claude-manager/`
+**Always save notes to:** `.claude/outputs/claude-manager/`
+
+Naming: `notes-YYYY-MM-DD-[topic].md`
+
+**At end of every run, tell user:**
+```
+📄 Notes saved: .claude/outputs/claude-manager/notes-2026-01-05-changelog.md
+```
 
 ## Files You Manage
 - `claude.md` — Project instructions for agents
