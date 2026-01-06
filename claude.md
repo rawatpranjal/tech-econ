@@ -206,6 +206,34 @@ Not currently useful — requires more user interaction data. When ready:
 
 ---
 
+# Slash Commands
+
+## `/rerank`
+Refresh content rankings with latest engagement data.
+1. Fetch clicks, impressions, dwell, scroll depth from D1
+2. Run `python3 scripts/rank_all_content.py`
+3. Updates `model_score` in all data/*.json files
+4. Cold-start items get scores via similarity propagation
+5. Commit and report: items updated, top gainers, cold-start count
+
+## `/review-clusters`
+Quality check clustering and carousels.
+1. Load `data/resource_clusters.json` (or other cluster files)
+2. Review each cluster: label accuracy, item coherence, size (5-10)
+3. Log issues to `scripts/cluster_assignments_review.csv`
+4. Columns: item_name, current_cluster, suggested_cluster, issue, notes
+5. Issue types: miscategorized, orphan, bad_label, too_small, too_large
+6. Summarize findings and recommend re-clustering if needed
+
+## `/enrich`
+Add LLM-generated metadata to new or poor items.
+1. Find items missing: tags, description, best_for, semantic_cluster
+2. Run `python3 scripts/enrich_metadata.py`
+3. Regenerate embeddings: `python3 scripts/generate_embeddings.py`
+4. Commit and report: items enriched, failures, manual review needed
+
+---
+
 # Tech Stack Quick Reference
 
 - **Static Site**: Hugo
