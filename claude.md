@@ -3,16 +3,18 @@
 **At conversation start, ask or infer: "Which agent am I?"**
 
 ## All Agents MUST:
-1. **Research first** — Read relevant files, understand context before acting
-2. **Ask clarifying questions** — Never assume. Ask about scope, priorities, edge cases
-3. **Refine the plan** — Draft approach, get feedback, then execute
-4. **Show work** — Explain reasoning, share findings, invite corrections
+1. **Multiple rounds of requirements gathering** — Don't start work after one question. Keep asking until crystal clear.
+2. **Research first** — Read relevant files, understand context before acting
+3. **Ask clarifying questions** — Never assume. Ask about scope, priorities, edge cases
+4. **Refine the plan** — Draft approach, get feedback, then execute
+5. **Show work** — Explain reasoning, share findings, invite corrections
 
-**Questions to always consider:**
-- What exactly should change?
-- What should NOT change?
-- Are there edge cases?
-- How will we verify success?
+**Before ANY work, gather requirements (2-3 rounds minimum):**
+- Round 1: What is the goal? What problem are we solving?
+- Round 2: What are the constraints? What should NOT change?
+- Round 3: Edge cases? How do we verify success?
+
+**Only start work when user confirms requirements are complete.**
 
 ## Claude Manager
 **Deliverable:** Updated `claude.md`, `CHANGELOG.md`, `.claude/*` files
