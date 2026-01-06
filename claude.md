@@ -8,6 +8,7 @@
    - Archive to `data/archive/` rather than delete
 3. **Use `template.txt`** for content schemas when adding new entries
 4. **Update `CHANGELOG.md`** after making changes - 1-2 line summary per day
+5. When changelog.md gets too large, dump into claude_history 
 
 ---
 
@@ -20,11 +21,7 @@
 - Help researchers discover relevant content through search, browsing, and recommendations
 - Maintain quality through ML-based ranking and curation
 - Provide learning paths and career guidance
-
-**Current Content:**
-- 188 Python/R packages | 243 datasets | 111 learning resources
-- 50 talks/podcasts | 13 career guides | 63 conferences
-- Academic papers organized by research topic
+- Focus on joyous learning, and discovery
 
 ---
 
@@ -138,10 +135,63 @@ npx wrangler d1 execute tech-econ-analytics-db --remote --command \
 
 ---
 
+# ML Pipeline
+
+## Ranking Model (`scripts/rank_all_content.py`)
+LightGBM-Tweedie model trained on engagement data. Outputs `model_score` field.
+
+**Engagement signals (from D1 analytics):**
+| Signal | Weight | Description |
+|--------|--------|-------------|
+| Clicks | ×5.0 | Outbound link clicks |
+| Impressions | ×0.5 | Card views |
+| Viewability | ×0.1 | Per second visible (IAB 50%+) |
+| Dwell | ×1.0 | Per minute on page |
+| Scroll 90% | ×2.0 | Deep read indicator |
+| Search clicks | ×3.0 | High-intent signal |
+| Rage clicks | ×-2.0 | Frustration (negative) |
+| Quick bounce | ×-1.0 | Left quickly (negative) |
+
+**Cold-start handling:** Uses sentence-BERT similarity (all-MiniLM-L6-v2) to propagate scores from similar engaged items.
+
+## Semantic Search (`scripts/generate_embeddings.py`)
+Hybrid keyword + vector search with RRF (Reciprocal Rank Fusion).
+
+- **Embeddings:** bge-large-en-v1.5 (1024 dimensions)
+- **Keyword:** MiniSearch (client-side)
+- **Output files:**
+  - `static/embeddings/search-metadata.json` - Item data
+  - `static/embeddings/search-embeddings.bin` - Binary Float32 vectors
+
+## Topic Clustering (`scripts/cluster_resources.py`)
+Creates Netflix-style carousels by grouping semantically similar items.
+
+- **Algorithm:** K-means on embeddings
+- **Cluster size:** 4-10 items (target: 7)
+- **Output:** `data/resource_clusters.json`
+
+## Collaborative Filtering (`scripts/build_als_model.py`)
+ALS (Alternating Least Squares) for item-item recommendations.
+
+- **Library:** implicit
+- **Input:** Session-level interactions (dwell, clicks, search queries)
+- **Output:** Item similarity matrix for "related items"
+
+## LLM Enrichment (`scripts/enrich_metadata.py`)
+Uses Claude API to generate:
+- Tags and categories
+- Short descriptions
+- "Best for" use cases
+- Semantic cluster labels
+
+---
+
 # Tech Stack Quick Reference
 
 - **Static Site**: Hugo
 - **Search**: Hybrid keyword (MiniSearch) + semantic (bge-large-en-v1.5) with RRF fusion
-- **Ranking**: LightGBM-Tweedie (clicks×5 + impressions×0.5 + viewability×0.1 + dwell×1) → `model_score`
+- **Ranking**: LightGBM-Tweedie → `model_score`
+- **Recommendations**: ALS collaborative filtering
+- **Clustering**: K-means on bge embeddings
 - **Backend**: Cloudflare Workers + D1 Database
 - **Frontend**: Vanilla JS, Leaflet maps, AOS animations
