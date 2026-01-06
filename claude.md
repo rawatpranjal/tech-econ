@@ -56,7 +56,45 @@
 5. **Archive when large** - When CHANGELOG.md exceeds ~150 lines:
    - Move to `.claude/history/changelog-YYYY-MM-DD.md`
    - Start fresh CHANGELOG.md
-   - Also archive old claude.md versions here as `claude-YYYY-MM-DD.md` 
+   - Also archive old claude.md versions here as `claude-YYYY-MM-DD.md`
+
+---
+
+# Pre-Commit Checklist
+
+**Must pass before pushing:**
+```bash
+python3 scripts/validate_data.py      # JSON schema validation
+npm run build                          # Hugo + pagefind index
+```
+
+**If you modified rankings/search:**
+```bash
+python3 scripts/rank_all_content.py    # Update model_score
+python3 scripts/generate_embeddings.py # Regenerate vectors
+```
+
+---
+
+# Don't Touch (Fragile)
+
+- **`papers.json` vs `papers_flat.json`** — Dual system, easy to desync. Use `papers_flat.json` for ranking/search.
+- **D1 analytics schema** — Ranking script depends on exact table structure
+- **No test suite** — `npm test` is a placeholder; validation is manual
+
+---
+
+# Glossary
+
+| Term | Meaning |
+|------|---------|
+| `model_score` | Engagement ranking 0-1 (clicks×5 + impressions×0.5 + dwell×1) |
+| `cold-start` | Items with no engagement; scored via k-NN similarity |
+| `semantic_cluster` | LLM-assigned topic label for discovery |
+| `carousel` | Horizontal scroll row of 5-10 items |
+| `D1` | Cloudflare database storing analytics |
+| `RRF` | Reciprocal Rank Fusion — merges keyword + semantic search |
+| `bge-large` | Embedding model (1024 dims) for semantic search |
 
 ---
 
