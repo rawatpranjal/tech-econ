@@ -1,20 +1,30 @@
 name: Generate Weekly Highlight
 
+# DISABLED - requires ANTHROPIC_API_KEY secret to be configured
+# To re-enable: replace the 'on:' section with:
+#
+# on:
+#   schedule:
+#     - cron: '0 0 * * 0'  # Sunday midnight UTC
+#   workflow_dispatch:
+#     inputs:
+#       topic:
+#         description: 'Specific topic to cover'
+#         required: false
+#         type: string
+
 on:
-  schedule:
-    # Runs every Sunday at midnight UTC
-    - cron: '0 0 * * 0'
   workflow_dispatch:
-    # Allow manual trigger
     inputs:
-      topic:
-        description: 'Specific topic to cover (optional, leave empty for auto-select)'
-        required: false
-        type: string
+      confirm:
+        description: 'This workflow is DISABLED. Add ANTHROPIC_API_KEY secret first.'
+        required: true
+        default: 'I have added the secret'
 
 jobs:
   generate:
     runs-on: ubuntu-latest
+    if: false  # Disabled until ANTHROPIC_API_KEY is configured
     permissions:
       contents: write
 
