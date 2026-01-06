@@ -1,3 +1,7 @@
+---
+description: Rerank all content using latest engagement data from D1
+---
+
 Fetch latest engagement data from D1 and rerank all content.
 
 1. Run `python3 scripts/rank_all_content.py`

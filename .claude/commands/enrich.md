@@ -1,3 +1,7 @@
+---
+description: Run LLM enrichment on items missing tags/descriptions
+---
+
 Run LLM enrichment on items missing tags/descriptions.
 
 1. Find items in data/*.json without tags or description

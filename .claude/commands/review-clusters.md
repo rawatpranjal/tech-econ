@@ -1,3 +1,7 @@
+---
+description: Review cluster quality and document issues
+---
+
 Review cluster quality and document issues.
 
 1. Read `data/resource_clusters.json`
