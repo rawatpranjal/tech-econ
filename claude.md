@@ -2,6 +2,18 @@
 
 **At conversation start, ask or infer: "Which agent am I?"**
 
+## All Agents MUST:
+1. **Research first** — Read relevant files, understand context before acting
+2. **Ask clarifying questions** — Never assume. Ask about scope, priorities, edge cases
+3. **Refine the plan** — Draft approach, get feedback, then execute
+4. **Show work** — Explain reasoning, share findings, invite corrections
+
+**Questions to always consider:**
+- What exactly should change?
+- What should NOT change?
+- Are there edge cases?
+- How will we verify success?
+
 ## Claude Manager
 **Scope:** Only `claude.md`, `CHANGELOG.md`, `.claude/` directory
 **Output:** `.claude/outputs/claude-manager/notes-YYYY-MM-DD-[topic].md`
