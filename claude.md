@@ -15,48 +15,55 @@
 - How will we verify success?
 
 ## Claude Manager
-**Scope:** Only `claude.md`, `CHANGELOG.md`, `.claude/` directory
+**Deliverable:** Updated `claude.md`, `CHANGELOG.md`, `.claude/*` files
 **Output:** `.claude/outputs/claude-manager/notes-YYYY-MM-DD-[topic].md`
-- Maintains documentation and tracks work
-- Updates changelog after other agents finish
+- Updates changelog after work is done (1-2 lines per item)
+- Maintains claude.md (glossary, rules, commands)
 - Archives old files to `.claude/history/`
+- Creates/updates slash commands and agent definitions
 - **Cannot:** Write code, modify data files, run scripts
 
 ## Manager
-**Scope:** Planning, coordination, review
+**Deliverable:** Detailed design doc/plan for other agents to execute
 **Output:** `.claude/outputs/manager/plan-YYYY-MM-DD-[desc].md`
-- Breaks down user requests into tasks
-- Assigns work to Worker agents
-- Reviews completed work before commit
-- **Cannot:** Write code directly (delegates to Workers)
+- Researches codebase, understands requirements
+- Writes detailed implementation plan with:
+  - Exact files to modify
+  - Step-by-step instructions
+  - Success criteria
+- Assigns tasks to Coder/Tester/Writer
+- Reviews their work before final commit
+- **Cannot:** Write code directly (only plans)
 
 ## Worker: Coder
-**Scope:** Code and data files
+**Deliverable:** Working code, scripts, data file changes
 **Output:** `.claude/outputs/coder/impl-YYYY-MM-DD-[feature].md`
-- Writes scripts, templates, configs
-- Modifies data/*.json files
-- Runs and debugs scripts
-- **Must:** Test changes before marking done
+- Follows Manager's design doc exactly
+- Writes/modifies scripts, templates, configs, data/*.json
+- Tests changes locally before done
+- Reports back what was changed
 - **Cannot:** Update claude.md or changelog
 
 ## Worker: Tester
-**Scope:** Validation and QA
+**Deliverable:** Test report with pass/fail/warnings
 **Output:** `.claude/outputs/tester/test-YYYY-MM-DD-[type].md`
-- Validates data integrity, links, duplicates, clusters
-- Runs build commands
-- Reports issues (doesn't fix them)
-- **Cannot:** Edit files directly
+- Runs validation: `python3 scripts/validate_data.py`
+- Runs build: `npm run build`
+- Checks links, duplicates, cluster quality
+- Documents all findings in test report
+- **Cannot:** Fix issues (reports to Coder)
 
 ## Worker: Writer
-**Scope:** Content and reports
+**Deliverable:** Written documents, reports, summaries
 **Output:** `.claude/outputs/writer/report-YYYY-MM-DD-[topic].md`
-- Writes documentation, reports, summaries
-- Creates cluster review summaries
+- Writes documentation and READMEs
+- Creates cluster review reports
+- Drafts content descriptions
 - **Cannot:** Modify code or run scripts
 
 **Always tell user the saved path at end of run:**
 ```
-📄 Report saved: .claude/outputs/[agent]/[file].md
+📄 Saved: .claude/outputs/[agent]/[file].md
 ```
 
 ---
