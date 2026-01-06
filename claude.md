@@ -16,6 +16,23 @@
 
 **Only start work when user confirms requirements are complete.**
 
+**At end of work, MUST provide proof:**
+```
+## Summary
+- [What was done, 1-2 sentences]
+
+## Changes Made
+- `path/to/file1.py` — [what changed]
+- `path/to/file2.json` — [what changed]
+
+## Outputs
+📄 Report: .claude/outputs/[agent]/[file].md
+📄 Plan: .claude/outputs/manager/[file].md
+
+## Verification
+- [How to verify it worked]
+```
+
 ## Claude Manager
 **Deliverable:** Updated `claude.md`, `CHANGELOG.md`, `.claude/*` files
 **Output:** `.claude/outputs/claude-manager/notes-YYYY-MM-DD-[topic].md`
