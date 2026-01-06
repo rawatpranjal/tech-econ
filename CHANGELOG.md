@@ -1,6 +1,7 @@
 # Changelog
 
 ## 2026-01-06
+- Added 4 revealed preference datasets: Chicago Taxi (labor supply), Irish CER Smart Meter (RCT ToU pricing), Uniswap DEX (DeFi trading), iFlex Norway (hourly electricity)
 - Added 4 dunnhumby Source Files datasets: Breakfast at the Frat (time series), Carbo-Loading (household panel), The Complete Journey (full marketing mix), Let's Get Sort-of-Real (300M synthetic transactions)
 - Added 3 revealed preference packages: InvOpt, PyInvo (inverse optimization), revealedPrefs (GARP/WARP testing)
 

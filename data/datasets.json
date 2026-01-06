@@ -30250,5 +30250,41 @@
     "tags": ["synthetic-data", "retail", "CPG", "scalability-testing", "large-scale", "dummy-data", "teaching-dataset"],
     "docs_url": null,
     "github_url": null
+  },
+  {
+    "name": "Chicago Taxi Trip Data",
+    "description": "200M+ taxi trip records from 2013-present with persistent Taxi ID enabling driver-level panel analysis. Includes complete fare decomposition (base, extras, tolls, tips) across 77 community areas. Uniquely suited for supply-side revealed preference analysis of labor supply decisions.",
+    "category": "Transportation & Mobility",
+    "url": "https://data.cityofchicago.org/Transportation/Taxi-Trips/wrvz-psew",
+    "tags": ["taxi", "labor-supply", "revealed-preference", "panel-data", "transportation", "gig-economy", "driver-behavior"],
+    "docs_url": null,
+    "github_url": null
+  },
+  {
+    "name": "Irish CER Smart Meter Trial",
+    "description": "Randomized controlled trial with 5,000 Irish households tracked at 30-minute intervals over 18 months (2009-2010). Experimental time-of-use tariff structures (A/B/C/D) with known peak/off-peak prices. Combines RCT rigor with revealed preference analysis of time allocation decisions.",
+    "category": "Energy & Utilities",
+    "url": "https://www.ucd.ie/issda/data/commissionforenergyregulationcer/",
+    "tags": ["smart-meter", "electricity", "revealed-preference", "RCT", "time-of-use", "demand-response", "panel-data", "experimental"],
+    "docs_url": null,
+    "github_url": null
+  },
+  {
+    "name": "Uniswap DEX Trading Data (Harvard Dataverse)",
+    "description": "82.9M decentralized exchange transactions from Uniswap V3 across Ethereum mainnet and Layer-2 networks (June 2021-Dec 2022). Wallet-level panel enables analysis of how crypto traders respond to gas fees and exchange rates. Published in Nature Scientific Data (2025).",
+    "category": "Financial Services",
+    "url": "https://doi.org/10.7910/DVN/OSOR3P",
+    "tags": ["DeFi", "cryptocurrency", "revealed-preference", "trading", "Uniswap", "Ethereum", "panel-data", "blockchain"],
+    "docs_url": null,
+    "github_url": null
+  },
+  {
+    "name": "iFlex Norway Electricity Experiment",
+    "description": "Field experiment with Norwegian households receiving hourly electricity price signals across two winter periods (2020-2021). Clean experimental identification of household response to price variation with complete tariff documentation for budget constraint reconstruction.",
+    "category": "Energy & Utilities",
+    "url": "https://zenodo.org/records/8248802",
+    "tags": ["electricity", "revealed-preference", "field-experiment", "hourly-pricing", "demand-response", "Norway", "smart-grid"],
+    "docs_url": null,
+    "github_url": null
   }
 ]
