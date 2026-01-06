@@ -5,8 +5,8 @@
     "min_cluster_size": 4,
     "max_cluster_size": 10
   },
-  "total_clusters": 41,
-  "total_items": 451,
+  "total_clusters": 45,
+  "total_items": 450,
   "clusters": [
     {
       "id": "cluster-did-staggered",
@@ -35,7 +35,9 @@
         "did",
         "staggered",
         "Differences"
-      ]
+      ],
+      "creative_name": "Staggered Treatment Timing",
+      "formal_name": "Staggered Difference-in-Differences"
     },
     {
       "id": "cluster-did-synth",
@@ -79,7 +81,9 @@
         "gsynth",
         "tidysynth",
         "synthdid"
-      ]
+      ],
+      "creative_name": "Build Your Counterfactual",
+      "formal_name": "Synthetic Control Methods"
     },
     {
       "id": "cluster-did-extensions",
@@ -123,7 +127,9 @@
         "didhetero",
         "CausalImpact",
         "HonestDiD"
-      ]
+      ],
+      "creative_name": "DiD Beyond the Basics",
+      "formal_name": "DiD Extensions & Variants"
     },
     {
       "id": "cluster-struct-dynamic",
@@ -166,7 +172,9 @@
         "econpizza",
         "ruspy",
         "QuantEcon.py"
-      ]
+      ],
+      "creative_name": "Model Decisions Over Time",
+      "formal_name": "Dynamic Structural Models"
     },
     {
       "id": "cluster-struct-estimation",
@@ -215,7 +223,9 @@
         "momentfit",
         "PyLogit",
         "OpenMx"
-      ]
+      ],
+      "creative_name": "Estimate Deep Parameters",
+      "formal_name": "Structural Econometrics"
     },
     {
       "id": "cluster-pkg-iv-rdd",
@@ -267,7 +277,9 @@
         "rddtools",
         "AER",
         "rdpower"
-      ]
+      ],
+      "creative_name": "Exploit Natural Experiments",
+      "formal_name": "IV & RDD Packages"
     },
     {
       "id": "cluster-pkg-pywhy-ecosystem",
@@ -311,7 +323,9 @@
         "pydtr",
         "DoWhy",
         "DoWhy"
-      ]
+      ],
+      "creative_name": "The Causal Python Stack",
+      "formal_name": "Causal Inference Libraries"
     },
     {
       "id": "cluster-pkg-panel-data",
@@ -361,7 +375,9 @@
         "duckreg",
         "glmmTMB",
         "nlme"
-      ]
+      ],
+      "creative_name": "Control for the Unobserved",
+      "formal_name": "Panel Data Methods"
     },
     {
       "id": "cluster-pkg-causal-discovery",
@@ -408,7 +424,9 @@
         "SDCI",
         "ggdag",
         "pcalg"
-      ]
+      ],
+      "creative_name": "Let Data Find the Graph",
+      "formal_name": "Causal Discovery"
     },
     {
       "id": "cluster-pkg-matching",
@@ -454,7 +472,9 @@
         "CBPS",
         "WeightIt",
         "cobalt"
-      ]
+      ],
+      "creative_name": "Find Your Comparison Group",
+      "formal_name": "Matching & Weighting"
     },
     {
       "id": "cluster-pkg-causal-mediation",
@@ -497,7 +517,9 @@
         "mediation",
         "PStrata",
         "spilled_t"
-      ]
+      ],
+      "creative_name": "Trace the Causal Path",
+      "formal_name": "Mediation Analysis"
     },
     {
       "id": "cluster-pkg-causal-forests",
@@ -539,7 +561,9 @@
         "causalToolbox",
         "DynTxRegime",
         "DTRreg"
-      ]
+      ],
+      "creative_name": "Heterogeneous Treatment Effects",
+      "formal_name": "CATE Estimation"
     },
     {
       "id": "cluster-pkg-tmle",
@@ -570,7 +594,9 @@
         "SuperLearner",
         "tmle",
         "tmle3"
-      ]
+      ],
+      "creative_name": "Efficient Causal Estimation",
+      "formal_name": "Targeted Learning"
     },
     {
       "id": "cluster-pkg-visualization",
@@ -609,7 +635,9 @@
         "stargazer",
         "gt",
         "modelsummary"
-      ]
+      ],
+      "creative_name": "Make Data Beautiful",
+      "formal_name": "Data Visualization"
     },
     {
       "id": "cluster-pkg-data-manipulation",
@@ -641,7 +669,9 @@
         "countrycode",
         "data.table",
         "haven"
-      ]
+      ],
+      "creative_name": "Wrangle Any Dataset",
+      "formal_name": "Data Manipulation"
     },
     {
       "id": "cluster-pkg-power-simulation",
@@ -683,7 +713,9 @@
         "DoEgen",
         "simChef",
         "mlpwr"
-      ]
+      ],
+      "creative_name": "Design Experiments Right",
+      "formal_name": "Power Analysis & Experimental Design"
     },
     {
       "id": "cluster-pkg-adaptive-bandits",
@@ -720,7 +752,9 @@
         "PyXAB",
         "SMPyBandits",
         "contextual"
-      ]
+      ],
+      "creative_name": "Learn While You Earn",
+      "formal_name": "Bandit Algorithms"
     },
     {
       "id": "cluster-pkg-ab-testing",
@@ -758,7 +792,9 @@
         "CausalMotifs",
         "savvi",
         "Ambrosia"
-      ]
+      ],
+      "creative_name": "Analyze Your Experiments",
+      "formal_name": "Experiment Analysis"
     },
     {
       "id": "cluster-pkg-insurance",
@@ -794,7 +830,9 @@
         "Fairlearn",
         "lifelib",
         "ChainLadder"
-      ]
+      ],
+      "creative_name": "Price Risk Precisely",
+      "formal_name": "Actuarial Science"
     },
     {
       "id": "cluster-pkg-energy",
@@ -831,7 +869,9 @@
         "GenX",
         "GenX",
         "PowerModels.jl"
-      ]
+      ],
+      "creative_name": "Model the Grid",
+      "formal_name": "Energy Systems"
     },
     {
       "id": "cluster-pkg-marketing",
@@ -876,7 +916,9 @@
         "MaMiMo",
         "Robyn",
         "BTYDplus"
-      ]
+      ],
+      "creative_name": "Value Your Customers",
+      "formal_name": "Marketing Analytics"
     },
     {
       "id": "cluster-pkg-geospatial",
@@ -919,7 +961,9 @@
         "Skyfield",
         "sgp4",
         "spdep"
-      ]
+      ],
+      "creative_name": "Map Your Data",
+      "formal_name": "Geospatial Analysis"
     },
     {
       "id": "cluster-pkg-transportation",
@@ -955,7 +999,9 @@
         "gmnl",
         "mixl",
         "tidytransit"
-      ]
+      ],
+      "creative_name": "Model Movement",
+      "formal_name": "Transportation Modeling"
     },
     {
       "id": "cluster-pkg-sports",
@@ -993,7 +1039,9 @@
         "mplsoccer",
         "pybaseball",
         "hoopR"
-      ]
+      ],
+      "creative_name": "Moneyball Your Team",
+      "formal_name": "Sports Analytics"
     },
     {
       "id": "cluster-pkg-healthcare",
@@ -1021,7 +1069,9 @@
         "MONAI",
         "hesim",
         "heemod"
-      ]
+      ],
+      "creative_name": "Health Economics Tools",
+      "formal_name": "Healthcare Analytics"
     },
     {
       "id": "cluster-pkg-nlp-llm",
@@ -1067,7 +1117,9 @@
         "EDSL",
         "stm",
         "tidytext"
-      ]
+      ],
+      "creative_name": "Process Human Language",
+      "formal_name": "NLP & Language Models"
     },
     {
       "id": "cluster-pkg-gradient-boosting",
@@ -1112,7 +1164,9 @@
         "LightGBM",
         "CatBoost",
         "glmnet"
-      ]
+      ],
+      "creative_name": "Boost Your Predictions",
+      "formal_name": "Gradient Boosting"
     },
     {
       "id": "cluster-pkg-recommender-systems",
@@ -1144,7 +1198,9 @@
         "Surprise",
         "LightFM",
         "Implicit"
-      ]
+      ],
+      "creative_name": "Build Recommendations",
+      "formal_name": "Recommender Systems"
     },
     {
       "id": "cluster-pkg-neural-networks",
@@ -1174,30 +1230,56 @@
         "scVI-tools",
         "PyTorch",
         "VaDE"
-      ]
+      ],
+      "creative_name": "Neural Network Foundations",
+      "formal_name": "Deep Learning"
     },
     {
-      "id": "cluster-des-simpy",
-      "label": "SimPy & DES Frameworks",
-      "cluster_id": "des-simpy",
+      "id": "cluster-des-core",
+      "label": "DES Core Libraries",
+      "cluster_id": "des-core",
       "macro_category": "Operations Research",
       "original_categories": [
         "Simulation & Computational Economics"
       ],
-      "item_count": 21,
+      "item_count": 7,
       "items": [
         "SimPy",
+        "Stable-Baselines3",
+        "SuperSuit",
+        "NetLogoR",
+        "TorchRL",
+        "Mesa",
+        "simmer"
+      ],
+      "carousel_items": [
+        "SimPy",
+        "Stable-Baselines3",
+        "SuperSuit",
+        "NetLogoR",
+        "TorchRL",
+        "Mesa",
+        "simmer"
+      ],
+      "creative_name": "Simulate Discrete Events",
+      "formal_name": "Discrete Event Simulation"
+    },
+    {
+      "id": "cluster-des-applications",
+      "label": "DES Applications",
+      "cluster_id": "des-applications",
+      "macro_category": "Operations Research",
+      "original_categories": [
+        "Simulation & Computational Economics"
+      ],
+      "item_count": 14,
+      "items": [
         "Arena Simulation",
         "RNetLogo",
         "AnyLogic",
         "CleanRL",
-        "Stable-Baselines3",
         "nlrx",
-        "SuperSuit",
         "ABIDES",
-        "NetLogoR",
-        "TorchRL",
-        "Mesa",
         "OR-Gym",
         "Simio",
         "ABCE",
@@ -1205,21 +1287,22 @@
         "RLlib",
         "Gymnasium",
         "MO-Gymnasium",
-        "simmer",
         "AgentPy"
       ],
       "carousel_items": [
-        "SimPy",
         "Arena Simulation",
         "RNetLogo",
         "AnyLogic",
         "CleanRL",
-        "Stable-Baselines3",
         "nlrx",
-        "SuperSuit",
         "ABIDES",
-        "NetLogoR"
-      ]
+        "OR-Gym",
+        "Simio",
+        "ABCE",
+        "pyNetLogo"
+      ],
+      "creative_name": "Simulation in Practice",
+      "formal_name": "Simulation Applications"
     },
     {
       "id": "cluster-pkg-game-theory",
@@ -1258,7 +1341,9 @@
         "scarfmatch",
         "PettingZoo",
         "AI Economist"
-      ]
+      ],
+      "creative_name": "Design Incentives",
+      "formal_name": "Game Theory & Mechanisms"
     },
     {
       "id": "cluster-pkg-linear-programming",
@@ -1291,12 +1376,14 @@
         "gurobipy",
         "Faer",
         "scipy.optimize"
-      ]
+      ],
+      "creative_name": "Optimize Everything",
+      "formal_name": "Mathematical Optimization"
     },
     {
-      "id": "cluster-stats-hypothesis",
-      "label": "Hypothesis Testing",
-      "cluster_id": "stats-hypothesis",
+      "id": "cluster-inference-classical",
+      "label": "Classical Inference",
+      "cluster_id": "inference-classical",
       "macro_category": "Statistics",
       "original_categories": [
         "Robust Standard Errors",
@@ -1311,49 +1398,118 @@
         "Model Diagnostics",
         "Interference & Spillovers"
       ],
-      "item_count": 28,
+      "item_count": 8,
       "items": [
         "lmtest",
-        "boot",
-        "sandwich",
         "Statsmodels",
-        "hypothetical",
-        "fwildclusterboot",
-        "rsample",
         "car",
         "lmerTest",
-        "SciPy Bootstrap",
-        "recombinator",
-        "bootUR",
-        "PyWhy-Stats",
-        "maketables",
         "Linregress",
-        "HypoRS",
-        "Statrs",
-        "Pingouin",
-        "Stargazer",
-        "wildboottest",
         "expectation",
-        "marginaleffects",
-        "texreg",
-        "Python Packages for Applied Economists",
-        "testinterference",
-        "clusterbootstraps",
         "broom",
         "gtsummary"
       ],
       "carousel_items": [
         "lmtest",
-        "boot",
-        "sandwich",
         "Statsmodels",
-        "hypothetical",
-        "fwildclusterboot",
-        "rsample",
         "car",
         "lmerTest",
-        "SciPy Bootstrap"
-      ]
+        "Linregress",
+        "expectation",
+        "broom",
+        "gtsummary"
+      ],
+      "creative_name": "Frequentist Fundamentals",
+      "formal_name": "Classical Inference"
+    },
+    {
+      "id": "cluster-inference-modern",
+      "label": "Modern Inference Methods",
+      "cluster_id": "inference-modern",
+      "macro_category": "Statistics",
+      "original_categories": [
+        "Robust Standard Errors",
+        "Standard Errors, Bootstrapping & Reporting",
+        "Core Libraries & Linear Models",
+        "Bootstrap & Inference",
+        "Inference & Reporting Tools",
+        "Mixed Effects",
+        "Marginal Effects",
+        "Regression Output",
+        "Statistical Inference & Hypothesis Testing",
+        "Model Diagnostics",
+        "Interference & Spillovers"
+      ],
+      "item_count": 11,
+      "items": [
+        "hypothetical",
+        "PyWhy-Stats",
+        "maketables",
+        "HypoRS",
+        "Statrs",
+        "Pingouin",
+        "Stargazer",
+        "marginaleffects",
+        "texreg",
+        "Python Packages for Applied Economists",
+        "testinterference"
+      ],
+      "carousel_items": [
+        "hypothetical",
+        "PyWhy-Stats",
+        "maketables",
+        "HypoRS",
+        "Statrs",
+        "Pingouin",
+        "Stargazer",
+        "marginaleffects",
+        "texreg",
+        "Python Packages for Applied Economists"
+      ],
+      "creative_name": "Inference for the Modern Age",
+      "formal_name": "Modern Inference"
+    },
+    {
+      "id": "cluster-hypothesis-permutation",
+      "label": "Permutation & Bootstrap",
+      "cluster_id": "hypothesis-permutation",
+      "macro_category": "Statistics",
+      "original_categories": [
+        "Robust Standard Errors",
+        "Standard Errors, Bootstrapping & Reporting",
+        "Core Libraries & Linear Models",
+        "Bootstrap & Inference",
+        "Inference & Reporting Tools",
+        "Mixed Effects",
+        "Marginal Effects",
+        "Regression Output",
+        "Statistical Inference & Hypothesis Testing",
+        "Model Diagnostics",
+        "Interference & Spillovers"
+      ],
+      "item_count": 8,
+      "items": [
+        "boot",
+        "fwildclusterboot",
+        "rsample",
+        "SciPy Bootstrap",
+        "recombinator",
+        "bootUR",
+        "wildboottest",
+        "clusterbootstraps"
+      ],
+      "carousel_items": [
+        "boot",
+        "fwildclusterboot",
+        "rsample",
+        "SciPy Bootstrap",
+        "recombinator",
+        "bootUR",
+        "wildboottest",
+        "clusterbootstraps"
+      ],
+      "creative_name": "Resample Your Way to P-Values",
+      "formal_name": "Resampling Methods"
     },
     {
       "id": "cluster-stats-bayesian",
@@ -1383,7 +1539,9 @@
         "emmeans",
         "performance",
         "gcimpute"
-      ]
+      ],
+      "creative_name": "Test the Bayesian Way",
+      "formal_name": "Bayesian Hypothesis Testing"
     },
     {
       "id": "cluster-pkg-bayesian",
@@ -1427,7 +1585,9 @@
         "bayesplot",
         "rstan",
         "Pyro"
-      ]
+      ],
+      "creative_name": "Program Your Priors",
+      "formal_name": "Probabilistic Programming"
     },
     {
       "id": "cluster-pkg-survival-analysis",
@@ -1465,7 +1625,9 @@
         "flexsurv",
         "pycox",
         "lifelines"
-      ]
+      ],
+      "creative_name": "Model Time-to-Event",
+      "formal_name": "Survival Analysis"
     },
     {
       "id": "cluster-pkg-synthetic-data",
@@ -1503,7 +1665,9 @@
         "simPop",
         "SDV (Synthetic Data Vault)",
         "sdcMicro"
-      ]
+      ],
+      "creative_name": "Generate Realistic Fakes",
+      "formal_name": "Synthetic Data"
     },
     {
       "id": "cluster-pkg-network-analysis",
@@ -1539,7 +1703,9 @@
         "sna",
         "Research Rabbit",
         "python-louvain"
-      ]
+      ],
+      "creative_name": "Analyze Connections",
+      "formal_name": "Network Analysis"
     },
     {
       "id": "cluster-pkg-conformal",
@@ -1566,33 +1732,27 @@
         "puncc",
         "MAPIE",
         "crepes"
-      ]
+      ],
+      "creative_name": "Prediction with Guarantees",
+      "formal_name": "Conformal Prediction"
     },
     {
-      "id": "cluster-pkg-classical-forecasting",
-      "label": "Classical Time Series",
-      "cluster_id": "pkg-classical-forecasting",
+      "id": "cluster-ts-arima",
+      "label": "ARIMA & Exponential Smoothing",
+      "cluster_id": "ts-arima",
       "macro_category": "Time Series",
       "original_categories": [
         "Time Series Forecasting",
         "State Space & Volatility Models",
         "Time Series Econometrics"
       ],
-      "languages": [
-        "Rust",
-        "R",
-        "Python"
-      ],
-      "item_count": 19,
+      "item_count": 15,
       "items": [
         "urca",
-        "LocalProjections",
         "pmdarima",
-        "fable",
         "ARCH",
         "Kats",
         "vars",
-        "Augurs",
         "KFAS",
         "dlm",
         "forecast",
@@ -1601,22 +1761,49 @@
         "tsDyn",
         "dynlm",
         "sktime",
-        "strucchange",
         "mFilter",
         "FilterPy"
       ],
       "carousel_items": [
         "urca",
         "pmdarima",
-        "fable",
-        "Kats",
-        "sktime",
-        "mFilter",
-        "FilterPy",
-        "LocalProjections",
         "ARCH",
-        "vars"
-      ]
+        "Kats",
+        "vars",
+        "KFAS",
+        "dlm",
+        "forecast",
+        "Metran",
+        "StatsForecast"
+      ],
+      "creative_name": "Classical Forecasting",
+      "formal_name": "Classical Time Series"
+    },
+    {
+      "id": "cluster-ts-decomposition",
+      "label": "Decomposition & Seasonal",
+      "cluster_id": "ts-decomposition",
+      "macro_category": "Time Series",
+      "original_categories": [
+        "Time Series Forecasting",
+        "State Space & Volatility Models",
+        "Time Series Econometrics"
+      ],
+      "item_count": 4,
+      "items": [
+        "LocalProjections",
+        "fable",
+        "Augurs",
+        "strucchange"
+      ],
+      "carousel_items": [
+        "LocalProjections",
+        "fable",
+        "Augurs",
+        "strucchange"
+      ],
+      "creative_name": "Decompose Your Series",
+      "formal_name": "Seasonal Decomposition"
     },
     {
       "id": "cluster-forecasting-libraries",
@@ -1643,7 +1830,9 @@
         "prophet",
         "NeuralForecast",
         "PyKalman"
-      ]
+      ],
+      "creative_name": "Forecast at Scale",
+      "formal_name": "Forecasting Tools"
     }
   ]
 }
