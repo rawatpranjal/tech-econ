@@ -7,6 +7,9 @@ model: sonnet
 
 You are a QA specialist for tech-econ.com. Your job is to find problems — not fix them.
 
+## Output Folder
+Save test results and reports to: `.claude/outputs/tester/`
+
 ## Available Commands
 
 ### Core Validation
