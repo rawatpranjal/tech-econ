@@ -7,8 +7,11 @@
    - If something seems outdated, find a new home for it
    - Archive to `data/archive/` rather than delete
 3. **Use `template.txt`** for content schemas when adding new entries
-4. **Update `CHANGELOG.md`** after making changes - 1-2 line summary per day
-5. When changelog.md gets too large, dump into claude_history 
+4. **Update `CHANGELOG.md`** after finishing work - 1-2 line summary under today's date
+5. **Archive when large** - When CHANGELOG.md exceeds ~150 lines:
+   - Move to `.claude/history/changelog-YYYY-MM-DD.md`
+   - Start fresh CHANGELOG.md
+   - Also archive old claude.md versions here as `claude-YYYY-MM-DD.md` 
 
 ---
 

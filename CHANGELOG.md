@@ -1,6 +1,10 @@
 # Changelog
 
 ## 2026-01-05
+- Added ML Pipeline documentation to claude.md (ranking, search, clustering, discovery, enrichment, ALS)
+- Added UI philosophy: large cards with images, rich metadata
+- Created slash commands: `/rerank`, `/review-clusters`, `/enrich`
+- Set up `.claude/history/` for changelog and claude.md archives
 - **Package clustering with Netflix-style carousels**: 38 topic clusters for 188 packages
   - Full cluster-by-cluster review documented in `scripts/CLUSTERING_REVIEW.md`
   - Fixed 5 misassignments: SuperLearner→pkg-tmle, collapse→pkg-data-manipulation, stargazer→pkg-visualization, inferference→pkg-causal-mediation, linregress→pkg-hypothesis-testing
