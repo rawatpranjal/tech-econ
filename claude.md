@@ -137,10 +137,10 @@ npx wrangler d1 execute tech-econ-analytics-db --remote --command \
 
 # ML Pipeline
 
-## Ranking Model (`scripts/rank_all_content.py`)
-LightGBM-Tweedie model trained on engagement data. Outputs `model_score` field.
+## 1. Ranking Model (`scripts/rank_all_content.py`)
+**Goal:** Create `model_score` to rank content everywhere on the site.
 
-**Engagement signals (from D1 analytics):**
+LightGBM-Tweedie model trained on engagement signals from D1 analytics:
 | Signal | Weight | Description |
 |--------|--------|-------------|
 | Clicks | ×5.0 | Outbound link clicks |
@@ -152,37 +152,49 @@ LightGBM-Tweedie model trained on engagement data. Outputs `model_score` field.
 | Rage clicks | ×-2.0 | Frustration (negative) |
 | Quick bounce | ×-1.0 | Left quickly (negative) |
 
-**Cold-start handling:** Uses sentence-BERT similarity (all-MiniLM-L6-v2) to propagate scores from similar engaged items.
+**Cold-start:** Uses sentence-BERT similarity to propagate scores from similar engaged items.
 
-## Semantic Search (`scripts/generate_embeddings.py`)
-Hybrid keyword + vector search with RRF (Reciprocal Rank Fusion).
+## 2. Semantic Search (`scripts/generate_embeddings.py`)
+**Goal:** Make search better and more contextual.
 
+Hybrid keyword + vector search with RRF (Reciprocal Rank Fusion):
 - **Embeddings:** bge-large-en-v1.5 (1024 dimensions)
 - **Keyword:** MiniSearch (client-side)
-- **Output files:**
-  - `static/embeddings/search-metadata.json` - Item data
-  - `static/embeddings/search-embeddings.bin` - Binary Float32 vectors
+- **Output:** `static/embeddings/search-*.json|bin`
 
-## Topic Clustering (`scripts/cluster_resources.py`)
-Creates Netflix-style carousels by grouping semantically similar items.
+## 3. Clustering & Carousels (`scripts/cluster_resources.py`)
+**Goal:** Netflix-style exploratory discovery within sections.
 
-- **Algorithm:** K-means on embeddings
-- **Cluster size:** 4-10 items (target: 7)
-- **Output:** `data/resource_clusters.json`
+Clustering happens within rigid sections (e.g., Talks → Videos → clusters). Each cluster becomes a carousel:
+- **5-10 items per carousel** (target: 7)
+- **Carousels ranked by score** (best clusters surface first)
+- **Items within carousels ranked by score**
+- **Carousels grouped into categories** for user filtering
+- **Niche & interesting** — aids discovery, not just popular content
 
-## Collaborative Filtering (`scripts/build_als_model.py`)
-ALS (Alternating Least Squares) for item-item recommendations.
+## 4. Discovery / Hero Topics
+**Goal:** Even more niche topic pages with one "hero" item and related content trailing.
 
-- **Library:** implicit
-- **Input:** Session-level interactions (dwell, clicks, search queries)
-- **Output:** Item similarity matrix for "related items"
+Used for deep-dive topic pages where one standout item leads, followed by related resources.
 
-## LLM Enrichment (`scripts/enrich_metadata.py`)
+## 5. LLM Enrichment (`scripts/enrich_metadata.py`)
+**Goal:** Create rich metadata and tags to power embeddings and search.
+
 Uses Claude API to generate:
 - Tags and categories
 - Short descriptions
 - "Best for" use cases
 - Semantic cluster labels
+
+Run enrichment **before** generating embeddings.
+
+## 6. ALS Collaborative Filtering (`scripts/build_als_model.py`)
+**Goal:** User-based recommendations (future).
+
+Not currently useful — requires more user interaction data. When ready:
+- **Library:** implicit (ALS)
+- **Input:** Session-level interactions
+- **Output:** User-item and item-item similarity matrices
 
 ---
 
