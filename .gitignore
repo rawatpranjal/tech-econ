@@ -16,3 +16,8 @@ Thumbs.db
 .hugo_build.lock
 node_modules/
 scripts/__pycache__/
+# Secrets - NEVER COMMIT
+.claude/secrets.env
+.env
+secrets.*
+!*.template

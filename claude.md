@@ -104,6 +104,26 @@
 
 ---
 
+# Secrets & API Keys
+
+**Location:** `.claude/secrets.env` (gitignored, never committed)
+
+**Setup:**
+```bash
+cp .claude/secrets.env.template .claude/secrets.env
+# Edit secrets.env with your actual keys
+```
+
+**Load in scripts:**
+```python
+from dotenv import load_dotenv
+load_dotenv('.claude/secrets.env')
+```
+
+**⚠️ NEVER paste keys in chat — they get logged!**
+
+---
+
 # Pre-Commit Checklist
 
 **Must pass before pushing:**
