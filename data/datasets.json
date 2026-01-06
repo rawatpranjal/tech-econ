@@ -30286,5 +30286,149 @@
     "tags": ["electricity", "revealed-preference", "field-experiment", "hourly-pricing", "demand-response", "Norway", "smart-grid"],
     "docs_url": null,
     "github_url": null
+  },
+  {
+    "name": "HumanEval",
+    "description": "164 hand-written Python programming problems with unit tests for evaluating code generation models. The benchmark that established the pass@k metric and launched the code generation era.",
+    "category": "ML Benchmarks",
+    "url": "https://github.com/openai/human-eval",
+    "tags": ["code-generation", "benchmark", "Python", "OpenAI", "unit-tests", "functional-correctness", "LLM-evaluation"],
+    "docs_url": null,
+    "github_url": "https://github.com/openai/human-eval"
+  },
+  {
+    "name": "MBPP (Mostly Basic Python Problems)",
+    "description": "974 crowd-sourced Python programming tasks designed to test basic programming skills. Entry-level problems with natural language descriptions and test cases. Google Research benchmark.",
+    "category": "ML Benchmarks",
+    "url": "https://github.com/google-research/google-research/tree/master/mbpp",
+    "tags": ["code-generation", "benchmark", "Python", "Google", "beginner-problems", "crowd-sourced", "LLM-evaluation"],
+    "docs_url": null,
+    "github_url": "https://github.com/google-research/google-research/tree/master/mbpp"
+  },
+  {
+    "name": "SWE-bench",
+    "description": "2,294 real GitHub issues from popular Python repositories for evaluating autonomous coding agents. Tests end-to-end software engineering including issue understanding, codebase navigation, and patch generation.",
+    "category": "ML Benchmarks",
+    "url": "https://www.swebench.com/",
+    "tags": ["software-engineering", "benchmark", "GitHub-issues", "agents", "patch-generation", "real-world", "LLM-evaluation"],
+    "docs_url": "https://www.swebench.com/",
+    "github_url": "https://github.com/princeton-nlp/SWE-bench"
+  },
+  {
+    "name": "CodeContests",
+    "description": "13,610 competitive programming problems with test cases and solutions from Codeforces, CodeChef, and other platforms. DeepMind benchmark with difficulty ratings and multiple solution languages.",
+    "category": "ML Benchmarks",
+    "url": "https://github.com/google-deepmind/code_contests",
+    "tags": ["competitive-programming", "benchmark", "DeepMind", "algorithmic-reasoning", "multi-language", "difficulty-ratings"],
+    "docs_url": null,
+    "github_url": "https://github.com/google-deepmind/code_contests"
+  },
+  {
+    "name": "MultiPL-E",
+    "description": "HumanEval and MBPP benchmarks translated to 22+ programming languages for evaluating multilingual code generation. Enables cross-language comparison of LLM coding capabilities.",
+    "category": "ML Benchmarks",
+    "url": "https://github.com/nuprl/MultiPL-E",
+    "tags": ["code-generation", "benchmark", "multilingual", "language-comparison", "translation", "LLM-evaluation"],
+    "docs_url": "https://nuprl.github.io/MultiPL-E/",
+    "github_url": "https://github.com/nuprl/MultiPL-E"
+  },
+  {
+    "name": "Defects4J",
+    "description": "854 reproducible bugs from 17 real-world Java projects with regression tests. Gold standard for automated program repair (APR) and fault localization research.",
+    "category": "ML Benchmarks",
+    "url": "https://github.com/rjust/defects4j",
+    "tags": ["bug-benchmark", "Java", "automated-program-repair", "fault-localization", "software-testing", "reproducible-bugs"],
+    "docs_url": "https://github.com/rjust/defects4j/wiki",
+    "github_url": "https://github.com/rjust/defects4j"
+  },
+  {
+    "name": "BugsInPy",
+    "description": "493 real bugs from 17 Python projects with test cases for bug detection and repair research. Python-focused counterpart to Defects4J.",
+    "category": "ML Benchmarks",
+    "url": "https://github.com/soarsmu/BugsInPy",
+    "tags": ["bug-benchmark", "Python", "automated-program-repair", "bug-detection", "software-testing", "reproducible-bugs"],
+    "docs_url": null,
+    "github_url": "https://github.com/soarsmu/BugsInPy"
+  },
+  {
+    "name": "GH Archive",
+    "description": "Complete public GitHub timeline since 2011 with 3B+ events. Captures all public repository activity including pushes, PRs, issues, stars, and forks. BigQuery and hourly downloadable archives available.",
+    "category": "Data Portals",
+    "url": "https://www.gharchive.org/",
+    "tags": ["GitHub", "open-source", "developer-activity", "BigQuery", "event-stream", "software-evolution", "time-series"],
+    "docs_url": "https://www.gharchive.org/",
+    "github_url": null
+  },
+  {
+    "name": "Software Heritage Archive",
+    "description": "World's largest source code archive with 5B+ files from 300M+ projects. Preserves entire Git history with persistent identifiers (SWHIDs). Universal reference for software provenance research.",
+    "category": "Data Portals",
+    "url": "https://www.softwareheritage.org/",
+    "tags": ["source-code", "archive", "software-preservation", "Git-history", "provenance", "universal-archive", "SWHID"],
+    "docs_url": "https://docs.softwareheritage.org/",
+    "github_url": null
+  },
+  {
+    "name": "Stack Exchange Data Dump",
+    "description": "Complete Q&A history from all Stack Exchange sites including Stack Overflow. Posts, users, votes, comments, and tags in XML format. Updated quarterly via archive.org.",
+    "category": "Data Portals",
+    "url": "https://archive.org/details/stackexchange",
+    "tags": ["Q&A", "Stack-Overflow", "developer-knowledge", "community-data", "text-mining", "social-network", "XML-dump"],
+    "docs_url": "https://meta.stackexchange.com/questions/2677/database-schema-documentation-for-the-public-data-dump-and-sede",
+    "github_url": null
+  },
+  {
+    "name": "TravisTorrent",
+    "description": "2.6M builds from 1,300 GitHub projects with test outcomes, build durations, and commit metadata. Links CI/CD behavior to code changes for build prediction and process mining research.",
+    "category": "Data Portals",
+    "url": "https://travistorrent.testroots.org/",
+    "tags": ["CI-CD", "Travis-CI", "build-prediction", "software-testing", "continuous-integration", "process-mining", "GitHub"],
+    "docs_url": "https://travistorrent.testroots.org/page_dataformat/",
+    "github_url": null
+  },
+  {
+    "name": "JetBrains Developer Ecosystem Survey",
+    "description": "Annual survey with 23,000-32,000 developer responses covering technology adoption, work patterns, and industry trends. Raw CSV data available for independent analysis.",
+    "category": "Data Portals",
+    "url": "https://www.jetbrains.com/lp/devecosystem-2024/",
+    "tags": ["developer-survey", "technology-adoption", "industry-trends", "JetBrains", "raw-data", "annual", "demographics"],
+    "docs_url": null,
+    "github_url": null
+  },
+  {
+    "name": "QScored",
+    "description": "Code quality metrics from 1.1B lines of code across 85K Java projects. Static analysis scores including maintainability, technical debt, and code smells from SonarQube.",
+    "category": "Software Engineering",
+    "url": "https://zenodo.org/records/4468390",
+    "tags": ["code-quality", "static-analysis", "SonarQube", "technical-debt", "maintainability", "Java", "large-scale"],
+    "docs_url": null,
+    "github_url": null
+  },
+  {
+    "name": "Technical Debt Dataset",
+    "description": "Longitudinal technical debt measurements from 33 Apache projects across 700+ releases. SQALE metrics, self-admitted technical debt (SATD) from comments, and evolution tracking.",
+    "category": "Software Engineering",
+    "url": "https://github.com/clowee/The-Technical-Debt-Dataset",
+    "tags": ["technical-debt", "Apache-projects", "SQALE", "SATD", "code-evolution", "longitudinal", "maintainability"],
+    "docs_url": null,
+    "github_url": "https://github.com/clowee/The-Technical-Debt-Dataset"
+  },
+  {
+    "name": "StackPilot Code Snippets",
+    "description": "30,746 Stack Overflow code snippets with execution results and correctness labels. Enables research on code quality in crowd-sourced knowledge bases.",
+    "category": "Software Engineering",
+    "url": "https://zenodo.org/records/5225651",
+    "tags": ["Stack-Overflow", "code-snippets", "correctness", "crowd-sourced", "code-quality", "execution-results"],
+    "docs_url": null,
+    "github_url": null
+  },
+  {
+    "name": "Copilot Telemetry Traces",
+    "description": "Developer interaction traces with GitHub Copilot showing suggestion acceptance/rejection patterns, edit sequences, and productivity metrics. Anonymized research dataset from 20 developers.",
+    "category": "Software Engineering",
+    "url": "https://zenodo.org/records/11503612",
+    "tags": ["GitHub-Copilot", "AI-assistants", "developer-productivity", "telemetry", "code-completion", "human-AI-interaction"],
+    "docs_url": null,
+    "github_url": null
   }
 ]
