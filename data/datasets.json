@@ -30214,5 +30214,41 @@
       "recommendation-systems",
       "product-analytics"
     ]
+  },
+  {
+    "name": "dunnhumby - Breakfast at the Frat",
+    "description": "Time series dataset featuring 156 weeks of store-level sales data for household staples in four categories: mouthwash, pretzels, frozen pizza, and boxed cereal. Includes pricing, promotional activity, and store characteristics.",
+    "category": "Grocery & Supermarkets",
+    "url": "https://www.dunnhumby.com/source-files/",
+    "tags": ["time-series", "retail", "CPG", "promotional-analysis", "pricing", "store-level", "sales-forecasting"],
+    "docs_url": null,
+    "github_url": null
+  },
+  {
+    "name": "dunnhumby - Carbo-Loading",
+    "description": "Relational database containing 2 years of household-level transaction data across 38 stores. Includes 5,000 households purchasing 125 products from pasta sauce and pasta categories with full demographic profiles.",
+    "category": "Grocery & Supermarkets",
+    "url": "https://www.dunnhumby.com/source-files/",
+    "tags": ["household-panel", "retail", "CPG", "demographics", "relational-data", "transaction-level", "consumer-behavior"],
+    "docs_url": null,
+    "github_url": null
+  },
+  {
+    "name": "dunnhumby - The Complete Journey",
+    "description": "Comprehensive household-level panel data from 2,500 frequent shoppers over 2 years. Includes full purchase history, coupon redemptions, direct mail campaigns, and complete demographic/lifestyle profiles - the gold standard for CPG analytics.",
+    "category": "Grocery & Supermarkets",
+    "url": "https://www.dunnhumby.com/source-files/",
+    "tags": ["household-panel", "retail", "CPG", "marketing-mix", "coupon-analysis", "loyalty-data", "consumer-behavior", "campaign-analysis"],
+    "docs_url": null,
+    "github_url": null
+  },
+  {
+    "name": "dunnhumby - Let's Get Sort-of-Real",
+    "description": "Large-scale synthetic dummy dataset with 300M+ transactions for testing analytics pipelines and algorithms at scale. Mimics real retail data structures without privacy concerns - ideal for scalability testing and teaching.",
+    "category": "Grocery & Supermarkets",
+    "url": "https://www.dunnhumby.com/source-files/",
+    "tags": ["synthetic-data", "retail", "CPG", "scalability-testing", "large-scale", "dummy-data", "teaching-dataset"],
+    "docs_url": null,
+    "github_url": null
   }
 ]
