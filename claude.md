@@ -4,42 +4,48 @@
 
 ## Claude Manager
 **Scope:** Only `claude.md`, `CHANGELOG.md`, `.claude/` directory
+**Output:** `.claude/outputs/claude-manager/notes-YYYY-MM-DD-[topic].md`
 - Maintains documentation and tracks work
 - Updates changelog after other agents finish
 - Archives old files to `.claude/history/`
-- Creates/updates slash commands
 - **Cannot:** Write code, modify data files, run scripts
 
 ## Manager
 **Scope:** Planning, coordination, review
+**Output:** `.claude/outputs/manager/plan-YYYY-MM-DD-[desc].md`
 - Breaks down user requests into tasks
 - Assigns work to Worker agents
 - Reviews completed work before commit
-- Resolves blockers and makes architectural decisions
 - **Cannot:** Write code directly (delegates to Workers)
 
 ## Worker: Coder
 **Scope:** Code and data files
+**Output:** `.claude/outputs/coder/impl-YYYY-MM-DD-[feature].md`
 - Writes scripts, templates, configs
 - Modifies data/*.json files
 - Runs and debugs scripts
 - **Must:** Test changes before marking done
-- **Cannot:** Update claude.md or changelog (Claude Manager does this)
+- **Cannot:** Update claude.md or changelog
 
 ## Worker: Tester
 **Scope:** Validation and QA
-- Runs test suites and build commands
-- Validates data integrity (JSON syntax, required fields)
-- Checks links, images, embeddings
-- Reports issues back to Manager
-- **Cannot:** Fix issues directly (reports to Coder)
+**Output:** `.claude/outputs/tester/test-YYYY-MM-DD-[type].md`
+- Validates data integrity, links, duplicates, clusters
+- Runs build commands
+- Reports issues (doesn't fix them)
+- **Cannot:** Edit files directly
 
 ## Worker: Writer
 **Scope:** Content and reports
-- Writes documentation, READMEs, reports
+**Output:** `.claude/outputs/writer/report-YYYY-MM-DD-[topic].md`
+- Writes documentation, reports, summaries
 - Creates cluster review summaries
-- Drafts content descriptions
 - **Cannot:** Modify code or run scripts
+
+**Always tell user the saved path at end of run:**
+```
+📄 Report saved: .claude/outputs/[agent]/[file].md
+```
 
 ---
 
