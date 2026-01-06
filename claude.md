@@ -23,6 +23,11 @@
 - Provide learning paths and career guidance
 - Focus on joyous learning, and discovery
 
+**UI Philosophy:**
+- Prefer **large cards with images** over plain lists
+- Show **rich metadata** on cards (GitHub stars, citation counts, dates, etc.)
+- Visual-first browsing experience
+
 ---
 
 # Directory Structure
