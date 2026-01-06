@@ -1,6 +1,10 @@
 # Changelog
 
 ## 2026-01-05
+- **Package clustering with Netflix-style carousels**: 38 topic clusters for 188 packages
+  - Full cluster-by-cluster review documented in `scripts/CLUSTERING_REVIEW.md`
+  - Fixed 5 misassignments: SuperLearner→pkg-tmle, collapse→pkg-data-manipulation, stargazer→pkg-visualization, inferference→pkg-causal-mediation, linregress→pkg-hypothesis-testing
+  - Cluster categories: Causal Inference (10), Experimentation (4), ML (6), Ops Research (5), Time Series (3), Statistics (8), Industry (9), Data Utils (3)
 - **Learning section niche clusters V4**: Fixed clustering coherence issues
   - 54 clusters, all in 4-10 item range (avg 6.6 items)
   - Fixed "Agent Based Modeling" clusters - now contains only actual ABM content

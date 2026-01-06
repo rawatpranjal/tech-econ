@@ -1,4 +1,232 @@
 {{ define "main" }}
+<style>
+/* Package Cluster Carousel Styles */
+.package-clusters {
+    padding: 2rem 0;
+    background: var(--background);
+}
+
+.package-clusters .explore-row {
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+}
+
+.package-clusters .explore-row-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.package-clusters .explore-row-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.package-clusters .explore-row-count {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.package-clusters .explore-scroller-wrapper {
+    position: relative;
+}
+
+.package-clusters .explore-scroller {
+    display: flex;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0.5rem 0;
+}
+
+.package-clusters .explore-scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.package-cluster-card {
+    flex: 0 0 280px;
+    min-width: 280px;
+    max-width: 280px;
+    height: 160px;
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 1.25rem;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.15s;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.package-cluster-card:hover {
+    transform: scale(1.03) translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    border-color: var(--accent);
+}
+
+.pkg-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.pkg-card-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.pkg-card-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.pkg-card-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+    flex: 1;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.pkg-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+
+.pkg-card-lang {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.pkg-card-lang.python {
+    background: rgba(55, 118, 171, 0.15);
+    color: #3776AB;
+}
+
+.pkg-card-lang.r {
+    background: rgba(39, 109, 195, 0.15);
+    color: #276DC3;
+}
+
+.pkg-stars {
+    height: 18px;
+}
+
+/* Scroller Navigation */
+.package-clusters .scroller-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.package-clusters .scroller-nav:hover {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
+.package-clusters .scroller-nav.prev {
+    left: -20px;
+}
+
+.package-clusters .scroller-nav.next {
+    right: -20px;
+}
+
+.package-clusters .scroller-nav.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Cluster Filter Bar */
+.cluster-filter-bar {
+    padding: 1rem 2rem;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 60px;
+    z-index: 100;
+}
+
+.cluster-filter-inner {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.cluster-filter-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.cluster-filter-select {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--background);
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    min-width: 200px;
+}
+
+.cluster-filter-select:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.cluster-count {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.explore-row.hidden {
+    display: none;
+}
+</style>
+
 <!-- Hero Section -->
 <header class="hero hero-with-image hero-packages">
     <h1 class="hero-title">Packages</h1>
@@ -9,6 +237,89 @@
 <script id="search-data" type="application/json">
 [{{ range $i, $pkg := .Site.Data.packages }}{{ if $i }},{{ end }}{"name":"{{ .name }}","description":"{{ .description | htmlEscape }}","category":"{{ .category }}","tags":"{{ delimit .tags "," }}","best_for":"{{ .best_for | htmlEscape }}","language":"{{ .language }}"}{{ end }}]
 </script>
+
+<!-- Cluster Filter Bar -->
+{{ if .Site.Data.package_clusters }}
+<div class="cluster-filter-bar">
+    <div class="cluster-filter-inner">
+        <span class="cluster-filter-label">Browse by topic:</span>
+        {{ $macros := slice }}
+        {{ range .Site.Data.package_clusters.clusters }}
+            {{ if not (in $macros .macro_category) }}
+                {{ $macros = $macros | append .macro_category }}
+            {{ end }}
+        {{ end }}
+        <select id="cluster-macro-filter" class="cluster-filter-select">
+            <option value="all">All Topics ({{ len .Site.Data.package_clusters.clusters }} clusters)</option>
+            {{ range $macro := sort $macros }}
+            <option value="{{ $macro }}">{{ $macro }}</option>
+            {{ end }}
+        </select>
+        <span id="cluster-count" class="cluster-count"></span>
+    </div>
+</div>
+{{ end }}
+
+<!-- Package Cluster Carousels (Netflix-style) -->
+{{ if .Site.Data.package_clusters }}
+<div class="explore-rows package-clusters" id="package-clusters">
+    {{ range $cluster := .Site.Data.package_clusters.clusters }}
+    {{ if ge $cluster.item_count 4 }}
+    <div class="explore-row category-row"
+         data-macro="{{ $cluster.macro_category }}">
+        <div class="explore-row-header">
+            <h2 class="explore-row-title">{{ $cluster.label }}</h2>
+            <span class="explore-row-count">{{ $cluster.item_count }} packages</span>
+        </div>
+        <div class="explore-scroller-wrapper">
+            <div class="explore-scroller">
+                {{ range $pkgName := $cluster.carousel_items }}
+                {{ $pkg := index (where $.Site.Data.packages "name" $pkgName) 0 }}
+                {{ with $pkg }}
+                <a href="{{ .url }}" target="_blank" rel="noopener"
+                   class="package-cluster-card"
+                   data-name="{{ .name | lower }}"
+                   data-category="{{ .category }}"
+                   data-language="{{ .language }}">
+                    <div class="pkg-card-header">
+                        {{ if .github_url }}
+                        {{ $owner := replaceRE "https://github.com/([^/]+)/.*" "$1" .github_url }}
+                        <img data-src="https://github.com/{{ $owner }}.png?size=32"
+                             alt=""
+                             class="pkg-card-logo lazy-badge"
+                             loading="lazy"
+                             onerror="this.style.display='none'">
+                        {{ end }}
+                        <h3 class="pkg-card-title">{{ .name }}</h3>
+                    </div>
+                    <p class="pkg-card-desc">{{ .description | truncate 120 }}</p>
+                    <div class="pkg-card-footer">
+                        <span class="pkg-card-lang {{ .language | lower }}">{{ .language }}</span>
+                        {{ if .github_url }}
+                        {{ $repo := replaceRE "https://github.com/([^/]+/[^/]+).*" "$1" .github_url }}
+                        <img data-src="https://img.shields.io/github/stars/{{ $repo }}?style=flat&logo=github&label=&color=555" alt="stars" class="lazy-badge pkg-stars" loading="lazy">
+                        {{ end }}
+                    </div>
+                </a>
+                {{ end }}
+                {{ end }}
+            </div>
+            <button class="scroller-nav prev" aria-label="Scroll left">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg>
+            </button>
+            <button class="scroller-nav next" aria-label="Scroll right">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+    {{ end }}
+    {{ end }}
+</div>
+{{ end }}
 
 <div class="container">
     <!-- Search and Filters Row -->
@@ -236,6 +547,69 @@ document.addEventListener('DOMContentLoaded', function() {
             searchInput.value = e.target.dataset.tag;
             searchInput.dispatchEvent(new Event('input'));
         }
+    });
+
+    // Cluster macro filter
+    const clusterMacroFilter = document.getElementById('cluster-macro-filter');
+    const clusterRows = document.querySelectorAll('.package-clusters .explore-row');
+    const clusterCountEl = document.getElementById('cluster-count');
+
+    if (clusterMacroFilter) {
+        clusterMacroFilter.addEventListener('change', function() {
+            const selectedMacro = this.value;
+            let visibleCount = 0;
+
+            clusterRows.forEach(row => {
+                const rowMacro = row.dataset.macro;
+                if (selectedMacro === 'all' || rowMacro === selectedMacro) {
+                    row.classList.remove('hidden');
+                    visibleCount++;
+                } else {
+                    row.classList.add('hidden');
+                }
+            });
+
+            if (clusterCountEl) {
+                clusterCountEl.textContent = selectedMacro === 'all'
+                    ? ''
+                    : `Showing ${visibleCount} clusters`;
+            }
+        });
+    }
+
+    // Carousel scroller navigation
+    function debounce(func, wait) {
+        let timeout;
+        return function(...args) {
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(this, args), wait);
+        };
+    }
+
+    document.querySelectorAll('.package-clusters .explore-row').forEach(row => {
+        const scroller = row.querySelector('.explore-scroller');
+        const prevBtn = row.querySelector('.scroller-nav.prev');
+        const nextBtn = row.querySelector('.scroller-nav.next');
+
+        if (!scroller || !prevBtn || !nextBtn) return;
+
+        function updateNavState() {
+            const atStart = scroller.scrollLeft <= 0;
+            const atEnd = scroller.scrollLeft >= scroller.scrollWidth - scroller.clientWidth - 10;
+            prevBtn.classList.toggle('disabled', atStart);
+            nextBtn.classList.toggle('disabled', atEnd);
+        }
+
+        prevBtn.addEventListener('click', () => {
+            scroller.scrollBy({ left: -300, behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', () => {
+            scroller.scrollBy({ left: 300, behavior: 'smooth' });
+        });
+
+        scroller.addEventListener('scroll', debounce(updateNavState, 50));
+        updateNavState();
     });
 });
 </script>

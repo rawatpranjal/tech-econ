@@ -1,0 +1,335 @@
+{
+  "version": "1.1",
+  "description": "Manually curated cluster definitions for Packages section",
+  "clusters": [
+    {
+      "id": "pkg-causal-forests",
+      "label": "Causal Forests & CATE",
+      "macro_category": "Causal Inference",
+      "description": "Heterogeneous treatment effect estimation with causal forests and CATE methods",
+      "keywords": ["causal forest", "grf", "CATE", "heterogeneous treatment", "econml", "causal tree", "double machine learning", "DML", "conditional average treatment"]
+    },
+    {
+      "id": "pkg-did-synth",
+      "label": "DiD & Synthetic Control",
+      "macro_category": "Causal Inference",
+      "description": "Difference-in-differences and synthetic control packages",
+      "keywords": ["did", "difference-in-differences", "synthetic control", "CausalImpact", "event study", "staggered", "parallel trends", "synth", "Abadie"]
+    },
+    {
+      "id": "pkg-matching",
+      "label": "Matching & Propensity Score",
+      "macro_category": "Causal Inference",
+      "description": "Propensity score matching and covariate matching methods",
+      "keywords": ["matching", "propensity score", "MatchIt", "CEM", "covariate balance", "nearest neighbor", "caliper", "ATT", "ATE"]
+    },
+    {
+      "id": "pkg-iv-rdd",
+      "label": "IV & RDD Methods",
+      "macro_category": "Causal Inference",
+      "description": "Instrumental variables and regression discontinuity packages",
+      "keywords": ["instrumental variable", "IV", "2SLS", "RDD", "regression discontinuity", "fuzzy RDD", "sharp RDD", "LATE", "ivreg"]
+    },
+    {
+      "id": "pkg-causal-discovery",
+      "label": "Causal Discovery & DAGs",
+      "macro_category": "Causal Inference",
+      "description": "Causal graph learning and discovery algorithms",
+      "keywords": ["causal discovery", "DAG", "PC algorithm", "causal graph", "d-separation", "Tetrad", "causal-learn", "NOTEARS", "structure learning"]
+    },
+    {
+      "id": "pkg-structural-estimation",
+      "label": "Structural Econometrics",
+      "macro_category": "Causal Inference",
+      "description": "GMM, MLE, and structural estimation methods",
+      "keywords": ["GMM", "MLE", "structural estimation", "maximum likelihood", "method of moments", "indirect inference", "BLP", "demand estimation"]
+    },
+    {
+      "id": "pkg-panel-data",
+      "label": "Panel Data & Fixed Effects",
+      "macro_category": "Causal Inference",
+      "description": "Panel data analysis and fixed effects models",
+      "keywords": ["panel data", "fixed effects", "random effects", "plm", "linearmodels", "within estimator", "between estimator", "Hausman"]
+    },
+    {
+      "id": "pkg-pywhy-ecosystem",
+      "label": "PyWhy & Causal Libraries",
+      "macro_category": "Causal Inference",
+      "description": "Unified causal inference libraries: DoWhy, EconML, CausalML",
+      "keywords": ["DoWhy", "EconML", "CausalML", "PyWhy", "causalpy", "causal inference library", "Microsoft causal"]
+    },
+    {
+      "id": "pkg-ab-testing",
+      "label": "A/B Testing & Experiment Analysis",
+      "macro_category": "Experimentation",
+      "description": "A/B test analysis, experiment design, and statistical testing",
+      "keywords": ["A/B test", "experiment", "statistical test", "t-test", "chi-square", "proportion test", "sample size", "MDE"]
+    },
+    {
+      "id": "pkg-adaptive-bandits",
+      "label": "Bandits & Adaptive Experiments",
+      "macro_category": "Experimentation",
+      "description": "Multi-armed bandits and adaptive experimentation platforms",
+      "keywords": ["bandit", "multi-armed", "Thompson sampling", "UCB", "Ax", "adaptive", "explore exploit", "Bayesian optimization"]
+    },
+    {
+      "id": "pkg-bayesian-ab",
+      "label": "Bayesian A/B Testing",
+      "macro_category": "Experimentation",
+      "description": "Bayesian approaches to A/B testing and conversion analysis",
+      "keywords": ["Bayesian A/B", "posterior", "credible interval", "Bayes factor", "sequential testing", "PyMC-Marketing"]
+    },
+    {
+      "id": "pkg-power-simulation",
+      "label": "Power Analysis & DOE",
+      "macro_category": "Experimentation",
+      "description": "Power simulation, sample size calculation, and design of experiments",
+      "keywords": ["power analysis", "sample size", "design of experiments", "DOE", "factorial", "simulation", "DeclareDesign", "pwr"]
+    },
+    {
+      "id": "pkg-gradient-boosting",
+      "label": "Gradient Boosting",
+      "macro_category": "Machine Learning",
+      "description": "XGBoost, LightGBM, CatBoost and tree ensemble methods",
+      "keywords": ["XGBoost", "LightGBM", "CatBoost", "gradient boosting", "GBDT", "tree ensemble", "random forest", "boosting"]
+    },
+    {
+      "id": "pkg-neural-networks",
+      "label": "Deep Learning Frameworks",
+      "macro_category": "Machine Learning",
+      "description": "PyTorch, TensorFlow, and neural network libraries",
+      "keywords": ["PyTorch", "TensorFlow", "Keras", "neural network", "deep learning", "MLP", "CNN", "RNN", "transformer"]
+    },
+    {
+      "id": "pkg-time-series-ml",
+      "label": "Deep Forecasting",
+      "macro_category": "Machine Learning",
+      "description": "Neural network forecasting: TFT, N-BEATS, NeuralProphet",
+      "keywords": ["NeuralProphet", "TFT", "N-BEATS", "deep forecast", "temporal fusion", "neural forecast", "Darts", "GluonTS"]
+    },
+    {
+      "id": "pkg-recommender-systems",
+      "label": "Recommender Systems",
+      "macro_category": "Machine Learning",
+      "description": "Recommendation engines and collaborative filtering",
+      "keywords": ["recommender", "recommendation", "collaborative filtering", "matrix factorization", "surprise", "implicit", "LightFM", "ALS"]
+    },
+    {
+      "id": "pkg-nlp-llm",
+      "label": "NLP & LLM Tools",
+      "macro_category": "Machine Learning",
+      "description": "Natural language processing and LLM libraries",
+      "keywords": ["NLP", "LLM", "transformers", "BERT", "GPT", "LangChain", "spaCy", "NLTK", "huggingface", "embeddings"]
+    },
+    {
+      "id": "pkg-automl",
+      "label": "AutoML & Hyperparameter Tuning",
+      "macro_category": "Machine Learning",
+      "description": "Automated machine learning and hyperparameter optimization",
+      "keywords": ["AutoML", "hyperparameter", "Optuna", "hyperopt", "auto-sklearn", "TPOT", "grid search", "tuning"]
+    },
+    {
+      "id": "pkg-linear-programming",
+      "label": "Linear & Integer Programming",
+      "macro_category": "Operations Research",
+      "description": "LP, MIP solvers and optimization modeling",
+      "keywords": ["linear programming", "LP", "MIP", "integer programming", "PuLP", "OR-Tools", "Gurobi", "CPLEX", "pyomo", "optimization"]
+    },
+    {
+      "id": "pkg-convex-optimization",
+      "label": "Convex Optimization",
+      "macro_category": "Operations Research",
+      "description": "Convex optimization and mathematical programming",
+      "keywords": ["convex", "CVXPY", "SDP", "semidefinite", "SOCP", "conic", "Boyd", "disciplined convex"]
+    },
+    {
+      "id": "pkg-routing",
+      "label": "Routing & Logistics",
+      "macro_category": "Operations Research",
+      "description": "Vehicle routing, TSP, and logistics optimization",
+      "keywords": ["VRP", "vehicle routing", "TSP", "traveling salesman", "routing", "logistics", "dispatch", "CVRP", "last mile"]
+    },
+    {
+      "id": "pkg-simulation",
+      "label": "Discrete Event Simulation",
+      "macro_category": "Operations Research",
+      "description": "Simulation frameworks and agent-based modeling",
+      "keywords": ["SimPy", "simulation", "discrete event", "Monte Carlo", "agent-based", "ABM", "Mesa", "queueing simulation"]
+    },
+    {
+      "id": "pkg-classical-forecasting",
+      "label": "Classical Time Series",
+      "macro_category": "Time Series",
+      "description": "ARIMA, ETS, and classical forecasting methods",
+      "keywords": ["ARIMA", "ETS", "exponential smoothing", "statsmodels", "SARIMA", "Holt-Winters", "ACF", "PACF", "Box-Jenkins"]
+    },
+    {
+      "id": "pkg-prophet-style",
+      "label": "Prophet & Trend Forecasting",
+      "macro_category": "Time Series",
+      "description": "Prophet-style decomposition and trend forecasting",
+      "keywords": ["Prophet", "trend", "seasonality", "changepoint", "decomposition", "holiday effects", "Facebook Prophet"]
+    },
+    {
+      "id": "pkg-hierarchical-forecasting",
+      "label": "Hierarchical Forecasting",
+      "macro_category": "Time Series",
+      "description": "Hierarchical reconciliation and grouped time series",
+      "keywords": ["hierarchical", "reconciliation", "grouped time series", "bottom-up", "top-down", "optimal reconciliation", "scikit-hts"]
+    },
+    {
+      "id": "pkg-bayesian",
+      "label": "Bayesian & Probabilistic Programming",
+      "macro_category": "Statistics",
+      "description": "PyMC, Stan, and probabilistic programming languages",
+      "keywords": ["PyMC", "Stan", "Bayesian", "MCMC", "probabilistic programming", "posterior", "prior", "Numpyro", "arviz"]
+    },
+    {
+      "id": "pkg-hypothesis-testing",
+      "label": "Statistical Testing",
+      "macro_category": "Statistics",
+      "description": "Hypothesis testing and statistical inference",
+      "keywords": ["hypothesis test", "t-test", "chi-square", "ANOVA", "scipy.stats", "statsmodels", "bootstrap", "permutation test"]
+    },
+    {
+      "id": "pkg-survival-analysis",
+      "label": "Survival Analysis",
+      "macro_category": "Statistics",
+      "description": "Survival models, hazard rates, and time-to-event analysis",
+      "keywords": ["survival", "lifelines", "Kaplan-Meier", "Cox", "hazard", "time-to-event", "censoring", "survival regression"]
+    },
+    {
+      "id": "pkg-synthetic-data",
+      "label": "Synthetic Data Generation",
+      "macro_category": "Statistics",
+      "description": "Synthetic data generation and privacy-preserving data",
+      "keywords": ["synthetic data", "SDV", "CTGAN", "data generation", "privacy", "Faker", "mimesis", "differential privacy"]
+    },
+    {
+      "id": "pkg-healthcare",
+      "label": "Healthcare & Clinical",
+      "macro_category": "Industry",
+      "description": "Healthcare analytics, clinical trials, and health economics",
+      "keywords": ["healthcare", "clinical trial", "health economics", "medical", "epidemiology", "HEOR", "pharmacoeconomics", "survival"]
+    },
+    {
+      "id": "pkg-insurance",
+      "label": "Insurance & Actuarial",
+      "macro_category": "Industry",
+      "description": "Actuarial science, claims modeling, and loss reserving",
+      "keywords": ["insurance", "actuarial", "claims", "loss reserve", "chainladder", "GLM pricing", "IBNR", "triangles"]
+    },
+    {
+      "id": "pkg-sports",
+      "label": "Sports Analytics",
+      "macro_category": "Industry",
+      "description": "Sports statistics and sabermetrics packages",
+      "keywords": ["sports", "sabermetrics", "baseball", "basketball", "soccer", "nflfastR", "Lahman", "expected goals", "WAR"]
+    },
+    {
+      "id": "pkg-energy",
+      "label": "Energy & Utilities",
+      "macro_category": "Industry",
+      "description": "Energy economics, utilities, and grid optimization",
+      "keywords": ["energy", "electricity", "power grid", "utilities", "load forecasting", "renewable", "smart grid", "demand response"]
+    },
+    {
+      "id": "pkg-transportation",
+      "label": "Transportation & Mobility",
+      "macro_category": "Industry",
+      "description": "Transportation economics and mobility analytics",
+      "keywords": ["transportation", "mobility", "rideshare", "transit", "traffic", "ETA", "travel time", "origin-destination"]
+    },
+    {
+      "id": "pkg-marketing",
+      "label": "Marketing & CLV",
+      "macro_category": "Industry",
+      "description": "Marketing mix modeling, attribution, and customer analytics",
+      "keywords": ["marketing mix", "MMM", "attribution", "CLV", "lifetime value", "churn", "retention", "RFM", "customer analytics"]
+    },
+    {
+      "id": "pkg-finance",
+      "label": "Quantitative Finance",
+      "macro_category": "Industry",
+      "description": "Quantitative finance, risk, and portfolio optimization",
+      "keywords": ["finance", "quant", "portfolio", "risk", "VaR", "Black-Scholes", "options", "derivatives", "trading"]
+    },
+    {
+      "id": "pkg-geospatial",
+      "label": "Geospatial Analysis",
+      "macro_category": "Industry",
+      "description": "Spatial analysis, GIS, and geographic data processing",
+      "keywords": ["geospatial", "GIS", "GeoPandas", "spatial", "shapely", "folium", "rasterio", "geographic", "mapping"]
+    },
+    {
+      "id": "pkg-data-manipulation",
+      "label": "Data Wrangling",
+      "macro_category": "Data & Utilities",
+      "description": "Data manipulation and transformation libraries",
+      "keywords": ["pandas", "polars", "dplyr", "tidyverse", "data wrangling", "dataframe", "data.table", "arrow"]
+    },
+    {
+      "id": "pkg-visualization",
+      "label": "Data Visualization",
+      "macro_category": "Data & Utilities",
+      "description": "Plotting and visualization libraries",
+      "keywords": ["matplotlib", "plotly", "seaborn", "ggplot", "altair", "visualization", "charts", "dashboard", "bokeh"]
+    },
+    {
+      "id": "pkg-validation",
+      "label": "Data Validation & Quality",
+      "macro_category": "Data & Utilities",
+      "description": "Data validation, testing, and quality frameworks",
+      "keywords": ["validation", "great expectations", "pandera", "pydantic", "data quality", "schema", "testing", "dbt"]
+    },
+    {
+      "id": "pkg-conformal",
+      "label": "Conformal Prediction",
+      "macro_category": "Statistics",
+      "description": "Conformal prediction and uncertainty quantification",
+      "keywords": ["conformal", "MAPIE", "prediction interval", "uncertainty", "coverage", "calibration", "crepes"]
+    },
+    {
+      "id": "pkg-network-analysis",
+      "label": "Network Analysis",
+      "macro_category": "Statistics",
+      "description": "Network analysis, graph algorithms, and social network methods",
+      "keywords": ["network", "igraph", "graph", "social network", "centrality", "community detection", "networkx"]
+    },
+    {
+      "id": "pkg-game-theory",
+      "label": "Game Theory & Mechanism Design",
+      "macro_category": "Operations Research",
+      "description": "Game theory, mechanism design, and strategic interaction",
+      "keywords": ["game theory", "mechanism design", "auction", "Nash", "equilibrium", "OpenSpiel", "strategic"]
+    },
+    {
+      "id": "pkg-causal-mediation",
+      "label": "Causal Mediation Analysis",
+      "macro_category": "Causal Inference",
+      "description": "Causal mediation analysis and path analysis",
+      "keywords": ["mediation", "mediator", "direct effect", "indirect effect", "path analysis", "CMAverse", "natural effect"]
+    },
+    {
+      "id": "pkg-gams",
+      "label": "GAMs & Flexible Regression",
+      "macro_category": "Statistics",
+      "description": "Generalized additive models and flexible regression",
+      "keywords": ["GAM", "mgcv", "gamlss", "additive", "spline", "smooth", "penalized regression", "flexible"]
+    },
+    {
+      "id": "pkg-tmle",
+      "label": "Targeted Learning (TMLE)",
+      "macro_category": "Causal Inference",
+      "description": "Targeted maximum likelihood estimation and AIPW methods",
+      "keywords": ["TMLE", "targeted learning", "AIPW", "ltmle", "tmle3", "SuperLearner", "van der Laan"]
+    },
+    {
+      "id": "pkg-quantile-regression",
+      "label": "Quantile Regression",
+      "macro_category": "Statistics",
+      "description": "Quantile regression and distributional regression methods",
+      "keywords": ["quantile", "quantreg", "distributional", "percentile", "quantile forest", "conditional quantile"]
+    }
+  ]
+}

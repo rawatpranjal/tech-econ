@@ -1,0 +1,519 @@
+id,name,category,language,primary,secondary,confidence,status
+pydoe2,pyDOE2,Power Simulation & Design of Experiments,Python,pkg-power-simulation,,high,success
+mlforecast,MLForecast,Time Series Forecasting,Python,pkg-gradient-boosting,,high,success
+eiapy,eiapy,Data Access,Python,pkg-energy,,high,success
+simpy,SimPy,Simulation & Computational Economics,Python,pkg-simulation,,high,success
+evalue,EValue,Causal Inference (ML),R,pkg-causal-mediation,,high,success
+mcd,MCD,Causal Discovery & Graphical Models,Python,pkg-causal-discovery,,high,success
+eiapy,eiapy,Energy & Utilities Economics,Python,pkg-energy,,high,success
+ltmle,ltmle,Causal Inference (ML),R,pkg-tmle,,high,success
+bunching,bunching,Bunching Estimation,R,pkg-iv-rdd,,high,success
+matching,matching,Matching & Market Design,Python,pkg-matching,,high,success
+spacetrack,spacetrack,Space & Orbital Analysis,Python,pkg-geospatial,,high,success
+ciw,Ciw,Simulation & Computational Economics,Python,pkg-simulation,,high,success
+plm,plm,Panel Data & Fixed Effects,R,pkg-panel-data,,high,success
+xgboost,xgboost,Machine Learning,R,pkg-gradient-boosting,,high,success
+actuar,actuar,Insurance & Actuarial,R,pkg-insurance,,high,success
+bnlearn,bnlearn,Causal Discovery & Graphical Models,R,pkg-causal-discovery,,high,success
+causalweight,causalweight,Causal Inference (ML),R,pkg-causal-mediation,pkg-iv-rdd,high,success
+gridstatus,gridstatus,Data Access,Python,pkg-energy,,high,success
+cvxpy,cvxpy,Optimization,Python,pkg-convex-optimization,,high,success
+arena-simulation,Arena Simulation,Simulation & Computational Economics,SIMAN,pkg-simulation,,high,success
+pycinc,pycinc,"Program Evaluation Methods (DiD, SC, RDD)",Python,pkg-did-synth,pkg-iv-rdd,high,success
+urca,urca,Time Series Econometrics,R,pkg-classical-forecasting,,high,success
+grf,grf,Causal Inference (ML),R,pkg-causal-forests,,high,success
+scpi,scpi,Causal Inference (Synthetic Control),R,pkg-did-synth,,high,success
+jax,JAX,Numerical Optimization & Computational Tools,Python,pkg-neural-networks,,high,success
+dagitty,dagitty,Causal Discovery & Graphical Models,R,pkg-causal-discovery,,high,success
+xgboost,XGBoost,Tree & Ensemble Methods for Prediction,Python,pkg-gradient-boosting,,high,success
+nba_api,nba_api,Sports Analytics,Python,pkg-sports,,high,success
+causal-llm-bfs,causal-llm-bfs,Causal Discovery & Graphical Models,Python,pkg-causal-discovery,,high,success
+superlearner,SuperLearner,Causal Inference (ML),R,pkg-tmle,,high,success
+lmtest,lmtest,Robust Standard Errors,R,pkg-hypothesis-testing,,high,success
+xgboost,xgboost,Machine Learning,Python,pkg-gradient-boosting,,high,success
+mapie,MAPIE,Conformal Prediction & Uncertainty,Python,pkg-conformal,,high,success
+tmle,tmle,Causal Inference (ML),R,pkg-tmle,,high,success
+langgraph,langgraph,Agentic AI,Python,pkg-nlp-llm,,high,success
+webpower,WebPower,Power Analysis,R,pkg-power-simulation,,high,success
+pymc-marketing,PyMC Marketing,Marketing Mix Models (MMM) & Business Analytics,Python,pkg-marketing,,high,success
+synthpop,Synthpop,Synthetic Data Generation,Python,pkg-synthetic-data,,high,success
+datasynthesizer,DataSynthesizer,Synthetic Data Generation,Python,pkg-synthetic-data,,high,success
+chainladder,ChainLadder,Insurance & Actuarial,R,pkg-insurance,,high,success
+tmle3,tmle3,Causal Inference (ML),R,pkg-tmle,,high,success
+drdid,DRDID,Causal Inference (DiD),R,pkg-did-synth,,high,success
+dcegm,dcegm,Structural Econometrics & Estimation,Python,pkg-structural-estimation,,high,success
+dca-deep-count-autoencoder,DCA (Deep Count Autoencoder),Machine Learning,Python,pkg-neural-networks,,high,success
+pydoublelasso,pydoublelasso,Double/Debiased Machine Learning (DML),Python,pkg-pywhy-ecosystem,,high,success
+systemfit,systemfit,Instrumental Variables,R,pkg-iv-rdd,,high,success
+respy,respy,Structural Econometrics & Estimation,Python,pkg-structural-estimation,,high,success
+oasislmf,OasisLMF,Insurance & Actuarial,Python,pkg-insurance,,high,success
+ngboost,NGBoost,Tree & Ensemble Methods for Prediction,Python,pkg-gradient-boosting,,high,success
+trimmed_match,trimmed_match,Geo-Experiments & Lift Measurement,Python,pkg-did-synth,,high,success
+contextual,contextual,Experimental Design,R,pkg-adaptive-bandits,,high,success
+rnetlogo,RNetLogo,Simulation & Computational Economics,R,pkg-simulation,,high,success
+doubleml,DoubleML,Double/Debiased Machine Learning (DML),Python,pkg-pywhy-ecosystem,,high,success
+text2vec,text2vec,Text Analysis,R,pkg-nlp-llm,,high,success
+see,see,Model Diagnostics,R,pkg-visualization,,high,success
+surprise,Surprise,Recommender Systems,Python,pkg-recommender-systems,,high,success
+matched_markets,matched_markets,Geo-Experiments & Lift Measurement,Python,pkg-did-synth,,high,success
+opentsne,openTSNE,Dimensionality Reduction,Python,none,,medium,success
+deepctr,DeepCTR,CTR Prediction,Python,pkg-recommender-systems,,high,success
+surprise,Surprise,MarTech & Customer Analytics,Python,pkg-recommender-systems,,high,success
+greeners,Greeners,Structural Econometrics & Estimation,Rust,pkg-structural-estimation,pkg-panel-data,high,success
+bayesplot,bayesplot,Bayesian Inference,R,pkg-bayesian,,high,success
+mstate,mstate,Healthcare Economics & Health-Tech,R,pkg-survival-analysis,pkg-healthcare,high,success
+stm,stm,Text Analysis,R,pkg-nlp-llm,,high,success
+mgcv,mgcv,Generalized Additive Models,R,pkg-gams,,high,success
+ctgan,CTGAN,Synthetic Data Generation,Python,pkg-synthetic-data,,high,success
+conflictcartographer,conflictcartographer,Defense Research,Python,pkg-geospatial,pkg-visualization,high,success
+didet,didet,"Program Evaluation Methods (DiD, SC, RDD)",Python,pkg-did-synth,,high,success
+neuralforecast,NeuralForecast,Time Series Forecasting,Python,pkg-time-series-ml,,high,success
+rstan,rstan,Bayesian Inference,R,pkg-bayesian,,high,success
+highs,HiGHS,Energy & Utilities Economics,C++/Python,pkg-linear-programming,,high,success
+anylogic,AnyLogic,Simulation & Computational Economics,Java,pkg-simulation,,high,success
+dolo,Dolo,Structural Econometrics & Estimation,Python,pkg-structural-estimation,,high,success
+hockeyr,hockeyR,Sports Analytics,R,pkg-sports,,high,success
+faker,Faker,Synthetic Data Generation,Python,pkg-synthetic-data,,high,success
+adaptive,Adaptive,Power Simulation & Design of Experiments,Python,pkg-power-simulation,,high,success
+microsynth,microsynth,Causal Inference (Synthetic Control),R,pkg-did-synth,,high,success
+boot,boot,Bootstrap & Inference,R,pkg-hypothesis-testing,,high,success
+microsynth,microsynth,Causal Inference (Synthetic Control),R,pkg-did-synth,,high,success
+dolo,Dolo,Simulation & Computational Economics,Python,pkg-structural-estimation,,high,success
+highs,HiGHS,Optimization,Python,pkg-linear-programming,,high,success
+auctiongym,AuctionGym,Simulation & Computational Economics,Python,pkg-game-theory,,high,success
+sandwich,sandwich,Robust Standard Errors,R,pkg-hypothesis-testing,,high,success
+aipyw,aipyw,Causal Inference & Matching,Python,pkg-tmle,,high,success
+pydynpd,pydynpd,Panel Data & Fixed Effects,Python,pkg-panel-data,,high,success
+cleanrl,CleanRL,Simulation & Computational Economics,Python,pkg-simulation,,high,success
+pycox,pycox,Survival Analysis,Python,pkg-survival-analysis,,high,success
+pyqreg,pyqreg,Quantile Regression & Distributional Methods,Python,pkg-quantile-regression,,high,success
+tidyverse,tidyverse,Data Workflow,R,pkg-data-manipulation,pkg-visualization,high,success
+worldfootballr,worldfootballR,Sports Analytics,R,pkg-sports,,high,success
+synapseml,SynapseML,Double/Debiased Machine Learning (DML),Spark,pkg-pywhy-ecosystem,,high,success
+statsmodels,Statsmodels,Core Libraries & Linear Models,Python,pkg-hypothesis-testing,,high,success
+gcastle,gCastle,Causal Discovery & Graphical Models,Python,pkg-causal-discovery,,high,success
+nfl-data-py,nfl-data-py,Sports Analytics,Python,pkg-sports,,high,success
+lifelines,lifelines,Statistical Inference & Hypothesis Testing,Python,pkg-survival-analysis,,high,success
+ivreg,ivreg,Instrumental Variables,R,pkg-iv-rdd,,high,success
+pymc-marketing,PyMC-Marketing,Marketing Analytics,Python,pkg-marketing,,high,success
+augsynth,augsynth,Causal Inference (Synthetic Control),R,pkg-did-synth,,high,success
+keceni,KECENI,Causal Inference & Matching,Python,pkg-network-analysis,pkg-causal-forests,high,success
+scvi-tools,scVI-tools,Machine Learning,Python,pkg-neural-networks,,high,success
+hypothetical,hypothetical,Statistical Inference & Hypothesis Testing,Python,pkg-hypothesis-testing,,high,success
+pymc-marketing,PyMC-Marketing,MarTech & Customer Analytics,Python,pkg-marketing,,high,success
+lahman,Lahman,Sports Analytics,R,pkg-sports,,high,success
+sdci,SDCI,Causal Discovery & Graphical Models,Python,pkg-causal-discovery,,high,success
+peacesciencer,peacesciencer,Defense Research,R,none,,medium,success
+lifelines,lifelines,Insurance & Actuarial,Python,pkg-survival-analysis,pkg-insurance,high,success
+sctools,SCtools,Causal Inference (Synthetic Control),R,pkg-did-synth,,high,success
+rddapp,rddapp,Causal Inference (RDD),R,pkg-iv-rdd,,high,success
+biogeme,Biogeme,Discrete Choice Models,Python,pkg-structural-estimation,,high,success
+fwildclusterboot,fwildclusterboot,Bootstrap & Inference,R,pkg-hypothesis-testing,,high,success
+nflfastr,nflfastR,Sports Analytics,R,pkg-sports,,high,success
+lifelines,lifelines,Healthcare Economics & Health-Tech,Python,pkg-survival-analysis,,high,success
+cobalt,cobalt,Causal Inference (Matching),R,pkg-matching,,high,success
+tidytext,tidytext,Text Analysis,R,pkg-nlp-llm,,high,success
+tidymodels,tidymodels,Machine Learning,R,pkg-automl,,high,success
+pyliferisk,pyliferisk,Insurance & Actuarial,Python,pkg-insurance,,high,success
+matchingr,matchingR,Matching & Market Design,R,pkg-matching,,high,success
+rsample,rsample,Bootstrap & Inference,R,pkg-hypothesis-testing,,high,success
+biogeme,Biogeme,Transportation Economics & Technology,Python,pkg-transportation,,high,success
+faer,Faer,Numerical Optimization & Computational Tools,Rust,pkg-linear-programming,,high,success
+ggdag,ggdag,Causal Discovery & Graphical Models,R,pkg-causal-discovery,,high,success
+genx,GenX,Energy & Utilities Economics,Julia,pkg-energy,,high,success
+polars,Polars,Core Libraries & Linear Models,Rust,pkg-data-manipulation,,high,success
+quantile-forest,quantile-forest,Quantile Regression & Distributional Methods,Python,pkg-quantile-regression,,high,success
+pcalg,pcalg,Causal Discovery & Graphical Models,R,pkg-causal-discovery,,high,success
+upliftml,UpliftML,Uplift Modeling,Python,pkg-marketing,,high,success
+rddensity,rddensity,Causal Inference (RDD),R,pkg-iv-rdd,,high,success
+genx,GenX,Energy Systems Modeling,Julia,pkg-energy,,high,success
+openspiel,OpenSpiel,Game Theory & Mechanism Design,Python,pkg-game-theory,,high,success
+algmatch,algmatch,Matching & Market Design,Python,pkg-matching,,high,success
+cowplot,cowplot,Visualization,R,pkg-visualization,,high,success
+car,car,Model Diagnostics,R,pkg-hypothesis-testing,,high,success
+survminer,survminer,Insurance & Actuarial,R,pkg-survival-analysis,pkg-insurance,high,success
+superpower,Superpower,Power Simulation & Design of Experiments,R,pkg-power-simulation,,high,success
+evd,evd,Insurance & Actuarial,R,pkg-insurance,,high,success
+mmm_stan,mmm_stan,Marketing Mix Models (MMM) & Business Analytics,Python,pkg-marketing,,high,success
+gamlss,gamlss,Generalized Additive Models,R,pkg-gams,,high,success
+benchpress,Benchpress,Causal Discovery & Graphical Models,Python,pkg-causal-discovery,,high,success
+lightfm,LightFM,MarTech & Customer Analytics,Python,pkg-recommender-systems,,high,success
+lmertest,lmerTest,Mixed Effects,R,pkg-hypothesis-testing,,high,success
+powermodels.jl,PowerModels.jl,Energy & Utilities Economics,Julia,pkg-energy,,high,success
+econml,EconML,Double/Debiased Machine Learning (DML),Python,pkg-pywhy-ecosystem,pkg-causal-forests,high,success
+ebal,ebal,Causal Inference (Matching),R,pkg-matching,,high,success
+rdrobust,rdrobust,"Program Evaluation Methods (DiD, SC, RDD)",Python,pkg-iv-rdd,,high,success
+stable-baselines3,Stable-Baselines3,Simulation & Computational Economics,Python,pkg-simulation,,high,success
+tfp-causalimpact,TFP CausalImpact,"Program Evaluation Methods (DiD, SC, RDD)",Python,pkg-did-synth,,high,success
+torch-choice,torch-choice,Discrete Choice Models,Python,pkg-structural-estimation,,high,success
+powermodels.jl,PowerModels.jl,Energy Systems Modeling,Julia,pkg-energy,,high,success
+econml,EconML,Healthcare Economics & Health-Tech,Python,pkg-pywhy-ecosystem,pkg-causal-forests,high,success
+deep-opt-auctions,deep-opt-auctions,Matching & Market Design,Python,pkg-game-theory,,high,success
+doegen,DoEgen,Power Simulation & Design of Experiments,Python,pkg-power-simulation,,high,success
+cmaverse,CMAverse,Causal Inference (Mediation),R,pkg-causal-mediation,,high,success
+simchef,simChef,Power Simulation & Design of Experiments,R,pkg-power-simulation,,high,success
+econml,EconML,Causal Inference,Python,pkg-pywhy-ecosystem,pkg-causal-forests,high,success
+fabricatr,fabricatr,Experimental Design,R,pkg-power-simulation,,high,success
+causaldata,causaldata,Datasets,R,none,,low,success
+ggraph,ggraph,Network Analysis,R,pkg-network-analysis,,high,success
+pyleebounds,pyleebounds,"Program Evaluation Methods (DiD, SC, RDD)",Python,pkg-did-synth,pkg-iv-rdd,high,success
+jaxonometrics,jaxonometrics,Numerical Optimization & Computational Tools,Python,pkg-structural-estimation,,high,success
+econml,EconML,MarTech & Customer Analytics,Python,pkg-pywhy-ecosystem,pkg-causal-forests,high,success
+pypsa,PyPSA,Energy & Utilities Economics,Python,pkg-energy,,high,success
+nlrx,nlrx,Simulation & Computational Economics,R,pkg-simulation,,high,success
+lingam,LiNGAM,Causal Discovery & Graphical Models,Python,pkg-causal-discovery,,high,success
+recbole,RecBole,MarTech & Customer Analytics,Python,pkg-recommender-systems,,high,success
+mediation,mediation,Causal Inference (Mediation),R,pkg-causal-mediation,,high,success
+cuml-rapids,cuML (RAPIDS),Tree & Ensemble Methods for Prediction,Python,pkg-gradient-boosting,,high,success
+pypsa,PyPSA,Energy Systems Modeling,Python,pkg-energy,,high,success
+igraph,igraph,Network Analysis,R,pkg-network-analysis,,high,success
+sentence-transformers,sentence-transformers,Natural Language Processing for Economics,Python,pkg-nlp-llm,,high,success
+py-tetrad,py-tetrad,Causal Discovery & Graphical Models,Python,pkg-causal-discovery,,high,success
+igraph,igraph,Network Analysis,R,pkg-network-analysis,,high,success
+pstrata,PStrata,Causal Inference (Principal Stratification),R,pkg-causal-mediation,,high,success
+crepes,crepes,Conformal Prediction & Uncertainty,Python,pkg-conformal,,high,success
+ranger,ranger,Machine Learning,R,pkg-gradient-boosting,,high,success
+pyfixest,PyFixest,Panel Data & Fixed Effects,Python,pkg-panel-data,,high,success
+targets,targets,Reproducibility,R,none,,high,success
+cbps,CBPS,Causal Inference (Matching),R,pkg-matching,,high,success
+tigramite,Tigramite,Causal Discovery & Graphical Models,Python,pkg-causal-discovery,,high,success
+didhetero,didhetero,"Program Evaluation Methods (DiD, SC, RDD)",Python,pkg-did-synth,,high,success
+deepecho,DeepEcho,Synthetic Data Generation,Python,pkg-synthetic-data,,high,success
+supersuit,SuperSuit,Simulation & Computational Economics,Python,pkg-simulation,,high,success
+pygambit,pygambit,Game Theory & Mechanism Design,Python,pkg-game-theory,,high,success
+causalmatch,CausalMatch,Causal Inference & Matching,Python,pkg-matching,,high,success
+extremes,extRemes,Insurance & Actuarial,R,pkg-insurance,,high,success
+abides,ABIDES,Simulation & Computational Economics,Python,pkg-simulation,,high,success
+mlpwr,mlpwr,Power Simulation & Design of Experiments,R,pkg-power-simulation,,high,success
+tidygraph,tidygraph,Network Analysis,R,pkg-network-analysis,,high,success
+duckreg,duckreg,Panel Data & Fixed Effects,Python,pkg-panel-data,,high,success
+randomizr,randomizr,Experimental Design,R,pkg-ab-testing,,high,success
+edsl,EDSL,Agentic AI,Python,pkg-nlp-llm,,high,success
+tea-tasting,tea-tasting,Power Simulation & Design of Experiments,Python,pkg-ab-testing,,high,success
+countrycode,countrycode,Data Wrangling,R,pkg-data-manipulation,,high,success
+causal-discovery-toolbox-cdt,Causal Discovery Toolbox (CDT),Causal Discovery & Graphical Models,Python,pkg-causal-discovery,,high,success
+argmin,Argmin,Optimization,Rust,pkg-structural-estimation,,high,success
+fortuna,fortuna,Conformal Prediction & Uncertainty,Python,pkg-conformal,,high,success
+scipy-bootstrap,SciPy Bootstrap,"Standard Errors, Bootstrapping & Reporting",Python,pkg-hypothesis-testing,,high,success
+pylift,pylift,Uplift Modeling,Python,pkg-marketing,,high,success
+ivmodel,ivmodel,Instrumental Variables,R,pkg-iv-rdd,,high,success
+glmmtmb,glmmTMB,Mixed Effects,R,pkg-panel-data,,high,success
+causalnex,CausalNex,Causal Discovery & Graphical Models,Python,pkg-causal-discovery,,high,success
+torchonometrics,torchonometrics,Numerical Optimization & Computational Tools,Python,pkg-structural-estimation,,high,success
+pyomo,Pyomo,Energy & Utilities Economics,Python,pkg-linear-programming,,high,success
+nlme,nlme,Mixed Effects,R,pkg-panel-data,,high,success
+tensorflow,TensorFlow,Machine Learning,Python,pkg-neural-networks,,high,success
+mlsynth,mlsynth,"Program Evaluation Methods (DiD, SC, RDD)",Python,pkg-did-synth,,high,success
+gegravity,gegravity,Structural Econometrics & Estimation,Python,pkg-structural-estimation,,high,success
+causalgps,CausalGPS,Causal Inference (Continuous Treatment),R,pkg-matching,,high,success
+lifecontingencies,lifecontingencies,Insurance & Actuarial,R,pkg-insurance,,high,success
+pyomo,Pyomo,Optimization,Python,pkg-linear-programming,,high,success
+data.table,data.table,Data Workflow,R,pkg-data-manipulation,,high,success
+momentfit,momentfit,Instrumental Variables,R,pkg-structural-estimation,pkg-iv-rdd,high,success
+synthlearners,synthlearners,"Program Evaluation Methods (DiD, SC, RDD)",Python,pkg-did-synth,,high,success
+lightgbm,LightGBM,Tree & Ensemble Methods for Prediction,Python,pkg-gradient-boosting,,high,success
+bcea,BCEA,Healthcare Economics & Health-Tech,R,pkg-healthcare,,high,success
+cjoint,cjoint,Conjoint Analysis,R,pkg-ab-testing,,high,success
+geolift,GeoLift,Geo-Experiments & Lift Measurement,Python,pkg-did-synth,,high,success
+pwr,pwr,Power Analysis,R,pkg-power-simulation,,high,success
+geolift,GeoLift,Causal Inference,R,pkg-did-synth,,high,success
+fairpyx,fairpyx,Game Theory & Mechanism Design,Python,pkg-game-theory,,high,success
+pylogit,PyLogit,Discrete Choice Models,Python,pkg-structural-estimation,,high,success
+simr,simr,Power Analysis,R,pkg-power-simulation,,high,success
+lightgbm,LightGBM,Machine Learning,Python,pkg-gradient-boosting,,high,success
+cplm,cplm,Insurance & Actuarial,R,pkg-insurance,,high,success
+linfa,Linfa,Tree & Ensemble Methods for Prediction,Rust,pkg-gradient-boosting,,medium,success
+pylogit,PyLogit,Transportation Economics & Technology,Python,pkg-transportation,,high,success
+causalmotifs,CausalMotifs,Interference & Spillovers,Python,pkg-ab-testing,,high,success
+recombinator,recombinator,Bootstrap & Inference,Python,pkg-hypothesis-testing,,high,success
+catboost,CatBoost,Tree & Ensemble Methods for Prediction,Python,pkg-gradient-boosting,,high,success
+catenets,CATENets,Causal Inference & Matching,Python,pkg-causal-forests,,high,success
+gretel-synthetics,Gretel Synthetics,Synthetic Data Generation,Python,pkg-synthetic-data,,high,success
+pysal-core,(PySAL Core),Spatial Econometrics,Python,pkg-geospatial,,high,success
+collapse,collapse,Data Workflow,R,pkg-data-manipulation,,high,success
+upper-envelope,upper-envelope,Structural Econometrics & Estimation,Python,pkg-structural-estimation,,high,success
+mamimo,MaMiMo,Marketing Mix Models (MMM) & Business Analytics,Python,pkg-marketing,,high,success
+fixedeffectmodelpyhdfe,FixedEffectModelPyHDFE,Panel Data & Fixed Effects,Python,pkg-panel-data,,high,success
+adopy,ADOpy,Power Simulation & Design of Experiments,Python,pkg-power-simulation,,high,success
+rddtools,rddtools,Causal Inference (RDD),R,pkg-iv-rdd,,high,success
+gensim,Gensim,Natural Language Processing for Economics,Python,pkg-nlp-llm,,high,success
+consensus,Consensus,Research Tools,Web,none,,medium,success
+bootur,bootUR,Bootstrap & Inference,R,pkg-hypothesis-testing,,high,success
+pysal-spreg,PySAL (spreg),Spatial Econometrics,Python,pkg-geospatial,,high,success
+aer,AER,Datasets,R,pkg-iv-rdd,,high,success
+networkcausaltree,NetworkCausalTree,Causal Inference & Matching,Python,pkg-network-analysis,,high,success
+ortools,ortools,Optimization,Python,pkg-linear-programming,pkg-routing,high,success
+causal-curve,causal-curve,Causal Inference & Matching,Python,pkg-tmle,,high,success
+recommenderlab,recommenderlab,MarTech & Customer Analytics,R,pkg-recommender-systems,,high,success
+pywhy-stats,PyWhy-Stats,Statistical Inference & Hypothesis Testing,Python,pkg-hypothesis-testing,,high,success
+gurobipy,gurobipy,Optimization,Python,pkg-linear-programming,,high,success
+netlogor,NetLogoR,Simulation & Computational Economics,R,pkg-simulation,,high,success
+emmeans,emmeans,Marginal Effects,R,pkg-hypothesis-testing,,high,success
+weightit,WeightIt,Causal Inference (Matching),R,pkg-matching,,high,success
+maketables,maketables,Inference & Reporting Tools,Python,pkg-hypothesis-testing,,high,success
+panelhetero,panelhetero,Panel Data & Fixed Effects,Python,pkg-panel-data,,high,success
+linregress,Linregress,Core Libraries & Linear Models,Rust,pkg-hypothesis-testing,,high,success
+openmx,OpenMx,Structural Equation Modeling,R,pkg-structural-estimation,,high,success
+linearmodels,Linearmodels,Panel Data & Fixed Effects,Python,pkg-panel-data,,high,success
+glmnet,glmnet,Machine Learning,R,pkg-gradient-boosting,,high,success
+mimesis,Mimesis,Synthetic Data Generation,Python,pkg-synthetic-data,,high,success
+pysensemakr,PySensemakr,Causal Inference & Matching,Python,pkg-pywhy-ecosystem,,high,success
+stochvol,stochvol,State Space & Volatility Models,Python,pkg-bayesian,,high,success
+y0,y0,Causal Inference & Matching,Python,pkg-causal-discovery,,high,success
+gsynth,gsynth,Causal Inference (Synthetic Control),R,pkg-did-synth,,high,success
+nltk,NLTK,Natural Language Processing for Economics,Python,pkg-nlp-llm,,high,success
+apache-sedona,Apache Sedona,Spatial Econometrics,Spark,pkg-geospatial,,high,success
+miceforest,miceforest,Statistical Inference & Hypothesis Testing,Python,pkg-hypothesis-testing,,high,success
+scipy.optimize,scipy.optimize,Optimization,Python,pkg-linear-programming,,high,success
+mcf-modified-causal-forest,mcf (Modified Causal Forest),Causal Inference & Matching,Python,pkg-causal-forests,,high,success
+geconpy,gEconpy,Structural Econometrics & Estimation,Python,pkg-structural-estimation,,high,success
+lme4,lme4,Mixed Effects,R,pkg-panel-data,,high,success
+pyblp,PyBLP,Discrete Choice Models,Python,pkg-structural-estimation,,high,success
+pyregadj,pyregadj,Causal Inference & Matching,Python,pkg-causal-mediation,,high,success
+haven,haven,Data Workflow,R,pkg-data-manipulation,,high,success
+catalystcoop-pudl,catalystcoop-pudl,Energy & Utilities Economics,Python,pkg-energy,,high,success
+rdpower,rdpower,Causal Inference (RDD),R,pkg-iv-rdd,,high,success
+hypors,HypoRS,Statistical Inference & Hypothesis Testing,Rust,pkg-hypothesis-testing,,high,success
+causalnlp,CausalNLP,Natural Language Processing for Economics,Python,pkg-pywhy-ecosystem,,high,success
+bartcause,bartCause,Bayesian Causal Inference,R,pkg-causal-forests,,high,success
+hark,HARK,Structural Econometrics & Estimation,Python,pkg-structural-estimation,,high,success
+catalystcoop-pudl,catalystcoop-pudl,Data Access,Python,pkg-energy,,high,success
+nashpy,Nashpy,Game Theory & Mechanism Design,Python,pkg-game-theory,,high,success
+rdd,rdd,"Program Evaluation Methods (DiD, SC, RDD)",Python,pkg-iv-rdd,,high,success
+localprojections,LocalProjections,Time Series Econometrics,Python,pkg-classical-forecasting,,high,success
+connected-papers,Connected Papers,Research Tools,Web,pkg-visualization,,high,success
+statrs,Statrs,Statistical Inference & Hypothesis Testing,Rust,pkg-hypothesis-testing,,high,success
+fastmatch,fastmatch,Causal Inference & Matching,Python,pkg-matching,,high,success
+causalimpact,CausalImpact,"Program Evaluation Methods (DiD, SC, RDD)",Python,pkg-did-synth,pkg-iv-rdd,high,success
+pingouin,Pingouin,Statistical Inference & Hypothesis Testing,Python,pkg-hypothesis-testing,,high,success
+csdid,csdid,"Program Evaluation Methods (DiD, SC, RDD)",Python,pkg-did-synth,,high,success
+scikit-uplift,scikit-uplift,Causal Inference & Matching,Python,pkg-pywhy-ecosystem,,high,success
+tidysynth,tidysynth,Causal Inference (Synthetic Control),R,pkg-did-synth,,high,success
+statsbombpy,statsbombpy,Sports Analytics,Python,pkg-sports,,high,success
+causalimpact,CausalImpact,Causal Inference,R,pkg-did-synth,,high,success
+factoranalyzer,FactorAnalyzer,Dimensionality Reduction,Python,none,,medium,success
+survhe,survHE,Healthcare Economics & Health-Tech,R,pkg-survival-analysis,pkg-healthcare,high,success
+rmarkdown,rmarkdown,Reproducibility,R,none,,high,success
+stargazer,stargazer,Regression Output,R,pkg-visualization,,high,success
+stargazer,Stargazer,"Standard Errors, Bootstrapping & Reporting",Python,pkg-hypothesis-testing,,high,success
+scarfmatch,scarfmatch,Matching & Market Design,Python,pkg-game-theory,,high,success
+mplsoccer,mplsoccer,Sports Analytics,Python,pkg-sports,,high,success
+appelpy,appelpy,Core Libraries & Linear Models,Python,pkg-structural-estimation,,high,success
+atbounds,ATbounds,Causal Inference (Bounds),R,pkg-iv-rdd,,high,success
+pmdarima,pmdarima,Time Series Forecasting,Python,pkg-classical-forecasting,,high,success
+pyro,Pyro,Bayesian Inference,Python,pkg-bayesian,,high,success
+pettingzoo,PettingZoo,Simulation & Computational Economics,Python,pkg-game-theory,,high,success
+fairpy,fairpy,Game Theory & Mechanism Design,Python,pkg-game-theory,,high,success
+sna,sna,Network Analysis,R,pkg-network-analysis,,high,success
+patchwork,patchwork,Visualization,R,pkg-visualization,,high,success
+pydtr,pydtr,Causal Inference & Matching,Python,pkg-pywhy-ecosystem,,high,success
+causallift,CausalLift,Uplift Modeling,Python,pkg-pywhy-ecosystem,,high,success
+prophet,Prophet,Time Series Forecasting,Python,pkg-prophet-style,,high,success
+synthdid,synthdid,Causal Inference (Synthetic Control),R,pkg-did-synth,,high,success
+pydsge,pydsge,Structural Econometrics & Estimation,Python,pkg-structural-estimation,,high,success
+pyrifreg,pyrifreg,Quantile Regression & Distributional Methods,Python,pkg-quantile-regression,,high,success
+causalinference,CausalInference,Causal Inference & Matching,Python,pkg-matching,,high,success
+pyhtelasso,pyhtelasso,Double/Debiased Machine Learning (DML),Python,pkg-pywhy-ecosystem,,high,success
+fable,fable,Time Series Forecasting,R,pkg-classical-forecasting,,high,success
+smartcore,SmartCore,Tree & Ensemble Methods for Prediction,Rust,pkg-gradient-boosting,,high,success
+pytorch,PyTorch,Numerical Optimization & Computational Tools,Python,pkg-neural-networks,,high,success
+prophet,prophet,Time Series Forecasting,R,pkg-prophet-style,,high,success
+nalgebra,Nalgebra,Numerical Optimization & Computational Tools,Rust,none,,high,success
+dowhy,DoWhy,Causal Inference & Matching,Python,pkg-pywhy-ecosystem,pkg-causal-discovery,high,success
+pensynth,pensynth,Causal Inference (Synthetic Control),R,pkg-did-synth,,high,success
+robyn,Robyn,Marketing Analytics,R,pkg-marketing,,high,success
+prophet,Prophet,Energy & Utilities Economics,Python/R,pkg-prophet-style,,high,success
+pynare,pynare,Structural Econometrics & Estimation,Python,pkg-structural-estimation,,high,success
+implicit,Implicit,MarTech & Customer Analytics,Python,pkg-recommender-systems,,high,success
+dowhy,DoWhy,Causal Inference,Python,pkg-pywhy-ecosystem,,high,success
+wooldridge,wooldridge,Datasets,R,none,,high,success
+fixest,fixest,Panel Data & Fixed Effects,R,pkg-panel-data,,high,success
+ai-economist,AI Economist,Simulation & Computational Economics,Python,pkg-game-theory,,high,success
+causalplayground,CausalPlayground,Causal Inference & Matching,Python,pkg-pywhy-ecosystem,,high,success
+py-econometrics-`gmm`,py-econometrics `gmm`,Instrumental Variables,Python,pkg-structural-estimation,pkg-iv-rdd,high,success
+doubly-debiased-lasso,Doubly-Debiased-Lasso,Double/Debiased Machine Learning (DML),Python,pkg-pywhy-ecosystem,,high,success
+research-rabbit,Research Rabbit,Research Tools,Web,pkg-network-analysis,,high,success
+arch,ARCH,Time Series Econometrics,Python,pkg-classical-forecasting,,high,success
+renv,renv,Reproducibility,R,none,,high,success
+wildboottest,wildboottest,"Standard Errors, Bootstrapping & Reporting",Python,pkg-hypothesis-testing,,high,success
+causalml,CausalML,Causal Inference & Matching,Python,pkg-pywhy-ecosystem,,high,success
+umap-learn,umap-learn,Dimensionality Reduction,Python,none,,medium,success
+btydplus,BTYDplus,MarTech & Customer Analytics,R,pkg-marketing,,high,success
+torchrl,TorchRL,Simulation & Computational Economics,Python,pkg-simulation,,high,success
+clvtools,CLVTools,MarTech & Customer Analytics,R,pkg-marketing,,high,success
+simpop,simPop,Synthetic Data Generation,R,pkg-synthetic-data,,high,success
+expectation,expectation,Statistical Inference & Hypothesis Testing,Python,pkg-hypothesis-testing,,high,success
+fixedeffectmodel,FixedEffectModel,Panel Data & Fixed Effects,Python,pkg-panel-data,,high,success
+marginaleffects,marginaleffects,Marginal Effects,R,pkg-hypothesis-testing,,high,success
+causalml,CausalML,Healthcare Economics & Health-Tech,Python,pkg-pywhy-ecosystem,pkg-causal-forests,high,success
+semantic-scholar-api,Semantic Scholar API,Research Tools,Python,none,,medium,success
+ax-meta-adaptive-experimentation,Ax (Meta Adaptive Experimentation),Adaptive Experimentation & Bandits,Python,pkg-adaptive-bandits,,high,success
+texreg,texreg,Regression Output,R,pkg-hypothesis-testing,,high,success
+torchcp,TorchCP,Conformal Prediction & Uncertainty,Python,pkg-conformal,,high,success
+causalml,CausalML,Causal Inference,Python,pkg-pywhy-ecosystem,,high,success
+gale-shapley,gale-shapley,Matching & Market Design,Python,pkg-matching,,high,success
+econpizza,econpizza,Structural Econometrics & Estimation,Python,pkg-structural-estimation,,high,success
+rdmulti,rdmulti,Causal Inference (RDD),R,pkg-iv-rdd,,high,success
+syntheticcontrolmethods,SyntheticControlMethods,"Program Evaluation Methods (DiD, SC, RDD)",Python,pkg-did-synth,,high,success
+pysyncon,pysyncon,"Program Evaluation Methods (DiD, SC, RDD)",Python,pkg-did-synth,,high,success
+causalml,CausalML,MarTech & Customer Analytics,Python,pkg-pywhy-ecosystem,,high,success
+bambi,Bambi,Bayesian Econometrics,Python,pkg-bayesian,,high,success
+fhirclient,fhirclient,Healthcare Economics & Health-Tech,Python,pkg-healthcare,,high,success
+declaredesign,DeclareDesign,Experimental Design,R,pkg-ab-testing,pkg-power-simulation,high,success
+lifetimes,Lifetimes,Marketing Mix Models (MMM) & Business Analytics,Python,pkg-marketing,,high,success
+causal-learn,causal-learn,Causal Discovery & Graphical Models,Python,pkg-causal-discovery,,high,success
+mesa,Mesa,Simulation & Computational Economics,Python,pkg-simulation,,high,success
+causallib,CausalLib,Causal Inference & Matching,Python,pkg-pywhy-ecosystem,,high,success
+scikit-learn-ens.,Scikit-learn Ens.,Tree & Ensemble Methods for Prediction,Python,pkg-gradient-boosting,,high,success
+elicit,Elicit,Research Tools,Web,none,,high,success
+cregg,cregg,Conjoint Analysis,R,pkg-ab-testing,,high,success
+skyfield,Skyfield,Space & Orbital Analysis,Python,pkg-geospatial,,high,success
+blavaan,blavaan,Structural Equation Modeling,R,pkg-bayesian,,high,success
+lifetimes,lifetimes,MarTech & Customer Analytics,Python,pkg-marketing,,high,success
+bacondecomp,bacondecomp,Causal Inference (DiD),R,pkg-did-synth,,high,success
+contextualbandits,ContextualBandits,Adaptive Experimentation & Bandits,Python,pkg-adaptive-bandits,,high,success
+causal-bert-pytorch,causal-bert-pytorch,Causal Inference (ML),Python,pkg-pywhy-ecosystem,,high,success
+monai,MONAI,Healthcare Economics & Health-Tech,Python,pkg-healthcare,,high,success
+bife,bife,Panel Data & Fixed Effects,R,pkg-panel-data,,high,success
+sgp4,sgp4,Space & Orbital Analysis,Python,pkg-geospatial,,high,success
+h2o-sparkling-water,H2O Sparkling Water,Core Libraries & Linear Models,Spark,pkg-automl,,high,success
+or-gym,OR-Gym,Simulation & Computational Economics,Python,pkg-simulation,,high,success
+python-packages-for-applied-economists,Python Packages for Applied Economists,Inference & Reporting Tools,Python,pkg-hypothesis-testing,,high,success
+gmm,gmm,Instrumental Variables,R,pkg-structural-estimation,pkg-iv-rdd,high,success
+causalpy,CausalPy,MarTech & Customer Analytics,Python,pkg-did-synth,,high,success
+bayesianbandits,BayesianBandits,Adaptive Experimentation & Bandits,Python,pkg-adaptive-bandits,,high,success
+ruspy,ruspy,Structural Econometrics & Estimation,Python,pkg-structural-estimation,,high,success
+sdv-synthetic-data-vault,SDV (Synthetic Data Vault),Synthetic Data Generation,Python,pkg-synthetic-data,,high,success
+causalpy,CausalPy,Causal Inference (Synthetic Control),Python,pkg-did-synth,pkg-iv-rdd,high,success
+synth,Synth,Causal Inference (Synthetic Control),R,pkg-did-synth,,high,success
+mabwiser,MABWiser,Adaptive Experimentation & Bandits,Python,pkg-adaptive-bandits,,high,success
+testinterference,testinterference,Interference & Spillovers,Python,pkg-hypothesis-testing,,high,success
+gt,gt,Regression Output,R,pkg-visualization,,high,success
+ts-flint,TS-Flint,Time Series Econometrics,Spark,pkg-time-series-ml,,high,success
+did,did,Causal Inference (DiD),R,pkg-did-synth,,high,success
+kats,Kats,Time Series Econometrics,Python,pkg-classical-forecasting,,high,success
+open-bandit-pipeline-obp,Open Bandit Pipeline (OBP),Adaptive Experimentation & Bandits,Python,pkg-adaptive-bandits,,high,success
+simio,Simio,Simulation & Computational Economics,C#,pkg-simulation,,high,success
+puncc,puncc,Conformal Prediction & Uncertainty,Python,pkg-conformal,,high,success
+computational-methods-for-practitioners,Computational Methods for practitioners,Inference & Reporting Tools,Python,none,,medium,success
+lightweightmmm,LightweightMMM,Bayesian Econometrics,Python,pkg-marketing,,high,success
+performance,performance,Model Diagnostics,R,pkg-hypothesis-testing,,high,success
+honestdid,HonestDiD,Causal Inference (DiD),R,pkg-did-synth,,high,success
+rdlocrand,rdlocrand,Causal Inference (RDD),R,pkg-iv-rdd,,high,success
+spilled_t,spilled_t,Interference & Spillovers,Python,pkg-causal-mediation,,high,success
+vars,vars,Time Series Econometrics,R,pkg-classical-forecasting,,high,success
+alpaca,alpaca,Panel Data & Fixed Effects,R,pkg-panel-data,,high,success
+abracadabra,abracadabra,Adaptive Experimentation & Bandits,Python,pkg-ab-testing,pkg-adaptive-bandits,high,success
+opendss,OpenDSS,Energy & Utilities Economics,COM/Python,pkg-energy,,high,success
+augurs,Augurs,Time Series Forecasting,Rust,pkg-classical-forecasting,pkg-prophet-style,high,success
+shap,SHAP,Insurance & Actuarial,Python,pkg-gradient-boosting,,high,success
+staggered,staggered,Causal Inference (DiD),R,pkg-did-synth,,high,success
+lfe,lfe,Panel Data & Fixed Effects,R,pkg-panel-data,,high,success
+ananke,Ananke,Causal Discovery & Graphical Models,Python,pkg-causal-discovery,,high,success
+pykalman,PyKalman,State Space & Volatility Models,Python,pkg-time-series-ml,,high,success
+fect,fect,Causal Inference (DiD),R,pkg-did-synth,,high,success
+gcimpute,gcimpute,Statistical Inference & Hypothesis Testing,Python,pkg-hypothesis-testing,,high,success
+opendss,OpenDSS,Energy Systems Modeling,Python,pkg-energy,,high,success
+shiftsharese,ShiftShareSE,Instrumental Variables,R,pkg-iv-rdd,,high,success
+vade,VaDE,Machine Learning,Python,pkg-neural-networks,,high,success
+xlogit,XLogit,Discrete Choice Models,Python,pkg-structural-estimation,,high,success
+pyxab,PyXAB,Adaptive Experimentation & Bandits,Python,pkg-adaptive-bandits,,high,success
+kfas,KFAS,Time Series Econometrics,R,pkg-classical-forecasting,,high,success
+fastdid,fastdid,Causal Inference (DiD),R,pkg-did-synth,,high,success
+panelr,panelr,Panel Data & Fixed Effects,R,pkg-panel-data,,high,success
+scikit-survival,scikit-survival,Insurance & Actuarial,Python,pkg-survival-analysis,pkg-insurance,high,success
+sdcmicro,sdcMicro,Synthetic Data Generation,R,pkg-synthetic-data,,high,success
+dlm,dlm,Time Series Econometrics,R,pkg-classical-forecasting,,high,success
+hesim,hesim,Healthcare Economics & Health-Tech,R,pkg-healthcare,,high,success
+didimputation,didimputation,Causal Inference (DiD),R,pkg-did-synth,,high,success
+xlogit,xlogit,Transportation Economics & Technology,Python,pkg-transportation,,high,success
+anthropic,anthropic,Agentic AI,Python,pkg-nlp-llm,,high,success
+scikit-survival,scikit-survival,Healthcare Economics & Health-Tech,Python,pkg-survival-analysis,pkg-healthcare,high,success
+quantecon.py,QuantEcon.py,Structural Econometrics & Estimation,Python,pkg-structural-estimation,,high,success
+bsts,bsts,Bayesian Causal Inference,R,pkg-bayesian,,high,success
+forecast,forecast,Time Series Forecasting,R,pkg-classical-forecasting,,high,success
+python-louvain,python-louvain,Network Analysis,Python,pkg-network-analysis,,high,success
+osmnx,OSMnx,Transportation Economics & Technology,Python,pkg-transportation,pkg-geospatial,high,success
+clusterbootstraps,clusterbootstraps,Inference & Reporting Tools,Python,pkg-hypothesis-testing,,high,success
+inferference,inferference,Causal Inference (Interference),R,pkg-causal-mediation,,high,success
+queueing,queueing,Simulation & Computational Economics,R,pkg-simulation,,high,success
+abce,ABCE,Simulation & Computational Economics,Python,pkg-simulation,,high,success
+quanteda,quanteda,Text Analysis,R,pkg-nlp-llm,,high,success
+smpybandits,SMPyBandits,Adaptive Experimentation & Bandits,Python,pkg-adaptive-bandits,,high,success
+heemod,heemod,Healthcare Economics & Health-Tech,R,pkg-healthcare,,high,success
+gtfs-kit,gtfs-kit,Transportation Economics & Technology,Python,pkg-transportation,,high,success
+differences,Differences,"Program Evaluation Methods (DiD, SC, RDD)",Python,pkg-did-synth,,high,success
+matchit,MatchIt,Causal Inference (Matching),R,pkg-matching,,high,success
+lavaan,lavaan,Structural Equation Modeling,R,pkg-structural-estimation,,high,success
+numpyro,NumPyro,Bayesian Econometrics,Python,pkg-bayesian,,high,success
+metran,Metran,State Space & Volatility Models,Python,pkg-classical-forecasting,,high,success
+apollo,Apollo,Transportation Economics & Technology,R,pkg-transportation,,high,success
+optmatch,optmatch,Causal Inference (Matching),R,pkg-matching,,high,success
+statsforecast,StatsForecast,Time Series Forecasting,Python,pkg-classical-forecasting,,high,success
+chainladder-python,chainladder-python,Insurance & Actuarial,Python,pkg-insurance,,high,success
+pymc,PyMC,Bayesian Econometrics,Python,pkg-bayesian,,high,success
+pymc-statespace,PyMC Statespace,State Space & Volatility Models,Python,pkg-bayesian,,high,success
+here,here,Reproducibility,R,none,,high,success
+fixes,fixes,Causal Inference (Event Study),R,pkg-did-synth,,high,success
+mlogit,mlogit,Transportation Economics & Technology,R,pkg-transportation,,high,success
+survival,survival,Insurance & Actuarial,R,pkg-survival-analysis,pkg-insurance,high,success
+causaltoolbox,causalToolbox,Causal Inference (ML),R,pkg-causal-forests,,high,success
+ndarray,Ndarray,Numerical Optimization & Computational Tools,Rust,none,,medium,success
+gmnl,gmnl,Transportation Economics & Technology,R,pkg-transportation,,high,success
+savvi,savvi,Statistical Inference & Hypothesis Testing,Python,pkg-hypothesis-testing,pkg-ab-testing,high,success
+finrl,FinRL,Simulation & Computational Economics,Python,pkg-finance,,high,success
+pymc,PyMC,Bayesian Inference,Python,pkg-bayesian,,high,success
+survival,survival,Healthcare Economics & Health-Tech,R,pkg-survival-analysis,,high,success
+pynetlogo,pyNetLogo,Simulation & Computational Economics,Python,pkg-simulation,,high,success
+pybaseball,pybaseball,Sports Analytics,Python,pkg-sports,,high,success
+openai,openai,Agentic AI,Python,pkg-nlp-llm,,high,success
+ambrosia,Ambrosia,Power Simulation & Design of Experiments,Spark,pkg-ab-testing,,high,success
+hoopr,hoopR,Sports Analytics,R,pkg-sports,,high,success
+rllib,RLlib,Simulation & Computational Economics,Python,pkg-simulation,,high,success
+mixl,mixl,Transportation Economics & Technology,R,pkg-transportation,,high,success
+latenetwork,latenetwork,Causal Inference (Interference),R,pkg-iv-rdd,,high,success
+spdep,spdep,Spatial Econometrics,R,pkg-geospatial,,high,success
+crewai,crewai,Agentic AI,Python,pkg-nlp-llm,,high,success
+sf,sf,Spatial Econometrics,R,pkg-geospatial,,high,success
+dyntxregime,DynTxRegime,Causal Inference (Dynamic Treatment),R,pkg-causal-forests,,high,success
+tidytransit,tidytransit,Transportation Economics & Technology,R,pkg-transportation,pkg-geospatial,high,success
+kep_solver,kep_solver,Matching & Market Design,Python,pkg-matching,,high,success
+modelsummary,modelsummary,Regression Output,R,pkg-visualization,,high,success
+rstanarm,rstanarm,Bayesian Inference,R,pkg-bayesian,,high,success
+ddml,ddml,Causal Inference (ML),R,pkg-causal-mediation,,high,success
+sf,sf,Geospatial,R,pkg-geospatial,,high,success
+sumo,SUMO,Transportation Economics & Technology,C++/Python,pkg-transportation,,high,success
+gymnasium,Gymnasium,Simulation & Computational Economics,Python,pkg-simulation,,high,success
+ziln_cltv,ziln_cltv,Marketing Mix Models (MMM) & Business Analytics,Python,pkg-marketing,,high,success
+broom,broom,Regression Output,R,pkg-hypothesis-testing,,high,success
+openai-agents,openai-agents,Agentic AI,Python,pkg-nlp-llm,,high,success
+opentripplanner,OpenTripPlanner,Transportation Economics & Technology,Java,pkg-transportation,,high,success
+mo-gymnasium,MO-Gymnasium,Simulation & Computational Economics,Python,pkg-simulation,,high,success
+hdm,hdm,Causal Inference (ML),R,pkg-iv-rdd,,high,success
+spatialreg,spatialreg,Spatial Econometrics,R,pkg-geospatial,,high,success
+tsdyn,tsDyn,Time Series Econometrics,R,pkg-classical-forecasting,,high,success
+mbt_gym,mbt_gym,Simulation & Computational Economics,Python,pkg-finance,,high,success
+gtsummary,gtsummary,Regression Output,R,pkg-hypothesis-testing,,high,success
+pandapower,pandapower,Energy & Utilities Economics,Python,pkg-energy,,high,success
+eventstudyr,eventstudyr,Causal Inference (Event Study),R,pkg-did-synth,,high,success
+langchain,langchain,Agentic AI,Python,pkg-nlp-llm,,high,success
+simmer,simmer,Simulation & Computational Economics,R,pkg-simulation,,high,success
+dynlm,dynlm,Time Series Econometrics,R,pkg-classical-forecasting,,high,success
+fairlearn,Fairlearn,Insurance & Actuarial,Python,pkg-insurance,,high,success
+brms,brms,Bayesian Inference,R,pkg-bayesian,,high,success
+econ-project-templates,Econ Project Templates,Inference & Reporting Tools,Python,none,,high,success
+pandapower,pandapower,Energy Systems Modeling,Python,pkg-energy,,high,success
+lifelib,lifelib,Insurance & Actuarial,Python,pkg-insurance,,high,success
+splm,splm,Spatial Econometrics,R,pkg-panel-data,pkg-structural-estimation,high,success
+dtrreg,DTRreg,Causal Inference (Dynamic Treatment),R,pkg-causal-forests,,high,success
+spacy,spaCy,Natural Language Processing for Economics,Python,pkg-nlp-llm,,high,success
+sktime,sktime,Time Series Forecasting,Python,pkg-time-series-ml,pkg-classical-forecasting,high,success
+strucchange,strucchange,Time Series Econometrics,R,pkg-classical-forecasting,,high,success
+nvdlib,nvdlib,Cybersecurity,Python,none,,high,success
+sensemakr,sensemakr,Causal Inference (ML),R,pkg-causal-mediation,,high,success
+flexsurv,flexsurv,Insurance & Actuarial,R,pkg-survival-analysis,pkg-insurance,high,success
+mfilter,mFilter,Time Series Econometrics,R,pkg-classical-forecasting,,high,success
+transformers,Transformers,Natural Language Processing for Economics,Python,pkg-nlp-llm,,high,success
+clubsandwich,clubSandwich,Robust Standard Errors,R,pkg-hypothesis-testing,pkg-panel-data,high,success
+agentpy,AgentPy,Simulation & Computational Economics,Python,pkg-simulation,,high,success
+filterpy,FilterPy,State Space & Volatility Models,Python,pkg-classical-forecasting,,high,success

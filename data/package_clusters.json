@@ -1,0 +1,1676 @@
+{
+  "generated_at": "2026-01-05T22:01:54.539206",
+  "algorithm": "manual_curation_v1",
+  "params": {
+    "min_cluster_size": 4,
+    "max_cluster_size": 10
+  },
+  "total_clusters": 38,
+  "total_items": 522,
+  "clusters": [
+    {
+      "id": "cluster-pkg-did-synth",
+      "label": "DiD & Synthetic Control",
+      "cluster_id": "pkg-did-synth",
+      "macro_category": "Causal Inference",
+      "original_categories": [
+        "Causal Inference (DiD)",
+        "Causal Inference",
+        "Causal Inference (Event Study)",
+        "Geo-Experiments & Lift Measurement",
+        "Program Evaluation Methods (DiD, SC, RDD)",
+        "Causal Inference (Synthetic Control)"
+      ],
+      "languages": [
+        "R",
+        "Python"
+      ],
+      "item_count": 39,
+      "items": [
+        "pycinc",
+        "scpi",
+        "DRDID",
+        "trimmed_match",
+        "matched_markets",
+        "didet",
+        "microsynth",
+        "microsynth",
+        "augsynth",
+        "SCtools",
+        "TFP CausalImpact",
+        "pyleebounds",
+        "didhetero",
+        "mlsynth",
+        "synthlearners",
+        "GeoLift",
+        "GeoLift",
+        "gsynth",
+        "CausalImpact",
+        "csdid",
+        "tidysynth",
+        "CausalImpact",
+        "synthdid",
+        "pensynth",
+        "SyntheticControlMethods",
+        "pysyncon",
+        "bacondecomp",
+        "CausalPy",
+        "CausalPy",
+        "Synth",
+        "did",
+        "HonestDiD",
+        "staggered",
+        "fect",
+        "fastdid",
+        "didimputation",
+        "Differences",
+        "fixes",
+        "eventstudyr"
+      ],
+      "carousel_items": [
+        "DRDID",
+        "GeoLift",
+        "GeoLift",
+        "bacondecomp",
+        "CausalPy",
+        "CausalPy",
+        "did",
+        "HonestDiD",
+        "staggered",
+        "fect"
+      ]
+    },
+    {
+      "id": "cluster-pkg-structural-estimation",
+      "label": "Structural Econometrics",
+      "cluster_id": "pkg-structural-estimation",
+      "macro_category": "Causal Inference",
+      "original_categories": [
+        "Discrete Choice Models",
+        "Spatial Econometrics",
+        "Core Libraries & Linear Models",
+        "Structural Econometrics & Estimation",
+        "Structural Equation Modeling",
+        "Numerical Optimization & Computational Tools",
+        "Instrumental Variables",
+        "Simulation & Computational Economics",
+        "Optimization",
+        "Transportation Economics & Technology"
+      ],
+      "languages": [
+        "Rust",
+        "R",
+        "Python"
+      ],
+      "item_count": 29,
+      "items": [
+        "dcegm",
+        "respy",
+        "Greeners",
+        "Dolo",
+        "Dolo",
+        "Biogeme",
+        "torch-choice",
+        "jaxonometrics",
+        "Argmin",
+        "torchonometrics",
+        "gegravity",
+        "momentfit",
+        "PyLogit",
+        "upper-envelope",
+        "OpenMx",
+        "gEconpy",
+        "PyBLP",
+        "HARK",
+        "appelpy",
+        "pydsge",
+        "pynare",
+        "py-econometrics `gmm`",
+        "econpizza",
+        "gmm",
+        "ruspy",
+        "XLogit",
+        "QuantEcon.py",
+        "lavaan",
+        "splm"
+      ],
+      "carousel_items": [
+        "Biogeme",
+        "torch-choice",
+        "PyLogit",
+        "PyBLP",
+        "appelpy",
+        "XLogit",
+        "respy",
+        "Dolo",
+        "Dolo",
+        "gegravity"
+      ]
+    },
+    {
+      "id": "cluster-pkg-iv-rdd",
+      "label": "IV & RDD Methods",
+      "cluster_id": "pkg-iv-rdd",
+      "macro_category": "Causal Inference",
+      "original_categories": [
+        "Causal Inference",
+        "Causal Inference (Interference)",
+        "Causal Inference (RDD)",
+        "Causal Inference (Bounds)",
+        "Program Evaluation Methods (DiD, SC, RDD)",
+        "Causal Inference (ML)",
+        "Datasets",
+        "Causal Inference (Synthetic Control)",
+        "Bunching Estimation",
+        "Instrumental Variables"
+      ],
+      "languages": [
+        "R",
+        "Python"
+      ],
+      "item_count": 25,
+      "items": [
+        "bunching",
+        "causalweight",
+        "pycinc",
+        "systemfit",
+        "ivreg",
+        "rddapp",
+        "rddensity",
+        "rdrobust",
+        "pyleebounds",
+        "ivmodel",
+        "momentfit",
+        "rddtools",
+        "AER",
+        "rdpower",
+        "rdd",
+        "CausalImpact",
+        "ATbounds",
+        "py-econometrics `gmm`",
+        "rdmulti",
+        "gmm",
+        "CausalPy",
+        "rdlocrand",
+        "ShiftShareSE",
+        "latenetwork",
+        "hdm"
+      ],
+      "carousel_items": [
+        "bunching",
+        "ATbounds",
+        "CausalPy",
+        "causalweight",
+        "latenetwork",
+        "hdm",
+        "rddensity",
+        "rddtools",
+        "AER",
+        "rdpower"
+      ]
+    },
+    {
+      "id": "cluster-pkg-pywhy-ecosystem",
+      "label": "PyWhy & Causal Libraries",
+      "cluster_id": "pkg-pywhy-ecosystem",
+      "macro_category": "Causal Inference",
+      "original_categories": [
+        "Causal Inference & Matching",
+        "Double/Debiased Machine Learning (DML)",
+        "Uplift Modeling",
+        "Causal Inference",
+        "Causal Inference (ML)",
+        "MarTech & Customer Analytics",
+        "Natural Language Processing for Economics"
+      ],
+      "languages": [
+        "Spark",
+        "Python"
+      ],
+      "item_count": 23,
+      "items": [
+        "pydoublelasso",
+        "DoubleML",
+        "SynapseML",
+        "EconML",
+        "EconML",
+        "EconML",
+        "EconML",
+        "PySensemakr",
+        "CausalNLP",
+        "scikit-uplift",
+        "pydtr",
+        "CausalLift",
+        "pyhtelasso",
+        "DoWhy",
+        "DoWhy",
+        "CausalPlayground",
+        "Doubly-Debiased-Lasso",
+        "CausalML",
+        "CausalML",
+        "CausalML",
+        "CausalML",
+        "CausalLib",
+        "causal-bert-pytorch"
+      ],
+      "carousel_items": [
+        "DoubleML",
+        "EconML",
+        "EconML",
+        "EconML",
+        "EconML",
+        "PySensemakr",
+        "scikit-uplift",
+        "pydtr",
+        "DoWhy",
+        "DoWhy"
+      ]
+    },
+    {
+      "id": "cluster-pkg-panel-data",
+      "label": "Panel Data & Fixed Effects",
+      "cluster_id": "pkg-panel-data",
+      "macro_category": "Causal Inference",
+      "original_categories": [
+        "Robust Standard Errors",
+        "Spatial Econometrics",
+        "Panel Data & Fixed Effects",
+        "Structural Econometrics & Estimation",
+        "Mixed Effects"
+      ],
+      "languages": [
+        "Rust",
+        "R",
+        "Python"
+      ],
+      "item_count": 19,
+      "items": [
+        "plm",
+        "Greeners",
+        "pydynpd",
+        "PyFixest",
+        "duckreg",
+        "glmmTMB",
+        "nlme",
+        "FixedEffectModelPyHDFE",
+        "panelhetero",
+        "Linearmodels",
+        "lme4",
+        "fixest",
+        "FixedEffectModel",
+        "bife",
+        "alpaca",
+        "lfe",
+        "panelr",
+        "splm",
+        "clubSandwich"
+      ],
+      "carousel_items": [
+        "Linearmodels",
+        "FixedEffectModel",
+        "bife",
+        "plm",
+        "Greeners",
+        "pydynpd",
+        "PyFixest",
+        "duckreg",
+        "glmmTMB",
+        "nlme"
+      ]
+    },
+    {
+      "id": "cluster-pkg-causal-discovery",
+      "label": "Causal Discovery & DAGs",
+      "cluster_id": "pkg-causal-discovery",
+      "macro_category": "Causal Inference",
+      "original_categories": [
+        "Causal Inference & Matching",
+        "Causal Discovery & Graphical Models",
+        "Causal Inference"
+      ],
+      "languages": [
+        "R",
+        "Python"
+      ],
+      "item_count": 18,
+      "items": [
+        "MCD",
+        "bnlearn",
+        "dagitty",
+        "causal-llm-bfs",
+        "gCastle",
+        "SDCI",
+        "ggdag",
+        "pcalg",
+        "Benchpress",
+        "LiNGAM",
+        "py-tetrad",
+        "Tigramite",
+        "Causal Discovery Toolbox (CDT)",
+        "CausalNex",
+        "y0",
+        "DoWhy",
+        "causal-learn",
+        "Ananke"
+      ],
+      "carousel_items": [
+        "causal-learn",
+        "Ananke",
+        "MCD",
+        "bnlearn",
+        "dagitty",
+        "causal-llm-bfs",
+        "gCastle",
+        "SDCI",
+        "ggdag",
+        "pcalg"
+      ]
+    },
+    {
+      "id": "cluster-pkg-matching",
+      "label": "Matching & Propensity Score",
+      "cluster_id": "pkg-matching",
+      "macro_category": "Causal Inference",
+      "original_categories": [
+        "Causal Inference (Matching)",
+        "Causal Inference (Continuous Treatment)",
+        "Matching & Market Design",
+        "Causal Inference & Matching"
+      ],
+      "languages": [
+        "R",
+        "Python"
+      ],
+      "item_count": 15,
+      "items": [
+        "matching",
+        "cobalt",
+        "matchingR",
+        "algmatch",
+        "ebal",
+        "CBPS",
+        "CausalMatch",
+        "CausalGPS",
+        "WeightIt",
+        "fastmatch",
+        "CausalInference",
+        "gale-shapley",
+        "MatchIt",
+        "optmatch",
+        "kep_solver"
+      ],
+      "carousel_items": [
+        "CausalMatch",
+        "CausalGPS",
+        "fastmatch",
+        "CausalInference",
+        "MatchIt",
+        "optmatch",
+        "ebal",
+        "CBPS",
+        "WeightIt",
+        "cobalt"
+      ]
+    },
+    {
+      "id": "cluster-pkg-causal-mediation",
+      "label": "Causal Mediation Analysis",
+      "cluster_id": "pkg-causal-mediation",
+      "macro_category": "Causal Inference",
+      "original_categories": [
+        "Causal Inference (Mediation)",
+        "Causal Inference & Matching",
+        "Causal Inference (Interference)",
+        "Causal Inference (Principal Stratification)",
+        "Causal Inference (ML)",
+        "Interference & Spillovers"
+      ],
+      "languages": [
+        "R",
+        "Python"
+      ],
+      "item_count": 10,
+      "items": [
+        "EValue",
+        "causalweight",
+        "CMAverse",
+        "mediation",
+        "PStrata",
+        "pyregadj",
+        "spilled_t",
+        "inferference",
+        "ddml",
+        "sensemakr"
+      ],
+      "carousel_items": [
+        "pyregadj",
+        "inferference",
+        "EValue",
+        "causalweight",
+        "ddml",
+        "sensemakr",
+        "CMAverse",
+        "mediation",
+        "PStrata",
+        "spilled_t"
+      ]
+    },
+    {
+      "id": "cluster-pkg-causal-forests",
+      "label": "Causal Forests & CATE",
+      "cluster_id": "pkg-causal-forests",
+      "macro_category": "Causal Inference",
+      "original_categories": [
+        "Causal Inference (Dynamic Treatment)",
+        "Causal Inference & Matching",
+        "Bayesian Causal Inference",
+        "Causal Inference (ML)",
+        "MarTech & Customer Analytics"
+      ],
+      "languages": [
+        "R",
+        "Python"
+      ],
+      "item_count": 10,
+      "items": [
+        "grf",
+        "KECENI",
+        "EconML",
+        "CATENets",
+        "mcf (Modified Causal Forest)",
+        "bartCause",
+        "CausalML",
+        "causalToolbox",
+        "DynTxRegime",
+        "DTRreg"
+      ],
+      "carousel_items": [
+        "KECENI",
+        "EconML",
+        "CATENets",
+        "mcf (Modified Causal Forest)",
+        "bartCause",
+        "CausalML",
+        "grf",
+        "causalToolbox",
+        "DynTxRegime",
+        "DTRreg"
+      ]
+    },
+    {
+      "id": "cluster-pkg-tmle",
+      "label": "Targeted Learning (TMLE)",
+      "cluster_id": "pkg-tmle",
+      "macro_category": "Causal Inference",
+      "original_categories": [
+        "Causal Inference & Matching",
+        "Causal Inference (ML)"
+      ],
+      "languages": [
+        "R",
+        "Python"
+      ],
+      "item_count": 6,
+      "items": [
+        "ltmle",
+        "SuperLearner",
+        "tmle",
+        "tmle3",
+        "aipyw",
+        "causal-curve"
+      ],
+      "carousel_items": [
+        "aipyw",
+        "causal-curve",
+        "ltmle",
+        "SuperLearner",
+        "tmle",
+        "tmle3"
+      ]
+    },
+    {
+      "id": "cluster-pkg-visualization",
+      "label": "Data Visualization",
+      "cluster_id": "pkg-visualization",
+      "macro_category": "Data & Utilities",
+      "original_categories": [
+        "Defense Research",
+        "Standard Errors, Bootstrapping & Reporting",
+        "Visualization",
+        "Research Tools",
+        "Data Workflow",
+        "Regression Output",
+        "Model Diagnostics"
+      ],
+      "languages": [
+        "Web",
+        "R",
+        "Python"
+      ],
+      "item_count": 9,
+      "items": [
+        "see",
+        "conflictcartographer",
+        "tidyverse",
+        "cowplot",
+        "Connected Papers",
+        "stargazer",
+        "patchwork",
+        "gt",
+        "modelsummary"
+      ],
+      "carousel_items": [
+        "conflictcartographer",
+        "tidyverse",
+        "cowplot",
+        "patchwork",
+        "see",
+        "Connected Papers",
+        "stargazer",
+        "gt",
+        "modelsummary"
+      ]
+    },
+    {
+      "id": "cluster-pkg-data-manipulation",
+      "label": "Data Wrangling",
+      "cluster_id": "pkg-data-manipulation",
+      "macro_category": "Data & Utilities",
+      "original_categories": [
+        "Data Wrangling",
+        "Core Libraries & Linear Models",
+        "Data Workflow"
+      ],
+      "languages": [
+        "Rust",
+        "R"
+      ],
+      "item_count": 6,
+      "items": [
+        "tidyverse",
+        "Polars",
+        "countrycode",
+        "data.table",
+        "collapse",
+        "haven"
+      ],
+      "carousel_items": [
+        "collapse",
+        "tidyverse",
+        "Polars",
+        "countrycode",
+        "data.table",
+        "haven"
+      ]
+    },
+    {
+      "id": "cluster-pkg-power-simulation",
+      "label": "Power Analysis & DOE",
+      "cluster_id": "pkg-power-simulation",
+      "macro_category": "Experimentation",
+      "original_categories": [
+        "Power Simulation & Design of Experiments",
+        "Power Analysis",
+        "Experimental Design"
+      ],
+      "languages": [
+        "R",
+        "Python"
+      ],
+      "item_count": 12,
+      "items": [
+        "pyDOE2",
+        "WebPower",
+        "Adaptive",
+        "Superpower",
+        "DoEgen",
+        "simChef",
+        "fabricatr",
+        "mlpwr",
+        "pwr",
+        "simr",
+        "ADOpy",
+        "DeclareDesign"
+      ],
+      "carousel_items": [
+        "DeclareDesign",
+        "fabricatr",
+        "Superpower",
+        "ADOpy",
+        "pyDOE2",
+        "WebPower",
+        "Adaptive",
+        "DoEgen",
+        "simChef",
+        "mlpwr"
+      ]
+    },
+    {
+      "id": "cluster-pkg-adaptive-bandits",
+      "label": "Bandits & Adaptive Experiments",
+      "cluster_id": "pkg-adaptive-bandits",
+      "macro_category": "Experimentation",
+      "original_categories": [
+        "Adaptive Experimentation & Bandits",
+        "Experimental Design"
+      ],
+      "languages": [
+        "R",
+        "Python"
+      ],
+      "item_count": 9,
+      "items": [
+        "contextual",
+        "Ax (Meta Adaptive Experimentation)",
+        "ContextualBandits",
+        "BayesianBandits",
+        "MABWiser",
+        "Open Bandit Pipeline (OBP)",
+        "abracadabra",
+        "PyXAB",
+        "SMPyBandits"
+      ],
+      "carousel_items": [
+        "Ax (Meta Adaptive Experimentation)",
+        "ContextualBandits",
+        "BayesianBandits",
+        "MABWiser",
+        "Open Bandit Pipeline (OBP)",
+        "abracadabra",
+        "PyXAB",
+        "SMPyBandits",
+        "contextual"
+      ]
+    },
+    {
+      "id": "cluster-pkg-ab-testing",
+      "label": "A/B Testing & Experiment Analysis",
+      "cluster_id": "pkg-ab-testing",
+      "macro_category": "Experimentation",
+      "original_categories": [
+        "Power Simulation & Design of Experiments",
+        "Adaptive Experimentation & Bandits",
+        "Experimental Design",
+        "Conjoint Analysis",
+        "Statistical Inference & Hypothesis Testing",
+        "Interference & Spillovers"
+      ],
+      "languages": [
+        "Spark",
+        "R",
+        "Python"
+      ],
+      "item_count": 9,
+      "items": [
+        "randomizr",
+        "tea-tasting",
+        "cjoint",
+        "CausalMotifs",
+        "DeclareDesign",
+        "cregg",
+        "abracadabra",
+        "savvi",
+        "Ambrosia"
+      ],
+      "carousel_items": [
+        "abracadabra",
+        "randomizr",
+        "cjoint",
+        "DeclareDesign",
+        "cregg",
+        "tea-tasting",
+        "CausalMotifs",
+        "savvi",
+        "Ambrosia"
+      ]
+    },
+    {
+      "id": "cluster-pkg-insurance",
+      "label": "Insurance & Actuarial",
+      "cluster_id": "pkg-insurance",
+      "macro_category": "Industry",
+      "original_categories": [
+        "Healthcare Economics & Health-Tech",
+        "Insurance & Actuarial"
+      ],
+      "languages": [
+        "R",
+        "Python"
+      ],
+      "item_count": 16,
+      "items": [
+        "actuar",
+        "ChainLadder",
+        "OasisLMF",
+        "lifelines",
+        "pyliferisk",
+        "survminer",
+        "evd",
+        "extRemes",
+        "lifecontingencies",
+        "cplm",
+        "scikit-survival",
+        "chainladder-python",
+        "survival",
+        "Fairlearn",
+        "lifelib",
+        "flexsurv"
+      ],
+      "carousel_items": [
+        "actuar",
+        "survminer",
+        "extRemes",
+        "scikit-survival",
+        "chainladder-python",
+        "survival",
+        "Fairlearn",
+        "lifelib",
+        "flexsurv",
+        "ChainLadder"
+      ]
+    },
+    {
+      "id": "cluster-pkg-energy",
+      "label": "Energy & Utilities",
+      "cluster_id": "pkg-energy",
+      "macro_category": "Industry",
+      "original_categories": [
+        "Data Access",
+        "Energy Systems Modeling"
+      ],
+      "languages": [
+        "Julia",
+        "Python"
+      ],
+      "item_count": 15,
+      "items": [
+        "eiapy",
+        "eiapy",
+        "gridstatus",
+        "GenX",
+        "GenX",
+        "PowerModels.jl",
+        "PowerModels.jl",
+        "PyPSA",
+        "PyPSA",
+        "catalystcoop-pudl",
+        "catalystcoop-pudl",
+        "OpenDSS",
+        "OpenDSS",
+        "pandapower",
+        "pandapower"
+      ],
+      "carousel_items": [
+        "eiapy",
+        "eiapy",
+        "gridstatus",
+        "OpenDSS",
+        "OpenDSS",
+        "pandapower",
+        "pandapower",
+        "GenX",
+        "GenX",
+        "PowerModels.jl"
+      ]
+    },
+    {
+      "id": "cluster-pkg-marketing",
+      "label": "Marketing & CLV",
+      "cluster_id": "pkg-marketing",
+      "macro_category": "Industry",
+      "original_categories": [
+        "Bayesian Econometrics",
+        "Uplift Modeling",
+        "Marketing Mix Models (MMM) & Business Analytics",
+        "Marketing Analytics",
+        "MarTech & Customer Analytics"
+      ],
+      "languages": [
+        "R",
+        "Python"
+      ],
+      "item_count": 14,
+      "items": [
+        "PyMC Marketing",
+        "PyMC-Marketing",
+        "PyMC-Marketing",
+        "UpliftML",
+        "mmm_stan",
+        "pylift",
+        "MaMiMo",
+        "Robyn",
+        "BTYDplus",
+        "CLVTools",
+        "Lifetimes",
+        "lifetimes",
+        "LightweightMMM",
+        "ziln_cltv"
+      ],
+      "carousel_items": [
+        "LightweightMMM",
+        "PyMC Marketing",
+        "PyMC-Marketing",
+        "PyMC-Marketing",
+        "mmm_stan",
+        "pylift",
+        "UpliftML",
+        "MaMiMo",
+        "Robyn",
+        "BTYDplus"
+      ]
+    },
+    {
+      "id": "cluster-pkg-geospatial",
+      "label": "Geospatial Analysis",
+      "cluster_id": "pkg-geospatial",
+      "macro_category": "Industry",
+      "original_categories": [
+        "Space & Orbital Analysis",
+        "Spatial Econometrics",
+        "Defense Research",
+        "Geospatial",
+        "Transportation Economics & Technology"
+      ],
+      "languages": [
+        "Spark",
+        "R",
+        "Python"
+      ],
+      "item_count": 13,
+      "items": [
+        "spacetrack",
+        "conflictcartographer",
+        "(PySAL Core)",
+        "PySAL (spreg)",
+        "Apache Sedona",
+        "Skyfield",
+        "sgp4",
+        "OSMnx",
+        "spdep",
+        "sf",
+        "tidytransit",
+        "sf",
+        "spatialreg"
+      ],
+      "carousel_items": [
+        "OSMnx",
+        "tidytransit",
+        "conflictcartographer",
+        "spacetrack",
+        "(PySAL Core)",
+        "PySAL (spreg)",
+        "Apache Sedona",
+        "Skyfield",
+        "sgp4",
+        "spdep"
+      ]
+    },
+    {
+      "id": "cluster-pkg-transportation",
+      "label": "Transportation & Mobility",
+      "cluster_id": "pkg-transportation",
+      "macro_category": "Industry",
+      "original_categories": [
+        "Transportation Economics & Technology"
+      ],
+      "languages": [
+        "C++/Python",
+        "Java",
+        "R",
+        "Python"
+      ],
+      "item_count": 12,
+      "items": [
+        "Biogeme",
+        "PyLogit",
+        "xlogit",
+        "OSMnx",
+        "gtfs-kit",
+        "Apollo",
+        "mlogit",
+        "gmnl",
+        "mixl",
+        "tidytransit",
+        "SUMO",
+        "OpenTripPlanner"
+      ],
+      "carousel_items": [
+        "Biogeme",
+        "PyLogit",
+        "xlogit",
+        "OSMnx",
+        "gtfs-kit",
+        "Apollo",
+        "mlogit",
+        "gmnl",
+        "mixl",
+        "tidytransit"
+      ]
+    },
+    {
+      "id": "cluster-pkg-sports",
+      "label": "Sports Analytics",
+      "cluster_id": "pkg-sports",
+      "macro_category": "Industry",
+      "original_categories": [
+        "Sports Analytics"
+      ],
+      "languages": [
+        "R",
+        "Python"
+      ],
+      "item_count": 10,
+      "items": [
+        "nba_api",
+        "hockeyR",
+        "worldfootballR",
+        "nfl-data-py",
+        "Lahman",
+        "nflfastR",
+        "statsbombpy",
+        "mplsoccer",
+        "pybaseball",
+        "hoopR"
+      ],
+      "carousel_items": [
+        "hockeyR",
+        "worldfootballR",
+        "nfl-data-py",
+        "Lahman",
+        "nflfastR",
+        "nba_api",
+        "statsbombpy",
+        "mplsoccer",
+        "pybaseball",
+        "hoopR"
+      ]
+    },
+    {
+      "id": "cluster-pkg-healthcare",
+      "label": "Healthcare & Clinical",
+      "cluster_id": "pkg-healthcare",
+      "macro_category": "Industry",
+      "original_categories": [
+        "Healthcare Economics & Health-Tech"
+      ],
+      "languages": [
+        "R",
+        "Python"
+      ],
+      "item_count": 8,
+      "items": [
+        "mstate",
+        "BCEA",
+        "survHE",
+        "fhirclient",
+        "MONAI",
+        "hesim",
+        "scikit-survival",
+        "heemod"
+      ],
+      "carousel_items": [
+        "mstate",
+        "BCEA",
+        "survHE",
+        "fhirclient",
+        "MONAI",
+        "hesim",
+        "scikit-survival",
+        "heemod"
+      ]
+    },
+    {
+      "id": "cluster-pkg-nlp-llm",
+      "label": "NLP & LLM Tools",
+      "cluster_id": "pkg-nlp-llm",
+      "macro_category": "Machine Learning",
+      "original_categories": [
+        "Agentic AI",
+        "Natural Language Processing for Economics",
+        "Text Analysis"
+      ],
+      "languages": [
+        "R",
+        "Python"
+      ],
+      "item_count": 16,
+      "items": [
+        "langgraph",
+        "text2vec",
+        "stm",
+        "tidytext",
+        "sentence-transformers",
+        "EDSL",
+        "Gensim",
+        "NLTK",
+        "anthropic",
+        "quanteda",
+        "openai",
+        "crewai",
+        "openai-agents",
+        "langchain",
+        "spaCy",
+        "Transformers"
+      ],
+      "carousel_items": [
+        "anthropic",
+        "openai",
+        "crewai",
+        "openai-agents",
+        "langchain",
+        "spaCy",
+        "langgraph",
+        "EDSL",
+        "stm",
+        "tidytext"
+      ]
+    },
+    {
+      "id": "cluster-pkg-gradient-boosting",
+      "label": "Gradient Boosting",
+      "cluster_id": "pkg-gradient-boosting",
+      "macro_category": "Machine Learning",
+      "original_categories": [
+        "Time Series Forecasting",
+        "Machine Learning",
+        "Insurance & Actuarial",
+        "Tree & Ensemble Methods for Prediction"
+      ],
+      "languages": [
+        "Rust",
+        "R",
+        "Python"
+      ],
+      "item_count": 15,
+      "items": [
+        "MLForecast",
+        "xgboost",
+        "XGBoost",
+        "xgboost",
+        "NGBoost",
+        "cuML (RAPIDS)",
+        "ranger",
+        "LightGBM",
+        "LightGBM",
+        "Linfa",
+        "CatBoost",
+        "glmnet",
+        "SmartCore",
+        "Scikit-learn Ens.",
+        "SHAP"
+      ],
+      "carousel_items": [
+        "MLForecast",
+        "xgboost",
+        "XGBoost",
+        "xgboost",
+        "NGBoost",
+        "ranger",
+        "LightGBM",
+        "LightGBM",
+        "CatBoost",
+        "glmnet"
+      ]
+    },
+    {
+      "id": "cluster-pkg-recommender-systems",
+      "label": "Recommender Systems",
+      "cluster_id": "pkg-recommender-systems",
+      "macro_category": "Machine Learning",
+      "original_categories": [
+        "MarTech & Customer Analytics",
+        "CTR Prediction"
+      ],
+      "languages": [
+        "R",
+        "Python"
+      ],
+      "item_count": 7,
+      "items": [
+        "Surprise",
+        "DeepCTR",
+        "Surprise",
+        "LightFM",
+        "RecBole",
+        "recommenderlab",
+        "Implicit"
+      ],
+      "carousel_items": [
+        "DeepCTR",
+        "RecBole",
+        "recommenderlab",
+        "Surprise",
+        "Surprise",
+        "LightFM",
+        "Implicit"
+      ]
+    },
+    {
+      "id": "cluster-pkg-neural-networks",
+      "label": "Deep Learning Frameworks",
+      "cluster_id": "pkg-neural-networks",
+      "macro_category": "Machine Learning",
+      "original_categories": [
+        "Numerical Optimization & Computational Tools",
+        "Machine Learning"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "item_count": 6,
+      "items": [
+        "JAX",
+        "DCA (Deep Count Autoencoder)",
+        "scVI-tools",
+        "TensorFlow",
+        "PyTorch",
+        "VaDE"
+      ],
+      "carousel_items": [
+        "DCA (Deep Count Autoencoder)",
+        "TensorFlow",
+        "JAX",
+        "scVI-tools",
+        "PyTorch",
+        "VaDE"
+      ]
+    },
+    {
+      "id": "cluster-pkg-time-series-ml",
+      "label": "Deep Forecasting",
+      "cluster_id": "pkg-time-series-ml",
+      "macro_category": "Machine Learning",
+      "original_categories": [
+        "Time Series Forecasting",
+        "State Space & Volatility Models",
+        "Time Series Econometrics"
+      ],
+      "languages": [
+        "Spark",
+        "Python"
+      ],
+      "item_count": 4,
+      "items": [
+        "NeuralForecast",
+        "TS-Flint",
+        "PyKalman",
+        "sktime"
+      ],
+      "carousel_items": [
+        "NeuralForecast",
+        "PyKalman",
+        "sktime",
+        "TS-Flint"
+      ]
+    },
+    {
+      "id": "cluster-pkg-simulation",
+      "label": "Discrete Event Simulation",
+      "cluster_id": "pkg-simulation",
+      "macro_category": "Operations Research",
+      "original_categories": [
+        "Simulation & Computational Economics"
+      ],
+      "languages": [
+        "C#",
+        "Python",
+        "SIMAN",
+        "Java",
+        "R"
+      ],
+      "item_count": 23,
+      "items": [
+        "SimPy",
+        "Ciw",
+        "Arena Simulation",
+        "RNetLogo",
+        "AnyLogic",
+        "CleanRL",
+        "Stable-Baselines3",
+        "nlrx",
+        "SuperSuit",
+        "ABIDES",
+        "NetLogoR",
+        "TorchRL",
+        "Mesa",
+        "OR-Gym",
+        "Simio",
+        "queueing",
+        "ABCE",
+        "pyNetLogo",
+        "RLlib",
+        "Gymnasium",
+        "MO-Gymnasium",
+        "simmer",
+        "AgentPy"
+      ],
+      "carousel_items": [
+        "SuperSuit",
+        "ABIDES",
+        "RNetLogo",
+        "CleanRL",
+        "TorchRL",
+        "OR-Gym",
+        "Simio",
+        "ABCE",
+        "pyNetLogo",
+        "RLlib"
+      ]
+    },
+    {
+      "id": "cluster-pkg-game-theory",
+      "label": "Game Theory & Mechanism Design",
+      "cluster_id": "pkg-game-theory",
+      "macro_category": "Operations Research",
+      "original_categories": [
+        "Simulation & Computational Economics",
+        "Matching & Market Design",
+        "Game Theory & Mechanism Design"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "item_count": 10,
+      "items": [
+        "AuctionGym",
+        "OpenSpiel",
+        "deep-opt-auctions",
+        "pygambit",
+        "fairpyx",
+        "Nashpy",
+        "scarfmatch",
+        "PettingZoo",
+        "fairpy",
+        "AI Economist"
+      ],
+      "carousel_items": [
+        "OpenSpiel",
+        "pygambit",
+        "Nashpy",
+        "fairpy",
+        "AuctionGym",
+        "deep-opt-auctions",
+        "fairpyx",
+        "scarfmatch",
+        "PettingZoo",
+        "AI Economist"
+      ]
+    },
+    {
+      "id": "cluster-pkg-linear-programming",
+      "label": "Linear & Integer Programming",
+      "cluster_id": "pkg-linear-programming",
+      "macro_category": "Operations Research",
+      "original_categories": [
+        "Numerical Optimization & Computational Tools",
+        "Optimization"
+      ],
+      "languages": [
+        "Rust",
+        "Python"
+      ],
+      "item_count": 8,
+      "items": [
+        "HiGHS",
+        "HiGHS",
+        "Faer",
+        "Pyomo",
+        "Pyomo",
+        "ortools",
+        "gurobipy",
+        "scipy.optimize"
+      ],
+      "carousel_items": [
+        "HiGHS",
+        "HiGHS",
+        "Pyomo",
+        "Pyomo",
+        "ortools",
+        "gurobipy",
+        "Faer",
+        "scipy.optimize"
+      ]
+    },
+    {
+      "id": "cluster-pkg-hypothesis-testing",
+      "label": "Statistical Testing",
+      "cluster_id": "pkg-hypothesis-testing",
+      "macro_category": "Statistics",
+      "original_categories": [
+        "Robust Standard Errors",
+        "Standard Errors, Bootstrapping & Reporting",
+        "Core Libraries & Linear Models",
+        "Bootstrap & Inference",
+        "Inference & Reporting Tools",
+        "Mixed Effects",
+        "Marginal Effects",
+        "Regression Output",
+        "Statistical Inference & Hypothesis Testing",
+        "Model Diagnostics",
+        "Interference & Spillovers"
+      ],
+      "languages": [
+        "Rust",
+        "R",
+        "Python"
+      ],
+      "item_count": 34,
+      "items": [
+        "lmtest",
+        "boot",
+        "sandwich",
+        "Statsmodels",
+        "hypothetical",
+        "fwildclusterboot",
+        "rsample",
+        "car",
+        "lmerTest",
+        "SciPy Bootstrap",
+        "recombinator",
+        "bootUR",
+        "PyWhy-Stats",
+        "emmeans",
+        "maketables",
+        "Linregress",
+        "miceforest",
+        "HypoRS",
+        "Statrs",
+        "Pingouin",
+        "Stargazer",
+        "wildboottest",
+        "expectation",
+        "marginaleffects",
+        "texreg",
+        "Python Packages for Applied Economists",
+        "testinterference",
+        "performance",
+        "gcimpute",
+        "clusterbootstraps",
+        "savvi",
+        "broom",
+        "gtsummary",
+        "clubSandwich"
+      ],
+      "carousel_items": [
+        "boot",
+        "fwildclusterboot",
+        "rsample",
+        "recombinator",
+        "bootUR",
+        "Statsmodels",
+        "Linregress",
+        "lmtest",
+        "hypothetical",
+        "emmeans"
+      ]
+    },
+    {
+      "id": "cluster-pkg-bayesian",
+      "label": "Bayesian & Probabilistic Programming",
+      "cluster_id": "pkg-bayesian",
+      "macro_category": "Statistics",
+      "original_categories": [
+        "Bayesian Econometrics",
+        "State Space & Volatility Models",
+        "Structural Equation Modeling",
+        "Bayesian Causal Inference",
+        "Bayesian Inference"
+      ],
+      "languages": [
+        "R",
+        "Python"
+      ],
+      "item_count": 13,
+      "items": [
+        "bayesplot",
+        "rstan",
+        "stochvol",
+        "Pyro",
+        "Bambi",
+        "blavaan",
+        "bsts",
+        "NumPyro",
+        "PyMC",
+        "PyMC Statespace",
+        "PyMC",
+        "rstanarm",
+        "brms"
+      ],
+      "carousel_items": [
+        "Bambi",
+        "bsts",
+        "NumPyro",
+        "PyMC",
+        "PyMC",
+        "rstanarm",
+        "brms",
+        "bayesplot",
+        "rstan",
+        "Pyro"
+      ]
+    },
+    {
+      "id": "cluster-pkg-survival-analysis",
+      "label": "Survival Analysis",
+      "cluster_id": "pkg-survival-analysis",
+      "macro_category": "Statistics",
+      "original_categories": [
+        "Healthcare Economics & Health-Tech",
+        "Survival Analysis",
+        "Insurance & Actuarial"
+      ],
+      "languages": [
+        "R",
+        "Python"
+      ],
+      "item_count": 12,
+      "items": [
+        "mstate",
+        "pycox",
+        "lifelines",
+        "lifelines",
+        "lifelines",
+        "survminer",
+        "survHE",
+        "scikit-survival",
+        "scikit-survival",
+        "survival",
+        "survival",
+        "flexsurv"
+      ],
+      "carousel_items": [
+        "mstate",
+        "survminer",
+        "survHE",
+        "scikit-survival",
+        "scikit-survival",
+        "survival",
+        "survival",
+        "flexsurv",
+        "pycox",
+        "lifelines"
+      ]
+    },
+    {
+      "id": "cluster-pkg-synthetic-data",
+      "label": "Synthetic Data Generation",
+      "cluster_id": "pkg-synthetic-data",
+      "macro_category": "Statistics",
+      "original_categories": [
+        "Synthetic Data Generation"
+      ],
+      "languages": [
+        "R",
+        "Python"
+      ],
+      "item_count": 10,
+      "items": [
+        "Synthpop",
+        "DataSynthesizer",
+        "CTGAN",
+        "Faker",
+        "DeepEcho",
+        "Gretel Synthetics",
+        "Mimesis",
+        "simPop",
+        "SDV (Synthetic Data Vault)",
+        "sdcMicro"
+      ],
+      "carousel_items": [
+        "DataSynthesizer",
+        "Synthpop",
+        "CTGAN",
+        "Faker",
+        "DeepEcho",
+        "Gretel Synthetics",
+        "Mimesis",
+        "simPop",
+        "SDV (Synthetic Data Vault)",
+        "sdcMicro"
+      ]
+    },
+    {
+      "id": "cluster-pkg-network-analysis",
+      "label": "Network Analysis",
+      "cluster_id": "pkg-network-analysis",
+      "macro_category": "Statistics",
+      "original_categories": [
+        "Research Tools",
+        "Causal Inference & Matching",
+        "Network Analysis"
+      ],
+      "languages": [
+        "Web",
+        "R",
+        "Python"
+      ],
+      "item_count": 9,
+      "items": [
+        "KECENI",
+        "ggraph",
+        "igraph",
+        "igraph",
+        "tidygraph",
+        "NetworkCausalTree",
+        "sna",
+        "Research Rabbit",
+        "python-louvain"
+      ],
+      "carousel_items": [
+        "KECENI",
+        "NetworkCausalTree",
+        "ggraph",
+        "igraph",
+        "igraph",
+        "tidygraph",
+        "sna",
+        "Research Rabbit",
+        "python-louvain"
+      ]
+    },
+    {
+      "id": "cluster-pkg-conformal",
+      "label": "Conformal Prediction",
+      "cluster_id": "pkg-conformal",
+      "macro_category": "Statistics",
+      "original_categories": [
+        "Conformal Prediction & Uncertainty"
+      ],
+      "languages": [
+        "Python"
+      ],
+      "item_count": 5,
+      "items": [
+        "MAPIE",
+        "crepes",
+        "fortuna",
+        "TorchCP",
+        "puncc"
+      ],
+      "carousel_items": [
+        "fortuna",
+        "TorchCP",
+        "puncc",
+        "MAPIE",
+        "crepes"
+      ]
+    },
+    {
+      "id": "cluster-pkg-classical-forecasting",
+      "label": "Classical Time Series",
+      "cluster_id": "pkg-classical-forecasting",
+      "macro_category": "Time Series",
+      "original_categories": [
+        "Time Series Forecasting",
+        "State Space & Volatility Models",
+        "Time Series Econometrics"
+      ],
+      "languages": [
+        "Rust",
+        "R",
+        "Python"
+      ],
+      "item_count": 19,
+      "items": [
+        "urca",
+        "LocalProjections",
+        "pmdarima",
+        "fable",
+        "ARCH",
+        "Kats",
+        "vars",
+        "Augurs",
+        "KFAS",
+        "dlm",
+        "forecast",
+        "Metran",
+        "StatsForecast",
+        "tsDyn",
+        "dynlm",
+        "sktime",
+        "strucchange",
+        "mFilter",
+        "FilterPy"
+      ],
+      "carousel_items": [
+        "urca",
+        "pmdarima",
+        "fable",
+        "Kats",
+        "sktime",
+        "mFilter",
+        "FilterPy",
+        "LocalProjections",
+        "ARCH",
+        "vars"
+      ]
+    },
+    {
+      "id": "cluster-pkg-prophet-style",
+      "label": "Prophet & Trend Forecasting",
+      "cluster_id": "pkg-prophet-style",
+      "macro_category": "Time Series",
+      "original_categories": [
+        "Time Series Forecasting",
+        "Energy & Utilities Economics"
+      ],
+      "languages": [
+        "Rust",
+        "Python/R"
+      ],
+      "item_count": 4,
+      "items": [
+        "Prophet",
+        "prophet",
+        "Prophet",
+        "Augurs"
+      ],
+      "carousel_items": [
+        "Prophet",
+        "prophet",
+        "Prophet",
+        "Augurs"
+      ]
+    }
+  ]
+}
