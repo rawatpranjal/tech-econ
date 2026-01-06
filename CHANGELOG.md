@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-01-06
+- Added 3 revealed preference packages: InvOpt, PyInvo (inverse optimization), revealedPrefs (GARP/WARP testing)
+
 ## 2026-01-05
 - Added ML Pipeline documentation to claude.md (ranking, search, clustering, discovery, enrichment, ALS)
 - Added UI philosophy: large cards with images, rich metadata

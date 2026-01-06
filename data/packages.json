@@ -41135,5 +41135,63 @@
     "install": "pip install scvi-tools",
     "best_for": "Deep learning for single-cell genomics",
     "model_score": 0.0
+  },
+  {
+    "name": "InvOpt",
+    "description": "Inverse optimization library that infers utility/cost functions from observed decisions. Learns the objective function that makes observed choices optimal given constraints.",
+    "category": "Structural Econometrics & Estimation",
+    "url": "https://github.com/pedroszattoni/InvOpt",
+    "language": "Python",
+    "github_url": "https://github.com/pedroszattoni/InvOpt",
+    "docs_url": null,
+    "tags": [
+      "inverse optimization",
+      "revealed preference",
+      "utility estimation",
+      "mechanism design",
+      "decision modeling"
+    ],
+    "install": "pip install invopt",
+    "best_for": "Learning economic parameters from observed choices and constraints",
+    "model_score": 0.0
+  },
+  {
+    "name": "PyInvo",
+    "description": "Lightweight inverse optimization library for fitting models where the forward problem is a linear program. Recovers utility function weights from observed optimal decisions.",
+    "category": "Structural Econometrics & Estimation",
+    "url": "https://pyinvo.readthedocs.io",
+    "language": "Python",
+    "github_url": null,
+    "docs_url": "https://pyinvo.readthedocs.io",
+    "tags": [
+      "inverse optimization",
+      "linear programming",
+      "utility estimation",
+      "revealed preference"
+    ],
+    "install": "pip install pyinvo",
+    "best_for": "Recovering utility weights from linear programming solutions",
+    "model_score": 0.0
+  },
+  {
+    "name": "revealedPrefs",
+    "description": "R package for testing revealed preference axioms (GARP, WARP, SARP) on consumer choice data. Detects violations of utility maximization assumptions.",
+    "category": "Structural Econometrics & Estimation",
+    "url": "https://cran.r-project.org/package=revealedPrefs",
+    "language": "R",
+    "github_url": null,
+    "docs_url": "https://cran.r-project.org/web/packages/revealedPrefs/revealedPrefs.pdf",
+    "tags": [
+      "revealed preference",
+      "GARP",
+      "WARP",
+      "SARP",
+      "utility theory",
+      "consumer choice",
+      "axiom testing"
+    ],
+    "install": "install.packages('revealedPrefs')",
+    "best_for": "Testing consumer data for consistency with utility maximization",
+    "model_score": 0.0
   }
 ]
