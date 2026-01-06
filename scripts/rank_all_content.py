@@ -1080,6 +1080,10 @@ def main():
             if item.get('cold_start', False):
                 continue
 
+            # Skip career portals from trending
+            if item.get('type') == 'career':
+                continue
+
             item_type = item.get('type', 'unknown')
             item_category = item.get('category', 'unknown')
 

@@ -517,13 +517,13 @@
         return items;
     }
 
-    // Task 1.1: Check if item is "New" (date_added within last 30 days)
+    // Task 1.1: Check if item is "New" (date_added within last 5 days)
     function isNewItem(item) {
         if (!item.date_added) return false;
         const dateAdded = new Date(item.date_added);
-        const thirtyDaysAgo = new Date();
-        thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
-        return dateAdded >= thirtyDaysAgo;
+        const fiveDaysAgo = new Date();
+        fiveDaysAgo.setDate(fiveDaysAgo.getDate() - 5);
+        return dateAdded >= fiveDaysAgo;
     }
 
     // Task 1.1: Check if item is "Popular" (model_score > 0.7)

@@ -1,0 +1,957 @@
+{
+  "generated_at": "2026-01-05T23:31:46.583442",
+  "algorithm": "manual_curation_v1",
+  "params": {
+    "min_cluster_size": 3,
+    "max_cluster_size": 10
+  },
+  "total_clusters": 24,
+  "total_items": 393,
+  "clusters": [
+    {
+      "id": "cluster-e-commerce-retail",
+      "label": "E-Commerce & Retail",
+      "cluster_id": "e-commerce-retail",
+      "macro_category": "Consumer",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 43,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-grocery-supermarkets",
+      "label": "Grocery & Supermarkets",
+      "cluster_id": "grocery-supermarkets",
+      "macro_category": "Consumer",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 28,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-entertainment-media",
+      "label": "Entertainment & Media",
+      "cluster_id": "entertainment-media",
+      "macro_category": "Consumer",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 24,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-fashion-apparel",
+      "label": "Fashion & Apparel",
+      "cluster_id": "fashion-apparel",
+      "macro_category": "Consumer",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 8,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-real-estate",
+      "label": "Real Estate",
+      "cluster_id": "real-estate",
+      "macro_category": "Consumer",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 6,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-travel-hospitality",
+      "label": "Travel & Hospitality",
+      "cluster_id": "travel-hospitality",
+      "macro_category": "Consumer",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 4,
+      "items": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-labor-markets",
+      "label": "Labor Markets",
+      "cluster_id": "labor-markets",
+      "macro_category": "Economics",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 15,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-auctions-marketplaces",
+      "label": "Auctions & Marketplaces",
+      "cluster_id": "auctions-marketplaces",
+      "macro_category": "Economics",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 10,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-sports-athletics",
+      "label": "Sports & Athletics",
+      "cluster_id": "sports-athletics",
+      "macro_category": "Entertainment",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 8,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-financial-services",
+      "label": "Financial Services",
+      "cluster_id": "financial-services",
+      "macro_category": "Finance",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 21,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-insurance-actuarial",
+      "label": "Insurance & Actuarial",
+      "cluster_id": "insurance-actuarial",
+      "macro_category": "Finance",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 12,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-defense-economics",
+      "label": "Defense Economics",
+      "cluster_id": "defense-economics",
+      "macro_category": "Government",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 7,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-healthcare",
+      "label": "Healthcare",
+      "cluster_id": "healthcare",
+      "macro_category": "Healthcare",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 15,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-healthcare-economics",
+      "label": "Healthcare Economics",
+      "cluster_id": "healthcare-economics",
+      "macro_category": "Healthcare",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 12,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-energy",
+      "label": "Energy & Utilities",
+      "cluster_id": "energy",
+      "macro_category": "Infrastructure",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 10,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-transportation",
+      "label": "Transportation & Mobility",
+      "cluster_id": "transportation",
+      "macro_category": "Logistics",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 26,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-logistics-supply-chain",
+      "label": "Logistics & Supply Chain",
+      "cluster_id": "logistics-supply-chain",
+      "macro_category": "Logistics",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 12,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-advertising",
+      "label": "Advertising & Ad Tech",
+      "cluster_id": "advertising",
+      "macro_category": "Marketing",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 25,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-martech-analytics",
+      "label": "MarTech & Customer Analytics",
+      "cluster_id": "martech-analytics",
+      "macro_category": "Marketing",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 9,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-data-portals",
+      "label": "Data Portals & Aggregators",
+      "cluster_id": "data-portals",
+      "macro_category": "Meta",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 45,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-causal-inference",
+      "label": "Causal Inference Benchmarks",
+      "cluster_id": "causal-inference",
+      "macro_category": "Methods",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 14,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-education",
+      "label": "Education",
+      "cluster_id": "education",
+      "macro_category": "Social",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 5,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-social-web",
+      "label": "Social & Web Data",
+      "cluster_id": "social-web",
+      "macro_category": "Technology",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 25,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": "cluster-geospatial",
+      "label": "Geospatial & Location",
+      "cluster_id": "geospatial",
+      "macro_category": "Technology",
+      "original_categories": [
+        "E-Commerce"
+      ],
+      "item_count": 9,
+      "items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "carousel_items": [
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  ]
+}

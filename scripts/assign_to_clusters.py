@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 """
-LLM-Assisted Cluster Assignment for Learning Resources.
+LLM-Assisted Cluster Assignment for Content (Resources, Talks, Datasets).
 
-Assigns each resource to 1-2 manually curated clusters using OpenAI.
+Assigns each item to 1-2 manually curated clusters using OpenAI.
 Outputs CSV for human review before final assignment.
 
 Usage:
     OPENAI_API_KEY=sk-... python3 scripts/assign_to_clusters.py
-    OPENAI_API_KEY=sk-... python3 scripts/assign_to_clusters.py --limit 50  # Test with 50 items
-    OPENAI_API_KEY=sk-... python3 scripts/assign_to_clusters.py --apply      # Apply from reviewed CSV
+    OPENAI_API_KEY=sk-... python3 scripts/assign_to_clusters.py --content-type talks
+    OPENAI_API_KEY=sk-... python3 scripts/assign_to_clusters.py --content-type datasets --limit 50
+    OPENAI_API_KEY=sk-... python3 scripts/assign_to_clusters.py --content-type talks --apply
 """
 
 import argparse
@@ -29,10 +30,46 @@ except ImportError:
 
 # Paths
 PROJECT_ROOT = Path(__file__).parent.parent
-RESOURCES_FILE = PROJECT_ROOT / "data" / "resources.json"
-CLUSTER_DEFS_FILE = PROJECT_ROOT / "data" / "cluster_definitions.json"
-OUTPUT_CSV = PROJECT_ROOT / "scripts" / "cluster_assignments_review.csv"
-OUTPUT_JSON = PROJECT_ROOT / "data" / "resource_clusters.json"
+
+# Content type configurations
+CONTENT_CONFIGS = {
+    "resources": {
+        "data_file": PROJECT_ROOT / "data" / "resources.json",
+        "defs_file": PROJECT_ROOT / "data" / "cluster_definitions.json",
+        "output_csv": PROJECT_ROOT / "scripts" / "cluster_assignments_review.csv",
+        "output_json": PROJECT_ROOT / "data" / "resource_clusters.json",
+        "min_cluster_size": 4,
+        "max_carousel": 10,
+        "item_type": "learning resource"
+    },
+    "talks": {
+        "data_file": PROJECT_ROOT / "data" / "talks.json",
+        "defs_file": PROJECT_ROOT / "data" / "talk_cluster_definitions.json",
+        "output_csv": PROJECT_ROOT / "scripts" / "talk_cluster_assignments_review.csv",
+        "output_json": PROJECT_ROOT / "data" / "talk_clusters.json",
+        "min_cluster_size": 3,
+        "max_carousel": 7,
+        "item_type": "talk/video"
+    },
+    "datasets": {
+        "data_file": PROJECT_ROOT / "data" / "datasets.json",
+        "defs_file": PROJECT_ROOT / "data" / "dataset_cluster_definitions.json",
+        "output_csv": PROJECT_ROOT / "scripts" / "dataset_cluster_assignments_review.csv",
+        "output_json": PROJECT_ROOT / "data" / "dataset_clusters.json",
+        "min_cluster_size": 3,
+        "max_carousel": 10,
+        "item_type": "dataset"
+    },
+    "packages": {
+        "data_file": PROJECT_ROOT / "data" / "packages.json",
+        "defs_file": PROJECT_ROOT / "data" / "package_cluster_definitions.json",
+        "output_csv": PROJECT_ROOT / "scripts" / "package_cluster_assignments_review.csv",
+        "output_json": PROJECT_ROOT / "data" / "package_clusters.json",
+        "min_cluster_size": 4,
+        "max_carousel": 10,
+        "item_type": "software package/library"
+    }
+}
 
 # API settings
 MODEL = "gpt-4o-mini"
@@ -40,15 +77,17 @@ MAX_CONCURRENT = 10
 RATE_LIMIT_DELAY = 0.1
 
 
-def load_resources():
-    """Load resources data."""
-    with open(RESOURCES_FILE) as f:
+def load_content(content_type: str):
+    """Load content data for the specified type."""
+    config = CONTENT_CONFIGS[content_type]
+    with open(config["data_file"]) as f:
         return json.load(f)
 
 
-def load_cluster_definitions():
-    """Load cluster definitions."""
-    with open(CLUSTER_DEFS_FILE) as f:
+def load_cluster_definitions(content_type: str):
+    """Load cluster definitions for the specified type."""
+    config = CONTENT_CONFIGS[content_type]
+    with open(config["defs_file"]) as f:
         return json.load(f)
 
 
@@ -60,19 +99,19 @@ def build_cluster_prompt(clusters):
     return "\n".join(lines)
 
 
-async def assign_resource(client: AsyncOpenAI, resource: dict, cluster_prompt: str, semaphore: asyncio.Semaphore) -> dict:
-    """Assign a single resource to clusters using LLM."""
+async def assign_item(client: AsyncOpenAI, item: dict, cluster_prompt: str, item_type: str, semaphore: asyncio.Semaphore) -> dict:
+    """Assign a single item to clusters using LLM."""
     async with semaphore:
         await asyncio.sleep(RATE_LIMIT_DELAY)
 
-        name = resource.get('name', 'Unknown')
-        description = resource.get('description', '')
-        category = resource.get('category', '')
-        url = resource.get('url', '')
+        name = item.get('name', item.get('title', 'Unknown'))
+        description = item.get('description', '')
+        category = item.get('category', '')
+        url = item.get('url', '')
 
-        prompt = f"""Assign this learning resource to 1-2 of the curated topic clusters below.
+        prompt = f"""Assign this {item_type} to 1-2 of the curated topic clusters below.
 
-RESOURCE:
+ITEM:
 - Name: {name}
 - Description: {description}
 - Category: {category}
@@ -82,7 +121,7 @@ AVAILABLE CLUSTERS:
 {cluster_prompt}
 
 INSTRUCTIONS:
-1. Choose 1-2 clusters that best match this resource
+1. Choose 1-2 clusters that best match this {item_type}
 2. Primary cluster should be the best fit
 3. Secondary cluster is optional (only if clearly relevant)
 4. If no cluster fits well, use "none" as primary
@@ -94,7 +133,7 @@ Return JSON only:
             response = await client.chat.completions.create(
                 model=MODEL,
                 messages=[
-                    {"role": "system", "content": "You are a classifier that assigns learning resources to topic clusters. Return only valid JSON."},
+                    {"role": "system", "content": f"You are a classifier that assigns {item_type}s to topic clusters. Return only valid JSON."},
                     {"role": "user", "content": prompt}
                 ],
                 temperature=0.1,
@@ -110,7 +149,7 @@ Return JSON only:
             result = json.loads(content)
 
             return {
-                "id": resource.get('id', ''),
+                "id": item.get('id', ''),
                 "name": name,
                 "category": category,
                 "primary": result.get('primary', 'none'),
@@ -122,7 +161,7 @@ Return JSON only:
         except Exception as e:
             print(f"  Error processing '{name}': {e}")
             return {
-                "id": resource.get('id', ''),
+                "id": item.get('id', ''),
                 "name": name,
                 "category": category,
                 "primary": "error",
@@ -132,18 +171,18 @@ Return JSON only:
             }
 
 
-async def process_all_resources(client: AsyncOpenAI, resources: list, cluster_prompt: str, limit: int = None):
-    """Process all resources with LLM assignment."""
+async def process_all_items(client: AsyncOpenAI, items: list, cluster_prompt: str, item_type: str, limit: int = None):
+    """Process all items with LLM assignment."""
     if limit:
-        resources = resources[:limit]
+        items = items[:limit]
 
     semaphore = asyncio.Semaphore(MAX_CONCURRENT)
     tasks = [
-        assign_resource(client, r, cluster_prompt, semaphore)
-        for r in resources
+        assign_item(client, item, cluster_prompt, item_type, semaphore)
+        for item in items
     ]
 
-    print(f"\nProcessing {len(tasks)} resources...")
+    print(f"\nProcessing {len(tasks)} {item_type}s...")
     results = []
     for i, coro in enumerate(asyncio.as_completed(tasks)):
         result = await coro
@@ -173,10 +212,14 @@ def load_reviewed_csv(csv_path: Path) -> list:
         return list(reader)
 
 
-def build_clusters_from_assignments(assignments: list, resources: list, cluster_defs: dict) -> dict:
-    """Build resource_clusters.json from assignments."""
-    # Build resource lookup
-    resource_by_id = {r.get('id', ''): r for r in resources}
+def build_clusters_from_assignments(assignments: list, items: list, cluster_defs: dict, content_type: str) -> dict:
+    """Build clusters JSON from assignments."""
+    config = CONTENT_CONFIGS[content_type]
+    min_cluster_size = config["min_cluster_size"]
+    max_carousel = config["max_carousel"]
+
+    # Build item lookup
+    item_by_id = {r.get('id', ''): r for r in items}
 
     # Build cluster lookup
     cluster_by_id = {c['id']: c for c in cluster_defs['clusters']}
@@ -206,8 +249,8 @@ def build_clusters_from_assignments(assignments: list, resources: list, cluster_
             print(f"  Warning: Unknown cluster '{cluster_id}'")
             continue
 
-        if len(item_ids) < 4:
-            print(f"  Skipping '{cluster_id}' - only {len(item_ids)} items")
+        if len(item_ids) < min_cluster_size:
+            print(f"  Skipping '{cluster_id}' - only {len(item_ids)} items (min: {min_cluster_size})")
             continue
 
         cluster_def = cluster_by_id[cluster_id]
@@ -215,20 +258,20 @@ def build_clusters_from_assignments(assignments: list, resources: list, cluster_
         # Get original categories
         orig_cats = set()
         for rid in item_ids:
-            if rid in resource_by_id:
-                cat = resource_by_id[rid].get('category', 'Unknown')
+            if rid in item_by_id:
+                cat = item_by_id[rid].get('category', 'Unknown')
                 orig_cats.add(cat)
 
         # Get items sorted by model_score
         items_with_score = []
         for rid in item_ids:
-            if rid in resource_by_id:
-                score = resource_by_id[rid].get('model_score', 0)
+            if rid in item_by_id:
+                score = item_by_id[rid].get('model_score', 0)
                 items_with_score.append((rid, score))
         items_with_score.sort(key=lambda x: -x[1])
 
-        # Carousel items (top 10)
-        carousel_items = [rid for rid, _ in items_with_score[:10]]
+        # Carousel items (top N based on content type)
+        carousel_items = [rid for rid, _ in items_with_score[:max_carousel]]
 
         output_clusters.append({
             "id": f"cluster-{cluster_id}",
@@ -248,8 +291,8 @@ def build_clusters_from_assignments(assignments: list, resources: list, cluster_
         "generated_at": datetime.now().isoformat(),
         "algorithm": "manual_curation_v1",
         "params": {
-            "min_cluster_size": 4,
-            "max_cluster_size": 10
+            "min_cluster_size": min_cluster_size,
+            "max_cluster_size": max_carousel
         },
         "total_clusters": len(output_clusters),
         "total_items": sum(c['item_count'] for c in output_clusters),
@@ -259,33 +302,43 @@ def build_clusters_from_assignments(assignments: list, resources: list, cluster_
 
 async def main():
     parser = argparse.ArgumentParser(description="LLM-assisted cluster assignment")
-    parser.add_argument('--limit', type=int, help="Limit number of resources to process")
+    parser.add_argument('--content-type', type=str, default='resources',
+                        choices=['resources', 'talks', 'datasets', 'packages'],
+                        help="Content type to process (default: resources)")
+    parser.add_argument('--limit', type=int, help="Limit number of items to process")
     parser.add_argument('--apply', action='store_true', help="Apply assignments from reviewed CSV")
     args = parser.parse_args()
 
+    content_type = args.content_type
+    config = CONTENT_CONFIGS[content_type]
+
     # Load data
-    print("Loading data...")
-    resources = load_resources()
-    cluster_defs = load_cluster_definitions()
-    print(f"  {len(resources)} resources")
+    print(f"Loading {content_type} data...")
+    items = load_content(content_type)
+    cluster_defs = load_cluster_definitions(content_type)
+    print(f"  {len(items)} {content_type}")
     print(f"  {len(cluster_defs['clusters'])} cluster definitions")
+
+    output_csv = config["output_csv"]
+    output_json = config["output_json"]
+    item_type = config["item_type"]
 
     if args.apply:
         # Apply from reviewed CSV
-        if not OUTPUT_CSV.exists():
-            print(f"Error: {OUTPUT_CSV} not found")
+        if not output_csv.exists():
+            print(f"Error: {output_csv} not found")
             print("Run without --apply first to generate assignments")
             return
 
-        print(f"\nLoading reviewed assignments from {OUTPUT_CSV}...")
-        assignments = load_reviewed_csv(OUTPUT_CSV)
+        print(f"\nLoading reviewed assignments from {output_csv}...")
+        assignments = load_reviewed_csv(output_csv)
         print(f"  {len(assignments)} assignments")
 
         print("\nBuilding clusters...")
-        output = build_clusters_from_assignments(assignments, resources, cluster_defs)
+        output = build_clusters_from_assignments(assignments, items, cluster_defs, content_type)
 
-        print(f"\nSaving to {OUTPUT_JSON}...")
-        with open(OUTPUT_JSON, 'w') as f:
+        print(f"\nSaving to {output_json}...")
+        with open(output_json, 'w') as f:
             json.dump(output, f, indent=2)
 
         print(f"\nDone! Created {output['total_clusters']} clusters with {output['total_items']} items")
@@ -301,10 +354,10 @@ async def main():
         client = AsyncOpenAI(api_key=api_key)
         cluster_prompt = build_cluster_prompt(cluster_defs['clusters'])
 
-        results = await process_all_resources(client, resources, cluster_prompt, limit=args.limit)
+        results = await process_all_items(client, items, cluster_prompt, item_type, limit=args.limit)
 
         # Save for review
-        save_csv_for_review(results, OUTPUT_CSV)
+        save_csv_for_review(results, output_csv)
 
         # Summary
         success = sum(1 for r in results if r['status'] == 'success')

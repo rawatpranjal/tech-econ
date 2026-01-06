@@ -1,0 +1,132 @@
+{
+  "version": "1.0",
+  "description": "Cluster definitions for Talks section - organized by topic/method",
+  "clusters": [
+    {
+      "id": "causal-inference",
+      "label": "Causal Inference & ML",
+      "macro_category": "Methods",
+      "description": "Causal inference methods, treatment effects, and ML for causal analysis",
+      "keywords": ["causal inference", "treatment effect", "causal ML", "econometrics", "identification", "CATE", "ATE", "counterfactual"]
+    },
+    {
+      "id": "experimentation",
+      "label": "Experimentation & A/B Testing",
+      "macro_category": "Methods",
+      "description": "A/B testing, experiment design, and scaling experimentation",
+      "keywords": ["A/B test", "experiment", "randomized", "controlled trial", "RCT", "testing", "variance reduction", "CUPED"]
+    },
+    {
+      "id": "platform-economics",
+      "label": "Platform Economics",
+      "macro_category": "Industry",
+      "description": "Economics of platforms, marketplaces, and two-sided networks",
+      "keywords": ["platform", "marketplace", "two-sided", "network effects", "matching", "Uber", "Airbnb", "DoorDash"]
+    },
+    {
+      "id": "market-design-auctions",
+      "label": "Market Design & Auctions",
+      "macro_category": "Methods",
+      "description": "Mechanism design, auction theory, and market design",
+      "keywords": ["auction", "mechanism design", "matching market", "kidney exchange", "school choice", "bidding", "VCG", "GSP"]
+    },
+    {
+      "id": "ai-labor",
+      "label": "AI & Labor Economics",
+      "macro_category": "Industry",
+      "description": "Impact of AI on labor, automation, and future of work",
+      "keywords": ["AI", "labor", "automation", "future of work", "employment", "wages", "skills", "GPT", "LLM"]
+    },
+    {
+      "id": "strategy-digital",
+      "label": "Strategy & Digital Platforms",
+      "macro_category": "Industry",
+      "description": "Digital strategy, tech companies, and platform competition",
+      "keywords": ["strategy", "digital", "tech company", "competition", "Amazon", "Google", "Meta", "Microsoft"]
+    },
+    {
+      "id": "pricing-behavioral",
+      "label": "Pricing & Behavioral Economics",
+      "macro_category": "Methods",
+      "description": "Dynamic pricing, behavioral economics, and consumer behavior",
+      "keywords": ["pricing", "behavioral", "surge", "dynamic pricing", "demand", "elasticity", "consumer", "nudge"]
+    },
+    {
+      "id": "monographs-lectures",
+      "label": "Monographs & Nobel Lectures",
+      "macro_category": "Foundational",
+      "description": "Foundational lectures, Nobel lectures, and academic monographs",
+      "keywords": ["Nobel", "monograph", "lecture series", "foundational", "Tirole", "Roth", "Milgrom", "Thaler"]
+    },
+    {
+      "id": "labor-gig-economy",
+      "label": "Labor & Gig Economy",
+      "macro_category": "Industry",
+      "description": "Labor economics, gig economy, and worker classification",
+      "keywords": ["labor", "gig economy", "worker", "employment", "freelance", "Uber driver", "contract", "minimum wage"]
+    },
+    {
+      "id": "tech-economics",
+      "label": "Tech Economics & Antitrust",
+      "macro_category": "Industry",
+      "description": "Economics of tech companies, antitrust, and competition policy",
+      "keywords": ["tech", "antitrust", "competition", "monopoly", "regulation", "FTC", "merger", "big tech"]
+    },
+    {
+      "id": "operations-research",
+      "label": "Operations Research",
+      "macro_category": "Methods",
+      "description": "Operations research, optimization, and supply chain",
+      "keywords": ["operations", "optimization", "supply chain", "logistics", "scheduling", "routing", "inventory"]
+    },
+    {
+      "id": "real-estate",
+      "label": "Real Estate Economics",
+      "macro_category": "Industry",
+      "description": "Real estate economics, housing markets, and PropTech",
+      "keywords": ["real estate", "housing", "property", "Zillow", "Redfin", "home prices", "rental"]
+    },
+    {
+      "id": "sports-analytics",
+      "label": "Sports Analytics",
+      "macro_category": "Industry",
+      "description": "Sports economics and analytics",
+      "keywords": ["sports", "baseball", "basketball", "football", "sabermetrics", "analytics", "player"]
+    },
+    {
+      "id": "marketing-martech",
+      "label": "Marketing & MarTech",
+      "macro_category": "Industry",
+      "description": "Marketing science, advertising economics, and customer analytics",
+      "keywords": ["marketing", "advertising", "attribution", "customer", "retention", "CLV", "ad tech", "campaign"]
+    },
+    {
+      "id": "healthcare-economics",
+      "label": "Healthcare Economics",
+      "macro_category": "Industry",
+      "description": "Healthcare economics and health technology",
+      "keywords": ["healthcare", "health", "hospital", "insurance", "pharma", "medical", "patient"]
+    },
+    {
+      "id": "energy-economics",
+      "label": "Energy Economics",
+      "macro_category": "Industry",
+      "description": "Energy economics, utilities, and sustainability",
+      "keywords": ["energy", "utilities", "electricity", "renewable", "carbon", "climate", "grid"]
+    },
+    {
+      "id": "machine-learning",
+      "label": "Machine Learning & AI",
+      "macro_category": "Methods",
+      "description": "Machine learning, deep learning, and AI applications",
+      "keywords": ["machine learning", "ML", "deep learning", "neural network", "prediction", "forecasting", "recommendation"]
+    },
+    {
+      "id": "transportation",
+      "label": "Transportation Economics",
+      "macro_category": "Industry",
+      "description": "Transportation economics and mobility",
+      "keywords": ["transportation", "mobility", "rideshare", "autonomous", "vehicle", "traffic", "transit"]
+    }
+  ]
+}

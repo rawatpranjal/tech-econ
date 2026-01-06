@@ -1,0 +1,174 @@
+{
+  "version": "1.0",
+  "description": "Cluster definitions for Datasets section - organized by domain",
+  "clusters": [
+    {
+      "id": "e-commerce-retail",
+      "label": "E-Commerce & Retail",
+      "macro_category": "Consumer",
+      "description": "E-commerce transactions, retail analytics, and online shopping data",
+      "keywords": ["e-commerce", "retail", "online shopping", "transaction", "purchase", "cart", "conversion", "Amazon"]
+    },
+    {
+      "id": "grocery-supermarkets",
+      "label": "Grocery & Supermarkets",
+      "macro_category": "Consumer",
+      "description": "Grocery shopping, supermarket data, and food retail",
+      "keywords": ["grocery", "supermarket", "food", "Instacart", "basket", "CPG", "FMCG", "Nielsen"]
+    },
+    {
+      "id": "fashion-apparel",
+      "label": "Fashion & Apparel",
+      "macro_category": "Consumer",
+      "description": "Fashion e-commerce and apparel datasets",
+      "keywords": ["fashion", "apparel", "clothing", "outfit", "style", "ASOS", "Zalando"]
+    },
+    {
+      "id": "entertainment-media",
+      "label": "Entertainment & Media",
+      "macro_category": "Consumer",
+      "description": "Movies, music, streaming, and media consumption data",
+      "keywords": ["entertainment", "media", "movie", "music", "streaming", "Netflix", "Spotify", "content"]
+    },
+    {
+      "id": "advertising",
+      "label": "Advertising & Ad Tech",
+      "macro_category": "Marketing",
+      "description": "Digital advertising, ad impressions, and click-through data",
+      "keywords": ["advertising", "ad", "impression", "click", "CTR", "display", "programmatic", "RTB"]
+    },
+    {
+      "id": "martech-analytics",
+      "label": "MarTech & Customer Analytics",
+      "macro_category": "Marketing",
+      "description": "Marketing technology and customer analytics datasets",
+      "keywords": ["marketing", "customer", "CLV", "retention", "churn", "segmentation", "CRM", "analytics"]
+    },
+    {
+      "id": "financial-services",
+      "label": "Financial Services",
+      "macro_category": "Finance",
+      "description": "Banking, fintech, and financial transaction data",
+      "keywords": ["financial", "banking", "fintech", "loan", "credit", "payment", "transaction", "fraud"]
+    },
+    {
+      "id": "insurance-actuarial",
+      "label": "Insurance & Actuarial",
+      "macro_category": "Finance",
+      "description": "Insurance claims, actuarial, and risk data",
+      "keywords": ["insurance", "actuarial", "claim", "risk", "underwriting", "premium", "loss"]
+    },
+    {
+      "id": "healthcare",
+      "label": "Healthcare",
+      "macro_category": "Healthcare",
+      "description": "Medical, clinical, and healthcare datasets",
+      "keywords": ["healthcare", "medical", "clinical", "patient", "hospital", "diagnosis", "treatment", "EHR"]
+    },
+    {
+      "id": "healthcare-economics",
+      "label": "Healthcare Economics",
+      "macro_category": "Healthcare",
+      "description": "Healthcare economics, health policy, and pharma data",
+      "keywords": ["health economics", "pharma", "drug", "pricing", "policy", "Medicare", "Medicaid"]
+    },
+    {
+      "id": "transportation",
+      "label": "Transportation & Mobility",
+      "macro_category": "Logistics",
+      "description": "Transportation, rideshare, and mobility datasets",
+      "keywords": ["transportation", "mobility", "rideshare", "Uber", "Lyft", "taxi", "traffic", "transit"]
+    },
+    {
+      "id": "logistics-supply-chain",
+      "label": "Logistics & Supply Chain",
+      "macro_category": "Logistics",
+      "description": "Supply chain, logistics, and delivery data",
+      "keywords": ["logistics", "supply chain", "delivery", "shipping", "warehouse", "inventory", "fulfillment"]
+    },
+    {
+      "id": "labor-markets",
+      "label": "Labor Markets",
+      "macro_category": "Economics",
+      "description": "Employment, wages, and labor market data",
+      "keywords": ["labor", "employment", "wage", "job", "hiring", "unemployment", "worker", "resume"]
+    },
+    {
+      "id": "causal-inference",
+      "label": "Causal Inference Benchmarks",
+      "macro_category": "Methods",
+      "description": "Benchmark datasets for causal inference methods",
+      "keywords": ["causal", "benchmark", "treatment", "RCT", "experiment", "evaluation", "IHDP", "Lalonde"]
+    },
+    {
+      "id": "data-portals",
+      "label": "Data Portals & Aggregators",
+      "macro_category": "Meta",
+      "description": "Data portal collections and dataset aggregators",
+      "keywords": ["portal", "aggregator", "collection", "repository", "Kaggle", "UCI", "data.gov", "open data"]
+    },
+    {
+      "id": "energy",
+      "label": "Energy & Utilities",
+      "macro_category": "Infrastructure",
+      "description": "Energy, utilities, and power grid data",
+      "keywords": ["energy", "electricity", "power", "utility", "grid", "renewable", "solar", "consumption"]
+    },
+    {
+      "id": "defense-economics",
+      "label": "Defense Economics",
+      "macro_category": "Government",
+      "description": "Defense, military, and government spending data",
+      "keywords": ["defense", "military", "government", "spending", "procurement", "contract", "security"]
+    },
+    {
+      "id": "sports-athletics",
+      "label": "Sports & Athletics",
+      "macro_category": "Entertainment",
+      "description": "Sports statistics and athletic performance data",
+      "keywords": ["sports", "baseball", "basketball", "football", "soccer", "athlete", "performance", "statistics"]
+    },
+    {
+      "id": "social-web",
+      "label": "Social & Web Data",
+      "macro_category": "Technology",
+      "description": "Social media, web traffic, and user behavior data",
+      "keywords": ["social", "web", "Twitter", "Reddit", "user", "engagement", "content", "moderation"]
+    },
+    {
+      "id": "geospatial",
+      "label": "Geospatial & Location",
+      "macro_category": "Technology",
+      "description": "Geospatial, mapping, and location data",
+      "keywords": ["geospatial", "location", "GPS", "map", "geographic", "POI", "coordinates"]
+    },
+    {
+      "id": "real-estate",
+      "label": "Real Estate",
+      "macro_category": "Consumer",
+      "description": "Real estate, housing, and property data",
+      "keywords": ["real estate", "housing", "property", "home", "rental", "price", "Zillow", "Redfin"]
+    },
+    {
+      "id": "education",
+      "label": "Education",
+      "macro_category": "Social",
+      "description": "Education, learning, and academic data",
+      "keywords": ["education", "student", "learning", "school", "university", "course", "MOOC"]
+    },
+    {
+      "id": "travel-hospitality",
+      "label": "Travel & Hospitality",
+      "macro_category": "Consumer",
+      "description": "Travel, hotels, and hospitality data",
+      "keywords": ["travel", "hotel", "hospitality", "booking", "Airbnb", "tourism", "flight", "reservation"]
+    },
+    {
+      "id": "auctions-marketplaces",
+      "label": "Auctions & Marketplaces",
+      "macro_category": "Economics",
+      "description": "Auction data and marketplace transaction data",
+      "keywords": ["auction", "marketplace", "eBay", "bidding", "peer-to-peer", "P2P", "listing"]
+    }
+  ]
+}

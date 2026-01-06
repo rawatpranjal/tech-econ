@@ -1,0 +1,409 @@
+id,name,category,primary,secondary,confidence,status
+,Diginetica Fashion,Fashion & Apparel,fashion-apparel,,high,success
+,Twitch Gamers Social Network,Entertainment & Media,entertainment-media,social-web,high,success
+,Citi Bike System Data,Transportation Economics & Technology,transportation,,high,success
+,Instacart Market Basket Analysis,MarTech & Customer Analytics,grocery-supermarkets,martech-analytics,high,success
+,CoasterQueues,Entertainment & Media,entertainment-media,,high,success
+,Criteo Terabyte,Advertising,advertising,,high,success
+,OpenML,Dataset Aggregators,data-portals,,high,success
+,Used Car Auction (PakWheels),Auctions & Marketplaces,auctions-marketplaces,,high,success
+,Bank of Israel Call Center (Technion),Operations & Service,financial-services,,high,success
+,MovieLens 25M,MarTech & Customer Analytics,entertainment-media,martech-analytics,high,success
+,Alibaba Fashion Combo,Fashion & Apparel,fashion-apparel,,high,success
+,Goodreads,Entertainment & Media,entertainment-media,,high,success
+,HCUP (Healthcare Cost and Utilization Project),Insurance & Actuarial,insurance-actuarial,healthcare,high,success
+,Google Dataset Search,Data Portals,data-portals,,high,success
+,Brazil Medical,Grocery & Supermarkets,grocery-supermarkets,healthcare-economics,high,success
+,Alibaba Cluster Trace v2018,Technology & Infrastructure,none,,low,success
+,CMS Hospital Price Transparency,Healthcare,healthcare,healthcare-economics,high,success
+,Google Dataset Search,Dataset Aggregators,data-portals,,high,success
+,Alibaba Cloud Theme,E-Commerce,e-commerce-retail,,high,success
+,Netflix Engagement Reports,Entertainment & Media,entertainment-media,,high,success
+,Israeli Bank Call Center (Technion),Operations & Service,none,,low,success
+,Common Crawl,Social & Web,social-web,,high,success
+,Rakuten SIGIR,E-Commerce,e-commerce-retail,,high,success
+,Fashion-MNIST,Fashion & Apparel,fashion-apparel,,high,success
+,NeurIPS Competition Data,Data Portals,data-portals,,high,success
+,IBM LBIDD Benchmark,Causal Inference,causal-inference,,high,success
+,ASOS Experiments,Fashion & Apparel,fashion-apparel,,high,success
+,Marketing Science Databases,Data Portals,martech-analytics,,high,success
+,Rakuten Data Release,Data Portals,e-commerce-retail,advertising,high,success
+,OPTN Organ Transplant,Healthcare,healthcare,,high,success
+,JD.com Search,E-Commerce,e-commerce-retail,,high,success
+,MicroLens,Entertainment & Media,entertainment-media,,high,success
+,Data Mining Cup,Data Portals,data-portals,,high,success
+,Medicare Provider Utilization,Healthcare,healthcare,,high,success
+,Amazon Reviews (2023),E-Commerce,e-commerce-retail,,high,success
+,RecSys Datasets Collection,Data Portals,data-portals,,high,success
+,Pushshift Reddit Archive,Social & Web,social-web,,high,success
+,Metacritic Video Games,Entertainment & Media,entertainment-media,,high,success
+,DrivenData,Data Portals,data-portals,,high,success
+,MIMIC-CXR,Healthcare,healthcare,causal-inference,high,success
+,USASpending Federal Awards,Data Portals,data-portals,,high,success
+,JD.com 2020 (MSOM-20),E-Commerce,e-commerce-retail,,high,success
+,TouringPlans Disney World Data,Entertainment & Media,entertainment-media,,high,success
+,DB1B Airline Origin and Destination Survey,Transportation Economics & Technology,transportation,travel-hospitality,high,success
+,NOAA Storm Events Database,Insurance & Actuarial,insurance-actuarial,,high,success
+,Yongfeng Dataset Collection,Data Portals,e-commerce-retail,,high,success
+,OpenStreetMap Road Network,Transportation Economics & Technology,transportation,geospatial,high,success
+,Census Business Dynamics Statistics,Data Portals,labor-markets,,high,success
+,Retail Rocket,E-Commerce,e-commerce-retail,,high,success
+,FEMA NFIP Claims & Policies,Insurance & Actuarial,insurance-actuarial,,high,success
+,Synthetic Distributed System Logs,Technology & Infrastructure,none,,low,success
+,Julian McAuley Datasets,Data Portals,data-portals,,high,success
+,BestBuy,E-Commerce,e-commerce-retail,,high,success
+,Innerwear Data,Fashion & Apparel,fashion-apparel,,high,success
+,CMS Medicare & Medicaid Data,Insurance & Actuarial,insurance-actuarial,,high,success
+,Indonesian Fashion,Fashion & Apparel,fashion-apparel,,high,success
+,Real-Time Advertisers Auction,Advertising,advertising,,high,success
+,Wayfair Search (WANDS),E-Commerce,e-commerce-retail,,high,success
+,KDD Cup 2009 Customer Relationship Prediction,MarTech & Customer Analytics,martech-analytics,,high,success
+,Amazon Fine Foods Reviews,MarTech & Customer Analytics,martech-analytics,grocery-supermarkets,high,success
+,French Motor TPL (freMTPL2),Insurance & Actuarial,insurance-actuarial,,high,success
+,Human Mortality Database,Insurance & Actuarial,insurance-actuarial,,high,success
+,Instacart,Food & Delivery,grocery-supermarkets,,high,success
+,French Motor Third Party Liability (MTPL),Insurance & Actuarial,insurance-actuarial,,high,success
+,Ele.me Clickstream,Food & Delivery,logistics-supply-chain,,high,success
+,ER Wait Time,Healthcare,healthcare,,high,success
+,Retail Rocket Recommender System Dataset,MarTech & Customer Analytics,e-commerce-retail,martech-analytics,high,success
+,Telco Customer Churn (IBM),MarTech & Customer Analytics,martech-analytics,,high,success
+,Ukraine Procurement (ProZorro),Auctions & Marketplaces,auctions-marketplaces,,high,success
+,Opportunity Atlas (Chetty),Labor Markets,labor-markets,,high,success
+,CodaLab,Data Portals,data-portals,,high,success
+,LMSYS-Chat-1M,AI & LLM,none,,medium,success
+,DoD National Defense Budget Estimates (Green Book),Defense Economics,defense-economics,,high,success
+,EU Open Data Portal,Dataset Aggregators,data-portals,,high,success
+,Statcast / Baseball Savant,Sports & Athletics,sports-athletics,,high,success
+,Natural Driving in Ohio,Transportation & Mobility,transportation,,high,success
+,Open E-Commerce 1.0 (MIT),E-Commerce,e-commerce-retail,,high,success
+,NBER Public Use Data Archive,Data Portals,data-portals,,high,success
+,Art Auction (Artists for Lahaina),Auctions & Marketplaces,auctions-marketplaces,,high,success
+,DiDi GAIA Open Data,Transportation & Mobility,transportation,,high,success
+,Tesco Grocery 1.0,Grocery & Supermarkets,grocery-supermarkets,,high,success
+,nflverse,Sports & Athletics,sports-athletics,,high,success
+,AirBnb (Inside Airbnb),Real Estate,real-estate,travel-hospitality,high,success
+,AEA Data and Code Repository,Dataset Aggregators,data-portals,,high,success
+,Amazon Sessions (KDD Cup 23),E-Commerce,e-commerce-retail,,high,success
+,Grab Driving GPS Traces,Transportation & Mobility,transportation,,high,success
+,NYC Property Sales,Real Estate,real-estate,,high,success
+,Baidu AI Datasets,Data Portals,data-portals,,high,success
+,Telecom Italia Big Data Challenge,Telecommunications,geospatial,,high,success
+,Chicago TNC Trips,Transportation & Mobility,transportation,,high,success
+,UK Land Registry Price Paid,Real Estate,real-estate,,high,success
+,ORBITAAL Bitcoin Transactions,Financial Services,financial-services,,high,success
+,Brazilian Store Chain,Grocery & Supermarkets,grocery-supermarkets,,high,success
+,PEP Experimental Research,Education,education,,high,success
+,NBER-CES Manufacturing Database,Labor Markets,labor-markets,,high,success
+,Dominick's Finer Foods (Kilts Center),MarTech & Customer Analytics,grocery-supermarkets,martech-analytics,high,success
+,DataMOCCA US Bank Database,Operations & Service,none,,low,success
+,ORBITAAL Bitcoin Graph,Financial Services,financial-services,,high,success
+,HateDay,Content Moderation,social-web,,high,success
+,MobileRec,App Stores,social-web,,high,success
+,Yandex Datasets,Data Portals,data-portals,,high,success
+,Office Supplies (DMDA 2023),Grocery & Supermarkets,grocery-supermarkets,,high,success
+,bayesm R Package Datasets,MarTech & Customer Analytics,martech-analytics,,high,success
+,SUPPORT Study,Healthcare,healthcare,,high,success
+,Criteo AI Lab Datasets,Dataset Aggregators,advertising,,high,success
+,Athey's Course Datasets,Education,causal-inference,,high,success
+,Space-Track.org,Space,data-portals,,high,success
+,NHL API,Sports & Athletics,sports-athletics,,high,success
+,LIAR Fact-Checking,Content Moderation,none,,high,success
+,Makridakis Competitions,Data Portals,data-portals,,high,success
+,Yahoo A1 Search Advertising Dataset,Advertising,advertising,,high,success
+,Home Depot Product Search,E-Commerce,e-commerce-retail,,high,success
+,National Transit Database (NTD),Transportation Economics & Technology,transportation,,high,success
+,FakeNewsNet,Content Moderation,social-web,,high,success
+,Romania Tenders,Auctions & Marketplaces,auctions-marketplaces,,high,success
+,Uber Movement,Transportation & Mobility,transportation,,high,success
+,Zillow Research Data,Real Estate,real-estate,,high,success
+,Zenodo,Dataset Aggregators,data-portals,,high,success
+,NYC EMS Incident Dispatch Data,Healthcare,healthcare,,high,success
+,LaDe (Cainiao),Logistics & Supply Chain,logistics-supply-chain,,high,success
+,Multi-Region MMM eCommerce Dataset,Marketing Mix,martech-analytics,advertising,high,success
+,MobilityData GTFS Catalog,Transportation Economics & Technology,transportation,,high,success
+,KuaiSAR,Entertainment & Media,entertainment-media,,high,success
+,Google Play Store Dataset,App Stores,none,,low,success
+,ICPSR,Dataset Aggregators,data-portals,,high,success
+,Creator Economy Reports,Creator Economy,social-web,,high,success
+,DiQAD,AI & LLM,none,,medium,success
+,Montgomery Liquor,Grocery & Supermarkets,grocery-supermarkets,,high,success
+,All of Us Research Program,Healthcare Economics & Health-Tech,healthcare-economics,,high,success
+,IMF PortWatch,Logistics & Supply Chain,logistics-supply-chain,,high,success
+,Flight Delay Dataset 2018-2022,Transportation & Mobility,transportation,,high,success
+,NATO Defence Expenditure,Defense Economics,defense-economics,,high,success
+,Flight Delay and Cancellation 2019-2023,Transportation & Mobility,transportation,,high,success
+,Social Capital Atlas,Labor Markets,labor-markets,,high,success
+,TfL Unified API,Transportation & Mobility,transportation,,high,success
+,NHANES (National Health and Nutrition Examination Survey),Healthcare Economics & Health-Tech,healthcare-economics,healthcare,high,success
+,CEPII BACI Trade Data,Labor Markets,labor-markets,,high,success
+,EPA CEMS (Continuous Emissions Monitoring),Energy,energy,,high,success
+,FCC Spectrum Auctions,Auctions & Marketplaces,auctions-marketplaces,,high,success
+,MTA Open Data,Transportation & Mobility,transportation,,high,success
+,Hate Speech Data Catalogue,Content Moderation,social-web,,high,success
+,BLP US Car Data,Automotive,transportation,,high,success
+,IEEE-CIS Fraud Detection,Financial Services,financial-services,,high,success
+,Ele.me Search,Food & Delivery,grocery-supermarkets,,high,success
+,World Inequality Database,Dataset Aggregators,data-portals,,high,success
+,Brazilian Drugs (ANVISA),Grocery & Supermarkets,grocery-supermarkets,,high,success
+,dSprite Causal Benchmark,Causal Inference,causal-inference,,high,success
+,NASA C-MAPSS Turbofan,Manufacturing,none,,low,success
+,NIST National Vulnerability Database (NVD),Cybersecurity,none,,high,success
+,PaySim Synthetic Transactions,Financial Services,financial-services,,high,success
+,Merative MarketScan,Healthcare Economics & Health-Tech,healthcare-economics,,high,success
+,DoubleML,Causal Inference,causal-inference,,high,success
+,GiveDirectly Kenya (Satellite Imagery),Causal Inference,causal-inference,geospatial,high,success
+,Fliggy Transfers,Travel & Hospitality,travel-hospitality,,high,success
+,BTS Airline On-Time Performance,Transportation & Mobility,transportation,,high,success
+,News (Johansson et al.),Causal Inference,causal-inference,,high,success
+,Coveo Shopping (SIGIR-21),E-Commerce,e-commerce-retail,,high,success
+,National Health Interview Survey (NHIS),Healthcare Economics & Health-Tech,healthcare-economics,healthcare,high,success
+,Shopee,E-Commerce,e-commerce-retail,,high,success
+,Airline Delay,Transportation & Mobility,transportation,,high,success
+,YouTube-8M,Entertainment & Media,entertainment-media,,high,success
+,Chicago Property Data,Real Estate,real-estate,,high,success
+,Revelio Labs COSMOS,Labor Markets,labor-markets,,high,success
+,NGSIM Vehicle Trajectories,Transportation & Mobility,transportation,,high,success
+,Flipkart,E-Commerce,e-commerce-retail,,high,success
+,Amazon Fraud Detection Benchmark,Financial Services,financial-services,,high,success
+,CelesTrak,Space,geospatial,,high,success
+,Lahman Baseball Database,Sports & Athletics,sports-athletics,,high,success
+,NEMSIS Public Release Research Dataset,Healthcare,healthcare,,high,success
+,Queue-Times API,Entertainment & Media,entertainment-media,,high,success
+,Alpha Vantage,Dataset Aggregators,financial-services,,high,success
+,Meta Content Library,Social & Web,social-web,,high,success
+,NBA Stats API,Sports & Athletics,sports-athletics,,high,success
+,NYC TLC Trip Records,Transportation & Mobility,transportation,,high,success
+,Stanford Amazon/Beer,Entertainment & Media,entertainment-media,e-commerce-retail,high,success
+,Federal Procurement Data System (FPDS),Defense Economics,defense-economics,,high,success
+,Oregon Health Insurance Experiment,Healthcare Economics & Health-Tech,healthcare-economics,,high,success
+,NYC TLC Trip Records,Transportation Economics & Technology,transportation,,high,success
+,Netflix Prize,Entertainment & Media,entertainment-media,,high,success
+,EM-DAT International Disaster Database,Insurance & Actuarial,insurance-actuarial,,high,success
+,Tencent Social Ads,Advertising,advertising,,high,success
+,Synthetic Patient Wait Time Records,Healthcare,healthcare,,high,success
+,Harvard Dataverse,Dataset Aggregators,data-portals,,high,success
+,LOBSTER Order Book,Financial Services,financial-services,,high,success
+,Moving to Opportunity (MTO),Labor Markets,labor-markets,,high,success
+,Medical Expenditure Panel Survey (MEPS),Healthcare Economics & Health-Tech,healthcare-economics,,high,success
+,Twitch Streaming Dataset,Entertainment & Media,entertainment-media,,high,success
+,FI-2010 Limit Order Book,Financial Services,financial-services,,high,success
+,Amazon AWS Open Data,Data Portals,data-portals,,high,success
+,Google Cluster Workload Traces 2019,Technology & Infrastructure,none,,low,success
+,YouTube Engagement Dataset,Entertainment & Media,entertainment-media,,high,success
+,Call Center Data,Operations & Service,none,,medium,success
+,Brazilian eCommerce,E-Commerce,e-commerce-retail,,high,success
+,NHTSA FARS (Fatality Analysis Reporting System),Insurance & Actuarial,insurance-actuarial,,high,success
+,Wikipedia Full Database Dump,Social & Web,social-web,,high,success
+,Damodaran Corporate Finance Data,Financial Services,financial-services,,high,success
+,Italian Grocers,Grocery & Supermarkets,grocery-supermarkets,,high,success
+,Queue Waiting Time Prediction,Operations & Service,none,,low,success
+,NYC Shopping,Grocery & Supermarkets,grocery-supermarkets,,high,success
+,Prosper Loan Data,Financial Services,financial-services,,high,success
+,Crypto Art (SuperRare),Auctions & Marketplaces,auctions-marketplaces,,high,success
+,Hashed Multimodal Banking,Financial Services,financial-services,,high,success
+,OpenStreetMap Planet,Social & Web,geospatial,social-web,high,success
+,Prosper Loans,Financial Services,financial-services,,high,success
+,Kaggle Datasets,Dataset Aggregators,data-portals,,high,success
+,Spotify Million Playlist,Entertainment & Media,entertainment-media,,high,success
+,Data.gov,Dataset Aggregators,data-portals,,high,success
+,StatsBomb Open Data,Sports & Athletics,sports-athletics,,high,success
+,Google BigQuery Crypto,Financial Services,financial-services,,high,success
+,SNAP Facebook Ego Networks,Social & Web,social-web,,high,success
+,Mexican Grocery,Grocery & Supermarkets,grocery-supermarkets,,high,success
+,Criteo Counterfactual Learning,Advertising,advertising,causal-inference,high,success
+,SEC EDGAR Filings,Financial Services,financial-services,,high,success
+,Open CDP,E-Commerce,e-commerce-retail,,high,success
+,Economic Tracker (COVID),Labor Markets,labor-markets,,high,success
+,Alibaba Ads (IJCAI-18),E-Commerce,advertising,,high,success
+,Computational Neuroscience,Education,education,,high,success
+,Avazu Click-Through Rate Dataset,Advertising,advertising,,high,success
+,Jeff Sackmann Tennis Data,Sports & Athletics,sports-athletics,,high,success
+,SIPRI Arms Transfers Database,Defense Economics,defense-economics,,high,success
+,iPinYou RTB Dataset,Advertising,advertising,,high,success
+,NetEase Music (INFORMS),Entertainment & Media,entertainment-media,,high,success
+,Google Merchandise,E-Commerce,e-commerce-retail,,high,success
+,LendingClub Loans,Financial Services,financial-services,,high,success
+,Harvard Dataverse Auctions,Advertising,auctions-marketplaces,,high,success
+,Google Cloud Public Datasets,Dataset Aggregators,data-portals,,high,success
+,Cainiao Last-Mile (MSOM18),Food & Delivery,logistics-supply-chain,,high,success
+,AXA Driver Telematics (Kaggle),Insurance & Actuarial,insurance-actuarial,,high,success
+,Predicting Poverty Replication Data,Geospatial,geospatial,,high,success
+,Server Logs,Technology & Infrastructure,none,,low,success
+,Alibaba Industrial Dump (150GB),E-Commerce,e-commerce-retail,,high,success
+,European Car Market,Automotive,none,,low,success
+,M5Product,E-Commerce,e-commerce-retail,,high,success
+,JD-pretrain-data,E-Commerce,e-commerce-retail,,high,success
+,Fliggy Travel,Travel & Hospitality,travel-hospitality,,high,success
+,Stanford GSB Experiment Collection,Education,education,,high,success
+,TCGA (The Cancer Genome Atlas),Healthcare,healthcare,,high,success
+,Store Item Demand,Grocery & Supermarkets,grocery-supermarkets,,high,success
+,Outbrain Click Prediction Dataset,Advertising,advertising,,high,success
+,Alibaba Clickstream 2018,E-Commerce,e-commerce-retail,,high,success
+,TalkingData AdTracking Fraud Detection,Fraud Detection,advertising,,high,success
+,Arena Human Preference (55K),AI & LLM,social-web,,high,success
+,Retrosheet,Sports & Athletics,sports-athletics,,high,success
+,US 2020 Election Study,Social & Web,social-web,,high,success
+,CFR Cyber Operations Tracker,Cybersecurity,none,,high,success
+,MHE Data Archive (Angrist-Pischke),Causal Inference,causal-inference,,high,success
+,IMF Data,Dataset Aggregators,financial-services,,high,success
+,SIPRI Arms Industry Database,Defense Economics,defense-economics,,high,success
+,EIA-860 Generator Inventory,Energy,energy,,high,success
+,ERA5 Reanalysis,Geospatial,geospatial,,high,success
+,Stack Overflow Developer Survey,Labor Markets,labor-markets,,high,success
+,Indian Sales,Grocery & Supermarkets,grocery-supermarkets,,high,success
+,GHCN-Daily,Geospatial,geospatial,,high,success
+,Dressipi Fashion (RecSys 2022),Fashion & Apparel,fashion-apparel,,high,success
+,Hospital Triage and Patient History,Healthcare,healthcare,,high,success
+,Vietnam Supermarket,Grocery & Supermarkets,grocery-supermarkets,,high,success
+,CSIS Significant Cyber Incidents,Cybersecurity,none,,high,success
+,German Used Cars,Automotive,e-commerce-retail,,high,success
+,JobHop (Flanders),Labor Markets,labor-markets,,high,success
+,Bosch Production Line Performance,Manufacturing,logistics-supply-chain,,high,success
+,Walmart Sales,Grocery & Supermarkets,grocery-supermarkets,,high,success
+,PyBLP (BLP Automobile Data),Causal Inference,causal-inference,,high,success
+,HYADES,Geospatial,geospatial,,high,success
+,Medicare Claims (ResDAC),Healthcare Economics & Health-Tech,healthcare-economics,,high,success
+,Netflix Viewing Behavior,Entertainment & Media,entertainment-media,,high,success
+,Indian Automobiles (Telangana),Automotive,transportation,,high,success
+,SIPRI Military Expenditure Database,Defense Economics,defense-economics,,high,success
+,Amazon ShopBench (KDD Cup 2024),Data Portals,e-commerce-retail,,high,success
+,Pastor-Stambaugh Liquidity Factors,Financial Services,financial-services,,high,success
+,Gamified Learning,Education,education,,high,success
+,MAWI Traffic Archive,Technology & Infrastructure,none,,low,success
+,YFCC100M,Entertainment & Media,entertainment-media,,high,success
+,Alibaba User Behavior 2018,E-Commerce,e-commerce-retail,,high,success
+,Dominicks Soft Drinks,Grocery & Supermarkets,grocery-supermarkets,,high,success
+,ETHOS Hate Speech,Content Moderation,social-web,,high,success
+,Behavioral Risk Factor Surveillance System (BRFSS),Healthcare Economics & Health-Tech,healthcare-economics,,high,success
+,ASOS Digital Experiments,E-Commerce,fashion-apparel,,high,success
+,Rossmann Store Sales,Grocery & Supermarkets,grocery-supermarkets,,high,success
+,Wikipedia Pageviews,Social & Web,social-web,,high,success
+,Open e-commerce 1.0,E-Commerce,e-commerce-retail,,high,success
+,Yelp Dataset,Social & Web,social-web,,high,success
+,Online Retail II (UCI),MarTech & Customer Analytics,e-commerce-retail,martech-analytics,high,success
+,Russian Car Market,Automotive,e-commerce-retail,,high,success
+,Alibaba Ads Dataset,Advertising,advertising,,high,success
+,Alibaba Mobile 2021,E-Commerce,e-commerce-retail,,high,success
+,gridstatus,Energy,energy,,high,success
+,Kenneth French Data Library,Financial Services,financial-services,,high,success
+,FERC Form 714,Energy,energy,,high,success
+,PJM Data Miner,Energy,energy,,high,success
+,Polish Supermarket POS Dataset,E-Commerce,grocery-supermarkets,,high,success
+,Alibaba Brick and Mortar (IJCAI-16),E-Commerce,e-commerce-retail,,high,success
+,NREL NSRDB (National Solar Radiation Database),Energy,energy,,high,success
+,Redfin Housing Market Data,Real Estate,real-estate,,high,success
+,Online Auctions Collection,Auctions & Marketplaces,auctions-marketplaces,,high,success
+,Drone Delivery,Logistics & Supply Chain,logistics-supply-chain,,high,success
+,ACIC Competition Series (2016-2023),Causal Inference,causal-inference,,high,success
+,ICPSR Auction Studies,Advertising,auctions-marketplaces,,high,success
+,MSOM Pharma Manufacturing (2024),Logistics & Supply Chain,logistics-supply-chain,,high,success
+,Avazu,Advertising,advertising,,high,success
+,World Bank Light Every Night,Geospatial,geospatial,,high,success
+,Online Shopping Intention,E-Commerce,e-commerce-retail,,high,success
+,Amazon Reviews (CausalNLP),Causal Inference,causal-inference,,high,success
+,OR-Library Job Shop Benchmarks,Manufacturing,none,,medium,success
+,News Headlines A/B Test Dataset,Causal Inference,advertising,,high,success
+,AWS Open Data Registry,Dataset Aggregators,data-portals,,high,success
+,EU TED Procurement,Auctions & Marketplaces,auctions-marketplaces,,high,success
+,Criteo Attribution Dataset,Advertising,advertising,,high,success
+,Google Trends Datastore,Social & Web,social-web,,high,success
+,Nevo Cereal Data,Causal Inference,causal-inference,,high,success
+,Call Centre Queue Simulation,Operations & Service,labor-markets,,high,success
+,Papers With Code Datasets,Dataset Aggregators,data-portals,,high,success
+,CAISO OASIS,Energy,energy,,high,success
+,Criteo 1TB Click Logs,Advertising,advertising,,high,success
+,IPUMS,Dataset Aggregators,data-portals,,high,success
+,PUDL (Public Utility Data Liberation),Energy,energy,,high,success
+,FRED (Federal Reserve Economic Data),Dataset Aggregators,data-portals,,high,success
+,Bandcamp Music Sales,Entertainment & Media,entertainment-media,,high,success
+,Pakistan e-commerce,E-Commerce,e-commerce-retail,,high,success
+,JD.com Open Datasets,Data Portals,e-commerce-retail,logistics-supply-chain,high,success
+,LaDe Last-Mile Delivery,Logistics & Supply Chain,logistics-supply-chain,,high,success
+,ConvAI Dataset,AI & LLM,social-web,,high,success
+,EIA-923 Power Plant Operations,Energy,energy,,high,success
+,USS (User Satisfaction Simulation),AI & LLM,martech-analytics,,high,success
+,Turkish Drugs,Grocery & Supermarkets,grocery-supermarkets,,high,success
+,Hospital Emergency Dataset,Healthcare,healthcare,,high,success
+,Transitland GTFS Feeds,Transportation Economics & Technology,transportation,,high,success
+,RecSys Challenge 2025 (Synerise),Data Portals,e-commerce-retail,,high,success
+,Criteo Uplift Prediction Dataset,Causal Inference,advertising,causal-inference,high,success
+,IJCAI Competitions,Data Portals,data-portals,,high,success
+,Nasdaq Data Link,Dataset Aggregators,data-portals,,high,success
+,Ecuador Grocery (Favorita),Grocery & Supermarkets,grocery-supermarkets,,high,success
+,MEPS (Medical Expenditure Panel Survey),Insurance & Actuarial,insurance-actuarial,healthcare,high,success
+,OTTO Session Data,E-Commerce,e-commerce-retail,,high,success
+,USAspending.gov,Defense Economics,defense-economics,,high,success
+,Iowa Liquor,Grocery & Supermarkets,grocery-supermarkets,,high,success
+,Shiller CAPE & Stock Market Data,Financial Services,financial-services,,high,success
+,Mendeley Food Delivery Reviews,Food & Delivery,logistics-supply-chain,none,high,success
+,Adform Display,Advertising,advertising,,high,success
+,Walmart (M5),Grocery & Supermarkets,grocery-supermarkets,,high,success
+,Tmall Reviews,E-Commerce,e-commerce-retail,,high,success
+,BLS JOLTS,Labor Markets,labor-markets,,high,success
+,Meta (Facebook) Research,Social & Web,social-web,,high,success
+,HateXplain,Content Moderation,social-web,,high,success
+,ASSISTments Dataset,Education,education,,high,success
+,National Household Travel Survey (NHTS),Transportation Economics & Technology,transportation,travel-hospitality,high,success
+,World Bank Open Data,Dataset Aggregators,data-portals,,high,success
+,Outbrain Click Prediction,Advertising,advertising,,high,success
+,Upworthy News Headlines,Advertising,advertising,,high,success
+,Flipkart Products,E-Commerce,e-commerce-retail,,high,success
+,Soso (KDD Cup 2012),Advertising,advertising,,high,success
+,Polish Grocery,Grocery & Supermarkets,grocery-supermarkets,,high,success
+,CAIDA Anonymized Internet Traces,Technology & Infrastructure,none,,low,success
+,CoAID COVID Misinformation,Content Moderation,healthcare,,high,success
+,Ember Global Electricity Data,Energy,energy,,high,success
+,OTTO Session-based Recommendations,E-Commerce,e-commerce-retail,,high,success
+,Ipinyou RTB,Advertising,advertising,,high,success
+,Spotify Music Streaming Sessions (MSSD),Entertainment & Media,entertainment-media,,high,success
+,Facebook URL Shares,Social & Web,social-web,,high,success
+,Indian Grocery (Flipkart Supermart),Grocery & Supermarkets,grocery-supermarkets,,high,success
+,Inside Airbnb Raw Data,Data Portals,data-portals,,high,success
+,Microsoft Research,Data Portals,data-portals,,high,success
+,Criteo Kaggle CTR Dataset,Advertising,advertising,,high,success
+,MIMIC-IV,Healthcare Economics & Health-Tech,healthcare-economics,healthcare,high,success
+,WRDS (Wharton Research Data Services),Dataset Aggregators,financial-services,,high,success
+,Social Blade,Creator Economy,social-web,,high,success
+,FDA Adverse Event Reporting System (FAERS),Healthcare Economics & Health-Tech,healthcare-economics,,high,success
+,Chicago Rideshare Data,Transportation Economics & Technology,transportation,,high,success
+,Hugging Face Datasets,Data Portals,data-portals,,high,success
+,DataCo Supply Chain,Logistics & Supply Chain,logistics-supply-chain,,high,success
+,Patreon Creator Data,Creator Economy,social-web,,high,success
+,Apple App Store Dataset,App Stores,e-commerce-retail,,high,success
+,Hugging Face Datasets,Dataset Aggregators,data-portals,,high,success
+,UK Gift Shop (Online Retail),Grocery & Supermarkets,e-commerce-retail,grocery-supermarkets,high,success
+,Israeli Grocery,Grocery & Supermarkets,grocery-supermarkets,,high,success
+,UK Biobank,Healthcare Economics & Health-Tech,healthcare-economics,healthcare,high,success
+,2015 Flight Delays and Cancellations,Transportation & Mobility,transportation,,high,success
+,Ukraine eCommerce (Fozzy),Grocery & Supermarkets,grocery-supermarkets,,high,success
+,Alibaba Personalized Re-Ranking,E-Commerce,e-commerce-retail,,high,success
+,Glassdoor Reviews,Labor Markets,labor-markets,,high,success
+,Expedia Hotel,Travel & Hospitality,travel-hospitality,,high,success
+,UCI Machine Learning Repository,Dataset Aggregators,data-portals,,high,success
+,KDD Cup,Data Portals,data-portals,,high,success
+,Stack Overflow Data Dump,Social & Web,social-web,,high,success
+,Amazon Last Mile,Logistics & Supply Chain,logistics-supply-chain,,high,success
+,Disney California Adventure Wait Times,Entertainment & Media,entertainment-media,,high,success
+,GRF (Generalized Random Forests),Causal Inference,causal-inference,,high,success
+,SOA Mortality Tables,Insurance & Actuarial,insurance-actuarial,,high,success
+,LastFM-1B,Entertainment & Media,entertainment-media,,high,success
+,Lalonde NSW Job Training,Causal Inference,causal-inference,,high,success
+,Synth (Synthetic Control),Causal Inference,causal-inference,,high,success
+,Port of Los Angeles Port Optimizer,Logistics & Supply Chain,logistics-supply-chain,,high,success
+,OECD Data,Dataset Aggregators,data-portals,,high,success
+,IBM Developer Data,Data Portals,data-portals,,high,success
+,RecSys Challenge 2024 (EB-NeRD),Data Portals,data-portals,,high,success
+,10X Genomics PBMC,Healthcare,healthcare,,high,success
+,YouTube User Watch History,Entertainment & Media,entertainment-media,,high,success
+,Penn World Table,Labor Markets,labor-markets,,high,success
+,MSOM Data Challenges,Data Portals,data-portals,,high,success
+,DrivenData Water Supply Forecasting (2024),Data Portals,data-portals,,high,success
+,LIAR,Content Moderation,none,,high,success
+,China Shock Data (Autor-Dorn-Hanson),Labor Markets,labor-markets,,high,success
+,Criteo Display Advertising,Advertising,advertising,,high,success
+,Yoyi,Advertising,advertising,,high,success
+,Web Log Dataset,Technology & Infrastructure,social-web,,high,success
+,PatentsView,Data Portals,data-portals,,high,success
+,Amazon Reviews 2023,MarTech & Customer Analytics,martech-analytics,,high,success
+,FHWA Highway Statistics,Transportation Economics & Technology,transportation,,high,success
+,OpenML,Data Portals,data-portals,,high,success
