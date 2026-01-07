@@ -1,5 +1,95 @@
 [
   {
+    "name": "MIND (Microsoft News Dataset)",
+    "description": "15M+ impression logs from 1M users over 6 weeks with explicit clicked/non-clicked news articles. Gold standard for impression-aware recommendation research with article titles, abstracts, categories, and user history.",
+    "category": "Entertainment & Media",
+    "url": "https://msnews.github.io",
+    "tags": ["revealed-preference", "impressions", "news-recommendation", "click-prediction", "Microsoft", "NLP"],
+    "docs_url": null,
+    "github_url": null
+  },
+  {
+    "name": "ContentWise Impressions",
+    "description": "Industrial OTT video streaming data with full recommendation lists shown to users, including position in list and interaction types (view, detail, rating, purchase). CIKM 2020 benchmark.",
+    "category": "Entertainment & Media",
+    "url": "https://github.com/ContentWise/contentwise-impressions",
+    "tags": ["revealed-preference", "impressions", "video-streaming", "OTT", "recommendation", "position-bias"],
+    "docs_url": null,
+    "github_url": "https://github.com/ContentWise/contentwise-impressions"
+  },
+  {
+    "name": "Trivago RecSys 2019",
+    "description": "16M hotel search sessions with explicit impression lists showing which accommodations were displayed. Session-based recommendation challenge with filter usage and clickout actions.",
+    "category": "Travel & Hospitality",
+    "url": "https://recsys2019data.trivago.com",
+    "tags": ["revealed-preference", "impressions", "hotel-search", "session-based", "RecSys-2019", "travel"],
+    "docs_url": null,
+    "github_url": "https://github.com/MaurizioFD/recsys-challenge-2019-trivago"
+  },
+  {
+    "name": "YOOCHOOSE RecSys 2015",
+    "description": "33M click events and 1.15M purchases from European e-commerce retailer. Session-based data where click sequences reveal considered alternatives within shopping sessions.",
+    "category": "E-Commerce & Retail",
+    "url": "https://2015.recsyschallenge.com/challenge.html",
+    "tags": ["revealed-preference", "session-based", "e-commerce", "click-prediction", "purchase-prediction", "RecSys-2015"],
+    "docs_url": null,
+    "github_url": null
+  },
+  {
+    "name": "Yandex Personalized Web Search",
+    "description": "35M search sessions with full SERPs showing all URLs displayed to users alongside click data. WSDM 2014 challenge with anonymized queries, dwell time labels, and user history.",
+    "category": "Social & Web Data",
+    "url": "https://www.kaggle.com/c/yandex-personalized-web-search-challenge",
+    "tags": ["revealed-preference", "SERP", "search-personalization", "click-models", "dwell-time", "WSDM-2014"],
+    "docs_url": null,
+    "github_url": null
+  },
+  {
+    "name": "Expedia Personalized Sort",
+    "description": "10M hotel search results with ranking positions, click/booking labels, prices, quality scores, and competitive OTA information. ICDM 2013 learning-to-rank benchmark.",
+    "category": "Travel & Hospitality",
+    "url": "https://www.kaggle.com/c/expedia-personalized-sort",
+    "tags": ["revealed-preference", "learning-to-rank", "hotel-search", "ICDM-2013", "pricing", "travel"],
+    "docs_url": null,
+    "github_url": null
+  },
+  {
+    "name": "SwissMetro Dataset",
+    "description": "Stated preference survey with explicit availability flags for train, SwissMetro (maglev), and car alternatives. Methodological gold standard for discrete choice modeling with Biogeme.",
+    "category": "Transportation & Mobility",
+    "url": "https://transp-or.epfl.ch/pythonbiogeme/examples_swissmetro.html",
+    "tags": ["revealed-preference", "discrete-choice", "mode-choice", "Biogeme", "transportation", "Switzerland"],
+    "docs_url": "https://biogeme.epfl.ch/sphinx/auto_examples/swissmetro/swissmetro_data.html",
+    "github_url": null
+  },
+  {
+    "name": "London Passenger Mode Choice (LPMC)",
+    "description": "134K trips from London Travel Demand Survey with level-of-service variables computed for all four modes (walking, cycling, transit, driving). Complete choice-set construction for mode choice analysis.",
+    "category": "Transportation & Mobility",
+    "url": "https://transp-or.epfl.ch/documents/technicalReports/CS_LPMC.pdf",
+    "tags": ["revealed-preference", "mode-choice", "discrete-choice", "London", "multimodal", "LTDS"],
+    "docs_url": null,
+    "github_url": "https://github.com/michelbierlaire/mooc-discrete-choice"
+  },
+  {
+    "name": "Foursquare Global Check-ins",
+    "description": "33M+ check-ins across millions of venues with 400+ fine-grained categories. Geographic coordinates enable constructing within-category alternatives for POI choice analysis.",
+    "category": "Geospatial & Location",
+    "url": "https://sites.google.com/site/yangdingqi/home/foursquare-dataset",
+    "tags": ["revealed-preference", "POI", "location-choice", "check-ins", "venue-categories", "geospatial"],
+    "docs_url": null,
+    "github_url": null
+  },
+  {
+    "name": "AMiner DBLP Citation Network",
+    "description": "2M+ papers and 8M citations from computer science literature. Citation choices reveal knowledge diffusion patterns; feasible set requires topic-based filtering assumptions.",
+    "category": "Data Portals & Aggregators",
+    "url": "https://www.aminer.org/citation",
+    "tags": ["revealed-preference", "citation-network", "bibliometrics", "knowledge-diffusion", "academic", "CS-literature"],
+    "docs_url": null,
+    "github_url": null
+  },
+  {
     "name": "Diginetica Fashion",
     "description": "Clickstream and purchase data for fashion e-commerce",
     "category": "Fashion & Apparel",
