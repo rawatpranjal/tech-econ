@@ -280,7 +280,7 @@
          data-category="{{ $cluster.original_category }}"
          data-macro="{{ $cluster.macro_category }}">
         <div class="explore-row-header">
-            <h2 class="explore-row-title">{{ $cluster.label }}</h2>
+            <h2 class="explore-row-title">{{ $cluster.formal_name | default $cluster.label }}</h2>
             <span class="explore-row-count">{{ $cluster.item_count }} resources</span>
         </div>
         <div class="explore-scroller-wrapper">

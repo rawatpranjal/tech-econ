@@ -27,35 +27,112 @@ REQUIRED_FIELDS = {
 
 # Domains that block bot requests - skip these in link checking
 SKIP_DOMAINS = {
+    # Social media
     "linkedin.com",
     "twitter.com",
     "x.com",
-    "medium.com",          # Blocks bots
-    "leetcode.com",        # Blocks bots
-    "sec.gov",             # Blocks bots
-    "zillow.com",          # Blocks bots
-    "freakonomics.com",    # Blocks bots
-    "doordash.engineering", # Blocks bots
-    "uber.com",            # Returns 406
-    "informs.org",         # Various issues
+    "medium.com",
+    # Academic publishers (block bots with 403)
+    "dl.acm.org",
+    "acm.org",
+    "jstor.org",
+    "wiley.com",
+    "onlinelibrary.wiley.com",
+    "academic.oup.com",
+    "oup.com",
+    "sagepub.com",
+    "journals.sagepub.com",
+    "tandfonline.com",
+    "journals.uchicago.edu",
+    "ssrn.com",
+    "papers.ssrn.com",
+    "pnas.org",
+    "annualreviews.org",
+    "science.org",
+    "sciencemag.org",
+    "researchgate.net",
+    "springer.com",
+    "link.springer.com",
+    "cambridge.org",
+    "sciencedirect.com",
+    "ieee.org",
+    "nature.com",
+    "aeaweb.org",
+    "projecteuclid.org",
+    "degruyter.com",
+    "nowpublishers.com",
+    "morganclaypool.com",
+    "acpjournals.org",
+    # News & business (block bots)
+    "bloomberg.com",
+    "hbs.edu",
+    "hbswk.hbs.edu",
+    "nber.org",
+    "rand.org",
+    "bls.gov",
+    # Tech companies (block bots)
+    "uber.com",
+    "doordash.engineering",
+    "careersatdoordash.com",
+    "etsy.com",
+    "glassdoor.com",
+    "indeed.com",
+    "wellfound.com",
+    # Career sites (block bots)
+    "careers.",
+    "career.",
+    "jobs.",
+    # Government sites (block bots)
+    "transit.dot.gov",
+    "ferc.gov",
+    "nhtsa.gov",
+    "eia.gov",
+    # Other bot-blocking sites
+    "platform.openai.com",
+    "patentsview.org",
+    "direct.mit.edu",
+    "cxotalk.com",
+    "gridstatus.io",
+    "engineering.fiverr.com",
+    "guykawasaki.com",
+    "stripe.events",
+    "business.columbia.edu",
+    "psycnet.apa.org",
+    "europeanhealtheconomics.com",
+    "infoagepub.com",
+    "joincolossus.com",
+    "branch.io",
+    "coupang.jobs",
+    "quora.com",
+    "carvana.com",
+    "classcentral.com",
+    "crates.io",
+    "routledge.com",
+    "e-elgar.com",
+    "mdpi.com",
+    # Other known issues
+    "leetcode.com",
+    "sec.gov",
+    "zillow.com",
+    "freakonomics.com",
+    "informs.org",
     "pubsonline.informs.org",
-    "forecasters.org",     # Blocks bots
-    "statmodeling.stat.columbia.edu",  # Blocks bots
-    "netflixtechblog.com", # SSL issues
-    "eng.lyft.com",        # SSL issues
-    "mediaspace.gatech.edu", # SSL issues
-    "leonwei.com",         # Blocks bots
-    "sciencedirect.com",   # Blocks bots
-    "data.iowa.gov",       # Slow/timeout
-    "kevinsheppard.com",   # Slow/timeout
-    "nabe.com",            # Various issues
-    "bts.gov",             # Blocks bots
-    "ec.sigecom.org",      # Connection issues
-    "wine-conference.org", # Connection issues
-    "data-mining-cup.com", # Timeout
-    "ai.baidu.com",        # Various issues
-    "openicpsr.org",       # Blocks bots
-    "web.stanford.edu",    # Various issues
+    "forecasters.org",
+    "statmodeling.stat.columbia.edu",
+    "netflixtechblog.com",
+    "eng.lyft.com",
+    "mediaspace.gatech.edu",
+    "leonwei.com",
+    "data.iowa.gov",
+    "kevinsheppard.com",
+    "nabe.com",
+    "bts.gov",
+    "ec.sigecom.org",
+    "wine-conference.org",
+    "data-mining-cup.com",
+    "ai.baidu.com",
+    "openicpsr.org",
+    "web.stanford.edu",
 }
 
 def load_json_files(data_dir: Path) -> dict:

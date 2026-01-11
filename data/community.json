@@ -42,7 +42,7 @@
     "event_format": "conference",
     "geographic_focus": "Netflix",
     "frequency": "annual",
-    "model_score": 0.0065,
+    "model_score": 0.1025,
     "image_url": "",
     "embedding_text": "The Netflix Causal Inference event is a pivotal gathering that delves into the intricacies of causal inference as it pertains to recommender systems. This annual conference is part of the CompCI project and features the CIDER roundtable, where leading experts, including research advisor Nathan Kallus from Cornell, share their insights and findings. The event attracts a diverse audience, primarily consisting of mid-level and senior data scientists, along with curious browsers eager to expand their understanding of advanced methodologies in recommendation algorithms. Attendees can expect a mix of engaging talks, workshops, and networking opportunities that facilitate collaboration and knowledge exchange. The focus on causal inference positions this event at the intersection of academia and industry, making it a unique venue for discussing cutting-edge research and practical applications. Participants typically gain a deeper understanding of how causal inference can enhance recommendation systems, as well as the chance to connect with peers and leaders in the field. The event's accessibility and relevance to both researchers and practitioners make it a valuable experience for anyone interested in the future of recommendation technology.",
     "tfidf_keywords": [
@@ -108,7 +108,7 @@
       "What networking opportunities are available at MeasuringU?"
     ],
     "event_format": "online",
-    "model_score": 0.0034,
+    "model_score": 0.0441,
     "subtopic": "Experimentation",
     "embedding_text": "MeasuringU is an online event dedicated to the exploration of survey science, conjoint analysis, and quantitative UX research. It emphasizes the importance of statistical rigor in product research, making it an essential gathering for professionals aiming to enhance user experience through data-driven insights. Attendees typically include junior to senior data scientists, UX researchers, and curious individuals eager to learn about the latest methodologies in user experience research. The event features a variety of session formats, including talks and workshops, designed to cater to both academic and industry-oriented participants. While the event is accessible online, it draws a diverse audience from various geographic locations, allowing for a rich exchange of ideas and experiences. Notable tracks may include discussions on advanced statistical techniques and their applications in real-world scenarios, providing attendees with valuable networking opportunities. Participants can expect to gain practical knowledge that they can apply in their own work, making MeasuringU a unique platform for learning and collaboration in the field of UX research. Compared to similar events, MeasuringU stands out for its focus on quantitative methods and the integration of statistical rigor into UX practices.",
     "tfidf_keywords": [
@@ -418,7 +418,7 @@
     "event_format": "conference",
     "geographic_focus": "Various US cities",
     "frequency": "annual",
-    "model_score": 0.0013,
+    "model_score": 0.0024,
     "image_url": "/images/logos/aeaweb.png",
     "embedding_text": "The ASSA Annual Meeting, organized by the Allied Social Science Associations, represents the largest convergence of economists in the world. This prestigious event focuses on a variety of themes central to the field of economics, including applied analytics, market design, and causal inference. It attracts a diverse audience comprising economists from academia, industry professionals, and policymakers, all eager to engage in discussions that shape the future of economic research and practice. The meeting features a range of session formats, including keynote talks, panel discussions, and workshops, allowing for both formal presentations and informal exchanges of ideas. Notably, the event is characterized by its strong academic orientation, with significant participation from leading economic associations such as the American Economic Association (AEA) and the Econometric Society, alongside over 60 allied associations. This creates a rich environment for interdisciplinary collaboration and networking opportunities, enabling attendees to connect with peers, share insights, and explore potential partnerships. The ASSA Annual Meeting is held in various cities across the United States, making it accessible to a wide audience. Participants typically gain valuable knowledge about the latest research trends, methodologies, and applications in economics, enhancing their professional development and academic pursuits. Compared to similar events, the ASSA Annual Meeting stands out due to its scale, breadth of topics covered, and the caliber of speakers and attendees, making it a must-attend for anyone serious about economics.",
     "tfidf_keywords": [
@@ -499,7 +499,7 @@
     ],
     "event_format": "conference",
     "frequency": "annual",
-    "model_score": 0.0012,
+    "model_score": 0.0023,
     "image_url": "http://www.sigecom.org/image/sigecom-logo.png",
     "embedding_text": "The ACM Conference on Economics and Computation serves as a leading platform for the dissemination of research in the intersection of economics and computation, focusing on critical areas such as market design, mechanism design, and algorithmic game theory. This annual event attracts a diverse group of attendees, including early-stage PhD students, junior and mid-level data scientists, and senior data science professionals, all of whom are keen to explore the latest advancements and applications in these fields. The conference typically features a mix of keynote talks, paper presentations, and workshops, providing ample opportunities for participants to engage with cutting-edge research and practical applications. Networking is a significant aspect of the conference, allowing attendees to connect with peers, industry leaders, and academic researchers, fostering collaborations and discussions that extend beyond the event. The academic orientation of the conference is complemented by its relevance to industry practitioners, particularly those involved in auctions, pricing strategies, and platform economics. Attendees can expect to gain valuable insights into the latest methodologies, tools, and theoretical advancements, positioning themselves at the forefront of the evolving landscape of economics and computation. The conference also features special sessions and tracks that delve into specific topics, enhancing the learning experience and catering to the varied interests of participants. Overall, ACM EC stands out among similar events for its unique blend of academic rigor and practical relevance, making it an essential gathering for anyone involved in the fields of economics and computation.",
     "tfidf_keywords": [
@@ -663,7 +663,7 @@
     ],
     "event_format": "conference",
     "frequency": "annual",
-    "model_score": 0.001,
+    "model_score": 0.0022,
     "image_url": "https://cdn.prod.website-files.com/6521956630a53cecc9e188c3/66ed22ea77fcd2bfa70d51b5_Artboard.png",
     "embedding_text": "The Causal Data Science Meeting is an annual conference that serves as a pivotal gathering for researchers and practitioners in the fields of causal inference and machine learning. Endorsed by Nobel laureate Guido Imbens, this event attracts a diverse audience, including academics, industry professionals, and graduate students, all eager to explore the latest advancements and applications of causal methodologies. The conference typically features a mix of keynote talks, panel discussions, and workshops that delve into both theoretical and practical aspects of causal data science. Attendees can expect to engage in rich discussions that bridge the gap between academic research and industry practices, making it an ideal venue for networking and collaboration. The event's strong industry presence from major tech companies highlights its relevance and importance in the current data landscape. Participants gain valuable insights into cutting-edge research, practical applications, and emerging trends, all while fostering connections with peers and leaders in the field. The Causal Data Science Meeting stands out among similar events by emphasizing the integration of causal inference with machine learning techniques, providing a unique perspective that is increasingly vital in today's data-driven world. With a focus on fostering an inclusive environment for learning and collaboration, this conference is a must-attend for anyone looking to deepen their understanding of causal methodologies and their applications in various domains.",
     "tfidf_keywords": [
@@ -731,7 +731,7 @@
       "How can I learn more about causal inference?"
     ],
     "event_format": "online",
-    "model_score": 0.0006,
+    "model_score": 0.0019,
     "subtopic": "Causal Inference",
     "embedding_text": "Aleksander Molak's personal blog serves as a resource for those interested in causal discovery, a crucial aspect of data science that focuses on identifying causal relationships from data without making prior assumptions. The blog delves into various methodologies and tools, including DoWhy and CausalPy, which are essential for constructing causal graphs and understanding the underlying causal structures in data. Typical attendees of this blog include data scientists, researchers, and anyone curious about the intricacies of causal inference. The content is designed to be accessible yet informative, providing readers with a solid foundation in causal discovery techniques. The blog emphasizes the importance of causal graphs in interpreting data and making informed decisions based on causal relationships. It also highlights the relevance of Bayesian networks in modeling complex causal relationships. Readers can expect to gain practical insights and knowledge that can be applied in their own work, whether in academic research or industry applications. This blog stands out for its focus on practical tools and methodologies, making it a valuable resource for those looking to deepen their understanding of causal inference.",
     "tfidf_keywords": [
@@ -795,7 +795,7 @@
     ],
     "event_format": "online",
     "frequency": "monthly",
-    "model_score": 0.0005,
+    "model_score": 0.002,
     "subtopic": "Economics & Research",
     "embedding_text": "Marginal Revolution is a highly influential economics blog created by Tyler Cowen, renowned for its eclectic mix of topics that span technology, innovation, and market dynamics. The blog serves as a daily must-read for those interested in contemporary economic discourse, offering insights that are both thought-provoking and accessible. Readers can expect a blend of academic rigor and practical relevance, making it suitable for a wide audience, from curious browsers to seasoned economists. The blog's content is updated frequently, ensuring that followers are kept abreast of the latest trends and discussions in the field of economics. The typical attendee profile includes students, professionals, and anyone with a keen interest in understanding the complexities of economic systems. The blog does not host traditional sessions like talks or workshops, but it fosters a vibrant online community where readers can engage with the content and with each other through comments and discussions. Marginal Revolution stands out among similar platforms due to its unique voice and the authoritative perspective of its author, making it a key resource for anyone looking to deepen their understanding of economics in the context of technology and innovation.",
     "tfidf_keywords": [
@@ -9370,7 +9370,7 @@
     "name": "SOA Annual Meeting",
     "description": "Society of Actuaries flagship conference with 3,000+ attendees covering life, health, pension, and general insurance. Features continuing education, networking, and career development.",
     "category": "Conference",
-    "url": "https://www.soa.org/prof-dev/events/",
+    "url": "https://www.soa.org/calendar/",
     "type": "Conference",
     "location": "Various US cities",
     "best_for": "Actuarial professional development, life insurance practice, pension actuarial topics",
@@ -15369,7 +15369,7 @@
       "How does demand forecasting work for events?",
       "What are best practices for revenue management in entertainment?"
     ],
-    "model_score": 0.0
+    "model_score": 0.0013
   },
   {
     "name": "Nick Huntington-Klein",
@@ -15541,7 +15541,7 @@
       "Why is interpretability important in data science?"
     ],
     "event_format": "online",
-    "model_score": 0.0,
+    "model_score": 0.0011,
     "subtopic": "Machine Learning & AI",
     "embedding_text": "Christoph Molnar's work on 'Interpretable Machine Learning' delves into the critical area of model interpretability, particularly focusing on black-box models that are commonly used in machine learning. The main themes of this content revolve around understanding feature importance through advanced techniques such as Shapley values, which serve as the machine learning equivalent of regression coefficients. This work is essential for both academic and industry professionals who seek to enhance their understanding of how models make decisions and the factors that influence those decisions. Typical attendees of this content include data scientists, machine learning practitioners, and researchers who are eager to learn about the interpretability of complex models. The format is primarily online, making it accessible to a global audience. Attendees can expect to gain insights into the methodologies for interpreting models, the importance of transparency in machine learning, and practical applications of these concepts in real-world scenarios. Networking opportunities may arise through online forums and discussions, allowing participants to connect with others interested in the same field. Overall, Christoph Molnar's contributions provide valuable knowledge that is increasingly relevant in today's data-driven landscape, especially as the demand for explainable AI continues to grow.",
     "tfidf_keywords": [
