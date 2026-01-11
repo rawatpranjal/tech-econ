@@ -632,13 +632,17 @@ def train_regression_model(items, item_signals):
     print(f"  Train: {len(y_train)} items ({n_train_engaged} with engagement)")
     print(f"  Test:  {len(y_test)} items ({n_test_engaged} with engagement)")
 
+    # Convert to binary classification target (any engagement = 1)
+    y_binary = (y > 0).astype(int)
+    y_train_binary = (y_train > 0).astype(int)
+    y_test_binary = (y_test > 0).astype(int)
+
     if HAS_LIGHTGBM:
-        # Use LightGBM with Tweedie loss for zero-inflated data
-        model = lgb.LGBMRegressor(
-            objective='tweedie',
-            tweedie_variance_power=1.5,  # Between Poisson(1) and Gamma(2)
-            n_estimators=100,
-            max_depth=5,
+        # Use LightGBM binary classifier for "any engagement" prediction
+        model = lgb.LGBMClassifier(
+            objective='binary',
+            n_estimators=150,
+            max_depth=6,
             learning_rate=0.05,
             num_leaves=31,
             min_child_samples=5,
@@ -647,77 +651,74 @@ def train_regression_model(items, item_signals):
             reg_alpha=1.0,
             reg_lambda=1.0,
             random_state=42,
-            verbose=-1
+            verbose=-1,
+            class_weight='balanced'  # Handle imbalance
         )
-        model_name = "LightGBM-Tweedie"
+        model_name = "LightGBM-Binary"
     else:
-        from sklearn.linear_model import Ridge
+        from sklearn.linear_model import LogisticRegression
         scaler = StandardScaler()
         X_train = scaler.fit_transform(X_train)
         X_test = scaler.transform(X_test)
         X = scaler.fit_transform(X)
-        model = Ridge(alpha=10.0)
+        model = LogisticRegression(class_weight='balanced', max_iter=1000)
         encoders['scaler'] = scaler
-        model_name = "Ridge"
+        model_name = "LogisticRegression"
 
-    # Train on training set
-    model.fit(X_train, y_train)
+    # Train on training set (binary target)
+    model.fit(X_train, y_train_binary)
 
-    # Evaluate on holdout test set
-    y_pred_test = model.predict(X_test)
-    y_pred_test = np.maximum(y_pred_test, 0)  # Clip negatives
+    # Get predicted probabilities for test set
+    y_pred_proba = model.predict_proba(X_test)[:, 1]
+    y_pred_class = model.predict(X_test)
 
-    # Regression metrics on test set
-    test_rmse = np.sqrt(mean_squared_error(y_test, y_pred_test))
-    test_mae = mean_absolute_error(y_test, y_pred_test)
-    test_r2 = r2_score(y_test, y_pred_test)
+    # Classification metrics
+    from sklearn.metrics import precision_score, recall_score, f1_score, confusion_matrix
 
-    # Baseline comparison (predicting mean)
-    baseline_pred = np.full_like(y_test, y_train.mean())
-    baseline_rmse = np.sqrt(mean_squared_error(y_test, baseline_pred))
+    test_precision = precision_score(y_test_binary, y_pred_class)
+    test_recall = recall_score(y_test_binary, y_pred_class)
+    test_f1 = f1_score(y_test_binary, y_pred_class)
+    test_auc = roc_auc_score(y_test_binary, y_pred_proba)
+    test_ap = average_precision_score(y_test_binary, y_pred_proba)
 
-    # Classification metric: can model rank engaged vs non-engaged?
-    test_binary = (y_test > 0).astype(int)
-    if len(np.unique(test_binary)) > 1:
-        test_auc = roc_auc_score(test_binary, y_pred_test)
-        test_ap = average_precision_score(test_binary, y_pred_test)
-    else:
-        test_auc = 0.5
-        test_ap = test_binary.mean()  # baseline for constant predictions
+    cm = confusion_matrix(y_test_binary, y_pred_class)
+    tn, fp, fn, tp = cm.ravel()
 
-    print(f"\n  === HOLDOUT TEST METRICS ===")
-    print(f"  Test RMSE: {test_rmse:.3f}")
-    print(f"  Test MAE:  {test_mae:.3f}")
-    print(f"  Test R²:   {test_r2:.3f}")
-    print(f"  Baseline RMSE (train mean): {baseline_rmse:.3f}")
-    if baseline_rmse > 0:
-        print(f"  RMSE vs baseline: {(test_rmse/baseline_rmse)*100:.1f}%")
-    print(f"  AUC-ROC (any engagement): {test_auc:.3f}")
-    print(f"  AUC-PR (any engagement):  {test_ap:.3f}")
+    print(f"\n  === HOLDOUT TEST METRICS (Binary Classification) ===")
+    print(f"  Precision: {test_precision:.3f}")
+    print(f"  Recall:    {test_recall:.3f}")
+    print(f"  F1 Score:  {test_f1:.3f}")
+    print(f"  AUC-ROC:   {test_auc:.3f}")
+    print(f"  AUC-PR:    {test_ap:.3f}")
+    print(f"  Confusion Matrix: TP={tp}, FP={fp}, FN={fn}, TN={tn}")
 
-    # Per-interaction AUC-ROC and AUC-PR
+    # Per-interaction metrics
     for signal_name, signal_key in [('clicks', 'clicks'), ('impressions', 'impressions'), ('dwell', 'dwell_ms')]:
         signal_binary = np.array([
             1 if item_signals.get(items[i]['name'], {}).get(signal_key, 0) > 0 else 0
             for i in idx_test
         ])
         if signal_binary.sum() > 0 and signal_binary.sum() < len(signal_binary):
-            signal_auc = roc_auc_score(signal_binary, y_pred_test)
-            signal_ap = average_precision_score(signal_binary, y_pred_test)
+            signal_auc = roc_auc_score(signal_binary, y_pred_proba)
+            signal_ap = average_precision_score(signal_binary, y_pred_proba)
             print(f"  AUC-ROC ({signal_name}): {signal_auc:.3f} | AUC-PR: {signal_ap:.3f}")
 
     # Retrain on full data for final model
     print(f"\n  Retraining on full data...")
     if not HAS_LIGHTGBM:
         X = scaler.fit_transform(X)
-    model.fit(X, y)
-    print(f"  {model_name} trained on {len(y)} items")
+    model.fit(X, y_binary)
+    print(f"  {model_name} trained on {len(y_binary)} items")
 
-    # Get predicted scores for all items
-    predictions = model.predict(X)
+    # Get predicted probabilities for all items
+    predictions_proba = model.predict_proba(X)[:, 1]
 
-    # Clip negative predictions to 0
-    predictions = np.maximum(predictions, 0)
+    # Final score = probability * (1 + log1p(weighted_score))
+    # This ranks by engagement probability, with weighted score as tiebreaker
+    predictions = predictions_proba * (1 + np.log1p(y) * 0.1)
+
+    # Clip to [0, 1] range
+    predictions = np.clip(predictions, 0, 1)
 
     # Build score dict
     scores = {}
@@ -725,7 +726,8 @@ def train_regression_model(items, item_signals):
         scores[item['name']] = float(predictions[i])
 
     print(f"  Scored {len(scores)} items")
-    print(f"  Predicted range: {predictions.min():.2f} to {predictions.max():.2f}")
+    print(f"  Probability range: {predictions_proba.min():.3f} to {predictions_proba.max():.3f}")
+    print(f"  Final score range: {predictions.min():.3f} to {predictions.max():.3f}")
 
     # Show feature importance
     n_cat = encoders['n_categorical']
