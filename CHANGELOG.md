@@ -1,5 +1,21 @@
 # Changelog
 
+## 2026-01-11
+- **Analytics system improvements** - stop losing data, use more signals:
+  - Added `web_vitals` table (LCP, FID, CLS) - was losing 2,912 events
+  - Added `client_errors` table - was losing 93 error events
+  - Added `referrer_stats` table - classify traffic sources (google, twitter, hackernews, etc.)
+  - Added device classification (mobile/tablet/desktop) to tracker
+  - Populated `item_cooccurrence` from session sequences
+  - Added rate limit truncation logging
+- **Ranking model improvements**:
+  - Added `reading_ratio` signal (actual vs expected read time)
+  - Added `high_imp_no_click` negative signal (impressions ≥10 with 0 clicks)
+  - Added engagement features to model (CTR, has_clicks, log_clicks, etc.)
+  - Comprehensive target using all 13 signals
+- **UX fix**: Scroller nav buttons now 60% visible (was 0% causing rage clicks)
+- Updated claude.md with new signals, tables, and analytics queries
+
 ## 2026-01-06
 - Added 4 revealed preference datasets: Chicago Taxi (labor supply), Irish CER Smart Meter (RCT ToU pricing), Uniswap DEX (DeFi trading), iFlex Norway (hourly electricity)
 - Added 4 dunnhumby Source Files datasets: Breakfast at the Frat (time series), Carbo-Loading (household panel), The Complete Journey (full marketing mix), Let's Get Sort-of-Real (300M synthetic transactions)

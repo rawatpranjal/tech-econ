@@ -59,10 +59,12 @@
       flush(true);
     });
 
-    // Track pageview
+    // Track pageview with device and referrer source
     track('pageview', {
       path: location.pathname,
-      ref: document.referrer ? hash(document.referrer) : null
+      ref: document.referrer ? hash(document.referrer) : null,
+      refSource: getReferrerSource(),
+      device: getDeviceType()
     });
 
     log('Tracker v2.0 initialized');
@@ -568,14 +570,20 @@
   function initErrorTracking() {
     window.addEventListener('error', function(e) {
       track('error', {
-        msg: truncate(e.message, 200),
+        type: 'error',
+        message: truncate(e.message, 200),
         file: e.filename ? hash(e.filename) : null,
-        line: e.lineno
+        line: e.lineno,
+        stack: e.error && e.error.stack ? truncate(e.error.stack, 500) : null
       });
     });
 
     window.addEventListener('unhandledrejection', function(e) {
-      track('error', { type: 'promise', msg: truncate(String(e.reason), 200) });
+      track('error', {
+        type: 'unhandledrejection',
+        message: truncate(String(e.reason), 200),
+        stack: e.reason && e.reason.stack ? truncate(e.reason.stack, 500) : null
+      });
     });
   }
 
@@ -594,6 +602,47 @@
     if (path.includes('/talks')) return 'talks';
     if (path.includes('/papers')) return 'papers';
     return 'other';
+  }
+
+  function getDeviceType() {
+    var ua = navigator.userAgent.toLowerCase();
+    var width = window.innerWidth || document.documentElement.clientWidth;
+    if (/mobile|android|iphone|ipod|blackberry|windows phone/.test(ua) || width < 768) {
+      return 'mobile';
+    }
+    if (/ipad|tablet/.test(ua) || (width >= 768 && width < 1024)) {
+      return 'tablet';
+    }
+    return 'desktop';
+  }
+
+  function getReferrerSource() {
+    var ref = document.referrer;
+    if (!ref) return 'direct';
+    try {
+      var url = new URL(ref);
+      var host = url.hostname.toLowerCase();
+      // Search engines
+      if (host.includes('google.')) return 'google';
+      if (host.includes('bing.')) return 'bing';
+      if (host.includes('duckduckgo.')) return 'duckduckgo';
+      if (host.includes('yahoo.')) return 'yahoo';
+      // Social
+      if (host.includes('twitter.') || host.includes('x.com')) return 'twitter';
+      if (host.includes('linkedin.')) return 'linkedin';
+      if (host.includes('facebook.')) return 'facebook';
+      if (host.includes('reddit.')) return 'reddit';
+      // Tech communities
+      if (host.includes('news.ycombinator.') || host.includes('hacker')) return 'hackernews';
+      if (host.includes('lobste.rs')) return 'lobsters';
+      if (host.includes('github.')) return 'github';
+      if (host.includes('stackoverflow.')) return 'stackoverflow';
+      // Self-referral (same domain)
+      if (host.includes('tech-econ.com')) return 'internal';
+      return 'referral';
+    } catch (e) {
+      return 'unknown';
+    }
   }
 
   function hash(str) {

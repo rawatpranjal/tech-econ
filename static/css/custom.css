@@ -8946,7 +8946,7 @@ mark.partial {
     display: none;
 }
 
-/* Navigation Arrows */
+/* Navigation Arrows - Improved for better UX (reduced rage clicks) */
 .scroller-nav {
     position: absolute;
     top: 50%;
@@ -8961,7 +8961,7 @@ mark.partial {
     justify-content: center;
     cursor: pointer;
     z-index: 10;
-    opacity: 0;
+    opacity: 0.6;  /* Always visible at 60% - was 0 causing frustration */
     transition: opacity 0.2s, background 0.2s, transform 0.2s;
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
@@ -8974,6 +8974,13 @@ mark.partial {
     background: var(--accent);
     color: white;
     transform: translateY(-50%) scale(1.1);
+}
+
+/* Active feedback on click - immediate visual response */
+.scroller-nav:active {
+    transform: translateY(-50%) scale(0.95);
+    background: var(--accent);
+    color: white;
 }
 
 .scroller-nav.prev {

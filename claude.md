@@ -152,13 +152,17 @@ python3 scripts/generate_embeddings.py # Regenerate vectors
 
 | Term | Meaning |
 |------|---------|
-| `model_score` | Engagement ranking 0-1 (clicks×5 + impressions×0.5 + dwell×1) |
+| `model_score` | Engagement ranking 0-1 (weighted signals from D1) |
 | `cold-start` | Items with no engagement; scored via k-NN similarity |
 | `semantic_cluster` | LLM-assigned topic label for discovery |
 | `carousel` | Horizontal scroll row of 5-10 items |
 | `D1` | Cloudflare database storing analytics |
 | `RRF` | Reciprocal Rank Fusion — merges keyword + semantic search |
 | `bge-large` | Embedding model (1024 dims) for semantic search |
+| `reading_ratio` | Actual dwell time / expected read time (quality signal) |
+| `web_vitals` | Core Web Vitals: LCP, FID, CLS performance metrics |
+| `cooccurrence` | Items viewed/clicked together in same session |
+| `refSource` | Classified referrer: google, twitter, hackernews, etc. |
 
 ---
 
@@ -263,6 +267,22 @@ npx wrangler d1 execute tech-econ-analytics-db --remote --command \
 # Recent searches
 npx wrangler d1 execute tech-econ-analytics-db --remote --command \
   "SELECT * FROM search_queries ORDER BY last_searched DESC LIMIT 10"
+
+# Web vitals (LCP, FID, CLS)
+npx wrangler d1 execute tech-econ-analytics-db --remote --command \
+  "SELECT metric, rating, COUNT(*) as count, AVG(value) as avg_value FROM web_vitals GROUP BY metric, rating"
+
+# Client errors
+npx wrangler d1 execute tech-econ-analytics-db --remote --command \
+  "SELECT path, error_type, message FROM client_errors ORDER BY created_at DESC LIMIT 10"
+
+# Referrer sources
+npx wrangler d1 execute tech-econ-analytics-db --remote --command \
+  "SELECT source, session_count FROM referrer_stats ORDER BY session_count DESC"
+
+# Item co-occurrence (for recommendations)
+npx wrangler d1 execute tech-econ-analytics-db --remote --command \
+  "SELECT item_a, item_b, coview_count FROM item_cooccurrence ORDER BY coview_count DESC LIMIT 20"
 ```
 
 ---
@@ -306,6 +326,11 @@ LightGBM-Tweedie model trained on engagement signals from D1 analytics:
 | Search clicks | ×3.0 | High-intent signal |
 | Rage clicks | ×-2.0 | Frustration (negative) |
 | Quick bounce | ×-1.0 | Left quickly (negative) |
+| Reading ratio | ×0.5 | Actual vs expected read time (quality) |
+| High-imp no-click | ×-1.0 | Impressions ≥10 with 0 clicks (irrelevant) |
+| Co-view | ×0.1 | Viewed with other engaged items |
+| Co-click | ×0.3 | Clicked with other engaged items |
+| Deep session | ×1.5 | Part of high-engagement session |
 
 **Cold-start:** Uses sentence-BERT similarity to propagate scores from similar engaged items.
 

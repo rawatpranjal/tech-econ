@@ -135,8 +135,12 @@ async function handleEvents(request, env, ctx, origin) {
       return new Response('Invalid payload', { status: 400 });
     }
 
-    // Limit events per request
+    // Limit events per request (log if truncating)
+    const originalCount = payload.events.length;
     const events = payload.events.slice(0, RATE_LIMIT.MAX_EVENTS_PER_REQUEST);
+    if (originalCount > RATE_LIMIT.MAX_EVENTS_PER_REQUEST) {
+      console.warn(`Rate limit: truncated ${originalCount - events.length} events (received ${originalCount}, max ${RATE_LIMIT.MAX_EVENTS_PER_REQUEST})`);
+    }
 
     const country = request.cf?.country || 'unknown';
     const now = Date.now();
@@ -224,6 +228,16 @@ async function processEvents(env, events, country, receivedAt) {
         aggregates.hourly[hourBucket].pageviews++;
         if (event.d?.path) {
           aggregates.pages[event.d.path] = (aggregates.pages[event.d.path] || 0) + 1;
+        }
+        // Track referrer source
+        if (event.d?.refSource) {
+          if (!aggregates.referrers) aggregates.referrers = {};
+          aggregates.referrers[event.d.refSource] = (aggregates.referrers[event.d.refSource] || 0) + 1;
+        }
+        // Track device type
+        if (event.d?.device) {
+          if (!aggregates.devices) aggregates.devices = {};
+          aggregates.devices[event.d.device] = (aggregates.devices[event.d.device] || 0) + 1;
         }
         break;
 
@@ -346,6 +360,32 @@ async function processEvents(env, events, country, receivedAt) {
           ts: timestamp
         });
         break;
+
+      case 'vitals':
+        if (!aggregates.vitals) aggregates.vitals = [];
+        if (event.d?.metric) {
+          aggregates.vitals.push({
+            sid: event.sid,
+            path: event.p,
+            metric: event.d.metric,
+            value: event.d.value,
+            rating: event.d.rating || null,
+            ts: timestamp
+          });
+        }
+        break;
+
+      case 'error':
+        if (!aggregates.errors) aggregates.errors = [];
+        aggregates.errors.push({
+          sid: event.sid,
+          path: event.p,
+          errorType: event.d?.type || 'error',
+          message: event.d?.message || '',
+          stack: event.d?.stack || null,
+          ts: timestamp
+        });
+        break;
     }
   }
 
@@ -453,6 +493,19 @@ async function updateAggregates(env, aggregates, country) {
     `).bind(country, aggregates.sessions.size));
   }
 
+  // Update referrer stats
+  if (aggregates.referrers) {
+    for (const [source, count] of Object.entries(aggregates.referrers)) {
+      updates.push(env.DB.prepare(`
+        INSERT INTO referrer_stats (source, session_count, last_seen)
+        VALUES (?, ?, datetime('now'))
+        ON CONFLICT(source) DO UPDATE SET
+          session_count = session_count + excluded.session_count,
+          last_seen = datetime('now')
+      `).bind(source, count));
+    }
+  }
+
   // ============================================
   // ML Aggregates
   // ============================================
@@ -504,6 +557,26 @@ async function updateAggregates(env, aggregates, country) {
         engagementTier,
         JSON.stringify(itemSeq)
       ));
+
+      // Populate item co-occurrence from session sequences
+      // Track which items were viewed together in this session
+      const uniqueItems = [...new Set(seq.items.map(i => i.name))];
+      if (uniqueItems.length >= 2) {
+        // Create pairs of co-viewed items
+        for (let i = 0; i < uniqueItems.length; i++) {
+          for (let j = i + 1; j < uniqueItems.length; j++) {
+            const itemA = uniqueItems[i] < uniqueItems[j] ? uniqueItems[i] : uniqueItems[j];
+            const itemB = uniqueItems[i] < uniqueItems[j] ? uniqueItems[j] : uniqueItems[i];
+            updates.push(env.DB.prepare(`
+              INSERT INTO item_cooccurrence (item_a, item_b, coview_count, last_updated)
+              VALUES (?, ?, 1, datetime('now'))
+              ON CONFLICT(item_a, item_b) DO UPDATE SET
+                coview_count = coview_count + 1,
+                last_updated = datetime('now')
+            `).bind(itemA, itemB));
+          }
+        }
+      }
     }
   }
 
@@ -564,6 +637,26 @@ async function updateAggregates(env, aggregates, country) {
         INSERT INTO frustration_events (session_id, path, event_type, element, timestamp)
         VALUES (?, ?, ?, ?, ?)
       `).bind(f.sid, f.path, f.type, f.element, f.ts));
+    }
+  }
+
+  // Store web vitals
+  if (aggregates.vitals) {
+    for (const v of aggregates.vitals) {
+      updates.push(env.DB.prepare(`
+        INSERT INTO web_vitals (session_id, path, metric, value, rating, timestamp)
+        VALUES (?, ?, ?, ?, ?, ?)
+      `).bind(v.sid, v.path, v.metric, v.value, v.rating, v.ts));
+    }
+  }
+
+  // Store client errors
+  if (aggregates.errors) {
+    for (const e of aggregates.errors) {
+      updates.push(env.DB.prepare(`
+        INSERT INTO client_errors (session_id, path, error_type, message, stack, timestamp)
+        VALUES (?, ?, ?, ?, ?, ?)
+      `).bind(e.sid, e.path, e.errorType, e.message, e.stack, e.ts));
     }
   }
 

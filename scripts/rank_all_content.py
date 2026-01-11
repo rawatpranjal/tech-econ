@@ -51,6 +51,9 @@ QUICK_BOUNCE_WEIGHT = -1.0 # Left quickly = not useful
 DEEP_SESSION_WEIGHT = 1.5  # Part of "deep" engagement session
 COVIEW_WEIGHT = 0.1        # Co-viewed with engaged items
 COCLICK_WEIGHT = 0.3       # Co-clicked with engaged items
+READING_RATIO_WEIGHT = 0.5 # Per reading_ratio point (actual/expected read time)
+HIGH_IMP_NO_CLICK_THRESHOLD = 10  # Min impressions to consider
+HIGH_IMP_NO_CLICK_WEIGHT = -1.0   # Penalty for high impressions but zero clicks
 
 
 def fetch_d1_data(query):
@@ -205,6 +208,14 @@ def fetch_engagement_data():
     )
     print(f"  Co-occurrence pairs: {len(cooccurrence)} pairs")
 
+    # NEW: Fetch reading ratio (quality signal)
+    reading_ratio = fetch_d1_data(
+        "SELECT name, section, AVG(reading_ratio) as avg_reading_ratio, COUNT(*) as sessions "
+        "FROM content_dwell WHERE reading_ratio IS NOT NULL AND reading_ratio > 0 "
+        "GROUP BY name, section"
+    )
+    print(f"  Reading ratio: {len(reading_ratio)} items")
+
     return {
         'clicks': clicks,
         'impressions': impressions,
@@ -214,6 +225,7 @@ def fetch_engagement_data():
         'session_tiers': session_tiers,
         'frustration': frustration,
         'cooccurrence': cooccurrence,
+        'reading_ratio': reading_ratio,
     }
 
 
@@ -239,6 +251,7 @@ def build_engagement_scores(engagement_data):
     session_tiers = engagement_data.get('session_tiers', [])
     frustration = engagement_data.get('frustration', [])
     cooccurrence = engagement_data.get('cooccurrence', [])
+    reading_ratio = engagement_data.get('reading_ratio', [])
 
     scores = defaultdict(float)
     item_signals = defaultdict(lambda: {
@@ -246,7 +259,8 @@ def build_engagement_scores(engagement_data):
         'scroll_90': 0, 'scroll_75': 0, 'scroll_50': 0,
         'search_clicks': 0, 'deep_sessions': 0,
         'rage_clicks': 0, 'quick_bounces': 0,
-        'coviews': 0, 'coclicks': 0
+        'coviews': 0, 'coclicks': 0,
+        'reading_ratio': 0, 'high_imp_no_click': False
     })
 
     # Aggregate clicks
@@ -359,6 +373,30 @@ def build_engagement_scores(engagement_data):
     # Add co-occurrence scores to main scores
     for name, boost in cooccur_scores.items():
         scores[name] += boost
+
+    # NEW: Aggregate reading ratio (quality signal)
+    for row in reading_ratio:
+        name = row['name'].lower().strip()
+        avg_ratio = row.get('avg_reading_ratio', 0) or 0
+        # Cap at reasonable value (e.g., 2.0 = read twice as long as expected)
+        capped_ratio = min(avg_ratio, 2.0)
+        scores[name] += capped_ratio * READING_RATIO_WEIGHT
+        item_signals[name]['reading_ratio'] = capped_ratio
+
+    # NEW: Apply penalty for high impressions with zero clicks
+    # Build click lookup for fast access
+    click_lookup = {row['name'].lower().strip(): row.get('click_count', 0) or 0 for row in clicks}
+
+    for row in impressions:
+        name = row['name'].lower().strip()
+        imp_count = row.get('impression_count', 0) or 0
+        click_count = click_lookup.get(name, 0)
+
+        # If item has high impressions but zero clicks, apply penalty
+        if imp_count >= HIGH_IMP_NO_CLICK_THRESHOLD and click_count == 0:
+            penalty = HIGH_IMP_NO_CLICK_WEIGHT * (imp_count / HIGH_IMP_NO_CLICK_THRESHOLD)
+            scores[name] += penalty  # Negative weight
+            item_signals[name]['high_imp_no_click'] = True
 
     # Ensure scores don't go negative (from frustration signals)
     for name in scores:
@@ -485,17 +523,90 @@ def train_regression_model(items, item_signals):
     # Build features with BERT embeddings
     X, encoders = build_features_for_regression(items)
 
-    # Build target: engagement score = clicks*5 + impressions*1 + dwell_minutes
-    y = []
+    # Build engagement features (these help the model learn what makes content engaging)
+    engagement_features = []
     for item in items:
         name = item['name']
         signals = item_signals.get(name, {})
         clicks = signals.get('clicks', 0)
         impressions = signals.get('impressions', 0)
+
+        # CTR (click-through rate) - a strong quality signal
+        ctr = clicks / max(impressions, 1) if impressions > 0 else 0
+
+        # Has any engagement signals (binary flags for cold-start detection)
+        has_clicks = 1 if clicks > 0 else 0
+        has_impressions = 1 if impressions > 0 else 0
+        has_dwell = 1 if signals.get('dwell_ms', 0) > 0 else 0
+        has_scroll = 1 if signals.get('scroll_90', 0) > 0 or signals.get('scroll_75', 0) > 0 else 0
+
+        engagement_features.append([
+            ctr,
+            has_clicks,
+            has_impressions,
+            has_dwell,
+            has_scroll,
+            np.log1p(clicks),  # Log-transformed click count
+            np.log1p(impressions),  # Log-transformed impressions
+        ])
+
+    engagement_features = np.array(engagement_features)
+    X = np.hstack([X, engagement_features])
+    encoders['n_engagement_features'] = engagement_features.shape[1]
+    print(f"  Added {engagement_features.shape[1]} engagement features")
+
+    # Build target: comprehensive engagement score using ALL signals
+    y = []
+    for item in items:
+        name = item['name']
+        signals = item_signals.get(name, {})
+
+        # Core signals
+        clicks = signals.get('clicks', 0)
+        impressions = signals.get('impressions', 0)
         dwell_ms = signals.get('dwell_ms', 0)
         dwell_minutes = dwell_ms / 60000.0
+        viewable_sec = signals.get('viewable_sec', 0)
 
-        score = clicks * CLICK_WEIGHT + impressions * IMPRESSION_WEIGHT + dwell_minutes * DWELL_WEIGHT
+        # Advanced signals
+        scroll_90 = signals.get('scroll_90', 0)
+        scroll_75 = signals.get('scroll_75', 0)
+        scroll_50 = signals.get('scroll_50', 0)
+        search_clicks = signals.get('search_clicks', 0)
+        deep_sessions = signals.get('deep_sessions', 0)
+        coviews = signals.get('coviews', 0)
+        coclicks = signals.get('coclicks', 0)
+        reading_ratio = signals.get('reading_ratio', 0)
+
+        # Negative signals
+        rage_clicks = signals.get('rage_clicks', 0)
+        quick_bounces = signals.get('quick_bounces', 0)
+        high_imp_no_click = signals.get('high_imp_no_click', False)
+
+        # Calculate comprehensive score
+        score = (
+            clicks * CLICK_WEIGHT +
+            impressions * IMPRESSION_WEIGHT +
+            dwell_minutes * DWELL_WEIGHT +
+            viewable_sec * VIEWABLE_WEIGHT +
+            scroll_90 * SCROLL_90_WEIGHT +
+            scroll_75 * SCROLL_75_WEIGHT +
+            scroll_50 * SCROLL_50_WEIGHT +
+            search_clicks * SEARCH_CLICK_WEIGHT +
+            deep_sessions * DEEP_SESSION_WEIGHT +
+            coviews * COVIEW_WEIGHT +
+            coclicks * COCLICK_WEIGHT +
+            reading_ratio * READING_RATIO_WEIGHT +
+            rage_clicks * RAGE_CLICK_WEIGHT +  # Negative
+            quick_bounces * QUICK_BOUNCE_WEIGHT  # Negative
+        )
+
+        # Apply high impression no click penalty
+        if high_imp_no_click:
+            score += HIGH_IMP_NO_CLICK_WEIGHT * (impressions / HIGH_IMP_NO_CLICK_THRESHOLD)
+
+        # Ensure non-negative
+        score = max(0, score)
         y.append(score)
 
     y = np.array(y)
@@ -618,30 +729,39 @@ def train_regression_model(items, item_signals):
 
     # Show feature importance
     n_cat = encoders['n_categorical']
+    n_eng = encoders.get('n_engagement_features', 0)
     feature_names = [
         'type', 'category', 'difficulty', 'domain', 'desc_len', 'n_tags', 'n_topics', 'has_url', 'citations', 'name_len',
-        'n_audience', 'n_use_cases', 'n_related', 'has_github', 'language', 'n_synthetic_q', 'desc_words', 'has_best_for'
+        'n_audience', 'n_use_cases', 'n_related', 'has_github', 'language', 'n_synthetic_q', 'desc_words', 'has_best_for',
+        'ctr', 'has_clicks', 'has_impressions', 'has_dwell', 'has_scroll', 'log_clicks', 'log_impressions'
     ]
 
     if HAS_LIGHTGBM and hasattr(model, 'feature_importances_'):
         importances = model.feature_importances_
         cat_importances = importances[:n_cat]
-        bert_importance_sum = importances[n_cat:].sum()
+        eng_importances = importances[n_cat:n_cat + n_eng] if n_eng > 0 else []
+        bert_importance_sum = importances[n_cat + n_eng:].sum()
 
-        sorted_idx = np.argsort(cat_importances)[::-1]
+        # Combine categorical and engagement features for sorting
+        all_feature_importances = list(cat_importances) + list(eng_importances)
+        sorted_idx = np.argsort(all_feature_importances)[::-1]
         print("  Top feature importances:")
-        for idx in sorted_idx[:5]:
-            print(f"    {feature_names[idx]}: {cat_importances[idx]:.1f}")
+        for idx in sorted_idx[:8]:
+            if idx < len(feature_names):
+                print(f"    {feature_names[idx]}: {all_feature_importances[idx]:.1f}")
         print(f"    BERT embeddings (sum): {bert_importance_sum:.1f}")
     elif hasattr(model, 'coef_'):
         coefs = np.abs(model.coef_)
         cat_coefs = coefs[:n_cat]
-        bert_coef_sum = coefs[n_cat:].sum()
+        eng_coefs = coefs[n_cat:n_cat + n_eng] if n_eng > 0 else []
+        bert_coef_sum = coefs[n_cat + n_eng:].sum()
 
-        sorted_idx = np.argsort(cat_coefs)[::-1]
+        all_feature_coefs = list(cat_coefs) + list(eng_coefs)
+        sorted_idx = np.argsort(all_feature_coefs)[::-1]
         print("  Top coefficient magnitudes:")
-        for idx in sorted_idx[:5]:
-            print(f"    {feature_names[idx]}: {cat_coefs[idx]:.3f}")
+        for idx in sorted_idx[:8]:
+            if idx < len(feature_names):
+                print(f"    {feature_names[idx]}: {all_feature_coefs[idx]:.3f}")
         print(f"    BERT embeddings (sum): {bert_coef_sum:.3f}")
 
     return model, scores, encoders
