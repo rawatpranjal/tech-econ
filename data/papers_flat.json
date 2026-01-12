@@ -21758,5 +21758,48 @@
     "topic": "Machine Learning",
     "subtopic": "Heterogeneous Treatment Effects",
     "model_score": 0.0
+  },
+  {
+    "id": "paper-a-heteroskedasticity-consistent-covariance-matrix-estimator",
+    "name": "A Heteroskedasticity-Consistent Covariance Matrix Estimator and a Direct Test for Heteroskedasticity",
+    "title": "A Heteroskedasticity-Consistent Covariance Matrix Estimator and a Direct Test for Heteroskedasticity",
+    "authors": "Halbert White",
+    "year": 1980,
+    "url": "https://www.econometricsociety.org/publications/econometrica/1980/05/01/heteroskedasticity-consistent-covariance-matrix-estimator-and",
+    "description": "THE foundational paper for robust inference. Introduced HC (heteroskedasticity-consistent) standard errors that provide valid inference in OLS regression without assuming homoskedasticity. Also introduced White's test for heteroskedasticity. Basis for all modern 'robust' standard errors.",
+    "citations": 27000,
+    "tag": "Classic",
+    "tags": [
+      "Statistics",
+      "Robust Standard Errors",
+      "Heteroskedasticity"
+    ],
+    "type": "paper",
+    "category": "Statistics > Robust Standard Errors & Heteroskedasticity",
+    "topic": "Statistics",
+    "subtopic": "Robust Standard Errors & Heteroskedasticity",
+    "model_score": 0.0
+  },
+  {
+    "id": "paper-resurrecting-weighted-least-squares",
+    "name": "Resurrecting Weighted Least Squares",
+    "title": "Resurrecting Weighted Least Squares",
+    "authors": "Joseph P. Romano & Michael Wolf",
+    "year": 2017,
+    "url": "https://doi.org/10.1016/j.jeconom.2016.10.006",
+    "description": "Rehabilitates FGLS/WLS by pairing it with HC standard errors. Shows WLS+HC achieves 30-82% shorter confidence intervals than OLS+HC under heteroskedasticity while maintaining valid inference even if weights are misspecified. Introduces ALS (Adaptive Least Squares) that pretests for heteroskedasticity—a 'free lunch' estimator with nearly zero efficiency loss under homoskedasticity.",
+    "citations": 40,
+    "tag": "Methodological",
+    "tags": [
+      "Statistics",
+      "Robust Standard Errors",
+      "Weighted Least Squares",
+      "Heteroskedasticity"
+    ],
+    "type": "paper",
+    "category": "Statistics > Robust Standard Errors & Heteroskedasticity",
+    "topic": "Statistics",
+    "subtopic": "Robust Standard Errors & Heteroskedasticity",
+    "model_score": 0.0
   }
 ]

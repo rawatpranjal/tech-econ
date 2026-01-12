@@ -4234,6 +4234,33 @@
               ]
             }
           ]
+        },
+        {
+          "id": "robust-standard-errors",
+          "name": "Robust Standard Errors & Heteroskedasticity",
+          "application": "Valid statistical inference when variance is non-constant across observations",
+          "papers": [
+            {
+              "title": "A Heteroskedasticity-Consistent Covariance Matrix Estimator and a Direct Test for Heteroskedasticity",
+              "authors": "Halbert White",
+              "year": 1980,
+              "url": "https://www.econometricsociety.org/publications/econometrica/1980/05/01/heteroskedasticity-consistent-covariance-matrix-estimator-and",
+              "tags": ["Statistics", "Robust Standard Errors", "Heteroskedasticity"],
+              "citations": 27000,
+              "tag": "Classic",
+              "description": "THE foundational paper for robust inference. Introduced HC (heteroskedasticity-consistent) standard errors that provide valid inference in OLS regression without assuming homoskedasticity. Also introduced White's test for heteroskedasticity. Basis for all modern 'robust' standard errors."
+            },
+            {
+              "title": "Resurrecting Weighted Least Squares",
+              "authors": "Joseph P. Romano & Michael Wolf",
+              "year": 2017,
+              "url": "https://doi.org/10.1016/j.jeconom.2016.10.006",
+              "tags": ["Statistics", "Robust Standard Errors", "Weighted Least Squares", "Heteroskedasticity"],
+              "citations": 40,
+              "tag": "Methodological",
+              "description": "Rehabilitates FGLS/WLS by pairing it with HC standard errors. Shows WLS+HC achieves 30-82% shorter confidence intervals than OLS+HC under heteroskedasticity while maintaining valid inference even if weights are misspecified. Introduces ALS (Adaptive Least Squares) that pretests for heteroskedasticity—a 'free lunch' estimator with nearly zero efficiency loss under homoskedasticity."
+            }
+          ]
         }
       ]
     },
