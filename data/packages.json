@@ -13719,6 +13719,32 @@
     ]
   },
   {
+    "name": "choix",
+    "description": "Inference algorithms for probabilistic choice models based on Luce's choice axiom. Supports Bradley-Terry (pairwise comparisons), Plackett-Luce (partial rankings), and Network Choice Models.",
+    "category": "Discrete Choice Models",
+    "url": "https://github.com/lucasmaystre/choix",
+    "docs_url": "http://choix.lum.li/",
+    "github_url": "https://github.com/lucasmaystre/choix",
+    "install": "pip install choix",
+    "tags": ["ranking", "Bradley-Terry", "Plackett-Luce", "pairwise comparisons", "choice axiom"],
+    "best_for": "Pairwise comparison inference, ranking from partial observations, tournament analysis",
+    "language": "Python",
+    "model_score": 0.0
+  },
+  {
+    "name": "Prest",
+    "description": "Desktop application for computational revealed preference analysis. GUI written in Python with Rust backend for performance. Analyzes choice datasets for rationality and behavioral consistency.",
+    "category": "Discrete Choice Models",
+    "url": "https://prestsoftware.com/",
+    "docs_url": "https://prestsoftware.com/",
+    "github_url": "https://github.com/prestsoftware/prest",
+    "install": "Download from prestsoftware.com",
+    "tags": ["revealed preference", "rationality testing", "GARP", "behavioral economics", "GUI"],
+    "best_for": "Interactive revealed preference analysis, testing rationality axioms (GARP/SARP/WARP)",
+    "language": "Python",
+    "model_score": 0.0
+  },
+  {
     "name": "xlogit",
     "description": "GPU-accelerated estimation of mixed logit models using CuPy/NumPy. Orders of magnitude faster than traditional packages for large datasets.",
     "category": "Transportation Economics & Technology",
@@ -41192,6 +41218,19 @@
     ],
     "install": "install.packages('revealedPrefs')",
     "best_for": "Testing consumer data for consistency with utility maximization",
+    "model_score": 0.0
+  },
+  {
+    "name": "pyStoNED",
+    "description": "Multivariate convex regression, stochastic frontier analysis, and data envelopment analysis (DEA). Implements Afriat inequalities for global concavity constraints in convex nonparametric least squares.",
+    "category": "Structural Econometrics & Estimation",
+    "url": "https://github.com/ds2010/pyStoNED",
+    "docs_url": "https://pystoned.readthedocs.io/",
+    "github_url": "https://github.com/ds2010/pyStoNED",
+    "install": "pip install pystoned",
+    "tags": ["convex regression", "stochastic frontier", "DEA", "efficiency analysis", "Afriat"],
+    "best_for": "Production frontier estimation, efficiency measurement, convex regression with shape constraints",
+    "language": "Python",
     "model_score": 0.0
   },
   {

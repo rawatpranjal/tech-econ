@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-01-16
+- Add choix, pyStoNED, Prest packages for preference modeling and revealed preference analysis
+
 ## 2026-01-11
 - **Analytics system improvements** - stop losing data, use more signals:
   - Added `web_vitals` table (LCP, FID, CLS) - was losing 2,912 events
