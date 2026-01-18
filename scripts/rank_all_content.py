@@ -55,6 +55,10 @@ READING_RATIO_WEIGHT = 0.5 # Per reading_ratio point (actual/expected read time)
 HIGH_IMP_NO_CLICK_THRESHOLD = 10  # Min impressions to consider
 HIGH_IMP_NO_CLICK_WEIGHT = -1.0   # Penalty for high impressions but zero clicks
 
+# Freshness parameters
+FRESHNESS_WEIGHT = 0.15           # Max boost for brand new items (15% of score)
+FRESHNESS_HALF_LIFE_DAYS = 30     # Days until freshness boost decays by half
+
 
 def fetch_d1_data(query):
     """Execute D1 query via wrangler and return results."""
@@ -216,6 +220,12 @@ def fetch_engagement_data():
     )
     print(f"  Reading ratio: {len(reading_ratio)} items")
 
+    # Fetch first_seen dates for freshness calculation
+    first_seen = fetch_d1_data(
+        "SELECT name, section, first_seen FROM content_impressions WHERE first_seen IS NOT NULL"
+    )
+    print(f"  First seen dates: {len(first_seen)} items")
+
     return {
         'clicks': clicks,
         'impressions': impressions,
@@ -226,6 +236,7 @@ def fetch_engagement_data():
         'frustration': frustration,
         'cooccurrence': cooccurrence,
         'reading_ratio': reading_ratio,
+        'first_seen': first_seen,
     }
 
 
@@ -403,6 +414,44 @@ def build_engagement_scores(engagement_data):
         scores[name] = max(0, scores[name])
 
     return dict(scores), dict(item_signals), cooccurrence
+
+
+def calculate_freshness_scores(first_seen_data):
+    """Calculate freshness boost based on first_seen dates.
+
+    Uses exponential decay: boost = FRESHNESS_WEIGHT * exp(-days / half_life)
+    Newer items get higher boost, decaying over time.
+    """
+    from datetime import datetime, timezone
+
+    now = datetime.now(timezone.utc)
+    freshness_scores = {}
+
+    for row in first_seen_data:
+        name = row['name'].lower().strip()
+        first_seen_str = row.get('first_seen')
+
+        if not first_seen_str:
+            continue
+
+        try:
+            # Parse ISO format datetime
+            if 'T' in first_seen_str:
+                first_seen = datetime.fromisoformat(first_seen_str.replace('Z', '+00:00'))
+            else:
+                first_seen = datetime.strptime(first_seen_str, '%Y-%m-%d %H:%M:%S')
+                first_seen = first_seen.replace(tzinfo=timezone.utc)
+
+            days_since = (now - first_seen).days
+
+            # Exponential decay: newer items get higher boost
+            decay = math.exp(-days_since / FRESHNESS_HALF_LIFE_DAYS)
+            freshness_scores[name] = FRESHNESS_WEIGHT * decay
+
+        except (ValueError, TypeError):
+            continue
+
+    return freshness_scores
 
 
 def extract_url_domain(url):
@@ -1041,6 +1090,31 @@ def main():
         combined_scores = normalize_scores(raw_scores)
         scoring_method = 'weighted'
 
+    # Step 5b: Apply freshness boost
+    first_seen_data = engagement_data.get('first_seen', [])
+    freshness_scores = calculate_freshness_scores(first_seen_data)
+
+    if freshness_scores:
+        print(f"\nApplying freshness boost...")
+        print(f"  Items with freshness data: {len(freshness_scores)}")
+
+        # Apply additive freshness boost (capped at 1.0)
+        boosted_count = 0
+        max_boost = 0
+        for name in combined_scores:
+            if name in freshness_scores:
+                boost = freshness_scores[name]
+                combined_scores[name] = min(1.0, combined_scores[name] + boost)
+                boosted_count += 1
+                max_boost = max(max_boost, boost)
+
+        print(f"  Boosted {boosted_count} items")
+        print(f"  Max freshness boost: {max_boost:.3f}")
+
+        # Re-normalize after freshness boost
+        combined_scores = normalize_scores(combined_scores)
+        scoring_method = 'hybrid_bert_fresh'
+
     # Step 6: Mark cold start flags (items without real interactions)
     cold_start_flags = {}
     for item in items:
@@ -1119,6 +1193,8 @@ def main():
                 'deep_session': DEEP_SESSION_WEIGHT,
                 'coview': COVIEW_WEIGHT,
                 'coclick': COCLICK_WEIGHT,
+                'freshness': FRESHNESS_WEIGHT,
+                'freshness_half_life_days': FRESHNESS_HALF_LIFE_DAYS,
             },
         },
         'metadata_fields': [

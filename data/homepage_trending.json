@@ -1,5 +1,5 @@
 {
-  "updated": "2026-01-18T19:29:10.241597Z",
+  "updated": "2026-01-18T19:33:47.571403Z",
   "count": 12,
   "items": [
     {
@@ -35,7 +35,7 @@
       "category": "Bayesian Methods",
       "description": "CLV basics, RFM analysis, BG/NBD models \u2014 free official docs",
       "url": "https://www.pymc-marketing.io/en/latest/notebooks/clv/clv_quickstart.html",
-      "score": 0.8928,
+      "score": 0.9808,
       "cold_start": false,
       "signals": {
         "clicks": 1,
@@ -62,7 +62,7 @@
       "category": "Strategy & Digital Platforms",
       "description": "NBER lecture on how AI is transforming economic research and industry applications.",
       "url": "https://www.youtube.com/watch?v=ifdSUKrJxqM",
-      "score": 0.8194,
+      "score": 0.9073,
       "cold_start": false,
       "signals": {
         "clicks": 7,
@@ -89,7 +89,7 @@
       "category": "Fashion & Apparel",
       "description": "Clickstream and purchase data for fashion e-commerce",
       "url": "https://competitions.codalab.org/competitions/11161",
-      "score": 0.6879,
+      "score": 0.7851,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -116,7 +116,7 @@
       "category": "Strategy & Digital Platforms",
       "description": "Keystone interview. How Amazon's Chief Scientist built applied research from scratch with 400+ PhD researchers.",
       "url": "https://www.keystone.ai/news-publications/patrick-bajari-qa",
-      "score": 0.4978,
+      "score": 0.5858,
       "cold_start": false,
       "signals": {
         "clicks": 4,
@@ -143,7 +143,7 @@
       "category": "Fashion & Apparel",
       "description": "Fashion item combinations from Alibaba for outfit recommendation",
       "url": "https://tianchi.aliyun.com/dataset/131519",
-      "score": 0.4322,
+      "score": 0.5295,
       "cold_start": false,
       "signals": {
         "clicks": 3,
@@ -170,7 +170,7 @@
       "category": "Research Labs",
       "description": "Causal inference for recommender systems. CompCI project, annual CIDER roundtable. Research advisor: Nathan Kallus (Cornell).",
       "url": "https://research.netflix.com/research-area/experimentation-and-causal-inference",
-      "score": 0.4048,
+      "score": 0.5123,
       "cold_start": false,
       "signals": {
         "clicks": 8,
@@ -197,7 +197,7 @@
       "category": "Adaptive Experimentation & Bandits",
       "description": "Meta's open-source platform for adaptive experimentation. Bayesian optimization, multi-objective optimization, and automated experiment design. Built on BoTorch for AI-assisted experimentation.",
       "url": "https://ax.dev",
-      "score": 0.3678,
+      "score": 0.4684,
       "cold_start": false,
       "signals": {
         "clicks": 2,
@@ -224,7 +224,7 @@
       "category": "Blogs",
       "description": "Survey science, conjoint analysis, and quantitative UX research. Statistical rigor for product research.",
       "url": "https://measuringu.com/",
-      "score": 0.3388,
+      "score": 0.4463,
       "cold_start": false,
       "signals": {
         "clicks": 1,
@@ -243,7 +243,7 @@
         "reading_ratio": 2.0,
         "high_imp_no_click": false
       },
-      "rank": 15
+      "rank": 14
     },
     {
       "name": "The Theory and Practice of Revenue Management",
@@ -251,7 +251,7 @@
       "category": "Pricing > Dynamic Pricing & Revenue Management",
       "description": "The definitive textbook on revenue management covering pricing, capacity control, and overbooking.",
       "url": "https://www.springer.com/gp/book/9781402077012",
-      "score": 0.3015,
+      "score": 0.402,
       "cold_start": false,
       "signals": {
         "clicks": 1,
@@ -271,7 +271,7 @@
         "high_imp_no_click": false
       },
       "citations": 2223,
-      "rank": 40
+      "rank": 36
     },
     {
       "name": "DoubleML",
@@ -279,7 +279,7 @@
       "category": "Double/Debiased Machine Learning (DML)",
       "description": "Implements the double/debiased ML framework (Chernozhukov et al.) for estimating causal parameters (ATE, LATE, POM) with ML nuisances.",
       "url": "https://github.com/DoubleML/doubleml-for-py",
-      "score": 0.2706,
+      "score": 0.3745,
       "cold_start": false,
       "signals": {
         "clicks": 1,
@@ -298,7 +298,7 @@
         "reading_ratio": 2.0,
         "high_imp_no_click": false
       },
-      "rank": 62
+      "rank": 42
     },
     {
       "name": "A/B Testing on Social Networks",
@@ -306,7 +306,7 @@
       "category": "Experimentation > A/B Test Design & Analysis",
       "description": "LinkedIn's landmark paper on network interference in A/B tests. Shows how social connections violate SUTVA, proposes cluster-based randomization and graph cluster metrics, and introduces the 'network A/B test' framework now used across social platforms.",
       "url": "https://content.linkedin.com/content/dam/engineering/site-assets/pdfs/ABTestingSocialNetwork_share.pdf",
-      "score": 0.2672,
+      "score": 0.3552,
       "cold_start": false,
       "signals": {
         "clicks": 7,
@@ -326,7 +326,7 @@
         "high_imp_no_click": false
       },
       "citations": 200,
-      "rank": 68
+      "rank": 59
     }
   ]
 }
