@@ -1,5 +1,10 @@
 # Changelog
 
+## 2026-02-07
+- Add 6 causal inference/ML packages: grf_python, causalfe, etwfe, diff-diff, choice-learn, GeoAI
+- Add Stefan Wager's "Causal Inference: A Statistical Learning Approach" book
+- Homepage: rename "Trending Now" → "New Additions" with star icon, showcase new items
+
 ## 2026-01-16
 - Add choix, pyStoNED, Prest packages for preference modeling and revealed preference analysis
 

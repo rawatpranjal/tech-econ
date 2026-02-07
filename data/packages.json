@@ -41657,5 +41657,120 @@
     "best_for": "AI-powered question answering across scientific literature with citations",
     "model_score": 0.0,
     "stars": 8042
+  },
+  {
+    "name": "grf_python",
+    "description": "Production-grade Python implementation of Generalized Random Forests for heterogeneous treatment effects. Multiple performance tiers (pure Python, Numba, Cython) with valid statistical inference via Infinitesimal Jackknife.",
+    "category": "Causal Inference (ML)",
+    "docs_url": null,
+    "github_url": "https://github.com/shoepaladin/statanomics",
+    "url": "https://github.com/shoepaladin/statanomics/tree/main/workingcode/grf_python",
+    "install": "pip install -e .",
+    "tags": [
+      "causal-forests",
+      "heterogeneous-treatment-effects",
+      "GRF",
+      "causal-inference",
+      "Python"
+    ],
+    "best_for": "Estimating heterogeneous treatment effects with causal forests in Python without R dependencies",
+    "language": "Python",
+    "model_score": 0.0
+  },
+  {
+    "name": "causalfe",
+    "description": "Causal Forests with Fixed Effects (CFFE) for estimating heterogeneous treatment effects in panel data and difference-in-differences settings. Node-level fixed-effect residualization during tree construction.",
+    "category": "Causal Inference (ML)",
+    "docs_url": null,
+    "github_url": "https://github.com/haytug/causalfe",
+    "url": "https://github.com/haytug/causalfe",
+    "install": "pip install causalfe",
+    "tags": [
+      "causal-forests",
+      "fixed-effects",
+      "panel-data",
+      "heterogeneous-treatment-effects",
+      "DiD"
+    ],
+    "best_for": "Heterogeneous treatment effects in panel data with unit/time fixed effects",
+    "language": "Python",
+    "model_score": 0.0
+  },
+  {
+    "name": "etwfe",
+    "description": "Extended Two-Way Fixed Effects estimator implementing Wooldridge (2021, 2023). Saturated interaction effects to overcome bias in vanilla TWFE for difference-in-differences with staggered treatment adoption. Built on pyfixest and marginaleffects.",
+    "category": "Causal Inference (DiD)",
+    "docs_url": null,
+    "github_url": null,
+    "url": "https://pypi.org/project/etwfe/",
+    "install": "pip install etwfe",
+    "tags": [
+      "DiD",
+      "two-way-fixed-effects",
+      "Wooldridge",
+      "staggered-treatment",
+      "panel-data"
+    ],
+    "best_for": "Heterogeneity-robust DiD estimation with staggered treatment adoption using Wooldridge's ETWFE approach",
+    "language": "Python",
+    "model_score": 0.0
+  },
+  {
+    "name": "diff-diff",
+    "description": "Comprehensive Difference-in-Differences library with sklearn-like API and statsmodels-style output. Implements Callaway-Sant'Anna, Sun-Abraham, Synthetic DiD, Triple Difference (DDD), Honest DiD sensitivity analysis, and extensive robustness diagnostics.",
+    "category": "Causal Inference (DiD)",
+    "docs_url": "https://diff-diff.readthedocs.io",
+    "github_url": null,
+    "url": "https://diff-diff.readthedocs.io",
+    "install": "pip install diff-diff",
+    "tags": [
+      "DiD",
+      "difference-in-differences",
+      "Callaway-SantAnna",
+      "synthetic-DiD",
+      "event-study",
+      "triple-difference"
+    ],
+    "best_for": "Full-featured DiD analysis with modern estimators, parallel trends testing, placebo tests, and sensitivity analysis",
+    "language": "Python",
+    "model_score": 0.0
+  },
+  {
+    "name": "choice-learn",
+    "description": "Discrete choice modeling with deep learning (e.g., TasteNet) for assortment and pricing optimization. Supports single-choice and basket models on large datasets. Published in JOSS.",
+    "category": "Discrete Choice Models",
+    "docs_url": "https://artefactory.github.io/choice-learn/",
+    "github_url": "https://github.com/artefactory/choice-learn",
+    "url": "https://github.com/artefactory/choice-learn",
+    "install": "pip install choice-learn",
+    "tags": [
+      "discrete-choice",
+      "deep-learning",
+      "TasteNet",
+      "assortment-optimization",
+      "pricing"
+    ],
+    "best_for": "Combining interpretable choice models with neural networks for scalable assortment and pricing optimization",
+    "language": "Python",
+    "model_score": 0.0
+  },
+  {
+    "name": "GeoAI",
+    "description": "Python package integrating AI with geospatial data analysis and visualization. 70+ end-to-end Jupyter notebook examples and a QGIS plugin. Published in JOSS.",
+    "category": "Geospatial & Spatial Economics",
+    "docs_url": "https://opengeoai.org",
+    "github_url": "https://github.com/opengeos/geoai",
+    "url": "https://github.com/opengeos/geoai",
+    "install": "pip install geoai",
+    "tags": [
+      "geospatial",
+      "machine-learning",
+      "spatial-analysis",
+      "QGIS",
+      "visualization"
+    ],
+    "best_for": "Applying machine learning to geographic data with minimal code for spatial economics research",
+    "language": "Python",
+    "model_score": 0.0
   }
 ]
