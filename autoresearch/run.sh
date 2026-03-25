@@ -105,12 +105,15 @@ for ((ITER=1; ITER<=AR_MAX_ITERATIONS; ITER++)); do
 
     # Step 1: Build prompt
     PROMPT_FILE="${ITER_LOG_PREFIX}-prompt.txt"
+    # build_prompt.sh takes positional args: template_file log_prefix [prev_log_prefix]
+    PREV_LOG_PREFIX=""
+    if [[ $ITER -gt 1 ]]; then
+        PREV_LOG_PREFIX="$LOG_DIR/iter-$(printf '%03d' $((ITER-1)))"
+    fi
     bash "$SCRIPT_DIR/build_prompt.sh" \
-        --task "$TASK_NAME" \
-        --program "$PROGRAM" \
-        --iteration "$ITER" \
-        --project-root "$PROJECT_ROOT" \
-        --log-prefix "$ITER_LOG_PREFIX" \
+        "$PROGRAM" \
+        "$ITER_LOG_PREFIX" \
+        "$PREV_LOG_PREFIX" \
         > "$PROMPT_FILE" 2>/dev/null
     PROMPT_SIZE=$(wc -c < "$PROMPT_FILE" | tr -d ' ')
     echo "  Prompt built ($PROMPT_SIZE bytes)"
