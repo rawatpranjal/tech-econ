@@ -4909,6 +4909,91 @@ mark.partial {
     color: var(--text-tertiary);
 }
 
+/* RAG Answer Panel */
+.rag-answer-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.rag-answer-header {
+    padding: 0.6rem 0.8rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.rag-answer-content {
+    padding: 0.8rem;
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.rag-answer-content .streaming-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: #667eea;
+    animation: llm-cursor-blink 1s step-end infinite;
+    margin-left: 2px;
+    vertical-align: text-bottom;
+}
+
+.rag-answer-content em {
+    color: var(--text-tertiary);
+}
+
+.rag-close {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.6rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    opacity: 0.8;
+    z-index: 1;
+    padding: 0;
+    line-height: 1;
+}
+
+.rag-close:hover {
+    opacity: 1;
+}
+
+.rag-ask-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.15s;
+    margin-left: auto;
+}
+
+.rag-ask-btn:hover {
+    opacity: 0.9;
+}
+
+.rag-ask-btn svg {
+    flex-shrink: 0;
+}
+
 /* Explain button on results */
 .result-explain-btn {
     display: none;

@@ -1553,6 +1553,12 @@
     this.resultsContainer.innerHTML = html;
     this.selectedIndex = 0;
     this.updateSelection();
+
+    // Show "Ask AI" button when LLM is enabled and we have results
+    var askBtn = document.getElementById('rag-ask-btn');
+    if (askBtn) {
+      askBtn.style.display = (this.llmEnabled && this.llmEndpoint && this.currentResults.length > 0) ? 'inline-flex' : 'none';
+    }
   };
 
   /**
@@ -3185,6 +3191,32 @@
         self.hideExplanationPanel();
       });
     }
+
+    // RAG "Ask AI" button
+    var ragAskBtn = document.getElementById('rag-ask-btn');
+    if (ragAskBtn) {
+      ragAskBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var query = self.input ? self.input.value.trim() : '';
+        if (query.length >= 2) {
+          self.askRAG(query);
+        }
+      });
+    }
+
+    // RAG panel close button
+    var ragCloseBtn = document.querySelector('#rag-answer-panel .rag-close');
+    if (ragCloseBtn) {
+      ragCloseBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var panel = document.getElementById('rag-answer-panel');
+        if (panel) panel.style.display = 'none';
+        if (self.ragAbortController) {
+          self.ragAbortController.abort();
+          self.ragAbortController = null;
+        }
+      });
+    }
   };
 
   /**
@@ -3488,6 +3520,55 @@
       this.explanationAbortController.abort();
       this.explanationAbortController = null;
     }
+  };
+
+  // ============================================
+  // RAG Answer
+  // ============================================
+
+  /**
+   * Ask AI a question grounded in current search results
+   */
+  UnifiedSearch.prototype.askRAG = function(question) {
+    var self = this;
+    if (!this.llmEnabled || !this.llmEndpoint) return;
+
+    var context = (this.currentResults || []).slice(0, 15).map(function(r) {
+      return {
+        name: r.name || r.title || '',
+        type: r.type || '',
+        description: (r.description || '').slice(0, 300),
+        category: r.category || '',
+        url: r.url || ''
+      };
+    });
+
+    if (context.length === 0) return;
+
+    var panel = document.getElementById('rag-answer-panel');
+    if (!panel) return;
+    panel.style.display = 'block';
+    var content = document.getElementById('rag-answer-content');
+    content.innerHTML = '<span class="streaming-cursor"></span>';
+
+    if (this.ragAbortController) this.ragAbortController.abort();
+    this.ragAbortController = new AbortController();
+
+    fetch(this.llmEndpoint + '/rag-answer', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ question: question, context: context }),
+      signal: this.ragAbortController.signal
+    })
+    .then(function(response) {
+      if (!response.ok) throw new Error('RAG failed');
+      return self.handleStreamingResponse(response, content);
+    })
+    .catch(function(error) {
+      if (error.name !== 'AbortError') {
+        content.innerHTML = '<em>Could not generate answer.</em>';
+      }
+    });
   };
 
   // ============================================

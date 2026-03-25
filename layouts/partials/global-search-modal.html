@@ -69,6 +69,11 @@
       <!-- Expanded query terms rendered by JS -->
     </div>
     <div class="global-search-body">
+      <div id="rag-answer-panel" class="rag-answer-panel" style="display: none;">
+        <button class="rag-close" title="Close">&times;</button>
+        <div class="rag-answer-header">AI Answer</div>
+        <div id="rag-answer-content" class="rag-answer-content"></div>
+      </div>
       <div id="global-search-results" class="global-search-results">
         <!-- Results rendered here -->
       </div>
@@ -96,6 +101,10 @@
       <span><kbd>↑</kbd><kbd>↓</kbd> Navigate</span>
       <span><kbd>↵</kbd> Open</span>
       <span><kbd>ESC</kbd> Close</span>
+      <button id="rag-ask-btn" class="rag-ask-btn" style="display: none;" title="Ask AI about these results" type="button">
+        <svg viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+        Ask AI
+      </button>
     </div>
   </div>
 </div>
