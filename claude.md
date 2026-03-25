@@ -254,41 +254,31 @@ python3 scripts/enrich_metadata.py       # LLM-enriched fields
 ```
 
 ## Check Analytics
+
+**Worker:** `tech-econ-analytics-v2.pp712.workers.dev` (D1 DB: `1515d5fb`)
+**Old worker:** `tech-econ-analytics.rawat-pranjal010.workers.dev` (read-only rollback)
+
 ```bash
-# Run from analytics-worker/ directory
+# Quick check via API (no auth needed)
+WORKER="https://tech-econ-analytics-v2.pp712.workers.dev"
+curl -s "$WORKER/stats" | python3 -m json.tool           # Dashboard summary
+curl -s "$WORKER/clicks?limit=20"                         # Top clicks
+curl -s "$WORKER/searches?limit=20"                       # Top searches
+curl -s "$WORKER/timeseries?days=7"                       # Daily timeseries
+curl -s "$WORKER/clicks-by-country"                       # Clicks by country
+curl -s "$WORKER/clicks-by-country?country=US"            # Clicks for specific country
+curl -s "$WORKER/health"                                  # Health check
+
+# Direct D1 queries via wrangler (from analytics-worker/ dir)
 cd analytics-worker
-
-# Recent page views (last 6 hours)
 npx wrangler d1 execute tech-econ-analytics-db --remote --command \
-  "SELECT path, view_count, last_viewed FROM page_views WHERE last_viewed > datetime('now', '-6 hours') ORDER BY last_viewed DESC"
+  "SELECT name, section, click_count, last_clicked FROM content_clicks ORDER BY last_clicked DESC LIMIT 20"
 
-# Recent clicks
-npx wrangler d1 execute tech-econ-analytics-db --remote --command \
-  "SELECT name, section, click_count, last_clicked FROM content_clicks WHERE last_clicked > datetime('now', '-6 hours') ORDER BY last_clicked DESC LIMIT 20"
-
-# Recent impressions
-npx wrangler d1 execute tech-econ-analytics-db --remote --command \
-  "SELECT name, section, impression_count, last_seen FROM content_impressions WHERE last_seen > datetime('now', '-6 hours') ORDER BY last_seen DESC LIMIT 20"
-
-# Recent searches
 npx wrangler d1 execute tech-econ-analytics-db --remote --command \
   "SELECT * FROM search_queries ORDER BY last_searched DESC LIMIT 10"
 
-# Web vitals (LCP, FID, CLS)
 npx wrangler d1 execute tech-econ-analytics-db --remote --command \
-  "SELECT metric, rating, COUNT(*) as count, AVG(value) as avg_value FROM web_vitals GROUP BY metric, rating"
-
-# Client errors
-npx wrangler d1 execute tech-econ-analytics-db --remote --command \
-  "SELECT path, error_type, message FROM client_errors ORDER BY created_at DESC LIMIT 10"
-
-# Referrer sources
-npx wrangler d1 execute tech-econ-analytics-db --remote --command \
-  "SELECT source, session_count FROM referrer_stats ORDER BY session_count DESC"
-
-# Item co-occurrence (for recommendations)
-npx wrangler d1 execute tech-econ-analytics-db --remote --command \
-  "SELECT item_a, item_b, coview_count FROM item_cooccurrence ORDER BY coview_count DESC LIMIT 20"
+  "SELECT country, SUM(click_count) as clicks FROM clicks_by_country GROUP BY country ORDER BY clicks DESC"
 ```
 
 ---
