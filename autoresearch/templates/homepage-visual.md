@@ -62,7 +62,7 @@ Make targeted, well-commented CSS changes. For template changes, be minimal and 
 
 ### Step 6: Verify Hugo build
 ```bash
-cd /Users/pranjal/Code/tech-econ && hugo --gc --minify
+hugo --gc --minify
 ```
 
 ---

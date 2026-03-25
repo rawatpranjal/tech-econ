@@ -10042,3 +10042,181 @@ mark.partial {
     color: var(--text-primary);
     background: var(--bg-hover);
 }
+/* ===========================================
+   Netflix-Quality Visual Overhaul
+   =========================================== */
+
+/* ── Hero Section — Dramatic spotlight ──────────────────────────────────── */
+.hero-section {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem 3rem;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f0f4f8 0%, #e8eef5 50%, #f0f4f8 100%);
+}
+[data-theme="dark"] .hero-section {
+    background: linear-gradient(135deg, #0a0a1a 0%, #12082e 30%, #081a2e 70%, #0a0a1a 100%);
+}
+.hero-site-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 1.5rem;
+    opacity: 0.9;
+}
+.hero-headline {
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin: 0 0 1rem;
+    color: var(--text-primary);
+    max-width: 700px;
+}
+[data-theme="dark"] .hero-headline {
+    background: linear-gradient(135deg, #f0f0f0 0%, #8ab4f8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.hero-editorial {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 1.5rem 0 0;
+    letter-spacing: 0.02em;
+    opacity: 0.7;
+}
+.hero-search {
+    margin-top: 2rem;
+    max-width: 500px;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .hero-section { min-height: 35vh; padding: 3rem 1.5rem 2rem; }
+    .hero-headline { font-size: 1.8rem; }
+}
+
+/* ── Card Depth & Dimension ─────────────────────────────────────────────── */
+.explore-card,
+.explore-card-hero,
+.explore-card-compact,
+.home-row-narrative .hero-card {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 16px rgba(0,0,0,0.04);
+    transition: transform 0.15s ease-out, box-shadow 0.15s ease-out, border-color 0.15s ease-out;
+}
+[data-theme="dark"] .explore-card,
+[data-theme="dark"] .explore-card-hero,
+[data-theme="dark"] .explore-card-compact {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3), 0 4px 16px rgba(0,0,0,0.15);
+    background: linear-gradient(180deg, #2a2a2e 0%, #232326 100%);
+    border-color: #333;
+}
+
+/* ── Type Accent Borders ────────────────────────────────────────────────── */
+.explore-card[data-type="package"],
+.explore-card-hero[data-type="package"],
+.explore-card-compact[data-type="package"] { border-left: 3px solid #1565c0; }
+.explore-card[data-type="dataset"],
+.explore-card-hero[data-type="dataset"],
+.explore-card-compact[data-type="dataset"] { border-left: 3px solid #2e7d32; }
+.explore-card[data-type="paper"],
+.explore-card-hero[data-type="paper"],
+.explore-card-compact[data-type="paper"] { border-left: 3px solid #e65100; }
+.explore-card[data-type="resource"],
+.explore-card-hero[data-type="resource"],
+.explore-card-compact[data-type="resource"] { border-left: 3px solid #7b1fa2; }
+.explore-card[data-type="talk"],
+.explore-card-hero[data-type="talk"],
+.explore-card-compact[data-type="talk"] { border-left: 3px solid #ff8f00; }
+.explore-card[data-type="career"],
+.explore-card-hero[data-type="career"],
+.explore-card-compact[data-type="career"] { border-left: 3px solid #00838f; }
+.explore-card[data-type="community"],
+.explore-card-hero[data-type="community"],
+.explore-card-compact[data-type="community"] { border-left: 3px solid #c2185b; }
+.explore-card[data-type="book"],
+.explore-card-hero[data-type="book"],
+.explore-card-compact[data-type="book"] { border-left: 3px solid #558b2f; }
+
+/* ── Dramatic Hover States ──────────────────────────────────────────────── */
+.explore-card:hover {
+    transform: scale(1.07) translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0,0,0,0.18), 0 0 0 1px rgba(0,102,204,0.2);
+}
+[data-theme="dark"] .explore-card:hover {
+    box-shadow: 0 16px 36px rgba(0,0,0,0.5), 0 0 12px rgba(77,166,255,0.12);
+    border-color: rgba(77,166,255,0.3);
+}
+.explore-card-hero:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0,0,0,0.2);
+}
+[data-theme="dark"] .explore-card-hero:hover {
+    box-shadow: 0 16px 36px rgba(0,0,0,0.5), 0 0 12px rgba(77,166,255,0.1);
+}
+.explore-card::before {
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), #7c4dff, transparent);
+}
+
+/* ── Row Spacing & Rhythm ───────────────────────────────────────────────── */
+.explore-rows { gap: 3rem; padding-top: 1rem; }
+.home-row { margin-bottom: 2.5rem; }
+
+/* ── Row Title Upgrade ──────────────────────────────────────────────────── */
+.home-row .explore-row-title {
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    position: relative;
+    padding-bottom: 0.4rem;
+}
+.home-row .explore-row-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), transparent);
+    border-radius: 1px;
+}
+
+/* ── Trending Row Special Treatment ─────────────────────────────────────── */
+.home-row-hero { position: relative; padding: 1.5rem 0; }
+[data-theme="dark"] .home-row-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0 -2rem;
+    background: linear-gradient(180deg, rgba(77,166,255,0.03) 0%, transparent 100%);
+    border-radius: 16px;
+    pointer-events: none;
+    z-index: -1;
+}
+.home-row-hero .explore-row-title { font-size: 1.6rem; }
+
+/* ── Fix: scroller fade gradient ────────────────────────────────────────── */
+.explore-scroller-wrapper::after {
+    background: linear-gradient(to right, transparent, var(--bg-primary));
+}
+
+/* ── Row entrance animation ─────────────────────────────────────────────── */
+@keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.home-row { animation: fadeSlideUp 0.35s ease-out both; }
+.home-row:nth-child(1) { animation-delay: 0s; }
+.home-row:nth-child(2) { animation-delay: 0.08s; }
+.home-row:nth-child(3) { animation-delay: 0.16s; }
+.home-row:nth-child(4) { animation-delay: 0.22s; }
+.home-row:nth-child(5) { animation-delay: 0.28s; }
+.home-row:nth-child(6) { animation-delay: 0.34s; }
+@media (prefers-reduced-motion: reduce) { .home-row { animation: none; } }
