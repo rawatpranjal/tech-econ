@@ -49,6 +49,15 @@ if [[ -z "$TASK_NAME" ]]; then
     TASK_NAME=$(basename "$PROGRAM" .md | sed 's/[^a-zA-Z0-9]/-/g')
 fi
 
+# ── Extract ALLOWED_FILES from template ──────────────────────────────────────
+# Templates declare scope: <!-- ALLOWED_FILES: file1, file2, file3 -->
+# Changes outside this scope are auto-reverted before evaluation.
+ALLOWED_FILES_RAW=$(grep -i 'ALLOWED_FILES:' "$PROGRAM" | head -1 | sed 's/.*ALLOWED_FILES:\s*//' | sed 's/-->//' | tr -d ' ')
+ALLOWED_FILES=()
+if [[ -n "$ALLOWED_FILES_RAW" ]]; then
+    IFS=',' read -ra ALLOWED_FILES <<< "$ALLOWED_FILES_RAW"
+fi
+
 BRANCH="autoresearch/$TASK_NAME"
 TIMESTAMP=$(date +%Y%m%d-%H%M%S)
 LOG_DIR="$SCRIPT_DIR/log/${TASK_NAME}-${TIMESTAMP}"
@@ -66,18 +75,33 @@ echo "Max iter:   $AR_MAX_ITERATIONS"
 echo "Budget:     \$$AR_BUDGET_TOTAL total, \$$AR_BUDGET_PER_ITER/iter"
 echo "Timeout:    ${AR_TIMEOUT}s per iteration"
 echo "Log dir:    $LOG_DIR"
+if [[ ${#ALLOWED_FILES[@]} -gt 0 ]]; then
+    echo "Scope:      ${ALLOWED_FILES[*]}"
+fi
 echo "============================================"
 
 cd "$PROJECT_ROOT"
 
-# Create or switch to branch
+# Create an isolated worktree so autoresearch never touches the main checkout
+WORKTREE_DIR="/tmp/autoresearch-${TASK_NAME}-$$"
+cleanup_worktree() {
+    cd "$PROJECT_ROOT"
+    git worktree remove --force "$WORKTREE_DIR" 2>/dev/null || rm -rf "$WORKTREE_DIR"
+    git worktree prune 2>/dev/null || true
+}
+trap cleanup_worktree EXIT
+
 if git show-ref --verify --quiet "refs/heads/$BRANCH" 2>/dev/null; then
-    git checkout "$BRANCH"
-    echo "Already on branch: $BRANCH"
+    git worktree add "$WORKTREE_DIR" "$BRANCH"
+    echo "Worktree created from existing branch: $BRANCH"
 else
-    git checkout -b "$BRANCH"
-    echo "Creating branch: $BRANCH"
+    git worktree add -b "$BRANCH" "$WORKTREE_DIR"
+    echo "Worktree created with new branch: $BRANCH"
 fi
+
+WORK_DIR="$WORKTREE_DIR"
+cd "$WORK_DIR"
+echo "Working directory: $WORK_DIR"
 
 # Initialize state
 TOTAL_COST=0
@@ -144,6 +168,33 @@ for ((ITER=1; ITER<=AR_MAX_ITERATIONS; ITER++)); do
     TOTAL_COST=$(python3 -c "print(round($TOTAL_COST + $COST, 4))")
     echo "  Iteration cost: \$$COST (total: \$$TOTAL_COST)"
 
+    # Step 2.5: Enforce file scope — revert anything outside allowed files
+    if [[ ${#ALLOWED_FILES[@]} -gt 0 ]]; then
+        # Revert out-of-scope tracked file changes
+        for f in $(git diff --name-only 2>/dev/null); do
+            IN_SCOPE=false
+            for allowed in "${ALLOWED_FILES[@]}"; do
+                [[ "$f" == "$allowed" ]] && IN_SCOPE=true && break
+            done
+            if ! $IN_SCOPE; then
+                git checkout -- "$f" 2>/dev/null || true
+                echo "    SCOPE: reverted $f"
+            fi
+        done
+        # Remove out-of-scope new files (but keep logs)
+        for f in $(git ls-files --others --exclude-standard 2>/dev/null); do
+            [[ "$f" == autoresearch/* ]] && continue
+            IN_SCOPE=false
+            for allowed in "${ALLOWED_FILES[@]}"; do
+                [[ "$f" == "$allowed" ]] && IN_SCOPE=true && break
+            done
+            if ! $IN_SCOPE; then
+                rm -f "$f" 2>/dev/null || true
+                echo "    SCOPE: removed $f"
+            fi
+        done
+    fi
+
     # Step 3: Check for changes
     CHANGES=$(git diff --stat 2>/dev/null || echo "")
     NEW_FILES=$(git ls-files --others --exclude-standard 2>/dev/null || echo "")
@@ -174,7 +225,7 @@ for ((ITER=1; ITER<=AR_MAX_ITERATIONS; ITER++)); do
 
     if bash "$SCRIPT_DIR/evaluate.sh" \
         --task "$TASK_NAME" \
-        --project-root "$PROJECT_ROOT" \
+        --project-root "$WORK_DIR" \
         --log-prefix "$ITER_LOG_PREFIX" \
         > "$EVAL_FILE" 2>&1; then
         EVAL_PASSED=true
@@ -261,5 +312,4 @@ except:
     pass
 " 2>/dev/null || true
 
-# Switch back to main
-git checkout main 2>/dev/null || true
+# Worktree cleanup handled by EXIT trap
