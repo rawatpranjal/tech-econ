@@ -1,0 +1,46 @@
+{{/* Homepage Standard Row — ~280px cards for most rows */}}
+{{/* Receives: {id, row_type, title, subtitle, template, items[]} */}}
+<section class="home-row home-row-standard" data-row-id="{{ .id }}">
+    <div class="explore-row-header">
+        <h2 class="explore-row-title">{{ .title }}</h2>
+        {{ with .subtitle }}<span class="explore-row-subtitle">{{ . }}</span>{{ end }}
+        <span class="explore-row-count">{{ len .items }} items</span>
+    </div>
+    <div class="explore-scroller-wrapper">
+        <div class="explore-scroller">
+            {{ range .items }}
+            <a href="{{ .url }}" target="_blank" rel="noopener" class="explore-card" data-score="{{ .model_score }}">
+                <div class="explore-card-header">
+                    <div class="explore-card-icon">
+                        {{ if findRE "github\\.com" .url }}
+                        {{ $owner := replaceRE "https://github.com/([^/]+).*" "$1" .url }}
+                        <img src="https://github.com/{{ $owner }}.png?size=32" alt="" loading="lazy" onerror="this.parentElement.classList.add('icon-fallback')">
+                        {{ else }}
+                        <img src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE `^https?://([^/]+).*` `$1` }}&sz=32" alt="" loading="lazy" onerror="this.parentElement.classList.add('icon-fallback')">
+                        {{ end }}
+                        <svg class="fallback-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                            {{ if eq .type "paper" }}<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline>
+                            {{ else if eq .type "package" }}<path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            {{ else if eq .type "dataset" }}<ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                            {{ else }}<circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>{{ end }}
+                        </svg>
+                    </div>
+                    <span class="explore-card-type type-{{ .type }}">{{ .type }}</span>
+                </div>
+                <h3>{{ .name }}</h3>
+                {{ with .description }}<p class="explore-card-desc">{{ . | truncate 80 }}</p>{{ end }}
+            </a>
+            {{ end }}
+        </div>
+        <button class="scroller-nav prev" aria-label="Scroll left">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M15 18l-6-6 6-6"/>
+            </svg>
+        </button>
+        <button class="scroller-nav next" aria-label="Scroll right">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l6-6-6-6"/>
+            </svg>
+        </button>
+    </div>
+</section>
