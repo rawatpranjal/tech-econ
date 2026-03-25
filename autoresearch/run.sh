@@ -120,38 +120,21 @@ for ((ITER=1; ITER<=AR_MAX_ITERATIONS; ITER++)); do
 
     # Step 2: Invoke Claude
     echo "  Invoking Claude ($AR_MODEL)..."
-    CLAUDE_OUTPUT="${ITER_LOG_PREFIX}-claude-output.json"
     CLAUDE_STDERR="${ITER_LOG_PREFIX}-claude-stderr.txt"
 
     COST=0
-    if timeout "$AR_TIMEOUT" claude --model "$AR_MODEL" \
-        --max-turns 20 \
-        --output-format json \
+    CLAUDE_STATUS="CONTINUE"
+
+    # Run Claude with the prompt (no timeout on macOS, use --max-turns to limit)
+    if claude --model "$AR_MODEL" \
+        --max-turns 25 \
+        --verbose \
         -p "$(cat "$PROMPT_FILE")" \
-        > "$CLAUDE_OUTPUT" 2>"$CLAUDE_STDERR"; then
-
-        # Extract cost from output
-        COST=$(python3 -c "
-import json, sys
-try:
-    data = json.load(open('$CLAUDE_OUTPUT'))
-    print(data.get('cost_usd', 0))
-except:
-    print(0)
-" 2>/dev/null || echo "0")
-
-        # Check Claude status
-        CLAUDE_STATUS=$(python3 -c "
-import json
-try:
-    data = json.load(open('$CLAUDE_OUTPUT'))
-    print(data.get('stop_reason', 'CONTINUE'))
-except:
-    print('ERROR')
-" 2>/dev/null || echo "ERROR")
+        > /dev/null 2>"$CLAUDE_STDERR"; then
+        CLAUDE_STATUS="CONTINUE"
     else
-        echo "  Claude timed out or failed"
-        CLAUDE_STATUS="TIMEOUT"
+        echo "  Claude failed (exit $?)"
+        CLAUDE_STATUS="ERROR"
     fi
 
     TOTAL_COST=$(python3 -c "print(round($TOTAL_COST + $COST, 4))")
