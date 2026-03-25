@@ -10220,3 +10220,178 @@ mark.partial {
 .home-row:nth-child(5) { animation-delay: 0.28s; }
 .home-row:nth-child(6) { animation-delay: 0.34s; }
 @media (prefers-reduced-motion: reduce) { .home-row { animation: none; } }
+
+/* ===========================================
+   Netflix Visual Overhaul — Phase 2
+   =========================================== */
+
+/* ── Custom Font: Inter for headings ────────────────────────────────────── */
+@font-face {
+    font-family: 'Inter Display';
+    src: url('/fonts/inter-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Inter Display';
+    src: url('/fonts/inter-800.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+.hero-headline,
+.home-row .explore-row-title,
+.section-card h3,
+.cta-text h2 {
+    font-family: 'Inter Display', -apple-system, system-ui, sans-serif;
+}
+
+/* ── Trending Row — Make It Special ─────────────────────────────────────── */
+.home-row-hero .explore-card-hero {
+    border: 1px solid rgba(77,166,255,0.15);
+    position: relative;
+}
+[data-theme="dark"] .home-row-hero .explore-card-hero {
+    background: linear-gradient(180deg, #1a2238 0%, #1a1a2e 100%);
+    border-color: rgba(77,166,255,0.2);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3), 0 0 20px rgba(77,166,255,0.05);
+}
+[data-theme="dark"] .home-row-hero .explore-card-hero:hover {
+    border-color: rgba(77,166,255,0.4);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 30px rgba(77,166,255,0.1);
+}
+
+/* Rank numbers on trending cards */
+.home-row-hero .explore-scroller .explore-card-hero {
+    counter-increment: trending-rank;
+}
+.home-row-hero .explore-scroller {
+    counter-reset: trending-rank;
+}
+.home-row-hero .explore-card-hero::after {
+    content: counter(trending-rank);
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: 'Inter Display', sans-serif;
+    opacity: 0.08;
+    line-height: 1;
+    color: var(--text-primary);
+    pointer-events: none;
+}
+[data-theme="dark"] .home-row-hero .explore-card-hero::after {
+    opacity: 0.12;
+    color: #8ab4f8;
+}
+
+/* ── Type Badge Refinement ──────────────────────────────────────────────── */
+.explore-card-type {
+    padding: 0.25rem 0.65rem;
+    font-size: 0.62rem;
+    font-weight: 700;
+    border-radius: 20px;
+    letter-spacing: 0.06em;
+}
+[data-theme="dark"] .explore-card-type.type-package { background: #1a3a5c; color: #82b1ff; }
+[data-theme="dark"] .explore-card-type.type-resource { background: #3a2050; color: #e1bee7; }
+[data-theme="dark"] .explore-card-type.type-dataset { background: #1a3a2a; color: #a5d6a7; }
+[data-theme="dark"] .explore-card-type.type-talk { background: #3d2a1a; color: #ffcc80; }
+[data-theme="dark"] .explore-card-type.type-career { background: #1a3a3d; color: #80deea; }
+[data-theme="dark"] .explore-card-type.type-community { background: #3d1a2a; color: #f48fb1; }
+[data-theme="dark"] .explore-card-type.type-book { background: #2a3a1a; color: #c5e1a5; }
+
+/* ── CTA Banners — Subdued, cinematic ───────────────────────────────────── */
+.cta-banner {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    margin: 1rem 0 2rem;
+}
+[data-theme="dark"] .cta-banner {
+    background: linear-gradient(135deg, #1a1a2e 0%, #1e1e2e 100%);
+    border-color: #2a2a3a;
+}
+.cta-icon {
+    background: var(--accent-bg);
+}
+.cta-icon svg {
+    stroke: var(--accent);
+}
+[data-theme="dark"] .cta-icon {
+    background: rgba(77,166,255,0.1);
+}
+[data-theme="dark"] .cta-icon svg {
+    stroke: #8ab4f8;
+}
+.cta-text h2 {
+    color: var(--text-primary);
+    font-size: 1.15rem;
+}
+.cta-text p {
+    color: var(--text-secondary);
+    opacity: 1;
+    font-size: 0.88rem;
+}
+.cta-button {
+    background: var(--accent);
+    color: white;
+    border-radius: 24px;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.88rem;
+}
+.cta-button:hover {
+    background: var(--accent-hover);
+    color: white;
+}
+[data-theme="dark"] .cta-button {
+    background: rgba(77,166,255,0.15);
+    color: #8ab4f8;
+    border: 1px solid rgba(77,166,255,0.2);
+}
+[data-theme="dark"] .cta-button:hover {
+    background: rgba(77,166,255,0.25);
+    color: #a8cbff;
+}
+
+/* Subscribe input in dark mode */
+[data-theme="dark"] .subscribe-input {
+    background: rgba(255,255,255,0.05);
+    border-color: #333;
+    color: var(--text-primary);
+}
+
+/* ── Section Grid Cards — Polish ────────────────────────────────────────── */
+.section-card {
+    border-radius: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.section-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+}
+.section-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+/* ── Dark Mode Cinema Polish ────────────────────────────────────────────── */
+[data-theme="dark"] .homepage {
+    background: #0a0a0a;
+}
+[data-theme="dark"] .section-grid .section-card {
+    border-color: #222;
+}
+[data-theme="dark"] .section-grid .section-card:hover {
+    border-color: rgba(77,166,255,0.2);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.4), 0 0 12px rgba(77,166,255,0.05);
+}
+[data-theme="dark"] .homepage-footer {
+    border-color: #1a1a1a;
+    color: var(--text-muted);
+}
