@@ -614,6 +614,11 @@ function performKeywordSearch(query, limit) {
           type: result.type,
           score: score,
           source: 'keyword',
+          tags: result.tags,
+          authors: result.authors,
+          year: result.year,
+          content_format: result.content_format,
+          semantic_cluster: result.semantic_cluster,
           // Enriched fields from LLM
           difficulty: result.difficulty,
           prerequisites: result.prerequisites,
@@ -788,6 +793,11 @@ function performSemanticSearch(queryEmbedding, limit) {
       type: item.type,
       score: similarity,
       source: 'semantic',
+      tags: item.tags,
+      authors: item.authors,
+      year: item.year,
+      content_format: item.content_format,
+      semantic_cluster: item.semantic_cluster,
       // Enriched fields from LLM
       difficulty: item.difficulty,
       prerequisites: item.prerequisites,
