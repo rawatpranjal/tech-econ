@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "tech-econ-catalog": {
+      "command": "npx",
+      "args": ["tsx", "index.ts"],
+      "cwd": "mcp-server"
+    }
+  }
+}

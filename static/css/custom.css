@@ -10395,3 +10395,77 @@ mark.partial {
     border-color: #1a1a1a;
     color: var(--text-muted);
 }
+
+/* ===========================================
+   Netflix Visual Overhaul — Phase 3
+   Bigger cards + fix sidebar gap
+   =========================================== */
+
+/* ── Fix sidebar gap: let homepage fill the viewport ────────────────────── */
+.homepage {
+    max-width: none;
+    padding: 0;
+}
+
+.hero-section {
+    padding: 4rem 2rem 3rem;
+}
+
+/* Content rows still need max-width for readability */
+#home-rows-wrapper,
+.show-more-rows-wrap,
+.cta-banner.subscribe-cta,
+.homepage-footer {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* ── Bigger hero cards (Netflix-sized) ──────────────────────────────────── */
+.explore-card-hero {
+    flex: 0 0 440px;
+    min-width: 440px;
+    max-width: 480px;
+    height: 280px;
+    padding: 24px;
+    border-radius: 14px;
+}
+
+.explore-card-hero h3 {
+    font-size: 1.1rem;
+}
+
+.explore-card-hero .explore-card-desc {
+    -webkit-line-clamp: 4;
+}
+
+/* ── Bigger standard cards ──────────────────────────────────────────────── */
+.explore-card {
+    flex: 0 0 300px;
+    min-width: 300px;
+    max-width: 300px;
+    height: 220px;
+}
+
+/* ── Responsive: scale down on mobile ───────────────────────────────────── */
+@media (max-width: 768px) {
+    .explore-card-hero {
+        flex: 0 0 320px;
+        min-width: 320px;
+        height: 240px;
+    }
+    .explore-card {
+        flex: 0 0 260px;
+        min-width: 260px;
+        height: 200px;
+    }
+    #home-rows-wrapper,
+    .show-more-rows-wrap,
+    .cta-banner.subscribe-cta,
+    .homepage-footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
