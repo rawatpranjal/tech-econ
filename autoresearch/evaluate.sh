@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 # evaluate.sh — Runs post-iteration checks for an autoresearch task.
 #
-# Usage:
-#   ./autoresearch/evaluate.sh <task_description> <log_prefix> [project_root]
+# Usage (named flags — preferred):
+#   ./autoresearch/evaluate.sh --task <desc> --log-prefix <prefix> [--project-root <path>]
 #
-# Arguments:
-#   task_description  Short string describing the task (used to pick checks)
-#   log_prefix        Path prefix for this iteration's log files
-#   project_root      Optional project root (defaults to repo root)
+# Usage (positional — backward compat):
+#   ./autoresearch/evaluate.sh <task_description> <log_prefix> [project_root]
 #
 # Exit codes:
 #   0  All checks passed
@@ -15,9 +13,35 @@
 
 set -euo pipefail
 
-TASK_DESC="${1:?Usage: evaluate.sh <task_description> <log_prefix> [project_root]}"
-LOG_PREFIX="${2:?Missing log_prefix}"
-PROJECT_ROOT="${3:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"
+# Parse arguments: supports both named flags and positional args
+TASK_DESC=""
+LOG_PREFIX=""
+PROJECT_ROOT=""
+
+if [[ "${1:-}" == --* ]]; then
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            --task)         TASK_DESC="$2"; shift 2 ;;
+            --log-prefix)   LOG_PREFIX="$2"; shift 2 ;;
+            --project-root) PROJECT_ROOT="$2"; shift 2 ;;
+            *)              echo "Unknown arg: $1"; exit 1 ;;
+        esac
+    done
+else
+    TASK_DESC="${1:-}"
+    LOG_PREFIX="${2:-}"
+    PROJECT_ROOT="${3:-}"
+fi
+
+PROJECT_ROOT="${PROJECT_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"
+if [[ -z "$TASK_DESC" ]]; then
+    echo "Usage: evaluate.sh --task <desc> --log-prefix <prefix> [--project-root <path>]"
+    exit 1
+fi
+if [[ -z "$LOG_PREFIX" ]]; then
+    echo "Error: --log-prefix is required"
+    exit 1
+fi
 
 CHECKS_DIR="$PROJECT_ROOT/autoresearch/checks"
 PASS=0
@@ -56,6 +80,7 @@ run_check() {
 TASK_TYPE="generic"
 
 case "$TASK_DESC" in
+    *homepage-visual* | *visual*)       TASK_TYPE="homepage_visual" ;;
     *homepage* | *row*)                 TASK_TYPE="homepage_rows" ;;
     *telemetry* | *analytics* | *track*) TASK_TYPE="telemetry" ;;
     *rank* | *score*)                   TASK_TYPE="ranking" ;;
@@ -73,14 +98,19 @@ log ""
 # ── Always run: validate data and build ───────────────────────────────────────
 log "--- Core checks ---"
 
-if python3 "$PROJECT_ROOT/scripts/validate_data.py" \
-    > "${LOG_PREFIX}-check-validate_data.txt" 2>&1; then
-    log "PASS  validate_data"
-    PASS=$(( PASS + 1 ))
+# Skip slow validate_data for UI-only tasks
+if [[ "$TASK_TYPE" == "search" || "$TASK_TYPE" == "homepage_rows" || "$TASK_TYPE" == "homepage_visual" ]]; then
+    log "SKIP  validate_data (UI-only task, not data changes)"
 else
-    log "FAIL  validate_data"
-    cat "${LOG_PREFIX}-check-validate_data.txt" | tee -a "$CHECK_LOG"
-    FAIL=$(( FAIL + 1 ))
+    if python3 "$PROJECT_ROOT/scripts/validate_data.py" \
+        > "${LOG_PREFIX}-check-validate_data.txt" 2>&1; then
+        log "PASS  validate_data"
+        PASS=$(( PASS + 1 ))
+    else
+        log "FAIL  validate_data"
+        cat "${LOG_PREFIX}-check-validate_data.txt" | tee -a "$CHECK_LOG"
+        FAIL=$(( FAIL + 1 ))
+    fi
 fi
 
 # ── Task-specific checks ──────────────────────────────────────────────────────
@@ -88,6 +118,9 @@ log ""
 log "--- Task-specific checks ($TASK_TYPE) ---"
 
 case "$TASK_TYPE" in
+    homepage_visual)
+        run_check "$CHECKS_DIR/check_homepage_visual.py"
+        ;;
     homepage_rows)
         run_check "$CHECKS_DIR/check_homepage_rows.py"
         ;;

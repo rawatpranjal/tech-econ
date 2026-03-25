@@ -237,7 +237,16 @@ for ((ITER=1; ITER<=AR_MAX_ITERATIONS; ITER++)); do
     # Step 5: Commit or revert
     if $EVAL_PASSED; then
         echo "  Eval PASSED -- committing"
-        git add -A
+        # Only add in-scope files + hugo_stats.json (auto-generated)
+        if [[ ${#ALLOWED_FILES[@]} -gt 0 ]]; then
+            for f in "${ALLOWED_FILES[@]}"; do
+                [[ -f "$f" ]] && git add "$f" 2>/dev/null || true
+            done
+            git add hugo_stats.json 2>/dev/null || true
+        else
+            # No scope: add everything except junk
+            git add -A -- ':!autoresearch/log/' ':!autoresearch/state.json' ':!**/__pycache__/' ':!*.pyc' 2>/dev/null || true
+        fi
         git commit -m "autoresearch($TASK_NAME): iteration $ITER
 
 $EVAL_RESULT

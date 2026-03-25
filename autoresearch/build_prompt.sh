@@ -27,6 +27,19 @@ echo "=== PROJECT ROOT ==="
 echo "$PROJECT_ROOT"
 echo ""
 
+# ── What previous iterations already changed ─────────────────────────────────
+# Critical context: tells Claude what's been done so it picks the NEXT improvement
+BRANCH_COMMITS=$(git log --oneline main..HEAD 2>/dev/null || echo "")
+if [[ -n "$BRANCH_COMMITS" ]]; then
+    echo "=== PREVIOUS ITERATIONS (already committed — do NOT redo these) ==="
+    echo "Commits:"
+    echo "$BRANCH_COMMITS"
+    echo ""
+    echo "Files changed so far:"
+    git diff --stat main..HEAD 2>/dev/null || true
+    echo ""
+fi
+
 # ── Previous iteration checks (if any) ───────────────────────────────────────
 if [[ -n "$PREV_LOG_PREFIX" ]]; then
     for check_file in "${PREV_LOG_PREFIX}"-check-*.txt; do
