@@ -59,6 +59,8 @@ HIGH_IMP_NO_CLICK_WEIGHT = -1.0   # Penalty for high impressions but zero clicks
 FRESHNESS_WEIGHT = 0.15           # Max boost for brand new items (15% of score)
 FRESHNESS_HALF_LIFE_DAYS = 30     # Days until freshness boost decays by half
 
+ANALYTICS_API = "https://tech-econ-analytics-v2.pp712.workers.dev"
+
 
 def fetch_d1_data(query):
     """Execute D1 query via wrangler and return results."""

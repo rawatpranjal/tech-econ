@@ -22,7 +22,39 @@
         </div>
     </div>
 
-    <!-- Trending Now Carousel -->
+    <!-- Dynamic Homepage Rows -->
+    {{ if .Site.Data.homepage_rows }}
+    {{ range $index, $row := .Site.Data.homepage_rows.rows }}
+      {{ if eq $row.template "hero" }}
+        {{ partial "homepage/row-hero.html" $row }}
+      {{ else if eq $row.template "narrative" }}
+        {{ partial "homepage/row-narrative.html" $row }}
+      {{ else if eq $row.template "compact" }}
+        {{ partial "homepage/row-compact.html" $row }}
+      {{ else }}
+        {{ partial "homepage/row-standard.html" $row }}
+      {{ end }}
+
+      {{ if eq $index 2 }}
+      <!-- Getting Started CTA inserted after row 2 -->
+      <div class="cta-banner" data-aos="fade-up">
+          <div class="cta-content">
+              <a href="{{ "start/" | relURL }}" class="cta-icon">
+                  <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+              </a>
+              <div class="cta-text">
+                  <h2>New here?</h2>
+                  <p>Check out our curated roadmaps and essential picks to get started.</p>
+              </div>
+              <a href="{{ "start/" | relURL }}" class="cta-button">Getting Started</a>
+          </div>
+      </div>
+      {{ end }}
+    {{ end }}
+    {{ else }}
+    <!-- Fallback: Trending Carousel from homepage_trending -->
     {{ with .Site.Data.homepage_trending }}
     {{ if .items }}
     <section class="home-trending" data-aos="fade-up">
@@ -62,8 +94,7 @@
     </section>
     {{ end }}
     {{ end }}
-
-    <!-- Getting Started CTA -->
+    <!-- Getting Started CTA (fallback path only — dynamic path injects this after row 2) -->
     <div class="cta-banner" data-aos="fade-up">
         <div class="cta-content">
             <a href="{{ "start/" | relURL }}" class="cta-icon">
@@ -78,6 +109,7 @@
             <a href="{{ "start/" | relURL }}" class="cta-button">Getting Started</a>
         </div>
     </div>
+    {{ end }}
 
     <!-- Section Cards Grid -->
     <div class="section-grid">
@@ -293,6 +325,44 @@
     // Re-append in shuffled order
     arr.forEach(function(el) {
         parent.appendChild(el);
+    });
+})();
+
+// Homepage row scroller nav arrows
+(function() {
+    function debounce(func, wait) {
+        var timeout;
+        return function() {
+            var args = arguments;
+            clearTimeout(timeout);
+            timeout = setTimeout(function() { func.apply(this, args); }, wait);
+        };
+    }
+
+    document.querySelectorAll('.home-row .explore-scroller-wrapper').forEach(function(wrapper) {
+        var scroller = wrapper.querySelector('.explore-scroller');
+        var prevBtn = wrapper.querySelector('.scroller-nav.prev');
+        var nextBtn = wrapper.querySelector('.scroller-nav.next');
+
+        if (!scroller || !prevBtn || !nextBtn) return;
+
+        function updateNavState() {
+            var atStart = scroller.scrollLeft <= 0;
+            var atEnd = scroller.scrollLeft >= scroller.scrollWidth - scroller.clientWidth - 10;
+            prevBtn.classList.toggle('disabled', atStart);
+            nextBtn.classList.toggle('disabled', atEnd);
+        }
+
+        prevBtn.addEventListener('click', function() {
+            scroller.scrollBy({ left: -320, behavior: 'smooth' });
+        });
+
+        nextBtn.addEventListener('click', function() {
+            scroller.scrollBy({ left: 320, behavior: 'smooth' });
+        });
+
+        scroller.addEventListener('scroll', debounce(updateNavState, 50));
+        updateNavState();
     });
 })();
 </script>

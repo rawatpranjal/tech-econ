@@ -21,3 +21,9 @@ scripts/__pycache__/
 .env
 secrets.*
 !*.template
+
+# Discovery crawler state (operational, not content)
+data/.discovery_state.json
+data/.discovery_rejected.json
+data/.discovery_digest.html
+data/.discovery_paper_staging.json

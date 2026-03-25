@@ -1,0 +1,345 @@
+{
+  "_meta": {
+    "version": "1.0",
+    "description": "Search queries for weekly content discovery. Rotated by week number.",
+    "budget": {
+      "packages": {"queries_per_week": 15, "engine": "brave"},
+      "papers": {"queries_per_week": 15, "engine": "tavily"},
+      "resources": {"queries_per_week": 12, "engine": "brave"},
+      "datasets": {"queries_per_week": 10, "engine": "brave"},
+      "talks": {"queries_per_week": 8, "engine": "brave"},
+      "books": {"queries_per_week": 5, "engine": "brave"},
+      "career": {"queries_per_week": 5, "engine": "brave"},
+      "community": {"queries_per_week": 5, "engine": "brave"}
+    }
+  },
+  "packages": {
+    "_generic": [
+      "new python economics library 2025 2026 github",
+      "new R econometrics package CRAN 2025 2026",
+      "causal inference software tool github new",
+      "PyPI economics statistics package recently released",
+      "new Julia economics package 2026"
+    ],
+    "Causal Inference (ML)": [
+      "python causal inference library new 2025 2026",
+      "heterogeneous treatment effects package github",
+      "CATE estimation python R package new",
+      "causal forest library update 2026"
+    ],
+    "Causal Inference (DiD)": [
+      "difference in differences python package new 2025 2026",
+      "staggered DiD R package github new",
+      "event study estimation library 2026"
+    ],
+    "Causal Inference (Synthetic Control)": [
+      "synthetic control method python package new",
+      "augmented synthetic control R library 2026"
+    ],
+    "Causal Inference (RDD)": [
+      "regression discontinuity design package python R 2026",
+      "RDD estimation software new github"
+    ],
+    "Adaptive Experimentation & Bandits": [
+      "contextual bandits python library new 2025 2026",
+      "bayesian optimization experiment package github",
+      "adaptive experimentation platform open source"
+    ],
+    "Experimental Design": [
+      "power analysis experiment design python package new",
+      "AB testing framework library open source 2026",
+      "experiment randomization software github"
+    ],
+    "Time Series Econometrics": [
+      "time series econometrics python package new 2026",
+      "VAR VECM cointegration R package update"
+    ],
+    "Time Series Forecasting": [
+      "time series forecasting python library new 2025 2026",
+      "probabilistic forecasting package github new",
+      "foundation model time series package 2026"
+    ],
+    "Bayesian Inference": [
+      "bayesian inference python package new 2025 2026",
+      "probabilistic programming library update 2026",
+      "MCMC sampler new python R package"
+    ],
+    "Double/Debiased Machine Learning (DML)": [
+      "double machine learning python package new 2026",
+      "debiased ML causal inference library github"
+    ],
+    "Machine Learning": [
+      "gradient boosting economics library python new",
+      "interpretable ML econometrics package 2026"
+    ],
+    "Geo-Experiments & Lift Measurement": [
+      "geo experimentation causal impact python package new",
+      "marketing lift measurement library open source 2026"
+    ],
+    "Uplift Modeling": [
+      "uplift modeling python package new 2025 2026",
+      "treatment effect heterogeneity library github"
+    ],
+    "Marketing Mix Models (MMM) & Business Analytics": [
+      "marketing mix model open source python package 2026",
+      "bayesian MMM media mix library new github"
+    ],
+    "Platform & Marketplace": [
+      "marketplace economics simulation library python",
+      "two-sided market pricing package github 2026"
+    ]
+  },
+  "papers": {
+    "_generic": [
+      "tech economics paper arxiv 2025 2026",
+      "marketplace design paper new NBER working paper",
+      "applied econometrics new methodology paper 2026",
+      "machine learning economics paper arxiv recent",
+      "platform economics research paper 2025 2026"
+    ],
+    "experimentation": [
+      "AB testing variance reduction paper arxiv 2025 2026",
+      "switchback experiment design paper new",
+      "adaptive experimentation sequential testing paper 2026",
+      "experiment interference spillovers paper new"
+    ],
+    "observational-causal-inference": [
+      "difference in differences staggered treatment paper arxiv 2026",
+      "synthetic control new methodology paper 2025",
+      "double machine learning CATE estimation paper new",
+      "regression discontinuity paper recent 2026"
+    ],
+    "pricing": [
+      "dynamic pricing algorithm paper new 2025 2026",
+      "personalized pricing economics paper arxiv",
+      "algorithmic pricing competition paper new"
+    ],
+    "recommender-systems": [
+      "recommender system economics paper 2025 2026",
+      "causal recommendation paper new arxiv",
+      "cold start recommendation paper recent"
+    ],
+    "search-ranking": [
+      "learning to rank economics search paper 2026",
+      "neural ranking model paper arxiv new"
+    ],
+    "matching-marketplaces": [
+      "two-sided marketplace matching paper 2025 2026",
+      "gig economy labor platform paper new arxiv",
+      "marketplace competition paper economics recent"
+    ],
+    "forecasting": [
+      "demand forecasting deep learning paper 2025 2026",
+      "foundation model time series paper arxiv new"
+    ],
+    "advertising": [
+      "ad auction mechanism design paper new 2026",
+      "advertising attribution incrementality paper arxiv",
+      "privacy advertising effectiveness paper 2025"
+    ],
+    "marketing-growth": [
+      "customer lifetime value paper new 2025 2026",
+      "uplift modeling methodology paper arxiv new",
+      "marketing mix model paper recent 2026"
+    ],
+    "reinforcement-learning": [
+      "off-policy evaluation paper new 2025 2026",
+      "contextual bandits economics paper arxiv new"
+    ]
+  },
+  "resources": {
+    "_generic": [
+      "causal inference tutorial blog 2025 2026",
+      "econometrics for data scientists guide new",
+      "AB testing best practices tutorial 2026",
+      "applied economics course online free new",
+      "tech economics newsletter blog new 2026"
+    ],
+    "A/B Testing": [
+      "AB testing tutorial advanced guide 2025 2026",
+      "experiment design tutorial online new",
+      "sequential testing guide practical 2026"
+    ],
+    "Causal Inference": [
+      "causal inference tutorial python R 2026 new",
+      "difference in differences practical guide 2025",
+      "synthetic control tutorial blog 2026"
+    ],
+    "Econometrics": [
+      "econometrics tutorial online free 2025 2026",
+      "applied econometrics blog new course"
+    ],
+    "Machine Learning": [
+      "machine learning for economists tutorial 2026",
+      "interpretable ML guide data science new 2025"
+    ],
+    "Platform Economics": [
+      "platform economics course tutorial 2025 2026",
+      "marketplace design guide blog new"
+    ],
+    "Pricing & Revenue": [
+      "dynamic pricing tutorial python guide 2026",
+      "pricing strategy tech economics blog new"
+    ],
+    "Statistics": [
+      "statistics tutorial applied researchers 2025 2026",
+      "bayesian statistics practical guide new 2026"
+    ],
+    "Bayesian Methods": [
+      "bayesian methods tutorial python R 2026 new",
+      "probabilistic programming guide practical 2025"
+    ],
+    "Marketplace Economics": [
+      "marketplace economics blog tutorial 2026",
+      "two-sided market analysis guide new"
+    ],
+    "Variance Reduction": [
+      "variance reduction AB testing tutorial 2026",
+      "CUPED variance reduction guide practical"
+    ],
+    "Data Science": [
+      "data science for economics tutorial 2026",
+      "applied data science economics blog new"
+    ]
+  },
+  "datasets": {
+    "_generic": [
+      "open economics dataset 2025 2026 new released",
+      "public dataset causal inference research",
+      "kaggle economics competition dataset new",
+      "government open data economics 2026"
+    ],
+    "E-Commerce & Retail": [
+      "ecommerce transaction dataset public open 2025 2026",
+      "retail customer behavior dataset kaggle new"
+    ],
+    "Financial Services": [
+      "financial services open dataset 2025 2026",
+      "credit lending public dataset new research"
+    ],
+    "Healthcare": [
+      "healthcare economics dataset public open 2026",
+      "health outcomes research dataset new"
+    ],
+    "Labor Markets": [
+      "labor market dataset public open 2025 2026",
+      "gig economy worker dataset research new"
+    ],
+    "Transportation & Mobility": [
+      "transportation mobility dataset public open 2026",
+      "ride-sharing trip data public new"
+    ],
+    "Auctions & Marketplaces": [
+      "auction marketplace dataset public research 2026",
+      "online marketplace transaction data open"
+    ],
+    "Causal Inference": [
+      "causal inference benchmark dataset 2025 2026",
+      "treatment effect estimation dataset public"
+    ],
+    "Energy": [
+      "energy economics dataset public open 2026",
+      "electricity market data open research new"
+    ]
+  },
+  "talks": {
+    "_generic": [
+      "tech economics talk youtube 2025 2026",
+      "causal inference conference presentation video new",
+      "data science economics podcast new episode 2026"
+    ],
+    "Causal Inference & ML": [
+      "causal inference talk video conference 2025 2026",
+      "causal ML presentation youtube new"
+    ],
+    "Experimentation": [
+      "AB testing talk conference video 2025 2026",
+      "experiment design presentation youtube new"
+    ],
+    "Machine Learning": [
+      "machine learning economics talk video 2026",
+      "ML applied research presentation conference"
+    ],
+    "Platform Economics": [
+      "platform economics talk conference 2025 2026",
+      "marketplace design presentation video new"
+    ],
+    "Marketing Science": [
+      "marketing science talk conference video 2026",
+      "customer analytics presentation youtube new"
+    ],
+    "Tech Economics": [
+      "tech economist talk interview podcast 2025 2026",
+      "economics technology industry talk new"
+    ]
+  },
+  "books": {
+    "_generic": [
+      "econometrics textbook new published 2025 2026",
+      "causal inference book new release",
+      "applied economics book published recently 2026"
+    ],
+    "Causal Inference": [
+      "causal inference book new 2025 2026",
+      "treatment effects book published recent"
+    ],
+    "Econometrics": [
+      "econometrics textbook new edition 2025 2026",
+      "applied econometrics book published recent"
+    ],
+    "Machine Learning": [
+      "machine learning economics book new 2025 2026",
+      "statistical learning applied book published"
+    ],
+    "Platform Economics": [
+      "platform economics book new published 2025 2026",
+      "digital markets book released recent"
+    ]
+  },
+  "career": {
+    "_generic": [
+      "tech economist career guide 2025 2026",
+      "data scientist economics job advice new",
+      "economist interview preparation guide 2026"
+    ],
+    "Why Tech": [
+      "why become tech economist career blog 2026",
+      "economist in tech industry career path guide"
+    ],
+    "Materials": [
+      "data scientist interview prep economics 2026",
+      "tech economist interview questions preparation new"
+    ],
+    "PhD Transition": [
+      "PhD to industry economist guide 2025 2026",
+      "economics PhD tech job transition advice new"
+    ],
+    "Experimentation": [
+      "experimentation team career tech economist 2026",
+      "AB testing role career guide data science"
+    ]
+  },
+  "community": {
+    "_generic": [
+      "economics conference 2026 2027 call for papers",
+      "causal inference workshop upcoming event",
+      "tech economics meetup community new"
+    ],
+    "Conference": [
+      "econometrics conference 2026 2027 registration",
+      "applied economics conference upcoming new"
+    ],
+    "Conferences": [
+      "data science economics conference 2026",
+      "causal inference summit event 2026 2027"
+    ],
+    "Academic": [
+      "economics research seminar series 2026",
+      "academic economics workshop upcoming"
+    ],
+    "Meetups": [
+      "tech economics meetup group new 2026",
+      "data science economics community event local"
+    ]
+  }
+}

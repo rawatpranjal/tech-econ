@@ -1,0 +1,90 @@
+name: Weekly Content Discovery
+
+on:
+  schedule:
+    - cron: '0 5 * * 3'  # Wednesday 5am UTC
+  workflow_dispatch:
+    inputs:
+      content_type:
+        description: 'Content type (e.g., packages, papers)'
+        required: false
+        type: string
+      dry_run:
+        description: 'Dry run - search and score but do not add'
+        required: false
+        type: boolean
+        default: false
+      limit:
+        description: 'Max items to add'
+        required: false
+        type: number
+        default: 15
+
+permissions:
+  contents: write
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests openai
+
+      - name: Run content discovery
+        env:
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+          TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python scripts/discover_content.py \
+            ${{ inputs.content_type && format('--type {0}', inputs.content_type) || '' }} \
+            ${{ inputs.dry_run && '--dry-run' || '' }} \
+            --limit ${{ inputs.limit || '15' }} \
+            --verbose
+
+      - name: Validate data
+        if: ${{ !inputs.dry_run }}
+        run: pip install requests && python scripts/validate_data.py
+
+      - name: Commit new content
+        if: ${{ !inputs.dry_run }}
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/
+          git diff --staged --quiet || git commit -m "Weekly content discovery - $(date +%Y-%m-%d)"
+          git push
+
+      - name: Send email digest
+        if: ${{ !inputs.dry_run }}
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "[tech-econ] Weekly Discovery - ${{ github.run_number }}"
+          to: pp712@georgetown.edu
+          from: tech-econ-bot
+          html_body: file://data/.discovery_digest.html
+
+      - name: Upload discovery artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: discovery-log-${{ github.run_number }}
+          path: |
+            data/.discovery_state.json
+            data/.discovery_digest.html
+          retention-days: 30
