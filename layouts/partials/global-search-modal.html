@@ -78,7 +78,18 @@
         <!-- Results rendered here -->
       </div>
       <div id="global-search-empty" class="global-search-empty" style="display: none;">
-        <p>No results found</p>
+        <div class="empty-state-icon">
+          <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.3">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M8 11h6" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="empty-state-title">No results found</p>
+        <p class="empty-state-hint">Try different keywords or use advanced syntax</p>
+        <div class="empty-state-tips">
+          <code data-query="&quot;exact phrase&quot;">"exact phrase"</code>
+          <code data-query="type:paper">type:paper</code>
+          <code data-query="author:Angrist">author:Angrist</code>
+        </div>
       </div>
       <div id="llm-explanation-panel" class="llm-explanation-panel" style="display: none;">
         <div class="explanation-header">

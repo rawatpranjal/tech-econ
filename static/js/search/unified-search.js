@@ -1507,9 +1507,37 @@
       html += '<a href="' + escapeHtml(result.url) + '" ';
       html += 'class="result-item' + (isSelected ? ' selected' : '') + '" ';
       html += 'data-index="' + index + '" ';
+      html += 'style="animation-delay:' + (index * 25) + 'ms" ';
       html += 'target="_blank" rel="noopener">';
       html += '<div class="result-content">';
       html += '<span class="result-name">' + highlightTextEnhanced(result.name, query) + '</span>';
+      // Type-specific metadata line
+      var metaLine = '';
+      if (result.type === 'paper' || result.type === 'book') {
+        if (result.authors) {
+          var authorParts = result.authors.split(',');
+          var authorShort = authorParts.slice(0, 2).join(', ');
+          if (authorParts.length > 2) authorShort += ' et al.';
+          metaLine += '<span class="meta-authors">' + escapeHtml(authorShort) + '</span>';
+        }
+        if (result.year) {
+          metaLine += '<span class="meta-year">' + escapeHtml(String(result.year)) + '</span>';
+        }
+      }
+      if (result.type === 'package' && result.tags) {
+        var langMatch = (typeof result.tags === 'string' ? result.tags : result.tags.join(',')).match(/\b(Python|R|Julia|JavaScript|Stata|Go|Rust)\b/i);
+        if (langMatch) metaLine += '<span class="meta-language">' + langMatch[1] + '</span>';
+      }
+      if (result.type === 'talk' && result.content_format) {
+        metaLine += '<span class="meta-format">' + escapeHtml(result.content_format) + '</span>';
+      }
+      if (result.audience && result.audience.length > 0) {
+        var aud = typeof result.audience === 'string' ? result.audience : result.audience[0];
+        if (aud) metaLine += '<span class="meta-audience">' + escapeHtml(aud) + '</span>';
+      }
+      if (metaLine) {
+        html += '<div class="result-meta-line">' + metaLine + '</div>';
+      }
       // Use contextual snippets for descriptions
       var snippet = generateSnippet(result.description, query, 180);
       html += '<span class="result-description">' + highlightTextEnhanced(snippet, query) + '</span>';
