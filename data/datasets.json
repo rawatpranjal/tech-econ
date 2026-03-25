@@ -8956,7 +8956,7 @@
     "size_category": "massive",
     "model_score": 0.0031,
     "image_url": "/images/datasets/lendingclub-loans.jpg",
-    "embedding_text": "The LendingClub Loans dataset is a comprehensive collection of 2.7 million loans issued from 2007 to 2019, providing a rich resource for researchers and practitioners in the field of financial services, particularly in peer-to-peer lending and credit risk assessment. This dataset includes 151 features that capture essential aspects of each loan, such as interest rates, credit scores, loan amounts, and default statuses. The data is structured in a tabular format, with each row representing a unique loan and each column corresponding to a specific variable related to that loan. Key variables include the borrower\u2019s credit score, which measures their creditworthiness, and the interest rate, which reflects the cost of borrowing. The dataset's extensive temporal coverage allows for the analysis of trends and changes in lending practices over more than a decade, making it a valuable asset for longitudinal studies. Researchers typically utilize this dataset to address various research questions, such as the factors influencing loan defaults, the relationship between borrower characteristics and loan performance, and the overall effectiveness of peer-to-peer lending platforms. Common preprocessing steps may include handling missing values, normalizing numerical features, and encoding categorical variables to prepare the data for analysis. The dataset supports a range of analytical techniques, including regression analysis, machine learning, and descriptive statistics, enabling users to build predictive models and derive insights into the dynamics of credit risk. However, users should be aware of potential limitations, such as the representativeness of the sample and the impact of external economic factors on loan performance. Overall, the LendingClub Loans dataset serves as a foundational resource for those interested in exploring the complexities of lending and credit risk in the modern financial landscape.",
+    "embedding_text": "The LendingClub Loans dataset is a comprehensive collection of 2.7 million loans issued from 2007 to 2019, providing a rich resource for researchers and practitioners in the field of financial services, particularly in peer-to-peer lending and credit risk assessment. This dataset includes 151 features that capture essential aspects of each loan, such as interest rates, credit scores, loan amounts, and default statuses. The data is structured in a tabular format, with each row representing a unique loan and each column corresponding to a specific variable related to that loan. Key variables include the borrower’s credit score, which measures their creditworthiness, and the interest rate, which reflects the cost of borrowing. The dataset's extensive temporal coverage allows for the analysis of trends and changes in lending practices over more than a decade, making it a valuable asset for longitudinal studies. Researchers typically utilize this dataset to address various research questions, such as the factors influencing loan defaults, the relationship between borrower characteristics and loan performance, and the overall effectiveness of peer-to-peer lending platforms. Common preprocessing steps may include handling missing values, normalizing numerical features, and encoding categorical variables to prepare the data for analysis. The dataset supports a range of analytical techniques, including regression analysis, machine learning, and descriptive statistics, enabling users to build predictive models and derive insights into the dynamics of credit risk. However, users should be aware of potential limitations, such as the representativeness of the sample and the impact of external economic factors on loan performance. Overall, the LendingClub Loans dataset serves as a foundational resource for those interested in exploring the complexities of lending and credit risk in the modern financial landscape.",
     "benchmark_usage": [
       "Credit risk modeling",
       "Loan performance analysis"
@@ -13846,7 +13846,7 @@
   },
   {
     "name": "dSprite Causal Benchmark",
-    "description": "64\u00d764 heart-shaped sprite images (4,096 dimensions) with fully synthetic data and known treatment effect functions. Supports backdoor, front-door, IV, and proxy causal learning identification strategies.",
+    "description": "64×64 heart-shaped sprite images (4,096 dimensions) with fully synthetic data and known treatment effect functions. Supports backdoor, front-door, IV, and proxy causal learning identification strategies.",
     "category": "Causal Inference",
     "url": "https://github.com/google-deepmind/dsprites-dataset",
     "tags": [
@@ -18006,7 +18006,7 @@
     ],
     "model_score": 0.0004,
     "image_url": "/images/datasets/pushshift-reddit-archive.png",
-    "embedding_text": "The Pushshift Reddit Archive is an extensive dataset that captures the full history of Reddit, comprising 5.6 billion comments and 651 million posts since its inception in 2005. This dataset is structured primarily as a text corpus, with each entry representing a comment or post made by users on the platform. The data is organized into rows and columns, where each row corresponds to a unique comment or post, and columns typically include variables such as user ID, timestamp, subreddit, comment text, and metadata related to the engagement of the post (e.g., upvotes, downvotes). The collection methodology involves scraping Reddit\u2019s public API and storing the data in a structured format, allowing for efficient querying and analysis. Researchers can leverage this dataset to explore various social and economic phenomena, such as public sentiment on current events, the impact of social media on consumer behavior, and the dynamics of online discussions. Key variables in the dataset include the content of comments and posts, which can be analyzed for sentiment, topic modeling, and user engagement metrics. However, researchers should be aware of potential data quality issues, such as missing values or biases in user-generated content. Common preprocessing steps may include text normalization, tokenization, and the removal of stop words to prepare the data for analysis. The dataset supports a wide range of analyses, including regression modeling, machine learning applications, and descriptive statistics. Researchers typically use this dataset to address research questions related to social trends, economic behavior, and the influence of online discourse on real-world events. Overall, the Pushshift Reddit Archive is a powerful tool for understanding the complexities of social interactions and economic discussions in the digital age.",
+    "embedding_text": "The Pushshift Reddit Archive is an extensive dataset that captures the full history of Reddit, comprising 5.6 billion comments and 651 million posts since its inception in 2005. This dataset is structured primarily as a text corpus, with each entry representing a comment or post made by users on the platform. The data is organized into rows and columns, where each row corresponds to a unique comment or post, and columns typically include variables such as user ID, timestamp, subreddit, comment text, and metadata related to the engagement of the post (e.g., upvotes, downvotes). The collection methodology involves scraping Reddit’s public API and storing the data in a structured format, allowing for efficient querying and analysis. Researchers can leverage this dataset to explore various social and economic phenomena, such as public sentiment on current events, the impact of social media on consumer behavior, and the dynamics of online discussions. Key variables in the dataset include the content of comments and posts, which can be analyzed for sentiment, topic modeling, and user engagement metrics. However, researchers should be aware of potential data quality issues, such as missing values or biases in user-generated content. Common preprocessing steps may include text normalization, tokenization, and the removal of stop words to prepare the data for analysis. The dataset supports a wide range of analyses, including regression modeling, machine learning applications, and descriptive statistics. Researchers typically use this dataset to address research questions related to social trends, economic behavior, and the influence of online discourse on real-world events. Overall, the Pushshift Reddit Archive is a powerful tool for understanding the complexities of social interactions and economic discussions in the digital age.",
     "temporal_coverage": "2005-2023",
     "tfidf_keywords": [
       "Reddit",
@@ -20894,7 +20894,7 @@
   },
   {
     "name": "ERA5 Reanalysis",
-    "description": "Hourly global climate fields from 1950-present at 0.25\u00b0 resolution. ECMWF's state-of-the-art reanalysis product.",
+    "description": "Hourly global climate fields from 1950-present at 0.25° resolution. ECMWF's state-of-the-art reanalysis product.",
     "category": "Geospatial",
     "url": "https://cds.climate.copernicus.eu/datasets/reanalysis-era5-single-levels",
     "tags": [
@@ -21757,7 +21757,7 @@
       "staffing",
       "Kaggle"
     ],
-    "best_for": "Queueing theory - estimate arrival rates \u03bb(t), fit service time distributions, validate Erlang-C formulas",
+    "best_for": "Queueing theory - estimate arrival rates λ(t), fit service time distributions, validate Erlang-C formulas",
     "image_url": "/images/datasets/call-centre-queue-simulation.png",
     "difficulty": "beginner",
     "prerequisites": [],
@@ -27660,7 +27660,7 @@
   },
   {
     "name": "OTTO Session Data",
-    "description": "12M German e-commerce sessions with click \u2192 cart \u2192 order sequences. RecSys 2022 competition",
+    "description": "12M German e-commerce sessions with click → cart → order sequences. RecSys 2022 competition",
     "category": "E-Commerce",
     "url": "https://github.com/otto-de/recsys-dataset",
     "docs_url": null,
@@ -27974,7 +27974,7 @@
   },
   {
     "name": "OTTO Session-based Recommendations",
-    "description": "12M+ e-commerce sessions with click \u2192 cart \u2192 order sequences. Real multi-stage conversion funnel data from German retailer",
+    "description": "12M+ e-commerce sessions with click → cart → order sequences. Real multi-stage conversion funnel data from German retailer",
     "category": "E-Commerce",
     "url": "https://www.kaggle.com/datasets/otto/recsys-dataset",
     "docs_url": null,
@@ -30780,5 +30780,14 @@
     ],
     "docs_url": null,
     "github_url": null
+  },
+  {
+    "name": "[PDF] THE GIG ECONOMY | Edison Research",
+    "description": "Source: Marketplace-Edison Research Poll 2018 Gig economy is primary source of income Gig economy is secondary source of income Total Men Women Age 18-34 Age 35-54 Age 55+ Hispanic African-American White 44 47 40 53 39 27 47 55 41 53 51 56 43 57 70 43 46 57 6 | Edison Research | Marketplace THE GIG ",
+    "category": "Labor Markets",
+    "url": "https://www.edisonresearch.com/wp-content/uploads/2019/01/Gig-Economy-2018-Marketplace-Edison-Research-Poll-FINAL.pdf",
+    "tags": [
+      "marketplace"
+    ]
   }
 ]

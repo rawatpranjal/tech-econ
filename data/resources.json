@@ -154,7 +154,7 @@
   },
   {
     "name": "PyMC-Marketing CLV Quickstart",
-    "description": "CLV basics, RFM analysis, BG/NBD models \u2014 free official docs",
+    "description": "CLV basics, RFM analysis, BG/NBD models — free official docs",
     "category": "Bayesian Methods",
     "url": "https://www.pymc-marketing.io/en/latest/notebooks/clv/clv_quickstart.html",
     "type": "Article",
@@ -697,7 +697,7 @@
   },
   {
     "name": "Auctions in Ad Tech (Sanjiv Das)",
-    "description": "GSP auctions, quality scores, AdRank \u2014 how Google/Meta ad auctions actually work. Chapter 21.",
+    "description": "GSP auctions, quality scores, AdRank — how Google/Meta ad auctions actually work. Chapter 21.",
     "category": "Ads & Attribution",
     "url": "https://srdas.github.io/MLBook/Auctions.html",
     "type": "Book",
@@ -1433,7 +1433,7 @@
     "id": "resource-meta-engineering-data-science"
   },
   {
-    "name": "Inside Data (Mikkel Dengs\u00f8e)",
+    "name": "Inside Data (Mikkel Dengsøe)",
     "description": "Economics of data teams: sizing, structure, and valuation. Benchmarks from 100+ tech companies. 'Experimentation as a Company Strategy' and data team economics.",
     "category": "Applied Economics",
     "url": "https://mikkeldengsoe.substack.com/",
@@ -1480,7 +1480,7 @@
     "macro_category": "Industry Economics",
     "domain": "Economics",
     "image_url": "https://substackcdn.com/image/fetch/$s_!vYDq!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fmikkeldengsoe.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D1500920578%26version%3D9",
-    "embedding_text": "Inside Data by Mikkel Dengs\u00f8e delves into the economics surrounding data teams, focusing on critical aspects such as their sizing, structure, and valuation. This newsletter provides valuable insights derived from benchmarks across more than 100 tech companies, offering a comprehensive view of how data teams operate within various organizational frameworks. The content is designed for professionals looking to enhance their understanding of data team dynamics and their impact on business strategies. Readers will learn about the importance of experimentation as a company strategy and how it integrates with the economics of data teams. The newsletter aims to equip readers with the knowledge to assess and optimize their data teams effectively, making it a vital resource for data scientists, managers, and organizational leaders. The insights provided can help in structuring new data teams, evaluating existing ones, and implementing data-driven strategies that align with overall business goals. The resource is particularly beneficial for those in junior to mid-level data science roles, as well as curious individuals looking to deepen their understanding of data team economics. Although the newsletter does not specify a completion time, it is designed to be digestible and informative, allowing readers to engage with the material at their own pace. After finishing this resource, readers will be better equipped to make informed decisions regarding the management and evaluation of data teams within their organizations.",
+    "embedding_text": "Inside Data by Mikkel Dengsøe delves into the economics surrounding data teams, focusing on critical aspects such as their sizing, structure, and valuation. This newsletter provides valuable insights derived from benchmarks across more than 100 tech companies, offering a comprehensive view of how data teams operate within various organizational frameworks. The content is designed for professionals looking to enhance their understanding of data team dynamics and their impact on business strategies. Readers will learn about the importance of experimentation as a company strategy and how it integrates with the economics of data teams. The newsletter aims to equip readers with the knowledge to assess and optimize their data teams effectively, making it a vital resource for data scientists, managers, and organizational leaders. The insights provided can help in structuring new data teams, evaluating existing ones, and implementing data-driven strategies that align with overall business goals. The resource is particularly beneficial for those in junior to mid-level data science roles, as well as curious individuals looking to deepen their understanding of data team economics. Although the newsletter does not specify a completion time, it is designed to be digestible and informative, allowing readers to engage with the material at their own pace. After finishing this resource, readers will be better equipped to make informed decisions regarding the management and evaluation of data teams within their organizations.",
     "tfidf_keywords": [
       "data team economics",
       "team sizing",
@@ -1507,11 +1507,11 @@
       "data-engineering",
       "econometrics"
     ],
-    "id": "resource-inside-data-mikkel-dengs\u00f8e"
+    "id": "resource-inside-data-mikkel-dengsøe"
   },
   {
     "name": "Meta: Ads Fairness Variance Reduction System",
-    "description": "Technical discussion of Total Value = Bid \u00d7 Estimated Action Rate \u00d7 Quality. How Meta ensures fairness in ad auctions while reducing variance.",
+    "description": "Technical discussion of Total Value = Bid × Estimated Action Rate × Quality. How Meta ensures fairness in ad auctions while reducing variance.",
     "category": "Advertising & Attention",
     "url": "https://ai.meta.com/blog/advertising-fairness-variance-reduction-system-vrs/",
     "type": "Article",
@@ -1548,7 +1548,7 @@
     "macro_category": "Marketing & Growth",
     "domain": "Marketing",
     "image_url": "https://scontent-lga3-2.xx.fbcdn.net/v/t39.2365-6/324400291_553378416676331_842962173273539477_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=e280be&_nc_ohc=FrfWzT4yObYQ7kNvwHHAajT&_nc_oc=Adlx0jIrzsjQP3bizHMPv3osVHzSScJKmFLVJA1ALCaFU5I6Cl_1vRjXvMl9sFnvrJrqLDlZZU9NhmLuhUrjfbQU&_nc_zt=14&_nc_ht=scontent-lga3-2.xx&_nc_gid=lsjydWa2WklkEYvBCTNiXA&oh=00_AfoHK8sZR-JTx9DJLWYJJZUNNoWfXW-lSxW3Iiigpu0tAw&oe=697284DF",
-    "embedding_text": "The article 'Meta: Ads Fairness Variance Reduction System' provides a comprehensive overview of the principles governing ad auctions, particularly focusing on the equation Total Value = Bid \u00d7 Estimated Action Rate \u00d7 Quality. It delves into how Meta implements fairness in its ad auction processes while simultaneously working to reduce variance, ensuring that advertisers can achieve more predictable outcomes. The discussion is technical and aimed at individuals with a foundational understanding of advertising mechanics, particularly those interested in the intersection of technology and economics. The article is structured to guide readers through the complexities of ad auctions, emphasizing the importance of fairness and the methodologies employed to achieve it. Readers will learn about the critical components that contribute to the overall effectiveness of ad auctions, including the roles of bidding strategies, estimated action rates, and quality assessments. This resource is particularly beneficial for those who are curious about the operational aspects of digital advertising and the underlying principles that drive fairness in competitive bidding environments. While the article does not specify hands-on exercises or projects, it offers a theoretical framework that can be applied in practical scenarios. The estimated time to complete the reading is not provided, but it is designed to be digestible for those with an intermediate understanding of the subject matter. After engaging with this resource, readers will be better equipped to analyze ad auction systems and understand the implications of fairness and variance in their outcomes.",
+    "embedding_text": "The article 'Meta: Ads Fairness Variance Reduction System' provides a comprehensive overview of the principles governing ad auctions, particularly focusing on the equation Total Value = Bid × Estimated Action Rate × Quality. It delves into how Meta implements fairness in its ad auction processes while simultaneously working to reduce variance, ensuring that advertisers can achieve more predictable outcomes. The discussion is technical and aimed at individuals with a foundational understanding of advertising mechanics, particularly those interested in the intersection of technology and economics. The article is structured to guide readers through the complexities of ad auctions, emphasizing the importance of fairness and the methodologies employed to achieve it. Readers will learn about the critical components that contribute to the overall effectiveness of ad auctions, including the roles of bidding strategies, estimated action rates, and quality assessments. This resource is particularly beneficial for those who are curious about the operational aspects of digital advertising and the underlying principles that drive fairness in competitive bidding environments. While the article does not specify hands-on exercises or projects, it offers a theoretical framework that can be applied in practical scenarios. The estimated time to complete the reading is not provided, but it is designed to be digestible for those with an intermediate understanding of the subject matter. After engaging with this resource, readers will be better equipped to analyze ad auction systems and understand the implications of fairness and variance in their outcomes.",
     "skill_progression": [
       "Understanding ad auction dynamics",
       "Analyzing fairness in algorithms",
@@ -2257,7 +2257,7 @@
   },
   {
     "name": "VisuAlgo",
-    "description": "Animated algorithm visualizations \u2014 sorting, graphs, DP",
+    "description": "Animated algorithm visualizations — sorting, graphs, DP",
     "category": "Programming",
     "url": "https://visualgo.net/",
     "type": "Guide",
@@ -2481,7 +2481,7 @@
   },
   {
     "name": "TheAlgorithms/Python",
-    "description": "200+ algorithm implementations in Python \u2014 reference code",
+    "description": "200+ algorithm implementations in Python — reference code",
     "category": "Programming",
     "url": "https://github.com/TheAlgorithms/Python",
     "type": "Guide",
@@ -2782,7 +2782,7 @@
   },
   {
     "name": "Postman Academy",
-    "description": "Free API certification path \u2014 often more useful than scraping",
+    "description": "Free API certification path — often more useful than scraping",
     "category": "Programming",
     "url": "https://academy.postman.com/",
     "type": "Guide",
@@ -2989,7 +2989,7 @@
   },
   {
     "name": "Problem Solving with Algorithms & Data Structures (Python)",
-    "description": "Free interactive textbook \u2014 visualizations and runnable code",
+    "description": "Free interactive textbook — visualizations and runnable code",
     "category": "Programming",
     "url": "https://runestone.academy/ns/books/published/pythonds/index.html",
     "type": "Guide",
@@ -3126,7 +3126,7 @@
   },
   {
     "name": "USF Data Structure Visualizations",
-    "description": "Interactive animations \u2014 see how trees, heaps, and graphs work",
+    "description": "Interactive animations — see how trees, heaps, and graphs work",
     "category": "Programming",
     "url": "https://www.cs.usfca.edu/~galles/visualization/Algorithms.html",
     "type": "Guide",
@@ -3194,7 +3194,7 @@
   },
   {
     "name": "Tim Roughgarden's CS364A: Mechanism Design",
-    "description": "The definitive free resource from a G\u00f6del Prize winner. 20 video lectures (~75 min each) covering Vickrey auctions, Myerson's Lemma, VCG, sponsored search, combinatorial auctions, revenue-maximizing mechanisms.",
+    "description": "The definitive free resource from a Gödel Prize winner. 20 video lectures (~75 min each) covering Vickrey auctions, Myerson's Lemma, VCG, sponsored search, combinatorial auctions, revenue-maximizing mechanisms.",
     "category": "Auction Theory",
     "url": "https://timroughgarden.org/f13/f13.html",
     "type": "Course",
@@ -3242,7 +3242,7 @@
     "model_score": 0.0249,
     "macro_category": "Platform & Markets",
     "image_url": "/images/logos/timroughgarden.png",
-    "embedding_text": "Tim Roughgarden's CS364A: Mechanism Design is a comprehensive course that delves into the intricacies of auction theory and mechanism design. Led by a G\u00f6del Prize winner, this resource consists of 20 video lectures, each approximately 75 minutes long, providing a thorough examination of critical topics such as Vickrey auctions, Myerson's Lemma, the VCG mechanism, and combinatorial auctions. The course emphasizes the theoretical underpinnings of these concepts while also exploring practical applications in areas like sponsored search and revenue-maximizing mechanisms. Students will gain a solid understanding of how to design effective auction systems and the economic principles that govern them. The course is designed for individuals with a foundational knowledge of economics and game theory, making it ideal for early-stage PhD students and junior data scientists looking to deepen their expertise in auction theory. Upon completing this course, learners will be equipped with the skills to analyze various auction formats and apply mechanism design principles to real-world scenarios. The estimated completion time for the course is around 15 hours, making it a manageable commitment for those seeking to enhance their understanding of this critical area in economics.",
+    "embedding_text": "Tim Roughgarden's CS364A: Mechanism Design is a comprehensive course that delves into the intricacies of auction theory and mechanism design. Led by a Gödel Prize winner, this resource consists of 20 video lectures, each approximately 75 minutes long, providing a thorough examination of critical topics such as Vickrey auctions, Myerson's Lemma, the VCG mechanism, and combinatorial auctions. The course emphasizes the theoretical underpinnings of these concepts while also exploring practical applications in areas like sponsored search and revenue-maximizing mechanisms. Students will gain a solid understanding of how to design effective auction systems and the economic principles that govern them. The course is designed for individuals with a foundational knowledge of economics and game theory, making it ideal for early-stage PhD students and junior data scientists looking to deepen their expertise in auction theory. Upon completing this course, learners will be equipped with the skills to analyze various auction formats and apply mechanism design principles to real-world scenarios. The estimated completion time for the course is around 15 hours, making it a manageable commitment for those seeking to enhance their understanding of this critical area in economics.",
     "tfidf_keywords": [
       "Vickrey auctions",
       "Myerson's Lemma",
@@ -3498,7 +3498,7 @@
   },
   {
     "name": "Eugene Yan: Bandits for Recommender Systems",
-    "description": "The definitive practitioner's guide synthesizing implementations from 12+ tech companies (Spotify, Netflix, Yahoo, DoorDash, Twitter, Alibaba, Amazon). Covers \u03b5-greedy, UCB, Thompson Sampling.",
+    "description": "The definitive practitioner's guide synthesizing implementations from 12+ tech companies (Spotify, Netflix, Yahoo, DoorDash, Twitter, Alibaba, Amazon). Covers ε-greedy, UCB, Thompson Sampling.",
     "category": "Bandits & Adaptive",
     "url": "https://eugeneyan.com/writing/bandits/",
     "type": "Tutorial",
@@ -3533,7 +3533,7 @@
       "How do different bandit strategies compare in practical applications?",
       "What implementations of bandit algorithms are used by major tech companies?",
       "What skills will I gain from learning about bandits for recommender systems?",
-      "How can I apply \u03b5-greedy and UCB methods in my projects?",
+      "How can I apply ε-greedy and UCB methods in my projects?",
       "What are the challenges of implementing bandit algorithms in production?",
       "How does Thompson Sampling work in the context of recommendations?",
       "What resources are available for further learning on bandit algorithms?"
@@ -3541,15 +3541,15 @@
     "content_format": "tutorial",
     "skill_progression": [
       "Understanding of bandit algorithms",
-      "Ability to implement \u03b5-greedy, UCB, and Thompson Sampling",
+      "Ability to implement ε-greedy, UCB, and Thompson Sampling",
       "Knowledge of practical applications in tech companies"
     ],
     "model_score": 0.2325,
     "macro_category": "Experimentation",
     "image_url": "https://eugeneyan.com/assets/og_image/bandit.jpeg",
-    "embedding_text": "The tutorial 'Bandits for Recommender Systems' by Eugene Yan serves as a definitive practitioner's guide that synthesizes implementations from over 12 leading tech companies, including Spotify, Netflix, and Amazon. It delves into various bandit algorithms such as \u03b5-greedy, Upper Confidence Bound (UCB), and Thompson Sampling, providing readers with a thorough understanding of their applications in real-world recommender systems. The content is structured to cater to practitioners who are looking to enhance their skills in adaptive learning techniques. The tutorial assumes a basic understanding of Python, making it accessible to those with foundational programming knowledge. Throughout the tutorial, readers will engage with hands-on exercises that reinforce the concepts discussed, allowing them to apply what they learn in practical scenarios. By the end of the tutorial, participants will have gained valuable insights into the implementation of bandit algorithms and how they can optimize user engagement through personalized recommendations. This resource is particularly beneficial for data scientists and machine learning practitioners who wish to deepen their understanding of adaptive algorithms in the context of recommendation systems. The tutorial is designed to be completed at a comfortable pace, allowing learners to absorb the material thoroughly. After finishing this resource, learners will be equipped to implement bandit algorithms in their own projects, enhancing their ability to develop effective recommendation systems.",
+    "embedding_text": "The tutorial 'Bandits for Recommender Systems' by Eugene Yan serves as a definitive practitioner's guide that synthesizes implementations from over 12 leading tech companies, including Spotify, Netflix, and Amazon. It delves into various bandit algorithms such as ε-greedy, Upper Confidence Bound (UCB), and Thompson Sampling, providing readers with a thorough understanding of their applications in real-world recommender systems. The content is structured to cater to practitioners who are looking to enhance their skills in adaptive learning techniques. The tutorial assumes a basic understanding of Python, making it accessible to those with foundational programming knowledge. Throughout the tutorial, readers will engage with hands-on exercises that reinforce the concepts discussed, allowing them to apply what they learn in practical scenarios. By the end of the tutorial, participants will have gained valuable insights into the implementation of bandit algorithms and how they can optimize user engagement through personalized recommendations. This resource is particularly beneficial for data scientists and machine learning practitioners who wish to deepen their understanding of adaptive algorithms in the context of recommendation systems. The tutorial is designed to be completed at a comfortable pace, allowing learners to absorb the material thoroughly. After finishing this resource, learners will be equipped to implement bandit algorithms in their own projects, enhancing their ability to develop effective recommendation systems.",
     "tfidf_keywords": [
-      "\u03b5-greedy",
+      "ε-greedy",
       "Upper Confidence Bound",
       "Thompson Sampling",
       "recommender systems",
@@ -3578,7 +3578,7 @@
   },
   {
     "name": "MIT 15.S08 FinTech (Gary Gensler)",
-    "description": "12 lectures from former SEC Chair on AI in finance, risk, and compliance \u2014 free",
+    "description": "12 lectures from former SEC Chair on AI in finance, risk, and compliance — free",
     "category": "Case Studies",
     "url": "https://ocw.mit.edu/courses/15-s08-fintech-shaping-the-financial-world-spring-2020/",
     "type": "Course",
@@ -3721,7 +3721,7 @@
   },
   {
     "name": "DoorDash: Next-Generation Dasher Dispatch Optimization",
-    "description": "Rare solver benchmarking transparency \u2014 compares CBC, XPress, CPLEX, Gurobi (34x faster than CBC).",
+    "description": "Rare solver benchmarking transparency — compares CBC, XPress, CPLEX, Gurobi (34x faster than CBC).",
     "category": "Linear Programming",
     "url": "https://careersatdoordash.com/blog/next-generation-optimization-for-dasher-dispatch-at-doordash/",
     "type": "Article",
@@ -4103,7 +4103,7 @@
   },
   {
     "name": "freeCodeCamp: Algorithms Course",
-    "description": "8-hour free video course \u2014 clear explanations",
+    "description": "8-hour free video course — clear explanations",
     "category": "Programming",
     "url": "https://www.youtube.com/watch?v=8hly31xKli0",
     "type": "Guide",
@@ -4246,7 +4246,7 @@
   },
   {
     "name": "150 Successful ML Models at Booking.com (KDD 2019)",
-    "description": "Reveals that model performance \u2260 business performance. Demonstrates why RCTs are critical for validating ML models in production with framework for hypothesis-driven iteration.",
+    "description": "Reveals that model performance ≠ business performance. Demonstrates why RCTs are critical for validating ML models in production with framework for hypothesis-driven iteration.",
     "category": "Case Studies",
     "url": "https://dl.acm.org/doi/10.1145/3292500.3330744",
     "type": "Article",
@@ -4919,7 +4919,7 @@
   },
   {
     "name": "The Theory and Practice of Revenue Management",
-    "description": "Talluri & van Ryzin's comprehensive textbook. Dynamic pricing, capacity allocation, overbooking \u2014 the bible of RM.",
+    "description": "Talluri & van Ryzin's comprehensive textbook. Dynamic pricing, capacity allocation, overbooking — the bible of RM.",
     "category": "Pricing & Revenue",
     "url": "http://ndl.ethernet.edu.et/bitstream/123456789/21707/1/306.pdf",
     "type": "Book",
@@ -5148,7 +5148,7 @@
   },
   {
     "name": "Slack's 2000 Messages Activation Metric",
-    "description": "Documents Slack's activation discovery \u2014 after 2,000 messages sent per team, 93% remain active. How they identified this leading indicator. Conversion rate significantly above 5% SaaS average.",
+    "description": "Documents Slack's activation discovery — after 2,000 messages sent per team, 93% remain active. How they identified this leading indicator. Conversion rate significantly above 5% SaaS average.",
     "category": "Growth & Retention",
     "url": "https://www.growth-letter.com/p/inside-slacks-4-billion-growth-system",
     "type": "Article",
@@ -5488,7 +5488,7 @@
     ],
     "model_score": 0.0048,
     "macro_category": "Programming",
-    "embedding_text": "The Scrapy Documentation serves as a vital resource for developers interested in web scraping using Python. It delves into the intricacies of the Scrapy framework, which is designed to facilitate the creation of spiders\u2014automated scripts that navigate websites to extract data. This guide covers essential topics such as setting up the Scrapy environment, defining spiders, and managing requests and responses. It emphasizes best practices for handling anti-bot measures, which are crucial for successful scraping. Users will learn how to scale their scraping efforts to handle millions of pages efficiently, making it a suitable choice for both small projects and large-scale data collection. The documentation is structured to accommodate both beginners who are new to web scraping and intermediate users looking to refine their skills. Hands-on exercises are included to reinforce learning, allowing users to apply concepts in real-world scenarios. By the end of this resource, learners will be equipped with the knowledge to implement effective web scraping solutions, making them proficient in extracting valuable data from the web. This resource is particularly beneficial for students, data scientists, and anyone interested in automating data collection processes. The estimated time to complete the guide varies based on individual pace, but it is designed to be accessible and engaging.",
+    "embedding_text": "The Scrapy Documentation serves as a vital resource for developers interested in web scraping using Python. It delves into the intricacies of the Scrapy framework, which is designed to facilitate the creation of spiders—automated scripts that navigate websites to extract data. This guide covers essential topics such as setting up the Scrapy environment, defining spiders, and managing requests and responses. It emphasizes best practices for handling anti-bot measures, which are crucial for successful scraping. Users will learn how to scale their scraping efforts to handle millions of pages efficiently, making it a suitable choice for both small projects and large-scale data collection. The documentation is structured to accommodate both beginners who are new to web scraping and intermediate users looking to refine their skills. Hands-on exercises are included to reinforce learning, allowing users to apply concepts in real-world scenarios. By the end of this resource, learners will be equipped with the knowledge to implement effective web scraping solutions, making them proficient in extracting valuable data from the web. This resource is particularly beneficial for students, data scientists, and anyone interested in automating data collection processes. The estimated time to complete the guide varies based on individual pace, but it is designed to be accessible and engaging.",
     "tfidf_keywords": [
       "web scraping",
       "Scrapy",
@@ -5817,7 +5817,7 @@
   },
   {
     "name": "Airbnb Engineering: Two-Sided Marketplace Matching",
-    "description": "Unique focus on 'both sides must accept' constraint. Host acceptance prediction, listing embeddings, cold start solutions. Shows how to infer host preferences from behavior\u20143.75% booking improvement.",
+    "description": "Unique focus on 'both sides must accept' constraint. Host acceptance prediction, listing embeddings, cold start solutions. Shows how to infer host preferences from behavior—3.75% booking improvement.",
     "category": "Market Design & Matching",
     "url": "https://medium.com/airbnb-engineering/how-airbnb-uses-machine-learning-to-detect-host-preferences-18ce07150fa3",
     "type": "Blog",
@@ -5970,7 +5970,7 @@
   },
   {
     "name": "SQLBolt",
-    "description": "Learn SQL with interactive exercises. No setup required \u2014 run queries right in the browser. Perfect for beginners.",
+    "description": "Learn SQL with interactive exercises. No setup required — run queries right in the browser. Perfect for beginners.",
     "category": "Programming",
     "url": "https://sqlbolt.com/",
     "type": "Course",
@@ -6042,7 +6042,7 @@
   },
   {
     "name": "Automate the Boring Stuff with Python",
-    "description": "The best free Python book for non-programmers. Web scraping, Excel automation, file management \u2014 practical skills for data work.",
+    "description": "The best free Python book for non-programmers. Web scraping, Excel automation, file management — practical skills for data work.",
     "category": "Programming",
     "url": "https://automatetheboringstuff.com/",
     "type": "Book",
@@ -6191,7 +6191,7 @@
   },
   {
     "name": "Convex Optimization (Boyd & Vandenberghe)",
-    "description": "The bible of convex optimization \u2014 free online, universally cited. Covers LP, QP, SDP, and more.",
+    "description": "The bible of convex optimization — free online, universally cited. Covers LP, QP, SDP, and more.",
     "category": "Convex Optimization",
     "url": "https://web.stanford.edu/~boyd/cvxbook/",
     "type": "Book",
@@ -8254,7 +8254,7 @@
   },
   {
     "name": "Shreyas Doshi: LNO Framework",
-    "description": "Former PM leader at Stripe, Twitter, Google. The LNO Framework (Leverage, Neutral, Overhead tasks) is a breakthrough prioritization model \u2014 distinguishes good from exceptional PM thinking.",
+    "description": "Former PM leader at Stripe, Twitter, Google. The LNO Framework (Leverage, Neutral, Overhead tasks) is a breakthrough prioritization model — distinguishes good from exceptional PM thinking.",
     "category": "Frameworks & Strategy",
     "url": "https://shreyasdoshi.com/",
     "type": "Article",
@@ -8325,7 +8325,7 @@
   },
   {
     "name": "Coursera Pricing Strategy Optimization (UVA/BCG)",
-    "description": "Price elasticity, WTP estimation, segmentation \u2014 free to audit",
+    "description": "Price elasticity, WTP estimation, segmentation — free to audit",
     "category": "Pricing & Revenue",
     "url": "https://www.coursera.org/specializations/uva-darden-bcg-pricing-strategy",
     "type": "Course",
@@ -8402,7 +8402,7 @@
   },
   {
     "name": "Chargebee: SaaS Pricing Models Guide",
-    "description": "Usage-based pricing, value metrics, packaging strategies \u2014 free",
+    "description": "Usage-based pricing, value metrics, packaging strategies — free",
     "category": "Pricing & Revenue",
     "url": "https://www.chargebee.com/resources/guides/saas-pricing-models-guide/",
     "type": "Article",
@@ -8471,7 +8471,7 @@
   },
   {
     "name": "Monetizing Innovation (Ramanujam)",
-    "description": "The industry bible \u2014 design products around price, not vice versa",
+    "description": "The industry bible — design products around price, not vice versa",
     "category": "Pricing & Revenue",
     "url": "https://www.simon-kucher.com/en/insights/monetizing-innovation",
     "type": "Article",
@@ -9558,7 +9558,7 @@
   },
   {
     "name": "Google Analytics for Marketing",
-    "description": "Free analytics for marketing \u2014 official Google tutorials",
+    "description": "Free analytics for marketing — official Google tutorials",
     "category": "Frameworks & Strategy",
     "url": "https://skillshop.exceedlms.com/student/path/508845-google-analytics-certification",
     "type": "Course",
@@ -9793,7 +9793,7 @@
   },
   {
     "name": "Stripe: How We Built Radar",
-    "description": "XGBoost\u2192DNN migration, 85% training time reduction",
+    "description": "XGBoost→DNN migration, 85% training time reduction",
     "category": "Case Studies",
     "url": "https://stripe.com/blog/how-we-built-it-stripe-radar",
     "type": "Article",
@@ -10182,7 +10182,7 @@
   },
   {
     "name": "Lyft: Quantifying Efficiency in Ridesharing",
-    "description": "Efficiency isn't speed\u2014it's an economic equilibrium. A masterclass in defining the objective function for marketplace optimization.",
+    "description": "Efficiency isn't speed—it's an economic equilibrium. A masterclass in defining the objective function for marketplace optimization.",
     "category": "Marketplace Economics",
     "url": "https://eng.lyft.com/quantifying-efficiency-in-ridesharing-marketplaces-affd53043db2",
     "type": "Article",
@@ -10255,7 +10255,7 @@
   },
   {
     "name": "The Cold Start Problem (Andrew Chen)",
-    "description": "Atomic Networks and tipping points of two-sided marketplaces \u2014 why growth stalls",
+    "description": "Atomic Networks and tipping points of two-sided marketplaces — why growth stalls",
     "category": "Marketplace Economics",
     "url": "https://www.coldstart.com/",
     "type": "Book",
@@ -11095,7 +11095,7 @@
   },
   {
     "name": "Eugene Yan: System Design for Recommendations",
-    "description": "Production patterns from Alibaba, Facebook, DoorDash, LinkedIn in a 2\u00d72 framework (offline/online \u00d7 retrieval/ranking). By Amazon Principal Applied Scientist. Referenced by NVIDIA as canonical industry reading.",
+    "description": "Production patterns from Alibaba, Facebook, DoorDash, LinkedIn in a 2×2 framework (offline/online × retrieval/ranking). By Amazon Principal Applied Scientist. Referenced by NVIDIA as canonical industry reading.",
     "category": "Recommender Systems",
     "url": "https://eugeneyan.com/writing/system-design-for-discovery/",
     "type": "Article",
@@ -11111,7 +11111,7 @@
       "machine-learning",
       "recommender-systems"
     ],
-    "summary": "This article provides insights into the production patterns of leading tech companies through a 2\u00d72 framework that distinguishes between offline/online and retrieval/ranking processes. It is aimed at practitioners and researchers interested in recommender systems and their real-world applications.",
+    "summary": "This article provides insights into the production patterns of leading tech companies through a 2×2 framework that distinguishes between offline/online and retrieval/ranking processes. It is aimed at practitioners and researchers interested in recommender systems and their real-world applications.",
     "use_cases": [
       "Understanding industry practices in recommender systems",
       "Designing recommendation algorithms",
@@ -11125,7 +11125,7 @@
     "synthetic_questions": [
       "What are the production patterns in recommender systems?",
       "How do companies like Alibaba and Facebook implement recommendations?",
-      "What is the 2\u00d72 framework for system design?",
+      "What is the 2×2 framework for system design?",
       "What are the differences between retrieval and ranking in recommendations?",
       "How does this article relate to industry practices?",
       "What insights can be gained from Amazon's approach to recommendations?",
@@ -11141,7 +11141,7 @@
     "model_score": 0.0036,
     "macro_category": "Machine Learning",
     "image_url": "https://eugeneyan.com/assets/og_image/discovery-2x2-v2.jpg",
-    "embedding_text": "The article by Eugene Yan delves into the intricate world of recommender systems, focusing on the production patterns observed in major tech companies such as Alibaba, Facebook, DoorDash, and LinkedIn. It presents a unique 2\u00d72 framework that categorizes these systems based on two dimensions: offline versus online and retrieval versus ranking. This framework serves as a valuable tool for understanding how different companies approach the design and implementation of recommendation systems. Readers will gain insights into the operational strategies employed by these industry leaders, particularly through the lens of Amazon's practices, which are referenced as canonical readings in the field. The article is designed for those with a foundational understanding of machine learning and recommender systems, making it suitable for junior to senior data scientists. It emphasizes the importance of practical applications and real-world examples, allowing readers to connect theoretical knowledge with industry practices. By the end of the article, readers will be equipped with a deeper understanding of how to design effective recommendation systems and the various factors that influence their success in different contexts. This resource is particularly beneficial for practitioners looking to enhance their skills in system design and for researchers seeking to explore the latest trends in recommender systems.",
+    "embedding_text": "The article by Eugene Yan delves into the intricate world of recommender systems, focusing on the production patterns observed in major tech companies such as Alibaba, Facebook, DoorDash, and LinkedIn. It presents a unique 2×2 framework that categorizes these systems based on two dimensions: offline versus online and retrieval versus ranking. This framework serves as a valuable tool for understanding how different companies approach the design and implementation of recommendation systems. Readers will gain insights into the operational strategies employed by these industry leaders, particularly through the lens of Amazon's practices, which are referenced as canonical readings in the field. The article is designed for those with a foundational understanding of machine learning and recommender systems, making it suitable for junior to senior data scientists. It emphasizes the importance of practical applications and real-world examples, allowing readers to connect theoretical knowledge with industry practices. By the end of the article, readers will be equipped with a deeper understanding of how to design effective recommendation systems and the various factors that influence their success in different contexts. This resource is particularly beneficial for practitioners looking to enhance their skills in system design and for researchers seeking to explore the latest trends in recommender systems.",
     "tfidf_keywords": [
       "recommender-systems",
       "production-patterns",
@@ -11708,7 +11708,7 @@
   },
   {
     "name": "Blind 75",
-    "description": "The 75 most important LeetCode problems. Arrays, strings, trees, graphs, DP \u2014 if you can solve these, you can handle any interview.",
+    "description": "The 75 most important LeetCode problems. Arrays, strings, trees, graphs, DP — if you can solve these, you can handle any interview.",
     "category": "Programming",
     "url": "https://www.techinterviewhandbook.org/grind75",
     "type": "Tool",
@@ -11782,7 +11782,7 @@
   },
   {
     "name": "LeetCode Patterns",
-    "description": "14 patterns to solve any coding interview question. Two pointers, sliding window, BFS/DFS, and more \u2014 with Python templates.",
+    "description": "14 patterns to solve any coding interview question. Two pointers, sliding window, BFS/DFS, and more — with Python templates.",
     "category": "Programming",
     "url": "https://seanprashad.com/leetcode-patterns/",
     "type": "Guide",
@@ -13216,7 +13216,7 @@
     "model_score": 0.003,
     "macro_category": "Time Series",
     "subtopic": "Marketplaces",
-    "embedding_text": "The resource titled 'DoorDash: ELITE Ensemble Learning' delves into the ELITE (Ensemble Learning for Improved Time-series Estimation) methodology, which addresses the critical trade-offs between accuracy, speed, and cost in forecasting. This blog post is particularly relevant for data scientists and practitioners who are interested in enhancing their understanding of ensemble learning techniques applied to time-series data. The ELITE approach is designed to scale effectively, accommodating tens of thousands of targets, which is essential for organizations dealing with large datasets. The teaching approach emphasizes practical engineering decisions, guiding learners on when to prioritize speed over accuracy\u2014a common dilemma in real-world applications. The resource assumes a foundational knowledge of Python, making it suitable for those with basic programming skills. By engaging with this content, learners can expect to gain insights into the intricacies of ensemble learning, develop skills in time-series forecasting, and understand the practical implications of their engineering choices. The blog is structured to facilitate a clear understanding of complex concepts while providing actionable insights that can be applied in various scenarios. After completing this resource, readers will be equipped to implement ensemble learning strategies in their own forecasting projects, making informed decisions that balance speed and accuracy effectively.",
+    "embedding_text": "The resource titled 'DoorDash: ELITE Ensemble Learning' delves into the ELITE (Ensemble Learning for Improved Time-series Estimation) methodology, which addresses the critical trade-offs between accuracy, speed, and cost in forecasting. This blog post is particularly relevant for data scientists and practitioners who are interested in enhancing their understanding of ensemble learning techniques applied to time-series data. The ELITE approach is designed to scale effectively, accommodating tens of thousands of targets, which is essential for organizations dealing with large datasets. The teaching approach emphasizes practical engineering decisions, guiding learners on when to prioritize speed over accuracy—a common dilemma in real-world applications. The resource assumes a foundational knowledge of Python, making it suitable for those with basic programming skills. By engaging with this content, learners can expect to gain insights into the intricacies of ensemble learning, develop skills in time-series forecasting, and understand the practical implications of their engineering choices. The blog is structured to facilitate a clear understanding of complex concepts while providing actionable insights that can be applied in various scenarios. After completing this resource, readers will be equipped to implement ensemble learning strategies in their own forecasting projects, making informed decisions that balance speed and accuracy effectively.",
     "tfidf_keywords": [
       "ensemble-learning",
       "time-series-estimation",
@@ -13558,7 +13558,7 @@
   },
   {
     "name": "Analytics Vidhya: Hyperparameter Tuning Guide",
-    "description": "Systematic tuning methodology from Kaggle winners. Sequential approach: fix tree params, tune learning rate/iterations, add regularization. Key insight: 10\u00d7 decrease in learning_rate needs ~10\u00d7 increase in n_estimators.",
+    "description": "Systematic tuning methodology from Kaggle winners. Sequential approach: fix tree params, tune learning rate/iterations, add regularization. Key insight: 10× decrease in learning_rate needs ~10× increase in n_estimators.",
     "category": "Gradient Boosting",
     "url": "https://www.analyticsvidhya.com/blog/2016/02/complete-guide-parameter-tuning-gradient-boosting-gbm-python/",
     "type": "Guide",
@@ -14035,7 +14035,7 @@
   },
   {
     "name": "Fraud Detection Handbook (ULB)",
-    "description": "From the team that created the Kaggle dataset \u2014 rigorous methodology",
+    "description": "From the team that created the Kaggle dataset — rigorous methodology",
     "category": "Trust & Safety",
     "url": "https://fraud-detection-handbook.github.io/fraud-detection-handbook/",
     "type": "Tool",
@@ -15036,7 +15036,7 @@
   },
   {
     "name": "Beyond Jupyter (TransferLab)",
-    "description": "Teaches software design principles for ML\u2014modularity, abstraction, and reproducibility\u2014going beyond ad hoc Jupyter workflows. Focus on maintainable, production-quality ML code.",
+    "description": "Teaches software design principles for ML—modularity, abstraction, and reproducibility—going beyond ad hoc Jupyter workflows. Focus on maintainable, production-quality ML code.",
     "category": "Programming",
     "domain": "Machine Learning",
     "url": "https://transferlab.ai/trainings/beyond-jupyter/",
@@ -15419,7 +15419,7 @@
     "id": "resource-anton-korinek-research"
   },
   {
-    "name": "Modelling Extremal Events (Embrechts, Kl\u00fcppelberg, Mikosch)",
+    "name": "Modelling Extremal Events (Embrechts, Klüppelberg, Mikosch)",
     "description": "Comprehensive treatment of extreme value theory with 8,000+ citations. Covers applications in insurance and finance with rigorous mathematical foundations.",
     "category": "Statistics",
     "url": "https://link.springer.com/book/10.1007/978-3-642-33483-2",
@@ -15433,7 +15433,7 @@
     ],
     "level": "Hard",
     "model_score": 0.002,
-    "id": "resource-modelling-extremal-events-embrechts-kl\u00fcppelberg-mi"
+    "id": "resource-modelling-extremal-events-embrechts-klüppelberg-mi"
   },
   {
     "name": "Lyft: Experimentation in a Ridesharing Marketplace",
@@ -16636,7 +16636,7 @@
     "model_score": 0.0027,
     "macro_category": "Marketing & Growth",
     "image_url": "https://a16z.com/wp-content/themes/a16z/assets/images/opegraph_images/corporate-Yoast-Facebook.jpg",
-    "embedding_text": "The Power User Curve, conceptualized by Facebook's growth team, provides a framework for understanding user engagement beyond traditional metrics like Daily Active Users (DAU) and Monthly Active Users (MAU). This resource delves into the L30/L28 framework, which emphasizes the importance of recognizing variance among users and identifying 'power users'\u2014those who exhibit significantly higher engagement levels. By focusing on customizable core actions, this framework allows product managers and growth strategists to tailor their analytics to better reflect user behavior and drive growth. The teaching approach emphasizes practical applications, encouraging learners to apply the concepts to real-world scenarios, particularly in startup environments. While no specific prerequisites are required, a foundational understanding of product analytics will enhance the learning experience. Upon completion, users will gain skills in analyzing user engagement, customizing metrics to suit their product's needs, and leveraging insights to inform strategic decisions. This resource is particularly beneficial for startup founders, product managers, and data scientists interested in optimizing user engagement strategies. The estimated time to complete the resource is not specified, but learners can expect to engage deeply with the material to fully grasp the concepts presented.",
+    "embedding_text": "The Power User Curve, conceptualized by Facebook's growth team, provides a framework for understanding user engagement beyond traditional metrics like Daily Active Users (DAU) and Monthly Active Users (MAU). This resource delves into the L30/L28 framework, which emphasizes the importance of recognizing variance among users and identifying 'power users'—those who exhibit significantly higher engagement levels. By focusing on customizable core actions, this framework allows product managers and growth strategists to tailor their analytics to better reflect user behavior and drive growth. The teaching approach emphasizes practical applications, encouraging learners to apply the concepts to real-world scenarios, particularly in startup environments. While no specific prerequisites are required, a foundational understanding of product analytics will enhance the learning experience. Upon completion, users will gain skills in analyzing user engagement, customizing metrics to suit their product's needs, and leveraging insights to inform strategic decisions. This resource is particularly beneficial for startup founders, product managers, and data scientists interested in optimizing user engagement strategies. The estimated time to complete the resource is not specified, but learners can expect to engage deeply with the material to fully grasp the concepts presented.",
     "tfidf_keywords": [
       "Power User Curve",
       "L30/L28 framework",
@@ -16667,7 +16667,7 @@
   },
   {
     "name": "Ultimate Guide: Activation (Aakash Gupta)",
-    "description": "Traces activation history from Facebook's 2008 growth team, including Chamath's '7 friends in 10 days' discovery. The Setup \u2192 Aha \u2192 Habit framework with data-backed examples.",
+    "description": "Traces activation history from Facebook's 2008 growth team, including Chamath's '7 friends in 10 days' discovery. The Setup → Aha → Habit framework with data-backed examples.",
     "category": "Growth & Retention",
     "url": "https://www.news.aakashg.com/p/ultimate-guide-activation",
     "type": "Guide",
@@ -16683,7 +16683,7 @@
       "product-analytics",
       "growth-strategies"
     ],
-    "summary": "This guide explores the activation strategies employed by Facebook's growth team, detailing the '7 friends in 10 days' discovery and the Setup \u2192 Aha \u2192 Habit framework. It is ideal for beginners interested in understanding growth and retention tactics in product analytics.",
+    "summary": "This guide explores the activation strategies employed by Facebook's growth team, detailing the '7 friends in 10 days' discovery and the Setup → Aha → Habit framework. It is ideal for beginners interested in understanding growth and retention tactics in product analytics.",
     "use_cases": [
       "Understanding user activation strategies",
       "Applying growth tactics in product development"
@@ -16692,7 +16692,7 @@
       "Curious-browser"
     ],
     "synthetic_questions": [
-      "What is the Setup \u2192 Aha \u2192 Habit framework?",
+      "What is the Setup → Aha → Habit framework?",
       "How did Facebook's growth team achieve activation?",
       "What are effective strategies for user retention?",
       "What can we learn from Chamath's '7 friends in 10 days' discovery?",
@@ -16707,7 +16707,7 @@
     "model_score": 0.0017,
     "macro_category": "Marketing & Growth",
     "image_url": "https://substackcdn.com/image/fetch/$s_!hH3X!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fbc847199-6822-4b81-848a-74a0f5d70bf1_1080x1080.png",
-    "embedding_text": "The Ultimate Guide: Activation by Aakash Gupta delves into the activation history of Facebook's growth team, highlighting pivotal strategies that contributed to the platform's explosive growth. This guide meticulously traces the evolution of user activation techniques, particularly focusing on Chamath Palihapitiya's groundbreaking discovery of the '7 friends in 10 days' principle. The guide introduces the Setup \u2192 Aha \u2192 Habit framework, which serves as a structured approach to understanding user engagement and retention. Readers will gain insights into how to effectively implement these strategies within their own products, leveraging data-backed examples to illustrate the principles in action. The teaching approach emphasizes practical application, making it suitable for those new to the field of product analytics. While no specific prerequisites are required, a basic understanding of product development concepts may enhance the learning experience. Upon completion, readers will be equipped with actionable strategies to enhance user activation and retention, making this guide an invaluable resource for aspiring growth professionals and curious learners alike. The estimated time to complete the guide is not specified, but it is designed to be digestible and applicable in real-world scenarios, allowing readers to immediately apply what they learn.",
+    "embedding_text": "The Ultimate Guide: Activation by Aakash Gupta delves into the activation history of Facebook's growth team, highlighting pivotal strategies that contributed to the platform's explosive growth. This guide meticulously traces the evolution of user activation techniques, particularly focusing on Chamath Palihapitiya's groundbreaking discovery of the '7 friends in 10 days' principle. The guide introduces the Setup → Aha → Habit framework, which serves as a structured approach to understanding user engagement and retention. Readers will gain insights into how to effectively implement these strategies within their own products, leveraging data-backed examples to illustrate the principles in action. The teaching approach emphasizes practical application, making it suitable for those new to the field of product analytics. While no specific prerequisites are required, a basic understanding of product development concepts may enhance the learning experience. Upon completion, readers will be equipped with actionable strategies to enhance user activation and retention, making this guide an invaluable resource for aspiring growth professionals and curious learners alike. The estimated time to complete the guide is not specified, but it is designed to be digestible and applicable in real-world scenarios, allowing readers to immediately apply what they learn.",
     "tfidf_keywords": [
       "activation-strategies",
       "user-retention",
@@ -17123,7 +17123,7 @@
   },
   {
     "name": "Discrete Optimization (Coursera)",
-    "description": "Van Hentenryck's course \u2014 actually makes you implement",
+    "description": "Van Hentenryck's course — actually makes you implement",
     "category": "Linear Programming",
     "url": "https://www.coursera.org/learn/solving-algorithms-discrete-optimization",
     "type": "Guide",
@@ -17514,7 +17514,7 @@
   },
   {
     "name": "TensorFlow Time Series Forecasting Tutorial",
-    "description": "Official Google documentation with production-quality code. Builds models incrementally: linear \u2192 dense \u2192 CNN \u2192 LSTM. Includes baseline comparisons so you can assess if DL is worth the complexity. Runnable in Colab.",
+    "description": "Official Google documentation with production-quality code. Builds models incrementally: linear → dense → CNN → LSTM. Includes baseline comparisons so you can assess if DL is worth the complexity. Runnable in Colab.",
     "category": "Deep Learning",
     "url": "https://www.tensorflow.org/tutorials/structured_data/time_series",
     "type": "Tutorial",
@@ -19332,7 +19332,7 @@
   },
   {
     "name": "Google's Recommendation Systems Course",
-    "description": "Industry-standard architecture: candidate retrieval \u2192 scoring \u2192 re-ranking. Built by YouTube RecSys engineers. 4-hour course on collaborative filtering, matrix factorization, embeddings, deep approaches. YouTube case study at 2B+ user scale.",
+    "description": "Industry-standard architecture: candidate retrieval → scoring → re-ranking. Built by YouTube RecSys engineers. 4-hour course on collaborative filtering, matrix factorization, embeddings, deep approaches. YouTube case study at 2B+ user scale.",
     "category": "Recommender Systems",
     "url": "https://developers.google.com/machine-learning/recommendation",
     "type": "Course",
@@ -19805,7 +19805,7 @@
   },
   {
     "name": "Evan Miller: Simple Sequential A/B Testing",
-    "description": "Derives a simple sequential test using gambler's ruin: stop when T-C reaches 2\u221aN. Elegant and implementable with basic arithmetic. Includes interactive calculator.",
+    "description": "Derives a simple sequential test using gambler's ruin: stop when T-C reaches 2√N. Elegant and implementable with basic arithmetic. Includes interactive calculator.",
     "category": "Sequential Testing",
     "url": "https://www.evanmiller.org/sequential-ab-testing.html",
     "type": "Blog",
@@ -20420,7 +20420,7 @@
   },
   {
     "name": "Georgia Tech (Ratliff): 10 Rules for Supply Chain Optimization",
-    "description": "Practitioner checklist for scoping, data readiness, constraints, deployment \u2014 free PDF",
+    "description": "Practitioner checklist for scoping, data readiness, constraints, deployment — free PDF",
     "category": "Routing & Logistics",
     "url": "https://www.scl.gatech.edu/sites/default/files/downloads/gtscl-10_rules_supply_chain_logistics_optimization_2.pdf",
     "type": "Article",
@@ -22390,7 +22390,7 @@
   },
   {
     "name": "Frank Pinter's Demand Estimation Notes",
-    "description": "Builds intuition from multinomial logit \u2192 Berry (1994) \u2192 full BLP. MPEC vs. nested fixed-point, micro BLP with second-choice data. Written for PhD field exam prep with red bus-blue bus example.",
+    "description": "Builds intuition from multinomial logit → Berry (1994) → full BLP. MPEC vs. nested fixed-point, micro BLP with second-choice data. Written for PhD field exam prep with red bus-blue bus example.",
     "category": "Computational Economics",
     "url": "https://frankpinter.com/notes/Demand_Estimation_Notes.pdf",
     "type": "Course",
@@ -23780,7 +23780,7 @@
   },
   {
     "name": "Teresa Torres: Opportunity Solution Trees",
-    "description": "Product discovery coach who has trained 17,000+ PMs. The Opportunity Solution Tree framework connects business outcomes \u2192 customer opportunities \u2192 solutions \u2192 experiments.",
+    "description": "Product discovery coach who has trained 17,000+ PMs. The Opportunity Solution Tree framework connects business outcomes → customer opportunities → solutions → experiments.",
     "category": "Frameworks & Strategy",
     "url": "https://www.producttalk.org/opportunity-solution-trees/",
     "type": "Blog",
@@ -25832,7 +25832,7 @@
     "macro_category": "Marketing & Growth",
     "subtopic": "AdTech",
     "image_url": "/images/logos/neilhoyne.png",
-    "embedding_text": "Neil Hoyne, a prominent figure in marketing as Google\u2019s Chief Strategist and a Senior Fellow at Wharton, offers a comprehensive look into customer lifetime value (CLV) marketing through his bestselling book 'Converted'. This resource delves into the significance of CLV in shaping effective marketing strategies aimed at growth and retention. Readers will explore the fundamental concepts of CLV, learning how to leverage customer data to enhance marketing efforts and drive business success. The teaching approach emphasizes practical applications, making it accessible to those new to the field while still providing valuable insights for seasoned professionals. The content is designed for marketers and business practitioners who wish to understand the intricacies of customer value and its impact on long-term business strategies. While no specific prerequisites are required, a basic understanding of marketing principles will enrich the learning experience. Upon completing this resource, readers will gain skills in identifying and applying CLV strategies to improve customer engagement and retention. This blog serves as an entry point into the world of CLV-focused marketing, guiding readers on how to implement these strategies effectively. The resource is particularly beneficial for those looking to enhance their marketing acumen and drive growth through data-informed decisions. After engaging with this content, readers will be equipped to apply CLV principles in their marketing efforts, ultimately leading to more effective customer acquisition and retention strategies.",
+    "embedding_text": "Neil Hoyne, a prominent figure in marketing as Google’s Chief Strategist and a Senior Fellow at Wharton, offers a comprehensive look into customer lifetime value (CLV) marketing through his bestselling book 'Converted'. This resource delves into the significance of CLV in shaping effective marketing strategies aimed at growth and retention. Readers will explore the fundamental concepts of CLV, learning how to leverage customer data to enhance marketing efforts and drive business success. The teaching approach emphasizes practical applications, making it accessible to those new to the field while still providing valuable insights for seasoned professionals. The content is designed for marketers and business practitioners who wish to understand the intricacies of customer value and its impact on long-term business strategies. While no specific prerequisites are required, a basic understanding of marketing principles will enrich the learning experience. Upon completing this resource, readers will gain skills in identifying and applying CLV strategies to improve customer engagement and retention. This blog serves as an entry point into the world of CLV-focused marketing, guiding readers on how to implement these strategies effectively. The resource is particularly beneficial for those looking to enhance their marketing acumen and drive growth through data-informed decisions. After engaging with this content, readers will be equipped to apply CLV principles in their marketing efforts, ultimately leading to more effective customer acquisition and retention strategies.",
     "tfidf_keywords": [
       "customer-lifetime-value",
       "marketing-strategy",
@@ -26754,7 +26754,7 @@
     "model_score": 0.0029,
     "macro_category": "Strategy",
     "domain": "Product Sense",
-    "embedding_text": "Money Stuff, authored by Matt Levine, is a daily newsletter that demystifies the intricate world of finance, making it accessible to a diverse readership. With over 300,000 subscribers, it has established itself as a go-to resource for those looking to grasp complex financial mechanics with clarity and humor. The newsletter covers a wide array of topics, including Wall Street dynamics, mergers and acquisitions, technology IPOs, and the nuances of securities law. Levine's engaging writing style ensures that even the most complicated concepts are presented in a way that is both entertaining and informative. Readers can expect to gain insights into current financial trends and practices, enhancing their understanding of the financial landscape. While no specific prerequisites are required, a general curiosity about finance will greatly enhance the reading experience. The newsletter serves as an excellent resource for anyone from casual readers to those seeking a deeper understanding of financial matters. After engaging with Money Stuff, readers will find themselves better equipped to navigate discussions around finance, equipped with knowledge that can be applied in various contexts, whether in professional settings or personal investment decisions. The newsletter is designed to be consumed daily, making it a quick yet enriching addition to one\u2019s routine. Overall, Money Stuff stands out in the crowded field of financial commentary, offering a unique blend of wit and insight that appeals to both novices and seasoned finance enthusiasts.",
+    "embedding_text": "Money Stuff, authored by Matt Levine, is a daily newsletter that demystifies the intricate world of finance, making it accessible to a diverse readership. With over 300,000 subscribers, it has established itself as a go-to resource for those looking to grasp complex financial mechanics with clarity and humor. The newsletter covers a wide array of topics, including Wall Street dynamics, mergers and acquisitions, technology IPOs, and the nuances of securities law. Levine's engaging writing style ensures that even the most complicated concepts are presented in a way that is both entertaining and informative. Readers can expect to gain insights into current financial trends and practices, enhancing their understanding of the financial landscape. While no specific prerequisites are required, a general curiosity about finance will greatly enhance the reading experience. The newsletter serves as an excellent resource for anyone from casual readers to those seeking a deeper understanding of financial matters. After engaging with Money Stuff, readers will find themselves better equipped to navigate discussions around finance, equipped with knowledge that can be applied in various contexts, whether in professional settings or personal investment decisions. The newsletter is designed to be consumed daily, making it a quick yet enriching addition to one’s routine. Overall, Money Stuff stands out in the crowded field of financial commentary, offering a unique blend of wit and insight that appeals to both novices and seasoned finance enthusiasts.",
     "skill_progression": [
       "understanding of financial mechanics",
       "insight into Wall Street practices",
@@ -27089,7 +27089,7 @@
   },
   {
     "name": "LinkedIn: AI Behind Recruiter Search",
-    "description": "Enterprise-scale search: multi-layer ranking (L1 retrieval \u2192 L2 ranking), evolution from linear to GBDT to neural, GLMix personalization. Among the largest learning-to-rank systems in production.",
+    "description": "Enterprise-scale search: multi-layer ranking (L1 retrieval → L2 ranking), evolution from linear to GBDT to neural, GLMix personalization. Among the largest learning-to-rank systems in production.",
     "category": "Search & Ranking",
     "url": "https://www.linkedin.com/blog/engineering/recommendations/ai-behind-linkedin-recruiter-search-and-recommendation-systems",
     "type": "Blog",
@@ -30028,7 +30028,7 @@
   },
   {
     "name": "Amplitude: Product Lessons with Shreyas Doshi",
-    "description": "Deep conversation on 'The Fundamental Framework of Product Work' (Impact, Execution, Optics levels) \u2014 demonstrates how metrics connect to strategy at sophisticated level.",
+    "description": "Deep conversation on 'The Fundamental Framework of Product Work' (Impact, Execution, Optics levels) — demonstrates how metrics connect to strategy at sophisticated level.",
     "category": "Frameworks & Strategy",
     "url": "https://amplitude.com/blog/shreyas-doshi-product-lessons",
     "type": "Podcast",
@@ -32711,7 +32711,7 @@
   },
   {
     "name": "Understanding CUPED by Matteo Courthoud",
-    "description": "Mathematical derivation from first principles: optimal covariate formula \u03b8 = Cov(X,Y)/Var(X) and variance reduction Var(\u0176_cuped) = Var(\u0232)(1 - \u03c1\u00b2). Compares with DiD and Frisch-Waugh-Lovell theorem. Full Python code.",
+    "description": "Mathematical derivation from first principles: optimal covariate formula θ = Cov(X,Y)/Var(X) and variance reduction Var(Ŷ_cuped) = Var(Ȳ)(1 - ρ²). Compares with DiD and Frisch-Waugh-Lovell theorem. Full Python code.",
     "category": "Variance Reduction",
     "url": "https://matteocourthoud.github.io/post/cuped/",
     "type": "Tutorial",
@@ -32759,7 +32759,7 @@
     "model_score": 0.0017,
     "macro_category": "Experimentation",
     "image_url": "https://matteocourthoud.github.io/post/cuped/featured.png",
-    "embedding_text": "Understanding CUPED by Matteo Courthoud is a comprehensive tutorial that delves into the mathematical derivation of the CUPED (Controlled Pre-Experiment Design) method. This resource is particularly valuable for those looking to enhance their skills in causal inference and variance reduction techniques. The tutorial begins with an introduction to the optimal covariate formula \u03b8 = Cov(X,Y)/Var(X), explaining how this formula is pivotal in achieving variance reduction in experimental designs. The author compares CUPED with other methodologies such as Difference-in-Differences (DiD) and the Frisch-Waugh-Lovell theorem, providing a nuanced understanding of when and why to apply these techniques. The tutorial is designed for individuals who have a foundational knowledge of Python and linear regression, making it suitable for junior data scientists and mid-level practitioners. The hands-on approach includes full Python code, allowing learners to implement the concepts discussed directly. By the end of the tutorial, participants will have a solid grasp of CUPED, its mathematical underpinnings, and practical applications, enabling them to improve the efficiency of their experimental analyses. This resource is ideal for those who are curious about advanced statistical methods and wish to apply them in real-world scenarios. The estimated time to complete this tutorial is not specified, but learners can expect to engage deeply with the material, enhancing their analytical skills and understanding of variance reduction.",
+    "embedding_text": "Understanding CUPED by Matteo Courthoud is a comprehensive tutorial that delves into the mathematical derivation of the CUPED (Controlled Pre-Experiment Design) method. This resource is particularly valuable for those looking to enhance their skills in causal inference and variance reduction techniques. The tutorial begins with an introduction to the optimal covariate formula θ = Cov(X,Y)/Var(X), explaining how this formula is pivotal in achieving variance reduction in experimental designs. The author compares CUPED with other methodologies such as Difference-in-Differences (DiD) and the Frisch-Waugh-Lovell theorem, providing a nuanced understanding of when and why to apply these techniques. The tutorial is designed for individuals who have a foundational knowledge of Python and linear regression, making it suitable for junior data scientists and mid-level practitioners. The hands-on approach includes full Python code, allowing learners to implement the concepts discussed directly. By the end of the tutorial, participants will have a solid grasp of CUPED, its mathematical underpinnings, and practical applications, enabling them to improve the efficiency of their experimental analyses. This resource is ideal for those who are curious about advanced statistical methods and wish to apply them in real-world scenarios. The estimated time to complete this tutorial is not specified, but learners can expect to engage deeply with the material, enhancing their analytical skills and understanding of variance reduction.",
     "tfidf_keywords": [
       "CUPED",
       "variance reduction",
@@ -33401,7 +33401,7 @@
   },
   {
     "name": "Intercom: RICE Prioritization Framework",
-    "description": "The RICE framework (Reach, Impact, Confidence, Effort) originated here and is now industry standard \u2014 provides quantitative structure for prioritization.",
+    "description": "The RICE framework (Reach, Impact, Confidence, Effort) originated here and is now industry standard — provides quantitative structure for prioritization.",
     "category": "Frameworks & Strategy",
     "url": "https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/",
     "type": "Article",
@@ -33700,7 +33700,7 @@
   },
   {
     "name": "SVPG: Product Management Start Here",
-    "description": "Silicon Valley Product Group's curated entry point distinguishing 'empowered product teams' from 'feature teams' \u2014 exposes why most PM work is 'product management theater'.",
+    "description": "Silicon Valley Product Group's curated entry point distinguishing 'empowered product teams' from 'feature teams' — exposes why most PM work is 'product management theater'.",
     "category": "Frameworks & Strategy",
     "url": "https://www.svpg.com/product-management-start-here/",
     "type": "Guide",
@@ -34270,7 +34270,7 @@
   },
   {
     "name": "Ken Norton: How to Hire a Product Manager",
-    "description": "Former Google PM (14+ years) who led Docs, Calendar, Mobile Maps. This essay defines what a PM does by revealing hiring criteria \u2014 the map of competencies to develop.",
+    "description": "Former Google PM (14+ years) who led Docs, Calendar, Mobile Maps. This essay defines what a PM does by revealing hiring criteria — the map of competencies to develop.",
     "category": "Frameworks & Strategy",
     "url": "https://www.bringthedonuts.com/essays/productmanager.html",
     "type": "Article",
@@ -34876,7 +34876,7 @@
   },
   {
     "name": "Uber: Reinforcement Learning for Marketplace Balance",
-    "description": "Largest RL deployment for matching in ridesharing\u2014400+ cities globally. How Uber uses reinforcement learning to balance supply and demand in real-time.",
+    "description": "Largest RL deployment for matching in ridesharing—400+ cities globally. How Uber uses reinforcement learning to balance supply and demand in real-time.",
     "category": "Platform Economics",
     "url": "https://www.uber.com/blog/reinforcement-learning-for-modeling-marketplace-balance/",
     "type": "Article",
@@ -37492,7 +37492,7 @@
   },
   {
     "name": "Little's Law 50th Anniversary Paper",
-    "description": "Retrospective on L = \u03bbW proving average customers equals arrival rate times average time, regardless of distributions.",
+    "description": "Retrospective on L = λW proving average customers equals arrival rate times average time, regardless of distributions.",
     "category": "Operations Research",
     "url": "https://people.cs.umass.edu/~emery/classes/cmpsci691st/readings/OS/Littles-Law-50-Years-Later.pdf",
     "type": "Article",
@@ -37601,5 +37601,18 @@
     "level": "Hard",
     "model_score": 0.0,
     "id": "resource-mor-harchol-balters-papers"
+  },
+  {
+    "name": "New Econometrics course posted on the Econometrics Academy",
+    "description": "This is a master's level Econometrics course taught with Stata or R. Topics include multiple linear regression, regression inference, heteroscedasticity,",
+    "category": "Econometrics",
+    "url": "https://aede.osu.edu/news/new-econometrics-course-posted-econometrics-academy",
+    "tags": [
+      "econometrics",
+      "regression",
+      "inference",
+      "stata"
+    ],
+    "type": "Course"
   }
 ]

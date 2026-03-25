@@ -90,6 +90,12 @@ DOMAIN_BLOCKLIST = {
     "nytimes.com", "wsj.com", "bloomberg.com", "forbes.com",
     "techcrunch.com", "wired.com", "theverge.com",
     "udemy.com", "skillshare.com",
+    # Content farms / low-quality SEO sites
+    "wahresume.com", "geeksforgeeks.org", "javatpoint.com",
+    "tutorialspoint.com", "interviewbit.com", "simplilearn.com",
+    "analyticsvidhya.com", "w3schools.com", "educba.com",
+    "intellipaat.com", "mygreatlearning.com", "scaler.com",
+    "shiksha.com", "naukri.com", "ambitionbox.com",
 }
 
 
@@ -474,7 +480,7 @@ TYPE_INFERENCE = {
             "discord.gg": "Discord Server",
         },
         "text_patterns": {
-            "conference": "Annual Conference", "workshop": "Workshop",
+            "conference": "Annual Conference",
             "meetup": "Meetup", "summit": "Annual Summit",
             "seminar": "Academic", "lab": "Tech Lab",
         },
@@ -602,6 +608,14 @@ class HeuristicMetadataExtractor:
         tags = self._extract_tags(text, url)
         self.call_count += 1
 
+        # Reject GitHub topic/awesome-list pages (not real packages)
+        if content_type == "packages":
+            url_lower = url.lower()
+            if "/topics/" in url_lower or "/topics?" in url_lower or url_lower.endswith("/topics"):
+                return None
+            if "awesome-list" in url_lower or "awesome-" in title.lower():
+                return None
+
         if content_type == "papers":
             return {
                 "title": title,
@@ -703,7 +717,13 @@ def validate_item(item: dict, content_type: str) -> tuple[bool, list[str]]:
         if year and (year < 1950 or year > datetime.now().year + 1):
             issues.append(f"suspicious year: {year}")
 
-    is_valid = not any("missing required" in i for i in issues)
+    if content_type == "community":
+        item_type = item.get("type", "")
+        name_lower = item.get("name", "").lower()
+        if item_type == "Workshop" or "workshop" in name_lower:
+            issues.append("workshops excluded from community")
+
+    is_valid = not any("missing required" in i or "excluded" in i for i in issues)
     return is_valid, issues
 
 

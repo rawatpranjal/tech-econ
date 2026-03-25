@@ -1007,7 +1007,7 @@
       "state-space",
       "Google"
     ],
-    "best_for": "Bayesian structural time series with spike-and-slab selection\u2014foundation for CausalImpact",
+    "best_for": "Bayesian structural time series with spike-and-slab selection—foundation for CausalImpact",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -1660,7 +1660,7 @@
       "tools",
       "lightweight"
     ],
-    "best_for": "OpenAI's lightweight SDK \u2014 fast prototyping",
+    "best_for": "OpenAI's lightweight SDK — fast prototyping",
     "language": "Python",
     "difficulty": "beginner",
     "prerequisites": [],
@@ -1734,7 +1734,7 @@
       "tools",
       "RAG"
     ],
-    "best_for": "LLM framework \u2014 chains, tools, memory",
+    "best_for": "LLM framework — chains, tools, memory",
     "language": "Python",
     "difficulty": "intermediate",
     "prerequisites": [
@@ -1824,7 +1824,7 @@
       "regression",
       "distributional-regression"
     ],
-    "best_for": "Complex hierarchical Bayesian regression with familiar R formula syntax, implementing B\u00fcrkner (2017)",
+    "best_for": "Complex hierarchical Bayesian regression with familiar R formula syntax, implementing Bürkner (2017)",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -3279,7 +3279,7 @@
   },
   {
     "name": "fwildclusterboot",
-    "description": "Fast wild cluster bootstrap implementation following Roodman et al. (2019)\u2014up to 1000\u00d7 faster than alternatives. Critical for panel data with few clusters. Integrates with fixest and lfe for efficient inference.",
+    "description": "Fast wild cluster bootstrap implementation following Roodman et al. (2019)—up to 1000× faster than alternatives. Critical for panel data with few clusters. Integrates with fixest and lfe for efficient inference.",
     "category": "Bootstrap & Inference",
     "docs_url": "https://s3alfisc.github.io/fwildclusterboot/",
     "github_url": "https://github.com/s3alfisc/fwildclusterboot",
@@ -6740,7 +6740,7 @@
   },
   {
     "name": "bacondecomp",
-    "description": "Performs Goodman-Bacon decomposition showing how two-way fixed effects (TWFE) estimates are weighted averages of all possible 2\u00d72 DiD comparisons. Essential for diagnosing negative weights problems in staggered adoption designs.",
+    "description": "Performs Goodman-Bacon decomposition showing how two-way fixed effects (TWFE) estimates are weighted averages of all possible 2×2 DiD comparisons. Essential for diagnosing negative weights problems in staggered adoption designs.",
     "category": "Causal Inference (DiD)",
     "docs_url": "https://cran.r-project.org/web/packages/bacondecomp/bacondecomp.pdf",
     "github_url": "https://github.com/evanjflack/bacondecomp",
@@ -6782,7 +6782,7 @@
     "api_complexity": "intermediate",
     "maintenance_status": "active",
     "model_score": 0.0076,
-    "embedding_text": "The bacondecomp package is a specialized tool designed for researchers and practitioners in the field of causal inference, particularly those focusing on the analysis of treatment effects in staggered adoption designs. This package implements the Goodman-Bacon decomposition method, which provides a systematic way to understand how two-way fixed effects (TWFE) estimates are computed as weighted averages of all possible 2\u00d72 difference-in-differences (DiD) comparisons. This functionality is crucial for diagnosing potential issues with negative weights that can arise in staggered adoption scenarios, where different groups may adopt a treatment at different times. The API of bacondecomp is designed to be user-friendly yet robust, allowing users to easily input their data and obtain the necessary decomposition results. Key functions within the package enable users to specify their models and extract insights regarding the contribution of various comparisons to the overall TWFE estimate. Installation is straightforward via CRAN, and basic usage typically involves loading the package, preparing the data, and calling the main decomposition function. Compared to alternative approaches, bacondecomp stands out due to its specific focus on the Goodman-Bacon methodology, which is not always available in more general-purpose causal inference packages. Users should be aware of common pitfalls, such as misinterpreting the results or failing to adequately check the assumptions underlying the TWFE model. Best practices include ensuring that the data is properly structured for analysis and being mindful of the implications of staggered treatment adoption. This package is particularly useful when researchers need to clarify the contributions of different comparisons to their estimates, but it may not be necessary for simpler experimental designs where such decomposition is not required.",
+    "embedding_text": "The bacondecomp package is a specialized tool designed for researchers and practitioners in the field of causal inference, particularly those focusing on the analysis of treatment effects in staggered adoption designs. This package implements the Goodman-Bacon decomposition method, which provides a systematic way to understand how two-way fixed effects (TWFE) estimates are computed as weighted averages of all possible 2×2 difference-in-differences (DiD) comparisons. This functionality is crucial for diagnosing potential issues with negative weights that can arise in staggered adoption scenarios, where different groups may adopt a treatment at different times. The API of bacondecomp is designed to be user-friendly yet robust, allowing users to easily input their data and obtain the necessary decomposition results. Key functions within the package enable users to specify their models and extract insights regarding the contribution of various comparisons to the overall TWFE estimate. Installation is straightforward via CRAN, and basic usage typically involves loading the package, preparing the data, and calling the main decomposition function. Compared to alternative approaches, bacondecomp stands out due to its specific focus on the Goodman-Bacon methodology, which is not always available in more general-purpose causal inference packages. Users should be aware of common pitfalls, such as misinterpreting the results or failing to adequately check the assumptions underlying the TWFE model. Best practices include ensuring that the data is properly structured for analysis and being mindful of the implications of staggered treatment adoption. This package is particularly useful when researchers need to clarify the contributions of different comparisons to their estimates, but it may not be necessary for simpler experimental designs where such decomposition is not required.",
     "tfidf_keywords": [
       "Goodman-Bacon",
       "decomposition",
@@ -7797,7 +7797,7 @@
       "S-learner",
       "CATE"
     ],
-    "best_for": "Comparing and benchmarking different CATE meta-learner strategies (S/T/X-learner) with BART or RF base learners, implementing K\u00fcnzel et al. (2019)",
+    "best_for": "Comparing and benchmarking different CATE meta-learner strategies (S/T/X-learner) with BART or RF base learners, implementing Künzel et al. (2019)",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -8581,7 +8581,7 @@
       "LATE",
       "instrumental-variables"
     ],
-    "best_for": "Mediation analysis and LATE estimation using weighting-based approaches with flexible nuisance estimation, implementing Huber (2014) and Fr\u00f6lich & Huber (2017)",
+    "best_for": "Mediation analysis and LATE estimation using weighting-based approaches with flexible nuisance estimation, implementing Huber (2014) and Frölich & Huber (2017)",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -8643,7 +8643,7 @@
   },
   {
     "name": "grf",
-    "description": "Forest-based statistical estimation and inference for heterogeneous treatment effects, supporting multiple treatment arms, instrumental variables, survival outcomes, and quantile regression\u2014all with honest estimation and valid confidence intervals. The most widely-used R package for CATE estimation.",
+    "description": "Forest-based statistical estimation and inference for heterogeneous treatment effects, supporting multiple treatment arms, instrumental variables, survival outcomes, and quantile regression—all with honest estimation and valid confidence intervals. The most widely-used R package for CATE estimation.",
     "category": "Causal Inference (ML)",
     "docs_url": "https://grf-labs.github.io/grf/",
     "github_url": "https://github.com/grf-labs/grf",
@@ -9841,7 +9841,7 @@
     ],
     "maintenance_status": "active",
     "model_score": 0.0006,
-    "embedding_text": "Biogeme is the reference Python package for discrete choice model estimation, specifically designed to handle various types of logit models including standard logit, nested logit, and mixed logit. Developed by Michel Bierlaire at the \u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne (EPFL), Biogeme has become a staple in transportation research, providing researchers and practitioners with robust tools to analyze and model choices made by individuals in various contexts. The core functionality of Biogeme revolves around its ability to estimate parameters of discrete choice models, allowing users to understand how different factors influence decision-making processes. The package is built with an emphasis on usability and flexibility, making it accessible to both novice and experienced users in the field of transportation economics. The API is designed to be intuitive, allowing users to define their choice models using a straightforward syntax. Key classes and functions within Biogeme facilitate the specification of utility functions, the estimation of model parameters, and the evaluation of model fit. Installation is straightforward via pip, and users can quickly get started by importing the package and defining their models. Biogeme's performance characteristics are commendable, as it efficiently handles large datasets and complex model specifications, making it suitable for real-world applications. However, users should be mindful of common pitfalls such as overfitting and the importance of correctly specifying the utility functions. Best practices include validating models with out-of-sample data and ensuring that the assumptions of the chosen model align with the data at hand. Biogeme is particularly useful when researchers aim to understand mode choice behavior in transportation studies, but it may not be the best fit for all types of choice modeling, particularly those that require more advanced machine learning techniques. Overall, Biogeme stands out as a powerful tool for discrete choice modeling, bridging the gap between theoretical frameworks and practical applications in transportation research.",
+    "embedding_text": "Biogeme is the reference Python package for discrete choice model estimation, specifically designed to handle various types of logit models including standard logit, nested logit, and mixed logit. Developed by Michel Bierlaire at the École Polytechnique Fédérale de Lausanne (EPFL), Biogeme has become a staple in transportation research, providing researchers and practitioners with robust tools to analyze and model choices made by individuals in various contexts. The core functionality of Biogeme revolves around its ability to estimate parameters of discrete choice models, allowing users to understand how different factors influence decision-making processes. The package is built with an emphasis on usability and flexibility, making it accessible to both novice and experienced users in the field of transportation economics. The API is designed to be intuitive, allowing users to define their choice models using a straightforward syntax. Key classes and functions within Biogeme facilitate the specification of utility functions, the estimation of model parameters, and the evaluation of model fit. Installation is straightforward via pip, and users can quickly get started by importing the package and defining their models. Biogeme's performance characteristics are commendable, as it efficiently handles large datasets and complex model specifications, making it suitable for real-world applications. However, users should be mindful of common pitfalls such as overfitting and the importance of correctly specifying the utility functions. Best practices include validating models with out-of-sample data and ensuring that the assumptions of the chosen model align with the data at hand. Biogeme is particularly useful when researchers aim to understand mode choice behavior in transportation studies, but it may not be the best fit for all types of choice modeling, particularly those that require more advanced machine learning techniques. Overall, Biogeme stands out as a powerful tool for discrete choice modeling, bridging the gap between theoretical frameworks and practical applications in transportation research.",
     "tfidf_keywords": [
       "discrete choice",
       "logit model",
@@ -10352,7 +10352,7 @@
   },
   {
     "name": "causaldata",
-    "description": "Unified collection of datasets from three major causal inference textbooks: 'The Effect' (Huntington-Klein), 'Causal Inference: The Mixtape' (Cunningham), and 'Causal Inference: What If?' (Hern\u00e1n & Robins).",
+    "description": "Unified collection of datasets from three major causal inference textbooks: 'The Effect' (Huntington-Klein), 'Causal Inference: The Mixtape' (Cunningham), and 'Causal Inference: What If?' (Hernán & Robins).",
     "category": "Datasets",
     "docs_url": "https://cran.r-project.org/web/packages/causaldata/causaldata.pdf",
     "github_url": "https://github.com/NickCH-K/causaldata",
@@ -10394,13 +10394,13 @@
     "api_complexity": "simple",
     "maintenance_status": "active",
     "model_score": 0.0005,
-    "embedding_text": "The causaldata package is designed to provide a unified collection of datasets derived from three prominent causal inference textbooks: 'The Effect' by Huntington-Klein, 'Causal Inference: The Mixtape' by Cunningham, and 'Causal Inference: What If?' by Hern\u00e1n & Robins. This package serves as a valuable resource for researchers, educators, and students who are engaged in the study of causal inference and its applications. By offering datasets that are directly linked to established literature, causaldata facilitates a deeper understanding of causal analysis techniques and their practical implications. The core functionality of the package revolves around its comprehensive dataset offerings, which are curated to support various causal inference methodologies. Users can easily access these datasets to practice and apply techniques such as regression discontinuity, propensity score matching, and instrumental variable analysis. The API design philosophy of causaldata is straightforward and user-friendly, allowing users to quickly load and utilize datasets without extensive setup or configuration. This simplicity is particularly beneficial for those who may be new to R or causal inference. The installation process is seamless, typically requiring only a few commands in R to get started. Basic usage patterns involve loading the package and accessing datasets, which can then be used in conjunction with other R packages for analysis and visualization. When comparing causaldata to alternative approaches, it stands out due to its specific focus on datasets that are directly tied to causal inference literature, making it an excellent educational tool. While there are other datasets available in the R ecosystem, few are as well-curated for the purpose of teaching and applying causal inference concepts. Performance characteristics of the package are generally robust, as it is designed to handle datasets that are manageable in size for typical research and educational purposes. Scalability may be limited by the size of the datasets included, but for most users, this is not a significant concern. Integration with data science workflows is straightforward, as the datasets can be easily incorporated into existing R scripts and projects. Common pitfalls include assuming that the datasets will cover every aspect of causal inference; users should be aware that while the datasets are valuable, they may not encompass all scenarios or methodologies. Best practices involve familiarizing oneself with the source textbooks to fully leverage the datasets' potential. Causaldata is best used when there is a need for reliable datasets to support causal inference analysis, particularly in educational settings or preliminary research. However, it may not be the best choice for users seeking highly specialized or niche datasets not covered by the included literature.",
+    "embedding_text": "The causaldata package is designed to provide a unified collection of datasets derived from three prominent causal inference textbooks: 'The Effect' by Huntington-Klein, 'Causal Inference: The Mixtape' by Cunningham, and 'Causal Inference: What If?' by Hernán & Robins. This package serves as a valuable resource for researchers, educators, and students who are engaged in the study of causal inference and its applications. By offering datasets that are directly linked to established literature, causaldata facilitates a deeper understanding of causal analysis techniques and their practical implications. The core functionality of the package revolves around its comprehensive dataset offerings, which are curated to support various causal inference methodologies. Users can easily access these datasets to practice and apply techniques such as regression discontinuity, propensity score matching, and instrumental variable analysis. The API design philosophy of causaldata is straightforward and user-friendly, allowing users to quickly load and utilize datasets without extensive setup or configuration. This simplicity is particularly beneficial for those who may be new to R or causal inference. The installation process is seamless, typically requiring only a few commands in R to get started. Basic usage patterns involve loading the package and accessing datasets, which can then be used in conjunction with other R packages for analysis and visualization. When comparing causaldata to alternative approaches, it stands out due to its specific focus on datasets that are directly tied to causal inference literature, making it an excellent educational tool. While there are other datasets available in the R ecosystem, few are as well-curated for the purpose of teaching and applying causal inference concepts. Performance characteristics of the package are generally robust, as it is designed to handle datasets that are manageable in size for typical research and educational purposes. Scalability may be limited by the size of the datasets included, but for most users, this is not a significant concern. Integration with data science workflows is straightforward, as the datasets can be easily incorporated into existing R scripts and projects. Common pitfalls include assuming that the datasets will cover every aspect of causal inference; users should be aware that while the datasets are valuable, they may not encompass all scenarios or methodologies. Best practices involve familiarizing oneself with the source textbooks to fully leverage the datasets' potential. Causaldata is best used when there is a need for reliable datasets to support causal inference analysis, particularly in educational settings or preliminary research. However, it may not be the best choice for users seeking highly specialized or niche datasets not covered by the included literature.",
     "tfidf_keywords": [
       "causal-inference",
       "datasets",
       "Huntington-Klein",
       "Cunningham",
-      "Hern\u00e1n",
+      "Hernán",
       "Robins",
       "regression-discontinuity",
       "propensity-score-matching",
@@ -11322,7 +11322,7 @@
   },
   {
     "name": "collapse",
-    "description": "High-performance data transformation package designed by an economist. Provides fast grouped operations, time series functions, and panel data tools with 10-100\u00d7 speedups over dplyr on large data.",
+    "description": "High-performance data transformation package designed by an economist. Provides fast grouped operations, time series functions, and panel data tools with 10-100× speedups over dplyr on large data.",
     "category": "Data Workflow",
     "docs_url": "https://sebkrantz.github.io/collapse/",
     "github_url": "https://github.com/SebKrantz/collapse",
@@ -11335,7 +11335,7 @@
       "time-series",
       "grouped-operations"
     ],
-    "best_for": "High-performance data transformation optimized for economists\u201410-100\u00d7 faster than dplyr",
+    "best_for": "High-performance data transformation optimized for economists—10-100× faster than dplyr",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -11365,7 +11365,7 @@
     "api_complexity": "intermediate",
     "maintenance_status": "active",
     "model_score": 0.0017,
-    "embedding_text": "The 'collapse' package is an innovative tool tailored for high-performance data transformation in R, particularly favored by economists. It is designed to enhance the efficiency of data manipulation tasks, providing significant speed improvements\u2014often between 10 to 100 times faster than traditional packages like dplyr\u2014when handling large datasets. The core functionality of 'collapse' includes fast grouped operations, time series functions, and tools for managing panel data. This makes it an invaluable resource for data scientists and economists who require robust performance in their data workflows. The API design of 'collapse' is functional, allowing users to apply transformations in a straightforward manner while maintaining clarity and efficiency. Key functions within the package facilitate operations such as summarizing data by groups, performing calculations on time series, and managing panel data structures. Installation is straightforward via CRAN, and users can quickly begin utilizing the package with simple function calls that integrate seamlessly into their existing R workflows. Compared to alternatives like dplyr, 'collapse' stands out due to its performance characteristics, especially when working with large datasets where speed is critical. However, users should be aware of potential pitfalls, such as the learning curve associated with its unique functions and the need for a solid understanding of R programming to maximize its capabilities. Best practices include leveraging its speed advantages for large data transformations while being mindful of the specific scenarios where 'collapse' excels versus when traditional methods may suffice. Overall, 'collapse' is a powerful addition to the R ecosystem for those focused on data transformation in economic research and analysis.",
+    "embedding_text": "The 'collapse' package is an innovative tool tailored for high-performance data transformation in R, particularly favored by economists. It is designed to enhance the efficiency of data manipulation tasks, providing significant speed improvements—often between 10 to 100 times faster than traditional packages like dplyr—when handling large datasets. The core functionality of 'collapse' includes fast grouped operations, time series functions, and tools for managing panel data. This makes it an invaluable resource for data scientists and economists who require robust performance in their data workflows. The API design of 'collapse' is functional, allowing users to apply transformations in a straightforward manner while maintaining clarity and efficiency. Key functions within the package facilitate operations such as summarizing data by groups, performing calculations on time series, and managing panel data structures. Installation is straightforward via CRAN, and users can quickly begin utilizing the package with simple function calls that integrate seamlessly into their existing R workflows. Compared to alternatives like dplyr, 'collapse' stands out due to its performance characteristics, especially when working with large datasets where speed is critical. However, users should be aware of potential pitfalls, such as the learning curve associated with its unique functions and the need for a solid understanding of R programming to maximize its capabilities. Best practices include leveraging its speed advantages for large data transformations while being mindful of the specific scenarios where 'collapse' excels versus when traditional methods may suffice. Overall, 'collapse' is a powerful addition to the R ecosystem for those focused on data transformation in economic research and analysis.",
     "primary_use_cases": [
       "fast grouped operations",
       "time series analysis",
@@ -11868,7 +11868,7 @@
       "study-design",
       "ex-ante-analysis"
     ],
-    "best_for": "Planning RDD studies\u2014calculating required sample sizes, statistical power, or minimum detectable effects, implementing Cattaneo, Titiunik & Vazquez-Bare (2019)",
+    "best_for": "Planning RDD studies—calculating required sample sizes, statistical power, or minimum detectable effects, implementing Cattaneo, Titiunik & Vazquez-Bare (2019)",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -12423,7 +12423,7 @@
   },
   {
     "name": "pyhtelasso",
-    "description": "Debiased\u2011Lasso detector of heterogeneous treatment effects in randomized experiments.",
+    "description": "Debiased‑Lasso detector of heterogeneous treatment effects in randomized experiments.",
     "category": "Double/Debiased Machine Learning (DML)",
     "docs_url": "https://pypi.org/project/pyhtelasso/",
     "github_url": null,
@@ -15341,7 +15341,7 @@
   },
   {
     "name": "pydoublelasso",
-    "description": "Double\u2011post\u00a0Lasso estimator for high\u2011dimensional treatment effects (Belloni\u2011Chernozhukov\u2011Hansen\u202f2014).",
+    "description": "Double‑post Lasso estimator for high‑dimensional treatment effects (Belloni‑Chernozhukov‑Hansen 2014).",
     "category": "Double/Debiased Machine Learning (DML)",
     "docs_url": "https://pypi.org/project/pydoublelasso/",
     "github_url": null,
@@ -18145,7 +18145,7 @@
       "regularization",
       "high-dimensional"
     ],
-    "best_for": "LASSO, ridge, and elastic net regularization\u2014foundation for high-dimensional regression and causal ML",
+    "best_for": "LASSO, ridge, and elastic net regularization—foundation for high-dimensional regression and causal ML",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -19378,7 +19378,7 @@
   },
   {
     "name": "marginaleffects",
-    "description": "Modern standard for interpreting regression results\u2014up to 1000\u00d7 faster than margins. Computes marginal effects, predictions, contrasts, and slopes for 100+ model classes. Published in JSS 2024.",
+    "description": "Modern standard for interpreting regression results—up to 1000× faster than margins. Computes marginal effects, predictions, contrasts, and slopes for 100+ model classes. Published in JSS 2024.",
     "category": "Marginal Effects",
     "docs_url": "https://marginaleffects.com/",
     "github_url": "https://github.com/vincentarelbundock/marginaleffects",
@@ -19391,7 +19391,7 @@
       "interpretation",
       "slopes"
     ],
-    "best_for": "Modern marginal effects interpretation\u20141000\u00d7 faster than margins with 100+ model support, JSS 2024",
+    "best_for": "Modern marginal effects interpretation—1000× faster than margins with 100+ model support, JSS 2024",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -19462,7 +19462,7 @@
   },
   {
     "name": "gale-shapley",
-    "description": "Python O(n\u00b2) implementation of Gale-Shapley algorithm for stable matching with simulation capabilities.",
+    "description": "Python O(n²) implementation of Gale-Shapley algorithm for stable matching with simulation capabilities.",
     "category": "Matching & Market Design",
     "docs_url": null,
     "github_url": "https://github.com/oedokumaci/gale-shapley",
@@ -20207,7 +20207,7 @@
   },
   {
     "name": "ShiftShareSE",
-    "description": "Implements correct standard errors for Bartik/shift-share instrumental variables designs following Ad\u00e3o, Koles\u00e1r, and Morales (2019 QJE). Standard clustered SEs are typically incorrect for shift-share\u2014this package provides econometrically valid inference.",
+    "description": "Implements correct standard errors for Bartik/shift-share instrumental variables designs following Adão, Kolesár, and Morales (2019 QJE). Standard clustered SEs are typically incorrect for shift-share—this package provides econometrically valid inference.",
     "category": "Instrumental Variables",
     "docs_url": "https://cran.r-project.org/web/packages/ShiftShareSE/ShiftShareSE.pdf",
     "github_url": "https://github.com/kolesarm/ShiftShareSE",
@@ -20220,7 +20220,7 @@
       "standard-errors",
       "regional-economics"
     ],
-    "best_for": "Correct standard errors for Bartik/shift-share IV designs, implementing Ad\u00e3o, Koles\u00e1r & Morales (2019 QJE)",
+    "best_for": "Correct standard errors for Bartik/shift-share IV designs, implementing Adão, Kolesár & Morales (2019 QJE)",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -20250,10 +20250,10 @@
       "R tools for regional economics analysis"
     ],
     "api_complexity": "intermediate",
-    "implements_paper": "Ad\u00e3o, Koles\u00e1r, and Morales (2019)",
+    "implements_paper": "Adão, Kolesár, and Morales (2019)",
     "maintenance_status": "active",
     "model_score": 0.0001,
-    "embedding_text": "ShiftShareSE is a specialized R package designed to enhance the accuracy of standard errors in Bartik and shift-share instrumental variables designs, a common approach in econometric analysis, particularly in regional economics. The package addresses a critical issue in econometric modeling, where standard clustered standard errors are often misapplied in shift-share contexts, leading to invalid inference. By implementing the methodologies proposed by Ad\u00e3o, Koles\u00e1r, and Morales in their 2019 paper, ShiftShareSE provides users with tools to conduct robust statistical analyses that yield valid results in the presence of complex economic relationships. The API of ShiftShareSE is designed with usability in mind, allowing users to easily integrate it into their existing R workflows. The package includes key functions that facilitate the estimation of standard errors tailored for shift-share designs, making it accessible to users who may not have extensive backgrounds in econometrics. Installation is straightforward via CRAN, and basic usage patterns are intuitive, enabling users to quickly apply the package to their datasets. Compared to alternative approaches, ShiftShareSE stands out by focusing specifically on the nuances of shift-share analysis, ensuring that users can achieve econometrically valid results without the pitfalls associated with traditional methods. Performance characteristics are optimized for handling regional economic data, which often involves large datasets with complex structures. However, users should be mindful of common pitfalls, such as misinterpreting the results when applying standard errors without understanding the underlying assumptions of the shift-share design. Best practices include ensuring that the data meets the necessary conditions for shift-share analysis and being cautious when generalizing results beyond the specific contexts of the study. ShiftShareSE is particularly useful when researchers aim to analyze the effects of economic policies or shocks at a regional level, but it may not be suitable for analyses that do not fit the shift-share framework. Overall, ShiftShareSE provides a valuable resource for economists and data scientists working in the field of regional economics, offering a robust solution for valid inference in instrumental variables designs.",
+    "embedding_text": "ShiftShareSE is a specialized R package designed to enhance the accuracy of standard errors in Bartik and shift-share instrumental variables designs, a common approach in econometric analysis, particularly in regional economics. The package addresses a critical issue in econometric modeling, where standard clustered standard errors are often misapplied in shift-share contexts, leading to invalid inference. By implementing the methodologies proposed by Adão, Kolesár, and Morales in their 2019 paper, ShiftShareSE provides users with tools to conduct robust statistical analyses that yield valid results in the presence of complex economic relationships. The API of ShiftShareSE is designed with usability in mind, allowing users to easily integrate it into their existing R workflows. The package includes key functions that facilitate the estimation of standard errors tailored for shift-share designs, making it accessible to users who may not have extensive backgrounds in econometrics. Installation is straightforward via CRAN, and basic usage patterns are intuitive, enabling users to quickly apply the package to their datasets. Compared to alternative approaches, ShiftShareSE stands out by focusing specifically on the nuances of shift-share analysis, ensuring that users can achieve econometrically valid results without the pitfalls associated with traditional methods. Performance characteristics are optimized for handling regional economic data, which often involves large datasets with complex structures. However, users should be mindful of common pitfalls, such as misinterpreting the results when applying standard errors without understanding the underlying assumptions of the shift-share design. Best practices include ensuring that the data meets the necessary conditions for shift-share analysis and being cautious when generalizing results beyond the specific contexts of the study. ShiftShareSE is particularly useful when researchers aim to analyze the effects of economic policies or shocks at a regional level, but it may not be suitable for analyses that do not fit the shift-share framework. Overall, ShiftShareSE provides a valuable resource for economists and data scientists working in the field of regional economics, offering a robust solution for valid inference in instrumental variables designs.",
     "tfidf_keywords": [
       "shift-share",
       "Bartik",
@@ -22751,7 +22751,7 @@
       "sentiment-analysis",
       "NLP"
     ],
-    "best_for": "Tidy text mining with dplyr and ggplot2 integration\u2014accompanies 'Text Mining with R'",
+    "best_for": "Tidy text mining with dplyr and ggplot2 integration—accompanies 'Text Mining with R'",
     "language": "R",
     "difficulty": "beginner",
     "prerequisites": [],
@@ -22789,7 +22789,7 @@
     ],
     "maintenance_status": "active",
     "model_score": 0.0001,
-    "embedding_text": "The tidytext package is designed to facilitate text mining by adhering to tidy data principles, which emphasize a clean and structured format for data analysis. By converting text into a tidy format\u2014where each token is represented in a separate row\u2014users can leverage the powerful capabilities of the tidyverse ecosystem, including dplyr for data manipulation and ggplot2 for visualization. This package is particularly useful for data scientists and researchers who are looking to perform natural language processing (NLP) tasks, such as sentiment analysis, topic modeling, and text classification. The API of tidytext is designed to be intuitive and user-friendly, making it accessible for beginners while still providing the depth needed for more advanced users. Key functions include the ability to unnest tokens, which breaks down text into individual words or phrases, and sentiment analysis functions that categorize text based on emotional tone. Installation is straightforward via CRAN, and basic usage typically involves loading the package, importing text data, and applying the provided functions to manipulate and analyze the data. Compared to alternative approaches, tidytext stands out for its integration with the tidyverse, allowing for seamless data workflows and visualizations. However, users should be aware of common pitfalls, such as the need to preprocess text data (e.g., removing stop words or punctuation) before analysis. Best practices include familiarizing oneself with the tidyverse principles and ensuring that the text data is in a suitable format for analysis. Tidytext is an excellent choice for those looking to explore text data in a structured manner, but it may not be the best fit for users requiring highly specialized NLP models or deep learning approaches.",
+    "embedding_text": "The tidytext package is designed to facilitate text mining by adhering to tidy data principles, which emphasize a clean and structured format for data analysis. By converting text into a tidy format—where each token is represented in a separate row—users can leverage the powerful capabilities of the tidyverse ecosystem, including dplyr for data manipulation and ggplot2 for visualization. This package is particularly useful for data scientists and researchers who are looking to perform natural language processing (NLP) tasks, such as sentiment analysis, topic modeling, and text classification. The API of tidytext is designed to be intuitive and user-friendly, making it accessible for beginners while still providing the depth needed for more advanced users. Key functions include the ability to unnest tokens, which breaks down text into individual words or phrases, and sentiment analysis functions that categorize text based on emotional tone. Installation is straightforward via CRAN, and basic usage typically involves loading the package, importing text data, and applying the provided functions to manipulate and analyze the data. Compared to alternative approaches, tidytext stands out for its integration with the tidyverse, allowing for seamless data workflows and visualizations. However, users should be aware of common pitfalls, such as the need to preprocess text data (e.g., removing stop words or punctuation) before analysis. Best practices include familiarizing oneself with the tidyverse principles and ensuring that the text data is in a suitable format for analysis. Tidytext is an excellent choice for those looking to explore text data in a structured manner, but it may not be the best fit for users requiring highly specialized NLP models or deep learning approaches.",
     "tfidf_keywords": [
       "tidy data",
       "text mining",
@@ -23325,7 +23325,7 @@
   },
   {
     "name": "pyleebounds",
-    "description": "Lee\u00a0(2009) sample\u2011selection bounds for treatment effects; trims treated distribution to match selection rates.",
+    "description": "Lee (2009) sample‑selection bounds for treatment effects; trims treated distribution to match selection rates.",
     "category": "Program Evaluation Methods (DiD, SC, RDD)",
     "docs_url": "https://pypi.org/project/pyleebounds/",
     "github_url": null,
@@ -23595,7 +23595,7 @@
       "fast",
       "causal-forests"
     ],
-    "best_for": "Fast random forests for high-dimensional data\u2014backend for grf causal forests",
+    "best_for": "Fast random forests for high-dimensional data—backend for grf causal forests",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -24561,7 +24561,7 @@
       "MIP",
       "commercial"
     ],
-    "best_for": "Best-in-class solver \u2014 free for academics",
+    "best_for": "Best-in-class solver — free for academics",
     "language": "Python",
     "difficulty": "intermediate",
     "prerequisites": [
@@ -25126,7 +25126,7 @@
   },
   {
     "name": "csdid",
-    "description": "Python adaptation of the R `did` package. Implements multi-period DiD with staggered treatment timing (Callaway & Sant\u2019Anna).",
+    "description": "Python adaptation of the R `did` package. Implements multi-period DiD with staggered treatment timing (Callaway & Sant’Anna).",
     "category": "Program Evaluation Methods (DiD, SC, RDD)",
     "docs_url": null,
     "github_url": "https://github.com/d2cml-ai/csdid",
@@ -25149,7 +25149,7 @@
       "program-evaluation",
       "econometrics"
     ],
-    "summary": "The csdid package is a Python adaptation of the R 'did' package, designed to implement multi-period difference-in-differences (DiD) analysis with staggered treatment timing as proposed by Callaway and Sant\u2019Anna. It is primarily used by researchers and data scientists in the fields of economics and social sciences to evaluate causal effects in observational data.",
+    "summary": "The csdid package is a Python adaptation of the R 'did' package, designed to implement multi-period difference-in-differences (DiD) analysis with staggered treatment timing as proposed by Callaway and Sant’Anna. It is primarily used by researchers and data scientists in the fields of economics and social sciences to evaluate causal effects in observational data.",
     "use_cases": [
       "Evaluating the impact of policy changes over time",
       "Assessing the effects of new programs in social sciences"
@@ -25173,7 +25173,7 @@
       "staggered treatment effect estimation"
     ],
     "api_complexity": "intermediate",
-    "implements_paper": "Callaway & Sant\u2019Anna (2021)",
+    "implements_paper": "Callaway & Sant’Anna (2021)",
     "related_packages": [
       "statsmodels",
       "causalml"
@@ -25189,7 +25189,7 @@
       "treatment effects",
       "observational data",
       "multi-period analysis",
-      "Callaway & Sant\u2019Anna",
+      "Callaway & Sant’Anna",
       "Python adaptation",
       "statistical methods"
     ],
@@ -26286,7 +26286,7 @@
   },
   {
     "name": "bife",
-    "description": "Estimates fixed effects binary choice models (logit and probit) with potentially many individual fixed effects using a pseudo-demeaning algorithm. Addresses the incidental parameters problem through analytical bias correction based on Fern\u00e1ndez-Val (2009) and computes average partial effects.",
+    "description": "Estimates fixed effects binary choice models (logit and probit) with potentially many individual fixed effects using a pseudo-demeaning algorithm. Addresses the incidental parameters problem through analytical bias correction based on Fernández-Val (2009) and computes average partial effects.",
     "category": "Panel Data & Fixed Effects",
     "docs_url": "https://cran.r-project.org/web/packages/bife/vignettes/howto.html",
     "github_url": "https://github.com/amrei-stammann/bife",
@@ -26327,10 +26327,10 @@
       "incidental parameters problem in econometrics R"
     ],
     "api_complexity": "intermediate",
-    "implements_paper": "Fern\u00e1ndez-Val (2009)",
+    "implements_paper": "Fernández-Val (2009)",
     "maintenance_status": "active",
     "model_score": 0.0001,
-    "embedding_text": "The 'bife' package in R is a powerful tool for estimating fixed effects binary choice models, including both logit and probit specifications. It utilizes a pseudo-demeaning algorithm to effectively handle potentially large numbers of individual fixed effects, which is a common challenge in panel data analysis. One of the standout features of 'bife' is its ability to address the incidental parameters problem, a well-known issue in econometrics that can lead to biased estimates when using traditional methods. This package incorporates analytical bias correction techniques based on the work of Fern\u00e1ndez-Val (2009), ensuring that users can obtain more reliable estimates of average partial effects. The API design of 'bife' is functional, allowing users to easily specify their models and obtain results without extensive boilerplate code. Key functions within the package facilitate model fitting and result extraction, making it accessible for users with a moderate level of R programming experience. Installation is straightforward via CRAN, and basic usage typically involves loading the package, preparing the data in a suitable format, and calling the main estimation function with the desired model specifications. Compared to alternative approaches, 'bife' stands out due to its focus on fixed effects in binary choice settings, which are often overlooked in other packages. Performance-wise, 'bife' is optimized for handling large datasets, making it suitable for extensive panel data applications. However, users should be aware of common pitfalls, such as ensuring that their data is appropriately structured and that they understand the assumptions underlying fixed effects models. Best practices include conducting robustness checks and being cautious about the interpretation of average partial effects. Overall, 'bife' is an essential tool for econometricians and data scientists working with binary outcomes in panel data frameworks, providing a robust solution to complex modeling challenges.",
+    "embedding_text": "The 'bife' package in R is a powerful tool for estimating fixed effects binary choice models, including both logit and probit specifications. It utilizes a pseudo-demeaning algorithm to effectively handle potentially large numbers of individual fixed effects, which is a common challenge in panel data analysis. One of the standout features of 'bife' is its ability to address the incidental parameters problem, a well-known issue in econometrics that can lead to biased estimates when using traditional methods. This package incorporates analytical bias correction techniques based on the work of Fernández-Val (2009), ensuring that users can obtain more reliable estimates of average partial effects. The API design of 'bife' is functional, allowing users to easily specify their models and obtain results without extensive boilerplate code. Key functions within the package facilitate model fitting and result extraction, making it accessible for users with a moderate level of R programming experience. Installation is straightforward via CRAN, and basic usage typically involves loading the package, preparing the data in a suitable format, and calling the main estimation function with the desired model specifications. Compared to alternative approaches, 'bife' stands out due to its focus on fixed effects in binary choice settings, which are often overlooked in other packages. Performance-wise, 'bife' is optimized for handling large datasets, making it suitable for extensive panel data applications. However, users should be aware of common pitfalls, such as ensuring that their data is appropriately structured and that they understand the assumptions underlying fixed effects models. Best practices include conducting robustness checks and being cautious about the interpretation of average partial effects. Overall, 'bife' is an essential tool for econometricians and data scientists working with binary outcomes in panel data frameworks, providing a robust solution to complex modeling challenges.",
     "primary_use_cases": [
       "estimating binary choice models",
       "computing average partial effects"
@@ -28135,7 +28135,7 @@
   },
   {
     "name": "pycinc",
-    "description": "Changes\u2011in\u2011Changes (CiC) estimator for distributional treatment effects (Athey\u00a0&\u00a0Imbens\u202f2006).",
+    "description": "Changes‑in‑Changes (CiC) estimator for distributional treatment effects (Athey & Imbens 2006).",
     "category": "Program Evaluation Methods (DiD, SC, RDD)",
     "docs_url": "https://pypi.org/project/pycinc/",
     "github_url": null,
@@ -29213,7 +29213,7 @@
       "hyperparameter-tuning",
       "preprocessing"
     ],
-    "best_for": "Modern tidyverse-native ML framework with reproducible workflows\u2014successor to caret",
+    "best_for": "Modern tidyverse-native ML framework with reproducible workflows—successor to caret",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -30272,7 +30272,7 @@
   },
   {
     "name": "SciPy Bootstrap",
-    "description": "Foundational module within SciPy for a wide range of statistical functions, distributions, and hypothesis tests (t-tests, ANOVA, chi\u00b2, KS, etc.).",
+    "description": "Foundational module within SciPy for a wide range of statistical functions, distributions, and hypothesis tests (t-tests, ANOVA, chi², KS, etc.).",
     "category": "Standard Errors, Bootstrapping & Reporting",
     "docs_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html",
     "github_url": "https://github.com/scipy/scipy",
@@ -31466,7 +31466,7 @@
   },
   {
     "name": "LocalProjections",
-    "description": "Community implementations of Jord\u00e0 (2005) Local Projections for estimating impulse responses without VAR assumptions.",
+    "description": "Community implementations of Jordà (2005) Local Projections for estimating impulse responses without VAR assumptions.",
     "category": "Time Series Econometrics",
     "docs_url": null,
     "github_url": "https://github.com/elenev/localprojections",
@@ -31487,7 +31487,7 @@
       "time-series",
       "econometrics"
     ],
-    "summary": "LocalProjections is a Python package designed for implementing Jord\u00e0 (2005) Local Projections, which allows users to estimate impulse responses without relying on VAR assumptions. It is particularly useful for economists and data scientists interested in time series analysis.",
+    "summary": "LocalProjections is a Python package designed for implementing Jordà (2005) Local Projections, which allows users to estimate impulse responses without relying on VAR assumptions. It is particularly useful for economists and data scientists interested in time series analysis.",
     "use_cases": [
       "Estimating impulse responses from economic shocks",
       "Analyzing the effects of monetary policy changes",
@@ -31503,7 +31503,7 @@
       "how to estimate impulse responses in python",
       "time series econometrics python package",
       "local projections implementation python",
-      "Jord\u00e0 local projections python",
+      "Jordà local projections python",
       "impulse response estimation without VAR"
     ],
     "primary_use_cases": [
@@ -31511,16 +31511,16 @@
       "economic shock analysis"
     ],
     "api_complexity": "intermediate",
-    "implements_paper": "Jord\u00e0 (2005)",
+    "implements_paper": "Jordà (2005)",
     "maintenance_status": "active",
     "model_score": 0.0,
-    "embedding_text": "LocalProjections is a specialized Python package that facilitates the implementation of Local Projections as introduced by Jord\u00e0 in 2005. This methodology provides a robust framework for estimating impulse responses, allowing researchers to bypass the traditional Vector Autoregression (VAR) assumptions that often complicate time series analysis. The core functionality of LocalProjections revolves around its ability to compute impulse responses directly from the data, making it a valuable tool for economists and data scientists who require precise estimations of dynamic relationships over time. The API is designed with an emphasis on clarity and usability, enabling users to easily integrate it into their existing data science workflows. Key functions within the package allow for straightforward specification of model parameters and the handling of time series data, ensuring that users can focus on analysis rather than technical implementation details. Installation is simple via pip, and basic usage typically involves importing the package, preparing the data, and calling the appropriate functions to generate impulse response estimates. Compared to alternative approaches, LocalProjections offers a more flexible and less assumption-driven method for analyzing time series data. This flexibility can lead to better performance in certain scenarios, particularly when the underlying data does not meet the stringent requirements of VAR models. However, users should be aware of common pitfalls, such as overfitting or mis-specifying the model, which can lead to misleading results. Best practices include validating model assumptions and conducting robustness checks to ensure the reliability of the findings. LocalProjections is particularly suited for researchers and practitioners engaged in economic analysis, policy evaluation, and any domain where understanding the temporal effects of interventions is critical. It is advisable to consider this package when traditional VAR models are not applicable or when a more intuitive approach to impulse response estimation is desired.",
+    "embedding_text": "LocalProjections is a specialized Python package that facilitates the implementation of Local Projections as introduced by Jordà in 2005. This methodology provides a robust framework for estimating impulse responses, allowing researchers to bypass the traditional Vector Autoregression (VAR) assumptions that often complicate time series analysis. The core functionality of LocalProjections revolves around its ability to compute impulse responses directly from the data, making it a valuable tool for economists and data scientists who require precise estimations of dynamic relationships over time. The API is designed with an emphasis on clarity and usability, enabling users to easily integrate it into their existing data science workflows. Key functions within the package allow for straightforward specification of model parameters and the handling of time series data, ensuring that users can focus on analysis rather than technical implementation details. Installation is simple via pip, and basic usage typically involves importing the package, preparing the data, and calling the appropriate functions to generate impulse response estimates. Compared to alternative approaches, LocalProjections offers a more flexible and less assumption-driven method for analyzing time series data. This flexibility can lead to better performance in certain scenarios, particularly when the underlying data does not meet the stringent requirements of VAR models. However, users should be aware of common pitfalls, such as overfitting or mis-specifying the model, which can lead to misleading results. Best practices include validating model assumptions and conducting robustness checks to ensure the reliability of the findings. LocalProjections is particularly suited for researchers and practitioners engaged in economic analysis, policy evaluation, and any domain where understanding the temporal effects of interventions is critical. It is advisable to consider this package when traditional VAR models are not applicable or when a more intuitive approach to impulse response estimation is desired.",
     "tfidf_keywords": [
       "local projections",
       "impulse response",
       "time series",
       "econometrics",
-      "Jord\u00e0",
+      "Jordà",
       "VAR assumptions",
       "economic shocks",
       "policy analysis",
@@ -31550,7 +31550,7 @@
   },
   {
     "name": "Pingouin",
-    "description": "User-friendly interface for common statistical tests (ANOVA, ANCOVA, t-tests, correlations, chi\u00b2, reliability) built on pandas & scipy.",
+    "description": "User-friendly interface for common statistical tests (ANOVA, ANCOVA, t-tests, correlations, chi², reliability) built on pandas & scipy.",
     "category": "Statistical Inference & Hypothesis Testing",
     "docs_url": "https://pingouin-stats.org/",
     "github_url": "https://github.com/raphaelvallat/pingouin",
@@ -31862,7 +31862,7 @@
   },
   {
     "name": "pyrifreg",
-    "description": "Recentered Influence\u2011Function (RIF) regression for unconditional quantile & distributional effects (Firpo\u202fet\u202fal.,\u202f2008).",
+    "description": "Recentered Influence‑Function (RIF) regression for unconditional quantile & distributional effects (Firpo et al., 2008).",
     "category": "Quantile Regression & Distributional Methods",
     "docs_url": "https://github.com/vyasenov/pyrifreg",
     "github_url": null,
@@ -33831,7 +33831,7 @@
       "publication-tables",
       "tidyverse"
     ],
-    "best_for": "Modern, flexible regression tables with extensive customization\u2014the successor to stargazer, implementing Arel-Bundock (2022, JSS)",
+    "best_for": "Modern, flexible regression tables with extensive customization—the successor to stargazer, implementing Arel-Bundock (2022, JSS)",
     "language": "R",
     "difficulty": "beginner",
     "prerequisites": [],
@@ -33891,7 +33891,7 @@
   },
   {
     "name": "broom",
-    "description": "Converts messy output from 100+ statistical model types into consistent tidy tibbles using three verbs: tidy() for coefficient-level statistics, glance() for model-level summaries (R\u00b2, AIC), and augment() for fitted values and residuals.",
+    "description": "Converts messy output from 100+ statistical model types into consistent tidy tibbles using three verbs: tidy() for coefficient-level statistics, glance() for model-level summaries (R², AIC), and augment() for fitted values and residuals.",
     "category": "Regression Output",
     "docs_url": "https://broom.tidymodels.org/",
     "github_url": "https://github.com/tidymodels/broom",
@@ -33931,7 +33931,7 @@
     "api_complexity": "simple",
     "maintenance_status": "active",
     "model_score": 0.0,
-    "embedding_text": "The 'broom' package in R is a powerful tool for data scientists and statisticians, designed to transform the often messy output of various statistical models into tidy, easy-to-use tibbles. This package supports over 100 different model types, making it highly versatile for users working with diverse statistical analyses. The core functionality of 'broom' revolves around three primary verbs: tidy(), glance(), and augment(). The tidy() function extracts coefficient-level statistics from models, presenting them in a clean, structured format that is ideal for further analysis or visualization. The glance() function provides a quick summary of model-level statistics, such as R\u00b2 and AIC, allowing users to quickly assess the overall performance of their models. Finally, the augment() function adds fitted values and residuals to the original data, enabling users to analyze model predictions alongside their actual data points. The API of 'broom' is designed with simplicity in mind, allowing users to easily integrate it into their data science workflows without extensive learning curves. Installation is straightforward via CRAN, and basic usage typically involves loading the package and applying its functions to model objects created using popular R modeling functions. Compared to alternative approaches, 'broom' stands out for its ability to standardize outputs from various model types into a consistent format, which is crucial for effective data analysis and reporting. However, users should be aware of common pitfalls, such as ensuring that the model objects passed to 'broom' functions are compatible and understanding the specific outputs generated by each function. Best practices include leveraging 'broom' in conjunction with other tidyverse packages like dplyr and ggplot2 for enhanced data manipulation and visualization. Overall, 'broom' is an essential tool for anyone looking to streamline their statistical modeling output in R, providing a clear pathway from complex model results to actionable insights.",
+    "embedding_text": "The 'broom' package in R is a powerful tool for data scientists and statisticians, designed to transform the often messy output of various statistical models into tidy, easy-to-use tibbles. This package supports over 100 different model types, making it highly versatile for users working with diverse statistical analyses. The core functionality of 'broom' revolves around three primary verbs: tidy(), glance(), and augment(). The tidy() function extracts coefficient-level statistics from models, presenting them in a clean, structured format that is ideal for further analysis or visualization. The glance() function provides a quick summary of model-level statistics, such as R² and AIC, allowing users to quickly assess the overall performance of their models. Finally, the augment() function adds fitted values and residuals to the original data, enabling users to analyze model predictions alongside their actual data points. The API of 'broom' is designed with simplicity in mind, allowing users to easily integrate it into their data science workflows without extensive learning curves. Installation is straightforward via CRAN, and basic usage typically involves loading the package and applying its functions to model objects created using popular R modeling functions. Compared to alternative approaches, 'broom' stands out for its ability to standardize outputs from various model types into a consistent format, which is crucial for effective data analysis and reporting. However, users should be aware of common pitfalls, such as ensuring that the model objects passed to 'broom' functions are compatible and understanding the specific outputs generated by each function. Best practices include leveraging 'broom' in conjunction with other tidyverse packages like dplyr and ggplot2 for enhanced data manipulation and visualization. Overall, 'broom' is an essential tool for anyone looking to streamline their statistical modeling output in R, providing a clear pathway from complex model results to actionable insights.",
     "tfidf_keywords": [
       "tidy",
       "statistical models",
@@ -33939,7 +33939,7 @@
       "model summaries",
       "fitted values",
       "residuals",
-      "R\u00b2",
+      "R²",
       "AIC",
       "data science",
       "regression output"
@@ -34394,7 +34394,7 @@
   },
   {
     "name": "cvxpy",
-    "description": "Domain-specific language for convex optimization problems. Write math as code \u2014 the standard for convex problems.",
+    "description": "Domain-specific language for convex optimization problems. Write math as code — the standard for convex problems.",
     "category": "Optimization",
     "docs_url": "https://www.cvxpy.org/",
     "github_url": "https://github.com/cvxpy/cvxpy",
@@ -34813,7 +34813,7 @@
       "publication-ready",
       "easystats"
     ],
-    "best_for": "Publication-ready visualizations of model diagnostics with a simple plot() interface, implementing L\u00fcdecke et al. (2021, JOSS)",
+    "best_for": "Publication-ready visualizations of model diagnostics with a simple plot() interface, implementing Lüdecke et al. (2021, JOSS)",
     "language": "R",
     "difficulty": "beginner",
     "prerequisites": [],
@@ -37275,7 +37275,7 @@
   },
   {
     "name": "NetLogoR",
-    "description": "Pure R implementation of NetLogo framework\u2014no NetLogo installation required. Benefits from ggplot2 integration and R spatial objects.",
+    "description": "Pure R implementation of NetLogo framework—no NetLogo installation required. Benefits from ggplot2 integration and R spatial objects.",
     "category": "Simulation & Computational Economics",
     "docs_url": "https://cran.r-project.org/web/packages/NetLogoR/",
     "github_url": "https://github.com/PredictiveEcology/NetLogoR",
@@ -37425,7 +37425,7 @@
   },
   {
     "name": "Mimesis",
-    "description": "High-performance fake data generator\u2014faster than Faker. Provides data for multiple domains and 35+ locales.",
+    "description": "High-performance fake data generator—faster than Faker. Provides data for multiple domains and 35+ locales.",
     "category": "Synthetic Data Generation",
     "docs_url": "https://mimesis.readthedocs.io/",
     "github_url": "https://github.com/lk-geimfari/mimesis",
@@ -37508,7 +37508,7 @@
       "minimization",
       "root finding"
     ],
-    "best_for": "General-purpose optimization \u2014 start here for basics",
+    "best_for": "General-purpose optimization — start here for basics",
     "language": "Python",
     "difficulty": "intermediate",
     "prerequisites": [
@@ -37726,7 +37726,7 @@
   },
   {
     "name": "Statrs",
-    "description": "Comprehensive statistical distributions for Rust (Normal, T, Gamma, etc.) with PDF, CDF, quantile functions\u2014the scipy.stats equivalent.",
+    "description": "Comprehensive statistical distributions for Rust (Normal, T, Gamma, etc.) with PDF, CDF, quantile functions—the scipy.stats equivalent.",
     "category": "Statistical Inference & Hypothesis Testing",
     "docs_url": "https://docs.rs/statrs",
     "github_url": "https://github.com/statrs-dev/statrs",
@@ -39127,7 +39127,7 @@
   },
   {
     "name": "performance",
-    "description": "Utilities for computing indices of model quality and goodness of fit, including R\u00b2, RMSE, ICC, AIC/BIC. Provides functions to check models for overdispersion, zero-inflation, multicollinearity (VIF), convergence, and singularity. Supports mixed effects and Bayesian models.",
+    "description": "Utilities for computing indices of model quality and goodness of fit, including R², RMSE, ICC, AIC/BIC. Provides functions to check models for overdispersion, zero-inflation, multicollinearity (VIF), convergence, and singularity. Supports mixed effects and Bayesian models.",
     "category": "Model Diagnostics",
     "docs_url": "https://easystats.github.io/performance/",
     "github_url": "https://github.com/easystats/performance",
@@ -39140,12 +39140,12 @@
       "VIF",
       "goodness-of-fit"
     ],
-    "best_for": "Comprehensive model quality assessment, especially the check_model() visual diagnostic panel, implementing L\u00fcdecke et al. (2021, JOSS)",
+    "best_for": "Comprehensive model quality assessment, especially the check_model() visual diagnostic panel, implementing Lüdecke et al. (2021, JOSS)",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [],
-    "summary": "The 'performance' package provides utilities for assessing the quality and fit of statistical models through various indices such as R\u00b2, RMSE, and AIC/BIC. It is particularly useful for statisticians and data scientists working with mixed effects and Bayesian models, allowing them to check for overdispersion, zero-inflation, and multicollinearity.",
+    "summary": "The 'performance' package provides utilities for assessing the quality and fit of statistical models through various indices such as R², RMSE, and AIC/BIC. It is particularly useful for statisticians and data scientists working with mixed effects and Bayesian models, allowing them to check for overdispersion, zero-inflation, and multicollinearity.",
     "use_cases": [
       "Evaluating the goodness of fit for regression models",
       "Checking for multicollinearity in mixed effects models"
@@ -39165,7 +39165,7 @@
     "api_complexity": "intermediate",
     "maintenance_status": "active",
     "model_score": 0.0,
-    "embedding_text": "The 'performance' package in R is designed to provide a comprehensive suite of utilities for evaluating the quality and fit of statistical models. It offers a range of functions that compute various indices, including R\u00b2, RMSE, ICC, and AIC/BIC, which are essential for assessing how well a model explains the data. The package also includes tools for diagnosing common issues in model fitting, such as overdispersion, zero-inflation, and multicollinearity, particularly through the variance inflation factor (VIF). This makes it an invaluable resource for statisticians and data scientists who need to ensure the robustness of their models, especially when dealing with mixed effects and Bayesian frameworks. The API is designed to be user-friendly, allowing for both functional and object-oriented programming styles, which can cater to different user preferences. Key functions within the package facilitate easy computation of model diagnostics, and users can quickly integrate these checks into their data analysis workflows. Installation is straightforward via CRAN, and basic usage patterns involve calling the relevant functions on fitted model objects. Compared to alternative approaches, the 'performance' package stands out for its focus on model diagnostics, providing a more specialized toolset than general-purpose statistical packages. Users should be aware of common pitfalls, such as misinterpreting the results of diagnostic checks or overlooking the assumptions underlying the models being evaluated. Best practices include using the package in conjunction with other modeling tools and ensuring a thorough understanding of the statistical principles involved. Overall, the 'performance' package is a powerful tool for anyone looking to rigorously assess the quality of their statistical models, while also being mindful of the limitations and assumptions inherent in their analyses.",
+    "embedding_text": "The 'performance' package in R is designed to provide a comprehensive suite of utilities for evaluating the quality and fit of statistical models. It offers a range of functions that compute various indices, including R², RMSE, ICC, and AIC/BIC, which are essential for assessing how well a model explains the data. The package also includes tools for diagnosing common issues in model fitting, such as overdispersion, zero-inflation, and multicollinearity, particularly through the variance inflation factor (VIF). This makes it an invaluable resource for statisticians and data scientists who need to ensure the robustness of their models, especially when dealing with mixed effects and Bayesian frameworks. The API is designed to be user-friendly, allowing for both functional and object-oriented programming styles, which can cater to different user preferences. Key functions within the package facilitate easy computation of model diagnostics, and users can quickly integrate these checks into their data analysis workflows. Installation is straightforward via CRAN, and basic usage patterns involve calling the relevant functions on fitted model objects. Compared to alternative approaches, the 'performance' package stands out for its focus on model diagnostics, providing a more specialized toolset than general-purpose statistical packages. Users should be aware of common pitfalls, such as misinterpreting the results of diagnostic checks or overlooking the assumptions underlying the models being evaluated. Best practices include using the package in conjunction with other modeling tools and ensuring a thorough understanding of the statistical principles involved. Overall, the 'performance' package is a powerful tool for anyone looking to rigorously assess the quality of their statistical models, while also being mindful of the limitations and assumptions inherent in their analyses.",
     "primary_use_cases": [
       "model quality assessment",
       "goodness-of-fit evaluation"
@@ -39765,7 +39765,7 @@
   },
   {
     "name": "Ndarray",
-    "description": "N-dimensional array library for Rust\u2014the NumPy equivalent with slicing, broadcasting, and BLAS/LAPACK integration.",
+    "description": "N-dimensional array library for Rust—the NumPy equivalent with slicing, broadcasting, and BLAS/LAPACK integration.",
     "category": "Numerical Optimization & Computational Tools",
     "docs_url": "https://docs.rs/ndarray",
     "github_url": "https://github.com/rust-ndarray/ndarray",
@@ -40382,7 +40382,7 @@
   },
   {
     "name": "clubSandwich",
-    "description": "Provides cluster-robust variance estimators with small-sample corrections, including bias-reduced linearization (BRL/CR2). Includes functions for hypothesis testing with Satterthwaite degrees of freedom and Hotelling's T\u00b2 approximation\u2014essential when the number of clusters is small.",
+    "description": "Provides cluster-robust variance estimators with small-sample corrections, including bias-reduced linearization (BRL/CR2). Includes functions for hypothesis testing with Satterthwaite degrees of freedom and Hotelling's T² approximation—essential when the number of clusters is small.",
     "category": "Robust Standard Errors",
     "docs_url": "https://jepusto.github.io/clubSandwich/",
     "github_url": "https://github.com/jepusto/clubSandwich",
@@ -40419,7 +40419,7 @@
       "R library for bias-reduced linearization",
       "cluster-robust standard errors in R",
       "Satterthwaite degrees of freedom R package",
-      "Hotelling's T\u00b2 approximation in R"
+      "Hotelling's T² approximation in R"
     ],
     "primary_use_cases": [
       "hypothesis testing with small samples",
@@ -40428,7 +40428,7 @@
     "api_complexity": "intermediate",
     "maintenance_status": "active",
     "model_score": 0.0,
-    "embedding_text": "The clubSandwich package in R is a powerful tool for statisticians and data scientists who require accurate variance estimation in the presence of clustered data, especially when dealing with small sample sizes. This package offers cluster-robust variance estimators that are essential for reliable statistical inference in such contexts. One of the standout features of clubSandwich is its implementation of bias-reduced linearization (BRL/CR2), which enhances the accuracy of variance estimates by addressing the biases that can arise in small samples. The package also includes functions for hypothesis testing that utilize Satterthwaite degrees of freedom and Hotelling's T\u00b2 approximation, making it particularly valuable for researchers who often find themselves working with limited clusters. The API is designed to be user-friendly, allowing for straightforward integration into existing R workflows. Users can easily install the package from CRAN and begin utilizing its functions to perform robust statistical analyses. The package is well-suited for applications in econometrics and causal inference, where the assumptions of traditional variance estimation methods may not hold. However, users should be cautious when applying these methods to very small datasets, as the performance can vary significantly based on the underlying data structure. Overall, clubSandwich is an essential tool for anyone looking to conduct rigorous statistical analyses in clustered settings, particularly in fields such as economics, social sciences, and public health.",
+    "embedding_text": "The clubSandwich package in R is a powerful tool for statisticians and data scientists who require accurate variance estimation in the presence of clustered data, especially when dealing with small sample sizes. This package offers cluster-robust variance estimators that are essential for reliable statistical inference in such contexts. One of the standout features of clubSandwich is its implementation of bias-reduced linearization (BRL/CR2), which enhances the accuracy of variance estimates by addressing the biases that can arise in small samples. The package also includes functions for hypothesis testing that utilize Satterthwaite degrees of freedom and Hotelling's T² approximation, making it particularly valuable for researchers who often find themselves working with limited clusters. The API is designed to be user-friendly, allowing for straightforward integration into existing R workflows. Users can easily install the package from CRAN and begin utilizing its functions to perform robust statistical analyses. The package is well-suited for applications in econometrics and causal inference, where the assumptions of traditional variance estimation methods may not hold. However, users should be cautious when applying these methods to very small datasets, as the performance can vary significantly based on the underlying data structure. Overall, clubSandwich is an essential tool for anyone looking to conduct rigorous statistical analyses in clustered settings, particularly in fields such as economics, social sciences, and public health.",
     "tfidf_keywords": [
       "cluster-robust",
       "variance estimation",
@@ -40436,7 +40436,7 @@
       "bias-reduced linearization",
       "hypothesis testing",
       "Satterthwaite degrees of freedom",
-      "Hotelling's T\u00b2",
+      "Hotelling's T²",
       "statistical inference",
       "econometrics",
       "causal inference"
@@ -41775,5 +41775,21 @@
     "best_for": "Applying machine learning to geographic data with minimal code for spatial economics research",
     "language": "Python",
     "model_score": 0.0
+  },
+  {
+    "name": "rdpackages/rdhte: Estimation and Inference for ...",
+    "description": "# Search code, repositories, users, issues, pull requests... You signed in with another tab or window. You signed out in another tab or window. You switched accounts on another tab or window. # rdpackages/rdhte. | Name | Name | Last commit message | Last commit date |. | Latest commit   History23 Co",
+    "category": "Causal Inference (RDD)",
+    "url": "https://github.com/rdpackages/rdhte",
+    "tags": [
+      "rdhte",
+      "regression-discontinuity",
+      "treatment-effect",
+      "heterogeneous-treatment",
+      "regression"
+    ],
+    "language": "R",
+    "github_url": "https://github.com/rdpackages/rdhte",
+    "install": ""
   }
 ]
