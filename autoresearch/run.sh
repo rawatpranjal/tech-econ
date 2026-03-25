@@ -207,7 +207,8 @@ Cost: \$$COST" --no-verify 2>/dev/null || true
     else
         echo "  Eval FAILED -- reverting changes"
         git checkout -- . 2>/dev/null || true
-        git clean -fd 2>/dev/null || true
+        # Clean untracked files but protect autoresearch log/state
+        git clean -fd -e "autoresearch/log/" -e "autoresearch/state.json" 2>/dev/null || true
     fi
 
     ITER_END=$(date +%s)
