@@ -20,6 +20,7 @@ REQUIRED_FIELDS = {
     "datasets.json": ["name", "url", "category"],
     "talks.json": ["name", "url", "category", "type"],
     "resources.json": ["name", "url", "category"],
+    "books.json": ["name", "url", "category", "author"],
     "community.json": ["name", "url"],
     "career.json": ["name", "url"],
     "roadmaps.json": ["name"],  # Uses name field
@@ -149,6 +150,17 @@ def validate_required_fields(files: dict) -> list:
     errors = []
 
     for filename, data in files.items():
+        # Handle nested papers.json structure
+        if filename == "papers.json" and isinstance(data, dict):
+            for topic in data.get("topics", []):
+                for subtopic in topic.get("subtopics", []):
+                    for paper in subtopic.get("papers", []):
+                        for field in ["title", "url"]:
+                            if field not in paper or not paper[field]:
+                                title = paper.get("title", f"unknown in {subtopic.get('id', '?')}")
+                                errors.append(f"papers.json: '{title}' missing required field '{field}'")
+            continue
+
         if filename not in REQUIRED_FIELDS:
             continue
 

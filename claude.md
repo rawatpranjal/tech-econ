@@ -151,6 +151,7 @@ python3 scripts/generate_embeddings.py # Regenerate vectors
 - **`papers.json` vs `papers_flat.json`** — Dual system, easy to desync. Use `papers_flat.json` for ranking/search.
 - **D1 analytics schema** — Ranking script depends on exact table structure
 - **No test suite** — `npm test` is a placeholder; validation is manual
+- **Autoresearch uses git worktrees** — `autoresearch/run.sh` runs in an isolated worktree under `/tmp/` so it never touches the main checkout. Do NOT change it back to `git checkout` — that caused files written by concurrent sessions to be deleted.
 
 ---
 
