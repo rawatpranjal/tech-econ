@@ -30,11 +30,20 @@ Pick ONE of these per session (start with whichever seems most impactful):
    - Explore quantile normalization or isotonic calibration
    - Ensure diverse content surfaces (not just popular items)
 
+4. **Modular refactor**: The script is 1400+ lines and monolithic. Break it into:
+   - `scripts/ranking/signals.py` — engagement signal weights, fetching from D1 API
+   - `scripts/ranking/features.py` — feature engineering (BERT embeddings, TF-IDF, categorical encoding)
+   - `scripts/ranking/cold_start.py` — k-NN score propagation for items without engagement
+   - `scripts/ranking/calibration.py` — score normalization, freshness boost, section weights
+   - `scripts/rank_all_content.py` — thin orchestrator that imports and calls the above
+   - Each module should be independently testable
+   - Preserve all existing behavior (same inputs, same outputs)
+
 ## Constraints
 - Do NOT change the D1 schema or analytics worker
 - Do NOT change the data file format (model_score must remain a float in [0,1])
 - The script must still work without D1 access (graceful fallback)
-- Keep the script under 2000 lines
+- When refactoring, create a `scripts/ranking/` package with `__init__.py`
 
 ## Verification
 After changes, run:

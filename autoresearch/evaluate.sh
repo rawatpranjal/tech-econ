@@ -61,6 +61,7 @@ case "$TASK_DESC" in
     *rank* | *score*)                   TASK_TYPE="ranking" ;;
     *search* | *embed*)                 TASK_TYPE="search" ;;
     *cluster*)                          TASK_TYPE="clustering" ;;
+    *metadata* | *enrich* | *deep*)     TASK_TYPE="deep_metadata" ;;
     *)                                  TASK_TYPE="generic" ;;
 esac
 
@@ -101,6 +102,9 @@ case "$TASK_TYPE" in
         ;;
     telemetry)
         run_check "$CHECKS_DIR/check_telemetry.py"
+        ;;
+    deep_metadata)
+        run_check "$CHECKS_DIR/check_deep_metadata.py"
         ;;
     *)
         log "SKIP  No task-specific checks for '$TASK_TYPE'"
