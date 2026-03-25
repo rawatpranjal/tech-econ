@@ -62,6 +62,10 @@ export default {
       return handleExplain(request, env, origin);
     }
 
+    if (request.method === 'POST' && url.pathname === '/rag-answer') {
+      return handleRagAnswer(request, env, origin);
+    }
+
     // Health check
     if (request.method === 'GET' && url.pathname === '/health') {
       return jsonResponse({ status: 'ok', model: MODEL }, origin);
@@ -284,6 +288,122 @@ Description: ${(result.description || '').slice(0, 400)}`
   }
 }
 
+/**
+ * Handle RAG answer — retrieves relevant items from provided context and
+ * generates a grounded answer with citations.
+ *
+ * Request body:
+ *   { question: string, context: Array<{name, type, description, category, url}>, limit?: number }
+ *
+ * The frontend performs the vector/keyword search and sends the top results
+ * as context. This keeps embeddings client-side and avoids duplicating search logic.
+ */
+async function handleRagAnswer(request, env, origin) {
+  try {
+    const { question, context, limit } = await request.json();
+
+    if (!question || question.length < 3) {
+      return jsonResponse({ error: 'Question too short' }, origin, 400);
+    }
+
+    if (!env.GROQ_API_KEY) {
+      return jsonResponse({ error: 'API not configured' }, origin, 500);
+    }
+
+    // Build context window from provided search results (max 15 items)
+    const items = (context || []).slice(0, limit || 15);
+    const contextBlock = items.map((item, i) =>
+      `[${i + 1}] ${item.name} (${item.type || 'resource'}) — ${(item.description || '').slice(0, 250)}${item.url ? '\n    URL: ' + item.url : ''}`
+    ).join('\n\n');
+
+    if (!contextBlock) {
+      return jsonResponse({ error: 'No context items provided' }, origin, 400);
+    }
+
+    const response = await fetch(GROQ_API_URL, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${env.GROQ_API_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        model: MODEL,
+        messages: [{
+          role: 'system',
+          content: `${DOMAIN_CONTEXT}
+
+You answer questions about tools, packages, datasets, papers, and resources in the tech-econ catalog.
+You MUST ground your answer in the provided catalog items. Cite items by their [number] when referencing them.
+Be concise (3-5 sentences). If the catalog doesn't contain enough information, say so honestly.
+End with a "Recommended:" section listing the 1-3 most relevant items by name.`
+        }, {
+          role: 'user',
+          content: `Question: ${question}\n\nCatalog items:\n${contextBlock}`
+        }],
+        max_tokens: 400,
+        temperature: 0.4,
+        stream: true
+      })
+    });
+
+    if (!response.ok) {
+      const error = await response.text();
+      console.error('Groq API error:', error);
+      return sseError('LLM request failed', origin);
+    }
+
+    // Stream the response
+    const { readable, writable } = new TransformStream();
+    const writer = writable.getWriter();
+    const encoder = new TextEncoder();
+
+    (async () => {
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      try {
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          const chunk = decoder.decode(value, { stream: true });
+          for (const line of chunk.split('\n')) {
+            if (line.startsWith('data: ')) {
+              const data = line.slice(6);
+              if (data === '[DONE]') {
+                await writer.write(encoder.encode('data: [DONE]\n\n'));
+                continue;
+              }
+              try {
+                const parsed = JSON.parse(data);
+                const content = parsed.choices?.[0]?.delta?.content;
+                if (content) {
+                  await writer.write(encoder.encode(`data: ${JSON.stringify({ content })}\n\n`));
+                }
+              } catch (e) { /* skip */ }
+            }
+          }
+        }
+      } catch (error) {
+        console.error('RAG stream error:', error);
+      } finally {
+        await writer.close();
+      }
+    })();
+
+    return new Response(readable, {
+      headers: {
+        'Content-Type': 'text/event-stream',
+        'Cache-Control': 'no-cache',
+        'Connection': 'keep-alive',
+        ...corsHeaders(origin)
+      }
+    });
+
+  } catch (error) {
+    console.error('RAG error:', error);
+    return sseError('Internal error', origin);
+  }
+}
+
 // Helper functions
 
 function isAllowedOrigin(origin) {
@@ -316,9 +436,9 @@ function corsHeaders(origin) {
   };
 }
 
-function jsonResponse(data, origin) {
+function jsonResponse(data, origin, status) {
   return new Response(JSON.stringify(data), {
-    status: 200,
+    status: status || 200,
     headers: {
       'Content-Type': 'application/json',
       ...corsHeaders(origin)
