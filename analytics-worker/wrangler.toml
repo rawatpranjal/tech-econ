@@ -1,4 +1,4 @@
-name = "tech-econ-analytics"
+name = "tech-econ-analytics-v2"
 main = "index.js"
 compatibility_date = "2024-01-01"
 workers_dev = true
@@ -22,7 +22,7 @@ CF_ACCOUNT_ID = "e53411f5363195f142c4b30558be082a"
 # Then update the id below with your namespace ID
 [[kv_namespaces]]
 binding = "ANALYTICS_EVENTS"
-id = "55666fb0baa64b12a16c9bc307483781"
+id = "7dc4fda8704d4dbcb9113962517fc00f"
 
 # D1 Database for analytics storage
 # Run: wrangler d1 create tech-econ-analytics-db
@@ -30,7 +30,7 @@ id = "55666fb0baa64b12a16c9bc307483781"
 [[d1_databases]]
 binding = "DB"
 database_name = "tech-econ-analytics-db"
-database_id = "7c92226a-53ba-4d34-97ba-09bb985321a3"
+database_id = "1515d5fb-3486-4083-adfe-d4e932841548"
 
 # To deploy:
 # 1. Install wrangler: npm install -g wrangler

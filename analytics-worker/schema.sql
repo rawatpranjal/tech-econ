@@ -94,6 +94,20 @@ CREATE TABLE IF NOT EXISTS country_stats (
     last_seen DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Clicks by country (aggregate)
+CREATE TABLE IF NOT EXISTS clicks_by_country (
+    country TEXT NOT NULL,
+    name TEXT NOT NULL,
+    section TEXT,
+    category TEXT,
+    click_count INTEGER DEFAULT 1,
+    last_clicked DATETIME DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(country, name, section)
+);
+
+CREATE INDEX IF NOT EXISTS idx_clicks_country ON clicks_by_country(country);
+CREATE INDEX IF NOT EXISTS idx_clicks_country_count ON clicks_by_country(click_count DESC);
+
 -- Cache metadata
 CREATE TABLE IF NOT EXISTS cache_meta (
     key TEXT PRIMARY KEY,

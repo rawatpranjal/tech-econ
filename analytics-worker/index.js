@@ -56,6 +56,11 @@ export default {
         return handleSearches(request, env, origin, url);
       }
 
+      // Route: GET /clicks-by-country - Clicks broken down by country
+      if (request.method === 'GET' && url.pathname === '/clicks-by-country') {
+        return handleClicksByCountry(request, env, origin, url);
+      }
+
       // Route: GET /export - CSV export
       if (request.method === 'GET' && url.pathname === '/export') {
         return handleExport(request, env, origin, url);
@@ -79,6 +84,15 @@ export default {
           return new Response('Unauthorized', { status: 401 });
         }
         return handleMigrate(request, env);
+      }
+
+      // Route: GET /run-schema - Run schema migrations (protected)
+      if (request.method === 'GET' && url.pathname === '/run-schema') {
+        const key = url.searchParams.get('key');
+        if (!env.ADMIN_KEY || key !== env.ADMIN_KEY) {
+          return new Response('Unauthorized', { status: 401 });
+        }
+        return handleRunSchema(request, env);
       }
 
       // Route: GET /health - Health check
@@ -433,6 +447,17 @@ async function updateAggregates(env, aggregates, country) {
         click_count = click_count + ?,
         last_clicked = datetime('now')
     `).bind(click.name, click.section, click.category, click.count, click.count));
+
+    // Also track clicks by country
+    if (country && country !== 'unknown') {
+      updates.push(env.DB.prepare(`
+        INSERT INTO clicks_by_country (country, name, section, category, click_count, last_clicked)
+        VALUES (?, ?, ?, ?, ?, datetime('now'))
+        ON CONFLICT(country, name, section) DO UPDATE SET
+          click_count = click_count + ?,
+          last_clicked = datetime('now')
+      `).bind(country, click.name, click.section, click.category, click.count, click.count));
+    }
   }
 
   // Update impressions
@@ -1005,6 +1030,71 @@ async function handleClicks(request, env, origin, url) {
 }
 
 // ============================================
+// GET /clicks-by-country - Clicks broken down by country
+// ============================================
+
+async function handleClicksByCountry(request, env, origin, url) {
+  if (origin && !isAllowedOrigin(origin)) {
+    return new Response('Forbidden', { status: 403 });
+  }
+
+  const limit = Math.min(parseInt(url.searchParams.get('limit') || '50', 10), 200);
+  const country = url.searchParams.get('country'); // optional filter
+  const section = url.searchParams.get('section'); // optional filter
+
+  if (!env.DB) {
+    return jsonResponse({ error: 'D1 not configured' }, origin, 500);
+  }
+
+  try {
+    if (country) {
+      // Get top clicks for a specific country
+      let query = `
+        SELECT country, name, section, category, click_count as count, last_clicked
+        FROM clicks_by_country
+        WHERE country = ?
+      `;
+      const params = [country];
+      if (section) {
+        query += ' AND section = ?';
+        params.push(section);
+      }
+      query += ' ORDER BY click_count DESC LIMIT ?';
+      params.push(limit);
+
+      const result = await env.DB.prepare(query).bind(...params).all();
+      return jsonResponse({
+        country,
+        total: result.results?.length || 0,
+        data: result.results || []
+      }, origin);
+    } else {
+      // Get click totals by country
+      let query = `
+        SELECT country, SUM(click_count) as total_clicks, COUNT(DISTINCT name) as unique_items, MAX(last_clicked) as last_clicked
+        FROM clicks_by_country
+      `;
+      const params = [];
+      if (section) {
+        query += ' WHERE section = ?';
+        params.push(section);
+      }
+      query += ' GROUP BY country ORDER BY total_clicks DESC LIMIT ?';
+      params.push(limit);
+
+      const result = await env.DB.prepare(query).bind(...params).all();
+      return jsonResponse({
+        total: result.results?.length || 0,
+        data: result.results || []
+      }, origin);
+    }
+  } catch (err) {
+    console.error('Clicks by country error:', err);
+    return jsonResponse({ error: err.message }, origin, 500);
+  }
+}
+
+// ============================================
 // GET /searches - Top search queries
 // ============================================
 
@@ -1357,6 +1447,63 @@ async function handleWebStats(request, env, origin, url) {
 }
 
 // ============================================
+// GET /run-schema - Run schema migrations
+// ============================================
+
+async function handleRunSchema(request, env) {
+  if (!env.DB) {
+    return jsonResponse({ error: 'D1 not configured' }, null, 500);
+  }
+
+  const results = [];
+
+  try {
+    // Create clicks_by_country table (each statement separately for D1 compatibility)
+    await env.DB.prepare(`CREATE TABLE IF NOT EXISTS clicks_by_country (country TEXT NOT NULL, name TEXT NOT NULL, section TEXT, category TEXT, click_count INTEGER DEFAULT 1, last_clicked DATETIME DEFAULT CURRENT_TIMESTAMP, UNIQUE(country, name, section))`).run();
+    await env.DB.prepare(`CREATE INDEX IF NOT EXISTS idx_clicks_country ON clicks_by_country(country)`).run();
+    await env.DB.prepare(`CREATE INDEX IF NOT EXISTS idx_clicks_country_count ON clicks_by_country(click_count DESC)`).run();
+    results.push('Created clicks_by_country table');
+
+    // Backfill from raw events table
+    const backfill = await env.DB.prepare(`
+      INSERT OR IGNORE INTO clicks_by_country (country, name, section, category, click_count, last_clicked)
+      SELECT
+        e.country,
+        json_extract(e.data, '$.name') as name,
+        COALESCE(json_extract(e.data, '$.section'), 'other') as section,
+        json_extract(e.data, '$.category') as category,
+        COUNT(*) as click_count,
+        MAX(e.created_at) as last_clicked
+      FROM events e
+      WHERE e.type = 'click'
+        AND e.country IS NOT NULL
+        AND e.country != 'unknown'
+        AND json_extract(e.data, '$.type') = 'card'
+        AND json_extract(e.data, '$.name') IS NOT NULL
+      GROUP BY e.country, json_extract(e.data, '$.name'), COALESCE(json_extract(e.data, '$.section'), 'other')
+    `).run();
+    results.push(`Backfilled ${backfill.meta?.changes || 0} rows from raw events`);
+
+    // Show summary
+    const summary = await env.DB.prepare(`
+      SELECT country, SUM(click_count) as total_clicks, COUNT(*) as unique_items
+      FROM clicks_by_country
+      GROUP BY country
+      ORDER BY total_clicks DESC
+      LIMIT 20
+    `).all();
+
+    return jsonResponse({
+      success: true,
+      migrations: results,
+      summary: summary.results || []
+    });
+  } catch (err) {
+    return jsonResponse({ error: err.message, migrations: results }, null, 500);
+  }
+}
+
+// ============================================
 // GET /migrate - One-time KV to D1 migration
 // ============================================
 
@@ -1402,6 +1549,7 @@ async function handleMigrate(request, env) {
 
     // Aggregation maps
     const clicks = {};
+    const clicksByCountry = {};
     const searches = {};
     const pages = {};
     const daily = {};
@@ -1456,6 +1604,21 @@ async function handleMigrate(request, env) {
               };
             }
             clicks[key].count++;
+
+            // Track clicks by country
+            if (country !== 'unknown') {
+              const ckey = `${country}|||${event.d.name}|||${event.d.section || 'other'}`;
+              if (!clicksByCountry[ckey]) {
+                clicksByCountry[ckey] = {
+                  country,
+                  name: event.d.name,
+                  section: event.d.section || 'other',
+                  category: event.d.category || null,
+                  count: 0
+                };
+              }
+              clicksByCountry[ckey].count++;
+            }
           }
           break;
 
@@ -1494,6 +1657,16 @@ async function handleMigrate(request, env) {
           last_clicked = datetime('now')
       `).bind(click.name, click.section, click.category, click.count));
       stats.clicksUpserted++;
+    }
+
+    for (const click of Object.values(clicksByCountry)) {
+      batch.push(env.DB.prepare(`
+        INSERT INTO clicks_by_country (country, name, section, category, click_count, last_clicked)
+        VALUES (?, ?, ?, ?, ?, datetime('now'))
+        ON CONFLICT(country, name, section) DO UPDATE SET
+          click_count = click_count + ?,
+          last_clicked = datetime('now')
+      `).bind(click.country, click.name, click.section, click.category, click.count, click.count));
     }
 
     for (const [query, count] of Object.entries(searches)) {
