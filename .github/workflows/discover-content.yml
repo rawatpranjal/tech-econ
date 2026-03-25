@@ -38,12 +38,15 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests openai
+        run: pip install requests
+
+      - name: Self-test (smoke check)
+        run: python scripts/discover_content.py --self-test
 
       - name: Run content discovery
         env:
-          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
           TAVILY_API_KEY: ${{ secrets.TAVILY_API_KEY }}
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: |
           python scripts/discover_content.py \
@@ -54,30 +57,16 @@ jobs:
 
       - name: Validate data
         if: ${{ !inputs.dry_run }}
-        run: pip install requests && python scripts/validate_data.py
+        run: python scripts/validate_data.py
 
       - name: Commit new content
         if: ${{ !inputs.dry_run }}
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/
+          git add data/*.json
           git diff --staged --quiet || git commit -m "Weekly content discovery - $(date +%Y-%m-%d)"
           git push
-
-      - name: Send email digest
-        if: ${{ !inputs.dry_run }}
-        uses: dawidd6/action-send-mail@v3
-        with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          secure: true
-          username: ${{ secrets.EMAIL_USERNAME }}
-          password: ${{ secrets.EMAIL_PASSWORD }}
-          subject: "[tech-econ] Weekly Discovery - ${{ github.run_number }}"
-          to: pp712@georgetown.edu
-          from: tech-econ-bot
-          html_body: file://data/.discovery_digest.html
 
       - name: Upload discovery artifacts
         if: always()
@@ -87,4 +76,5 @@ jobs:
           path: |
             data/.discovery_state.json
             data/.discovery_digest.html
+            data/.discovery_rejected.json
           retention-days: 30

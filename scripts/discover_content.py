@@ -14,13 +14,16 @@ Usage:
     TAVILY_API_KEY=... python3 scripts/discover_content.py --dry-run --verbose
     BRAVE_API_KEY=... TAVILY_API_KEY=... OPENAI_API_KEY=... python3 scripts/discover_content.py
     python3 scripts/discover_content.py --dry-run --type packages --limit 5 --verbose
+    python3 scripts/discover_content.py --self-test
 """
 
 import argparse
 import json
 import logging
 import os
+import re
 import sys
+import tempfile
 import time
 from copy import deepcopy
 from datetime import datetime, timezone
@@ -80,6 +83,7 @@ SEARCH_ENGINE_MAP = {
 DOMAIN_BLOCKLIST = {
     "reddit.com", "news.ycombinator.com", "twitter.com", "x.com",
     "facebook.com", "instagram.com", "tiktok.com", "pinterest.com",
+    "linkedin.com",
     "quora.com", "stackoverflow.com", "stackexchange.com",
     "wikipedia.org", "amazon.com", "goodreads.com",
     "google.com", "bing.com", "yahoo.com",
@@ -238,7 +242,6 @@ class DeduplicationIndex:
         host = parsed.hostname or ""
         host = host.lower().removeprefix("www.")
         path = parsed.path.rstrip("/")
-        # Keep query for arxiv abs IDs
         query = parsed.query if "arxiv.org" in host else ""
         return urlunparse(("", host, path, "", query, "")).lstrip("/")
 
@@ -339,7 +342,6 @@ class RelevanceJudge:
                 self.total_tokens += resp.usage.total_tokens if resp.usage else 0
                 text = resp.choices[0].message.content
                 parsed = json.loads(text)
-                # Handle both {"results": [...]} and bare [...]
                 if isinstance(parsed, dict):
                     scores = parsed.get("results", parsed.get("candidates", list(parsed.values())[0]))
                 else:
@@ -409,33 +411,24 @@ class KeywordRelevanceJudge:
         self.call_count = 0
         self.total_tokens = 0
 
-    def _keyword_score(self, text: str) -> float:
-        text_lower = text.lower()
-        score = 0.0
-        for kw in RELEVANCE_KEYWORDS["high"]:
-            if kw in text_lower:
-                score += 2.0
-        for kw in RELEVANCE_KEYWORDS["medium"]:
-            if kw in text_lower:
-                score += 1.0
-        return min(score, 10.0)
-
     def judge_batch(self, candidates: list[dict]) -> list[dict]:
         for c in candidates:
-            text = f"{c.get('title', '')} {c.get('description', '')}"
-            kw_score = self._keyword_score(text)
-            tavily_score = c.get("tavily_score", 0.0) * 10  # normalize 0-1 -> 0-10
-            # Weighted blend: 60% keyword, 40% Tavily
+            text = f"{c.get('title', '')} {c.get('description', '')}".lower()
+            high_hits = sum(1 for kw in RELEVANCE_KEYWORDS["high"] if kw in text)
+            medium_hits = sum(1 for kw in RELEVANCE_KEYWORDS["medium"] if kw in text)
+            kw_score = min((high_hits * 2.0) + (medium_hits * 1.0), 10.0)
+            tavily_score = c.get("tavily_score", 0.0) * 10
             combined = (kw_score * 0.6) + (tavily_score * 0.4)
             c["relevance_score"] = round(combined, 1)
-            c["reasoning"] = f"keyword={kw_score:.1f}, tavily={tavily_score:.1f}"
+            c["high_keyword_hits"] = high_hits
+            c["reasoning"] = f"keyword={kw_score:.1f}(high={high_hits},med={medium_hits}), tavily={tavily_score:.1f}"
         return candidates
 
     def judge_all(self, candidates: list[dict]) -> tuple[list[dict], list[dict]]:
         accepted, rejected = [], []
         self.judge_batch(candidates)
         for c in candidates:
-            if c.get("relevance_score", 0) >= 4.0:  # lower threshold for keyword-based
+            if c.get("relevance_score", 0) >= 5.0 and c.get("high_keyword_hits", 0) >= 1:
                 accepted.append(c)
             else:
                 rejected.append(c)
@@ -445,6 +438,54 @@ class KeywordRelevanceJudge:
 # =============================================================================
 # Heuristic Metadata Extractor (no LLM needed)
 # =============================================================================
+
+TYPE_INFERENCE = {
+    "resources": {
+        "default": "Article",
+        "url_patterns": {
+            "youtube.com": "Video", "youtu.be": "Video",
+            "substack.com": "Newsletter", "medium.com": "Blog",
+            "github.io": "Tutorial",
+            "coursera.org": "Course", "edx.org": "Course",
+        },
+        "text_patterns": {
+            "tutorial": "Tutorial", "course": "Course",
+            "guide": "Guide", "blog": "Blog",
+            "newsletter": "Newsletter", "podcast": "Podcast",
+        },
+    },
+    "talks": {
+        "default": "Video",
+        "url_patterns": {
+            "youtube.com": "Video", "youtu.be": "Video",
+            "spotify.com": "Podcast", "apple.com/podcast": "Podcast",
+        },
+        "text_patterns": {
+            "interview": "Interview", "podcast": "Podcast",
+            "lecture": "Video", "keynote": "Video",
+            "workshop": "Video", "panel": "Video",
+            "webinar": "Video",
+        },
+    },
+    "community": {
+        "default": "Conference",
+        "url_patterns": {
+            "meetup.com": "Meetup", "slack.com": "Slack Community",
+            "discord.gg": "Discord Server",
+        },
+        "text_patterns": {
+            "conference": "Annual Conference", "workshop": "Workshop",
+            "meetup": "Meetup", "summit": "Annual Summit",
+            "seminar": "Academic", "lab": "Tech Lab",
+        },
+    },
+    "career": {
+        "default": "Article",
+        "url_patterns": {"youtube.com": "Video"},
+        "text_patterns": {"guide": "Guide", "course": "Course", "job board": "Job Board"},
+    },
+}
+
 
 class HeuristicMetadataExtractor:
     """Extracts metadata from search results without LLM calls."""
@@ -470,31 +511,83 @@ class HeuristicMetadataExtractor:
                 ))
         return cats
 
-    def _guess_category(self, text: str, content_type: str) -> str:
-        text_lower = text.lower()
+    def _guess_category(self, text: str, content_type: str, search_category: str = "") -> str:
         cats = self.categories.get(content_type, [])
-        best, best_score = cats[0] if cats else "General", 0
+        if not cats:
+            return "General"
+        if search_category and search_category != "_generic" and search_category in cats:
+            return search_category
+        text_lower = text.lower()
+        best, best_score = cats[0], 0
         for cat in cats:
-            score = sum(1 for word in cat.lower().split() if word in text_lower)
+            cat_words = [w for w in cat.lower().split() if len(w) > 2]
+            score = sum(1 for word in cat_words if word in text_lower)
             if score > best_score:
                 best, best_score = cat, score
         return best
 
-    def _extract_tags(self, text: str) -> list[str]:
+    @staticmethod
+    def _normalize_tag(tag: str) -> str:
+        return tag.lower().strip().replace(" ", "-").replace("/", "-")
+
+    def _extract_tags(self, text: str, url: str = "") -> list[str]:
         text_lower = text.lower()
         tags = []
+        seen = set()
+        url_lower = url.lower()
+        if "github.com" in url_lower:
+            parts = urlparse(url).path.strip("/").split("/")
+            if len(parts) >= 2:
+                repo = parts[1].lower().replace("_", "-")
+                if len(repo) > 2 and repo not in seen:
+                    tags.append(repo)
+                    seen.add(repo)
+        elif "pypi.org" in url_lower or "cran.r-project.org" in url_lower:
+            parts = urlparse(url).path.strip("/").split("/")
+            if parts:
+                pkg = parts[-1].lower()
+                if pkg and pkg not in seen:
+                    tags.append(pkg)
+                    seen.add(pkg)
         all_kw = RELEVANCE_KEYWORDS["high"] + RELEVANCE_KEYWORDS["medium"]
         for kw in all_kw:
             if kw in text_lower and len(tags) < 5:
-                tags.append(kw.replace(" ", "-"))
-        return tags if tags else ["uncategorized"]
+                normalized = self._normalize_tag(kw)
+                if normalized not in seen:
+                    tags.append(normalized)
+                    seen.add(normalized)
+        return tags[:5] if tags else ["uncategorized"]
 
     def _guess_language(self, text: str) -> str:
         text_lower = text.lower()
-        for lang in ["python", "r", "julia", "stata", "matlab", "javascript", "java", "c++"]:
-            if lang in text_lower:
-                return lang.capitalize() if lang != "c++" else "C++"
-        return "Python"  # safe default for econ tools
+        patterns = [
+            (r'\bpython\b|pypi|\.py\b', "Python"),
+            (r'\br[\s-](?:package|library)|cran\b|r-project', "R"),
+            (r'\bjulia\b', "Julia"),
+            (r'\bstata\b', "Stata"),
+            (r'\bmatlab\b', "MATLAB"),
+            (r'\bjavascript\b|\.js\b|npm\b', "JavaScript"),
+            (r'\bjava\b(?!script)', "Java"),
+            (r'\bc\+\+\b|cpp\b', "C++"),
+        ]
+        for pattern, lang in patterns:
+            if re.search(pattern, text_lower):
+                return lang
+        return "Python"
+
+    def _guess_type(self, text: str, url: str, content_type: str) -> str:
+        config = TYPE_INFERENCE.get(content_type)
+        if not config:
+            return "Article"
+        url_lower = url.lower()
+        text_lower = text.lower()
+        for pattern, type_val in config.get("url_patterns", {}).items():
+            if pattern in url_lower:
+                return type_val
+        for pattern, type_val in config.get("text_patterns", {}).items():
+            if pattern in text_lower:
+                return type_val
+        return config["default"]
 
     def extract(self, candidate: dict, content_type: str) -> dict | None:
         title = candidate.get("title", "").strip()
@@ -504,8 +597,9 @@ class HeuristicMetadataExtractor:
             return None
 
         text = f"{title} {desc}"
-        category = self._guess_category(text, content_type)
-        tags = self._extract_tags(text)
+        search_cat = candidate.get("search_category", "")
+        category = self._guess_category(text, content_type, search_cat)
+        tags = self._extract_tags(text, url)
         self.call_count += 1
 
         if content_type == "papers":
@@ -542,7 +636,6 @@ class HeuristicMetadataExtractor:
                 "tags": tags,
             }
         else:
-            # resources, datasets, talks, career, community
             item = {
                 "name": title,
                 "description": desc[:300] if desc else title,
@@ -551,8 +644,67 @@ class HeuristicMetadataExtractor:
                 "tags": tags,
             }
             if content_type in ("resources", "talks", "career", "community"):
-                item["type"] = "Article"
+                item["type"] = self._guess_type(text, url, content_type)
             return item
+
+
+# =============================================================================
+# Post-Extraction Validation
+# =============================================================================
+
+VALID_TYPES = {
+    "resources": {"Article", "Blog", "Book", "Course", "Guide", "Newsletter",
+                  "Online Book", "Podcast", "Tool", "Tutorial", "Video"},
+    "talks": {"Video", "Interview", "Podcast", "Lecture", "Conference Talk",
+              "Workshop", "Panel", "Tutorial", "Talk", "Seminar",
+              "YouTube Channel", "Presentation", "Video Series"},
+    "community": {"Conference", "Annual Conference", "Workshop", "Meetup", "Summit",
+                  "Academic", "Tech Lab", "Research Center", "Blog",
+                  "Slack Community", "Discord Server", "Annual Summit", "Annual Workshop"},
+    "career": {"Article", "Blog", "Book", "Career Portal", "Community", "Conference",
+               "Course", "Database", "Documentation", "GitHub", "Guide", "Job Board",
+               "Newsletter", "Podcast", "Practice", "Research", "Tool", "Video"},
+}
+
+
+def validate_item(item: dict, content_type: str) -> tuple[bool, list[str]]:
+    """Validate an extracted item before writing. Returns (is_valid, list_of_issues)."""
+    issues = []
+    required = REQUIRED_FIELDS.get(content_type, [])
+
+    for field in required:
+        val = item.get(field)
+        if val is None or val == "" or val == []:
+            issues.append(f"missing required: {field}")
+
+    url = item.get("url", "")
+    if url:
+        parsed = urlparse(url)
+        if not parsed.scheme or not parsed.hostname:
+            issues.append(f"invalid URL: {url[:60]}")
+
+    name = item.get("name", item.get("title", ""))
+    if len(name) < 3:
+        issues.append(f"name too short: '{name}'")
+    if len(name) > 200:
+        issues.append(f"name too long: {len(name)} chars")
+
+    tags = item.get("tags", [])
+    if not isinstance(tags, list):
+        issues.append(f"tags is not a list: {type(tags)}")
+
+    if content_type in VALID_TYPES:
+        item_type = item.get("type", "")
+        if item_type and item_type not in VALID_TYPES[content_type]:
+            issues.append(f"invalid type '{item_type}' for {content_type}")
+
+    if content_type == "papers":
+        year = item.get("year", 0)
+        if year and (year < 1950 or year > datetime.now().year + 1):
+            issues.append(f"suspicious year: {year}")
+
+    is_valid = not any("missing required" in i for i in issues)
+    return is_valid, issues
 
 
 # =============================================================================
@@ -667,10 +819,7 @@ class MetadataExtractor:
                 item = json.loads(text)
 
                 # Force correct URL
-                if content_type == "papers":
-                    item["url"] = candidate["url"]
-                else:
-                    item["url"] = candidate["url"]
+                item["url"] = candidate["url"]
 
                 # Validate required fields
                 required = REQUIRED_FIELDS.get(content_type, [])
@@ -701,9 +850,21 @@ def _load_json(filepath: Path):
 
 
 def _save_json(filepath: Path, data):
-    with open(filepath, "w") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
-        f.write("\n")
+    """Atomic JSON write: write to temp file, then rename."""
+    dir_path = filepath.parent
+    tmp_path = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w", dir=dir_path, suffix=".tmp", delete=False
+        ) as tmp:
+            json.dump(data, tmp, indent=2, ensure_ascii=False)
+            tmp.write("\n")
+            tmp_path = Path(tmp.name)
+        tmp_path.replace(filepath)
+    except Exception:
+        if tmp_path:
+            tmp_path.unlink(missing_ok=True)
+        raise
 
 
 def append_to_flat_json(item: dict, content_type: str, data_dir: Path) -> bool:
@@ -754,13 +915,11 @@ def generate_digest(results: dict) -> str:
 
     sections = []
 
-    # Header
     sections.append(f"""
 <h1>Weekly Discovery {"(DRY RUN)" if dry else "Report"}</h1>
 <p>Run: {results.get("run_date", "")[:19]} UTC | Duration: {results.get("duration_seconds", 0)}s</p>
 <hr>""")
 
-    # Items added
     sections.append(f"<h2>Items Added ({len(added)} total)</h2>")
     if not added:
         sections.append("<p><em>No items added this week.</em></p>")
@@ -774,7 +933,6 @@ def generate_digest(results: dict) -> str:
             sections.append(f'<li><strong>{name}</strong> [{cat}]<br><a href="{url}">{url}</a></li>')
         sections.append("</ul>")
 
-    # Rejected (top 10)
     top_rejected = sorted(rejected, key=lambda r: r.get("relevance_score", 0), reverse=True)[:10]
     if top_rejected:
         sections.append(f"<h2>Top Rejected ({len(rejected)} total)</h2>")
@@ -783,7 +941,6 @@ def generate_digest(results: dict) -> str:
             sections.append(f'<tr><td>{r.get("url", "")[:60]}</td><td>{r.get("relevance_score", 0)}/10</td><td>{r.get("reasoning", "")}</td></tr>')
         sections.append("</table>")
 
-    # Staged papers
     if staged:
         sections.append(f"<h2>Papers Pending Review ({len(staged)})</h2><ul>")
         for s in staged:
@@ -791,7 +948,6 @@ def generate_digest(results: dict) -> str:
             sections.append(f'<li>{meta.get("title", "?")}</li>')
         sections.append("</ul>")
 
-    # API usage
     sections.append(f"""
 <h2>API Usage</h2>
 <ul>
@@ -800,7 +956,6 @@ def generate_digest(results: dict) -> str:
 <li>OpenAI: {api.get("openai_calls", 0)} calls (~${api.get("openai_cost_usd", 0):.3f})</li>
 </ul>""")
 
-    # Errors
     if errors:
         sections.append(f"<h2>Errors ({len(errors)})</h2><ul>")
         for e in errors:
@@ -821,9 +976,7 @@ a {{ color: #0066cc; }}
 # State Management
 # =============================================================================
 
-def load_state() -> dict:
-    if STATE_FILE.exists():
-        return _load_json(STATE_FILE)
+def _default_state() -> dict:
     return {
         "schema_version": "1.0",
         "total_runs": 0,
@@ -834,6 +987,21 @@ def load_state() -> dict:
         "history": [],
         "recently_added_urls": [],
     }
+
+
+def load_state() -> dict:
+    if not STATE_FILE.exists():
+        return _default_state()
+    try:
+        state = _load_json(STATE_FILE)
+        if not isinstance(state, dict) or "schema_version" not in state:
+            raise ValueError("Invalid state structure")
+        return state
+    except (json.JSONDecodeError, ValueError) as e:
+        logging.warning(f"State file corrupted ({e}), backing up and resetting")
+        backup = STATE_FILE.with_suffix(f".json.bak.{int(time.time())}")
+        STATE_FILE.rename(backup)
+        return _default_state()
 
 
 def save_state(state: dict):
@@ -875,8 +1043,8 @@ def process_content_type(
     queries: list[dict],
     search: SearchOrchestrator,
     dedup: DeduplicationIndex,
-    judge: RelevanceJudge,
-    extractor: MetadataExtractor,
+    judge,
+    extractor,
     data_dir: Path,
     limit: int,
     dry_run: bool,
@@ -922,7 +1090,7 @@ def process_content_type(
     if not candidates:
         return result
 
-    # 3. LLM relevance judgment
+    # 3. Relevance judgment
     accepted, rejected = judge.judge_all(candidates)
     for r in rejected:
         dedup.add_rejection(r["url"], r.get("relevance_score", 0), r.get("reasoning", ""))
@@ -930,7 +1098,7 @@ def process_content_type(
 
     logging.info(f"  {content_type}: {len(accepted)} accepted, {len(rejected)} rejected")
 
-    # 4. Extract metadata + write
+    # 4. Extract metadata + validate + write
     added_count = 0
     for candidate in accepted:
         if added_count >= limit:
@@ -940,6 +1108,13 @@ def process_content_type(
             if item is None:
                 result["errors"].append(f"Extraction failed: {candidate['url']}")
                 continue
+
+            is_valid, issues = validate_item(item, content_type)
+            if not is_valid:
+                result["errors"].append(f"Validation failed {candidate['url']}: {issues}")
+                continue
+            if issues:
+                logging.warning(f"  Validation warnings {candidate['url']}: {issues}")
 
             if dry_run:
                 result["added"].append({"item": item, "type": content_type, "url": candidate["url"]})
@@ -971,6 +1146,144 @@ def process_content_type(
 
 
 # =============================================================================
+# Self-Test
+# =============================================================================
+
+def run_self_test() -> int:
+    """End-to-end pipeline test with mock data. Returns 0 on success, 1 on failure."""
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+    logging.info("=" * 60)
+    logging.info("SELF-TEST: Running pipeline validation with mock data")
+    logging.info("=" * 60)
+    passed = 0
+    failed = 0
+
+    # 1. DeduplicationIndex
+    logging.info("Test 1: DeduplicationIndex...")
+    try:
+        dedup = DeduplicationIndex(DATA_DIR)
+        dedup.build()
+        assert len(dedup.urls) > 0, "Dedup index has no URLs"
+        assert DeduplicationIndex.normalize_url("https://www.github.com/foo/bar/") == "github.com/foo/bar"
+        is_dup, _ = dedup.is_duplicate("https://ax.dev", "Ax (Meta Adaptive Experimentation)")
+        assert is_dup, "Should detect existing item as duplicate"
+        is_dup, _ = dedup.is_duplicate("https://example.com/new-tool-99999", "Brand New Fake Tool 99999")
+        assert not is_dup, "Should not flag novel item as duplicate"
+        logging.info("  PASS: DeduplicationIndex (%d URLs, %d names)", len(dedup.urls), len(dedup.names))
+        passed += 1
+    except Exception as e:
+        logging.error("  FAIL: DeduplicationIndex: %s", e)
+        failed += 1
+
+    # 2. KeywordRelevanceJudge
+    logging.info("Test 2: KeywordRelevanceJudge...")
+    try:
+        judge = KeywordRelevanceJudge()
+        mock = [
+            {"title": "New Python Causal Inference Library", "url": "https://example.com/1",
+             "description": "A package for difference-in-differences and treatment effect estimation", "tavily_score": 0.8},
+            {"title": "Best Pizza Recipes 2026", "url": "https://example.com/2",
+             "description": "Top pizza recipes from around the world", "tavily_score": 0.9},
+        ]
+        accepted, rejected = judge.judge_all(deepcopy(mock))
+        assert len(accepted) >= 1, f"Should accept causal inference item, got {len(accepted)}"
+        assert any("pizza" in r.get("title", "").lower() for r in rejected), "Should reject pizza"
+        logging.info("  PASS: KeywordRelevanceJudge (accepted=%d, rejected=%d)", len(accepted), len(rejected))
+        passed += 1
+    except Exception as e:
+        logging.error("  FAIL: KeywordRelevanceJudge: %s", e)
+        failed += 1
+
+    # 3. HeuristicMetadataExtractor
+    logging.info("Test 3: HeuristicMetadataExtractor...")
+    try:
+        extractor = HeuristicMetadataExtractor(DATA_DIR)
+        item = extractor.extract({"title": "econml - Causal ML", "url": "https://github.com/py-why/econml",
+            "description": "Python package for heterogeneous treatment effects", "search_category": "Causal Inference (ML)"}, "packages")
+        assert item is not None and item["language"] == "Python" and item["github_url"] is not None
+        logging.info("  PASS: Extraction produced: %s", item["name"])
+        passed += 1
+    except Exception as e:
+        logging.error("  FAIL: HeuristicMetadataExtractor: %s", e)
+        failed += 1
+
+    # 4. validate_item
+    logging.info("Test 4: validate_item...")
+    try:
+        good = {"name": "Test Pkg", "url": "https://example.com", "category": "General",
+                "description": "A test package", "tags": ["test"], "language": "Python"}
+        valid, _ = validate_item(good, "packages")
+        assert valid, "Good item should be valid"
+        bad = {"name": "", "url": "", "category": "", "tags": [], "language": ""}
+        valid, issues = validate_item(bad, "packages")
+        assert not valid and len(issues) > 0
+        logging.info("  PASS: validate_item")
+        passed += 1
+    except Exception as e:
+        logging.error("  FAIL: validate_item: %s", e)
+        failed += 1
+
+    # 5. Type inference
+    logging.info("Test 5: Type inference...")
+    try:
+        ext = HeuristicMetadataExtractor(DATA_DIR)
+        t = ext.extract({"title": "Talk", "url": "https://youtube.com/watch?v=123", "description": "causal ML"}, "talks")
+        assert t["type"] == "Video", f"YouTube should be Video, got {t['type']}"
+        r = ext.extract({"title": "Newsletter", "url": "https://causalinf.substack.com/", "description": "econ"}, "resources")
+        assert r["type"] == "Newsletter", f"Substack should be Newsletter, got {r['type']}"
+        logging.info("  PASS: Type inference")
+        passed += 1
+    except Exception as e:
+        logging.error("  FAIL: Type inference: %s", e)
+        failed += 1
+
+    # 6. Atomic write round-trip
+    logging.info("Test 6: Atomic write...")
+    try:
+        tf = DATA_DIR / ".self_test_tmp.json"
+        td = [{"test": True}]
+        _save_json(tf, td)
+        assert _load_json(tf) == td
+        tf.unlink(missing_ok=True)
+        logging.info("  PASS: Atomic write")
+        passed += 1
+    except Exception as e:
+        logging.error("  FAIL: Atomic write: %s", e)
+        failed += 1
+
+    # 7. Paper handling
+    logging.info("Test 7: Paper staging...")
+    try:
+        ext = HeuristicMetadataExtractor(DATA_DIR)
+        p = ext.extract({"title": "Treatment Effects", "url": "https://arxiv.org/abs/2401.12345", "description": "interference"}, "papers")
+        assert p is not None and "topic_id" not in p and "subtopic_id" not in p
+        logging.info("  PASS: Papers have no topic_id")
+        passed += 1
+    except Exception as e:
+        logging.error("  FAIL: Paper staging: %s", e)
+        failed += 1
+
+    # 8. Language detection
+    logging.info("Test 8: Language detection...")
+    try:
+        ext = HeuristicMetadataExtractor(DATA_DIR)
+        g = ext.extract({"title": "Better Tools", "url": "https://example.com/tools", "description": "for researchers"}, "packages")
+        assert g["language"] == "Python", f"Generic should default Python, got {g['language']}"
+        r = ext.extract({"title": "R Package for DiD", "url": "https://cran.r-project.org/package=did2s", "description": "R library"}, "packages")
+        assert r["language"] == "R", f"CRAN should detect R, got {r['language']}"
+        logging.info("  PASS: Language detection")
+        passed += 1
+    except Exception as e:
+        logging.error("  FAIL: Language detection: %s", e)
+        failed += 1
+
+    logging.info("=" * 60)
+    logging.info("SELF-TEST: %d PASSED, %d FAILED", passed, failed)
+    logging.info("=" * 60)
+    return 0 if failed == 0 else 1
+
+
+# =============================================================================
 # Main
 # =============================================================================
 
@@ -980,12 +1293,16 @@ def main():
     parser.add_argument("--type", type=str, help="Single content type to process")
     parser.add_argument("--limit", type=int, default=15, help="Max items to add total (default: 15)")
     parser.add_argument("--verbose", action="store_true", help="Verbose logging")
+    parser.add_argument("--self-test", action="store_true", help="Run pipeline self-test with mock data (no API keys needed)")
     args = parser.parse_args()
 
     logging.basicConfig(
         level=logging.DEBUG if args.verbose else logging.INFO,
         format="%(asctime)s %(levelname)s %(message)s",
     )
+
+    if args.self_test:
+        sys.exit(run_self_test())
 
     # API keys
     brave_key = os.environ.get("BRAVE_API_KEY")
@@ -1100,7 +1417,10 @@ def main():
     # Update state
     state["total_runs"] += 1
     state["total_items_added"] += len(all_results["added"])
-    state["query_rotation_week"] = week_number + 1
+    if all_results["added"] or all_results["rejected"]:
+        state["query_rotation_week"] = week_number + 1
+    else:
+        logging.warning("No results processed; query rotation NOT advanced")
     state["api_usage_monthly"]["brave"] += api_usage["brave"]
     state["api_usage_monthly"]["tavily"] += api_usage["tavily"]
     state["total_cost_usd"] = round(state.get("total_cost_usd", 0) + api_usage["openai_cost_usd"], 4)
