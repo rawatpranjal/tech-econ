@@ -118,6 +118,10 @@ for ((ITER=1; ITER<=AR_MAX_ITERATIONS; ITER++)); do
     PROMPT_SIZE=$(wc -c < "$PROMPT_FILE" | tr -d ' ')
     echo "  Prompt built ($PROMPT_SIZE bytes)"
 
+    # Snapshot repo state BEFORE Claude runs (so we only revert what this iteration changed)
+    DIRTY_BEFORE="${ITER_LOG_PREFIX}-dirty-before.txt"
+    { git diff --name-only; git diff --name-only --cached; git ls-files --others --exclude-standard; } | sort -u > "$DIRTY_BEFORE"
+
     # Step 2: Invoke Claude
     echo "  Invoking Claude ($AR_MODEL)..."
     CLAUDE_STDERR="${ITER_LOG_PREFIX}-claude-stderr.txt"
@@ -188,10 +192,21 @@ for ((ITER=1; ITER<=AR_MAX_ITERATIONS; ITER++)); do
 $EVAL_RESULT
 Cost: \$$COST" --no-verify 2>/dev/null || true
     else
-        echo "  Eval FAILED -- reverting changes"
-        git checkout -- . 2>/dev/null || true
-        # Clean untracked files but protect autoresearch log/state
-        git clean -fd -e "autoresearch/log/" -e "autoresearch/state.json" 2>/dev/null || true
+        echo "  Eval FAILED -- reverting changes from this iteration only"
+        DIRTY_AFTER="${ITER_LOG_PREFIX}-dirty-after.txt"
+        { git diff --name-only; git diff --name-only --cached; git ls-files --others --exclude-standard; } | sort -u > "$DIRTY_AFTER"
+
+        # Only revert files that became dirty DURING this iteration
+        ITER_CHANGES=$(comm -13 "$DIRTY_BEFORE" "$DIRTY_AFTER")
+        if [[ -n "$ITER_CHANGES" ]]; then
+            echo "$ITER_CHANGES" | while read -r f; do
+                if git ls-files --error-unmatch "$f" &>/dev/null; then
+                    git checkout -- "$f" 2>/dev/null || true
+                else
+                    rm -f "$f" 2>/dev/null || true
+                fi
+            done
+        fi
     fi
 
     ITER_END=$(date +%s)

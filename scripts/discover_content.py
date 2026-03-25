@@ -4,9 +4,14 @@ Weekly Content Discovery for tech-econ.com
 
 Searches for new packages, datasets, papers, resources, talks, books,
 career guides, and community events using Brave + Tavily APIs, then
-filters via GPT-4o-mini relevance judgment and metadata extraction.
+filters via relevance judgment and metadata extraction.
+
+Modes:
+  - Tavily-only: keyword relevance + heuristic extraction (no OpenAI needed)
+  - Full: GPT-4o-mini relevance judgment + metadata extraction (needs OPENAI_API_KEY)
 
 Usage:
+    TAVILY_API_KEY=... python3 scripts/discover_content.py --dry-run --verbose
     BRAVE_API_KEY=... TAVILY_API_KEY=... OPENAI_API_KEY=... python3 scripts/discover_content.py
     python3 scripts/discover_content.py --dry-run --type packages --limit 5 --verbose
 """
@@ -145,6 +150,7 @@ class TavilySearchClient:
                     "title": r.get("title", ""),
                     "url": r.get("url", ""),
                     "description": r.get("content", r.get("description", "")),
+                    "tavily_score": r.get("score", 0.0),
                 })
             time.sleep(0.5)
             return results
@@ -368,7 +374,189 @@ class RelevanceJudge:
 
 
 # =============================================================================
-# Metadata Extraction
+# Keyword-based Relevance Judge (no LLM needed)
+# =============================================================================
+
+RELEVANCE_KEYWORDS = {
+    "high": [
+        "econometrics", "causal inference", "causal-inference", "a/b test",
+        "ab test", "experimentation", "diff-in-diff", "difference-in-difference",
+        "instrumental variable", "regression discontinuity", "synthetic control",
+        "treatment effect", "propensity score", "panel data", "fixed effect",
+        "platform economics", "marketplace", "pricing", "auction",
+        "applied economics", "tech economist", "data scientist",
+        "randomized control", "rct", "double machine learning",
+        "heterogeneous treatment", "uplift model", "counterfactual",
+    ],
+    "medium": [
+        "economics", "economist", "statistical", "statistics",
+        "machine learning", "regression", "bayesian", "time series",
+        "natural experiment", "quasi-experiment", "observational study",
+        "demand estimation", "supply chain", "market design",
+        "mechanism design", "game theory", "industrial organization",
+        "labor economics", "policy evaluation", "impact evaluation",
+        "survival analysis", "hazard model", "duration model",
+        "matching", "weighting", "bootstrap", "inference",
+        "python", "r package", "stata", "jupyter",
+    ],
+}
+
+
+class KeywordRelevanceJudge:
+    """Scores candidates using Tavily relevance score + keyword matching."""
+
+    def __init__(self):
+        self.call_count = 0
+        self.total_tokens = 0
+
+    def _keyword_score(self, text: str) -> float:
+        text_lower = text.lower()
+        score = 0.0
+        for kw in RELEVANCE_KEYWORDS["high"]:
+            if kw in text_lower:
+                score += 2.0
+        for kw in RELEVANCE_KEYWORDS["medium"]:
+            if kw in text_lower:
+                score += 1.0
+        return min(score, 10.0)
+
+    def judge_batch(self, candidates: list[dict]) -> list[dict]:
+        for c in candidates:
+            text = f"{c.get('title', '')} {c.get('description', '')}"
+            kw_score = self._keyword_score(text)
+            tavily_score = c.get("tavily_score", 0.0) * 10  # normalize 0-1 -> 0-10
+            # Weighted blend: 60% keyword, 40% Tavily
+            combined = (kw_score * 0.6) + (tavily_score * 0.4)
+            c["relevance_score"] = round(combined, 1)
+            c["reasoning"] = f"keyword={kw_score:.1f}, tavily={tavily_score:.1f}"
+        return candidates
+
+    def judge_all(self, candidates: list[dict]) -> tuple[list[dict], list[dict]]:
+        accepted, rejected = [], []
+        self.judge_batch(candidates)
+        for c in candidates:
+            if c.get("relevance_score", 0) >= 4.0:  # lower threshold for keyword-based
+                accepted.append(c)
+            else:
+                rejected.append(c)
+        return accepted, rejected
+
+
+# =============================================================================
+# Heuristic Metadata Extractor (no LLM needed)
+# =============================================================================
+
+class HeuristicMetadataExtractor:
+    """Extracts metadata from search results without LLM calls."""
+
+    def __init__(self, data_dir: Path):
+        self.data_dir = data_dir
+        self.categories = self._load_categories()
+        self.call_count = 0
+
+    def _load_categories(self) -> dict[str, list[str]]:
+        cats = {}
+        for ctype, filename in DATA_FILE_MAP.items():
+            if ctype == "papers":
+                continue
+            filepath = self.data_dir / filename
+            if not filepath.exists():
+                continue
+            data = _load_json(filepath)
+            if isinstance(data, list):
+                cats[ctype] = sorted(set(
+                    item.get("category", "") for item in data
+                    if isinstance(item, dict) and item.get("category")
+                ))
+        return cats
+
+    def _guess_category(self, text: str, content_type: str) -> str:
+        text_lower = text.lower()
+        cats = self.categories.get(content_type, [])
+        best, best_score = cats[0] if cats else "General", 0
+        for cat in cats:
+            score = sum(1 for word in cat.lower().split() if word in text_lower)
+            if score > best_score:
+                best, best_score = cat, score
+        return best
+
+    def _extract_tags(self, text: str) -> list[str]:
+        text_lower = text.lower()
+        tags = []
+        all_kw = RELEVANCE_KEYWORDS["high"] + RELEVANCE_KEYWORDS["medium"]
+        for kw in all_kw:
+            if kw in text_lower and len(tags) < 5:
+                tags.append(kw.replace(" ", "-"))
+        return tags if tags else ["uncategorized"]
+
+    def _guess_language(self, text: str) -> str:
+        text_lower = text.lower()
+        for lang in ["python", "r", "julia", "stata", "matlab", "javascript", "java", "c++"]:
+            if lang in text_lower:
+                return lang.capitalize() if lang != "c++" else "C++"
+        return "Python"  # safe default for econ tools
+
+    def extract(self, candidate: dict, content_type: str) -> dict | None:
+        title = candidate.get("title", "").strip()
+        url = candidate.get("url", "")
+        desc = candidate.get("description", "").strip()
+        if not title or not url:
+            return None
+
+        text = f"{title} {desc}"
+        category = self._guess_category(text, content_type)
+        tags = self._extract_tags(text)
+        self.call_count += 1
+
+        if content_type == "papers":
+            return {
+                "title": title,
+                "authors": "",
+                "year": datetime.now().year,
+                "url": url,
+                "tags": tags,
+                "citations": 0,
+                "tag": None,
+                "description": desc[:300] if desc else title,
+            }
+        elif content_type == "packages":
+            return {
+                "name": title,
+                "description": desc[:300] if desc else title,
+                "category": category,
+                "url": url,
+                "tags": tags,
+                "language": self._guess_language(text),
+                "github_url": url if "github.com" in url else None,
+                "install": "",
+            }
+        elif content_type == "books":
+            return {
+                "name": title,
+                "author": "",
+                "year": datetime.now().year,
+                "description": desc[:300] if desc else title,
+                "category": category,
+                "type": "Book",
+                "url": url,
+                "tags": tags,
+            }
+        else:
+            # resources, datasets, talks, career, community
+            item = {
+                "name": title,
+                "description": desc[:300] if desc else title,
+                "category": category,
+                "url": url,
+                "tags": tags,
+            }
+            if content_type in ("resources", "talks", "career", "community"):
+                item["type"] = "Article"
+            return item
+
+
+# =============================================================================
+# Metadata Extraction (LLM-based)
 # =============================================================================
 
 TEMPLATES = {
@@ -804,20 +992,23 @@ def main():
     tavily_key = os.environ.get("TAVILY_API_KEY")
     openai_key = os.environ.get("OPENAI_API_KEY")
 
-    if not openai_key:
-        logging.error("OPENAI_API_KEY is required")
-        sys.exit(1)
     if not brave_key and not tavily_key:
         logging.error("At least one of BRAVE_API_KEY or TAVILY_API_KEY is required")
         sys.exit(1)
 
-    try:
-        from openai import OpenAI
-    except ImportError:
-        logging.error("openai package required: pip install openai")
-        sys.exit(1)
+    use_llm = bool(openai_key)
+    openai_client = None
+    if use_llm:
+        try:
+            from openai import OpenAI
+            openai_client = OpenAI(api_key=openai_key)
+        except ImportError:
+            logging.warning("openai package not installed — falling back to keyword-based judging")
+            use_llm = False
 
-    openai_client = OpenAI(api_key=openai_key)
+    if not use_llm:
+        logging.info("Running in Tavily-only mode (keyword relevance + heuristic extraction)")
+
     brave = BraveSearchClient(brave_key) if brave_key else None
     tavily = TavilySearchClient(tavily_key) if tavily_key else None
     search_orch = SearchOrchestrator(brave, tavily)
@@ -838,9 +1029,13 @@ def main():
     dedup.build()
     logging.info(f"Dedup index: {len(dedup.urls)} URLs, {len(dedup.names)} names")
 
-    # LLM components
-    judge = RelevanceJudge(openai_client)
-    extractor = MetadataExtractor(openai_client, DATA_DIR)
+    # Relevance + extraction components
+    if use_llm:
+        judge = RelevanceJudge(openai_client)
+        extractor = MetadataExtractor(openai_client, DATA_DIR)
+    else:
+        judge = KeywordRelevanceJudge()
+        extractor = HeuristicMetadataExtractor(DATA_DIR)
 
     # Content types to process
     content_types = [args.type] if args.type else list(DATA_FILE_MAP.keys())
@@ -877,11 +1072,13 @@ def main():
     dedup.save_rejections()
 
     # API usage summary
+    openai_calls = judge.call_count + extractor.call_count if use_llm else 0
+    openai_tokens = getattr(judge, "total_tokens", 0)
     api_usage = {
         "brave": brave.call_count if brave else 0,
         "tavily": tavily.call_count if tavily else 0,
-        "openai_calls": judge.call_count + extractor.call_count,
-        "openai_cost_usd": round((judge.total_tokens * 0.00000015) + (extractor.call_count * 500 * 0.00000015), 4),
+        "openai_calls": openai_calls,
+        "openai_cost_usd": round((openai_tokens * 0.00000015) + (extractor.call_count * 500 * 0.00000015), 4) if use_llm else 0.0,
     }
 
     # Generate digest
