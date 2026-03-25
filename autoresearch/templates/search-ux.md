@@ -80,7 +80,7 @@ Make the change. Keep it minimal and tasteful. Remember:
 ### Step 4: Validate build
 
 ```bash
-cd /Users/pranjal/Code/tech-econ
+cd "$(git rev-parse --show-toplevel)"
 hugo --gc --minify
 node --check static/js/search/unified-search.js
 ```

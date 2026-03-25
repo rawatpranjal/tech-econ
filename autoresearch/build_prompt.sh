@@ -15,7 +15,8 @@ TEMPLATE_FILE="${1:?Usage: build_prompt.sh <template_file> <log_prefix> [prev_lo
 LOG_PREFIX="${2:?Missing log_prefix}"
 PREV_LOG_PREFIX="${3:-}"
 
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+# Use PWD if set (worktree context), otherwise derive from script location
+PROJECT_ROOT="${AUTORESEARCH_PROJECT_ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"
 
 # ── Template ──────────────────────────────────────────────────────────────────
 echo "=== TASK TEMPLATE ==="

@@ -52,7 +52,7 @@ fi
 # ── Extract ALLOWED_FILES from template ──────────────────────────────────────
 # Templates declare scope: <!-- ALLOWED_FILES: file1, file2, file3 -->
 # Changes outside this scope are auto-reverted before evaluation.
-ALLOWED_FILES_RAW=$(grep -i 'ALLOWED_FILES:' "$PROGRAM" | head -1 | sed 's/.*ALLOWED_FILES:\s*//' | sed 's/-->//' | tr -d ' ')
+ALLOWED_FILES_RAW=$(grep -i 'ALLOWED_FILES:' "$PROGRAM" 2>/dev/null | head -1 | sed 's/.*ALLOWED_FILES:\s*//' | sed 's/-->//' | tr -d ' ' || true)
 ALLOWED_FILES=()
 if [[ -n "$ALLOWED_FILES_RAW" ]]; then
     IFS=',' read -ra ALLOWED_FILES <<< "$ALLOWED_FILES_RAW"
@@ -101,6 +101,7 @@ fi
 
 WORK_DIR="$WORKTREE_DIR"
 cd "$WORK_DIR"
+export AUTORESEARCH_PROJECT_ROOT="$WORK_DIR"
 echo "Working directory: $WORK_DIR"
 
 # Initialize state
