@@ -1,6 +1,6 @@
 /**
- * Tech-Econ Analytics Tracker v2.0
- * ML-ready, privacy-respecting telemetry
+ * Tech-Econ Analytics Tracker v2.1
+ * ML-ready, privacy-respecting telemetry with user identity
  * Target: <5KB gzipped
  */
 (function(global) {
@@ -13,6 +13,72 @@
   var BATCH_SIZE = 10;
   var FLUSH_INTERVAL = 30000;
   var WPM = 238; // Average reading speed
+
+  // User identity state
+  var userId = null;
+  var sessionNumber = 0;
+  var isReturningUser = false;
+  var deviceType = null;
+  var cookieReady = false;
+
+  // ============================================
+  // User Identity (Cookie-based)
+  // ============================================
+
+  function generateUUID() {
+    if (typeof crypto !== 'undefined' && crypto.randomUUID) {
+      return crypto.randomUUID();
+    }
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      var r = Math.random() * 16 | 0;
+      return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+  }
+
+  function getCookie(name) {
+    var match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+    return match ? decodeURIComponent(match[1]) : null;
+  }
+
+  function setCookie(name, value, maxAgeDays) {
+    var maxAge = (maxAgeDays || 365) * 86400;
+    var parts = [
+      name + '=' + encodeURIComponent(value),
+      'path=/',
+      'max-age=' + maxAge,
+      'SameSite=Lax'
+    ];
+    if (location.protocol === 'https:') parts.push('Secure');
+    document.cookie = parts.join('; ');
+  }
+
+  function initUserIdentity() {
+    var existingUid = getCookie('te_uid');
+    var existingSn = getCookie('te_sn');
+
+    if (existingUid) {
+      userId = existingUid;
+      isReturningUser = true;
+      sessionNumber = parseInt(existingSn || '0', 10) + 1;
+      setCookie('te_sn', String(sessionNumber), 365);
+      cookieReady = true;
+    } else {
+      userId = generateUUID();
+      isReturningUser = false;
+      sessionNumber = 1;
+      var setOnInteraction = function() {
+        if (!cookieReady) {
+          cookieReady = true;
+          setCookie('te_uid', userId, 365);
+          setCookie('te_sn', '1', 365);
+        }
+      };
+      document.addEventListener('click', setOnInteraction, { once: true, passive: true });
+      document.addEventListener('scroll', setOnInteraction, { once: true, passive: true });
+    }
+    deviceType = getDeviceType();
+  }
+
 
   // ============================================
   // Initialization
@@ -27,6 +93,7 @@
 
     sessionId = getSessionId();
     sessionState = getSessionState();
+    initUserIdentity();
 
     // Add current page to sequence
     addToSequence('page', { pid: location.pathname, ts: Date.now() });
@@ -130,13 +197,18 @@
 
   function track(type, data) {
     if (!sessionId) return;
-    eventQueue.push({
+    var event = {
       t: type,
       ts: Date.now(),
       sid: sessionId,
       p: location.pathname,
       d: data || {}
-    });
+    };
+    if (userId) event.uid = userId;
+    if (sessionNumber) event.sn = sessionNumber;
+    if (isReturningUser) event.ret = true;
+    if (deviceType) event.dev = deviceType;
+    eventQueue.push(event);
     log('Event:', type, data);
     if (eventQueue.length >= BATCH_SIZE) flush();
   }

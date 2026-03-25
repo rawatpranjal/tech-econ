@@ -121,3 +121,61 @@ CREATE TABLE IF NOT EXISTS item_cooccurrence (
 
 CREATE INDEX IF NOT EXISTS idx_cooccur_a ON item_cooccurrence(item_a);
 CREATE INDEX IF NOT EXISTS idx_cooccur_b ON item_cooccurrence(item_b);
+
+
+-- ============================================================
+-- User Identity & Cross-Session Tracking
+-- ============================================================
+
+CREATE TABLE IF NOT EXISTS user_profiles (
+    user_id TEXT PRIMARY KEY,
+    id_type TEXT DEFAULT 'strong',
+    first_seen TEXT NOT NULL,
+    last_seen TEXT NOT NULL,
+    session_count INTEGER DEFAULT 1,
+    total_pageviews INTEGER DEFAULT 0,
+    total_clicks INTEGER DEFAULT 0,
+    total_searches INTEGER DEFAULT 0,
+    devices TEXT DEFAULT '[]',
+    countries TEXT DEFAULT '[]',
+    referrer_sources TEXT DEFAULT '[]',
+    engagement_tier TEXT DEFAULT 'new',
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+CREATE INDEX IF NOT EXISTS idx_user_profiles_tier ON user_profiles(engagement_tier);
+CREATE INDEX IF NOT EXISTS idx_user_profiles_last ON user_profiles(last_seen);
+
+CREATE TABLE IF NOT EXISTS user_sessions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id TEXT NOT NULL,
+    session_id TEXT NOT NULL UNIQUE,
+    started_at TEXT NOT NULL,
+    ended_at TEXT,
+    duration_ms INTEGER DEFAULT 0,
+    pageviews INTEGER DEFAULT 0,
+    clicks INTEGER DEFAULT 0,
+    searches INTEGER DEFAULT 0,
+    engagement_tier TEXT,
+    device TEXT,
+    country TEXT,
+    referrer_source TEXT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+CREATE INDEX IF NOT EXISTS idx_user_sessions_user ON user_sessions(user_id);
+CREATE INDEX IF NOT EXISTS idx_user_sessions_started ON user_sessions(started_at);
+
+CREATE TABLE IF NOT EXISTS identity_links (
+    cookie_id TEXT NOT NULL,
+    weak_id TEXT NOT NULL,
+    confidence REAL DEFAULT 1.0,
+    first_linked TEXT NOT NULL,
+    last_linked TEXT NOT NULL,
+    link_count INTEGER DEFAULT 1,
+    PRIMARY KEY (cookie_id, weak_id)
+);
+
+CREATE TABLE IF NOT EXISTS monthly_salts (
+    month TEXT PRIMARY KEY,
+    salt TEXT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+);

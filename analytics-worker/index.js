@@ -105,6 +105,15 @@ export default {
         }, null);
       }
 
+      // Route: GET /users - User analytics summary
+      if (request.method === 'GET' && url.pathname === '/users') {
+        return handleUsers(request, env, origin);
+      }
+      // Route: GET /cohorts - Cohort analysis
+      if (request.method === 'GET' && url.pathname === '/cohorts') {
+        return handleCohorts(request, env, origin, url);
+      }
+
       return new Response('Not found', { status: 404 });
     } catch (err) {
       console.error('Worker error:', err);
@@ -160,7 +169,7 @@ async function handleEvents(request, env, ctx, origin) {
     const now = Date.now();
 
     // Process events in background
-    ctx.waitUntil(processEvents(env, events, country, now));
+    ctx.waitUntil(processEvents(env, events, country, now, clientIP, userAgent));
 
     // Periodically clean old events (1% chance per request)
     if (Math.random() < 0.01) {
@@ -181,25 +190,70 @@ async function handleEvents(request, env, ctx, origin) {
   }
 }
 
-async function processEvents(env, events, country, receivedAt) {
-  // Check if D1 is available
+async function processEvents(env, events, country, receivedAt, clientIP, userAgent) {
   if (!env.DB) {
-    // Fall back to KV if D1 not configured
     if (env.ANALYTICS_EVENTS) {
       const key = `events:${receivedAt}:${crypto.randomUUID()}`;
       await env.ANALYTICS_EVENTS.put(key, JSON.stringify(events.map(e => ({
-        ...e,
-        _received: receivedAt,
-        _country: country
+        ...e, _received: receivedAt, _country: country
       }))), { expirationTtl: 86400 * 30 });
     }
     return;
   }
 
+  // --- User Identity Resolution ---
+  const weakId = await computeWeakId(env, clientIP, userAgent);
+  let cookieUid = null, sessionNumber = 0, deviceType = null, refSource = null;
+  for (const event of events) {
+    if (event.uid && !cookieUid) cookieUid = event.uid;
+    if (event.sn && !sessionNumber) sessionNumber = event.sn;
+    if (event.dev && !deviceType) deviceType = event.dev;
+    if (event.d?.refSource && !refSource) refSource = event.d.refSource;
+  }
+  const effectiveUserId = cookieUid || (weakId ? 'weak_' + weakId : null);
+  const idType = cookieUid ? 'strong' : 'weak';
+  const eventSessionId = events[0]?.sid || null;
+  const nowIso = new Date().toISOString();
+
+  if (effectiveUserId) {
+    try {
+      await env.DB.prepare(`
+        INSERT INTO user_profiles (user_id, id_type, first_seen, last_seen, session_count, devices, countries, referrer_sources)
+        VALUES (?, ?, ?, ?, 1, ?, ?, ?)
+        ON CONFLICT(user_id) DO UPDATE SET last_seen = excluded.last_seen,
+          total_pageviews = total_pageviews + ?, total_clicks = total_clicks + ?, total_searches = total_searches + ?
+      `).bind(effectiveUserId, idType, nowIso, nowIso,
+        JSON.stringify(deviceType ? [deviceType] : []), JSON.stringify(country !== 'unknown' ? [country] : []),
+        JSON.stringify(refSource ? [refSource] : []),
+        events.filter(e => e.t === 'pageview').length, events.filter(e => e.t === 'click').length,
+        events.filter(e => e.t === 'search').length).run();
+    } catch (e) { console.error('User profile upsert:', e); }
+    if (eventSessionId) {
+      try {
+        await env.DB.prepare(`
+          INSERT INTO user_sessions (user_id, session_id, started_at, device, country, referrer_source)
+          VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT(session_id) DO UPDATE SET ended_at = ?,
+            pageviews = pageviews + ?, clicks = clicks + ?, searches = searches + ?
+        `).bind(effectiveUserId, eventSessionId, nowIso, deviceType, country, refSource, nowIso,
+          events.filter(e => e.t === 'pageview').length, events.filter(e => e.t === 'click').length,
+          events.filter(e => e.t === 'search').length).run();
+      } catch (e) { console.error('User session upsert:', e); }
+    }
+    if (cookieUid && weakId) {
+      try {
+        await env.DB.prepare(`
+          INSERT INTO identity_links (cookie_id, weak_id, first_linked, last_linked, link_count)
+          VALUES (?, ?, ?, ?, 1) ON CONFLICT(cookie_id, weak_id) DO UPDATE SET
+            last_linked = excluded.last_linked, link_count = link_count + 1
+        `).bind(cookieUid, 'weak_' + weakId, nowIso, nowIso).run();
+      } catch (e) { console.error('Identity link:', e); }
+    }
+  }
+
   // Insert events into D1
   const insertStmt = env.DB.prepare(`
-    INSERT INTO events (type, session_id, path, timestamp, country, data)
-    VALUES (?, ?, ?, ?, ?, ?)
+    INSERT INTO events (type, session_id, path, timestamp, country, data, user_id)
+    VALUES (?, ?, ?, ?, ?, ?, ?)
   `);
 
   const batch = [];
@@ -221,12 +275,8 @@ async function processEvents(env, events, country, receivedAt) {
 
     // Insert raw event
     batch.push(insertStmt.bind(
-      event.t,
-      event.sid || null,
-      event.p || event.d?.path || null,
-      timestamp,
-      country,
-      JSON.stringify(event.d || {})
+      event.t, event.sid || null, event.p || event.d?.path || null,
+      timestamp, country, JSON.stringify(event.d || {}), effectiveUserId
     ));
 
     // Track session
@@ -1855,6 +1905,62 @@ async function cleanupOldEvents(env) {
   } catch (err) {
     console.error('Cleanup error:', err);
   }
+}
+
+// ============================================
+// User Identity Helpers
+// ============================================
+
+async function computeWeakId(env, clientIP, userAgent) {
+  if (!clientIP || clientIP === 'unknown') return null;
+  let bf = 'unknown';
+  if (userAgent) {
+    if (userAgent.includes('Chrome') && !userAgent.includes('Edg')) bf = 'Chrome';
+    else if (userAgent.includes('Firefox')) bf = 'Firefox';
+    else if (userAgent.includes('Safari') && !userAgent.includes('Chrome')) bf = 'Safari';
+    else if (userAgent.includes('Edg')) bf = 'Edge';
+    else bf = 'other';
+  }
+  const month = new Date().toISOString().slice(0, 7);
+  let salt;
+  try {
+    const row = await env.DB.prepare('SELECT salt FROM monthly_salts WHERE month = ?').bind(month).first();
+    if (row) { salt = row.salt; }
+    else { salt = crypto.randomUUID(); await env.DB.prepare('INSERT INTO monthly_salts (month, salt) VALUES (?, ?)').bind(month, salt).run(); }
+  } catch (e) { salt = 'fallback-' + month; }
+  const data = new TextEncoder().encode(clientIP + ':' + bf + ':' + salt);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+  return Array.from(new Uint8Array(hashBuffer)).slice(0, 8).map(b => b.toString(16).padStart(2, '0')).join('');
+}
+
+async function handleUsers(request, env, origin) {
+  if (!isAllowedOrigin(origin)) return new Response('Forbidden', { status: 403 });
+  if (!env.DB) return jsonResponse({ error: 'No database' }, origin);
+  try {
+    const [tot, tiers, devs, ret] = await Promise.all([
+      env.DB.prepare('SELECT COUNT(*) as total FROM user_profiles').first(),
+      env.DB.prepare('SELECT engagement_tier, COUNT(*) as count FROM user_profiles GROUP BY engagement_tier').all(),
+      env.DB.prepare('SELECT device, COUNT(*) as count FROM user_sessions WHERE device IS NOT NULL GROUP BY device').all(),
+      env.DB.prepare('SELECT COUNT(*) as count FROM user_profiles WHERE session_count > 1').first()
+    ]);
+    const total = tot?.total || 0;
+    const tierMap = {}; for (const r of (tiers?.results || [])) tierMap[r.engagement_tier || 'unknown'] = r.count;
+    const devMap = {}; for (const r of (devs?.results || [])) devMap[r.device || 'unknown'] = r.count;
+    return jsonResponse({ total_users: total, returning_rate: total > 0 ? ((ret?.count || 0) / total) : 0, engagement_tiers: tierMap, devices: devMap }, origin);
+  } catch (e) { console.error('Users error:', e); return jsonResponse({ error: 'Query failed' }, origin); }
+}
+
+async function handleCohorts(request, env, origin, url) {
+  if (!isAllowedOrigin(origin)) return new Response('Forbidden', { status: 403 });
+  if (!env.DB) return jsonResponse({ error: 'No database' }, origin);
+  const groupBy = url.searchParams.get('by') || 'week';
+  try {
+    let de = groupBy === 'week' ? "strftime('%Y-W%W', first_seen)" : groupBy === 'month' ? "strftime('%Y-%m', first_seen)" : "date(first_seen)";
+    const result = await env.DB.prepare(`SELECT ${de} as cohort, COUNT(*) as new_users,
+      SUM(CASE WHEN session_count > 1 THEN 1 ELSE 0 END) as returned,
+      AVG(session_count) as avg_sessions FROM user_profiles GROUP BY cohort ORDER BY cohort DESC LIMIT 52`).all();
+    return jsonResponse({ group_by: groupBy, cohorts: result?.results || [] }, origin);
+  } catch (e) { console.error('Cohorts error:', e); return jsonResponse({ error: 'Query failed' }, origin); }
 }
 
 // ============================================
