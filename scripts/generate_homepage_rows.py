@@ -78,6 +78,19 @@ def load_content_lookup(data_dir: Path) -> dict[str, dict]:
                 or item.get("docs_url")
                 or ""
             )
+            # Generate image_url for types that lack them
+            image_url = item.get("image_url", "")
+            if not image_url:
+                if content_type == "package":
+                    github_url = item.get("github_url", "")
+                    if "github.com/" in github_url:
+                        owner = github_url.split("github.com/")[1].split("/")[0]
+                        image_url = f"https://github.com/{owner}.png?size=128"
+                elif content_type == "book":
+                    isbn = item.get("isbn", "")
+                    if isbn:
+                        image_url = f"https://covers.openlibrary.org/b/isbn/{isbn}-M.jpg"
+
             key = name.lower().strip()
             lookup[key] = {
                 "name": name,
@@ -85,7 +98,7 @@ def load_content_lookup(data_dir: Path) -> dict[str, dict]:
                 "category": item.get("category", ""),
                 "description": item.get("description") or item.get("summary", ""),
                 "url": url,
-                "image_url": item.get("image_url", ""),
+                "image_url": image_url,
                 "tags": item.get("tags", []),
             }
 
