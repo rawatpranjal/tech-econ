@@ -10589,3 +10589,214 @@ mark.partial {
 [data-theme="dark"] .explore-card-compact[data-type="career"] { background: linear-gradient(135deg, #102528 0%, #232326 100%); }
 [data-theme="dark"] .explore-card-compact[data-type="community"] { background: linear-gradient(135deg, #2e1020 0%, #232326 100%); }
 [data-theme="dark"] .explore-card-compact[data-type="book"] { background: linear-gradient(135deg, #1e2810 0%, #232326 100%); }
+
+/* ===========================================
+   Netflix Hero Banner — Featured Item
+   =========================================== */
+.hero-banner {
+    min-height: 50vh;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    padding: 3rem 3rem 3.5rem;
+    overflow: hidden;
+    background: linear-gradient(135deg, #f0f4f8 0%, #e0e8f0 100%);
+}
+
+[data-theme="dark"] .hero-banner {
+    background: linear-gradient(160deg, #0a0a1a 0%, #12082e 35%, #081a2e 65%, #0a0a1a 100%);
+}
+
+/* Type-tinted backgrounds */
+[data-theme="dark"] .hero-banner[data-type="package"] { background: linear-gradient(160deg, #0a0a1a 0%, #0a1a3a 40%, #081a2e 70%, #0a0a1a 100%); }
+[data-theme="dark"] .hero-banner[data-type="dataset"] { background: linear-gradient(160deg, #0a0a1a 0%, #0a2a1a 40%, #081a1e 70%, #0a0a1a 100%); }
+[data-theme="dark"] .hero-banner[data-type="paper"] { background: linear-gradient(160deg, #0a0a1a 0%, #2a1508 40%, #1e1008 70%, #0a0a1a 100%); }
+[data-theme="dark"] .hero-banner[data-type="resource"] { background: linear-gradient(160deg, #0a0a1a 0%, #1a0a2e 40%, #150a25 70%, #0a0a1a 100%); }
+[data-theme="dark"] .hero-banner[data-type="talk"] { background: linear-gradient(160deg, #0a0a1a 0%, #2a1e08 40%, #1e1808 70%, #0a0a1a 100%); }
+[data-theme="dark"] .hero-banner[data-type="career"] { background: linear-gradient(160deg, #0a0a1a 0%, #082028 40%, #081a20 70%, #0a0a1a 100%); }
+
+/* Search bar — compact top-right overlay */
+.hero-banner-search {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    width: 280px;
+    z-index: 5;
+}
+.hero-banner-search .search-input-wrapper {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(8px);
+    border-radius: 24px;
+    padding: 0.45rem 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.15s, border-color 0.15s;
+}
+.hero-banner-search .search-input-wrapper:hover {
+    background: rgba(255,255,255,0.12);
+    border-color: rgba(255,255,255,0.2);
+}
+.hero-banner-search .search-input {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.8rem;
+    padding: 0;
+    width: 100%;
+    cursor: pointer;
+}
+.hero-banner-search .search-icon { color: rgba(255,255,255,0.5); }
+.hero-banner-search .search-kbd {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.4rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    color: rgba(255,255,255,0.5);
+    border: none;
+}
+
+/* Light mode search */
+.hero-banner-search .search-input-wrapper {
+    background: rgba(0,0,0,0.04);
+    border-color: rgba(0,0,0,0.1);
+}
+[data-theme="dark"] .hero-banner-search .search-input-wrapper {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(255,255,255,0.1);
+}
+
+/* Banner content — left-aligned, editorial */
+.hero-banner-content {
+    max-width: 600px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-banner-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 20px;
+    margin-bottom: 1rem;
+}
+
+.hero-banner-title {
+    font-family: 'Inter Display', -apple-system, system-ui, sans-serif;
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    color: var(--text-primary);
+    margin: 0 0 1rem;
+}
+
+[data-theme="dark"] .hero-banner-title {
+    color: #f0f0f0;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.hero-banner-desc {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    margin: 0 0 0.75rem;
+    max-width: 500px;
+}
+
+[data-theme="dark"] .hero-banner-desc {
+    color: rgba(255,255,255,0.7);
+}
+
+.hero-banner-signal {
+    font-size: 0.82rem;
+    color: var(--accent);
+    margin: 0 0 1.5rem;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+[data-theme="dark"] .hero-banner-signal {
+    color: #8ab4f8;
+}
+
+/* CTA Buttons */
+.hero-banner-cta {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 24px;
+    text-decoration: none;
+    transition: all 0.15s ease;
+    cursor: pointer;
+}
+
+.hero-btn-primary {
+    background: var(--accent);
+    color: white;
+}
+.hero-btn-primary:hover {
+    background: var(--accent-hover);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(0,102,204,0.3);
+}
+
+[data-theme="dark"] .hero-btn-primary {
+    background: #4da6ff;
+    color: #0a0a1a;
+}
+[data-theme="dark"] .hero-btn-primary:hover {
+    background: #7cbfff;
+    box-shadow: 0 4px 20px rgba(77,166,255,0.3);
+}
+
+.hero-btn-secondary {
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border-color);
+}
+.hero-btn-secondary:hover {
+    color: var(--text-primary);
+    border-color: var(--text-muted);
+    background: rgba(0,0,0,0.03);
+}
+
+[data-theme="dark"] .hero-btn-secondary {
+    color: rgba(255,255,255,0.7);
+    border-color: rgba(255,255,255,0.15);
+}
+[data-theme="dark"] .hero-btn-secondary:hover {
+    color: white;
+    border-color: rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-banner {
+        min-height: 40vh;
+        padding: 5rem 1.5rem 2.5rem;
+    }
+    .hero-banner-title { font-size: 1.8rem; }
+    .hero-banner-desc { font-size: 0.95rem; }
+    .hero-banner-search {
+        top: 1rem;
+        right: 1rem;
+        left: 1rem;
+        width: auto;
+    }
+}

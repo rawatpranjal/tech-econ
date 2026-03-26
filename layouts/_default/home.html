@@ -1,26 +1,41 @@
 {{ define "main" }}
 <div class="homepage">
-    <!-- Hero Section — Netflix-quality spotlight -->
-    {{ $paperCount := 0 }}{{ range .Site.Data.papers.topics }}{{ range .subtopics }}{{ $paperCount = add $paperCount (len .papers) }}{{ end }}{{ end }}
+    <!-- Hero Banner — Netflix-style featured item -->
+    {{ if .Site.Data.homepage_rows }}
+    {{ $heroRow := index .Site.Data.homepage_rows.rows 0 }}
+    {{ $featured := index $heroRow.items 0 }}
+    <div class="hero-banner" data-type="{{ $featured.type }}">
+        <div class="hero-banner-search">
+            <div class="search-input-wrapper" onclick="document.getElementById('global-search-modal').style.display='flex'; document.getElementById('global-search-input').focus();">
+                <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <path d="m21 21-4.35-4.35"></path>
+                </svg>
+                <input type="text" class="search-input" placeholder="Search 4,000+ resources..." readonly>
+                <kbd class="search-kbd">&#8984;K</kbd>
+            </div>
+        </div>
+        <div class="hero-banner-content">
+            <span class="hero-banner-badge type-{{ $featured.type }}">{{ $featured.type }}</span>
+            <h1 class="hero-banner-title">{{ $featured.name }}</h1>
+            {{ with $featured.description }}<p class="hero-banner-desc">{{ . }}</p>{{ end }}
+            {{ with $featured.signals }}
+            {{ if .impressions }}<p class="hero-banner-signal">{{ .impressions }} views and climbing</p>{{ end }}
+            {{ end }}
+            <div class="hero-banner-cta">
+                <a href="{{ $featured.url }}" target="_blank" rel="noopener" class="hero-btn hero-btn-primary">Read More</a>
+                <a href="#home-rows-wrapper" class="hero-btn hero-btn-secondary">See All Trending</a>
+            </div>
+        </div>
+    </div>
+    {{ else }}
     <div class="hero-section">
         <header class="hero">
             <p class="hero-site-label">tech-econ</p>
             <h1 class="hero-headline">Discover the tools, data, and research<br>shaping tech economics.</h1>
-            <p class="hero-editorial">{{ len .Site.Data.packages }} packages &middot; {{ len .Site.Data.datasets }} datasets &middot; {{ $paperCount }} papers &middot; {{ len .Site.Data.resources }} learning resources</p>
         </header>
-
-        <!-- Search Bar inside Hero -->
-        <div class="homepage-search hero-search" data-aos="fade-up">
-            <div class="search-input-wrapper" onclick="document.getElementById('global-search-modal').style.display='flex'; document.getElementById('global-search-input').focus();">
-                <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                </svg>
-                <input type="text" class="search-input" placeholder="Search packages, datasets, papers..." readonly>
-                <kbd class="search-kbd">⌘K</kbd>
-            </div>
-        </div>
     </div>
+    {{ end }}
 
     <!-- Dynamic Homepage Rows -->
     {{ if .Site.Data.homepage_rows }}
