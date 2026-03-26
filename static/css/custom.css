@@ -10469,3 +10469,123 @@ mark.partial {
         padding-right: 1rem;
     }
 }
+
+/* ===========================================
+   Netflix Visual Overhaul — Phase 4
+   Card color & visual richness
+   =========================================== */
+
+/* ── Type-specific gradient backgrounds (dark mode) ─────────────────────── */
+[data-theme="dark"] .explore-card[data-type="package"],
+[data-theme="dark"] .explore-card-hero[data-type="package"] {
+    background: linear-gradient(135deg, #1a2540 0%, #1a1e2e 60%, #232326 100%);
+}
+[data-theme="dark"] .explore-card[data-type="dataset"],
+[data-theme="dark"] .explore-card-hero[data-type="dataset"] {
+    background: linear-gradient(135deg, #152e1e 0%, #1a2420 60%, #232326 100%);
+}
+[data-theme="dark"] .explore-card[data-type="paper"],
+[data-theme="dark"] .explore-card-hero[data-type="paper"] {
+    background: linear-gradient(135deg, #2e1a10 0%, #261e1a 60%, #232326 100%);
+}
+[data-theme="dark"] .explore-card[data-type="resource"],
+[data-theme="dark"] .explore-card-hero[data-type="resource"] {
+    background: linear-gradient(135deg, #251a30 0%, #221e28 60%, #232326 100%);
+}
+[data-theme="dark"] .explore-card[data-type="talk"],
+[data-theme="dark"] .explore-card-hero[data-type="talk"] {
+    background: linear-gradient(135deg, #2e2510 0%, #26221a 60%, #232326 100%);
+}
+[data-theme="dark"] .explore-card[data-type="career"],
+[data-theme="dark"] .explore-card-hero[data-type="career"] {
+    background: linear-gradient(135deg, #102528 0%, #1a2224 60%, #232326 100%);
+}
+[data-theme="dark"] .explore-card[data-type="community"],
+[data-theme="dark"] .explore-card-hero[data-type="community"] {
+    background: linear-gradient(135deg, #2e1020 0%, #261a20 60%, #232326 100%);
+}
+[data-theme="dark"] .explore-card[data-type="book"],
+[data-theme="dark"] .explore-card-hero[data-type="book"] {
+    background: linear-gradient(135deg, #1e2810 0%, #20241a 60%, #232326 100%);
+}
+
+/* Light mode: subtle tints */
+.explore-card[data-type="package"] { background: linear-gradient(135deg, #e8f0fe 0%, white 60%); }
+.explore-card[data-type="dataset"] { background: linear-gradient(135deg, #e6f4ea 0%, white 60%); }
+.explore-card[data-type="paper"] { background: linear-gradient(135deg, #fef0e6 0%, white 60%); }
+.explore-card[data-type="resource"] { background: linear-gradient(135deg, #f3e8fd 0%, white 60%); }
+.explore-card[data-type="talk"] { background: linear-gradient(135deg, #fef6e6 0%, white 60%); }
+.explore-card[data-type="career"] { background: linear-gradient(135deg, #e0f7fa 0%, white 60%); }
+.explore-card[data-type="community"] { background: linear-gradient(135deg, #fce4ec 0%, white 60%); }
+.explore-card[data-type="book"] { background: linear-gradient(135deg, #f1f8e9 0%, white 60%); }
+
+/* ── Always-visible top accent bar (not just on hover) ──────────────────── */
+.explore-card::before,
+.explore-card-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: 14px 14px 0 0;
+    opacity: 0.7;
+    transition: opacity 0.15s ease;
+}
+.explore-card:hover::before,
+.explore-card-hero:hover::before {
+    opacity: 1;
+}
+.explore-card[data-type="package"]::before,
+.explore-card-hero[data-type="package"]::before { background: linear-gradient(90deg, #1565c0, #42a5f5, transparent); }
+.explore-card[data-type="dataset"]::before,
+.explore-card-hero[data-type="dataset"]::before { background: linear-gradient(90deg, #2e7d32, #66bb6a, transparent); }
+.explore-card[data-type="paper"]::before,
+.explore-card-hero[data-type="paper"]::before { background: linear-gradient(90deg, #e65100, #ff9800, transparent); }
+.explore-card[data-type="resource"]::before,
+.explore-card-hero[data-type="resource"]::before { background: linear-gradient(90deg, #7b1fa2, #ba68c8, transparent); }
+.explore-card[data-type="talk"]::before,
+.explore-card-hero[data-type="talk"]::before { background: linear-gradient(90deg, #ff8f00, #ffca28, transparent); }
+.explore-card[data-type="career"]::before,
+.explore-card-hero[data-type="career"]::before { background: linear-gradient(90deg, #00838f, #4dd0e1, transparent); }
+.explore-card[data-type="community"]::before,
+.explore-card-hero[data-type="community"]::before { background: linear-gradient(90deg, #c2185b, #f48fb1, transparent); }
+.explore-card[data-type="book"]::before,
+.explore-card-hero[data-type="book"]::before { background: linear-gradient(90deg, #558b2f, #aed581, transparent); }
+
+/* ── Styled icon area ───────────────────────────────────────────────────── */
+.explore-card .explore-card-icon,
+.explore-card-hero .explore-card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.explore-card .explore-card-icon img,
+.explore-card-hero .explore-card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9px;
+}
+/* Light mode icon frame */
+.explore-card .explore-card-icon {
+    background: rgba(0,0,0,0.04);
+    border-color: rgba(0,0,0,0.06);
+}
+
+/* ── Compact card type gradients ────────────────────────────────────────── */
+[data-theme="dark"] .explore-card-compact[data-type="package"] { background: linear-gradient(135deg, #1a2540 0%, #232326 100%); }
+[data-theme="dark"] .explore-card-compact[data-type="dataset"] { background: linear-gradient(135deg, #152e1e 0%, #232326 100%); }
+[data-theme="dark"] .explore-card-compact[data-type="paper"] { background: linear-gradient(135deg, #2e1a10 0%, #232326 100%); }
+[data-theme="dark"] .explore-card-compact[data-type="resource"] { background: linear-gradient(135deg, #251a30 0%, #232326 100%); }
+[data-theme="dark"] .explore-card-compact[data-type="talk"] { background: linear-gradient(135deg, #2e2510 0%, #232326 100%); }
+[data-theme="dark"] .explore-card-compact[data-type="career"] { background: linear-gradient(135deg, #102528 0%, #232326 100%); }
+[data-theme="dark"] .explore-card-compact[data-type="community"] { background: linear-gradient(135deg, #2e1020 0%, #232326 100%); }
+[data-theme="dark"] .explore-card-compact[data-type="book"] { background: linear-gradient(135deg, #1e2810 0%, #232326 100%); }
