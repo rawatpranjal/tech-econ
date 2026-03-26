@@ -85,6 +85,7 @@ def load_content_lookup(data_dir: Path) -> dict[str, dict]:
                 "category": item.get("category", ""),
                 "description": item.get("description") or item.get("summary", ""),
                 "url": url,
+                "image_url": item.get("image_url", ""),
                 "tags": item.get("tags", []),
             }
 
@@ -108,6 +109,7 @@ def make_item(ranking_entry: dict, content_lookup: dict) -> dict:
         "category": ranking_entry.get("category", meta.get("category", "")),
         "description": ranking_entry.get("description", meta.get("description", "")),
         "url": ranking_entry.get("url", meta.get("url", "")),
+        "image_url": ranking_entry.get("image_url", meta.get("image_url", "")),
         "score": ranking_entry.get("score", 0.0),
         "cold_start": ranking_entry.get("cold_start", True),
         "signals": ranking_entry.get("signals", {}),
@@ -124,6 +126,7 @@ def make_item_from_meta(meta: dict, score_lookup: dict) -> dict:
         "category": meta.get("category", ""),
         "description": meta.get("description", ""),
         "url": meta.get("url", ""),
+        "image_url": meta.get("image_url", ""),
         "score": score_lookup.get(key, 0.0),
         "cold_start": score_lookup.get(key, -1.0) == -1.0,
         "signals": {},
@@ -1006,7 +1009,7 @@ def generate_rows(data_dir: Path, max_rows: int, critique_iterations: int) -> di
             rows.append(row4)
 
         # Row 5: Person's Universe
-        row5 = build_persons_universe(narrative_carousels, content_lookup, score_lookup, used)
+        row5 = build_persons_universe(narrative_carousels, rankings, content_lookup, score_lookup, used)
         if row5:
             rows.append(row5)
 
@@ -1050,8 +1053,12 @@ def generate_rows(data_dir: Path, max_rows: int, critique_iterations: int) -> di
         # Row 13: Community & Events
         rows.append(build_community_events(rankings, content_lookup, used))
 
-        # Row 14: Career Corner
-        rows.append(build_career_corner(rankings, content_lookup, used))
+        # Row 14: Career Corner — DISABLED (career accessible via sidebar)
+        # rows.append(build_career_corner(rankings, content_lookup, used))
+
+        # Filter career items from all non-career rows
+        for row in rows:
+            row["items"] = [i for i in row["items"] if i.get("type") != "career"]
 
         # Apply max_rows cap
         rows = rows[:max_rows]

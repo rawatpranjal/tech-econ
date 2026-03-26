@@ -1,11 +1,10 @@
 {
-  "generated_at": "2026-03-25T10:41:57.364555+00:00",
+  "generated_at": "2026-03-26T14:32:34.563431+00:00",
   "stats": {
-    "total_rows": 15,
-    "total_items": 139,
+    "total_rows": 14,
+    "total_items": 116,
     "unique_types": [
       "book",
-      "career",
       "community",
       "dataset",
       "package",
@@ -13,29 +12,51 @@
       "resource",
       "talk"
     ],
-    "type_count": 8,
-    "critique_iterations": 1
+    "type_count": 7,
+    "critique_iterations": 3
   },
   "critique_log": [
     {
       "iteration": 1,
       "issues": [
-        "Row 'deep-dive-tools-causal-inference-ml' has 8 items of type 'package' (max 3)",
-        "Row 'persons-universe-pat-bajari-universe' has only 4 items (min 5)",
-        "Row 'toolkit-cluster-did-staggered' has 5 items of type 'package' (max 3)",
+        "Row 'deep-dive-tools-causal-inference-ml' has only 4 items (min 5)",
+        "Row 'toolkit-cluster-pkg-data-manipulation' has 6 items of type 'package' (max 3)",
         "Row 'learning-path-ols-to-causal-forests' has only 4 items (min 5)",
-        "Row 'if-you-like' has only 3 items (min 5)"
+        "Row 'if-you-like' has only 3 items (min 5)",
+        "Missing content types across all rows: {'career'}"
       ],
       "issue_count": 5
     },
     {
       "iteration": 2,
       "issues": [
-        "Row 'deep-dive-tools-causal-inference-ml' has 8 items of type 'package' (max 3)",
-        "Row 'persons-universe-pat-bajari-universe' has only 4 items (min 5)",
-        "Row 'toolkit-cluster-did-staggered' has 5 items of type 'package' (max 3)",
+        "Row 'deep-dive-tools-causal-inference-ml' has only 4 items (min 5)",
+        "Row 'toolkit-cluster-pkg-data-manipulation' has 6 items of type 'package' (max 3)",
         "Row 'learning-path-ols-to-causal-forests' has only 4 items (min 5)",
-        "Row 'if-you-like' has only 3 items (min 5)"
+        "Row 'if-you-like' has only 3 items (min 5)",
+        "Missing content types across all rows: {'career'}"
+      ],
+      "issue_count": 5
+    },
+    {
+      "iteration": 3,
+      "issues": [
+        "Row 'deep-dive-tools-causal-inference-ml' has only 4 items (min 5)",
+        "Row 'toolkit-cluster-pkg-data-manipulation' has 6 items of type 'package' (max 3)",
+        "Row 'learning-path-ols-to-causal-forests' has only 4 items (min 5)",
+        "Row 'if-you-like' has only 3 items (min 5)",
+        "Missing content types across all rows: {'career'}"
+      ],
+      "issue_count": 5
+    },
+    {
+      "iteration": 4,
+      "issues": [
+        "Row 'deep-dive-tools-causal-inference-ml' has only 4 items (min 5)",
+        "Row 'toolkit-cluster-pkg-data-manipulation' has 6 items of type 'package' (max 3)",
+        "Row 'learning-path-ols-to-causal-forests' has only 4 items (min 5)",
+        "Row 'if-you-like' has only 3 items (min 5)",
+        "Missing content types across all rows: {'career'}"
       ],
       "issue_count": 5
     }
@@ -54,6 +75,7 @@
           "category": "Bayesian Methods",
           "description": "BG/NBD and Gamma-Gamma CLV tutorials",
           "url": "https://www.pymc-marketing.io/en/stable/",
+          "image_url": "",
           "score": 1.0,
           "cold_start": false,
           "signals": {
@@ -80,6 +102,7 @@
           "category": "Bayesian Methods",
           "description": "CLV basics, RFM analysis, BG/NBD models \u2014 free official docs",
           "url": "https://www.pymc-marketing.io/en/latest/notebooks/clv/clv_quickstart.html",
+          "image_url": "",
           "score": 0.9808,
           "cold_start": false,
           "signals": {
@@ -106,6 +129,7 @@
           "category": "Fashion & Apparel",
           "description": "Clickstream and purchase data for fashion e-commerce",
           "url": "https://competitions.codalab.org/competitions/11161",
+          "image_url": "",
           "score": 0.7851,
           "cold_start": false,
           "signals": {
@@ -132,6 +156,7 @@
           "category": "Causal Inference",
           "description": "Substack and podcast 'The Mixtape with Scott' featuring interviews with leading causal inference researchers. Bridges academic methods and practical application.",
           "url": "https://causalinf.substack.com/",
+          "image_url": "https://substackcdn.com/image/fetch/$s_!bzGI!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fcausalinf.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D-923814904%26version%3D9",
           "score": 0.5962,
           "cold_start": false,
           "signals": {
@@ -158,6 +183,7 @@
           "category": "Fashion & Apparel",
           "description": "Fashion item combinations from Alibaba for outfit recommendation",
           "url": "https://tianchi.aliyun.com/dataset/131519",
+          "image_url": "",
           "score": 0.5295,
           "cold_start": false,
           "signals": {
@@ -184,6 +210,7 @@
           "category": "Adaptive Experimentation & Bandits",
           "description": "Meta's open-source platform for adaptive experimentation. Bayesian optimization, multi-objective optimization, and automated experiment design. Built on BoTorch for AI-assisted experimentation.",
           "url": "https://ax.dev",
+          "image_url": "",
           "score": 0.4684,
           "cold_start": false,
           "signals": {
@@ -210,6 +237,7 @@
           "category": "Blogs",
           "description": "Survey science, conjoint analysis, and quantitative UX research. Statistical rigor for product research.",
           "url": "https://measuringu.com/",
+          "image_url": "/images/bloggers/measuringu.png",
           "score": 0.4463,
           "cold_start": false,
           "signals": {
@@ -236,6 +264,7 @@
           "category": "Food & Delivery",
           "description": "3.4M orders, 206k+ users, 49k+ products with reorder behavior",
           "url": "https://www.kaggle.com/datasets/psparks/instacart-market-basket-analysis",
+          "image_url": "",
           "score": 0.4199,
           "cold_start": false,
           "signals": {
@@ -262,6 +291,7 @@
           "category": "Double/Debiased Machine Learning (DML)",
           "description": "Implements the double/debiased ML framework (Chernozhukov et al.) for estimating causal parameters (ATE, LATE, POM) with ML nuisances.",
           "url": "https://github.com/DoubleML/doubleml-for-py",
+          "image_url": "",
           "score": 0.3745,
           "cold_start": false,
           "signals": {
@@ -288,6 +318,7 @@
           "category": "Experimentation > A/B Test Design & Analysis",
           "description": "LinkedIn's landmark paper on network interference in A/B tests. Shows how social connections violate SUTVA, proposes cluster-based randomization and graph cluster metrics, and introduces the 'network A/B test' framework now used across social platforms.",
           "url": "https://content.linkedin.com/content/dam/engineering/site-assets/pdfs/ABTestingSocialNetwork_share.pdf",
+          "image_url": "",
           "score": 0.3552,
           "cold_start": false,
           "signals": {
@@ -314,6 +345,7 @@
           "category": "Bayesian Econometrics",
           "description": "High-level interface for building Bayesian GLMMs, built on top of PyMC. Uses formula syntax similar to R's `lme4`.",
           "url": "https://github.com/bambinos/bambi",
+          "image_url": "",
           "score": 0.3208,
           "cold_start": false,
           "signals": {
@@ -329,32 +361,6 @@
             "rage_clicks": 0,
             "quick_bounces": 0,
             "coviews": 16674,
-            "coclicks": 0,
-            "reading_ratio": 2.0,
-            "high_imp_no_click": false
-          }
-        },
-        {
-          "name": "Spotify",
-          "type": "career",
-          "category": "Company Lists",
-          "description": "Career portal",
-          "url": "https://www.lifeatspotify.com/jobs/",
-          "score": 0.2022,
-          "cold_start": false,
-          "signals": {
-            "clicks": 1,
-            "impressions": 37,
-            "dwell_ms": 806824,
-            "viewable_sec": 856.9000000000001,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 16,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 7629,
             "coclicks": 0,
             "reading_ratio": 2.0,
             "high_imp_no_click": false
@@ -375,6 +381,7 @@
           "category": "Causal Inference",
           "description": "Matheus Facure's comprehensive Python-based coverage of synthetic control, difference-in-differences, and other causal methods central to marketing science.",
           "url": "https://matheusfacure.github.io/python-causality-handbook/",
+          "image_url": "/images/logos/github.png",
           "score": 0.7533,
           "cold_start": false,
           "signals": {}
@@ -385,6 +392,7 @@
           "category": "MarTech & Customer Analytics",
           "description": "Microsoft's library for heterogeneous treatment effect estimation. Implements DML, causal forests, and instrumental variable methods with sklearn-compatible API.",
           "url": "https://github.com/microsoft/EconML",
+          "image_url": "",
           "score": 0.2841,
           "cold_start": false,
           "signals": {}
@@ -395,6 +403,7 @@
           "category": "E-Commerce",
           "description": "2.5M customers (457k purchasers) and 31,868 SKUs from JD.com",
           "url": "https://huggingface.co/datasets/a6687543/MSOM_Data_Driven_Challenge_2020",
+          "image_url": "/images/datasets/jdcom-2020-msom-20.png",
           "score": 0.3504,
           "cold_start": false,
           "signals": {}
@@ -405,6 +414,7 @@
           "category": "Strategy & Digital Platforms",
           "description": "NBER lecture on how AI is transforming economic research and industry applications.",
           "url": "https://www.youtube.com/watch?v=ifdSUKrJxqM",
+          "image_url": "https://img.youtube.com/vi/ifdSUKrJxqM/hqdefault.jpg",
           "score": 0.9073,
           "cold_start": false,
           "signals": {}
@@ -415,6 +425,7 @@
           "category": "Pricing > Dynamic Pricing & Revenue Management",
           "description": "The definitive textbook on revenue management covering pricing, capacity control, and overbooking.",
           "url": "https://www.springer.com/gp/book/9781402077012",
+          "image_url": "",
           "score": 0.402,
           "cold_start": false,
           "signals": {}
@@ -425,6 +436,7 @@
           "category": "Research Labs",
           "description": "Causal inference for recommender systems. CompCI project, annual CIDER roundtable. Research advisor: Nathan Kallus (Cornell).",
           "url": "https://research.netflix.com/research-area/experimentation-and-causal-inference",
+          "image_url": "",
           "score": 0.5123,
           "cold_start": false,
           "signals": {}
@@ -435,6 +447,7 @@
           "category": "Causal Inference (DiD)",
           "description": "Comprehensive Difference-in-Differences library with sklearn-like API and statsmodels-style output. Implements Callaway-Sant'Anna, Sun-Abraham, Synthetic DiD, Triple Difference (DDD), Honest DiD sensitivity analysis, and extensive robustness diagnostics.",
           "url": "https://diff-diff.readthedocs.io",
+          "image_url": "",
           "score": 0.0,
           "cold_start": true,
           "signals": {}
@@ -445,6 +458,7 @@
           "category": "Causal Inference",
           "description": "Microsoft's causal inference library with four-step Model-Identify-Estimate-Refute workflow",
           "url": "https://www.pywhy.org/dowhy/",
+          "image_url": "",
           "score": 0.29,
           "cold_start": false,
           "signals": {}
@@ -455,6 +469,7 @@
           "category": "Causal Inference",
           "description": "Free PDF textbook covering causal inference from a machine learning perspective. Covers RCTs, propensity scores, treatment effect estimation, causal forests, and modern methods.",
           "url": "https://web.stanford.edu/~swager/causal_inf_book.pdf",
+          "image_url": "",
           "score": 0.1646,
           "cold_start": false,
           "signals": {}
@@ -465,6 +480,7 @@
           "category": "Strategy & Digital Platforms",
           "description": "Keystone interview. How Amazon's Chief Scientist built applied research from scratch with 400+ PhD researchers.",
           "url": "https://www.keystone.ai/news-publications/patrick-bajari-qa",
+          "image_url": "https://patbajari.ai/wp-content/uploads/2024/02/image-4-1.png",
           "score": 0.5858,
           "cold_start": false,
           "signals": {}
@@ -484,6 +500,7 @@
           "category": "Programming",
           "description": "Teaches software design principles for ML\u2014modularity, abstraction, and reproducibility\u2014going beyond ad hoc Jupyter workflows. Focus on maintainable, production-quality ML code.",
           "url": "https://transferlab.ai/trainings/beyond-jupyter/",
+          "image_url": "https://transferlab.ai/trainings/beyond-jupyter/beyond-jupyter-logo.png",
           "score": 0.3181,
           "cold_start": false,
           "signals": {
@@ -510,6 +527,7 @@
           "category": "Optimization",
           "description": "Numerical optimization framework for Rust with Newton, BFGS, L-BFGS, trust region, and derivative-free methods for MLE/GMM.",
           "url": "https://crates.io/crates/argmin",
+          "image_url": "",
           "score": 0.2839,
           "cold_start": false,
           "signals": {
@@ -536,6 +554,7 @@
           "category": "Causal Inference & ML",
           "description": "MIT. The foundational Double ML methodology for high-dimensional causal inference. BFI presentation with accompanying DoubleML package.",
           "url": "https://www.nber.org/research/videos/2013-methods-lecture-victor-chernozhukov-econometrics-high-dimensional-sparse-models",
+          "image_url": "https://www.nber.org/sites/default/files/2022-06/NBER-FB-Share-Tile-1200.jpg",
           "score": 0.0984,
           "cold_start": false,
           "signals": {
@@ -562,6 +581,7 @@
           "category": "Market Design & Auctions",
           "description": "Design the mechanism, don't just bid in it. RegretNet and deep learning for auction design.",
           "url": "https://www.youtube.com/watch?v=gsPWQqVhb74",
+          "image_url": "https://img.youtube.com/vi/gsPWQqVhb74/hqdefault.jpg",
           "score": 0.0984,
           "cold_start": false,
           "signals": {
@@ -588,6 +608,7 @@
           "category": "Power Simulation & Design of Experiments",
           "description": "Bayesian Adaptive Design Optimization (ADO) for tuning experiments in real-time, with models for psychometric tasks.",
           "url": "https://github.com/adopy/adopy",
+          "image_url": "",
           "score": 0.2846,
           "cold_start": false,
           "signals": {
@@ -614,6 +635,7 @@
           "category": "Power Simulation & Design of Experiments",
           "description": "Implements classical Design of Experiments: factorial (full/fractional), response surface (Box-Behnken, CCD), Latin Hypercube.",
           "url": "https://github.com/clicumu/pyDOE2",
+          "image_url": "",
           "score": 0.2846,
           "cold_start": false,
           "signals": {
@@ -640,6 +662,7 @@
           "category": "Search & Ranking",
           "description": "Clearest learning-to-rank explanation with code. Why ranking differs from classification, pointwise vs. pairwise vs. listwise approaches. Implementing RankNet and LambdaMART with XGBoost rank:pairwise and rank:ndcg.",
           "url": "https://tech.olx.com/from-ranknet-to-lambdamart-leveraging-xgboost-for-enhanced-ranking-models-cf21f33350fb",
+          "image_url": "https://miro.medium.com/v2/da:true/resize:fit:1200/0*QXhnt_P802Oi14kl",
           "score": 0.311,
           "cold_start": false,
           "signals": {
@@ -661,89 +684,12 @@
           }
         },
         {
-          "name": "Gilead Sciences",
-          "type": "career",
-          "category": "Company Lists",
-          "description": "Career portal",
-          "url": "https://www.gilead.com/careers",
-          "score": 0.155,
-          "cold_start": false,
-          "signals": {
-            "clicks": 0,
-            "impressions": 5,
-            "dwell_ms": 0,
-            "viewable_sec": 0,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 3,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 2450,
-            "coclicks": 0,
-            "reading_ratio": 0,
-            "high_imp_no_click": false
-          }
-        },
-        {
-          "name": "Google DeepMind",
-          "type": "career",
-          "category": "Company Lists",
-          "description": "Career portal",
-          "url": "https://deepmind.google/careers/",
-          "score": 0.155,
-          "cold_start": false,
-          "signals": {
-            "clicks": 0,
-            "impressions": 5,
-            "dwell_ms": 0,
-            "viewable_sec": 0,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 3,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 2450,
-            "coclicks": 0,
-            "reading_ratio": 0,
-            "high_imp_no_click": false
-          }
-        },
-        {
-          "name": "Procter & Gamble",
-          "type": "career",
-          "category": "Company Lists",
-          "description": "Career portal",
-          "url": "https://www.pgcareers.com/",
-          "score": 0.155,
-          "cold_start": false,
-          "signals": {
-            "clicks": 0,
-            "impressions": 5,
-            "dwell_ms": 0,
-            "viewable_sec": 0,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 3,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 2450,
-            "coclicks": 0,
-            "reading_ratio": 0,
-            "high_imp_no_click": false
-          }
-        },
-        {
           "name": "Aki Vehtari: Bayesian Data Analysis",
           "type": "talk",
           "category": "Causal Inference & ML",
           "description": "Aalto University. BDA course lectures covering MCMC, HMC, model comparison, cross-validation (PSIS-LOO), and practical Bayesian workflow.",
           "url": "https://www.youtube.com/@aki_vehtari_aalto",
+          "image_url": "https://yt3.googleusercontent.com/ytc/AIdro_l1bYufCxfgRlo5tUKVjfHNuN_Cr_D5dvgLNQxzIFXjP28=s900-c-k-c0x00ffffff-no-rj",
           "score": 0.0984,
           "cold_start": false,
           "signals": {
@@ -770,6 +716,7 @@
           "category": "Search & Ranking",
           "description": "Masterclass in production search evolution. 4-stage journey from baseline to personalized GBDT ranking with A/B test results (+13%, +7.9%, +5.1% booking improvements). Feature engineering for two-sided marketplaces.",
           "url": "https://medium.com/airbnb-engineering/machine-learning-powered-search-ranking-of-airbnb-experiences-110b4b1a0789",
+          "image_url": "",
           "score": 0.3109,
           "cold_start": false,
           "signals": {
@@ -805,6 +752,7 @@
           "category": "Healthcare",
           "description": "Hospital pricing data mandated since 2021. Negotiated rates, chargemaster prices across 6,000+ hospitals. Healthcare pricing research",
           "url": "https://www.cms.gov/hospital-price-transparency",
+          "image_url": "/images/logos/cms.png",
           "score": 0.3469,
           "cold_start": false,
           "signals": {
@@ -831,6 +779,7 @@
           "category": "E-Commerce",
           "description": "Mobile website clicks (~42k) for Xbox games from BestBuy",
           "url": "https://www.kaggle.com/competitions/acm-sf-chapter-hackathon-big",
+          "image_url": "/images/datasets/bestbuy.png",
           "score": 0.3455,
           "cold_start": false,
           "signals": {
@@ -857,6 +806,7 @@
           "category": "E-Commerce",
           "description": "1.8M Amazon purchases with demographics (age, gender, location). Real household e-commerce behavior at scale",
           "url": "https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/YGAVK9",
+          "image_url": "/images/logos/harvard.png",
           "score": 0.3432,
           "cold_start": false,
           "signals": {
@@ -883,6 +833,7 @@
           "category": "Causal Inference",
           "description": "Python workflow for economists covering data transformation, econometrics, Bayesian inference, and ML. Modern Python-first approach.",
           "url": "https://aeturrell.github.io/coding-for-economists/",
+          "image_url": "",
           "score": 0.3131,
           "cold_start": false,
           "signals": {
@@ -909,6 +860,7 @@
           "category": "Programming",
           "description": "Command line, Git, debugging, shell scripting. The CS skills they don't teach in econ PhD programs but you absolutely need.",
           "url": "https://missing.csail.mit.edu/",
+          "image_url": "/images/logos/mit.png",
           "score": 0.1186,
           "cold_start": false,
           "signals": {
@@ -935,6 +887,7 @@
           "category": "Difference-in-Differences",
           "description": "Free workshop materials from sessions taught at Facebook, eBay, LSE, and Oxford. Covers advanced DiD, staggered timing, PT violations, with coding labs and interactive apps.",
           "url": "https://github.com/Mixtape-Sessions",
+          "image_url": "https://avatars.githubusercontent.com/u/95192943?s=280&v=4",
           "score": 0.5611,
           "cold_start": false,
           "signals": {
@@ -961,6 +914,7 @@
           "category": "Causal Discovery & Graphical Models",
           "description": "Comprehensive Python package serving as Python translation and extension of Java-based Tetrad toolkit for causal discovery algorithms.",
           "url": "https://github.com/py-why/causal-learn",
+          "image_url": "",
           "score": 0.2848,
           "cold_start": false,
           "signals": {
@@ -982,37 +936,12 @@
           }
         },
         {
-          "name": "Zomato",
-          "type": "career",
-          "category": "Company Lists",
-          "description": "Career portal",
-          "url": "https://www.zomato.com/careers",
-          "score": 0.1867,
-          "cold_start": false,
-          "signals": {
-            "clicks": 3,
-            "impressions": 15,
-            "dwell_ms": 59616,
-            "viewable_sec": 47.9,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 7,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 7629,
-            "coclicks": 0,
-            "reading_ratio": 2.0,
-            "high_imp_no_click": false
-          }
-        },
-        {
           "name": "spaCy",
           "type": "package",
           "category": "Natural Language Processing for Economics",
           "description": "Industrial-strength NLP library for efficient text processing pipelines (NER, POS tagging, etc.).",
           "url": "https://github.com/explosion/spaCy",
+          "image_url": "",
           "score": 0.1503,
           "cold_start": false,
           "signals": {
@@ -1039,6 +968,7 @@
           "category": "Strategy & Digital Platforms",
           "description": "Uber's Chief Economist on transitioning from research to leadership. Bay Area Tech Economics Seminar at Stanford.",
           "url": "https://datascience.stanford.edu/events/causal-science-center/bay-area-tech-economics-seminar-jonathan-hall-uber",
+          "image_url": "https://identity.stanford.edu/wp-content/uploads/sites/3/2020/07/block-s-right.png",
           "score": 0.1032,
           "cold_start": false,
           "signals": {
@@ -1065,6 +995,7 @@
           "category": "Causal Discovery & Graphical Models",
           "description": "Causal inference using graphical models (DAGs), including identification theory and effect estimation.",
           "url": "https://gitlab.com/causal/ananke",
+          "image_url": "",
           "score": 0.2784,
           "cold_start": false,
           "signals": {
@@ -1080,32 +1011,6 @@
             "rage_clicks": 0,
             "quick_bounces": 0,
             "coviews": 15618,
-            "coclicks": 0,
-            "reading_ratio": 2.0,
-            "high_imp_no_click": false
-          }
-        },
-        {
-          "name": "Citadel",
-          "type": "career",
-          "category": "Company Lists",
-          "description": "Career portal",
-          "url": "https://www.citadel.com/careers/",
-          "score": 0.1868,
-          "cold_start": false,
-          "signals": {
-            "clicks": 2,
-            "impressions": 15,
-            "dwell_ms": 103570,
-            "viewable_sec": 95.3,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 7,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 7629,
             "coclicks": 0,
             "reading_ratio": 2.0,
             "high_imp_no_click": false
@@ -1149,56 +1054,6 @@
           "description": "Implements the Super Learner algorithm for optimal ensemble prediction via cross-validation. Creates weighted combinations of multiple ML algorithms (XGBoost, Random Forest, glmnet, neural networks, SVM, BART) with guaranteed asymptotic optimality.",
           "url": "https://cran.r-project.org/package=SuperLearner",
           "score": 0.2787,
-          "cold_start": false,
-          "signals": {}
-        },
-        {
-          "name": "hdm",
-          "type": "package",
-          "category": "Causal Inference (ML)",
-          "description": "High-dimensional statistical methods featuring heteroscedasticity-robust LASSO with theoretically-grounded penalty selection, post-double-selection inference, and treatment effect estimation under sparsity assumptions for high-dimensional controls.",
-          "url": "https://cran.r-project.org/package=hdm",
-          "score": 0.2951,
-          "cold_start": false,
-          "signals": {}
-        },
-        {
-          "name": "sensemakr",
-          "type": "package",
-          "category": "Causal Inference (ML)",
-          "description": "Suite of sensitivity analysis tools extending the traditional omitted variable bias framework, computing robustness values, bias-adjusted estimates, and sensitivity contour plots for OLS regression to assess how strong unmeasured confounders would need to be to overturn conclusions.",
-          "url": "https://cran.r-project.org/package=sensemakr",
-          "score": 0.1292,
-          "cold_start": false,
-          "signals": {}
-        },
-        {
-          "name": "EValue",
-          "type": "package",
-          "category": "Causal Inference (ML)",
-          "description": "Conducts sensitivity analyses for unmeasured confounding, selection bias, and measurement error in observational studies and meta-analyses. Computes E-values representing the minimum strength of association unmeasured confounders would need to fully explain away an observed effect.",
-          "url": "https://cran.r-project.org/package=EValue",
-          "score": 0.2832,
-          "cold_start": false,
-          "signals": {}
-        },
-        {
-          "name": "grf",
-          "type": "package",
-          "category": "Causal Inference (ML)",
-          "description": "Forest-based statistical estimation and inference for heterogeneous treatment effects, supporting multiple treatment arms, instrumental variables, survival outcomes, and quantile regression\u2014all with honest estimation and valid confidence intervals. The most widely-used R package for CATE estimation.",
-          "url": "https://cran.r-project.org/package=grf",
-          "score": 0.1121,
-          "cold_start": false,
-          "signals": {}
-        },
-        {
-          "name": "ltmle",
-          "type": "package",
-          "category": "Causal Inference (ML)",
-          "description": "Targeted maximum likelihood estimation for treatment/censoring-specific mean outcomes with time-varying treatments and confounders. Supports longitudinal settings, marginal structural models, and dynamic treatment regimes alongside IPTW and G-computation.",
-          "url": "https://cran.r-project.org/package=ltmle",
-          "score": 0.2829,
           "cold_start": false,
           "signals": {}
         },
@@ -1261,64 +1116,101 @@
           "score": 0.0,
           "cold_start": false,
           "signals": {}
+        },
+        {
+          "name": "bacondecomp",
+          "type": "package",
+          "category": "Causal Inference (DiD)",
+          "description": "Performs Goodman-Bacon decomposition showing how two-way fixed effects (TWFE) estimates are weighted averages of all possible 2\u00d72 DiD comparisons. Essential for diagnosing negative weights problems in staggered adoption designs.",
+          "url": "https://cran.r-project.org/package=bacondecomp",
+          "image_url": "",
+          "score": 0.3149,
+          "cold_start": false,
+          "signals": {
+            "clicks": 0,
+            "impressions": 30,
+            "dwell_ms": 47706,
+            "viewable_sec": 47.9,
+            "scroll_90": 0,
+            "scroll_75": 0,
+            "scroll_50": 0,
+            "search_clicks": 0,
+            "deep_sessions": 16,
+            "rage_clicks": 0,
+            "quick_bounces": 0,
+            "coviews": 18784,
+            "coclicks": 0,
+            "reading_ratio": 2.0,
+            "high_imp_no_click": true
+          }
         }
       ]
     },
     {
-      "id": "toolkit-cluster-did-staggered",
+      "id": "toolkit-cluster-pkg-data-manipulation",
       "row_type": "essential_toolkit",
-      "title": "Essential Staggered Treatment Timing Toolkit",
-      "description": "Core packages for causal inference work",
+      "title": "Essential Wrangle Any Dataset Toolkit",
+      "description": "Core packages for data & utilities work",
       "template": "standard",
-      "source_cluster_id": "cluster-did-staggered",
+      "source_cluster_id": "cluster-pkg-data-manipulation",
       "items": [
         {
-          "name": "bacondecomp",
+          "name": "collapse",
           "type": "package",
-          "category": "Causal Inference",
-          "description": "Performs Goodman-Bacon decomposition showing how two-way fixed effects (TWFE) estimates are weighted averages of all possible 2\u00d72 DiD comparisons. Essential for diagnosing negative weights problems in staggered adoption designs.",
-          "url": "https://cran.r-project.org/package=bacondecomp",
-          "score": 0.3149,
+          "category": "Data & Utilities",
+          "description": "High-performance data transformation package designed by an economist. Provides fast grouped operations, time series functions, and panel data tools with 10-100\u00d7 speedups over dplyr on large data.",
+          "url": "https://cran.r-project.org/package=collapse",
+          "score": 0.2856,
           "cold_start": false,
           "signals": {}
         },
         {
-          "name": "did",
+          "name": "tidyverse",
           "type": "package",
-          "category": "Causal Inference",
-          "description": "Implements group-time average treatment effects (ATT(g,t)) for staggered DiD designs with multiple periods and variation in treatment timing. Provides flexible aggregation into event-study plots or overall treatment effect estimates, addressing the well-documented negative weighting issues with conventional TWFE under staggered adoption.",
-          "url": "https://cran.r-project.org/package=did",
-          "score": 0.3148,
+          "category": "Data & Utilities",
+          "description": "Meta-package installing core tidyverse packages: ggplot2 (visualization), dplyr (manipulation), tidyr (tidying), readr (import), purrr (functional programming), tibble (data frames), stringr (strings), and forcats (factors).",
+          "url": "https://cran.r-project.org/package=tidyverse",
+          "score": 0.2838,
           "cold_start": false,
           "signals": {}
         },
         {
-          "name": "csdid",
+          "name": "Polars",
           "type": "package",
-          "category": "Causal Inference",
-          "description": "Python adaptation of the R `did` package. Implements multi-period DiD with staggered treatment timing (Callaway & Sant\u2019Anna).",
-          "url": "https://github.com/d2cml-ai/csdid",
-          "score": 0.3147,
+          "category": "Data & Utilities",
+          "description": "Blazingly fast DataFrame library for Rust and Python with SQL-like syntax, lazy evaluation, and excellent time series handling.",
+          "url": "https://crates.io/crates/polars",
+          "score": 0.2838,
           "cold_start": false,
           "signals": {}
         },
         {
-          "name": "staggered",
+          "name": "data.table",
           "type": "package",
-          "category": "Causal Inference",
-          "description": "Provides the efficient estimator for randomized staggered rollout designs, offering optimal weighting schemes for treatment effect estimation. Also implements Callaway & Sant'Anna and Sun & Abraham estimators with design-based Fisher inference for randomized experiments.",
-          "url": "https://cran.r-project.org/package=staggered",
-          "score": 0.3139,
+          "category": "Data & Utilities",
+          "description": "Extension of data.frame providing fast aggregation of large data (100GB+), ordered joins, and memory-efficient operations. Uses reference semantics for in-place modification with concise syntax [:=, .SD, by=].",
+          "url": "https://cran.r-project.org/package=data.table",
+          "score": 0.2796,
           "cold_start": false,
           "signals": {}
         },
         {
-          "name": "Differences",
+          "name": "countrycode",
           "type": "package",
-          "category": "Causal Inference",
-          "description": "Implements modern difference-in-differences methods for staggered adoption designs (e.g., Callaway & Sant'Anna).",
-          "url": "https://github.com/bernardodionisi/differences",
-          "score": 0.301,
+          "category": "Data & Utilities",
+          "description": "R package for converting between country naming and coding conventions essential for merging defense datasets",
+          "url": "https://vincentarelbundock.github.io/countrycode/",
+          "score": 0.2795,
+          "cold_start": false,
+          "signals": {}
+        },
+        {
+          "name": "haven",
+          "type": "package",
+          "category": "Data & Utilities",
+          "description": "Import and export Stata, SPSS, and SAS data files preserving variable labels and value labels. Handles .dta, .sav, .sas7bdat, and .xpt formats with labelled vectors for metadata.",
+          "url": "https://cran.r-project.org/package=haven",
+          "score": 0.1291,
           "cold_start": false,
           "signals": {}
         }
@@ -1388,6 +1280,7 @@
           "category": "Difference-in-Differences",
           "description": "The definitive meta-resource for modern DiD. Covers TWFE failures, Goodman-Bacon decomposition, all major estimators (Callaway-Sant'Anna, Sun-Abraham, etc.) with code in Stata, R, Python, and Julia. Updated quarterly.",
           "url": "https://asjadnaqvi.github.io/DiD/",
+          "image_url": "",
           "score": 0.5571,
           "cold_start": false,
           "signals": {
@@ -1414,6 +1307,7 @@
           "category": "Difference-in-Differences",
           "description": "14 lecture slide decks from the co-creator of Callaway-Sant'Anna. Covers classical DiD, parallel trends, ML for DiD, event studies, TWFE problems, and treatments turning on-and-off.",
           "url": "https://psantanna.com/did-resources/",
+          "image_url": "https://psantanna.com/images/pedro_smaller.jpg",
           "score": 0.3749,
           "cold_start": false,
           "signals": {
@@ -1440,6 +1334,7 @@
           "category": "Difference-in-Differences",
           "description": "Course slides and coding exercises focusing on pre-trends testing limitations and HonestDiD sensitivity analysis. Created the HonestDiD and pretrends R packages. Includes practitioner checklists.",
           "url": "https://www.jonathandroth.com/did-resources/",
+          "image_url": "",
           "score": 0.2181,
           "cold_start": false,
           "signals": {
@@ -1566,6 +1461,7 @@
           "category": "Dataset Aggregators",
           "description": "20+ petabytes across 200+ datasets with 1TB free BigQuery queries monthly",
           "url": "https://cloud.google.com/datasets",
+          "image_url": "/images/datasets/google-cloud-public-datasets.png",
           "score": 0.3,
           "cold_start": true,
           "signals": {
@@ -1592,6 +1488,7 @@
           "category": "Dataset Aggregators",
           "description": "International macroeconomic forecasts, BOP, and financial statistics for 195 countries",
           "url": "https://data.imf.org",
+          "image_url": "",
           "score": 0.3,
           "cold_start": true,
           "signals": {
@@ -1618,17 +1515,8 @@
           "category": "Research Group",
           "description": "NBER working group bringing economics methodology to national security questions",
           "url": "https://www.nber.org/programs-projects/programs-working-groups/national-security",
+          "image_url": "/images/logos/nber.png",
           "score": 0.004,
-          "cold_start": true,
-          "signals": {}
-        },
-        {
-          "name": "InterviewDB Causal Inference Collection",
-          "type": "career",
-          "category": "Causal Inference",
-          "description": "Largest dedicated causal inference question bank. 100+ questions on confounding, RCTs, PSM, DiD, RDD, DAGs, spillover effects, fixed effects, sensitivity analysis.",
-          "url": "https://www.interviewdb.com/causal-inference/",
-          "score": 0.0034,
           "cold_start": true,
           "signals": {}
         },
@@ -1638,6 +1526,7 @@
           "category": "Healthcare Economics & Health-Tech",
           "description": "Obermeyer presents the landmark Science 2019 paper exposing racial bias in a widely-used algorithm affecting 200 million patients. Essential viewing for anyone working on healthcare AI.",
           "url": "https://www.youtube.com/watch?v=ukXqEQu_qx4",
+          "image_url": "",
           "score": 0.0027,
           "cold_start": true,
           "signals": {}
@@ -1648,6 +1537,7 @@
           "category": "Causal Inference & ML",
           "description": "Harvard course by Raj Chetty on using large datasets and empirical methods to address questions in public policy and social mobility.",
           "url": "https://opportunityinsights.org/course/",
+          "image_url": "https://opportunityinsights.org/wp-content/uploads/2019/05/Course-2.png",
           "score": 0.0025,
           "cold_start": true,
           "signals": {}
@@ -1658,6 +1548,7 @@
           "category": "Trust & Safety > Privacy & Data Misuse",
           "description": "Foundational paper defining differential privacy; mathematical framework for privacy-preserving computation.",
           "url": "https://link.springer.com/chapter/10.1007/11787006_1",
+          "image_url": "",
           "score": 0.002,
           "cold_start": true,
           "signals": {}
@@ -1668,6 +1559,7 @@
           "category": "Think Tank Events",
           "description": "Regular briefings and events from the #1 ranked defense and national security think tank",
           "url": "https://www.csis.org/events",
+          "image_url": "",
           "score": 0.0019,
           "cold_start": true,
           "signals": {}
@@ -1678,6 +1570,7 @@
           "category": "Discrete Choice Models",
           "description": "Desktop application for computational revealed preference analysis. GUI written in Python with Rust backend for performance. Analyzes choice datasets for rationality and behavioral consistency.",
           "url": "https://prestsoftware.com/",
+          "image_url": "",
           "score": 0.0017,
           "cold_start": true,
           "signals": {}
@@ -1688,6 +1581,7 @@
           "category": "Bibliography Management",
           "description": "Parse and write BibTeX files in Python with middleware transformations. Trusted by 1,600+ repositories. Version 2.0 beta offers 10x faster performance.",
           "url": "https://github.com/sciunto-org/python-bibtexparser",
+          "image_url": "",
           "score": 0.0016,
           "cold_start": true,
           "signals": {}
@@ -1698,17 +1592,8 @@
           "category": "Specialized Methods",
           "description": "Distribution-free uncertainty quantification without Gaussian assumptions. Model-agnostic approach works with any forecasting method. Addresses limitation of bootstrap (only captures data uncertainty). MAPIE implementation.",
           "url": "https://towardsdatascience.com/time-series-forecasting-with-conformal-prediction-intervals-scikit-learn-is-all-you-need-4b68143a027a/",
+          "image_url": "https://towardsdatascience.com/wp-content/uploads/2022/12/0214HEJGKVZ-4cmPf-scaled.jpg",
           "score": 0.0016,
-          "cold_start": true,
-          "signals": {}
-        },
-        {
-          "name": "DataLemur (Same Author as Book!)",
-          "type": "career",
-          "category": "SQL & Data",
-          "description": "100+ free practice questions: SQL, Python, statistics, ML, probability. Same author as 'Ace the Data Science Interview'. 60+ SQL from FAANG with solutions. Interactive PostgreSQL environment. Free 9-day crash course.",
-          "url": "https://datalemur.com",
-          "score": 0.0014,
           "cold_start": true,
           "signals": {}
         }
@@ -1727,6 +1612,7 @@
           "category": "Fashion & Apparel",
           "description": "99 real e-commerce experiments with daily checkpoints from ASOS",
           "url": "https://www.kaggle.com/datasets/marinazmieva/asos-digital-experiments-dataset",
+          "image_url": "/images/datasets/asos-experiments.png",
           "score": 0.3617,
           "cold_start": false,
           "signals": {
@@ -1753,6 +1639,7 @@
           "category": "Fashion & Apparel",
           "description": "Session interactions and item features from styling service",
           "url": "http://www.recsyschallenge.com/2022/dataset.html",
+          "image_url": "/images/logos/recsyschallenge.png",
           "score": 0.3542,
           "cold_start": false,
           "signals": {
@@ -1779,6 +1666,7 @@
           "category": "E-Commerce",
           "description": "2.76M events (views, carts, purchases) from 1.4M visitors",
           "url": "https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset",
+          "image_url": "/images/datasets/retail-rocket.png",
           "score": 0.3444,
           "cold_start": false,
           "signals": {
@@ -1805,6 +1693,7 @@
           "category": "Healthcare",
           "description": "Complete US organ donation records since 1987. Waiting lists, donor-recipient matches, outcomes. Market design and matching research",
           "url": "https://optn.transplant.hrsa.gov/data/",
+          "image_url": "/images/logos/hrsa.png",
           "score": 0.3379,
           "cold_start": false,
           "signals": {
@@ -1831,6 +1720,7 @@
           "category": "Content Moderation",
           "description": "12.8K fact-checked political statements with speaker metadata",
           "url": "https://sites.cs.ucsb.edu/~william/software.html",
+          "image_url": "",
           "score": 0.3366,
           "cold_start": false,
           "signals": {
@@ -1857,6 +1747,7 @@
           "category": "Healthcare",
           "description": "All Medicare providers with service utilization and payment data. CMS public use files for healthcare analytics",
           "url": "https://data.cms.gov/provider-summary-by-type-of-service",
+          "image_url": "/images/logos/cms.png",
           "score": 0.3363,
           "cold_start": false,
           "signals": {
@@ -1883,6 +1774,7 @@
           "category": "MarTech & Customer Analytics",
           "description": "4.5 months of behavior data from a real e-commerce site: 2.7M sessions, item properties, and purchase events. Designed for session-based recommendation research.",
           "url": "https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset",
+          "image_url": "/images/datasets/retail-rocket-recommender-system-dataset.png",
           "score": 0.3346,
           "cold_start": false,
           "signals": {
@@ -1909,6 +1801,7 @@
           "category": "Financial Services",
           "description": "590K card-not-present transactions with 393 features from Vesta Corp. Real messy fraud data (3.5% fraud rate)",
           "url": "https://www.kaggle.com/competitions/ieee-fraud-detection",
+          "image_url": "/images/datasets/ieee-cis-fraud-detection.jpg",
           "score": 0.3327,
           "cold_start": false,
           "signals": {
@@ -1935,6 +1828,7 @@
           "category": "Entertainment & Media",
           "description": "5M search actions, 14.6M recommendation events from 25k users",
           "url": "https://kuaisar.github.io/",
+          "image_url": "/images/logos/github.png",
           "score": 0.3322,
           "cold_start": false,
           "signals": {
@@ -1961,6 +1855,7 @@
           "category": "Transportation & Mobility",
           "description": "100M+ rideshare trips with fares (unlike NYC which lacks fare data). Trip-level pricing for Uber/Lyft economic analysis",
           "url": "https://data.cityofchicago.org/Transportation/Transportation-Network-Providers-Trips/m6dm-c72p",
+          "image_url": "/images/logos/cityofchicago.png",
           "score": 0.3317,
           "cold_start": false,
           "signals": {
@@ -1987,6 +1882,7 @@
           "category": "Grocery & Supermarkets",
           "description": "Flipkart Supermart transaction and product details",
           "url": "https://www.kaggle.com/datasets/aryansingh95/flipkart-grocery-transaction-and-product-details",
+          "image_url": "/images/datasets/indian-grocery-flipkart-supermart.png",
           "score": 0.3307,
           "cold_start": false,
           "signals": {
@@ -2013,6 +1909,7 @@
           "category": "Grocery & Supermarkets",
           "description": "Medicine sales data in Brazil",
           "url": "https://www.kaggle.com/datasets/tgomesjuliana/brazil-medicine-sales",
+          "image_url": "/images/datasets/brazil-medical.jpg",
           "score": 0.3305,
           "cold_start": false,
           "signals": {
@@ -2048,6 +1945,7 @@
           "category": "Strategy & Digital Platforms",
           "description": "AEA Research Highlights. Why companies like Airbnb need researchers to solve marketplace design problems.",
           "url": "https://www.aeaweb.org/research/athey-luca-interview-tech-economics",
+          "image_url": "https://gsb-faculty.stanford.edu/susan-athey/files/2025/08/Stanford_Susan_Athey-1048x1280.jpg",
           "score": 0.1807,
           "cold_start": false,
           "signals": {
@@ -2074,6 +1972,7 @@
           "category": "Strategy & Digital Platforms",
           "description": "Data as labor, quadratic voting, and mechanism design for platforms. Bridging theory and practice.",
           "url": "https://www.youtube.com/watch?v=yxVikHslgHA",
+          "image_url": "https://img.youtube.com/vi/yxVikHslgHA/hqdefault.jpg",
           "score": 0.1648,
           "cold_start": false,
           "signals": {
@@ -2100,6 +1999,7 @@
           "category": "Strategy & Digital Platforms",
           "description": "Deep dive into pricing on both sides of platforms and the economics of 'free' services.",
           "url": "https://www.richmondfed.org/publications/research/econ_focus/2017/q4/interview",
+          "image_url": "https://www.richmondfed.org/-/media/RichmondFedOrg/assets/images/standard/logos/econ_focus_masthead_pisi.jpg",
           "score": 0.1446,
           "cold_start": false,
           "signals": {
@@ -2126,6 +2026,7 @@
           "category": "Strategy & Digital Platforms",
           "description": "Econ Focus interview on generative AI for economic research, use cases, and implications for the profession.",
           "url": "https://www.richmondfed.org/publications/research/econ_focus/2025/q4_interview",
+          "image_url": "https://www.richmondfed.org/-/media/RichmondFedOrg/assets/images/publications/research/econ_focus/2025_q4/korinek-cropped.jpg",
           "score": 0.1443,
           "cold_start": false,
           "signals": {
@@ -2152,6 +2053,7 @@
           "category": "Strategy & Digital Platforms",
           "description": "MIT economist Daron Acemoglu discusses AI's impact on labor markets, inequality, and economic growth on the Capitalism and Freedom podcast.",
           "url": "https://capitalismandfreedom.substack.com/p/episode-33-daron-acemoglu-mit-economics",
+          "image_url": "https://substackcdn.com/image/fetch/$s_!9VIs!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb4de7ccc-3b24-4568-8e8f-56b899524610_284x284.jpeg",
           "score": 0.143,
           "cold_start": false,
           "signals": {
@@ -2178,6 +2080,7 @@
           "category": "Causal Inference & ML",
           "description": "Senior data scientist with causal inference expertise. Practical tutorials on synthetic controls, event studies, Marketing Mix Models (Google Meridian), and data science career advice.",
           "url": "https://www.youtube.com/@data-science-interviews",
+          "image_url": "https://yt3.googleusercontent.com/xV9goQewMVYFzlhcWTQvBmfG8bwRvHA12kp_hX__Ocaqv-C7d0KfDRzH7u3hBMVpB6a-OHgZ=s900-c-k-c0x00ffffff-no-rj",
           "score": 0.1068,
           "cold_start": false,
           "signals": {
@@ -2204,6 +2107,7 @@
           "category": "Market Design & Auctions",
           "description": "Microsoft Research. How to design revenue-maximizing auctions using duality \u2014 simple auctions, budget smoothing, and optimal mechanisms.",
           "url": "https://mediaspace.gatech.edu/media/Nikhil+Devanur+-+Lagrangian+Duality+in+Mechanism+Design/1_oj4qzj8x",
+          "image_url": "",
           "score": 0.0984,
           "cold_start": false,
           "signals": {
@@ -2230,6 +2134,7 @@
           "category": "Causal Inference & ML",
           "description": "National Bureau of Economic Research. Methods lectures on causal inference (synthetic controls, RDD, DiD), Feldstein Lectures featuring Ben Bernanke, Gita Gopinath, and more.",
           "url": "https://www.youtube.com/@NBERvideos",
+          "image_url": "https://yt3.googleusercontent.com/ytc/AIdro_l2BjgFAWxin4xHSe_ABlz34ehSwxov5hLZCweRwVb0Rg=s900-c-k-c0x00ffffff-no-rj",
           "score": 0.0983,
           "cold_start": false,
           "signals": {
@@ -2256,6 +2161,7 @@
           "category": "Market Design & Auctions",
           "description": "Data Science Tech Lead at Topsort, former Yandex. 7+ years building VCG auctions, ML for click prediction, and revenue optimization for search ads.",
           "url": "https://www.youtube.com/@AlexeyStysin",
+          "image_url": "https://yt3.googleusercontent.com/K8RCF1Uh7SBjU2SAk76QZezv4vsnDzPxjY2w2WM2kW9AO7OkYhAfChPBq-5I2RlKkXxFyKGXfQ=s900-c-k-c0x00ffffff-no-rj",
           "score": 0.0983,
           "cold_start": false,
           "signals": {
@@ -2282,6 +2188,7 @@
           "category": "Causal Inference & ML",
           "description": "American Economic Association. Includes Athey-Imbens ML and Econometrics course, plus sessions on LLMs for economics.",
           "url": "https://www.youtube.com/@AEA",
+          "image_url": "https://yt3.googleusercontent.com/ZwJAc5ddntUzpj3zssLL103IFGw7SbG206lkV7jpsiy_hnT9vk2P_LKdobz5DZb4wL5gStOb1nQ=s900-c-k-c0x00ffffff-no-rj",
           "score": 0.0981,
           "cold_start": false,
           "signals": {
@@ -2308,6 +2215,7 @@
           "category": "Causal Inference & ML",
           "description": "Regular international causal inference research seminar. Features Susan Athey on Synthetic DiD, Jakob Runge on Tigramite, and leading researchers on cutting-edge methods.",
           "url": "https://www.youtube.com/@onlinecausalinferencesemin2364",
+          "image_url": "https://yt3.googleusercontent.com/ytc/AIdro_mXeIz4G4xFFr6sGMdVO3QPWTM9_ujBs78q3CxbGP4=s900-c-k-c0x00ffffff-no-rj",
           "score": 0.0981,
           "cold_start": false,
           "signals": {
@@ -2334,6 +2242,7 @@
           "category": "Causal Inference & ML",
           "description": "Comprehensive causal inference video course. 16K subscribers. Guest lectures from Susan Athey, Alberto Abadie (Synthetic Controls), and Yoshua Bengio.",
           "url": "https://www.youtube.com/@BradyNealCausalInference",
+          "image_url": "https://yt3.googleusercontent.com/ytc/AIdro_kBxEEeyM3fs6Yfr0Sl83lgbmNmgXmpCzMt0bQftlzrwg=s900-c-k-c0x00ffffff-no-rj",
           "score": 0.0981,
           "cold_start": false,
           "signals": {
@@ -2369,6 +2278,7 @@
           "category": "Research Labs",
           "description": "Pricing Labs for A/B testing price changes, switchback experiments, marketplace analytics at scale.",
           "url": "https://amazon.science/research-areas/economics",
+          "image_url": "https://assets.amazon.science/dims4/default/2eb32de/2147483647/strip/true/crop/1198x629+0+0/resize/1200x630!/quality/90/?url=http%3A%2F%2Famazon-topics-brightspot.s3.amazonaws.com%2Fscience%2Fa3%2Ff3%2F855c69f94f16a8803a91c00bdbbd%2Famazon-science-research-area-economics.jpg",
           "score": 0.1083,
           "cold_start": false,
           "signals": {
@@ -2395,6 +2305,7 @@
           "category": "Conferences",
           "description": "Allied Social Science Associations annual meeting. The largest gathering of economists with sessions on applied analytics, market design, and causal inference. Features AEA, Econometric Society, and 60+ allied associations.",
           "url": "https://www.aeaweb.org/conference/",
+          "image_url": "/images/logos/aeaweb.png",
           "score": 0.1082,
           "cold_start": false,
           "signals": {
@@ -2421,6 +2332,7 @@
           "category": "Conferences",
           "description": "ACM Conference on Economics and Computation. Premier venue for market design, mechanism design, and algorithmic game theory research. Essential for tech economists working on auctions, pricing, and platform economics.",
           "url": "https://www.sigecom.org/",
+          "image_url": "http://www.sigecom.org/image/sigecom-logo.png",
           "score": 0.1082,
           "cold_start": false,
           "signals": {
@@ -2447,6 +2359,7 @@
           "category": "Blogs",
           "description": "The econ blog. Tech, innovation, markets \u2014 prolific, eclectic, and influential. A daily must-read.",
           "url": "https://marginalrevolution.com/",
+          "image_url": "/images/bloggers/marginal-revolution-tyler-cowen.png",
           "score": 0.1081,
           "cold_start": false,
           "signals": {
@@ -2473,6 +2386,7 @@
           "category": "Blogs",
           "description": "Data scientist specializing in reinforcement learning and pricing. Multi-armed bandits for dynamic pricing, contextual bandits for personalization. Detailed implementations with practical code.",
           "url": "https://towardsdatascience.com/@massimiliano-costacurta",
+          "image_url": "/images/bloggers/massimiliano-costacurta.jpg",
           "score": 0.108,
           "cold_start": false,
           "signals": {
@@ -2499,6 +2413,7 @@
           "category": "Online",
           "description": "~1.4M subscribers. High-quality moderated economics Q&A. Answers must be comprehensive and well-sourced, valuable for policy questions.",
           "url": "https://www.reddit.com/r/AskEconomics/",
+          "image_url": "",
           "score": 0.0016,
           "cold_start": true,
           "signals": {}
@@ -2509,6 +2424,7 @@
           "category": "Notable Contributors",
           "description": "Chief Economist at International Center for Law & Economics. Co-author of Economic Forces newsletter (23,000+ subscribers). Reviving Chicago-style price theory.",
           "url": "https://www.economicforces.xyz/",
+          "image_url": "https://substackcdn.com/image/fetch/$s_!H_2c!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fpricetheory.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D1552868815%26version%3D9",
           "score": 0.0016,
           "cold_start": true,
           "signals": {}
@@ -2519,6 +2435,7 @@
           "category": "Meetups",
           "description": "American Statistical Association Bay Area chapter. Quarterly events for statistics professionals.",
           "url": "https://community.amstat.org/sfbayareaasa/home",
+          "image_url": "",
           "score": 0.0015,
           "cold_start": true,
           "signals": {}
@@ -2529,6 +2446,7 @@
           "category": "Research Programs",
           "description": "Top academic research setting for environmental and energy economics. Summer Institute sessions and working paper series featuring frontier research.",
           "url": "https://www.nber.org/programs-projects/programs-working-groups/environment-and-energy-economics",
+          "image_url": "https://www.nber.org/sites/default/files/2022-06/NBER-FB-Share-Tile-1200.jpg",
           "score": 0.0013,
           "cold_start": true,
           "signals": {}
@@ -2539,6 +2457,7 @@
           "category": "Meetups",
           "description": "Joint SSC-ASA chapter serving Ottawa's statistics community. Strong government and academic connections.",
           "url": "https://ssc.ca/en/about/sections-regions/ottawa",
+          "image_url": "",
           "score": 0.0013,
           "cold_start": true,
           "signals": {}
@@ -2549,6 +2468,7 @@
           "category": "Academic Journal",
           "description": "Leading academic journal publishing empirical and theoretical research on defense economics, conflict, and peace",
           "url": "https://www.tandfonline.com/journals/gdpe20",
+          "image_url": "",
           "score": 0.001,
           "cold_start": true,
           "signals": {}
@@ -2559,330 +2479,10 @@
           "category": "Notable Contributors",
           "description": "Former ML researcher at Twitter/X, PhD from Cambridge. Known for inFERENCe blog bridging ML research with causal inference.",
           "url": "https://www.inference.vc/",
+          "image_url": "/images/logos/inference.png",
           "score": 0.001,
           "cold_start": true,
           "signals": {}
-        }
-      ]
-    },
-    {
-      "id": "career-corner",
-      "row_type": "career",
-      "title": "Career Corner",
-      "description": "Jobs, companies, and career resources for tech economists",
-      "template": "compact",
-      "items": [
-        {
-          "name": "Statsig",
-          "type": "career",
-          "category": "Company Lists",
-          "description": "Career portal",
-          "url": "https://www.statsig.com/careers",
-          "score": 0.1865,
-          "cold_start": false,
-          "signals": {
-            "clicks": 0,
-            "impressions": 24,
-            "dwell_ms": 76270,
-            "viewable_sec": 71.30000000000001,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 10,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 7651,
-            "coclicks": 0,
-            "reading_ratio": 2.0,
-            "high_imp_no_click": true
-          }
-        },
-        {
-          "name": "Stripe",
-          "type": "career",
-          "category": "Company Lists",
-          "description": "Career portal",
-          "url": "https://stripe.com/jobs/",
-          "score": 0.1862,
-          "cold_start": false,
-          "signals": {
-            "clicks": 1,
-            "impressions": 15,
-            "dwell_ms": 102669,
-            "viewable_sec": 93.7,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 7,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 7629,
-            "coclicks": 0,
-            "reading_ratio": 2.0,
-            "high_imp_no_click": false
-          }
-        },
-        {
-          "name": "Deliveroo",
-          "type": "career",
-          "category": "Company Lists",
-          "description": "Career portal",
-          "url": "https://careers.deliveroo.co.uk/",
-          "score": 0.1858,
-          "cold_start": false,
-          "signals": {
-            "clicks": 0,
-            "impressions": 15,
-            "dwell_ms": 129463,
-            "viewable_sec": 118.7,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 7,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 7629,
-            "coclicks": 0,
-            "reading_ratio": 2.0,
-            "high_imp_no_click": true
-          }
-        },
-        {
-          "name": "Supercell",
-          "type": "career",
-          "category": "Company Lists",
-          "description": "Career portal",
-          "url": "https://supercell.com/en/careers/",
-          "score": 0.1858,
-          "cold_start": false,
-          "signals": {
-            "clicks": 1,
-            "impressions": 15,
-            "dwell_ms": 70104,
-            "viewable_sec": 60.3,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 7,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 7629,
-            "coclicks": 0,
-            "reading_ratio": 2.0,
-            "high_imp_no_click": false
-          }
-        },
-        {
-          "name": "Klarna",
-          "type": "career",
-          "category": "Company Lists",
-          "description": "Career portal",
-          "url": "https://www.klarna.com/careers/",
-          "score": 0.1857,
-          "cold_start": false,
-          "signals": {
-            "clicks": 1,
-            "impressions": 15,
-            "dwell_ms": 67088,
-            "viewable_sec": 57.3,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 7,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 7629,
-            "coclicks": 0,
-            "reading_ratio": 2.0,
-            "high_imp_no_click": false
-          }
-        },
-        {
-          "name": "Rakuten",
-          "type": "career",
-          "category": "Company Lists",
-          "description": "Career portal",
-          "url": "https://japan-job-en.rakuten.careers/",
-          "score": 0.1856,
-          "cold_start": false,
-          "signals": {
-            "clicks": 1,
-            "impressions": 15,
-            "dwell_ms": 59616,
-            "viewable_sec": 47.9,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 7,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 7629,
-            "coclicks": 0,
-            "reading_ratio": 2.0,
-            "high_imp_no_click": false
-          }
-        },
-        {
-          "name": "Google",
-          "type": "career",
-          "category": "Company Lists",
-          "description": "Career portal",
-          "url": "https://careers.google.com/",
-          "score": 0.1855,
-          "cold_start": false,
-          "signals": {
-            "clicks": 0,
-            "impressions": 15,
-            "dwell_ms": 106844,
-            "viewable_sec": 97.80000000000001,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 7,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 7629,
-            "coclicks": 0,
-            "reading_ratio": 2.0,
-            "high_imp_no_click": true
-          }
-        },
-        {
-          "name": "Amazon",
-          "type": "career",
-          "category": "Company Lists",
-          "description": "Career portal",
-          "url": "https://www.amazon.jobs/",
-          "score": 0.1855,
-          "cold_start": false,
-          "signals": {
-            "clicks": 0,
-            "impressions": 15,
-            "dwell_ms": 106844,
-            "viewable_sec": 97.80000000000001,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 7,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 7629,
-            "coclicks": 0,
-            "reading_ratio": 2.0,
-            "high_imp_no_click": true
-          }
-        },
-        {
-          "name": "Microsoft",
-          "type": "career",
-          "category": "Company Lists",
-          "description": "Career portal",
-          "url": "https://careers.microsoft.com/",
-          "score": 0.1855,
-          "cold_start": false,
-          "signals": {
-            "clicks": 0,
-            "impressions": 15,
-            "dwell_ms": 106844,
-            "viewable_sec": 97.80000000000001,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 7,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 7629,
-            "coclicks": 0,
-            "reading_ratio": 2.0,
-            "high_imp_no_click": true
-          }
-        },
-        {
-          "name": "Apple",
-          "type": "career",
-          "category": "Company Lists",
-          "description": "Career portal",
-          "url": "https://jobs.apple.com/",
-          "score": 0.1855,
-          "cold_start": false,
-          "signals": {
-            "clicks": 0,
-            "impressions": 15,
-            "dwell_ms": 106844,
-            "viewable_sec": 97.80000000000001,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 7,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 7629,
-            "coclicks": 0,
-            "reading_ratio": 2.0,
-            "high_imp_no_click": true
-          }
-        },
-        {
-          "name": "Uber",
-          "type": "career",
-          "category": "Company Lists",
-          "description": "Career portal",
-          "url": "https://www.uber.com/careers/",
-          "score": 0.1855,
-          "cold_start": false,
-          "signals": {
-            "clicks": 0,
-            "impressions": 15,
-            "dwell_ms": 106844,
-            "viewable_sec": 97.80000000000001,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 7,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 7629,
-            "coclicks": 0,
-            "reading_ratio": 2.0,
-            "high_imp_no_click": true
-          }
-        },
-        {
-          "name": "Lyft",
-          "type": "career",
-          "category": "Company Lists",
-          "description": "Career portal",
-          "url": "https://www.lyft.com/careers/",
-          "score": 0.1855,
-          "cold_start": false,
-          "signals": {
-            "clicks": 0,
-            "impressions": 15,
-            "dwell_ms": 106844,
-            "viewable_sec": 97.80000000000001,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 7,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 7629,
-            "coclicks": 0,
-            "reading_ratio": 2.0,
-            "high_imp_no_click": true
-          }
         }
       ]
     }
