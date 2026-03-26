@@ -10604,16 +10604,16 @@ mark.partial {
 }
 
 [data-theme="dark"] .hero-banner {
-    background: linear-gradient(160deg, #0a0a1a 0%, #12082e 35%, #081a2e 65%, #0a0a1a 100%);
+    background: linear-gradient(170deg, #1a1050 0%, #0d2a4a 40%, #0a1530 75%, #0a0a0a 100%);
 }
 
-/* Type-tinted backgrounds */
-[data-theme="dark"] .hero-banner[data-type="package"] { background: linear-gradient(160deg, #0a0a1a 0%, #0a1a3a 40%, #081a2e 70%, #0a0a1a 100%); }
-[data-theme="dark"] .hero-banner[data-type="dataset"] { background: linear-gradient(160deg, #0a0a1a 0%, #0a2a1a 40%, #081a1e 70%, #0a0a1a 100%); }
-[data-theme="dark"] .hero-banner[data-type="paper"] { background: linear-gradient(160deg, #0a0a1a 0%, #2a1508 40%, #1e1008 70%, #0a0a1a 100%); }
-[data-theme="dark"] .hero-banner[data-type="resource"] { background: linear-gradient(160deg, #0a0a1a 0%, #1a0a2e 40%, #150a25 70%, #0a0a1a 100%); }
-[data-theme="dark"] .hero-banner[data-type="talk"] { background: linear-gradient(160deg, #0a0a1a 0%, #2a1e08 40%, #1e1808 70%, #0a0a1a 100%); }
-[data-theme="dark"] .hero-banner[data-type="career"] { background: linear-gradient(160deg, #0a0a1a 0%, #082028 40%, #081a20 70%, #0a0a1a 100%); }
+/* Type-tinted backgrounds — dramatic, visible gradients */
+[data-theme="dark"] .hero-banner[data-type="package"] { background: linear-gradient(170deg, #0c1e4a 0%, #0a2850 35%, #081a35 70%, #0a0a0a 100%); }
+[data-theme="dark"] .hero-banner[data-type="dataset"] { background: linear-gradient(170deg, #0a3020 0%, #084028 35%, #0a2018 70%, #0a0a0a 100%); }
+[data-theme="dark"] .hero-banner[data-type="paper"] { background: linear-gradient(170deg, #3a1a08 0%, #2e1808 35%, #1e1008 70%, #0a0a0a 100%); }
+[data-theme="dark"] .hero-banner[data-type="resource"] { background: linear-gradient(170deg, #2a1050 0%, #1e0a40 35%, #150a2a 70%, #0a0a0a 100%); }
+[data-theme="dark"] .hero-banner[data-type="talk"] { background: linear-gradient(170deg, #3a2808 0%, #2e2008 35%, #1e1508 70%, #0a0a0a 100%); }
+[data-theme="dark"] .hero-banner[data-type="career"] { background: linear-gradient(170deg, #083040 0%, #0a3848 35%, #082028 70%, #0a0a0a 100%); }
 
 /* Search bar — compact top-right overlay */
 .hero-banner-search {
