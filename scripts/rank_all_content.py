@@ -59,6 +59,8 @@ HIGH_IMP_NO_CLICK_WEIGHT = -1.0   # Penalty for high impressions but zero clicks
 FRESHNESS_WEIGHT = 0.15           # Max boost for brand new items (15% of score)
 FRESHNESS_HALF_LIFE_DAYS = 30     # Days until freshness boost decays by half
 
+CITATION_WEIGHT = 0.3  # Boost for papers with citations
+
 ANALYTICS_API = "https://tech-econ-analytics-v2.pp712.workers.dev"
 
 
@@ -71,7 +73,7 @@ def fetch_d1_data(query):
 
     result = subprocess.run(
         cmd, capture_output=True, text=True,
-        cwd='/Users/pranjal/metrics-packages/analytics-worker'
+        cwd=str(Path(__file__).resolve().parent.parent / 'analytics-worker')
     )
 
     if result.returncode != 0:
@@ -240,6 +242,65 @@ def fetch_engagement_data():
         'reading_ratio': reading_ratio,
         'first_seen': first_seen,
     }
+
+
+def fetch_engagement_from_api():
+    """Fetch all engagement signals from the analytics HTTP API."""
+    import urllib.request
+    import ssl
+
+    url = f"{ANALYTICS_API}/ranking-export"
+    print(f"\nFetching engagement data from API: {url}")
+
+    try:
+        req = urllib.request.Request(url, headers={
+            'User-Agent': 'tech-econ-ranker/1.0',
+            'Accept': 'application/json',
+        })
+        try:
+            ctx = ssl.create_default_context()
+            with urllib.request.urlopen(req, timeout=60, context=ctx) as resp:
+                data = json.loads(resp.read().decode())
+        except urllib.error.URLError as ssl_err:
+            if 'CERTIFICATE_VERIFY_FAILED' in str(ssl_err):
+                print("  SSL verification failed, retrying with unverified context...")
+                ctx = ssl.create_default_context()
+                ctx.check_hostname = False
+                ctx.verify_mode = ssl.CERT_NONE
+                with urllib.request.urlopen(req, timeout=60, context=ctx) as resp:
+                    data = json.loads(resp.read().decode())
+            else:
+                raise
+    except Exception as e:
+        print(f"  Error fetching from API: {e}")
+        return {
+            'clicks': [], 'impressions': [], 'dwell': [],
+            'scroll': [], 'search_clicks': [], 'session_tiers': [],
+            'frustration': [], 'cooccurrence': [], 'reading_ratio': [],
+            'first_seen': [],
+        }
+
+    signals = data.get('signals', {})
+    print(f"  Generated at: {data.get('generated_at', 'unknown')}")
+
+    # Map API field names to the names expected by build_engagement_scores
+    result = {
+        'clicks': signals.get('clicks', []),
+        'impressions': signals.get('impressions', []),
+        'dwell': signals.get('dwell', []),
+        'scroll': signals.get('scroll_milestones', []),
+        'search_clicks': signals.get('search_sessions', []),
+        'session_tiers': signals.get('session_features', []),
+        'frustration': signals.get('frustration_events', []),
+        'cooccurrence': signals.get('item_cooccurrence', []),
+        'reading_ratio': signals.get('reading_ratio', []),
+        'first_seen': signals.get('first_seen', []),
+    }
+
+    for key, val in result.items():
+        print(f"  {key}: {len(val)} items")
+
+    return result
 
 
 def extract_item_name_from_path(path):
@@ -1002,9 +1063,11 @@ def main():
                         help='Output file path')
     parser.add_argument('--k-neighbors', '-k', type=int, default=5,
                         help='Number of neighbors for cold start (default: 5)')
+    parser.add_argument('--source', choices=['d1', 'api'], default='d1',
+                        help='Data source: d1 (wrangler CLI) or api (HTTP endpoint)')
     args = parser.parse_args()
 
-    data_dir = Path('/Users/pranjal/metrics-packages/data')
+    data_dir = Path(__file__).resolve().parent.parent / 'data'
 
     # Step 1: Load all content
     print("Loading content catalog...")
@@ -1015,7 +1078,10 @@ def main():
     item_lookup = {item['name']: item for item in items}
 
     # Step 2: Fetch engagement data (now returns dict with all signal types)
-    engagement_data = fetch_engagement_data()
+    if args.source == 'api':
+        engagement_data = fetch_engagement_from_api()
+    else:
+        engagement_data = fetch_engagement_data()
 
     # Calculate coverage stats
     clicks = engagement_data.get('clicks', [])
@@ -1264,7 +1330,7 @@ def main():
             print(f"  #{item['rank']} ({item['score']:.3f}) {name_display}")
 
     # Save output
-    output_path = data_dir.parent / args.output
+    output_path = Path(__file__).resolve().parent.parent / args.output
     with open(output_path, 'w') as f:
         json.dump(output, f, indent=2)
     print(f"\n\nRankings saved to: {args.output}")

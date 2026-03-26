@@ -114,6 +114,11 @@ export default {
         return handleCohorts(request, env, origin, url);
       }
 
+      // Route: GET /ranking-export - Export all ranking signals for ML pipeline
+      if (request.method === 'GET' && url.pathname === '/ranking-export') {
+        return handleRankingExport(request, env, origin);
+      }
+
       return new Response('Not found', { status: 404 });
     } catch (err) {
       console.error('Worker error:', err);
@@ -2012,6 +2017,57 @@ async function setCache(env, key, data, ttl) {
     try {
       await env.ANALYTICS_EVENTS.put(`cache:${key}`, JSON.stringify({ data, ts: Date.now() }), { expirationTtl: ttl });
     } catch (e) {}
+  }
+}
+
+// ============================================
+// GET /ranking-export - Export all ranking signals for ML pipeline
+// ============================================
+
+async function handleRankingExport(request, env, origin) {
+  try {
+    const results = await env.DB.batch([
+      env.DB.prepare("SELECT name, section, click_count FROM content_clicks"),
+      env.DB.prepare("SELECT name, section, impression_count, first_seen, last_seen FROM content_impressions"),
+      env.DB.prepare("SELECT name, section, SUM(dwell_ms) as total_dwell, SUM(viewable_seconds) as total_viewable FROM content_dwell GROUP BY name, section"),
+      env.DB.prepare("SELECT path, milestone, COUNT(*) as count FROM scroll_milestones GROUP BY path, milestone"),
+      env.DB.prepare("SELECT query, clicks FROM search_sessions WHERE clicks IS NOT NULL AND clicks != '[]'"),
+      env.DB.prepare("SELECT content_sequence, engagement_tier FROM session_features WHERE engagement_tier = 'deep' AND content_sequence IS NOT NULL"),
+      env.DB.prepare("SELECT path, event_type, COUNT(*) as count FROM frustration_events GROUP BY path, event_type"),
+      env.DB.prepare("SELECT item_a, item_b, coview_count, coclick_count FROM item_cooccurrence WHERE coview_count > 0 OR coclick_count > 0"),
+      env.DB.prepare("SELECT name, section, AVG(reading_ratio) as avg_reading_ratio, COUNT(*) as sessions FROM content_dwell WHERE reading_ratio IS NOT NULL AND reading_ratio > 0 GROUP BY name, section"),
+      env.DB.prepare("SELECT name, section, first_seen FROM content_impressions WHERE first_seen IS NOT NULL"),
+    ]);
+
+    const response = {
+      generated_at: new Date().toISOString(),
+      signals: {
+        clicks: results[0].results || [],
+        impressions: results[1].results || [],
+        dwell: results[2].results || [],
+        scroll_milestones: results[3].results || [],
+        search_sessions: results[4].results || [],
+        session_features: results[5].results || [],
+        frustration_events: results[6].results || [],
+        item_cooccurrence: results[7].results || [],
+        reading_ratio: results[8].results || [],
+        first_seen: results[9].results || [],
+      }
+    };
+
+    return new Response(JSON.stringify(response), {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Cache-Control': 'public, max-age=1800',
+        ...corsHeaders(origin || '*')
+      }
+    });
+  } catch (err) {
+    return new Response(JSON.stringify({ error: 'Failed to export ranking data: ' + err.message }), {
+      status: 500,
+      headers: { 'Content-Type': 'application/json', ...corsHeaders(origin || '*') }
+    });
   }
 }
 

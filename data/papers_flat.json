@@ -17,7 +17,7 @@
     "category": "Experimentation > A/B Test Design & Analysis",
     "topic": "Experimentation",
     "subtopic": "A/B Test Design & Analysis",
-    "model_score": 0.0427
+    "model_score": 0.0825
   },
   {
     "id": "paper-the-theory-and-practice-of-revenue-management",
@@ -37,7 +37,47 @@
     "category": "Pricing > Dynamic Pricing & Revenue Management",
     "topic": "Pricing",
     "subtopic": "Dynamic Pricing & Revenue Management",
-    "model_score": 0.0067
+    "model_score": 0.0108
+  },
+  {
+    "id": "paper-a-theory-of-fads-fashion-custom-and-cultural-change-as-informational-cascades",
+    "name": "A Theory of Fads, Fashion, Custom, and Cultural Change as Informational Cascades",
+    "title": "A Theory of Fads, Fashion, Custom, and Cultural Change as Informational Cascades",
+    "authors": "Sushil Bikhchandani, David Hirshleifer, Ivo Welch",
+    "year": 1992,
+    "url": "https://www.journals.uchicago.edu/doi/10.1086/261849",
+    "description": "Introduces informational cascades where optimal behavior is to follow predecessors; explains fragility of mass behaviors and sudden social shifts.",
+    "citations": 1763,
+    "tag": "",
+    "tags": [
+      "Choice Models & Dynamic Choice",
+      "Social Influence & Peer Effects"
+    ],
+    "type": "paper",
+    "category": "Choice Models & Dynamic Choice > Social Influence & Peer Effects",
+    "topic": "Choice Models & Dynamic Choice",
+    "subtopic": "Social Influence & Peer Effects",
+    "model_score": 0.0001
+  },
+  {
+    "id": "paper-fear-lockdown-and-diversion-comparing-drivers-of-pandemic-economic-decline",
+    "name": "Fear, Lockdown, and Diversion: Comparing Drivers of Pandemic Economic Decline",
+    "title": "Fear, Lockdown, and Diversion: Comparing Drivers of Pandemic Economic Decline",
+    "authors": "Austan Goolsbee, Chad Syverson",
+    "year": 2021,
+    "url": "https://www.sciencedirect.com/science/article/pii/S0047272720301754",
+    "description": "Uses smartphone mobility to show voluntary behavioral changes dwarfed lockdown effects on foot traffic.",
+    "citations": 724,
+    "tag": "",
+    "tags": [
+      "Spatial & Geo",
+      "Mobility & Movement Patterns"
+    ],
+    "type": "paper",
+    "category": "Spatial & Geo > Mobility & Movement Patterns",
+    "topic": "Spatial & Geo",
+    "subtopic": "Mobility & Movement Patterns",
+    "model_score": 0.0001
   },
   {
     "id": "paper-from-first-price-auctions-to-incentive-compatible-auctions",
@@ -57,7 +97,7 @@
     "category": "Advertising > Autobidding & Budget Pacing",
     "topic": "Advertising",
     "subtopic": "Autobidding & Budget Pacing",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-discrete-choice-methods-with-simulation-2nd-ed",
@@ -77,7 +117,7 @@
     "category": "Choice Models & Dynamic Choice > Discrete Choice (Logit, Mixed Logit)",
     "topic": "Choice Models & Dynamic Choice",
     "subtopic": "Discrete Choice (Logit, Mixed Logit)",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-use-of-alternative-data-in-credit-process",
@@ -97,7 +137,7 @@
     "category": "Credit & Lending > Alternative Data",
     "topic": "Credit & Lending",
     "subtopic": "Alternative Data",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-constitutional-ai-harmlessness-from-ai-feedback",
@@ -117,7 +157,7 @@
     "category": "Inverse RL & Preference Learning > Human Feedback & RLHF",
     "topic": "Inverse RL & Preference Learning",
     "subtopic": "Human Feedback & RLHF",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-personalization-in-email-marketing-the-role-of-noninformative-advertising-content",
@@ -137,7 +177,7 @@
     "category": "Advertising > Targeting & Lookalikes",
     "topic": "Advertising",
     "subtopic": "Targeting & Lookalikes",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-direct-preference-optimization-dpo",
@@ -157,7 +197,7 @@
     "category": "Inverse RL & Preference Learning > Human Feedback & RLHF",
     "topic": "Inverse RL & Preference Learning",
     "subtopic": "Human Feedback & RLHF",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-forecasting-at-scale-prophet",
@@ -177,7 +217,7 @@
     "category": "Forecasting > Deep Learning for Forecasting",
     "topic": "Forecasting",
     "subtopic": "Deep Learning for Forecasting",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-the-economic-consequences-of-apple-s-app-tracking-transparency",
@@ -197,7 +237,7 @@
     "category": "Advertising > Privacy & Ad Effectiveness",
     "topic": "Advertising",
     "subtopic": "Privacy & Ad Effectiveness",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-rfm-analysis-for-customer-segmentation",
@@ -217,7 +257,7 @@
     "category": "Clustering & Segmentation > Customer Segmentation",
     "topic": "Clustering & Segmentation",
     "subtopic": "Customer Segmentation",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-the-long-and-the-short-of-it-balancing-short-and-long-term-marketing-strategies",
@@ -237,7 +277,7 @@
     "category": "Advertising > Brand vs. Performance",
     "topic": "Advertising",
     "subtopic": "Brand vs. Performance",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-equilibrium-effects-of-pay-transparency",
@@ -257,7 +297,7 @@
     "category": "Mechanism Design & Auctions > Platform Mechanism Design",
     "topic": "Mechanism Design & Auctions",
     "subtopic": "Platform Mechanism Design",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-libpostal-international-address-parsing",
@@ -277,7 +317,7 @@
     "category": "Spatial & Geo > Mapping & Geocoding",
     "topic": "Spatial & Geo",
     "subtopic": "Mapping & Geocoding",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-freemium-as-optimal-menu-pricing",
@@ -297,7 +337,7 @@
     "category": "Pricing > Subscription & Nonlinear Pricing",
     "topic": "Pricing",
     "subtopic": "Subscription & Nonlinear Pricing",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-personalized-pricing-and-consumer-welfare",
@@ -317,7 +357,7 @@
     "category": "Pricing > Personalized Pricing",
     "topic": "Pricing",
     "subtopic": "Personalized Pricing",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-causal-impact-a-new-approach-to-estimate-causal-effects",
@@ -337,7 +377,7 @@
     "category": "Experimentation > Switchback & Geo-Experiments",
     "topic": "Experimentation",
     "subtopic": "Switchback & Geo-Experiments",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-pyblp-blp-demand-estimation-in-python",
@@ -357,7 +397,7 @@
     "category": "Pricing > Demand Estimation & Elasticity",
     "topic": "Pricing",
     "subtopic": "Demand Estimation & Elasticity",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-dense-passage-retrieval-for-open-domain-qa-dpr",
@@ -377,7 +417,7 @@
     "category": "Search & Ranking > Semantic Search & Embeddings",
     "topic": "Search & Ranking",
     "subtopic": "Semantic Search & Embeddings",
-    "model_score": 0.0001
+    "model_score": 0.0
   },
   {
     "id": "paper-alibaba-vehicle-routing-algorithms-enable-rapid-pick-and-delivery",
@@ -16940,26 +16980,6 @@
     "model_score": 0.0
   },
   {
-    "id": "paper-a-theory-of-fads-fashion-custom-and-cultural-change-as-informational-cascades",
-    "name": "A Theory of Fads, Fashion, Custom, and Cultural Change as Informational Cascades",
-    "title": "A Theory of Fads, Fashion, Custom, and Cultural Change as Informational Cascades",
-    "authors": "Sushil Bikhchandani, David Hirshleifer, Ivo Welch",
-    "year": 1992,
-    "url": "https://www.journals.uchicago.edu/doi/10.1086/261849",
-    "description": "Introduces informational cascades where optimal behavior is to follow predecessors; explains fragility of mass behaviors and sudden social shifts.",
-    "citations": 1763,
-    "tag": "",
-    "tags": [
-      "Choice Models & Dynamic Choice",
-      "Social Influence & Peer Effects"
-    ],
-    "type": "paper",
-    "category": "Choice Models & Dynamic Choice > Social Influence & Peer Effects",
-    "topic": "Choice Models & Dynamic Choice",
-    "subtopic": "Social Influence & Peer Effects",
-    "model_score": 0.0
-  },
-  {
     "id": "paper-identification-of-endogenous-social-effects-the-reflection-problem",
     "name": "Identification of Endogenous Social Effects: The Reflection Problem",
     "title": "Identification of Endogenous Social Effects: The Reflection Problem",
@@ -21440,26 +21460,6 @@
     "model_score": 0.0
   },
   {
-    "id": "paper-fear-lockdown-and-diversion-comparing-drivers-of-pandemic-economic-decline",
-    "name": "Fear, Lockdown, and Diversion: Comparing Drivers of Pandemic Economic Decline",
-    "title": "Fear, Lockdown, and Diversion: Comparing Drivers of Pandemic Economic Decline",
-    "authors": "Austan Goolsbee, Chad Syverson",
-    "year": 2021,
-    "url": "https://www.sciencedirect.com/science/article/pii/S0047272720301754",
-    "description": "Uses smartphone mobility to show voluntary behavioral changes dwarfed lockdown effects on foot traffic.",
-    "citations": 724,
-    "tag": "",
-    "tags": [
-      "Spatial & Geo",
-      "Mobility & Movement Patterns"
-    ],
-    "type": "paper",
-    "category": "Spatial & Geo > Mobility & Movement Patterns",
-    "topic": "Spatial & Geo",
-    "subtopic": "Mobility & Movement Patterns",
-    "model_score": 0.0
-  },
-  {
     "id": "paper-creating-synthetic-baseline-populations",
     "name": "Creating Synthetic Baseline Populations",
     "title": "Creating Synthetic Baseline Populations",
@@ -21787,7 +21787,7 @@
     "authors": "Joseph P. Romano & Michael Wolf",
     "year": 2017,
     "url": "https://doi.org/10.1016/j.jeconom.2016.10.006",
-    "description": "Rehabilitates FGLS/WLS by pairing it with HC standard errors. Shows WLS+HC achieves 30-82% shorter confidence intervals than OLS+HC under heteroskedasticity while maintaining valid inference even if weights are misspecified. Introduces ALS (Adaptive Least Squares) that pretests for heteroskedasticity—a 'free lunch' estimator with nearly zero efficiency loss under homoskedasticity.",
+    "description": "Rehabilitates FGLS/WLS by pairing it with HC standard errors. Shows WLS+HC achieves 30-82% shorter confidence intervals than OLS+HC under heteroskedasticity while maintaining valid inference even if weights are misspecified. Introduces ALS (Adaptive Least Squares) that pretests for heteroskedasticity\u2014a 'free lunch' estimator with nearly zero efficiency loss under homoskedasticity.",
     "citations": 40,
     "tag": "Methodological",
     "tags": [
