@@ -1,0 +1,251 @@
+=== TASK TEMPLATE ===
+# Task: Homepage Visual Quality — Netflix-Level Transformation
+
+You are a senior frontend designer and CSS architect. The tech-econ.com homepage currently looks like "a spreadsheet wearing a dark theme." Your job is to transform it into a premium, Netflix-quality content discovery experience — one iteration at a time.
+
+**The core problem:** The site has extraordinary content (4000+ curated resources) but serves it on a cafeteria tray. The gap isn't substance, it's staging.
+
+## PREREQUISITE
+
+Hugo server must be running at localhost:1313 in a separate terminal. Verify before starting:
+```bash
+curl -s -o /dev/null -w "%{http_code}" http://localhost:1313/
+```
+If you get `000` or an error, screenshots will be skipped but CSS work can continue.
+
+## Constraints
+
+You MAY modify:
+- `static/css/custom.css` — your primary target (9900+ lines, explore-row styling starts ~line 8880)
+- `layouts/_default/home.html` — the homepage template (369 lines)
+- `layouts/partials/homepage/row-standard.html` — standard row cards
+- `layouts/partials/homepage/row-hero.html` — hero/trending row cards
+- `layouts/partials/homepage/row-narrative.html` — narrative collection cards
+- `layouts/partials/homepage/row-compact.html` — compact cards
+
+You MUST NOT modify:
+- `data/*.json` — content data files
+- `hugo.toml` — site config
+- `scripts/` — Python scripts
+- `analytics-worker/` — Cloudflare worker code
+- `autoresearch/` — autoresearch infrastructure
+- `static/js/` — JavaScript files (no JS changes)
+
+## Critical Rules
+
+1. **Never delete existing CSS rules** — only add or modify
+2. **Preserve all CSS class names** used in templates
+3. **Don't break the horizontal scroller** — `.explore-scroller` is core UX
+4. **Don't remove `content-visibility: auto`** — it's a performance optimization
+5. **One focus area per iteration** — don't scatter changes
+6. **Dark mode is the default** — most users see dark. Design dark-first, verify light doesn't break.
+
+## Step-by-Step Per Iteration
+
+### Step 1: Screenshot "before" state
+```bash
+/Library/Frameworks/Python.framework/Versions/3.11/bin/shot-scraper http://localhost:1313/ -o /tmp/homepage-before.png --width 1400 --height 2400
+```
+
+### Step 2: Read current state
+Read `static/css/custom.css` focusing on the relevant section for your chosen focus area (see line map below). Read the relevant template partial too.
+
+### Step 3: Pick ONE focus area
+Choose the HIGHEST PRIORITY uncompleted item from the checklist below. Check what already looks good and pick what needs the most work.
+
+### Step 4: Implement the improvement
+Make targeted, well-commented CSS changes. For template changes, be minimal and surgical.
+
+### Step 5: Screenshot "after" state
+```bash
+/Library/Frameworks/Python.framework/Versions/3.11/bin/shot-scraper http://localhost:1313/ -o /tmp/homepage-after.png --width 1400 --height 2400
+```
+
+### Step 6: Verify Hugo build
+```bash
+hugo --gc --minify
+```
+
+---
+
+## The 10 Problems to Fix (Priority Order)
+
+These come from a ruthless Netflix comparison. Each iteration should attack ONE.
+
+### Priority 1: Kill the Clutter (15 rows → 6 rows)
+
+Netflix shows 5-7 rows. You show FIFTEEN. Nothing feels chosen for me.
+
+**What to do:** In `layouts/_default/home.html`, hide rows beyond the first 6 behind a "Show More Rows" button/section. The 6 to keep visible:
+1. Trending Now (hero template — the hot stuff)
+2. Staff Picks (curated quality)
+3. One narrative collection (editorial depth)
+4. New This Month (freshness)
+5. Hidden Gems (discovery)
+6. Career Corner or Quick Start (utility)
+
+The remaining rows should be hidden via CSS (`display: none` on `.home-row:nth-child(n+7)` with a toggle) or moved to a collapsible section. Do NOT delete them — just hide them from the initial view.
+
+Also: remove or minimize the stats banner ("550 packages..."). It reads like a database inventory report. Netflix never opens with "We have 17,000 titles." Either kill it or make it a subtle footer element.
+
+### Priority 2: Transform the Hero Section
+
+The hero is a centered text block — brand name, tagline, stats, search bar — stacked like a conference slide. Zero visual drama.
+
+**What to do:** Replace with a "Featured This Week" spotlight. One standout resource with:
+- Full-width gradient background (not flat `rgb(18,18,18)`)
+- Large editorial headline ("This week: discover DoWhy 2.0 — Microsoft's causal inference rewrite")
+- A compelling 1-2 sentence blurb about WHY it matters
+- A bold CTA button ("Explore" / "Read More")
+- The search bar can stay but should be minimal (the ⌘K shortcut already works)
+
+Use the first item from the Trending Now row as the featured item. The hero should take 50-60% of the viewport and make someone feel something.
+
+### Priority 3: Card Depth and Dimension
+
+Cards are flat `rgb(37,37,37)` rectangles. They all look identical regardless of content importance.
+
+**What to do:**
+- Add layered shadows: a soft spread (`0 4px 20px rgba(0,0,0,0.1)`) + a sharp small shadow (`0 1px 3px rgba(0,0,0,0.08)`)
+- Subtle gradient on card background (not flat color — a very slight top-to-bottom gradient)
+- Add colored left-border or top-accent stripe by content type:
+  - Package: blue (`#1565c0`)
+  - Dataset: green (`#2e7d32`)
+  - Paper: orange (`#e65100`)
+  - Resource: purple (`#7b1fa2`)
+  - Talk: amber (`#ff8f00`)
+  - Career: teal (`#00838f`)
+  - Community: pink (`#c2185b`)
+  - Book: olive (`#558b2f`)
+- Fix missing CSS: `.explore-card h3` and `.explore-card .explore-card-icon` on standard cards have NO explicit styling
+
+### Priority 4: Typography Hierarchy
+
+Row titles are 1.25rem with no visual presence. Card titles have minimal styling. Everything feels the same weight.
+
+**What to do:**
+- Row titles (`.explore-row-title`): increase to 1.5rem, add letter-spacing (0.02em), add a subtle accent underline (2px gradient line below)
+- Row subtitles: add italic, slightly different color
+- Card titles: explicit font-size, weight, and line-clamp rules
+- Consider adding editorial sub-headers to rows (e.g., "Trending Now" -> subtitle: "what the community can't stop clicking")
+- If you can download a .woff2 font file, add `@font-face` for Inter or Space Grotesk for headings only. Save to `static/fonts/`. System font stack is fine for body text.
+
+### Priority 5: Make Trending Row Special
+
+The most valuable row looks identical to every other row. Netflix's "Top 10" has massive numbered cards.
+
+**What to do:**
+- Make trending hero cards visually distinct: bigger shadows, a subtle animated glow or pulsing border accent
+- Consider adding rank numbers (1, 2, 3...) as large overlaid text on each card
+- The row header should feel dramatic — larger font, maybe a subtle icon or color treatment
+- Background of the entire trending row could have a subtle gradient that other rows don't have
+
+### Priority 6: Hover States That Shout
+
+Current hover is `scale(1.05) translateY(-4px)`. Barely perceptible.
+
+**What to do:**
+- Scale up to `scale(1.08)` with a more dramatic shadow lift (`0 20px 40px rgba(0,0,0,0.3)`)
+- Add a glowing border effect (box-shadow with accent color at low opacity)
+- The top accent line (already exists via `::before`) should be more visible — maybe 4px tall with a vibrant gradient
+- Consider revealing additional info on hover: expand the description clamp from 2 to 4 lines, or show extra metadata
+- Transition should be snappy: 0.15s ease-out (not 0.2s ease)
+
+### Priority 7: Row Spacing and Rhythm
+
+Rows feel cramped. 2rem gap between rows, no visual breathing room.
+
+**What to do:**
+- Increase `.explore-rows` gap to 3rem or 3.5rem
+- Add more padding to row headers
+- Each row should feel like its own "act" — consider alternating subtle background tints (every other row gets a faint bg shift like `rgba(255,255,255,0.02)` in dark mode)
+- The scroller padding needs more breathing room
+- Fix: line 8929 uses `var(--background)` which doesn't exist -> change to `var(--bg-primary)`
+
+### Priority 8: Type Badge Refinement
+
+Type badges (package, dataset, etc.) are tiny pills with low visual weight.
+
+**What to do:**
+- Increase padding and font-size slightly
+- More rounded pill shape (border-radius: 20px)
+- Better dark mode contrast — the current dark mode colors are too muted
+- Consider adding a tiny icon before the text via CSS `::before` content
+
+### Priority 9: Dark Mode = Cinema
+
+Dark mode should feel like walking into a cinema, not just "inverted colors."
+
+**What to do:**
+- Deep blacks for backgrounds (keep `#121212`)
+- Vibrant accent colors — boost the accent from `#4da6ff` to something warmer or more distinctive
+- Subtle glows instead of sharp borders (use `box-shadow` with accent color instead of `border`)
+- Cards should have a very subtle warm tint in dark mode, not cold gray
+- Pick ONE brand accent color and use it consistently everywhere (suggest warm gold `#f0b429` or electric teal `#00d4aa`)
+
+### Priority 10: Motion and Life
+
+The page is completely static. Nothing animates on load, nothing fades in as you scroll.
+
+**What to do IN THE TEMPLATE ONLY (no JS file changes):**
+- Add CSS `@keyframes fadeSlideIn` animation
+- In `home.html`, add `style="animation: fadeSlideIn 0.3s ease forwards; animation-delay: Xs"` to each row with staggered delays
+- OR use a simple inline `<script>` in `home.html` (NOT in tracker.js) with IntersectionObserver to add a `.visible` class to rows as they scroll into view, then animate `.home-row.visible` with CSS
+- The hero section could have a very subtle gradient animation (slow color shift)
+- Keep all animations under 0.3s (except hero gradient which can be slow: 8-10s cycle)
+
+---
+
+## CSS Line Map (for quick navigation)
+
+| Lines | Content |
+|-------|---------|
+| 1-36 | CSS variables (`:root` and `[data-theme="dark"]`) |
+| 8880-8914 | `.explore-rows`, `.explore-row`, `.explore-row-header`, `.explore-row-title` |
+| 8916-8947 | `.explore-scroller-wrapper`, scroller, scrollbar hide |
+| 8949-8997 | `.scroller-nav` buttons (prev/next arrows) |
+| 9000-9040 | `.explore-card` base + hover + `::before` accent |
+| 9042-9070 | `.explore-card-type` badges (light + dark mode) |
+| 9072-9120 | `.explore-card-title`, `.explore-card-desc`, card icons |
+| 9378-9540 | Engagement badges, narrative hero styling |
+| 9589-9682 | `.explore-card-hero` (380px wide, 240px tall) |
+| 9684-9735 | `.explore-card-compact` (240px wide, 140px tall) |
+| 9737-9757 | `.home-row-narrative .hero-card` accent |
+| 9760-9817 | `.home-row` wrapper, row header, responsive rules |
+
+## Known CSS Bugs to Fix Along the Way
+
+- **Line 8929**: `var(--background)` should be `var(--bg-primary)` — the fade gradient is invisible
+- **Standard `.explore-card`**: the `h3` inside has styling via `.explore-card-title` class but the icon (`.explore-card-icon`) has no explicit styling on standard cards (only hero variant does at line 9624)
+- **Row gap**: only `2rem` — makes the page feel cramped
+- **Scroller fade**: barely visible because of the wrong CSS variable
+
+## Anti-Patterns to Avoid
+
+- Don't use `!important` except to override third-party styles
+- Don't use fixed pixel sizes for text (use rem)
+- Don't add animations longer than 0.3s (except page-load hero animation)
+- Don't change card flex sizing (`flex: 0 0 280px`) without testing scroller behavior
+- Don't remove `content-visibility: auto` performance optimization
+- Don't add external web font CDN links — self-host .woff2 files in `static/fonts/` if adding custom fonts
+- Don't add `<script>` tags that load external resources
+
+## Quality Bar
+
+A Netflix-quality homepage makes you want to keep scrolling. Each row draws the eye with:
+1. A bold title that tells you "this row is about X"
+2. Cards that feel touchable, dimensional, not flat
+3. Smooth, delightful hover states
+4. Clear visual hierarchy (hero section > trending > standard > compact)
+5. Rich color without being garish
+6. Consistent spacing that creates visual rhythm
+7. Dark mode that feels premium, like a cinema — not just "inverted"
+
+The homepage should feel like a curated experience, not a spreadsheet with rounded corners.
+
+=== PROJECT ROOT ===
+/tmp/autoresearch-homepage-visual-16151
+
+=== LOG PREFIX ===
+/Users/pranjal/Code/tech-econ/autoresearch/log/homepage-visual-20260325-084000/iter-002
+

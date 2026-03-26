@@ -1,0 +1,112 @@
+=== TASK TEMPLATE ===
+# Search UX: Make It Sexy, Intuitive, and Smart
+
+<!-- ALLOWED_FILES: static/css/custom.css, static/js/search/unified-search.js, layouts/partials/global-search-modal.html -->
+
+You are a senior UI/UX engineer obsessed with craft. Your job is to make the search experience on tech-econ.com feel premium — like Spotlight, Raycast, or Linear's command palette. Fast, beautiful, and it *understands what you're looking for*.
+
+IMPORTANT: You may ONLY modify the three files listed above. Do NOT touch any other files — no evaluate.sh, no run.sh, no build scripts, no data files. Changes to other files will be automatically reverted.
+
+## Three Quality Lenses
+
+Judge everything through these lenses. They are deliberately vague — use your taste.
+
+**Sexy**: Does this look like it was designed by someone who obsesses over pixels? Are transitions smooth? Do colors feel intentional? Is there visual rhythm? Would a designer screenshot this and share it?
+
+**Intuitive**: Can a first-time visitor find what they need in 5 seconds? Do the suggestions, filters, and result layout guide the eye naturally? Is anything confusing or cluttered?
+
+**Understands You**: When I search "causal inference for beginners", do the results FEEL curated for me? Does a paper look different from a package? Can I tell at a glance which result is the one I need? Does the system surface the right metadata to help me decide?
+
+## What You Can Touch
+
+You MAY modify these three files ONLY:
+- `static/css/custom.css` — search styles (lines ~4123-5300)
+- `static/js/search/unified-search.js` — result rendering (~lines 1500-1551) and landing state (~lines 2117-2182)
+- `layouts/partials/global-search-modal.html` — modal HTML structure (~102 lines)
+
+You MUST NOT modify anything else. No scripts, no data, no config, no autoresearch infrastructure.
+
+## Available Data (Most Is Unused!)
+
+Each search result from the worker carries these fields. **Bold = currently NOT rendered** but available:
+
+Rendered: name, description, tags, type, difficulty, category, prerequisites
+
+NOT rendered: **authors, year, model_score, best_for, summary, semantic_cluster, content_format, depth_level, audience, use_cases, topic_tags, related_concepts, canonical_topics, topic, subtopic**
+
+This is a massive opportunity. A paper about "Synthetic Control Methods" should show "Abadie et al., 2010" — not look identical to a Python package.
+
+## CSS Conventions
+
+- Use existing variables: `var(--bg-hover)`, `var(--accent)`, `var(--text-muted)`, `var(--text-primary)`, `var(--border-light)`, `var(--bg-card)`, `var(--accent-bg)`
+- Dark mode: use `[data-theme="dark"]` selectors
+- Animations: always add `@media (prefers-reduced-motion: reduce)` fallback
+- No hardcoded hex colors for anything theme-dependent
+- Inline styles are OK for dynamic values like type badge colors
+
+## Instructions
+
+### Step 1: Read the current code
+
+Read these files completely — every line, not summaries:
+- `layouts/partials/global-search-modal.html`
+- `static/js/search/unified-search.js` lines 1490-1560 (result rendering)
+- `static/js/search/unified-search.js` lines 2110-2210 (landing/hint state)
+- `static/css/custom.css` lines 4120-5000 (search styles)
+
+### Step 2: Pick ONE improvement
+
+Choose the single most impactful change from this list. Skip any that a previous iteration already addressed (check the PREVIOUS ITERATIONS section in the prompt if present).
+
+Priority:
+1. Modal opening animation + result entrance animations (staggered slide-in)
+2. Type-specific metadata lines (authors/year for papers, language badge for packages, format for talks)
+3. Search landing experience (catalog stats, browse-by-type grid, richer suggestions)
+4. Match highlight styling (gradient background instead of plain yellow mark)
+5. Enhanced no-results state (icon, guidance, clickable syntax examples)
+6. Relevance score indicator (subtle gradient bar per result)
+7. Semantic cluster badges on results
+8. Mobile responsive refinements (stacking, touch targets, font scaling)
+
+Do NOT do multiple improvements. One focused change. Do it well.
+
+### Step 3: Implement
+
+Make the change. Keep it minimal and tasteful. Remember:
+- Result rendering is string concatenation (no JSX/templates) — keep it fast
+- There are 4000+ items, so rendering must be lightweight
+- Guard against missing data: `if (result.authors)` before using it
+- The result HTML structure matters for keyboard navigation (`.result-item` class)
+
+### Step 4: Validate build
+
+```bash
+cd /Users/pranjal/Code/tech-econ
+hugo --gc --minify
+node --check static/js/search/unified-search.js
+```
+
+Fix any errors before proceeding.
+
+### Step 5: Self-critique through the three lenses
+
+Walk through your change mentally:
+- **Sexy**: Does this feel polished or bolted-on? Would you be proud of this in a portfolio?
+- **Intuitive**: Did you add clutter or clarity? Does the information hierarchy still flow?
+- **Understands You**: Does this help the user make better decisions about which result to click?
+- Does it work in both light and dark mode?
+- Does it degrade gracefully when data is missing?
+- Does it have reduced-motion fallback if animated?
+
+If the self-critique reveals issues, fix them now.
+
+### Step 6: Write a brief summary
+
+End with a 2-3 line summary of what you changed and why, for the next iteration to reference.
+
+=== PROJECT ROOT ===
+/Users/pranjal/Code/tech-econ
+
+=== LOG PREFIX ===
+/Users/pranjal/Code/tech-econ/autoresearch/log/search-ux-20260325-083458/iter-001
+

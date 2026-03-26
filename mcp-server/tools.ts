@@ -30,8 +30,9 @@ export const ConceptGraphSchema = z.object({
 });
 
 function formatItemCompact(item: ContentItem): string {
+  const cat = item.category ? ` | ${item.category}` : "";
   const score = item.model_score !== undefined ? ` (score: ${item.model_score.toFixed(3)})` : "";
-  return `- **${item.name}** [${item.type}] — ${(item.description || "").slice(0, 120)}${score}`;
+  return `- **${item.name}** [${item.type}${cat}] — ${(item.description || "").slice(0, 120)}${score}`;
 }
 
 export function catalogSearch(loader: DataLoader, input: z.infer<typeof CatalogSearchSchema>): string {

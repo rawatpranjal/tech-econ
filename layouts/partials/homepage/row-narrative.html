@@ -10,7 +10,7 @@
         <div class="explore-scroller">
             {{/* Hero card — rendered first if present */}}
             {{ with .hero }}
-            <a href="{{ .url }}" target="_blank" rel="noopener" class="explore-card hero-card" data-score="{{ .model_score }}">
+            <a href="{{ .url }}" target="_blank" rel="noopener" class="explore-card hero-card" data-score="{{ .model_score }}" data-type="{{ .type }}">
                 <span class="hero-indicator">FEATURED</span>
                 <div class="explore-card-header">
                     <div class="explore-card-icon">
@@ -35,7 +35,7 @@
             {{ end }}
             {{/* Remaining cast items */}}
             {{ range .items }}
-            <a href="{{ .url }}" target="_blank" rel="noopener" class="explore-card" data-score="{{ .model_score }}">
+            <a href="{{ .url }}" target="_blank" rel="noopener" class="explore-card" data-score="{{ .model_score }}" data-type="{{ .type }}">
                 <div class="explore-card-header">
                     <div class="explore-card-icon">
                         {{ if findRE "github\\.com" .url }}
