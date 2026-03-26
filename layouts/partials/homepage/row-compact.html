@@ -9,7 +9,7 @@
     <div class="explore-scroller-wrapper">
         <div class="explore-scroller">
             {{ range .items }}
-            <a href="{{ .url }}" target="_blank" rel="noopener" class="explore-card-compact" data-score="{{ .model_score }}" data-type="{{ .type }}">
+            <a href="{{ .url }}" target="_blank" rel="noopener" class="explore-card-compact" data-score="{{ .model_score }}" data-type="{{ .type }}" data-section-category="{{ .type }}">
                 <div class="explore-card-header">
                     <div class="explore-card-icon">
                         {{ if findRE "github\\.com" .url }}

@@ -9,7 +9,7 @@
     <div class="explore-scroller-wrapper">
         <div class="explore-scroller">
             {{ range .items }}
-            <a href="{{ .url }}" target="_blank" rel="noopener" class="explore-card-hero {{ if .image_url }}has-thumbnail{{ end }}" data-score="{{ .model_score }}" data-type="{{ .type }}">
+            <a href="{{ .url }}" target="_blank" rel="noopener" class="explore-card-hero {{ if .image_url }}has-thumbnail{{ end }}" data-score="{{ .model_score }}" data-type="{{ .type }}" data-section-category="{{ .type }}">
                 {{ if .image_url }}
                 <div class="card-thumbnail">
                     <img src="{{ .image_url }}" alt="" loading="lazy" onerror="this.parentElement.style.display='none'">

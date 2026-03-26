@@ -82,12 +82,12 @@ def load_content_lookup(data_dir: Path) -> dict[str, dict]:
             image_url = item.get("image_url", "")
             if not image_url:
                 if content_type == "package":
-                    github_url = item.get("github_url", "")
+                    github_url = item.get("github_url") or ""
                     if "github.com/" in github_url:
                         owner = github_url.split("github.com/")[1].split("/")[0]
                         image_url = f"https://github.com/{owner}.png?size=128"
                 elif content_type == "book":
-                    isbn = item.get("isbn", "")
+                    isbn = item.get("isbn") or ""
                     if isbn:
                         image_url = f"https://covers.openlibrary.org/b/isbn/{isbn}-M.jpg"
 
@@ -1095,11 +1095,20 @@ def generate_rows(data_dir: Path, max_rows: int, critique_iterations: int) -> di
 
         # No auto-fix on last iteration
         if iteration < critique_iterations and issues:
-            # Simple fix: trim oversized rows
+            # Fix: trim oversized rows
             for row in rows:
                 if len(row.get("items", [])) > ROW_MAX_ITEMS:
                     row["items"] = row["items"][:ROW_MAX_ITEMS]
                     print(f"  Fixed: trimmed '{row['id']}' to {ROW_MAX_ITEMS} items")
+            # Fix: pad undersized rows with available candidates
+            all_candidates = [make_item(r, content_lookup) for r in rankings if r["name"].lower().strip() not in used]
+            for row in rows:
+                if len(row.get("items", [])) < ROW_MIN_ITEMS:
+                    before = len(row["items"])
+                    fix_row_item_counts(row, all_candidates, used)
+                    after = len(row["items"])
+                    if after > before:
+                        print(f"  Fixed: padded '{row['id']}' from {before} to {after} items")
 
     # Compute stats
     total_items = sum(len(r.get("items", [])) for r in best_rows)

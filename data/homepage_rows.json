@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-26T14:32:34.563431+00:00",
+  "generated_at": "2026-03-26T14:44:15.531438+00:00",
   "stats": {
     "total_rows": 14,
     "total_items": 116,
@@ -210,7 +210,7 @@
           "category": "Adaptive Experimentation & Bandits",
           "description": "Meta's open-source platform for adaptive experimentation. Bayesian optimization, multi-objective optimization, and automated experiment design. Built on BoTorch for AI-assisted experimentation.",
           "url": "https://ax.dev",
-          "image_url": "",
+          "image_url": "https://github.com/facebook.png?size=128",
           "score": 0.4684,
           "cold_start": false,
           "signals": {
@@ -345,7 +345,7 @@
           "category": "Bayesian Econometrics",
           "description": "High-level interface for building Bayesian GLMMs, built on top of PyMC. Uses formula syntax similar to R's `lme4`.",
           "url": "https://github.com/bambinos/bambi",
-          "image_url": "",
+          "image_url": "https://github.com/bambinos.png?size=128",
           "score": 0.3208,
           "cold_start": false,
           "signals": {
@@ -392,7 +392,7 @@
           "category": "MarTech & Customer Analytics",
           "description": "Microsoft's library for heterogeneous treatment effect estimation. Implements DML, causal forests, and instrumental variable methods with sklearn-compatible API.",
           "url": "https://github.com/microsoft/EconML",
-          "image_url": "",
+          "image_url": "https://github.com/microsoft.png?size=128",
           "score": 0.2841,
           "cold_start": false,
           "signals": {}
@@ -458,7 +458,7 @@
           "category": "Causal Inference",
           "description": "Microsoft's causal inference library with four-step Model-Identify-Estimate-Refute workflow",
           "url": "https://www.pywhy.org/dowhy/",
-          "image_url": "",
+          "image_url": "https://github.com/py-why.png?size=128",
           "score": 0.29,
           "cold_start": false,
           "signals": {}
@@ -527,7 +527,7 @@
           "category": "Optimization",
           "description": "Numerical optimization framework for Rust with Newton, BFGS, L-BFGS, trust region, and derivative-free methods for MLE/GMM.",
           "url": "https://crates.io/crates/argmin",
-          "image_url": "",
+          "image_url": "https://github.com/argmin-rs.png?size=128",
           "score": 0.2839,
           "cold_start": false,
           "signals": {
@@ -608,7 +608,7 @@
           "category": "Power Simulation & Design of Experiments",
           "description": "Bayesian Adaptive Design Optimization (ADO) for tuning experiments in real-time, with models for psychometric tasks.",
           "url": "https://github.com/adopy/adopy",
-          "image_url": "",
+          "image_url": "https://github.com/adopy.png?size=128",
           "score": 0.2846,
           "cold_start": false,
           "signals": {
@@ -635,7 +635,7 @@
           "category": "Power Simulation & Design of Experiments",
           "description": "Implements classical Design of Experiments: factorial (full/fractional), response surface (Box-Behnken, CCD), Latin Hypercube.",
           "url": "https://github.com/clicumu/pyDOE2",
-          "image_url": "",
+          "image_url": "https://github.com/clicumu.png?size=128",
           "score": 0.2846,
           "cold_start": false,
           "signals": {
@@ -914,7 +914,7 @@
           "category": "Causal Discovery & Graphical Models",
           "description": "Comprehensive Python package serving as Python translation and extension of Java-based Tetrad toolkit for causal discovery algorithms.",
           "url": "https://github.com/py-why/causal-learn",
-          "image_url": "",
+          "image_url": "https://github.com/py-why.png?size=128",
           "score": 0.2848,
           "cold_start": false,
           "signals": {
@@ -941,7 +941,7 @@
           "category": "Natural Language Processing for Economics",
           "description": "Industrial-strength NLP library for efficient text processing pipelines (NER, POS tagging, etc.).",
           "url": "https://github.com/explosion/spaCy",
-          "image_url": "",
+          "image_url": "https://github.com/explosion.png?size=128",
           "score": 0.1503,
           "cold_start": false,
           "signals": {
@@ -1123,7 +1123,7 @@
           "category": "Causal Inference (DiD)",
           "description": "Performs Goodman-Bacon decomposition showing how two-way fixed effects (TWFE) estimates are weighted averages of all possible 2\u00d72 DiD comparisons. Essential for diagnosing negative weights problems in staggered adoption designs.",
           "url": "https://cran.r-project.org/package=bacondecomp",
-          "image_url": "",
+          "image_url": "https://github.com/evanjflack.png?size=128",
           "score": 0.3149,
           "cold_start": false,
           "signals": {
@@ -1570,7 +1570,7 @@
           "category": "Discrete Choice Models",
           "description": "Desktop application for computational revealed preference analysis. GUI written in Python with Rust backend for performance. Analyzes choice datasets for rationality and behavioral consistency.",
           "url": "https://prestsoftware.com/",
-          "image_url": "",
+          "image_url": "https://github.com/prestsoftware.png?size=128",
           "score": 0.0017,
           "cold_start": true,
           "signals": {}
@@ -1581,7 +1581,7 @@
           "category": "Bibliography Management",
           "description": "Parse and write BibTeX files in Python with middleware transformations. Trusted by 1,600+ repositories. Version 2.0 beta offers 10x faster performance.",
           "url": "https://github.com/sciunto-org/python-bibtexparser",
-          "image_url": "",
+          "image_url": "https://github.com/sciunto-org.png?size=128",
           "score": 0.0016,
           "cold_start": true,
           "signals": {}
