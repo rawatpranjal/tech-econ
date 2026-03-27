@@ -25,7 +25,7 @@ TEMPLATE_NARRATIVE = "narrative"
 TEMPLATE_COMPACT = "compact"
 
 # Content types across the site
-ALL_TYPES = {"package", "dataset", "resource", "paper", "talk", "career", "community", "book"}
+ALL_TYPES = {"package", "dataset", "resource", "paper", "talk", "community", "book"}
 
 # Max items same type per row (unless type-specific rows like datasets/talks)
 MAX_SAME_TYPE_PER_ROW = 3
@@ -354,6 +354,7 @@ def _narrative_carousel_to_items(
 
 def build_deep_dive(
     narrative_carousels: list[dict],
+    rankings: list[dict],
     content_lookup: dict,
     score_lookup: dict,
     used: set[str],
@@ -386,6 +387,19 @@ def build_deep_dive(
 
     # Apply type cap so one type doesn't dominate
     items = apply_type_cap(items, MAX_SAME_TYPE_PER_ROW)
+
+    # Pad short rows with related items from rankings
+    if len(items) < ROW_MIN_ITEMS:
+        seed_types = {i["type"] for i in items}
+        for r in rankings:
+            if len(items) >= ROW_MIN_ITEMS:
+                break
+            key = r["name"].lower().strip()
+            if key in used or r.get("type") not in seed_types:
+                continue
+            if not any(i["name"].lower().strip() == key for i in items):
+                items.append(make_item(r, content_lookup))
+
     name = chosen.get("name", "Deep Dive")
     items = items[:ROW_MAX_ITEMS]
     mark_used(items, used)
@@ -455,6 +469,7 @@ def build_persons_universe(
 
 def build_essential_toolkit(
     package_clusters: list[dict],
+    rankings: list[dict],
     content_lookup: dict,
     score_lookup: dict,
     used: set[str],
@@ -508,6 +523,24 @@ def build_essential_toolkit(
         })
 
     items.sort(key=lambda x: x["score"], reverse=True)
+    items = apply_type_cap(items, MAX_SAME_TYPE_PER_ROW)
+
+    # Pad short rows after type cap with related items from rankings
+    if len(items) < ROW_MIN_ITEMS:
+        macro = best_cluster.get("macro_category", "").lower()
+        for r in rankings:
+            if len(items) >= ROW_MIN_ITEMS:
+                break
+            key = r["name"].lower().strip()
+            if key in used:
+                continue
+            # Prefer items in related categories
+            r_cat = (r.get("category") or "").lower()
+            if macro and macro not in r_cat and r.get("type") == "package":
+                continue  # skip unrelated packages (type cap would just drop them)
+            if not any(i["name"].lower().strip() == key for i in items):
+                items.append(make_item(r, content_lookup))
+
     items = items[:ROW_MAX_ITEMS]
     mark_used(items, used)
 
@@ -525,6 +558,7 @@ def build_essential_toolkit(
 
 def build_learning_path(
     narrative_carousels: list[dict],
+    rankings: list[dict],
     content_lookup: dict,
     score_lookup: dict,
     used: set[str],
@@ -548,6 +582,18 @@ def build_learning_path(
 
     if not items:
         return None
+
+    # Pad short rows with related items from rankings
+    if len(items) < ROW_MIN_ITEMS:
+        seed_types = {i["type"] for i in items}
+        for r in rankings:
+            if len(items) >= ROW_MIN_ITEMS:
+                break
+            key = r["name"].lower().strip()
+            if key in used or r.get("type") not in seed_types:
+                continue
+            if not any(i["name"].lower().strip() == key for i in items):
+                items.append(make_item(r, content_lookup))
 
     name = chosen.get("name", "Learning Path")
     items = items[:ROW_MAX_ITEMS]
@@ -598,6 +644,18 @@ def build_if_you_like(
     candidates.sort(key=lambda x: x["score"], reverse=True)
     candidates = apply_type_cap(candidates, MAX_SAME_TYPE_PER_ROW)
     items = candidates[:ROW_MAX_ITEMS]
+
+    # Pad short rows by broadening beyond seed category
+    if len(items) < ROW_MIN_ITEMS:
+        for r in rankings:
+            if len(items) >= ROW_MIN_ITEMS:
+                break
+            key = r["name"].lower().strip()
+            if key in used or r["name"] == seed_name:
+                continue
+            if not any(i["name"].lower().strip() == key for i in items):
+                items.append(make_item(r, content_lookup))
+
     mark_used(items, used)
 
     return {
@@ -1017,7 +1075,7 @@ def generate_rows(data_dir: Path, max_rows: int, critique_iterations: int) -> di
         rows.append(build_most_clicked(rankings, content_lookup, used))
 
         # Row 4: Deep Dive
-        row4 = build_deep_dive(narrative_carousels, content_lookup, score_lookup, used)
+        row4 = build_deep_dive(narrative_carousels, rankings, content_lookup, score_lookup, used)
         if row4:
             rows.append(row4)
 
@@ -1027,12 +1085,12 @@ def generate_rows(data_dir: Path, max_rows: int, critique_iterations: int) -> di
             rows.append(row5)
 
         # Row 6: Essential Toolkit
-        row6 = build_essential_toolkit(package_clusters, content_lookup, score_lookup, used)
+        row6 = build_essential_toolkit(package_clusters, rankings, content_lookup, score_lookup, used)
         if row6:
             rows.append(row6)
 
         # Row 7: Learning Path
-        row7 = build_learning_path(narrative_carousels, content_lookup, score_lookup, used)
+        row7 = build_learning_path(narrative_carousels, rankings, content_lookup, score_lookup, used)
         if row7:
             rows.append(row7)
 

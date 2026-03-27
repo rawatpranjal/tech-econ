@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-26T17:26:30.057229+00:00",
+  "generated_at": "2026-03-27T00:04:02.694787+00:00",
   "stats": {
     "total_rows": 14,
     "total_items": 120,
@@ -18,43 +18,23 @@
   "critique_log": [
     {
       "iteration": 1,
-      "issues": [
-        "Row 'deep-dive-tools-causal-inference' has only 4 items (min 5)",
-        "Row 'toolkit-cluster-did-extensions' has 7 items of type 'package' (max 3)",
-        "Row 'learning-path-ols-to-causal-forests' has only 4 items (min 5)",
-        "Missing content types across all rows: {'career'}"
-      ],
-      "issue_count": 4
+      "issues": [],
+      "issue_count": 0
     },
     {
       "iteration": 2,
-      "issues": [
-        "Row 'deep-dive-tools-causal-inference' has only 4 items (min 5)",
-        "Row 'toolkit-cluster-did-extensions' has 7 items of type 'package' (max 3)",
-        "Row 'learning-path-ols-to-causal-forests' has only 4 items (min 5)",
-        "Missing content types across all rows: {'career'}"
-      ],
-      "issue_count": 4
+      "issues": [],
+      "issue_count": 0
     },
     {
       "iteration": 3,
-      "issues": [
-        "Row 'deep-dive-tools-causal-inference' has only 4 items (min 5)",
-        "Row 'toolkit-cluster-did-extensions' has 7 items of type 'package' (max 3)",
-        "Row 'learning-path-ols-to-causal-forests' has only 4 items (min 5)",
-        "Missing content types across all rows: {'career'}"
-      ],
-      "issue_count": 4
+      "issues": [],
+      "issue_count": 0
     },
     {
       "iteration": 4,
-      "issues": [
-        "Row 'deep-dive-tools-causal-inference' has only 4 items (min 5)",
-        "Row 'toolkit-cluster-did-extensions' has 7 items of type 'package' (max 3)",
-        "Row 'learning-path-ols-to-causal-forests' has only 4 items (min 5)",
-        "Missing content types across all rows: {'career'}"
-      ],
-      "issue_count": 4
+      "issues": [],
+      "issue_count": 0
     }
   ],
   "rows": [
@@ -1061,6 +1041,33 @@
           "score": 0.1845,
           "cold_start": false,
           "signals": {}
+        },
+        {
+          "name": "Mark White's Practical Causal Forest Tutorial",
+          "type": "resource",
+          "category": "Causal Inference",
+          "description": "Explains why optimize directly on causal effects, not outcomes. Complete workflow from data prep to interpretation using GRF package. Written for applied researchers transitioning to causal ML.",
+          "url": "https://www.markhw.com/blog/causalforestintro",
+          "image_url": "http://static1.squarespace.com/static/58a7d1e52994ca398697a621/58a7ddb22e69cf0bf2af0547/5bc3627e4192027cad76588d/1676302536095/download.png?format=1500w",
+          "score": 0.3134,
+          "cold_start": false,
+          "signals": {
+            "clicks": 3,
+            "impressions": 5,
+            "dwell_ms": 20691,
+            "viewable_sec": 18.7,
+            "scroll_90": 0,
+            "scroll_75": 0,
+            "scroll_50": 0,
+            "search_clicks": 0,
+            "deep_sessions": 1,
+            "rage_clicks": 0,
+            "quick_bounces": 0,
+            "coviews": 487,
+            "coclicks": 0,
+            "reading_ratio": 2.0,
+            "high_imp_no_click": false
+          }
         }
       ]
     },
@@ -1163,44 +1170,58 @@
           "signals": {}
         },
         {
-          "name": "TFP CausalImpact",
-          "type": "package",
+          "name": "Causal Inference: The Mixtape",
+          "type": "resource",
           "category": "Causal Inference",
-          "description": "TensorFlow Probability port of Google's CausalImpact. Bayesian structural time-series for intervention effects.",
-          "url": "https://github.com/google/tfp-causalimpact",
-          "score": 0.0001,
+          "description": "Scott Cunningham's academic-quality but accessible methodology covering causal methods essential for marketing measurement.",
+          "url": "https://mixtape.scunning.com/",
+          "image_url": "",
+          "score": 0.3132,
           "cold_start": false,
-          "signals": {}
+          "signals": {
+            "clicks": 3,
+            "impressions": 2,
+            "dwell_ms": 14228,
+            "viewable_sec": 13.2,
+            "scroll_90": 0,
+            "scroll_75": 0,
+            "scroll_50": 0,
+            "search_clicks": 0,
+            "deep_sessions": 1,
+            "rage_clicks": 0,
+            "quick_bounces": 0,
+            "coviews": 487,
+            "coclicks": 0,
+            "reading_ratio": 2.0,
+            "high_imp_no_click": false
+          }
         },
         {
-          "name": "pyleebounds",
-          "type": "package",
-          "category": "Causal Inference",
-          "description": "Lee\u00a0(2009) sample\u2011selection bounds for treatment effects; trims treated distribution to match selection rates.",
-          "url": "https://pypi.org/project/pyleebounds/",
-          "score": 0.0,
+          "name": "Google's CausalImpact Blog Post",
+          "type": "resource",
+          "category": "Synthetic Control",
+          "description": "Production-grade tool from Google's advertising team. Bayesian structural time-series approach with automatic variable selection and uncertainty quantification. Widely used for marketing impact analysis.",
+          "url": "https://opensource.googleblog.com/2014/09/causalimpact-new-open-source-package.html",
+          "image_url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgG5FWaZ3Eblpls8Grc_6iML9O664sBNcxaMEYHPedcscxEFJpV2mKn5L_unITVNcMzoPMM5xwG7RlKkr7EXJByo5xMaLxDRYI-B7k7P8ZSDbbqDoeqL1UA433LuG_vg3KfYe244DC_Rc8c/w1200-h630-p-k-no-nu/image00.png",
+          "score": 0.3054,
           "cold_start": false,
-          "signals": {}
-        },
-        {
-          "name": "didhetero",
-          "type": "package",
-          "category": "Causal Inference",
-          "description": "Doubly robust estimation for group-time conditional average treatment effects. UCB for heterogeneous DiD.",
-          "url": "https://github.com/tkhdyanagi/didhetero",
-          "score": 0.0,
-          "cold_start": false,
-          "signals": {}
-        },
-        {
-          "name": "HonestDiD",
-          "type": "package",
-          "category": "Causal Inference",
-          "description": "Constructs robust confidence intervals for DiD and event-study designs under violations of parallel trends. Allows researchers to conduct sensitivity analysis by relaxing the parallel trends assumption using smoothness or relative magnitude restrictions on pre-trend violations.",
-          "url": "https://cran.r-project.org/package=HonestDiD",
-          "score": 0.0,
-          "cold_start": false,
-          "signals": {}
+          "signals": {
+            "clicks": 2,
+            "impressions": 2,
+            "dwell_ms": 30199,
+            "viewable_sec": 27.9,
+            "scroll_90": 0,
+            "scroll_75": 0,
+            "scroll_50": 0,
+            "search_clicks": 0,
+            "deep_sessions": 1,
+            "rage_clicks": 0,
+            "quick_bounces": 0,
+            "coviews": 487,
+            "coclicks": 0,
+            "reading_ratio": 2.0,
+            "high_imp_no_click": false
+          }
         }
       ]
     },
@@ -1251,110 +1272,110 @@
           "score": 0.0,
           "cold_start": true,
           "signals": {}
+        },
+        {
+          "name": "Matteo Courthoud's DiD Tutorial",
+          "type": "resource",
+          "category": "Difference-in-Differences",
+          "description": "Industry perspective with full Python code. Covers classic DiD with potential outcomes, parallel trends testing, multiple time periods, Card-Krueger replication, and business applications.",
+          "url": "https://matteocourthoud.github.io/post/diff_in_diffs/",
+          "image_url": "https://matteocourthoud.github.io/post/diff_in_diffs/featured.png",
+          "score": 0.3012,
+          "cold_start": false,
+          "signals": {
+            "clicks": 2,
+            "impressions": 2,
+            "dwell_ms": 14228,
+            "viewable_sec": 13.2,
+            "scroll_90": 0,
+            "scroll_75": 0,
+            "scroll_50": 0,
+            "search_clicks": 0,
+            "deep_sessions": 1,
+            "rage_clicks": 0,
+            "quick_bounces": 0,
+            "coviews": 487,
+            "coclicks": 0,
+            "reading_ratio": 2.0,
+            "high_imp_no_click": false
+          }
         }
       ]
     },
     {
       "id": "if-you-like",
       "row_type": "if_you_like",
-      "title": "If You Like Mark White's Practical Causal Forest Tutorial...",
-      "description": "More from Causal Inference",
+      "title": "If You Like AEA: Machine Learning and Econometrics (Athey/Imbens)...",
+      "description": "More from Computational Economics",
       "template": "standard",
-      "seed_item": "Mark White's Practical Causal Forest Tutorial",
+      "seed_item": "AEA: Machine Learning and Econometrics (Athey/Imbens)",
       "items": [
         {
-          "name": "Causal Inference: The Mixtape",
+          "name": "Introduction to Agent-Based Modeling",
           "type": "resource",
-          "category": "Causal Inference",
-          "description": "Scott Cunningham's academic-quality but accessible methodology covering causal methods essential for marketing measurement.",
-          "url": "https://mixtape.scunning.com/",
-          "image_url": "",
-          "score": 0.3132,
+          "category": "Computational Economics",
+          "description": "Bill Rand's comprehensive free course on agent-based modeling from Santa Fe Institute's Complexity Explorer. Covers NetLogo, model design, and analysis.",
+          "url": "https://www.complexityexplorer.org/courses/183-introduction-to-agent-based-modeling",
+          "image_url": "https://www.complexityexplorer.org/og-image.jpg",
+          "score": 0.1845,
           "cold_start": false,
           "signals": {
             "clicks": 3,
-            "impressions": 2,
-            "dwell_ms": 14228,
-            "viewable_sec": 13.2,
+            "impressions": 4,
+            "dwell_ms": 0,
+            "viewable_sec": 0,
             "scroll_90": 0,
             "scroll_75": 0,
             "scroll_50": 0,
             "search_clicks": 0,
-            "deep_sessions": 1,
+            "deep_sessions": 0,
             "rage_clicks": 0,
             "quick_bounces": 0,
-            "coviews": 487,
+            "coviews": 0,
             "coclicks": 0,
-            "reading_ratio": 2.0,
+            "reading_ratio": 0,
             "high_imp_no_click": false
           }
         },
         {
-          "name": "Uber Engineering: Uplift Modeling for Multiple Treatments",
+          "name": "ETH Zurich: Agent-Based Modeling of Economic Systems",
           "type": "resource",
-          "category": "Causal Inference",
-          "description": "Extending X-Learner and R-Learner to multiple treatments with cost optimization. Production system design for uplift models at scale with cost-aware treatment allocation.",
-          "url": "https://www.uber.com/blog/research/uplift-modeling-for-multiple-treatments-with-cost-optimization/",
-          "image_url": "/images/logos/uber.png",
-          "score": 0.2893,
+          "category": "Computational Economics",
+          "description": "GitHub repository with course materials for ETH's ABM course using Mesa. Includes exercises on market simulation and network effects.",
+          "url": "https://github.com/alexmakassiouk/eth-agent-based-modeling-of-economic-systems",
+          "image_url": "https://opengraph.githubassets.com/35f0d95a6e7106c448c0d9d6302cebb2cbad34ab2616363b9d572330198002ff/alexmakassiouk/eth-agent-based-modeling-of-economic-systems",
+          "score": 0.162,
           "cold_start": false,
           "signals": {
             "clicks": 1,
-            "impressions": 2,
-            "dwell_ms": 14228,
-            "viewable_sec": 13.2,
+            "impressions": 1,
+            "dwell_ms": 0,
+            "viewable_sec": 0,
             "scroll_90": 0,
             "scroll_75": 0,
             "scroll_50": 0,
             "search_clicks": 0,
-            "deep_sessions": 1,
+            "deep_sessions": 0,
             "rage_clicks": 0,
             "quick_bounces": 0,
-            "coviews": 487,
+            "coviews": 0,
             "coclicks": 0,
-            "reading_ratio": 2.0,
+            "reading_ratio": 0,
             "high_imp_no_click": false
           }
         },
         {
-          "name": "Stanford STATS 361: Causal Inference Lecture Notes (Wager)",
+          "name": "Agent-Based Models with Python: An Introduction to Mesa",
           "type": "resource",
-          "category": "Causal Inference",
-          "description": "Stefan Wager's graduate course notes on causal inference with machine learning: heterogeneous treatment effects, conformal inference, and forest methods.",
-          "url": "https://web.stanford.edu/~swager/stats361.pdf",
-          "image_url": "",
-          "score": 0.2893,
+          "category": "Computational Economics",
+          "description": "21-lesson course on Complexity Explorer covering agent-based modeling in Python using Mesa framework. Builds Sugarscape and other classic models.",
+          "url": "https://www.complexityexplorer.org/courses/172-agent-based-models-with-python-an-introduction-to-mesa",
+          "image_url": "https://www.complexityexplorer.org/og-image.jpg",
+          "score": 0.15,
           "cold_start": false,
           "signals": {
-            "clicks": 1,
-            "impressions": 2,
-            "dwell_ms": 14228,
-            "viewable_sec": 13.2,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 1,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 487,
-            "coclicks": 0,
-            "reading_ratio": 2.0,
-            "high_imp_no_click": false
-          }
-        },
-        {
-          "name": "Nevo Cereal Data",
-          "type": "dataset",
-          "category": "Causal Inference",
-          "description": "Semi-fabricated ready-to-eat cereal data for teaching BLP methods. 24 brands, 94 markets.",
-          "url": "https://pyblp.readthedocs.io/en/stable/_notebooks/tutorial/nevo.html",
-          "image_url": "",
-          "score": 0.0227,
-          "cold_start": false,
-          "signals": {
-            "clicks": 2,
-            "impressions": 0,
+            "clicks": 0,
+            "impressions": 1,
             "dwell_ms": 0,
             "viewable_sec": 0,
             "scroll_90": 0,
@@ -1371,58 +1392,37 @@
           }
         },
         {
-          "name": "News Headlines A/B Test Dataset",
-          "type": "dataset",
-          "category": "Causal Inference",
-          "description": "Real A/B test outcomes on click-through rates paired with BERT embeddings of headline text. From Columbia Business School.",
-          "url": "https://www.gsb.columbia.edu/faculty-research/divisions/decision-risk-operations",
-          "image_url": "",
-          "score": 0.0108,
-          "cold_start": false,
-          "signals": {
-            "clicks": 1,
-            "impressions": 0,
-            "dwell_ms": 0,
-            "viewable_sec": 0,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 0,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 0,
-            "coclicks": 0,
-            "reading_ratio": 0,
-            "high_imp_no_click": false
-          }
+          "name": "Agent-Based and Individual-Based Modeling: A Practical Introduction",
+          "type": "book",
+          "category": "Computational Economics",
+          "description": "The standard textbook for agent-based modeling. Second edition covers model design, NetLogo programming, ODD protocol, and analysis techniques.",
+          "url": "https://press.princeton.edu/books/paperback/9780691190839/agent-based-and-individual-based-modeling",
+          "image_url": "https://covers.openlibrary.org/b/isbn/978-0691190839-M.jpg",
+          "score": 0.0001,
+          "cold_start": true,
+          "signals": {}
         },
         {
-          "name": "IBM LBIDD Benchmark",
-          "type": "dataset",
-          "category": "Causal Inference",
-          "description": "Scalable semi-synthetic causal inference data from birth records (~100 covariates) with various link functions for treatment effect estimation.",
-          "url": "https://github.com/IBM/causallib",
-          "image_url": "",
-          "score": 0.0108,
-          "cold_start": false,
-          "signals": {
-            "clicks": 1,
-            "impressions": 0,
-            "dwell_ms": 0,
-            "viewable_sec": 0,
-            "scroll_90": 0,
-            "scroll_75": 0,
-            "scroll_50": 0,
-            "search_clicks": 0,
-            "deep_sessions": 0,
-            "rage_clicks": 0,
-            "quick_bounces": 0,
-            "coviews": 0,
-            "coclicks": 0,
-            "reading_ratio": 0,
-            "high_imp_no_click": false
-          }
+          "name": "Growing Artificial Societies: Social Science from the Bottom Up",
+          "type": "book",
+          "category": "Computational Economics",
+          "description": "Foundational text on computational social science introducing the Sugarscape model. Shows how trade, conflict, and social dynamics emerge from simple agent rules.",
+          "url": "https://mitpress.mit.edu/9780262550253/growing-artificial-societies/",
+          "image_url": "https://covers.openlibrary.org/b/isbn/978-0262550253-M.jpg",
+          "score": 0.0001,
+          "cold_start": true,
+          "signals": {}
+        },
+        {
+          "name": "Handbook of Computational Economics Vol. 2: Agent-Based Computational Economics",
+          "type": "book",
+          "category": "Computational Economics",
+          "description": "Comprehensive reference on agent-based computational economics. Covers ACE methodology, financial markets, labor markets, and policy analysis.",
+          "url": "https://www.sciencedirect.com/handbook/handbook-of-computational-economics/vol/2",
+          "image_url": "https://covers.openlibrary.org/b/isbn/978-0444512536-M.jpg",
+          "score": 0.0001,
+          "cold_start": true,
+          "signals": {}
         }
       ]
     },

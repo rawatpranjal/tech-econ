@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-26T17:26:18.049888Z",
+  "updated": "2026-03-27T00:06:19.791206Z",
   "count": 12,
   "items": [
     {
@@ -111,6 +111,62 @@
       "rank": 5
     },
     {
+      "name": "A/B Testing on Social Networks",
+      "type": "paper",
+      "category": "Experimentation > A/B Test Design & Analysis",
+      "description": "LinkedIn's landmark paper on network interference in A/B tests. Shows how social connections violate SUTVA, proposes cluster-based randomization and graph cluster metrics, and introduces the 'network A/B test' framework now used across social platforms.",
+      "url": "https://content.linkedin.com/content/dam/engineering/site-assets/pdfs/ABTestingSocialNetwork_share.pdf",
+      "score": 0.2155,
+      "cold_start": false,
+      "signals": {
+        "clicks": 7,
+        "impressions": 0,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
+      "citations": 200,
+      "rank": 97
+    },
+    {
+      "name": "The Theory and Practice of Revenue Management",
+      "type": "paper",
+      "category": "Pricing > Dynamic Pricing & Revenue Management",
+      "description": "The definitive textbook on revenue management covering pricing, capacity control, and overbooking.",
+      "url": "https://www.springer.com/gp/book/9781402077012",
+      "score": 0.204,
+      "cold_start": false,
+      "signals": {
+        "clicks": 1,
+        "impressions": 0,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
+      "citations": 2223,
+      "rank": 154
+    },
+    {
       "name": "csdid",
       "type": "package",
       "category": "Program Evaluation Methods (DiD, SC, RDD)",
@@ -135,7 +191,7 @@
         "reading_ratio": 0,
         "high_imp_no_click": false
       },
-      "rank": 68
+      "rank": 290
     },
     {
       "name": "DRDID",
@@ -162,7 +218,7 @@
         "reading_ratio": 0,
         "high_imp_no_click": false
       },
-      "rank": 96
+      "rank": 391
     },
     {
       "name": "Netflix Causal Inference",
@@ -189,7 +245,7 @@
         "reading_ratio": 0,
         "high_imp_no_click": false
       },
-      "rank": 148
+      "rank": 545
     },
     {
       "name": "Susan Athey: Economics of Transformative AI",
@@ -216,35 +272,7 @@
         "reading_ratio": 0,
         "high_imp_no_click": false
       },
-      "rank": 326
-    },
-    {
-      "name": "A/B Testing on Social Networks",
-      "type": "paper",
-      "category": "Experimentation > A/B Test Design & Analysis",
-      "description": "LinkedIn's landmark paper on network interference in A/B tests. Shows how social connections violate SUTVA, proposes cluster-based randomization and graph cluster metrics, and introduces the 'network A/B test' framework now used across social platforms.",
-      "url": "https://content.linkedin.com/content/dam/engineering/site-assets/pdfs/ABTestingSocialNetwork_share.pdf",
-      "score": 0.0825,
-      "cold_start": false,
-      "signals": {
-        "clicks": 7,
-        "impressions": 0,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "citations": 200,
-      "rank": 328
+      "rank": 811
     },
     {
       "name": "Pat Bajari: Building applied analytics at Amazon",
@@ -271,7 +299,7 @@
         "reading_ratio": 0,
         "high_imp_no_click": false
       },
-      "rank": 330
+      "rank": 1146
     },
     {
       "name": "Uber CausalML",
@@ -298,35 +326,7 @@
         "reading_ratio": 0,
         "high_imp_no_click": false
       },
-      "rank": 359
-    },
-    {
-      "name": "The Theory and Practice of Revenue Management",
-      "type": "paper",
-      "category": "Pricing > Dynamic Pricing & Revenue Management",
-      "description": "The definitive textbook on revenue management covering pricing, capacity control, and overbooking.",
-      "url": "https://www.springer.com/gp/book/9781402077012",
-      "score": 0.0108,
-      "cold_start": false,
-      "signals": {
-        "clicks": 1,
-        "impressions": 0,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "citations": 2223,
-      "rank": 390
+      "rank": 1274
     }
   ]
 }

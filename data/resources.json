@@ -2050,6 +2050,84 @@
     "id": "resource-causal-inference-for-the-brave-and-true-time-serie"
   },
   {
+    "name": "The Theory and Practice of Revenue Management",
+    "description": "Talluri & van Ryzin's comprehensive textbook. Dynamic pricing, capacity allocation, overbooking \u2014 the bible of RM.",
+    "category": "Pricing & Revenue",
+    "url": "http://ndl.ethernet.edu.et/bitstream/123456789/21707/1/306.pdf",
+    "type": "Book",
+    "level": "Hard",
+    "tags": [
+      "Pricing & Demand",
+      "Online Book"
+    ],
+    "domain": "Domain Applications",
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "dynamic-pricing",
+      "capacity-allocation",
+      "overbooking"
+    ],
+    "summary": "This textbook provides a comprehensive overview of revenue management principles and practices, focusing on dynamic pricing, capacity allocation, and overbooking strategies. It is ideal for students and professionals looking to deepen their understanding of revenue management techniques.",
+    "use_cases": [
+      "When to implement dynamic pricing strategies",
+      "How to optimize capacity allocation",
+      "Managing overbooking in service industries"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "What are the key principles of revenue management?",
+      "How does dynamic pricing work?",
+      "What strategies are effective for capacity allocation?",
+      "What is overbooking and how is it managed?",
+      "How can I apply revenue management techniques in practice?",
+      "What are the challenges in implementing revenue management?",
+      "What case studies illustrate successful revenue management?",
+      "How does revenue management differ across industries?"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "Understanding dynamic pricing",
+      "Applying capacity allocation techniques",
+      "Managing overbooking effectively"
+    ],
+    "model_score": 0.204,
+    "macro_category": "Marketing & Growth",
+    "image_url": "/images/logos/ethernet.edu.png",
+    "embedding_text": "The Theory and Practice of Revenue Management by Talluri & van Ryzin is an essential resource for anyone interested in mastering the art and science of revenue management. This comprehensive textbook delves into key topics such as dynamic pricing, capacity allocation, and overbooking, providing readers with a solid foundation in these critical areas. The authors employ a pedagogical approach that combines theoretical insights with practical applications, making complex concepts accessible to a broad audience. Readers can expect to gain valuable skills in analyzing pricing strategies, optimizing resource allocation, and effectively managing overbooking scenarios. The book is designed for students, practitioners, and anyone looking to enhance their knowledge in revenue management. While no specific prerequisites are required, a basic understanding of economics and statistics will be beneficial. Upon completion, readers will be equipped to implement revenue management techniques in various industries, improving their decision-making and strategic planning capabilities. The estimated time to complete the book will vary based on individual reading pace, but it is structured to facilitate both in-depth study and quick reference. Overall, this resource stands out for its thorough exploration of revenue management principles, making it a must-have for those serious about excelling in this field.",
+    "tfidf_keywords": [
+      "dynamic-pricing",
+      "capacity-allocation",
+      "overbooking",
+      "revenue-management",
+      "pricing-strategies",
+      "resource-optimization",
+      "demand-forecasting",
+      "market-segmentation",
+      "yield-management",
+      "price-elasticity"
+    ],
+    "semantic_cluster": "pricing-optimization",
+    "depth_level": "intermediate",
+    "related_concepts": [
+      "pricing-strategies",
+      "demand-forecasting",
+      "yield-management",
+      "market-segmentation",
+      "price-elasticity"
+    ],
+    "canonical_topics": [
+      "pricing",
+      "econometrics",
+      "consumer-behavior"
+    ],
+    "id": "resource-the-theory-and-practice-of-revenue-management"
+  },
+  {
     "name": "Coding for Economists (Arthur Turrell)",
     "description": "Python workflow for economists covering data transformation, econometrics, Bayesian inference, and ML. Modern Python-first approach.",
     "category": "Causal Inference",
@@ -20716,84 +20794,6 @@
       "econometrics"
     ],
     "id": "resource-uber-engineering"
-  },
-  {
-    "name": "The Theory and Practice of Revenue Management",
-    "description": "Talluri & van Ryzin's comprehensive textbook. Dynamic pricing, capacity allocation, overbooking \u2014 the bible of RM.",
-    "category": "Pricing & Revenue",
-    "url": "http://ndl.ethernet.edu.et/bitstream/123456789/21707/1/306.pdf",
-    "type": "Book",
-    "level": "Hard",
-    "tags": [
-      "Pricing & Demand",
-      "Online Book"
-    ],
-    "domain": "Domain Applications",
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [
-      "dynamic-pricing",
-      "capacity-allocation",
-      "overbooking"
-    ],
-    "summary": "This textbook provides a comprehensive overview of revenue management principles and practices, focusing on dynamic pricing, capacity allocation, and overbooking strategies. It is ideal for students and professionals looking to deepen their understanding of revenue management techniques.",
-    "use_cases": [
-      "When to implement dynamic pricing strategies",
-      "How to optimize capacity allocation",
-      "Managing overbooking in service industries"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS"
-    ],
-    "synthetic_questions": [
-      "What are the key principles of revenue management?",
-      "How does dynamic pricing work?",
-      "What strategies are effective for capacity allocation?",
-      "What is overbooking and how is it managed?",
-      "How can I apply revenue management techniques in practice?",
-      "What are the challenges in implementing revenue management?",
-      "What case studies illustrate successful revenue management?",
-      "How does revenue management differ across industries?"
-    ],
-    "content_format": "book",
-    "skill_progression": [
-      "Understanding dynamic pricing",
-      "Applying capacity allocation techniques",
-      "Managing overbooking effectively"
-    ],
-    "model_score": 0.0108,
-    "macro_category": "Marketing & Growth",
-    "image_url": "/images/logos/ethernet.edu.png",
-    "embedding_text": "The Theory and Practice of Revenue Management by Talluri & van Ryzin is an essential resource for anyone interested in mastering the art and science of revenue management. This comprehensive textbook delves into key topics such as dynamic pricing, capacity allocation, and overbooking, providing readers with a solid foundation in these critical areas. The authors employ a pedagogical approach that combines theoretical insights with practical applications, making complex concepts accessible to a broad audience. Readers can expect to gain valuable skills in analyzing pricing strategies, optimizing resource allocation, and effectively managing overbooking scenarios. The book is designed for students, practitioners, and anyone looking to enhance their knowledge in revenue management. While no specific prerequisites are required, a basic understanding of economics and statistics will be beneficial. Upon completion, readers will be equipped to implement revenue management techniques in various industries, improving their decision-making and strategic planning capabilities. The estimated time to complete the book will vary based on individual reading pace, but it is structured to facilitate both in-depth study and quick reference. Overall, this resource stands out for its thorough exploration of revenue management principles, making it a must-have for those serious about excelling in this field.",
-    "tfidf_keywords": [
-      "dynamic-pricing",
-      "capacity-allocation",
-      "overbooking",
-      "revenue-management",
-      "pricing-strategies",
-      "resource-optimization",
-      "demand-forecasting",
-      "market-segmentation",
-      "yield-management",
-      "price-elasticity"
-    ],
-    "semantic_cluster": "pricing-optimization",
-    "depth_level": "intermediate",
-    "related_concepts": [
-      "pricing-strategies",
-      "demand-forecasting",
-      "yield-management",
-      "market-segmentation",
-      "price-elasticity"
-    ],
-    "canonical_topics": [
-      "pricing",
-      "econometrics",
-      "consumer-behavior"
-    ],
-    "id": "resource-the-theory-and-practice-of-revenue-management"
   },
   {
     "name": "SQLBolt",

@@ -1,5 +1,18 @@
 # Changelog
 
+## 2026-03-26
+- **Weekly reranking pipeline**: `/ranking-export` API endpoint on analytics worker, `--source=api` mode for ranking script, scheduled remote trigger (Monday 6am ET)
+- **Netflix-style homepage**: Rotating hero carousel, card images from data, career items removed, dramatic gradient
+- **Card images**: GitHub org avatars for packages, Open Library covers for books, image_url pipeline in homepage rows
+- **Data quality**: Fix row sizing (min 5, max 10), analytics section mapping for resources/community
+- **MCP search**: Tokenized multi-field scoring algorithm overhaul
+- **Homepage row validation**: Fix type cap in toolkit builder, padding for short narrative carousels, citation-based paper scoring
+- **UI overhaul**: Netflix-quality cards, type-specific colors, Inter font, search animations, bigger cards
+
+## 2026-03-25
+- **Homepage layout**: Simplify navigation, remove redundant section grid/CTAs/Discover tab
+- **Search UX**: Pass authors, year, tags, format through search worker results; type metadata in results
+
 ## 2026-02-07
 - Add 6 causal inference/ML packages: grf_python, causalfe, etwfe, diff-diff, choice-learn, GeoAI
 - Add Stefan Wager's "Causal Inference: A Statistical Learning Approach" book

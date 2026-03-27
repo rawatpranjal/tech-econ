@@ -18,6 +18,82 @@
     "model_score": 1.0
   },
   {
+    "name": "Putting Auction Theory to Work",
+    "author": "Paul Milgrom",
+    "year": 2004,
+    "isbn": "978-0521536721",
+    "description": "Nobel laureate bridges auction theory and practice, from the designer of FCC spectrum auctions and market design pioneer",
+    "category": "Auction Theory",
+    "type": "textbook",
+    "url": "https://www.cambridge.org/core/books/putting-auction-theory-to-work/7ADA18EE8AE3B5F6EDA8DA89C64E37D1",
+    "tags": [
+      "auctions",
+      "market design",
+      "spectrum auctions",
+      "Nobel Prize"
+    ],
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "auction theory",
+      "market design",
+      "spectrum auctions"
+    ],
+    "summary": "This resource explores the application of auction theory in real-world scenarios, particularly focusing on spectrum auctions and market design. It is suitable for individuals interested in understanding the intersection of economic theory and practical auction implementation.",
+    "use_cases": [
+      "Understanding auction mechanisms",
+      "Designing efficient markets",
+      "Analyzing spectrum auction strategies"
+    ],
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are the practical applications of auction theory?",
+      "How does auction design impact market efficiency?",
+      "What insights can be gained from spectrum auctions?",
+      "Who is the author of 'Putting Auction Theory to Work'?",
+      "What is the significance of auction theory in economics?",
+      "How can auction theory be applied to real-world problems?",
+      "What are the key concepts in market design?",
+      "What role does a Nobel laureate play in auction theory?"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "Understanding auction mechanisms",
+      "Applying auction theory to real-world scenarios",
+      "Analyzing market design principles"
+    ],
+    "model_score": 0.1778,
+    "embedding_text": "Putting Auction Theory to Work is a comprehensive exploration of the practical applications of auction theory, written by a Nobel laureate who has significantly contributed to the field of market design. This resource delves into the intricate relationship between theoretical concepts and their implementation in real-world auction scenarios, particularly focusing on spectrum auctions. Readers will gain insights into the fundamental principles of auction design, including the various types of auctions, bidding strategies, and the impact of auction rules on market outcomes. The teaching approach emphasizes a blend of theoretical insights and practical examples, making it accessible for those with a foundational understanding of economics. While no specific prerequisites are required, a basic familiarity with economic principles will enhance the learning experience. The book aims to equip readers with the skills to analyze and design efficient auction mechanisms, making it a valuable resource for students, practitioners, and anyone interested in the intersection of economics and market design. Upon completion, readers will be better prepared to engage with auction theory in both academic and practical contexts, enabling them to contribute to discussions on market efficiency and auction strategy. The estimated time to complete the resource varies depending on the reader's pace, but it is structured to facilitate both deep engagement and quick reference.",
+    "tfidf_keywords": [
+      "auction mechanisms",
+      "market design",
+      "spectrum auctions",
+      "bidding strategies",
+      "Nobel laureate",
+      "economic theory",
+      "auction theory applications",
+      "efficiency",
+      "auction rules",
+      "real-world auctions"
+    ],
+    "semantic_cluster": "auction-theory-applications",
+    "depth_level": "intermediate",
+    "related_concepts": [
+      "market efficiency",
+      "bidding strategies",
+      "economic theory",
+      "auction design",
+      "spectrum management"
+    ],
+    "canonical_topics": [
+      "econometrics",
+      "marketplaces",
+      "pricing"
+    ]
+  },
+  {
     "name": "Discrete Choice Methods with Simulation",
     "author": "Kenneth Train",
     "year": 2009,
@@ -6572,82 +6648,6 @@
       "policy-evaluation",
       "industrial-organization",
       "economics"
-    ]
-  },
-  {
-    "name": "Putting Auction Theory to Work",
-    "author": "Paul Milgrom",
-    "year": 2004,
-    "isbn": "978-0521536721",
-    "description": "Nobel laureate bridges auction theory and practice, from the designer of FCC spectrum auctions and market design pioneer",
-    "category": "Auction Theory",
-    "type": "textbook",
-    "url": "https://www.cambridge.org/core/books/putting-auction-theory-to-work/7ADA18EE8AE3B5F6EDA8DA89C64E37D1",
-    "tags": [
-      "auctions",
-      "market design",
-      "spectrum auctions",
-      "Nobel Prize"
-    ],
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [
-      "auction theory",
-      "market design",
-      "spectrum auctions"
-    ],
-    "summary": "This resource explores the application of auction theory in real-world scenarios, particularly focusing on spectrum auctions and market design. It is suitable for individuals interested in understanding the intersection of economic theory and practical auction implementation.",
-    "use_cases": [
-      "Understanding auction mechanisms",
-      "Designing efficient markets",
-      "Analyzing spectrum auction strategies"
-    ],
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are the practical applications of auction theory?",
-      "How does auction design impact market efficiency?",
-      "What insights can be gained from spectrum auctions?",
-      "Who is the author of 'Putting Auction Theory to Work'?",
-      "What is the significance of auction theory in economics?",
-      "How can auction theory be applied to real-world problems?",
-      "What are the key concepts in market design?",
-      "What role does a Nobel laureate play in auction theory?"
-    ],
-    "content_format": "book",
-    "skill_progression": [
-      "Understanding auction mechanisms",
-      "Applying auction theory to real-world scenarios",
-      "Analyzing market design principles"
-    ],
-    "model_score": 0.0,
-    "embedding_text": "Putting Auction Theory to Work is a comprehensive exploration of the practical applications of auction theory, written by a Nobel laureate who has significantly contributed to the field of market design. This resource delves into the intricate relationship between theoretical concepts and their implementation in real-world auction scenarios, particularly focusing on spectrum auctions. Readers will gain insights into the fundamental principles of auction design, including the various types of auctions, bidding strategies, and the impact of auction rules on market outcomes. The teaching approach emphasizes a blend of theoretical insights and practical examples, making it accessible for those with a foundational understanding of economics. While no specific prerequisites are required, a basic familiarity with economic principles will enhance the learning experience. The book aims to equip readers with the skills to analyze and design efficient auction mechanisms, making it a valuable resource for students, practitioners, and anyone interested in the intersection of economics and market design. Upon completion, readers will be better prepared to engage with auction theory in both academic and practical contexts, enabling them to contribute to discussions on market efficiency and auction strategy. The estimated time to complete the resource varies depending on the reader's pace, but it is structured to facilitate both deep engagement and quick reference.",
-    "tfidf_keywords": [
-      "auction mechanisms",
-      "market design",
-      "spectrum auctions",
-      "bidding strategies",
-      "Nobel laureate",
-      "economic theory",
-      "auction theory applications",
-      "efficiency",
-      "auction rules",
-      "real-world auctions"
-    ],
-    "semantic_cluster": "auction-theory-applications",
-    "depth_level": "intermediate",
-    "related_concepts": [
-      "market efficiency",
-      "bidding strategies",
-      "economic theory",
-      "auction design",
-      "spectrum management"
-    ],
-    "canonical_topics": [
-      "econometrics",
-      "marketplaces",
-      "pricing"
     ]
   },
   {

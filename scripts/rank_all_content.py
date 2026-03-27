@@ -1052,6 +1052,10 @@ def apply_citations_boost(items, scores):
                 if name in scores:
                     scores[name] = min(1.0, scores[name] + boost)
                     boosted += 1
+                else:
+                    # Give papers with citations a baseline score even without engagement
+                    scores[name] = min(1.0, boost)
+                    boosted += 1
 
     print(f"  Applied citations boost to {boosted} papers")
     return scores
@@ -1182,6 +1186,13 @@ def main():
         # Re-normalize after freshness boost
         combined_scores = normalize_scores(combined_scores)
         scoring_method = 'hybrid_bert_fresh'
+
+    # Step 5c: Apply citations boost for papers
+    print(f"\nApplying citations boost...")
+    combined_scores = apply_citations_boost(items, combined_scores)
+
+    # Re-normalize after citations boost
+    combined_scores = normalize_scores(combined_scores)
 
     # Step 6: Mark cold start flags (items without real interactions)
     cold_start_flags = {}
