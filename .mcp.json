@@ -1,9 +1,9 @@
 {
   "mcpServers": {
     "tech-econ-catalog": {
-      "command": "npx",
-      "args": ["tsx", "index.ts"],
-      "cwd": "mcp-server"
+      "command": "/Users/pranjal/Code/tech-econ/mcp-server/node_modules/.bin/tsx",
+      "args": ["index.ts"],
+      "cwd": "/Users/pranjal/Code/tech-econ/mcp-server"
     }
   }
 }
