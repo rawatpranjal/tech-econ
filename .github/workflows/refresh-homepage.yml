@@ -1,0 +1,38 @@
+name: Refresh Homepage Rows
+
+on:
+  schedule:
+    - cron: '0 3 * * 1'  # Monday 3am UTC (before the 8am deploy)
+  workflow_dispatch:      # Allow manual trigger via GitHub UI
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate homepage rows
+        run: python3 scripts/generate_homepage_rows.py
+
+      - name: Validate output
+        run: python3 autoresearch/checks/check_homepage_rows.py
+
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git diff --quiet data/homepage_rows.json || (
+            git add data/homepage_rows.json &&
+            git commit -m "Auto-refresh homepage rows ($(date +%Y-%m-%d))" &&
+            git push
+          )
