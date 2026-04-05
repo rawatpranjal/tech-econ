@@ -32,8 +32,31 @@ except ImportError:
 
 # Load sentence transformer model for semantic embeddings
 print("Loading sentence-BERT model...")
-SBERT_MODEL = SentenceTransformer('all-MiniLM-L6-v2')
-print("  Model loaded: all-MiniLM-L6-v2 (384 dimensions)")
+try:
+    SBERT_MODEL = SentenceTransformer('all-MiniLM-L6-v2')
+    print("  Model loaded: all-MiniLM-L6-v2 (384 dimensions)")
+except Exception as _sbert_err:
+    print(f"  Warning: could not load sentence-BERT model ({_sbert_err})")
+    print("  Falling back to hash-based pseudo-embeddings (384 dims)")
+
+    class _HashEmbedder:
+        """Deterministic hash-based embeddings as a fallback when HuggingFace is unreachable."""
+        def encode(self, texts, show_progress_bar=False, batch_size=64):
+            import hashlib
+            result = []
+            for text in texts:
+                h = hashlib.sha256(text.encode('utf-8', errors='replace')).digest()
+                # Expand 32 bytes → 384 floats by repeating + normalising
+                extended = (h * 12)[:384]
+                vec = np.frombuffer(extended, dtype=np.uint8).astype(np.float32)
+                vec = (vec - 127.5) / 127.5   # normalise to [-1, 1]
+                norm = np.linalg.norm(vec)
+                if norm > 0:
+                    vec = vec / norm
+                result.append(vec)
+            return np.array(result, dtype=np.float32)
+
+    SBERT_MODEL = _HashEmbedder()
 
 # Signal weights for engagement scoring
 CLICK_WEIGHT = 5.0
