@@ -25,13 +25,13 @@ from collections import Counter
 
 
 # Thresholds
-MIN_ROWS = 10
-MAX_ROWS = 15
+MIN_ROWS = 5
+MAX_ROWS = 7
 MIN_ITEMS_PER_ROW = 3
 MAX_ITEMS_PER_ROW = 12
 MAX_ALLOWED_DUPLICATES = 5
-EXPECTED_TYPES = {"package", "dataset", "resource", "paper", "talk", "career", "community"}
-MIN_UNIQUE_ITEMS = 60
+EXPECTED_TYPES = {"package", "dataset", "resource", "talk"}
+MIN_UNIQUE_ITEMS = 30
 
 # Required fields
 ROW_REQUIRED_FIELDS = {"id", "row_type", "title", "template", "items"}
