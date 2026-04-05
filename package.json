@@ -6,6 +6,7 @@
   "scripts": {
     "build": "hugo --gc --minify && npx pagefind --site public",
     "pagefind": "npx pagefind --site public",
+    "screenshot": "node scripts/screenshot-homepage.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,6 +22,7 @@
   },
   "homepage": "https://github.com/rawatpranjal/tech-econ#readme",
   "devDependencies": {
-    "pagefind": "^1.4.0"
+    "pagefind": "^1.4.0",
+    "playwright": "^1.59.1"
   }
 }
