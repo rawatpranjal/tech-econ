@@ -166,12 +166,16 @@ def mark_used(items: list[dict], used: set[str]) -> None:
 def build_trending_now(
     rankings: list[dict], content_lookup: dict, used: set[str]
 ) -> dict:
-    """Row 0: top engaged non-cold-start items, max 3 per type."""
+    """Row 0: top engaged non-cold-start items, max 3 per type.
+    Falls back to top-scored items from full rankings when no engagement data exists."""
     candidates = [
         make_item(r, content_lookup)
         for r in rankings
         if not r.get("cold_start", True)
     ]
+    if not candidates:
+        # No engagement data yet — fall back to top-scored items
+        candidates = [make_item(r, content_lookup) for r in rankings]
     candidates = dedup_against_used(candidates, used)
     candidates = apply_type_cap(candidates, MAX_SAME_TYPE_PER_ROW)
     items = candidates[:HERO_ITEMS]
@@ -189,18 +193,30 @@ def build_trending_now(
 def build_new_this_month(
     rankings: list[dict], content_lookup: dict, used: set[str]
 ) -> dict:
-    """Row 1: items with some impressions but few deep sessions (recently discovered)."""
+    """Row 1: items with some impressions but few deep sessions (recently discovered).
+    Falls back to top cold-start items by score when no impression data exists."""
     candidates = [
         make_item(r, content_lookup)
         for r in rankings
         if r.get("signals", {}).get("impressions", 0) > 0
         and r.get("signals", {}).get("deep_sessions", 0) < 5
     ]
+    has_engagement = bool(candidates)
+    if not candidates:
+        # No impression data — use cold-start items as "new/undiscovered" content
+        candidates = [
+            make_item(r, content_lookup)
+            for r in rankings
+            if r.get("cold_start", True)
+        ]
     candidates = dedup_against_used(candidates, used)
     candidates = apply_type_cap(candidates, MAX_SAME_TYPE_PER_ROW)
-    candidates.sort(
-        key=lambda x: x.get("signals", {}).get("impressions", 0), reverse=True
-    )
+    if has_engagement:
+        candidates.sort(
+            key=lambda x: x.get("signals", {}).get("impressions", 0), reverse=True
+        )
+    else:
+        candidates.sort(key=lambda x: x.get("score", 0.0), reverse=True)
     items = candidates[:ROW_ITEMS]
     mark_used(items, used)
     return {
