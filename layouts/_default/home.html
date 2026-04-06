@@ -46,7 +46,8 @@
     {{ if .Site.Data.homepage_rows }}
     <div id="home-rows-wrapper">
     {{ range $index, $row := .Site.Data.homepage_rows.rows }}
-      {{ if eq $row.template "hero" }}
+      {{ if eq $index 0 }}{{/* Skip — already rendered as hero banner above */}}
+      {{ else if eq $row.template "hero" }}
         {{ partial "homepage/row-hero.html" $row }}
       {{ else if eq $row.template "narrative" }}
         {{ partial "homepage/row-narrative.html" $row }}

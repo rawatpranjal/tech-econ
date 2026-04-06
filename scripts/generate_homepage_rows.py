@@ -31,6 +31,9 @@ MAX_SAME_TYPE_PER_ROW = 3
 ROW_ITEMS = 8  # target items per non-hero row
 HERO_ITEMS = 10  # target items for hero/trending row
 
+# Types with rich visual assets — exclude papers, career, community from hero
+HERO_ALLOWED_TYPES = {"package", "dataset", "resource", "talk", "book"}
+
 
 def load_json(path: Path) -> dict | list | None:
     """Load a JSON file, return None if missing or invalid."""
@@ -172,10 +175,15 @@ def build_trending_now(
         make_item(r, content_lookup)
         for r in rankings
         if not r.get("cold_start", True)
+        and r.get("type", "").lower() in HERO_ALLOWED_TYPES
     ]
     if not candidates:
-        # No engagement data yet — fall back to top-scored items
-        candidates = [make_item(r, content_lookup) for r in rankings]
+        # No engagement data yet — fall back to top-scored items (still type-filtered)
+        candidates = [
+            make_item(r, content_lookup)
+            for r in rankings
+            if r.get("type", "").lower() in HERO_ALLOWED_TYPES
+        ]
     candidates = dedup_against_used(candidates, used)
     candidates = apply_type_cap(candidates, MAX_SAME_TYPE_PER_ROW)
     items = candidates[:HERO_ITEMS]

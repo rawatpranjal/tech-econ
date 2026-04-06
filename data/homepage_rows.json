@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-06T10:05:26.823566+00:00",
+  "generated_at": "2026-04-06T21:10:00.279213+00:00",
   "stats": {
     "total_rows": 5,
     "total_items": 42,
@@ -22,39 +22,6 @@
       "description": "What the community is reading and clicking most",
       "template": "hero",
       "items": [
-        {
-          "name": "Deep Residual Learning for Image Recognition (ResNet)",
-          "type": "paper",
-          "category": "Clustering & Segmentation > Visual Content Clustering",
-          "description": "ResNet architecture enabling powerful visual features for image clustering.",
-          "url": "https://arxiv.org/abs/1512.03385",
-          "image_url": "",
-          "score": 1.0,
-          "cold_start": true,
-          "signals": {}
-        },
-        {
-          "name": "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing",
-          "type": "paper",
-          "category": "Statistics > Multiple Testing & False Discovery Rate",
-          "description": "One of the most-cited statistics papers ever (~100,000 citations). Introduced FDR as alternative to FWER\u2014controls expected proportion of false discoveries among rejections. The BH step-up procedure is now default in experimentation platforms at Google, Netflix, Meta. Essential when testing 500 experiments or 20 metrics per A/B test.",
-          "url": "https://www.jstor.org/stable/2346101",
-          "image_url": "",
-          "score": 0.9632,
-          "cold_start": true,
-          "signals": {}
-        },
-        {
-          "name": "Regression Models and Life Tables",
-          "type": "paper",
-          "category": "Machine Learning > Neural Survival Models",
-          "description": "The Cox proportional hazards model\u2014one of the most cited statistical methods ever. Foundation for survival analysis across oncology, cardiology, and reliability.",
-          "url": "https://www.jstor.org/stable/2985181",
-          "image_url": "",
-          "score": 0.9284,
-          "cold_start": true,
-          "signals": {}
-        },
         {
           "name": "csdid",
           "type": "package",
@@ -131,6 +98,39 @@
           "score": 0.0,
           "cold_start": true,
           "signals": {}
+        },
+        {
+          "name": "Causal Inference for the Brave and True",
+          "type": "resource",
+          "category": "Causal Inference",
+          "description": "Matheus Facure's comprehensive Python-based coverage of synthetic control, difference-in-differences, and other causal methods central to marketing science.",
+          "url": "https://matheusfacure.github.io/python-causality-handbook/",
+          "image_url": "/images/logos/github.png",
+          "score": 0.0,
+          "cold_start": true,
+          "signals": {}
+        },
+        {
+          "name": "Causal Econometrics Course",
+          "type": "resource",
+          "category": "Causal Inference",
+          "description": "Graduate-level credibility revolution methods. Comprehensive coverage of modern causal inference techniques for econometricians.",
+          "url": "https://donskerclass.github.io/CausalEconometrics.html",
+          "image_url": "",
+          "score": 0.0,
+          "cold_start": true,
+          "signals": {}
+        },
+        {
+          "name": "Susan Athey: Economics of Transformative AI",
+          "type": "talk",
+          "category": "Strategy & Digital Platforms",
+          "description": "NBER lecture on how AI is transforming economic research and industry applications.",
+          "url": "https://www.youtube.com/watch?v=ifdSUKrJxqM",
+          "image_url": "https://img.youtube.com/vi/ifdSUKrJxqM/hqdefault.jpg",
+          "score": 0.0,
+          "cold_start": true,
+          "signals": {}
         }
       ]
     },
@@ -142,35 +142,35 @@
       "template": "standard",
       "items": [
         {
-          "name": "Nonparametric Estimation from Incomplete Observations",
+          "name": "Deep Residual Learning for Image Recognition (ResNet)",
           "type": "paper",
-          "category": "Statistics > Survival Analysis & Time-to-Event Models",
-          "description": "Introduced the Kaplan-Meier estimator (product-limit estimator), the universal method for estimating survival curves from censored data. Every survival analysis begins here\u2014essential for visualizing retention curves, comparing cohorts, and calculating median time-to-churn.",
-          "url": "https://www.jstor.org/stable/2281868",
+          "category": "Clustering & Segmentation > Visual Content Clustering",
+          "description": "ResNet architecture enabling powerful visual features for image clustering.",
+          "url": "https://arxiv.org/abs/1512.03385",
           "image_url": "",
-          "score": 0.8753,
+          "score": 1.0,
           "cold_start": true,
           "signals": {}
         },
         {
-          "name": "Regression Models and Life-Tables",
+          "name": "Controlling the False Discovery Rate: A Practical and Powerful Approach to Multiple Testing",
           "type": "paper",
-          "category": "Statistics > Survival Analysis & Time-to-Event Models",
-          "description": "Introduced the Cox proportional hazards model, enabling regression analysis on survival data while leaving the baseline hazard unspecified. Ranked 24th among all scientific papers ever published. The workhorse for identifying churn drivers and estimating treatment effects of retention interventions.",
+          "category": "Statistics > Multiple Testing & False Discovery Rate",
+          "description": "One of the most-cited statistics papers ever (~100,000 citations). Introduced FDR as alternative to FWER\u2014controls expected proportion of false discoveries among rejections. The BH step-up procedure is now default in experimentation platforms at Google, Netflix, Meta. Essential when testing 500 experiments or 20 metrics per A/B test.",
+          "url": "https://www.jstor.org/stable/2346101",
+          "image_url": "",
+          "score": 0.9632,
+          "cold_start": true,
+          "signals": {}
+        },
+        {
+          "name": "Regression Models and Life Tables",
+          "type": "paper",
+          "category": "Machine Learning > Neural Survival Models",
+          "description": "The Cox proportional hazards model\u2014one of the most cited statistical methods ever. Foundation for survival analysis across oncology, cardiology, and reliability.",
           "url": "https://www.jstor.org/stable/2985181",
           "image_url": "",
-          "score": 0.8753,
-          "cold_start": true,
-          "signals": {}
-        },
-        {
-          "name": "The Central Role of the Propensity Score in Observational Studies",
-          "type": "paper",
-          "category": "Observational Causal Inference > Matching & Propensity Scores",
-          "description": "The foundational paper introducing propensity scores for causal inference in observational studies.",
-          "url": "https://academic.oup.com/biomet/article/70/1/41/240879",
-          "image_url": "",
-          "score": 0.8523,
+          "score": 0.9284,
           "cold_start": true,
           "signals": {}
         },
@@ -433,17 +433,6 @@
       "template": "standard",
       "items": [
         {
-          "name": "Susan Athey: Economics of Transformative AI",
-          "type": "talk",
-          "category": "Strategy & Digital Platforms",
-          "description": "NBER lecture on how AI is transforming economic research and industry applications.",
-          "url": "https://www.youtube.com/watch?v=ifdSUKrJxqM",
-          "image_url": "https://img.youtube.com/vi/ifdSUKrJxqM/hqdefault.jpg",
-          "score": 0.0,
-          "cold_start": false,
-          "signals": {}
-        },
-        {
           "name": "Pat Bajari: Building applied analytics at Amazon",
           "type": "talk",
           "category": "Strategy & Digital Platforms",
@@ -516,6 +505,17 @@
           "description": "MIT economist Daron Acemoglu discusses AI's impact on labor markets, inequality, and economic growth on the Capitalism and Freedom podcast.",
           "url": "https://capitalismandfreedom.substack.com/p/episode-33-daron-acemoglu-mit-economics",
           "image_url": "https://substackcdn.com/image/fetch/$s_!9VIs!,w_1200,h_600,c_fill,f_jpg,q_auto:good,fl_progressive:steep,g_auto/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fb4de7ccc-3b24-4568-8e8f-56b899524610_284x284.jpeg",
+          "score": 0.0,
+          "cold_start": false,
+          "signals": {}
+        },
+        {
+          "name": "John List: Market Design in Ride-Sharing",
+          "type": "talk",
+          "category": "Market Design & Auctions",
+          "description": "How ride-sharing platforms design markets for drivers and riders. Insights from Uber and Lyft.",
+          "url": "https://www.youtube.com/watch?v=CF7FQnD-2jg",
+          "image_url": "https://economics.uchicago.edu/sites/default/files/2025-08/john_list_photo_3.jpeg",
           "score": 0.0,
           "cold_start": false,
           "signals": {}
