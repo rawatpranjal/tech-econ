@@ -436,12 +436,14 @@ function handleSearch(payload, messageId) {
 
   if (!useSemanticSearch) {
     // Return keyword results only
+    var kOnly = keywordResults.slice(0, topK);
     postMessage({
       type: 'SEARCH_RESULTS',
       id: messageId,
       payload: {
-        results: keywordResults.slice(0, topK),
-        mode: 'keyword'
+        results: kOnly,
+        mode: 'keyword',
+        suggestion: maybeSuggestion(query, kOnly)
       }
     });
     return;
@@ -451,12 +453,14 @@ function handleSearch(payload, messageId) {
   embedQuery(query).then(function(queryEmbedding) {
     if (!queryEmbedding) {
       // Fallback to keyword only
+      var kFallback = keywordResults.slice(0, topK);
       postMessage({
         type: 'SEARCH_RESULTS',
         id: messageId,
         payload: {
-          results: keywordResults.slice(0, topK),
-          mode: 'keyword'
+          results: kFallback,
+          mode: 'keyword',
+          suggestion: maybeSuggestion(query, kFallback)
         }
       });
       return;
@@ -468,12 +472,14 @@ function handleSearch(payload, messageId) {
     var topSemanticScore = semanticResults.length > 0 ? semanticResults[0].score : 0;
     if (topSemanticScore < 0.3) {
       // Fall back to keyword-only results
+      var kSemFallback = keywordResults.slice(0, topK);
       postMessage({
         type: 'SEARCH_RESULTS',
         id: messageId,
         payload: {
-          results: keywordResults.slice(0, topK),
-          mode: 'keyword-fallback'
+          results: kSemFallback,
+          mode: 'keyword-fallback',
+          suggestion: maybeSuggestion(query, kSemFallback)
         }
       });
       return;
@@ -487,18 +493,21 @@ function handleSearch(payload, messageId) {
       id: messageId,
       payload: {
         results: fusedResults,
-        mode: 'hybrid'
+        mode: 'hybrid',
+        suggestion: maybeSuggestion(query, fusedResults)
       }
     });
   }).catch(function(error) {
     // Fallback to keyword only
+    var kErr = keywordResults.slice(0, topK);
     postMessage({
       type: 'SEARCH_RESULTS',
       id: messageId,
       payload: {
-        results: keywordResults.slice(0, topK),
+        results: kErr,
         mode: 'keyword',
-        error: error.message
+        error: error.message,
+        suggestion: maybeSuggestion(query, kErr)
       }
     });
   });
@@ -530,12 +539,14 @@ function handleProgressiveSearch(payload, messageId) {
     embedQuery(query).then(function(queryEmbedding) {
       if (!queryEmbedding) {
         // No embedding, keyword results are final
+        var kNoEmb = keywordResults.slice(0, topK);
         postMessage({
           type: 'SEARCH_RESULTS',
           id: messageId,
           payload: {
-            results: keywordResults.slice(0, topK),
-            mode: 'keyword-fallback'
+            results: kNoEmb,
+            mode: 'keyword-fallback',
+            suggestion: maybeSuggestion(query, kNoEmb)
           }
         });
         return;
@@ -547,12 +558,14 @@ function handleProgressiveSearch(payload, messageId) {
       var topSemanticScore = semanticResults.length > 0 ? semanticResults[0].score : 0;
       if (topSemanticScore < 0.3) {
         // Fall back to keyword-only results
+        var kLowSem = keywordResults.slice(0, topK);
         postMessage({
           type: 'SEARCH_RESULTS',
           id: messageId,
           payload: {
-            results: keywordResults.slice(0, topK),
-            mode: 'keyword-fallback'
+            results: kLowSem,
+            mode: 'keyword-fallback',
+            suggestion: maybeSuggestion(query, kLowSem)
           }
         });
         return;
@@ -566,23 +579,40 @@ function handleProgressiveSearch(payload, messageId) {
         id: messageId,
         payload: {
           results: fusedResults,
-          mode: 'hybrid'
+          mode: 'hybrid',
+          suggestion: maybeSuggestion(query, fusedResults)
         }
       });
     }).catch(function(error) {
       // Error during semantic, keyword results are final
+      var kProgErr = keywordResults.slice(0, topK);
       postMessage({
         type: 'SEARCH_RESULTS',
         id: messageId,
         payload: {
-          results: keywordResults.slice(0, topK),
+          results: kProgErr,
           mode: 'keyword',
-          error: error.message
+          error: error.message,
+          suggestion: maybeSuggestion(query, kProgErr)
         }
       });
     });
   }
   // If no semantic search, keyword results were already sent as final
+}
+
+/**
+ * Re2 — compute a "Did you mean…?" suggestion when the user's query
+ * yielded zero hits. Returns the corrected query string or null. Cheap
+ * (single Levenshtein pass over the pre-built vocab); safe to call from
+ * every SEARCH_RESULTS post-message branch.
+ */
+function maybeSuggestion(query, finalResults) {
+  if (!finalResults || finalResults.length > 0) return null;
+  if (!spellcheckVocab || typeof Spellcheck === 'undefined') return null;
+  var s = Spellcheck.suggest(query, spellcheckVocab);
+  if (s && s.changed && s.corrected !== query) return s.corrected;
+  return null;
 }
 
 /**
@@ -594,25 +624,13 @@ function handleKeywordSearch(payload, messageId) {
 
   var results = performKeywordSearch(query, topK);
 
-  // Re2 — when keyword search returns nothing, attempt a spellcheck
-  // suggestion and include it in the response so the UI can show a
-  // "Did you mean…?" banner. Cheap (single Levenshtein pass over the
-  // pre-built vocab) and always non-blocking.
-  var suggestion = null;
-  if (results.length === 0 && spellcheckVocab && typeof Spellcheck !== 'undefined') {
-    var s = Spellcheck.suggest(query, spellcheckVocab);
-    if (s && s.changed && s.corrected !== query) {
-      suggestion = s.corrected;
-    }
-  }
-
   postMessage({
     type: 'SEARCH_RESULTS',
     id: messageId,
     payload: {
       results: results,
       mode: 'keyword',
-      suggestion: suggestion
+      suggestion: maybeSuggestion(query, results)
     }
   });
 }
