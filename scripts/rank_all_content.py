@@ -31,6 +31,11 @@ _REPO_ROOT = Path(__file__).resolve().parents[1]
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 from lib.sample_weights import compute_sample_weights
+from lib.model_cache import (
+    ModelCacheError,
+    latest_version as _latest_model_version,
+    save_model as _save_model_artifact,
+)
 
 try:
     import lightgbm as lgb
@@ -914,6 +919,36 @@ def train_regression_model(items, item_signals):
         X = scaler.fit_transform(X)
     model.fit(X, y_binary)
     print(f"  {model_name} trained on {len(y_binary)} items")
+
+    # Ra7 — persist the trained model with sidecar metadata so future
+    # evaluator / replay runs can score against a fixed artifact rather
+    # than re-running training. Best-effort: any failure here is logged
+    # but does NOT abort the rerank (the in-memory `model` is still
+    # used to compute scores). Skipped when LightGBM isn't available
+    # (the LR fallback isn't worth caching).
+    if HAS_LIGHTGBM and hasattr(model, "save_model"):
+        try:
+            next_version = (_latest_model_version() or 0) + 1
+            cached = _save_model_artifact(
+                model,
+                version=next_version,
+                metadata={
+                    "model_name": model_name,
+                    "n_train_rows": int(len(y_train_binary)),
+                    "n_train_engaged": int(np.sum(y_train_binary)),
+                    "n_features": int(X_train.shape[1]),
+                    "test_metrics": {
+                        "precision": float(test_precision),
+                        "recall": float(test_recall),
+                        "f1": float(test_f1),
+                        "auc_roc": float(test_auc),
+                        "auc_pr": float(test_ap),
+                    },
+                },
+            )
+            print(f"  Saved model artifact v{cached.version} -> {cached.booster_path}")
+        except (ModelCacheError, OSError, TypeError) as cache_err:
+            print(f"  Warning: model cache write failed ({cache_err}); ranking continues.")
 
     # Get predicted probabilities for all items
     predictions_proba = model.predict_proba(X)[:, 1]
