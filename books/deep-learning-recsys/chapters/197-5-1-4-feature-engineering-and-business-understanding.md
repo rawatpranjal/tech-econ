@@ -1,0 +1,8 @@
+## 5.1.4 Feature Engineering and Business Understanding
+
+So far in this section, we introduced the types of features and main processing methods of feature engineering for recommender systems. In the era of deep learning, the recommendation model itself undertakes a lot of feature selection and combination work, and machine learning engineers do not need to spend a lot of time on feature engineering as before. However, the powerful feature processing capabilities of deep learning  models  do  not  mean  that  we  can  abandon  our  understanding  of  business data. On the contrary, feature engineering itself has become a part of the deep learning model when recommendation models and feature engineering tend to be fused together nowadays.
+
+For  example,  in  the  Wide&amp;Deep  model,  machine  learning  engineers  need  to have a deep understanding of the business application in order to determine which features to 'feed' to the Wide part for memory strengthening. In the DIEN model, the feature extraction of user behavior is deeply coupled within the model structure, and the complex sequence model structure is used to embed the user behavior sequence.
+
+In  this  sense,  the  traditional  work  of  artificial  feature  combination  and  filtering no longer exists, and it is replaced by a deep learning model that combines feature engineering and model structure with unified thinking and overall modeling. What remains unchanged is that only by deeply understanding the business and the user's thinking and behavioral motives in business use cases can the most valuable features be accurately extracted and successful deep learning models be constructed.
+

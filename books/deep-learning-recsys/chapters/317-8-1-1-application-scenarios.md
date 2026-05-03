@@ -1,0 +1,4 @@
+## 8.1.1 Application Scenarios
+
+The application scenario of Facebook's advertising recommender system is a standard CTR (click-through rate) prediction use case. The system takes in relevant features of users, ads, and context, predicts the CTR, and then uses the CTR for ad ranking and recommendation. It is important to note that other modules of Facebook's advertising system use the CTR to calculate ad bidding, return on investment (ROI), and other estimated values. Therefore, the predicted value of the CTR model needs to be an accurate value with actual physical meaning, rather than just the higher or lower relevance of ads (which is a crucial difference between advertising and recommender systems). Facebook also specifically introduces a CTR calibration method to correct the deviation between the output value of the CTR prediction model and the actual value.
+

@@ -15,12 +15,14 @@ Thumbs.db
 # Hugo lock file
 .hugo_build.lock
 node_modules/
-scripts/__pycache__/
+**/__pycache__/
 # Secrets - NEVER COMMIT
 .claude/secrets.env
 .env
 secrets.*
 !*.template
+# Local one-off secret files (per CLAUDE.md, secrets belong in .claude/secrets.env)
+cloudflaretoken.txt
 
 # Discovery crawler state (operational, not content)
 data/.discovery_state.json

@@ -1,0 +1,9 @@
+## 9.3.3 Summary of the Competencies Required for Machine Learning Engineers
+
+To  become  an  excellent  machine  learning  engineer  in  recommender  systems, or  even  an  excellent  machine  learning  engineer  in  general,  you  should  comprehensively  improve  your  abilities  in  the  four  aspects  of  'knowledge,'  'tools,' 'analytics,' and 'business.' Solving a problem will require the engineer to have knowledge and technical capabilities in depth and breadth, make trade-offs and compromises under practical constraints, and finally come up with a feasible and optimal technical solution.
+
+From the beginning of writing this book to the final draft, it took a whole year. In this year, the development of deep learning recommender systems has never ceased. Even  if  the  scope  of  knowledge  included  in  this  book  has  been  adjusted  several times, trying to keep up with the new technology, it still cannot cover all the latest developments. As the authors often said when introducing the work to others, 'A machine learning engineer is a job that is struggling on the verge of being eliminated at  any time.' That is why we say, when you close the book, it's not the end, but another beginning.
+
+The situation is not so pessimistic. As introduced at the beginning of Chapter 9, once you have established your own recommender system knowledge framework, all that remains is to grow branches and leaves from this big tree. We believe that the process for deep learning to change the recommender system is far from over. The classic models that have been settled before will eventually become important nodes on this tree of knowledge, so that everyone will benefit from them. We also hope that this book can become a phased portrait of this tree. For us, this is definitely not the end. In the near future, we will continue to update the content of this book, so that the knowledge framework of the book is also flourishing.
+
+Until then, keep learning.

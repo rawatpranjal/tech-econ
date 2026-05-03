@@ -1,0 +1,6 @@
+## 5.3.4 Using the 'Wooden Bucket Theory' to Look at the Iterative Update of Recommender Systems
+
+This  section  introduced  the  main  methods  to  improve  the  'feature'  real-time  and 'model'  real-time  performance  of  recommender  systems.  Since  there  are  many aspects that affect the real-time performance of a recommender system, the engineers need to adopt a strategy that focuses on one point and improve before moving on to the next. But how to accurately find this key point is a problem requires us to look at it with the 'wooden bucket theory,' that is, finding the shortest piece of plank that slows down the real-time performance of the recommender system, replace or improve it, so that the bucket of 'recommender system' can hold more 'water.'
+
+Looking at the iterative update of the entire recommender system from a higher perspective, the 'wooden bucket theory' is also applicable. The model part and engineering part of the recommender system are always alternately optimized. When the attempt to improve the recommendation results by improving the model is hindered or the cost is too high, the direction of optimization can be focused on the engineering part, so as to achieve the goal of spending less effort and achieving more significant results.
+

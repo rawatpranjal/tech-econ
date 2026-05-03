@@ -1,0 +1,4 @@
+## 8.4.4.1 User Interest Representation Module
+
+The 'User Behavior Features Online Database' in Architecture A is replaced by the 'User Interest Representation Online Database' in Architecture B. This change is very important for the model inference process. Whether it is DIEN or MIMN, the final form of expressing user interests is the interest embedding vector. If the user behavior feature sequence is obtained online, a complex sequence model inference process needs to be run to generate the user interest vector on the real-time prediction server. If the user interest vector is available in an online feature store, the real-time prediction server can skip the sequence model inferencing phase and start the MLP calculation directly. The number of layers in MLP is much smaller than that in the sequence model and is easier to compute in parallel. Therefore, the latency of entire online inferencing can be significantly reduced.
+

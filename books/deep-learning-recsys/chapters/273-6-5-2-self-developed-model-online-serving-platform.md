@@ -1,0 +1,12 @@
+## 6.5.2 Self-Developed Model Online Serving Platform
+
+Whether in the era when deep learning was just emerging a few years ago, or today when  TensorFlow  and  PyTorch  have  become  popular,  self-developed  machine learning training and online serving platforms are still a popular option for many large  and  medium-sized  companies.  Why  do  these  companies  not  use  the  flexible and mature frameworks such as TensorFlow, but still develop their own model training and serving platform from scratch?
+
+An important reason is that general-purpose platforms such as TensorFlow need to  support  a  large  number  of  redundant  functions  for  flexibility  and  versatility, which makes the platform too heavy and difficult to modify and customize. The advantage of the self-developed platform is that it can be customized according to the company's business and actual needs, as well as taking into account the efficiency of model serving.
+
+The  author  has  participated  in  the  implementation  of  Follow  the  Regularized Leader (FTRL), neural network models, and the development of customized online serving platforms. Since it does not depend on any third-party tools, the online serving process can be designed based on the actual production environment. For example, if a Java server is used for online service, the process of online FTRL is to obtain model parameters from the parameter server or in-memory database, and then use customized Java code to implement the model inferencing logic.
+
+Another reason is that most deep learning frameworks cannot support cases when the model has special needs, such as some retrieval models in recommender systems, 'exploration and utilization' models, and cold start algorithms that are very tightly coupled with the specific business use case. The online serving code of such models usually needs to be self-developed.
+
+The disadvantages of self-developed platforms are obvious. It is feasible to develop one or two models with customized code. But it is difficult to implement, compare, and tune dozens of models due to the high cost of implementing models. Nowadays, the iteration cycle of self-developed models is too long considering the emergence of new models. Therefore, self-developed platforms and models are often only used by large companies, when the model structure is already determined. In this case, the model inferencing code also needs to be manually implemented.
+

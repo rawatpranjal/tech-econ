@@ -1,0 +1,8 @@
+## 5.5.2 Netflix's Observation on User Behavior
+
+Netflix is one of the largest streaming media company in the United States. Its recommender system generates a list of movies based on user preferences. In addition to the ranking of videos, one factor that has the most impact of the click-through rate is actually the preview image of the movie. For example, for a user who likes Matt Damon, when he sees Matt Damon's profile picture on the poster of the movie, the probability of clicking on the movie will increase significantly. After verifying this through A/B testing, Netflix's data scientists began to optimize the generation of movie preview images [8] to improve the overall click-through rate of the recommendation results.
+
+In the specific optimization process, the model will use different movie preview templates  and  fill  them  with  different  foregrounds,  backgrounds,  texts,  and  so  on, according to the preferences of different users. By using a simple linear 'exploration vs. exploitation' model, it is possible to verify which combination is the most suitable for a certain type of user to personalize the posters.
+
+In  this  problem,  Netflix  does  not  use  a  complex  model,  but  the  effect  of  CTR improvement is on the order of 10%, far exceeding the benefits of improving the model structure. This is to solve problems from the perspective of users and scenarios. This is also in line with the idea of 'wooden bucket theory' proposed in Section 5.3. The most effective way to improve a recommender system is not to persistently improve the already long plank, but to find the shortest plank and improve the overall performance.
+

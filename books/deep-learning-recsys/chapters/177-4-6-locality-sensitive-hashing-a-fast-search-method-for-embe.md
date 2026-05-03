@@ -1,0 +1,6 @@
+## 4.6 Locality Sensitive Hashing: A Fast Search Method for Embedding-Based Searching
+
+As  mentioned,  one  of  the  most  important  uses  of  the  embedding  technique  is  to retrieve similar items from the candidate set in recommender systems. The main function of the retrieval layer of recommender systems is to quickly reduce the candidate set  size  from  a  large  scale  (for  example,  millions)  to  a  smaller,  manageable  scale (for example, thousands or hundreds). This can prevent sending all candidate items directly into the subsequent deep learning model which avoids leading to the waste of computing resources and high online inferencing latency.
+
+Compared  with  traditional  rule-based  candidate  retrieval  methods,  embedding technology is more suitable for solving the retrieval problem for recommender systems because of its ability to synthesize a variety of information and features in the similarity prediction. In practical application, the key to the embedding productionization is how the embedding technique can quickly process hundreds of thousands or even millions of candidates, so as to satisfy the overall end-to-end latency constraints in the entire recommendation process.
+

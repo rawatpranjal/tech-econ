@@ -1,0 +1,378 @@
+# deep-learning-recsys
+
+Source: `source.md` (22361 KB)
+Chapters: 371 | Total words: 110,932
+
+## Table of Contents
+
+- [Deep Learning Recommender Systems](chapters/001-deep-learning-recommender-systems.md) — 11 words
+- [Deep Learning Recommender Systems](chapters/002-deep-learning-recommender-systems.md) — 373 words
+- [Deep Learning Recommender Systems](chapters/003-deep-learning-recommender-systems.md) — 13 words
+- [Shaftesbury Road, Cambridge CB2 8EA, United Kingdom](chapters/004-shaftesbury-road-cambridge-cb2-8ea-united-kingdom.md) — 231 words
+- [Contents](chapters/005-contents.md) — 5,899 words
+- [Foreword](chapters/006-foreword.md) — 1,854 words
+- [Preface](chapters/007-preface.md) — 2 words
+- [The Deep Learning Era of Recommender Systems](chapters/008-the-deep-learning-era-of-recommender-systems.md) — 263 words
+- [The Origin of This Book](chapters/009-the-origin-of-this-book.md) — 291 words
+- [Features of This Book](chapters/010-features-of-this-book.md) — 117 words
+- [Readers of This Book](chapters/011-readers-of-this-book.md) — 142 words
+- [Discussions Are Welcomed](chapters/012-discussions-are-welcomed.md) — 98 words
+- [Appreciations](chapters/013-appreciations.md) — 226 words
+- [References](chapters/014-references.md) — 59 words
+- [Growth Engine of the Internet](chapters/015-growth-engine-of-the-internet.md) — 196 words
+- [1.1 Why Are Recommender Systems the Growth Engine of the Internet?](chapters/016-1-1-why-are-recommender-systems-the-growth-engine-of-the-int.md) — 170 words
+- [1.1.1 The Role and Significance of Recommender Systems](chapters/017-1-1-1-the-role-and-significance-of-recommender-systems.md) — 399 words
+- [1.1.2 Recommender Systems and YouTube Watch Time Growth](chapters/018-1-1-2-recommender-systems-and-youtube-watch-time-growth.md) — 256 words
+- [1.1.3 Recommender Systems and Revenue Growth for E-Commerce Sites](chapters/019-1-1-3-recommender-systems-and-revenue-growth-for-e-commerce.md) — 438 words
+- [1.2 Recommender Systems Architecture](chapters/020-1-2-recommender-systems-architecture.md) — 233 words
+- [1.2.1 The Logical Framework for Recommender Systems](chapters/021-1-2-1-the-logical-framework-for-recommender-systems.md) — 129 words
+- [1.2.2 The Technical Architecture for Recommender Systems](chapters/022-1-2-2-the-technical-architecture-for-recommender-systems.md) — 194 words
+- [1.2.3 Data Part of the Recommender System](chapters/023-1-2-3-data-part-of-the-recommender-system.md) — 227 words
+- [1.2.4 Model Part of the Recommender System](chapters/024-1-2-4-model-part-of-the-recommender-system.md) — 371 words
+- [1.2.5 The Revolutionary Contribution of Deep Learning to Recommender Systems](chapters/025-1-2-5-the-revolutionary-contribution-of-deep-learning-to-rec.md) — 145 words
+- [1.2.6 See the Whole Picture, Supplement Details](chapters/026-1-2-6-see-the-whole-picture-supplement-details.md) — 155 words
+- [1.3 Structure of the Book](chapters/027-1-3-structure-of-the-book.md) — 133 words
+- [Chapter 1. The Growth Engine of the Internet: Recommender Systems](chapters/028-chapter-1-the-growth-engine-of-the-internet-recommender-syst.md) — 58 words
+- [Chapter 2. Pre-Deep Learning Era: The Evolution of Recommender Systems](chapters/029-chapter-2-pre-deep-learning-era-the-evolution-of-recommender.md) — 50 words
+- [Chapter  3.  Top  of  the  Tide:  Application  of  Deep  Learning  in  Recommender Systems](chapters/030-chapter-3-top-of-the-tide-application-of-deep-learning-in-re.md) — 59 words
+- [Chapter 4. Application of Embedding Technology in Recommender Systems](chapters/031-chapter-4-application-of-embedding-technology-in-recommender.md) — 45 words
+- [Chapter 5. Recommender Systems from Multiple Perspectives](chapters/032-chapter-5-recommender-systems-from-multiple-perspectives.md) — 70 words
+- [Chapter  6.  Engineering  Implementations  in  Deep  Learning  Recommender Systems](chapters/033-chapter-6-engineering-implementations-in-deep-learning-recom.md) — 43 words
+- [Chapter 7. Evaluation in Recommender Systems](chapters/034-chapter-7-evaluation-in-recommender-systems.md) — 52 words
+- [Chapter 8. Frontier Practice of Deep Learning Recommender Systems](chapters/035-chapter-8-frontier-practice-of-deep-learning-recommender-sys.md) — 43 words
+- [Chapter 9. Build Your Own Recommender Systems Knowledge Framework](chapters/036-chapter-9-build-your-own-recommender-systems-knowledge-frame.md) — 35 words
+- [Reference](chapters/037-reference.md) — 30 words
+- [2 Pre-Deep Learning Era](chapters/038-2-pre-deep-learning-era.md) — 377 words
+- [2.1 Evolution Diagram of Traditional Recommendation Models](chapters/039-2-1-evolution-diagram-of-traditional-recommendation-models.md) — 399 words
+- [2.2 Collaborative Filtering: A Classic Recommendation Algorithm](chapters/040-2-2-collaborative-filtering-a-classic-recommendation-algorit.md) — 169 words
+- [2.2.1 What Is Collaborative Filtering?](chapters/041-2-2-1-what-is-collaborative-filtering.md) — 562 words
+- [2.2.2 User Similarity Calculation](chapters/042-2-2-2-user-similarity-calculation.md) — 277 words
+- [2.2.3 Sorting of the Final Results](chapters/043-2-2-3-sorting-of-the-final-results.md) — 351 words
+- [2.2.4 ItemCF](chapters/044-2-2-4-itemcf.md) — 317 words
+- [2.2.5 Application Scenarios of UserCF and ItemCF](chapters/045-2-2-5-application-scenarios-of-usercf-and-itemcf.md) — 217 words
+- [2.2.6 The Next Step of Collaborative Filtering](chapters/046-2-2-6-the-next-step-of-collaborative-filtering.md) — 414 words
+- [2.3 Matrix Factorization Algorithm: The Evolution of Collaborative Filtering](chapters/047-2-3-matrix-factorization-algorithm-the-evolution-of-collabor.md) — 133 words
+- [2.3.1 Principle of Matrix Factorization Algorithm](chapters/048-2-3-1-principle-of-matrix-factorization-algorithm.md) — 609 words
+- [2.3.2 Solving Matrix Factorization](chapters/049-2-3-2-solving-matrix-factorization.md) — 402 words
+- [Basics: What Is Overfitting and Regularization?](chapters/050-basics-what-is-overfitting-and-regularization.md) — 732 words
+- [2.3.3 Eliminating the Scoring Bias](chapters/051-2-3-3-eliminating-the-scoring-bias.md) — 269 words
+- [2.3.4 Advantages and Limitations of Matrix Factorization](chapters/052-2-3-4-advantages-and-limitations-of-matrix-factorization.md) — 214 words
+- [2.4 Logistic Regression: A Recommendation Model That Combines Multiple Features](chapters/053-2-4-logistic-regression-a-recommendation-model-that-combines.md) — 152 words
+- [2.4.1 Recommendation Process Based on Logistic Regression Models](chapters/054-2-4-1-recommendation-process-based-on-logistic-regression-mo.md) — 166 words
+- [2.4.2 Mathematical Expression of Logistic Regression Models](chapters/055-2-4-2-mathematical-expression-of-logistic-regression-models.md) — 251 words
+- [2.4.3 Training Methods of Logistic Regression Models](chapters/056-2-4-3-training-methods-of-logistic-regression-models.md) — 410 words
+- [2.4.4 Advantages of Logistic Regression Models](chapters/057-2-4-4-advantages-of-logistic-regression-models.md) — 64 words
+- [2.4.4.1 Mathematical Support](chapters/058-2-4-4-1-mathematical-support.md) — 117 words
+- [2.4.4.2 Strong Interpretability](chapters/059-2-4-4-2-strong-interpretability.md) — 172 words
+- [2.4.4.3 Engineering Requirements](chapters/060-2-4-4-3-engineering-requirements.md) — 103 words
+- [2.4.5 Limitations of Logistic Regression Models](chapters/061-2-4-5-limitations-of-logistic-regression-models.md) — 114 words
+- [2.5 From FM to FFM: A Solution for Automatic Feature Interaction](chapters/062-2-5-from-fm-to-ffm-a-solution-for-automatic-feature-interact.md) — 72 words
+- [Basics: What Is Simpson's Paradox?](chapters/063-basics-what-is-simpson-s-paradox.md) — 386 words
+- [2.5.1 POLY2 Model: The Beginning of Feature Interaction](chapters/064-2-5-1-poly2-model-the-beginning-of-feature-interaction.md) — 248 words
+- [Basics: What Is One-Hot Encoding?](chapters/065-basics-what-is-one-hot-encoding.md) — 236 words
+- [2.5.2 FM Models: Interaction for Latent Features](chapters/066-2-5-2-fm-models-interaction-for-latent-features.md) — 461 words
+- [2.5.3 FFM Model: Introducing the Concept of Feature Field](chapters/067-2-5-3-ffm-model-introducing-the-concept-of-feature-field.md) — 637 words
+- [2.5.4 Model Evolution from POLY2 to FFM](chapters/068-2-5-4-model-evolution-from-poly2-to-ffm.md) — 409 words
+- [2.6 GBDT+LR: The Beginning of Feature Engineering Modeling](chapters/069-2-6-gbdt-lr-the-beginning-of-feature-engineering-modeling.md) — 89 words
+- [2.6.1 Structure of GBDT+LR Ensemble Model](chapters/070-2-6-1-structure-of-gbdt-lr-ensemble-model.md) — 127 words
+- [Basics: What Is a GBDT Model?](chapters/071-basics-what-is-a-gbdt-model.md) — 316 words
+- [2.6.2 Feature Transformation with GBDT](chapters/072-2-6-2-feature-transformation-with-gbdt.md) — 332 words
+- [2.6.3 New Trend of Feature Engineering after GBDT+LR Model](chapters/073-2-6-3-new-trend-of-feature-engineering-after-gbdt-lr-model.md) — 184 words
+- [2.7 LS-PLM: Previous Mainstream Model by Alibaba](chapters/074-2-7-ls-plm-previous-mainstream-model-by-alibaba.md) — 132 words
+- [2.7.1 Main Structure of LS-PLM](chapters/075-2-7-1-main-structure-of-ls-plm.md) — 428 words
+- [2.7.2 Advantages of the LS-PLM Model](chapters/076-2-7-2-advantages-of-the-ls-plm-model.md) — 142 words
+- [Basics: Why L1 Norm Is More Likely to Produce Sparse Solutions Than L2 Norm](chapters/077-basics-why-l1-norm-is-more-likely-to-produce-sparse-solution.md) — 297 words
+- [2.7.3 Viewing LS-PLM from the Perspective of Deep Learning](chapters/078-2-7-3-viewing-ls-plm-from-the-perspective-of-deep-learning.md) — 258 words
+- [2.8 Summary: The Eve of Deep Learning Recommender Systems](chapters/079-2-8-summary-the-eve-of-deep-learning-recommender-systems.md) — 865 words
+- [References](chapters/080-references.md) — 217 words
+- [3 Top of the Tide](chapters/081-3-top-of-the-tide.md) — 6 words
+- [Application of Deep Learning in Recommender Systems](chapters/082-application-of-deep-learning-in-recommender-systems.md) — 307 words
+- [3.1 Evolution Graph of Deep Learning Recommendation Models](chapters/083-3-1-evolution-graph-of-deep-learning-recommendation-models.md) — 459 words
+- [3.2 AutoRec: A Single Hidden-Layer Neural Network Recommendation Model](chapters/084-3-2-autorec-a-single-hidden-layer-neural-network-recommendat.md) — 65 words
+- [3.2.1 Theories of AutoRec](chapters/085-3-2-1-theories-of-autorec.md) — 56 words
+- [Basics: Autoencoder](chapters/086-basics-autoencoder.md) — 427 words
+- [3.2.2 Network Structure of the AutoRec Model](chapters/087-3-2-2-network-structure-of-the-autorec-model.md) — 189 words
+- [Basics: Neuron, Neural Network, and Backpropagation](chapters/088-basics-neuron-neural-network-and-backpropagation.md) — 757 words
+- [3.2.3 Recommendation Process Based on the AutoRec Model](chapters/089-3-2-3-recommendation-process-based-on-the-autorec-model.md) — 247 words
+- [3.2.4 Strengths and Limitations of the AutoRec Model](chapters/090-3-2-4-strengths-and-limitations-of-the-autorec-model.md) — 132 words
+- [3.3 Deep Crossing Model: A Classic Deep Learning Architecture](chapters/091-3-3-deep-crossing-model-a-classic-deep-learning-architecture.md) — 154 words
+- [3.3.1 Application Scenarios of the Deep Crossing Model](chapters/092-3-3-1-application-scenarios-of-the-deep-crossing-model.md) — 528 words
+- [3.3.2 Network Structure of Deep Crossing Model](chapters/093-3-3-2-network-structure-of-deep-crossing-model.md) — 507 words
+- [Basics: Residual Neural Networks and Its Characteristics](chapters/094-basics-residual-neural-networks-and-its-characteristics.md) — 379 words
+- [3.3.3 The Revolution to Feature Crossing Method by Deep Crossing Model](chapters/095-3-3-3-the-revolution-to-feature-crossing-method-by-deep-cros.md) — 158 words
+- [3.4 NeuralCF Model: Combination of CF and Deep Learning](chapters/096-3-4-neuralcf-model-combination-of-cf-and-deep-learning.md) — 119 words
+- [3.4.1 Revisiting Matrix Factorization Models from the Perspective of Deep Learning](chapters/097-3-4-1-revisiting-matrix-factorization-models-from-the-perspe.md) — 231 words
+- [3.4.2 Network Structure of the NeuralCF Model](chapters/098-3-4-2-network-structure-of-the-neuralcf-model.md) — 396 words
+- [Basics: What Is the Softmax Function?](chapters/099-basics-what-is-the-softmax-function.md) — 59 words
+- [Mathematical Definition of Softmax Function](chapters/100-mathematical-definition-of-softmax-function.md) — 446 words
+- [3.4.3 Strengths and Limitations of NeuralCF Models](chapters/101-3-4-3-strengths-and-limitations-of-neuralcf-models.md) — 228 words
+- [3.5 PNN Model: A Way of Enhancing Feature Cross Capabilities](chapters/102-3-5-pnn-model-a-way-of-enhancing-feature-cross-capabilities.md) — 150 words
+- [3.5.1 Network Structure of the PNN Model](chapters/103-3-5-1-network-structure-of-the-pnn-model.md) — 211 words
+- [3.5.2 Multiple Feature Intersection Forms in the Product Layer](chapters/104-3-5-2-multiple-feature-intersection-forms-in-the-product-lay.md) — 642 words
+- [3.5.3 Strengths and Limitations of the PNN Model](chapters/105-3-5-3-strengths-and-limitations-of-the-pnn-model.md) — 171 words
+- [3.6 Wide&amp;Deep Model: Combining Memorization and Generalization](chapters/106-3-6-wide-amp-deep-model-combining-memorization-and-generaliz.md) — 164 words
+- [3.6.1 Memorization and Generalization of the Wide&amp;Deep Model](chapters/107-3-6-1-memorization-and-generalization-of-the-wide-amp-deep-m.md) — 578 words
+- [3.6.2 Network Structure of the Wide&amp;Deep Model](chapters/108-3-6-2-network-structure-of-the-wide-amp-deep-model.md) — 572 words
+- [3.6.3 Evolution of the Wide&amp;Deep Model: The Deep and Cross Model](chapters/109-3-6-3-evolution-of-the-wide-amp-deep-model-the-deep-and-cros.md) — 417 words
+- [3.6.4 Influence of the Wide&amp;Deep Model](chapters/110-3-6-4-influence-of-the-wide-amp-deep-model.md) — 174 words
+- [3.7 Integration of FM and Deep Learning Models](chapters/111-3-7-integration-of-fm-and-deep-learning-models.md) — 93 words
+- [3.7.1 FNN: Embedding Layer Initialization with the Hidden Vector of FM](chapters/112-3-7-1-fnn-embedding-layer-initialization-with-the-hidden-vec.md) — 879 words
+- [3.7.2 DeepFM: Replacing the Wide Part with FM](chapters/113-3-7-2-deepfm-replacing-the-wide-part-with-fm.md) — 309 words
+- [3.7.3 NFM: FM Model's Neural Network Attempt](chapters/114-3-7-3-nfm-fm-model-s-neural-network-attempt.md) — 505 words
+- [3.7.4 Strengths and Limitations of FM-Based Deep Learning Models](chapters/115-3-7-4-strengths-and-limitations-of-fm-based-deep-learning-mo.md) — 191 words
+- [3.8 Application of Attention Mechanism in the Recommendation Model](chapters/116-3-8-application-of-attention-mechanism-in-the-recommendation.md) — 189 words
+- [3.8.1 AFM: FM Model with Attention Mechanism](chapters/117-3-8-1-afm-fm-model-with-attention-mechanism.md) — 664 words
+- [3.8.2 DIN: Deep Learning Network with Attention Mechanism](chapters/118-3-8-2-din-deep-learning-network-with-attention-mechanism.md) — 852 words
+- [3.8.3 Inspiration of Attention Mechanism to Recommender Systems](chapters/119-3-8-3-inspiration-of-attention-mechanism-to-recommender-syst.md) — 147 words
+- [3.9 DIEN: Combination of Sequence Model and Recommender Systems](chapters/120-3-9-dien-combination-of-sequence-model-and-recommender-syste.md) — 97 words
+- [3.9.1 Motivation of the DIEN Model](chapters/121-3-9-1-motivation-of-the-dien-model.md) — 360 words
+- [3.9.2 Network Structure of the DIEN Model](chapters/122-3-9-2-network-structure-of-the-dien-model.md) — 273 words
+- [3.9.3 Interest Extraction Layer](chapters/123-3-9-3-interest-extraction-layer.md) — 224 words
+- [3.9.4 Structure of Interest Evolution Layer](chapters/124-3-9-4-structure-of-interest-evolution-layer.md) — 353 words
+- [3.9.5 Inspiration of the Sequence Model to Recommender Systems](chapters/125-3-9-5-inspiration-of-the-sequence-model-to-recommender-syste.md) — 165 words
+- [3.10 Combination of Reinforcement Learning and Recommender Systems](chapters/126-3-10-combination-of-reinforcement-learning-and-recommender-s.md) — 197 words
+- [3.10.1 Deep Reinforcement Learning Recommender Systems Framework](chapters/127-3-10-1-deep-reinforcement-learning-recommender-systems-frame.md) — 490 words
+- [3.10.2 Deep Reinforcement Learning Recommendation Models](chapters/128-3-10-2-deep-reinforcement-learning-recommendation-models.md) — 206 words
+- [3.10.3 Learning of the DRN Model](chapters/129-3-10-3-learning-of-the-drn-model.md) — 286 words
+- [3.10.4 Online Learning of the DRN Model: Dueling Bandit Gradient Descent Algorithm](chapters/130-3-10-4-online-learning-of-the-drn-model-dueling-bandit-gradi.md) — 360 words
+- [3.10.5 Inspiration of Reinforcement Learning for Recommender Systems](chapters/131-3-10-5-inspiration-of-reinforcement-learning-for-recommender.md) — 160 words
+- [3.11 Applications of BERT in a Recommendation Model](chapters/132-3-11-applications-of-bert-in-a-recommendation-model.md) — 164 words
+- [Basics: The Transformer Model and Self-Attention Mechanism](chapters/133-basics-the-transformer-model-and-self-attention-mechanism.md) — 647 words
+- [3.11.1 Relationship between BERT and Transformer](chapters/134-3-11-1-relationship-between-bert-and-transformer.md) — 195 words
+- [3.11.2 BERT4Rec: BERT for Recommendation Model](chapters/135-3-11-2-bert4rec-bert-for-recommendation-model.md) — 553 words
+- [3.11.3 UNBERT: A BERT-Based Model Combining Sequential Recommendation and NLP](chapters/136-3-11-3-unbert-a-bert-based-model-combining-sequential-recomm.md) — 244 words
+- [Input Sequence and Embedding Layer](chapters/137-input-sequence-and-embedding-layer.md) — 176 words
+- [Word-Level Module](chapters/138-word-level-module.md) — 81 words
+- [News-Level Module](chapters/139-news-level-module.md) — 157 words
+- [Click Predictor](chapters/140-click-predictor.md) — 200 words
+- [3.11.4 Inspiration of BERT Applications in Recommender Systems](chapters/141-3-11-4-inspiration-of-bert-applications-in-recommender-syste.md) — 70 words
+- [3.12 LLM: The New Revolution in AI and Its Application in Recommender Systems](chapters/142-3-12-llm-the-new-revolution-in-ai-and-its-application-in-rec.md) — 418 words
+- [3.12.1 Where to Adapt LLM](chapters/143-3-12-1-where-to-adapt-llm.md) — 44 words
+- [3.12.1.1 LLM in Feature Engineering](chapters/144-3-12-1-1-llm-in-feature-engineering.md) — 468 words
+- [In response to the request on Reddit: Hi Philadelphia area friends, I](chapters/145-in-response-to-the-request-on-reddit-hi-philadelphia-area-fr.md) — 127 words
+- [3.12.1.2 LLM as Feature Encoder](chapters/146-3-12-1-2-llm-as-feature-encoder.md) — 115 words
+- [3.12.1.3 LLM as Scoring/Ranking Function](chapters/147-3-12-1-3-llm-as-scoring-ranking-function.md) — 198 words
+- [Example:](chapters/148-example.md) — 2 words
+- [Babe (1995), Children's|Comedy|Drama, 4](chapters/149-babe-1995-children-s-comedy-drama-4.md) — 342 words
+- [3.12.1.4 LLM as Pipeline Controller](chapters/150-3-12-1-4-llm-as-pipeline-controller.md) — 559 words
+- [3.12.2 How to Adapt LLM](chapters/151-3-12-2-how-to-adapt-llm.md) — 296 words
+- [3.12.3 Inspiration and Challenges of LLM Adaptation in Recommender Systems](chapters/152-3-12-3-inspiration-and-challenges-of-llm-adaptation-in-recom.md) — 349 words
+- [3.13 Summary: The Deep Learning Era of Recommender Systems](chapters/153-3-13-summary-the-deep-learning-era-of-recommender-systems.md) — 1,125 words
+- [References](chapters/154-references.md) — 581 words
+- [4 Application of Embedding Technology in Recommender Systems](chapters/155-4-application-of-embedding-technology-in-recommender-systems.md) — 244 words
+- [4.1 What Is Embedding?](chapters/156-4-1-what-is-embedding.md) — 98 words
+- [4.1.1 Examples of Word Vectors](chapters/157-4-1-1-examples-of-word-vectors.md) — 275 words
+- [4.1.2 Expansion of Embedding Application in Other Fields](chapters/158-4-1-2-expansion-of-embedding-application-in-other-fields.md) — 151 words
+- [4.1.3 Importance of Embedding Technology for Deep Learning Recommender Systems](chapters/159-4-1-3-importance-of-embedding-technology-for-deep-learning-r.md) — 309 words
+- [4.2 Word2vec: The Classic Embedding Method](chapters/160-4-2-word2vec-the-classic-embedding-method.md) — 98 words
+- [4.2.1 What Is Word2vec?](chapters/161-4-2-1-what-is-word2vec.md) — 170 words
+- [4.2.2 Training Process of the Word2vec Model](chapters/162-4-2-2-training-process-of-the-word2vec-model.md) — 645 words
+- [4.2.3 Negative Sampling in Word2vec Training](chapters/163-4-2-3-negative-sampling-in-word2vec-training.md) — 339 words
+- [4.2.4 Importance of Word2vec to Embedding Technology](chapters/164-4-2-4-importance-of-word2vec-to-embedding-technology.md) — 148 words
+- [4.3 Item2vec: The Extension of Word2vec in Recommender Systems](chapters/165-4-3-item2vec-the-extension-of-word2vec-in-recommender-system.md) — 76 words
+- [4.3.1 Fundamentals of Item2vec](chapters/166-4-3-1-fundamentals-of-item2vec.md) — 386 words
+- [4.3.2 Item2vec in Generalized Form](chapters/167-4-3-2-item2vec-in-generalized-form.md) — 269 words
+- [4.3.3 Characteristics and Limitations of Item2vec](chapters/168-4-3-3-characteristics-and-limitations-of-item2vec.md) — 99 words
+- [4.4 Graph Embedding: Introducing More Structural Information](chapters/169-4-4-graph-embedding-introducing-more-structural-information.md) — 210 words
+- [4.4.1 DeepWalk: The Basic Graph Embedding Method](chapters/170-4-4-1-deepwalk-the-basic-graph-embedding-method.md) — 503 words
+- [4.4.2 Node2vec: Trade-Offs between Homophily and Structural Equivalence](chapters/171-4-4-2-node2vec-trade-offs-between-homophily-and-structural-e.md) — 804 words
+- [4.4.3 EGES: A Comprehensive Graph Embedding Method from Alibaba](chapters/172-4-4-3-eges-a-comprehensive-graph-embedding-method-from-aliba.md) — 560 words
+- [4.5 Integration of Embedding and Deep Learning Recommender Systems](chapters/173-4-5-integration-of-embedding-and-deep-learning-recommender-s.md) — 165 words
+- [4.5.1 Embedding Layer in Deep Learning Networks](chapters/174-4-5-1-embedding-layer-in-deep-learning-networks.md) — 458 words
+- [4.5.2 Pre-Training Method for Embedding](chapters/175-4-5-2-pre-training-method-for-embedding.md) — 466 words
+- [4.5.3 Application of Embedding in the Retrieval Layer of Recommender Systems](chapters/176-4-5-3-application-of-embedding-in-the-retrieval-layer-of-rec.md) — 483 words
+- [4.6 Locality Sensitive Hashing: A Fast Search Method for Embedding-Based Searching](chapters/177-4-6-locality-sensitive-hashing-a-fast-search-method-for-embe.md) — 174 words
+- [4.6.1 Fast Nearest Neighbor Search with Embedding](chapters/178-4-6-1-fast-nearest-neighbor-search-with-embedding.md) — 332 words
+- [4.6.2 Fundamentals of Locality Sensitive Hashing](chapters/179-4-6-2-fundamentals-of-locality-sensitive-hashing.md) — 528 words
+- [4.6.3 Multi-Bucket Strategy for Locality Sensitive Hashing](chapters/180-4-6-3-multi-bucket-strategy-for-locality-sensitive-hashing.md) — 392 words
+- [4.7 Summary: Core Operations of Deep Learning Recommender Systems](chapters/181-4-7-summary-core-operations-of-deep-learning-recommender-sys.md) — 533 words
+- [References](chapters/182-references.md) — 547 words
+- [5.1 Feature Engineering of Recommender Systems](chapters/183-5-1-feature-engineering-of-recommender-systems.md) — 135 words
+- [5.1.1 Feature Engineering in Recommender Systems](chapters/184-5-1-1-feature-engineering-in-recommender-systems.md) — 527 words
+- [5.1.2 Common Features in Recommender Systems](chapters/185-5-1-2-common-features-in-recommender-systems.md) — 37 words
+- [5.1.2.1 User Behavior Data](chapters/186-5-1-2-1-user-behavior-data.md) — 385 words
+- [5.1.2.2 User Relationship Data](chapters/187-5-1-2-2-user-relationship-data.md) — 286 words
+- [5.1.2.3 Attributes and Tags](chapters/188-5-1-2-3-attributes-and-tags.md) — 146 words
+- [5.1.2.4 Content Data](chapters/189-5-1-2-4-content-data.md) — 145 words
+- [5.1.2.5 Contextual Information](chapters/190-5-1-2-5-contextual-information.md) — 137 words
+- [5.1.2.6 Statistical Features](chapters/191-5-1-2-6-statistical-features.md) — 126 words
+- [5.1.2.7 Combined Features](chapters/192-5-1-2-7-combined-features.md) — 79 words
+- [5.1.3 Common Methods for Feature Processing](chapters/193-5-1-3-common-methods-for-feature-processing.md) — 87 words
+- [5.1.3.1 Continuous Features](chapters/194-5-1-3-1-continuous-features.md) — 218 words
+- [5.1.3.2 Categorical Features](chapters/195-5-1-3-2-categorical-features.md) — 61 words
+- [Basics: What Is Multi-Hot Encoding?](chapters/196-basics-what-is-multi-hot-encoding.md) — 217 words
+- [5.1.4 Feature Engineering and Business Understanding](chapters/197-5-1-4-feature-engineering-and-business-understanding.md) — 253 words
+- [5.2 The Main Strategy of the Retrieval Layer in Recommender Systems](chapters/198-5-2-the-main-strategy-of-the-retrieval-layer-in-recommender.md) — 100 words
+- [5.2.1 Functional Characteristics of the Retrieval Layer and the Ranking Layer](chapters/199-5-2-1-functional-characteristics-of-the-retrieval-layer-and.md) — 333 words
+- [5.2.2 Multichannel Retrieval Strategy](chapters/200-5-2-2-multichannel-retrieval-strategy.md) — 327 words
+- [5.2.3 Embedding-Based Retrieval Method](chapters/201-5-2-3-embedding-based-retrieval-method.md) — 256 words
+- [5.3 Real-Time Performance of Recommender Systems](chapters/202-5-3-real-time-performance-of-recommender-systems.md) — 71 words
+- [5.3.1 Why Are Real-Time Recommendations Important?](chapters/203-5-3-1-why-are-real-time-recommendations-important.md) — 385 words
+- [5.3.2 Real-Time 'Features' of Recommender Systems](chapters/204-5-3-2-real-time-features-of-recommender-systems.md) — 329 words
+- [5.3.2.1 Client Real-Time Features](chapters/205-5-3-2-1-client-real-time-features.md) — 281 words
+- [5.3.2.2 Quasi-Real-Time Feature Processing of Stream Computing Platform](chapters/206-5-3-2-2-quasi-real-time-feature-processing-of-stream-computi.md) — 188 words
+- [5.3.2.3 Full Feature Processing of Distributed Batch Processing Platform](chapters/207-5-3-2-3-full-feature-processing-of-distributed-batch-process.md) — 214 words
+- [5.3.3 Real-Time 'Model' of the Recommender Systems](chapters/208-5-3-3-real-time-model-of-the-recommender-systems.md) — 200 words
+- [5.3.3.1 Full Update](chapters/209-5-3-3-1-full-update.md) — 104 words
+- [5.3.3.2 Incremental Update](chapters/210-5-3-3-2-incremental-update.md) — 124 words
+- [5.3.3.3 Online Learning](chapters/211-5-3-3-3-online-learning.md) — 300 words
+- [5.3.3.4 Partial Update](chapters/212-5-3-3-4-partial-update.md) — 285 words
+- [5.3.3.5 Real-Time Update of the Client Model](chapters/213-5-3-3-5-real-time-update-of-the-client-model.md) — 308 words
+- [5.3.4 Using the 'Wooden Bucket Theory' to Look at the Iterative Update of Recommender Systems](chapters/214-5-3-4-using-the-wooden-bucket-theory-to-look-at-the-iterativ.md) — 204 words
+- [5.4 How to Set the Optimization Goals in Recommender Systems](chapters/215-5-4-how-to-set-the-optimization-goals-in-recommender-systems.md) — 187 words
+- [5.4.1 The Rationality of YouTube Taking Viewing Duration as the Optimization Goal](chapters/216-5-4-1-the-rationality-of-youtube-taking-viewing-duration-as.md) — 473 words
+- [5.4.2 Unity of the Scenarios for Model Optimization and Application](chapters/217-5-4-2-unity-of-the-scenarios-for-model-optimization-and-appl.md) — 699 words
+- [5.4.3 Multi-Task Learning in Recommender Systems](chapters/218-5-4-3-multi-task-learning-in-recommender-systems.md) — 54 words
+- [5.4.3.1 Weighted Loss Function](chapters/219-5-4-3-1-weighted-loss-function.md) — 84 words
+- [5.4.3.2 Shared-Bottom Multi-Task Model](chapters/220-5-4-3-2-shared-bottom-multi-task-model.md) — 201 words
+- [5.4.3.3 Mixture-of-Experts](chapters/221-5-4-3-3-mixture-of-experts.md) — 196 words
+- [5.4.3.4 Multi-gate Mixture-of-Experts](chapters/222-5-4-3-4-multi-gate-mixture-of-experts.md) — 182 words
+- [5.4.3.5 Progressive Layered Extraction](chapters/223-5-4-3-5-progressive-layered-extraction.md) — 390 words
+- [5.4.4 Setting the Optimization Goal Is a Collaborative Work with Other Teams](chapters/224-5-4-4-setting-the-optimization-goal-is-a-collaborative-work.md) — 265 words
+- [5.5 What Is More Important than Model Structure in Recommender Systems?](chapters/225-5-5-what-is-more-important-than-model-structure-in-recommend.md) — 64 words
+- [5.5.1 Is There a 'Silver Bullet' to Solve All Recommendation Problems?](chapters/226-5-5-1-is-there-a-silver-bullet-to-solve-all-recommendation-p.md) — 871 words
+- [5.5.2 Netflix's Observation on User Behavior](chapters/227-5-5-2-netflix-s-observation-on-user-behavior.md) — 268 words
+- [5.5.3 Observe User Behavior and Add Valuable User Information to the Model](chapters/228-5-5-3-observe-user-behavior-and-add-valuable-user-informatio.md) — 238 words
+- [5.5.4 Motivation for Improvement of the DIN Model](chapters/229-5-5-4-motivation-for-improvement-of-the-din-model.md) — 337 words
+- [5.5.5 Machine Learning Engineers Cannot Be Just an 'Alchemist'](chapters/230-5-5-5-machine-learning-engineers-cannot-be-just-an-alchemist.md) — 209 words
+- [5.6 Solutions to Cold Start](chapters/231-5-6-solutions-to-cold-start.md) — 206 words
+- [5.6.1 Rules-Based Cold Start Process](chapters/232-5-6-1-rules-based-cold-start-process.md) — 413 words
+- [5.6.2 Enrich Available Features](chapters/233-5-6-2-enrich-available-features.md) — 360 words
+- [5.6.3 Utilize Active Learning, Transfer Learning, and 'Exploration vs. Exploitation' Mechanisms](chapters/234-5-6-3-utilize-active-learning-transfer-learning-and-explorat.md) — 66 words
+- [5.6.3.1 Active Learning](chapters/235-5-6-3-1-active-learning.md) — 552 words
+- [5.6.3.2 Transfer Learning](chapters/236-5-6-3-2-transfer-learning.md) — 309 words
+- [5.6.3.3 'Exploration vs. Exploitation' Mechanism](chapters/237-5-6-3-3-exploration-vs-exploitation-mechanism.md) — 332 words
+- [5.6.4 The Dilemma of 'Making Bricks without Straw'](chapters/238-5-6-4-the-dilemma-of-making-bricks-without-straw.md) — 210 words
+- [5.7 Exploration vs. Exploitation](chapters/239-5-7-exploration-vs-exploitation.md) — 349 words
+- [5.7.1 Traditional Exploration vs. Exploitation Methods](chapters/240-5-7-1-traditional-exploration-vs-exploitation-methods.md) — 20 words
+- [Basics: The Multiarmed Bandit Problem](chapters/241-basics-the-multiarmed-bandit-problem.md) — 278 words
+- [5.7.1.1 ε -Greedy Algorithm](chapters/242-5-7-1-1-greedy-algorithm.md) — 274 words
+- [5.7.1.2 Thompson Sampling Algorithm](chapters/243-5-7-1-2-thompson-sampling-algorithm.md) — 599 words
+- [5.7.1.3 UCB Algorithm](chapters/244-5-7-1-3-ucb-algorithm.md) — 242 words
+- [Basics: The Origin of the UCB Formula](chapters/245-basics-the-origin-of-the-ucb-formula.md) — 264 words
+- [5.7.2 Personalized Exploration vs. Exploitation Methods](chapters/246-5-7-2-personalized-exploration-vs-exploitation-methods.md) — 981 words
+- [5.7.3 Model-Based Exploration vs. Exploitation Methods](chapters/247-5-7-3-model-based-exploration-vs-exploitation-methods.md) — 275 words
+- [5.7.4 Application of the 'Exploration vs. Exploitation' Mechanism in Recommender Systems](chapters/248-5-7-4-application-of-the-exploration-vs-exploitation-mechani.md) — 372 words
+- [References](chapters/249-references.md) — 356 words
+- [6 Engineering Implementations in Deep Learning Recommender Systems](chapters/250-6-engineering-implementations-in-deep-learning-recommender-s.md) — 284 words
+- [6.1 Data Pipeline in Recommender Systems](chapters/251-6-1-data-pipeline-in-recommender-systems.md) — 157 words
+- [6.1.1 Batch Processing](chapters/252-6-1-1-batch-processing.md) — 238 words
+- [6.1.2 Big Data Stream Processing](chapters/253-6-1-2-big-data-stream-processing.md) — 375 words
+- [6.1.3 Lambda Architecture](chapters/254-6-1-3-lambda-architecture.md) — 266 words
+- [6.1.4 Kappa Architecture](chapters/255-6-1-4-kappa-architecture.md) — 364 words
+- [6.1.5 Integration of Big Data Platforms and Recommender Systems](chapters/256-6-1-5-integration-of-big-data-platforms-and-recommender-syst.md) — 419 words
+- [6.2 Spark MLlib for Offline Recommendation Model Training](chapters/257-6-2-spark-mllib-for-offline-recommendation-model-training.md) — 430 words
+- [6.2.1 Distributed Computing Mechanism in Spark](chapters/258-6-2-1-distributed-computing-mechanism-in-spark.md) — 597 words
+- [6.2.2 Parallel Training Mechanism in Spark MLlib](chapters/259-6-2-2-parallel-training-mechanism-in-spark-mllib.md) — 784 words
+- [6.2.3 Limitations of Spark MLlib Parallel Training](chapters/260-6-2-3-limitations-of-spark-mllib-parallel-training.md) — 390 words
+- [6.3 Parameter Server for Offline Recommendation Model Training](chapters/261-6-3-parameter-server-for-offline-recommendation-model-traini.md) — 147 words
+- [6.3.1 Mechanisms of Distributed Training in Parameter Server](chapters/262-6-3-1-mechanisms-of-distributed-training-in-parameter-server.md) — 945 words
+- [6.3.2 Trade-Off between Consistency and Parallel Efficiency](chapters/263-6-3-2-trade-off-between-consistency-and-parallel-efficiency.md) — 756 words
+- [6.3.3 Coordination and Efficiency in Multiserver Mode](chapters/264-6-3-3-coordination-and-efficiency-in-multiserver-mode.md) — 657 words
+- [6.3.4 Summary of Technical Key Points in Parameter Server](chapters/265-6-3-4-summary-of-technical-key-points-in-parameter-server.md) — 155 words
+- [6.4 TensorFlow for Offline Training of Recommendation Models](chapters/266-6-4-tensorflow-for-offline-training-of-recommendation-models.md) — 113 words
+- [6.4.1 Fundamentals of TensorFlow](chapters/267-6-4-1-fundamentals-of-tensorflow.md) — 320 words
+- [6.4.2 Parallel Training Process in TensorFlow Based on Task Graph](chapters/268-6-4-2-parallel-training-process-in-tensorflow-based-on-task.md) — 511 words
+- [6.4.3 Single-Machine Training vs. Distributed Training in TensorFlow](chapters/269-6-4-3-single-machine-training-vs-distributed-training-in-ten.md) — 353 words
+- [6.4.4 Summary of TensorFlow Technical Key Points](chapters/270-6-4-4-summary-of-tensorflow-technical-key-points.md) — 200 words
+- [6.5 Online Serving of Deep Learning Recommendation Model](chapters/271-6-5-online-serving-of-deep-learning-recommendation-model.md) — 90 words
+- [6.5.1 Pre-Stored Recommendation Results or Embeddings](chapters/272-6-5-1-pre-stored-recommendation-results-or-embeddings.md) — 354 words
+- [6.5.2 Self-Developed Model Online Serving Platform](chapters/273-6-5-2-self-developed-model-online-serving-platform.md) — 370 words
+- [6.5.3 Pre-Trained Embedding and Lightweight Online Model](chapters/274-6-5-3-pre-trained-embedding-and-lightweight-online-model.md) — 364 words
+- [6.5.4 Model Transformation and Deployment with PMML](chapters/275-6-5-4-model-transformation-and-deployment-with-pmml.md) — 332 words
+- [6.5.5 TensorFlow Serving](chapters/276-6-5-5-tensorflow-serving.md) — 224 words
+- [6.5.6 Flexible Choice of Model Serving Method](chapters/277-6-5-6-flexible-choice-of-model-serving-method.md) — 124 words
+- [6.6 Trade-Off between Engineering and Theory](chapters/278-6-6-trade-off-between-engineering-and-theory.md) — 82 words
+- [6.6.1 Nature of the Engineer's Responsibilities](chapters/279-6-6-1-nature-of-the-engineer-s-responsibilities.md) — 235 words
+- [6.6.2 Trade-Off between Redis Capacity and Online Model Deployment](chapters/280-6-6-2-trade-off-between-redis-capacity-and-online-model-depl.md) — 483 words
+- [6.6.3 Research Development Schedule Constraints and Trade-Offs in Technology Selection](chapters/281-6-6-3-research-development-schedule-constraints-and-trade-of.md) — 406 words
+- [6.6.4 Trade-Offs between Hardware Platform and Model Structure](chapters/282-6-6-4-trade-offs-between-hardware-platform-and-model-structu.md) — 399 words
+- [6.6.5 Balance between Whole Picture and Details](chapters/283-6-6-5-balance-between-whole-picture-and-details.md) — 101 words
+- [References](chapters/284-references.md) — 373 words
+- [7.1 Offline Evaluation Methods and Basic Metrics](chapters/285-7-1-offline-evaluation-methods-and-basic-metrics.md) — 165 words
+- [7.1.1 Methods of Offline Evaluations](chapters/286-7-1-1-methods-of-offline-evaluations.md) — 62 words
+- [7.1.1.1 Holdout Test](chapters/287-7-1-1-1-holdout-test.md) — 131 words
+- [7.1.1.2 Cross-Validation](chapters/288-7-1-1-2-cross-validation.md) — 218 words
+- [7.1.1.3 Bootstrap](chapters/289-7-1-1-3-bootstrap.md) — 146 words
+- [7.1.2 Offline Evaluation Metrics](chapters/290-7-1-2-offline-evaluation-metrics.md) — 50 words
+- [7.1.2.1 Accuracy](chapters/291-7-1-2-1-accuracy.md) — 172 words
+- [7.1.2.2 Precision and Recall](chapters/292-7-1-2-2-precision-and-recall.md) — 200 words
+- [7.1.2.3 Root Mean Square Error](chapters/293-7-1-2-3-root-mean-square-error.md) — 194 words
+- [7.1.2.4 Logarithmic Loss Function](chapters/294-7-1-2-4-logarithmic-loss-function.md) — 139 words
+- [7.2 Offline Metrics for Ranking Models](chapters/295-7-2-offline-metrics-for-ranking-models.md) — 169 words
+- [7.2.1 Precision-Recall Curve](chapters/296-7-2-1-precision-recall-curve.md) — 417 words
+- [7.2.2 Receiver Operating Characteristic Curve](chapters/297-7-2-2-receiver-operating-characteristic-curve.md) — 903 words
+- [7.2.3 Mean Average Precision](chapters/298-7-2-3-mean-average-precision.md) — 244 words
+- [7.2.4 Selecting Reasonable Evaluation Metrics](chapters/299-7-2-4-selecting-reasonable-evaluation-metrics.md) — 251 words
+- [7.3 Replay: An Offline Evaluation Method Aligned with the Online Environment](chapters/300-7-3-replay-an-offline-evaluation-method-aligned-with-the-onl.md) — 71 words
+- [7.3.1 Logical Loop for Model Evaluation](chapters/301-7-3-1-logical-loop-for-model-evaluation.md) — 105 words
+- [7.3.2 Dynamic Offline Evaluation Method](chapters/302-7-3-2-dynamic-offline-evaluation-method.md) — 348 words
+- [7.3.3 Replay Evaluation Method Adopted in Netflix](chapters/303-7-3-3-replay-evaluation-method-adopted-in-netflix.md) — 632 words
+- [7.4 A/B Test and Online Evaluation Metrics](chapters/304-7-4-a-b-test-and-online-evaluation-metrics.md) — 54 words
+- [7.4.1 What Is A/B Test?](chapters/305-7-4-1-what-is-a-b-test.md) — 269 words
+- [7.4.2 Bucketing Mechanism in A/B Testing](chapters/306-7-4-2-bucketing-mechanism-in-a-b-testing.md) — 521 words
+- [7.4.3 Metrics for Online A/B Testing](chapters/307-7-4-3-metrics-for-online-a-b-testing.md) — 268 words
+- [7.5 Fast Online Evaluation Method: Interleaving](chapters/308-7-5-fast-online-evaluation-method-interleaving.md) — 262 words
+- [7.5.1 Statistical Issues with Traditional A/B Testing](chapters/309-7-5-1-statistical-issues-with-traditional-a-b-testing.md) — 357 words
+- [7.5.2 Implementing the Interleaving Method](chapters/310-7-5-2-implementing-the-interleaving-method.md) — 270 words
+- [7.5.3 Sensitivity Comparison of Interleaving and Traditional A/B Testing](chapters/311-7-5-3-sensitivity-comparison-of-interleaving-and-traditional.md) — 208 words
+- [7.5.4 Correlation of Metrics in Interleaving and A/B Testing](chapters/312-7-5-4-correlation-of-metrics-in-interleaving-and-a-b-testing.md) — 169 words
+- [7.5.5 Advantages and Disadvantages of the Interleaving Method](chapters/313-7-5-5-advantages-and-disadvantages-of-the-interleaving-metho.md) — 216 words
+- [7.6 Recommender Systems Evaluation Architecture](chapters/314-7-6-recommender-systems-evaluation-architecture.md) — 479 words
+- [References](chapters/315-references.md) — 362 words
+- [8.1 Deep Learning Recommender Systems by Facebook](chapters/316-8-1-deep-learning-recommender-systems-by-facebook.md) — 249 words
+- [8.1.1 Application Scenarios](chapters/317-8-1-1-application-scenarios.md) — 135 words
+- [8.1.2 CTR Prediction Model Based on GBDT+LR](chapters/318-8-1-2-ctr-prediction-model-based-on-gbdt-lr.md) — 379 words
+- [8.1.3 Real-Time Streaming Architecture](chapters/319-8-1-3-real-time-streaming-architecture.md) — 155 words
+- [8.1.3.1 Waiting Window](chapters/320-8-1-3-1-waiting-window.md) — 129 words
+- [8.1.3.2 Unified Action ID in Distributed Systems](chapters/321-8-1-3-2-unified-action-id-in-distributed-systems.md) — 104 words
+- [8.1.3.3 Data Stream Protection Mechanism](chapters/322-8-1-3-3-data-stream-protection-mechanism.md) — 143 words
+- [8.1.4 Downsampling and Model Calibration](chapters/323-8-1-4-downsampling-and-model-calibration.md) — 423 words
+- [8.1.5 Facebook's Engineering Practice of GBDT+LR Combination Model](chapters/324-8-1-5-facebook-s-engineering-practice-of-gbdt-lr-combination.md) — 48 words
+- [8.1.5.1 Modelization of Feature Engineering](chapters/325-8-1-5-1-modelization-of-feature-engineering.md) — 63 words
+- [8.1.5.2 Balancing Model Complexity and Effectiveness](chapters/326-8-1-5-2-balancing-model-complexity-and-effectiveness.md) — 42 words
+- [8.1.5.3 Use Data to Verify Ideas](chapters/327-8-1-5-3-use-data-to-verify-ideas.md) — 77 words
+- [8.1.6 Facebook's Deep Learning Model DLRM](chapters/328-8-1-6-facebook-s-deep-learning-model-dlrm.md) — 457 words
+- [8.1.7 Parallel Training Method in the DLRM Model](chapters/329-8-1-7-parallel-training-method-in-the-dlrm-model.md) — 232 words
+- [8.1.8 DLRM Model Performance](chapters/330-8-1-8-dlrm-model-performance.md) — 233 words
+- [8.1.9 Summary of Facebook's Deep Learning Recommender System](chapters/331-8-1-9-summary-of-facebook-s-deep-learning-recommender-system.md) — 131 words
+- [8.2 Airbnb's Real-Time Search Recommender System Based on Embedding](chapters/332-8-2-airbnb-s-real-time-search-recommender-system-based-on-em.md) — 129 words
+- [8.2.1 Application Scenarios](chapters/333-8-2-1-application-scenarios.md) — 279 words
+- [8.2.2 Housing Embedding Method Based on Short-Term Interests](chapters/334-8-2-2-housing-embedding-method-based-on-short-term-interests.md) — 699 words
+- [8.2.3 User Embeddings and Housing Embeddings Based on Long-Term Interests](chapters/335-8-2-3-user-embeddings-and-housing-embeddings-based-on-long-t.md) — 1,187 words
+- [8.2.4 Embedding for Airbnb Search Queries](chapters/336-8-2-4-embedding-for-airbnb-search-queries.md) — 144 words
+- [8.2.5 Airbnb's Real-Time Search Ranking Model and Its Feature Engineering](chapters/337-8-2-5-airbnb-s-real-time-search-ranking-model-and-its-featur.md) — 476 words
+- [8.2.6 Summary of Airbnb's Real-Time Search Recommender System](chapters/338-8-2-6-summary-of-airbnb-s-real-time-search-recommender-syste.md) — 33 words
+- [8.2.6.1 Excellent Integration of Engineering and Theory](chapters/339-8-2-6-1-excellent-integration-of-engineering-and-theory.md) — 56 words
+- [8.2.6.2 Excellent Integration of Business and Knowledge](chapters/340-8-2-6-2-excellent-integration-of-business-and-knowledge.md) — 55 words
+- [8.3 YouTube's Deep Learning Video Recommender System](chapters/341-8-3-youtube-s-deep-learning-video-recommender-system.md) — 88 words
+- [8.3.1 Application Scenarios](chapters/342-8-3-1-application-scenarios.md) — 215 words
+- [8.3.2 YouTube Recommender Systems Architecture](chapters/343-8-3-2-youtube-recommender-systems-architecture.md) — 195 words
+- [8.3.3 Candidate Generation Model](chapters/344-8-3-3-candidate-generation-model.md) — 280 words
+- [8.3.4 Unique Online Serving Method for Candidate Generation Models](chapters/345-8-3-4-unique-online-serving-method-for-candidate-generation.md) — 486 words
+- [8.3.5 Ranking Model](chapters/346-8-3-5-ranking-model.md) — 838 words
+- [8.3.6 Training and Testing Samples Processing](chapters/347-8-3-6-training-and-testing-samples-processing.md) — 300 words
+- [8.3.7 How to Handle User Preferences for New Videos](chapters/348-8-3-7-how-to-handle-user-preferences-for-new-videos.md) — 502 words
+- [8.3.8 Summary of YouTube's Deep Learning Video Recommender System](chapters/349-8-3-8-summary-of-youtube-s-deep-learning-video-recommender-s.md) — 81 words
+- [8.4 Evolution of Alibaba's Deep Learning Recommender System](chapters/350-8-4-evolution-of-alibaba-s-deep-learning-recommender-system.md) — 104 words
+- [8.4.1 Recommender Systems Application Scenarios](chapters/351-8-4-1-recommender-systems-application-scenarios.md) — 325 words
+- [8.4.2 Recommendation Model Systems in Alibaba](chapters/352-8-4-2-recommendation-model-systems-in-alibaba.md) — 126 words
+- [8.4.3 Evolution Process of Alibaba's Deep Learning Recommendation Model](chapters/353-8-4-3-evolution-process-of-alibaba-s-deep-learning-recommend.md) — 20 words
+- [8.4.3.1 Basic Deep Learning Model](chapters/354-8-4-3-1-basic-deep-learning-model.md) — 55 words
+- [8.4.3.2 DIN Model](chapters/355-8-4-3-2-din-model.md) — 140 words
+- [8.4.3.3 DIEN Model](chapters/356-8-4-3-3-dien-model.md) — 45 words
+- [8.4.3.4 MIMN Model](chapters/357-8-4-3-4-mimn-model.md) — 344 words
+- [8.4.4 Technical Architecture of Online Serving](chapters/358-8-4-4-technical-architecture-of-online-serving.md) — 298 words
+- [8.4.4.1 User Interest Representation Module](chapters/359-8-4-4-1-user-interest-representation-module.md) — 147 words
+- [8.4.4.2 User Interest Center Module](chapters/360-8-4-4-2-user-interest-center-module.md) — 476 words
+- [8.4.5 Summary of Alibaba's Recommender Systems Architecture](chapters/361-8-4-5-summary-of-alibaba-s-recommender-systems-architecture.md) — 62 words
+- [8.4.5.1 Best Engineering Practices](chapters/362-8-4-5-1-best-engineering-practices.md) — 70 words
+- [8.4.5.2 Accurate Observation of User Behavior Patterns](chapters/363-8-4-5-2-accurate-observation-of-user-behavior-patterns.md) — 53 words
+- [8.4.5.3 Micro-Innovation of the Model](chapters/364-8-4-5-3-micro-innovation-of-the-model.md) — 103 words
+- [References](chapters/365-references.md) — 603 words
+- [9.1 The Overall Architecture Diagram of Recommender Systems](chapters/366-9-1-the-overall-architecture-diagram-of-recommender-systems.md) — 313 words
+- [9.2 Timeline of Recommendation Model Development](chapters/367-9-2-timeline-of-recommendation-model-development.md) — 100 words
+- [9.3 How to Become an Excellent Recommender Systems Machine Learning Engineer](chapters/368-9-3-how-to-become-an-excellent-recommender-systems-machine-l.md) — 52 words
+- [9.3.1 The Four Competencies for Machine Learning Engineers](chapters/369-9-3-1-the-four-competencies-for-machine-learning-engineers.md) — 706 words
+- [9.3.2 Depth and Breadth of the Capabilities](chapters/370-9-3-2-depth-and-breadth-of-the-capabilities.md) — 516 words
+- [9.3.3 Summary of the Competencies Required for Machine Learning Engineers](chapters/371-9-3-3-summary-of-the-competencies-required-for-machine-learn.md) — 318 words
