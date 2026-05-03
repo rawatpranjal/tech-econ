@@ -1,0 +1,2 @@
+run_at_utc,git_sha,holdout_days,n_sessions_total,n_sessions_evaluable,n_sessions_skipped,mean_average_precision,notes,ndcg_at_5,precision_at_5,recall_at_5,hit_rate_at_5,ndcg_at_10,precision_at_10,recall_at_10,hit_rate_at_10
+2026-05-03T20:37:56Z,3a5ba9b,60,139,15,124,0.414948,rerank source=api,0.386307,0.186667,0.360449,0.666667,0.419125,0.126667,0.518385,0.8

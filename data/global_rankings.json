@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-03T08:58:56.534441Z",
+  "updated": "2026-05-03T20:37:53.335453Z",
   "algorithm": "hybrid_bert_fresh",
   "total_items": 3896,
   "observed_items": 518,
@@ -97,7 +97,7 @@
       "category": "Causal Inference",
       "description": "Matheus Facure's comprehensive Python-based coverage of synthetic control, difference-in-differences, and other causal methods central to marketing science.",
       "url": "https://matheusfacure.github.io/python-causality-handbook/",
-      "score": 0.377,
+      "score": 0.3756,
       "cold_start": false,
       "signals": {
         "clicks": 17,
@@ -515,12 +515,48 @@
       "rank": 30
     },
     {
+      "name": "Anomaly Detection: A Survey",
+      "type": "paper",
+      "category": "Credit & Lending > Fraud, Credit and Claim Risk & Anomaly Detection",
+      "description": "Definitive survey covering statistical, ML, and proximity-based anomaly methods.",
+      "url": "https://dl.acm.org/doi/10.1145/1541880.1541882",
+      "score": 0.2321,
+      "cold_start": true,
+      "signals": {},
+      "citations": 10461,
+      "rank": 31
+    },
+    {
+      "name": "The Control of the False Discovery Rate in Multiple Testing Under Dependency",
+      "type": "paper",
+      "category": "Statistics > Multiple Testing & False Discovery Rate",
+      "description": "Proves BH controls FDR under positive regression dependence (PRDS), covering most real-world cases. For arbitrary dependence, provides the BY correction guaranteeing FDR control under any correlation structure. Essential since A/B test metrics are correlated, user segments overlap, and experimental units cluster.",
+      "url": "https://projecteuclid.org/journals/annals-of-statistics/volume-29/issue-4/The-control-of-the-false-discovery-rate-in-multiple-testing/10.1214/aos/1013699998.full",
+      "score": 0.2321,
+      "cold_start": true,
+      "signals": {},
+      "citations": 10438,
+      "rank": 32
+    },
+    {
+      "name": "Hedonic Prices and Implicit Markets: Product Differentiation in Pure Competition",
+      "type": "paper",
+      "category": "Spatial & Geo > Real Estate & Proptech",
+      "description": "Theoretical foundation for all hedonic pricing models; every AVM derives from this framework.",
+      "url": "https://www.jstor.org/stable/1830899",
+      "score": 0.2318,
+      "cold_start": true,
+      "signals": {},
+      "citations": 10339,
+      "rank": 33
+    },
+    {
       "name": "Scott Cunningham: Causal Inference Substack",
       "type": "resource",
       "category": "Causal Inference",
       "description": "Substack and podcast 'The Mixtape with Scott' featuring interviews with leading causal inference researchers. Bridges academic methods and practical application.",
       "url": "https://causalinf.substack.com/",
-      "score": 0.233,
+      "score": 0.2316,
       "cold_start": false,
       "signals": {
         "clicks": 5,
@@ -539,42 +575,6 @@
         "reading_ratio": 2.0,
         "high_imp_no_click": false
       },
-      "rank": 31
-    },
-    {
-      "name": "Anomaly Detection: A Survey",
-      "type": "paper",
-      "category": "Credit & Lending > Fraud, Credit and Claim Risk & Anomaly Detection",
-      "description": "Definitive survey covering statistical, ML, and proximity-based anomaly methods.",
-      "url": "https://dl.acm.org/doi/10.1145/1541880.1541882",
-      "score": 0.2321,
-      "cold_start": true,
-      "signals": {},
-      "citations": 10461,
-      "rank": 32
-    },
-    {
-      "name": "The Control of the False Discovery Rate in Multiple Testing Under Dependency",
-      "type": "paper",
-      "category": "Statistics > Multiple Testing & False Discovery Rate",
-      "description": "Proves BH controls FDR under positive regression dependence (PRDS), covering most real-world cases. For arbitrary dependence, provides the BY correction guaranteeing FDR control under any correlation structure. Essential since A/B test metrics are correlated, user segments overlap, and experimental units cluster.",
-      "url": "https://projecteuclid.org/journals/annals-of-statistics/volume-29/issue-4/The-control-of-the-false-discovery-rate-in-multiple-testing/10.1214/aos/1013699998.full",
-      "score": 0.2321,
-      "cold_start": true,
-      "signals": {},
-      "citations": 10438,
-      "rank": 33
-    },
-    {
-      "name": "Hedonic Prices and Implicit Markets: Product Differentiation in Pure Competition",
-      "type": "paper",
-      "category": "Spatial & Geo > Real Estate & Proptech",
-      "description": "Theoretical foundation for all hedonic pricing models; every AVM derives from this framework.",
-      "url": "https://www.jstor.org/stable/1830899",
-      "score": 0.2318,
-      "cold_start": true,
-      "signals": {},
-      "citations": 10339,
       "rank": 34
     },
     {
@@ -1257,33 +1257,6 @@
       "rank": 88
     },
     {
-      "name": "Mark White's Practical Causal Forest Tutorial",
-      "type": "resource",
-      "category": "Causal Inference",
-      "description": "Explains why optimize directly on causal effects, not outcomes. Complete workflow from data prep to interpretation using GRF package. Written for applied researchers transitioning to causal ML.",
-      "url": "https://www.markhw.com/blog/causalforestintro",
-      "score": 0.2106,
-      "cold_start": false,
-      "signals": {
-        "clicks": 3,
-        "impressions": 5,
-        "dwell_ms": 20691,
-        "viewable_sec": 18.7,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 1,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 487,
-        "coclicks": 0,
-        "reading_ratio": 2.0,
-        "high_imp_no_click": false
-      },
-      "rank": 89
-    },
-    {
       "name": "Comparing Predictive Accuracy",
       "type": "paper",
       "category": "Forecasting > Production Forecasting Systems",
@@ -1293,7 +1266,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 4423,
-      "rank": 90
+      "rank": 89
     },
     {
       "name": "Pedro Sant'Anna's DiD Resources",
@@ -1320,7 +1293,7 @@
         "reading_ratio": 2.0,
         "high_imp_no_click": false
       },
-      "rank": 91
+      "rank": 90
     },
     {
       "name": "Strategic Information Transmission",
@@ -1332,7 +1305,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 4318,
-      "rank": 92
+      "rank": 91
     },
     {
       "name": "BPR: Bayesian Personalized Ranking from Implicit Feedback",
@@ -1344,7 +1317,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 4304,
-      "rank": 93
+      "rank": 92
     },
     {
       "name": "Unobservable Selection and Coefficient Stability: Theory and Evidence",
@@ -1356,7 +1329,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 4287,
-      "rank": 94
+      "rank": 93
     },
     {
       "name": "Untraceable Electronic Mail, Return Addresses, and Digital Pseudonyms",
@@ -1368,7 +1341,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 4253,
-      "rank": 95
+      "rank": 94
     },
     {
       "name": "Matching as Nonparametric Preprocessing for Reducing Model Dependence",
@@ -1380,6 +1353,33 @@
       "cold_start": true,
       "signals": {},
       "citations": 4192,
+      "rank": 95
+    },
+    {
+      "name": "Mark White's Practical Causal Forest Tutorial",
+      "type": "resource",
+      "category": "Causal Inference",
+      "description": "Explains why optimize directly on causal effects, not outcomes. Complete workflow from data prep to interpretation using GRF package. Written for applied researchers transitioning to causal ML.",
+      "url": "https://www.markhw.com/blog/causalforestintro",
+      "score": 0.2092,
+      "cold_start": false,
+      "signals": {
+        "clicks": 3,
+        "impressions": 5,
+        "dwell_ms": 20691,
+        "viewable_sec": 18.7,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 1,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 487,
+        "coclicks": 0,
+        "reading_ratio": 2.0,
+        "high_imp_no_click": false
+      },
       "rank": 96
     },
     {
@@ -3157,33 +3157,6 @@
       "rank": 230
     },
     {
-      "name": "Alibaba Fashion Combo",
-      "type": "dataset",
-      "category": "Fashion & Apparel",
-      "description": "Fashion item combinations from Alibaba for outfit recommendation",
-      "url": "https://tianchi.aliyun.com/dataset/131519",
-      "score": 0.1824,
-      "cold_start": false,
-      "signals": {
-        "clicks": 8,
-        "impressions": 3,
-        "dwell_ms": 6725,
-        "viewable_sec": 6.9,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 2,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 128,
-        "coclicks": 0,
-        "reading_ratio": 2.0,
-        "high_imp_no_click": false
-      },
-      "rank": 231
-    },
-    {
       "name": "What Drives Media Slant? Evidence from U.S. Daily Newspapers",
       "type": "paper",
       "category": "Choice Models & Dynamic Choice > Discrete Choice (Logit, Mixed Logit)",
@@ -3193,7 +3166,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 1428,
-      "rank": 232
+      "rank": 231
     },
     {
       "name": "The Rise of Social Bots",
@@ -3205,7 +3178,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 1428,
-      "rank": 233
+      "rank": 232
     },
     {
       "name": "ALVINN: An Autonomous Land Vehicle in a Neural Network",
@@ -3217,7 +3190,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 1426,
-      "rank": 234
+      "rank": 233
     },
     {
       "name": "Difference-in-Differences with Multiple Time Periods",
@@ -3229,7 +3202,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 1413,
-      "rank": 235
+      "rank": 234
     },
     {
       "name": "Performance of Recommender Algorithms on Top-N Recommendation Tasks",
@@ -3241,7 +3214,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 1406,
-      "rank": 236
+      "rank": 235
     },
     {
       "name": "The Flying Sidekick Traveling Salesman Problem: Optimization of Drone-Assisted Parcel Delivery",
@@ -3253,7 +3226,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 1396,
-      "rank": 237
+      "rank": 236
     },
     {
       "name": "Uber Engineering: Uplift Modeling for Multiple Treatments",
@@ -3280,7 +3253,7 @@
         "reading_ratio": 2.0,
         "high_imp_no_click": false
       },
-      "rank": 238
+      "rank": 237
     },
     {
       "name": "Stanford STATS 361: Causal Inference Lecture Notes (Wager)",
@@ -3307,7 +3280,7 @@
         "reading_ratio": 2.0,
         "high_imp_no_click": false
       },
-      "rank": 239
+      "rank": 238
     },
     {
       "name": "Graph-Based Anomaly Detection and Description: A Survey",
@@ -3319,6 +3292,33 @@
       "cold_start": true,
       "signals": {},
       "citations": 1372,
+      "rank": 239
+    },
+    {
+      "name": "Alibaba Fashion Combo",
+      "type": "dataset",
+      "category": "Fashion & Apparel",
+      "description": "Fashion item combinations from Alibaba for outfit recommendation",
+      "url": "https://tianchi.aliyun.com/dataset/131519",
+      "score": 0.181,
+      "cold_start": false,
+      "signals": {
+        "clicks": 8,
+        "impressions": 3,
+        "dwell_ms": 6725,
+        "viewable_sec": 6.9,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 2,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 128,
+        "coclicks": 0,
+        "reading_ratio": 2.0,
+        "high_imp_no_click": false
+      },
       "rank": 240
     },
     {
@@ -5191,33 +5191,6 @@
       "rank": 387
     },
     {
-      "name": "Diginetica Fashion",
-      "type": "dataset",
-      "category": "Fashion & Apparel",
-      "description": "Clickstream and purchase data for fashion e-commerce",
-      "url": "https://competitions.codalab.org/competitions/11161",
-      "score": 0.1586,
-      "cold_start": false,
-      "signals": {
-        "clicks": 6,
-        "impressions": 3,
-        "dwell_ms": 8834,
-        "viewable_sec": 6.9,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 2,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 128,
-        "coclicks": 0,
-        "reading_ratio": 2.0,
-        "high_imp_no_click": false
-      },
-      "rank": 388
-    },
-    {
       "name": "A Significance Test for the Lasso",
       "type": "paper",
       "category": "Statistics > Post-Selection Inference",
@@ -5227,7 +5200,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 555,
-      "rank": 389
+      "rank": 388
     },
     {
       "name": "A Survey of Text Clustering Algorithms",
@@ -5239,7 +5212,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 554,
-      "rank": 390
+      "rank": 389
     },
     {
       "name": "Learning from Demonstration",
@@ -5251,7 +5224,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 553,
-      "rank": 391
+      "rank": 390
     },
     {
       "name": "Search, Obfuscation, and Price Elasticities on the Internet",
@@ -5263,7 +5236,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 551,
-      "rank": 392
+      "rank": 391
     },
     {
       "name": "The Econometrics of Randomized Experiments",
@@ -5275,7 +5248,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 548,
-      "rank": 393
+      "rank": 392
     },
     {
       "name": "Thompson Sampling for Contextual Bandits with Linear Payoffs",
@@ -5287,7 +5260,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 547,
-      "rank": 394
+      "rank": 393
     },
     {
       "name": "Routing a Mixed Fleet of Electric and Conventional Vehicles",
@@ -5299,7 +5272,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 539,
-      "rank": 395
+      "rank": 394
     },
     {
       "name": "A Dirichlet Multinomial Mixture Model-based Approach for Short Text Clustering (GSDMM)",
@@ -5311,7 +5284,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 537,
-      "rank": 396
+      "rank": 395
     },
     {
       "name": "The Rise and Nature of Alternative Work Arrangements in the United States, 1995-2015",
@@ -5323,7 +5296,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 536,
-      "rank": 397
+      "rank": 396
     },
     {
       "name": "The Lovely but Lonely Vickrey Auction",
@@ -5335,7 +5308,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 536,
-      "rank": 398
+      "rank": 397
     },
     {
       "name": "A Dynamic Bayesian Network Click Model for Web Search Ranking",
@@ -5347,7 +5320,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 535,
-      "rank": 399
+      "rank": 398
     },
     {
       "name": "Multiproduct Nonlinear Pricing",
@@ -5359,7 +5332,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 535,
-      "rank": 400
+      "rank": 399
     },
     {
       "name": "Spotify Million Playlist",
@@ -5386,7 +5359,7 @@
         "reading_ratio": 2.0,
         "high_imp_no_click": false
       },
-      "rank": 401
+      "rank": 400
     },
     {
       "name": "Conservative Q-Learning for Offline Reinforcement Learning (CQL)",
@@ -5398,7 +5371,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 532,
-      "rank": 402
+      "rank": 401
     },
     {
       "name": "FEDformer: Frequency Enhanced Decomposed Transformer for Long-term Series Forecasting",
@@ -5410,7 +5383,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 530,
-      "rank": 403
+      "rank": 402
     },
     {
       "name": "Time-Series Anomaly Detection Service at Microsoft",
@@ -5422,7 +5395,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 528,
-      "rank": 404
+      "rank": 403
     },
     {
       "name": "OddBall: Spotting Anomalies in Weighted Graphs",
@@ -5434,7 +5407,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 528,
-      "rank": 405
+      "rank": 404
     },
     {
       "name": "Learning to Optimize via Posterior Sampling",
@@ -5446,6 +5419,33 @@
       "cold_start": true,
       "signals": {},
       "citations": 526,
+      "rank": 405
+    },
+    {
+      "name": "Diginetica Fashion",
+      "type": "dataset",
+      "category": "Fashion & Apparel",
+      "description": "Clickstream and purchase data for fashion e-commerce",
+      "url": "https://competitions.codalab.org/competitions/11161",
+      "score": 0.1572,
+      "cold_start": false,
+      "signals": {
+        "clicks": 6,
+        "impressions": 3,
+        "dwell_ms": 8834,
+        "viewable_sec": 6.9,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 2,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 128,
+        "coclicks": 0,
+        "reading_ratio": 2.0,
+        "high_imp_no_click": false
+      },
       "rank": 406
     },
     {
@@ -8560,12 +8560,48 @@
       "rank": 659
     },
     {
+      "name": "Internet Argument Corpus 2.0: An SQL Schema for Dialogic Social Media and the Corpora to Go with It",
+      "type": "paper",
+      "category": "Trust & Safety > Content Moderation & Toxicity",
+      "description": "Studies how subreddit norms shape behavior; users posting in banned communities post less toxic content after ban.",
+      "url": "https://dl.acm.org/doi/10.1145/3359294",
+      "score": 0.1223,
+      "cold_start": true,
+      "signals": {},
+      "citations": 130,
+      "rank": 660
+    },
+    {
+      "name": "Offline Reinforcement Learning with Implicit Q-Learning",
+      "type": "paper",
+      "category": "Reinforcement Learning > Batch/Offline RL",
+      "description": "Simple algorithm avoiding explicit policy constraint; strong performance on D4RL benchmarks.",
+      "url": "https://arxiv.org/abs/2110.06169",
+      "score": 0.1221,
+      "cold_start": true,
+      "signals": {},
+      "citations": 129,
+      "rank": 661
+    },
+    {
+      "name": "Unsupervised Corpus Aware Language Model Pre-training for Dense Passage Retrieval",
+      "type": "paper",
+      "category": "Search & Ranking > Neural Ranking Models",
+      "description": "Pre-training specifically for dense retrieval via Condenser architecture; coCondenser adds corpus-aware contrastive objective for further gains.",
+      "url": "https://aclanthology.org/2022.acl-long.203/",
+      "score": 0.1219,
+      "cold_start": true,
+      "signals": {},
+      "citations": 128,
+      "rank": 662
+    },
+    {
       "name": "ASOS Experiments",
       "type": "dataset",
       "category": "Fashion & Apparel",
       "description": "99 real e-commerce experiments with daily checkpoints from ASOS",
       "url": "https://www.kaggle.com/datasets/marinazmieva/asos-digital-experiments-dataset",
-      "score": 0.1227,
+      "score": 0.1213,
       "cold_start": false,
       "signals": {
         "clicks": 3,
@@ -8584,42 +8620,6 @@
         "reading_ratio": 2.0,
         "high_imp_no_click": false
       },
-      "rank": 660
-    },
-    {
-      "name": "Internet Argument Corpus 2.0: An SQL Schema for Dialogic Social Media and the Corpora to Go with It",
-      "type": "paper",
-      "category": "Trust & Safety > Content Moderation & Toxicity",
-      "description": "Studies how subreddit norms shape behavior; users posting in banned communities post less toxic content after ban.",
-      "url": "https://dl.acm.org/doi/10.1145/3359294",
-      "score": 0.1223,
-      "cold_start": true,
-      "signals": {},
-      "citations": 130,
-      "rank": 661
-    },
-    {
-      "name": "Offline Reinforcement Learning with Implicit Q-Learning",
-      "type": "paper",
-      "category": "Reinforcement Learning > Batch/Offline RL",
-      "description": "Simple algorithm avoiding explicit policy constraint; strong performance on D4RL benchmarks.",
-      "url": "https://arxiv.org/abs/2110.06169",
-      "score": 0.1221,
-      "cold_start": true,
-      "signals": {},
-      "citations": 129,
-      "rank": 662
-    },
-    {
-      "name": "Unsupervised Corpus Aware Language Model Pre-training for Dense Passage Retrieval",
-      "type": "paper",
-      "category": "Search & Ranking > Neural Ranking Models",
-      "description": "Pre-training specifically for dense retrieval via Condenser architecture; coCondenser adds corpus-aware contrastive objective for further gains.",
-      "url": "https://aclanthology.org/2022.acl-long.203/",
-      "score": 0.1219,
-      "cold_start": true,
-      "signals": {},
-      "citations": 128,
       "rank": 663
     },
     {
@@ -9478,33 +9478,6 @@
       "rank": 733
     },
     {
-      "name": "Dressipi Fashion (RecSys 2022)",
-      "type": "dataset",
-      "category": "Fashion & Apparel",
-      "description": "Session interactions and item features from styling service",
-      "url": "http://www.recsyschallenge.com/2022/dataset.html",
-      "score": 0.1107,
-      "cold_start": false,
-      "signals": {
-        "clicks": 2,
-        "impressions": 3,
-        "dwell_ms": 8834,
-        "viewable_sec": 6.9,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 2,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 128,
-        "coclicks": 0,
-        "reading_ratio": 2.0,
-        "high_imp_no_click": false
-      },
-      "rank": 734
-    },
-    {
       "name": "The Welfare Effects of Peer Entry: The Case of Airbnb and the Accommodation Industry",
       "type": "paper",
       "category": "Matching & Marketplaces > Information Design in Marketplaces",
@@ -9514,7 +9487,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 81,
-      "rank": 735
+      "rank": 734
     },
     {
       "name": "Privacy and Mechanism Design",
@@ -9526,7 +9499,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 81,
-      "rank": 736
+      "rank": 735
     },
     {
       "name": "NYC EMS Incident Dispatch Data",
@@ -9553,7 +9526,7 @@
         "reading_ratio": 2.0,
         "high_imp_no_click": false
       },
-      "rank": 737
+      "rank": 736
     },
     {
       "name": "Deep Reinforcement Learning for Sponsored Search Real-time Bidding",
@@ -9565,7 +9538,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 79,
-      "rank": 738
+      "rank": 737
     },
     {
       "name": "Budget Constrained Bidding by Model-free Reinforcement Learning",
@@ -9577,7 +9550,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 79,
-      "rank": 739
+      "rank": 738
     },
     {
       "name": "Competition in Two-Sided Markets",
@@ -9589,7 +9562,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 79,
-      "rank": 740
+      "rank": 739
     },
     {
       "name": "Netflix Artwork Personalization",
@@ -9601,6 +9574,33 @@
       "cold_start": true,
       "signals": {},
       "citations": 78,
+      "rank": 740
+    },
+    {
+      "name": "Dressipi Fashion (RecSys 2022)",
+      "type": "dataset",
+      "category": "Fashion & Apparel",
+      "description": "Session interactions and item features from styling service",
+      "url": "http://www.recsyschallenge.com/2022/dataset.html",
+      "score": 0.1093,
+      "cold_start": false,
+      "signals": {
+        "clicks": 2,
+        "impressions": 3,
+        "dwell_ms": 8834,
+        "viewable_sec": 6.9,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 2,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 128,
+        "coclicks": 0,
+        "reading_ratio": 2.0,
+        "high_imp_no_click": false
+      },
       "rank": 741
     },
     {
@@ -10636,12 +10636,72 @@
       "rank": 822
     },
     {
+      "name": "Resurrecting Weighted Least Squares",
+      "type": "paper",
+      "category": "Statistics > Robust Standard Errors & Heteroskedasticity",
+      "description": "Rehabilitates FGLS/WLS by pairing it with HC standard errors. Shows WLS+HC achieves 30-82% shorter confidence intervals than OLS+HC under heteroskedasticity while maintaining valid inference even if weights are misspecified. Introduces ALS (Adaptive Least Squares) that pretests for heteroskedasticity\u2014a 'free lunch' estimator with nearly zero efficiency loss under homoskedasticity.",
+      "url": "https://doi.org/10.1016/j.jeconom.2016.10.006",
+      "score": 0.0932,
+      "cold_start": true,
+      "signals": {},
+      "citations": 40,
+      "rank": 823
+    },
+    {
+      "name": "Optimal Picking Policies in E-Commerce Warehouses",
+      "type": "paper",
+      "category": "Logistics & Operations > Inventory & Fulfillment",
+      "description": "State-of-the-art picker routing for mixed-shelves warehouses; exact real-time algorithms for high-SKU e-commerce facilities.",
+      "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2022.4448",
+      "score": 0.0931,
+      "cold_start": true,
+      "signals": {},
+      "citations": 40,
+      "rank": 824
+    },
+    {
+      "name": "Off-policy Evaluation for Slate Recommendation",
+      "type": "paper",
+      "category": "Reinforcement Learning > Off-Policy Evaluation",
+      "description": "Extends OPE to slate/list recommendations; critical for search and recommendation systems.",
+      "url": "https://papers.nips.cc/paper/2017/hash/5352696a9ca3397beb79f116f3a33991-Abstract.html",
+      "score": 0.0925,
+      "cold_start": true,
+      "signals": {},
+      "citations": 39,
+      "rank": 825
+    },
+    {
+      "name": "Forecast Reconciliation: A Review",
+      "type": "paper",
+      "category": "Forecasting > Hierarchical & Grouped Forecasting",
+      "description": "Comprehensive review covering cross-sectional, temporal, and cross-temporal reconciliation.",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0169207023001097",
+      "score": 0.0925,
+      "cold_start": true,
+      "signals": {},
+      "citations": 39,
+      "rank": 826
+    },
+    {
+      "name": "Why is Intermediating Houses so Difficult? Evidence from iBuyers",
+      "type": "paper",
+      "category": "Spatial & Geo > Real Estate & Proptech",
+      "description": "Definitive analysis of Opendoor and Zillow Offers; quantifies adverse selection vs. liquidity tradeoffs in iBuying.",
+      "url": "https://www.nber.org/papers/w28252",
+      "score": 0.0925,
+      "cold_start": true,
+      "signals": {},
+      "citations": 39,
+      "rank": 827
+    },
+    {
       "name": "LinkedIn: Building Inclusive Products Through A/B Testing",
       "type": "resource",
       "category": "A/B Testing",
       "description": "Novel approach to measuring inequality impact of experiments. How to ensure product changes don't disproportionately harm certain user groups.",
       "url": "https://engineering.linkedin.com/blog/2020/building-inclusive-products-through-a-b-testing",
-      "score": 0.0937,
+      "score": 0.0923,
       "cold_start": false,
       "signals": {
         "clicks": 4,
@@ -10660,66 +10720,6 @@
         "reading_ratio": 0,
         "high_imp_no_click": false
       },
-      "rank": 823
-    },
-    {
-      "name": "Resurrecting Weighted Least Squares",
-      "type": "paper",
-      "category": "Statistics > Robust Standard Errors & Heteroskedasticity",
-      "description": "Rehabilitates FGLS/WLS by pairing it with HC standard errors. Shows WLS+HC achieves 30-82% shorter confidence intervals than OLS+HC under heteroskedasticity while maintaining valid inference even if weights are misspecified. Introduces ALS (Adaptive Least Squares) that pretests for heteroskedasticity\u2014a 'free lunch' estimator with nearly zero efficiency loss under homoskedasticity.",
-      "url": "https://doi.org/10.1016/j.jeconom.2016.10.006",
-      "score": 0.0932,
-      "cold_start": true,
-      "signals": {},
-      "citations": 40,
-      "rank": 824
-    },
-    {
-      "name": "Optimal Picking Policies in E-Commerce Warehouses",
-      "type": "paper",
-      "category": "Logistics & Operations > Inventory & Fulfillment",
-      "description": "State-of-the-art picker routing for mixed-shelves warehouses; exact real-time algorithms for high-SKU e-commerce facilities.",
-      "url": "https://pubsonline.informs.org/doi/10.1287/mnsc.2022.4448",
-      "score": 0.0931,
-      "cold_start": true,
-      "signals": {},
-      "citations": 40,
-      "rank": 825
-    },
-    {
-      "name": "Off-policy Evaluation for Slate Recommendation",
-      "type": "paper",
-      "category": "Reinforcement Learning > Off-Policy Evaluation",
-      "description": "Extends OPE to slate/list recommendations; critical for search and recommendation systems.",
-      "url": "https://papers.nips.cc/paper/2017/hash/5352696a9ca3397beb79f116f3a33991-Abstract.html",
-      "score": 0.0925,
-      "cold_start": true,
-      "signals": {},
-      "citations": 39,
-      "rank": 826
-    },
-    {
-      "name": "Forecast Reconciliation: A Review",
-      "type": "paper",
-      "category": "Forecasting > Hierarchical & Grouped Forecasting",
-      "description": "Comprehensive review covering cross-sectional, temporal, and cross-temporal reconciliation.",
-      "url": "https://www.sciencedirect.com/science/article/pii/S0169207023001097",
-      "score": 0.0925,
-      "cold_start": true,
-      "signals": {},
-      "citations": 39,
-      "rank": 827
-    },
-    {
-      "name": "Why is Intermediating Houses so Difficult? Evidence from iBuyers",
-      "type": "paper",
-      "category": "Spatial & Geo > Real Estate & Proptech",
-      "description": "Definitive analysis of Opendoor and Zillow Offers; quantifies adverse selection vs. liquidity tradeoffs in iBuying.",
-      "url": "https://www.nber.org/papers/w28252",
-      "score": 0.0925,
-      "cold_start": true,
-      "signals": {},
-      "citations": 39,
       "rank": 828
     },
     {
@@ -11221,33 +11221,6 @@
       "rank": 862
     },
     {
-      "name": "Matteo Courthoud's IV Tutorial",
-      "type": "resource",
-      "category": "IV & RDD",
-      "description": "IV in experimental settings with realistic tech examples (newsletter subscription as instrument). Covers LATE/Compliers interpretation, exclusion restriction, weak instruments diagnostics. Complete Python code.",
-      "url": "https://matteocourthoud.github.io/post/instrumental_variables/",
-      "score": 0.0838,
-      "cold_start": false,
-      "signals": {
-        "clicks": 1,
-        "impressions": 4,
-        "dwell_ms": 4042,
-        "viewable_sec": 3.1,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 1,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 80,
-        "coclicks": 0,
-        "reading_ratio": 2.0,
-        "high_imp_no_click": false
-      },
-      "rank": 863
-    },
-    {
       "name": "Learning in Repeated Auctions with Budgets: Regret Minimization and Equilibrium",
       "type": "paper",
       "category": "Reinforcement Learning > RL for Bidding & Pricing",
@@ -11257,7 +11230,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 27,
-      "rank": 864
+      "rank": 863
     },
     {
       "name": "Customer Lifetime Value Segmentation",
@@ -11269,7 +11242,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 27,
-      "rank": 865
+      "rank": 864
     },
     {
       "name": "Risk and Risk Management in the Credit Card Industry",
@@ -11281,7 +11254,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 27,
-      "rank": 866
+      "rank": 865
     },
     {
       "name": "Benchmarking Safe Exploration in Deep Reinforcement Learning",
@@ -11293,7 +11266,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 26,
-      "rank": 867
+      "rank": 866
     },
     {
       "name": "Matching and Pricing in Ride Hailing: Wild Goose Chases",
@@ -11305,7 +11278,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 26,
-      "rank": 868
+      "rank": 867
     },
     {
       "name": "The Value of Reputation on eBay: A Controlled Experiment",
@@ -11317,7 +11290,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 26,
-      "rank": 869
+      "rank": 868
     },
     {
       "name": "Crowdsourced Delivery\u2014A Dynamic Pickup and Delivery Problem with Ad Hoc Drivers",
@@ -11329,7 +11302,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 26,
-      "rank": 870
+      "rank": 869
     },
     {
       "name": "Synthetic Patient Wait Time Records",
@@ -11356,7 +11329,7 @@
         "reading_ratio": 0,
         "high_imp_no_click": false
       },
-      "rank": 871
+      "rank": 870
     },
     {
       "name": "MIMIC-CXR",
@@ -11383,7 +11356,7 @@
         "reading_ratio": 0,
         "high_imp_no_click": false
       },
-      "rank": 872
+      "rank": 871
     },
     {
       "name": "Flipkart",
@@ -11410,7 +11383,7 @@
         "reading_ratio": 0,
         "high_imp_no_click": false
       },
-      "rank": 873
+      "rank": 872
     },
     {
       "name": "Pat Bajari: Building applied analytics at Amazon",
@@ -11435,6 +11408,33 @@
         "coviews": 0,
         "coclicks": 0,
         "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
+      "rank": 873
+    },
+    {
+      "name": "Matteo Courthoud's IV Tutorial",
+      "type": "resource",
+      "category": "IV & RDD",
+      "description": "IV in experimental settings with realistic tech examples (newsletter subscription as instrument). Covers LATE/Compliers interpretation, exclusion restriction, weak instruments diagnostics. Complete Python code.",
+      "url": "https://matteocourthoud.github.io/post/instrumental_variables/",
+      "score": 0.0824,
+      "cold_start": false,
+      "signals": {
+        "clicks": 1,
+        "impressions": 4,
+        "dwell_ms": 4042,
+        "viewable_sec": 3.1,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 1,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 80,
+        "coclicks": 0,
+        "reading_ratio": 2.0,
         "high_imp_no_click": false
       },
       "rank": 874
@@ -11476,114 +11476,6 @@
       "rank": 877
     },
     {
-      "name": "Matteo Courthoud's Experimentation Series",
-      "type": "resource",
-      "category": "A/B Testing",
-      "description": "Connects experimentation to econometric foundations. Covers CUPED (linking to DiD), group sequential testing, Bayesian A/B testing, and clustered standard errors. Every post includes complete Python code.",
-      "url": "https://matteocourthoud.github.io/post/",
-      "score": 0.0817,
-      "cold_start": false,
-      "signals": {
-        "clicks": 3,
-        "impressions": 4,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "rank": 878
-    },
-    {
-      "name": "Lyft Engineering",
-      "type": "resource",
-      "category": "Marketplace Economics",
-      "description": "Rideshare economics, forecasting, and marketplace efficiency. Technical deep-dives on pricing, dispatch, and causal inference.",
-      "url": "https://eng.lyft.com/",
-      "score": 0.0817,
-      "cold_start": false,
-      "signals": {
-        "clicks": 3,
-        "impressions": 4,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "rank": 879
-    },
-    {
-      "name": "Introduction to Agent-Based Modeling",
-      "type": "resource",
-      "category": "Computational Economics",
-      "description": "Bill Rand's comprehensive free course on agent-based modeling from Santa Fe Institute's Complexity Explorer. Covers NetLogo, model design, and analysis.",
-      "url": "https://www.complexityexplorer.org/courses/183-introduction-to-agent-based-modeling",
-      "score": 0.0817,
-      "cold_start": false,
-      "signals": {
-        "clicks": 3,
-        "impressions": 4,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "rank": 880
-    },
-    {
-      "name": "EconDL: Deep Learning for Economists",
-      "type": "resource",
-      "category": "Machine Learning",
-      "description": "Companion website for Melissa Dell's JEL paper with demo notebooks, code examples, and tutorials on applying deep learning to economics research.",
-      "url": "https://econdl.github.io/",
-      "score": 0.0817,
-      "cold_start": false,
-      "signals": {
-        "clicks": 3,
-        "impressions": 4,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "rank": 881
-    },
-    {
       "name": "Online Retail II (UCI)",
       "type": "dataset",
       "category": "MarTech & Customer Analytics",
@@ -11608,7 +11500,7 @@
         "reading_ratio": 2.0,
         "high_imp_no_click": false
       },
-      "rank": 882
+      "rank": 878
     },
     {
       "name": "Preference-based Online Learning with Dueling Bandits: A Survey",
@@ -11620,7 +11512,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 24,
-      "rank": 883
+      "rank": 879
     },
     {
       "name": "Weak-to-Strong Generalization: Eliciting Strong Capabilities With Weak Supervision",
@@ -11632,7 +11524,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 24,
-      "rank": 884
+      "rank": 880
     },
     {
       "name": "Ditto: Fair and Robust Federated Learning Through Personalization",
@@ -11644,6 +11536,114 @@
       "cold_start": true,
       "signals": {},
       "citations": 24,
+      "rank": 881
+    },
+    {
+      "name": "Matteo Courthoud's Experimentation Series",
+      "type": "resource",
+      "category": "A/B Testing",
+      "description": "Connects experimentation to econometric foundations. Covers CUPED (linking to DiD), group sequential testing, Bayesian A/B testing, and clustered standard errors. Every post includes complete Python code.",
+      "url": "https://matteocourthoud.github.io/post/",
+      "score": 0.0803,
+      "cold_start": false,
+      "signals": {
+        "clicks": 3,
+        "impressions": 4,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
+      "rank": 882
+    },
+    {
+      "name": "Lyft Engineering",
+      "type": "resource",
+      "category": "Marketplace Economics",
+      "description": "Rideshare economics, forecasting, and marketplace efficiency. Technical deep-dives on pricing, dispatch, and causal inference.",
+      "url": "https://eng.lyft.com/",
+      "score": 0.0803,
+      "cold_start": false,
+      "signals": {
+        "clicks": 3,
+        "impressions": 4,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
+      "rank": 883
+    },
+    {
+      "name": "Introduction to Agent-Based Modeling",
+      "type": "resource",
+      "category": "Computational Economics",
+      "description": "Bill Rand's comprehensive free course on agent-based modeling from Santa Fe Institute's Complexity Explorer. Covers NetLogo, model design, and analysis.",
+      "url": "https://www.complexityexplorer.org/courses/183-introduction-to-agent-based-modeling",
+      "score": 0.0803,
+      "cold_start": false,
+      "signals": {
+        "clicks": 3,
+        "impressions": 4,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
+      "rank": 884
+    },
+    {
+      "name": "EconDL: Deep Learning for Economists",
+      "type": "resource",
+      "category": "Machine Learning",
+      "description": "Companion website for Melissa Dell's JEL paper with demo notebooks, code examples, and tutorials on applying deep learning to economics research.",
+      "url": "https://econdl.github.io/",
+      "score": 0.0803,
+      "cold_start": false,
+      "signals": {
+        "clicks": 3,
+        "impressions": 4,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
       "rank": 885
     },
     {
@@ -12331,60 +12331,6 @@
       "rank": 927
     },
     {
-      "name": "Andrew Heiss's DAG and Backdoor Tutorials",
-      "type": "resource",
-      "category": "Machine Learning",
-      "description": "Hands-on tutorials on building DAGs with ggdag, backdoor criterion, confounders/colliders, d-separation, and propensity scores. Uses real variable names with complete R code.",
-      "url": "https://www.andrewheiss.com/blog/2020/02/25/closing-backdoors-dags/",
-      "score": 0.0714,
-      "cold_start": false,
-      "signals": {
-        "clicks": 0,
-        "impressions": 4,
-        "dwell_ms": 2423,
-        "viewable_sec": 1.4,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 1,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 80,
-        "coclicks": 0,
-        "reading_ratio": 2.0,
-        "high_imp_no_click": false
-      },
-      "rank": 928
-    },
-    {
-      "name": "Brady Neal's Introduction to Causal Inference",
-      "type": "resource",
-      "category": "Machine Learning",
-      "description": "14-week video course covering potential outcomes, DAGs, do-calculus, and causal discovery. Features guest lectures from Susan Athey, Alberto Abadie, and Yoshua Bengio. Bridges ML and econometric traditions.",
-      "url": "https://www.bradyneal.com/causal-inference-course",
-      "score": 0.0714,
-      "cold_start": false,
-      "signals": {
-        "clicks": 0,
-        "impressions": 4,
-        "dwell_ms": 2423,
-        "viewable_sec": 1.4,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 1,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 80,
-        "coclicks": 0,
-        "reading_ratio": 2.0,
-        "high_imp_no_click": false
-      },
-      "rank": 929
-    },
-    {
       "name": "Novelty and Primacy: A Long-Term Estimator for Online Experiments",
       "type": "paper",
       "category": "Experimentation > Long-run Effects & Surrogates",
@@ -12394,7 +12340,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 16,
-      "rank": 930
+      "rank": 928
     },
     {
       "name": "Differentiated Products Demand Systems from a Combination of Micro and Macro Data: The New Car Market",
@@ -12406,7 +12352,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 16,
-      "rank": 931
+      "rank": 929
     },
     {
       "name": "NEMSIS Public Release Research Dataset",
@@ -12433,7 +12379,7 @@
         "reading_ratio": 0,
         "high_imp_no_click": false
       },
-      "rank": 932
+      "rank": 930
     },
     {
       "name": "Hospital Emergency Dataset",
@@ -12460,7 +12406,7 @@
         "reading_ratio": 0,
         "high_imp_no_click": false
       },
-      "rank": 933
+      "rank": 931
     },
     {
       "name": "Amazon Sessions (KDD Cup 23)",
@@ -12487,88 +12433,61 @@
         "reading_ratio": 0,
         "high_imp_no_click": false
       },
+      "rank": 932
+    },
+    {
+      "name": "Andrew Heiss's DAG and Backdoor Tutorials",
+      "type": "resource",
+      "category": "Machine Learning",
+      "description": "Hands-on tutorials on building DAGs with ggdag, backdoor criterion, confounders/colliders, d-separation, and propensity scores. Uses real variable names with complete R code.",
+      "url": "https://www.andrewheiss.com/blog/2020/02/25/closing-backdoors-dags/",
+      "score": 0.07,
+      "cold_start": false,
+      "signals": {
+        "clicks": 0,
+        "impressions": 4,
+        "dwell_ms": 2423,
+        "viewable_sec": 1.4,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 1,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 80,
+        "coclicks": 0,
+        "reading_ratio": 2.0,
+        "high_imp_no_click": false
+      },
+      "rank": 933
+    },
+    {
+      "name": "Brady Neal's Introduction to Causal Inference",
+      "type": "resource",
+      "category": "Machine Learning",
+      "description": "14-week video course covering potential outcomes, DAGs, do-calculus, and causal discovery. Features guest lectures from Susan Athey, Alberto Abadie, and Yoshua Bengio. Bridges ML and econometric traditions.",
+      "url": "https://www.bradyneal.com/causal-inference-course",
+      "score": 0.07,
+      "cold_start": false,
+      "signals": {
+        "clicks": 0,
+        "impressions": 4,
+        "dwell_ms": 2423,
+        "viewable_sec": 1.4,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 1,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 80,
+        "coclicks": 0,
+        "reading_ratio": 2.0,
+        "high_imp_no_click": false
+      },
       "rank": 934
-    },
-    {
-      "name": "PyMC-Marketing CLV Quickstart",
-      "type": "resource",
-      "category": "Bayesian Methods",
-      "description": "CLV basics, RFM analysis, BG/NBD models \u2014 free official docs",
-      "url": "https://www.pymc-marketing.io/en/latest/notebooks/clv/clv_quickstart.html",
-      "score": 0.0698,
-      "cold_start": false,
-      "signals": {
-        "clicks": 2,
-        "impressions": 4,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "rank": 935
-    },
-    {
-      "name": "150 Successful ML Models at Booking.com (KDD 2019)",
-      "type": "resource",
-      "category": "Case Studies",
-      "description": "Reveals that model performance \u2260 business performance. Demonstrates why RCTs are critical for validating ML models in production with framework for hypothesis-driven iteration.",
-      "url": "https://dl.acm.org/doi/10.1145/3292500.3330744",
-      "score": 0.0698,
-      "cold_start": false,
-      "signals": {
-        "clicks": 2,
-        "impressions": 4,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "rank": 936
-    },
-    {
-      "name": "GrowthBook's Experimentation Fundamentals",
-      "type": "resource",
-      "category": "A/B Testing",
-      "description": "Complete single-page reference covering hypothesis formation, statistical significance, Type I/II errors, MDE, power analysis, A/A tests, novelty effects, and experiment interactions. Notes that industry success rates are only ~33%.",
-      "url": "https://docs.growthbook.io/using/fundamentals",
-      "score": 0.0698,
-      "cold_start": false,
-      "signals": {
-        "clicks": 2,
-        "impressions": 4,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "rank": 937
     },
     {
       "name": "Dominick's Finer Foods (Kilts Center)",
@@ -12595,7 +12514,7 @@
         "reading_ratio": 2.0,
         "high_imp_no_click": false
       },
-      "rank": 938
+      "rank": 935
     },
     {
       "name": "London Passenger Mode Choice (LPMC)",
@@ -12620,6 +12539,87 @@
         "coviews": 45,
         "coclicks": 0,
         "reading_ratio": 2.0,
+        "high_imp_no_click": false
+      },
+      "rank": 936
+    },
+    {
+      "name": "PyMC-Marketing CLV Quickstart",
+      "type": "resource",
+      "category": "Bayesian Methods",
+      "description": "CLV basics, RFM analysis, BG/NBD models \u2014 free official docs",
+      "url": "https://www.pymc-marketing.io/en/latest/notebooks/clv/clv_quickstart.html",
+      "score": 0.0684,
+      "cold_start": false,
+      "signals": {
+        "clicks": 2,
+        "impressions": 4,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
+      "rank": 937
+    },
+    {
+      "name": "150 Successful ML Models at Booking.com (KDD 2019)",
+      "type": "resource",
+      "category": "Case Studies",
+      "description": "Reveals that model performance \u2260 business performance. Demonstrates why RCTs are critical for validating ML models in production with framework for hypothesis-driven iteration.",
+      "url": "https://dl.acm.org/doi/10.1145/3292500.3330744",
+      "score": 0.0684,
+      "cold_start": false,
+      "signals": {
+        "clicks": 2,
+        "impressions": 4,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
+      "rank": 938
+    },
+    {
+      "name": "GrowthBook's Experimentation Fundamentals",
+      "type": "resource",
+      "category": "A/B Testing",
+      "description": "Complete single-page reference covering hypothesis formation, statistical significance, Type I/II errors, MDE, power analysis, A/A tests, novelty effects, and experiment interactions. Notes that industry success rates are only ~33%.",
+      "url": "https://docs.growthbook.io/using/fundamentals",
+      "score": 0.0684,
+      "cold_start": false,
+      "signals": {
+        "clicks": 2,
+        "impressions": 4,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
         "high_imp_no_click": false
       },
       "rank": 939
@@ -13660,141 +13660,6 @@
       "rank": 994
     },
     {
-      "name": "How to Measure Cohort Retention (Lenny's Newsletter)",
-      "type": "resource",
-      "category": "Bayesian Methods",
-      "description": "The most comprehensive retention measurement guide. SQL implementations, bounded vs unbounded retention definitions, visualization best practices. When to use X-day vs unbounded retention.",
-      "url": "https://www.lennysnewsletter.com/p/measuring-cohort-retention",
-      "score": 0.0578,
-      "cold_start": false,
-      "signals": {
-        "clicks": 1,
-        "impressions": 4,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "rank": 995
-    },
-    {
-      "name": "Meta Engineering - Data Science",
-      "type": "resource",
-      "category": "Case Studies",
-      "description": "Large-scale experimentation, ML infrastructure, and data discovery at Facebook scale. Posts on causal inference and data tools.",
-      "url": "https://engineering.fb.com/",
-      "score": 0.0578,
-      "cold_start": false,
-      "signals": {
-        "clicks": 1,
-        "impressions": 4,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "rank": 996
-    },
-    {
-      "name": "Jay Alammar's Illustrated Transformer",
-      "type": "resource",
-      "category": "Deep Learning",
-      "description": "Definitive visual guide to attention mechanisms, referenced at Stanford, Harvard, MIT, Princeton, CMU. Step-by-step illustrations of self-attention, multi-head attention, positional encoding. Covers BERT, GPT-2, retrieval transformers.",
-      "url": "https://jalammar.github.io/illustrated-transformer/",
-      "score": 0.0578,
-      "cold_start": false,
-      "signals": {
-        "clicks": 1,
-        "impressions": 4,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "rank": 997
-    },
-    {
-      "name": "Google Machine Learning Crash Course",
-      "type": "resource",
-      "category": "Machine Learning",
-      "description": "15-hour interactive course originally for Google engineers, refreshed 2024 with LLMs/AutoML. Covers supervised learning, feature engineering, and production ML with Colab exercises. Teaches exact mental models Google engineers use.",
-      "url": "https://developers.google.com/machine-learning/crash-course",
-      "score": 0.0578,
-      "cold_start": false,
-      "signals": {
-        "clicks": 1,
-        "impressions": 4,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "rank": 998
-    },
-    {
-      "name": "Matteo Courthoud's Meta-Learners Tutorial",
-      "type": "resource",
-      "category": "Causal Inference",
-      "description": "S-learner, T-learner, X-learner with detailed math, causal trees/forests, AIPW estimators. Uses Uber's CausalML package for demos. Complete Jupyter notebooks on GitHub.",
-      "url": "https://matteocourthoud.github.io/post/meta_learners/",
-      "score": 0.0578,
-      "cold_start": false,
-      "signals": {
-        "clicks": 1,
-        "impressions": 4,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "rank": 999
-    },
-    {
       "name": "Machine Learning for Variance Reduction in Online Experiments",
       "type": "paper",
       "category": "Experimentation > Variance Reduction",
@@ -13804,7 +13669,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 9,
-      "rank": 1000
+      "rank": 995
     },
     {
       "name": "Selling Privacy at Auction",
@@ -13816,7 +13681,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 9,
-      "rank": 1001
+      "rank": 996
     },
     {
       "name": "What Makes Them Click: Empirical Analysis of Consumer Demand for Search Advertising",
@@ -13828,7 +13693,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 9,
-      "rank": 1002
+      "rank": 997
     },
     {
       "name": "Dynamics of Consumer Demand for New Durable Goods",
@@ -13840,7 +13705,7 @@
       "cold_start": true,
       "signals": {},
       "citations": 9,
-      "rank": 1003
+      "rank": 998
     },
     {
       "name": "Natural Driving in Ohio",
@@ -13867,19 +13732,19 @@
         "reading_ratio": 2.0,
         "high_imp_no_click": false
       },
-      "rank": 1004
+      "rank": 999
     },
     {
-      "name": "MIT 15.053: Optimization Methods in Management Science",
+      "name": "How to Measure Cohort Retention (Lenny's Newsletter)",
       "type": "resource",
-      "category": "Convex Optimization",
-      "description": "Undergraduate course on LP with geometry and visualization before algebra. Interactive spreadsheet exercises.",
-      "url": "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/",
-      "score": 0.0566,
+      "category": "Bayesian Methods",
+      "description": "The most comprehensive retention measurement guide. SQL implementations, bounded vs unbounded retention definitions, visualization best practices. When to use X-day vs unbounded retention.",
+      "url": "https://www.lennysnewsletter.com/p/measuring-cohort-retention",
+      "score": 0.0564,
       "cold_start": false,
       "signals": {
         "clicks": 1,
-        "impressions": 3,
+        "impressions": 4,
         "dwell_ms": 0,
         "viewable_sec": 0,
         "scroll_90": 0,
@@ -13894,7 +13759,115 @@
         "reading_ratio": 0,
         "high_imp_no_click": false
       },
-      "rank": 1005
+      "rank": 1000
+    },
+    {
+      "name": "Meta Engineering - Data Science",
+      "type": "resource",
+      "category": "Case Studies",
+      "description": "Large-scale experimentation, ML infrastructure, and data discovery at Facebook scale. Posts on causal inference and data tools.",
+      "url": "https://engineering.fb.com/",
+      "score": 0.0564,
+      "cold_start": false,
+      "signals": {
+        "clicks": 1,
+        "impressions": 4,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
+      "rank": 1001
+    },
+    {
+      "name": "Jay Alammar's Illustrated Transformer",
+      "type": "resource",
+      "category": "Deep Learning",
+      "description": "Definitive visual guide to attention mechanisms, referenced at Stanford, Harvard, MIT, Princeton, CMU. Step-by-step illustrations of self-attention, multi-head attention, positional encoding. Covers BERT, GPT-2, retrieval transformers.",
+      "url": "https://jalammar.github.io/illustrated-transformer/",
+      "score": 0.0564,
+      "cold_start": false,
+      "signals": {
+        "clicks": 1,
+        "impressions": 4,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
+      "rank": 1002
+    },
+    {
+      "name": "Google Machine Learning Crash Course",
+      "type": "resource",
+      "category": "Machine Learning",
+      "description": "15-hour interactive course originally for Google engineers, refreshed 2024 with LLMs/AutoML. Covers supervised learning, feature engineering, and production ML with Colab exercises. Teaches exact mental models Google engineers use.",
+      "url": "https://developers.google.com/machine-learning/crash-course",
+      "score": 0.0564,
+      "cold_start": false,
+      "signals": {
+        "clicks": 1,
+        "impressions": 4,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
+      "rank": 1003
+    },
+    {
+      "name": "Matteo Courthoud's Meta-Learners Tutorial",
+      "type": "resource",
+      "category": "Causal Inference",
+      "description": "S-learner, T-learner, X-learner with detailed math, causal trees/forests, AIPW estimators. Uses Uber's CausalML package for demos. Complete Jupyter notebooks on GitHub.",
+      "url": "https://matteocourthoud.github.io/post/meta_learners/",
+      "score": 0.0564,
+      "cold_start": false,
+      "signals": {
+        "clicks": 1,
+        "impressions": 4,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
+      "rank": 1004
     },
     {
       "name": "Airline Delay",
@@ -13919,6 +13892,33 @@
         "coviews": 45,
         "coclicks": 0,
         "reading_ratio": 2.0,
+        "high_imp_no_click": false
+      },
+      "rank": 1005
+    },
+    {
+      "name": "MIT 15.053: Optimization Methods in Management Science",
+      "type": "resource",
+      "category": "Convex Optimization",
+      "description": "Undergraduate course on LP with geometry and visualization before algebra. Interactive spreadsheet exercises.",
+      "url": "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/",
+      "score": 0.0552,
+      "cold_start": false,
+      "signals": {
+        "clicks": 1,
+        "impressions": 3,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
         "high_imp_no_click": false
       },
       "rank": 1006
@@ -15286,201 +15286,96 @@
       "rank": 1062
     },
     {
+      "name": "\u03b2\u00b3-IRT: A New Item Response Model and its Applications",
+      "type": "paper",
+      "category": "Statistics > Item Response Theory",
+      "description": "Extends IRT to continuous responses using Beta-distributed item characteristic curves. Treats ML model evaluation as psychometric problem: each test instance has latent difficulty, each model has latent ability. Identifies which benchmark examples genuinely discriminate strong from weak classifiers\u2014critical for efficient benchmarking.",
+      "url": "https://proceedings.mlr.press/v89/chen19b.html",
+      "score": 0.0449,
+      "cold_start": true,
+      "signals": {},
+      "citations": 5,
+      "rank": 1063
+    },
+    {
+      "name": "Contextual Bandits with Cross-Learning",
+      "type": "paper",
+      "category": "Reinforcement Learning > RL for Bidding & Pricing",
+      "description": "Learning across related auctions; critical for ad platforms with correlated contexts.",
+      "url": "https://proceedings.neurips.cc/paper/2019/hash/b5b03f06271f8917685d14cea7c6c50a-Abstract.html",
+      "score": 0.0449,
+      "cold_start": true,
+      "signals": {},
+      "citations": 5,
+      "rank": 1064
+    },
+    {
+      "name": "Concrete Problems in AI Safety",
+      "type": "paper",
+      "category": "Inverse RL & Preference Learning > Value Alignment & AI Safety",
+      "description": "Taxonomy of five safety problems: side effects, reward hacking, scalable oversight, safe exploration, distributional shift.",
+      "url": "https://arxiv.org/abs/1606.06565",
+      "score": 0.0449,
+      "cold_start": true,
+      "signals": {},
+      "citations": 5,
+      "rank": 1065
+    },
+    {
+      "name": "Orbit: Probabilistic Forecast with Exponential Smoothing",
+      "type": "paper",
+      "category": "Forecasting > Production Forecasting Systems",
+      "description": "Uber's Bayesian forecasting framework combining ETS with global models; production-ready with uncertainty.",
+      "url": "https://arxiv.org/abs/2004.08492",
+      "score": 0.0449,
+      "cold_start": true,
+      "signals": {},
+      "citations": 5,
+      "rank": 1066
+    },
+    {
+      "name": "Alibaba Realizes Millions in Cost Savings Through Integrated Demand Forecasting and Inventory Management",
+      "type": "paper",
+      "category": "Logistics & Operations > Inventory & Fulfillment",
+      "description": "Deep learning + simulation-optimization generating $42M+ annual savings in inventory and shrinkage costs. Franz Edelman Award finalist.",
+      "url": "https://pubsonline.informs.org/doi/10.1287/inte.2023.1165",
+      "score": 0.0449,
+      "cold_start": true,
+      "signals": {},
+      "citations": 5,
+      "rank": 1067
+    },
+    {
+      "name": "Spatial Pricing in Ride-Sharing Networks",
+      "type": "paper",
+      "category": "Logistics & Operations > Capacity Planning",
+      "description": "Characterizes optimal spatial pricing; introduces 'balancedness' concept for demand patterns and driver positioning incentives.",
+      "url": "https://pubsonline.informs.org/doi/10.1287/opre.2018.1800",
+      "score": 0.0449,
+      "cold_start": true,
+      "signals": {},
+      "citations": 5,
+      "rank": 1068
+    },
+    {
+      "name": "Dynamic Pricing and Matching for Two-Sided Queues",
+      "type": "paper",
+      "category": "Logistics & Operations > Capacity Planning",
+      "description": "Rigorous queueing-theoretic model; develops fluid-based max-weight matching achieving \u221a\u03b7 optimality rate.",
+      "url": "https://pubsonline.informs.org/doi/10.1287/opre.2022.2266",
+      "score": 0.0449,
+      "cold_start": true,
+      "signals": {},
+      "citations": 5,
+      "rank": 1069
+    },
+    {
       "name": "DoorDash: 4 Principles to Boost Experimentation by 1000%",
       "type": "resource",
       "category": "AB Testing",
       "description": "Scaling from ~10 to 100+ experiments/month using switchback designs in logistics.",
       "url": "https://doordash.engineering/2021/09/21/the-4-principles-doordash-used-to-increase-its-logistics-experiment-capacity-by-1000",
-      "score": 0.0459,
-      "cold_start": false,
-      "signals": {
-        "clicks": 0,
-        "impressions": 4,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "rank": 1063
-    },
-    {
-      "name": "Eppo: Bandit vs. Experiment Testing Decision Guide",
-      "type": "resource",
-      "category": "Bandits & Adaptive",
-      "description": "The single best resource for when to use bandits vs. experiments. Covers perishable decisions, impact estimation challenges, why A/B tests win for complex multi-metric decisions.",
-      "url": "https://www.geteppo.com/blog/bandit-or-experiment",
-      "score": 0.0459,
-      "cold_start": false,
-      "signals": {
-        "clicks": 0,
-        "impressions": 4,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "rank": 1064
-    },
-    {
-      "name": "AdKDD Workshop Papers",
-      "type": "resource",
-      "category": "Ads & Attribution",
-      "description": "Applied research from Google, Meta, Amazon",
-      "url": "https://www.adkdd.org/",
-      "score": 0.0459,
-      "cold_start": false,
-      "signals": {
-        "clicks": 0,
-        "impressions": 4,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "rank": 1065
-    },
-    {
-      "name": "Eugene Yan: Bandits for Recommender Systems",
-      "type": "resource",
-      "category": "Bandits & Adaptive",
-      "description": "The definitive practitioner's guide synthesizing implementations from 12+ tech companies (Spotify, Netflix, Yahoo, DoorDash, Twitter, Alibaba, Amazon). Covers \u03b5-greedy, UCB, Thompson Sampling.",
-      "url": "https://eugeneyan.com/writing/bandits/",
-      "score": 0.0459,
-      "cold_start": false,
-      "signals": {
-        "clicks": 0,
-        "impressions": 4,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "rank": 1066
-    },
-    {
-      "name": "Coaching Actuaries",
-      "type": "resource",
-      "category": "Insurance & Actuarial",
-      "description": "Premium exam preparation platform for SOA and CAS actuarial exams with practice problems, video lessons, and adaptive learning. Industry standard for exam preparation.",
-      "url": "https://www.coachingactuaries.com/",
-      "score": 0.0459,
-      "cold_start": false,
-      "signals": {
-        "clicks": 0,
-        "impressions": 4,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "rank": 1067
-    },
-    {
-      "name": "MIT OCW: Energy Economics (14.44)",
-      "type": "resource",
-      "category": "Energy & Utilities Economics",
-      "description": "Paul Joskow's MIT course on theoretical and empirical perspectives in energy markets. Covers electricity, oil, gas, and environmental economics with full lecture notes.",
-      "url": "https://ocw.mit.edu/courses/14-44-energy-economics-spring-2007/",
-      "score": 0.0459,
-      "cold_start": false,
-      "signals": {
-        "clicks": 0,
-        "impressions": 4,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "rank": 1068
-    },
-    {
-      "name": "Google OR-Tools: VRP + VRPTW Tutorial",
-      "type": "resource",
-      "category": "Linear Programming",
-      "description": "Core logistics vocabulary (depot, fleet, constraints) with working Python baseline",
-      "url": "https://developers.google.com/optimization/routing/vrp",
-      "score": 0.0459,
-      "cold_start": false,
-      "signals": {
-        "clicks": 0,
-        "impressions": 4,
-        "dwell_ms": 0,
-        "viewable_sec": 0,
-        "scroll_90": 0,
-        "scroll_75": 0,
-        "scroll_50": 0,
-        "search_clicks": 0,
-        "deep_sessions": 0,
-        "rage_clicks": 0,
-        "quick_bounces": 0,
-        "coviews": 0,
-        "coclicks": 0,
-        "reading_ratio": 0,
-        "high_imp_no_click": false
-      },
-      "rank": 1069
-    },
-    {
-      "name": "Juan Orduz: Bayesian Marketing Methods",
-      "type": "resource",
-      "category": "Marketing Science",
-      "description": "Principal Data Scientist at PyMC Labs with PhD in Mathematics. 50+ deep technical posts on media effect estimation, adstock/saturation curves, CLV modeling, and synthetic controls.",
-      "url": "https://juanitorduz.github.io/",
-      "score": 0.0459,
+      "score": 0.0445,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -15502,12 +15397,12 @@
       "rank": 1070
     },
     {
-      "name": "Temporal Fusion Transformer: Complete Tutorial",
+      "name": "Eppo: Bandit vs. Experiment Testing Decision Guide",
       "type": "resource",
-      "category": "Deep Learning",
-      "description": "End-to-end TFT with PyTorch Forecasting. Handles heterogeneous features (static, time-varying known/unknown). Interpretability via variable importance and attention. Shows when TFT outperforms simpler methods.",
-      "url": "https://towardsdatascience.com/temporal-fusion-transformer-time-series-forecasting-with-deep-learning-complete-tutorial-d32c1e51cd91/",
-      "score": 0.0459,
+      "category": "Bandits & Adaptive",
+      "description": "The single best resource for when to use bandits vs. experiments. Covers perishable decisions, impact estimation challenges, why A/B tests win for complex multi-metric decisions.",
+      "url": "https://www.geteppo.com/blog/bandit-or-experiment",
+      "score": 0.0445,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -15529,12 +15424,12 @@
       "rank": 1071
     },
     {
-      "name": "Kaggle's Intermediate Machine Learning",
+      "name": "AdKDD Workshop Papers",
       "type": "resource",
-      "category": "Gradient Boosting",
-      "description": "Hands-on XGBoost with graded exercises. Covers missing values, categorical encoding, pipelines, cross-validation, then XGBoost tuning (n_estimators, early_stopping, learning_rate). Free certificate.",
-      "url": "https://www.kaggle.com/learn/intermediate-machine-learning",
-      "score": 0.0459,
+      "category": "Ads & Attribution",
+      "description": "Applied research from Google, Meta, Amazon",
+      "url": "https://www.adkdd.org/",
+      "score": 0.0445,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -15556,12 +15451,12 @@
       "rank": 1072
     },
     {
-      "name": "MLJAR: Feature Importance with XGBoost",
+      "name": "Eugene Yan: Bandits for Recommender Systems",
       "type": "resource",
-      "category": "Gradient Boosting",
-      "description": "Definitive guide covering three importance methods: gain, weight, and SHAP. Complete Colab code comparing built-in importance vs. permutation vs. SHAP values. Essential for model interpretation.",
-      "url": "https://mljar.com/blog/feature-importance-xgboost/",
-      "score": 0.0459,
+      "category": "Bandits & Adaptive",
+      "description": "The definitive practitioner's guide synthesizing implementations from 12+ tech companies (Spotify, Netflix, Yahoo, DoorDash, Twitter, Alibaba, Amazon). Covers \u03b5-greedy, UCB, Thompson Sampling.",
+      "url": "https://eugeneyan.com/writing/bandits/",
+      "score": 0.0445,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -15583,12 +15478,12 @@
       "rank": 1073
     },
     {
-      "name": "Defense Acquisition University (DAU)",
+      "name": "Coaching Actuaries",
       "type": "resource",
-      "category": "Machine Learning",
-      "description": "Official DoD training for acquisition professionals covering contracting, program management, and cost estimation",
-      "url": "https://www.dau.edu/training",
-      "score": 0.0459,
+      "category": "Insurance & Actuarial",
+      "description": "Premium exam preparation platform for SOA and CAS actuarial exams with practice problems, video lessons, and adaptive learning. Industry standard for exam preparation.",
+      "url": "https://www.coachingactuaries.com/",
+      "score": 0.0445,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -15610,12 +15505,12 @@
       "rank": 1074
     },
     {
-      "name": "OpenAI Cookbook: Semantic Search with Embeddings",
+      "name": "MIT OCW: Energy Economics (14.44)",
       "type": "resource",
-      "category": "Search & Ranking",
-      "description": "Modern embedding-based retrieval end-to-end. Embedding generation with OpenAI API, Pinecone vector database, cosine similarity search. Foundation for semantic search and RAG systems.",
-      "url": "https://cookbook.openai.com/examples/vector_databases/pinecone/semantic_search",
-      "score": 0.0459,
+      "category": "Energy & Utilities Economics",
+      "description": "Paul Joskow's MIT course on theoretical and empirical perspectives in energy markets. Covers electricity, oil, gas, and environmental economics with full lecture notes.",
+      "url": "https://ocw.mit.edu/courses/14-44-energy-economics-spring-2007/",
+      "score": 0.0445,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -15637,12 +15532,12 @@
       "rank": 1075
     },
     {
-      "name": "Afi Labs: Ride-Share Dispatch Algorithms",
+      "name": "Google OR-Tools: VRP + VRPTW Tutorial",
       "type": "resource",
-      "category": "Routing & Logistics",
-      "description": "Complete worked examples for ride-share dispatch with full code. Explains why greedy nearest-driver matching fails compared to optimal trip chaining.",
-      "url": "https://blog.afi.io/",
-      "score": 0.0459,
+      "category": "Linear Programming",
+      "description": "Core logistics vocabulary (depot, fleet, constraints) with working Python baseline",
+      "url": "https://developers.google.com/optimization/routing/vrp",
+      "score": 0.0445,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -15664,12 +15559,12 @@
       "rank": 1076
     },
     {
-      "name": "Georgia Tech (Ratliff): 10 Rules for Supply Chain Optimization",
+      "name": "Juan Orduz: Bayesian Marketing Methods",
       "type": "resource",
-      "category": "Routing & Logistics",
-      "description": "Practitioner checklist for scoping, data readiness, constraints, deployment \u2014 free PDF",
-      "url": "https://www.scl.gatech.edu/sites/default/files/downloads/gtscl-10_rules_supply_chain_logistics_optimization_2.pdf",
-      "score": 0.0459,
+      "category": "Marketing Science",
+      "description": "Principal Data Scientist at PyMC Labs with PhD in Mathematics. 50+ deep technical posts on media effect estimation, adstock/saturation curves, CLV modeling, and synthetic controls.",
+      "url": "https://juanitorduz.github.io/",
+      "score": 0.0445,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -15691,12 +15586,12 @@
       "rank": 1077
     },
     {
-      "name": "LinkedIn: A/B Testing Variant Assignment at Scale",
+      "name": "Temporal Fusion Transformer: Complete Tutorial",
       "type": "resource",
-      "category": "A/B Testing",
-      "description": "Hash-based variant assignment for trillions of daily invocations. Technical deep-dive on deterministic, consistent randomization at LinkedIn scale.",
-      "url": "https://www.linkedin.com/blog/engineering/ab-testing-experimentation/a-b-testing-variant-assignment",
-      "score": 0.0459,
+      "category": "Deep Learning",
+      "description": "End-to-end TFT with PyTorch Forecasting. Handles heterogeneous features (static, time-varying known/unknown). Interpretability via variable importance and attention. Shows when TFT outperforms simpler methods.",
+      "url": "https://towardsdatascience.com/temporal-fusion-transformer-time-series-forecasting-with-deep-learning-complete-tutorial-d32c1e51cd91/",
+      "score": 0.0445,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -15718,12 +15613,12 @@
       "rank": 1078
     },
     {
-      "name": "Dominik Krupke: CP-SAT Primer",
+      "name": "Kaggle's Intermediate Machine Learning",
       "type": "resource",
-      "category": "Operations Research",
-      "description": "The most comprehensive unofficial guide to Google OR-Tools' CP-SAT solver. Chapters cover modeling patterns, parameter tuning, benchmarking methodology, and large neighborhood search.",
-      "url": "https://d-krupke.github.io/cpsat-primer/",
-      "score": 0.0459,
+      "category": "Gradient Boosting",
+      "description": "Hands-on XGBoost with graded exercises. Covers missing values, categorical encoding, pipelines, cross-validation, then XGBoost tuning (n_estimators, early_stopping, learning_rate). Free certificate.",
+      "url": "https://www.kaggle.com/learn/intermediate-machine-learning",
+      "score": 0.0445,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -15745,12 +15640,12 @@
       "rank": 1079
     },
     {
-      "name": "Tallys Yunes: OR by the Beach",
+      "name": "MLJAR: Feature Importance with XGBoost",
       "type": "resource",
-      "category": "Operations Research",
-      "description": "Associate Professor at University of Miami focusing on making optimization accessible. Downloadable 'Optimization Games for the Young' and everyday optimization examples.",
-      "url": "https://orbythebeach.wordpress.com/",
-      "score": 0.0459,
+      "category": "Gradient Boosting",
+      "description": "Definitive guide covering three importance methods: gain, weight, and SHAP. Complete Colab code comparing built-in importance vs. permutation vs. SHAP values. Essential for model interpretation.",
+      "url": "https://mljar.com/blog/feature-importance-xgboost/",
+      "score": 0.0445,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -15772,87 +15667,192 @@
       "rank": 1080
     },
     {
-      "name": "\u03b2\u00b3-IRT: A New Item Response Model and its Applications",
-      "type": "paper",
-      "category": "Statistics > Item Response Theory",
-      "description": "Extends IRT to continuous responses using Beta-distributed item characteristic curves. Treats ML model evaluation as psychometric problem: each test instance has latent difficulty, each model has latent ability. Identifies which benchmark examples genuinely discriminate strong from weak classifiers\u2014critical for efficient benchmarking.",
-      "url": "https://proceedings.mlr.press/v89/chen19b.html",
-      "score": 0.0449,
-      "cold_start": true,
-      "signals": {},
-      "citations": 5,
+      "name": "Defense Acquisition University (DAU)",
+      "type": "resource",
+      "category": "Machine Learning",
+      "description": "Official DoD training for acquisition professionals covering contracting, program management, and cost estimation",
+      "url": "https://www.dau.edu/training",
+      "score": 0.0445,
+      "cold_start": false,
+      "signals": {
+        "clicks": 0,
+        "impressions": 4,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
       "rank": 1081
     },
     {
-      "name": "Contextual Bandits with Cross-Learning",
-      "type": "paper",
-      "category": "Reinforcement Learning > RL for Bidding & Pricing",
-      "description": "Learning across related auctions; critical for ad platforms with correlated contexts.",
-      "url": "https://proceedings.neurips.cc/paper/2019/hash/b5b03f06271f8917685d14cea7c6c50a-Abstract.html",
-      "score": 0.0449,
-      "cold_start": true,
-      "signals": {},
-      "citations": 5,
+      "name": "OpenAI Cookbook: Semantic Search with Embeddings",
+      "type": "resource",
+      "category": "Search & Ranking",
+      "description": "Modern embedding-based retrieval end-to-end. Embedding generation with OpenAI API, Pinecone vector database, cosine similarity search. Foundation for semantic search and RAG systems.",
+      "url": "https://cookbook.openai.com/examples/vector_databases/pinecone/semantic_search",
+      "score": 0.0445,
+      "cold_start": false,
+      "signals": {
+        "clicks": 0,
+        "impressions": 4,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
       "rank": 1082
     },
     {
-      "name": "Concrete Problems in AI Safety",
-      "type": "paper",
-      "category": "Inverse RL & Preference Learning > Value Alignment & AI Safety",
-      "description": "Taxonomy of five safety problems: side effects, reward hacking, scalable oversight, safe exploration, distributional shift.",
-      "url": "https://arxiv.org/abs/1606.06565",
-      "score": 0.0449,
-      "cold_start": true,
-      "signals": {},
-      "citations": 5,
+      "name": "Afi Labs: Ride-Share Dispatch Algorithms",
+      "type": "resource",
+      "category": "Routing & Logistics",
+      "description": "Complete worked examples for ride-share dispatch with full code. Explains why greedy nearest-driver matching fails compared to optimal trip chaining.",
+      "url": "https://blog.afi.io/",
+      "score": 0.0445,
+      "cold_start": false,
+      "signals": {
+        "clicks": 0,
+        "impressions": 4,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
       "rank": 1083
     },
     {
-      "name": "Orbit: Probabilistic Forecast with Exponential Smoothing",
-      "type": "paper",
-      "category": "Forecasting > Production Forecasting Systems",
-      "description": "Uber's Bayesian forecasting framework combining ETS with global models; production-ready with uncertainty.",
-      "url": "https://arxiv.org/abs/2004.08492",
-      "score": 0.0449,
-      "cold_start": true,
-      "signals": {},
-      "citations": 5,
+      "name": "Georgia Tech (Ratliff): 10 Rules for Supply Chain Optimization",
+      "type": "resource",
+      "category": "Routing & Logistics",
+      "description": "Practitioner checklist for scoping, data readiness, constraints, deployment \u2014 free PDF",
+      "url": "https://www.scl.gatech.edu/sites/default/files/downloads/gtscl-10_rules_supply_chain_logistics_optimization_2.pdf",
+      "score": 0.0445,
+      "cold_start": false,
+      "signals": {
+        "clicks": 0,
+        "impressions": 4,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
       "rank": 1084
     },
     {
-      "name": "Alibaba Realizes Millions in Cost Savings Through Integrated Demand Forecasting and Inventory Management",
-      "type": "paper",
-      "category": "Logistics & Operations > Inventory & Fulfillment",
-      "description": "Deep learning + simulation-optimization generating $42M+ annual savings in inventory and shrinkage costs. Franz Edelman Award finalist.",
-      "url": "https://pubsonline.informs.org/doi/10.1287/inte.2023.1165",
-      "score": 0.0449,
-      "cold_start": true,
-      "signals": {},
-      "citations": 5,
+      "name": "LinkedIn: A/B Testing Variant Assignment at Scale",
+      "type": "resource",
+      "category": "A/B Testing",
+      "description": "Hash-based variant assignment for trillions of daily invocations. Technical deep-dive on deterministic, consistent randomization at LinkedIn scale.",
+      "url": "https://www.linkedin.com/blog/engineering/ab-testing-experimentation/a-b-testing-variant-assignment",
+      "score": 0.0445,
+      "cold_start": false,
+      "signals": {
+        "clicks": 0,
+        "impressions": 4,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
       "rank": 1085
     },
     {
-      "name": "Spatial Pricing in Ride-Sharing Networks",
-      "type": "paper",
-      "category": "Logistics & Operations > Capacity Planning",
-      "description": "Characterizes optimal spatial pricing; introduces 'balancedness' concept for demand patterns and driver positioning incentives.",
-      "url": "https://pubsonline.informs.org/doi/10.1287/opre.2018.1800",
-      "score": 0.0449,
-      "cold_start": true,
-      "signals": {},
-      "citations": 5,
+      "name": "Dominik Krupke: CP-SAT Primer",
+      "type": "resource",
+      "category": "Operations Research",
+      "description": "The most comprehensive unofficial guide to Google OR-Tools' CP-SAT solver. Chapters cover modeling patterns, parameter tuning, benchmarking methodology, and large neighborhood search.",
+      "url": "https://d-krupke.github.io/cpsat-primer/",
+      "score": 0.0445,
+      "cold_start": false,
+      "signals": {
+        "clicks": 0,
+        "impressions": 4,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
       "rank": 1086
     },
     {
-      "name": "Dynamic Pricing and Matching for Two-Sided Queues",
-      "type": "paper",
-      "category": "Logistics & Operations > Capacity Planning",
-      "description": "Rigorous queueing-theoretic model; develops fluid-based max-weight matching achieving \u221a\u03b7 optimality rate.",
-      "url": "https://pubsonline.informs.org/doi/10.1287/opre.2022.2266",
-      "score": 0.0449,
-      "cold_start": true,
-      "signals": {},
-      "citations": 5,
+      "name": "Tallys Yunes: OR by the Beach",
+      "type": "resource",
+      "category": "Operations Research",
+      "description": "Associate Professor at University of Miami focusing on making optimization accessible. Downloadable 'Optimization Games for the Young' and everyday optimization examples.",
+      "url": "https://orbythebeach.wordpress.com/",
+      "score": 0.0445,
+      "cold_start": false,
+      "signals": {
+        "clicks": 0,
+        "impressions": 4,
+        "dwell_ms": 0,
+        "viewable_sec": 0,
+        "scroll_90": 0,
+        "scroll_75": 0,
+        "scroll_50": 0,
+        "search_clicks": 0,
+        "deep_sessions": 0,
+        "rage_clicks": 0,
+        "quick_bounces": 0,
+        "coviews": 0,
+        "coclicks": 0,
+        "reading_ratio": 0,
+        "high_imp_no_click": false
+      },
       "rank": 1087
     },
     {
@@ -15861,7 +15861,7 @@
       "category": "Market Design & Matching",
       "description": "20+ hours of video with publication-quality notes. Covers Gale-Shapley, NRMP matching, deferred acceptance, strategyproofness proofs, cryptocurrency incentives. Uniquely bridges classical stable matching with modern applications.",
       "url": "https://timroughgarden.org/f16/f16.html",
-      "score": 0.0447,
+      "score": 0.0433,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -15888,7 +15888,7 @@
       "category": "Pricing & Revenue",
       "description": "Price elasticity, WTP estimation, segmentation \u2014 free to audit",
       "url": "https://www.coursera.org/specializations/uva-darden-bcg-pricing-strategy",
-      "score": 0.0447,
+      "score": 0.0433,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -15915,7 +15915,7 @@
       "category": "Operations Research",
       "description": "Interactive online calculator for M/M/c queue metrics: service level, delay probability, average waiting time.",
       "url": "https://erlang.chwyean.com/erlang/",
-      "score": 0.0447,
+      "score": 0.0433,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -15942,7 +15942,7 @@
       "category": "Causal Inference",
       "description": "MIT professor and former Facebook data scientist. Deep expertise in network experiments, social influence, and randomization at Facebook scale.",
       "url": "https://deaneckles.com/blog",
-      "score": 0.0447,
+      "score": 0.0433,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -15969,7 +15969,7 @@
       "category": "Pricing & Revenue",
       "description": "Evolution of Lyft's PrimeTime surge algorithm. Explains undersupply spirals and iterative fixes for two-sided marketplace pricing.",
       "url": "https://eng.lyft.com/dynamic-pricing-to-sustain-marketplace-balance-1d23a8d1be90",
-      "score": 0.0447,
+      "score": 0.0433,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -15996,7 +15996,7 @@
       "category": "Platform Economics",
       "description": "LinkedIn's vision for mapping the global economy. How they use data to understand labor markets, skills, and economic opportunity.",
       "url": "https://economicgraph.linkedin.com/",
-      "score": 0.0447,
+      "score": 0.0433,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -16023,7 +16023,7 @@
       "category": "Platform Economics",
       "description": "DoorDash engineering explains the unique challenges of balancing three sides: merchants, dashers, and consumers in their delivery marketplace.",
       "url": "https://doordash.engineering/2021/04/28/building-a-successful-three-sided-marketplace/",
-      "score": 0.0447,
+      "score": 0.0433,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -16050,7 +16050,7 @@
       "category": "Platform Economics",
       "description": "How Fiverr structures their freelance marketplace, from gig discovery to pricing and seller success mechanics.",
       "url": "https://engineering.fiverr.com/",
-      "score": 0.0447,
+      "score": 0.0433,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -16077,7 +16077,7 @@
       "category": "Platform Economics",
       "description": "Analysis of TAM (Total Addressable Market) estimation errors. Explains why most TAM analyses are flawed and how to think about market sizing for tech companies.",
       "url": "https://abovethecrowd.com/2014/07/11/how-to-miss-by-a-mile-an-alternative-look-at-ubers-potential-market-size/",
-      "score": 0.0447,
+      "score": 0.0433,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -16104,7 +16104,7 @@
       "category": "Platform Economics",
       "description": "Seminal paper introducing the economics of two-sided markets. Analyzes how platforms set prices when they serve distinct but interdependent customer groups.",
       "url": "https://www.jstor.org/stable/1593720",
-      "score": 0.0447,
+      "score": 0.0433,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -16131,7 +16131,7 @@
       "category": "Platform Economics",
       "description": "Nobel laureate's comprehensive survey of two-sided market theory. Covers pricing, platform competition, and welfare implications of multi-sided platforms.",
       "url": "https://www.jstor.org/stable/25046328",
-      "score": 0.0447,
+      "score": 0.0433,
       "cold_start": false,
       "signals": {
         "clicks": 0,
@@ -23660,7 +23660,7 @@
       "type": "dataset",
       "category": "Grocery & Supermarkets",
       "description": "Time series dataset featuring 156 weeks of store-level sales data for household staples in four categories: mouthwash, pretzels, frozen pizza, and boxed cereal. Includes pricing, promotional activity, and store characteristics.",
-      "url": "https://www.dunnhumby.com/source-files/",
+      "url": "https://www.dunnhumby.com/source-files/#breakfast-at-the-frat",
       "score": 0.0108,
       "cold_start": false,
       "signals": {
@@ -29378,7 +29378,7 @@
       "type": "dataset",
       "category": "Grocery & Supermarkets",
       "description": "Relational database containing 2 years of household-level transaction data across 38 stores. Includes 5,000 households purchasing 125 products from pasta sauce and pasta categories with full demographic profiles.",
-      "url": "https://www.dunnhumby.com/source-files/",
+      "url": "https://www.dunnhumby.com/source-files/#carbo-loading",
       "score": 0.0001,
       "cold_start": true,
       "signals": {},
@@ -40840,7 +40840,7 @@
       "type": "dataset",
       "category": "Grocery & Supermarkets",
       "description": "Comprehensive household-level panel data from 2,500 frequent shoppers over 2 years. Includes full purchase history, coupon redemptions, direct mail campaigns, and complete demographic/lifestyle profiles - the gold standard for CPG analytics.",
-      "url": "https://www.dunnhumby.com/source-files/",
+      "url": "https://www.dunnhumby.com/source-files/#the-complete-journey",
       "score": 0.0,
       "cold_start": true,
       "signals": {},
@@ -40851,7 +40851,7 @@
       "type": "dataset",
       "category": "Grocery & Supermarkets",
       "description": "Large-scale synthetic dummy dataset with 300M+ transactions for testing analytics pipelines and algorithms at scale. Mimics real retail data structures without privacy concerns - ideal for scalability testing and teaching.",
-      "url": "https://www.dunnhumby.com/source-files/",
+      "url": "https://www.dunnhumby.com/source-files/#lets-get-sort-of-real",
       "score": 0.0,
       "cold_start": true,
       "signals": {},
