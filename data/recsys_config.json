@@ -1,0 +1,52 @@
+{
+  "_meta": {
+    "version": "recsys-config@v1",
+    "created_at": "2026-05-03",
+    "doc": "Single source of truth for recsys / search tunables. Loaded by lib.recsys_config.load(). Fields not listed here use the documented defaults in lib/recsys_config.py."
+  },
+
+  "ranking": {
+    "click_weight": 5.0,
+    "impression_weight": 0.5,
+    "viewable_weight": 0.1,
+    "dwell_weight": 1.0,
+
+    "scroll_90_weight": 2.0,
+    "scroll_75_weight": 1.0,
+    "scroll_50_weight": 0.5,
+
+    "search_click_weight": 3.0,
+    "deep_session_weight": 1.5,
+
+    "coview_weight": 0.1,
+    "coclick_weight": 0.3,
+
+    "reading_ratio_weight": 0.5,
+
+    "rage_click_weight": -2.0,
+    "quick_bounce_weight": -1.0,
+    "high_imp_no_click_weight": -1.0,
+
+    "citations_weight": 0.3,
+
+    "freshness_half_life_days": 30.0,
+    "freshness_boost_max": 0.15,
+
+    "cold_start_discount": 0.3,
+    "cold_start_k_neighbors": 5,
+
+    "random_seed": 42
+  },
+
+  "surfaces": {
+    "related_items_enabled": true,
+    "because_you_viewed_enabled": true,
+    "continue_reading_enabled": true
+  },
+
+  "evaluation": {
+    "holdout_days": 14,
+    "k_values": [5, 10],
+    "ndcg_drop_alert_threshold": 0.05
+  }
+}
