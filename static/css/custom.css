@@ -11046,3 +11046,25 @@ mark.partial {
 .explore-card.has-thumbnail {
     padding-top: 0;
 }
+
+/* Score debug overlay -- only shows when ?debug=1 fetches search-index.json */
+.debug-score-badge {
+    display: inline-block;
+    margin-left: 0.5rem;
+    padding: 0.125rem 0.4rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--text-secondary, #666);
+    background: var(--bg-secondary, #f4f4f4);
+    border: 1px solid var(--border-light, #ddd);
+    border-radius: 4px;
+    vertical-align: middle;
+    white-space: nowrap;
+    user-select: text;
+}
+.debug-score-badge::before {
+    content: 's:';
+    margin-right: 0.15rem;
+    color: var(--text-muted, #999);
+}
