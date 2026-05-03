@@ -188,6 +188,113 @@ class TestSessionEvaluable:
 
 
 # ---------------------------------------------------------------------------
+# fetch_events_via_api -- URL building, key handling, error mapping
+# ---------------------------------------------------------------------------
+class TestFetchEventsViaApi:
+    """Unit tests for the HTTP fetcher. Patches urllib.request.urlopen
+    so the suite remains offline."""
+
+    def _stub_urlopen(self, body: bytes, *, http_status: int = 200,
+                      raise_kind: type | None = None):
+        from contextlib import contextmanager
+        import urllib.error
+
+        @contextmanager
+        def fake_open(url, timeout):
+            self._called_url = url  # capture for assertion
+            if raise_kind is urllib.error.HTTPError:
+                raise urllib.error.HTTPError(url, http_status, "boom", {}, None)
+            if raise_kind is urllib.error.URLError:
+                raise urllib.error.URLError("network down")
+            class _Resp:
+                def __init__(self, b): self.b = b
+                def read(self): return self.b
+            yield _Resp(body)
+        return fake_open
+
+    def test_passes_admin_key_in_query(self, monkeypatch):
+        from lib import d1_sessions
+        body = json.dumps({"events": [_ev()]}).encode("utf-8")
+        monkeypatch.setattr(d1_sessions.urllib.request, "urlopen",
+                            self._stub_urlopen(body))
+        d1_sessions.fetch_events_via_api(
+            "http://w/", since_ms=1000, until_ms=2000, admin_key="SECRET",
+        )
+        assert "key=SECRET" in self._called_url
+        assert "since=1000" in self._called_url
+        assert "until=2000" in self._called_url
+
+    def test_includes_types_and_limit(self, monkeypatch):
+        from lib import d1_sessions
+        body = json.dumps({"events": []}).encode("utf-8")
+        monkeypatch.setattr(d1_sessions.urllib.request, "urlopen",
+                            self._stub_urlopen(body))
+        d1_sessions.fetch_events_via_api(
+            "http://w/", since_ms=0, until_ms=1, admin_key="K",
+            types=("click", "impression"), limit=12345,
+        )
+        assert "types=click,impression" in self._called_url
+        assert "limit=12345" in self._called_url
+
+    def test_404_raises_session_load_error_without_leaking_key(
+        self, monkeypatch
+    ):
+        from lib import d1_sessions
+        import urllib.error
+        monkeypatch.setattr(d1_sessions.urllib.request, "urlopen",
+                            self._stub_urlopen(
+                                b"", http_status=404,
+                                raise_kind=urllib.error.HTTPError))
+        with pytest.raises(d1_sessions.SessionLoadError) as exc:
+            d1_sessions.fetch_events_via_api(
+                "http://w/", since_ms=0, until_ms=1, admin_key="SECRET",
+            )
+        assert "SECRET" not in str(exc.value)
+
+    def test_url_error_raises_with_clean_url(self, monkeypatch):
+        from lib import d1_sessions
+        import urllib.error
+        monkeypatch.setattr(d1_sessions.urllib.request, "urlopen",
+                            self._stub_urlopen(
+                                b"", raise_kind=urllib.error.URLError))
+        with pytest.raises(d1_sessions.SessionLoadError) as exc:
+            d1_sessions.fetch_events_via_api(
+                "http://w/", since_ms=0, until_ms=1, admin_key="SECRET",
+            )
+        assert "SECRET" not in str(exc.value)
+
+    def test_non_json_body_raises(self, monkeypatch):
+        from lib import d1_sessions
+        monkeypatch.setattr(d1_sessions.urllib.request, "urlopen",
+                            self._stub_urlopen(b"not json"))
+        with pytest.raises(d1_sessions.SessionLoadError, match="non-JSON"):
+            d1_sessions.fetch_events_via_api(
+                "http://w/", since_ms=0, until_ms=1, admin_key="K",
+            )
+
+    def test_unexpected_shape_raises(self, monkeypatch):
+        from lib import d1_sessions
+        body = json.dumps({"data": []}).encode("utf-8")  # no 'events' key
+        monkeypatch.setattr(d1_sessions.urllib.request, "urlopen",
+                            self._stub_urlopen(body))
+        with pytest.raises(d1_sessions.SessionLoadError, match="unexpected shape"):
+            d1_sessions.fetch_events_via_api(
+                "http://w/", since_ms=0, until_ms=1, admin_key="K",
+            )
+
+    def test_admin_key_optional_for_legacy_callers(self, monkeypatch):
+        from lib import d1_sessions
+        body = json.dumps({"events": []}).encode("utf-8")
+        monkeypatch.setattr(d1_sessions.urllib.request, "urlopen",
+                            self._stub_urlopen(body))
+        # No admin_key -> URL should NOT contain key=
+        d1_sessions.fetch_events_via_api(
+            "http://w/", since_ms=0, until_ms=1,
+        )
+        assert "key=" not in self._called_url
+
+
+# ---------------------------------------------------------------------------
 # load_sessions arg validation
 # ---------------------------------------------------------------------------
 class TestLoadSessionsArgs:

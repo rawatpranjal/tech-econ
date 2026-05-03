@@ -99,6 +99,18 @@ export default {
         return handleRunSchema(request, env);
       }
 
+      // Route: GET /events-raw - Raw events for offline eval (protected)
+      // Used by lib/d1_sessions.fetch_events_via_api -- returns rows from
+      // the events table filtered by time + type. ADMIN_KEY-gated since
+      // events carry session_ids and IP-derived country.
+      if (request.method === 'GET' && url.pathname === '/events-raw') {
+        const key = url.searchParams.get('key');
+        if (!env.ADMIN_KEY || key !== env.ADMIN_KEY) {
+          return new Response('Unauthorized', { status: 401 });
+        }
+        return handleEventsRaw(request, env, url);
+      }
+
       // Route: GET /health - Health check (surfaces write freshness, not just bindings)
       if (request.method === 'GET' && url.pathname === '/health') {
         let lastEventTs = null;
@@ -1177,6 +1189,85 @@ async function handleClicks(request, env, origin, url) {
     return jsonResponse({ error: err.message }, origin, 500);
   }
 }
+
+// ============================================
+// GET /events-raw - Raw events for offline evaluation (admin-protected)
+// Backs lib/d1_sessions.fetch_events_via_api so rank_all_content's
+// eval gate can run via HTTP instead of the wrangler subprocess.
+// ============================================
+
+async function handleEventsRaw(request, env, url) {
+  if (!env.DB) {
+    return jsonResponse({ error: 'D1 not configured' }, null, 500);
+  }
+
+  const sinceMs = parseInt(url.searchParams.get('since') || '0', 10);
+  const untilParam = url.searchParams.get('until');
+  const untilMs = untilParam ? parseInt(untilParam, 10) : Date.now();
+  // Cap LIMIT at 100k so a careless request can't exhaust D1.
+  const limit = Math.min(
+    parseInt(url.searchParams.get('limit') || '50000', 10),
+    100000,
+  );
+  const typesCsv = url.searchParams.get('types') || 'click,impression,impress';
+
+  // Validate inputs.
+  if (!Number.isFinite(sinceMs) || sinceMs < 0) {
+    return jsonResponse(
+      { error: '`since` must be a non-negative epoch-ms integer' }, null, 400,
+    );
+  }
+  if (!Number.isFinite(untilMs) || untilMs < sinceMs) {
+    return jsonResponse(
+      { error: '`until` must be a finite epoch-ms integer >= since' },
+      null, 400,
+    );
+  }
+  // Whitelist event types so a caller can't drop arbitrary SQL through
+  // the comma-separated value. Anything not on this list is silently
+  // discarded.
+  const ALLOWED_TYPES = new Set([
+    'click', 'impression', 'impress', 'pageview', 'dwell',
+    'scroll_milestone', 'search', 'frustration', 'sequence',
+  ]);
+  const types = typesCsv
+    .split(',')
+    .map(t => t.trim())
+    .filter(t => ALLOWED_TYPES.has(t));
+  if (types.length === 0) {
+    return jsonResponse(
+      { error: '`types` produced no whitelisted entries' }, null, 400,
+    );
+  }
+
+  const placeholders = types.map(() => '?').join(',');
+  const sql = (
+    `SELECT id, type, session_id, timestamp, data ` +
+    `FROM events ` +
+    `WHERE type IN (${placeholders}) ` +
+    `AND timestamp >= ? AND timestamp <= ? ` +
+    `ORDER BY timestamp ASC LIMIT ?`
+  );
+
+  try {
+    const result = await env.DB.prepare(sql)
+      .bind(...types, sinceMs, untilMs, limit)
+      .all();
+    const rows = result.results || [];
+    return jsonResponse({
+      events: rows,
+      count: rows.length,
+      since: sinceMs,
+      until: untilMs,
+      types,
+      limit,
+    }, null);
+  } catch (err) {
+    console.error('events-raw error:', err);
+    return jsonResponse({ error: err.message }, null, 500);
+  }
+}
+
 
 // ============================================
 // GET /clicks-by-country - Clicks broken down by country
