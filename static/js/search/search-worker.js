@@ -10,6 +10,7 @@
 
 // Import MiniSearch from CDN
 importScripts('https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js');
+importScripts('/js/search/mmr.js');
 importScripts('/js/search/spellcheck.js');
 
 // State
@@ -23,6 +24,7 @@ var modelLoadPromise = null;
 var synonyms = null;
 var popularityBoostEnabled = true;  // Default ON
 var spellcheckVocab = null;          // Populated on handleLoadIndex
+var idToEmbeddingIndex = null;       // {[itemId]: rowIndex in `embeddings`}
 
 // Configuration
 var CONFIG = {
@@ -306,6 +308,16 @@ function handleLoadEmbeddings(payload) {
     } else {
       // Standard Float32 format
       embeddings = new Float32Array(payload.embeddingsBuffer);
+    }
+
+    // Build id -> row-index lookup for MMR (Re1) and any other consumer
+    // that wants O(1) embedding access by item id.
+    idToEmbeddingIndex = Object.create(null);
+    if (embeddingsMetadata && Array.isArray(embeddingsMetadata.items)) {
+      for (var mi = 0; mi < embeddingsMetadata.items.length; mi++) {
+        var meta = embeddingsMetadata.items[mi];
+        if (meta && meta.id) idToEmbeddingIndex[meta.id] = mi;
+      }
     }
 
     postMessage({
@@ -921,6 +933,21 @@ function reciprocalRankFusion(keywordResults, semanticResults, topK, query) {
   fusedResults.sort(function(a, b) {
     return b.rrfScore - a.rrfScore;
   });
+
+  // Re1 — MMR diversity rerank on the post-RRF top-K. Operates on a
+  // wider pool than topK so the diversification has room to shuffle,
+  // then truncates back to topK. Skipped silently if the MMR module
+  // didn't load or no embeddings are available.
+  if (typeof MMR !== 'undefined' && MMR.mmrRerank && embeddings && embeddingsMetadata) {
+    var dim = embeddingsMetadata.dimensions || CONFIG.DIMENSIONS;
+    var pool = fusedResults.slice(0, Math.max(topK * 3, 50)); // wider candidate pool
+    var diverse = MMR.mmrRerank(pool, function (id) {
+      var rowIdx = idToEmbeddingIndex ? idToEmbeddingIndex[id] : null;
+      if (rowIdx == null) return null;
+      return embeddings.subarray(rowIdx * dim, (rowIdx + 1) * dim);
+    }, { lambda: 0.7, topK: topK, scoreField: 'rrfScore' });
+    return diverse;
+  }
 
   return fusedResults.slice(0, topK);
 }
