@@ -150,6 +150,7 @@ python3 scripts/generate_embeddings.py # Regenerate vectors
 
 - **`papers.json` vs `papers_flat.json`** — Dual system, easy to desync. Use `papers_flat.json` for ranking/search.
 - **D1 analytics schema** — Ranking script depends on exact table structure
+- **Worker schema = code + migration.** When `analytics-worker/index.js` adds or renames a column referenced in an INSERT, the matching ALTER must (a) be added to `handleRunSchema` so it's idempotent and replayable, and (b) be applied to the live D1 by hitting `GET /run-schema?key=$ADMIN_KEY` *immediately after deploy*. Skipping this caused the 2026-03-26 → 2026-05-03 silent analytics blackout — five weeks of `200 ok` on `/events` while every D1 write rejected because `events.user_id` didn't exist.
 - **No test suite** — `npm test` is a placeholder; validation is manual
 - **Autoresearch uses git worktrees** — `autoresearch/run.sh` runs in an isolated worktree under `/tmp/` so it never touches the main checkout. Do NOT change it back to `git checkout` — that caused files written by concurrent sessions to be deleted.
 
@@ -282,9 +283,46 @@ npx wrangler d1 execute tech-econ-analytics-db --remote --command \
   "SELECT country, SUM(click_count) as clicks FROM clicks_by_country GROUP BY country ORDER BY clicks DESC"
 ```
 
----
+## Analytics health & runbook
 
-# Key Files Reference
+**Quick check (no auth):**
+```bash
+curl -s https://tech-econ-analytics-v2.pp712.workers.dev/health | python3 -m json.tool
+```
+Healthy: `status=ok`, `last_write_age_seconds < 3600`, `write_errors_today=0`, `events_24h > 0`.
+Degraded: `status=degraded` flips when last write is older than 24h or any write errors recorded today.
+
+**Symptoms of a broken pipeline:**
+- `/timeseries?days=N` returns nothing past a certain date
+- All `last_clicked` timestamps in `/clicks` are stale
+- `/health` → `status=degraded` (or `last_write_age_seconds` is null/huge)
+- The reranker reports `Items with engagement: 0` and falls back to `weighted` scoring
+- `python3 scripts/rank_all_content.py --source api` aborts with "REFUSING TO RERANK" (the staleness guard)
+
+**Recovery (in order):**
+1. **Backup first.** Never skip this step.
+   ```bash
+   cd analytics-worker && mkdir -p backups
+   npx wrangler d1 export tech-econ-analytics-db --remote \
+     --output=backups/$(date +%F)-pre-recovery.sql
+   ```
+2. **Re-run schema.** Idempotent — safe to call repeatedly.
+   ```bash
+   curl "https://tech-econ-analytics-v2.pp712.workers.dev/run-schema?key=$ADMIN_KEY"
+   ```
+3. **Smoke test** with a uniquely-named click:
+   ```bash
+   UNIQ="diag_$(date +%s)"
+   curl -s -X POST https://tech-econ-analytics-v2.pp712.workers.dev/events \
+     -H "Content-Type: application/json" -H "Origin: https://tech-econ.com" \
+     --data "{\"v\":2,\"events\":[{\"t\":\"click\",\"sid\":\"diag\",\"p\":\"/diag\",\"ts\":$(date +%s)000,\"d\":{\"type\":\"card\",\"name\":\"$UNIQ\",\"section\":\"diag\"}}]}"
+   sleep 3
+   curl -s "https://tech-econ-analytics-v2.pp712.workers.dev/clicks?limit=200" | grep "$UNIQ"
+   ```
+4. **Re-check** `/health` → `last_write_age_seconds` should now be small.
+5. If `/health` shows `last_error`, that's the actual D1 error (not just a generic failure).
+
+`backups/` is gitignored — D1 dumps contain IPs and weak user IDs, never commit them.
 
 **Configuration:**
 - `hugo.toml` - Hugo site config (baseURL: tech-econ.com)

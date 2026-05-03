@@ -12,6 +12,7 @@ import json
 import subprocess
 import argparse
 import math
+import sys
 from datetime import datetime
 from collections import defaultdict
 from pathlib import Path
@@ -267,10 +268,63 @@ def fetch_engagement_data():
     }
 
 
+def _fetch_json(url, timeout=30):
+    """GET a JSON URL with the same SSL fallback as fetch_engagement_from_api."""
+    import urllib.request
+    import ssl
+    req = urllib.request.Request(url, headers={
+        'User-Agent': 'tech-econ-ranker/1.0',
+        'Accept': 'application/json',
+    })
+    try:
+        ctx = ssl.create_default_context()
+        with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
+            return json.loads(resp.read().decode())
+    except urllib.error.URLError as ssl_err:
+        if 'CERTIFICATE_VERIFY_FAILED' in str(ssl_err):
+            ctx = ssl.create_default_context()
+            ctx.check_hostname = False
+            ctx.verify_mode = ssl.CERT_NONE
+            with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
+                return json.loads(resp.read().decode())
+        raise
+
+
+def assert_analytics_fresh():
+    """Abort the rerank if /health says writes are stale or failing.
+
+    Prevents the silent regenerate-with-stale-data failure mode that produced
+    five identical reranks between 2026-03-26 and 2026-05-03. The check is
+    advisory: a worker that hasn't been redeployed with the new /health body
+    will simply lack `last_write_age_seconds` and we degrade to a warning.
+    """
+    try:
+        health = _fetch_json(f"{ANALYTICS_API}/health", timeout=10)
+    except Exception as e:
+        print(f"  Warning: /health unreachable ({e}); proceeding with potentially stale data")
+        return
+    age = health.get('last_write_age_seconds')
+    status = health.get('status')
+    if age is None and status is None:
+        print(f"  Note: /health is the legacy shape (no freshness data). Worker not yet redeployed.")
+        return
+    if status == 'degraded' or (age is not None and age > 86400):
+        raise SystemExit(
+            f"\n  REFUSING TO RERANK: analytics health is degraded.\n"
+            f"  /health: {health}\n"
+            f"  Fix the worker first (see CLAUDE.md → Analytics health), then re-run.\n"
+            f"  Override with --ignore-stale if you really mean it.\n"
+        )
+    print(f"  /health ok: last write {age}s ago, events_24h={health.get('events_24h')}")
+
+
 def fetch_engagement_from_api():
     """Fetch all engagement signals from the analytics HTTP API."""
     import urllib.request
     import ssl
+
+    if '--ignore-stale' not in sys.argv:
+        assert_analytics_fresh()
 
     url = f"{ANALYTICS_API}/ranking-export"
     print(f"\nFetching engagement data from API: {url}")

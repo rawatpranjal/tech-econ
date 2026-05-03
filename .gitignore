@@ -27,3 +27,9 @@ data/.discovery_state.json
 data/.discovery_rejected.json
 data/.discovery_digest.html
 data/.discovery_paper_staging.json
+
+# Book PDFs - keep markdown output, never commit the binaries
+books/**/source.pdf
+
+# D1 dumps — contain IPs and weak user IDs, never commit
+analytics-worker/backups/

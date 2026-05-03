@@ -95,13 +95,45 @@ export default {
         return handleRunSchema(request, env);
       }
 
-      // Route: GET /health - Health check
+      // Route: GET /health - Health check (surfaces write freshness, not just bindings)
       if (request.method === 'GET' && url.pathname === '/health') {
+        let lastEventTs = null;
+        let events24h = null;
+        let writeErrorsToday = 0;
+        let lastError = null;
+        if (env.DB) {
+          try {
+            const r = await env.DB.prepare(
+              `SELECT MAX(timestamp) AS ts, COUNT(*) AS n FROM events WHERE timestamp > ?`
+            ).bind(Date.now() - 86400000).first();
+            lastEventTs = r?.ts ?? null;
+            events24h = r?.n ?? 0;
+          } catch (_) { /* schema not initialized — leave nulls */ }
+        }
+        if (env.ANALYTICS_EVENTS) {
+          const date = new Date().toISOString().slice(0, 10);
+          try {
+            const k = await env.ANALYTICS_EVENTS.get(`health:write_errors:${date}`);
+            writeErrorsToday = k ? parseInt(k, 10) : 0;
+            if (writeErrorsToday > 0) {
+              const e = await env.ANALYTICS_EVENTS.get(`health:last_error:${date}`);
+              lastError = e ? JSON.parse(e) : null;
+            }
+          } catch (_) {}
+        }
+        const lastWriteAgeSec = lastEventTs ? Math.floor((Date.now() - lastEventTs) / 1000) : null;
+        const status = (lastWriteAgeSec === null || lastWriteAgeSec > 86400 || writeErrorsToday > 0)
+          ? 'degraded' : 'ok';
         return jsonResponse({
-          status: 'ok',
+          status,
           d1: !!env.DB,
           kv: !!env.ANALYTICS_EVENTS,
-          timestamp: Date.now()
+          timestamp: Date.now(),
+          last_event_ts: lastEventTs,
+          last_write_age_seconds: lastWriteAgeSec,
+          events_24h: events24h,
+          write_errors_today: writeErrorsToday,
+          last_error: lastError
         }, null);
       }
 
@@ -458,16 +490,44 @@ async function processEvents(env, events, country, receivedAt, clientIP, userAge
     }
   }
 
-  try {
-    // Execute batch insert
-    if (batch.length > 0) {
+  // Events batch and aggregate updates are independent paths. A schema mismatch
+  // on the events table (e.g. missing user_id column) used to also kill aggregates
+  // because both lived in one try/catch — that's the 2026-03-26 → 05-03 blackout.
+  if (batch.length > 0) {
+    try {
       await env.DB.batch(batch);
+    } catch (err) {
+      console.error('events batch insert failed:', err.message, '| sample:',
+                    JSON.stringify(events[0] || {}).slice(0, 200));
+      await recordWriteFailure(env, 'events_batch', err.message);
     }
+  }
 
-    // Update aggregates
+  try {
     await updateAggregates(env, aggregates, country);
   } catch (err) {
-    console.error('D1 batch error:', err);
+    console.error('aggregate updates failed:', err.message);
+    await recordWriteFailure(env, 'aggregates', err.message);
+  }
+}
+
+// Increment a daily KV counter so /health can surface silent write failures.
+// Tolerates KV being absent (best-effort).
+async function recordWriteFailure(env, kind, message) {
+  if (!env.ANALYTICS_EVENTS) return;
+  const date = new Date().toISOString().slice(0, 10);
+  const key = `health:write_errors:${date}`;
+  try {
+    const cur = await env.ANALYTICS_EVENTS.get(key);
+    const next = (cur ? parseInt(cur, 10) : 0) + 1;
+    // Keep 14 days; small payload so this is cheap
+    await env.ANALYTICS_EVENTS.put(key, String(next), { expirationTtl: 86400 * 14 });
+    // Also write last error sample for debugging
+    await env.ANALYTICS_EVENTS.put(`health:last_error:${date}`,
+      JSON.stringify({ kind, message: String(message).slice(0, 500), ts: Date.now() }),
+      { expirationTtl: 86400 * 14 });
+  } catch (e) {
+    console.error('recordWriteFailure failed:', e.message);
   }
 }
 
@@ -1512,12 +1572,34 @@ async function handleRunSchema(request, env) {
 
   const results = [];
 
+  // Idempotent ALTER helper — SQLite has no IF NOT EXISTS for columns, so we
+  // run the ALTER and swallow the "duplicate column" error on replay.
+  const safeAlter = async (sql, label) => {
+    try {
+      await env.DB.prepare(sql).run();
+      results.push(`OK: ${label}`);
+    } catch (e) {
+      if (/duplicate column|already exists/i.test(e.message || '')) {
+        results.push(`SKIP: ${label} (already applied)`);
+      } else {
+        throw e;
+      }
+    }
+  };
+
   try {
     // Create clicks_by_country table (each statement separately for D1 compatibility)
     await env.DB.prepare(`CREATE TABLE IF NOT EXISTS clicks_by_country (country TEXT NOT NULL, name TEXT NOT NULL, section TEXT, category TEXT, click_count INTEGER DEFAULT 1, last_clicked DATETIME DEFAULT CURRENT_TIMESTAMP, UNIQUE(country, name, section))`).run();
     await env.DB.prepare(`CREATE INDEX IF NOT EXISTS idx_clicks_country ON clicks_by_country(country)`).run();
     await env.DB.prepare(`CREATE INDEX IF NOT EXISTS idx_clicks_country_count ON clicks_by_country(click_count DESC)`).run();
     results.push('Created clicks_by_country table');
+
+    // user_identity migration (was migration-user-identity.sql; inlined here so /run-schema is the
+    // single replayable entry point). Skipping this on deploy caused the 2026-03-26 → 05-03 blackout.
+    await safeAlter(`ALTER TABLE events            ADD COLUMN user_id TEXT`, 'events.user_id');
+    await safeAlter(`ALTER TABLE session_features  ADD COLUMN user_id TEXT`, 'session_features.user_id');
+    await safeAlter(`ALTER TABLE session_sequences ADD COLUMN user_id TEXT`, 'session_sequences.user_id');
+    await safeAlter(`CREATE INDEX IF NOT EXISTS idx_events_user ON events(user_id)`, 'idx_events_user');
 
     // Backfill from raw events table
     const backfill = await env.DB.prepare(`

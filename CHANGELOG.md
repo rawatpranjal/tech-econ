@@ -2,6 +2,7 @@
 
 ## 2026-05-03
 - **Rerank**: Refresh global rankings with latest D1 engagement (518 items with signals, 309 with clicks); homepage trending repopulated (12 items, was empty); regenerate `homepage_rows.json`. Top item: "Causal Inference: A Statistical Learning Approach" (73 clicks).
+- **Analytics blackout fix**: Diagnosed 5-week silent write failure on the v2 worker (`events.user_id` column missing — schema migration never applied). Permanent code fixes: `handleRunSchema` now self-heals the user_identity migration idempotently; `processEvents` no longer wraps the events batch and `updateAggregates` in one try/catch (a schema mismatch on events used to silently kill all aggregate writes too); `/health` now reports `last_event_ts`, `last_write_age_seconds`, `events_24h`, `write_errors_today`, with `status=degraded` when stale; rerank script aborts if `/health` is degraded (`--ignore-stale` to override). Runbook added to `claude.md`. Migration application + deploy pending wrangler reauth.
 
 ## 2026-03-26
 - **Weekly reranking pipeline**: `/ranking-export` API endpoint on analytics worker, `--source=api` mode for ranking script, scheduled remote trigger (Monday 6am ET)
