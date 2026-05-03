@@ -9005,6 +9005,116 @@ mark.partial {
     }
 }
 
+/* ========================================
+   Because You Viewed X - homepage row
+   Surfaces related-items.json[lastLocalHistoryItem]
+   ======================================== */
+
+.because-you-viewed-section {
+    margin-bottom: 1.5rem;
+    padding: 1rem 1.25rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+.byv-header {
+    margin-bottom: 0.75rem;
+}
+
+.byv-header h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.byv-header h3 em {
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.byv-cards {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+    scrollbar-width: thin;
+}
+
+.byv-card {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.65rem 0.9rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    text-decoration: none;
+    min-width: 200px;
+    max-width: 260px;
+    transition: all 0.15s;
+}
+
+.byv-card:hover {
+    border-color: var(--accent);
+    background: var(--accent-bg);
+    transform: translateY(-1px);
+}
+
+.byv-type {
+    font-size: 0.65rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--accent);
+    opacity: 0.8;
+}
+
+.byv-name {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.byv-category {
+    font-size: 0.7rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.byv-desc {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .because-you-viewed-section {
+        margin: 0 -1rem 1rem -1rem;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+
+    .byv-cards {
+        margin: 0 -0.5rem;
+        padding: 0 0.5rem 0.25rem 0.5rem;
+    }
+}
+
 /* ============================================
    EXPLORE PAGE - Netflix-Style Scrollers
    ============================================ */
