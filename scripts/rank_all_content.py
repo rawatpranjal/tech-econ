@@ -1355,6 +1355,8 @@ def _run_offline_eval_gate(
     analytics_api: str,
     skip_regression_check: bool,
     holdout_days_override: int | None = None,
+    cold_start_method: str = 'regression',
+    notes_override: str = '',
 ) -> None:
     """Phase-1 offline evaluation: pull D1 sessions, score this run's
     rankings against the actual clicks, append a row to metrics.csv, and
@@ -1408,13 +1410,19 @@ def _run_offline_eval_gate(
 
     metrics_csv_path = Path(__file__).resolve().parent.parent / metrics_csv
 
+    # Compose a structured notes string. Auto-include the cold-start
+    # method so future readers of metrics.csv can tell regression rows
+    # apart from knn-bge rows. The user's --notes (if any) is appended.
+    auto_notes = f"source={source} cold_start={cold_start_method}"
+    notes = f"{auto_notes} | {notes_override}" if notes_override else auto_notes
+
     result = _run_evaluation(
         scores=scores,
         sessions=sessions,
         holdout_days=holdout_days,
         k_values=k_values,
         git_sha=_current_git_sha(),
-        notes=f"rerank source={source}",
+        notes=notes,
     )
     print(f"  sessions_total={result.n_sessions_total} "
           f"evaluable={result.n_sessions_evaluable} "
@@ -1450,6 +1458,10 @@ def main():
     parser.add_argument('--eval-holdout-days', type=int, default=None,
                         help='Override config.evaluation.holdout_days for the eval gate. '
                              'Useful for one-off seed runs against pre-blackout data.')
+    parser.add_argument('--eval-notes', default='',
+                        help='Free-form note appended to the metrics.csv row, after the '
+                             'auto-generated "source=X cold_start=Y" prefix. '
+                             'Example: --eval-notes "ra4-test"')
     parser.add_argument(
         '--cold-start-method',
         choices=['regression', 'knn', 'knn-tfidf', 'knn-bge'],
@@ -1791,6 +1803,8 @@ def main():
                 analytics_api=args.analytics_api,
                 skip_regression_check=args.skip_regression_check,
                 holdout_days_override=args.eval_holdout_days,
+                cold_start_method=args.cold_start_method,
+                notes_override=args.eval_notes,
             )
         except _RegressionAlert as e:
             print(f"\nABORTING RERANK: {e}", file=sys.stderr)
