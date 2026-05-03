@@ -22,6 +22,7 @@ import numpy as np
 from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import cross_val_predict, train_test_split
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score, roc_auc_score, average_precision_score
+from sklearn.feature_extraction.text import TfidfVectorizer
 from sentence_transformers import SentenceTransformer
 
 # Make `lib/` importable when this script is run directly (e.g. via the
@@ -41,6 +42,10 @@ from lib.data_io import current_git_sha as _current_git_sha
 from lib.trending import (
     build_trending_embedding_lookup,
     select_diverse_trending,
+)
+from lib.cold_start import (
+    propagate_cold_start_scores as _knn_propagate_cold_start,
+    make_tfidf_similarity_fn as _make_tfidf_similarity_fn,
 )
 from lib.eval_runner import (
     RegressionAlert as _RegressionAlert,
@@ -1206,6 +1211,71 @@ def apply_citations_boost(items, scores):
     return scores
 
 
+def _knn_cold_start_via_tfidf(items, observed_scores, *, k=5):
+    """Compute k-NN propagated cold-start scores using TF-IDF metadata
+    similarity.
+
+    Wraps lib.cold_start.propagate_cold_start_scores. We pass discount=1.0
+    here and apply the cold-start discount in the caller, so an A/B vs the
+    regression path compares method-vs-method, not discount-vs-discount.
+
+    Returns dict[name -> score] for cold items only. Items already in
+    observed_scores are not included.
+    """
+    print("\nBuilding TF-IDF features for k-NN cold-start...")
+    texts = []
+    for item in items:
+        text_parts = [
+            item.get('name', ''),
+            item.get('description', ''),
+            item.get('summary', ''),
+            item.get('category', ''),
+            safe_join(item.get('tags', [])),
+            safe_join(item.get('topic_tags', [])),
+            item.get('difficulty', ''),
+            safe_join(item.get('audience', [])),
+            item.get('type', ''),
+            safe_join(item.get('synthetic_questions', [])),
+            safe_join(item.get('use_cases', [])),
+            item.get('best_for', ''),
+            safe_join(item.get('domain_tags', [])),
+            safe_join(item.get('key_insights', [])),
+            safe_join(item.get('mentioned_tools', [])),
+            item.get('language', ''),
+            item.get('content_format', ''),
+            item.get('speaker_expertise', ''),
+            item.get('company_context', ''),
+            item.get('experience_level', ''),
+            item.get('data_modality', ''),
+            safe_join(item.get('related_packages', [])),
+        ]
+        texts.append(' '.join(str(p) for p in text_parts if p))
+
+    vectorizer = TfidfVectorizer(
+        max_features=1000,
+        stop_words='english',
+        ngram_range=(1, 2),
+        min_df=2,
+        max_df=0.8,
+    )
+    try:
+        feature_matrix = vectorizer.fit_transform(texts)
+    except ValueError as e:
+        # Happens on tiny corpora where every term gets pruned.
+        print(f"  TF-IDF build failed ({e}); k-NN cold-start unavailable.")
+        return {}
+    print(f"  Feature matrix: {feature_matrix.shape}")
+
+    sim_fn = _make_tfidf_similarity_fn(feature_matrix)
+    result = _knn_propagate_cold_start(
+        items, observed_scores, sim_fn,
+        k=k, discount=1.0, name_key='name',
+    )
+    print(f"  Cold-start k-NN: observed={result.n_observed} "
+          f"cold={result.n_cold} fallback={result.fallback}")
+    return result.scores
+
+
 def _run_offline_eval_gate(
     *,
     rankings: list,
@@ -1309,6 +1379,13 @@ def main():
     parser.add_argument('--eval-holdout-days', type=int, default=None,
                         help='Override config.evaluation.holdout_days for the eval gate. '
                              'Useful for one-off seed runs against pre-blackout data.')
+    parser.add_argument('--cold-start-method', choices=['regression', 'knn'],
+                        default='regression',
+                        help='How to score items with no observed engagement. '
+                             '"regression" (default) uses the trained model output * discount. '
+                             '"knn" propagates observed scores via TF-IDF k-NN '
+                             '(lib.cold_start). Ra2 — A/B with replay_eval.py before '
+                             'flipping the default.')
     parser.add_argument('--analytics-api',
                         default='https://tech-econ-analytics-v2.pp712.workers.dev',
                         help='analytics-worker URL used by --evaluate when --source api.')
@@ -1382,8 +1459,34 @@ def main():
     # Step 4: Train regression model to predict engagement scores
     model, regression_scores, encoders = train_regression_model(items, item_signals)
 
-    # Step 5: Hybrid scoring - actual engagement for observed, predicted for cold-start
-    if regression_scores:
+    # Step 5: Hybrid scoring - actual engagement for observed, propagated for cold-start
+    # Two cold-start methods (Ra2 audit):
+    #   regression: norm_predicted * 0.3 (current production path)
+    #   knn:        lib.cold_start k-NN propagation over TF-IDF features
+    cold_start_method = args.cold_start_method
+
+    if cold_start_method == 'knn':
+        # k-NN path. We still compute regression_scores above so the
+        # diagnostics print out, but we ignore them for cold scoring.
+        cold_lookup = _knn_cold_start_via_tfidf(
+            items=items,
+            observed_scores=raw_scores,
+            k=5,  # TODO: thread from config.ranking.cold_start_k_neighbors
+        )
+        # Apply the same 0.3 discount the regression path uses, so the
+        # A/B compares method-vs-method, not discount-vs-discount.
+        norm_engagement = normalize_scores(raw_scores)
+        norm_cold = normalize_scores(cold_lookup) if cold_lookup else {}
+        combined_scores = {}
+        for item in items:
+            name = item['name']
+            if name in any_interaction_names:
+                combined_scores[name] = norm_engagement.get(name, 0)
+            else:
+                combined_scores[name] = norm_cold.get(name, 0) * 0.3
+        combined_scores = normalize_scores(combined_scores)
+        scoring_method = 'hybrid_knn'
+    elif regression_scores:
         # Normalize actual engagement scores
         norm_engagement = normalize_scores(raw_scores)
         # Normalize predicted scores
