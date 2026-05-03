@@ -59,6 +59,23 @@ class TestParseEvents:
         assert s1.viewed_names == frozenset({"tool a"})
         assert s1.clicked_names == frozenset({"tool b"})
 
+    def test_full_word_impression_event_type(self):
+        # Regression: 2026-05-03 the worker writes type='impression'
+        # (full word) but we were filtering for 'impress'. 6627
+        # impression rows in production were silently dropped from
+        # the eval gate. Both spellings must be accepted.
+        events = [
+            _ev(type_="impression", sid="s1", name="Tool A"),
+            _ev(type_="impress", sid="s2", name="Tool B"),  # legacy short form
+            _ev(type_="click", sid="s1", name="Tool A"),
+        ]
+        sessions = parse_events_to_sessions(events)
+        s1 = next(s for s in sessions if s.session_id == "s1")
+        s2 = next(s for s in sessions if s.session_id == "s2")
+        assert "tool a" in s1.viewed_names
+        assert "tool a" in s1.clicked_names
+        assert "tool b" in s2.viewed_names
+
     def test_started_at_is_min_timestamp(self):
         events = [
             _ev(sid="s1", ts_ms=2_000_000_000_000, name="Tool A"),

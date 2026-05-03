@@ -21,8 +21,11 @@ hugo --gc --minify
 echo "=== Committing changes ==="
 # reports/metrics.csv is produced by the new offline-eval gate inside
 # rank_all_content.py (Phase 1, master_recsys_planner.md). Stage it
-# alongside the data updates so the time-series stays in git.
-git add data/*.json static/data/*.json hugo_stats.json reports/metrics.csv
+# alongside the data updates when present -- if the eval gate skipped
+# (eg. D1 unreachable), the file may not exist yet and we shouldn't
+# fail the whole rerank.
+git add data/*.json static/data/*.json hugo_stats.json
+[ -f reports/metrics.csv ] && git add reports/metrics.csv
 git commit -m "$(cat <<'EOF'
 Update model_score with latest engagement data
 

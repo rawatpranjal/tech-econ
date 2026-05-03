@@ -1213,6 +1213,7 @@ def _run_offline_eval_gate(
     source: str,
     analytics_api: str,
     skip_regression_check: bool,
+    holdout_days_override: int | None = None,
 ) -> None:
     """Phase-1 offline evaluation: pull D1 sessions, score this run's
     rankings against the actual clicks, append a row to metrics.csv, and
@@ -1226,7 +1227,10 @@ def _run_offline_eval_gate(
     dev without internet).
     """
     config = _load_recsys_config()
-    holdout_days = config.evaluation.holdout_days
+    holdout_days = (
+        holdout_days_override if holdout_days_override is not None
+        else config.evaluation.holdout_days
+    )
     k_values = tuple(config.evaluation.k_values)
     threshold = config.evaluation.ndcg_drop_alert_threshold
 
@@ -1241,11 +1245,15 @@ def _run_offline_eval_gate(
     print("\n=== Offline evaluation ===")
     print(f"  holdout_days={holdout_days} k_values={k_values} threshold={threshold}")
 
+    # The /events-raw HTTP endpoint isn't deployed yet (Phase 2
+    # follow-up); session-level evaluation always reads via wrangler
+    # today. The script's --source flag (api vs d1) controls aggregate
+    # engagement fetch, not raw events. Once /events-raw lands we can
+    # flip this to honour --source.
     try:
         sessions = _load_sessions(
             holdout_days=holdout_days,
-            source='api' if source == 'api' else 'wrangler',
-            api_url=analytics_api if source == 'api' else None,
+            source='wrangler',
         )
     except _SessionLoadError as e:
         print(f"  ERROR: D1 session load failed: {e}", file=sys.stderr)
@@ -1298,6 +1306,9 @@ def main():
                         help='Append the metrics row but do not abort on NDCG@10 drop.')
     parser.add_argument('--metrics-csv', default='reports/metrics.csv',
                         help='Path to the metrics history CSV.')
+    parser.add_argument('--eval-holdout-days', type=int, default=None,
+                        help='Override config.evaluation.holdout_days for the eval gate. '
+                             'Useful for one-off seed runs against pre-blackout data.')
     parser.add_argument('--analytics-api',
                         default='https://tech-econ-analytics-v2.pp712.workers.dev',
                         help='analytics-worker URL used by --evaluate when --source api.')
@@ -1585,6 +1596,7 @@ def main():
                 source=args.source,
                 analytics_api=args.analytics_api,
                 skip_regression_check=args.skip_regression_check,
+                holdout_days_override=args.eval_holdout_days,
             )
         except _RegressionAlert as e:
             print(f"\nABORTING RERANK: {e}", file=sys.stderr)
