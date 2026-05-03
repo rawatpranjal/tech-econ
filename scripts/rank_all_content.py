@@ -46,6 +46,7 @@ from lib.trending import (
 from lib.cold_start import (
     propagate_cold_start_scores as _knn_propagate_cold_start,
     make_tfidf_similarity_fn as _make_tfidf_similarity_fn,
+    make_dense_similarity_fn as _make_dense_similarity_fn,
 )
 from lib.eval_runner import (
     RegressionAlert as _RegressionAlert,
@@ -1211,17 +1212,9 @@ def apply_citations_boost(items, scores):
     return scores
 
 
-def _knn_cold_start_via_tfidf(items, observed_scores, *, k=5):
-    """Compute k-NN propagated cold-start scores using TF-IDF metadata
-    similarity.
-
-    Wraps lib.cold_start.propagate_cold_start_scores. We pass discount=1.0
-    here and apply the cold-start discount in the caller, so an A/B vs the
-    regression path compares method-vs-method, not discount-vs-discount.
-
-    Returns dict[name -> score] for cold items only. Items already in
-    observed_scores are not included.
-    """
+def _build_tfidf_sim_fn(items):
+    """TF-IDF feature matrix over 22 metadata fields → similarity_fn.
+    Returns None if the corpus is too small for TF-IDF (rare)."""
     print("\nBuilding TF-IDF features for k-NN cold-start...")
     texts = []
     for item in items:
@@ -1261,17 +1254,95 @@ def _knn_cold_start_via_tfidf(items, observed_scores, *, k=5):
     try:
         feature_matrix = vectorizer.fit_transform(texts)
     except ValueError as e:
-        # Happens on tiny corpora where every term gets pruned.
-        print(f"  TF-IDF build failed ({e}); k-NN cold-start unavailable.")
-        return {}
-    print(f"  Feature matrix: {feature_matrix.shape}")
+        print(f"  TF-IDF build failed ({e}); falling back.")
+        return None
+    print(f"  TF-IDF feature matrix: {feature_matrix.shape}")
+    return _make_tfidf_similarity_fn(feature_matrix)
 
-    sim_fn = _make_tfidf_similarity_fn(feature_matrix)
+
+def _build_bge_sim_fn(items, *, name_key='name'):
+    """Load static/embeddings/search-embeddings.bin (bge-large-en-v1.5,
+    1024 dim) and build a similarity_fn aligned to the `items` list.
+
+    Items not present in the embedding catalog get a zero row, which
+    lib.cold_start.cosine_sim coerces to 0 similarity (defensive).
+
+    Returns None if the bin / metadata files are missing or malformed.
+    """
+    print("\nLoading BGE embeddings for k-NN cold-start...")
+    repo_root = Path(__file__).resolve().parents[1]
+    meta_path = repo_root / 'static' / 'embeddings' / 'search-metadata.json'
+    bin_path = repo_root / 'static' / 'embeddings' / 'search-embeddings.bin'
+
+    if not (meta_path.exists() and bin_path.exists()):
+        print(f"  BGE files missing ({meta_path.name}, {bin_path.name}); falling back.")
+        return None
+
+    try:
+        with meta_path.open() as f:
+            meta = json.load(f)
+        dim = int(meta['dimensions'])
+        n_total = int(meta['count'])
+        catalog_items = meta.get('items', [])
+        if len(catalog_items) != n_total:
+            print(f"  BGE metadata mismatch (count={n_total} but {len(catalog_items)} items); falling back.")
+            return None
+    except (KeyError, ValueError, json.JSONDecodeError) as e:
+        print(f"  BGE metadata parse failed ({e}); falling back.")
+        return None
+
+    raw = np.fromfile(bin_path, dtype=np.float32)
+    if raw.size != n_total * dim:
+        print(f"  BGE bin size mismatch ({raw.size} != {n_total * dim}); falling back.")
+        return None
+    full_matrix = raw.reshape(n_total, dim)
+
+    # rank_all_content normalises item names to lowercase (line ~210);
+    # the embedding catalog keeps original case. Match case-insensitively.
+    name_to_row = {}
+    for i, it in enumerate(catalog_items):
+        n = it.get('name')
+        if isinstance(n, str) and n:
+            name_to_row[n.strip().lower()] = i
+
+    out_matrix = np.zeros((len(items), dim), dtype=np.float32)
+    matched = 0
+    for i, item in enumerate(items):
+        name = item.get(name_key)
+        if isinstance(name, str):
+            row = name_to_row.get(name.strip().lower())
+            if row is not None:
+                out_matrix[i] = full_matrix[row]
+                matched += 1
+    print(f"  BGE matched {matched}/{len(items)} items "
+          f"({matched / len(items) * 100:.1f}% coverage)")
+    if matched < 0.5 * len(items):
+        print("  WARNING: less than half the items have BGE embeddings — "
+              "cold items may degrade to zero-similarity (random-tie) propagation.")
+
+    return _make_dense_similarity_fn(out_matrix)
+
+
+def _knn_cold_start(items, observed_scores, *, similarity, k=5):
+    """Compute k-NN propagated cold-start scores. `similarity` is one of
+    'tfidf' or 'bge'. Returns dict[name -> score] for cold items only;
+    discount=1.0 (caller applies the cold-start discount uniformly so
+    A/B comparisons are method-vs-method).
+    """
+    if similarity == 'tfidf':
+        sim_fn = _build_tfidf_sim_fn(items)
+    elif similarity == 'bge':
+        sim_fn = _build_bge_sim_fn(items)
+    else:
+        raise ValueError(f"unknown similarity {similarity!r}; expected 'tfidf' or 'bge'")
+    if sim_fn is None:
+        return {}
+
     result = _knn_propagate_cold_start(
         items, observed_scores, sim_fn,
         k=k, discount=1.0, name_key='name',
     )
-    print(f"  Cold-start k-NN: observed={result.n_observed} "
+    print(f"  Cold-start k-NN ({similarity}): observed={result.n_observed} "
           f"cold={result.n_cold} fallback={result.fallback}")
     return result.scores
 
@@ -1379,13 +1450,17 @@ def main():
     parser.add_argument('--eval-holdout-days', type=int, default=None,
                         help='Override config.evaluation.holdout_days for the eval gate. '
                              'Useful for one-off seed runs against pre-blackout data.')
-    parser.add_argument('--cold-start-method', choices=['regression', 'knn'],
-                        default='regression',
-                        help='How to score items with no observed engagement. '
-                             '"regression" (default) uses the trained model output * discount. '
-                             '"knn" propagates observed scores via TF-IDF k-NN '
-                             '(lib.cold_start). Ra2 — A/B with replay_eval.py before '
-                             'flipping the default.')
+    parser.add_argument(
+        '--cold-start-method',
+        choices=['regression', 'knn', 'knn-tfidf', 'knn-bge'],
+        default='regression',
+        help='How to score items with no observed engagement. '
+             '"regression" (default) uses the trained model output * discount. '
+             '"knn-tfidf" propagates observed scores via TF-IDF k-NN. '
+             '"knn-bge" propagates via BGE-embedding k-NN '
+             '(static/embeddings/search-embeddings.bin, 1024 dim). '
+             '"knn" is a deprecated alias for "knn-tfidf". '
+             'Ra2 — A/B with replay_eval.py before flipping the default.')
     parser.add_argument('--analytics-api',
                         default='https://tech-econ-analytics-v2.pp712.workers.dev',
                         help='analytics-worker URL used by --evaluate when --source api.')
@@ -1465,12 +1540,16 @@ def main():
     #   knn:        lib.cold_start k-NN propagation over TF-IDF features
     cold_start_method = args.cold_start_method
 
-    if cold_start_method == 'knn':
+    if cold_start_method in ('knn', 'knn-tfidf', 'knn-bge'):
         # k-NN path. We still compute regression_scores above so the
         # diagnostics print out, but we ignore them for cold scoring.
-        cold_lookup = _knn_cold_start_via_tfidf(
+        # 'knn' is a legacy alias for 'knn-tfidf' (kept so the just-merged
+        # Ra2 PR's docs don't break).
+        similarity = 'bge' if cold_start_method == 'knn-bge' else 'tfidf'
+        cold_lookup = _knn_cold_start(
             items=items,
             observed_scores=raw_scores,
+            similarity=similarity,
             k=5,  # TODO: thread from config.ranking.cold_start_k_neighbors
         )
         # Apply the same 0.3 discount the regression path uses, so the
@@ -1485,7 +1564,7 @@ def main():
             else:
                 combined_scores[name] = norm_cold.get(name, 0) * 0.3
         combined_scores = normalize_scores(combined_scores)
-        scoring_method = 'hybrid_knn'
+        scoring_method = f'hybrid_{cold_start_method.replace("-", "_")}'
     elif regression_scores:
         # Normalize actual engagement scores
         norm_engagement = normalize_scores(raw_scores)
