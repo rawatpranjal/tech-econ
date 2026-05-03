@@ -8,3 +8,8 @@ pytest>=8.0
 pytest-cov>=5.0
 ruff>=0.5
 mypy>=1.10
+
+# Lightweight numerical libs needed by lib/ unit tests. NOT a full
+# replacement for requirements.txt — heavy ML deps (sentence-transformers,
+# lightgbm) stay there.
+numpy>=1.26
