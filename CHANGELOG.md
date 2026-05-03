@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-05-03
+- **Rerank**: Refresh global rankings with latest D1 engagement (518 items with signals, 309 with clicks); homepage trending repopulated (12 items, was empty); regenerate `homepage_rows.json`. Top item: "Causal Inference: A Statistical Learning Approach" (73 clicks).
+
 ## 2026-03-26
 - **Weekly reranking pipeline**: `/ranking-export` API endpoint on analytics worker, `--source=api` mode for ranking script, scheduled remote trigger (Monday 6am ET)
 - **Netflix-style homepage**: Rotating hero carousel, card images from data, career items removed, dramatic gradient
