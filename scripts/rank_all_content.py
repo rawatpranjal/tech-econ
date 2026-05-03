@@ -38,6 +38,7 @@ from lib.model_cache import (
 )
 from lib.recsys_config import load as _load_recsys_config
 from lib.data_io import current_git_sha as _current_git_sha
+from lib.diversity import mmr_rerank as _mmr_rerank
 from lib.eval_runner import (
     RegressionAlert as _RegressionAlert,
     check_regression as _check_regression,
@@ -1202,6 +1203,83 @@ def apply_citations_boost(items, scores):
     return scores
 
 
+def select_diverse_trending(
+    rankings,
+    *,
+    n=12,
+    lambda_=0.7,
+    pool_multiplier=3,
+    min_pool_size=30,
+    embedding_lookup=None,
+):
+    """Pick the homepage trending row with MMR diversification.
+
+    Replaces the legacy max-2-per-type / max-2-per-category rule
+    (commit cce2ebd) with a principled MMR pass (lib.diversity.mmr_rerank,
+    same module that powers search-side diversification at lambda=0.7).
+
+    Filters
+        - drops cold-start items (no observed engagement)
+        - drops 'career' items (legacy: career portals shouldn't trend)
+
+    `embedding_lookup` is callable(name) -> np.ndarray | None. When
+    None we fall through to pure-relevance ordering (mmr_rerank handles
+    that internally) — the homepage row still works, it just isn't
+    diversified.
+    """
+    candidates = [
+        r for r in rankings
+        if not r.get('cold_start', False) and r.get('type') != 'career'
+    ]
+    if not candidates:
+        return []
+
+    pool_size = max(n * pool_multiplier, min_pool_size)
+    pool = candidates[:pool_size]
+
+    return _mmr_rerank(
+        pool,
+        embedding_lookup=embedding_lookup,
+        lambda_=lambda_,
+        top_k=n,
+        score_field='score',
+        id_field='name',
+    )
+
+
+def build_trending_embedding_lookup(rankings, encoder, *, pool_size=60):
+    """Encode the trending candidate pool's text via `encoder` and return
+    a name->vector lookup (callable form, suitable for mmr_rerank).
+
+    `encoder` is anything with `.encode(list[str], show_progress_bar=...)`
+    returning a (n, dim) array. The script-loaded SBERT_MODEL satisfies
+    this; tests can inject any stub.
+
+    Returns None if the pool is empty or encoding fails — callers should
+    treat None as "MMR falls back to pure-relevance" rather than crashing.
+    """
+    pool = [
+        r for r in rankings
+        if not r.get('cold_start', False)
+        and r.get('type') != 'career'
+        and isinstance(r.get('name'), str)
+    ][:pool_size]
+    if not pool:
+        return None
+    texts = [
+        f"{r.get('name', '')} {(r.get('description', '') or '')[:200]}"
+        for r in pool
+    ]
+    try:
+        vectors = encoder.encode(texts, show_progress_bar=False)
+    except Exception as e:
+        print(f"  Warning: SBERT encode failed for trending pool ({e}); "
+              "MMR will fall back to pure-relevance ordering.")
+        return None
+    by_name = {r['name']: vectors[i] for i, r in enumerate(pool)}
+    return by_name.get
+
+
 def _run_offline_eval_gate(
     *,
     rankings: list,
@@ -1592,41 +1670,15 @@ def main():
         json.dump(output, f, indent=2)
     print(f"\n\nRankings saved to: {args.output}")
 
-    # Generate homepage trending data (top 12 items with real engagement + diversity)
-    def select_diverse_trending(rankings, n=12, max_per_type=2, max_per_category=2):
-        """Select top items with diversity constraints."""
-        selected = []
-        type_counts = {}
-        category_counts = {}
-
-        for item in rankings:
-            if item.get('cold_start', False):
-                continue
-
-            # Skip career portals from trending
-            if item.get('type') == 'career':
-                continue
-
-            item_type = item.get('type', 'unknown')
-            item_category = item.get('category', 'unknown')
-
-            # Check limits
-            if type_counts.get(item_type, 0) >= max_per_type:
-                continue
-            if category_counts.get(item_category, 0) >= max_per_category:
-                continue
-
-            # Add item
-            selected.append(item)
-            type_counts[item_type] = type_counts.get(item_type, 0) + 1
-            category_counts[item_category] = category_counts.get(item_category, 0) + 1
-
-            if len(selected) >= n:
-                break
-
-        return selected
-
-    homepage_items = select_diverse_trending(rankings, n=12, max_per_type=2, max_per_category=2)
+    # Generate homepage trending data (top 12 items with real engagement +
+    # MMR diversification over SBERT embeddings; lib.diversity.mmr_rerank).
+    print("\nDiversifying homepage trending row via MMR...")
+    embedding_lookup = build_trending_embedding_lookup(
+        rankings, SBERT_MODEL, pool_size=60,
+    )
+    homepage_items = select_diverse_trending(
+        rankings, n=12, lambda_=0.7, embedding_lookup=embedding_lookup,
+    )
     homepage_data = {
         "updated": output['updated'],
         "count": len(homepage_items),
