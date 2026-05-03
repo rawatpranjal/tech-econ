@@ -60,6 +60,8 @@ __all__ = [
     "write_metrics_row",
     "read_last_metrics_row",
     "check_regression",
+    "format_replay_row",
+    "write_replay_row",
 ]
 
 
@@ -319,6 +321,151 @@ def read_last_metrics_row(path: str | Path) -> dict[str, str] | None:
     if not rows:
         return None
     return rows[-1]
+
+
+# ---------------------------------------------------------------------------
+# Replay history (reports/replays.csv): side-by-side baseline vs candidate
+# ---------------------------------------------------------------------------
+_REPLAY_BASE_COLUMNS: tuple[str, ...] = (
+    "run_at_utc",
+    "git_sha",
+    "baseline_path",
+    "candidate_path",
+    "n_sessions",
+    "n_evaluable",
+    "regression_metric",
+    "regression_threshold",
+    "verdict",            # "ok" | "regressed"
+    "notes",
+)
+
+
+def _replay_per_k_columns(k_values: Iterable[int]) -> list[str]:
+    cols: list[str] = []
+    for k in k_values:
+        for prefix in ("baseline", "candidate", "delta"):
+            cols.append(f"{prefix}_ndcg_at_{k}")
+        for prefix in ("baseline", "candidate", "delta"):
+            cols.append(f"{prefix}_hit_rate_at_{k}")
+    cols.append("baseline_map")
+    cols.append("candidate_map")
+    cols.append("delta_map")
+    return cols
+
+
+def replay_header_columns(k_values: Iterable[int]) -> list[str]:
+    return list(_REPLAY_BASE_COLUMNS) + _replay_per_k_columns(k_values)
+
+
+def format_replay_row(
+    *,
+    baseline: EvalResult,
+    candidate: EvalResult,
+    baseline_path: str,
+    candidate_path: str,
+    regression_metric: str,
+    regression_threshold: float,
+    verdict: str,
+    notes: str = "",
+) -> dict[str, Any]:
+    """Flatten a baseline/candidate pair into one CSV row."""
+    if baseline.k_values != candidate.k_values:
+        raise ValueError(
+            f"k_values mismatch: baseline={baseline.k_values} candidate={candidate.k_values}"
+        )
+    row: dict[str, Any] = {
+        "run_at_utc": candidate.run_at_utc,
+        "git_sha": candidate.git_sha or "",
+        "baseline_path": baseline_path,
+        "candidate_path": candidate_path,
+        "n_sessions": candidate.n_sessions_total,
+        "n_evaluable": candidate.n_sessions_evaluable,
+        "regression_metric": regression_metric,
+        "regression_threshold": _round(regression_threshold),
+        "verdict": verdict,
+        "notes": notes,
+    }
+    for k in baseline.k_values:
+        b_n = baseline.aggregate.ndcg_at_k.get(k, 0.0)
+        c_n = candidate.aggregate.ndcg_at_k.get(k, 0.0)
+        row[f"baseline_ndcg_at_{k}"] = _round(b_n)
+        row[f"candidate_ndcg_at_{k}"] = _round(c_n)
+        row[f"delta_ndcg_at_{k}"] = _round(c_n - b_n)
+        b_h = baseline.aggregate.hit_rate_at_k.get(k, 0.0)
+        c_h = candidate.aggregate.hit_rate_at_k.get(k, 0.0)
+        row[f"baseline_hit_rate_at_{k}"] = _round(b_h)
+        row[f"candidate_hit_rate_at_{k}"] = _round(c_h)
+        row[f"delta_hit_rate_at_{k}"] = _round(c_h - b_h)
+    b_m = baseline.aggregate.mean_average_precision
+    c_m = candidate.aggregate.mean_average_precision
+    row["baseline_map"] = _round(b_m)
+    row["candidate_map"] = _round(c_m)
+    row["delta_map"] = _round(c_m - b_m)
+    return row
+
+
+def write_replay_row(
+    path: str | Path,
+    *,
+    baseline: EvalResult,
+    candidate: EvalResult,
+    baseline_path: str,
+    candidate_path: str,
+    regression_metric: str,
+    regression_threshold: float,
+    verdict: str,
+    notes: str = "",
+) -> None:
+    """Append a row to `path` (default reports/replays.csv). Atomic via
+    tmp + os.replace; same header-drift guard as write_metrics_row."""
+    p = Path(path)
+    p.parent.mkdir(parents=True, exist_ok=True)
+    columns = replay_header_columns(baseline.k_values)
+    row = format_replay_row(
+        baseline=baseline,
+        candidate=candidate,
+        baseline_path=baseline_path,
+        candidate_path=candidate_path,
+        regression_metric=regression_metric,
+        regression_threshold=regression_threshold,
+        verdict=verdict,
+        notes=notes,
+    )
+
+    existing_text = p.read_text(encoding="utf-8") if p.exists() else ""
+    if existing_text:
+        existing_header = existing_text.splitlines()[0]
+        new_header_str = ",".join(columns)
+        if existing_header != new_header_str:
+            raise ValueError(
+                f"{p} header mismatch.\n"
+                f"  on disk: {existing_header}\n"
+                f"  this run: {new_header_str}\n"
+                "  Either restore the old k_values or move the old "
+                "replays.csv aside and start fresh."
+            )
+
+    buf = io.StringIO()
+    writer = csv.DictWriter(buf, fieldnames=columns, extrasaction="ignore")
+    if not existing_text:
+        writer.writeheader()
+    else:
+        buf.write(existing_text)
+        if not existing_text.endswith("\n"):
+            buf.write("\n")
+    writer.writerow(row)
+
+    tmp = p.with_suffix(p.suffix + ".tmp")
+    try:
+        with tmp.open("w", encoding="utf-8", newline="") as f:
+            f.write(buf.getvalue())
+        os.replace(tmp, p)
+    except Exception:
+        try:
+            tmp.unlink(missing_ok=True)
+        except OSError:
+            pass
+        raise
 
 
 def check_regression(

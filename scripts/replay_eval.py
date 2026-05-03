@@ -42,7 +42,8 @@ if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
 from lib.d1_sessions import SessionLoadError, load_sessions
-from lib.eval_runner import EvalResult, run_evaluation
+from lib.data_io import current_git_sha
+from lib.eval_runner import EvalResult, run_evaluation, write_replay_row
 from lib.recsys_config import load as load_config
 
 # Borrow the scores loader from evaluate_recsys -- single source of truth.
@@ -121,6 +122,19 @@ def parse_args() -> argparse.Namespace:
         "--regression-metric", default="ndcg_at_10",
         help="metric used to gate exit code (default: ndcg_at_10)",
     )
+    parser.add_argument(
+        "--output-csv", type=Path,
+        default=_REPO_ROOT / "reports" / "replays.csv",
+        help="path to append a side-by-side row to (default: reports/replays.csv)",
+    )
+    parser.add_argument(
+        "--no-output-csv", action="store_true",
+        help="skip writing the replay history row",
+    )
+    parser.add_argument(
+        "--notes", default="",
+        help="free-form note appended to the replay history row",
+    )
     return parser.parse_args()
 
 
@@ -159,11 +173,13 @@ def main() -> int:
               file=sys.stderr)
         return 4
 
+    git_sha = current_git_sha()
     baseline_result = run_evaluation(
         scores=baseline_scores,
         sessions=sessions,
         holdout_days=holdout_days,
         k_values=k_values,
+        git_sha=git_sha,
         fill_with_global_top=args.fill_with_global_top,
         notes="baseline",
     )
@@ -172,6 +188,7 @@ def main() -> int:
         sessions=sessions,
         holdout_days=holdout_days,
         k_values=k_values,
+        git_sha=git_sha,
         fill_with_global_top=args.fill_with_global_top,
         notes="candidate",
     )
@@ -191,7 +208,29 @@ def main() -> int:
         print(f"  unsupported --regression-metric {metric!r}", file=sys.stderr)
         return 2
 
-    if b > 0 and (b - c) / b > threshold:
+    regressed = b > 0 and (b - c) / b > threshold
+    verdict = "regressed" if regressed else "ok"
+
+    # Append history row before exit so even regressions are recorded.
+    if not args.no_output_csv:
+        try:
+            write_replay_row(
+                args.output_csv,
+                baseline=baseline_result,
+                candidate=candidate_result,
+                baseline_path=str(args.baseline),
+                candidate_path=str(args.candidate),
+                regression_metric=metric,
+                regression_threshold=threshold,
+                verdict=verdict,
+                notes=args.notes,
+            )
+            print(f"  appended replay row to {args.output_csv}")
+        except ValueError as e:
+            # Header drift -- don't block the exit code on it; just warn
+            print(f"  WARNING: replay row not written ({e})", file=sys.stderr)
+
+    if regressed:
         print(
             f"  CANDIDATE REGRESSED: {metric} dropped from {b:.4f} to {c:.4f} "
             f"(threshold {threshold * 100:.1f}%). Exit 5.",

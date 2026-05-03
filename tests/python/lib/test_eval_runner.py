@@ -15,10 +15,12 @@ from lib.eval_runner import (
     build_session_pairs,
     check_regression,
     format_metrics_row,
+    format_replay_row,
     header_columns,
     read_last_metrics_row,
     run_evaluation,
     write_metrics_row,
+    write_replay_row,
 )
 
 
@@ -262,3 +264,118 @@ class TestRegressionCheck:
         with pytest.raises(RegressionAlert):
             check_regression(new, prev, threshold=0.05,
                              metric="mean_average_precision")
+
+
+# ---------------------------------------------------------------------------
+# Replay history CSV
+# ---------------------------------------------------------------------------
+class TestReplayCSV:
+    def _pair(self):
+        # Build a baseline + candidate via the real pipeline so the
+        # results carry honest k_values and metric values.
+        scores_a = {"good": 1.0, "bad": 0.0}
+        scores_b = {"good": 0.0, "bad": 1.0}
+        sessions = [_sess("s1", clicked={"good"}, viewed={"bad"})]
+        baseline = run_evaluation(
+            scores=scores_a, sessions=sessions, holdout_days=14,
+            k_values=(5, 10), git_sha="base1234",
+            now=datetime(2026, 5, 3, 12, tzinfo=timezone.utc),
+        )
+        candidate = run_evaluation(
+            scores=scores_b, sessions=sessions, holdout_days=14,
+            k_values=(5, 10), git_sha="cand5678",
+            now=datetime(2026, 5, 3, 12, tzinfo=timezone.utc),
+        )
+        return baseline, candidate
+
+    def test_format_row_includes_deltas(self):
+        b, c = self._pair()
+        row = format_replay_row(
+            baseline=b, candidate=c,
+            baseline_path="data/baseline.json",
+            candidate_path="data/candidate.json",
+            regression_metric="ndcg_at_10",
+            regression_threshold=0.05,
+            verdict="regressed",
+            notes="ra2 test",
+        )
+        assert row["baseline_path"] == "data/baseline.json"
+        assert row["candidate_path"] == "data/candidate.json"
+        assert row["regression_metric"] == "ndcg_at_10"
+        assert row["verdict"] == "regressed"
+        assert row["notes"] == "ra2 test"
+        # delta = candidate - baseline; baseline ranks "good" first (perfect),
+        # candidate ranks "bad" first (zero) -> delta should be negative.
+        assert row["delta_ndcg_at_10"] < 0
+
+    def test_writes_header_on_first_call(self, tmp_path: Path):
+        b, c = self._pair()
+        path = tmp_path / "replays.csv"
+        write_replay_row(
+            path, baseline=b, candidate=c,
+            baseline_path="data/baseline.json",
+            candidate_path="data/candidate.json",
+            regression_metric="ndcg_at_10",
+            regression_threshold=0.05,
+            verdict="ok",
+        )
+        text = path.read_text(encoding="utf-8")
+        first_line = text.splitlines()[0]
+        for col in ("run_at_utc", "git_sha", "baseline_path",
+                    "delta_ndcg_at_10", "verdict", "notes"):
+            assert col in first_line
+
+    def test_appends_subsequent_rows(self, tmp_path: Path):
+        b, c = self._pair()
+        path = tmp_path / "replays.csv"
+        for i in range(3):
+            write_replay_row(
+                path, baseline=b, candidate=c,
+                baseline_path=f"a{i}.json", candidate_path=f"b{i}.json",
+                regression_metric="ndcg_at_10", regression_threshold=0.05,
+                verdict="ok",
+            )
+        with path.open() as f:
+            rows = list(csv.DictReader(f))
+        assert len(rows) == 3
+
+    def test_rejects_header_drift(self, tmp_path: Path):
+        b, c = self._pair()
+        path = tmp_path / "replays.csv"
+        write_replay_row(
+            path, baseline=b, candidate=c,
+            baseline_path="a", candidate_path="b",
+            regression_metric="ndcg_at_10", regression_threshold=0.05,
+            verdict="ok",
+        )
+        # Force a different k_values via a re-run, then try writing
+        b2 = run_evaluation(
+            scores={"x": 1.0}, sessions=[_sess("s1", clicked={"x"})],
+            holdout_days=14, k_values=(3, 7),
+            now=datetime(2026, 5, 3, 12, tzinfo=timezone.utc),
+        )
+        c2 = b2  # same shape; the point is k_values mismatch with file
+        with pytest.raises(ValueError, match="header mismatch"):
+            write_replay_row(
+                path, baseline=b2, candidate=c2,
+                baseline_path="a", candidate_path="b",
+                regression_metric="ndcg_at_3", regression_threshold=0.05,
+                verdict="ok",
+            )
+
+    def test_baseline_candidate_kvalues_must_match(self):
+        b = run_evaluation(
+            scores={"x": 1.0}, sessions=[_sess("s1", clicked={"x"})],
+            holdout_days=14, k_values=(5, 10),
+        )
+        c = run_evaluation(
+            scores={"x": 1.0}, sessions=[_sess("s1", clicked={"x"})],
+            holdout_days=14, k_values=(3, 7),
+        )
+        with pytest.raises(ValueError, match="k_values mismatch"):
+            format_replay_row(
+                baseline=b, candidate=c,
+                baseline_path="a", candidate_path="b",
+                regression_metric="ndcg_at_10", regression_threshold=0.05,
+                verdict="ok",
+            )
