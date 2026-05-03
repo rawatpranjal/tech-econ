@@ -9,11 +9,11 @@
 
 | Field | Value |
 |---|---|
-| **Current phase** | Phase 0 — Safety harness + test infrastructure (Job 0.1 done) |
+| **Current phase** | Phase 3 — First feature: R2 "Because you viewed X" homepage row (in progress) |
 | **Last updated** | 2026-05-03 |
 | **Owner** | Pranjal (solo) |
-| **Blockers** | none |
-| **Next action** | Job 0.2 — build `lib/` modules (`recsys_config.py`, `data_io.py`, `schemas.py`) with their unit tests. Then turn on branch protection in GitHub UI to make `recsys-ci.yml` required for merge. |
+| **Blockers** | PR #2 awaiting merge (CI green); branch protection now active |
+| **Next action** | Implement R2 on `phase-0/job-0.1-harness` branch (will be renamed in next push or rebased after PR #2 merges). After R2 ships: pivot to either Job 0.2 (lib/ modules) or another visible feature depending on user direction. |
 
 ---
 
@@ -381,6 +381,11 @@ half_life_days = 30
 - **What gets skipped now:** stream processors (Kafka/Flink), TF Serving, ANN indexes, RNN ranker. See audit "What we are NOT doing" section. Revisit when scale or data forces it.
 - **Book ingest done:** docling 2.71.0 produced `books/deep-learning-recsys/source.md` (22 MB, 8029 lines) in 104 s. Split into 371 H2-level chapter files. Source PDF gitignored.
 - **Worker schema-code agreement** elevated to a Phase 0 architecture principle (rules 15-17) after CLAUDE.md flagged the 2026-03-26 → 2026-05-03 silent analytics blackout — five weeks of `200 ok` on `/events` while every D1 write rejected because `events.user_id` didn't exist. This class of bug must be impossible going forward: every new column in a worker write requires a same-PR `ALTER TABLE` + post-deploy `/run-schema` ping + a unit test that parses worker source for INSERT columns and asserts schema agreement.
+- **AUDIT CORRECTION (2026-05-03):** While starting Phase 3, discovered that **R1 and R3 from the audit are already shipped**:
+  - **R1** — `static/embeddings/related-items.json` IS rendered: `static/js/search/unified-search.js:891` fetches it; `getRelatedItems(itemId)` is exposed and used by the search modal's "more like this" feature.
+  - **R3** — "Continue Reading" homepage row IS implemented: `static/js/reading-history.js:122` has `renderHistorySection()`, `layouts/index.html:37` has the placeholder div, `static/css/custom.css:8901` has all the styles. Renders "Pick up where you left off" cards from localStorage.
+  - The audit was based on outdated grep that missed both. **Lesson:** before claiming "X is missing", grep for the symbol AND check whether it's used at runtime.
+- **Phase 3 pivot:** First user-visible feature is now **R2 — "Because you viewed [last item name]" row on homepage** (genuinely missing). Combines reading-history.js localStorage with related-items.json: read user's last viewed item → look up its id in search-metadata.json → fetch its top-5 related items → render row.
 - **Job 0.1 done — "Harness lives".** Stood up minimum end-to-end test plumbing:
   - `requirements-dev.txt` (pytest, pytest-cov, ruff, mypy)
   - `pyproject.toml` (tool config only, no `[project]` section — Python deps stay in `requirements.txt`)
