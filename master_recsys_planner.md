@@ -9,11 +9,11 @@
 
 | Field | Value |
 |---|---|
-| **Current phase** | Planner Phase 1 (offline eval pipeline) **complete + merged to main** as of 2026-05-03 (PR #21, commit 43f18b8). Audit Phase 1 (surface-what-we-compute) was already complete. Next live phase: **Planner Phase 2 — logging extensions** (Ra3 search-click rank + server-side reading history) AND Ra2 cold-start A/B. |
+| **Current phase** | Planner Phase 1 (offline eval pipeline) **complete + producing data**. PR #21 merged the pipeline; PR #22 fixed the event-type bug; PR #23 is row 1 of `reports/metrics.csv`. Next: **Ra2 cold-start A/B** (regression vs k-NN, replay-driven) and **Phase 2 logging (Ra3)**. |
 | **Last updated** | 2026-05-03 |
 | **Owner** | Pranjal (solo, with parallel AI agents) |
 | **Blockers** | none |
-| **Next action** | (a) Run `/rerank` once on main to seed `reports/metrics.csv` with row 1 (the scoreboard's zero-point). (b) Wire `lib/cold_start` as opt-in `--cold-start-method=knn` flag on `rank_all_content.py` (Ra2). After rerun, use `scripts/replay_eval.py` to A/B regression vs k-NN against the same D1 sessions; merge whichever wins. (c) Phase 2 logging: Ra3 expose search-click `rank` from worker + server-side reading-history table — touches worker schema, apply rules F15-17 strictly (same-PR ALTER + post-deploy `/run-schema` ping). |
+| **Next action** | (a) ✅ Eval pipeline live; row 1 in `reports/metrics.csv`: NDCG@10=0.4191, HitRate@10=0.8000 over 15 evaluable sessions (60-day holdout because of the 2026-03-26→05-03 analytics blackout). (b) Wire `lib/cold_start` as opt-in `--cold-start-method=knn` flag on `rank_all_content.py` (Ra2). Use `scripts/replay_eval.py` to A/B regression vs k-NN against the same 139 sessions; ship whichever wins. (c) Phase 2 logging: Ra3 expose search-click `rank` from worker + server-side reading-history table — touches worker schema, apply rules F15-17 strictly (same-PR ALTER + post-deploy `/run-schema` ping). |
 
 ---
 
@@ -418,7 +418,9 @@ half_life_days = 30
 
 ## Eval results log (append-only)
 
-*(empty — Phase 1 outputs land here as `reports/metrics-YYYY-MM-DD.csv` rows + a one-line interpretation)*
+| run | git | sessions | NDCG@10 | HitRate@10 | Prec@5 | MAP | notes |
+|---|---|---|---|---|---|---|---|
+| 2026-05-03T20:37Z | 3a5ba9b | 15 / 139 | 0.4191 | 0.8000 | 0.187 | 0.415 | Row 1. 60-day holdout (analytics blackout 2026-03-26 → 05-03 means 14-day default would be empty). Baseline: regression-based cold-start, MMR-diversified homepage row. |
 
 ---
 
