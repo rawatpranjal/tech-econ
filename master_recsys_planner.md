@@ -13,7 +13,7 @@
 | **Last updated** | 2026-05-03 |
 | **Owner** | Pranjal (solo, with parallel AI agents) |
 | **Blockers** | none |
-| **Next action** | (a) ✅ Eval pipeline live; row 1 in `reports/metrics.csv`: NDCG@10=0.4191, HitRate@10=0.8000 over 15 evaluable sessions. (b) ✅ Ra2 A/B done: TF-IDF k-NN regressed ~10% — keeping the flag opt-in, regression stays default. Future Ra2 experiment: BGE embeddings instead of TF-IDF (the audit's actual vision). (c) Phase 2 logging: Ra3 expose search-click `rank` from worker + server-side reading-history table — touches worker schema, apply rules F15-17 strictly (same-PR ALTER + post-deploy `/run-schema` ping). (d) Optimisation: skip the regression-train step when `--cold-start-method=knn` (currently we pay for both). |
+| **Next action** | (a) ✅ Eval pipeline live; row 1 in `reports/metrics.csv`: NDCG@10=0.4191, HitRate@10=0.8000 over 15 evaluable sessions. (b) ✅ Ra2 A/B v1 (TF-IDF) regressed ~10% — flag stays opt-in. (c) ✅ Ra2 A/B v2 (BGE-large) within noise on this 15-session sample (-4.1% NDCG@10, identical Hit-Rate@10) — flag stays opt-in. **Revisit Ra2 once post-blackout traffic gives ≥50 evaluable sessions.** (d) Phase 2 logging: Ra3 expose search-click `rank` from worker + server-side reading-history table — touches worker schema, apply rules F15-17 strictly. (e) Optimisation: skip regression-train step when `--cold-start-method=knn*`. |
 
 ---
 
@@ -421,7 +421,8 @@ half_life_days = 30
 | run | git | sessions | NDCG@10 | HitRate@10 | Prec@5 | MAP | notes |
 |---|---|---|---|---|---|---|---|
 | 2026-05-03T20:37Z | 3a5ba9b | 15 / 139 | 0.4191 | 0.8000 | 0.187 | 0.415 | Row 1. 60-day holdout (analytics blackout 2026-03-26 → 05-03 means 14-day default would be empty). Baseline: regression-based cold-start, MMR-diversified homepage row. |
-| 2026-05-03T20:51Z (replay) | ra2-knn | 15 / 139 | 0.3755 | 0.7333 | 0.173 | 0.374 | **Ra2 A/B: k-NN cold-start (TF-IDF) regresses ~10% on NDCG@10, MAP and Hit-Rate@10 vs regression baseline.** Replay exited 5. Decision: keep `--cold-start-method=knn` opt-in for future BGE-embedding experiments (the audit's actual Ra2 vision); production stays on regression. 15-session sample is small but the signal is consistent across all metrics. |
+| 2026-05-03T20:51Z (replay) | ra2-knn-tfidf | 15 / 139 | 0.3755 | 0.7333 | 0.173 | 0.374 | **Ra2 A/B v1: k-NN cold-start (TF-IDF) regresses ~10% on NDCG@10, MAP and Hit-Rate@10 vs regression baseline.** Replay exited 5. Keep `--cold-start-method=knn-tfidf` opt-in. |
+| 2026-05-03T21:00Z (replay) | ra2-knn-bge | 15 / 139 | 0.4021 | 0.8000 | 0.187 | 0.383 | **Ra2 A/B v2: k-NN cold-start (BGE-large-en-v1.5, 1024d) loses NDCG@10 by 4.1%, MAP by 7.5%; Hit-Rate@10 and Precision@5 unchanged.** Replay exited 0 (within 5% threshold). Much closer than TF-IDF, as the audit predicted. Most clicks in evaluable sessions are on observed items so cold-start path barely moves Hit-Rate; the deltas are subtle re-orderings. **Decision:** keep BGE opt-in too. With 15 sessions both methods are within statistical noise; revisit when post-blackout traffic produces a larger sample. |
 
 ---
 
