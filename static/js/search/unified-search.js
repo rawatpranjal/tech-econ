@@ -848,6 +848,10 @@
 
   /**
    * Handle search results from worker (final results - may replace keyword results)
+   *
+   * Worker may include payload.suggestion for Re2 (spellcheck "Did you
+   * mean…?"). We forward it untouched; the UI layer decides whether to
+   * render the banner.
    */
   UnifiedSearch.prototype.handleSearchResults = function(id, payload) {
     var resolve = this.pendingSearches.get(id);
@@ -857,7 +861,8 @@
       resolve({
         results: payload.results,
         isPartial: false,
-        mode: payload.mode
+        mode: payload.mode,
+        suggestion: payload.suggestion || null
       });
     }
   };
@@ -1407,7 +1412,9 @@
                 enhanced: enhancedQuery !== searchQuery
               });
             }
-            self.showEmpty();
+            // Re2 — pass the suggestion (if any) into showEmpty so the
+            // banner can offer a "Did you mean…?" link
+            self.showEmpty(result.suggestion || null, query);
             self.flatResults = [];
           } else {
             self.renderGlobalResults(self.currentResults, query, isPartial);
@@ -2259,9 +2266,14 @@
   };
 
   /**
-   * Show empty state
+   * Show empty state. Optionally renders a "Did you mean…?" banner if a
+   * spellcheck suggestion is provided (Re2).
+   *
+   * @param {?string} suggestion - corrected query string, or null
+   * @param {?string} originalQuery - the user's original input (for context)
    */
-  UnifiedSearch.prototype.showEmpty = function() {
+  UnifiedSearch.prototype.showEmpty = function(suggestion, originalQuery) {
+    var self = this;
     this.resultsContainer.innerHTML = '';
     this.hint.style.display = 'none';
     this.emptyState.style.display = 'flex';
@@ -2271,6 +2283,40 @@
     if (sortContainer) sortContainer.style.display = 'none';
     var intentContainer = document.getElementById('global-search-intent');
     if (intentContainer) intentContainer.style.display = 'none';
+
+    // Re2 — render "Did you mean X?" banner inside the empty state.
+    // We rebuild the banner each call so a new search can replace it.
+    var existingBanner = this.emptyState.querySelector('.search-spellcheck-banner');
+    if (existingBanner) existingBanner.remove();
+
+    if (suggestion && typeof suggestion === 'string' && suggestion.trim()) {
+      var banner = document.createElement('div');
+      banner.className = 'search-spellcheck-banner';
+      var safeOriginal = (originalQuery || '').replace(/[<>&"']/g, function (c) {
+        return { '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;', "'": '&#39;' }[c];
+      });
+      var safeSuggestion = suggestion.replace(/[<>&"']/g, function (c) {
+        return { '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;', "'": '&#39;' }[c];
+      });
+      banner.innerHTML =
+        'No results for <em>' + safeOriginal + '</em>. Did you mean ' +
+        '<button type="button" class="search-spellcheck-suggestion" data-suggestion="' +
+        safeSuggestion + '"><strong>' + safeSuggestion + '</strong></button>?';
+      this.emptyState.insertBefore(banner, this.emptyState.firstChild);
+
+      // Wire the click — re-run the search with the corrected query.
+      var btn = banner.querySelector('.search-spellcheck-suggestion');
+      if (btn) {
+        btn.addEventListener('click', function () {
+          if (self.input) {
+            self.input.value = btn.dataset.suggestion;
+            // Trigger an input event so debounced handlers fire.
+            self.input.dispatchEvent(new Event('input', { bubbles: true }));
+            self.input.focus();
+          }
+        });
+      }
+    }
   };
 
   /**

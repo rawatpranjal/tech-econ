@@ -10,6 +10,7 @@
 
 // Import MiniSearch from CDN
 importScripts('https://cdn.jsdelivr.net/npm/minisearch@6.3.0/dist/umd/index.min.js');
+importScripts('/js/search/spellcheck.js');
 
 // State
 var miniSearch = null;
@@ -21,6 +22,7 @@ var isModelLoading = false;
 var modelLoadPromise = null;
 var synonyms = null;
 var popularityBoostEnabled = true;  // Default ON
+var spellcheckVocab = null;          // Populated on handleLoadIndex
 
 // Configuration
 var CONFIG = {
@@ -218,11 +220,32 @@ function handleLoadIndex(payload) {
     searchIndex = indexData;
     console.log('[SearchWorker] Documents added successfully');
 
+    // Build the spellcheck vocabulary from the same documents. We
+    // accumulate name + category + tags + topic_tags strings and let the
+    // Spellcheck module tokenise + filter. ~10k unique words for 4k
+    // items, fits comfortably in worker memory.
+    if (typeof Spellcheck !== 'undefined' && Spellcheck.buildVocabulary) {
+      var vocabSource = [];
+      for (var di = 0; di < indexData.documents.length; di++) {
+        var doc = indexData.documents[di];
+        if (!doc) continue;
+        if (doc.name) vocabSource.push(doc.name);
+        if (doc.category) vocabSource.push(doc.category);
+        if (doc.tags) vocabSource.push(Array.isArray(doc.tags) ? doc.tags.join(' ') : doc.tags);
+        if (doc.topic_tags) vocabSource.push(Array.isArray(doc.topic_tags) ? doc.topic_tags.join(' ') : doc.topic_tags);
+      }
+      spellcheckVocab = Spellcheck.buildVocabulary(vocabSource);
+      console.log('[SearchWorker] Spellcheck vocab:', spellcheckVocab.size, 'words');
+    } else {
+      console.warn('[SearchWorker] Spellcheck module not available; spellcheck disabled');
+    }
+
     postMessage({
       type: 'INDEX_LOADED',
       payload: {
         success: true,
-        count: indexData.documents.length
+        count: indexData.documents.length,
+        spellcheckVocabSize: spellcheckVocab ? spellcheckVocab.size : 0
       }
     });
   } catch (error) {
@@ -559,12 +582,25 @@ function handleKeywordSearch(payload, messageId) {
 
   var results = performKeywordSearch(query, topK);
 
+  // Re2 — when keyword search returns nothing, attempt a spellcheck
+  // suggestion and include it in the response so the UI can show a
+  // "Did you mean…?" banner. Cheap (single Levenshtein pass over the
+  // pre-built vocab) and always non-blocking.
+  var suggestion = null;
+  if (results.length === 0 && spellcheckVocab && typeof Spellcheck !== 'undefined') {
+    var s = Spellcheck.suggest(query, spellcheckVocab);
+    if (s && s.changed && s.corrected !== query) {
+      suggestion = s.corrected;
+    }
+  }
+
   postMessage({
     type: 'SEARCH_RESULTS',
     id: messageId,
     payload: {
       results: results,
-      mode: 'keyword'
+      mode: 'keyword',
+      suggestion: suggestion
     }
   });
 }
