@@ -1531,20 +1531,32 @@ def main():
     raw_scores, item_signals, cooccurrence = build_engagement_scores(engagement_data)
     print(f"  Items with engagement data: {len(raw_scores)}")
 
-    # Step 4: Train regression model to predict engagement scores
-    model, regression_scores, encoders = train_regression_model(items, item_signals)
+    cold_start_method = args.cold_start_method
+    knn_path = cold_start_method in ('knn', 'knn-tfidf', 'knn-bge')
+
+    # Step 4: Train regression model to predict engagement scores.
+    # Skipped when --cold-start-method=knn* because the regression
+    # output is unused on those paths -- saves ~3 min on the rerank
+    # (most of which is SBERT-encoding 3896 item descriptions in
+    # batches). Set model/scores/encoders to empty so the rest of
+    # main() reads diagnostics as "no model trained" gracefully.
+    if knn_path:
+        print(
+            f"\nSkipping regression-train step "
+            f"(--cold-start-method={cold_start_method}; predictions unused)"
+        )
+        model, regression_scores, encoders = None, {}, {}
+    else:
+        model, regression_scores, encoders = train_regression_model(items, item_signals)
 
     # Step 5: Hybrid scoring - actual engagement for observed, propagated for cold-start
     # Two cold-start methods (Ra2 audit):
     #   regression: norm_predicted * 0.3 (current production path)
-    #   knn:        lib.cold_start k-NN propagation over TF-IDF features
-    cold_start_method = args.cold_start_method
+    #   knn:        lib.cold_start k-NN propagation (TF-IDF or BGE)
 
-    if cold_start_method in ('knn', 'knn-tfidf', 'knn-bge'):
-        # k-NN path. We still compute regression_scores above so the
-        # diagnostics print out, but we ignore them for cold scoring.
-        # 'knn' is a legacy alias for 'knn-tfidf' (kept so the just-merged
-        # Ra2 PR's docs don't break).
+    if knn_path:
+        # 'knn' is a legacy alias for 'knn-tfidf' (kept so the merged
+        # Ra2 PR #24's docs don't break).
         similarity = 'bge' if cold_start_method == 'knn-bge' else 'tfidf'
         cold_lookup = _knn_cold_start(
             items=items,
