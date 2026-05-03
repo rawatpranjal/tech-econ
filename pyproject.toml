@@ -1,0 +1,74 @@
+# Shared tool config for the tech-econ recsys / search stack.
+#
+# Intentionally NO [project] section — Python dependencies stay in
+# requirements.txt + requirements-dev.txt. This file exists only to give
+# pytest, ruff, and mypy a single place to read their config.
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests/python"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "-ra",
+    "--strict-markers",
+    "--strict-config",
+]
+markers = [
+    "slow: tests that take more than ~1 second",
+    "integration: tests that touch fixture data files",
+    "invariant: output-shape / cross-module agreement tests",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = ["public", "node_modules", "books", "data", "static/embeddings"]
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort
+    "B",    # flake8-bugbear
+    "UP",   # pyupgrade
+    "SIM",  # flake8-simplify
+]
+ignore = [
+    "E501",  # line length handled by formatter
+]
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+no_implicit_optional = true
+check_untyped_defs = true
+# Strict mode comes later — for Phase 0, we just want it runnable.
+strict = false
+exclude = [
+    "public/",
+    "node_modules/",
+    "books/",
+    "scripts/__pycache__/",
+]
+
+[[tool.mypy.overrides]]
+# Third-party libs without type stubs — silence the noise rather than
+# pollute every `import` with `# type: ignore`.
+module = [
+    "lightgbm",
+    "lightgbm.*",
+    "sentence_transformers",
+    "sentence_transformers.*",
+    "sklearn",
+    "sklearn.*",
+    "implicit",
+    "implicit.*",
+    "gensim",
+    "gensim.*",
+]
+ignore_missing_imports = true
