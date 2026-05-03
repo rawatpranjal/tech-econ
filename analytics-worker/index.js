@@ -20,6 +20,10 @@ const RATE_LIMIT = {
   RETENTION_DAYS: 0               // 0 = keep forever (D1 free tier is 5GB, ~90 years at current rate)
 };
 
+// Cached per worker isolate. Set to true the first time ensureSchema completes
+// successfully; remaining requests in the same isolate skip the migration check.
+let SCHEMA_CHECKED = false;
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -205,8 +209,12 @@ async function handleEvents(request, env, ctx, origin) {
     const country = request.cf?.country || 'unknown';
     const now = Date.now();
 
-    // Process events in background
-    ctx.waitUntil(processEvents(env, events, country, now, clientIP, userAgent));
+    // Belt-and-suspenders: ensure schema is current before writing. Self-heals
+    // any forgotten ALTER TABLE deploys (the 2026-03-26 blackout cause).
+    // Cached per isolate via SCHEMA_CHECKED so it's a one-time cost on cold start.
+    ctx.waitUntil(ensureSchema(env).then(() =>
+      processEvents(env, events, country, now, clientIP, userAgent)
+    ));
 
     // Periodically clean old events (1% chance per request)
     if (Math.random() < 0.01) {
@@ -508,6 +516,32 @@ async function processEvents(env, events, country, receivedAt, clientIP, userAge
   } catch (err) {
     console.error('aggregate updates failed:', err.message);
     await recordWriteFailure(env, 'aggregates', err.message);
+  }
+}
+
+// Auto-applies idempotent schema migrations the first time it runs in a given
+// worker isolate. Lets us deploy code that requires new columns without an
+// explicit /run-schema step — the failure mode that caused the 2026-03-26
+// blackout. New ALTER/CREATE statements should be added here AND to handleRunSchema.
+async function ensureSchema(env) {
+  if (SCHEMA_CHECKED || !env.DB) return;
+  const safeAlter = async (sql) => {
+    try { await env.DB.prepare(sql).run(); }
+    catch (e) {
+      if (!/duplicate column|already exists/i.test(e.message || '')) throw e;
+    }
+  };
+  try {
+    await safeAlter(`ALTER TABLE events            ADD COLUMN user_id TEXT`);
+    await safeAlter(`ALTER TABLE session_features  ADD COLUMN user_id TEXT`);
+    await safeAlter(`ALTER TABLE session_sequences ADD COLUMN user_id TEXT`);
+    await safeAlter(`CREATE INDEX IF NOT EXISTS idx_events_user ON events(user_id)`);
+    SCHEMA_CHECKED = true;
+  } catch (e) {
+    // Don't cache failure — next request will retry. Surface in /health via
+    // the same write-error counter.
+    console.error('ensureSchema failed:', e.message);
+    await recordWriteFailure(env, 'schema_migration', e.message);
   }
 }
 
