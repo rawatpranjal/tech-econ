@@ -1,5 +1,23 @@
 [
   {
+    "name": "Causal Inference: A Statistical Learning Approach",
+    "author": "Stefan Wager",
+    "year": 2024,
+    "description": "Free PDF textbook covering causal inference from a machine learning perspective. Covers RCTs, propensity scores, treatment effect estimation, causal forests, and modern methods.",
+    "category": "Causal Inference",
+    "type": "Book",
+    "url": "https://web.stanford.edu/~swager/causal_inf_book.pdf",
+    "isbn": "",
+    "tags": [
+      "causal-inference",
+      "machine-learning",
+      "textbook",
+      "free",
+      "Stanford"
+    ],
+    "model_score": 1.0
+  },
+  {
     "name": "Putting Auction Theory to Work",
     "author": "Paul Milgrom",
     "year": 2004,
@@ -46,7 +64,7 @@
       "Applying auction theory to real-world scenarios",
       "Analyzing market design principles"
     ],
-    "model_score": 0.5676,
+    "model_score": 0.1778,
     "embedding_text": "Putting Auction Theory to Work is a comprehensive exploration of the practical applications of auction theory, written by a Nobel laureate who has significantly contributed to the field of market design. This resource delves into the intricate relationship between theoretical concepts and their implementation in real-world auction scenarios, particularly focusing on spectrum auctions. Readers will gain insights into the fundamental principles of auction design, including the various types of auctions, bidding strategies, and the impact of auction rules on market outcomes. The teaching approach emphasizes a blend of theoretical insights and practical examples, making it accessible for those with a foundational understanding of economics. While no specific prerequisites are required, a basic familiarity with economic principles will enhance the learning experience. The book aims to equip readers with the skills to analyze and design efficient auction mechanisms, making it a valuable resource for students, practitioners, and anyone interested in the intersection of economics and market design. Upon completion, readers will be better prepared to engage with auction theory in both academic and practical contexts, enabling them to contribute to discussions on market efficiency and auction strategy. The estimated time to complete the resource varies depending on the reader's pace, but it is structured to facilitate both deep engagement and quick reference.",
     "tfidf_keywords": [
       "auction mechanisms",
@@ -74,24 +92,6 @@
       "marketplaces",
       "pricing"
     ]
-  },
-  {
-    "name": "Causal Inference: A Statistical Learning Approach",
-    "author": "Stefan Wager",
-    "year": 2024,
-    "description": "Free PDF textbook covering causal inference from a machine learning perspective. Covers RCTs, propensity scores, treatment effect estimation, causal forests, and modern methods.",
-    "category": "Causal Inference",
-    "type": "Book",
-    "url": "https://web.stanford.edu/~swager/causal_inf_book.pdf",
-    "isbn": "",
-    "tags": [
-      "causal-inference",
-      "machine-learning",
-      "textbook",
-      "free",
-      "Stanford"
-    ],
-    "model_score": 0.0
   },
   {
     "name": "Discrete Choice Methods with Simulation",
@@ -136,7 +136,7 @@
       "Understanding of discrete choice models",
       "Ability to implement mixed logit and probit simulations"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Discrete choice methods are crucial in understanding decision-making processes in various fields, particularly in transportation economics. This resource serves as an essential guide to modern discrete choice methods, covering topics such as mixed logit models, probit simulation, and Bayesian approaches. It is designed for those who wish to gain a comprehensive understanding of these advanced statistical techniques. The book assumes a foundational knowledge of statistics and econometrics but is accessible to those with a basic understanding of these concepts. Readers can expect to learn how to apply these methods to real-world problems, particularly in the context of transportation. The teaching approach emphasizes practical applications, allowing learners to engage with hands-on exercises and projects that reinforce the material covered. After completing this resource, readers will be equipped to utilize discrete choice methods in their research or professional practice, enhancing their analytical skills and understanding of consumer behavior in transportation contexts. This book is particularly suited for early-stage PhD students, junior data scientists, and mid-level data scientists looking to expand their methodological toolkit.",
     "tfidf_keywords": [
       "discrete-choice",
@@ -209,7 +209,7 @@
       "knowledge of instrumental variables",
       "ability to implement difference-in-differences"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Mostly Harmless Econometrics is a seminal text in the field of applied econometrics, authored by Nobel laureate Joshua Angrist. This book serves as a practical guide for those looking to navigate the complexities of causal inference, focusing on essential methodologies such as regression analysis, instrumental variables (IV), difference-in-differences (DiD), and regression discontinuity design (RDD). Angrist emphasizes the importance of clean identification strategies, making the material accessible to practitioners and students alike. The teaching approach is grounded in real-world applications, allowing readers to grasp the significance of econometric techniques in empirical research. While the book does not specify prerequisites, a basic understanding of statistics and regression analysis is beneficial for readers to fully engage with the content. Learning outcomes include the ability to critically assess causal claims and apply econometric methods to various datasets. The book does not include hands-on exercises but provides numerous examples that illustrate the application of the discussed methods. Compared to other learning resources, Mostly Harmless Econometrics stands out for its practical focus and clarity, making it suitable for early-stage PhD students and junior data scientists. Upon completion, readers will be equipped to apply econometric techniques to real-world problems, enhancing their analytical skills in the field of economics.",
     "tfidf_keywords": [
       "causal-inference",
@@ -282,7 +282,7 @@
       "Understanding economic bubbles",
       "Analyzing the impact of fraud in digital advertising"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "The 'Subprime Attention Crisis' delves into the intricate dynamics of programmatic advertising, drawing compelling parallels to the 2008 housing crisis. This resource examines how inflated metrics and click fraud contribute to a deceptive landscape in digital marketing, creating a bubble that mirrors past economic failures. Readers will explore the fundamental concepts of advertising and attention economics, gaining insights into the mechanisms that underpin the current advertising ecosystem. The book is structured to engage readers with a blend of theoretical frameworks and practical implications, making it suitable for marketers, economists, and curious individuals seeking to deepen their understanding of this critical issue. The pedagogical approach emphasizes critical analysis and encourages readers to question prevailing assumptions about advertising effectiveness. While no specific prerequisites are required, a basic understanding of marketing principles will enhance the reading experience. Upon completion, readers will be equipped with the skills to critically evaluate advertising strategies, recognize the signs of inflated metrics, and understand the broader economic implications of their findings. This resource is particularly relevant for those looking to navigate the complexities of digital marketing and avoid the pitfalls that have historically plagued the industry. The book can be completed at one's own pace, allowing for a thorough engagement with the material. After finishing, readers will be better prepared to make informed decisions in their marketing strategies and contribute to discussions about the future of advertising in a digital age.",
     "tfidf_keywords": [
       "programmatic advertising",
@@ -356,7 +356,7 @@
       "applying market design principles",
       "developing effective pricing strategies"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Confessions of the Pricing Man is a comprehensive exploration of pricing strategies, authored by a leading expert in the field. This book delves into various topics and concepts related to pricing and market design, providing readers with a rich understanding of how pricing can influence market behavior and business outcomes. The teaching approach emphasizes practical application, making it suitable for practitioners and professionals who seek to enhance their skills in pricing strategy. While no specific prerequisites are required, a foundational understanding of market dynamics may be beneficial. Readers can expect to gain valuable insights into the intricacies of pricing, including the psychological aspects of consumer behavior, competitive pricing strategies, and the impact of market design on pricing decisions. The book is structured to facilitate hands-on learning, with case studies and real-world examples that illustrate the application of pricing strategies in various contexts. After completing this resource, readers will be equipped to develop and implement effective pricing strategies that align with their business objectives. This book stands out in the landscape of pricing literature by combining theoretical insights with practical applications, making it a valuable resource for both students and seasoned professionals in the field.",
     "tfidf_keywords": [
       "pricing-strategy",
@@ -424,7 +424,7 @@
       "Understanding data economics",
       "Analyzing competition dynamics"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "The Age of Surveillance Capitalism delves into the intricate relationship between data, economics, and behavior in the digital age. It discusses how companies leverage personal data to create economic value, often at the expense of consumer privacy. The book is structured to provide insights into the mechanisms of behavioral surplus extraction, illustrating the ways in which data is commodified and the implications for competition and antitrust regulations. Readers will gain a comprehensive understanding of the challenges posed by surveillance capitalism, including the ethical dilemmas and regulatory considerations that arise in this context. The teaching approach emphasizes critical thinking and encourages readers to reflect on the broader societal impacts of data-driven business models. While no specific prerequisites are required, a general understanding of economics and technology will enhance the reading experience. The book is particularly suited for those curious about the intersection of technology and economics, including students, practitioners, and anyone interested in the future of data privacy and market competition. Upon completion, readers will be better equipped to navigate the complexities of data economics and its implications for society.",
     "tfidf_keywords": [
       "surveillance-capitalism",
@@ -500,7 +500,7 @@
       "Analyzing fairness in machine learning",
       "Evaluating economic impacts of algorithms"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Weapons of Math Destruction is a critical examination of the pervasive influence of algorithms in modern society, particularly in the realms of education, employment, and criminal justice. The book delves into the concept of algorithmic bias, illustrating how these mathematical models can perpetuate inequality and injustice. Readers will learn about the mechanisms through which algorithms operate and the potential consequences of their deployment without proper oversight. The teaching approach emphasizes real-world examples and case studies, making complex ideas accessible to a broad audience. While no specific prerequisites are required, a basic understanding of machine learning concepts may enhance comprehension. Upon completing this resource, readers will be equipped to critically assess the fairness of algorithms and advocate for more equitable practices in AI development. This book is particularly beneficial for students, practitioners, and anyone interested in the ethical implications of technology in society. The time commitment for reading this book can vary, but it typically requires several hours to digest the material thoroughly. After finishing, readers will be better prepared to engage in discussions about the ethical use of algorithms and contribute to the movement for greater accountability in AI.",
     "tfidf_keywords": [
       "algorithmic bias",
@@ -576,7 +576,7 @@
       "Portfolio modeling",
       "Excel and VBA proficiency"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Credit Risk Modeling using Excel and VBA is a practitioner-oriented guide that delves into the intricacies of credit risk assessment and modeling. This resource focuses on the implementation of key credit risk metrics such as Probability of Default (PD), Loss Given Default (LGD), and Exposure at Default (EAD) using Excel and VBA programming. The book is structured to provide a step-by-step approach, allowing readers to build their understanding from fundamental concepts to more complex portfolio models. It emphasizes hands-on exercises and practical applications, making it suitable for finance professionals who wish to enhance their quantitative skills in risk management. The teaching approach is pragmatic, combining theoretical insights with practical implementations, ensuring that learners can apply their knowledge directly to real-world scenarios. The assumed knowledge includes basic proficiency in Excel and an introductory understanding of VBA, making it accessible to those with a foundational background in finance or data analysis. Upon completion, readers will gain valuable skills in credit risk modeling, enabling them to make informed decisions in their financial practices. This resource is particularly beneficial for junior to mid-level data scientists and finance professionals looking to deepen their expertise in risk modeling. The estimated time to complete the book may vary based on individual learning pace, but it is designed to be comprehensive yet digestible, allowing for flexible learning.",
     "tfidf_keywords": [
       "credit-risk",
@@ -650,7 +650,7 @@
       "Applying GLMs to insurance pricing",
       "Conducting territorial ratemaking"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Generalized Linear Models for Insurance Rating is a pivotal resource in the CAS Monograph Series, focusing on the application of Generalized Linear Models (GLMs) in the context of insurance pricing. This book serves as an industry standard, providing detailed insights into the methodologies and practices that underpin effective risk modeling in the insurance sector. Readers will delve into the intricacies of GLMs, exploring how these statistical models can be utilized to assess and price risk accurately. The content is structured to guide practitioners through the essential concepts of GLMs, including the Tweedie distribution, which is particularly relevant for modeling insurance claims. The book emphasizes practical applications, offering case studies and examples that illustrate the use of GLMs in real-world scenarios. It is designed for individuals with a foundational understanding of statistics and a desire to apply these concepts within the insurance industry. The teaching approach is hands-on, encouraging readers to engage with the material through exercises that reinforce learning outcomes. By the end of this resource, readers will have gained valuable skills in risk modeling, enabling them to implement GLMs effectively in their work. This book is ideal for data scientists, actuaries, and insurance professionals seeking to enhance their expertise in pricing strategies and risk assessment. While the duration of study may vary, readers can expect to invest significant time in mastering the concepts presented. Upon completion, individuals will be well-equipped to contribute to the development of pricing models that are both accurate and compliant with industry standards.",
     "tfidf_keywords": [
       "Generalized Linear Models",
@@ -725,7 +725,7 @@
       "Familiarity with statistical analysis in sports",
       "Insight into player evaluation methods"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Moneyball: The Art of Winning an Unfair Game is a groundbreaking book that delves into the world of sports economics and analytics, particularly focusing on baseball. It chronicles the innovative strategies employed by the Oakland Athletics, a Major League Baseball team, to compete against wealthier franchises through the use of statistical analysis and data-driven decision-making. The book introduces readers to the concept of sabermetrics, which involves the rigorous analysis of baseball statistics to evaluate player performance and potential. Through detailed narratives and case studies, it illustrates how the A's management, led by General Manager Billy Beane, challenged conventional wisdom in player evaluation and team building. This resource is particularly valuable for those interested in the application of economic principles in sports, as it highlights the intersection of data analysis and competitive strategy. The teaching approach emphasizes real-world applications of statistical methods, making it accessible to a broad audience, including students, practitioners, and sports enthusiasts. While no specific prerequisites are required, a basic understanding of statistics may enhance the reading experience. Upon completion, readers will gain insights into how data can transform industries, particularly in sports, and will be equipped with knowledge applicable to various fields that utilize analytics for decision-making. The book serves as a vital resource for anyone looking to understand the evolution of sports analytics and its implications for future trends in the industry.",
     "tfidf_keywords": [
       "sabermetrics",
@@ -801,7 +801,7 @@
       "Understanding sabermetrics",
       "Applying analytics to baseball"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "The Book: Playing the Percentages in Baseball serves as a comprehensive guide to the world of baseball analytics, often referred to as the technical bible for practitioners in the field. This resource delves into critical topics such as lineup optimization, which is essential for maximizing a team's offensive potential by strategically arranging players based on their strengths and weaknesses. The book also explores the concept of platoon splits, which examines how players perform against left-handed versus right-handed pitchers, providing insights that can influence game strategy. Additionally, it covers clutch hitting, a vital aspect of performance that assesses how players perform under pressure in critical game situations. Defensive positioning is another key area addressed, highlighting how data-driven decisions can enhance a team's defensive effectiveness. The teaching approach is rooted in rigorous statistical analysis, making it suitable for readers who have a foundational understanding of statistics and are eager to apply these concepts in a practical context. While no specific prerequisites are outlined, a basic knowledge of statistical methods will enhance the learning experience. Readers can expect to gain valuable skills in analyzing baseball performance metrics and applying these insights to improve team strategies. The book is particularly beneficial for students, practitioners, and anyone interested in the intersection of sports and analytics. Although the exact duration to complete the book is not specified, it is designed to be a thorough exploration of its topics, making it a valuable resource for those looking to deepen their understanding of baseball analytics. After finishing this resource, readers will be equipped to utilize statistical analysis in evaluating player performance and making informed decisions in the context of baseball.",
     "tfidf_keywords": [
       "lineup-optimization",
@@ -873,7 +873,7 @@
       "Ability to interpret shot charts",
       "Knowledge of spatial analysis techniques"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Sprawlball: A Visual Tour of the New Era of the NBA delves into the transformative impact of the three-point revolution on basketball strategies, utilizing modern analytics and exceptional data visualization techniques. This resource is designed to provide readers with a comprehensive understanding of how data shapes the game, particularly through shot charts and spatial analysis. It covers essential topics such as sports economics, the evolution of basketball strategy, and the significance of data visualization in interpreting player performance and team dynamics. The teaching approach emphasizes practical applications of analytics in sports, making it accessible to a broad audience, including students, practitioners, and curious enthusiasts. Readers will gain insights into how analytics has redefined traditional basketball strategies and will be equipped with the skills to analyze and interpret basketball data effectively. While no specific prerequisites are required, a basic understanding of basketball will enhance the learning experience. Upon completion, readers will be able to apply analytical techniques to basketball scenarios, contributing to a deeper appreciation of the game.",
     "tfidf_keywords": [
       "three-point revolution",
@@ -948,7 +948,7 @@
       "basic mathematical applications in sports",
       "familiarity with multi-sport analysis"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Mathletics: How Gamblers, Managers, and Sports Enthusiasts Use Mathematics in Baseball, Basketball, and Football serves as a foundational text for those interested in sports analytics. This book, endorsed by Daryl Morey, offers a comprehensive overview of how mathematical principles are applied across various sports, including baseball, basketball, and football. The teaching approach is designed to make complex mathematical concepts accessible to a broad audience, ensuring that readers can grasp the essential ideas without requiring advanced mathematical training. The book covers a range of topics, including statistical analysis, probability, and decision-making processes in sports, making it an invaluable resource for students, practitioners, and sports enthusiasts alike. While no specific prerequisites are necessary, a general interest in sports and mathematics will enhance the learning experience. Upon completing this resource, readers will gain a solid understanding of how mathematics influences sports strategies and decision-making, equipping them with the knowledge to engage in discussions about sports analytics and its implications. The book does not include hands-on exercises or projects but provides a theoretical foundation that can be applied in practical scenarios. Compared to other learning paths, Mathletics stands out for its focus on the intersection of sports and mathematics, making it particularly appealing to those who wish to explore this unique field. Overall, this resource is perfect for curious browsers seeking to expand their knowledge of sports analytics and its mathematical underpinnings.",
     "tfidf_keywords": [
       "sports-analytics",
@@ -1025,7 +1025,7 @@
       "proficiency in risk measures",
       "ability to conduct simulations"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Loss Models: From Data to Decisions is a definitive actuarial textbook that serves as an essential resource for understanding the complexities of loss distributions, credibility theory, simulation methods, and risk measures. This book is tailored for actuarial students and professionals who are preparing for the Society of Actuaries (SOA) Exam STAM, providing them with the necessary knowledge and skills to excel in their examinations and professional practice. The textbook delves deeply into various topics, including the mathematical foundations of loss distributions, which are crucial for modeling and analyzing insurance claims and other financial risks. It also covers credibility theory, which is vital for adjusting estimates based on available data, thereby enhancing the accuracy of risk assessments. Additionally, the book emphasizes the importance of simulation techniques in decision-making processes, allowing practitioners to model complex scenarios and evaluate potential outcomes effectively. The pedagogical approach of this textbook combines theoretical explanations with practical applications, ensuring that readers not only grasp the underlying concepts but also learn how to apply them in real-world situations. While no specific prerequisites are required, a basic understanding of statistics and probability will be beneficial for readers. By engaging with the material, readers can expect to gain valuable skills such as the ability to analyze loss data, apply credibility methods, and utilize simulation tools for risk assessment. The book includes exercises and examples that encourage hands-on practice, reinforcing the learning experience. Upon completion, readers will be well-equipped to tackle actuarial challenges and make informed decisions in their professional roles. This resource stands out among other learning materials due to its comprehensive coverage of essential actuarial topics and its focus on practical application, making it an ideal choice for students, early-career professionals, and those looking to deepen their understanding of actuarial science.",
     "tfidf_keywords": [
       "loss-distributions",
@@ -1104,7 +1104,7 @@
       "Knowledge of life tables",
       "Skills in reserving techniques"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Actuarial Mathematics for Life Contingent Risks is a comprehensive resource that delves into the intricacies of life insurance mathematics, focusing on essential topics such as survival models, life tables, premium calculations, and reserving techniques. This book serves as a standard text for those preparing for Society of Actuaries (SOA) exams, providing a modern approach to the subject matter. The teaching approach emphasizes clarity and practical application, making complex concepts accessible to learners. While no specific prerequisites are required, a basic understanding of mathematics and statistics is beneficial for maximizing the learning experience. Readers can expect to gain valuable skills in calculating premiums and understanding the underlying principles of life insurance, which are critical for actuaries and insurance professionals. The book may include hands-on exercises and examples to reinforce learning, although specific projects are not detailed in the description. This resource is particularly suited for students and early-career professionals in the actuarial field, as well as those looking to deepen their understanding of life insurance mathematics. The expected completion time is not specified, but the depth of content suggests a significant investment in study time. Upon finishing this resource, readers will be equipped with the knowledge and skills necessary to navigate the complexities of life insurance mathematics and apply them in real-world scenarios.",
     "tfidf_keywords": [
       "survival-models",
@@ -1180,7 +1180,7 @@
       "Application of GLMs in insurance",
       "Analysis of longitudinal data"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Regression Modeling with Actuarial and Financial Applications serves as a bridge between actuarial science and modern statistics, focusing on regression techniques that are crucial for insurance applications. The book delves into generalized linear models (GLMs), which are essential for understanding various types of insurance data and risk assessment. It also covers credibility theory, which helps actuaries make informed decisions based on historical data, and longitudinal data analysis, which is vital for tracking changes over time in insurance claims and policies. The teaching approach emphasizes practical applications, ensuring that readers not only grasp theoretical concepts but also learn how to apply them in real-world scenarios. Prerequisites for this resource are minimal, making it accessible to those with basic statistical knowledge. However, a familiarity with regression analysis will enhance the learning experience. By the end of the book, readers will have gained skills in statistical modeling, risk assessment, and data analysis specific to the insurance industry. The resource includes hands-on exercises that allow learners to apply what they have learned to practical problems, solidifying their understanding of the material. This book is particularly suited for students and professionals in the fields of actuarial science and finance who are looking to deepen their knowledge of regression techniques and their applications. It is a valuable addition to any learning path focused on data analysis in insurance, providing a solid foundation for further exploration of advanced statistical methods. After completing this resource, readers will be equipped to tackle complex insurance modeling challenges and contribute effectively to their organizations.",
     "tfidf_keywords": [
       "regression",
@@ -1262,7 +1262,7 @@
       "Ability to analyze adverse selection and moral hazard",
       "Knowledge of regulatory impacts on insurance"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "The Handbook of Insurance serves as a comprehensive academic reference that delves into the intricate world of insurance economics. This resource is structured into 30 chapters, each meticulously exploring critical concepts such as adverse selection, moral hazard, and the regulatory frameworks that shape the insurance industry. Readers will gain insights into empirical research findings that highlight the practical implications of these theories in real-world scenarios. The teaching approach emphasizes a blend of theoretical foundations and empirical evidence, making it suitable for both students and professionals in the field. While no specific prerequisites are required, a foundational understanding of economics and finance will enhance the learning experience. Upon completion, readers will be equipped with the skills to critically analyze insurance market dynamics and apply economic principles to various contexts. The Handbook of Insurance is particularly beneficial for early-stage PhD students, junior data scientists, and mid-level professionals seeking to deepen their knowledge of insurance economics. The estimated time to complete the resource varies based on individual reading speed and engagement with the material, but it is designed to be a thorough reference for ongoing study and application. After finishing this resource, readers will be well-prepared to engage in discussions about insurance policies, contribute to research in the field, and apply their knowledge to enhance corporate insurance strategies.",
     "tfidf_keywords": [
       "adverse-selection",
@@ -1343,7 +1343,7 @@
       "R programming for simulations",
       "Understanding of GLMs in insurance"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "The book 'Computational Actuarial Science with R' serves as a comprehensive guide for individuals interested in the intersection of actuarial science and programming. It delves into essential topics such as simulation techniques, which are crucial for modeling various actuarial scenarios, and generalized linear models (GLMs), which are widely used in insurance for risk assessment and prediction. The resource is structured to provide practical, hands-on learning through complete R code examples, allowing readers to apply theoretical concepts in real-world situations. The teaching approach emphasizes a practical understanding of loss reserving methods, which are vital for insurance companies to maintain financial stability, and mortality modeling, which is essential for life insurance and pension planning. The book assumes that readers have a basic understanding of R programming, making it suitable for those who have completed introductory courses in R or have some experience with the language. By the end of the book, readers will have gained valuable skills in actuarial computing, enabling them to perform complex analyses and simulations relevant to the insurance industry. This resource is particularly beneficial for junior data scientists and those curious about the applications of R in actuarial contexts. The estimated time to complete the book varies based on the reader's pace, but it is designed to be accessible yet thorough, ensuring that learners can effectively grasp the material and apply it in practice.",
     "tfidf_keywords": [
       "actuarial science",
@@ -1423,7 +1423,7 @@
       "applying predictive modeling techniques",
       "analyzing case studies in insurance"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "The two-volume set 'Predictive Modeling Applications in Actuarial Science' offers an in-depth exploration of machine learning techniques specifically tailored for the insurance sector. Volume 1 delves into various predictive modeling methods, providing a solid foundation for readers to grasp the underlying principles and techniques that drive modern actuarial practices. It covers essential topics such as regression analysis, classification algorithms, and model evaluation metrics, ensuring that readers develop a robust understanding of how these methods can be applied in real-world scenarios. Volume 2 complements this knowledge by presenting a series of case studies that demonstrate the practical application of these methods in key areas such as pricing, underwriting, and reserving. Through these case studies, readers will gain insights into the challenges and successes of implementing machine learning solutions in the insurance industry. The resource is designed for individuals with a background in actuarial science or data science, particularly those who are looking to enhance their skills in predictive modeling. It assumes a basic understanding of Python and linear regression, making it suitable for intermediate learners. By engaging with this material, readers will not only learn about advanced modeling techniques but also acquire practical skills that can be directly applied to their work in insurance. The book includes hands-on exercises and projects that encourage active learning and application of concepts, making it a valuable resource for both students and professionals. Upon completion, readers will be equipped to leverage machine learning for improved decision-making in insurance, enhancing their career prospects in this evolving field.",
     "tfidf_keywords": [
       "predictive modeling",
@@ -1504,7 +1504,7 @@
       "Application of machine learning in insurance",
       "Interpretability of models"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "The 'Statistical Foundations of Actuarial Learning and its Applications' is a pivotal resource that bridges the gap between traditional actuarial methodologies and the rapidly evolving field of machine learning. This book delves into the integration of neural networks into pricing strategies, exploring how these advanced techniques can enhance the accuracy and efficiency of actuarial models. Readers will gain insights into telematics and its implications for modern insurance practices, alongside a thorough examination of model interpretability, a crucial aspect for actuaries who must communicate complex results to stakeholders. The pedagogical approach emphasizes practical applications, ensuring that learners not only grasp theoretical concepts but also engage in hands-on exercises that reinforce their understanding. Prerequisites include a basic knowledge of Python, making this resource accessible to those with foundational programming skills. By the end of the book, readers will have developed a robust skill set that includes the ability to implement machine learning techniques in actuarial contexts, assess the effectiveness of various models, and navigate the challenges of interpretability in their analyses. This resource is particularly suited for junior to senior data scientists and actuaries who are looking to enhance their skill sets with modern analytical techniques. The estimated time to complete the book is variable, depending on the reader's pace and prior knowledge, but it is structured to facilitate a comprehensive understanding of the material. Upon completion, readers will be equipped to apply machine learning methods in their actuarial work, contributing to more innovative and effective insurance solutions.",
     "tfidf_keywords": [
       "actuarial science",
@@ -1575,7 +1575,7 @@
       "Exploring technology applications in InsurTech"
     ],
     "content_format": "book",
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "The INSURTECH Book serves as a comprehensive resource that delves into the transformative effects of digital disruption on the insurance industry. It covers critical topics such as blockchain technology, the Internet of Things (IoT), and artificial intelligence (AI) applications, providing insights from over 80 InsurTech executives. This book is designed for a diverse audience, including industry professionals, students, and anyone curious about the intersection of technology and insurance. Readers will gain a solid understanding of how these technologies are reshaping business models and practices within the insurance sector. The book emphasizes practical applications and real-world examples, making it an invaluable tool for those looking to navigate the evolving landscape of InsurTech. It does not require prior technical knowledge, making it accessible to beginners. After completing this resource, readers will be equipped to engage in discussions about digital transformation in insurance and identify opportunities for innovation in their own practices.",
     "skill_progression": [
       "Understanding of digital disruption",
@@ -1655,7 +1655,7 @@
       "Understanding discrete choice models",
       "Applying econometric techniques to transportation demand"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Discrete Choice Analysis: Theory and Application to Travel Demand is a foundational text that delves into the principles of discrete choice modeling, particularly within the realm of transportation economics. This book introduces the random utility framework, which serves as the cornerstone for modern mode choice and demand forecasting methodologies. Readers will explore various topics and concepts, including the theoretical underpinnings of choice modeling, the application of econometric techniques to real-world transportation scenarios, and the implications of these models for understanding consumer behavior in travel demand. The pedagogical approach emphasizes clarity and accessibility, making complex theories approachable for both students and practitioners. While prior knowledge of basic econometrics may enhance comprehension, the book is structured to guide readers through the essential concepts without requiring extensive prerequisites. Learning outcomes include the ability to apply discrete choice models to analyze transportation demand, as well as an understanding of how these models can inform policy decisions and improve forecasting accuracy. The book may include hands-on exercises or case studies that allow readers to engage with the material practically. After completing this resource, readers will be equipped to utilize discrete choice modeling techniques in their own research or professional practice, contributing to more informed decision-making in transportation planning and policy. This resource is particularly beneficial for early PhD students, junior data scientists, and mid-level professionals looking to deepen their understanding of econometric applications in transportation.",
     "tfidf_keywords": [
       "discrete-choice",
@@ -1732,7 +1732,7 @@
       "Analyzing economic policies",
       "Evaluating transport efficiency"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Transport Economics is a comprehensive textbook that serves as an essential resource for undergraduate and MBA students interested in the economic aspects of transportation. This book covers all major modes of transport, including road, rail, air, and maritime, providing a thorough analysis of each mode's economic implications. The teaching approach emphasizes accessible economic analysis, making complex concepts understandable for students and practitioners alike. The book discusses various transport policies, their economic impacts, and the role of government in shaping transportation systems. It assumes no prior knowledge of economics, making it suitable for beginners, while also providing depth for those looking to expand their understanding of the field. Learning outcomes include the ability to analyze transport policies, evaluate the efficiency of different transport modes, and understand the broader economic implications of transportation decisions. The book may include case studies and examples that illustrate real-world applications of transport economics, enhancing the learning experience. After completing this resource, readers will be equipped to engage in discussions about transport policy and its economic ramifications, making it a valuable addition to the curriculum for students pursuing careers in transportation, economics, or public policy.",
     "tfidf_keywords": [
       "transportation modes",
@@ -1812,7 +1812,7 @@
       "Analyzing transportation's impact on land use",
       "Applying economic models to urban settings"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Lectures on Urban Economics is a graduate-level text that intricately connects the fields of urban economics and transportation. It delves into essential topics such as land use, housing markets, urban spatial structure, and transport infrastructure, employing elegant models to illustrate these complex relationships. The book is structured to provide a thorough understanding of how transportation systems influence urban development and vice versa. It is designed for graduate students and professionals who are looking to deepen their knowledge in urban economics, particularly those interested in the implications of transportation on urban planning and policy. The teaching approach emphasizes theoretical models while also encouraging practical applications, making it suitable for those who wish to apply these concepts in real-world scenarios. While no specific prerequisites are mentioned, a foundational understanding of economics and urban studies is assumed. Upon completing this resource, readers will gain insights into the dynamics of urban environments and the critical role of transportation in shaping these landscapes. The book does not specify hands-on exercises or projects, but it encourages critical thinking and application of the discussed models. Compared to other learning paths, this resource uniquely focuses on the intersection of urban economics and transportation, providing a specialized perspective that is crucial for students and practitioners in these fields. The estimated time to complete the book varies based on individual reading speed and engagement with the material, but it is structured to facilitate a comprehensive understanding of the subject matter. After finishing this resource, readers will be equipped to analyze urban economic issues, contribute to transportation policy discussions, and apply economic models to urban planning challenges.",
     "tfidf_keywords": [
       "urban-economics",
@@ -1880,7 +1880,7 @@
       "Knowledge of emerging automotive technologies",
       "Insight into sustainability practices in transportation"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Three Revolutions: Steering Automated, Shared, and Electric Vehicles to a Better Future is a comprehensive exploration of the transformative potential of autonomous vehicles, shared mobility, and electrification in the transportation sector. Authored by the founder of the UC Davis Institute of Transportation Studies, this book delves into the intricate interplay between technology and economics, offering insights into how these innovations will reshape our mobility landscape. Readers can expect to engage with a forward-looking analysis that emphasizes the implications of these revolutions on urban planning, environmental sustainability, and consumer behavior. The book is designed for a diverse audience, including students, practitioners, and anyone with a keen interest in the future of transportation. It does not assume prior knowledge, making it accessible to a broad range of readers. The author employs a pedagogical approach that combines theoretical frameworks with practical examples, ensuring that readers not only grasp the concepts but also understand their real-world applications. By the end of the book, readers will have a clearer vision of the future of transportation and the skills to critically assess the ongoing changes in this dynamic field.",
     "tfidf_keywords": [
       "autonomous vehicles",
@@ -1953,7 +1953,7 @@
       "Understanding AI applications in healthcare",
       "Recognizing the balance between technology and human interaction"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Deep Medicine: How Artificial Intelligence Can Make Healthcare Human Again presents a compelling vision for the future of healthcare through the lens of artificial intelligence. Authored by one of the most-cited researchers in medicine, this book argues that AI has the potential to liberate physicians from mundane tasks, allowing them to focus on meaningful human connections with patients. The text delves into various applications of deep learning, particularly in fields such as radiology and pathology, showcasing how these technologies can enhance diagnostic accuracy and patient outcomes. Readers will gain insights into the ethical implications of AI in medicine, the importance of maintaining human empathy in patient care, and the transformative power of digital health technologies. This resource is particularly relevant for healthcare professionals, AI enthusiasts, and anyone interested in the evolving landscape of health-tech. The book encourages critical thinking about the integration of AI into healthcare practices and the potential challenges that may arise. By the end of this reading, individuals will have a deeper understanding of how AI can be harnessed to improve healthcare delivery while preserving the essential human elements of patient care.",
     "tfidf_keywords": [
       "artificial-intelligence",
@@ -2031,7 +2031,7 @@
       "Applying DAGs in research",
       "Identifying and addressing confounding and selection bias"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Causal Inference: What If is a pivotal textbook in the field of causal inference, specifically tailored for health sciences. This resource delves into critical topics such as potential outcomes, directed acyclic graphs (DAGs), confounding, selection bias, and the intricacies of complex longitudinal settings. The pedagogical approach emphasizes a clear understanding of causal relationships, making it accessible for graduate students and professionals alike. Readers will gain essential skills in identifying causal mechanisms and applying appropriate methodologies to real-world health data. The book also encourages hands-on exercises that allow learners to practice these concepts in practical scenarios. By the end of this resource, readers will be equipped to critically analyze epidemiological studies and contribute to advancements in healthcare economics. The estimated time to complete the resource is variable, depending on the reader's pace and prior knowledge. Overall, this textbook stands out as a foundational piece for anyone serious about mastering causal inference in the context of health sciences.",
     "tfidf_keywords": [
       "causal-inference",
@@ -2111,7 +2111,7 @@
       "Applying advanced analytical methods",
       "Implementing solutions for clinical prediction and fraud detection"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Healthcare Data Analytics is a comprehensive 760-page reference that delves into the intricate world of healthcare data sources and advanced analytical methods. This resource is designed for those who wish to understand the applications of data analytics in healthcare, spanning critical areas such as clinical prediction and fraud detection. The book covers a wide array of topics, including the various data sources available in the healthcare sector, the methodologies for analyzing this data, and the practical applications of these analyses in real-world scenarios. Readers can expect to gain a robust understanding of how data science principles can be applied to healthcare problems, enhancing their ability to make informed decisions based on data-driven insights. The teaching approach emphasizes practical applications and real-world case studies, making it suitable for both students and professionals in the field. While no specific prerequisites are required, a basic understanding of data science concepts will be beneficial. Upon completion, readers will be equipped with the skills to analyze healthcare data effectively, implement predictive models, and identify fraudulent activities within healthcare systems. This resource stands out as a key reference for anyone looking to deepen their knowledge in healthcare analytics, offering a unique blend of theoretical knowledge and practical application. It is particularly beneficial for junior to senior data scientists, as well as curious individuals looking to explore the intersection of healthcare and data science. The estimated completion time is not specified, but the depth of content suggests a significant commitment to fully grasp the material. After finishing this resource, readers will be well-prepared to tackle complex challenges in healthcare analytics and contribute to improving healthcare outcomes through data-driven solutions.",
     "tfidf_keywords": [
       "healthcare-data-sources",
@@ -2187,7 +2187,7 @@
       "Ability to apply economic models to real-world scenarios",
       "Insight into institutional influences on energy pricing"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "The textbook 'International Energy Markets' serves as a definitive resource for understanding the complexities of global energy markets, including oil, coal, natural gas, and electricity. It delves into the practical models that underpin these markets, providing readers with a robust framework for analyzing energy pricing and market dynamics. The author, who has been recognized with the IAEE Outstanding Contributions Award, brings a wealth of knowledge and expertise to the subject matter, making this book an essential read for those interested in energy economics. The content is structured to cater to an audience that includes early-stage PhD students and junior data scientists, as well as mid-level professionals seeking to enhance their understanding of energy markets. The book emphasizes the importance of institutional context in shaping market behavior, offering insights that are applicable in both academic and practical settings. Readers can expect to gain a comprehensive understanding of the various energy sectors, the models used to analyze them, and the institutional factors that influence market outcomes. While the book does not specify prerequisites, a foundational knowledge of economics and market analysis will be beneficial for readers. The learning outcomes include a deeper appreciation of energy market structures and the ability to apply theoretical models to real-world scenarios. Overall, this textbook is a valuable resource for anyone looking to navigate the complexities of international energy markets and understand the economic principles that govern them.",
     "tfidf_keywords": [
       "energy-markets",
@@ -2251,7 +2251,7 @@
       "Understanding of market dynamics",
       "Ability to assess economic impacts of energy policies"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "The textbook 'International Energy Markets' offers an in-depth exploration of the global energy landscape, focusing on the economic principles that underpin the oil, gas, coal, and electricity markets. It delves into the intricacies of how these markets operate, examining the interplay of supply and demand, pricing mechanisms, and the influence of geopolitical factors on energy prices. The resource is designed to equip readers with a robust understanding of the economic forces shaping the energy sector, making it ideal for students, professionals, and anyone interested in the complexities of international energy markets. The teaching approach emphasizes a comprehensive overview, ensuring that readers gain a clear perspective on the various components of energy economics. While no specific prerequisites are outlined, a foundational understanding of economic principles may enhance the learning experience. Upon completing this resource, readers will be able to analyze market trends, assess the impact of external factors on energy prices, and understand the broader implications of energy economics on global markets. The textbook is structured to facilitate learning through detailed explanations and real-world examples, allowing readers to engage with the material actively. Overall, 'International Energy Markets' serves as a valuable resource for those looking to deepen their knowledge of energy economics and its relevance in today's world.",
     "tfidf_keywords": [
       "energy economics",
@@ -2332,7 +2332,7 @@
       "ability to analyze military spending",
       "knowledge of procurement processes"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "The Handbook of Defense Economics is a definitive academic reference that spans two comprehensive volumes, delving into the intricate relationship between economics and defense. It covers a wide array of topics including alliances, arms races, military spending, procurement, and conversion economics. This resource is designed for those who seek an in-depth understanding of how economic principles apply to defense strategies and policies. The teaching approach emphasizes a rigorous academic framework, providing readers with theoretical insights as well as practical applications. While no specific prerequisites are required, a foundational knowledge of economics and military studies would enhance the reader's comprehension. Upon completion, readers will gain valuable skills in analyzing defense-related economic issues and will be equipped to engage in informed discussions on military budgets and economic policies. This resource is particularly suited for early-stage PhD students, junior and mid-level data scientists, and senior decision-makers in defense-related fields. The estimated time to complete the readings and assimilate the knowledge will vary based on individual pace, but readers can expect a significant investment of time given the depth and breadth of the content. After finishing this resource, individuals will be well-prepared to contribute to academic discussions, policy-making, and strategic planning in defense economics.",
     "tfidf_keywords": [
       "military-spending",
@@ -2410,7 +2410,7 @@
       "knowledge of cryptographic techniques",
       "insight into economic and policy implications of security"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Security Engineering: A Guide to Building Dependable Distributed Systems is a pivotal resource for those looking to deepen their understanding of information security. This comprehensive guide covers a wide array of topics, including technical security measures, economic considerations, psychological factors, and policy implications. The author, a notable figure in the field of security economics, presents a well-rounded approach that integrates various disciplines to provide a holistic view of security engineering. Readers can expect to learn about the fundamental principles of security, the role of cryptography in safeguarding information, and the importance of understanding human behavior in the context of security. The book emphasizes the necessity of policy frameworks that support effective security practices while also addressing the economic aspects that influence decision-making in security. It is designed for a diverse audience, including students, practitioners, and anyone curious about the complexities of building secure distributed systems. The resource does not specify a duration for completion, but it is structured to facilitate a thorough exploration of the subject matter, making it suitable for both self-study and academic settings. After engaging with this material, readers will be equipped with the skills to assess and implement security measures, understand the economic implications of their choices, and navigate the policy landscape surrounding information security.",
     "tfidf_keywords": [
       "security engineering",
@@ -2489,7 +2489,7 @@
       "Analyzing strategic bidding",
       "Applying game theory to auctions"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Auction Theory is a standard graduate textbook that delves into the intricate world of auctions, a critical area of study within economics and game theory. The book covers a wide range of topics, from the foundational concepts of private values to the complexities of multi-unit auctions, providing a thorough understanding of how different auction formats operate and their implications for bidders and sellers alike. The text also includes a dedicated chapter on position auctions, which explores the nuances of auction design and the strategic behavior of participants. This resource is particularly valuable for graduate students and researchers who are looking to deepen their knowledge of auction theory and its applications in various economic contexts. The teaching approach emphasizes rigorous analytical methods, ensuring that readers not only grasp theoretical concepts but also develop practical skills in analyzing auction scenarios. While no specific prerequisites are outlined, a background in economics and game theory is beneficial for fully engaging with the material. Upon completion, readers will gain a robust understanding of auction dynamics, enabling them to apply these insights in real-world situations, such as designing auctions or formulating bidding strategies. This textbook stands out in its field by providing a comprehensive and detailed exploration of auction theory, making it an essential resource for those pursuing advanced studies in economics and related disciplines. The estimated time to complete the book may vary depending on the reader's pace, but it is designed to be a thorough yet accessible resource for serious learners in the field.",
     "tfidf_keywords": [
       "auction theory",
@@ -2564,7 +2564,7 @@
       "Understanding of media economics principles",
       "Knowledge of advertising platforms and targeting"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "The Handbook of Media Economics is a two-volume comprehensive resource that delves into the intricate relationship between media and economic principles. It covers a wide array of topics, including the evolution of advertising platforms, the mechanisms of targeting, and the broader dynamics of media markets. This handbook is structured to provide both theoretical insights and practical applications, making it an essential read for those interested in the economic aspects of media. The teaching approach emphasizes modern developments in the field, ensuring that readers are equipped with the latest knowledge and skills. While no specific prerequisites are outlined, a foundational understanding of economics and media studies may enhance the learning experience. Upon completion, readers can expect to gain a nuanced understanding of how advertising influences media consumption and the economic forces at play in media markets. This resource is particularly beneficial for early PhD students, junior data scientists, and mid-level professionals seeking to deepen their expertise in media economics. The estimated time to complete the handbook varies based on individual reading speed and engagement with the material. Overall, the Handbook of Media Economics serves as a vital tool for anyone looking to navigate the complexities of media economics and its implications for advertising and market strategies.",
     "tfidf_keywords": [
       "advertising platforms",
@@ -2641,7 +2641,7 @@
       "CLV modeling",
       "analytical assessment techniques"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "The Customer-Base Audit: The First Step on the Journey to Customer Centricity is a pivotal resource for professionals seeking to enhance their understanding of customer analytics. This book delves into five analytical lenses that provide a structured approach to assessing customer portfolio health. Readers will learn to diagnose customer base composition and identify trends using various customer behavior metrics, which are crucial for developing effective Customer Lifetime Value (CLV) models. The teaching approach emphasizes practical application, ensuring that readers can translate theoretical concepts into actionable insights. While no specific prerequisites are required, a foundational understanding of analytics will be beneficial. Upon completion, readers will gain valuable skills in customer behavior analysis and CLV modeling, equipping them to make data-driven decisions that foster customer centricity. This resource is particularly well-suited for junior to senior data scientists, as well as curious individuals exploring the field of customer analytics. The book is designed to be engaging and informative, making complex concepts accessible to a broad audience. Readers can expect to complete the book at their own pace, allowing for a thorough understanding of the material. After finishing this resource, individuals will be better prepared to assess customer portfolios and implement strategies that enhance customer relationships and drive business success.",
     "tfidf_keywords": [
       "customer-portfolio",
@@ -2719,7 +2719,7 @@
       "Customer analytics",
       "Resource allocation strategies"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Statistical Methods in Customer Relationship Management is a comprehensive resource that delves into the rigorous statistical techniques applicable throughout the customer lifecycle. The book covers essential topics such as acquisition modeling, which helps businesses understand how to effectively attract new customers. It also addresses customer lifetime value (CLV) estimation, a crucial metric for evaluating the long-term profitability of customer relationships. Retention management is another key area explored, providing insights into strategies for keeping customers engaged and satisfied. Additionally, the book discusses resource allocation, offering detailed methodologies that assist marketers in making informed decisions about where to invest their efforts and budgets. The teaching approach is grounded in practical applications, making it suitable for both students and professionals in the fields of marketing technology and customer analytics. While a foundational understanding of statistics is beneficial, the book is structured to guide readers through complex concepts, ensuring that they can apply these methods effectively in real-world scenarios. Hands-on exercises and case studies are included to reinforce learning and provide practical experience. Upon completion, readers will gain valuable skills in statistical analysis, enabling them to enhance customer relationship strategies and drive business growth. This resource is particularly beneficial for those looking to advance their careers in data science and marketing analytics, as it equips them with the tools necessary to analyze and interpret customer data effectively. The estimated time to complete the book may vary based on individual reading pace and engagement with the exercises, but it is designed to be a thorough yet accessible resource for those committed to mastering statistical methods in CRM.",
     "tfidf_keywords": [
       "customer-lifecycle",
@@ -2800,7 +2800,7 @@
       "Applying analytics techniques",
       "Using Excel/R for marketing applications"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "The 'Principles of Marketing Engineering and Analytics' is a definitive textbook that delves into the essential models and methodologies used in marketing. This resource covers a variety of topics including segmentation, positioning, choice models, pricing strategies, customer lifetime value (CLV), and resource allocation. Each concept is explored in detail, providing readers with a robust understanding of how these models can be applied in real-world marketing scenarios. The book emphasizes hands-on applications using Excel and R, allowing learners to engage with the material actively and practically. The teaching approach is designed to cater to individuals with some background knowledge in marketing and analytics, making it suitable for junior to senior data scientists, as well as curious learners looking to enhance their marketing acumen. By the end of this resource, readers will have gained valuable skills in marketing analytics, enabling them to make informed decisions based on data-driven insights. The book is structured to facilitate a progressive learning experience, guiding readers from foundational concepts to more complex applications. It is an excellent choice for marketing professionals, students, and anyone interested in the intersection of marketing and analytics. While the estimated duration for completion is not specified, the comprehensive nature of the content suggests that readers should allocate sufficient time to fully grasp the material and engage with the exercises provided.",
     "tfidf_keywords": [
       "segmentation",
@@ -2885,7 +2885,7 @@
       "Data analysis in marketing",
       "Implementation of analytics techniques in R and Python"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Marketing Data Science: Modeling Techniques in Predictive Analytics with R and Python is a comprehensive resource that delves into the practical applications of marketing analytics. The book covers a variety of topics including choice modeling, customer lifetime value (CLV), text analytics, and web analytics, providing readers with hands-on code examples in both R and Python. The teaching approach emphasizes practical implementations, making it suitable for those who wish to apply theoretical concepts in real-world scenarios. Prerequisites include a basic understanding of Python and statistical knowledge, which will help readers grasp the modeling techniques discussed. By engaging with this resource, learners can expect to gain skills in predictive modeling and data analysis specifically tailored for marketing. The book includes exercises that encourage readers to apply what they have learned, reinforcing their understanding of the material. This resource is ideal for junior to senior data scientists looking to enhance their marketing analytics capabilities. Although the estimated duration for completion is not specified, the depth of content suggests a significant investment of time for thorough understanding. Upon finishing this resource, readers will be equipped to implement advanced marketing analytics techniques, analyze customer data effectively, and make informed decisions based on predictive insights.",
     "tfidf_keywords": [
       "predictive-analytics",
@@ -2962,7 +2962,7 @@
       "Understanding of marketing metrics",
       "Ability to measure and analyze marketing performance"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "embedding_text": "Marketing Metrics: The Manager's Guide to Measuring Marketing Performance is a critical resource for anyone involved in marketing, from junior analysts to senior managers. This book meticulously covers over 50 essential metrics that are crucial for evaluating marketing performance across various dimensions, including customer engagement, product effectiveness, sales performance, advertising impact, and financial outcomes. Each metric is explained with clear formulas and practical applications, making it accessible for readers with varying levels of expertise. The teaching approach emphasizes real-world application, ensuring that readers can directly implement the concepts learned into their marketing strategies. While no specific prerequisites are required, a basic understanding of marketing principles will enhance the learning experience. Upon completion of this resource, readers will gain valuable skills in measuring and interpreting marketing performance, enabling them to make informed decisions that drive business success. The book is particularly beneficial for marketing professionals seeking to deepen their analytical skills and improve their campaign effectiveness. It is structured to facilitate a gradual learning process, making it suitable for those who are relatively new to the field as well as seasoned professionals looking to refresh their knowledge. After finishing this resource, readers will be equipped to select and apply the right metrics for their marketing initiatives, ultimately contributing to better performance outcomes.",
     "tfidf_keywords": [
       "marketing-metrics",
@@ -3006,7 +3006,7 @@
       "Economics",
       "Finance"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "difficulty": "intermediate",
     "prerequisites": [
       "python-basics"
@@ -3084,7 +3084,7 @@
       "Business Analytics",
       "Causal Inference"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
@@ -3163,7 +3163,7 @@
       "Econometrics",
       "Free"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "difficulty": "intermediate",
     "prerequisites": [
       "python-basics",
@@ -3242,7 +3242,7 @@
       "Simulation",
       "Textbook"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "difficulty": "beginner|intermediate",
     "prerequisites": [],
     "topic_tags": [
@@ -3316,7 +3316,7 @@
       "Emergence",
       "Classic"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
@@ -3392,7 +3392,7 @@
       "Handbook",
       "Reference"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
@@ -3469,7 +3469,7 @@
       "Derivatives",
       "Simulation"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "difficulty": "advanced",
     "prerequisites": [
       "stochastic-processes",
@@ -3550,7 +3550,7 @@
       "Simulation",
       "Inference"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "difficulty": "intermediate",
     "prerequisites": [
       "statistics",
@@ -3631,7 +3631,7 @@
       "Synthetic Control",
       "Double ML"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "difficulty": "intermediate",
     "prerequisites": [
       "python-basics",
@@ -3714,7 +3714,7 @@
       "Rubin",
       "Classic"
     ],
-    "model_score": 0.0,
+    "model_score": 0.0001,
     "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [
