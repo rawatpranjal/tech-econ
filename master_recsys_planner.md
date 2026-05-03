@@ -9,11 +9,11 @@
 
 | Field | Value |
 |---|---|
-| **Current phase** | Phase 1 of audit recommended sequencing **complete**; Phase 2 (ranker quality) starting |
+| **Current phase** | Planner Phase 1 (offline eval pipeline) **complete** as of 2026-05-03. Audit Phase 1 (surface-what-we-compute) was already complete. Next live phase: **Planner Phase 2 — logging extensions** (Ra3 search-click rank + server-side reading history). |
 | **Last updated** | 2026-05-03 |
 | **Owner** | Pranjal (solo, with parallel AI agents) |
 | **Blockers** | none |
-| **Next action** | Pick from Phase 2 ranker work: Ra1 watch-time weighting (in progress on `phase-5/ra1-watch-time-weighting`), Ra2 bge cold-start, Ra3 position-aware logging, Ra7 model persist. Ra4 (user-pref multiplier) and Re4 (session dampening) defer until R2 has dwell data. After Phase 2: Phase 3 evaluation pipeline (NDCG@10, Hit-Rate@10, replay) before any further ranker work. |
+| **Next action** | (a) wire `lib/diversity.mmr_rerank` into `rank_all_content.py:select_diverse_trending` (committed but not merged on `phase-2/lib-diversity`), (b) wire `lib/cold_start` propagation into `rank_all_content.py` (Ra2 integration; primitives already shipped in #16), (c) start Phase 2 logging: Ra3 expose search-click `rank` from worker + server-side reading-history table. Eval pipeline now gates every rerank (`reports/metrics.csv`); regressions > 5% NDCG@10 abort the run. |
 
 ---
 
@@ -403,6 +403,15 @@ half_life_days = 30
 - **Re1 shipped** as PR #5 (`0d0a6ab`). 18 vitest tests. MMR (lambda=0.7) over a wider candidate pool than topK, applied inside `reciprocalRankFusion`. Items without embeddings appended after the diverse set so we never drop content. Falls silently to RRF-only when MMR module isn't loaded.
 - **Audit's "Phase 1 — Surface what we already compute" is now complete.** R1 (already shipped), R2 (PR #3), R3 (already shipped), Re2 (PR #4), Re1 (PR #5). Total: 4 PRs in one session, 62 vitest tests, all behind the new gate.
 - **Coordination note (2026-05-03):** A second AI agent is running in parallel. We coordinate via branch presence and `git status`; don't claim the same file. So far Ra1 (`scripts/rank_all_content.py`) is the other agent's; this agent shipped R2/Re2/Re1.
+- **Phase 1 (offline eval pipeline) shipped 2026-05-03** on branch `phase-2/lib-diversity` (combined with the unmerged `lib/diversity.py` work). Pieces:
+  - `lib/d1_sessions.py` — `parse_events_to_sessions(events) -> list[Session]` plus HTTP / wrangler fetchers. Sessions are grouped by `session_id`, names lowercased to align with `inject_scores.py:39`.
+  - `lib/eval_runner.py` — `run_evaluation`, `write_metrics_row` (atomic via `os.replace`), `read_last_metrics_row`, `check_regression(threshold=…)` raising `RegressionAlert`.
+  - `scripts/evaluate_recsys.py` — CLI; exit codes `3` (D1 unreachable), `4` (zero sessions), `5` (regression). Pulls scores from `data/global_rankings.json` by default.
+  - `scripts/replay_eval.py` — baseline-vs-candidate side-by-side. No file writes.
+  - `scripts/rank_all_content.py` — new `--evaluate / --no-evaluate / --skip-regression-check` flags; `--evaluate` defaults ON for `--source api`. Eval gate runs **before** writing `data/global_rankings.json`, so a regression aborts without overwriting production. Wired through imports of the lib modules above.
+  - 51 new tests across `tests/python/lib/test_d1_sessions.py`, `tests/python/lib/test_eval_runner.py`, `tests/python/scripts/test_evaluate_recsys.py`. Full python suite at 285 passing.
+  - **What this gives us in practical terms:** every `/rerank` run now appends a row to `reports/metrics.csv` with NDCG@K, Precision@K, Hit-Rate@K, MAP, n_sessions, git_sha. The CSV is the time-series scoreboard. A drop > 5% NDCG@10 vs the previous row aborts the rerank with exit 5 — production scores untouched. Replay lets us A/B a candidate ranker against the last `holdout_days` of real D1 sessions before merging.
+  - **Out of scope (deliberate):** writing the eval row from CI on every PR — Phase 2's Ra3 needs to land first so per-session impressions carry their position-rank, otherwise NDCG penalises rankers for items the user never had a chance to click. Until then the eval is most useful at weekly-rerank cadence, not per-PR.
 
 ---
 
