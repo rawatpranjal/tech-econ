@@ -9,11 +9,11 @@
 
 | Field | Value |
 |---|---|
-| **Current phase** | Planner Phase 1 (offline eval pipeline) **complete** as of 2026-05-03. Audit Phase 1 (surface-what-we-compute) was already complete. Next live phase: **Planner Phase 2 — logging extensions** (Ra3 search-click rank + server-side reading history). |
+| **Current phase** | Planner Phase 1 (offline eval pipeline) **complete + merged to main** as of 2026-05-03 (PR #21, commit 43f18b8). Audit Phase 1 (surface-what-we-compute) was already complete. Next live phase: **Planner Phase 2 — logging extensions** (Ra3 search-click rank + server-side reading history) AND Ra2 cold-start A/B. |
 | **Last updated** | 2026-05-03 |
 | **Owner** | Pranjal (solo, with parallel AI agents) |
 | **Blockers** | none |
-| **Next action** | (a) ✅ MMR wired into `rank_all_content.py:select_diverse_trending` (this branch). Remaining: (b) wire `lib/cold_start` propagation into `rank_all_content.py` (Ra2 integration; needs replay-driven A/B vs current regression approach since the script's existing cold-start path is regression-based, not k-NN), (c) start Phase 2 logging: Ra3 expose search-click `rank` from worker + server-side reading-history table (touches worker schema — apply rules F15-17). Eval pipeline gates every rerank (`reports/metrics.csv`); regressions > 5% NDCG@10 abort the run. |
+| **Next action** | (a) Run `/rerank` once on main to seed `reports/metrics.csv` with row 1 (the scoreboard's zero-point). (b) Wire `lib/cold_start` as opt-in `--cold-start-method=knn` flag on `rank_all_content.py` (Ra2). After rerun, use `scripts/replay_eval.py` to A/B regression vs k-NN against the same D1 sessions; merge whichever wins. (c) Phase 2 logging: Ra3 expose search-click `rank` from worker + server-side reading-history table — touches worker schema, apply rules F15-17 strictly (same-PR ALTER + post-deploy `/run-schema` ping). |
 
 ---
 

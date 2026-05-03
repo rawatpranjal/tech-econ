@@ -63,6 +63,15 @@ __all__ = [
 ]
 
 
+# Worker writes 'click' for clicks. The impression event has been
+# emitted under both 'impress' (early prototypes) and 'impression'
+# (current; verified 2026-05-03 via wrangler -- 6627 rows of type
+# 'impression', zero of 'impress'). Accept both so we don't lose
+# data across schema-name churn.
+_CLICK_LIKE_TYPES = frozenset({"click"})
+_IMPRESS_LIKE_TYPES = frozenset({"impress", "impression"})
+
+
 class SessionLoadError(RuntimeError):
     """Raised when D1 is unreachable or returns an unusable payload.
 
@@ -137,7 +146,9 @@ def parse_events_to_sessions(events: Iterable[dict[str, Any]]) -> list[Session]:
         ts_raw = ev.get("timestamp")
         if not isinstance(sid, str) or not sid:
             continue
-        if ev_type not in ("click", "impress"):
+        is_click = ev_type in _CLICK_LIKE_TYPES
+        is_impress = ev_type in _IMPRESS_LIKE_TYPES
+        if not (is_click or is_impress):
             continue
         if not isinstance(ts_raw, (int, float)):
             continue
@@ -160,9 +171,9 @@ def parse_events_to_sessions(events: Iterable[dict[str, Any]]) -> list[Session]:
         if ts < bucket["started_at"]:
             bucket["started_at"] = ts
 
-        if ev_type == "click":
+        if is_click:
             bucket["clicks"].add(name)
-        else:  # impress
+        else:  # impression / impress
             bucket["impressions"].add(name)
 
     out: list[Session] = []
@@ -241,7 +252,7 @@ def fetch_events_via_wrangler(
     sql = (
         "SELECT id, type, session_id, timestamp, data "
         "FROM events "
-        f"WHERE type IN ('click','impress') "
+        f"WHERE type IN ('click','impress','impression') "
         f"AND timestamp >= {int(since_ms)} AND timestamp <= {int(until)} "
         f"ORDER BY timestamp ASC "
         f"LIMIT {int(limit)}"
