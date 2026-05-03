@@ -9,11 +9,11 @@
 
 | Field | Value |
 |---|---|
-| **Current phase** | Phase 3 — First feature: R2 "Because you viewed X" homepage row (in progress) |
+| **Current phase** | Phase 1 of audit recommended sequencing **complete**; Phase 2 (ranker quality) starting |
 | **Last updated** | 2026-05-03 |
-| **Owner** | Pranjal (solo) |
-| **Blockers** | PR #2 awaiting merge (CI green); branch protection now active |
-| **Next action** | Implement R2 on `phase-0/job-0.1-harness` branch (will be renamed in next push or rebased after PR #2 merges). After R2 ships: pivot to either Job 0.2 (lib/ modules) or another visible feature depending on user direction. |
+| **Owner** | Pranjal (solo, with parallel AI agents) |
+| **Blockers** | none |
+| **Next action** | Pick from Phase 2 ranker work: Ra1 watch-time weighting (in progress on `phase-5/ra1-watch-time-weighting`), Ra2 bge cold-start, Ra3 position-aware logging, Ra7 model persist. Ra4 (user-pref multiplier) and Re4 (session dampening) defer until R2 has dwell data. After Phase 2: Phase 3 evaluation pipeline (NDCG@10, Hit-Rate@10, replay) before any further ranker work. |
 
 ---
 
@@ -397,6 +397,12 @@ half_life_days = 30
   - `.github/workflows/recsys-ci.yml` — 4 jobs (pytest, vitest, validate_data, hugo build), no paths filter, runs on every PR + push to main
   - **Local verification**: `python3 -m pytest tests/python/ -v` → 2 passed; `npm test` → 3 passed.
   - **Remaining manual step (user-side):** turn on branch protection in GitHub UI → settings → branches → require `recsys-ci.yml` jobs to pass before merge.
+- **Phase-0 PR #2 unblocked + merged** (commit `c36f608`). `validate_data.py` had failed on three dunnhumby duplicate-URL errors; fixed by appending unique URL fragments per dataset (`#breakfast-at-the-frat`, `#carbo-loading`, `#the-complete-journey`, `#lets-get-sort-of-real`). The validator was also softened to allow legitimate hub URLs to host multiple distinct items (commit `fc5c7ca`). All four RecsysGate checks green; ruleset now active on main.
+- **R2 shipped** as PR #3 (`4d73585`). 18 vitest tests; combines reading-history + related-items.json + search-metadata.json. Silent-failure mode + new-user mode both verified.
+- **Re2 shipped** as PR #4 (`4ae1dd5`). 23 vitest tests. Spellcheck via Levenshtein over a vocabulary built from index docs (names, categories, tags, topic_tags). Wired only into `handleKeywordSearch`; hybrid/progressive paths can be extended in a follow-up if needed.
+- **Re1 shipped** as PR #5 (`0d0a6ab`). 18 vitest tests. MMR (lambda=0.7) over a wider candidate pool than topK, applied inside `reciprocalRankFusion`. Items without embeddings appended after the diverse set so we never drop content. Falls silently to RRF-only when MMR module isn't loaded.
+- **Audit's "Phase 1 — Surface what we already compute" is now complete.** R1 (already shipped), R2 (PR #3), R3 (already shipped), Re2 (PR #4), Re1 (PR #5). Total: 4 PRs in one session, 62 vitest tests, all behind the new gate.
+- **Coordination note (2026-05-03):** A second AI agent is running in parallel. We coordinate via branch presence and `git status`; don't claim the same file. So far Ra1 (`scripts/rank_all_content.py`) is the other agent's; this agent shipped R2/Re2/Re1.
 
 ---
 

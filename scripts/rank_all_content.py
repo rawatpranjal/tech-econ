@@ -24,6 +24,14 @@ from sklearn.model_selection import cross_val_predict, train_test_split
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score, roc_auc_score, average_precision_score
 from sentence_transformers import SentenceTransformer
 
+# Make `lib/` importable when this script is run directly (e.g. via the
+# weekly cron / `/rerank` slash command). Tests get this for free via
+# tests/python/conftest.py.
+_REPO_ROOT = Path(__file__).resolve().parents[1]
+if str(_REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT))
+from lib.sample_weights import compute_sample_weights
+
 try:
     import lightgbm as lgb
     HAS_LIGHTGBM = True
@@ -854,8 +862,16 @@ def train_regression_model(items, item_signals):
         encoders['scaler'] = scaler
         model_name = "LogisticRegression"
 
-    # Train on training set (binary target)
-    model.fit(X_train, y_train_binary)
+    # Train on training set (binary target).
+    #
+    # Ra1 — watch-time-weighted positive samples (book §8.3.2 / YouTube).
+    # Each row's training weight is `1 + log1p(engagement_score)` for
+    # positives and 1.0 for negatives. Items with deeper engagement
+    # (longer dwell, deeper scroll, more clicks) push the classifier
+    # harder than shallow click-bait. Compounds with class_weight=
+    # 'balanced' multiplicatively.
+    train_sample_weights = compute_sample_weights(y_train)
+    model.fit(X_train, y_train_binary, sample_weight=train_sample_weights)
 
     # Get predicted probabilities for test set
     y_pred_proba = model.predict_proba(X_test)[:, 1]
