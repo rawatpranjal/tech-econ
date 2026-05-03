@@ -1,9 +1,19 @@
 #!/bin/bash
 set -e
-cd /Users/pranjal/metrics-packages
+cd /Users/pranjal/Code/tech-econ
+
+# Load CLOUDFLARE_API_TOKEN so wrangler can auth non-interactively. Without
+# this the rerank silently falls back to cold-start scoring (the failure
+# mode that hid the 2026-03-26 → 05-03 analytics blackout).
+if [ -f .claude/secrets.env ]; then
+  set -a
+  # shellcheck source=/dev/null
+  . .claude/secrets.env
+  set +a
+fi
 
 echo "=== Fetching analytics & running ranking model ==="
-python3 scripts/rank_all_content.py
+python3 scripts/rank_all_content.py --source api
 
 echo "=== Rebuilding site ==="
 hugo --gc --minify
@@ -15,7 +25,7 @@ Update model_score with latest engagement data
 
 🤖 Generated with [Claude Code](https://claude.com/claude-code)
 
-Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
+Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>
 EOF
 )" || echo "No changes to commit"
 

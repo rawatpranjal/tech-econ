@@ -120,11 +120,19 @@ cp .claude/secrets.env.template .claude/secrets.env
 # Edit secrets.env with your actual keys
 ```
 
-**Load in scripts:**
+**Load in Python scripts:**
 ```python
 from dotenv import load_dotenv
 load_dotenv('.claude/secrets.env')
 ```
+
+**Load in shell scripts (so wrangler picks up `CLOUDFLARE_API_TOKEN`):**
+```bash
+if [ -f .claude/secrets.env ]; then
+  set -a; . .claude/secrets.env; set +a
+fi
+```
+`scripts/update_rankings.sh` does this — copy the pattern for any new shell entrypoint that calls wrangler. Without it wrangler falls back to OAuth, which silently expires.
 
 **⚠️ NEVER paste keys in chat — they get logged!**
 
