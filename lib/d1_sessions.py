@@ -198,40 +198,62 @@ def fetch_events_via_api(
     *,
     since_ms: int,
     until_ms: int | None = None,
+    admin_key: str | None = None,
+    types: tuple[str, ...] = ("click", "impression", "impress"),
+    limit: int = 50000,
     timeout_seconds: float = 30.0,
 ) -> list[dict[str, Any]]:
-    """GET {api_url}/events-raw?since=..&until=.. and return the rows.
+    """GET {api_url}/events-raw?key=..&since=..&until=.. and return the rows.
 
-    The endpoint contract: returns `{"events": [{...}, ...]}`. If the
-    worker doesn't expose this endpoint yet, raises SessionLoadError
-    with a clear message so callers can fall back to wrangler.
+    The endpoint contract: returns `{"events": [{...}, ...]}`. The
+    handler is ADMIN_KEY-protected (events carry session_ids), so
+    `admin_key` is required. If `admin_key` is missing the call will
+    almost certainly 401. Defaulting to None lets old callers crash
+    loud rather than silently auth-bypass.
+
+    If the worker doesn't expose this endpoint yet (was added 2026-05-03),
+    raises SessionLoadError with a clear message so callers can fall
+    back to wrangler.
     """
     until = until_ms if until_ms is not None else int(datetime.now(timezone.utc).timestamp() * 1000)
-    url = f"{api_url.rstrip('/')}/events-raw?since={int(since_ms)}&until={int(until)}"
+    qs_parts = [
+        f"since={int(since_ms)}",
+        f"until={int(until)}",
+        f"limit={int(limit)}",
+        f"types={','.join(types)}",
+    ]
+    if admin_key:
+        qs_parts.append(f"key={admin_key}")
+    url = f"{api_url.rstrip('/')}/events-raw?" + "&".join(qs_parts)
     try:
         with urllib.request.urlopen(url, timeout=timeout_seconds) as resp:
             body = resp.read().decode("utf-8")
     except urllib.error.HTTPError as e:
+        # Don't leak the admin_key into the error message.
+        safe_url = url.split("&key=")[0] if admin_key else url
         raise SessionLoadError(
-            f"GET {url} returned HTTP {e.code}. The /events-raw endpoint "
-            "may not be deployed yet -- fall back to --source wrangler."
+            f"GET {safe_url} returned HTTP {e.code}. The /events-raw "
+            "endpoint may not be deployed yet, or the admin key may be "
+            "wrong -- fall back to --source wrangler."
         ) from e
     except (urllib.error.URLError, TimeoutError, OSError) as e:
-        raise SessionLoadError(f"Could not reach {url}: {e}") from e
+        safe_url = url.split("&key=")[0] if admin_key else url
+        raise SessionLoadError(f"Could not reach {safe_url}: {e}") from e
 
+    safe_url = url.split("&key=")[0] if admin_key else url
     try:
         payload = json.loads(body)
     except json.JSONDecodeError as e:
-        raise SessionLoadError(f"{url} returned non-JSON body: {e}") from e
+        raise SessionLoadError(f"{safe_url} returned non-JSON body: {e}") from e
 
     if not isinstance(payload, dict) or "events" not in payload:
         raise SessionLoadError(
-            f"{url} returned unexpected shape: keys="
+            f"{safe_url} returned unexpected shape: keys="
             f"{sorted(payload.keys()) if isinstance(payload, dict) else type(payload).__name__}"
         )
     events = payload["events"]
     if not isinstance(events, list):
-        raise SessionLoadError(f"{url} 'events' field is not a list")
+        raise SessionLoadError(f"{safe_url} 'events' field is not a list")
     return events
 
 
@@ -295,15 +317,16 @@ def load_sessions(
     holdout_days: int,
     source: str = "api",
     api_url: str | None = None,
+    admin_key: str | None = None,
     now: datetime | None = None,
     db_name: str = "tech-econ-analytics-db",
 ) -> list[Session]:
     """High-level entry point: fetch the last `holdout_days` of events
     and group into Session objects.
 
-    `source` is "api" (HTTP) or "wrangler" (CLI). Caller decides the
-    fallback policy. Per rule E14 we never silently return [] on
-    failure -- we raise SessionLoadError.
+    `source` is "api" (HTTP, requires admin_key) or "wrangler" (CLI).
+    Caller decides the fallback policy. Per rule E14 we never silently
+    return [] on failure -- we raise SessionLoadError.
     """
     if holdout_days <= 0:
         raise ValueError(f"holdout_days must be positive, got {holdout_days}")
@@ -315,7 +338,12 @@ def load_sessions(
     if source == "api":
         if not api_url:
             raise ValueError("source='api' requires api_url")
-        events = fetch_events_via_api(api_url, since_ms=since_ms, until_ms=until_ms)
+        events = fetch_events_via_api(
+            api_url,
+            since_ms=since_ms,
+            until_ms=until_ms,
+            admin_key=admin_key,
+        )
     elif source == "wrangler":
         events = fetch_events_via_wrangler(
             since_ms=since_ms, until_ms=until_ms, db_name=db_name
