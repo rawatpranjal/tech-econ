@@ -36,6 +36,23 @@ from lib.model_cache import (
     latest_version as _latest_model_version,
     save_model as _save_model_artifact,
 )
+from lib.recsys_config import load as _load_recsys_config
+from lib.data_io import current_git_sha as _current_git_sha
+from lib.trending import (
+    build_trending_embedding_lookup,
+    select_diverse_trending,
+)
+from lib.eval_runner import (
+    RegressionAlert as _RegressionAlert,
+    check_regression as _check_regression,
+    read_last_metrics_row as _read_last_metrics_row,
+    run_evaluation as _run_evaluation,
+    write_metrics_row as _write_metrics_row,
+)
+from lib.d1_sessions import (
+    SessionLoadError as _SessionLoadError,
+    load_sessions as _load_sessions,
+)
 
 try:
     import lightgbm as lgb
@@ -1189,6 +1206,81 @@ def apply_citations_boost(items, scores):
     return scores
 
 
+def _run_offline_eval_gate(
+    *,
+    rankings: list,
+    metrics_csv: str,
+    source: str,
+    analytics_api: str,
+    skip_regression_check: bool,
+) -> None:
+    """Phase-1 offline evaluation: pull D1 sessions, score this run's
+    rankings against the actual clicks, append a row to metrics.csv, and
+    raise RegressionAlert if NDCG@10 dropped beyond the configured
+    threshold. Caller (main) catches the alert and exits non-zero
+    before any data file is overwritten.
+
+    A failure to reach D1 is treated as a hard error per rule E14 --
+    we won't silently rubber-stamp a rerank against zero observations.
+    Pass --no-evaluate to bypass when you really mean to (e.g. local
+    dev without internet).
+    """
+    config = _load_recsys_config()
+    holdout_days = config.evaluation.holdout_days
+    k_values = tuple(config.evaluation.k_values)
+    threshold = config.evaluation.ndcg_drop_alert_threshold
+
+    # Build (lowercased name -> score) lookup from this run's rankings
+    scores = {}
+    for entry in rankings:
+        name = entry.get('name')
+        score = entry.get('score')
+        if isinstance(name, str) and isinstance(score, (int, float)):
+            scores[name.strip().lower()] = float(score)
+
+    print("\n=== Offline evaluation ===")
+    print(f"  holdout_days={holdout_days} k_values={k_values} threshold={threshold}")
+
+    try:
+        sessions = _load_sessions(
+            holdout_days=holdout_days,
+            source='api' if source == 'api' else 'wrangler',
+            api_url=analytics_api if source == 'api' else None,
+        )
+    except _SessionLoadError as e:
+        print(f"  ERROR: D1 session load failed: {e}", file=sys.stderr)
+        print("  Skipping evaluation (no rerank gate). Investigate D1 health.",
+              file=sys.stderr)
+        return
+
+    if not sessions:
+        print("  No sessions in the holdout window; skipping evaluation row.")
+        return
+
+    metrics_csv_path = Path(__file__).resolve().parent.parent / metrics_csv
+
+    result = _run_evaluation(
+        scores=scores,
+        sessions=sessions,
+        holdout_days=holdout_days,
+        k_values=k_values,
+        git_sha=_current_git_sha(),
+        notes=f"rerank source={source}",
+    )
+    print(f"  sessions_total={result.n_sessions_total} "
+          f"evaluable={result.n_sessions_evaluable} "
+          f"NDCG@10={result.aggregate.ndcg_at_k.get(10, 0.0):.4f} "
+          f"HitRate@10={result.aggregate.hit_rate_at_k.get(10, 0.0):.4f}")
+
+    previous = _read_last_metrics_row(metrics_csv_path)
+    if not skip_regression_check:
+        # Raises RegressionAlert -- caller exits 5
+        _check_regression(result, previous, threshold=threshold)
+
+    _write_metrics_row(metrics_csv_path, result)
+    print(f"  appended row to {metrics_csv}")
+
+
 def main():
     parser = argparse.ArgumentParser(description='Rank all content items')
     parser.add_argument('--output', '-o', default='data/global_rankings.json',
@@ -1197,7 +1289,22 @@ def main():
                         help='Number of neighbors for cold start (default: 5)')
     parser.add_argument('--source', choices=['d1', 'api'], default='d1',
                         help='Data source: d1 (wrangler CLI) or api (HTTP endpoint)')
+    parser.add_argument('--evaluate', dest='evaluate', action='store_true', default=None,
+                        help='Run offline evaluation against D1 sessions and append a row '
+                             'to reports/metrics.csv. Defaults to ON for --source api.')
+    parser.add_argument('--no-evaluate', dest='evaluate', action='store_false',
+                        help='Skip the offline evaluation pass.')
+    parser.add_argument('--skip-regression-check', action='store_true',
+                        help='Append the metrics row but do not abort on NDCG@10 drop.')
+    parser.add_argument('--metrics-csv', default='reports/metrics.csv',
+                        help='Path to the metrics history CSV.')
+    parser.add_argument('--analytics-api',
+                        default='https://tech-econ-analytics-v2.pp712.workers.dev',
+                        help='analytics-worker URL used by --evaluate when --source api.')
     args = parser.parse_args()
+    # Default: evaluate when running against the live API
+    if args.evaluate is None:
+        args.evaluate = (args.source == 'api')
 
     data_dir = Path(__file__).resolve().parent.parent / 'data'
 
@@ -1468,47 +1575,36 @@ def main():
             name_display = item['name'][:50] + '...' if len(item['name']) > 50 else item['name']
             print(f"  #{item['rank']} ({item['score']:.3f}) {name_display}")
 
+    # Offline evaluation gate -- runs BEFORE we overwrite global_rankings.json
+    # so a regression aborts without touching production scores (rule E14).
+    if args.evaluate:
+        try:
+            _run_offline_eval_gate(
+                rankings=rankings,
+                metrics_csv=args.metrics_csv,
+                source=args.source,
+                analytics_api=args.analytics_api,
+                skip_regression_check=args.skip_regression_check,
+            )
+        except _RegressionAlert as e:
+            print(f"\nABORTING RERANK: {e}", file=sys.stderr)
+            sys.exit(5)
+
     # Save output
     output_path = Path(__file__).resolve().parent.parent / args.output
     with open(output_path, 'w') as f:
         json.dump(output, f, indent=2)
     print(f"\n\nRankings saved to: {args.output}")
 
-    # Generate homepage trending data (top 12 items with real engagement + diversity)
-    def select_diverse_trending(rankings, n=12, max_per_type=2, max_per_category=2):
-        """Select top items with diversity constraints."""
-        selected = []
-        type_counts = {}
-        category_counts = {}
-
-        for item in rankings:
-            if item.get('cold_start', False):
-                continue
-
-            # Skip career portals from trending
-            if item.get('type') == 'career':
-                continue
-
-            item_type = item.get('type', 'unknown')
-            item_category = item.get('category', 'unknown')
-
-            # Check limits
-            if type_counts.get(item_type, 0) >= max_per_type:
-                continue
-            if category_counts.get(item_category, 0) >= max_per_category:
-                continue
-
-            # Add item
-            selected.append(item)
-            type_counts[item_type] = type_counts.get(item_type, 0) + 1
-            category_counts[item_category] = category_counts.get(item_category, 0) + 1
-
-            if len(selected) >= n:
-                break
-
-        return selected
-
-    homepage_items = select_diverse_trending(rankings, n=12, max_per_type=2, max_per_category=2)
+    # Generate homepage trending data (top 12 items with real engagement +
+    # MMR diversification over SBERT embeddings; lib.diversity.mmr_rerank).
+    print("\nDiversifying homepage trending row via MMR...")
+    embedding_lookup = build_trending_embedding_lookup(
+        rankings, SBERT_MODEL, pool_size=60,
+    )
+    homepage_items = select_diverse_trending(
+        rankings, n=12, lambda_=0.7, embedding_lookup=embedding_lookup,
+    )
     homepage_data = {
         "updated": output['updated'],
         "count": len(homepage_items),
