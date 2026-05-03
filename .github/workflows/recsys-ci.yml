@@ -79,6 +79,22 @@ jobs:
       - name: Validate data
         run: python scripts/validate_data.py
 
+  recsys-output-invariants:
+    name: test_recsys_outputs.py
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run output invariants
+        run: python scripts/test_recsys_outputs.py
+
   hugo-build:
     name: hugo build sanity
     runs-on: ubuntu-latest
