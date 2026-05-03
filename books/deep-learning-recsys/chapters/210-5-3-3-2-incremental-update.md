@@ -1,0 +1,4 @@
+## 5.3.3.2 Incremental Update
+
+Incremental update only 'feeds' the newly added samples to the model for incremental training. Technically, deep learning models often use the stochastic gradient descent (SGD) method and its variants for learning. The learning of incremental samples by the model is equivalent to continuing to input incremental samples for gradient descent  based  on  the  original  samples.  The  disadvantage  of  incremental  update  is that the model of incremental update is often unable to find the global optimal point. Therefore, in the actual application, the combination of incremental update and global update is often used. After several rounds of incremental updates, global update is performed when the business volume is small to correct the errors accumulated in the model during those incremental updates.
+

@@ -1,0 +1,8 @@
+## 6.6.1 Nature of the Engineer's Responsibilities
+
+The trade-off balance between engineering and theory is something that every engineer needs to consider. Every engineer should have an engineering mindset instead of the 'research thinking' that scholars have. Recommender systems is a field with a  strong  emphasis  on  engineering  implementations  and  aiming  at  putting  theory into  production  as  its  primary  goal.  The  importance  of  an  engineering  mindset  is self-evident. Next, we will explain how to make trade-offs between engineering and theory from the perspective of an engineer.
+
+Whether you are a machine learning engineer, a software engineer, or even an engineer designing an electric vehicle or rockets, your responsibilities are the same. You need to find and utilize the optimal solution to deliver the product given some constraints.
+
+In  the  recommender  systems  context,  the  constraints  here  can  be  restrictions from  the  R&amp;D  schedule,  limitations  of  the  hardware  and  software  environment, requirements of actual business logic and application scenarios, or from the business objectives defined by the product manager, and so on. Because of these constraints, it  is  impossible  for  an  engineer  to  arbitrarily  try  new  technologies  and  do  as  many exploratory innovations as researchers in academia. Thus making a balance between cutting-edge theory and engineering implementations is a basic quality an engineer should have. In the following sections, we will use three practical cases to help readers understand how to make technical trade-offs in actual projects.
+

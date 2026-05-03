@@ -1,0 +1,4 @@
+## Features of This Book
+
+This  book  hopes  to  discuss  the  'classic'  or  'cutting-edge'  technical  content related to recommender systems, with a particular focus on the application of deep learning in the industry. It should be noted that this book is not an introductory book on machine learning or deep learning. Although the book will intersperse the introduction of basic machine learning knowledge, most of the content assumes that readers have some machine learning background. Additionally, this book is not a purely theoretical book, but a technical book that introduces the   application   methods of  deep  learning  in  the  field  of  recommender  systems  and  industry    cutting-edge technology  related  to  recommender  systems  from  the  perspective  of  engineers' practical experience.
+

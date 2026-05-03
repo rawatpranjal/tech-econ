@@ -1,0 +1,13 @@
+## 2 Pre-Deep Learning Era
+
+The Evolution of Recommender Systems
+
+Driven by the ever-increasing user growth demand for internet applications, recommender systems have seen tremendous progress in the technologies, from the onesize-fits-all Collaborative Filtering (CF) and Logistic Regression (LR) before 2010, to Factorization Machine (FM) and Gradient Boosting Decision Tree (GBDT). After 2015, deep learning models took off, and various model architectures emerged one after another. The mainstream recommender system models have developed from a single model to a combination of models, from classical frameworks to deep learning.
+
+Frankly  speaking,  deep  learning  recommendation  models  have  already  become the mainstream in the fields of recommendation, advertising, and search. But before diving right in, it is still necessary to understand the recommendation models of the pre-deep learning era for the following reasons:
+
+- (1)  Even with the unprecedented popularity of deep learning nowadays, traditional recommendation  models,  such  as  CF,  LR,  and  FMs,  still  have  irreplaceable advantages and extensively applicable scenarios. This is because they have high interpretability,  low  requirements  of  hardware  environment,  and  are  easy  for rapid  training  and  deployment.  An  excellent  recommendation  engineer  should get familiar with the pros and cons of each model and be able to flexibly utilize and improve different algorithm models.
+- (2)  Traditional recommendation models are the basis of deep learning models. The basic unit that constitutes the deep neural network (DNN) is a neuron, and a neuron can be represented by the widely used traditional LR models. Furthermore, the most influential deep learning recommendation models, such as Factorization machine-supported Neural Network (FNN), Deep Factorization Machine (DeepFM), and Neural Factorization Machine (NFM) have deep connections to the traditional FM models. In addition, training methods such as gradient descent, which are widely used in traditional model training, are still used in the deep learning era. Therefore, traditional recommendation models are the foundation of deep learning models, and it is also where we will start our journey in this book.
+
+This chapter starts with the evolution diagram of the recommendation models in the pre-deep learning era and introduces the principles, advantages, and disadvantages of the main traditional models, as well as the evolutionary relationship between different models. Hopefully, this will serve as a comprehensive blueprint for readers to understand the development of traditional recommendation models.
+

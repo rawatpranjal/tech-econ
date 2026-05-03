@@ -1,0 +1,4 @@
+## 8.1.9 Summary of Facebook's Deep Learning Recommender System
+
+Whether it is the GBDT+LR combination model or the latest DLRM model, Facebook's technical choices always give people a very practical feeling, which are simple and direct with problem-solving as their centric goal. Although, from an academic perspective, both models are not very innovative, practitioners in the industry can still learn a lot of engineering practices from them. The DLRM model is a very standard and practical deep learning recommendation model. If a company is just starting to transition from traditional machine learning models to deep learning models, it can completely adopt DLRM as the standard implementation. The feature engineering modelization and model combination ideas conveyed by the GBDT+LR combination model have a profound impact on the development of recommender system technology.
+

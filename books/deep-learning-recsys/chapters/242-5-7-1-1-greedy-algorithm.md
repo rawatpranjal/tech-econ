@@ -1,0 +1,8 @@
+## 5.7.1.1 ε -Greedy Algorithm
+
+Here we describe the main process of the ε -Greedy algorithm. Set a number ε in [0,1]. Each time, the probability of randomly choosing from all the slot machines is ε , and the probability of selecting the slot machine with the highest average reward up to now is (1ε ). After pulling the lever, update the reward expectation of the slot machine according to the reward value.
+
+The value of ε here  represents  the  preference  for  'exploration.'  Each  time,  the probability ε is used to 'explore,' and the probability (1ε ) is used to 'exploit,' and the reward expectation is updated after the item gets selected. Essentially, 'exploration' is actually a process of collecting new information, while 'exploitation' is a process of 'greedy' utilization of known information. The probability ε is the tradeoff between 'exploration' and 'exploitation.'
+
+The ε -Greedy algorithm is a very simple and practical algorithm, but its division of the exploration part and the exploitation part is somewhat rough and blunt. For example, after some iterations of exploration, the benefits of further exploration are not as great as before. At this time, the value of ε should be gradually reduced to increase the proportion of the exploitation part; in addition, exploration with completely 'randomized' slot machines is not the most efficient strategy. Some slot machines may have already accumulated enough information, and no further exploration is necessary. At this time, the chance of exploration should be more inclined to the slot machines that have rarely been selected. In order to improve these defects of ε -Greedy algorithm, a heuristic exploration and exploitation algorithm is proposed.
+

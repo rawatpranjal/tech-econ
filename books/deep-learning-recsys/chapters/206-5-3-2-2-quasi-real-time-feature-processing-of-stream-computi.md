@@ -1,0 +1,6 @@
+## 5.3.2.2 Quasi-Real-Time Feature Processing of Stream Computing Platform
+
+With the increasing maturity of a number of excellent stream computing platforms such as Storm, Spark Streaming, and Flink, the use of stream computing platforms for quasi-real-time feature processing has almost become the standard configuration of current recommender systems. The stream computing platform is a platform that stream processes the logs in mini batches. Due to the nature of waiting and processing a small batch of logs each time, the stream computing platform is not exactly a real-time platform, but the advantage is that it can perform some simple calculation of statistical features within the time window, such as the number of impressions and clicks of an item, the distribution of clicked topics by a user, and so on.
+
+The  features  calculated  by  the  stream  computing  platform  can  be  immediately stored in the feature database for the recommendation model to use. Although it is not designed to change the user's recommendation list in real-time according to the user's behavior, a few minutes' delay can basically ensure that the users' recent behaviors are incorporated into the recommender system in quasi-real-time.
+

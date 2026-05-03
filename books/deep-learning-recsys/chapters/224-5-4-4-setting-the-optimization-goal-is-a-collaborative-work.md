@@ -1,0 +1,8 @@
+## 5.4.4 Setting the Optimization Goal Is a Collaborative Work with Other Teams
+
+Regarding the topic of 'optimization goals,' the third point we want to emphasize is not a technical issue, but a teamwork effort. Building a successful recommender system is a complex and systematic problem that cannot be accomplished by the technical team alone. Instead, it requires the coordination of the product team, operation team, and content editing team to jointly achieve the business goals.
+
+During the coordination process, the technical team complains about the product team's frequent modification of the requirements, and the product team complains about the technical team's lack of understanding of their design intentions. There are often structural contradictions between the two. If you are looking for the best entry point to decouple the work between the product team and the technical team, then it would be the setting of the optimization goal for the recommender system.
+
+Only by setting appropriate optimization goals can the technical team focus on model improvement and structural adjustment, and avoid exposing too much of the complicated and obscure technical details to the outside world. On the other hand, for the product team, only by setting reasonable optimization goals can the recommender system serve the company's overall business interests and product design targets. To be honest, conflicts, compromises, and trade-offs among the teams are indispensable in this process. But only by negotiating the optimization goals before solving the problems can we avoid strategic mistakes, prevarication, and rework as much as possible, and maximize the business interests of the company and the productivity of the teams.
+

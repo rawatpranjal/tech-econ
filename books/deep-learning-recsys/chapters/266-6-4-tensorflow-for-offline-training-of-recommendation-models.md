@@ -1,0 +1,4 @@
+## 6.4 TensorFlow for Offline Training of Recommendation Models
+
+The application of deep learning is increasingly deepening in various fields, and the development of major deep learning platforms is also advancing by leaps and bounds.  Google's  TensorFlow  [6,7],  Amazon's  MXNet,  Facebook's  PyTorch, Microsoft's CNTK, and others are all deep learning frameworks launched by major technology giants. Unlike Parameter Server, which mainly focuses on model parallel  training,  the  aforementioned  deep  learning  frameworks  include  almost  all steps  related  to  deep  learning  models,  such  as  model  building,  parallel  training, and online serving. This section takes TensorFlow as an example and introduces model training mechanisms in the deep learning framework, especially the technical details of parallel training.
+

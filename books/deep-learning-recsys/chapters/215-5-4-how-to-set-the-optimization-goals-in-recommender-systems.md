@@ -1,0 +1,6 @@
+## 5.4 How to Set the Optimization Goals in Recommender Systems
+
+A famous technology company CEO once said: 'Don't use diligence in tactic to cover up laziness  in  strategy.'  This  quote  also  applies  to  the  technology  innovation  and application. If a technology itself is novel and advanced, but the direction of application deviates from its actual demand, then the achievements of this technology cannot be significant. In recommender systems, if the optimization goal of your model is inaccurate, no matter how good the evaluation metric is, it will deviate from the actual goal you want to achieve. Therefore, making no strategic mistakes and reasonably setting the optimization goals are the focus for every machine learning engineer before they start building a recommender system.
+
+To set a 'reasonable' optimization goal for a recommender system, you first need to  establish a 'reasonable' principle. For a company, in most cases, the goal is to achieve a certain business target, so formulating the optimization goal according to the company's business targets should be a 'reasonable' choice. This is further illustrated next with the examples of recommender systems for YouTube and Alibaba.
+

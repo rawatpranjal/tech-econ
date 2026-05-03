@@ -185,12 +185,16 @@ def find_duplicate_urls(files: dict) -> list:
 
     Cross-file duplicates are allowed.
     Same URL with different category/topic is allowed (cross-category indexing).
-    Only flags true duplicates: same URL + same category/topic.
+    Same URL with different name is allowed (legitimate hub URLs — e.g.
+    dunnhumby's /source-files/ index page hosts multiple datasets that all
+    download from the same landing URL).
+
+    Flags true accidental duplicates only: same URL + same category + same name.
     """
     errors = []
 
     for filename, data in files.items():
-        file_keys = {}  # Track URL+category within this file only
+        file_keys = {}  # Track URL+category+name within this file only
         items = data if isinstance(data, list) else [data]
 
         for item in items:
@@ -209,11 +213,12 @@ def find_duplicate_urls(files: dict) -> list:
             else:
                 category = item.get("category", "")
 
-            # Composite key: URL + category
-            key = f"{url}|{category}"
+            # Composite key: URL + category + name. Same URL + category +
+            # different names is legitimate (multi-asset hub pages).
+            key = f"{url}|{category}|{name}"
 
             if key in file_keys:
-                errors.append(f"{filename}: Duplicate URL '{url}' in category '{category}' - '{name}' and '{file_keys[key]}'")
+                errors.append(f"{filename}: Duplicate URL '{url}' in category '{category}' - '{name}' (entered twice)")
             else:
                 file_keys[key] = name
 

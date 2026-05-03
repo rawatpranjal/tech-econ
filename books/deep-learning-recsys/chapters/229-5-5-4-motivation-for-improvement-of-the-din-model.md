@@ -1,0 +1,10 @@
+## 5.5.4 Motivation for Improvement of the DIN Model
+
+Back to Alibaba's recommendation model. Section 3.8 details that the predecessor of the DIEN model is DIN, and its basic idea is to combine the attention mechanism with the deep neural network (as shown in Figure 3.24).
+
+Let's have a brief review of the principle of DIN. Based on the classic deep CTR model, DIN adds an activation unit to each type of feature while constructing the feature vector. This activation unit acts like a switch, controlling whether to put this type of feature into the feature vector and the weight when putting it in. Who controls this switch? It is determined by the relationship between the advertised item to be predicted and the features. That is to say, when predicting whether user u likes item i , DIN only takes into account the features related to item i , and the doors of other features will be closed, and they will not be considered at all or have very little weight.
+
+So is it a purely technical consideration when Alibaba's engineers came up with the idea of applying attention mechanisms to deep neural networks?
+
+The  author  once  communicated  with  the  authors  of  DIN  papers,  and  found that their starting point is also observations of user behavior. As comprehensive e-commerce websites, Tmall and Taobao's collection of historical user behavior records are valuable only if they are related to candidate items. Based on this starting  point,  the  switch  and  weight  structure  of  related  items  are  introduced,  and finally  it  is  found  that  the  attention  mechanism  happens  to  be  the  most  suitable technical  structure  that  can  explain  this  motivation.  Conversely,  if  the  attention mechanism is applied purely from a technical point of view just to verify whether it will be effective, it is 'putting the cart before the horse,' because this is not a conventional  way  of  solving  problems  in  the  industry,  but  a  tentative  technical verification process. This pure 'guess work' type of verification will undoubtedly increase the workload.
+
