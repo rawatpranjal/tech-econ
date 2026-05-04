@@ -1,6 +1,7 @@
 # Changelog
 
 ## 2026-05-04
+- **Re4 session-aware dampening (extends `static/js/personalize.js`)**: items the user has already clicked (sources of the Ra4 boost) get pushed DOWN in their row with multiplier `1 - DAMPEN` (0.8). Dampening **trumps** boosting: a card that is both clicked AND a neighbour of another clicked item still gets dampened. New `buildDampenSet` helper; `reorderRow` gains a 4th optional `dampen` arg (3-arg call still works). 12 new tests (suite 116 → 128).
 - **Ra4 client-side personalization (`static/js/personalize.js`)**: multiplicative re-rank of homepage `.cards-row` cards by the user's reading history. For each of the last 5 history items, top-5 neighbours from `related-items.json` get a rank-decayed boost (1.0 → 0.6); each card's static `model_score` is multiplied by `1 + 0.2 × max(boost)`. Stable on ties, runs on `requestIdleCallback`, no-ops with `< 3` history items or any fetch failure. Reuses the 1.4 MB `related-items.json` already loaded by `because-you-viewed.js` instead of pulling the 16 MB raw embedding binary the original audit assumed (`search-cache.js:getEmbedding(id)` doesn't exist — only blob-level access).
 
 ## 2026-05-03

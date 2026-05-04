@@ -175,6 +175,50 @@ describe('buildNameToIdMap', () => {
   });
 });
 
+describe('buildDampenSet', () => {
+  beforeEach(() => loadScript());
+
+  it('returns empty set for empty history', () => {
+    const { buildDampenSet } = window.TechEconPersonalize;
+    expect(Object.keys(buildDampenSet(sampleMetadata.items, []))).toEqual([]);
+  });
+
+  it('returns empty set for null history', () => {
+    const { buildDampenSet } = window.TechEconPersonalize;
+    expect(Object.keys(buildDampenSet(sampleMetadata.items, null))).toEqual([]);
+  });
+
+  it('contains the source ids of all matched history items', () => {
+    const { buildDampenSet } = window.TechEconPersonalize;
+    const history = [
+      { name: 'Foo Package', type: 'package' },
+      { name: 'Zed Paper', type: 'paper' },
+    ];
+    const set = buildDampenSet(sampleMetadata.items, history);
+    expect(set['package-foo']).toBe(true);
+    expect(set['paper-zed']).toBe(true);
+    expect(Object.keys(set).sort()).toEqual(['package-foo', 'paper-zed']);
+  });
+
+  it('silently skips history items not in metadata', () => {
+    const { buildDampenSet } = window.TechEconPersonalize;
+    const history = [
+      { name: 'Ghost Item', type: 'package' },
+      { name: 'Foo Package', type: 'package' },
+    ];
+    const set = buildDampenSet(sampleMetadata.items, history);
+    expect(Object.keys(set)).toEqual(['package-foo']);
+  });
+
+  it('disambiguates same-name items by type', () => {
+    const { buildDampenSet } = window.TechEconPersonalize;
+    const history = [{ name: 'Collide', type: 'paper' }];
+    const set = buildDampenSet(sampleMetadata.items, history);
+    expect(set['paper-collide']).toBe(true);
+    expect(set['package-collide']).toBeUndefined();
+  });
+});
+
 describe('reorderRow', () => {
   let row;
 
@@ -275,6 +319,79 @@ describe('reorderRow', () => {
     expect(LAMBDA).toBeGreaterThanOrEqual(0);
     expect(LAMBDA).toBeLessThanOrEqual(1);
   });
+
+  it('DAMPEN stays in [0, 1] so multiplier never drops below 1 - DAMPEN', () => {
+    const { DAMPEN } = window.TechEconPersonalize;
+    expect(DAMPEN).toBeGreaterThanOrEqual(0);
+    expect(DAMPEN).toBeLessThanOrEqual(1);
+  });
+
+  it('pushes dampened cards to the bottom of the row', () => {
+    const { reorderRow } = window.TechEconPersonalize;
+    makeCards(['alpha', 'beta', 'gamma']);
+    const nameToId = { alpha: 'a', beta: 'b', gamma: 'g' };
+    const dampen = { b: true }; // dampen beta
+    const moved = reorderRow(row, nameToId, {}, dampen);
+    expect(moved).toBe(true);
+    const order = [...row.children].map((c) => c.getAttribute('data-name'));
+    // beta dampened (0.8), alpha + gamma untouched (1.0). Beta last.
+    expect(order).toEqual(['alpha', 'gamma', 'beta']);
+  });
+
+  it('dampening trumps boosting (already-seen wins over similar-to-seen)', () => {
+    const { reorderRow } = window.TechEconPersonalize;
+    makeCards(['alpha', 'beta']);
+    const nameToId = { alpha: 'a', beta: 'b' };
+    const boost = { a: 1.0 }; // alpha would normally boost to 1.2
+    const dampen = { a: true }; // but alpha is also dampened to 0.8
+    const moved = reorderRow(row, nameToId, boost, dampen);
+    expect(moved).toBe(true);
+    const order = [...row.children].map((c) => c.getAttribute('data-name'));
+    // alpha dampened wins over its own boost: 0.8 < 1.0 (beta's untouched).
+    expect(order).toEqual(['beta', 'alpha']);
+  });
+
+  it('three-arg call (no dampen) still works for backwards compatibility', () => {
+    const { reorderRow } = window.TechEconPersonalize;
+    makeCards(['alpha', 'beta', 'gamma']);
+    const nameToId = { alpha: 'a', beta: 'b', gamma: 'g' };
+    const boost = { g: 1.0 };
+    const moved = reorderRow(row, nameToId, boost);
+    expect(moved).toBe(true);
+    expect([...row.children].map((c) => c.getAttribute('data-name'))).toEqual(['gamma', 'alpha', 'beta']);
+  });
+
+  it('returns false when only dampen ids match no cards', () => {
+    const { reorderRow } = window.TechEconPersonalize;
+    makeCards(['alpha', 'beta']);
+    const nameToId = { alpha: 'a', beta: 'b' };
+    const moved = reorderRow(row, nameToId, {}, { ghost: true });
+    expect(moved).toBe(false);
+  });
+
+  it('orders multiple dampened cards stably on tie', () => {
+    const { reorderRow } = window.TechEconPersonalize;
+    makeCards(['alpha', 'beta', 'gamma']);
+    const nameToId = { alpha: 'a', beta: 'b', gamma: 'g' };
+    const dampen = { a: true, g: true };
+    const moved = reorderRow(row, nameToId, {}, dampen);
+    expect(moved).toBe(true);
+    // Both alpha and gamma dampened (0.8); beta untouched (1.0).
+    // Stable on dampen tie: alpha before gamma (original idx 0 < 2).
+    expect([...row.children].map((c) => c.getAttribute('data-name'))).toEqual(['beta', 'alpha', 'gamma']);
+  });
+
+  it('mixes boost + dampen + untouched correctly', () => {
+    const { reorderRow } = window.TechEconPersonalize;
+    makeCards(['alpha', 'beta', 'gamma', 'delta']);
+    const nameToId = { alpha: 'a', beta: 'b', gamma: 'g', delta: 'd' };
+    const boost = { g: 1.0, d: 0.5 };
+    const dampen = { a: true };
+    const moved = reorderRow(row, nameToId, boost, dampen);
+    expect(moved).toBe(true);
+    // gamma 1.2 > delta 1.1 > beta 1.0 > alpha 0.8
+    expect([...row.children].map((c) => c.getAttribute('data-name'))).toEqual(['gamma', 'delta', 'beta', 'alpha']);
+  });
 });
 
 describe('init() — end to end', () => {
@@ -342,7 +459,7 @@ describe('init() — end to end', () => {
     expect(fetchSpy).not.toHaveBeenCalled();
   });
 
-  it('reorders cards when ≥3 history items have boostable neighbours', async () => {
+  it('reorders cards: boost neighbours up, dampen sources down', async () => {
     addCards(['foo package', 'bar package', 'baz package', 'qux package']);
     window.TechEconHistory = {
       getRecent: () => [
@@ -354,15 +471,17 @@ describe('init() — end to end', () => {
     mockFetchWith(sampleMetadata, sampleRelated);
     loadScript();
     await window.TechEconPersonalize.init();
-    // Foo's neighbours are bar(1.0), baz(0.9), qux(0.8), zed(0.7).
-    // Bar's neighbours are baz(1.0), qux(0.9). Zed has none.
-    // After max(): bar=1.0, baz=1.0, qux=0.9, zed=0.7. Foo card itself is not in metadata's neighbour set so is no-boost.
-    // Expected order in row: bar (1.0) > baz (1.0, stable on tie via original idx 2) > qux (0.9) > foo (0).
+    // Sources (dampened to 1-DAMPEN=0.8): foo, bar, zed.
+    // Foo's neighbours: bar(1.0), baz(0.9), qux(0.8), zed(0.7).
+    // Bar's neighbours: baz(1.0), qux(0.9). Zed has none.
+    // Boost map after max(): bar=1.0, baz=1.0, qux=0.9, zed=0.7. But:
+    //   bar is in dampen set -> hard-set to 0.8 (dampening trumps boost)
+    //   foo is in dampen set -> hard-set to 0.8
+    //   baz: 1 + 0.2 * 1.0 = 1.2
+    //   qux: 1 + 0.2 * 0.9 = 1.18
+    // Sort descending: baz (1.2), qux (1.18), foo (0.8 idx 0), bar (0.8 idx 1).
     const order = [...row.children].map((c) => c.getAttribute('data-name'));
-    expect(order[0]).toBe('bar package');
-    expect(order[1]).toBe('baz package');
-    expect(order[2]).toBe('qux package');
-    expect(order[3]).toBe('foo package');
+    expect(order).toEqual(['baz package', 'qux package', 'foo package', 'bar package']);
   });
 
   it('silently no-ops when fetch fails', async () => {
@@ -434,9 +553,10 @@ describe('init() — end to end', () => {
     mockFetchWith(sampleMetadata, sampleRelated);
     loadScript();
     await window.TechEconPersonalize.init();
-    // Row 1 with bar and foo: bar gets boost 1.0 (rank 0 of foo), foo gets 0 (it's the source). bar stays at top.
+    // Sources (dampened to 0.8): foo, bar.
+    // Row 1 with bar (idx 0) and foo (idx 1): both dampened to 0.8 -> tie -> stable on idx -> bar, foo.
     expect([...row.children].map((c) => c.getAttribute('data-name'))).toEqual(['bar package', 'foo package']);
-    // Row 2 with qux and baz: baz gets max(0.9 from foo, 1.0 from bar) = 1.0; qux gets max(0.8 from foo, 0.9 from bar) = 0.9.
+    // Row 2 with qux and baz: baz gets max(0.9 from foo, 1.0 from bar) = 1.0 -> 1.2; qux gets max(0.8 from foo, 0.9 from bar) = 0.9 -> 1.18.
     // baz first.
     expect([...row2.children].map((c) => c.getAttribute('data-name'))).toEqual(['baz package', 'qux package']);
   });
