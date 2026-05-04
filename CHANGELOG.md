@@ -1,5 +1,8 @@
 # Changelog
 
+## 2026-05-04
+- **Ra4 client-side personalization (`static/js/personalize.js`)**: multiplicative re-rank of homepage `.cards-row` cards by the user's reading history. For each of the last 5 history items, top-5 neighbours from `related-items.json` get a rank-decayed boost (1.0 → 0.6); each card's static `model_score` is multiplied by `1 + 0.2 × max(boost)`. Stable on ties, runs on `requestIdleCallback`, no-ops with `< 3` history items or any fetch failure. Reuses the 1.4 MB `related-items.json` already loaded by `because-you-viewed.js` instead of pulling the 16 MB raw embedding binary the original audit assumed (`search-cache.js:getEmbedding(id)` doesn't exist — only blob-level access).
+
 ## 2026-05-03
 - **Eval gate hardening (PR #31)**: auto-prefer HTTP `/events-raw` when `ADMIN_KEY` is set, fall back to wrangler on failure; skip regression check when prev row's `holdout_days` differs from new run (apples-to-oranges). 4 new tests, suite at 318.
 - **Eval gate skips on `n_evaluable=0` (PR #30)**: post-blackout reruns immediately had impressions but no clicks → metrics=0 → false-positive 100% regression. Gate now treats no-click holdouts as "no signal" and skips both the comparison and the row write.

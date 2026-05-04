@@ -2,6 +2,8 @@
 
 You are a senior staff Google engineer. Your user respects your judgement. You will think, deliberate, and plan all major decisions. You take time to research and be thorough. Better well-planned than quick-and-dirty — this repo is getting large so we need much more thought than blazing fast execution. Ask, think, search, research, test — but do it the right way.
 
+**Read `.claude/RULES.md` before any non-trivial work.** It contains the canonical HARD STOPS, REQUIRED RITUALS, and REPO-SPECIFIC GOTCHAS that govern this codebase. When this file and `RULES.md` conflict, RULES.md wins.
+
 ---
 
 # Agent Personas
@@ -156,11 +158,17 @@ python3 scripts/generate_embeddings.py # Regenerate vectors
 
 # Don't Touch (Fragile)
 
+(Full canonical list in `.claude/RULES.md` § REPO-SPECIFIC GOTCHAS. Quick reference here.)
+
 - **`papers.json` vs `papers_flat.json`** — Dual system, easy to desync. Use `papers_flat.json` for ranking/search.
 - **D1 analytics schema** — Ranking script depends on exact table structure
 - **Worker schema = code + migration.** When `analytics-worker/index.js` adds or renames a column referenced in an INSERT, the matching ALTER must (a) be added to `handleRunSchema` so it's idempotent and replayable, and (b) be applied to the live D1 by hitting `GET /run-schema?key=$ADMIN_KEY` *immediately after deploy*. Skipping this caused the 2026-03-26 → 2026-05-03 silent analytics blackout — five weeks of `200 ok` on `/events` while every D1 write rejected because `events.user_id` didn't exist.
-- **No test suite** — `npm test` is a placeholder; validation is manual
+- **JS test suite at `tests/js/`** runs via `npm test` (vitest + jsdom). 116 tests as of 2026-05-04. Pure-helper tests for new client modules are required (see `tests/js/personalize.test.js` and `because-you-viewed.test.js` for the pattern).
 - **Autoresearch uses git worktrees** — `autoresearch/run.sh` runs in an isolated worktree under `/tmp/` so it never touches the main checkout. Do NOT change it back to `git checkout` — that caused files written by concurrent sessions to be deleted.
+- **No per-item single pages exist.** Cards on every list page link out via `target="_blank"`. Only `papers/single.html` exists, and it's a *topic* page (lists papers in a topic), not a per-paper detail page. Plans assuming per-item detail pages need to pivot to list-page hover, search-result hover, or topic-page footer.
+- **`reading-history-section` and `because-you-viewed-section` placeholders have `display: none` because that's the empty state.** Don't read this as "feature not built" — `static/js/reading-history.js:121` `renderHistorySection()` and `static/js/because-you-viewed.js` flip these to `block` once history exists.
+- **`search-cache.js` is an IndexedDB wrapper, not an embeddings index.** It exposes `getEmbeddings()` (blob-level, lazy) and `setEmbeddings()`, no `getEmbedding(id)` helper. The 16 MB embedding binary loads only after first search. Don't trigger that download on the homepage critical path. For homepage personalization, reuse `static/embeddings/related-items.json` (1.4 MB, fetched eagerly by `because-you-viewed.js`) instead.
+- **Hugo cards expose `data-name` lowercased.** Match against `search-metadata.json` by lowercasing both sides.
 
 ---
 
