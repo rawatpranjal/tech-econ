@@ -73,6 +73,16 @@ rank_module = importlib.util.module_from_spec(_spec)
 sys.modules["rank_all_content"] = rank_module
 _spec.loader.exec_module(rank_module)
 
+# Read the canonical freshness tunables from data/recsys_config.json (the same
+# place rank_all_content.calculate_freshness_scores reads them). Used as the
+# "weight" and "half_life" args to the frozen legacy reference impl below so
+# both sides of the equivalence test see identical inputs.
+from lib.recsys_config import load as _load_recsys_config  # noqa: E402
+
+_CFG = _load_recsys_config()
+FRESH_WEIGHT = _CFG.ranking.freshness_boost_max
+FRESH_HALF_LIFE = _CFG.ranking.freshness_half_life_days
+
 
 # --------------------------------------------------------------------------- #
 # Reference: the pre-migration inline implementation, frozen here so future
@@ -156,8 +166,8 @@ class TestEquivalence:
         new = rank_module.calculate_freshness_scores(rows)
         legacy = legacy_calculate_freshness_scores(
             rows,
-            rank_module.FRESHNESS_WEIGHT,
-            rank_module.FRESHNESS_HALF_LIFE_DAYS,
+            FRESH_WEIGHT,
+            FRESH_HALF_LIFE,
         )
         assert set(new.keys()) == set(legacy.keys())
         for k in new:
@@ -175,8 +185,8 @@ class TestEquivalence:
         new = rank_module.calculate_freshness_scores(rows)
         legacy = legacy_calculate_freshness_scores(
             rows,
-            rank_module.FRESHNESS_WEIGHT,
-            rank_module.FRESHNESS_HALF_LIFE_DAYS,
+            FRESH_WEIGHT,
+            FRESH_HALF_LIFE,
         )
         for k in new:
             assert new[k] == pytest.approx(legacy[k], rel=1e-3, abs=1e-4)
@@ -207,14 +217,14 @@ class TestDeliberateDivergences:
         rows = [{"name": "future", "first_seen": _iso(-10)}]
         new = rank_module.calculate_freshness_scores(rows)
         # Maximum possible boost under the new impl
-        assert new["future"] == pytest.approx(rank_module.FRESHNESS_WEIGHT, abs=1e-9)
+        assert new["future"] == pytest.approx(FRESH_WEIGHT, abs=1e-9)
         # Legacy would have over-shot
         legacy = legacy_calculate_freshness_scores(
             rows,
-            rank_module.FRESHNESS_WEIGHT,
-            rank_module.FRESHNESS_HALF_LIFE_DAYS,
+            FRESH_WEIGHT,
+            FRESH_HALF_LIFE,
         )
-        assert legacy["future"] > rank_module.FRESHNESS_WEIGHT  # the bug we fixed
+        assert legacy["future"] > FRESH_WEIGHT  # the bug we fixed
 
     def test_fractional_days_resolve_more_precisely(self):
         """A 1.7-day-old item under legacy had days_since=1 (truncated);
@@ -225,13 +235,49 @@ class TestDeliberateDivergences:
         new = rank_module.calculate_freshness_scores(rows)
         legacy = legacy_calculate_freshness_scores(
             rows,
-            rank_module.FRESHNESS_WEIGHT,
-            rank_module.FRESHNESS_HALF_LIFE_DAYS,
+            FRESH_WEIGHT,
+            FRESH_HALF_LIFE,
         )
         # New (uses 1.7 days) decays more than legacy (uses 1 day, less decay).
         assert new["p"] < legacy["p"]
         # But the difference is bounded.
         assert abs(new["p"] - legacy["p"]) < 0.01
+
+
+class TestConfigOverride:
+    """The new wrapper accepts an optional `config` kwarg so tests / replays
+    can pin behaviour without depending on disk state. This is also the
+    forward-compat path for per-type half-lives once the audit's "papers
+    slow / talks fast" plan lands -- pass a Mapping in the config."""
+
+    def test_explicit_config_overrides_default(self):
+        """Build a config with double the boost and assert the output reflects
+        it. Verifies the new `config=` kwarg is wired all the way through."""
+        from dataclasses import replace
+        rows = [{"name": "x", "first_seen": _iso(0)}]
+        # Halve the half-life and double the boost from defaults.
+        custom = replace(
+            _CFG.ranking,
+            freshness_boost_max=FRESH_WEIGHT * 2,
+            freshness_half_life_days=FRESH_HALF_LIFE / 2,
+        )
+        custom_cfg = replace(_CFG, ranking=custom)
+        out = rank_module.calculate_freshness_scores(rows, config=custom_cfg)
+        # At age≈0 the boost should equal the configured max (within the
+        # microsecond drift between _iso(0) and the function call below).
+        assert out["x"] == pytest.approx(FRESH_WEIGHT * 2, abs=1e-5)
+
+    def test_default_config_used_when_kwarg_omitted(self):
+        """No-kwargs call should match an explicit-default-config call."""
+        rows = [
+            {"name": "a", "first_seen": _iso(3)},
+            {"name": "b", "first_seen": _iso(15)},
+        ]
+        no_kw = rank_module.calculate_freshness_scores(rows)
+        with_kw = rank_module.calculate_freshness_scores(rows, config=_CFG)
+        assert set(no_kw.keys()) == set(with_kw.keys())
+        for k in no_kw:
+            assert no_kw[k] == pytest.approx(with_kw[k], abs=1e-9)
 
 
 class TestErrorHandling:
