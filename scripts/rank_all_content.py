@@ -790,6 +790,23 @@ def train_regression_model(items, item_signals):
         has_dwell = 1 if signals.get('dwell_ms', 0) > 0 else 0
         has_scroll = 1 if signals.get('scroll_90', 0) > 0 or signals.get('scroll_75', 0) > 0 else 0
 
+        # Search-rank-at-click features (Ra3 follow-up).
+        # search_click_positions is a list of int positions (0 = top
+        # of search results). Items clicked at high positions
+        # demonstrate "the user worked for it" -- a quality signal
+        # that's orthogonal to raw click counts.
+        positions = signals.get('search_click_positions', []) or []
+        if positions:
+            avg_rank_at_click = float(np.mean(positions))
+            # Log-scaled so the model can learn non-linear effects
+            # (rank-0 vs rank-3 is a bigger gap than rank-20 vs rank-23).
+            log_avg_rank_at_click = float(np.log1p(avg_rank_at_click))
+            n_search_clicks_with_rank = len(positions)
+        else:
+            avg_rank_at_click = 0.0
+            log_avg_rank_at_click = 0.0
+            n_search_clicks_with_rank = 0
+
         engagement_features.append([
             ctr,
             has_clicks,
@@ -798,12 +815,16 @@ def train_regression_model(items, item_signals):
             has_scroll,
             np.log1p(clicks),  # Log-transformed click count
             np.log1p(impressions),  # Log-transformed impressions
+            avg_rank_at_click,           # Ra3
+            log_avg_rank_at_click,       # Ra3
+            float(n_search_clicks_with_rank),  # Ra3: how many position-bearing clicks
         ])
 
     engagement_features = np.array(engagement_features)
     X = np.hstack([X, engagement_features])
     encoders['n_engagement_features'] = engagement_features.shape[1]
-    print(f"  Added {engagement_features.shape[1]} engagement features")
+    print(f"  Added {engagement_features.shape[1]} engagement features "
+          f"(incl. 3 Ra3 search-rank features)")
 
     # Build target: comprehensive engagement score using ALL signals
     y = []
