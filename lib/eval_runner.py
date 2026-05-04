@@ -476,9 +476,15 @@ def check_regression(
     metric: str = "ndcg_at_10",
 ) -> None:
     """Raise RegressionAlert if `new` has dropped beyond `threshold`
-    on the named metric vs `previous_row`. No-ops when there is no
-    previous row (first run) or the previous row lacks the column
-    (k_values changed since)."""
+    on the named metric vs `previous_row`. No-ops when:
+      - there is no previous row (first run)
+      - the previous row lacks the metric column (k_values changed)
+      - the previous row's holdout_days disagree with the new run's
+        (different windows -> different session populations -> not a
+        fair apples-to-apples comparison; eg. the seed run used a
+        60-day window because of the analytics blackout, and the next
+        run reverts to the configured default of 14 days)
+    """
     if previous_row is None:
         return
     prev_str = previous_row.get(metric)
@@ -488,6 +494,18 @@ def check_regression(
         prev_value = float(prev_str)
     except ValueError:
         return  # malformed prior row -- can't compare honestly
+
+    # Window-mismatch guard: a 14-day rerun would always look like
+    # it regressed against a 60-day baseline simply because the
+    # session populations differ. Skip the comparison and let the
+    # caller write a fresh row at the new window.
+    prev_window = previous_row.get("holdout_days")
+    if prev_window is not None and prev_window != "":
+        try:
+            if int(prev_window) != int(new.holdout_days):
+                return
+        except ValueError:
+            return  # malformed window -- skip rather than crash
 
     # Resolve new value from EvalResult
     if metric.startswith("ndcg_at_"):

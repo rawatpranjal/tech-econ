@@ -265,6 +265,35 @@ class TestRegressionCheck:
             check_regression(new, prev, threshold=0.05,
                              metric="mean_average_precision")
 
+    def test_skips_when_holdout_days_differ(self):
+        # Row 1 was 60-day; the next rerun reverts to default 14.
+        # Comparing them is apples-to-oranges -- different session
+        # populations -- so the gate must not fire.
+        prev = {"ndcg_at_10": "1.0", "holdout_days": "60"}
+        new = self._result_with_ndcg(0.0)  # would normally trip the gate
+        # new.holdout_days defaults to 14 in _result_with_ndcg
+        check_regression(new, prev, threshold=0.05)  # no raise
+
+    def test_compares_when_holdout_days_match(self):
+        prev = {"ndcg_at_10": "1.0", "holdout_days": "14"}
+        new = self._result_with_ndcg(0.0)
+        with pytest.raises(RegressionAlert):
+            check_regression(new, prev, threshold=0.05)
+
+    def test_malformed_prev_holdout_days_skips(self):
+        prev = {"ndcg_at_10": "1.0", "holdout_days": "not-a-number"}
+        new = self._result_with_ndcg(0.0)
+        check_regression(new, prev, threshold=0.05)  # no raise
+
+    def test_missing_prev_holdout_days_compares(self):
+        # Pre-#28 rows didn't have a holdout_days column. Don't break
+        # forward-compat: if the prior row lacks the column, fall back
+        # to comparing (legacy behaviour).
+        prev = {"ndcg_at_10": "1.0"}
+        new = self._result_with_ndcg(0.0)
+        with pytest.raises(RegressionAlert):
+            check_regression(new, prev, threshold=0.05)
+
 
 # ---------------------------------------------------------------------------
 # Replay history CSV
