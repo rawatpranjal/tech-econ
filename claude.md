@@ -271,6 +271,19 @@ python3 scripts/rank_all_content.py      # ML-based rankings
 python3 scripts/enrich_metadata.py       # LLM-enriched fields
 ```
 
+## Check the Recsys Scoreboard
+**Source of truth for "is the ranker getting better?"**
+
+```bash
+python3 scripts/scoreboard_status.py     # one-screen view of metrics.csv + replays.csv
+```
+Reads `reports/metrics.csv` (one row per rerank-with-eval) + `reports/replays.csv` (baseline-vs-candidate replays from `replay_eval.py`). Prints:
+- row count + latest NDCG@10 / Hit-Rate@10 / MAP / @5 metrics
+- delta vs prior comparable row (same `holdout_days` only — cross-window deltas are skipped per the eval gate)
+- WARNING when rows mix `holdout_days` windows
+- replay-history tail
+- **decision-readiness guard**: RED/YELLOW/GREEN based on row density. Don't flip a ranker default (e.g., Ra2 `knn-bge`) until GREEN — that requires ≥3 rows at the same `holdout_days`.
+
 ## Check Analytics
 
 **Worker:** `tech-econ-analytics-v2.pp712.workers.dev` (D1 DB: `1515d5fb`)
@@ -426,6 +439,42 @@ Not currently useful — requires more user interaction data. When ready:
 - **Library:** implicit (ALS)
 - **Input:** Session-level interactions
 - **Output:** User-item and item-item similarity matrices
+
+## 7. A/B Testing Harness (`static/js/experiments.js` + `data/experiments.json`)
+**Goal:** Measure ranker / re-ranker / surface changes before global rollout.
+
+**Client-side bucketing (shipped, PR #18):**
+- `data/experiments.json` declares experiments with `id`, `status`, `variants[]`
+- Inlined into every page via `baseof.html` (`<script id="experiments-config">`); pipe `jsonify` through `safeJS` to avoid Hugo's html/template double-encoding (see RULES.md).
+- `window.Experiments.getVariant('exp_id')` returns `"control" | "treatment" | null` deterministically per `(te_uid, experiment_id)` cookie hash.
+- Pause an experiment by flipping `status` to `"paused"`; deterministic mapping persists.
+
+**Tracker logging (shipped, PR #42):**
+- `static/js/tracker.js:track()` reads `window.Experiments.getAllAssignments()` and attaches the result as `event.exp = {experiment_id: variant_id, ...}` to every payload when non-empty.
+- Worker side currently ignores the field. Until the §4 server-side schema lands (next), no aggregation is possible — but the data is already on the wire.
+
+**Still TODO (§4 server-side):**
+- `analytics-worker/index.js`: schema columns + INSERT path for `experiment_id` / `variant_id`. Per RULES.md HARD STOP F15: schema migration + INSERT in same PR + post-deploy `GET /run-schema?key=$ADMIN_KEY` ping.
+- `scripts/analyze_experiments.py`: per-variant CTR / engagement with confidence intervals.
+- First real experiment: probably `homepage_row_mmr_vs_baseline` (Re1 MMR @ λ=0.7) wired into `search-worker.js`.
+
+## 8. `lib/` toolkit (Phase 2 extractions)
+Reusable modules pulled out of `scripts/rank_all_content.py` so they can be tested independently and re-used by future scripts:
+
+| Module | Purpose | Use it from |
+|---|---|---|
+| `lib/freshness.py` | Exponential decay boost based on `first_seen` | `rank_all_content.py:calculate_freshness_scores` (now a thin wrapper) |
+| `lib/d1_client.py` | HTTP wrapper around the analytics worker (read-only typed endpoints) | `scripts/evaluate_recsys.py`, future replays |
+| `lib/diversity.py` | MMR re-ranking | `select_diverse_trending`, search-side `mmr.js` mirror |
+| `lib/eval_runner.py` | Offline NDCG/Hit-Rate gate; appends `metrics.csv` | `scripts/evaluate_recsys.py`, eval-gate in `rank_all_content.py` |
+| `lib/replay.py` | Baseline-vs-candidate replay | `scripts/replay_eval.py` |
+| `lib/recsys_config.py` | Typed loader for `data/recsys_config.json` | All ranker tunables; `from lib.recsys_config import load` |
+| `lib/cold_start.py` | k-NN cold-start propagation (TF-IDF / BGE) | `rank_all_content.py:propagate_cold_start_scores` |
+| `lib/sample_weights.py` | Dwell-weighted positive samples (Ra1) | `rank_all_content.py` LightGBM training |
+| `lib/model_cache.py` | Persist/load LightGBM booster (Ra7) | `rank_all_content.py:_save_model_artifact` |
+| `lib/d1_sessions.py` | Group D1 events into sessions | `lib/eval_runner.py` |
+| `lib/holdout.py` | Temporal split for offline eval | `lib/eval_runner.py` |
+| `lib/metrics.py` | NDCG / Hit-Rate / MAP / Precision implementations | `lib/eval_runner.py` |
 
 ---
 
