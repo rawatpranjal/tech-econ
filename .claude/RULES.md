@@ -72,6 +72,14 @@ Each entry includes **Why** (the underlying incident or principle) and **How to 
 - **Why:** Browser testing is not always available. Pure helpers can be exercised in jsdom without a server. Catches regressions early.
 - **How to apply:** Mirror the pattern in `tests/js/because-you-viewed.test.js` and `tests/js/personalize.test.js`. Public API on `window.X` for testability. Each pure function gets a describe block; init() gets an end-to-end describe with mocked `fetch` + `window.TechEconHistory`.
 
+### ALWAYS verify rendered HTML for inline-template features
+- **Why:** vitest mocks `el.textContent` directly with parsed objects, sidestepping Hugo's `html/template` engine. PR #18 shipped with all 30 vitest tests passing AND a real bug: Hugo auto-escaped the inlined `<script id="experiments-config" type="application/json">` body as a JS string literal, so `JSON.parse` returned a *string*, and the A/B harness silently failed-closed. Caught only by parsing the rendered `public/index.html` during the rebase merge-check.
+- **How to apply:** For ANY feature that depends on Hugo template output (inline JSON config, `jsonify`-encoded data, `safeJS` / `safeHTML` filters), add a CI step that builds the site AND parses the actual built HTML to assert the runtime contract. See `.github/workflows/recsys-ci.yml` "Inlined-config sanity" step for the pattern: `node -e "const html = readFileSync('public/index.html'); JSON.parse(html.match(...)[1])` etc.
+
+### ALWAYS use `safeJS` (or `safeHTML`) on Hugo `jsonify` inside `<script>` tags
+- **Why:** Same incident. Go's `html/template` (which Hugo uses) treats `<script>` body as JS context — including `<script type="application/json">` — and double-encodes `jsonify` output as a JS string literal. The fix: pipe through `safeJS` so Hugo trusts the value as already-safe and skips the auto-escape pass.
+- **How to apply:** `{{ .Site.Data.foo | jsonify | safeJS }}` for any inlined JSON config. Verify at CI time per the rule above.
+
 ### ALWAYS append to CHANGELOG.md under today's date when finishing work
 - **Why:** Future-us reading the changelog should be able to reconstruct what shipped without `git log` archaeology.
 - **How to apply:** 1-2 line entry. Lead with what shipped (PR number if known), then a one-clause "why". Archive to `.claude/history/changelog-YYYY-MM-DD.md` when CHANGELOG.md exceeds ~150 lines.
