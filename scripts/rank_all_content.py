@@ -121,8 +121,12 @@ HIGH_IMP_NO_CLICK_THRESHOLD = 10  # Min impressions to consider
 HIGH_IMP_NO_CLICK_WEIGHT = -1.0   # Penalty for high impressions but zero clicks
 
 # Freshness parameters
-FRESHNESS_WEIGHT = 0.15           # Max boost for brand new items (15% of score)
-FRESHNESS_HALF_LIFE_DAYS = 30     # Days until freshness boost decays by half
+# Freshness tunables now live in data/recsys_config.json under
+# `ranking.freshness_boost_max` / `ranking.freshness_half_life_days`.
+# Read via lib.recsys_config.load() at the call sites below — no
+# module-level constants. This unblocks the audit's per-type half-life
+# plan (papers slow / talks fast) without further code changes; the
+# config schema already accepts a Mapping[type → days].
 
 CITATION_WEIGHT = 0.3  # Boost for papers with citations
 
@@ -617,27 +621,35 @@ def build_engagement_scores(engagement_data):
     return dict(scores), dict(item_signals), cooccurrence
 
 
-def calculate_freshness_scores(first_seen_data):
+def calculate_freshness_scores(first_seen_data, *, config=None):
     """Calculate freshness boost based on first_seen dates.
 
-    Uses exponential decay: boost = FRESHNESS_WEIGHT * exp(-days / half_life)
+    Uses exponential decay: boost = boost_max * exp(-days / half_life)
     Newer items get higher boost, decaying over time.
 
-    Thin wrapper around lib.freshness.compute_freshness_boosts. Pre-migration
-    this was an inline implementation; the lib version is functionally
-    equivalent except for two deliberate improvements:
+    Thin wrapper around lib.freshness.compute_freshness_boosts. Reads
+    `freshness_boost_max` and `freshness_half_life_days` from
+    data/recsys_config.json via lib.recsys_config.load() (defaults: 0.15
+    and 30.0). Tests pass an explicit RankingConfig-shaped object via
+    the `config` kwarg to pin behaviour without depending on disk state.
+
+    Behaviour vs the pre-migration inline impl (still pinned by tests):
       - fractional days instead of integer (sub-day precision)
       - clock-skewed future dates clamp to age=0 instead of producing
-        boost > FRESHNESS_WEIGHT
+        boost > boost_max
     Both changes shift boosts by sub-0.001 magnitude on real data and
-    don't move ranks. Verified by tests/python/scripts/test_rank_all_content_freshness.py.
+    don't move ranks. Verified by
+    tests/python/scripts/test_rank_all_content_freshness.py.
     """
     from lib.freshness import compute_freshness_boosts
 
+    if config is None:
+        config = _load_recsys_config()
+
     return compute_freshness_boosts(
         first_seen_data,
-        boost_max=FRESHNESS_WEIGHT,
-        half_life_days=FRESHNESS_HALF_LIFE_DAYS,
+        boost_max=config.ranking.freshness_boost_max,
+        half_life_days=config.ranking.freshness_half_life_days,
     )
 
 
@@ -1799,8 +1811,8 @@ def main():
                 'deep_session': DEEP_SESSION_WEIGHT,
                 'coview': COVIEW_WEIGHT,
                 'coclick': COCLICK_WEIGHT,
-                'freshness': FRESHNESS_WEIGHT,
-                'freshness_half_life_days': FRESHNESS_HALF_LIFE_DAYS,
+                'freshness': _cfg.ranking.freshness_boost_max,
+                'freshness_half_life_days': _cfg.ranking.freshness_half_life_days,
             },
         },
         'metadata_fields': [
