@@ -1,6 +1,7 @@
 # Tech-econ recsys & search improvement audit
 
 **Date:** 2026-05-03
+**Last verified:** 2026-05-04 (status table at top of doc)
 **Inputs:**
 - Repo audit (3 parallel Explore agents, see plan file)
 - Cover-to-cover read of *Deep Learning Recommender Systems* (5 parallel Explore agents → `books/deep-learning-recsys/crosswalk.md`)
@@ -8,6 +9,47 @@
 **Companion docs:**
 - `obvious-wins-2026-05-03.md` — quick wins ≤1 day each (no model training)
 - `books/deep-learning-recsys/crosswalk.md` — every book technique → repo status
+
+---
+
+## STATUS AS OF 2026-05-04
+
+The body of this doc is the original audit, kept verbatim for historical context. **Several items in the original audit were either already implemented (the audit's Phase-1 explore missed them) or are not applicable to the actual repo architecture.** The table below is the source of truth for "what's done, what's left." When this doc and the table disagree, the table wins.
+
+| Item | Original audit said | Verified 2026-05-04 | Evidence |
+|---|---|---|---|
+| **R1** Related-items widget on single-item pages | TODO | **N/A** | The site has no per-item single pages (only `papers/single.html` exists, and it's a topic page that lists all papers in a topic). Cards on every list page link out via `target="_blank"`. The audit's "if they have single pages" caveat in `obvious-wins-2026-05-03.md` was correct; the audit itself was over-broad. |
+| **R2** "Because you viewed X" row | TODO | **DONE** | `static/js/because-you-viewed.js`; section at `layouts/index.html:39`. |
+| **R3** "Continue Reading" row from localStorage | TODO | **DONE** | `static/js/reading-history.js:121` `renderHistorySection()`; auto-runs on `DOMContentLoaded` (line 161); CSS at `static/css/custom.css:8933+`. The `display: none` on the placeholder is the empty state — flips to `block` once the user has any reading history. |
+| **R4** Multi-channel candidate generation | TODO | TODO | No `scripts/build_candidate_sources.py`. |
+| **R5** Item2vec / DeepWalk on co-view | TODO | TODO | No `scripts/train_item2vec.py`. |
+| **R6** ANN index | DEFER | DEFER | Catalog still ~4k items. |
+| **Ra1** Watch-time-weighted positives | TODO | **DONE** | `compute_sample_weights` + `sample_weight=` at `scripts/rank_all_content.py:947`. |
+| **Ra2** bge cold-start k-NN | TODO | **PARTIAL** | `--cold-start-method=knn-bge` flag exists (PR #25); default still `'regression'` (`rank_all_content.py:1404,1630`). PR #25's A/B was -4.1% NDCG@10 within noise on N=15 — needs more eval rows before flipping default. |
+| **Ra3** Use search rank as feature | TODO | **DONE** | PR #33 (search-rank bonus on click signal) + PR #35 (rank-at-click into regression features). |
+| **Ra4** User-pref vector multiplier | TODO | **DONE** | PR #36 (this session): `static/js/personalize.js`. Note: original plan called for cosine over bge embeddings via `search-cache.js:getEmbedding(id)`. That helper does not exist (search-cache only has blob-level access to a 16 MB binary). Implementation uses `related-items.json` neighbour-set approximation instead. |
+| **Ra5** Multi-task ranker (click+dwell+scroll) | DEFER until Ra1-Ra4 plateau | DEFER | Ra4 just shipped — observe before scoping Ra5. |
+| **Ra6** Wide & Deep | DEFER | DEFER | |
+| **Ra7** Persist trained model | TODO | **DONE** | `_save_model_artifact` at `scripts/rank_all_content.py:998`. |
+| **Re1** MMR diversity rerank for SEARCH | TODO | **DONE** | `static/js/search/mmr.js` imported into `search-worker.js:10,305`. |
+| **Re2** Search spellcheck fallback | TODO | **DONE** | `static/js/search/spellcheck.js`; "Did you mean" banner in `unified-search.js:341`. |
+| **Re3** Position-bias correction | TODO | TODO | Pairs with Ra3 logging — Ra3 done, Re3 not started. |
+| **Re4** Session-aware dampening | TODO | TODO | Depends on Ra4 (now done). |
+| **Re5** Contextual bandit over carousel orderings | TODO | TODO | Depends on A/B harness. |
+| **Re6** DPP at scale | DEFER | DEFER | |
+| **§4 A/B testing harness** (A1-A8) | TODO | TODO | No `data/experiments.json`, no `experiment_id` in tracker, no `analyze_experiments.py`. **The biggest unfinished block in the roadmap.** |
+| **§5b Evaluation pipeline** | TODO | **DONE** | PR #21 onward: `lib/d1_sessions.py`, `lib/eval_runner.py`, `scripts/evaluate_recsys.py`, `scripts/replay_eval.py`, `reports/metrics.csv`, `reports/replays.csv`, regression gate in `update_rankings.sh`. |
+
+**Score:** 9 done · 1 partial (Ra2 default flip) · 9 todo (the original 12, minus 3 already done) · 1 N/A (R1) · 5 deferred.
+
+**Next decision point:** The "obvious wins" + Phase 2 ranker work is fully closed. The two remaining substantive blocks are §4 (A/B harness) and Phase 5 (multi-channel retrieval + Item2vec). My read: §4 first — without it, Phase 5's gains are unmeasurable at our session count.
+
+**Lessons learned (audit hygiene):**
+1. The Phase-1 exploration that fed this audit missed `renderHistorySection()` in `reading-history.js` (R3 was already shipped). Audits decay even from the moment they're written. Always re-verify any "TODO" claim against the current code before planning work.
+2. The audit assumed several files/helpers existed that don't (`search-cache.js:getEmbedding(id)`, single-item pages for non-paper types). When a plan depends on a specific helper or file path, grep for it BEFORE writing the plan.
+3. See `RULES.md` for the full set of protocols added after this session.
+
+---
 
 This doc is organized by the four canonical recsys stages plus a fifth section for embeddings and evaluation:
 
