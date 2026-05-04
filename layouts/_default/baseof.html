@@ -303,11 +303,12 @@
 
     <!-- A/B experiments config (Phase 7 scaffold) -- inlined so the
          client can pick variants synchronously without a round-trip.
-         Loaded by static/js/experiments.js. -->
+         Loaded by static/js/experiments.js.
+         safeJS is required because Hugo's html/template auto-escapes
+         the body of any <script> tag (including type="application/json")
+         as a JS string literal, which would double-encode our JSON. -->
     {{ with .Site.Data.experiments }}
-    <script id="experiments-config" type="application/json">
-{{ . | jsonify }}
-    </script>
+    <script id="experiments-config" type="application/json">{{ . | jsonify | safeJS }}</script>
     {{ end }}
 
     <!-- Custom JS -->
