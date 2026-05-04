@@ -195,6 +195,54 @@
   // Core Tracking
   // ============================================
 
+  // ============================================
+  // Experiment Assignments (Phase 7 server-side hookup)
+  // ============================================
+  //
+  // Reads window.Experiments.getAllAssignments() (defined in
+  // static/js/experiments.js, loaded earlier in baseof.html) and returns a
+  // {experiment_id: variant_id, ...} map for the current user. Returns {}
+  // if Experiments isn't loaded, throws, or yields no assignments.
+  //
+  // The worker side currently ignores event.exp (it stores event.d as JSON
+  // and reads only the named top-level fields it knows about). A follow-up
+  // PR adds an `experiment_id`/`variant_id` ingestion path so the data
+  // attached here actually flows into D1. Until then, this is forward-
+  // compat scaffolding -- harmless to current ingestion, immediately
+  // useful once the worker side lands.
+
+  function getExperimentAssignments() {
+    try {
+      var Exp = global.Experiments;
+      if (!Exp || typeof Exp.getAllAssignments !== 'function') return {};
+      var assignments = Exp.getAllAssignments();
+      if (!assignments || typeof assignments !== 'object') return {};
+      // Guard against accidental array / non-plain-object returns; we
+      // want a string->string dict to match worker schema expectations.
+      var out = {};
+      for (var key in assignments) {
+        if (Object.prototype.hasOwnProperty.call(assignments, key)) {
+          var val = assignments[key];
+          if (typeof key === 'string' && typeof val === 'string') {
+            out[key] = val;
+          }
+        }
+      }
+      return out;
+    } catch (e) {
+      log('getExperimentAssignments failed:', e);
+      return {};
+    }
+  }
+
+  function hasAnyAssignment(map) {
+    if (!map) return false;
+    for (var k in map) {
+      if (Object.prototype.hasOwnProperty.call(map, k)) return true;
+    }
+    return false;
+  }
+
   function track(type, data) {
     if (!sessionId) return;
     var event = {
@@ -208,6 +256,8 @@
     if (sessionNumber) event.sn = sessionNumber;
     if (isReturningUser) event.ret = true;
     if (deviceType) event.dev = deviceType;
+    var exp = getExperimentAssignments();
+    if (hasAnyAssignment(exp)) event.exp = exp;
     eventQueue.push(event);
     log('Event:', type, data);
     if (eventQueue.length >= BATCH_SIZE) flush();
@@ -749,7 +799,12 @@
         searchContext.results = results;
         sessionStorage.setItem('_tsearch', JSON.stringify(searchContext));
       }
-    }
+    },
+    // Internal: exposed for tests so we can drive these without going through
+    // the full track() pipeline. Underscored to signal "not for production
+    // callers" -- public callers should use track().
+    _getExperimentAssignments: getExperimentAssignments,
+    _hasAnyAssignment: hasAnyAssignment
   };
 
   // Initialize
