@@ -1608,6 +1608,10 @@ def main():
 
     cold_start_method = args.cold_start_method
     knn_path = cold_start_method in ('knn', 'knn-tfidf', 'knn-bge')
+    # Thread cold-start tunables from data/recsys_config.json so an A/B
+    # via that file doesn't require a code change.
+    _cfg = _load_recsys_config()
+    cold_start_discount = _cfg.ranking.cold_start_discount
 
     # Step 4: Train regression model to predict engagement scores.
     # Skipped when --cold-start-method=knn* because the regression
@@ -1637,7 +1641,7 @@ def main():
             items=items,
             observed_scores=raw_scores,
             similarity=similarity,
-            k=5,  # TODO: thread from config.ranking.cold_start_k_neighbors
+            k=args.k_neighbors,
         )
         # Apply the same 0.3 discount the regression path uses, so the
         # A/B compares method-vs-method, not discount-vs-discount.
@@ -1649,7 +1653,7 @@ def main():
             if name in any_interaction_names:
                 combined_scores[name] = norm_engagement.get(name, 0)
             else:
-                combined_scores[name] = norm_cold.get(name, 0) * 0.3
+                combined_scores[name] = norm_cold.get(name, 0) * cold_start_discount
         combined_scores = normalize_scores(combined_scores)
         scoring_method = f'hybrid_{cold_start_method.replace("-", "_")}'
     elif regression_scores:
@@ -1667,7 +1671,7 @@ def main():
                 combined_scores[name] = norm_engagement.get(name, 0)
             else:
                 # Cold start - use predicted score but discount it
-                combined_scores[name] = norm_predicted.get(name, 0) * 0.3  # Cold-start discount
+                combined_scores[name] = norm_predicted.get(name, 0) * cold_start_discount
 
         # Re-normalize
         combined_scores = normalize_scores(combined_scores)
