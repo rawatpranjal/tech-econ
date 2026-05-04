@@ -1,0 +1,20 @@
+{
+  "_meta": {
+    "version": "experiments@v1",
+    "doc": "A/B experiment registry. Loaded by static/js/experiments.js. Each experiment has an id, status (active|paused|draft), and variants whose traffic must sum to 100. Bucketing is deterministic on (te_uid, experiment_id) — same user always gets the same variant for a given experiment, but bucketing across experiments is independent.",
+    "schema": "see static/js/experiments.js for full schema docstring"
+  },
+
+  "experiments": [
+    {
+      "id": "_example_disabled",
+      "status": "draft",
+      "started_at": null,
+      "primary_metric": "ctr_top10",
+      "variants": [
+        { "id": "control",   "traffic": 50 },
+        { "id": "treatment", "traffic": 50 }
+      ]
+    }
+  ]
+}
