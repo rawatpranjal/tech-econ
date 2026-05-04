@@ -34,7 +34,7 @@ The body of this doc is the original audit, kept verbatim for historical context
 | **Re1** MMR diversity rerank for SEARCH | TODO | **DONE** | `static/js/search/mmr.js` imported into `search-worker.js:10,305`. |
 | **Re2** Search spellcheck fallback | TODO | **DONE** | `static/js/search/spellcheck.js`; "Did you mean" banner in `unified-search.js:341`. |
 | **Re3** Position-bias correction | TODO | TODO | Pairs with Ra3 logging — Ra3 done, Re3 not started. |
-| **Re4** Session-aware dampening | TODO | TODO | Depends on Ra4 (now done). |
+| **Re4** Session-aware dampening | TODO | **DONE** | PR #37: extends `static/js/personalize.js`. Source items get multiplier `1 - DAMPEN` (0.8); dampening trumps boosting. New `buildDampenSet` helper. 12 new vitest cases (suite 116 → 128). |
 | **Re5** Contextual bandit over carousel orderings | TODO | TODO | Depends on A/B harness. |
 | **Re6** DPP at scale | DEFER | DEFER | |
 | **§4 A/B testing harness** (A1-A8) | TODO | **PARTIAL — client side in flight** | PR #18 ships `data/experiments.json`, `static/js/experiments.js`, inlined config in `baseof.html`, deterministic `te_uid + experiment_id` bucketing, 30 vitest tests. Server-side (tracker.js extension + D1 `experiment_id`/`variant_id` columns + `analyze_experiments.py`) is still TODO. PR #18 also needed a `safeJS` fix during the merge-check — a Hugo auto-escape bug had silently double-encoded the inlined config (caught by parsing rendered HTML; see `RULES.md` "ALWAYS verify rendered HTML" for the codified protocol). |
