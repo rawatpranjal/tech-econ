@@ -1429,6 +1429,18 @@ def _run_offline_eval_gate(
           f"NDCG@10={result.aggregate.ndcg_at_k.get(10, 0.0):.4f} "
           f"HitRate@10={result.aggregate.hit_rate_at_k.get(10, 0.0):.4f}")
 
+    # Zero-evaluable rows have no signal -- the metrics will all be 0
+    # because aggregate_sessions has nothing to average. Don't compare
+    # them against a real baseline (would always look like a 100%
+    # regression) and don't pollute metrics.csv with an empty row.
+    # This is the "rerank ran fine but the holdout window had no
+    # click-bearing sessions yet" case that hits right after the worker
+    # comes back online (impressions arrive before clicks).
+    if result.n_sessions_evaluable == 0:
+        print("  All sessions had zero clicks (no eval signal). "
+              "Skipping regression check and row write.")
+        return
+
     previous = _read_last_metrics_row(metrics_csv_path)
     if not skip_regression_check:
         # Raises RegressionAlert -- caller exits 5
