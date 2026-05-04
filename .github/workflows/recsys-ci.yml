@@ -111,3 +111,22 @@ jobs:
 
       - name: Build
         run: hugo --gc --minify
+
+      - name: Inlined-config sanity (catches Hugo auto-escape regressions)
+        run: |
+          node -e '
+          const fs = require("fs");
+          const html = fs.readFileSync("public/index.html", "utf8");
+          const m = html.match(/<script id=experiments-config[^>]*>([\s\S]*?)<\/script>/);
+          if (!m) { console.error("experiments-config script tag missing"); process.exit(1); }
+          const parsed = JSON.parse(m[1]);
+          if (typeof parsed !== "object" || parsed === null) {
+            console.error("experiments-config did not parse to an object (typeof " + typeof parsed + "). Check baseof.html safeJS pipeline.");
+            process.exit(1);
+          }
+          if (!Array.isArray(parsed.experiments)) {
+            console.error("experiments-config.experiments missing or not an array. Check data/experiments.json.");
+            process.exit(1);
+          }
+          console.log("experiments-config OK: " + parsed.experiments.length + " experiment(s) inlined");
+          '
