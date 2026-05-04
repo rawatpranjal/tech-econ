@@ -12,6 +12,7 @@ import json
 import subprocess
 import argparse
 import math
+import os
 import sys
 from datetime import datetime
 from collections import defaultdict
@@ -1388,21 +1389,47 @@ def _run_offline_eval_gate(
     print("\n=== Offline evaluation ===")
     print(f"  holdout_days={holdout_days} k_values={k_values} threshold={threshold}")
 
-    # The /events-raw HTTP endpoint isn't deployed yet (Phase 2
-    # follow-up); session-level evaluation always reads via wrangler
-    # today. The script's --source flag (api vs d1) controls aggregate
-    # engagement fetch, not raw events. Once /events-raw lands we can
-    # flip this to honour --source.
+    # /events-raw HTTP endpoint is preferred (deployed 2026-05-03 in
+    # PR #27). Fall back to wrangler subprocess when ADMIN_KEY isn't
+    # available locally so the gate still works in environments
+    # without secret access.
+    admin_key = os.environ.get('ADMIN_KEY')
+    if admin_key:
+        eval_source = 'api'
+        eval_api_url = analytics_api
+        print(f"  session source: HTTP /events-raw on {analytics_api}")
+    else:
+        eval_source = 'wrangler'
+        eval_api_url = None
+        print(f"  session source: wrangler (no ADMIN_KEY env; export it for HTTP)")
     try:
         sessions = _load_sessions(
             holdout_days=holdout_days,
-            source='wrangler',
+            source=eval_source,
+            api_url=eval_api_url,
+            admin_key=admin_key,
         )
     except _SessionLoadError as e:
         print(f"  ERROR: D1 session load failed: {e}", file=sys.stderr)
-        print("  Skipping evaluation (no rerank gate). Investigate D1 health.",
-              file=sys.stderr)
-        return
+        # If HTTP was the path that failed, automatically fall back to
+        # wrangler. Could be a transient endpoint outage or stale key;
+        # keeps the rerank green either way.
+        if eval_source == 'api':
+            print("  Falling back to wrangler subprocess...", file=sys.stderr)
+            try:
+                sessions = _load_sessions(
+                    holdout_days=holdout_days,
+                    source='wrangler',
+                )
+            except _SessionLoadError as e2:
+                print(f"  Wrangler fallback also failed: {e2}", file=sys.stderr)
+                print("  Skipping evaluation (no rerank gate). Investigate D1 health.",
+                      file=sys.stderr)
+                return
+        else:
+            print("  Skipping evaluation (no rerank gate). Investigate D1 health.",
+                  file=sys.stderr)
+            return
 
     if not sessions:
         print("  No sessions in the holdout window; skipping evaluation row.")
