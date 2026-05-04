@@ -107,6 +107,10 @@ SCROLL_90_WEIGHT = 2.0   # Reached 90% = high quality read
 SCROLL_75_WEIGHT = 1.0   # Good engagement
 SCROLL_50_WEIGHT = 0.5   # Moderate engagement
 SEARCH_CLICK_WEIGHT = 3.0  # Clicked from search = high intent
+SEARCH_CLICK_RANK_BONUS_WEIGHT = 0.3  # Per-position bonus: a click at
+                                       # rank 0 (top) is easy; a click at
+                                       # rank 20 means the user worked
+                                       # for it. Audit Ra3.
 RAGE_CLICK_WEIGHT = -2.0   # Frustration = negative signal
 QUICK_BOUNCE_WEIGHT = -1.0 # Left quickly = not useful
 DEEP_SESSION_WEIGHT = 1.5  # Part of "deep" engagement session
@@ -448,7 +452,10 @@ def build_engagement_scores(engagement_data):
         'search_clicks': 0, 'deep_sessions': 0,
         'rage_clicks': 0, 'quick_bounces': 0,
         'coviews': 0, 'coclicks': 0,
-        'reading_ratio': 0, 'high_imp_no_click': False
+        'reading_ratio': 0, 'high_imp_no_click': False,
+        # Search-rank tracking (Ra3): list of click positions per item
+        # so we can compute avg/min for downstream features.
+        'search_click_positions': [],
     })
 
     # Aggregate clicks
@@ -495,22 +502,39 @@ def build_engagement_scores(engagement_data):
                 scores[name] += count * SCROLL_50_WEIGHT
                 item_signals[name]['scroll_50'] += count
 
-    # NEW: Aggregate search-to-click attribution
+    # NEW: Aggregate search-to-click attribution.
+    # Audit Ra3: extract `position` and apply a per-position bonus
+    # (clicking the top result is easy; clicking rank-20 means the
+    # user worked for it). Also store positions on item_signals so
+    # downstream features can use avg/min rank-at-click.
     for row in search_clicks:
         clicks_json = row.get('clicks', '[]')
         try:
             click_list = json.loads(clicks_json) if isinstance(clicks_json, str) else clicks_json
             for click in click_list:
                 # click might be {id: "item name", position: 1, dwellMs: 5000}
+                position: int | None = None
                 if isinstance(click, dict):
                     name = click.get('id', '').lower().strip()
+                    pos_raw = click.get('position')
+                    if isinstance(pos_raw, (int, float)) and pos_raw >= 0:
+                        position = int(pos_raw)
                 elif isinstance(click, str):
                     name = click.lower().strip()
                 else:
                     continue
-                if name:
-                    scores[name] += SEARCH_CLICK_WEIGHT
-                    item_signals[name]['search_clicks'] += 1
+                if not name:
+                    continue
+                # Base search-click weight
+                contribution = SEARCH_CLICK_WEIGHT
+                # Position bonus: a click at rank 5 is more informative
+                # than a click at rank 0. Linear in position; can be
+                # tuned via SEARCH_CLICK_RANK_BONUS_WEIGHT.
+                if position is not None:
+                    contribution += position * SEARCH_CLICK_RANK_BONUS_WEIGHT
+                    item_signals[name]['search_click_positions'].append(position)
+                scores[name] += contribution
+                item_signals[name]['search_clicks'] += 1
         except (json.JSONDecodeError, TypeError):
             pass
 
@@ -1758,6 +1782,7 @@ def main():
                 'scroll_75': SCROLL_75_WEIGHT,
                 'scroll_50': SCROLL_50_WEIGHT,
                 'search_click': SEARCH_CLICK_WEIGHT,
+                'search_click_rank_bonus': SEARCH_CLICK_RANK_BONUS_WEIGHT,
                 'rage_click': RAGE_CLICK_WEIGHT,
                 'quick_bounce': QUICK_BOUNCE_WEIGHT,
                 'deep_session': DEEP_SESSION_WEIGHT,
