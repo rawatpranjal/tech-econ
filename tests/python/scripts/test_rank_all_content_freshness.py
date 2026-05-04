@@ -13,6 +13,12 @@ This test pins both implementations against the same fixtures and asserts:
   - rank order over the items is identical
 
 If a future change accidentally diverges these, the suite fails loudly.
+
+Import strategy: scripts/rank_all_content.py imports sklearn at module load,
+which isn't in requirements-dev.txt (CI installs only dev deps). To test the
+wrapper without pulling in the full ML stack, we stub the heavy imports
+in sys.modules before loading the module — same code path under test, just
+without forcing pytest to need sklearn/lightgbm/sentence_transformers.
 """
 
 from __future__ import annotations
@@ -22,8 +28,40 @@ import math
 import sys
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from unittest.mock import MagicMock
 
 import pytest
+
+
+# Stub heavy ML deps that rank_all_content.py imports at module load.
+# Only the modules — and only the names we know it imports — need to exist;
+# we don't actually call any sklearn / lightgbm / sentence_transformers
+# functions in the freshness path under test. Each stub uses a real
+# ModuleType (not just MagicMock) so submodule lookups via dotted-path
+# import work — `from sklearn.preprocessing import StandardScaler`
+# needs `sklearn.preprocessing` to be a module.
+import types as _types
+
+def _stub_module(name: str) -> None:
+    if name not in sys.modules:
+        m = _types.ModuleType(name)
+        # MagicMock backstop so any attribute access (e.g. SentenceTransformer)
+        # still returns *something* rather than AttributeError.
+        m.__getattr__ = lambda attr: MagicMock()  # type: ignore[assignment]
+        sys.modules[name] = m
+
+for _mod in (
+    "sklearn",
+    "sklearn.preprocessing",
+    "sklearn.model_selection",
+    "sklearn.feature_extraction",
+    "sklearn.feature_extraction.text",
+    "sklearn.metrics",
+    "sklearn.metrics.pairwise",
+    "lightgbm",
+    "sentence_transformers",
+):
+    _stub_module(_mod)
 
 
 # Load rank_all_content as a module without running its main() side effects.
