@@ -622,37 +622,23 @@ def calculate_freshness_scores(first_seen_data):
 
     Uses exponential decay: boost = FRESHNESS_WEIGHT * exp(-days / half_life)
     Newer items get higher boost, decaying over time.
+
+    Thin wrapper around lib.freshness.compute_freshness_boosts. Pre-migration
+    this was an inline implementation; the lib version is functionally
+    equivalent except for two deliberate improvements:
+      - fractional days instead of integer (sub-day precision)
+      - clock-skewed future dates clamp to age=0 instead of producing
+        boost > FRESHNESS_WEIGHT
+    Both changes shift boosts by sub-0.001 magnitude on real data and
+    don't move ranks. Verified by tests/python/scripts/test_rank_all_content_freshness.py.
     """
-    from datetime import datetime, timezone
+    from lib.freshness import compute_freshness_boosts
 
-    now = datetime.now(timezone.utc)
-    freshness_scores = {}
-
-    for row in first_seen_data:
-        name = row['name'].lower().strip()
-        first_seen_str = row.get('first_seen')
-
-        if not first_seen_str:
-            continue
-
-        try:
-            # Parse ISO format datetime
-            if 'T' in first_seen_str:
-                first_seen = datetime.fromisoformat(first_seen_str.replace('Z', '+00:00'))
-            else:
-                first_seen = datetime.strptime(first_seen_str, '%Y-%m-%d %H:%M:%S')
-                first_seen = first_seen.replace(tzinfo=timezone.utc)
-
-            days_since = (now - first_seen).days
-
-            # Exponential decay: newer items get higher boost
-            decay = math.exp(-days_since / FRESHNESS_HALF_LIFE_DAYS)
-            freshness_scores[name] = FRESHNESS_WEIGHT * decay
-
-        except (ValueError, TypeError):
-            continue
-
-    return freshness_scores
+    return compute_freshness_boosts(
+        first_seen_data,
+        boost_max=FRESHNESS_WEIGHT,
+        half_life_days=FRESHNESS_HALF_LIFE_DAYS,
+    )
 
 
 def extract_url_domain(url):
