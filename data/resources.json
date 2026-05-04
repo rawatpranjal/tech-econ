@@ -21651,6 +21651,85 @@
     "id": "resource-instacart-no-order-left-behind;-no-shopper-left-id"
   },
   {
+    "name": "Netflix: Quasi Experimentation at Netflix",
+    "description": "Netflix Tech Blog covering synthetic control and difference-in-differences methods for observational causal inference.",
+    "category": "Causal Inference",
+    "url": "https://netflixtechblog.com/quasi-experimentation-at-netflix-566b57d2e362",
+    "type": "Blog",
+    "level": "Hard",
+    "tags": [
+      "Synthetic Control",
+      "DiD",
+      "Causal Inference",
+      "Netflix"
+    ],
+    "domain": "Causal Inference",
+    "macro_category": "Causal Methods",
+    "model_score": 0.0003,
+    "subtopic": "Streaming",
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "causal-inference",
+      "statistics"
+    ],
+    "summary": "This resource explores the application of synthetic control and difference-in-differences methods for observational causal inference, specifically in the context of Netflix's experimentation practices. It is suitable for those interested in understanding advanced causal inference techniques.",
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are synthetic control methods?",
+      "How does difference-in-differences work?",
+      "What is observational causal inference?",
+      "How does Netflix apply these methods?",
+      "What are the limitations of synthetic control?",
+      "What are the assumptions behind DiD?",
+      "How can I implement these methods in Python?",
+      "What are real-world applications of causal inference?"
+    ],
+    "use_cases": [
+      "When to apply synthetic control methods",
+      "When to use difference-in-differences",
+      "Understanding causal relationships in observational data"
+    ],
+    "embedding_text": "The blog post titled 'Netflix: Quasi Experimentation at Netflix' delves into advanced methodologies for causal inference, specifically focusing on synthetic control and difference-in-differences techniques. These methods are crucial for researchers and practitioners who aim to derive causal insights from observational data, particularly in complex environments like those encountered by Netflix. The content is designed to provide readers with a comprehensive understanding of these methodologies, including their theoretical foundations, practical applications, and limitations. The teaching approach emphasizes clarity and accessibility, making it suitable for individuals with a foundational knowledge of statistics and causal inference. While no specific prerequisites are outlined, familiarity with basic statistical concepts is beneficial. Readers can expect to gain skills in applying these methods to real-world scenarios, enhancing their analytical capabilities in data-driven decision-making. The blog also encourages hands-on engagement, prompting readers to consider how they might implement these techniques in their own work. By the end of the resource, learners will be equipped to critically assess and apply causal inference methods in various contexts, particularly in tech and data science fields. This resource is particularly valuable for junior and mid-level data scientists, as well as curious individuals looking to deepen their understanding of causal analysis in technology-driven environments.",
+    "content_format": "article",
+    "skill_progression": [
+      "Understanding synthetic control",
+      "Applying difference-in-differences",
+      "Analyzing observational data"
+    ],
+    "tfidf_keywords": [
+      "synthetic-control",
+      "difference-in-differences",
+      "observational-causal-inference",
+      "causal-methods",
+      "Netflix-experimentation",
+      "causal-analysis",
+      "treatment-effects",
+      "panel-data",
+      "parallel-trends",
+      "quasi-experimental-design"
+    ],
+    "semantic_cluster": "causal-inference-methods",
+    "depth_level": "intermediate",
+    "related_concepts": [
+      "causal-inference",
+      "treatment-effects",
+      "panel-data",
+      "parallel-trends",
+      "event-study"
+    ],
+    "canonical_topics": [
+      "causal-inference",
+      "experimentation",
+      "statistics"
+    ],
+    "id": "resource-netflix-quasi-experimentation-at-netflix"
+  },
+  {
     "name": "Netflix: Return-Aware Experimentation",
     "description": "KDD 2025 Best Paper on optimal experiment design with limited resources. Framework for designing experiments that maximize learning given resource constraints.",
     "category": "A/B Testing",
@@ -21697,7 +21776,7 @@
       "resource allocation",
       "data analysis"
     ],
-    "model_score": 0.0003,
+    "model_score": 0.0002,
     "macro_category": "Experimentation",
     "domain": "Experimentation",
     "embedding_text": "The article 'Netflix: Return-Aware Experimentation' presents a cutting-edge framework for designing experiments that maximize learning while navigating the constraints of limited resources. This resource is particularly relevant for those involved in A/B testing and experimental design, providing a comprehensive overview of how to effectively allocate resources to enhance the learning outcomes of experiments. Readers will delve into the intricacies of return-aware experimentation, exploring methodologies that prioritize maximizing insights from each test conducted. The teaching approach emphasizes practical applications, making it suitable for both practitioners and researchers who seek to deepen their understanding of optimal experiment design. Prerequisites include a foundational knowledge of experimental design and statistics, ensuring that readers can fully engage with the content. Upon completion, learners will gain valuable skills in designing efficient experiments, understanding the trade-offs involved in resource allocation, and applying these concepts to real-world scenarios. This resource stands out by offering insights that are not only theoretical but also applicable in practical settings, making it an essential read for mid-level data scientists and senior professionals looking to refine their experimentation strategies. The estimated time to complete this resource is not specified, but it is designed to be digestible for those with the requisite background knowledge. After engaging with this article, readers will be equipped to implement return-aware methodologies in their own A/B testing frameworks, ultimately leading to more informed decision-making and enhanced learning outcomes in their projects.",
@@ -21772,7 +21851,7 @@
       "Familiarity with experimentation platforms",
       "Basic knowledge of monitoring tools"
     ],
-    "model_score": 0.0003,
+    "model_score": 0.0002,
     "macro_category": "Experimentation",
     "domain": "Experimentation",
     "embedding_text": "The article 'Netflix: It's All A/Bout Testing - The Experimentation Platform' offers an in-depth examination of Netflix's sophisticated A/B testing framework, which is pivotal for optimizing user experiences and product features. It delves into the architecture that supports one of the most advanced experimentation platforms in the industry, highlighting key components such as allocation strategies and the Ignite analysis tool. Readers will gain insights into how Netflix approaches experimentation, including the methodologies employed to ensure reliable and actionable results. The content is structured to cater to individuals who are curious about the intersection of technology and experimentation, making it accessible to a broad audience. While no specific prerequisites are required, a basic understanding of data analysis concepts may enhance comprehension. The article serves as a valuable resource for students, practitioners, and anyone looking to deepen their knowledge of A/B testing and its applications in real-world scenarios. Upon completion, readers will be better equipped to implement A/B testing strategies in their own projects, leveraging the insights gained from Netflix's approach to experimentation.",
@@ -22115,153 +22194,6 @@
     "id": "resource-scipystats-documentation"
   },
   {
-    "name": "ritvikmath Time Series YouTube + GitHub",
-    "description": "Hand-drawn diagrams build intuition before code. Covers AR, MA, ARMA, ARIMA, SARIMA, stationarity, ACF/PACF, GARCH. GitHub repo (700+ stars) with complete Jupyter notebooks. Explains why not just how.",
-    "category": "Classical Methods",
-    "url": "https://www.youtube.com/@ritvikmath",
-    "type": "Video",
-    "level": "Easy",
-    "tags": [
-      "Forecasting",
-      "Time Series"
-    ],
-    "domain": "Forecasting & Time Series",
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "python-basics"
-    ],
-    "topic_tags": [
-      "forecasting",
-      "time-series",
-      "statistics"
-    ],
-    "summary": "This resource provides an intuitive understanding of time series analysis through hand-drawn diagrams and practical coding examples. It is ideal for learners who want to grasp the underlying concepts of time series methods such as ARIMA and GARCH before diving into implementation.",
-    "use_cases": [
-      "when to analyze time series data",
-      "when to apply ARIMA models",
-      "when to use GARCH for volatility forecasting"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are the key components of ARIMA models?",
-      "How does GARCH differ from traditional time series models?",
-      "What is the significance of stationarity in time series analysis?",
-      "How to interpret ACF and PACF plots?",
-      "What practical applications exist for time series forecasting?",
-      "How can I access the GitHub repository for this resource?",
-      "What are the benefits of using hand-drawn diagrams in learning?",
-      "What skills will I gain from this time series tutorial?"
-    ],
-    "content_format": "video",
-    "skill_progression": [
-      "understanding ARIMA",
-      "applying GARCH",
-      "interpreting ACF/PACF"
-    ],
-    "model_score": 0.0002,
-    "macro_category": "Time Series",
-    "image_url": "https://yt3.googleusercontent.com/ytc/AIdro_lxr7Ix9Hd0LXeAf5COrCnl_DZO-ICODccEChApv5MByy_4=s900-c-k-c0x00ffffff-no-rj",
-    "embedding_text": "The 'ritvikmath Time Series YouTube + GitHub' resource offers a comprehensive approach to learning time series analysis, focusing on classical methods such as AR, MA, ARMA, ARIMA, SARIMA, and GARCH. Through hand-drawn diagrams, the resource builds intuition before delving into code, making complex concepts more accessible. It emphasizes the importance of understanding the 'why' behind the methods, not just the 'how', which is crucial for effective application in real-world scenarios. The GitHub repository, boasting over 700 stars, contains complete Jupyter notebooks that allow learners to engage with the material interactively. This resource is particularly beneficial for those with a basic understanding of Python, as it assumes familiarity with programming concepts but does not require advanced statistical knowledge. By completing this resource, learners will gain a solid foundation in time series forecasting, enabling them to apply these techniques in various contexts, such as finance, economics, and data science. The hands-on exercises included in the Jupyter notebooks provide practical experience, reinforcing the theoretical concepts covered in the videos. This resource is ideal for junior data scientists and mid-level practitioners looking to enhance their skills in time series analysis. It serves as a stepping stone for more advanced studies in forecasting and statistical modeling, making it a valuable addition to any data science curriculum.",
-    "tfidf_keywords": [
-      "ARIMA",
-      "GARCH",
-      "stationarity",
-      "ACF",
-      "PACF",
-      "time series",
-      "forecasting",
-      "hand-drawn diagrams",
-      "Jupyter notebooks",
-      "SARIMA"
-    ],
-    "semantic_cluster": "time-series-analysis",
-    "depth_level": "intermediate",
-    "related_concepts": [
-      "forecasting",
-      "time-series",
-      "statistics",
-      "ARIMA",
-      "GARCH"
-    ],
-    "canonical_topics": [
-      "forecasting",
-      "statistics",
-      "econometrics"
-    ],
-    "id": "resource-ritvikmath-time-series-youtube-+-github"
-  },
-  {
-    "name": "Apricitas Economics (Joseph Politano)",
-    "description": "Data-driven macroeconomic analysis with exceptional visualization. Noah Smith calls it 'one of the best econ data blogs'. Labor markets, inflation, industry economics.",
-    "category": "Applied Economics",
-    "url": "https://www.apricitas.io/",
-    "type": "Newsletter",
-    "tags": [
-      "Macro Economics",
-      "Data Viz",
-      "Labor Markets"
-    ],
-    "level": "Medium",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "Apricitas Economics offers data-driven macroeconomic analysis with a focus on labor markets, inflation, and industry economics. It is ideal for those interested in understanding macroeconomic trends through exceptional visualizations.",
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are the key insights from Apricitas Economics?",
-      "How does Apricitas Economics visualize macroeconomic data?",
-      "What topics are covered in Apricitas Economics?",
-      "Who recommends Apricitas Economics as a valuable resource?",
-      "What can I learn about labor markets from Apricitas Economics?",
-      "How does Apricitas Economics approach inflation analysis?",
-      "What makes Apricitas Economics stand out among econ blogs?",
-      "What type of content can I expect in Apricitas Economics?"
-    ],
-    "use_cases": [],
-    "content_format": "newsletter",
-    "skill_progression": [
-      "data analysis",
-      "economic visualization",
-      "understanding macroeconomic indicators"
-    ],
-    "model_score": 0.0002,
-    "macro_category": "Industry Economics",
-    "domain": "Economics",
-    "image_url": "https://substackcdn.com/image/fetch/$s_!vdzx!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fapricitas.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D-1297034036%26version%3D9",
-    "embedding_text": "Apricitas Economics, authored by Joseph Politano, is a distinguished newsletter that provides in-depth, data-driven macroeconomic analysis. The resource is particularly noted for its exceptional visualization techniques, which enhance the understanding of complex economic concepts. The newsletter covers a range of topics including labor markets, inflation, and industry economics, making it a valuable resource for anyone interested in these areas. The teaching approach emphasizes clarity and accessibility, allowing readers to grasp intricate economic data and trends easily. While there are no specific prerequisites for engaging with the content, a basic understanding of macroeconomic principles may enhance the learning experience. Readers can expect to gain insights into current economic conditions, trends, and forecasts, as well as develop a better understanding of how macroeconomic factors interact. Apricitas Economics is suitable for a wide audience, including students, practitioners, and anyone with a curiosity about economics. The resource does not specify a completion time, as it is designed to be consumed at the reader's pace. After engaging with the content, readers will be better equipped to analyze macroeconomic data and trends independently, enhancing their understanding of the economic landscape.",
-    "tfidf_keywords": [
-      "macroeconomics",
-      "labor markets",
-      "inflation",
-      "data visualization",
-      "economic analysis",
-      "industry economics",
-      "economic trends",
-      "data-driven insights",
-      "visualization techniques",
-      "economic conditions"
-    ],
-    "semantic_cluster": "macroeconomic-analysis",
-    "depth_level": "intro",
-    "related_concepts": [
-      "labor-economics",
-      "industrial-organization",
-      "policy-evaluation"
-    ],
-    "canonical_topics": [
-      "econometrics",
-      "labor-economics",
-      "policy-evaluation"
-    ],
-    "id": "resource-apricitas-economics-joseph-politano"
-  },
-  {
     "name": "Economic Forces (Albrecht & Hendrickson)",
     "description": "Chicago-style price theory for modern audiences. 23,000+ subscribers. 'By far the best newsletter on economics' per Anton Howes.",
     "category": "Applied Economics",
@@ -22493,161 +22425,6 @@
       "experimentation"
     ],
     "id": "resource-meta-andromeda-next-gen-personalized-ads-retrieval"
-  },
-  {
-    "name": "CSIS Strategic Technologies Program",
-    "description": "Research and events on defense technology, cybersecurity, and emerging technologies from the #1 ranked defense think tank",
-    "category": "Computational Economics",
-    "url": "https://www.csis.org/programs/strategic-technologies-program",
-    "type": "Tool",
-    "level": "general",
-    "tags": [
-      "CSIS",
-      "technology",
-      "cybersecurity",
-      "policy"
-    ],
-    "domain": "Defense Technology",
-    "image_url": "https://csis-website-prod.s3.amazonaws.com/s3fs-public/2023-01/AdobeStock_299680759%281%29_1.jpg?VersionId=yvuffHS8zX1z8Hl3204JY_CMssLZpv3v",
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [
-      "cybersecurity",
-      "defense-technology",
-      "emerging-technologies"
-    ],
-    "summary": "The CSIS Strategic Technologies Program provides insights into defense technology, cybersecurity, and emerging technologies through research and events. It is designed for policymakers, researchers, and anyone interested in the intersection of technology and security.",
-    "use_cases": [
-      "Understanding defense technology advancements",
-      "Staying informed on cybersecurity issues",
-      "Engaging with policy discussions on technology"
-    ],
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are the latest trends in defense technology?",
-      "How does cybersecurity impact national security?",
-      "What emerging technologies are being researched at CSIS?",
-      "What events does CSIS host on technology policy?",
-      "How can I stay updated on defense technology?",
-      "What role does CSIS play in technology research?",
-      "What are the implications of emerging technologies for policy?",
-      "How does CSIS rank among defense think tanks?"
-    ],
-    "content_format": "article",
-    "skill_progression": [
-      "Understanding of defense technology",
-      "Knowledge of cybersecurity policies",
-      "Awareness of emerging technologies"
-    ],
-    "model_score": 0.0002,
-    "macro_category": "Industry Economics",
-    "embedding_text": "The CSIS Strategic Technologies Program focuses on the critical intersection of defense technology, cybersecurity, and emerging technologies. As a leading defense think tank, CSIS conducts extensive research and hosts events that delve into the implications of technological advancements on national security and policy-making. This resource is ideal for individuals interested in understanding how technology shapes defense strategies and the broader implications for society. Participants can expect to engage with a variety of topics, including the latest trends in cybersecurity, the role of emerging technologies in defense, and the policy challenges that arise from rapid technological change. The program emphasizes a research-driven approach, providing attendees with insights from experts in the field. While no specific prerequisites are required, a basic understanding of technology and policy will enhance the learning experience. By engaging with this resource, individuals will gain a deeper understanding of the strategic considerations surrounding technology in defense, equipping them with knowledge applicable to careers in policy analysis, research, and technology development. The program also encourages participants to think critically about the ethical implications of technology in defense and the importance of informed policy-making. Overall, the CSIS Strategic Technologies Program serves as a vital resource for those looking to navigate the complex landscape of defense technology and cybersecurity.",
-    "tfidf_keywords": [
-      "defense-technology",
-      "cybersecurity",
-      "emerging-technologies",
-      "policy-analysis",
-      "national-security",
-      "technology-research",
-      "CSIS",
-      "think-tank",
-      "strategic-technology",
-      "policy-implications"
-    ],
-    "semantic_cluster": "defense-technology-policy",
-    "depth_level": "intro",
-    "related_concepts": [
-      "cybersecurity",
-      "national-security",
-      "technology-policy",
-      "emerging-technologies",
-      "defense-strategy"
-    ],
-    "canonical_topics": [
-      "policy-evaluation",
-      "technology-policy",
-      "defense-technology"
-    ],
-    "id": "resource-csis-strategic-technologies-program"
-  },
-  {
-    "name": "MIT 15.S08 FinTech (Gary Gensler)",
-    "description": "12 lectures from former SEC Chair on AI in finance, risk, and compliance \u2014 free",
-    "category": "Case Studies",
-    "url": "https://ocw.mit.edu/courses/15-s08-fintech-shaping-the-financial-world-spring-2020/",
-    "type": "Course",
-    "level": "Medium",
-    "tags": [
-      "ML & Data Science",
-      "Course"
-    ],
-    "domain": "Product Sense",
-    "difficulty": "intro",
-    "prerequisites": [],
-    "topic_tags": [
-      "finance",
-      "AI",
-      "risk-management",
-      "compliance"
-    ],
-    "summary": "This course provides insights into the intersection of artificial intelligence and finance, focusing on risk and compliance. It is designed for individuals interested in understanding how AI can transform financial practices, particularly those in early stages of their careers or studies.",
-    "use_cases": [
-      "Understanding AI applications in finance",
-      "Learning about risk management in FinTech",
-      "Exploring compliance issues in financial technology"
-    ],
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is the role of AI in finance?",
-      "How does AI impact risk management?",
-      "What compliance issues are addressed in FinTech?",
-      "Who is Gary Gensler and what are his contributions to finance?",
-      "What are the key topics covered in the MIT FinTech course?",
-      "How can I apply AI in financial compliance?",
-      "What are the risks associated with AI in finance?",
-      "Where can I find free resources on AI and finance?"
-    ],
-    "content_format": "course",
-    "skill_progression": [
-      "Understanding AI applications in finance",
-      "Knowledge of risk management practices",
-      "Awareness of compliance issues in financial technology"
-    ],
-    "model_score": 0.0002,
-    "macro_category": "Strategy",
-    "image_url": "https://ocw.mit.edu/courses/15-s08-fintech-shaping-the-financial-world-spring-2020/b6d26d8a1afdc660d742c93abcba73e1_15-s08s20.jpg",
-    "embedding_text": "The MIT 15.S08 FinTech course, taught by former SEC Chair Gary Gensler, offers a comprehensive exploration of the role of artificial intelligence in the finance sector. This course consists of 12 lectures that delve into various topics including the implications of AI on risk management and compliance within financial institutions. The teaching approach emphasizes real-world applications and case studies, providing students with a practical understanding of how AI technologies can be integrated into financial practices. While there are no specific prerequisites, a basic understanding of finance and technology will enhance the learning experience. The course is particularly beneficial for those curious about the evolving landscape of FinTech and the regulatory challenges that accompany it. By the end of the course, participants will gain insights into the transformative potential of AI in finance, equipping them with knowledge that can be applied in various financial contexts. This resource is ideal for students, practitioners, and anyone interested in the intersection of technology and finance. The course is designed to be accessible, making it suitable for a wide audience, including those who are new to the field or looking to expand their knowledge in FinTech. Upon completion, learners will be better prepared to engage with the complexities of AI in finance and its regulatory environment.",
-    "tfidf_keywords": [
-      "FinTech",
-      "AI",
-      "risk management",
-      "compliance",
-      "Gary Gensler",
-      "financial technology",
-      "regulatory challenges",
-      "machine learning",
-      "financial practices",
-      "technology integration"
-    ],
-    "semantic_cluster": "ai-in-finance",
-    "depth_level": "intro",
-    "related_concepts": [
-      "artificial-intelligence",
-      "financial-regulation",
-      "risk-assessment",
-      "compliance-standards",
-      "financial-services"
-    ],
-    "canonical_topics": [
-      "finance",
-      "machine-learning",
-      "policy-evaluation"
-    ],
-    "id": "resource-mit-15s08-fintech-gary-gensler"
   },
   {
     "name": "Interpreting ACF and PACF Plots",
@@ -24507,84 +24284,6 @@
     "id": "resource-sequoia-data-informed-product-building"
   },
   {
-    "name": "Fraud Detection Handbook (ULB)",
-    "description": "From the team that created the Kaggle dataset \u2014 rigorous methodology",
-    "category": "Trust & Safety",
-    "url": "https://fraud-detection-handbook.github.io/fraud-detection-handbook/",
-    "type": "Tool",
-    "level": "Medium",
-    "tags": [
-      "ML & Data Science",
-      "Tool"
-    ],
-    "domain": "Domain Applications",
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "python-basics"
-    ],
-    "topic_tags": [
-      "machine-learning",
-      "fraud-detection"
-    ],
-    "summary": "The Fraud Detection Handbook provides a comprehensive overview of methodologies and tools for detecting fraudulent activities using machine learning techniques. It is designed for data scientists and practitioners looking to enhance their skills in fraud detection and prevention.",
-    "use_cases": [
-      "When to apply machine learning techniques for fraud detection",
-      "Identifying patterns of fraudulent behavior",
-      "Evaluating the effectiveness of fraud detection tools"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS"
-    ],
-    "synthetic_questions": [
-      "What methodologies are used in fraud detection?",
-      "How can machine learning improve fraud detection?",
-      "What tools are recommended for fraud detection?",
-      "What datasets are available for practicing fraud detection?",
-      "What are the common challenges in fraud detection?",
-      "How to implement fraud detection algorithms?",
-      "What are the best practices for fraud detection?",
-      "How does the Kaggle dataset contribute to fraud detection research?"
-    ],
-    "content_format": "tool",
-    "skill_progression": [
-      "Understanding of machine learning algorithms",
-      "Ability to apply fraud detection techniques",
-      "Skill in analyzing data for fraud patterns"
-    ],
-    "model_score": 0.0002,
-    "macro_category": "Strategy",
-    "embedding_text": "The Fraud Detection Handbook is a vital resource for anyone interested in the intersection of machine learning and fraud detection. This handbook is crafted by the team behind a well-known Kaggle dataset, ensuring that the methodologies presented are grounded in rigorous research and practical application. It covers a variety of topics including the fundamental principles of fraud detection, the role of machine learning in identifying and preventing fraudulent activities, and the tools available for practitioners in the field. The teaching approach emphasizes hands-on learning, providing readers with practical exercises and projects that reinforce the concepts discussed. Prerequisites for this resource include a basic understanding of Python programming, as well as familiarity with data analysis techniques. By engaging with this handbook, learners can expect to gain valuable skills in applying machine learning algorithms to real-world fraud detection scenarios. The content is designed for data scientists at various levels, particularly those who are looking to deepen their understanding of fraud detection methodologies. After completing this resource, readers will be equipped to implement effective fraud detection strategies and contribute to the ongoing development of tools and techniques in this critical area of study.",
-    "tfidf_keywords": [
-      "fraud-detection",
-      "machine-learning",
-      "anomaly-detection",
-      "classification",
-      "predictive-modeling",
-      "data-cleaning",
-      "feature-engineering",
-      "model-evaluation",
-      "Kaggle-dataset",
-      "risk-assessment"
-    ],
-    "semantic_cluster": "fraud-detection-methodologies",
-    "depth_level": "intermediate",
-    "related_concepts": [
-      "anomaly-detection",
-      "predictive-modeling",
-      "data-cleaning",
-      "feature-engineering",
-      "risk-assessment"
-    ],
-    "canonical_topics": [
-      "machine-learning",
-      "statistics",
-      "data-engineering"
-    ],
-    "id": "resource-fraud-detection-handbook-ulb"
-  },
-  {
     "name": "SemiAnalysis (Dylan Patel)",
     "description": "Deep technical analysis of semiconductor economics and AI hardware. 200,000+ subscribers. Ben Thompson's 'most important and most-cited resource'.",
     "category": "Tech Strategy",
@@ -24809,81 +24508,6 @@
       "statistics"
     ],
     "id": "resource-quantecon-discrete-state-dynamic-programming"
-  },
-  {
-    "name": "Lenny's Podcast: Madhavan Ramanujam",
-    "description": "90 minutes on WTP conversations and behavioral pricing",
-    "category": "Pricing & Revenue",
-    "url": "https://www.lennyspodcast.com/the-art-and-science-of-pricing-madhavan-ramanujam-simon-kucher/",
-    "type": "Podcast",
-    "level": "Medium",
-    "tags": [
-      "Pricing & Demand",
-      "Podcast"
-    ],
-    "domain": "Domain Applications",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "behavioral-pricing",
-      "WTP-conversations",
-      "pricing-strategies"
-    ],
-    "summary": "In this episode of Lenny's Podcast, Madhavan Ramanujam discusses the intricacies of willingness-to-pay (WTP) conversations and behavioral pricing strategies. Listeners will gain insights into how to effectively engage in pricing discussions and understand consumer behavior, making it suitable for those new to pricing concepts.",
-    "use_cases": [
-      "Understanding pricing strategies",
-      "Improving negotiation skills in pricing",
-      "Learning about consumer behavior"
-    ],
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are WTP conversations?",
-      "How does behavioral pricing work?",
-      "What strategies can improve pricing discussions?",
-      "Who is Madhavan Ramanujam?",
-      "What insights can be gained from Lenny's Podcast?",
-      "How long is the episode featuring Madhavan Ramanujam?",
-      "What topics are covered in the podcast?",
-      "How can I apply behavioral pricing in my business?"
-    ],
-    "content_format": "podcast",
-    "estimated_duration": "90 minutes",
-    "skill_progression": [
-      "Understanding of behavioral pricing",
-      "Skills in WTP conversations"
-    ],
-    "model_score": 0.0002,
-    "macro_category": "Marketing & Growth",
-    "embedding_text": "Lenny's Podcast featuring Madhavan Ramanujam offers a deep dive into the world of behavioral pricing and willingness-to-pay (WTP) conversations, providing listeners with a comprehensive understanding of how to navigate pricing discussions effectively. The episode spans 90 minutes, making it a substantial resource for those looking to enhance their knowledge in pricing strategies. Throughout the conversation, Ramanujam shares his expertise on the psychological aspects of pricing, emphasizing how consumer behavior influences pricing decisions. This podcast is designed for individuals who are curious about pricing dynamics, whether they are students, practitioners, or simply interested in the topic. The teaching approach is conversational, allowing listeners to absorb complex concepts in an engaging manner. While no specific prerequisites are required, a basic understanding of pricing principles may enhance the listening experience. By the end of the episode, listeners will have gained valuable insights into effective pricing strategies and how to approach WTP conversations, equipping them with skills that can be applied in real-world scenarios. This resource stands out by providing practical advice and real-world applications, making it a unique addition to the learning paths available in the field of pricing and revenue management.",
-    "tfidf_keywords": [
-      "willingness-to-pay",
-      "behavioral-pricing",
-      "pricing-strategies",
-      "consumer-behavior",
-      "negotiation-skills",
-      "pricing-discussions",
-      "market-research",
-      "value-perception",
-      "pricing-psychology",
-      "pricing-models"
-    ],
-    "semantic_cluster": "behavioral-pricing-strategies",
-    "depth_level": "intro",
-    "related_concepts": [
-      "consumer-behavior",
-      "pricing-strategies",
-      "negotiation",
-      "market-research",
-      "value-perception"
-    ],
-    "canonical_topics": [
-      "pricing",
-      "consumer-behavior",
-      "behavioral-economics"
-    ],
-    "id": "resource-lennys-podcast-madhavan-ramanujam"
   },
   {
     "name": "Stable-Baselines3 Documentation",
@@ -27131,85 +26755,6 @@
     "id": "resource-fangraphs-sabermetrics-library"
   },
   {
-    "name": "Netflix: Quasi Experimentation at Netflix",
-    "description": "Netflix Tech Blog covering synthetic control and difference-in-differences methods for observational causal inference.",
-    "category": "Causal Inference",
-    "url": "https://netflixtechblog.com/quasi-experimentation-at-netflix-566b57d2e362",
-    "type": "Blog",
-    "level": "Hard",
-    "tags": [
-      "Synthetic Control",
-      "DiD",
-      "Causal Inference",
-      "Netflix"
-    ],
-    "domain": "Causal Inference",
-    "macro_category": "Causal Methods",
-    "model_score": 0.0002,
-    "subtopic": "Streaming",
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [
-      "causal-inference",
-      "statistics"
-    ],
-    "summary": "This resource explores the application of synthetic control and difference-in-differences methods for observational causal inference, specifically in the context of Netflix's experimentation practices. It is suitable for those interested in understanding advanced causal inference techniques.",
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are synthetic control methods?",
-      "How does difference-in-differences work?",
-      "What is observational causal inference?",
-      "How does Netflix apply these methods?",
-      "What are the limitations of synthetic control?",
-      "What are the assumptions behind DiD?",
-      "How can I implement these methods in Python?",
-      "What are real-world applications of causal inference?"
-    ],
-    "use_cases": [
-      "When to apply synthetic control methods",
-      "When to use difference-in-differences",
-      "Understanding causal relationships in observational data"
-    ],
-    "embedding_text": "The blog post titled 'Netflix: Quasi Experimentation at Netflix' delves into advanced methodologies for causal inference, specifically focusing on synthetic control and difference-in-differences techniques. These methods are crucial for researchers and practitioners who aim to derive causal insights from observational data, particularly in complex environments like those encountered by Netflix. The content is designed to provide readers with a comprehensive understanding of these methodologies, including their theoretical foundations, practical applications, and limitations. The teaching approach emphasizes clarity and accessibility, making it suitable for individuals with a foundational knowledge of statistics and causal inference. While no specific prerequisites are outlined, familiarity with basic statistical concepts is beneficial. Readers can expect to gain skills in applying these methods to real-world scenarios, enhancing their analytical capabilities in data-driven decision-making. The blog also encourages hands-on engagement, prompting readers to consider how they might implement these techniques in their own work. By the end of the resource, learners will be equipped to critically assess and apply causal inference methods in various contexts, particularly in tech and data science fields. This resource is particularly valuable for junior and mid-level data scientists, as well as curious individuals looking to deepen their understanding of causal analysis in technology-driven environments.",
-    "content_format": "article",
-    "skill_progression": [
-      "Understanding synthetic control",
-      "Applying difference-in-differences",
-      "Analyzing observational data"
-    ],
-    "tfidf_keywords": [
-      "synthetic-control",
-      "difference-in-differences",
-      "observational-causal-inference",
-      "causal-methods",
-      "Netflix-experimentation",
-      "causal-analysis",
-      "treatment-effects",
-      "panel-data",
-      "parallel-trends",
-      "quasi-experimental-design"
-    ],
-    "semantic_cluster": "causal-inference-methods",
-    "depth_level": "intermediate",
-    "related_concepts": [
-      "causal-inference",
-      "treatment-effects",
-      "panel-data",
-      "parallel-trends",
-      "event-study"
-    ],
-    "canonical_topics": [
-      "causal-inference",
-      "experimentation",
-      "statistics"
-    ],
-    "id": "resource-netflix-quasi-experimentation-at-netflix"
-  },
-  {
     "name": "MIT OCW: Dynamic Programming (Bertsekas)",
     "description": "6 advanced lectures (~12 hours) from the definitive DP authority. Approximate DP, large-scale infinite horizon problems, policy iteration with function approximation, temporal difference, neuro-dynamic programming.",
     "category": "Computational Economics",
@@ -27588,70 +27133,6 @@
       "industrial-organization"
     ],
     "id": "resource-sangeet-choudary-platform-scale-blog"
-  },
-  {
-    "name": "Li Jin: Unbundling Work",
-    "description": "How platforms are unbundling traditional employment into discrete tasks. Examines implications for workers, platforms, and the economy.",
-    "category": "Platform Economics",
-    "url": "https://li.substack.com/p/unbundling-work",
-    "type": "Blog",
-    "tags": [
-      "Gig Economy",
-      "Future of Work",
-      "Unbundling"
-    ],
-    "level": "Easy",
-    "difficulty": "intro",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "This resource explores how platforms are transforming traditional employment by breaking it down into discrete tasks. It is suitable for anyone interested in understanding the implications of this shift for workers, platforms, and the broader economy.",
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is unbundling work in the context of the gig economy?",
-      "How do platforms influence traditional employment models?",
-      "What are the economic implications of task-based work?",
-      "Who benefits from the unbundling of work?",
-      "What challenges do workers face in a gig economy?",
-      "How does unbundling affect job security?",
-      "What are the future trends in the future of work?",
-      "How do platforms impact the labor market?"
-    ],
-    "use_cases": [],
-    "content_format": "article",
-    "model_score": 0.0002,
-    "macro_category": "Platform & Markets",
-    "domain": "Platform Economics",
-    "subtopic": "Creator Economy",
-    "embedding_text": "In the modern economy, the concept of work is undergoing a significant transformation, particularly through the rise of platforms that unbundle traditional employment into discrete tasks. This article by Li Jin delves into the implications of this shift for workers, platforms, and the economy at large. It provides an overview of how platforms like gig economy services are redefining the nature of work, allowing for more flexibility but also raising questions about job security and worker rights. The teaching approach emphasizes a conceptual understanding of the gig economy, making it accessible to a broad audience, including students, practitioners, and anyone curious about the future of work. While no specific prerequisites are required, a general interest in labor economics and platform dynamics will enhance the learning experience. Readers can expect to gain insights into the challenges and opportunities presented by the unbundling of work, as well as a broader understanding of the economic landscape shaped by these changes. The resource does not include hands-on exercises or projects but serves as a foundational piece for those looking to explore further into the gig economy and its implications. After engaging with this content, readers will be better equipped to navigate discussions surrounding the future of work and its impact on society.",
-    "tfidf_keywords": [
-      "gig economy",
-      "platform economics",
-      "unbundling work",
-      "task-based employment",
-      "labor market",
-      "worker rights",
-      "job security",
-      "future of work",
-      "economic implications",
-      "flexibility in work"
-    ],
-    "semantic_cluster": "platform-economics",
-    "depth_level": "intro",
-    "related_concepts": [
-      "labor-economics",
-      "consumer-behavior",
-      "industrial-organization",
-      "behavioral-economics",
-      "marketplaces"
-    ],
-    "canonical_topics": [
-      "labor-economics",
-      "marketplaces",
-      "consumer-behavior"
-    ],
-    "id": "resource-li-jin-unbundling-work"
   },
   {
     "name": "QuantEcon DataScience",
@@ -28279,85 +27760,6 @@
     "id": "resource-ieee-spectrum-the-secret-of-airbnbs-pricing-algori"
   },
   {
-    "name": "Change Point Detection in Time Series",
-    "description": "Six algorithms via ruptures library (PELT, Dynamic Programming, Binary Segmentation, Window-based, Bottom-up, Kernel CPD). Real Google Search Console application. Discusses computational complexity tradeoffs.",
-    "category": "Specialized Methods",
-    "url": "https://forecastegy.com/posts/change-point-detection-time-series-python/",
-    "type": "Tutorial",
-    "level": "Medium",
-    "tags": [
-      "Forecasting",
-      "Change Point"
-    ],
-    "domain": "Forecasting & Time Series",
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "python-basics"
-    ],
-    "topic_tags": [
-      "forecasting",
-      "change-point-detection"
-    ],
-    "summary": "This tutorial covers six algorithms for change point detection using the ruptures library, focusing on computational complexity tradeoffs. It is designed for individuals with some programming experience who are interested in time series analysis and forecasting.",
-    "use_cases": [
-      "Identifying shifts in time series data",
-      "Improving forecasting models",
-      "Analyzing trends in Google Search Console data"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are the six algorithms for change point detection?",
-      "How does the ruptures library facilitate change point detection?",
-      "What are the computational complexity tradeoffs in change point detection?",
-      "In what scenarios would you apply change point detection?",
-      "How can change point detection improve forecasting accuracy?",
-      "What is the practical application of change point detection in Google Search Console?",
-      "What prerequisites are needed to understand the algorithms discussed?",
-      "How do the algorithms compare in terms of performance?"
-    ],
-    "content_format": "tutorial",
-    "skill_progression": [
-      "Understanding of change point detection",
-      "Ability to implement algorithms using the ruptures library",
-      "Knowledge of computational tradeoffs in algorithm selection"
-    ],
-    "model_score": 0.0002,
-    "macro_category": "Time Series",
-    "image_url": "https://forecastegy.com/img/ts_cpd/2.png",
-    "embedding_text": "Change Point Detection in Time Series is a comprehensive tutorial that delves into six distinct algorithms for detecting change points within time series data, utilizing the ruptures library. The tutorial emphasizes the practical application of these algorithms, particularly in the context of real-world scenarios such as Google Search Console. Participants will explore various methods including PELT, Dynamic Programming, Binary Segmentation, Window-based, Bottom-up, and Kernel CPD, gaining insights into their respective computational complexities and tradeoffs. The teaching approach is hands-on, encouraging learners to engage with the material through practical exercises that reinforce theoretical concepts. Prerequisites include a basic understanding of Python programming, making this resource suitable for junior data scientists and curious individuals looking to enhance their skills in time series analysis. Upon completion, learners will be equipped to identify shifts in data trends, improve their forecasting models, and apply change point detection techniques in various analytical contexts. The estimated time to complete this resource is not specified, but it is structured to provide a thorough understanding of the subject matter, allowing participants to progress confidently in their data science journey.",
-    "tfidf_keywords": [
-      "change-point-detection",
-      "ruptures-library",
-      "PELT",
-      "Dynamic Programming",
-      "Binary Segmentation",
-      "Window-based",
-      "Bottom-up",
-      "Kernel CPD",
-      "computational-complexity",
-      "forecasting"
-    ],
-    "semantic_cluster": "time-series-analysis",
-    "depth_level": "intermediate",
-    "related_concepts": [
-      "time-series-analysis",
-      "forecasting",
-      "statistical-methods",
-      "data-science",
-      "algorithm-complexity"
-    ],
-    "canonical_topics": [
-      "forecasting",
-      "machine-learning",
-      "statistics"
-    ],
-    "id": "resource-change-point-detection-in-time-series"
-  },
-  {
     "name": "Airbnb: Aerosolve - ML for Humans",
     "description": "Open-source interpretable ML showing price-demand elasticity curves. How Airbnb built interpretable pricing models that hosts can understand.",
     "category": "Pricing & Revenue",
@@ -28514,155 +27916,6 @@
       "data-engineering"
     ],
     "id": "resource-sports-performance-analytics-specialization"
-  },
-  {
-    "name": "Money Stuff (Matt Levine)",
-    "description": "Daily newsletter making complex financial mechanics accessible. 300,000+ subscribers. Wall Street, M&A, tech IPOs, and securities law explained with wit.",
-    "category": "Tech Strategy",
-    "url": "https://www.bloomberg.com/account/newsletters/money-stuff",
-    "type": "Newsletter",
-    "tags": [
-      "Finance",
-      "Wall Street",
-      "Free"
-    ],
-    "level": "Medium",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [
-      "finance",
-      "Wall Street",
-      "M&A",
-      "tech IPOs",
-      "securities law"
-    ],
-    "summary": "Money Stuff is a daily newsletter that makes complex financial mechanics accessible to a broad audience. It is particularly suitable for those interested in understanding Wall Street, mergers and acquisitions, technology IPOs, and securities law, all explained with wit and clarity.",
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is Money Stuff by Matt Levine?",
-      "How does Money Stuff simplify financial concepts?",
-      "Who subscribes to Money Stuff?",
-      "What topics are covered in Money Stuff?",
-      "Is Money Stuff suitable for beginners?",
-      "How can I subscribe to Money Stuff?",
-      "What makes Money Stuff unique?",
-      "What can I learn from Money Stuff?"
-    ],
-    "use_cases": [
-      "to understand complex financial topics",
-      "to stay updated on Wall Street trends",
-      "to learn about M&A and tech IPOs"
-    ],
-    "content_format": "newsletter",
-    "model_score": 0.0002,
-    "macro_category": "Strategy",
-    "domain": "Product Sense",
-    "embedding_text": "Money Stuff, authored by Matt Levine, is a daily newsletter that demystifies the intricate world of finance, making it accessible to a diverse readership. With over 300,000 subscribers, it has established itself as a go-to resource for those looking to grasp complex financial mechanics with clarity and humor. The newsletter covers a wide array of topics, including Wall Street dynamics, mergers and acquisitions, technology IPOs, and the nuances of securities law. Levine's engaging writing style ensures that even the most complicated concepts are presented in a way that is both entertaining and informative. Readers can expect to gain insights into current financial trends and practices, enhancing their understanding of the financial landscape. While no specific prerequisites are required, a general curiosity about finance will greatly enhance the reading experience. The newsletter serves as an excellent resource for anyone from casual readers to those seeking a deeper understanding of financial matters. After engaging with Money Stuff, readers will find themselves better equipped to navigate discussions around finance, equipped with knowledge that can be applied in various contexts, whether in professional settings or personal investment decisions. The newsletter is designed to be consumed daily, making it a quick yet enriching addition to one\u2019s routine. Overall, Money Stuff stands out in the crowded field of financial commentary, offering a unique blend of wit and insight that appeals to both novices and seasoned finance enthusiasts.",
-    "skill_progression": [
-      "understanding of financial mechanics",
-      "insight into Wall Street practices",
-      "knowledge of M&A and IPO processes"
-    ],
-    "tfidf_keywords": [
-      "financial mechanics",
-      "Wall Street",
-      "M&A",
-      "tech IPOs",
-      "securities law",
-      "daily newsletter",
-      "Matt Levine",
-      "financial trends",
-      "complex concepts",
-      "accessible finance"
-    ],
-    "semantic_cluster": "finance-education",
-    "depth_level": "intro",
-    "related_concepts": [
-      "finance",
-      "economics",
-      "business strategy",
-      "investment",
-      "market analysis"
-    ],
-    "canonical_topics": [
-      "finance"
-    ],
-    "id": "resource-money-stuff-matt-levine"
-  },
-  {
-    "name": "HBR IdeaCast: How to Build Dynamic Pricing That Works",
-    "description": "Price fairness communication; cross-subsidization strategies. Harvard Business Review podcast on implementing dynamic pricing customers accept.",
-    "category": "Pricing & Revenue",
-    "url": "https://hbr.org/podcast/2024/08/how-to-build-a-dynamic-pricing-strategy-that-works",
-    "type": "Podcast",
-    "tags": [
-      "Dynamic Pricing",
-      "Strategy",
-      "Consumer Psychology"
-    ],
-    "level": "Easy",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "This podcast episode explores the intricacies of dynamic pricing and how to communicate price fairness to consumers. It is designed for business professionals and marketers interested in understanding pricing strategies that can enhance customer acceptance.",
-    "audience": [
-      "Junior-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is dynamic pricing?",
-      "How can price fairness be communicated effectively?",
-      "What are cross-subsidization strategies?",
-      "Why do customers accept dynamic pricing?",
-      "What are the benefits of implementing dynamic pricing?",
-      "How does consumer psychology affect pricing strategies?",
-      "What are the challenges of dynamic pricing?",
-      "How can businesses implement dynamic pricing successfully?"
-    ],
-    "use_cases": [
-      "When developing pricing strategies",
-      "When assessing customer acceptance of pricing models"
-    ],
-    "content_format": "podcast",
-    "skill_progression": [
-      "Understanding dynamic pricing",
-      "Communicating price fairness",
-      "Applying pricing strategies in business"
-    ],
-    "model_score": 0.0002,
-    "macro_category": "Marketing & Growth",
-    "domain": "Marketing",
-    "image_url": "https://hbr.org/resources/images/article_assets/2023/05/wide-hbr-on-strategy.png",
-    "embedding_text": "The HBR IdeaCast episode titled 'How to Build Dynamic Pricing That Works' delves into the essential concepts of dynamic pricing, a strategy that allows businesses to adjust prices based on market demand and consumer behavior. This podcast provides insights into the importance of price fairness communication, which is crucial for gaining customer acceptance of dynamic pricing strategies. Listeners will learn about various cross-subsidization strategies that can be employed to balance pricing across different consumer segments. The teaching approach is conversational and informative, making complex pricing strategies accessible to a broad audience. Although no specific prerequisites are required, a basic understanding of pricing concepts may enhance the listening experience. By the end of this episode, listeners will have gained valuable insights into how to effectively implement dynamic pricing in their businesses while ensuring that customers feel treated fairly. This resource is particularly beneficial for business professionals, marketers, and anyone interested in pricing strategies. The episode is concise, making it easy to fit into a busy schedule, and provides actionable takeaways for immediate application in real-world scenarios.",
-    "tfidf_keywords": [
-      "dynamic pricing",
-      "price fairness",
-      "cross-subsidization",
-      "consumer acceptance",
-      "pricing strategy",
-      "business communication",
-      "market demand",
-      "pricing models",
-      "consumer behavior",
-      "pricing psychology"
-    ],
-    "semantic_cluster": "dynamic-pricing-strategies",
-    "depth_level": "intro",
-    "related_concepts": [
-      "consumer-psychology",
-      "pricing",
-      "behavioral-economics",
-      "market-strategy",
-      "business-communication"
-    ],
-    "canonical_topics": [
-      "pricing",
-      "consumer-behavior",
-      "behavioral-economics"
-    ],
-    "id": "resource-hbr-ideacast-how-to-build-dynamic-pricing-that-wor"
   },
   {
     "name": "Matt Levine: The Crypto Story (Businessweek)",
@@ -31267,74 +30520,6 @@
     "id": "resource-mkt1-b2b-marketing-frameworks"
   },
   {
-    "name": "Hagiu: Multi-Sided Platforms - From Microfoundations to Design",
-    "description": "Academic treatment of platform design principles. Bridges economic theory with practical platform design decisions.",
-    "category": "Platform Economics",
-    "url": "https://www.hbs.edu/faculty/Pages/item.aspx?num=45103",
-    "type": "Article",
-    "tags": [
-      "Platform Design",
-      "Microfoundations",
-      "Theory"
-    ],
-    "level": "Hard",
-    "difficulty": "intermediate",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "This resource explores the principles of platform design through an academic lens, integrating economic theory with practical applications. It is suitable for those interested in understanding the foundational aspects of multi-sided platforms and their design implications.",
-    "audience": [
-      "Early-PhD",
-      "Junior-DS",
-      "Mid-DS"
-    ],
-    "synthetic_questions": [
-      "What are the key principles of platform design?",
-      "How does economic theory apply to platform design?",
-      "What are multi-sided platforms?",
-      "What practical decisions are involved in platform design?",
-      "How can platform design impact economic outcomes?",
-      "What are the microfoundations of platform economics?"
-    ],
-    "use_cases": [],
-    "content_format": "article",
-    "skill_progression": [
-      "Understanding platform design principles",
-      "Applying economic theory to practical scenarios"
-    ],
-    "model_score": 0.0002,
-    "macro_category": "Platform & Markets",
-    "domain": "Platform Economics",
-    "image_url": "/images/logos/hbs.png",
-    "embedding_text": "The article 'Hagiu: Multi-Sided Platforms - From Microfoundations to Design' provides a comprehensive academic treatment of platform design principles, focusing on the intersection of economic theory and practical design decisions. It delves into the intricacies of multi-sided platforms, elucidating how these platforms operate and the economic implications of their design choices. Readers will gain insights into the foundational concepts of platform economics, including the microfoundations that underpin these platforms. The teaching approach emphasizes theoretical understanding while bridging the gap to practical applications, making it relevant for both scholars and practitioners in the field. While no specific prerequisites are outlined, a basic understanding of economics and platform dynamics would be beneficial. The resource aims to equip learners with skills in analyzing platform design and its economic impacts, fostering a deeper comprehension of how design decisions can influence market outcomes. Although the article does not include hands-on exercises, it serves as a critical reference for those looking to explore the complexities of platform economics further. Ideal for early-stage PhD students and junior data scientists, this resource provides a solid foundation for those interested in the design and functionality of multi-sided platforms. The estimated time to complete the reading is not specified, but it is designed to be digestible for those with a moderate background in economics.",
-    "tfidf_keywords": [
-      "multi-sided platforms",
-      "platform design",
-      "economic theory",
-      "microfoundations",
-      "platform economics",
-      "design principles",
-      "market dynamics",
-      "economic implications",
-      "practical decisions",
-      "theoretical understanding"
-    ],
-    "semantic_cluster": "platform-economics-design",
-    "depth_level": "intermediate",
-    "related_concepts": [
-      "market dynamics",
-      "platform strategy",
-      "economic theory",
-      "design principles",
-      "multi-sided markets"
-    ],
-    "canonical_topics": [
-      "marketplaces",
-      "economics",
-      "product-analytics"
-    ],
-    "id": "resource-hagiu-multi-sided-platforms-from-microfoundations-"
-  },
-  {
     "name": "Marketing BS: Strategic Marketing Newsletter",
     "description": "#1 marketing newsletter on Substack (21,000+ subscribers, 40%+ open rates). Edward Nevraumont (former VP Expedia, CMO General Assembly) challenges conventional marketing wisdom.",
     "category": "Frameworks & Strategy",
@@ -31487,76 +30672,6 @@
       "Knowledge of NLP and computer vision advancements"
     ],
     "id": "resource-google-ai-blog"
-  },
-  {
-    "name": "Simon Rothman (a16z): How to Build a Marketplace",
-    "description": "Former eBay Motors GM and a16z partner's comprehensive guide to marketplace building. Covers liquidity, matching, and scaling strategies.",
-    "category": "Platform Economics",
-    "url": "https://a16z.com/2014/04/23/marketplace-startups/",
-    "type": "Blog",
-    "tags": [
-      "a16z",
-      "Marketplaces",
-      "Startup Strategy"
-    ],
-    "level": "Medium",
-    "difficulty": "beginner",
-    "prerequisites": [],
-    "topic_tags": [],
-    "summary": "This resource provides a comprehensive guide to building a marketplace, focusing on essential strategies such as liquidity, matching, and scaling. It is ideal for entrepreneurs and startup enthusiasts looking to understand the intricacies of marketplace dynamics.",
-    "audience": [
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What are the key strategies for building a successful marketplace?",
-      "How do liquidity and matching affect marketplace performance?",
-      "What scaling strategies can be applied to marketplaces?",
-      "Who is Simon Rothman and what is his expertise in marketplace building?",
-      "What lessons can startups learn from eBay Motors?",
-      "How can I apply marketplace principles to my startup?",
-      "What are the common challenges faced when building a marketplace?",
-      "What insights does a16z provide on marketplace economics?"
-    ],
-    "use_cases": [],
-    "content_format": "article",
-    "model_score": 0.0002,
-    "macro_category": "Platform & Markets",
-    "domain": "Platform Economics",
-    "subtopic": "Marketplaces",
-    "image_url": "/images/logos/a16z.png",
-    "embedding_text": "Simon Rothman, a former GM of eBay Motors and a partner at a16z, offers a comprehensive guide on how to build a successful marketplace. This resource delves into critical topics such as liquidity, which refers to the ease with which buyers and sellers can transact, and matching, which is the process of connecting buyers with the right sellers. Additionally, scaling strategies are discussed, providing insights on how to grow a marketplace effectively. The teaching approach emphasizes practical applications and real-world examples, making it accessible for those new to the concept of marketplaces. While no specific prerequisites are mentioned, a basic understanding of startup dynamics may be beneficial. Upon completion, readers will gain valuable skills in marketplace strategy and execution, enabling them to apply these concepts to their ventures. This resource is particularly suited for curious individuals looking to enhance their understanding of marketplace economics and strategy. The estimated time to complete this resource is not specified, but it is designed to be digestible for those seeking to learn at their own pace. After finishing this guide, readers will be equipped to identify and implement effective marketplace strategies in their own projects.",
-    "skill_progression": [
-      "Understanding marketplace dynamics",
-      "Applying liquidity and matching strategies",
-      "Scaling a marketplace effectively"
-    ],
-    "tfidf_keywords": [
-      "marketplace",
-      "liquidity",
-      "matching",
-      "scaling",
-      "startup",
-      "strategy",
-      "a16z",
-      "eBay",
-      "economics",
-      "entrepreneurship"
-    ],
-    "semantic_cluster": "marketplace-building-strategies",
-    "depth_level": "intro",
-    "related_concepts": [
-      "platform-economics",
-      "startup-strategy",
-      "marketplace-dynamics",
-      "entrepreneurship",
-      "liquidity"
-    ],
-    "canonical_topics": [
-      "marketplaces",
-      "economics",
-      "startup-strategy"
-    ],
-    "id": "resource-simon-rothman-a16z-how-to-build-a-marketplace"
   },
   {
     "name": "Netflix: Heterogeneous Treatment Effects",
@@ -32004,6 +31119,1045 @@
     "id": "resource-michael-trick-operations-research-blog"
   },
   {
+    "name": "Python for Econometrics",
+    "description": "Kevin Sheppard's comprehensive intro for researchers. NumPy, pandas, statsmodels, and econometric applications.",
+    "category": "Programming",
+    "url": "https://bashtage.github.io/kevinsheppard.com/teaching/python/notes/",
+    "type": "Book",
+    "level": "Easy",
+    "tags": [
+      "Coding",
+      "Online Book"
+    ],
+    "domain": "Programming",
+    "difficulty": "beginner|intermediate",
+    "prerequisites": [
+      "python-basics"
+    ],
+    "topic_tags": [
+      "econometrics",
+      "statistics"
+    ],
+    "summary": "This resource provides a comprehensive introduction to Python for econometric applications, focusing on libraries such as NumPy, pandas, and statsmodels. It is designed for researchers and practitioners looking to apply Python in econometric analysis.",
+    "use_cases": [
+      "when to analyze data using econometric methods",
+      "when to apply Python for statistical analysis"
+    ],
+    "audience": [
+      "Early-PhD",
+      "Junior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is Python for econometrics?",
+      "How can I use NumPy for econometric analysis?",
+      "What are the applications of pandas in econometrics?",
+      "How does statsmodels facilitate econometric modeling?",
+      "What skills will I gain from learning Python for econometrics?",
+      "Who should consider this resource for learning?"
+    ],
+    "content_format": "book",
+    "skill_progression": [
+      "Python programming",
+      "Data manipulation with pandas",
+      "Statistical modeling with statsmodels",
+      "Understanding econometric applications"
+    ],
+    "model_score": 0.0002,
+    "macro_category": "Programming",
+    "embedding_text": "Python for Econometrics by Kevin Sheppard is a comprehensive resource tailored for researchers seeking to harness the power of Python in econometric analysis. This book delves into essential libraries such as NumPy, pandas, and statsmodels, providing readers with the foundational knowledge necessary to conduct robust econometric research. The teaching approach emphasizes practical applications, ensuring that learners not only grasp theoretical concepts but also gain hands-on experience through exercises and projects. Prerequisites include a basic understanding of Python, making it accessible for early PhD students, junior data scientists, and curious learners. Upon completion, readers will be equipped with skills in data manipulation, statistical modeling, and econometric applications, enabling them to effectively analyze economic data. This resource stands out for its practical focus, making it an ideal choice for those looking to apply Python in real-world econometric scenarios. While the estimated duration for completing the book is not specified, the structured content allows for flexible learning at one's own pace. After finishing this resource, learners will be well-prepared to tackle econometric problems using Python, enhancing their research capabilities and analytical skills.",
+    "tfidf_keywords": [
+      "econometrics",
+      "Python",
+      "NumPy",
+      "pandas",
+      "statsmodels",
+      "data-analysis",
+      "statistical-modeling",
+      "research-methods",
+      "data-manipulation",
+      "econometric-applications"
+    ],
+    "semantic_cluster": "python-for-econometrics",
+    "depth_level": "intro",
+    "related_concepts": [
+      "data-analysis",
+      "statistical-modeling",
+      "econometric-methods",
+      "quantitative-research",
+      "data-science"
+    ],
+    "canonical_topics": [
+      "econometrics",
+      "statistics"
+    ],
+    "id": "resource-python-for-econometrics"
+  },
+  {
+    "name": "PayPal: Graph Database for Fraud",
+    "description": "Real-time fraud ring detection",
+    "category": "Trust & Safety",
+    "url": "https://medium.com/paypal-tech/how-paypal-uses-real-time-graph-database-and-graph-analysis-to-fight-fraud-96a2b918619a",
+    "type": "Article",
+    "level": "Medium",
+    "tags": [
+      "ML & Data Science",
+      "Blog"
+    ],
+    "domain": "Domain Applications",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "python-basics"
+    ],
+    "topic_tags": [
+      "machine-learning",
+      "fraud-detection"
+    ],
+    "summary": "This article explores the implementation of graph databases for real-time fraud ring detection using machine learning techniques. It is aimed at data scientists and practitioners interested in enhancing their understanding of fraud detection methodologies.",
+    "use_cases": [
+      "When to use graph databases for fraud detection",
+      "When to apply machine learning techniques in fraud prevention"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "What are the applications of graph databases in fraud detection?",
+      "How can machine learning enhance fraud detection?",
+      "What techniques are used for real-time fraud ring detection?",
+      "What are the challenges in implementing graph databases?",
+      "How does PayPal utilize graph databases for fraud prevention?",
+      "What skills are needed to work with graph databases?",
+      "What are the benefits of using machine learning for fraud detection?",
+      "How can I get started with graph databases?"
+    ],
+    "content_format": "article",
+    "skill_progression": [
+      "Understanding of graph databases",
+      "Knowledge of machine learning applications in fraud detection"
+    ],
+    "model_score": 0.0002,
+    "macro_category": "Strategy",
+    "embedding_text": "The article 'PayPal: Graph Database for Fraud' delves into the innovative use of graph databases to detect fraud rings in real-time, a crucial aspect of maintaining trust and safety in financial transactions. It covers the underlying concepts of graph databases, including their structure and how they can efficiently represent complex relationships between entities involved in fraudulent activities. The teaching approach emphasizes practical applications, showcasing how machine learning techniques can be integrated with graph databases to enhance detection capabilities. Prerequisites for readers include a basic understanding of Python, as the article assumes familiarity with programming concepts essential for implementing the discussed techniques. Learning outcomes include gaining insights into the mechanics of fraud detection, understanding the advantages of using graph databases, and acquiring skills in applying machine learning to real-world problems. The article may also include hands-on exercises or examples that illustrate the concepts in action, allowing readers to engage with the material actively. Compared to other learning resources, this article provides a focused exploration of fraud detection, making it suitable for data scientists and practitioners looking to specialize in this area. The estimated time to complete the reading and exercises is not specified, but readers can expect to gain valuable knowledge that can be applied in their careers in data science and fraud prevention. After finishing this resource, readers will be better equipped to implement graph databases in their own fraud detection systems and understand the broader implications of machine learning in this field.",
+    "tfidf_keywords": [
+      "graph-database",
+      "fraud-detection",
+      "real-time-detection",
+      "machine-learning",
+      "fraud-ring",
+      "data-relationships",
+      "entity-relationship",
+      "trust-and-safety",
+      "data-science",
+      "algorithm",
+      "data-structure",
+      "anomaly-detection",
+      "predictive-modeling"
+    ],
+    "semantic_cluster": "fraud-detection-ml",
+    "depth_level": "intermediate",
+    "related_concepts": [
+      "graph-theory",
+      "anomaly-detection",
+      "machine-learning",
+      "data-structures",
+      "real-time-processing"
+    ],
+    "canonical_topics": [
+      "machine-learning",
+      "fraud-detection",
+      "data-engineering"
+    ],
+    "id": "resource-paypal-graph-database-for-fraud"
+  },
+  {
+    "name": "ritvikmath Time Series YouTube + GitHub",
+    "description": "Hand-drawn diagrams build intuition before code. Covers AR, MA, ARMA, ARIMA, SARIMA, stationarity, ACF/PACF, GARCH. GitHub repo (700+ stars) with complete Jupyter notebooks. Explains why not just how.",
+    "category": "Classical Methods",
+    "url": "https://www.youtube.com/@ritvikmath",
+    "type": "Video",
+    "level": "Easy",
+    "tags": [
+      "Forecasting",
+      "Time Series"
+    ],
+    "domain": "Forecasting & Time Series",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "python-basics"
+    ],
+    "topic_tags": [
+      "forecasting",
+      "time-series",
+      "statistics"
+    ],
+    "summary": "This resource provides an intuitive understanding of time series analysis through hand-drawn diagrams and practical coding examples. It is ideal for learners who want to grasp the underlying concepts of time series methods such as ARIMA and GARCH before diving into implementation.",
+    "use_cases": [
+      "when to analyze time series data",
+      "when to apply ARIMA models",
+      "when to use GARCH for volatility forecasting"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are the key components of ARIMA models?",
+      "How does GARCH differ from traditional time series models?",
+      "What is the significance of stationarity in time series analysis?",
+      "How to interpret ACF and PACF plots?",
+      "What practical applications exist for time series forecasting?",
+      "How can I access the GitHub repository for this resource?",
+      "What are the benefits of using hand-drawn diagrams in learning?",
+      "What skills will I gain from this time series tutorial?"
+    ],
+    "content_format": "video",
+    "skill_progression": [
+      "understanding ARIMA",
+      "applying GARCH",
+      "interpreting ACF/PACF"
+    ],
+    "model_score": 0.0001,
+    "macro_category": "Time Series",
+    "image_url": "https://yt3.googleusercontent.com/ytc/AIdro_lxr7Ix9Hd0LXeAf5COrCnl_DZO-ICODccEChApv5MByy_4=s900-c-k-c0x00ffffff-no-rj",
+    "embedding_text": "The 'ritvikmath Time Series YouTube + GitHub' resource offers a comprehensive approach to learning time series analysis, focusing on classical methods such as AR, MA, ARMA, ARIMA, SARIMA, and GARCH. Through hand-drawn diagrams, the resource builds intuition before delving into code, making complex concepts more accessible. It emphasizes the importance of understanding the 'why' behind the methods, not just the 'how', which is crucial for effective application in real-world scenarios. The GitHub repository, boasting over 700 stars, contains complete Jupyter notebooks that allow learners to engage with the material interactively. This resource is particularly beneficial for those with a basic understanding of Python, as it assumes familiarity with programming concepts but does not require advanced statistical knowledge. By completing this resource, learners will gain a solid foundation in time series forecasting, enabling them to apply these techniques in various contexts, such as finance, economics, and data science. The hands-on exercises included in the Jupyter notebooks provide practical experience, reinforcing the theoretical concepts covered in the videos. This resource is ideal for junior data scientists and mid-level practitioners looking to enhance their skills in time series analysis. It serves as a stepping stone for more advanced studies in forecasting and statistical modeling, making it a valuable addition to any data science curriculum.",
+    "tfidf_keywords": [
+      "ARIMA",
+      "GARCH",
+      "stationarity",
+      "ACF",
+      "PACF",
+      "time series",
+      "forecasting",
+      "hand-drawn diagrams",
+      "Jupyter notebooks",
+      "SARIMA"
+    ],
+    "semantic_cluster": "time-series-analysis",
+    "depth_level": "intermediate",
+    "related_concepts": [
+      "forecasting",
+      "time-series",
+      "statistics",
+      "ARIMA",
+      "GARCH"
+    ],
+    "canonical_topics": [
+      "forecasting",
+      "statistics",
+      "econometrics"
+    ],
+    "id": "resource-ritvikmath-time-series-youtube-+-github"
+  },
+  {
+    "name": "Apricitas Economics (Joseph Politano)",
+    "description": "Data-driven macroeconomic analysis with exceptional visualization. Noah Smith calls it 'one of the best econ data blogs'. Labor markets, inflation, industry economics.",
+    "category": "Applied Economics",
+    "url": "https://www.apricitas.io/",
+    "type": "Newsletter",
+    "tags": [
+      "Macro Economics",
+      "Data Viz",
+      "Labor Markets"
+    ],
+    "level": "Medium",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "Apricitas Economics offers data-driven macroeconomic analysis with a focus on labor markets, inflation, and industry economics. It is ideal for those interested in understanding macroeconomic trends through exceptional visualizations.",
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are the key insights from Apricitas Economics?",
+      "How does Apricitas Economics visualize macroeconomic data?",
+      "What topics are covered in Apricitas Economics?",
+      "Who recommends Apricitas Economics as a valuable resource?",
+      "What can I learn about labor markets from Apricitas Economics?",
+      "How does Apricitas Economics approach inflation analysis?",
+      "What makes Apricitas Economics stand out among econ blogs?",
+      "What type of content can I expect in Apricitas Economics?"
+    ],
+    "use_cases": [],
+    "content_format": "newsletter",
+    "skill_progression": [
+      "data analysis",
+      "economic visualization",
+      "understanding macroeconomic indicators"
+    ],
+    "model_score": 0.0001,
+    "macro_category": "Industry Economics",
+    "domain": "Economics",
+    "image_url": "https://substackcdn.com/image/fetch/$s_!vdzx!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fapricitas.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D-1297034036%26version%3D9",
+    "embedding_text": "Apricitas Economics, authored by Joseph Politano, is a distinguished newsletter that provides in-depth, data-driven macroeconomic analysis. The resource is particularly noted for its exceptional visualization techniques, which enhance the understanding of complex economic concepts. The newsletter covers a range of topics including labor markets, inflation, and industry economics, making it a valuable resource for anyone interested in these areas. The teaching approach emphasizes clarity and accessibility, allowing readers to grasp intricate economic data and trends easily. While there are no specific prerequisites for engaging with the content, a basic understanding of macroeconomic principles may enhance the learning experience. Readers can expect to gain insights into current economic conditions, trends, and forecasts, as well as develop a better understanding of how macroeconomic factors interact. Apricitas Economics is suitable for a wide audience, including students, practitioners, and anyone with a curiosity about economics. The resource does not specify a completion time, as it is designed to be consumed at the reader's pace. After engaging with the content, readers will be better equipped to analyze macroeconomic data and trends independently, enhancing their understanding of the economic landscape.",
+    "tfidf_keywords": [
+      "macroeconomics",
+      "labor markets",
+      "inflation",
+      "data visualization",
+      "economic analysis",
+      "industry economics",
+      "economic trends",
+      "data-driven insights",
+      "visualization techniques",
+      "economic conditions"
+    ],
+    "semantic_cluster": "macroeconomic-analysis",
+    "depth_level": "intro",
+    "related_concepts": [
+      "labor-economics",
+      "industrial-organization",
+      "policy-evaluation"
+    ],
+    "canonical_topics": [
+      "econometrics",
+      "labor-economics",
+      "policy-evaluation"
+    ],
+    "id": "resource-apricitas-economics-joseph-politano"
+  },
+  {
+    "name": "CSIS Strategic Technologies Program",
+    "description": "Research and events on defense technology, cybersecurity, and emerging technologies from the #1 ranked defense think tank",
+    "category": "Computational Economics",
+    "url": "https://www.csis.org/programs/strategic-technologies-program",
+    "type": "Tool",
+    "level": "general",
+    "tags": [
+      "CSIS",
+      "technology",
+      "cybersecurity",
+      "policy"
+    ],
+    "domain": "Defense Technology",
+    "image_url": "https://csis-website-prod.s3.amazonaws.com/s3fs-public/2023-01/AdobeStock_299680759%281%29_1.jpg?VersionId=yvuffHS8zX1z8Hl3204JY_CMssLZpv3v",
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [
+      "cybersecurity",
+      "defense-technology",
+      "emerging-technologies"
+    ],
+    "summary": "The CSIS Strategic Technologies Program provides insights into defense technology, cybersecurity, and emerging technologies through research and events. It is designed for policymakers, researchers, and anyone interested in the intersection of technology and security.",
+    "use_cases": [
+      "Understanding defense technology advancements",
+      "Staying informed on cybersecurity issues",
+      "Engaging with policy discussions on technology"
+    ],
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are the latest trends in defense technology?",
+      "How does cybersecurity impact national security?",
+      "What emerging technologies are being researched at CSIS?",
+      "What events does CSIS host on technology policy?",
+      "How can I stay updated on defense technology?",
+      "What role does CSIS play in technology research?",
+      "What are the implications of emerging technologies for policy?",
+      "How does CSIS rank among defense think tanks?"
+    ],
+    "content_format": "article",
+    "skill_progression": [
+      "Understanding of defense technology",
+      "Knowledge of cybersecurity policies",
+      "Awareness of emerging technologies"
+    ],
+    "model_score": 0.0001,
+    "macro_category": "Industry Economics",
+    "embedding_text": "The CSIS Strategic Technologies Program focuses on the critical intersection of defense technology, cybersecurity, and emerging technologies. As a leading defense think tank, CSIS conducts extensive research and hosts events that delve into the implications of technological advancements on national security and policy-making. This resource is ideal for individuals interested in understanding how technology shapes defense strategies and the broader implications for society. Participants can expect to engage with a variety of topics, including the latest trends in cybersecurity, the role of emerging technologies in defense, and the policy challenges that arise from rapid technological change. The program emphasizes a research-driven approach, providing attendees with insights from experts in the field. While no specific prerequisites are required, a basic understanding of technology and policy will enhance the learning experience. By engaging with this resource, individuals will gain a deeper understanding of the strategic considerations surrounding technology in defense, equipping them with knowledge applicable to careers in policy analysis, research, and technology development. The program also encourages participants to think critically about the ethical implications of technology in defense and the importance of informed policy-making. Overall, the CSIS Strategic Technologies Program serves as a vital resource for those looking to navigate the complex landscape of defense technology and cybersecurity.",
+    "tfidf_keywords": [
+      "defense-technology",
+      "cybersecurity",
+      "emerging-technologies",
+      "policy-analysis",
+      "national-security",
+      "technology-research",
+      "CSIS",
+      "think-tank",
+      "strategic-technology",
+      "policy-implications"
+    ],
+    "semantic_cluster": "defense-technology-policy",
+    "depth_level": "intro",
+    "related_concepts": [
+      "cybersecurity",
+      "national-security",
+      "technology-policy",
+      "emerging-technologies",
+      "defense-strategy"
+    ],
+    "canonical_topics": [
+      "policy-evaluation",
+      "technology-policy",
+      "defense-technology"
+    ],
+    "id": "resource-csis-strategic-technologies-program"
+  },
+  {
+    "name": "MIT 15.S08 FinTech (Gary Gensler)",
+    "description": "12 lectures from former SEC Chair on AI in finance, risk, and compliance \u2014 free",
+    "category": "Case Studies",
+    "url": "https://ocw.mit.edu/courses/15-s08-fintech-shaping-the-financial-world-spring-2020/",
+    "type": "Course",
+    "level": "Medium",
+    "tags": [
+      "ML & Data Science",
+      "Course"
+    ],
+    "domain": "Product Sense",
+    "difficulty": "intro",
+    "prerequisites": [],
+    "topic_tags": [
+      "finance",
+      "AI",
+      "risk-management",
+      "compliance"
+    ],
+    "summary": "This course provides insights into the intersection of artificial intelligence and finance, focusing on risk and compliance. It is designed for individuals interested in understanding how AI can transform financial practices, particularly those in early stages of their careers or studies.",
+    "use_cases": [
+      "Understanding AI applications in finance",
+      "Learning about risk management in FinTech",
+      "Exploring compliance issues in financial technology"
+    ],
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is the role of AI in finance?",
+      "How does AI impact risk management?",
+      "What compliance issues are addressed in FinTech?",
+      "Who is Gary Gensler and what are his contributions to finance?",
+      "What are the key topics covered in the MIT FinTech course?",
+      "How can I apply AI in financial compliance?",
+      "What are the risks associated with AI in finance?",
+      "Where can I find free resources on AI and finance?"
+    ],
+    "content_format": "course",
+    "skill_progression": [
+      "Understanding AI applications in finance",
+      "Knowledge of risk management practices",
+      "Awareness of compliance issues in financial technology"
+    ],
+    "model_score": 0.0001,
+    "macro_category": "Strategy",
+    "image_url": "https://ocw.mit.edu/courses/15-s08-fintech-shaping-the-financial-world-spring-2020/b6d26d8a1afdc660d742c93abcba73e1_15-s08s20.jpg",
+    "embedding_text": "The MIT 15.S08 FinTech course, taught by former SEC Chair Gary Gensler, offers a comprehensive exploration of the role of artificial intelligence in the finance sector. This course consists of 12 lectures that delve into various topics including the implications of AI on risk management and compliance within financial institutions. The teaching approach emphasizes real-world applications and case studies, providing students with a practical understanding of how AI technologies can be integrated into financial practices. While there are no specific prerequisites, a basic understanding of finance and technology will enhance the learning experience. The course is particularly beneficial for those curious about the evolving landscape of FinTech and the regulatory challenges that accompany it. By the end of the course, participants will gain insights into the transformative potential of AI in finance, equipping them with knowledge that can be applied in various financial contexts. This resource is ideal for students, practitioners, and anyone interested in the intersection of technology and finance. The course is designed to be accessible, making it suitable for a wide audience, including those who are new to the field or looking to expand their knowledge in FinTech. Upon completion, learners will be better prepared to engage with the complexities of AI in finance and its regulatory environment.",
+    "tfidf_keywords": [
+      "FinTech",
+      "AI",
+      "risk management",
+      "compliance",
+      "Gary Gensler",
+      "financial technology",
+      "regulatory challenges",
+      "machine learning",
+      "financial practices",
+      "technology integration"
+    ],
+    "semantic_cluster": "ai-in-finance",
+    "depth_level": "intro",
+    "related_concepts": [
+      "artificial-intelligence",
+      "financial-regulation",
+      "risk-assessment",
+      "compliance-standards",
+      "financial-services"
+    ],
+    "canonical_topics": [
+      "finance",
+      "machine-learning",
+      "policy-evaluation"
+    ],
+    "id": "resource-mit-15s08-fintech-gary-gensler"
+  },
+  {
+    "name": "Fraud Detection Handbook (ULB)",
+    "description": "From the team that created the Kaggle dataset \u2014 rigorous methodology",
+    "category": "Trust & Safety",
+    "url": "https://fraud-detection-handbook.github.io/fraud-detection-handbook/",
+    "type": "Tool",
+    "level": "Medium",
+    "tags": [
+      "ML & Data Science",
+      "Tool"
+    ],
+    "domain": "Domain Applications",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "python-basics"
+    ],
+    "topic_tags": [
+      "machine-learning",
+      "fraud-detection"
+    ],
+    "summary": "The Fraud Detection Handbook provides a comprehensive overview of methodologies and tools for detecting fraudulent activities using machine learning techniques. It is designed for data scientists and practitioners looking to enhance their skills in fraud detection and prevention.",
+    "use_cases": [
+      "When to apply machine learning techniques for fraud detection",
+      "Identifying patterns of fraudulent behavior",
+      "Evaluating the effectiveness of fraud detection tools"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Senior-DS"
+    ],
+    "synthetic_questions": [
+      "What methodologies are used in fraud detection?",
+      "How can machine learning improve fraud detection?",
+      "What tools are recommended for fraud detection?",
+      "What datasets are available for practicing fraud detection?",
+      "What are the common challenges in fraud detection?",
+      "How to implement fraud detection algorithms?",
+      "What are the best practices for fraud detection?",
+      "How does the Kaggle dataset contribute to fraud detection research?"
+    ],
+    "content_format": "tool",
+    "skill_progression": [
+      "Understanding of machine learning algorithms",
+      "Ability to apply fraud detection techniques",
+      "Skill in analyzing data for fraud patterns"
+    ],
+    "model_score": 0.0001,
+    "macro_category": "Strategy",
+    "embedding_text": "The Fraud Detection Handbook is a vital resource for anyone interested in the intersection of machine learning and fraud detection. This handbook is crafted by the team behind a well-known Kaggle dataset, ensuring that the methodologies presented are grounded in rigorous research and practical application. It covers a variety of topics including the fundamental principles of fraud detection, the role of machine learning in identifying and preventing fraudulent activities, and the tools available for practitioners in the field. The teaching approach emphasizes hands-on learning, providing readers with practical exercises and projects that reinforce the concepts discussed. Prerequisites for this resource include a basic understanding of Python programming, as well as familiarity with data analysis techniques. By engaging with this handbook, learners can expect to gain valuable skills in applying machine learning algorithms to real-world fraud detection scenarios. The content is designed for data scientists at various levels, particularly those who are looking to deepen their understanding of fraud detection methodologies. After completing this resource, readers will be equipped to implement effective fraud detection strategies and contribute to the ongoing development of tools and techniques in this critical area of study.",
+    "tfidf_keywords": [
+      "fraud-detection",
+      "machine-learning",
+      "anomaly-detection",
+      "classification",
+      "predictive-modeling",
+      "data-cleaning",
+      "feature-engineering",
+      "model-evaluation",
+      "Kaggle-dataset",
+      "risk-assessment"
+    ],
+    "semantic_cluster": "fraud-detection-methodologies",
+    "depth_level": "intermediate",
+    "related_concepts": [
+      "anomaly-detection",
+      "predictive-modeling",
+      "data-cleaning",
+      "feature-engineering",
+      "risk-assessment"
+    ],
+    "canonical_topics": [
+      "machine-learning",
+      "statistics",
+      "data-engineering"
+    ],
+    "id": "resource-fraud-detection-handbook-ulb"
+  },
+  {
+    "name": "Lenny's Podcast: Madhavan Ramanujam",
+    "description": "90 minutes on WTP conversations and behavioral pricing",
+    "category": "Pricing & Revenue",
+    "url": "https://www.lennyspodcast.com/the-art-and-science-of-pricing-madhavan-ramanujam-simon-kucher/",
+    "type": "Podcast",
+    "level": "Medium",
+    "tags": [
+      "Pricing & Demand",
+      "Podcast"
+    ],
+    "domain": "Domain Applications",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "behavioral-pricing",
+      "WTP-conversations",
+      "pricing-strategies"
+    ],
+    "summary": "In this episode of Lenny's Podcast, Madhavan Ramanujam discusses the intricacies of willingness-to-pay (WTP) conversations and behavioral pricing strategies. Listeners will gain insights into how to effectively engage in pricing discussions and understand consumer behavior, making it suitable for those new to pricing concepts.",
+    "use_cases": [
+      "Understanding pricing strategies",
+      "Improving negotiation skills in pricing",
+      "Learning about consumer behavior"
+    ],
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are WTP conversations?",
+      "How does behavioral pricing work?",
+      "What strategies can improve pricing discussions?",
+      "Who is Madhavan Ramanujam?",
+      "What insights can be gained from Lenny's Podcast?",
+      "How long is the episode featuring Madhavan Ramanujam?",
+      "What topics are covered in the podcast?",
+      "How can I apply behavioral pricing in my business?"
+    ],
+    "content_format": "podcast",
+    "estimated_duration": "90 minutes",
+    "skill_progression": [
+      "Understanding of behavioral pricing",
+      "Skills in WTP conversations"
+    ],
+    "model_score": 0.0001,
+    "macro_category": "Marketing & Growth",
+    "embedding_text": "Lenny's Podcast featuring Madhavan Ramanujam offers a deep dive into the world of behavioral pricing and willingness-to-pay (WTP) conversations, providing listeners with a comprehensive understanding of how to navigate pricing discussions effectively. The episode spans 90 minutes, making it a substantial resource for those looking to enhance their knowledge in pricing strategies. Throughout the conversation, Ramanujam shares his expertise on the psychological aspects of pricing, emphasizing how consumer behavior influences pricing decisions. This podcast is designed for individuals who are curious about pricing dynamics, whether they are students, practitioners, or simply interested in the topic. The teaching approach is conversational, allowing listeners to absorb complex concepts in an engaging manner. While no specific prerequisites are required, a basic understanding of pricing principles may enhance the listening experience. By the end of the episode, listeners will have gained valuable insights into effective pricing strategies and how to approach WTP conversations, equipping them with skills that can be applied in real-world scenarios. This resource stands out by providing practical advice and real-world applications, making it a unique addition to the learning paths available in the field of pricing and revenue management.",
+    "tfidf_keywords": [
+      "willingness-to-pay",
+      "behavioral-pricing",
+      "pricing-strategies",
+      "consumer-behavior",
+      "negotiation-skills",
+      "pricing-discussions",
+      "market-research",
+      "value-perception",
+      "pricing-psychology",
+      "pricing-models"
+    ],
+    "semantic_cluster": "behavioral-pricing-strategies",
+    "depth_level": "intro",
+    "related_concepts": [
+      "consumer-behavior",
+      "pricing-strategies",
+      "negotiation",
+      "market-research",
+      "value-perception"
+    ],
+    "canonical_topics": [
+      "pricing",
+      "consumer-behavior",
+      "behavioral-economics"
+    ],
+    "id": "resource-lennys-podcast-madhavan-ramanujam"
+  },
+  {
+    "name": "Li Jin: Unbundling Work",
+    "description": "How platforms are unbundling traditional employment into discrete tasks. Examines implications for workers, platforms, and the economy.",
+    "category": "Platform Economics",
+    "url": "https://li.substack.com/p/unbundling-work",
+    "type": "Blog",
+    "tags": [
+      "Gig Economy",
+      "Future of Work",
+      "Unbundling"
+    ],
+    "level": "Easy",
+    "difficulty": "intro",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource explores how platforms are transforming traditional employment by breaking it down into discrete tasks. It is suitable for anyone interested in understanding the implications of this shift for workers, platforms, and the broader economy.",
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is unbundling work in the context of the gig economy?",
+      "How do platforms influence traditional employment models?",
+      "What are the economic implications of task-based work?",
+      "Who benefits from the unbundling of work?",
+      "What challenges do workers face in a gig economy?",
+      "How does unbundling affect job security?",
+      "What are the future trends in the future of work?",
+      "How do platforms impact the labor market?"
+    ],
+    "use_cases": [],
+    "content_format": "article",
+    "model_score": 0.0001,
+    "macro_category": "Platform & Markets",
+    "domain": "Platform Economics",
+    "subtopic": "Creator Economy",
+    "embedding_text": "In the modern economy, the concept of work is undergoing a significant transformation, particularly through the rise of platforms that unbundle traditional employment into discrete tasks. This article by Li Jin delves into the implications of this shift for workers, platforms, and the economy at large. It provides an overview of how platforms like gig economy services are redefining the nature of work, allowing for more flexibility but also raising questions about job security and worker rights. The teaching approach emphasizes a conceptual understanding of the gig economy, making it accessible to a broad audience, including students, practitioners, and anyone curious about the future of work. While no specific prerequisites are required, a general interest in labor economics and platform dynamics will enhance the learning experience. Readers can expect to gain insights into the challenges and opportunities presented by the unbundling of work, as well as a broader understanding of the economic landscape shaped by these changes. The resource does not include hands-on exercises or projects but serves as a foundational piece for those looking to explore further into the gig economy and its implications. After engaging with this content, readers will be better equipped to navigate discussions surrounding the future of work and its impact on society.",
+    "tfidf_keywords": [
+      "gig economy",
+      "platform economics",
+      "unbundling work",
+      "task-based employment",
+      "labor market",
+      "worker rights",
+      "job security",
+      "future of work",
+      "economic implications",
+      "flexibility in work"
+    ],
+    "semantic_cluster": "platform-economics",
+    "depth_level": "intro",
+    "related_concepts": [
+      "labor-economics",
+      "consumer-behavior",
+      "industrial-organization",
+      "behavioral-economics",
+      "marketplaces"
+    ],
+    "canonical_topics": [
+      "labor-economics",
+      "marketplaces",
+      "consumer-behavior"
+    ],
+    "id": "resource-li-jin-unbundling-work"
+  },
+  {
+    "name": "Change Point Detection in Time Series",
+    "description": "Six algorithms via ruptures library (PELT, Dynamic Programming, Binary Segmentation, Window-based, Bottom-up, Kernel CPD). Real Google Search Console application. Discusses computational complexity tradeoffs.",
+    "category": "Specialized Methods",
+    "url": "https://forecastegy.com/posts/change-point-detection-time-series-python/",
+    "type": "Tutorial",
+    "level": "Medium",
+    "tags": [
+      "Forecasting",
+      "Change Point"
+    ],
+    "domain": "Forecasting & Time Series",
+    "difficulty": "intermediate",
+    "prerequisites": [
+      "python-basics"
+    ],
+    "topic_tags": [
+      "forecasting",
+      "change-point-detection"
+    ],
+    "summary": "This tutorial covers six algorithms for change point detection using the ruptures library, focusing on computational complexity tradeoffs. It is designed for individuals with some programming experience who are interested in time series analysis and forecasting.",
+    "use_cases": [
+      "Identifying shifts in time series data",
+      "Improving forecasting models",
+      "Analyzing trends in Google Search Console data"
+    ],
+    "audience": [
+      "Junior-DS",
+      "Mid-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are the six algorithms for change point detection?",
+      "How does the ruptures library facilitate change point detection?",
+      "What are the computational complexity tradeoffs in change point detection?",
+      "In what scenarios would you apply change point detection?",
+      "How can change point detection improve forecasting accuracy?",
+      "What is the practical application of change point detection in Google Search Console?",
+      "What prerequisites are needed to understand the algorithms discussed?",
+      "How do the algorithms compare in terms of performance?"
+    ],
+    "content_format": "tutorial",
+    "skill_progression": [
+      "Understanding of change point detection",
+      "Ability to implement algorithms using the ruptures library",
+      "Knowledge of computational tradeoffs in algorithm selection"
+    ],
+    "model_score": 0.0001,
+    "macro_category": "Time Series",
+    "image_url": "https://forecastegy.com/img/ts_cpd/2.png",
+    "embedding_text": "Change Point Detection in Time Series is a comprehensive tutorial that delves into six distinct algorithms for detecting change points within time series data, utilizing the ruptures library. The tutorial emphasizes the practical application of these algorithms, particularly in the context of real-world scenarios such as Google Search Console. Participants will explore various methods including PELT, Dynamic Programming, Binary Segmentation, Window-based, Bottom-up, and Kernel CPD, gaining insights into their respective computational complexities and tradeoffs. The teaching approach is hands-on, encouraging learners to engage with the material through practical exercises that reinforce theoretical concepts. Prerequisites include a basic understanding of Python programming, making this resource suitable for junior data scientists and curious individuals looking to enhance their skills in time series analysis. Upon completion, learners will be equipped to identify shifts in data trends, improve their forecasting models, and apply change point detection techniques in various analytical contexts. The estimated time to complete this resource is not specified, but it is structured to provide a thorough understanding of the subject matter, allowing participants to progress confidently in their data science journey.",
+    "tfidf_keywords": [
+      "change-point-detection",
+      "ruptures-library",
+      "PELT",
+      "Dynamic Programming",
+      "Binary Segmentation",
+      "Window-based",
+      "Bottom-up",
+      "Kernel CPD",
+      "computational-complexity",
+      "forecasting"
+    ],
+    "semantic_cluster": "time-series-analysis",
+    "depth_level": "intermediate",
+    "related_concepts": [
+      "time-series-analysis",
+      "forecasting",
+      "statistical-methods",
+      "data-science",
+      "algorithm-complexity"
+    ],
+    "canonical_topics": [
+      "forecasting",
+      "machine-learning",
+      "statistics"
+    ],
+    "id": "resource-change-point-detection-in-time-series"
+  },
+  {
+    "name": "Money Stuff (Matt Levine)",
+    "description": "Daily newsletter making complex financial mechanics accessible. 300,000+ subscribers. Wall Street, M&A, tech IPOs, and securities law explained with wit.",
+    "category": "Tech Strategy",
+    "url": "https://www.bloomberg.com/account/newsletters/money-stuff",
+    "type": "Newsletter",
+    "tags": [
+      "Finance",
+      "Wall Street",
+      "Free"
+    ],
+    "level": "Medium",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [
+      "finance",
+      "Wall Street",
+      "M&A",
+      "tech IPOs",
+      "securities law"
+    ],
+    "summary": "Money Stuff is a daily newsletter that makes complex financial mechanics accessible to a broad audience. It is particularly suitable for those interested in understanding Wall Street, mergers and acquisitions, technology IPOs, and securities law, all explained with wit and clarity.",
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is Money Stuff by Matt Levine?",
+      "How does Money Stuff simplify financial concepts?",
+      "Who subscribes to Money Stuff?",
+      "What topics are covered in Money Stuff?",
+      "Is Money Stuff suitable for beginners?",
+      "How can I subscribe to Money Stuff?",
+      "What makes Money Stuff unique?",
+      "What can I learn from Money Stuff?"
+    ],
+    "use_cases": [
+      "to understand complex financial topics",
+      "to stay updated on Wall Street trends",
+      "to learn about M&A and tech IPOs"
+    ],
+    "content_format": "newsletter",
+    "model_score": 0.0001,
+    "macro_category": "Strategy",
+    "domain": "Product Sense",
+    "embedding_text": "Money Stuff, authored by Matt Levine, is a daily newsletter that demystifies the intricate world of finance, making it accessible to a diverse readership. With over 300,000 subscribers, it has established itself as a go-to resource for those looking to grasp complex financial mechanics with clarity and humor. The newsletter covers a wide array of topics, including Wall Street dynamics, mergers and acquisitions, technology IPOs, and the nuances of securities law. Levine's engaging writing style ensures that even the most complicated concepts are presented in a way that is both entertaining and informative. Readers can expect to gain insights into current financial trends and practices, enhancing their understanding of the financial landscape. While no specific prerequisites are required, a general curiosity about finance will greatly enhance the reading experience. The newsletter serves as an excellent resource for anyone from casual readers to those seeking a deeper understanding of financial matters. After engaging with Money Stuff, readers will find themselves better equipped to navigate discussions around finance, equipped with knowledge that can be applied in various contexts, whether in professional settings or personal investment decisions. The newsletter is designed to be consumed daily, making it a quick yet enriching addition to one\u2019s routine. Overall, Money Stuff stands out in the crowded field of financial commentary, offering a unique blend of wit and insight that appeals to both novices and seasoned finance enthusiasts.",
+    "skill_progression": [
+      "understanding of financial mechanics",
+      "insight into Wall Street practices",
+      "knowledge of M&A and IPO processes"
+    ],
+    "tfidf_keywords": [
+      "financial mechanics",
+      "Wall Street",
+      "M&A",
+      "tech IPOs",
+      "securities law",
+      "daily newsletter",
+      "Matt Levine",
+      "financial trends",
+      "complex concepts",
+      "accessible finance"
+    ],
+    "semantic_cluster": "finance-education",
+    "depth_level": "intro",
+    "related_concepts": [
+      "finance",
+      "economics",
+      "business strategy",
+      "investment",
+      "market analysis"
+    ],
+    "canonical_topics": [
+      "finance"
+    ],
+    "id": "resource-money-stuff-matt-levine"
+  },
+  {
+    "name": "HBR IdeaCast: How to Build Dynamic Pricing That Works",
+    "description": "Price fairness communication; cross-subsidization strategies. Harvard Business Review podcast on implementing dynamic pricing customers accept.",
+    "category": "Pricing & Revenue",
+    "url": "https://hbr.org/podcast/2024/08/how-to-build-a-dynamic-pricing-strategy-that-works",
+    "type": "Podcast",
+    "tags": [
+      "Dynamic Pricing",
+      "Strategy",
+      "Consumer Psychology"
+    ],
+    "level": "Easy",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This podcast episode explores the intricacies of dynamic pricing and how to communicate price fairness to consumers. It is designed for business professionals and marketers interested in understanding pricing strategies that can enhance customer acceptance.",
+    "audience": [
+      "Junior-DS",
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What is dynamic pricing?",
+      "How can price fairness be communicated effectively?",
+      "What are cross-subsidization strategies?",
+      "Why do customers accept dynamic pricing?",
+      "What are the benefits of implementing dynamic pricing?",
+      "How does consumer psychology affect pricing strategies?",
+      "What are the challenges of dynamic pricing?",
+      "How can businesses implement dynamic pricing successfully?"
+    ],
+    "use_cases": [
+      "When developing pricing strategies",
+      "When assessing customer acceptance of pricing models"
+    ],
+    "content_format": "podcast",
+    "skill_progression": [
+      "Understanding dynamic pricing",
+      "Communicating price fairness",
+      "Applying pricing strategies in business"
+    ],
+    "model_score": 0.0001,
+    "macro_category": "Marketing & Growth",
+    "domain": "Marketing",
+    "image_url": "https://hbr.org/resources/images/article_assets/2023/05/wide-hbr-on-strategy.png",
+    "embedding_text": "The HBR IdeaCast episode titled 'How to Build Dynamic Pricing That Works' delves into the essential concepts of dynamic pricing, a strategy that allows businesses to adjust prices based on market demand and consumer behavior. This podcast provides insights into the importance of price fairness communication, which is crucial for gaining customer acceptance of dynamic pricing strategies. Listeners will learn about various cross-subsidization strategies that can be employed to balance pricing across different consumer segments. The teaching approach is conversational and informative, making complex pricing strategies accessible to a broad audience. Although no specific prerequisites are required, a basic understanding of pricing concepts may enhance the listening experience. By the end of this episode, listeners will have gained valuable insights into how to effectively implement dynamic pricing in their businesses while ensuring that customers feel treated fairly. This resource is particularly beneficial for business professionals, marketers, and anyone interested in pricing strategies. The episode is concise, making it easy to fit into a busy schedule, and provides actionable takeaways for immediate application in real-world scenarios.",
+    "tfidf_keywords": [
+      "dynamic pricing",
+      "price fairness",
+      "cross-subsidization",
+      "consumer acceptance",
+      "pricing strategy",
+      "business communication",
+      "market demand",
+      "pricing models",
+      "consumer behavior",
+      "pricing psychology"
+    ],
+    "semantic_cluster": "dynamic-pricing-strategies",
+    "depth_level": "intro",
+    "related_concepts": [
+      "consumer-psychology",
+      "pricing",
+      "behavioral-economics",
+      "market-strategy",
+      "business-communication"
+    ],
+    "canonical_topics": [
+      "pricing",
+      "consumer-behavior",
+      "behavioral-economics"
+    ],
+    "id": "resource-hbr-ideacast-how-to-build-dynamic-pricing-that-wor"
+  },
+  {
+    "name": "Hagiu: Multi-Sided Platforms - From Microfoundations to Design",
+    "description": "Academic treatment of platform design principles. Bridges economic theory with practical platform design decisions.",
+    "category": "Platform Economics",
+    "url": "https://www.hbs.edu/faculty/Pages/item.aspx?num=45103",
+    "type": "Article",
+    "tags": [
+      "Platform Design",
+      "Microfoundations",
+      "Theory"
+    ],
+    "level": "Hard",
+    "difficulty": "intermediate",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource explores the principles of platform design through an academic lens, integrating economic theory with practical applications. It is suitable for those interested in understanding the foundational aspects of multi-sided platforms and their design implications.",
+    "audience": [
+      "Early-PhD",
+      "Junior-DS",
+      "Mid-DS"
+    ],
+    "synthetic_questions": [
+      "What are the key principles of platform design?",
+      "How does economic theory apply to platform design?",
+      "What are multi-sided platforms?",
+      "What practical decisions are involved in platform design?",
+      "How can platform design impact economic outcomes?",
+      "What are the microfoundations of platform economics?"
+    ],
+    "use_cases": [],
+    "content_format": "article",
+    "skill_progression": [
+      "Understanding platform design principles",
+      "Applying economic theory to practical scenarios"
+    ],
+    "model_score": 0.0001,
+    "macro_category": "Platform & Markets",
+    "domain": "Platform Economics",
+    "image_url": "/images/logos/hbs.png",
+    "embedding_text": "The article 'Hagiu: Multi-Sided Platforms - From Microfoundations to Design' provides a comprehensive academic treatment of platform design principles, focusing on the intersection of economic theory and practical design decisions. It delves into the intricacies of multi-sided platforms, elucidating how these platforms operate and the economic implications of their design choices. Readers will gain insights into the foundational concepts of platform economics, including the microfoundations that underpin these platforms. The teaching approach emphasizes theoretical understanding while bridging the gap to practical applications, making it relevant for both scholars and practitioners in the field. While no specific prerequisites are outlined, a basic understanding of economics and platform dynamics would be beneficial. The resource aims to equip learners with skills in analyzing platform design and its economic impacts, fostering a deeper comprehension of how design decisions can influence market outcomes. Although the article does not include hands-on exercises, it serves as a critical reference for those looking to explore the complexities of platform economics further. Ideal for early-stage PhD students and junior data scientists, this resource provides a solid foundation for those interested in the design and functionality of multi-sided platforms. The estimated time to complete the reading is not specified, but it is designed to be digestible for those with a moderate background in economics.",
+    "tfidf_keywords": [
+      "multi-sided platforms",
+      "platform design",
+      "economic theory",
+      "microfoundations",
+      "platform economics",
+      "design principles",
+      "market dynamics",
+      "economic implications",
+      "practical decisions",
+      "theoretical understanding"
+    ],
+    "semantic_cluster": "platform-economics-design",
+    "depth_level": "intermediate",
+    "related_concepts": [
+      "market dynamics",
+      "platform strategy",
+      "economic theory",
+      "design principles",
+      "multi-sided markets"
+    ],
+    "canonical_topics": [
+      "marketplaces",
+      "economics",
+      "product-analytics"
+    ],
+    "id": "resource-hagiu-multi-sided-platforms-from-microfoundations-"
+  },
+  {
+    "name": "Simon Rothman (a16z): How to Build a Marketplace",
+    "description": "Former eBay Motors GM and a16z partner's comprehensive guide to marketplace building. Covers liquidity, matching, and scaling strategies.",
+    "category": "Platform Economics",
+    "url": "https://a16z.com/2014/04/23/marketplace-startups/",
+    "type": "Blog",
+    "tags": [
+      "a16z",
+      "Marketplaces",
+      "Startup Strategy"
+    ],
+    "level": "Medium",
+    "difficulty": "beginner",
+    "prerequisites": [],
+    "topic_tags": [],
+    "summary": "This resource provides a comprehensive guide to building a marketplace, focusing on essential strategies such as liquidity, matching, and scaling. It is ideal for entrepreneurs and startup enthusiasts looking to understand the intricacies of marketplace dynamics.",
+    "audience": [
+      "Curious-browser"
+    ],
+    "synthetic_questions": [
+      "What are the key strategies for building a successful marketplace?",
+      "How do liquidity and matching affect marketplace performance?",
+      "What scaling strategies can be applied to marketplaces?",
+      "Who is Simon Rothman and what is his expertise in marketplace building?",
+      "What lessons can startups learn from eBay Motors?",
+      "How can I apply marketplace principles to my startup?",
+      "What are the common challenges faced when building a marketplace?",
+      "What insights does a16z provide on marketplace economics?"
+    ],
+    "use_cases": [],
+    "content_format": "article",
+    "model_score": 0.0001,
+    "macro_category": "Platform & Markets",
+    "domain": "Platform Economics",
+    "subtopic": "Marketplaces",
+    "image_url": "/images/logos/a16z.png",
+    "embedding_text": "Simon Rothman, a former GM of eBay Motors and a partner at a16z, offers a comprehensive guide on how to build a successful marketplace. This resource delves into critical topics such as liquidity, which refers to the ease with which buyers and sellers can transact, and matching, which is the process of connecting buyers with the right sellers. Additionally, scaling strategies are discussed, providing insights on how to grow a marketplace effectively. The teaching approach emphasizes practical applications and real-world examples, making it accessible for those new to the concept of marketplaces. While no specific prerequisites are mentioned, a basic understanding of startup dynamics may be beneficial. Upon completion, readers will gain valuable skills in marketplace strategy and execution, enabling them to apply these concepts to their ventures. This resource is particularly suited for curious individuals looking to enhance their understanding of marketplace economics and strategy. The estimated time to complete this resource is not specified, but it is designed to be digestible for those seeking to learn at their own pace. After finishing this guide, readers will be equipped to identify and implement effective marketplace strategies in their own projects.",
+    "skill_progression": [
+      "Understanding marketplace dynamics",
+      "Applying liquidity and matching strategies",
+      "Scaling a marketplace effectively"
+    ],
+    "tfidf_keywords": [
+      "marketplace",
+      "liquidity",
+      "matching",
+      "scaling",
+      "startup",
+      "strategy",
+      "a16z",
+      "eBay",
+      "economics",
+      "entrepreneurship"
+    ],
+    "semantic_cluster": "marketplace-building-strategies",
+    "depth_level": "intro",
+    "related_concepts": [
+      "platform-economics",
+      "startup-strategy",
+      "marketplace-dynamics",
+      "entrepreneurship",
+      "liquidity"
+    ],
+    "canonical_topics": [
+      "marketplaces",
+      "economics",
+      "startup-strategy"
+    ],
+    "id": "resource-simon-rothman-a16z-how-to-build-a-marketplace"
+  },
+  {
     "name": "edX Queuing Theory: from Markov Chains to Multi-Server Systems",
     "description": "IMT course covering M/M/1, Erlang formulas, with Python labs. Self-paced online learning.",
     "category": "Operations Research",
@@ -32016,7 +32170,7 @@
       "edX"
     ],
     "level": "Medium",
-    "model_score": 0.0002,
+    "model_score": 0.0001,
     "id": "resource-edx-queuing-theory-from-markov-chains-to-multi-ser"
   },
   {
@@ -32033,7 +32187,7 @@
       "graduate"
     ],
     "level": "Hard",
-    "model_score": 0.0002,
+    "model_score": 0.0001,
     "id": "resource-mit-15070j-advanced-stochastic-processes"
   },
   {
@@ -32049,7 +32203,7 @@
       "basics"
     ],
     "level": "Easy",
-    "model_score": 0.0002,
+    "model_score": 0.0001,
     "id": "resource-kendall-notation-tutorial"
   },
   {
@@ -33024,81 +33178,6 @@
       "labor-economics"
     ],
     "id": "resource-tim-roughgardens-cs364a-kidney-exchange"
-  },
-  {
-    "name": "Python for Econometrics",
-    "description": "Kevin Sheppard's comprehensive intro for researchers. NumPy, pandas, statsmodels, and econometric applications.",
-    "category": "Programming",
-    "url": "https://bashtage.github.io/kevinsheppard.com/teaching/python/notes/",
-    "type": "Book",
-    "level": "Easy",
-    "tags": [
-      "Coding",
-      "Online Book"
-    ],
-    "domain": "Programming",
-    "difficulty": "beginner|intermediate",
-    "prerequisites": [
-      "python-basics"
-    ],
-    "topic_tags": [
-      "econometrics",
-      "statistics"
-    ],
-    "summary": "This resource provides a comprehensive introduction to Python for econometric applications, focusing on libraries such as NumPy, pandas, and statsmodels. It is designed for researchers and practitioners looking to apply Python in econometric analysis.",
-    "use_cases": [
-      "when to analyze data using econometric methods",
-      "when to apply Python for statistical analysis"
-    ],
-    "audience": [
-      "Early-PhD",
-      "Junior-DS",
-      "Curious-browser"
-    ],
-    "synthetic_questions": [
-      "What is Python for econometrics?",
-      "How can I use NumPy for econometric analysis?",
-      "What are the applications of pandas in econometrics?",
-      "How does statsmodels facilitate econometric modeling?",
-      "What skills will I gain from learning Python for econometrics?",
-      "Who should consider this resource for learning?"
-    ],
-    "content_format": "book",
-    "skill_progression": [
-      "Python programming",
-      "Data manipulation with pandas",
-      "Statistical modeling with statsmodels",
-      "Understanding econometric applications"
-    ],
-    "model_score": 0.0001,
-    "macro_category": "Programming",
-    "embedding_text": "Python for Econometrics by Kevin Sheppard is a comprehensive resource tailored for researchers seeking to harness the power of Python in econometric analysis. This book delves into essential libraries such as NumPy, pandas, and statsmodels, providing readers with the foundational knowledge necessary to conduct robust econometric research. The teaching approach emphasizes practical applications, ensuring that learners not only grasp theoretical concepts but also gain hands-on experience through exercises and projects. Prerequisites include a basic understanding of Python, making it accessible for early PhD students, junior data scientists, and curious learners. Upon completion, readers will be equipped with skills in data manipulation, statistical modeling, and econometric applications, enabling them to effectively analyze economic data. This resource stands out for its practical focus, making it an ideal choice for those looking to apply Python in real-world econometric scenarios. While the estimated duration for completing the book is not specified, the structured content allows for flexible learning at one's own pace. After finishing this resource, learners will be well-prepared to tackle econometric problems using Python, enhancing their research capabilities and analytical skills.",
-    "tfidf_keywords": [
-      "econometrics",
-      "Python",
-      "NumPy",
-      "pandas",
-      "statsmodels",
-      "data-analysis",
-      "statistical-modeling",
-      "research-methods",
-      "data-manipulation",
-      "econometric-applications"
-    ],
-    "semantic_cluster": "python-for-econometrics",
-    "depth_level": "intro",
-    "related_concepts": [
-      "data-analysis",
-      "statistical-modeling",
-      "econometric-methods",
-      "quantitative-research",
-      "data-science"
-    ],
-    "canonical_topics": [
-      "econometrics",
-      "statistics"
-    ],
-    "id": "resource-python-for-econometrics"
   },
   {
     "name": "Real Python: Web Scraping",
@@ -34442,85 +34521,6 @@
       "econometrics"
     ],
     "id": "resource-stripe-engineering"
-  },
-  {
-    "name": "PayPal: Graph Database for Fraud",
-    "description": "Real-time fraud ring detection",
-    "category": "Trust & Safety",
-    "url": "https://medium.com/paypal-tech/how-paypal-uses-real-time-graph-database-and-graph-analysis-to-fight-fraud-96a2b918619a",
-    "type": "Article",
-    "level": "Medium",
-    "tags": [
-      "ML & Data Science",
-      "Blog"
-    ],
-    "domain": "Domain Applications",
-    "difficulty": "intermediate",
-    "prerequisites": [
-      "python-basics"
-    ],
-    "topic_tags": [
-      "machine-learning",
-      "fraud-detection"
-    ],
-    "summary": "This article explores the implementation of graph databases for real-time fraud ring detection using machine learning techniques. It is aimed at data scientists and practitioners interested in enhancing their understanding of fraud detection methodologies.",
-    "use_cases": [
-      "When to use graph databases for fraud detection",
-      "When to apply machine learning techniques in fraud prevention"
-    ],
-    "audience": [
-      "Junior-DS",
-      "Mid-DS",
-      "Senior-DS"
-    ],
-    "synthetic_questions": [
-      "What are the applications of graph databases in fraud detection?",
-      "How can machine learning enhance fraud detection?",
-      "What techniques are used for real-time fraud ring detection?",
-      "What are the challenges in implementing graph databases?",
-      "How does PayPal utilize graph databases for fraud prevention?",
-      "What skills are needed to work with graph databases?",
-      "What are the benefits of using machine learning for fraud detection?",
-      "How can I get started with graph databases?"
-    ],
-    "content_format": "article",
-    "skill_progression": [
-      "Understanding of graph databases",
-      "Knowledge of machine learning applications in fraud detection"
-    ],
-    "model_score": 0.0001,
-    "macro_category": "Strategy",
-    "embedding_text": "The article 'PayPal: Graph Database for Fraud' delves into the innovative use of graph databases to detect fraud rings in real-time, a crucial aspect of maintaining trust and safety in financial transactions. It covers the underlying concepts of graph databases, including their structure and how they can efficiently represent complex relationships between entities involved in fraudulent activities. The teaching approach emphasizes practical applications, showcasing how machine learning techniques can be integrated with graph databases to enhance detection capabilities. Prerequisites for readers include a basic understanding of Python, as the article assumes familiarity with programming concepts essential for implementing the discussed techniques. Learning outcomes include gaining insights into the mechanics of fraud detection, understanding the advantages of using graph databases, and acquiring skills in applying machine learning to real-world problems. The article may also include hands-on exercises or examples that illustrate the concepts in action, allowing readers to engage with the material actively. Compared to other learning resources, this article provides a focused exploration of fraud detection, making it suitable for data scientists and practitioners looking to specialize in this area. The estimated time to complete the reading and exercises is not specified, but readers can expect to gain valuable knowledge that can be applied in their careers in data science and fraud prevention. After finishing this resource, readers will be better equipped to implement graph databases in their own fraud detection systems and understand the broader implications of machine learning in this field.",
-    "tfidf_keywords": [
-      "graph-database",
-      "fraud-detection",
-      "real-time-detection",
-      "machine-learning",
-      "fraud-ring",
-      "data-relationships",
-      "entity-relationship",
-      "trust-and-safety",
-      "data-science",
-      "algorithm",
-      "data-structure",
-      "anomaly-detection",
-      "predictive-modeling"
-    ],
-    "semantic_cluster": "fraud-detection-ml",
-    "depth_level": "intermediate",
-    "related_concepts": [
-      "graph-theory",
-      "anomaly-detection",
-      "machine-learning",
-      "data-structures",
-      "real-time-processing"
-    ],
-    "canonical_topics": [
-      "machine-learning",
-      "fraud-detection",
-      "data-engineering"
-    ],
-    "id": "resource-paypal-graph-database-for-fraud"
   },
   {
     "name": "CVXPY Short Course",
