@@ -34,13 +34,16 @@ The body of this doc is the original audit, kept verbatim for historical context
 | **Re1** MMR diversity rerank for SEARCH | TODO | **DONE** | `static/js/search/mmr.js` imported into `search-worker.js:10,305`. |
 | **Re2** Search spellcheck fallback | TODO | **DONE** | `static/js/search/spellcheck.js`; "Did you mean" banner in `unified-search.js:341`. |
 | **Re3** Position-bias correction | TODO | TODO | Pairs with Ra3 logging — Ra3 done, Re3 not started. |
-| **Re4** Session-aware dampening | TODO | TODO | Depends on Ra4 (now done). |
+| **Re4** Session-aware dampening | TODO | **DONE** | PR #37: extends `static/js/personalize.js`. Source items get multiplier `1 - DAMPEN` (0.8); dampening trumps boosting. New `buildDampenSet` helper. 12 new vitest cases (suite 116 → 128). |
 | **Re5** Contextual bandit over carousel orderings | TODO | TODO | Depends on A/B harness. |
 | **Re6** DPP at scale | DEFER | DEFER | |
-| **§4 A/B testing harness** (A1-A8) | TODO | TODO | No `data/experiments.json`, no `experiment_id` in tracker, no `analyze_experiments.py`. **The biggest unfinished block in the roadmap.** |
+| **§4 A/B testing harness** (A1-A8) | TODO | **PARTIAL — client side in flight** | PR #18 ships `data/experiments.json`, `static/js/experiments.js`, inlined config in `baseof.html`, deterministic `te_uid + experiment_id` bucketing, 30 vitest tests. Server-side (tracker.js extension + D1 `experiment_id`/`variant_id` columns + `analyze_experiments.py`) is still TODO. PR #18 also needed a `safeJS` fix during the merge-check — a Hugo auto-escape bug had silently double-encoded the inlined config (caught by parsing rendered HTML; see `RULES.md` "ALWAYS verify rendered HTML" for the codified protocol). |
+| **§4 server-side** (tracker logging + D1 schema + `analyze_experiments.py`) | TODO | TODO | First real experiment can't run without these. |
 | **§5b Evaluation pipeline** | TODO | **DONE** | PR #21 onward: `lib/d1_sessions.py`, `lib/eval_runner.py`, `scripts/evaluate_recsys.py`, `scripts/replay_eval.py`, `reports/metrics.csv`, `reports/replays.csv`, regression gate in `update_rankings.sh`. |
+| **`lib/d1_client.py`** (HTTP wrapper for analytics worker) | n/a (added during impl) | **DONE** | PR #13. Read-only typed endpoints; injectable `FakeFetcher` for tests; replaces wrangler subprocess pattern in upcoming `evaluate_recsys.py` work. |
+| **`lib/freshness.py`** (extract `FRESHNESS_WEIGHT` from rank_all_content.py) | n/a (added during impl) | **DONE** | PR #17. Pure-add lib + 31 tests. Ready for per-type half-lives via `Mapping[type → half_life_days]` arg. Migration of call sites in `rank_all_content.py` is deferred. |
 
-**Score:** 9 done · 1 partial (Ra2 default flip) · 9 todo (the original 12, minus 3 already done) · 1 N/A (R1) · 5 deferred.
+**Score:** 11 done · 2 partial (Ra2 default flip; A/B harness client-side) · 8 todo · 1 N/A (R1) · 5 deferred.
 
 **Next decision point:** The "obvious wins" + Phase 2 ranker work is fully closed. The two remaining substantive blocks are §4 (A/B harness) and Phase 5 (multi-channel retrieval + Item2vec). My read: §4 first — without it, Phase 5's gains are unmeasurable at our session count.
 
