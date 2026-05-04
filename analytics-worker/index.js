@@ -307,10 +307,14 @@ async function processEvents(env, events, country, receivedAt, clientIP, userAge
     }
   }
 
-  // Insert events into D1
+  // Insert events into D1.
+  // experiments column (Phase 7 A/B harness): JSON map of
+  // {experiment_id: variant_id, ...} when the client has experiment
+  // assignments; NULL otherwise. Schema added by ensureSchema +
+  // handleRunSchema. Read aggregations via json_extract.
   const insertStmt = env.DB.prepare(`
-    INSERT INTO events (type, session_id, path, timestamp, country, data, user_id)
-    VALUES (?, ?, ?, ?, ?, ?, ?)
+    INSERT INTO events (type, session_id, path, timestamp, country, data, user_id, experiments)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
   `);
 
   const batch = [];
@@ -330,10 +334,22 @@ async function processEvents(env, events, country, receivedAt, clientIP, userAge
     const date = new Date(timestamp).toISOString().split('T')[0];
     const hourBucket = new Date(timestamp).toISOString().slice(0, 13).replace('T', '-');
 
-    // Insert raw event
+    // Insert raw event. event.exp is a {experiment_id: variant_id} map
+    // when the client has experiment assignments; we serialize to JSON for
+    // the events.experiments column. Defensive: only accept plain objects
+    // (drop arrays / strings / numbers) so a malformed payload can't poison
+    // the column with non-aggregable data.
+    let experiments = null;
+    if (event.exp && typeof event.exp === 'object' && !Array.isArray(event.exp)) {
+      const keys = Object.keys(event.exp);
+      if (keys.length > 0) {
+        experiments = JSON.stringify(event.exp);
+      }
+    }
     batch.push(insertStmt.bind(
       event.t, event.sid || null, event.p || event.d?.path || null,
-      timestamp, country, JSON.stringify(event.d || {}), effectiveUserId
+      timestamp, country, JSON.stringify(event.d || {}), effectiveUserId,
+      experiments
     ));
 
     // Track session
@@ -548,6 +564,14 @@ async function ensureSchema(env) {
     await safeAlter(`ALTER TABLE session_features  ADD COLUMN user_id TEXT`);
     await safeAlter(`ALTER TABLE session_sequences ADD COLUMN user_id TEXT`);
     await safeAlter(`CREATE INDEX IF NOT EXISTS idx_events_user ON events(user_id)`);
+    // Phase 7 A/B harness: events.experiments is a JSON map
+    // {experiment_id: variant_id, ...} (NULL when no experiments active).
+    // Read with json_extract(experiments, '$.<exp_id>') for per-variant
+    // aggregation. Same column also added to handleRunSchema below; this
+    // self-heal lets a fresh deploy work without an explicit /run-schema
+    // step (the 2026-03-26 blackout's root cause).
+    await safeAlter(`ALTER TABLE events ADD COLUMN experiments TEXT`);
+    await safeAlter(`CREATE INDEX IF NOT EXISTS idx_events_experiments ON events(experiments) WHERE experiments IS NOT NULL`);
     SCHEMA_CHECKED = true;
   } catch (e) {
     // Don't cache failure — next request will retry. Surface in /health via
@@ -1725,6 +1749,13 @@ async function handleRunSchema(request, env) {
     await safeAlter(`ALTER TABLE session_features  ADD COLUMN user_id TEXT`, 'session_features.user_id');
     await safeAlter(`ALTER TABLE session_sequences ADD COLUMN user_id TEXT`, 'session_sequences.user_id');
     await safeAlter(`CREATE INDEX IF NOT EXISTS idx_events_user ON events(user_id)`, 'idx_events_user');
+
+    // Phase 7 A/B harness migration. events.experiments stores the
+    // {experiment_id: variant_id} map as JSON (NULL when no experiments
+    // active). Mirrored in ensureSchema for per-isolate self-heal so a
+    // fresh deploy without /run-schema doesn't reject events.
+    await safeAlter(`ALTER TABLE events ADD COLUMN experiments TEXT`, 'events.experiments');
+    await safeAlter(`CREATE INDEX IF NOT EXISTS idx_events_experiments ON events(experiments) WHERE experiments IS NOT NULL`, 'idx_events_experiments');
 
     // Backfill from raw events table
     const backfill = await env.DB.prepare(`

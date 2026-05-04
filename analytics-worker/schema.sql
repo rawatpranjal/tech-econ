@@ -10,6 +10,8 @@ CREATE TABLE IF NOT EXISTS events (
     timestamp INTEGER NOT NULL,      -- Unix timestamp in ms
     country TEXT,
     data TEXT,                       -- JSON payload
+    user_id TEXT,                    -- te_uid cookie hash; added migration-style for legacy DBs
+    experiments TEXT,                -- JSON {experiment_id: variant_id, ...} or NULL (Phase 7 A/B harness)
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP
 );
 
@@ -19,6 +21,8 @@ CREATE INDEX IF NOT EXISTS idx_events_timestamp ON events(timestamp);
 CREATE INDEX IF NOT EXISTS idx_events_path ON events(path);
 CREATE INDEX IF NOT EXISTS idx_events_session ON events(session_id);
 CREATE INDEX IF NOT EXISTS idx_events_type_timestamp ON events(type, timestamp);
+CREATE INDEX IF NOT EXISTS idx_events_user ON events(user_id);
+CREATE INDEX IF NOT EXISTS idx_events_experiments ON events(experiments) WHERE experiments IS NOT NULL;
 
 -- Daily aggregated stats (for fast dashboard queries)
 CREATE TABLE IF NOT EXISTS daily_stats (
