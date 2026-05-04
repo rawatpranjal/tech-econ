@@ -7,6 +7,18 @@
 
   "experiments": [
     {
+      "id": "harness_aa_v1",
+      "status": "active",
+      "started_at": "2026-05-04",
+      "primary_metric": "ctr",
+      "doc": "First real experiment: an A/A test (both variants do the same thing). Sole purpose is to validate the end-to-end harness — bucketing → tracker.js event.exp → worker events.experiments column → analyze_experiments.py — by checking that traffic actually splits ~50/50. If the split is off, something in the pipeline is broken. Per the audit's A7 implementation order: 'no-op A/A test (control vs control)' lands first, before any treatment-vs-control experiment touches the ranker. Run analyze_experiments.py after a few days; expect impressions and clicks roughly equal across variants. Audit ref: §4.A7 step 1.",
+      "variants": [
+        { "id": "control_a", "traffic": 50 },
+        { "id": "control_b", "traffic": 50 }
+      ]
+    },
+
+    {
       "id": "_example_disabled",
       "status": "draft",
       "started_at": null,
