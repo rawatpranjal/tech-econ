@@ -9,6 +9,7 @@ Usage:
 """
 
 import json
+import re
 import subprocess
 import argparse
 import math
@@ -134,7 +135,13 @@ ANALYTICS_API = "https://tech-econ-analytics-v2.pp712.workers.dev"
 
 
 def fetch_d1_data(query):
-    """Execute D1 query via wrangler and return results."""
+    """Execute D1 query via wrangler and return results.
+
+    Wrangler 4.x emits a non-JSON preamble to stdout even with --json.
+    We strip it by finding the first '[' with a regex rather than relying
+    on a suppressible env var (none exists). JSON parse errors now surface
+    as warnings with context rather than silently returning [].
+    """
     cmd = [
         'npx', 'wrangler', 'd1', 'execute', 'tech-econ-analytics-db',
         '--remote', '--command', query, '--json'
@@ -149,10 +156,19 @@ def fetch_d1_data(query):
         print(f"  Warning: D1 query failed: {result.stderr[:100]}")
         return []
 
+    # Extract the JSON array from wrangler's mixed stdout (preamble + JSON).
+    match = re.search(r'\[.*\]', result.stdout, re.DOTALL)
+    if not match:
+        print(
+            f"  Warning: wrangler stdout contained no JSON array "
+            f"(stdout={result.stdout[:200]!r})"
+        )
+        return []
     try:
-        data = json.loads(result.stdout)
+        data = json.loads(match.group(0))
         return data[0]['results'] if data and data[0].get('results') else []
-    except (json.JSONDecodeError, IndexError, KeyError):
+    except (json.JSONDecodeError, IndexError, KeyError) as exc:
+        print(f"  Warning: D1 JSON parse failed: {exc} (raw={result.stdout[:200]!r})")
         return []
 
 

@@ -11068,3 +11068,1555 @@ mark.partial {
     margin-right: 0.15rem;
     color: var(--text-muted, #999);
 }
+
+/* ============================================================
+   /site — How It Works page
+   ============================================================ */
+
+.hero-site {
+    padding: 2rem 0 1.5rem;
+}
+
+.site-page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1rem 3rem;
+}
+
+/* Tab bar */
+.site-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 0;
+}
+
+.site-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.65rem 1.1rem;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    transition: color 0.15s ease, border-color 0.15s ease;
+    white-space: nowrap;
+}
+
+.site-tab:hover {
+    color: var(--text-primary);
+}
+
+.site-tab.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.site-tab svg {
+    stroke: currentColor;
+    flex-shrink: 0;
+}
+
+/* Tab panels */
+.site-tab-content {
+    display: none;
+}
+
+.site-tab-content.active {
+    display: block;
+}
+
+/* Tab intro block */
+.site-tab-intro {
+    margin-bottom: 2rem;
+}
+
+.site-tab-intro h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem;
+    color: var(--text-primary);
+}
+
+.site-tab-lead {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Diagram container */
+.site-diagram-container {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+}
+
+.site-diagram text {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Prose */
+.site-prose h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 2rem 0 0.6rem;
+    color: var(--text-primary);
+}
+
+.site-prose h3:first-child {
+    margin-top: 0;
+}
+
+.site-prose p {
+    margin: 0 0 1rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.site-prose code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.85em;
+    background: var(--bg-hover);
+    border: 1px solid var(--border-light);
+    border-radius: 3px;
+    padding: 0.1em 0.35em;
+    color: var(--text-primary);
+}
+
+.site-prose a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.site-prose a:hover {
+    text-decoration: underline;
+}
+
+/* Coming-soon stub */
+.site-coming-soon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem 1rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+.site-coming-soon svg {
+    opacity: 0.4;
+}
+
+.site-coming-soon p {
+    font-size: 0.95rem;
+    margin: 0;
+    max-width: 380px;
+    line-height: 1.6;
+}
+
+.site-coming-soon a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.site-coming-soon a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive — stack tabs vertically on narrow screens */
+@media (max-width: 600px) {
+    .site-tabs {
+        flex-direction: column;
+        border-bottom: none;
+        gap: 0;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    .site-tab {
+        border-bottom: 1px solid var(--border-color);
+        border-left: 3px solid transparent;
+        border-right: none;
+        margin-bottom: 0;
+        padding: 0.75rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    .site-tab:last-child {
+        border-bottom: none;
+    }
+
+    .site-tab.active {
+        border-bottom-color: var(--border-color);
+        border-left-color: var(--accent);
+        background: var(--bg-hover);
+    }
+
+    .site-diagram-container {
+        padding: 1rem 0.5rem;
+    }
+}
+
+/* ===========================================
+   Tab 1 enhancements (2026-05-24)
+   Content types table + JSON evolution boxes.
+   =========================================== */
+
+.site-table-container {
+    margin: 1.5rem 0 2rem;
+    overflow-x: auto;
+}
+
+.site-content-types {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.site-content-types th,
+.site-content-types td {
+    padding: 0.85rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color, #e5e5e5);
+    vertical-align: top;
+}
+
+.site-content-types thead th {
+    background: var(--bg-secondary, #f6f7f9);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-secondary, #555);
+}
+
+.site-content-types tbody tr:hover {
+    background: var(--bg-hover, #fafafa);
+}
+
+.site-content-types td:first-child {
+    width: 12%;
+    min-width: 110px;
+}
+
+.site-content-types td:nth-child(2) {
+    width: 33%;
+    color: var(--text-secondary, #555);
+}
+
+[data-theme="dark"] .site-content-types thead th {
+    background: #232326;
+    color: #c7c7c8;
+}
+
+[data-theme="dark"] .site-content-types th,
+[data-theme="dark"] .site-content-types td {
+    border-color: #2c2c30;
+}
+
+[data-theme="dark"] .site-content-types tbody tr:hover {
+    background: #1f1f23;
+}
+
+/* ── JSON evolution: linked smaller diagrams ─────────────────────────── */
+.site-json-evolution {
+    display: flex;
+    align-items: stretch;
+    gap: 0.5rem;
+    margin: 1.5rem 0 2rem;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+}
+
+.site-json-stage {
+    flex: 1 1 0;
+    min-width: 220px;
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+    background: var(--bg-card, #fff);
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-json-stage.stage-input  { border-color: #4a9eff; background: linear-gradient(180deg, #f0f7ff 0%, var(--bg-card, #fff) 100%); }
+.site-json-stage.stage-enrich { border-color: #4caf50; background: linear-gradient(180deg, #f0f9f0 0%, var(--bg-card, #fff) 100%); }
+.site-json-stage.stage-rank   { border-color: #e91e63; background: linear-gradient(180deg, #fff0f5 0%, var(--bg-card, #fff) 100%); }
+
+.site-json-label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-bottom: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-secondary, #555);
+}
+
+.site-json-stage pre {
+    margin: 0;
+    background: transparent;
+    padding: 0;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow: visible;
+}
+
+.site-json-stage code {
+    background: transparent;
+    padding: 0;
+    font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
+    color: var(--text-primary, #1a1a1a);
+}
+
+.site-json-arrow {
+    align-self: center;
+    font-size: 2.5rem;
+    color: #aaa;
+    font-weight: 300;
+    padding: 0 0.15rem;
+    user-select: none;
+}
+
+[data-theme="dark"] .site-json-stage {
+    background: #1f1f23;
+}
+
+[data-theme="dark"] .site-json-stage.stage-input  { background: linear-gradient(180deg, #14253a 0%, #1f1f23 100%); }
+[data-theme="dark"] .site-json-stage.stage-enrich { background: linear-gradient(180deg, #16291a 0%, #1f1f23 100%); }
+[data-theme="dark"] .site-json-stage.stage-rank   { background: linear-gradient(180deg, #2d161f 0%, #1f1f23 100%); }
+
+[data-theme="dark"] .site-json-stage code {
+    color: #e0e0e0;
+}
+
+@media (max-width: 800px) {
+    .site-json-evolution {
+        flex-direction: column;
+    }
+    .site-json-arrow {
+        transform: rotate(90deg);
+        padding: 0.25rem 0;
+    }
+}
+
+/* ===========================================
+   Stream C.10 — Under The Hood Artifact Components (2026-05-24)
+   Callouts, snippets, comparisons, mini diagrams.
+   =========================================== */
+
+/* ── General callout box ─────────────────────────────────────────────────── */
+.under-hood-callout {
+    border-radius: 10px;
+    padding: 1.25rem 1.4rem;
+    margin: 1.5rem 0 2rem;
+    border-left: 4px solid #4a9eff;
+    background: #f0f7ff;
+    position: relative;
+}
+
+/* Pull-quote variant — large opening mark, editorial */
+.under-hood-callout.callout-quote {
+    border-left-color: #9c27b0;
+    background: linear-gradient(135deg, #f8f0ff 0%, #faf5ff 100%);
+    padding-left: 3.5rem;
+}
+.under-hood-callout.callout-quote::before {
+    content: '\201C';
+    position: absolute;
+    left: 0.9rem;
+    top: 0.6rem;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: #9c27b0;
+    opacity: 0.55;
+    font-family: Georgia, serif;
+}
+.under-hood-callout.callout-quote p {
+    margin: 0 0 0.4rem;
+    font-size: 1.05rem;
+    font-style: italic;
+    line-height: 1.65;
+    color: var(--text-primary, #1a1a1a);
+}
+.under-hood-callout.callout-quote .callout-attribution {
+    font-size: 0.82rem;
+    font-style: normal;
+    color: var(--text-muted, #888);
+    margin-top: 0.3rem;
+}
+
+/* Running example variant — "EXAMPLE" label at top */
+.under-hood-callout.callout-example {
+    border-left-color: #4caf50;
+    background: linear-gradient(135deg, #f0f9f0 0%, #f7fcf7 100%);
+}
+.under-hood-callout.callout-example::before {
+    content: 'EXAMPLE';
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: #4caf50;
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+}
+.under-hood-callout.callout-example p {
+    margin: 0 0 0.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-primary, #1a1a1a);
+}
+.under-hood-callout.callout-example p:last-child {
+    margin-bottom: 0;
+}
+
+/* Aside variant — small grey note */
+.under-hood-callout.callout-aside {
+    border-left-color: #bbb;
+    background: #f5f5f5;
+    padding: 0.9rem 1.2rem;
+    margin: 1rem 0 1.5rem;
+}
+.under-hood-callout.callout-aside p {
+    margin: 0;
+    font-size: 0.88rem;
+    color: var(--text-secondary, #555);
+    line-height: 1.55;
+}
+
+/* ── Conceptual code snippet ─────────────────────────────────────────────── */
+.under-hood-snippet-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #e91e63;
+    margin-bottom: 0.35rem;
+    display: block;
+}
+
+.under-hood-snippet {
+    background: #1e1e2e;
+    border-radius: 8px;
+    padding: 1.1rem 1.3rem;
+    margin: 0.25rem 0 2rem;
+    overflow-x: auto;
+}
+.under-hood-snippet code {
+    font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: #cdd6f4;
+    background: transparent;
+    white-space: pre;
+    display: block;
+}
+/* colour-coded comment lines */
+.under-hood-snippet code .snip-comment {
+    color: #6c7086;
+    font-style: italic;
+}
+.under-hood-snippet code .snip-highlight {
+    color: #a6e3a1;
+}
+.under-hood-snippet code .snip-neg {
+    color: #f38ba8;
+}
+
+/* ── Comparison panel ────────────────────────────────────────────────────── */
+.under-hood-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+}
+.under-hood-comparison-pane {
+    border-radius: 10px;
+    padding: 1.1rem 1.2rem;
+    border: 1.5px solid;
+}
+.under-hood-comparison-pane h4 {
+    margin: 0 0 0.6rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+}
+.under-hood-comparison-pane ul {
+    margin: 0;
+    padding-left: 1.1rem;
+}
+.under-hood-comparison-pane li {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    margin-bottom: 0.3rem;
+    color: var(--text-primary, #1a1a1a);
+}
+.under-hood-comparison-pane.pane-before {
+    border-color: #bbb;
+    background: #f8f8f8;
+}
+.under-hood-comparison-pane.pane-before h4 {
+    color: #888;
+}
+.under-hood-comparison-pane.pane-after {
+    border-color: #4a9eff;
+    background: #f0f7ff;
+}
+.under-hood-comparison-pane.pane-after h4 {
+    color: #4a9eff;
+}
+.under-hood-comparison-pane.pane-left {
+    border-color: #bbb;
+    background: #f8f8f8;
+}
+.under-hood-comparison-pane.pane-left h4 {
+    color: #666;
+}
+.under-hood-comparison-pane.pane-right {
+    border-color: #4caf50;
+    background: #f0f9f0;
+}
+.under-hood-comparison-pane.pane-right h4 {
+    color: #4caf50;
+}
+
+/* ── Mini secondary diagram container ───────────────────────────────────── */
+.under-hood-mini-diagram {
+    margin: 1.5rem 0 2rem;
+    text-align: center;
+}
+.under-hood-mini-diagram svg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background: var(--bg-card, #fff);
+    border: 1px solid var(--border-color, #e5e5e5);
+    padding: 0.5rem;
+}
+.under-hood-mini-diagram-label {
+    font-size: 0.78rem;
+    color: var(--text-muted, #888);
+    margin-top: 0.4rem;
+    text-align: center;
+    display: block;
+    font-style: italic;
+}
+
+/* ── Real-data table (reusing site-content-types, but adding a variant) ─── */
+.under-hood-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 2rem;
+}
+.under-hood-data-table th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    padding: 0.5rem 0.8rem;
+    background: #f0f7ff;
+    border-bottom: 2px solid #4a9eff;
+    color: #4a9eff;
+}
+.under-hood-data-table td {
+    padding: 0.5rem 0.8rem;
+    border-bottom: 1px solid var(--border-color, #e5e5e5);
+    color: var(--text-primary, #1a1a1a);
+    vertical-align: middle;
+}
+.under-hood-data-table tr:last-child td {
+    border-bottom: none;
+}
+.under-hood-data-table tr:hover td {
+    background: var(--bg-hover, #f0f0f0);
+}
+.ud-pos { color: #4caf50; font-weight: 700; }
+.ud-neg { color: #e91e63; font-weight: 700; }
+
+/* ── Dark mode overrides ─────────────────────────────────────────────────── */
+[data-theme="dark"] .under-hood-callout {
+    background: #14253a;
+    border-left-color: #4a9eff;
+}
+[data-theme="dark"] .under-hood-callout.callout-quote {
+    background: linear-gradient(135deg, #22162b 0%, #1f1f23 100%);
+    border-left-color: #9c27b0;
+}
+[data-theme="dark"] .under-hood-callout.callout-quote p {
+    color: #e0e0e0;
+}
+[data-theme="dark"] .under-hood-callout.callout-example {
+    background: linear-gradient(135deg, #162918 0%, #1f1f23 100%);
+    border-left-color: #4caf50;
+}
+[data-theme="dark"] .under-hood-callout.callout-example p {
+    color: #d0d0d0;
+}
+[data-theme="dark"] .under-hood-callout.callout-aside {
+    background: #232326;
+    border-left-color: #555;
+}
+[data-theme="dark"] .under-hood-callout.callout-aside p {
+    color: #aaa;
+}
+[data-theme="dark"] .under-hood-comparison-pane.pane-before,
+[data-theme="dark"] .under-hood-comparison-pane.pane-left {
+    background: #232326;
+    border-color: #555;
+}
+[data-theme="dark"] .under-hood-comparison-pane.pane-after {
+    background: #14253a;
+    border-color: #4a9eff;
+}
+[data-theme="dark"] .under-hood-comparison-pane.pane-right {
+    background: #162918;
+    border-color: #4caf50;
+}
+[data-theme="dark"] .under-hood-mini-diagram svg {
+    background: #2a2a2e;
+    border-color: rgba(255,255,255,0.08);
+}
+[data-theme="dark"] .under-hood-data-table th {
+    background: #14253a;
+    color: #4a9eff;
+    border-bottom-color: #4a9eff;
+}
+[data-theme="dark"] .under-hood-data-table td {
+    border-bottom-color: #333;
+    color: #d0d0d0;
+}
+[data-theme="dark"] .under-hood-data-table tr:hover td {
+    background: #2a2a2e;
+}
+
+/* ── Mobile responsive ───────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+    .under-hood-comparison {
+        grid-template-columns: 1fr;
+    }
+    .under-hood-callout.callout-quote {
+        padding-left: 2.8rem;
+    }
+    .under-hood-callout.callout-quote::before {
+        font-size: 2.8rem;
+    }
+    .under-hood-snippet code {
+        font-size: 0.78rem;
+    }
+}
+
+/* ===========================================
+   Stream B — Editorial Polish (2026-05-24)
+   Display font extended to card titles.
+   Subtle type-tinted card backgrounds.
+   =========================================== */
+
+/* ── Card titles in Inter Display ───────────────────────────────────────── */
+/* Covers all three card variants rendered on the homepage */
+.explore-card h3,
+.explore-card-hero h3,
+.explore-card-compact h3,
+.home-trending .explore-card h3 {
+    font-family: 'Inter Display', -apple-system, system-ui, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+}
+
+/* ── Subtle card background tint by content type (light mode only) ──────── */
+/* Uses data-type attribute already present on all card root elements.       */
+/* 4% opacity gradient — enough to read type at a glance, not overwhelming. */
+.explore-card[data-type="package"],
+.explore-card-hero[data-type="package"],
+.explore-card-compact[data-type="package"] {
+    background: linear-gradient(170deg, rgba(21, 101, 192, 0.04) 0%, var(--bg-card) 60%);
+}
+.explore-card[data-type="dataset"],
+.explore-card-hero[data-type="dataset"],
+.explore-card-compact[data-type="dataset"] {
+    background: linear-gradient(170deg, rgba(46, 125, 50, 0.04) 0%, var(--bg-card) 60%);
+}
+.explore-card[data-type="paper"],
+.explore-card-hero[data-type="paper"],
+.explore-card-compact[data-type="paper"] {
+    background: linear-gradient(170deg, rgba(230, 81, 0, 0.04) 0%, var(--bg-card) 60%);
+}
+.explore-card[data-type="resource"],
+.explore-card-hero[data-type="resource"],
+.explore-card-compact[data-type="resource"] {
+    background: linear-gradient(170deg, rgba(123, 31, 162, 0.04) 0%, var(--bg-card) 60%);
+}
+.explore-card[data-type="talk"],
+.explore-card-hero[data-type="talk"],
+.explore-card-compact[data-type="talk"] {
+    background: linear-gradient(170deg, rgba(230, 81, 0, 0.04) 0%, var(--bg-card) 60%);
+}
+.explore-card[data-type="career"],
+.explore-card-hero[data-type="career"],
+.explore-card-compact[data-type="career"] {
+    background: linear-gradient(170deg, rgba(0, 131, 143, 0.04) 0%, var(--bg-card) 60%);
+}
+.explore-card[data-type="community"],
+.explore-card-hero[data-type="community"],
+.explore-card-compact[data-type="community"] {
+    background: linear-gradient(170deg, rgba(194, 24, 91, 0.04) 0%, var(--bg-card) 60%);
+}
+.explore-card[data-type="book"],
+.explore-card-hero[data-type="book"],
+.explore-card-compact[data-type="book"] {
+    background: linear-gradient(170deg, rgba(85, 139, 47, 0.04) 0%, var(--bg-card) 60%);
+}
+
+/* Dark mode — reset tint; left-border accent is sufficient on dark cards.  */
+/* The existing dark-mode gradient (line ~10256-10262) provides depth.      */
+[data-theme="dark"] .explore-card[data-type],
+[data-theme="dark"] .explore-card-hero[data-type],
+[data-theme="dark"] .explore-card-compact[data-type] {
+    background: linear-gradient(180deg, #2a2a2e 0%, #232326 100%);
+}
+
+/* ===========================================
+   Stream C.8 — /site Tabs 7+8 (2026-05-24)
+   Scoreboard stat cards, experiment cards,
+   status pills, sparkline layout.
+   =========================================== */
+
+/* ── Big headline number ─────────────────────────────────────────────────── */
+.scoreboard-number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.scoreboard-number .score-value {
+    font-size: 3.5rem;
+    font-weight: 700;
+    font-family: 'Inter Display', -apple-system, system-ui, sans-serif;
+    line-height: 1;
+    letter-spacing: -0.03em;
+    color: #4a9eff;
+}
+
+.scoreboard-number .score-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+/* ── Responsive grid of stat cards ──────────────────────────────────────── */
+.scoreboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+/* ── Individual stat card ────────────────────────────────────────────────── */
+.scoreboard-card {
+    background: var(--bg-card, #fff);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.scoreboard-card.card-primary {
+    border-color: #4a9eff;
+    background: linear-gradient(160deg, #f0f7ff 0%, var(--bg-card, #fff) 100%);
+    grid-column: span 1;
+}
+
+.scoreboard-card .card-value {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Inter Display', -apple-system, system-ui, sans-serif;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+}
+
+.scoreboard-card.card-primary .card-value {
+    font-size: 2.75rem;
+    color: #4a9eff;
+}
+
+.scoreboard-card .card-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #888;
+}
+
+.scoreboard-card .card-desc {
+    font-size: 0.82rem;
+    color: #666;
+    line-height: 1.4;
+    margin-top: 0.2rem;
+}
+
+/* ── Sparkline SVG strip ─────────────────────────────────────────────────── */
+.scoreboard-sparkline {
+    margin: 1.5rem 0 0.5rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.scoreboard-sparkline svg {
+    border-radius: 8px;
+    background: #f8f9fa;
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+.scoreboard-sparkline .sparkline-label {
+    font-size: 0.78rem;
+    color: #888;
+    align-self: center;
+}
+
+/* ── Experiment card ─────────────────────────────────────────────────────── */
+.experiment-card {
+    background: var(--bg-card, #fff);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.experiment-card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.experiment-card-id {
+    font-family: 'SFMono-Regular', 'Consolas', monospace;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.experiment-card-kind {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.experiment-card-summary {
+    font-size: 0.92rem;
+    color: #444;
+    line-height: 1.55;
+    margin-bottom: 1rem;
+}
+
+.experiment-results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.experiment-result-cell {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+}
+
+.experiment-result-cell .variant-name {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #666;
+    margin-bottom: 0.35rem;
+}
+
+.experiment-result-cell .variant-ctr {
+    font-size: 1.4rem;
+    font-weight: 700;
+    font-family: 'Inter Display', -apple-system, system-ui, sans-serif;
+    color: #1a1a1a;
+}
+
+.experiment-result-cell .variant-ci {
+    font-size: 0.74rem;
+    color: #888;
+    margin-top: 0.15rem;
+}
+
+.experiment-result-cell .variant-counts {
+    font-size: 0.78rem;
+    color: #999;
+    margin-top: 0.1rem;
+}
+
+.experiment-verdict {
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: #444;
+    padding: 0.6rem 0.9rem;
+    border-radius: 6px;
+    background: #f8f9fa;
+    border-left: 3px solid #dee2e6;
+}
+
+.experiment-verdict.verdict-broken {
+    border-left-color: #e91e63;
+    background: #fff0f5;
+    color: #c62060;
+}
+
+.experiment-verdict.verdict-active {
+    border-left-color: #4caf50;
+    background: #f0f9f0;
+    color: #2e7d32;
+}
+
+/* ── Status pills ────────────────────────────────────────────────────────── */
+.status-pill {
+    display: inline-block;
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    white-space: nowrap;
+}
+
+.status-pill.status-active {
+    background: #e8f5e9;
+    color: #2e7d32;
+    border: 1px solid rgba(46, 125, 50, 0.25);
+}
+
+.status-pill.status-paused {
+    background: #f3f4f6;
+    color: #666;
+    border: 1px solid rgba(0,0,0,0.12);
+}
+
+.status-pill.status-ended {
+    background: #e8f4ff;
+    color: #1565c0;
+    border: 1px solid rgba(21, 101, 192, 0.25);
+}
+
+.status-pill.status-broken {
+    background: #fce4ec;
+    color: #c62060;
+    border: 1px solid rgba(198, 32, 96, 0.25);
+}
+
+/* ── Experiment timeline SVG ─────────────────────────────────────────────── */
+.experiment-timeline {
+    margin: 1.5rem 0;
+    overflow-x: auto;
+}
+
+.experiment-timeline svg {
+    border-radius: 8px;
+    background: #f8f9fa;
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* ── Active experiment callout ───────────────────────────────────────────── */
+.active-experiment-callout {
+    background: linear-gradient(160deg, #f0f9f0 0%, var(--bg-card, #fff) 100%);
+    border: 1.5px solid rgba(76, 175, 80, 0.35);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.active-experiment-callout .callout-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.active-experiment-callout .callout-body h4 {
+    margin: 0 0 0.35rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.active-experiment-callout .callout-body p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.55;
+}
+
+/* ── What's next callout ─────────────────────────────────────────────────── */
+.next-experiments-callout {
+    background: linear-gradient(160deg, #f0f7ff 0%, var(--bg-card, #fff) 100%);
+    border: 1px solid rgba(74, 158, 255, 0.25);
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.next-experiments-callout h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0 0 0.6rem;
+}
+
+.next-experiments-callout p {
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.55;
+    margin: 0 0 0.5rem;
+}
+
+.next-experiments-callout p:last-child {
+    margin-bottom: 0;
+}
+
+/* ── Dark mode overrides ─────────────────────────────────────────────────── */
+[data-theme="dark"] .scoreboard-card {
+    background: #2a2a2e;
+    border-color: rgba(255,255,255,0.08);
+}
+
+[data-theme="dark"] .scoreboard-card.card-primary {
+    background: linear-gradient(160deg, #14253a 0%, #2a2a2e 100%);
+}
+
+[data-theme="dark"] .scoreboard-card .card-value {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .scoreboard-sparkline svg {
+    background: #2a2a2e;
+    border-color: rgba(255,255,255,0.08);
+}
+
+[data-theme="dark"] .experiment-card {
+    background: #2a2a2e;
+    border-color: rgba(255,255,255,0.08);
+}
+
+[data-theme="dark"] .experiment-result-cell {
+    background: #232326;
+}
+
+[data-theme="dark"] .experiment-result-cell .variant-ctr {
+    color: #e0e0e0;
+}
+
+[data-theme="dark"] .experiment-verdict {
+    background: #232326;
+    border-left-color: #555;
+    color: #bbb;
+}
+
+[data-theme="dark"] .experiment-verdict.verdict-broken {
+    background: #2d1620;
+    border-left-color: #e91e63;
+    color: #f48fb1;
+}
+
+[data-theme="dark"] .experiment-verdict.verdict-active {
+    background: #162918;
+    border-left-color: #4caf50;
+    color: #a5d6a7;
+}
+
+[data-theme="dark"] .active-experiment-callout {
+    background: linear-gradient(160deg, #162918 0%, #2a2a2e 100%);
+    border-color: rgba(76, 175, 80, 0.3);
+}
+
+[data-theme="dark"] .next-experiments-callout {
+    background: linear-gradient(160deg, #14253a 0%, #2a2a2e 100%);
+    border-color: rgba(74, 158, 255, 0.2);
+}
+
+[data-theme="dark"] .experiment-timeline svg {
+    background: #2a2a2e;
+    border-color: rgba(255,255,255,0.06);
+}
+
+@media (max-width: 600px) {
+    .scoreboard-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .scoreboard-card.card-primary .card-value {
+        font-size: 2.25rem;
+    }
+    .experiment-results-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .active-experiment-callout {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* ===========================================
+   Stream C.11 — /site + /dashboard frontend design polish (2026-05-24)
+   Typography scale, spacing rhythm, stage-color tokens,
+   tab bar a11y/polish, skeleton loaders, micro-interactions,
+   mobile pass, table zebra + numeric columns.
+   =========================================== */
+
+/* ── Stage color tokens ─────────────────────────────────────────────────── */
+/* Use these in both /site and /dashboard; soft backgrounds are 8% alpha     */
+:root {
+    --stage-input:        #4a9eff;
+    --stage-input-soft:   rgba(74, 158, 255, 0.08);
+    --stage-gate:         #f5a623;
+    --stage-gate-soft:    rgba(245, 166, 35, 0.08);
+    --stage-enrich:       #4caf50;
+    --stage-enrich-soft:  rgba(76, 175, 80, 0.08);
+    --stage-rank:         #e91e63;
+    --stage-rank-soft:    rgba(233, 30, 99, 0.08);
+    --stage-publish:      #9c27b0;
+    --stage-publish-soft: rgba(156, 39, 176, 0.08);
+    /* Softened secondary text token used by both pages */
+    --text-soft:          #555;
+    --text-muted-light:   #888;
+    /* Tab bar bottom-border thickness */
+    --tab-active-border:  2.5px;
+    /* 8-pt grid base */
+    --space-1:  0.25rem;  /* 4px  */
+    --space-2:  0.5rem;   /* 8px  */
+    --space-3:  0.75rem;  /* 12px */
+    --space-4:  1rem;     /* 16px */
+    --space-6:  1.5rem;   /* 24px */
+    --space-8:  2rem;     /* 32px */
+    --space-12: 3rem;     /* 48px */
+    --space-16: 4rem;     /* 64px */
+}
+
+[data-theme="dark"] {
+    --text-soft:        #bbb;
+    --text-muted-light: #777;
+}
+
+/* ── Typography scale for /site and /dashboard ──────────────────────────── */
+/* h1 page title — handled by .hero-title already in baseof; no change.      */
+/* h2 inside tab intro: bump to 1.75rem Inter Display */
+.site-tab-intro h2,
+.dashboard-tab-intro h2 {
+    font-family: 'Inter Display', -apple-system, system-ui, sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin: 0 0 0.5rem;
+    color: var(--text-primary);
+}
+
+/* h3 in prose sections: 1.25rem weight 600 */
+.site-prose h3 {
+    font-family: 'Inter Display', -apple-system, system-ui, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: var(--space-12) 0 var(--space-2);
+    color: var(--text-primary);
+}
+
+.site-prose h3:first-child {
+    margin-top: 0;
+}
+
+/* Body copy: 1rem / lh 1.65 */
+.site-prose p {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--text-secondary);
+    margin: 0 0 var(--space-4);
+}
+
+/* Lead paragraph */
+.site-tab-lead {
+    font-size: 1.05rem;
+    line-height: 1.65;
+}
+
+/* ── Tab bar polish ─────────────────────────────────────────────────────── */
+/* Stronger active indicator: 2.5px bottom border, not just color change */
+.site-tab {
+    padding: 0.75rem 1rem;   /* min 44px tap target height */
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-bottom-width: var(--tab-active-border);
+    transition: color 0.1s ease, border-color 0.1s ease, background 0.1s ease;
+    gap: var(--space-2);     /* 8px icon-to-text */
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+}
+
+.site-tab:hover {
+    color: var(--text-primary);
+    background: var(--bg-hover);
+}
+
+.site-tab.active {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+    font-weight: 600;
+}
+
+/* Horizontal scroll on mobile instead of stacking vertically */
+@media (max-width: 600px) {
+    .site-tabs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        gap: 0;
+        border: none;
+        border-bottom: 2px solid var(--border-color);
+        border-radius: 0;
+        background: transparent;
+        padding-bottom: 0;
+        /* Hide scrollbar but keep scrollable */
+        scrollbar-width: none;
+    }
+    .site-tabs::-webkit-scrollbar { display: none; }
+
+    .site-tab {
+        border-bottom: var(--tab-active-border) solid transparent;
+        border-left: none;
+        border-right: none;
+        margin-bottom: -2px;
+        flex-shrink: 0;
+        padding: 0.75rem 0.85rem;
+    }
+
+    .site-tab.active {
+        border-bottom-color: var(--accent);
+        border-left-color: transparent;
+        background: transparent;
+    }
+
+    .site-tab:last-child {
+        border-bottom: var(--tab-active-border) solid transparent;
+    }
+}
+
+/* ── Tab panel fade-in on switch ────────────────────────────────────────── */
+.site-tab-content {
+    display: none;
+    animation: none;
+}
+
+.site-tab-content.active {
+    display: block;
+    animation: tab-fade-in 0.15s ease forwards;
+}
+
+@keyframes tab-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.dashboard-tab-content {
+    display: none;
+    animation: none;
+}
+
+.dashboard-tab-content.active {
+    display: block;
+    animation: tab-fade-in 0.15s ease forwards;
+}
+
+/* ── Tab intro section spacing ──────────────────────────────────────────── */
+.site-tab-intro {
+    margin-bottom: var(--space-8);
+    padding-bottom: var(--space-6);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Bottom breathing room for tab content */
+.site-page,
+.dashboard-page {
+    padding-bottom: var(--space-16);
+}
+
+/* ── Focus rings ────────────────────────────────────────────────────────── */
+.site-tab:focus-visible,
+.dashboard-tab:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* ── Card hover micro-interaction ──────────────────────────────────────── */
+/* Scoreboard cards */
+.scoreboard-card {
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.scoreboard-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Experiment cards */
+.experiment-card {
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.experiment-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .scoreboard-card:hover,
+[data-theme="dark"] .experiment-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Stat numbers: tabular-nums ─────────────────────────────────────────── */
+.scoreboard-card .card-value,
+.dashboard-stat-num,
+.dashboard-variant-ctr {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Bigger stat numbers on scoreboard */
+.scoreboard-card .card-value {
+    font-size: 2.25rem;
+}
+
+.scoreboard-card.card-primary .card-value {
+    font-size: 2.75rem;
+}
+
+/* ── Dashboard stat card: bump number size ──────────────────────────────── */
+.dashboard-stat-num {
+    font-family: 'Inter Display', -apple-system, system-ui, sans-serif;
+    font-size: 2.25rem;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+.dashboard-stat-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 0.25rem;
+}
+
+.dashboard-stat-card {
+    padding: var(--space-6);
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    cursor: default;
+}
+
+.dashboard-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .dashboard-stat-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ── Section gap between major content blocks ───────────────────────────── */
+.dashboard-chart-section {
+    margin: var(--space-12) 0;
+}
+
+/* ── Skeleton loader ─────────────────────────────────────────────────────── */
+@keyframes skel-pulse {
+    0%, 100% { opacity: 0.35; }
+    50%       { opacity: 0.6;  }
+}
+
+.dashboard-skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-6);
+}
+
+.dashboard-skeleton .skel-row {
+    height: 60px;
+    background: var(--bg-secondary, #f0f0f0);
+    border-radius: 8px;
+    animation: skel-pulse 1.4s ease-in-out infinite;
+}
+
+.dashboard-skeleton .skel-row:nth-child(2) {
+    height: 40px;
+    animation-delay: 0.15s;
+}
+
+.dashboard-skeleton .skel-row:nth-child(3) {
+    height: 80px;
+    animation-delay: 0.3s;
+}
+
+/* ── Table improvements ─────────────────────────────────────────────────── */
+/* Zebra striping on site-content-types */
+.site-content-types tbody tr:nth-child(even) {
+    background: var(--bg-secondary);
+}
+
+.site-content-types tbody tr:nth-child(even):hover {
+    background: var(--bg-hover);
+}
+
+/* Right-align numeric cols in under-hood-data-table */
+.under-hood-data-table td:nth-child(2) {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Zebra on data table */
+.under-hood-data-table tbody tr:nth-child(even) td {
+    background: var(--bg-secondary);
+}
+
+.under-hood-data-table tbody tr:nth-child(even):hover td {
+    background: var(--bg-hover);
+}
+
+/* Dashboard ranked list zebra */
+.dashboard-ranked-list tbody tr:nth-child(even) td {
+    background: var(--bg-secondary);
+}
+
+/* Dashboard ranked list numeric columns right-aligned */
+.dashboard-ranked-list .dashboard-click-count,
+.dashboard-ranked-list .dashboard-rank {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Table horizontal scroll with right-edge fade on narrow screens */
+@media (max-width: 600px) {
+    .site-table-container {
+        position: relative;
+    }
+    .site-table-container::after {
+        content: '';
+        position: absolute;
+        top: 0; right: 0; bottom: 0;
+        width: 2rem;
+        background: linear-gradient(to left, var(--bg-primary, white), transparent);
+        pointer-events: none;
+    }
+}
+
+/* ── Dashboard section title scale ──────────────────────────────────────── */
+.dashboard-section-title {
+    font-family: 'Inter Display', -apple-system, system-ui, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 0 0 var(--space-3);
+    color: var(--text-primary);
+}
+
+/* ── Stat card coloring by semantic group (dashboard) ───────────────────── */
+.dashboard-stat-card.stat-positive {
+    background: linear-gradient(135deg, var(--bg-secondary), rgba(76, 175, 80, 0.05));
+    border-color: rgba(76, 175, 80, 0.35);
+}
+
+.dashboard-stat-card.stat-warning {
+    background: linear-gradient(135deg, var(--bg-secondary), rgba(245, 166, 35, 0.05));
+    border-color: rgba(245, 166, 35, 0.35);
+}
+
+/* ── Dashboard callout spacing ──────────────────────────────────────────── */
+.dashboard-callout {
+    padding: var(--space-4) var(--space-6);
+    border-radius: 8px;
+    margin: var(--space-4) 0;
+}
+
+/* ── Last-updated timestamp style ───────────────────────────────────────── */
+.dashboard-refresh-note {
+    font-size: 0.78rem;
+    color: var(--text-muted, #888);
+    margin: 0 0 var(--space-4);
+    letter-spacing: 0.01em;
+}
+
+/* ── Variant CTR large number ───────────────────────────────────────────── */
+.dashboard-variant-ctr {
+    font-family: 'Inter Display', -apple-system, system-ui, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1;
+}
+
+/* ── Prose line-height fix in dashboard ─────────────────────────────────── */
+.dashboard-prose p {
+    line-height: 1.65;
+}
+
+/* ── Mobile: 2-col stat grid, stack tables ──────────────────────────────── */
+@media (max-width: 600px) {
+    .dashboard-stat-num {
+        font-size: 1.6rem;
+    }
+
+    .dashboard-stat-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Tables scroll horizontally */
+    .dashboard-ranked-list,
+    .under-hood-data-table,
+    .site-content-types {
+        min-width: 480px;
+    }
+}
+
+/* ── Dark mode table overrides for zebra ─────────────────────────────────── */
+[data-theme="dark"] .site-content-types tbody tr:nth-child(even) {
+    background: #1f1f23;
+}
+[data-theme="dark"] .under-hood-data-table tbody tr:nth-child(even) td {
+    background: #1f1f23;
+}
+[data-theme="dark"] .dashboard-ranked-list tbody tr:nth-child(even) td {
+    background: #1f1f23;
+}
+
+/* ── Site table container spacing ─────────────────────────────────────────── */
+.site-table-container {
+    margin: var(--space-4) 0 var(--space-8);
+}

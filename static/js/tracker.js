@@ -66,15 +66,15 @@
       userId = generateUUID();
       isReturningUser = false;
       sessionNumber = 1;
-      var setOnInteraction = function() {
-        if (!cookieReady) {
-          cookieReady = true;
-          setCookie('te_uid', userId, 365);
-          setCookie('te_sn', '1', 365);
-        }
-      };
-      document.addEventListener('click', setOnInteraction, { once: true, passive: true });
-      document.addEventListener('scroll', setOnInteraction, { once: true, passive: true });
+      // Write te_uid eagerly at page load so experiments.js reads the same
+      // UUID on first impression. The old pattern deferred to first click/scroll
+      // (setOnInteraction), which caused first-visit users to receive a different
+      // ephemeral UUID for impressions vs. a real UID after interaction —
+      // resulting in the same user appearing in both A/B variants (A.5 audit,
+      // 57 contaminated users, 19 days of harness_aa_v1 data poisoned).
+      cookieReady = true;
+      setCookie('te_uid', userId, 365);
+      setCookie('te_sn', '1', 365);
     }
     deviceType = getDeviceType();
   }

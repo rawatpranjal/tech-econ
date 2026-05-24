@@ -8,10 +8,23 @@
   "experiments": [
     {
       "id": "harness_aa_v1",
-      "status": "active",
+      "status": "paused",
       "started_at": "2026-05-04",
+      "ended_at": "2026-05-23",
       "primary_metric": "ctr",
-      "doc": "First real experiment: an A/A test (both variants do the same thing). Sole purpose is to validate the end-to-end harness — bucketing → tracker.js event.exp → worker events.experiments column → analyze_experiments.py — by checking that traffic actually splits ~50/50. If the split is off, something in the pipeline is broken. Per the audit's A7 implementation order: 'no-op A/A test (control vs control)' lands first, before any treatment-vs-control experiment touches the ranker. Run analyze_experiments.py after a few days; expect impressions and clicks roughly equal across variants. Audit ref: §4.A7 step 1.",
+      "doc": "CONTAMINATED — paused 2026-05-23 after A.5 audit found cookie-timing bug. tracker.js deferred te_uid cookie write to first interaction; experiments.js read it eagerly on first impression, minting a different ephemeral UUID. Same user appeared in both variants (57 users, 19 days of data). Replaced by harness_aa_v2 after tracker.js fix. Historical data preserved for analysis but ALL harness_aa_v1 stats are invalid. Original goal: A/A test to validate the end-to-end harness — bucketing → tracker.js event.exp → worker events.experiments column → analyze_experiments.py. Audit ref: §4.A7 step 1, A.5 root-cause report.",
+      "variants": [
+        { "id": "control_a", "traffic": 50 },
+        { "id": "control_b", "traffic": 50 }
+      ]
+    },
+
+    {
+      "id": "harness_aa_v2",
+      "status": "active",
+      "started_at": "2026-05-24",
+      "primary_metric": "ctr",
+      "doc": "v2, post tracker.js fix. Same A/A structure as harness_aa_v1 (control_a vs control_b, 50/50). Restarted after the cookie-timing bug was fixed: tracker.js now writes te_uid eagerly at page load instead of deferring to first click/scroll, so experiments.js reads the same UUID on the first impression. New experiment ID produces fresh bucketing for every user (deterministic hash includes experiment_id, so old users with cached te_uid get a clean re-assignment). Run analyze_experiments.py after a few days; expect impressions and clicks roughly equal across variants. If the A/A passes, harness is validated and Stream A.3 (Re1 MMR treatment) can proceed.",
       "variants": [
         { "id": "control_a", "traffic": 50 },
         { "id": "control_b", "traffic": 50 }

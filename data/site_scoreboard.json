@@ -1,0 +1,114 @@
+{
+  "generated_at": "2026-05-24T06:24:47.776431+00:00",
+  "metrics": {
+    "latest": {
+      "date": "2026-05-03",
+      "run_at_utc": "2026-05-03T20:37:56Z",
+      "git_sha": "3a5ba9b",
+      "holdout_days": 60,
+      "n_sessions_total": 139,
+      "n_evaluable_sessions": 15,
+      "n_sessions_skipped": 124,
+      "ndcg_at_5": 0.386307,
+      "ndcg_at_10": 0.419125,
+      "hit_rate_at_5": 0.666667,
+      "hit_rate_at_10": 0.8,
+      "map_at_10": 0.414948,
+      "precision_at_10": 0.126667,
+      "notes": "rerank source=api"
+    },
+    "history": [
+      {
+        "date": "2026-05-03",
+        "run_at_utc": "2026-05-03T20:37:56Z",
+        "git_sha": "3a5ba9b",
+        "holdout_days": 60,
+        "n_sessions_total": 139,
+        "n_evaluable_sessions": 15,
+        "n_sessions_skipped": 124,
+        "ndcg_at_5": 0.386307,
+        "ndcg_at_10": 0.419125,
+        "hit_rate_at_5": 0.666667,
+        "hit_rate_at_10": 0.8,
+        "map_at_10": 0.414948,
+        "precision_at_10": 0.126667,
+        "notes": "rerank source=api"
+      }
+    ]
+  },
+  "replays": {
+    "latest": {
+      "date": "2026-05-24",
+      "run_at_utc": "2026-05-24T03:35:46Z",
+      "git_sha": "2bb7722",
+      "baseline_label": "global_rankings",
+      "candidate_label": "global_rankings",
+      "n_sessions": 145,
+      "n_evaluable": 39,
+      "verdict": "ok",
+      "notes": "",
+      "baseline_ndcg_at_10": 0.227479,
+      "candidate_ndcg_at_10": 0.227479,
+      "delta_ndcg_at_10": 0.0,
+      "baseline_hit_rate_at_10": 0.589744,
+      "candidate_hit_rate_at_10": 0.589744,
+      "delta_hit_rate_at_10": 0.0
+    },
+    "history": [
+      {
+        "date": "2026-05-24",
+        "run_at_utc": "2026-05-24T03:35:46Z",
+        "git_sha": "2bb7722",
+        "baseline_label": "global_rankings",
+        "candidate_label": "global_rankings",
+        "n_sessions": 145,
+        "n_evaluable": 39,
+        "verdict": "ok",
+        "notes": "",
+        "baseline_ndcg_at_10": 0.227479,
+        "candidate_ndcg_at_10": 0.227479,
+        "delta_ndcg_at_10": 0.0,
+        "baseline_hit_rate_at_10": 0.589744,
+        "candidate_hit_rate_at_10": 0.589744,
+        "delta_hit_rate_at_10": 0.0
+      }
+    ]
+  },
+  "experiments": [
+    {
+      "id": "harness_aa_v1",
+      "status": "paused",
+      "started_at": "2026-05-04",
+      "ended_at": "2026-05-23",
+      "kind": "A/A sanity",
+      "summary": "A/A sanity test to validate the end-to-end experiment harness. Discovered a bucketing contamination bug: the anonymous user ID cookie was written too late, so the first-impression bucketing used a different ID than later events. Fixed before restarting as v2.",
+      "results": {
+        "control_a": {
+          "impressions": 8071,
+          "clicks": 322,
+          "ctr": 0.0399,
+          "ci_low": 0.0358,
+          "ci_high": 0.0444
+        },
+        "control_b": {
+          "impressions": 10205,
+          "clicks": 237,
+          "ctr": 0.0232,
+          "ci_low": 0.0205,
+          "ci_high": 0.0263
+        }
+      },
+      "verdict": "broken -- cookie-timing bug caused 57 users to appear in both variants; 19 days of data were contaminated. Bug fixed; harness_aa_v2 started."
+    },
+    {
+      "id": "harness_aa_v2",
+      "status": "active",
+      "started_at": "2026-05-24",
+      "ended_at": null,
+      "kind": "A/A sanity",
+      "summary": "A/A sanity re-run after the cookie-timing fix. Both variants see the same experience. If CTR is balanced, the harness is validated and real treatment experiments can begin.",
+      "results": null,
+      "verdict": "collecting data"
+    }
+  ]
+}

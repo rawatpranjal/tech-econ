@@ -52,12 +52,22 @@ from __future__ import annotations
 
 import json
 import os
+import ssl
 import time
 import urllib.error
 import urllib.parse
 import urllib.request
 from dataclasses import dataclass, field
 from typing import Any, Callable
+
+try:
+    import certifi as _certifi
+    _SSL_CONTEXT = ssl.create_default_context(cafile=_certifi.where())
+except ImportError:
+    # certifi not installed — fall back to the default context (works on
+    # most Linux CI; may fail on macOS where Python 3.11 doesn't use the
+    # system keychain by default).
+    _SSL_CONTEXT = None
 
 
 __all__ = [
@@ -103,10 +113,16 @@ HttpFetcher = Callable[[str, float], tuple[int, bytes, dict[str, str]]]
 
 def _default_fetcher(url: str, timeout: float) -> tuple[int, bytes, dict[str, str]]:
     """Default fetcher backed by urllib. No external HTTP library —
-    keeps lib/ light-deps."""
+    keeps lib/ light-deps.
+
+    Uses certifi's CA bundle when available. Python 3.11 on macOS does
+    not trust the system keychain by default, so without certifi the
+    Cloudflare worker TLS cert fails verification. certifi is a soft
+    dependency — if missing we fall back to the default context and log
+    a warning so the failure is visible."""
     req = urllib.request.Request(url, headers={"User-Agent": "tech-econ-d1-client/1.0"})
     try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
+        with urllib.request.urlopen(req, timeout=timeout, context=_SSL_CONTEXT) as resp:
             body = resp.read()
             headers = {k.lower(): v for k, v in resp.headers.items()}
             return (resp.status, body, headers)

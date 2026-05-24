@@ -1,0 +1,1434 @@
+{{ define "main" }}
+
+<header class="hero hero-site">
+    <h1 class="hero-title">Under The Hood</h1>
+    <p class="hero-tagline">How tech-econ.com curates, ranks, and recommends content.</p>
+</header>
+
+<div class="site-page">
+
+    <!-- Tab navigation -->
+    <div class="site-tabs" role="tablist" aria-label="Site sections">
+        <button class="site-tab active" data-tab="ingestion" role="tab" aria-selected="true" aria-controls="tab-ingestion">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="16 16 12 12 8 16"></polyline>
+                <line x1="12" y1="12" x2="12" y2="21"></line>
+                <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3"></path>
+            </svg>
+            Ingestion
+        </button>
+        <button class="site-tab" data-tab="storage" role="tab" aria-selected="false" aria-controls="tab-storage">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+            </svg>
+            Storage
+        </button>
+        <button class="site-tab" data-tab="processing" role="tab" aria-selected="false" aria-controls="tab-processing">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="16 3 21 3 21 8"></polyline>
+                <line x1="4" y1="20" x2="21" y2="3"></line>
+                <polyline points="21 16 21 21 16 21"></polyline>
+                <line x1="15" y1="15" x2="21" y2="21"></line>
+            </svg>
+            Processing
+        </button>
+        <button class="site-tab" data-tab="recsys" role="tab" aria-selected="false" aria-controls="tab-recsys">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            Recsys
+        </button>
+        <button class="site-tab" data-tab="how-recs-work" role="tab" aria-selected="false" aria-controls="tab-how-recs-work">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            How Recs Work
+        </button>
+        <button class="site-tab" data-tab="how-ab-works" role="tab" aria-selected="false" aria-controls="tab-how-ab-works">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+            How A/B Works
+        </button>
+        <button class="site-tab" data-tab="performance" role="tab" aria-selected="false" aria-controls="tab-performance">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+            </svg>
+            Performance
+        </button>
+        <button class="site-tab" data-tab="experiments" role="tab" aria-selected="false" aria-controls="tab-experiments">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"></path>
+            </svg>
+            Experiments
+        </button>
+    </div>
+
+    <!-- ============================================================
+         Tab 1: Ingestion (COMPLETE)
+    ============================================================ -->
+    <div class="site-tab-content active" id="tab-ingestion" role="tabpanel" aria-labelledby="tab-btn-ingestion">
+
+        <div class="site-tab-intro">
+            <h2>Ingestion</h2>
+            <p class="site-tab-lead">Before you can read, search, or stumble across something useful on this site, each piece of content has to go through a pipeline. From raw submission to ranked, enriched, and ready to discover. This tab walks through that journey.</p>
+        </div>
+
+        <!-- Diagram 1: Main pipeline (bigger boxes) -->
+        <div class="site-diagram-container">
+            <svg viewBox="0 0 900 260" width="100%" height="auto" role="img" aria-label="Content ingestion flow diagram" class="site-diagram">
+                <defs>
+                    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto">
+                        <path d="M0,0 L0,8 L10,4 z" fill="#888" />
+                    </marker>
+                </defs>
+
+                <!-- Stage labels at top -->
+                <text x="92" y="55" text-anchor="middle" font-size="18" fill="#4a9eff" font-weight="600" letter-spacing="0.05em">INPUT</text>
+                <text x="274" y="55" text-anchor="middle" font-size="18" fill="#f5a623" font-weight="600" letter-spacing="0.05em">GATE</text>
+                <text x="456" y="55" text-anchor="middle" font-size="18" fill="#4caf50" font-weight="600" letter-spacing="0.05em">ENRICH</text>
+                <text x="638" y="55" text-anchor="middle" font-size="18" fill="#e91e63" font-weight="600" letter-spacing="0.05em">RANK</text>
+                <text x="820" y="55" text-anchor="middle" font-size="18" fill="#9c27b0" font-weight="600" letter-spacing="0.05em">PUBLISH</text>
+
+                <!-- Node 1: Sources -->
+                <rect x="7" y="75" width="170" height="155" rx="10" ry="10" fill="#e8f4ff" stroke="#4a9eff" stroke-width="2"/>
+                <text x="92" y="115" text-anchor="middle" font-size="24" font-weight="700" fill="#1a1a1a">Sources</text>
+                <text x="92" y="155" text-anchor="middle" font-size="17" fill="#555">submit form</text>
+                <text x="92" y="180" text-anchor="middle" font-size="17" fill="#555">curation</text>
+                <text x="92" y="205" text-anchor="middle" font-size="17" fill="#555">archive</text>
+
+                <!-- Arrow 1 to 2 -->
+                <line x1="178" y1="152" x2="187" y2="152" stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+
+                <!-- Node 2: Validation -->
+                <rect x="189" y="75" width="170" height="155" rx="10" ry="10" fill="#fff3e0" stroke="#f5a623" stroke-width="2"/>
+                <text x="274" y="115" text-anchor="middle" font-size="24" font-weight="700" fill="#1a1a1a">Validation</text>
+                <text x="274" y="155" text-anchor="middle" font-size="17" fill="#555">schema checks</text>
+                <text x="274" y="180" text-anchor="middle" font-size="17" fill="#555">duplicate URLs</text>
+                <text x="274" y="205" text-anchor="middle" font-size="17" fill="#555">field defaults</text>
+
+                <!-- Arrow 2 to 3 -->
+                <line x1="360" y1="152" x2="369" y2="152" stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+
+                <!-- Node 3: Enrichment -->
+                <rect x="371" y="75" width="170" height="155" rx="10" ry="10" fill="#e8f5e9" stroke="#4caf50" stroke-width="2"/>
+                <text x="456" y="115" text-anchor="middle" font-size="24" font-weight="700" fill="#1a1a1a">Enrichment</text>
+                <text x="456" y="155" text-anchor="middle" font-size="17" fill="#555">tags</text>
+                <text x="456" y="180" text-anchor="middle" font-size="17" fill="#555">descriptions</text>
+                <text x="456" y="205" text-anchor="middle" font-size="17" fill="#555">cluster labels</text>
+
+                <!-- Arrow 3 to 4 -->
+                <line x1="542" y1="152" x2="551" y2="152" stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+
+                <!-- Node 4: Ranking -->
+                <rect x="553" y="75" width="170" height="155" rx="10" ry="10" fill="#fce4ec" stroke="#e91e63" stroke-width="2"/>
+                <text x="638" y="115" text-anchor="middle" font-size="24" font-weight="700" fill="#1a1a1a">Ranking</text>
+                <text x="638" y="155" text-anchor="middle" font-size="17" fill="#555">engagement signals</text>
+                <text x="638" y="180" text-anchor="middle" font-size="17" fill="#555">model score</text>
+                <text x="638" y="205" text-anchor="middle" font-size="17" fill="#555">cold-start</text>
+
+                <!-- Arrow 4 to 5 -->
+                <line x1="724" y1="152" x2="733" y2="152" stroke="#888" stroke-width="2" marker-end="url(#arrow)"/>
+
+                <!-- Node 5: Published -->
+                <rect x="735" y="75" width="170" height="155" rx="10" ry="10" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+                <text x="820" y="115" text-anchor="middle" font-size="24" font-weight="700" fill="#1a1a1a">Published</text>
+                <text x="820" y="155" text-anchor="middle" font-size="17" fill="#555">site build</text>
+                <text x="820" y="180" text-anchor="middle" font-size="17" fill="#555">search index</text>
+                <text x="820" y="205" text-anchor="middle" font-size="17" fill="#555">live on site</text>
+            </svg>
+        </div>
+
+        <!-- Content types table -->
+        <div class="site-prose">
+            <h3>What kinds of content?</h3>
+            <p>Every entry on the site belongs to one of eight types. Each type lives in its own collection and shows up in different places (homepage rows, search results, dedicated browse pages).</p>
+        </div>
+        <div class="site-table-container">
+            <table class="site-content-types">
+                <thead>
+                    <tr><th>Type</th><th>What it covers</th><th>An example</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Packages</strong></td><td>Software libraries and tools</td><td>DoubleML, a library for causal machine learning</td></tr>
+                    <tr><td><strong>Datasets</strong></td><td>Data collections and benchmarks</td><td>Nielsen retail scanner data for consumer research</td></tr>
+                    <tr><td><strong>Papers</strong></td><td>Academic research organized by topic</td><td>"Mostly Harmless Econometrics" by Angrist and Pischke</td></tr>
+                    <tr><td><strong>Books</strong></td><td>Long-form treatments worth reading cover to cover</td><td>"The Mixtape" by Scott Cunningham on causal inference</td></tr>
+                    <tr><td><strong>Talks</strong></td><td>Videos, podcasts, lectures</td><td>Susan Athey on causal AI at Stanford</td></tr>
+                    <tr><td><strong>Resources</strong></td><td>Blogs, tutorials, courses, anything that teaches</td><td>Andrew Ng's blog on applied AI</td></tr>
+                    <tr><td><strong>Career</strong></td><td>Interview prep, hiring guides, industry overviews</td><td>Big Tech economist interview prep guides</td></tr>
+                    <tr><td><strong>Community</strong></td><td>Conferences, meetups, labs, events</td><td>NBER summer institute and ASSA annual meeting</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- JSON evolution: how an entry grows across the pipeline -->
+        <div class="site-prose">
+            <h3>How a single entry grows along the way</h3>
+            <p>Each entry starts as a tiny record (a name, a link, a short description) and gets richer at every stage. Here is the same item at three points in the pipeline.</p>
+        </div>
+        <div class="site-json-evolution">
+            <div class="site-json-stage stage-input">
+                <div class="site-json-label">When it arrives</div>
+                <pre><code>{
+  "name": "DoubleML",
+  "url": "https://docs.doubleml.org",
+  "description": "Double machine
+    learning for causal inference"
+}</code></pre>
+            </div>
+
+            <div class="site-json-arrow" aria-hidden="true">&rsaquo;</div>
+
+            <div class="site-json-stage stage-enrich">
+                <div class="site-json-label">After enrichment</div>
+                <pre><code>{
+  "name": "DoubleML",
+  "url": "https://docs.doubleml.org",
+  "description": "Double machine
+    learning for causal inference",
+  "tags": ["causal inference",
+    "python", "machine learning"],
+  "best_for": "treatment effects
+    with high-dimensional controls",
+  "cluster": "Causal ML"
+}</code></pre>
+            </div>
+
+            <div class="site-json-arrow" aria-hidden="true">&rsaquo;</div>
+
+            <div class="site-json-stage stage-rank">
+                <div class="site-json-label">After ranking</div>
+                <pre><code>{
+  "name": "DoubleML",
+  ...
+  "tags": [...],
+  "cluster": "Causal ML",
+  "score": 0.87,
+  "rank": 4
+}</code></pre>
+            </div>
+        </div>
+
+        <!-- Tab 1: Running example - raw vs enriched entry -->
+        <div class="under-hood-callout callout-example">
+            <p><strong>DoubleML</strong> arrived as a two-line stub: name, URL, and the phrase "double machine learning for causal inference." After the enrichment step it grew tags (<em>causal inference, Python, treatment effects</em>), a best-for note (<em>"high-dimensional controls in observational studies"</em>), a cluster label (<em>Causal ML Methods</em>), and seven synthetic questions that power semantic search. That richer record is what gets vectorized and ranked. The raw stub would have been nearly invisible in search.</p>
+        </div>
+
+        <!-- Tab 1: Pull-quote -->
+        <div class="under-hood-callout callout-quote">
+            <p>Curation is a craft, not a pipeline. The pipeline handles tedium; judgment about what belongs is the part that can't be automated.</p>
+        </div>
+
+        <!-- Prose -->
+        <div class="site-prose">
+
+            <h3>Where it comes from</h3>
+            <p>Content arrives from three places. The primary channel is <strong>manual curation</strong>: reading the field, following researchers, spotting tools that actually get used in practice. A public <strong>submission form</strong> at <a href="/submit/">/submit/</a> lets anyone suggest an addition. Behind the scenes, a small Cloudflare service receives the form data and routes it for review. There's also a modest <strong>archive channel</strong>, made up of older lists and reading stashes that get cleaned up and folded in over time.</p>
+            <p>Nothing lands on the site without a human deciding it belongs there. The pipeline automates the boring parts; curation stays manual.</p>
+
+            <h3>Validation: the gate before anything enters</h3>
+            <p>Once an item is ready to add, it has to pass a validation check. Before anything publishes, we run a quick schema check to make sure required fields are present (every entry must have at least a title, a URL, and a description). The check also scans for <strong>duplicate URLs</strong> to prevent the same resource appearing twice under different names, and it verifies that category values match the allowed list. If anything fails, the check reports exactly which entries are broken and why. Nothing merges until this passes.</p>
+            <p>Think of it as the spell-checker you run before publishing: it won't catch bad judgment, but it will catch bad data.</p>
+
+            <h3>Enrichment: making the data richer</h3>
+            <p>Raw entries are sparse. They have a title and a URL and maybe a short description, but they don't yet have tags, a "best for" use-case note, or a cluster label (the thematic bucket that groups similar content together). That's where the enrichment step comes in.</p>
+            <p>This step calls the Claude API (the same Claude that helped write this very page, which is a slightly recursive situation) and asks it to read each entry and generate structured metadata. The output gets written back into the content files. Enrichment runs for new entries and for entries that are missing metadata; it doesn't re-touch things that already look complete.</p>
+            <p>The generated tags and descriptions are what power search. When you type something into the search bar and get a result that feels semantically related to your query rather than just keyword-matched, that's because the enriched descriptions and tags were converted into <strong>vector embeddings</strong> (a way of representing meaning as a list of numbers) that the search engine can compare. More on that in the Processing tab.</p>
+
+            <h3>Ranking: deciding what rises to the top</h3>
+            <p>After an item is validated and enriched, it gets a score. That score determines where an item appears on any list page: higher score floats to the top.</p>
+            <p>The scoring is driven by a machine-learning model that pulls <strong>engagement signals</strong> from the site's analytics database (how often an item was clicked, how long people spent reading it, how far they scrolled, whether they found it through search). These signals feed into a model that is good at predicting how interesting an item is based on patterns in past behavior. Items with lots of strong signals get high scores; items that get lots of impressions but no clicks get penalized.</p>
+            <p>New items have no history, so they can't be scored by engagement. Instead, the ranker finds the items most similar to the new item (using the vector embeddings from the enrichment step) and borrows a fraction of their score. This is called <strong>cold-start propagation</strong>: a new item earns a provisional score based on its nearest neighbors until it accumulates its own engagement data.</p>
+
+            <h3>Where it lives</h3>
+            <p>The final resting place for all content is a set of structured files, one per content type. Hugo (the static site generator that powers tech-econ.com) reads these files at build time and converts them into the pages you see. The files are version-controlled in git, which means every addition, change, or removal is tracked. If something goes wrong, you can always roll back.</p>
+            <p>The build step also generates the search index and the vector embeddings that power semantic search, but that's the Processing tab's story.</p>
+
+        </div>
+    </div>
+
+    <!-- ============================================================
+         Tab 2: Storage (COMPLETE)
+    ============================================================ -->
+    <div class="site-tab-content" id="tab-storage" role="tabpanel" aria-labelledby="tab-btn-storage">
+
+        <div class="site-tab-intro">
+            <h2>Storage</h2>
+            <p class="site-tab-lead">Once content is ingested and ranked (see the Ingestion tab), it has to live somewhere. This tab explains where each kind of data sits: content files, ranking outputs, search indexes, analytics events, and the small cookie trail in your browser.</p>
+        </div>
+
+        <!-- SVG Diagram -->
+        <div class="site-diagram-container">
+            <svg viewBox="0 0 860 260" width="100%" height="auto" role="img" aria-label="Data storage locations diagram" class="site-diagram">
+                <defs>
+                    <marker id="arrow-s" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                        <path d="M0,0 L0,6 L8,3 z" fill="#888" />
+                    </marker>
+                </defs>
+
+                <!-- Node 1: Browser -->
+                <rect x="10" y="70" width="140" height="90" rx="8" ry="8" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1.5"/>
+                <text x="80" y="105" text-anchor="middle" font-size="20" font-weight="600" fill="#1a1a1a">Browser</text>
+                <text x="80" y="125" text-anchor="middle" font-size="16" fill="#555">user ID cookie</text>
+                <text x="80" y="143" text-anchor="middle" font-size="16" fill="#555">reading history</text>
+                <text x="80" y="178" text-anchor="middle" font-size="15" fill="#4a9eff" font-style="italic">your device only</text>
+
+                <!-- Arrow 1 to 2 (write) -->
+                <line x1="151" y1="100" x2="183" y2="100" stroke="#e91e63" stroke-width="1.5" marker-end="url(#arrow-s)"/>
+                <text x="167" y="93" text-anchor="middle" font-size="14" fill="#e91e63">write</text>
+
+                <!-- Node 2: Edge Worker -->
+                <rect x="185" y="70" width="145" height="90" rx="8" ry="8" fill="#fce4ec" stroke="#e91e63" stroke-width="1.5"/>
+                <text x="257" y="105" text-anchor="middle" font-size="20" font-weight="600" fill="#1a1a1a">Edge Worker</text>
+                <text x="257" y="125" text-anchor="middle" font-size="16" fill="#555">CORS + rate limit</text>
+                <text x="257" y="143" text-anchor="middle" font-size="16" fill="#555">event routing</text>
+                <text x="257" y="178" text-anchor="middle" font-size="15" fill="#e91e63" font-style="italic">Cloudflare edge</text>
+
+                <!-- Arrow 2 to 3 -->
+                <line x1="331" y1="115" x2="363" y2="115" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-s)"/>
+
+                <!-- Node 3: Analytics Database -->
+                <rect x="365" y="70" width="145" height="90" rx="8" ry="8" fill="#e8f5e9" stroke="#4caf50" stroke-width="1.5"/>
+                <text x="437" y="105" text-anchor="middle" font-size="20" font-weight="600" fill="#1a1a1a">Analytics DB</text>
+                <text x="437" y="125" text-anchor="middle" font-size="16" fill="#555">events log</text>
+                <text x="437" y="143" text-anchor="middle" font-size="16" fill="#555">click counts</text>
+                <text x="437" y="178" text-anchor="middle" font-size="15" fill="#4caf50" font-style="italic">Cloudflare SQL (edge)</text>
+
+                <!-- Arrow 3 to 4 (ranker reads) -->
+                <line x1="511" y1="115" x2="543" y2="115" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-s)"/>
+
+                <!-- Node 4: Repo Files -->
+                <rect x="545" y="70" width="145" height="90" rx="8" ry="8" fill="#fff3e0" stroke="#f5a623" stroke-width="1.5"/>
+                <text x="617" y="105" text-anchor="middle" font-size="20" font-weight="600" fill="#1a1a1a">Content Files</text>
+                <text x="617" y="125" text-anchor="middle" font-size="16" fill="#555">packages, papers, etc.</text>
+                <text x="617" y="143" text-anchor="middle" font-size="16" fill="#555">rankings output</text>
+                <text x="617" y="178" text-anchor="middle" font-size="15" fill="#f5a623" font-style="italic">git-tracked, human-editable</text>
+
+                <!-- Arrow 4 to 5 -->
+                <line x1="691" y1="115" x2="723" y2="115" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-s)"/>
+
+                <!-- Node 5: Embeddings -->
+                <rect x="725" y="70" width="125" height="90" rx="8" ry="8" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1.5"/>
+                <text x="787" y="105" text-anchor="middle" font-size="20" font-weight="600" fill="#1a1a1a">Search Index</text>
+                <text x="787" y="125" text-anchor="middle" font-size="16" fill="#555">vector embeddings</text>
+                <text x="787" y="143" text-anchor="middle" font-size="16" fill="#555">related items</text>
+                <text x="787" y="178" text-anchor="middle" font-size="15" fill="#9c27b0" font-style="italic">served to browser</text>
+
+                <!-- Stage labels -->
+                <text x="80" y="55" text-anchor="middle" font-size="18" fill="#4a9eff" font-weight="600" letter-spacing="0.05em">USER DEVICE</text>
+                <text x="257" y="55" text-anchor="middle" font-size="18" fill="#e91e63" font-weight="600" letter-spacing="0.05em">EDGE</text>
+                <text x="437" y="55" text-anchor="middle" font-size="18" fill="#4caf50" font-weight="600" letter-spacing="0.05em">ANALYTICS DB</text>
+                <text x="617" y="55" text-anchor="middle" font-size="18" fill="#f5a623" font-weight="600" letter-spacing="0.05em">CONTENT STORE</text>
+                <text x="787" y="55" text-anchor="middle" font-size="18" fill="#9c27b0" font-weight="600" letter-spacing="0.05em">SEARCH INDEX</text>
+            </svg>
+        </div>
+
+        <!-- Tab 2: Real-data table - content type row counts -->
+        <div class="site-prose">
+            <h3>What lives where: the corpus at a glance</h3>
+            <p>Eight content types, each stored separately, each with a different level of engagement relative to its size.</p>
+        </div>
+        <div class="site-table-container">
+            <table class="under-hood-data-table">
+                <thead>
+                    <tr><th>Type</th><th>Entries</th><th>Approx. size</th><th>Notes</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Packages</strong></td><td>551</td><td>2.3 MB</td><td>Largest collection; richest metadata per entry</td></tr>
+                    <tr><td><strong>Career</strong></td><td>639</td><td>2.4 MB</td><td>Most entries; interview guides, role overviews</td></tr>
+                    <tr><td><strong>Datasets</strong></td><td>443</td><td>1.7 MB</td><td>Includes benchmark and commercial datasets</td></tr>
+                    <tr><td><strong>Resources</strong></td><td>518</td><td>2.0 MB</td><td>Blogs, courses, tutorials; highest click density</td></tr>
+                    <tr><td><strong>Community</strong></td><td>452</td><td>1.8 MB</td><td>Conferences, labs, meetups</td></tr>
+                    <tr><td><strong>Talks</strong></td><td>265</td><td>1.1 MB</td><td>Videos, podcasts, interviews</td></tr>
+                    <tr><td><strong>Papers</strong></td><td>~400+</td><td>7.6 MB</td><td>Nested by topic; largest single file</td></tr>
+                    <tr><td><strong>Books</strong></td><td>102</td><td>379 KB</td><td>Smallest; highest per-item quality bar</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tab 2: Conceptual snippet - what an analytics event looks like -->
+        <div class="site-prose">
+            <h3>A single moment of attention, captured</h3>
+            <p>Every interaction is compressed into a small event record before it travels from your browser to the edge database. The record is intentionally minimal: no names, no accounts, just an anonymous session and what happened.</p>
+        </div>
+        <span class="under-hood-snippet-label">what one analytics event looks like (illustrative)</span>
+        <div class="under-hood-snippet">
+            <code>{
+  "type":    "click",
+  "session": "anon-8f3a",          <span class="snip-comment">// random, not tied to an account</span>
+  "page":    "/packages/",
+  "ts":      1716547200000,        <span class="snip-comment">// millisecond timestamp</span>
+  "item":    "DoubleML",
+  "section": "packages",
+  "exp":     { "harness_aa_v2": "control_a" }  <span class="snip-comment">// which experiment variant</span>
+}</code>
+        </div>
+
+        <!-- Tab 2: Pull-quote about edge computing -->
+        <div class="under-hood-callout callout-quote">
+            <p>The server that receives your click is probably less than 20 milliseconds away. That's the point of running at the edge: the database lives close to the reader, not in a single central warehouse.</p>
+        </div>
+
+        <!-- Prose -->
+        <div class="site-prose">
+
+            <h3>Content files: the source of truth</h3>
+            <p>The primary home for all content is a set of structured files in the site's code repository, one per content type (packages, datasets, resources, and so on). Each file is a human-readable list of entries, with fields like title, URL, description, and tags. These files are version-controlled with git, which means every change is recorded and reversible. Before anything publishes, we run a quick schema check to make sure required fields are present and links aren't broken.</p>
+            <p>Humans can edit these files directly. The pipeline (enrichment, ranking, embedding generation) writes back into them automatically, adding or updating fields like the ranking score, tags, and cluster label.</p>
+
+            <h3>Rankings and homepage layout</h3>
+            <p>Two outputs represent the ranker's work. A ranking snapshot stores every item's current score after each ranking run. A separate pre-computed homepage layout describes a list of named rows ("Trending Now", "Top Packages", and so on), each containing the ordered items that should appear in that row. These files are the bridge between the machine-learning pipeline and the Hugo build step that assembles the actual pages.</p>
+
+            <h3>Embeddings: numbers that represent meaning</h3>
+            <p>Semantic search works by turning each item's text into a list of 1,024 numbers (an "embedding") that captures what the item is about in a way that can be compared mathematically. These embeddings live in a dedicated folder as two files. A compact binary file (roughly 16 MB) that the browser downloads only when someone uses the search bar for the first time. A smaller JSON file maps item IDs to their names and URLs so the browser can display results. A third file stores precomputed "items similar to this one" lists, used by the "Because You Viewed" recommendation row. This one loads quietly in the background when the page opens.</p>
+
+            <h3>The analytics database</h3>
+            <p>While the content files are static and human-readable, the analytics side is dynamic. Every time someone visits a page, clicks a card, searches, or scrolls, the site sends a small event to a Cloudflare Worker running at the edge (a server that lives close to the user, not in a central datacenter). That worker receives the event, validates it, and writes it into a SQL database. The database itself is replicated near every Cloudflare edge location for speed.</p>
+            <p>The database stores every raw event, along with aggregated counts of clicks per item and a record of what people searched for and how often. The ranking process reads from the analytics database to fetch engagement signals for each item before training the model.</p>
+
+            <h3>Cookies on your browser</h3>
+            <p>The site stores two small cookies: a random anonymous user ID (so the ranker can treat your session as a coherent visit, without knowing who you are) and a session counter that increments each visit. These cookies never contain personal information. They are not shared with third parties, and they are the only data the site stores on your device. Reading history (used for the "Because You Viewed" row) stays entirely in your browser's local memory and is never sent to any server.</p>
+
+        </div>
+    </div>
+
+    <!-- ============================================================
+         Tab 3: Processing (COMPLETE)
+    ============================================================ -->
+    <div class="site-tab-content" id="tab-processing" role="tabpanel" aria-labelledby="tab-btn-processing">
+
+        <div class="site-tab-intro">
+            <h2>Processing</h2>
+            <p class="site-tab-lead">Between "item added to a content file" and "item shows up ranked on the homepage" are several automated steps. This tab walks through each one, what it does, and how they depend on each other.</p>
+        </div>
+
+        <!-- SVG Diagram: pipeline flow left to right with feedback loop -->
+        <div class="site-diagram-container">
+            <svg viewBox="0 0 860 290" width="100%" height="auto" role="img" aria-label="Processing pipeline diagram" class="site-diagram">
+                <defs>
+                    <marker id="arrow-p" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                        <path d="M0,0 L0,6 L8,3 z" fill="#888" />
+                    </marker>
+                    <marker id="arrow-p-red" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                        <path d="M0,0 L0,6 L8,3 z" fill="#e91e63" />
+                    </marker>
+                </defs>
+
+                <!-- Node 1: Validate -->
+                <rect x="10" y="80" width="130" height="80" rx="8" ry="8" fill="#fff3e0" stroke="#f5a623" stroke-width="1.5"/>
+                <text x="75" y="115" text-anchor="middle" font-size="20" font-weight="600" fill="#1a1a1a">Validate</text>
+                <text x="75" y="135" text-anchor="middle" font-size="16" fill="#555">schema checks</text>
+                <text x="75" y="153" text-anchor="middle" font-size="16" fill="#555">duplicate URLs</text>
+
+                <!-- Arrow 1 to 2 -->
+                <line x1="141" y1="120" x2="173" y2="120" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-p)"/>
+
+                <!-- Node 2: Enrich -->
+                <rect x="175" y="80" width="135" height="80" rx="8" ry="8" fill="#e8f5e9" stroke="#4caf50" stroke-width="1.5"/>
+                <text x="242" y="115" text-anchor="middle" font-size="20" font-weight="600" fill="#1a1a1a">Enrich</text>
+                <text x="242" y="135" text-anchor="middle" font-size="16" fill="#555">tags + descriptions</text>
+                <text x="242" y="153" text-anchor="middle" font-size="16" fill="#555">best-for use cases</text>
+
+                <!-- Arrow 2 to 3 -->
+                <line x1="311" y1="120" x2="343" y2="120" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-p)"/>
+
+                <!-- Node 3: Embed -->
+                <rect x="345" y="80" width="135" height="80" rx="8" ry="8" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1.5"/>
+                <text x="412" y="115" text-anchor="middle" font-size="20" font-weight="600" fill="#1a1a1a">Embed</text>
+                <text x="412" y="135" text-anchor="middle" font-size="16" fill="#555">1024-dim vectors</text>
+                <text x="412" y="153" text-anchor="middle" font-size="16" fill="#555">per item</text>
+
+                <!-- Arrow 3 to 4 -->
+                <line x1="481" y1="120" x2="513" y2="120" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-p)"/>
+
+                <!-- Node 4: Cluster -->
+                <rect x="515" y="80" width="135" height="80" rx="8" ry="8" fill="#fff3e0" stroke="#f5a623" stroke-width="1.5"/>
+                <text x="582" y="115" text-anchor="middle" font-size="20" font-weight="600" fill="#1a1a1a">Cluster</text>
+                <text x="582" y="135" text-anchor="middle" font-size="16" fill="#555">themed carousels</text>
+                <text x="582" y="153" text-anchor="middle" font-size="16" fill="#555">5-10 items each</text>
+
+                <!-- Arrow 4 to 5 -->
+                <line x1="651" y1="120" x2="683" y2="120" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-p)"/>
+
+                <!-- Node 5: Rank -->
+                <rect x="685" y="80" width="155" height="80" rx="8" ry="8" fill="#fce4ec" stroke="#e91e63" stroke-width="1.5"/>
+                <text x="762" y="115" text-anchor="middle" font-size="20" font-weight="600" fill="#1a1a1a">Rank</text>
+                <text x="762" y="135" text-anchor="middle" font-size="16" fill="#555">engagement signals</text>
+                <text x="762" y="153" text-anchor="middle" font-size="16" fill="#555">score per item</text>
+
+                <!-- Feedback arc: engagement back to Rank -->
+                <path d="M762 200 Q762 260 430 260 Q220 260 75 200" stroke="#e91e63" stroke-width="1.5" fill="none" stroke-dasharray="5,3" marker-end="url(#arrow-p-red)"/>
+                <text x="430" y="255" text-anchor="middle" font-size="16" fill="#e91e63">engagement data feeds back into ranking</text>
+
+                <!-- Stage labels at top -->
+                <text x="75" y="65" text-anchor="middle" font-size="18" fill="#f5a623" font-weight="600" letter-spacing="0.05em">GATE</text>
+                <text x="242" y="65" text-anchor="middle" font-size="18" fill="#4caf50" font-weight="600" letter-spacing="0.05em">ENRICH</text>
+                <text x="412" y="65" text-anchor="middle" font-size="18" fill="#4a9eff" font-weight="600" letter-spacing="0.05em">EMBED</text>
+                <text x="582" y="65" text-anchor="middle" font-size="18" fill="#f5a623" font-weight="600" letter-spacing="0.05em">CLUSTER</text>
+                <text x="762" y="65" text-anchor="middle" font-size="18" fill="#e91e63" font-weight="600" letter-spacing="0.05em">RANK</text>
+            </svg>
+        </div>
+
+        <!-- Tab 3: Conceptual snippet - the ranking formula -->
+        <div class="site-prose">
+            <h3>The rough shape of the ranking formula</h3>
+            <p>Before the machine-learning model takes over, each item's raw engagement signals are combined using a weighted sum. The weights below are the actual values used in the current ranking configuration.</p>
+        </div>
+        <span class="under-hood-snippet-label">the rough formula (actual signal weights)</span>
+        <div class="under-hood-snippet">
+            <code>raw_score =
+  <span class="snip-highlight">+ 5.0</span>  * clicks
+  <span class="snip-highlight">+ 3.0</span>  * search_clicks       <span class="snip-comment">// intentional: searched then clicked</span>
+  <span class="snip-highlight">+ 2.0</span>  * scroll_90           <span class="snip-comment">// read the whole thing</span>
+  <span class="snip-highlight">+ 1.5</span>  * deep_session         <span class="snip-comment">// part of a high-engagement visit</span>
+  <span class="snip-highlight">+ 1.0</span>  * dwell_minutes
+  <span class="snip-highlight">+ 0.5</span>  * impressions
+  <span class="snip-highlight">+ 0.3</span>  * coclick_count
+  <span class="snip-highlight">+ 0.1</span>  * coview_count
+  <span class="snip-highlight">+ 0.15</span> * freshness_decay      <span class="snip-comment">// half-life: 30 days</span>
+  <span class="snip-neg">- 2.0</span>  * rage_clicks          <span class="snip-comment">// repeated frustrated clicks</span>
+  <span class="snip-neg">- 1.0</span>  * quick_bounces
+  <span class="snip-neg">- 1.0</span>  * high_imp_no_click    <span class="snip-comment">// seen often but never clicked</span>
+  + cold_start_boost            <span class="snip-comment">// borrowed from 5 nearest neighbors</span>
+
+model_score = gradient_boosted_tree(raw_score, item_features)
+              <span class="snip-comment">// normalised to [0, 1]</span></code>
+        </div>
+
+        <!-- Tab 3: Running example using real top item -->
+        <div class="under-hood-callout callout-example">
+            <p><strong>Stefan Wager's "Causal Inference: A Statistical Learning Approach"</strong> is the top-ranked item on the site as of the last ranking run. It collected 73 clicks against just 2 impressions, which is an unusually high click-to-impression ratio (most items with 2 impressions collect 0 or 1 clicks). The high ratio, combined with 487 co-views in the same sessions as other top items and 14 seconds of average viewable time, pushed it to the maximum normalized score of 1.00.</p>
+            <p>By contrast, "Causal Inference for the Brave and True" has 17 clicks and a score of 0.376. The gap is mostly in clicks, not in quality. The ranker rewards high intent signals, not just popularity.</p>
+        </div>
+
+        <!-- Tab 3: Cold-start mini diagram -->
+        <div class="under-hood-mini-diagram">
+            <svg viewBox="0 0 420 160" width="420" height="160" role="img" aria-label="Cold-start propagation: a new item borrows score from its three nearest neighbors">
+                <defs>
+                    <marker id="cs-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                        <path d="M0,0 L0,6 L8,3 z" fill="#9c27b0" />
+                    </marker>
+                </defs>
+                <!-- New item in center -->
+                <rect x="160" y="60" width="100" height="48" rx="8" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
+                <text x="210" y="82" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a1a">New Item</text>
+                <text x="210" y="99" text-anchor="middle" font-size="12" fill="#9c27b0">score = ?</text>
+
+                <!-- Neighbor 1 (top-left) -->
+                <rect x="18" y="12" width="110" height="44" rx="8" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1.5"/>
+                <text x="73" y="32" text-anchor="middle" font-size="13" font-weight="600" fill="#1a1a1a">EconML</text>
+                <text x="73" y="48" text-anchor="middle" font-size="12" fill="#4a9eff">score 0.71</text>
+                <line x1="128" y1="50" x2="163" y2="76" stroke="#9c27b0" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#cs-arrow)"/>
+
+                <!-- Neighbor 2 (left) -->
+                <rect x="8" y="82" width="110" height="44" rx="8" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1.5"/>
+                <text x="63" y="102" text-anchor="middle" font-size="13" font-weight="600" fill="#1a1a1a">causalml</text>
+                <text x="63" y="118" text-anchor="middle" font-size="12" fill="#4a9eff">score 0.58</text>
+                <line x1="118" y1="104" x2="162" y2="90" stroke="#9c27b0" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#cs-arrow)"/>
+
+                <!-- Neighbor 3 (top-right) -->
+                <rect x="292" y="12" width="110" height="44" rx="8" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1.5"/>
+                <text x="347" y="32" text-anchor="middle" font-size="13" font-weight="600" fill="#1a1a1a">DoubleML</text>
+                <text x="347" y="48" text-anchor="middle" font-size="12" fill="#4a9eff">score 0.24</text>
+                <line x1="292" y1="50" x2="258" y2="76" stroke="#9c27b0" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#cs-arrow)"/>
+
+                <!-- Result -->
+                <text x="210" y="140" text-anchor="middle" font-size="12" fill="#555" font-style="italic">new item gets 30% of the weighted average: ~0.19</text>
+            </svg>
+            <span class="under-hood-mini-diagram-label">Cold-start: a new item borrows a fraction of its nearest neighbors' scores until it earns its own.</span>
+        </div>
+
+        <!-- Prose -->
+        <div class="site-prose">
+
+            <h3>Step 0: Validate (runs on every change)</h3>
+            <p>The gatekeeper runs automatically whenever a content file changes and exits with an error if anything is wrong: missing required fields, duplicate URLs, or values that don't match the allowed list. Nothing proceeds until this passes. Think of it as a strict proofreader that catches structural problems before they become bugs on the live site.</p>
+
+            <h3>Step 1: Enrich (runs for new or sparse entries)</h3>
+            <p>The enrichment step calls the Claude API and asks it to read each item and generate structured metadata: descriptive tags, a short summary, a "best for" note explaining which audience would find it useful, and a cluster label (a thematic name like "Causal Inference" or "NLP Methods"). The output is written back into the same content files. Enrichment is selective: it only touches entries that are missing metadata or that have very sparse descriptions. Items with complete metadata are skipped to avoid unnecessary API calls.</p>
+            <p>The tags and enriched descriptions generated here are the raw material for the next step.</p>
+
+            <h3>Step 2: Embed (runs after enrichment)</h3>
+            <p>The embedding step turns each item's text (title, description, and tags combined) into a list of 1,024 numbers using an embedding model. These numbers are called an "embedding." Items about similar topics end up with similar-looking number lists, so the computer can find related items by comparing how close their numbers are, rather than by matching exact words. The output is saved as a compact binary file that the browser downloads when needed, and a smaller file for related-item recommendations.</p>
+
+            <h3>Step 3: Cluster (runs after embedding)</h3>
+            <p>The clustering step groups items within the Resources section into themed carousels for browsing. It starts from the cluster labels written during enrichment, then uses a standard grouping algorithm to handle orphans and merge clusters that are too small. The target is 5-10 items per carousel, and each carousel gets a human-readable name. These clusters become the browsable rows on the Resources page.</p>
+
+            <h3>Step 4: Rank (runs on a schedule)</h3>
+            <p>The ranking step is the most complex part of the pipeline. It fetches engagement data from the analytics database (clicks, time spent, scroll depth, search-result clicks), trains a small machine-learning model on those signals, and assigns each item a score between 0 and 1. That score is written back into the content files and determines where items appear on every list and row across the site.</p>
+            <p>For items with no engagement data yet (new additions), the ranker uses the embeddings from Step 2 to find the 5 most similar items that do have engagement, and borrows a fraction of their score. This is called "cold-start propagation." New items don't start at zero; they start from their nearest neighbors.</p>
+
+            <h3>The feedback loop</h3>
+            <p>The curved arrow in the diagram above shows the most important relationship in the whole pipeline: engagement data flows from the analytics database back into the ranking step. Every click, scroll, and search on the live site eventually becomes a training signal for the next ranking run. The pipeline is not a one-way conveyor belt; it is a loop that tightens over time as more engagement data accumulates.</p>
+
+        </div>
+    </div>
+
+    <!-- ============================================================
+         Tab 4: Recsys (COMPLETE)
+    ============================================================ -->
+    <div class="site-tab-content" id="tab-recsys" role="tabpanel" aria-labelledby="tab-btn-recsys">
+
+        <div class="site-tab-intro">
+            <h2>Recommendation Surfaces</h2>
+            <p class="site-tab-lead">A recommendation system is only as useful as the places it shows up. This tab maps out the specific spots on the site where recommendations appear, what drives each one, and what you are supposed to get out of it.</p>
+        </div>
+
+        <!-- SVG Diagram: cartoon site map showing where each surface lives -->
+        <div class="site-diagram-container">
+            <svg viewBox="0 0 860 290" width="100%" height="auto" role="img" aria-label="Recommendation surfaces site map" class="site-diagram">
+                <defs>
+                    <marker id="arrow-r" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                        <path d="M0,0 L0,6 L8,3 z" fill="#888" />
+                    </marker>
+                </defs>
+
+                <!-- Homepage column -->
+                <rect x="10" y="20" width="180" height="260" rx="8" ry="8" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+                <text x="100" y="44" text-anchor="middle" font-size="18" font-weight="600" fill="#555">Homepage</text>
+
+                <!-- Hero banner inside homepage -->
+                <rect x="22" y="54" width="156" height="44" rx="5" ry="5" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1"/>
+                <text x="100" y="72" text-anchor="middle" font-size="16" font-weight="600" fill="#1a1a1a">Hero Banner</text>
+                <text x="100" y="90" text-anchor="middle" font-size="15" fill="#4a9eff">top 5 by ranking score</text>
+
+                <!-- Trending row inside homepage -->
+                <rect x="22" y="108" width="156" height="44" rx="5" ry="5" fill="#e8f5e9" stroke="#4caf50" stroke-width="1"/>
+                <text x="100" y="126" text-anchor="middle" font-size="16" font-weight="600" fill="#1a1a1a">Trending Row</text>
+                <text x="100" y="144" text-anchor="middle" font-size="15" fill="#4caf50">recent clicks + freshness</text>
+
+                <!-- Content rows inside homepage -->
+                <rect x="22" y="162" width="156" height="44" rx="5" ry="5" fill="#fff3e0" stroke="#f5a623" stroke-width="1"/>
+                <text x="100" y="180" text-anchor="middle" font-size="16" font-weight="600" fill="#1a1a1a">Type Rows</text>
+                <text x="100" y="198" text-anchor="middle" font-size="15" fill="#f5a623">by section, ranked by score</text>
+
+                <!-- Because You Viewed inside homepage -->
+                <rect x="22" y="216" width="156" height="44" rx="5" ry="5" fill="#fce4ec" stroke="#e91e63" stroke-width="1"/>
+                <text x="100" y="234" text-anchor="middle" font-size="16" font-weight="600" fill="#1a1a1a">Because You Viewed</text>
+                <text x="100" y="252" text-anchor="middle" font-size="15" fill="#e91e63">browser reading history</text>
+
+                <!-- Search column -->
+                <rect x="220" y="20" width="180" height="155" rx="8" ry="8" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+                <text x="310" y="44" text-anchor="middle" font-size="18" font-weight="600" fill="#555">Search</text>
+
+                <rect x="232" y="54" width="156" height="44" rx="5" ry="5" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1"/>
+                <text x="310" y="72" text-anchor="middle" font-size="16" font-weight="600" fill="#1a1a1a">Keyword Match</text>
+                <text x="310" y="90" text-anchor="middle" font-size="15" fill="#4a9eff">exact word overlap</text>
+
+                <rect x="232" y="108" width="156" height="44" rx="5" ry="5" fill="#e8f5e9" stroke="#4caf50" stroke-width="1"/>
+                <text x="310" y="126" text-anchor="middle" font-size="16" font-weight="600" fill="#1a1a1a">Semantic Match</text>
+                <text x="310" y="144" text-anchor="middle" font-size="15" fill="#4caf50">embedding similarity</text>
+
+                <!-- Section list column -->
+                <rect x="430" y="20" width="180" height="115" rx="8" ry="8" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+                <text x="520" y="44" text-anchor="middle" font-size="18" font-weight="600" fill="#555">Section Pages</text>
+
+                <rect x="442" y="54" width="156" height="62" rx="5" ry="5" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1"/>
+                <text x="520" y="76" text-anchor="middle" font-size="16" font-weight="600" fill="#1a1a1a">Ranked List</text>
+                <text x="520" y="94" text-anchor="middle" font-size="15" fill="#9c27b0">all items sorted by</text>
+                <text x="520" y="110" text-anchor="middle" font-size="15" fill="#9c27b0">ranking score</text>
+
+                <!-- Personalization callout -->
+                <rect x="430" y="150" width="180" height="130" rx="8" ry="8" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+                <text x="520" y="174" text-anchor="middle" font-size="18" font-weight="600" fill="#555">Personalization</text>
+
+                <rect x="442" y="186" width="156" height="80" rx="5" ry="5" fill="#fce4ec" stroke="#e91e63" stroke-width="1"/>
+                <text x="520" y="208" text-anchor="middle" font-size="16" font-weight="600" fill="#1a1a1a">Homepage Re-rank</text>
+                <text x="520" y="226" text-anchor="middle" font-size="15" fill="#e91e63">boosts items similar to</text>
+                <text x="520" y="242" text-anchor="middle" font-size="15" fill="#e91e63">your recent clicks</text>
+                <text x="520" y="258" text-anchor="middle" font-size="15" fill="#e91e63">(in browser, never uploaded)</text>
+
+                <!-- Legend -->
+                <rect x="640" y="20" width="210" height="210" rx="8" ry="8" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1.5"/>
+                <text x="745" y="44" text-anchor="middle" font-size="18" font-weight="600" fill="#555">Signal key</text>
+                <rect x="655" y="58" width="12" height="12" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1"/>
+                <text x="675" y="70" font-size="15" fill="#555">ML ranking score</text>
+                <rect x="655" y="86" width="12" height="12" fill="#e8f5e9" stroke="#4caf50" stroke-width="1"/>
+                <text x="675" y="98" font-size="15" fill="#555">Recent engagement + freshness</text>
+                <rect x="655" y="114" width="12" height="12" fill="#fff3e0" stroke="#f5a623" stroke-width="1"/>
+                <text x="675" y="126" font-size="15" fill="#555">Section-level rank</text>
+                <rect x="655" y="142" width="12" height="12" fill="#fce4ec" stroke="#e91e63" stroke-width="1"/>
+                <text x="675" y="154" font-size="15" fill="#555">Your reading history</text>
+                <rect x="655" y="170" width="12" height="12" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1"/>
+                <text x="675" y="182" font-size="15" fill="#555">Sorted by score</text>
+                <text x="745" y="205" text-anchor="middle" font-size="15" fill="#999">Reading history stays in</text>
+                <text x="745" y="220" text-anchor="middle" font-size="15" fill="#999">your browser. Never sent.</text>
+            </svg>
+        </div>
+
+        <!-- Tab 4: Running example - what the homepage actually showed -->
+        <div class="under-hood-callout callout-example">
+            <p>The "Trending Now" row as of the last ranking run (May 2026) led with <strong>Stefan Wager's "Causal Inference: A Statistical Learning Approach"</strong> at score 1.00, followed by <strong>"Causal Inference for the Brave and True"</strong> by Matheus Facure (score 0.376), <strong>JD.com 2020 (MSOM-20) dataset</strong> (score 0.280), <strong>"Causal Econometrics Course"</strong> (score 0.257), and <strong>BestBuy dataset</strong> (score 0.244). Four of the five top items are causal inference resources. That's not a editorial choice; it's the community voting with its clicks.</p>
+        </div>
+
+        <!-- Tab 4: Comparison panel - first-time vs returning visitor -->
+        <div class="site-prose">
+            <h3>How the homepage adapts to who you are</h3>
+            <p>The server sends the same HTML to every visitor. Your browser is the one that rearranges things, based on reading history stored locally.</p>
+        </div>
+        <div class="under-hood-comparison">
+            <div class="under-hood-comparison-pane pane-left">
+                <h4>First visit</h4>
+                <ul>
+                    <li>Rows shown in default score order</li>
+                    <li>Hero row: top 5 items site-wide by ranking score</li>
+                    <li>No "Because You Viewed" row yet (nothing to base it on)</li>
+                    <li>Every item equally weighted for display</li>
+                </ul>
+            </div>
+            <div class="under-hood-comparison-pane pane-right">
+                <h4>Returning reader (after a few clicks)</h4>
+                <ul>
+                    <li>Items similar to past clicks get a quiet boost in row order</li>
+                    <li>Items already seen are deprioritized (you won't get the same thing twice)</li>
+                    <li>"Because You Viewed" row appears with semantically related suggestions</li>
+                    <li>All adjustments happen in-browser; server sees nothing</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Prose -->
+        <div class="site-prose">
+
+            <h3>Homepage rows: the main stage</h3>
+            <p>The homepage is organized into named rows, each curated for a different purpose. The <strong>hero banner</strong> at the top rotates through the five highest-scoring items across the whole corpus. Below that are rows like "Trending Now" (items with a spike in recent clicks, blended with a freshness boost), "Top Packages," "Top Datasets," and so on. Each row is ranked independently by score within its category. The rows themselves are pre-computed by the ranking step and stored in a layout file, so the site build step is just reading a file, not running any algorithms.</p>
+
+            <h3>Search: two kinds of matching blended together</h3>
+            <p>When you type something in the search bar, two kinds of matching happen at the same time. <strong>Keyword matching</strong> finds items whose text contains the words you typed (or words close to them). <strong>Semantic matching</strong> finds items that mean something similar to your query, even if they share no words. Both produce a ranked list, and the two lists are blended together using a technique called Reciprocal Rank Fusion: an item gets a higher combined score if it appeared high in either list (or both). After blending, a diversity pass ensures the top results aren't all nearly identical to each other. For the algorithm behind this, see the "How Recs Work" tab.</p>
+
+            <h3>Related items: "Because You Viewed"</h3>
+            <p>Once you have clicked on a few items, a row called "Because You Viewed" appears on the homepage. It shows items that are similar (in the embedding sense, meaning similar in topic and style) to things you recently clicked. The similarity is pre-computed and stored in a file that loads quietly in the background when the page opens. Matching your reading history against that file happens entirely in your browser. Nothing about what you clicked is ever sent to a server.</p>
+
+            <h3>Section pages: sorted lists</h3>
+            <p>Every section page (Packages, Datasets, Resources, and so on) is a ranked list of all items in that category, sorted from highest to lowest score. There is no personalization here: the order is the same for every visitor. These pages are static HTML files generated at build time, which means they load quickly and work without JavaScript.</p>
+
+            <h3>Personalization: a subtle re-rank on the homepage</h3>
+            <p>The homepage rows respond to your reading history. If you have clicked on several machine-learning papers, the homepage will quietly surface more of them. If you have already seen an item, the homepage deprioritizes it so you see something new. This re-ranking happens in JavaScript on your device, after the page loads. It does not change the underlying score in the content files; it only adjusts the display order for you. No reading history is ever uploaded.</p>
+
+        </div>
+    </div>
+
+    <!-- ============================================================
+         Tab 5: How Recs Work (COMPLETE)
+    ============================================================ -->
+    <div class="site-tab-content" id="tab-how-recs-work" role="tabpanel" aria-labelledby="tab-btn-how-recs-work">
+
+        <div class="site-tab-intro">
+            <h2>How Recommendations Work</h2>
+            <p class="site-tab-lead">This tab explains the actual algorithms. No jargon left unexplained. If you want to understand how a number gets assigned to every item on the site, or how the search bar decides what to show, this is the place.</p>
+        </div>
+
+        <!-- SVG Diagram: how a ranking score gets made -->
+        <div class="site-diagram-container">
+            <svg viewBox="0 0 860 280" width="100%" height="auto" role="img" aria-label="How a recommendation score is computed" class="site-diagram">
+                <defs>
+                    <marker id="arrow-h" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                        <path d="M0,0 L0,6 L8,3 z" fill="#888" />
+                    </marker>
+                </defs>
+
+                <!-- Column 1: Input signals -->
+                <text x="90" y="22" text-anchor="middle" font-size="18" fill="#4a9eff" font-weight="600" letter-spacing="0.05em">SIGNALS</text>
+
+                <rect x="10" y="32" width="160" height="30" rx="6" ry="6" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1"/>
+                <text x="90" y="52" text-anchor="middle" font-size="16" fill="#1a1a1a">clicks (x5 weight)</text>
+
+                <rect x="10" y="70" width="160" height="30" rx="6" ry="6" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1"/>
+                <text x="90" y="90" text-anchor="middle" font-size="16" fill="#1a1a1a">time reading (x1 per min)</text>
+
+                <rect x="10" y="108" width="160" height="30" rx="6" ry="6" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1"/>
+                <text x="90" y="128" text-anchor="middle" font-size="16" fill="#1a1a1a">scroll depth (x2 bonus)</text>
+
+                <rect x="10" y="146" width="160" height="30" rx="6" ry="6" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1"/>
+                <text x="90" y="166" text-anchor="middle" font-size="16" fill="#1a1a1a">search clicks (x3 bonus)</text>
+
+                <rect x="10" y="184" width="160" height="30" rx="6" ry="6" fill="#fce4ec" stroke="#e91e63" stroke-width="1"/>
+                <text x="90" y="204" text-anchor="middle" font-size="16" fill="#1a1a1a">rage clicks (x-2 penalty)</text>
+
+                <rect x="10" y="222" width="160" height="30" rx="6" ry="6" fill="#e8f5e9" stroke="#4caf50" stroke-width="1"/>
+                <text x="90" y="242" text-anchor="middle" font-size="16" fill="#1a1a1a">freshness boost (recency)</text>
+
+                <!-- Arrows from signals to model -->
+                <line x1="171" y1="47" x2="263" y2="100" stroke="#888" stroke-width="1" marker-end="url(#arrow-h)"/>
+                <line x1="171" y1="85" x2="263" y2="110" stroke="#888" stroke-width="1" marker-end="url(#arrow-h)"/>
+                <line x1="171" y1="123" x2="263" y2="120" stroke="#888" stroke-width="1" marker-end="url(#arrow-h)"/>
+                <line x1="171" y1="161" x2="263" y2="130" stroke="#888" stroke-width="1" marker-end="url(#arrow-h)"/>
+                <line x1="171" y1="199" x2="263" y2="140" stroke="#888" stroke-width="1" marker-end="url(#arrow-h)"/>
+                <line x1="171" y1="237" x2="263" y2="150" stroke="#888" stroke-width="1" marker-end="url(#arrow-h)"/>
+
+                <!-- Column 2: ML Model -->
+                <text x="335" y="22" text-anchor="middle" font-size="18" fill="#e91e63" font-weight="600" letter-spacing="0.05em">MODEL</text>
+                <rect x="265" y="70" width="140" height="120" rx="8" ry="8" fill="#fce4ec" stroke="#e91e63" stroke-width="1.5"/>
+                <text x="335" y="116" text-anchor="middle" font-size="22" font-weight="600" fill="#1a1a1a">Ranking</text>
+                <text x="335" y="140" text-anchor="middle" font-size="18" fill="#555">ML model</text>
+                <text x="335" y="158" text-anchor="middle" font-size="18" fill="#555">learns from past data</text>
+
+                <!-- Arrow model to output -->
+                <line x1="406" y1="130" x2="458" y2="130" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-h)"/>
+
+                <!-- Column 3: Score output -->
+                <text x="545" y="22" text-anchor="middle" font-size="18" fill="#9c27b0" font-weight="600" letter-spacing="0.05em">OUTPUT</text>
+                <rect x="460" y="80" width="170" height="100" rx="8" ry="8" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1.5"/>
+                <text x="545" y="120" text-anchor="middle" font-size="22" font-weight="600" fill="#1a1a1a">Ranking Score</text>
+                <text x="545" y="142" text-anchor="middle" font-size="18" fill="#555">0.0 to 1.0 per item</text>
+                <text x="545" y="162" text-anchor="middle" font-size="18" fill="#555">written to content files</text>
+
+                <!-- Arrows from score to uses -->
+                <line x1="631" y1="105" x2="683" y2="80" stroke="#888" stroke-width="1" marker-end="url(#arrow-h)"/>
+                <line x1="631" y1="130" x2="683" y2="130" stroke="#888" stroke-width="1" marker-end="url(#arrow-h)"/>
+                <line x1="631" y1="155" x2="683" y2="170" stroke="#888" stroke-width="1" marker-end="url(#arrow-h)"/>
+
+                <!-- Column 4: used by -->
+                <text x="770" y="22" text-anchor="middle" font-size="18" fill="#f5a623" font-weight="600" letter-spacing="0.05em">USED BY</text>
+                <rect x="685" y="52" width="155" height="40" rx="6" ry="6" fill="#fff3e0" stroke="#f5a623" stroke-width="1"/>
+                <text x="762" y="77" text-anchor="middle" font-size="16" fill="#1a1a1a">homepage row order</text>
+
+                <rect x="685" y="106" width="155" height="40" rx="6" ry="6" fill="#fff3e0" stroke="#f5a623" stroke-width="1"/>
+                <text x="762" y="131" text-anchor="middle" font-size="16" fill="#1a1a1a">section page rank</text>
+
+                <rect x="685" y="160" width="155" height="40" rx="6" ry="6" fill="#fff3e0" stroke="#f5a623" stroke-width="1"/>
+                <text x="762" y="185" text-anchor="middle" font-size="16" fill="#1a1a1a">cold-start seed score</text>
+
+                <!-- Cold start note -->
+                <rect x="265" y="220" width="360" height="48" rx="6" ry="6" fill="#f8f9fa" stroke="#dee2e6" stroke-width="1"/>
+                <text x="445" y="242" text-anchor="middle" font-size="16" fill="#555">New items have no signals. The model finds the</text>
+                <text x="445" y="260" text-anchor="middle" font-size="16" fill="#555">5 most similar items and borrows part of their score ("cold start").</text>
+            </svg>
+        </div>
+
+        <!-- Tab 5: Real-data signal weights table -->
+        <div class="site-prose">
+            <h3>Signal weights: what the ranker is actually measuring</h3>
+            <p>The table below shows every signal the ranking model reads, its direction (positive or negative), and its weight. These are the actual values in the current configuration.</p>
+        </div>
+        <div class="site-table-container">
+            <table class="under-hood-data-table">
+                <thead>
+                    <tr><th>Signal</th><th>Weight</th><th>What it means</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Outbound clicks</td><td class="ud-pos">+5.0</td><td>Clicked the link and left to read; the strongest positive signal</td></tr>
+                    <tr><td>Search-result clicks</td><td class="ud-pos">+3.0</td><td>Searched, saw it, chose it: high-intent</td></tr>
+                    <tr><td>Scroll past 90%</td><td class="ud-pos">+2.0</td><td>Read the whole page</td></tr>
+                    <tr><td>Deep session</td><td class="ud-pos">+1.5</td><td>Part of a high-engagement multi-item session</td></tr>
+                    <tr><td>Dwell time</td><td class="ud-pos">+1.0 /min</td><td>Minutes actually spent on the page</td></tr>
+                    <tr><td>Impressions</td><td class="ud-pos">+0.5</td><td>Card was visible in the viewport</td></tr>
+                    <tr><td>Co-clicks</td><td class="ud-pos">+0.3</td><td>Clicked alongside other engaged items in the same session</td></tr>
+                    <tr><td>Co-views</td><td class="ud-pos">+0.1</td><td>Viewed in the same session as other items</td></tr>
+                    <tr><td>Freshness</td><td class="ud-pos">+0.15 max</td><td>Recency boost that decays with a 30-day half-life</td></tr>
+                    <tr><td>Rage clicks</td><td class="ud-neg">-2.0</td><td>Rapid repeated clicks: frustration signal</td></tr>
+                    <tr><td>Quick bounces</td><td class="ud-neg">-1.0</td><td>Left almost immediately</td></tr>
+                    <tr><td>High impressions, zero clicks</td><td class="ud-neg">-1.0</td><td>Seen many times, never clicked: probably irrelevant</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tab 5: Pull-quote from recsys literature -->
+        <div class="under-hood-callout callout-quote">
+            <p>Relevance is not binary. It is a distribution over users, queries, and contexts. A recommender system is really a probability estimator dressed up as a list.</p>
+            <div class="callout-attribution">paraphrase of Daniel Tunkelang, "Faceted Search" (Morgan &amp; Claypool, 2009)</div>
+        </div>
+
+        <!-- Tab 5: Conceptual snippet - search fusion pseudocode -->
+        <div class="site-prose">
+            <h3>How search blends two lists into one</h3>
+            <p>When you search, two ranked lists are produced simultaneously and then fused. The fusion technique (Reciprocal Rank Fusion) rewards items that appear high in either list.</p>
+        </div>
+        <span class="under-hood-snippet-label">search fusion: how two lists become one (pseudocode)</span>
+        <div class="under-hood-snippet">
+            <code><span class="snip-comment">// step 1: get two ranked lists for query "diff in diff"</span>
+keyword_results  = keyword_search("diff in diff")
+  <span class="snip-comment">// → ["DiD course", "mixtape chapter 9", "Callaway-Sant'Anna", ...]</span>
+semantic_results = semantic_search(embed("diff in diff"))
+  <span class="snip-comment">// → ["Callaway-Sant'Anna", "Event studies paper", "DiD course", ...]</span>
+
+<span class="snip-comment">// step 2: Reciprocal Rank Fusion score for each candidate</span>
+for item in all_candidates:
+  rrf_score = 1/(k + keyword_rank) + 1/(k + semantic_rank)
+  <span class="snip-comment">// k=60 is a smoothing constant; higher rank = lower position number</span>
+
+<span class="snip-comment">// step 3: sort by rrf_score, run MMR diversity pass on top-20</span>
+fused = sort_by(rrf_score, descending=True)
+final = mmr_diverse(fused[:20], lambda=0.7)
+  <span class="snip-comment">// MMR trades some relevance for variety so the top 5 aren't near-identical</span></code>
+        </div>
+
+        <!-- Tab 5: Running example - real search walkthrough -->
+        <div class="under-hood-callout callout-example">
+            <p>A search for <strong>"difference in differences"</strong> returns different results from keyword and semantic passes. The keyword pass finds items that literally contain those words in their titles or descriptions. The semantic pass finds items whose meaning is close to the query in vector space: it surfaces event-study papers, synthetic control resources, and "parallel trends" explainers even if they never use the phrase "difference in differences." After fusion, the blended top 5 includes results from both passes ranked by their combined position. The diversity step then ensures the top 5 aren't five near-identical DiD textbook chapters.</p>
+        </div>
+
+        <!-- Prose -->
+        <div class="site-prose">
+
+            <h3>The ranker: learning from engagement</h3>
+            <p>The core algorithm is a machine-learning model (a type of "gradient boosted tree," which you can think of as a very sophisticated weighted average that learns its own weights from data). The model takes a set of engagement signals for each item and outputs a single score between 0 and 1. Higher is better.</p>
+            <p>The signals and their rough weights are: clicks (5x), search-result clicks (3x, because clicking a search result is a very intentional act), scroll depth past 90% (2x, which means you read the whole thing), time spent reading (1x per minute), co-occurrence with other clicked items in the same session (0.3x), and freshness (recent items get a small decay-based boost). On the penalty side: rage clicks (rapid repeated clicks, a sign of frustration, -2x) and items with many impressions but zero clicks (-1x).</p>
+            <p>The model learns to combine these signals from historical data. It does not use rules written by hand; it figures out the combination that best predicts future engagement.</p>
+
+            <h3>Cold start: what happens for new items</h3>
+            <p>A brand-new item has no engagement at all. Clicks are zero, dwell time is zero, scroll depth is zero. A model trained on engagement signals has nothing to work with. This is the "cold start" problem.</p>
+            <p>The solution is nearest-neighbor lookup. Before scoring new items, the pipeline computes embeddings for every item (the 1,024-number representation from the Processing tab). It then finds the 5 existing items most similar to each new item in that embedding space, and assigns the new item a fraction of their average score. This fraction is weighted by how close the neighbors are: a very similar neighbor gives a stronger signal than a loosely related one. The new item then accumulates its own engagement data over time, and future ranking runs replace the borrowed score with a real one.</p>
+
+            <h3>Search: two lists blended into one</h3>
+            <p>When you search, two separate systems respond at the same time. The keyword system finds items where the text literally contains your query words (or words with the same stem). The semantic system converts your query into an embedding and finds items whose embeddings are close. Each system produces a ranked list of results.</p>
+            <p>The two lists are then merged using <strong>Reciprocal Rank Fusion</strong>. This is a straightforward idea: each item gets a score based on where it appeared in each list. Position 1 in either list is worth 1/(1+1). Position 5 is worth 1/(5+1). The positions are summed across both lists, and items are re-sorted by the total. An item that appears in the top 5 of both lists will beat an item that only appears in one, even if the one-list item was ranked first in its own list.</p>
+            <p>After blending, a <strong>diversity pass</strong> runs over the top candidates. It prefers results that are meaningfully different from each other, rather than showing ten near-identical items. It does this by computing the similarity between each candidate and the items already selected, and penalizing items that are too similar to what is already in the list.</p>
+
+            <h3>Personalization: what changes for you</h3>
+            <p>When you have clicked several items, the homepage performs a local re-rank in your browser. It retrieves the pre-computed similar items for each thing in your reading history, boosts the scores of items in that set, and reduces the scores of items you have already seen. This adjustment happens entirely in JavaScript on your device. The server sends the same page to everyone; your browser is the one that changes the order. No reading history is ever sent to a server.</p>
+
+        </div>
+    </div>
+
+    <!-- ============================================================
+         Tab 6: How A/B Works (COMPLETE)
+    ============================================================ -->
+    <div class="site-tab-content" id="tab-how-ab-works" role="tabpanel" aria-labelledby="tab-btn-how-ab-works">
+
+        <div class="site-tab-intro">
+            <h2>How A/B Testing Works</h2>
+            <p class="site-tab-lead">Before rolling out a change to everyone, we run an experiment: show the change to half the users, keep the old version for the other half, and measure what happens. This tab explains how that process works from start to finish.</p>
+        </div>
+
+        <!-- SVG Diagram: fork in the road showing bucketing, two paths, event streams, analysis -->
+        <div class="site-diagram-container">
+            <svg viewBox="0 0 860 250" width="100%" height="auto" role="img" aria-label="A/B testing flow diagram" class="site-diagram">
+                <defs>
+                    <marker id="arrow-ab" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                        <path d="M0,0 L0,6 L8,3 z" fill="#888" />
+                    </marker>
+                    <marker id="arrow-ab-blue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                        <path d="M0,0 L0,6 L8,3 z" fill="#4a9eff" />
+                    </marker>
+                    <marker id="arrow-ab-green" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                        <path d="M0,0 L0,6 L8,3 z" fill="#4caf50" />
+                    </marker>
+                </defs>
+
+                <!-- Node 1: User visit -->
+                <rect x="10" y="90" width="140" height="70" rx="8" ry="8" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1.5"/>
+                <text x="80" y="122" text-anchor="middle" font-size="20" font-weight="600" fill="#1a1a1a">User Visit</text>
+                <text x="80" y="146" text-anchor="middle" font-size="16" fill="#555">user ID cookie read</text>
+
+                <!-- Arrow to Bucket -->
+                <line x1="151" y1="125" x2="193" y2="125" stroke="#888" stroke-width="1.5" marker-end="url(#arrow-ab)"/>
+
+                <!-- Node 2: Bucket function -->
+                <rect x="195" y="80" width="150" height="90" rx="8" ry="8" fill="#fff3e0" stroke="#f5a623" stroke-width="1.5"/>
+                <text x="270" y="115" text-anchor="middle" font-size="20" font-weight="600" fill="#1a1a1a">Hash Bucket</text>
+                <text x="270" y="135" text-anchor="middle" font-size="16" fill="#555">FNV-1a hash</text>
+                <text x="270" y="155" text-anchor="middle" font-size="16" fill="#555">same user = same bucket</text>
+
+                <!-- Fork arrows -->
+                <line x1="346" y1="105" x2="418" y2="80" stroke="#4a9eff" stroke-width="1.5" marker-end="url(#arrow-ab-blue)"/>
+                <line x1="346" y1="155" x2="418" y2="175" stroke="#4caf50" stroke-width="1.5" marker-end="url(#arrow-ab-green)"/>
+
+                <!-- Node 3a: Control -->
+                <rect x="420" y="45" width="155" height="70" rx="8" ry="8" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1.5"/>
+                <text x="497" y="76" text-anchor="middle" font-size="20" font-weight="600" fill="#1a1a1a">Control (A)</text>
+                <text x="497" y="98" text-anchor="middle" font-size="16" fill="#555">current version, no change</text>
+
+                <!-- Node 3b: Treatment -->
+                <rect x="420" y="145" width="155" height="70" rx="8" ry="8" fill="#e8f5e9" stroke="#4caf50" stroke-width="1.5"/>
+                <text x="497" y="176" text-anchor="middle" font-size="20" font-weight="600" fill="#1a1a1a">Treatment (B)</text>
+                <text x="497" y="198" text-anchor="middle" font-size="16" fill="#555">new version under test</text>
+
+                <!-- Event stream arrows -->
+                <line x1="576" y1="80" x2="638" y2="115" stroke="#888" stroke-width="1" marker-end="url(#arrow-ab)"/>
+                <line x1="576" y1="180" x2="638" y2="150" stroke="#888" stroke-width="1" marker-end="url(#arrow-ab)"/>
+
+                <!-- Node 4: Events -->
+                <rect x="640" y="85" width="155" height="90" rx="8" ry="8" fill="#fce4ec" stroke="#e91e63" stroke-width="1.5"/>
+                <text x="717" y="120" text-anchor="middle" font-size="20" font-weight="600" fill="#1a1a1a">Event Stream</text>
+                <text x="717" y="142" text-anchor="middle" font-size="16" fill="#555">experiment ID tagged</text>
+                <text x="717" y="162" text-anchor="middle" font-size="16" fill="#555">on every event</text>
+
+                <!-- Node 5: Analysis -->
+                <rect x="680" y="205" width="155" height="35" rx="6" ry="6" fill="#f3e5f5" stroke="#9c27b0" stroke-width="1"/>
+                <text x="757" y="228" text-anchor="middle" font-size="18" fill="#1a1a1a">Statistical analysis</text>
+                <line x1="717" y1="175" x2="750" y2="204" stroke="#888" stroke-width="1" marker-end="url(#arrow-ab)"/>
+
+                <!-- Stage labels -->
+                <text x="80" y="76" text-anchor="middle" font-size="18" fill="#4a9eff" font-weight="600" letter-spacing="0.05em">VISITOR</text>
+                <text x="270" y="66" text-anchor="middle" font-size="18" fill="#f5a623" font-weight="600" letter-spacing="0.05em">BUCKET</text>
+                <text x="497" y="30" text-anchor="middle" font-size="18" fill="#4a9eff" font-weight="600" letter-spacing="0.05em">VARIANTS</text>
+                <text x="717" y="70" text-anchor="middle" font-size="18" fill="#e91e63" font-weight="600" letter-spacing="0.05em">EVENTS</text>
+            </svg>
+        </div>
+
+        <!-- Tab 6: Conceptual snippet - what an experiment declaration looks like -->
+        <div class="site-prose">
+            <h3>Declaring an experiment</h3>
+            <p>Every experiment lives in a registry file, committed to the codebase. The declaration says who gets what, and what fraction of traffic goes to each variant. Nothing runs in secret.</p>
+        </div>
+        <span class="under-hood-snippet-label">what an experiment declaration looks like (illustrative)</span>
+        <div class="under-hood-snippet">
+            <code>{
+  "id":             "homepage_row_mmr_vs_baseline",  <span class="snip-comment">// unique, stable name</span>
+  "status":         "active",                        <span class="snip-comment">// active | paused | draft | ended</span>
+  "started_at":     "2026-06-01",
+  "primary_metric": "ctr",                           <span class="snip-comment">// what we're measuring</span>
+  "variants": [
+    { "id": "control",   "traffic": 50 },            <span class="snip-comment">// current behavior</span>
+    { "id": "treatment", "traffic": 50 }             <span class="snip-comment">// MMR diversity re-rank</span>
+  ]
+}
+
+<span class="snip-comment">// bucketing: hash(user_id + experiment_id) % 100 → variant</span>
+<span class="snip-comment">// same user → same variant, every visit, for this experiment's lifetime</span></code>
+        </div>
+
+        <!-- Tab 6: Running example - the A/A test results, honest framing -->
+        <div class="under-hood-callout callout-example">
+            <p>The first experiment, <strong>harness_aa_v1</strong>, ran from May 4 to May 23, 2026. Both variants were supposed to see the same thing; an A/A test should show identical click-through rates. Instead, the analysis showed <strong>control_a at 4.0% CTR</strong> (8,071 impressions, 322 clicks) vs <strong>control_b at 2.3% CTR</strong> (10,205 impressions, 237 clicks). A z-score of -6.5 and p near zero. That's not noise. A difference that large in a test where nothing differs means the measurement is broken.</p>
+            <p>The root cause: the anonymous user ID cookie was being written only after a first interaction (click or scroll), not on page load. The bucketing function read that cookie on the first impression, before the interaction, found it empty, and minted a temporary ID. Same user ended up in both variants. The bug touched 57 users across 19 days of data. It was fixed, the experiment was reset as <strong>harness_aa_v2</strong>, and the contaminated data was preserved for the record but flagged as invalid.</p>
+        </div>
+
+        <!-- Tab 6: Pull-quote about epistemic humility -->
+        <div class="under-hood-callout callout-quote">
+            <p>The most dangerous phrase in data science is "the numbers look about right." About right is how bad measurement hides behind intuition until it's too late to notice.</p>
+        </div>
+
+        <!-- Tab 6: Mini diagram - switchback design -->
+        <div class="site-prose">
+            <h3>Switchback design (planned for next phase)</h3>
+            <p>Some changes can't be tested by splitting users, because the two groups would interact with each other. The "Trending Now" row is one example: what one group clicks affects what appears as trending for another. The fix is a switchback: alternate the change on and off over time, then compare the periods.</p>
+        </div>
+        <div class="under-hood-mini-diagram">
+            <svg viewBox="0 0 420 130" width="420" height="130" role="img" aria-label="Switchback experiment design: alternating A and B periods over time">
+                <defs>
+                    <marker id="sb-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                        <path d="M0,0 L0,6 L8,3 z" fill="#888" />
+                    </marker>
+                </defs>
+                <!-- Time axis -->
+                <line x1="30" y1="95" x2="400" y2="95" stroke="#ccc" stroke-width="1.5" marker-end="url(#sb-arrow)"/>
+                <text x="405" y="99" font-size="11" fill="#aaa">time</text>
+
+                <!-- Period A1 -->
+                <rect x="40" y="50" width="70" height="38" rx="5" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1.5"/>
+                <text x="75" y="71" text-anchor="middle" font-size="13" font-weight="700" fill="#4a9eff">A</text>
+                <text x="75" y="104" text-anchor="middle" font-size="10" fill="#888">hr 1</text>
+
+                <!-- Period B1 -->
+                <rect x="118" y="50" width="70" height="38" rx="5" fill="#e8f5e9" stroke="#4caf50" stroke-width="1.5"/>
+                <text x="153" y="71" text-anchor="middle" font-size="13" font-weight="700" fill="#4caf50">B</text>
+                <text x="153" y="104" text-anchor="middle" font-size="10" fill="#888">hr 2</text>
+
+                <!-- Period A2 -->
+                <rect x="196" y="50" width="70" height="38" rx="5" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1.5"/>
+                <text x="231" y="71" text-anchor="middle" font-size="13" font-weight="700" fill="#4a9eff">A</text>
+                <text x="231" y="104" text-anchor="middle" font-size="10" fill="#888">hr 3</text>
+
+                <!-- Period B2 -->
+                <rect x="274" y="50" width="70" height="38" rx="5" fill="#e8f5e9" stroke="#4caf50" stroke-width="1.5"/>
+                <text x="309" y="71" text-anchor="middle" font-size="13" font-weight="700" fill="#4caf50">B</text>
+                <text x="309" y="104" text-anchor="middle" font-size="10" fill="#888">hr 4</text>
+
+                <!-- ... ellipsis -->
+                <text x="360" y="73" font-size="16" fill="#aaa">...</text>
+
+                <!-- Top label -->
+                <text x="220" y="30" text-anchor="middle" font-size="12" fill="#555" font-style="italic">compare A-periods to B-periods; users are never split</text>
+            </svg>
+            <span class="under-hood-mini-diagram-label">Switchback: the entire site alternates between versions on a time schedule, avoiding group contamination.</span>
+        </div>
+
+        <!-- Prose -->
+        <div class="site-prose">
+
+            <h3>Why A/B test at all</h3>
+            <p>Opinions about which design or algorithm is "better" are cheap. Everyone on the team (or in this case, me) has intuitions about what will work. But intuitions are often wrong, and the site is too small for that to be obvious without measurement. A/B testing is the discipline of turning a question like "does sorting by diversity help more than sorting by score alone?" into a measurement: run both versions at the same time on real users, count what actually happens, and let the data decide.</p>
+
+            <h3>How bucketing works</h3>
+            <p>When you visit the site, your anonymous user ID (stored in a cookie) is combined with the experiment ID using a hash function called FNV-1a. A hash function takes any text as input and produces a number. The number is taken modulo 100 to get a value between 0 and 99. Experiments declare their traffic split as percentages: a 50/50 split means users in buckets 0-49 see control, users in buckets 50-99 see treatment. Because the hash function is deterministic (the same inputs always give the same output), you see the same variant every visit, for the duration of the experiment. Different experiments use different experiment IDs, so your bucket in one experiment is independent of your bucket in another.</p>
+
+            <h3>What gets tracked</h3>
+            <p>Every event your browser sends to the analytics service already includes an experiment field: a map of which experiments you are in and which variant you received. For example, something like "harness_aa_v2: control_a." The analytics service stores this alongside the event itself. An analysis script then reads those events, groups them by variant, and computes per-variant click-through rates (CTR, the fraction of users who clicked something) with confidence intervals. It then runs a standard statistical test (a two-proportion z-test) to judge whether any difference between variants is likely real or just noise.</p>
+
+            <h3>The current experiment: an A/A sanity check</h3>
+            <p>Before running a real treatment experiment (where the two groups see something different), we first run an A/A test: both groups see exactly the same thing. If the harness works correctly, the two groups should produce nearly identical click-through rates. A big difference in an A/A test is a sign that something is broken in the measurement pipeline, not that one version is better. The current experiment is this A/A check. It replaced an earlier version that turned out to have a bug: the cookie that identifies users was being written too late, so some users appeared in both groups at once. That bug was fixed before restarting the experiment.</p>
+
+            <h3>Switchback experiments (planned)</h3>
+            <p>Some changes cannot be A/B tested by splitting users. The "Trending Now" row, for example, shows the same content to every visitor. If you show different trending rows to different user groups, the groups are no longer independent: what one group clicks affects what appears as trending for the other. The fix for this is a switchback experiment: instead of splitting by user, you alternate the change on and off over time, then compare the periods. One hour you run version A, the next you run version B, and so on. The analysis then compares the A-periods to the B-periods. This design is more complex to analyze, but it avoids the contamination problem. Switchback experiments are planned as the next step after the current A/A check validates the harness.</p>
+
+        </div>
+    </div>
+
+    <!-- ============================================================
+         Tab 7: Performance (COMPLETE)
+    ============================================================ -->
+    {{ $sb := site.Data.site_scoreboard }}
+    {{ $metrics := $sb.metrics }}
+    {{ $replays := $sb.replays }}
+    <div class="site-tab-content" id="tab-performance" role="tabpanel" aria-labelledby="tab-btn-performance">
+
+        <div class="site-tab-intro">
+            <h2>How Well Does the Ranker Work?</h2>
+            <p class="site-tab-lead">Every week or so, the ranking system gets re-evaluated. This tab shows the latest results. The numbers here are real, pulled from the same evaluation runs that govern whether any change gets promoted to the live site.</p>
+        </div>
+
+        {{ if $metrics.latest }}
+        {{ $lat := $metrics.latest }}
+
+        <!-- Scoreboard stat cards -->
+        <div class="scoreboard-grid">
+
+            <div class="scoreboard-card card-primary">
+                <div class="card-value">{{ printf "%.3f" $lat.ndcg_at_10 }}</div>
+                <div class="card-label">NDCG@10</div>
+                <div class="card-desc">How closely the top-10 ranking matches what people actually clicked. 1.0 is perfect; 0.0 is random. A score of 0.4 to 0.5 is a reasonable baseline for a curated content site at this scale.</div>
+            </div>
+
+            <div class="scoreboard-card">
+                <div class="card-value">{{ printf "%.0f%%" (mul $lat.hit_rate_at_10 100) }}</div>
+                <div class="card-label">Hit-Rate@10</div>
+                <div class="card-desc">Chance that at least one item in the top 10 was something the visitor eventually clicked. Higher is better.</div>
+            </div>
+
+            <div class="scoreboard-card">
+                <div class="card-value">{{ printf "%.3f" $lat.map_at_10 }}</div>
+                <div class="card-label">MAP</div>
+                <div class="card-desc">Mean Average Precision: how high up in the list a click typically appears across all evaluated visits. Rewards putting good items near the top, not just anywhere in the list.</div>
+            </div>
+
+            <div class="scoreboard-card">
+                <div class="card-value">{{ $lat.n_evaluable_sessions }}</div>
+                <div class="card-label">Evaluated Sessions</div>
+                <div class="card-desc">Number of real sessions used for this evaluation. Only sessions with at least one click are evaluable; the rest are skipped.</div>
+            </div>
+
+        </div>
+
+        <!-- Sparkline SVG (one dot per history row; lines once there are 2+ rows) -->
+        <div class="scoreboard-sparkline">
+            {{ $history := $metrics.history }}
+            {{ $n := len $history }}
+            {{ $w := 320 }}
+            {{ $h := 80 }}
+            {{ $pad := 16 }}
+            {{ $innerW := sub $w (mul $pad 2) }}
+            {{ $innerH := sub $h (mul $pad 2) }}
+            <svg viewBox="0 0 {{ $w }} {{ $h }}" width="{{ $w }}" height="{{ $h }}"
+                 role="img" aria-label="NDCG@10 trend over time">
+                <!-- Y-axis guide lines at 0.2, 0.4, 0.6, 0.8 -->
+                {{ range slice 0.2 0.4 0.6 0.8 }}
+                {{ $yFrac := sub 1.0 . }}
+                {{ $yPx := add $pad (mul $yFrac $innerH) }}
+                <line x1="{{ $pad }}" y1="{{ $yPx }}" x2="{{ sub $w $pad }}" y2="{{ $yPx }}"
+                      stroke="#ddd" stroke-width="1" stroke-dasharray="3,3"/>
+                <text x="{{ sub $pad 3 }}" y="{{ add $yPx 4 }}" text-anchor="end"
+                      font-size="10" fill="#aaa">{{ printf "%.1f" . }}</text>
+                {{ end }}
+                {{ if gt $n 1 }}
+                <!-- Draw polyline when we have multiple points -->
+                <polyline points="{{ range $i, $row := $history }}{{ $xFrac := div (float $i) (float (sub $n 1)) }}{{ $yFrac := sub 1.0 (default 0.0 $row.ndcg_at_10) }}{{ $xPx := add $pad (mul $xFrac $innerW) }}{{ $yPx := add $pad (mul $yFrac $innerH) }}{{ $xPx }},{{ $yPx }} {{ end }}"
+                          fill="none" stroke="#4a9eff" stroke-width="2" stroke-linejoin="round"/>
+                {{ end }}
+                <!-- Dots for each data point -->
+                {{ range $i, $row := $history }}
+                {{ $xFrac := div (float $i) (float (cond (eq $n 1) 1 (sub $n 1))) }}
+                {{ $yFrac := sub 1.0 (default 0.0 $row.ndcg_at_10) }}
+                {{ $xPx := add $pad (mul $xFrac $innerW) }}
+                {{ $yPx := add $pad (mul $yFrac $innerH) }}
+                <circle cx="{{ $xPx }}" cy="{{ $yPx }}" r="4"
+                        fill="#4a9eff" stroke="#fff" stroke-width="1.5">
+                    <title>{{ $row.date }}: {{ printf "%.4f" (default 0.0 $row.ndcg_at_10) }}</title>
+                </circle>
+                {{ end }}
+                <!-- X-axis label: latest date -->
+                {{ with index $history (sub $n 1) }}
+                <text x="{{ sub $w $pad }}" y="{{ sub $h 4 }}" text-anchor="end"
+                      font-size="10" fill="#aaa">{{ .date }}</text>
+                {{ end }}
+                <text x="{{ $pad }}" y="{{ sub $h 4 }}" font-size="10" fill="#aaa">NDCG@10 over time</text>
+            </svg>
+            <span class="sparkline-label">{{ $n }} {{ if eq $n 1 }}data point{{ else }}data points{{ end }}</span>
+        </div>
+
+        <!-- What these numbers mean -->
+        <div class="site-prose">
+
+            <h3>What these numbers are measuring</h3>
+            <p>The ranker is the part of the site that decides which items float to the top of every list. Measuring how good that ordering is requires checking, after the fact, whether the items placed highest were actually the ones people clicked. We do this by holding out a chunk of recent sessions (60 days of data by default) and asking: for each session, given only the items the ranker scored, did the thing the person clicked appear early in the list? NDCG, Hit-Rate, and MAP all measure this in slightly different ways.</p>
+            <p>NDCG (short for Normalized Discounted Cumulative Gain) is the primary metric. It scores between 0 and 1. A ranking that puts every clicked item at position 1 scores 1.0. A ranking no better than random scores near 0. For a content site at this scale, 0.4 to 0.5 is a reasonable starting point for a model that has only a modest amount of engagement data to learn from. We expect this number to grow over months as the corpus accumulates more clicks and the model can learn from richer patterns.</p>
+            <p>Hit-Rate@10 answers a simpler question: was at least one of the items in the top 10 something the visitor eventually clicked? This is easier to achieve than NDCG because it doesn't care about position within the top 10. MAP (Mean Average Precision) splits the difference: it rewards high positions, like NDCG, but uses a simpler average-of-precisions formula that some practitioners find more interpretable.</p>
+
+            <h3>How evaluation actually runs</h3>
+            <p>The evaluation is entirely offline: it does not run experiments on live users. Instead, it replays historical sessions against the current ranking and checks how well the ranking aligns with what people actually clicked during those sessions. This is a common technique in recommender systems research, sometimes called "leave-one-out" or "holdout evaluation." Sessions without any clicks are excluded from the count, because there is nothing to measure against.</p>
+            <p>The evaluation gate also governs when a new ranking approach is allowed to go live. The rule is: no default flip until we have at least three evaluation runs at the same holdout setting showing a consistent improvement. One measurement proving something looks better is not enough; it could be noise. Three measurements in the same direction is a pattern worth acting on.</p>
+
+            {{ if $replays.latest }}
+            {{ $rep := $replays.latest }}
+            <h3>Replay evaluation</h3>
+            <p>Alongside the main evaluation, we run a replay: a head-to-head comparison of two scoring approaches on the same set of historical sessions. The most recent replay ({{ $rep.date }}) compared two configurations over {{ $rep.n_evaluable }} sessions. Both approaches produced a NDCG@10 of {{ printf "%.4f" (default 0.0 $rep.baseline_ndcg_at_10) }}. When the delta is zero, it means we tested the same configuration against itself as a sanity check, confirming the evaluation framework is deterministic.</p>
+            {{ end }}
+
+            <h3>What "good" looks like over time</h3>
+            <p>We are not chasing a single target number. The goal is a steady upward trend over months as the ranker gets more engagement data, better cold-start propagation, and more carefully tuned features. The chart above shows the NDCG@10 trajectory. With one data point today, it is a single dot. Future evaluation runs will fill in the line. We track every run in a log that is the source of truth for the chart, so nothing is smoothed or cherry-picked.</p>
+
+        </div>
+
+        <!-- History table -->
+        {{ if gt (len $metrics.history) 0 }}
+        <div class="site-prose">
+            <h3>All evaluation runs</h3>
+        </div>
+        <div class="site-table-container">
+            <table class="site-content-types">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>NDCG@10</th>
+                        <th>Hit-Rate@10</th>
+                        <th>MAP</th>
+                        <th>Sessions</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ range $metrics.history }}
+                    <tr>
+                        <td>{{ .date }}</td>
+                        <td><strong>{{ printf "%.4f" (default 0.0 .ndcg_at_10) }}</strong></td>
+                        <td>{{ printf "%.4f" (default 0.0 .hit_rate_at_10) }}</td>
+                        <td>{{ printf "%.4f" (default 0.0 .map_at_10) }}</td>
+                        <td>{{ .n_evaluable_sessions }}</td>
+                        <td>{{ .notes }}</td>
+                    </tr>
+                    {{ end }}
+                </tbody>
+            </table>
+        </div>
+        {{ end }}
+
+        {{ else }}
+        <div class="site-prose">
+            <p>No evaluation data yet. This tab will populate automatically once the first evaluation run completes.</p>
+        </div>
+        {{ end }}
+
+    </div>
+
+    <!-- ============================================================
+         Tab 8: Experiments (COMPLETE)
+    ============================================================ -->
+    {{ $experiments := $sb.experiments }}
+    <div class="site-tab-content" id="tab-experiments" role="tabpanel" aria-labelledby="tab-btn-experiments">
+
+        <div class="site-tab-intro">
+            <h2>What Experiments Have We Run?</h2>
+            <p class="site-tab-lead">Every change to the ranking, layout, or recommendation logic that could affect what you see gets tested in a controlled experiment before it goes live for everyone. This tab is the public registry of every experiment ever started, including the ones that went wrong.</p>
+        </div>
+
+        <!-- Timeline SVG: horizontal bars by date range, color-coded by status -->
+        <div class="experiment-timeline">
+            <svg viewBox="0 0 760 120" width="100%" height="auto"
+                 role="img" aria-label="Experiment timeline by date range" class="site-diagram">
+                <!-- Reference dates -->
+                <text x="60" y="18" font-size="13" fill="#888" text-anchor="middle">May 4</text>
+                <text x="380" y="18" font-size="13" fill="#888" text-anchor="middle">May 14</text>
+                <text x="700" y="18" font-size="13" fill="#888" text-anchor="middle">May 24+</text>
+                <line x1="60" y1="22" x2="60" y2="110" stroke="#eee" stroke-width="1"/>
+                <line x1="380" y1="22" x2="380" y2="110" stroke="#eee" stroke-width="1"/>
+                <line x1="700" y1="22" x2="700" y2="110" stroke="#eee" stroke-width="1"/>
+
+                <!-- harness_aa_v1: May 4 - May 23 (19 days out of 20-day window shown) -->
+                <rect x="60" y="35" width="620" height="28" rx="6" ry="6" fill="#fce4ec" stroke="#e91e63" stroke-width="1.5"/>
+                <text x="70" y="54" font-size="14" font-weight="600" fill="#c62060">harness_aa_v1</text>
+                <text x="500" y="54" font-size="13" fill="#c62060">broken</text>
+
+                <!-- harness_aa_v2: May 24 onwards -->
+                <rect x="700" y="71" width="44" height="28" rx="6" ry="6" fill="#e8f5e9" stroke="#4caf50" stroke-width="1.5"/>
+                <text x="716" y="90" font-size="13" font-weight="600" fill="#2e7d32">v2</text>
+                <line x1="60" y1="84" x2="700" y2="84" stroke="#e0e0e0" stroke-width="1" stroke-dasharray="4,3"/>
+                <text x="62" y="90" font-size="13" fill="#888" font-style="italic">waiting (not yet started)</text>
+
+                <!-- Legend -->
+                <rect x="60" y="108" width="12" height="8" rx="2" fill="#fce4ec" stroke="#e91e63" stroke-width="1"/>
+                <text x="76" y="117" font-size="12" fill="#666">paused/broken</text>
+                <rect x="165" y="108" width="12" height="8" rx="2" fill="#e8f5e9" stroke="#4caf50" stroke-width="1"/>
+                <text x="181" y="117" font-size="12" fill="#666">active</text>
+            </svg>
+        </div>
+
+        <!-- Active experiment callout -->
+        {{ range $experiments }}{{ if eq .status "active" }}
+        <div class="active-experiment-callout">
+            <div class="callout-icon">&#x1F7E2;</div>
+            <div class="callout-body">
+                <h4>Running now: {{ .id }} <span class="status-pill status-active">live</span></h4>
+                <p>{{ .summary }} Results are not available yet. Once we have a few days of data, the per-variant numbers will appear in the detail section below.</p>
+            </div>
+        </div>
+        {{ end }}{{ end }}
+
+        <!-- Experiments table -->
+        <div class="site-table-container">
+            <table class="site-content-types">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Started</th>
+                        <th>Status</th>
+                        <th>Kind</th>
+                        <th>Verdict</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ range $experiments }}
+                    <tr>
+                        <td><code>{{ .id }}</code></td>
+                        <td>{{ .started_at }}</td>
+                        <td>
+                            {{ if eq .status "active" }}
+                            <span class="status-pill status-active">live</span>
+                            {{ else if eq .status "paused" }}
+                            <span class="status-pill status-paused">paused</span>
+                            {{ else if eq .status "ended" }}
+                            <span class="status-pill status-ended">ended</span>
+                            {{ else }}
+                            <span class="status-pill status-paused">{{ .status }}</span>
+                            {{ end }}
+                        </td>
+                        <td>{{ .kind }}</td>
+                        <td>{{ .verdict }}</td>
+                    </tr>
+                    {{ end }}
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Per-experiment detail cards -->
+        <div class="site-prose">
+            <h3>Experiment details</h3>
+        </div>
+
+        {{ range $experiments }}
+        <div class="experiment-card">
+            <div class="experiment-card-header">
+                <span class="experiment-card-id">{{ .id }}</span>
+                <span class="experiment-card-kind">{{ .kind }}</span>
+                {{ if eq .status "active" }}
+                <span class="status-pill status-active">live</span>
+                {{ else if eq .status "paused" }}
+                <span class="status-pill status-paused">paused</span>
+                {{ end }}
+            </div>
+            <p class="experiment-card-summary">{{ .summary }}</p>
+
+            {{ if .results }}
+            <div class="experiment-results-grid">
+                {{ range $variant, $data := .results }}
+                <div class="experiment-result-cell">
+                    <div class="variant-name">{{ $variant }}</div>
+                    <div class="variant-ctr">{{ printf "%.1f%%" (mul $data.ctr 100) }}</div>
+                    <div class="variant-ci">95% CI [{{ printf "%.1f%%" (mul $data.ci_low 100) }}, {{ printf "%.1f%%" (mul $data.ci_high 100) }}]</div>
+                    <div class="variant-counts">{{ $data.impressions }} impressions, {{ $data.clicks }} clicks</div>
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+
+            {{ $verdictClass := "experiment-verdict" }}
+            {{ if eq .status "paused" }}{{ $verdictClass = "experiment-verdict verdict-broken" }}{{ end }}
+            {{ if eq .status "active" }}{{ $verdictClass = "experiment-verdict verdict-active" }}{{ end }}
+            <div class="{{ $verdictClass }}">
+                <strong>Verdict:</strong> {{ .verdict }}
+            </div>
+        </div>
+        {{ end }}
+
+        <!-- What to expect next -->
+        <div class="next-experiments-callout">
+            <h3>What comes next</h3>
+            <p>The current A/A test is validating the harness itself: if both variants show similar click-through rates, the infrastructure is confirmed to be splitting traffic fairly and measuring events correctly. That is the prerequisite for any real treatment experiment.</p>
+            <p>Once the A/A passes, the first real treatment experiments are planned to test whether applying a diversity pass to homepage rows (surfacing a broader mix of topics rather than the highest-scoring items alone) improves overall engagement. A second planned experiment will test whether re-ordering recommendations based on an individual's browsing history produces more clicks than the default score-based order.</p>
+            <p>All experiments will appear in this table as they start. Nothing runs in secret.</p>
+        </div>
+
+        <!-- Prose: how experiments connect to decisions -->
+        <div class="site-prose">
+
+            <h3>How we run experiments here</h3>
+            <p>The experiment registry is a file committed into the site's code, so every experiment that has ever existed (including the ones that were paused, broke, or were never launched) has a permanent public record. The status field tells you what happened: "active" means it is running right now, "paused" means it was stopped before a conclusion, and "ended" means it ran to completion with a verdict.</p>
+            <p>Bucketing (deciding which variant each visitor sees) happens in JavaScript when you first load any page. Your anonymous user ID (a random number stored in a cookie) is combined with the experiment ID using a hash function to produce a number between 0 and 99. That number maps to a variant. The same user ID always produces the same bucket for a given experiment. If an experiment is paused, the bucket mapping is preserved but no new experiment data is collected.</p>
+            <p>We do not run A/B tests in secret or post-hoc select which results to publish. The table above shows every experiment, including the one that broke. The broken one is especially valuable: finding that the harness was contaminated before running any real treatment experiment saved us from drawing wrong conclusions about whether changes actually helped.</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var tabs = Array.from(document.querySelectorAll('.site-tab'));
+    var tabContents = document.querySelectorAll('.site-tab-content');
+
+    function activateSiteTab(targetTab) {
+        tabs.forEach(function (t) {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+            t.tabIndex = -1;
+        });
+        tabContents.forEach(function (c) {
+            c.classList.remove('active');
+        });
+
+        var activeBtn = tabs.find(function (t) { return t.dataset.tab === targetTab; });
+        if (activeBtn) {
+            activeBtn.classList.add('active');
+            activeBtn.setAttribute('aria-selected', 'true');
+            activeBtn.tabIndex = 0;
+        }
+
+        var panel = document.getElementById('tab-' + targetTab);
+        if (panel) {
+            panel.classList.add('active');
+        }
+    }
+
+    tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+            activateSiteTab(this.dataset.tab);
+        });
+
+        /* Arrow-key navigation between tabs */
+        tab.addEventListener('keydown', function (e) {
+            var idx = tabs.indexOf(this);
+            var next = -1;
+            if (e.key === 'ArrowRight') {
+                next = (idx + 1) % tabs.length;
+            } else if (e.key === 'ArrowLeft') {
+                next = (idx - 1 + tabs.length) % tabs.length;
+            } else if (e.key === 'Home') {
+                next = 0;
+            } else if (e.key === 'End') {
+                next = tabs.length - 1;
+            }
+            if (next >= 0) {
+                e.preventDefault();
+                tabs[next].focus();
+                activateSiteTab(tabs[next].dataset.tab);
+            }
+        });
+    });
+
+    /* Set correct tabIndex initial state */
+    tabs.forEach(function (t, i) {
+        t.tabIndex = (i === 0) ? 0 : -1;
+    });
+});
+</script>
+
+{{ end }}

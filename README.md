@@ -3,6 +3,7 @@
 A curated directory of resources for tech economists, data scientists, and applied researchers.
 
 **Live site:** [tech-econ.com](https://tech-econ.com/)
+**Roadmap:** [`docs/roadmap.md`](docs/roadmap.md) — Now / Next / Later (living doc).
 
 ## What's Inside
 

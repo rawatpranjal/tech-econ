@@ -42,6 +42,8 @@ D1 event payload (per analytics-worker/index.js line 280-ish):
 from __future__ import annotations
 
 import json
+import re
+import ssl
 import subprocess
 from collections.abc import Iterable
 from dataclasses import dataclass, field
@@ -51,6 +53,12 @@ from typing import Any
 
 import urllib.error
 import urllib.request
+
+try:
+    import certifi as _certifi
+    _SSL_CONTEXT = ssl.create_default_context(cafile=_certifi.where())
+except ImportError:
+    _SSL_CONTEXT = None
 
 
 __all__ = [
@@ -226,7 +234,8 @@ def fetch_events_via_api(
         qs_parts.append(f"key={admin_key}")
     url = f"{api_url.rstrip('/')}/events-raw?" + "&".join(qs_parts)
     try:
-        with urllib.request.urlopen(url, timeout=timeout_seconds) as resp:
+        with urllib.request.urlopen(url, timeout=timeout_seconds,
+                                    context=_SSL_CONTEXT) as resp:
             body = resp.read().decode("utf-8")
     except urllib.error.HTTPError as e:
         # Don't leak the admin_key into the error message.
@@ -295,10 +304,21 @@ def fetch_events_via_wrangler(
         raise SessionLoadError(
             f"wrangler exit {result.returncode}: {result.stderr.strip()[:400]}"
         )
+    # Wrangler 4.x prints a non-JSON preamble to stdout before the JSON array
+    # even when --json is passed. Strip it by finding the first '['.
+    match = re.search(r'\[.*\]', result.stdout, re.DOTALL)
+    if not match:
+        raise SessionLoadError(
+            f"wrangler returned no JSON array "
+            f"(stdout={result.stdout[:300]!r})"
+        )
     try:
-        payload = json.loads(result.stdout)
+        payload = json.loads(match.group(0))
     except json.JSONDecodeError as e:
-        raise SessionLoadError(f"wrangler returned non-JSON: {e}") from e
+        raise SessionLoadError(
+            f"wrangler JSON parse failed: {e} "
+            f"(raw={result.stdout[:300]!r})"
+        ) from e
     # wrangler --json returns a list of result-sets; results[0]["results"] is the rows
     if isinstance(payload, list) and payload:
         first = payload[0]

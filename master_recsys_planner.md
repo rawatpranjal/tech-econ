@@ -1,7 +1,7 @@
 # Master Recsys Planner
 
-> **Single living source of truth** for the recsys / search overhaul.
-> Append-only journal. Every meaningful action, decision, and result lands here.
+> **Recsys decision journal.** Append-only. Every meaningful action, decision, and result lands here.
+> **Forward planning now lives in [`docs/roadmap.md`](docs/roadmap.md)** (Now / Next / Later). This file remains the journal — what happened, when, and why.
 
 ---
 
