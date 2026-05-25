@@ -57,6 +57,10 @@ Each entry includes **Why** (the underlying incident or principle) and **How to 
 - **Why:** Audit docs decay. The audit at `.claude/outputs/manager/recsys-audit-2026-05-03.md` was one day old when consulted on 2026-05-04 and three of its "TODO" items were already done.
 - **How to apply:** When a plan or audit doc is more than ~3 days old, treat its status claims as hypotheses. Spot-check 3 random items against the current code before acting on the rest. If you find one stale claim, the whole doc is suspect — re-verify or write a "STATUS AS OF" addendum like the one at the top of the recsys audit.
 
+### ALWAYS verify handoff/PR-readiness claims against the actual CI log before merging
+- **Why:** `handoff.md` on 2026-05-24 said the 7 pytest failures on PR #51 were "pre-existing from earlier session." Pulling the CI log showed otherwise: commit `8aa2d13` on the same branch added `context=_SSL_CONTEXT` to `urlopen()` in `lib/d1_sessions.py:237` (the certifi fix) without updating the test stub `fake_open(url, timeout)` — a NEW regression introduced by the branch under review. Merging on the handoff's word would have shipped a red main.
+- **How to apply:** When a handoff/PR note says "failing check is unrelated / pre-existing," spend 60 seconds with `gh run view <id> --log-failed` and `git log --oneline -5 -- <failing-file> <production-file-it-tests>` before believing it. If the production file was touched on the PR branch and the test file wasn't, the regression is almost certainly from this branch.
+
 ### ALWAYS verify file paths and helper functions exist before recommending reuse
 - **Why:** The original Ra4 plan said "reuse `search-cache.js:getEmbedding(id)`". That helper does not exist — search-cache only has blob-level access. Building Ra4 against a non-existent helper would have produced runtime errors.
 - **How to apply:** When a plan says "reuse X", grep for X. When a plan says "modify file Y", `ls` it. Plans that assume code into existence will produce broken implementations.
