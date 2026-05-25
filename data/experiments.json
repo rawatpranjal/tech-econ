@@ -32,6 +32,18 @@
     },
 
     {
+      "id": "exp_re1_mmr_v1",
+      "status": "draft",
+      "started_at": null,
+      "primary_metric": "ctr_homepage",
+      "doc": "Stream A.3 first real treatment. Re-rank homepage row items with MMR (Maximal Marginal Relevance, lambda=0.7) using BGE embeddings on top of the existing model_score ordering. Control sees today's row order; treatment sees a diversity-balanced ordering that nudges away from near-duplicate items consecutively. Goalpost: detect a real CTR shift (positive or negative) at p<0.05 with ≥100 clicks per variant. STATUS DRAFT until (a) harness_aa_v2 returns a clean A/A pass (~1-2 days of post-2026-05-24 data) and (b) the wiring PR lands. Launch gate, architecture decisions, test plan, and rollback procedure documented in .claude/outputs/manager/plan-2026-05-24-a3-re1-mmr-treatment.md. Code already in lib/diversity.py:mmr_rerank.",
+      "variants": [
+        { "id": "control",   "traffic": 50 },
+        { "id": "treatment", "traffic": 50 }
+      ]
+    },
+
+    {
       "id": "_example_disabled",
       "status": "draft",
       "started_at": null,
