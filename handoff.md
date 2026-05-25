@@ -1,43 +1,41 @@
-# Handoff — 2026-05-24 — feat/wrap-2026-05-24
+# Handoff — 2026-05-25 — main
 
 ## Where we left off
-PR #51 open with /site (Under The Hood) + /dashboard (Live Dashboard) pages, A/A bucketing fix, roadmap, scoreboard pipeline. Branch protection requires 4 CI checks + merge. Local `main` is 1 commit ahead of `origin/main` (the same change as PR #51); sync after merge.
+6 PRs shipped this session (#51-#56). Local main synced to origin/main at 02f426e. Nothing in flight; all open work is gated on a you-action (deploy, design call, or aa_v2 collecting data).
 
 ## Active streams (clustered)
 
 **[A] Experimental loop**
-- A.1, A.2, A.5, A.6 shipped (in PR #51, not yet deployed).
-- A.3 Re1 MMR first treatment — ready to recon. **BLOCKED** on tracker.js deploy + harness_aa_v2 producing clean A/A data for 1-2 days.
+- A.1, A.2, A.5, A.6 shipped. A.6 now in code; awaits Cloudflare push.
+- A.3 Re1 MMR — DRAFT registered (PR #54), design doc at `.claude/outputs/manager/plan-2026-05-24-a3-re1-mmr-treatment.md`. BLOCKED on (a) Cloudflare deploy, (b) `harness_aa_v2` ≥48h clean A/A, (c) you picking Option A vs B in the plan, (d) wiring PR.
 - A.7 fresh-agent audit pending.
 
 **[B] Homepage Editorial**
-- B.3 + B.4 shipped (in PR #51). **HITL pending**: visual sign-off on Inter Display + type-tinted cards. Open `hugo server`, eyeball homepage.
-- B.6 end-of-stream audit pending. SEQUENTIAL.
+- B.1-B.4 shipped (PR #56). B.5 implicit-signed-off; no `hugo server` eyeball was actually performed — flag if homepage looks off.
+- B.6 audit pending. SEQUENTIAL.
 
-**[C] Under The Hood + Live Dashboard**
-- C.1 through C.11 shipped (in PR #51). 8 explainer tabs + 5 dashboard tabs live.
-- C.4 fresh-agent audit on all 13 tabs pending. PARALLEL.
+**[C] /site + /dashboard**
+- C.1-C.11 + audit fix + follow-ups shipped (PRs #51, #53, #55).
+- Tabs 7 (Performance) + 8 (Experiments) still need SVG diagrams — needs your design direction. PARALLEL.
+- C.4 fresh-agent audit-of-the-audit pending.
 
-**[F] Ra2 knn-bge default flip**
-- Replay row 1 seeded (ndcg@10=0.2275). Need 2+ more metrics.csv rows at same holdout_days before flip. Mechanical once gate clears.
+**[Deploy]**
+- Cloudflare push so tracker.js fix + dashboard fixes + /site/dashboard pages go live. UNBLOCKS aa_v2 clean data, which unblocks A.3.
 
 ## Decisions made this session
-- Public-page voice = editorial, not developer. No em dashes, no internal file paths, no code object names. Real running examples from `data/*.json`. See CLAUDE.md proposed Learned Rules (not yet added; user declined this turn).
-- Single bundled PR (not split per stream) — kept atomic so A/A fix ships with new pages.
-- Workhorses only, no NN reach. Deep models (two-tower, SASRec, LightGCN) parked in roadmap "Later". LLM-as-reranker later.
+- Stream B WIP shipped as one bundled PR (#56) per "simplest call" — including `handoff.md` (was untracked).
+- A.3 prep scope: register + plan only; wiring deferred to activation PR.
+- 4 C.4 audit follow-ups bundled (#55); SVG-diagram-Tabs-7+8 carved out because design call.
 
 ## Open questions
-- **Privacy posture**: tracker.js now writes `te_uid` eagerly (was deferred until user gesture). GDPR/consent implication if relevant?
-- **URL rename**: `/site/` URL still says `/site/` even though label says "Under The Hood". Rename to `/under-the-hood/`?
-- **Scoreboard cadence**: `scripts/build_site_scoreboard.py` runs manually before deploy. Wire to schedule?
-- **ADMIN_KEY**: secrets.env has placeholder `PASTE_FROM_CLOUDFLARE_DASHBOARD_OR_ROTATE`. Paste real value or rotate via wrangler.
+- A.3 architecture: Option A (server-side dual-render) vs Option B (client-side rerender)?
+- `handoff.md` committed this session — keep tracked or move to `.gitignore`?
+- 13 stale local branches (phase-*, autoresearch/*) — prune?
+- 3 pre-existing stashes — drop?
 
 ## Landmines / gotchas
-- **Tracker.js fix unshipped**: lives in PR #51. Until merged + Cloudflare-deployed, harness_aa_v2 also collects contaminated data. Worker schema already has the column (PR #46).
-- **Build-time scoreboard staleness**: `data/site_scoreboard.json` snapshot at last `build_site_scoreboard.py` run. Tabs go stale until rerun. Rerun before each deploy.
-- **Local main 1 commit ahead of origin**: after PR #51 merges, do `git fetch && git pull origin main` (or `git reset --hard origin/main` if no local-only work; but reset is destructive, ask first).
-- **Pre-existing pytest failures**: `tests/python/test_d1_sessions.py` 7 stubs failing, unrelated to this work. Pre-existing from earlier session.
-- **CLAUDE.md line 177**: fixed this session (`search-cache.js` → `static/js/search/search-cache.js`).
+- **Stash cycles can silently drop file changes**: lost the prior-session CHANGELOG WIP entries during one of the stash → pop rounds; restored from `/tmp/changelog_wip_full.md`. New rule added to `.claude/RULES.md` §2.
+- **B.5 not actually eyeballed**: you said "signoff" as a directive to ship PR #56, but no `hugo server` look happened. If the hero or type-tinted cards look wrong in prod, that's why.
 
 ## Suggested next move
-Watch PR #51 CI. When green, merge + deploy via Cloudflare so tracker.js fix lands. Then monitor harness_aa_v2 for 1-2 days; once split is healthy, recon A.3 (Re1 MMR first treatment).
+Deploy to Cloudflare. Single action, biggest unblock (lets aa_v2 collect clean data, which is the chokepoint for A.3 — the headline goalpost).
