@@ -520,28 +520,28 @@ model_score = gradient_boosted_tree(raw_score, item_features)
                 <!-- New item in center -->
                 <rect x="160" y="60" width="100" height="48" rx="8" fill="#f3e5f5" stroke="#9c27b0" stroke-width="2"/>
                 <text x="210" y="82" text-anchor="middle" font-size="14" font-weight="700" fill="#1a1a1a">New Item</text>
-                <text x="210" y="99" text-anchor="middle" font-size="12" fill="#9c27b0">score = ?</text>
+                <text x="210" y="99" text-anchor="middle" font-size="13" fill="#9c27b0">score = ?</text>
 
                 <!-- Neighbor 1 (top-left) -->
                 <rect x="18" y="12" width="110" height="44" rx="8" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1.5"/>
                 <text x="73" y="32" text-anchor="middle" font-size="13" font-weight="600" fill="#1a1a1a">EconML</text>
-                <text x="73" y="48" text-anchor="middle" font-size="12" fill="#4a9eff">score 0.71</text>
+                <text x="73" y="48" text-anchor="middle" font-size="13" fill="#4a9eff">score 0.71</text>
                 <line x1="128" y1="50" x2="163" y2="76" stroke="#9c27b0" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#cs-arrow)"/>
 
                 <!-- Neighbor 2 (left) -->
                 <rect x="8" y="82" width="110" height="44" rx="8" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1.5"/>
                 <text x="63" y="102" text-anchor="middle" font-size="13" font-weight="600" fill="#1a1a1a">causalml</text>
-                <text x="63" y="118" text-anchor="middle" font-size="12" fill="#4a9eff">score 0.58</text>
+                <text x="63" y="118" text-anchor="middle" font-size="13" fill="#4a9eff">score 0.58</text>
                 <line x1="118" y1="104" x2="162" y2="90" stroke="#9c27b0" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#cs-arrow)"/>
 
                 <!-- Neighbor 3 (top-right) -->
                 <rect x="292" y="12" width="110" height="44" rx="8" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1.5"/>
                 <text x="347" y="32" text-anchor="middle" font-size="13" font-weight="600" fill="#1a1a1a">DoubleML</text>
-                <text x="347" y="48" text-anchor="middle" font-size="12" fill="#4a9eff">score 0.24</text>
+                <text x="347" y="48" text-anchor="middle" font-size="13" fill="#4a9eff">score 0.24</text>
                 <line x1="292" y1="50" x2="258" y2="76" stroke="#9c27b0" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#cs-arrow)"/>
 
                 <!-- Result -->
-                <text x="210" y="140" text-anchor="middle" font-size="12" fill="#555" font-style="italic">new item gets 30% of the weighted average: ~0.19</text>
+                <text x="210" y="140" text-anchor="middle" font-size="13" fill="#555" font-style="italic">new item gets 30% of the weighted average: ~0.19</text>
             </svg>
             <span class="under-hood-mini-diagram-label">Cold-start: a new item borrows a fraction of its nearest neighbors' scores until it earns its own.</span>
         </div>
@@ -1012,33 +1012,33 @@ final = mmr_diverse(fused[:20], lambda=0.7)
                 </defs>
                 <!-- Time axis -->
                 <line x1="30" y1="95" x2="400" y2="95" stroke="#ccc" stroke-width="1.5" marker-end="url(#sb-arrow)"/>
-                <text x="405" y="99" font-size="11" fill="#aaa">time</text>
+                <text x="405" y="99" font-size="13" fill="#aaa">time</text>
 
                 <!-- Period A1 -->
                 <rect x="40" y="50" width="70" height="38" rx="5" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1.5"/>
                 <text x="75" y="71" text-anchor="middle" font-size="13" font-weight="700" fill="#4a9eff">A</text>
-                <text x="75" y="104" text-anchor="middle" font-size="10" fill="#888">hr 1</text>
+                <text x="75" y="104" text-anchor="middle" font-size="13" fill="#888">hr 1</text>
 
                 <!-- Period B1 -->
                 <rect x="118" y="50" width="70" height="38" rx="5" fill="#e8f5e9" stroke="#4caf50" stroke-width="1.5"/>
                 <text x="153" y="71" text-anchor="middle" font-size="13" font-weight="700" fill="#4caf50">B</text>
-                <text x="153" y="104" text-anchor="middle" font-size="10" fill="#888">hr 2</text>
+                <text x="153" y="104" text-anchor="middle" font-size="13" fill="#888">hr 2</text>
 
                 <!-- Period A2 -->
                 <rect x="196" y="50" width="70" height="38" rx="5" fill="#e8f4ff" stroke="#4a9eff" stroke-width="1.5"/>
                 <text x="231" y="71" text-anchor="middle" font-size="13" font-weight="700" fill="#4a9eff">A</text>
-                <text x="231" y="104" text-anchor="middle" font-size="10" fill="#888">hr 3</text>
+                <text x="231" y="104" text-anchor="middle" font-size="13" fill="#888">hr 3</text>
 
                 <!-- Period B2 -->
                 <rect x="274" y="50" width="70" height="38" rx="5" fill="#e8f5e9" stroke="#4caf50" stroke-width="1.5"/>
                 <text x="309" y="71" text-anchor="middle" font-size="13" font-weight="700" fill="#4caf50">B</text>
-                <text x="309" y="104" text-anchor="middle" font-size="10" fill="#888">hr 4</text>
+                <text x="309" y="104" text-anchor="middle" font-size="13" fill="#888">hr 4</text>
 
                 <!-- ... ellipsis -->
                 <text x="360" y="73" font-size="16" fill="#aaa">...</text>
 
                 <!-- Top label -->
-                <text x="220" y="30" text-anchor="middle" font-size="12" fill="#555" font-style="italic">compare A-periods to B-periods; users are never split</text>
+                <text x="220" y="30" text-anchor="middle" font-size="13" fill="#555" font-style="italic">compare A-periods to B-periods; users are never split</text>
             </svg>
             <span class="under-hood-mini-diagram-label">Switchback: the entire site alternates between versions on a time schedule, avoiding group contamination.</span>
         </div>
@@ -1127,7 +1127,7 @@ final = mmr_diverse(fused[:20], lambda=0.7)
                 <line x1="{{ $pad }}" y1="{{ $yPx }}" x2="{{ sub $w $pad }}" y2="{{ $yPx }}"
                       stroke="#ddd" stroke-width="1" stroke-dasharray="3,3"/>
                 <text x="{{ sub $pad 3 }}" y="{{ add $yPx 4 }}" text-anchor="end"
-                      font-size="10" fill="#aaa">{{ printf "%.1f" . }}</text>
+                      font-size="13" fill="#aaa">{{ printf "%.1f" . }}</text>
                 {{ end }}
                 {{ if gt $n 1 }}
                 <!-- Draw polyline when we have multiple points -->
@@ -1148,9 +1148,9 @@ final = mmr_diverse(fused[:20], lambda=0.7)
                 <!-- X-axis label: latest date -->
                 {{ with index $history (sub $n 1) }}
                 <text x="{{ sub $w $pad }}" y="{{ sub $h 4 }}" text-anchor="end"
-                      font-size="10" fill="#aaa">{{ .date }}</text>
+                      font-size="13" fill="#aaa">{{ .date }}</text>
                 {{ end }}
-                <text x="{{ $pad }}" y="{{ sub $h 4 }}" font-size="10" fill="#aaa">NDCG@10 over time</text>
+                <text x="{{ $pad }}" y="{{ sub $h 4 }}" font-size="13" fill="#aaa">NDCG@10 over time</text>
             </svg>
             <span class="sparkline-label">{{ $n }} {{ if eq $n 1 }}data point{{ else }}data points{{ end }}</span>
         </div>
@@ -1255,9 +1255,9 @@ final = mmr_diverse(fused[:20], lambda=0.7)
 
                 <!-- Legend -->
                 <rect x="60" y="108" width="12" height="8" rx="2" fill="#fce4ec" stroke="#e91e63" stroke-width="1"/>
-                <text x="76" y="117" font-size="12" fill="#666">paused/broken</text>
+                <text x="76" y="117" font-size="13" fill="#666">paused/broken</text>
                 <rect x="165" y="108" width="12" height="8" rx="2" fill="#e8f5e9" stroke="#4caf50" stroke-width="1"/>
-                <text x="181" y="117" font-size="12" fill="#666">active</text>
+                <text x="181" y="117" font-size="13" fill="#666">active</text>
             </svg>
         </div>
 
