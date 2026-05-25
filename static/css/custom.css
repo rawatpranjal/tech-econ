@@ -10733,16 +10733,46 @@ mark.partial {
 [data-theme="dark"] .explore-card-compact[data-type="book"] { background: linear-gradient(135deg, #1e2810 0%, #232326 100%); }
 
 /* ===========================================
-   Netflix Hero Banner — Featured Item
+   Hero Banner — Featured This Week spotlight
    =========================================== */
 .hero-banner {
-    min-height: 50vh;
+    min-height: 60vh;
     display: flex;
     align-items: flex-end;
     position: relative;
     padding: 3rem 3rem 3.5rem;
     overflow: hidden;
     background: linear-gradient(135deg, #f0f4f8 0%, #e0e8f0 100%);
+}
+
+.hero-label {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--accent);
+    margin-bottom: 0.9rem;
+    opacity: 0.95;
+}
+[data-theme="dark"] .hero-label {
+    color: #8ab4f8;
+}
+
+/* When the hero has an image overlay, force light text regardless of theme. */
+.hero-banner-imaged .hero-label,
+[data-theme="dark"] .hero-banner-imaged .hero-label {
+    color: #cfe1ff;
+}
+.hero-banner-imaged .hero-banner-title,
+[data-theme="dark"] .hero-banner-imaged .hero-banner-title {
+    color: #ffffff;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.55);
+}
+.hero-banner-imaged .hero-banner-desc,
+[data-theme="dark"] .hero-banner-imaged .hero-banner-desc {
+    color: rgba(255,255,255,0.88);
+    text-shadow: 0 1px 12px rgba(0,0,0,0.4);
 }
 
 [data-theme="dark"] .hero-banner {
@@ -10930,7 +10960,7 @@ mark.partial {
 /* Responsive */
 @media (max-width: 768px) {
     .hero-banner {
-        min-height: 40vh;
+        min-height: 50vh;
         padding: 5rem 1.5rem 2.5rem;
     }
     .hero-banner-title { font-size: 1.8rem; }
@@ -10941,69 +10971,7 @@ mark.partial {
         left: 1rem;
         width: auto;
     }
-}
-
-/* ===========================================
-   Hero Carousel — Rotating top 5 slides
-   =========================================== */
-.hero-slide {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: flex-end;
-    padding: 3rem 3rem 4rem;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.6s ease;
-}
-.hero-slide.hero-slide-active {
-    opacity: 1;
-    pointer-events: auto;
-    position: relative;
-}
-
-/* Dots navigation */
-.hero-dots {
-    position: absolute;
-    bottom: 1.2rem;
-    left: 3rem;
-    display: flex;
-    gap: 0.5rem;
-    z-index: 10;
-}
-.hero-dot {
-    width: 32px;
-    height: 3px;
-    background: rgba(255,255,255,0.25);
-    border: none;
-    border-radius: 2px;
-    cursor: pointer;
-    padding: 0;
-    transition: background 0.2s, width 0.2s;
-}
-.hero-dot.active {
-    background: rgba(255,255,255,0.9);
-    width: 48px;
-}
-.hero-dot:hover {
-    background: rgba(255,255,255,0.5);
-}
-
-/* Light mode dots */
-.hero-dot { background: rgba(0,0,0,0.15); }
-.hero-dot.active { background: rgba(0,0,0,0.6); }
-.hero-dot:hover { background: rgba(0,0,0,0.3); }
-[data-theme="dark"] .hero-dot { background: rgba(255,255,255,0.25); }
-[data-theme="dark"] .hero-dot.active { background: rgba(255,255,255,0.9); }
-[data-theme="dark"] .hero-dot:hover { background: rgba(255,255,255,0.5); }
-
-@media (max-width: 768px) {
-    .hero-slide { padding: 5rem 1.5rem 3.5rem; }
-    .hero-dots { left: 1.5rem; bottom: 1rem; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .hero-slide { transition: none; }
+    .hero-label { font-size: 0.65rem; }
 }
 
 /* ===========================================

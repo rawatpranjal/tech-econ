@@ -1558,24 +1558,8 @@
       html += '</div>';
       html += '<div class="result-meta">';
       html += '<span class="result-type-badge" style="background-color:' + typeConfig.color + '">' + typeConfig.label + '</span>';
-      // Show difficulty badge if available (from LLM enrichment)
-      if (result.difficulty) {
-        var diffColors = { beginner: '#4caf50', intermediate: '#ff9800', advanced: '#f44336' };
-        var diffColor = diffColors[result.difficulty] || '#9e9e9e';
-        html += '<span class="result-difficulty-badge" style="background-color:' + diffColor + '">' + result.difficulty.charAt(0).toUpperCase() + result.difficulty.slice(1) + '</span>';
-      }
       html += '<span class="result-category">' + escapeHtml(result.category) + '</span>';
       html += '</div>';
-      // Show "Learn first" for advanced items with prerequisites
-      if (result.difficulty === 'advanced' && result.prerequisites && result.prerequisites.length > 0) {
-        html += '<div class="result-prerequisites">';
-        html += '<span class="prereq-label">Learn first:</span>';
-        var prereqs = result.prerequisites.slice(0, 3);
-        prereqs.forEach(function(prereq) {
-          html += '<a class="prereq-chip" href="#" data-query="' + escapeHtml(prereq) + '">' + escapeHtml(prereq) + '</a>';
-        });
-        html += '</div>';
-      }
       html += '<button class="result-explain-btn" data-index="' + index + '" title="Explain why this result matches">';
       html += '<svg viewBox="0 0 24 24" width="12" height="12"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H8c0-2.21 1.79-4 4-4s4 1.79 4 4c0 .88-.36 1.68-.93 2.25z"/></svg>';
       html += '</button>';
@@ -1715,27 +1699,7 @@
       html += '</div>';
     }
 
-    // Difficulty filter dropdown (from LLM enrichment)
-    var hasDifficulty = Object.keys(this.facetCounts.difficulty).length > 0;
-    if (hasDifficulty) {
-      var difficultyOrder = ['beginner', 'intermediate', 'advanced'];
-      var sortedDifficulty = difficultyOrder.filter(function(d) {
-        return self.facetCounts.difficulty[d] > 0;
-      });
 
-      html += '<div class="facet-group">';
-      html += '<label class="facet-label">Level:</label>';
-      html += '<select class="facet-select" id="facet-difficulty">';
-      html += '<option value="">All Levels</option>';
-      sortedDifficulty.forEach(function(diff) {
-        var count = self.facetCounts.difficulty[diff];
-        var selected = self.activeFilters.difficulty.indexOf(diff) !== -1 ? ' selected' : '';
-        var label = diff.charAt(0).toUpperCase() + diff.slice(1);
-        html += '<option value="' + diff + '"' + selected + '>' + label + ' (' + count + ')</option>';
-      });
-      html += '</select>';
-      html += '</div>';
-    }
 
     // Audience filter dropdown (from LLM enrichment)
     var hasAudience = Object.keys(this.facetCounts.audience).length > 0;

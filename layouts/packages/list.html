@@ -400,7 +400,6 @@
                      data-pagefind-sort="score:{{ $scoreInt }}"
                      data-pagefind-filter="type:package"
                      data-pagefind-filter="category:{{ .category }}"
-                     {{ with .difficulty }}data-pagefind-filter="difficulty:{{ . }}"{{ end }}
                      {{ with .audience }}{{ range . }}data-pagefind-filter="audience:{{ . }}" {{ end }}{{ end }}>
                     <span data-pagefind-weight="10" style="display:none;">{{ .name }}</span>
                     <span data-pagefind-weight="5" style="display:none;">{{ .description }}</span>

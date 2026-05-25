@@ -277,6 +277,16 @@ def generate_rows(data_dir: Path) -> dict:
     used: set[str] = set()
     rows = [
         build_trending_now(rankings, content_lookup, used),
+        build_type_row(
+            "talk", "talks-worth-watching", "Talks Worth Watching",
+            "Lectures, interviews, and keynotes worth your time",
+            content_lookup, score_lookup, used,
+        ),
+        build_type_row(
+            "resource", "top-resources", "Blogs & Tutorials",
+            "Blogs, tutorials, and courses to learn from",
+            content_lookup, score_lookup, used,
+        ),
         build_new_this_month(rankings, content_lookup, used),
         build_type_row(
             "package", "top-packages", "Top Packages",
@@ -286,11 +296,6 @@ def generate_rows(data_dir: Path) -> dict:
         build_type_row(
             "dataset", "top-datasets", "Top Datasets",
             "Datasets researchers keep coming back to",
-            content_lookup, score_lookup, used,
-        ),
-        build_type_row(
-            "talk", "talks-worth-watching", "Talks Worth Watching",
-            "Lectures, interviews, and keynotes worth your time",
             content_lookup, score_lookup, used,
         ),
     ]

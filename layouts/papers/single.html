@@ -73,7 +73,6 @@
                      data-pagefind-sort="score:{{ $scoreInt }}"
                      data-pagefind-filter="type:paper"
                      data-pagefind-filter="category:{{ $topic.name }}"
-                     {{ with .difficulty }}data-pagefind-filter="difficulty:{{ . }}"{{ end }}
                      {{ with .audience }}{{ range . }}data-pagefind-filter="audience:{{ . }}" {{ end }}{{ end }}>
                     <span data-pagefind-weight="10" style="display:none;">{{ .title }}</span>
                     <span data-pagefind-weight="5" style="display:none;">{{ .authors }}</span>
