@@ -258,13 +258,6 @@
         {{ end }}
     </select>
 
-    <!-- Level Pills -->
-    <div class="level-pills">
-        <button class="level-pill active" data-level="all">All Levels</button>
-        <button class="level-pill" data-level="beginner">Beginner</button>
-        <button class="level-pill" data-level="intermediate">Intermediate</button>
-        <button class="level-pill" data-level="advanced">Advanced</button>
-    </div>
 </div>
 
 <!-- Meta info -->
@@ -306,9 +299,6 @@
                     <p class="learning-card-desc">{{ .description }}</p>
                     <div class="learning-card-footer">
                         <span class="learning-card-type">{{ .type }}</span>
-                        {{ with .difficulty }}
-                        <span class="learning-card-level {{ . }}">{{ . | title }}</span>
-                        {{ end }}
                     </div>
                 </a>
                 {{ end }}

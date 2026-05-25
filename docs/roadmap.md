@@ -65,7 +65,7 @@ Four parallel streams. A and B are highest priority.
 Source: the Mar 2026 critique captured in `feedback_homepage_visual.md` memory. Quoting Pranjal: *"The content is genuinely exceptional. The gap isn't substance, it's staging. Serving a Michelin-star meal on a cafeteria tray."*
 
 - **B.1** Hero spotlight — "Featured This Week" with 60–70% viewport image, editorial blurb, single CTA. Replaces the current text-block hero.
-- **B.2** Cut rows from 15 → 6 max. Demote narrative rows (Pat Bajari, Staggered Treatment, etc.) to a dedicated Discover surface.
+- **B.2** ✅ satisfied 2026-05-24 — homepage already at 5 rows in `data/homepage_rows.json`; narrative rows (Pat Bajari, Staggered Treatment) no longer exist as standalone rows (appear as items inside `trending-now`). Target was ≤6; we're at 5. No Discover surface populated; deferred until a real long-tail need surfaces.
 - **B.3** ✅ partial 2026-05-24 — subtle 4%-opacity type-tinted card background gradient added via `data-type` attribute on all card variants. Left-border accent already existed. Dark mode resets tint (accent border sufficient). HITL visual sign-off (B.5) still needed.
 - **B.4** ✅ partial 2026-05-24 — Inter Display extended from hero-only to all card `h3` titles. Row titles already had Inter Display via Phase 2 overhaul. Body stays system-stack.
 - **B.5** **HITL checkpoint** — Pranjal signs off on the visual before merge.
@@ -107,10 +107,11 @@ This is criterion (c) of the north star made concrete. It's also the most levera
 
 **Goalpost:** Documentation tells the truth about the current state of the code.
 
-- **D.1** Strip the "Still TODO (§4 server-side)" block from `CLAUDE.md` lines 456–459. All three items shipped in PRs #42–48.
-- **D.2** Add a roadmap pointer near the top of `CLAUDE.md`, above the Glossary.
-- **D.3** Mark `master_recsys_planner.md` Status table: "Forward planning now lives in `docs/roadmap.md`. This file remains the decision journal."
-- **D.4** Add roadmap link to `README.md`.
+- **D.1** ✅ shipped (prior PR) — "Still TODO (§4 server-side)" block already removed from `CLAUDE.md`. Verified 2026-05-24.
+- **D.2** ✅ shipped (prior PR) — roadmap pointer present at `CLAUDE.md:3`. Verified 2026-05-24.
+- **D.3** ✅ shipped (prior PR) — `master_recsys_planner.md:4` already notes "Forward planning now lives in `docs/roadmap.md`". Verified 2026-05-24.
+- **D.4** ✅ shipped (prior PR) — `README.md:6` already links to `docs/roadmap.md`. Verified 2026-05-24.
+- **D.5** ✅ Stream D fully closed 2026-05-24. No action items remain.
 
 **Why now:** Stale docs mislead future agents. Cheap and immediate.
 
@@ -185,6 +186,20 @@ Sequenced after Now. Most are blocked on Now-stream goalposts.
 **Blocked on:** Stream C (tab architecture must be proven first).
 
 **Links:** [`analytics-worker/README.md`](../analytics-worker/README.md) · [`docs/ANALYTICS_REPORT.md`](ANALYTICS_REPORT.md) · [`scripts/`](../scripts/)
+
+---
+
+### Stream M — Slide deck refresh (mirror Under The Hood)
+
+**Goalpost:** `/slides/` (linked from About) reflects the eight Under The Hood tabs (Ingestion → Storage → Processing → Recsys → How Recs Work → How A/B Works → Performance → Experiments). One slide per tab, mirroring the prose voice + SVG diagrams already shipped at `/site/`.
+
+- **M.1** Extract Under The Hood content into a shared data file (`data/site_content.json`) so both `/site/` and `/slides/` can render from a single source of truth. Today the content lives inline in `layouts/site/list.html` (~1,300 lines).
+- **M.2** Rewrite `layouts/slides/list.html` (currently ~12 hand-written Reveal.js sections, last touched March 2026) to range over the shared data file. Keep the dark cinematic theme; carry the SVGs across.
+- **M.3** End-of-stream audit + HITL.
+
+**Blocked on:** Stream C audit (C.4). Once C.4 is signed off, the Under The Hood content is canonical and ready to fork.
+
+**Links:** [`layouts/slides/list.html`](../layouts/slides/list.html) · [`layouts/site/list.html`](../layouts/site/list.html) · [`content/slides/_index.md`](../content/slides/_index.md)
 
 ---
 

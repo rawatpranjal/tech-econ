@@ -1,9 +1,29 @@
 {{ define "main" }}
 <div class="homepage">
-    <!-- Hero Banner — Netflix-style rotating carousel (top 5) -->
+    <!-- Hero Banner — single Featured This Week spotlight -->
     {{ if .Site.Data.homepage_rows }}
     {{ $heroRow := index .Site.Data.homepage_rows.rows 0 }}
-    <div class="hero-banner">
+    {{ $featured := .Site.Data.featured }}
+    {{ $heroItem := index $heroRow.items 0 }}
+    {{ if and $featured $featured.item_name }}
+        {{ range .Site.Data.homepage_rows.rows }}
+            {{ range .items }}
+                {{ if eq .name $featured.item_name }}
+                    {{ $heroItem = . }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+    {{ $label := "Featured This Week" }}
+    {{ if and $featured $featured.label }}{{ $label = $featured.label }}{{ end }}
+    {{ $ctaText := "Open →" }}
+    {{ if and $featured $featured.cta_text }}{{ $ctaText = $featured.cta_text }}{{ end }}
+    {{ $blurb := $heroItem.description }}
+    {{ if and $featured $featured.blurb_override }}{{ $blurb = $featured.blurb_override }}{{ end }}
+    {{ $heroImage := "" }}
+    {{ with $heroItem.image_url }}{{ $heroImage = . }}{{ end }}
+    {{ if and $featured $featured.image_override }}{{ $heroImage = $featured.image_override }}{{ end }}
+    <div class="hero-banner hero-banner-spotlight{{ with $heroImage }} hero-banner-imaged{{ end }}" data-type="{{ $heroItem.type }}"{{ with $heroImage }} style="background-image: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.78) 100%), linear-gradient(90deg, rgba(0,0,0,0.35) 0%, transparent 22%, transparent 78%, rgba(0,0,0,0.35) 100%), url('{{ . }}'); background-size: cover; background-position: center;"{{ end }}>
         <div class="hero-banner-search">
             <div class="search-input-wrapper" onclick="document.getElementById('global-search-modal').style.display='flex'; document.getElementById('global-search-input').focus();">
                 <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
@@ -14,23 +34,13 @@
                 <kbd class="search-kbd">&#8984;K</kbd>
             </div>
         </div>
-        {{ range $i, $item := first 5 $heroRow.items }}
-        <div class="hero-slide {{ if eq $i 0 }}hero-slide-active{{ end }}" data-type="{{ $item.type }}" data-slide="{{ $i }}">
-            <div class="hero-banner-content">
-                <span class="hero-banner-badge type-{{ $item.type }}">{{ $item.type }}</span>
-                <h1 class="hero-banner-title">{{ $item.name }}</h1>
-                {{ with $item.description }}<p class="hero-banner-desc">{{ . }}</p>{{ end }}
-                <div class="hero-banner-cta">
-                    <a href="{{ $item.url }}" target="_blank" rel="noopener" class="hero-btn hero-btn-primary">Read More</a>
-                    <a href="#home-rows-wrapper" class="hero-btn hero-btn-secondary">See All Trending</a>
-                </div>
+        <div class="hero-banner-content">
+            <span class="hero-label">{{ $label }}</span>
+            <h1 class="hero-banner-title">{{ $heroItem.name }}</h1>
+            {{ with $blurb }}<p class="hero-banner-desc">{{ . }}</p>{{ end }}
+            <div class="hero-banner-cta">
+                <a href="{{ $heroItem.url }}" target="_blank" rel="noopener" class="hero-btn hero-btn-primary">{{ $ctaText }}</a>
             </div>
-        </div>
-        {{ end }}
-        <div class="hero-dots">
-            {{ range $i, $item := first 5 $heroRow.items }}
-            <button class="hero-dot {{ if eq $i 0 }}active{{ end }}" data-slide="{{ $i }}" aria-label="Slide {{ add $i 1 }}"></button>
-            {{ end }}
         </div>
     </div>
     {{ else }}
@@ -140,51 +150,6 @@
 </div>
 
 <script>
-// Hero carousel — rotate top 5 slides
-(function() {
-    var slides = document.querySelectorAll('.hero-slide');
-    var dots = document.querySelectorAll('.hero-dot');
-    if (slides.length < 2) return;
-    var current = 0;
-    var total = slides.length;
-    var interval = 6000;
-
-    // Type-tinted gradient colors for hero background
-    var typeColors = {
-        'package':  '170deg, #0c1e4a 0%, #0a2850 35%, #081a35 70%, #0a0a0a 100%',
-        'dataset':  '170deg, #0a3020 0%, #084028 35%, #0a2018 70%, #0a0a0a 100%',
-        'paper':    '170deg, #3a1a08 0%, #2e1808 35%, #1e1008 70%, #0a0a0a 100%',
-        'resource': '170deg, #2a1050 0%, #1e0a40 35%, #150a2a 70%, #0a0a0a 100%',
-        'talk':     '170deg, #3a2808 0%, #2e2008 35%, #1e1508 70%, #0a0a0a 100%',
-        'career':   '170deg, #083040 0%, #0a3848 35%, #082028 70%, #0a0a0a 100%',
-        'community':'170deg, #2e1020 0%, #261a20 35%, #1a1018 70%, #0a0a0a 100%',
-        'book':     '170deg, #1e2810 0%, #1a3010 35%, #121a0a 70%, #0a0a0a 100%'
-    };
-    var defaultGrad = '170deg, #1a1050 0%, #0d2a4a 40%, #0a1530 75%, #0a0a0a 100%';
-
-    function showSlide(n) {
-        slides.forEach(function(s) { s.classList.remove('hero-slide-active'); });
-        dots.forEach(function(d) { d.classList.remove('active'); });
-        slides[n].classList.add('hero-slide-active');
-        dots[n].classList.add('active');
-        var type = slides[n].getAttribute('data-type');
-        var grad = typeColors[type] || defaultGrad;
-        document.querySelector('.hero-banner').style.background = 'linear-gradient(' + grad + ')';
-        current = n;
-    }
-
-    dots.forEach(function(dot) {
-        dot.addEventListener('click', function() {
-            showSlide(parseInt(this.getAttribute('data-slide')));
-            clearInterval(autoplay);
-            autoplay = setInterval(function() { showSlide((current + 1) % total); }, interval);
-        });
-    });
-
-    var autoplay = setInterval(function() { showSlide((current + 1) % total); }, interval);
-    showSlide(0);
-})();
-
 // Collapse homepage rows beyond the first 6
 (function() {
     var VISIBLE = 6;

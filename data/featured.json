@@ -1,0 +1,8 @@
+{
+  "_doc": "Optional weekly editorial override for the homepage hero. Leave item_name empty to auto-pick top-1 by model_score from homepage_rows.json trending-now. Set item_name (exact match) to spotlight a specific item. image_override (full URL or absolute path) and blurb_override are optional. label defaults to 'Featured This Week'. cta_text defaults to 'Open →'.",
+  "item_name": "",
+  "image_override": "",
+  "blurb_override": "",
+  "cta_text": "Open →",
+  "label": "Featured This Week"
+}
