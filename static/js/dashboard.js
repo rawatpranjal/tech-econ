@@ -121,20 +121,23 @@ function renderTraffic(stats, timeseries, health) {
     }
   }
 
-  // Stat cards
-  const totalEventsToday = stats ? fmtNum(stats.today_events ?? stats.events_today ?? '--') : '--';
-  const uniqueSessions   = stats ? fmtNum(stats.unique_sessions ?? stats.sessions_today ?? '--') : '--';
-  const clicksToday      = stats ? fmtNum(stats.clicks_today ?? stats.today_clicks ?? '--') : '--';
-  const events24h        = health ? fmtNum(health.events_24h) : '--';
+  // Today's metrics come from the latest entry in /timeseries (the worker
+  // doesn't expose dedicated today_* fields on /stats).
+  const tsArr = timeseries && Array.isArray(timeseries.data) ? timeseries.data : [];
+  const today = tsArr.length ? tsArr[tsArr.length - 1] : null;
+  const pageviewsToday = today ? fmtNum(today.pageviews ?? 0) : '--';
+  const sessionsToday  = today ? fmtNum(today.sessions  ?? 0) : '--';
+  const clicksToday    = today ? fmtNum(today.clicks    ?? 0) : '--';
+  const events24h      = health ? fmtNum(health.events_24h) : '--';
 
   let cards = `
     <div class="dashboard-stat-grid">
       <div class="dashboard-stat-card stat-positive">
-        <div class="dashboard-stat-num">${totalEventsToday}</div>
-        <div class="dashboard-stat-label">Events today</div>
+        <div class="dashboard-stat-num">${pageviewsToday}</div>
+        <div class="dashboard-stat-label">Pageviews today</div>
       </div>
       <div class="dashboard-stat-card">
-        <div class="dashboard-stat-num">${uniqueSessions}</div>
+        <div class="dashboard-stat-num">${sessionsToday}</div>
         <div class="dashboard-stat-label">Sessions today</div>
       </div>
       <div class="dashboard-stat-card">
@@ -151,9 +154,10 @@ function renderTraffic(stats, timeseries, health) {
   let chart = '';
   if (timeseries && timeseries.data && timeseries.data.length > 0) {
     const days = timeseries.data;
-    const maxVal = Math.max(...days.map(d => d.events || d.event_count || d.count || 0), 1);
+    const eventCount = d => (d.pageviews ?? 0) + (d.clicks ?? 0) + (d.searches ?? 0);
+    const maxVal = Math.max(...days.map(eventCount), 1);
     const bars = days.map(d => {
-      const count = d.events ?? d.event_count ?? d.count ?? 0;
+      const count = eventCount(d);
       const heightPct = Math.max(2, Math.round((count / maxVal) * 100));
       const dateLabel = d.date || d.day || '';
       return `<div class="dashboard-bar" style="height:${heightPct}%" title="${dateLabel}: ${count} events" data-count="${count}" data-date="${dateLabel}"></div>`;
@@ -191,7 +195,7 @@ function loadTopContent() {
 }
 
 function renderTopContent(data) {
-  const items = data.clicks || data.items || data || [];
+  const items = Array.isArray(data) ? data : (data.data || data.clicks || data.items || []);
 
   if (!Array.isArray(items) || items.length === 0) {
     return '<div class="dashboard-empty">No click data available yet.</div>';
@@ -268,7 +272,7 @@ function loadSearch() {
 }
 
 function renderSearch(data) {
-  const queries = data.searches || data.queries || data || [];
+  const queries = Array.isArray(data) ? data : (data.data || data.searches || data.queries || []);
 
   if (!Array.isArray(queries) || queries.length === 0) {
     return '<div class="dashboard-empty">No search data available yet.</div>';
