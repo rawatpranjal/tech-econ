@@ -41,8 +41,10 @@ async function fetchAndRender(endpoint, renderFn, mountSel) {
         <line x1="12" y1="16" x2="12.01" y2="16"></line>
       </svg>
       Could not load live data.
-      <button onclick="location.reload()" class="dashboard-retry-btn">Retry</button>
+      <button type="button" class="dashboard-retry-btn">Retry</button>
     </div>`;
+    const btn = mount.querySelector('.dashboard-retry-btn');
+    if (btn) btn.addEventListener('click', () => fetchAndRender(endpoint, renderFn, mountSel));
   }
 }
 

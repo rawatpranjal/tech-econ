@@ -12224,6 +12224,14 @@ mark.partial {
 [data-theme="dark"] {
     --text-soft:        #bbb;
     --text-muted-light: #777;
+    /* Bump soft-tint alpha from 0.08 to 0.18 so the wash stays visible
+       against dark surfaces. Saturated stage colors (--stage-*) stay
+       the same — they read fine on both backgrounds. */
+    --stage-input-soft:   rgba(74, 158, 255, 0.18);
+    --stage-gate-soft:    rgba(245, 166, 35, 0.18);
+    --stage-enrich-soft:  rgba(76, 175, 80, 0.18);
+    --stage-rank-soft:    rgba(233, 30, 99, 0.18);
+    --stage-publish-soft: rgba(156, 39, 176, 0.18);
 }
 
 /* ── Typography scale for /site and /dashboard ──────────────────────────── */
