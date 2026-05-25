@@ -200,7 +200,7 @@ class TestFetchEventsViaApi:
         import urllib.error
 
         @contextmanager
-        def fake_open(url, timeout):
+        def fake_open(url, timeout, context=None):
             self._called_url = url  # capture for assertion
             if raise_kind is urllib.error.HTTPError:
                 raise urllib.error.HTTPError(url, http_status, "boom", {}, None)
