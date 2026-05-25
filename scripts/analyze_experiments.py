@@ -43,6 +43,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import re
 import subprocess
 import sys
 from dataclasses import dataclass
@@ -122,7 +123,13 @@ class VariantRow:
 
 def _wrangler_query(sql: str) -> list[dict[str, Any]]:
     """Run a SELECT against D1 via wrangler. Returns the parsed `results`
-    list. Raises CalledProcessError on wrangler failure."""
+    list. Raises CalledProcessError on wrangler failure, raises ValueError
+    on JSON parse failure.
+
+    Wrangler 4.x prints a non-JSON preamble ("Cloudflare agent skills are
+    available for ...") to stdout before the JSON array even when --json is
+    passed. We extract the JSON array with a regex rather than trying to
+    suppress the preamble (no reliable env var exists for it)."""
     proc = subprocess.run(
         [
             "npx", "wrangler", "d1", "execute",
@@ -134,7 +141,21 @@ def _wrangler_query(sql: str) -> list[dict[str, Any]]:
         text=True,
         check=True,
     )
-    payload = json.loads(proc.stdout)
+    # Strip the preamble: find the first '[' and take from there.
+    # re.DOTALL so '.' matches newlines inside the JSON array.
+    match = re.search(r'\[.*\]', proc.stdout, re.DOTALL)
+    if not match:
+        raise ValueError(
+            f"wrangler stdout contained no JSON array.\n"
+            f"stdout={proc.stdout[:400]!r}\nstderr={proc.stderr[:200]!r}"
+        )
+    try:
+        payload = json.loads(match.group(0))
+    except json.JSONDecodeError as exc:
+        raise ValueError(
+            f"wrangler JSON parse failed: {exc}\n"
+            f"raw stdout={proc.stdout[:400]!r}"
+        ) from exc
     # wrangler --json format: list of one query result; results live under .results
     if not payload or not isinstance(payload, list):
         return []

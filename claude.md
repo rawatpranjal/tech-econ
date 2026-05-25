@@ -1,3 +1,10 @@
+# Roadmap
+
+> **Primary plan anchor:** [`docs/roadmap.md`](docs/roadmap.md) — Now / Next / Later, updated 2026-05-23. Future agents read this first.
+> The recsys decision journal lives in [`master_recsys_planner.md`](master_recsys_planner.md). The per-commit log lives in [`CHANGELOG.md`](CHANGELOG.md).
+
+---
+
 # Mindset
 
 You are a senior staff Google engineer. Your user respects your judgement. You will think, deliberate, and plan all major decisions. You take time to research and be thorough. Better well-planned than quick-and-dirty — this repo is getting large so we need much more thought than blazing fast execution. Ask, think, search, research, test — but do it the right way.
@@ -167,7 +174,7 @@ python3 scripts/generate_embeddings.py # Regenerate vectors
 - **Autoresearch uses git worktrees** — `autoresearch/run.sh` runs in an isolated worktree under `/tmp/` so it never touches the main checkout. Do NOT change it back to `git checkout` — that caused files written by concurrent sessions to be deleted.
 - **No per-item single pages exist.** Cards on every list page link out via `target="_blank"`. Only `papers/single.html` exists, and it's a *topic* page (lists papers in a topic), not a per-paper detail page. Plans assuming per-item detail pages need to pivot to list-page hover, search-result hover, or topic-page footer.
 - **`reading-history-section` and `because-you-viewed-section` placeholders have `display: none` because that's the empty state.** Don't read this as "feature not built" — `static/js/reading-history.js:121` `renderHistorySection()` and `static/js/because-you-viewed.js` flip these to `block` once history exists.
-- **`search-cache.js` is an IndexedDB wrapper, not an embeddings index.** It exposes `getEmbeddings()` (blob-level, lazy) and `setEmbeddings()`, no `getEmbedding(id)` helper. The 16 MB embedding binary loads only after first search. Don't trigger that download on the homepage critical path. For homepage personalization, reuse `static/embeddings/related-items.json` (1.4 MB, fetched eagerly by `because-you-viewed.js`) instead.
+- **`static/js/search/search-cache.js` is an IndexedDB wrapper, not an embeddings index.** It exposes `getEmbeddings()` (blob-level, lazy) and `setEmbeddings()`, no `getEmbedding(id)` helper. The 16 MB embedding binary loads only after first search. Don't trigger that download on the homepage critical path. For homepage personalization, reuse `static/embeddings/related-items.json` (1.4 MB, fetched eagerly by `because-you-viewed.js`) instead.
 - **Hugo cards expose `data-name` lowercased.** Match against `search-metadata.json` by lowercasing both sides.
 
 ---
@@ -451,12 +458,17 @@ Not currently useful — requires more user interaction data. When ready:
 
 **Tracker logging (shipped, PR #42):**
 - `static/js/tracker.js:track()` reads `window.Experiments.getAllAssignments()` and attaches the result as `event.exp = {experiment_id: variant_id, ...}` to every payload when non-empty.
-- Worker side currently ignores the field. Until the §4 server-side schema lands (next), no aggregation is possible — but the data is already on the wire.
 
-**Still TODO (§4 server-side):**
-- `analytics-worker/index.js`: schema columns + INSERT path for `experiment_id` / `variant_id`. Per RULES.md HARD STOP F15: schema migration + INSERT in same PR + post-deploy `GET /run-schema?key=$ADMIN_KEY` ping.
-- `scripts/analyze_experiments.py`: per-variant CTR / engagement with confidence intervals.
-- First real experiment: probably `homepage_row_mmr_vs_baseline` (Re1 MMR @ λ=0.7) wired into `search-worker.js`.
+**Server-side ingestion (shipped, PR #46):**
+- `analytics-worker/index.js`: `events.experiments` column added; INSERT path stores per-event variant assignments. Schema migration applied via `/run-schema` per RULES.md F15.
+
+**Analysis script (shipped, PR #47):**
+- `scripts/analyze_experiments.py`: per-variant CTR + statistical significance. Run as `python3 scripts/analyze_experiments.py --experiment <id>`.
+
+**First experiment running (shipped, PR #48):**
+- `harness_aa_v1` — A/A test (control_a vs control_b, 50/50). Validates pipeline health before any real treatment. Live since 2026-05-04.
+
+**Open items:** See [`docs/roadmap.md`](docs/roadmap.md) Stream A — run analysis on `harness_aa_v1`, seed `replays.csv`, ship first real treatment (Re1 MMR vs baseline).
 
 ## 8. `lib/` toolkit (Phase 2 extractions)
 Reusable modules pulled out of `scripts/rank_all_content.py` so they can be tested independently and re-used by future scripts:

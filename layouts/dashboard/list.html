@@ -1,0 +1,655 @@
+{{ define "main" }}
+
+{{/* Embed scoreboard JSON for tabs 4 and 5 (no live endpoint yet) */}}
+<script id="site-scoreboard-data" type="application/json">{{ site.Data.site_scoreboard | jsonify }}</script>
+
+<style>
+/* =============================================================
+   Dashboard page styles (scoped under .dashboard-page)
+   Reuses .site-tab* classes from custom.css for the tab bar.
+   ============================================================= */
+
+.dashboard-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem 3rem;
+}
+
+/* Stat grid */
+.dashboard-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-stat-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.dashboard-stat-card.stat-positive {
+  border-color: #4caf50;
+  background: linear-gradient(135deg, var(--bg-secondary), #e8f5e9);
+}
+
+.dashboard-stat-card.stat-warning {
+  border-color: #f5a623;
+  background: linear-gradient(135deg, var(--bg-secondary), #fff3e0);
+}
+
+@media (prefers-color-scheme: dark) {
+  .dashboard-stat-card.stat-positive {
+    background: linear-gradient(135deg, var(--bg-secondary), #1b3a1e);
+  }
+  .dashboard-stat-card.stat-warning {
+    background: linear-gradient(135deg, var(--bg-secondary), #2d2100);
+  }
+}
+
+.dashboard-stat-num {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.dashboard-stat-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Health pill */
+.dashboard-health-pill {
+  display: inline-block;
+  padding: 0.1em 0.5em;
+  border-radius: 20px;
+  font-size: 0.7em;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  vertical-align: middle;
+}
+
+.dashboard-health-pill.stat-positive {
+  background: #e8f5e9;
+  color: #388e3c;
+  border: 1px solid #a5d6a7;
+}
+
+.dashboard-health-pill.stat-warning {
+  background: #fff3e0;
+  color: #e65100;
+  border: 1px solid #ffcc80;
+}
+
+.dashboard-health-pill.stat-unknown {
+  background: var(--bg-hover);
+  color: var(--text-muted);
+  border: 1px solid var(--border-light);
+}
+
+@media (prefers-color-scheme: dark) {
+  .dashboard-health-pill.stat-positive {
+    background: #1b3a1e;
+    color: #81c784;
+    border-color: #388e3c;
+  }
+  .dashboard-health-pill.stat-warning {
+    background: #2d2100;
+    color: #ffb74d;
+    border-color: #e65100;
+  }
+}
+
+/* Bar chart */
+.dashboard-chart-section {
+  margin: 1.5rem 0;
+}
+
+.dashboard-section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 0.75rem;
+}
+
+.dashboard-bar-chart {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1rem 0.75rem 0.5rem;
+  position: relative;
+}
+
+.dashboard-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 100px;
+  width: 100%;
+}
+
+.dashboard-bar {
+  flex: 1;
+  background: var(--accent);
+  border-radius: 2px 2px 0 0;
+  opacity: 0.7;
+  cursor: default;
+  transition: opacity 0.1s;
+  min-height: 2px;
+}
+
+.dashboard-bar:hover {
+  opacity: 1;
+}
+
+.dashboard-bar-baseline {
+  height: 1px;
+  background: var(--border-color);
+  margin-top: 0.25rem;
+}
+
+.dashboard-chart-note {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0.35rem 0 0;
+}
+
+/* Ranked list */
+.dashboard-ranked-list {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+
+.dashboard-ranked-list th {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 2px solid var(--border-color);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.dashboard-ranked-list td {
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-secondary);
+}
+
+.dashboard-ranked-list tbody tr:hover td {
+  background: var(--bg-hover);
+}
+
+.dashboard-rank {
+  color: var(--text-muted);
+  font-size: 0.8em;
+  width: 2rem;
+}
+
+.dashboard-item-name {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.dashboard-click-count {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.dashboard-query-text {
+  color: var(--text-primary);
+}
+
+/* Type pill */
+.dashboard-type-pill {
+  display: inline-block;
+  padding: 0.15em 0.55em;
+  border-radius: 12px;
+  font-size: 0.72em;
+  font-weight: 500;
+  background: var(--accent-bg);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  white-space: nowrap;
+}
+
+/* Zero-result pill */
+.dashboard-zero-pill {
+  display: inline-block;
+  padding: 0.15em 0.55em;
+  border-radius: 12px;
+  font-size: 0.72em;
+  font-weight: 500;
+  background: #fff3e0;
+  color: #e65100;
+  border: 1px solid #ffcc80;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dashboard-zero-pill {
+    background: #2d2100;
+    color: #ffb74d;
+    border-color: #e65100;
+  }
+}
+
+/* Callouts */
+.dashboard-callout {
+  background: var(--accent-bg);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 0.85rem 1rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin: 1rem 0;
+}
+
+.dashboard-callout-warn {
+  background: #fff3e0;
+  border-color: #f5a623;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dashboard-callout-warn {
+    background: #2d2100;
+    border-color: #e65100;
+  }
+}
+
+.dashboard-zero-list {
+  margin: 0.5rem 0 0 1rem;
+  padding: 0;
+  list-style: disc;
+  font-size: 0.85em;
+  color: var(--text-muted);
+}
+
+/* Filter bar */
+.dashboard-filter-bar {
+  margin: 0.75rem 0;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+}
+
+.dashboard-filter-bar label {
+  margin-right: 0.5rem;
+}
+
+.dashboard-filter-bar select {
+  background: var(--bg-input);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.85rem;
+}
+
+/* Loading + error states */
+.dashboard-loading {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text-muted);
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+.dashboard-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--border-color);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: dash-spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes dash-spin {
+  to { transform: rotate(360deg); }
+}
+
+.dashboard-error {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--error);
+  padding: 1rem 0;
+  font-size: 0.88rem;
+}
+
+.dashboard-retry-btn {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 0.2rem 0.6rem;
+  cursor: pointer;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.dashboard-retry-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.dashboard-empty {
+  color: var(--text-muted);
+  padding: 1.5rem 0;
+  font-size: 0.88rem;
+}
+
+/* Prose blurbs */
+.dashboard-prose {
+  margin: 1.25rem 0;
+}
+
+.dashboard-prose p {
+  margin: 0 0 0.75rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+/* Refresh note */
+.dashboard-refresh-note {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin: 0 0 1rem;
+}
+
+/* Sparkline */
+.dashboard-sparkline-wrap {
+  margin: 0.5rem 0 1rem;
+}
+
+.dashboard-sparkline {
+  width: 100%;
+  max-width: 300px;
+  height: 60px;
+  display: block;
+}
+
+/* Experiment cards */
+.dashboard-experiment-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.dashboard-experiment-active {
+  border-color: #4caf50;
+}
+
+.dashboard-experiment-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.4rem;
+}
+
+.dashboard-exp-pill {
+  display: inline-block;
+  padding: 0.15em 0.6em;
+  border-radius: 12px;
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pill-active  { background: #e8f5e9; color: #388e3c; border: 1px solid #a5d6a7; }
+.pill-paused  { background: #fff3e0; color: #e65100; border: 1px solid #ffcc80; }
+.pill-ended   { background: var(--bg-hover); color: var(--text-muted); border: 1px solid var(--border-light); }
+
+@media (prefers-color-scheme: dark) {
+  .pill-active { background: #1b3a1e; color: #81c784; border-color: #388e3c; }
+  .pill-paused { background: #2d2100; color: #ffb74d; border-color: #e65100; }
+}
+
+.dashboard-exp-id {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.dashboard-exp-kind {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.dashboard-experiment-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+.dashboard-exp-summary {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 0.4rem 0;
+}
+
+.dashboard-exp-collecting {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.dashboard-variants-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.dashboard-variant-block {
+  background: var(--bg-hover);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  min-width: 150px;
+}
+
+.dashboard-variant-label {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.dashboard-variant-ctr {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.dashboard-variant-ci {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+.dashboard-variant-counts {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+/* Past experiment table */
+.dashboard-exp-table td { vertical-align: top; }
+.exp-verdict-broken { color: var(--error); font-size: 0.82em; }
+.exp-verdict-pass   { color: #388e3c; font-size: 0.82em; }
+.exp-verdict-other  { font-size: 0.82em; }
+
+.dashboard-exp-detail-row td { background: var(--bg-hover); }
+.dashboard-exp-detail-body {
+  padding: 0.75rem 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.dashboard-exp-detail-body p { margin: 0 0 0.5rem; }
+
+/* Last-updated page footer */
+.dashboard-last-updated-footer {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: center;
+  margin: 3rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .dashboard-stat-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .dashboard-stat-num { font-size: 1.5rem; }
+  .dashboard-ranked-list th,
+  .dashboard-ranked-list td { padding: 0.35rem 0.5rem; }
+  .dashboard-variants-grid { flex-direction: column; }
+}
+</style>
+
+<header class="hero hero-site">
+    <h1 class="hero-title">Live Dashboard</h1>
+    <p class="hero-tagline">Numbers from the last 24 hours. Refreshes on page load.</p>
+</header>
+
+<div class="dashboard-page">
+
+    <!-- Tab navigation (reuses .site-tab* CSS from custom.css) -->
+    <div class="site-tabs" role="tablist" aria-label="Dashboard sections">
+
+        <button class="site-tab dashboard-tab active" data-tab="traffic" role="tab" aria-selected="true" aria-controls="dash-tab-traffic">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+            </svg>
+            Traffic
+        </button>
+
+        <button class="site-tab dashboard-tab" data-tab="content" role="tab" aria-selected="false" aria-controls="dash-tab-content">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            Top Content
+        </button>
+
+        <button class="site-tab dashboard-tab" data-tab="search" role="tab" aria-selected="false" aria-controls="dash-tab-search">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            Search
+        </button>
+
+        <button class="site-tab dashboard-tab" data-tab="models" role="tab" aria-selected="false" aria-controls="dash-tab-models">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            ML Models
+        </button>
+
+        <button class="site-tab dashboard-tab" data-tab="experiments" role="tab" aria-selected="false" aria-controls="dash-tab-experiments">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"></path>
+            </svg>
+            A/B Tests
+        </button>
+
+    </div>
+
+    <!-- ============================================================
+         Tab 1: Traffic
+    ============================================================ -->
+    <div class="site-tab-content dashboard-tab-content active" id="dash-tab-traffic" role="tabpanel">
+        <div class="site-tab-intro">
+            <h2>Traffic</h2>
+            <p class="site-tab-lead">Live activity from the analytics worker: event volume, session counts, and pipeline health.</p>
+        </div>
+        <div id="dash-traffic-content"></div>
+    </div>
+
+    <!-- ============================================================
+         Tab 2: Top Content
+    ============================================================ -->
+    <div class="site-tab-content dashboard-tab-content" id="dash-tab-content" role="tabpanel">
+        <div class="site-tab-intro">
+            <h2>Top Content</h2>
+            <p class="site-tab-lead">The 50 most-clicked items on the site, ranked by cumulative outbound clicks.</p>
+        </div>
+        <div id="dash-content-content"></div>
+    </div>
+
+    <!-- ============================================================
+         Tab 3: Search
+    ============================================================ -->
+    <div class="site-tab-content dashboard-tab-content" id="dash-tab-search" role="tabpanel">
+        <div class="site-tab-intro">
+            <h2>Search</h2>
+            <p class="site-tab-lead">What readers type into the search bar, how often, and where the index comes up short.</p>
+        </div>
+        <div id="dash-search-content"></div>
+    </div>
+
+    <!-- ============================================================
+         Tab 4: ML Models
+    ============================================================ -->
+    <div class="site-tab-content dashboard-tab-content" id="dash-tab-models" role="tabpanel">
+        <div class="site-tab-intro">
+            <h2>ML Models</h2>
+            <p class="site-tab-lead">Current ranker performance: NDCG@10, Hit-Rate@10, and MAP from the latest offline eval.</p>
+        </div>
+        <div id="dash-models-content"></div>
+    </div>
+
+    <!-- ============================================================
+         Tab 5: A/B Tests
+    ============================================================ -->
+    <div class="site-tab-content dashboard-tab-content" id="dash-tab-experiments" role="tabpanel">
+        <div class="site-tab-intro">
+            <h2>A/B Tests</h2>
+            <p class="site-tab-lead">Live and past experiments: bucketing status, per-variant CTR, and verdicts.</p>
+        </div>
+        <div id="dash-experiments-content"></div>
+    </div>
+
+</div>
+
+{{/* Last-updated footer: ML/AB tabs use site_scoreboard generated_at; traffic tabs say "live" */}}
+<p class="dashboard-last-updated-footer">
+    Live data refreshes on page load.
+    {{- with site.Data.site_scoreboard -}}
+    {{- with .generated_at }}
+    ML model and experiment data last built: <time>{{ . | truncate 10 "" }}</time>.
+    {{- end -}}
+    {{- end }}
+</p>
+
+<script src="{{ "js/dashboard.js" | relURL }}"></script>
+
+{{ end }}

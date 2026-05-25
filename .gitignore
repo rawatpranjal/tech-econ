@@ -38,3 +38,6 @@ books/**/source.pdf
 
 # D1 dumps — contain IPs and weak user IDs, never commit
 analytics-worker/backups/
+
+# Anthropic Serena tool cache
+.serena/
