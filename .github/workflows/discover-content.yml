@@ -30,15 +30,18 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.WORKFLOW_PAT }}
+          persist-credentials: true
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests openai
 
       - name: Self-test (smoke check)
         run: python scripts/discover_content.py --self-test
@@ -55,9 +58,9 @@ jobs:
             --limit ${{ inputs.limit || '15' }} \
             --verbose
 
-      - name: Validate data
+      - name: Validate data (fields, sync, duplicates — no network link check)
         if: ${{ !inputs.dry_run }}
-        run: python scripts/validate_data.py
+        run: python scripts/validate_data.py --skip-links
 
       - name: Commit new content
         if: ${{ !inputs.dry_run }}
@@ -70,7 +73,7 @@ jobs:
 
       - name: Upload discovery artifacts
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: discovery-log-${{ github.run_number }}
           path: |

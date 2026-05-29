@@ -1,0 +1,33 @@
+name: Alert on Workflow Failure
+
+on:
+  workflow_run:
+    workflows:
+      - "Refresh Homepage Rows"
+      - "Check Links"
+      - "Update GitHub Stars"
+      - "Weekly Content Discovery"
+      - "Update Citations"
+    types: [completed]
+
+permissions:
+  contents: read
+
+jobs:
+  alert:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - name: Notify webhook (no-op if secret unset)
+        env:
+          WEBHOOK: ${{ secrets.ALERT_WEBHOOK_URL }}
+          WF_NAME: ${{ github.event.workflow_run.name }}
+          WF_URL: ${{ github.event.workflow_run.html_url }}
+          WF_BRANCH: ${{ github.event.workflow_run.head_branch }}
+        run: |
+          if [ -z "$WEBHOOK" ]; then
+            echo "ALERT_WEBHOOK_URL not set — skipping notification (no-op)."
+            exit 0
+          fi
+          payload=$(printf '{"text":"❌ Scheduled workflow failed: %s on %s\n%s"}' "$WF_NAME" "$WF_BRANCH" "$WF_URL")
+          curl -sf -X POST -H 'Content-Type: application/json' -d "$payload" "$WEBHOOK"

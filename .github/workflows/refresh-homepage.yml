@@ -14,12 +14,18 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.WORKFLOW_PAT }}
+          persist-credentials: true
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.11'
+
+      - name: Install deps (numpy required for MMR ordering)
+        run: pip install numpy
 
       - name: Generate homepage rows
         run: python3 scripts/generate_homepage_rows.py
