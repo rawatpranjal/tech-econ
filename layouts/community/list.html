@@ -141,11 +141,15 @@
                      data-description="{{ .description | lower }}"
                      data-category="{{ .category }}">
                     <div class="card-header">
+                        {{ if .image_url }}
+                        <img src="{{ .image_url }}" class="resource-favicon" loading="lazy" onerror="this.style.display='none'">
+                        {{ else if .url }}
                         <img class="resource-favicon lazy-badge"
                              data-src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32"
                              alt=""
                              loading="lazy"
                              onerror="this.style.display='none'">
+                        {{ end }}
                         <h3 class="resource-name">
                             <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
                         </h3>
@@ -173,11 +177,15 @@
                      data-description="{{ .description | lower }}"
                      data-category="{{ .category }}">
                     <div class="card-header">
+                        {{ if .image_url }}
+                        <img src="{{ .image_url }}" class="resource-favicon" loading="lazy" onerror="this.style.display='none'">
+                        {{ else if .url }}
                         <img class="resource-favicon lazy-badge"
                              data-src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32"
                              alt=""
                              loading="lazy"
                              onerror="this.style.display='none'">
+                        {{ end }}
                         <h3 class="resource-name">
                             <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
                         </h3>
@@ -206,11 +214,15 @@
                      data-category="{{ .category }}"
                      data-location="{{ .location | lower }}">
                     <div class="card-header">
+                        {{ if .image_url }}
+                        <img src="{{ .image_url }}" class="resource-favicon" loading="lazy" onerror="this.style.display='none'">
+                        {{ else if .url }}
                         <img class="resource-favicon lazy-badge"
                              data-src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32"
                              alt=""
                              loading="lazy"
                              onerror="this.style.display='none'">
+                        {{ end }}
                         <h3 class="resource-name">
                             <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
                         </h3>
@@ -397,10 +409,14 @@
                          data-dates="{{ .dates | lower }}"
                          data-subcategory="{{ .subcategory | default "" | lower }}">
                         <div class="card-header">
+                            {{ if .image_url }}
+                            <img src="{{ .image_url }}" class="resource-favicon" loading="lazy" onerror="this.style.display='none'">
+                            {{ else if .url }}
                             <img class="resource-favicon lazy-badge"
                                  data-src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=32"
                                  alt=""
                                  onerror="this.style.display='none'">
+                            {{ end }}
                             <h3 class="resource-name">
                                 <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
                             </h3>
