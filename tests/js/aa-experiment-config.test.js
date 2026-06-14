@@ -138,6 +138,8 @@ describe('harness_aa_v2: end-to-end bucket distribution', () => {
     expect(all.harness_aa_v1).toBeUndefined();
     // _example_disabled is status=draft — must NOT appear.
     expect(all._example_disabled).toBeUndefined();
+    // exp_re1_mmr_v1 is draft — must NOT appear until aa_v2 A/A clears.
+    expect(all.exp_re1_mmr_v1).toBeUndefined();
     document.cookie = 'te_uid=; path=/; max-age=0';
   });
 

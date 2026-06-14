@@ -804,7 +804,11 @@
     // the full track() pipeline. Underscored to signal "not for production
     // callers" -- public callers should use track().
     _getExperimentAssignments: getExperimentAssignments,
-    _hasAnyAssignment: hasAnyAssignment
+    _hasAnyAssignment: hasAnyAssignment,
+    _jaccard: jaccard,
+    _hash: hash,
+    _truncate: truncate,
+    _getReferrerSource: getReferrerSource
   };
 
   // Initialize
@@ -812,6 +816,12 @@
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
+  }
+
+  if (typeof window !== 'undefined') {
+    window.Tracker = window.Tracker || {};
+    window.Tracker._hasAnyAssignment = hasAnyAssignment;
+    window.Tracker._getWordCount = getWordCount;
   }
 
 })(window);

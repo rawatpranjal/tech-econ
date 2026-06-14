@@ -204,6 +204,39 @@ def check_related_items_envelope() -> dict[str, Any]:
     return {"sample_size": len(sample_ids), "total_items": len(items)}
 
 
+def check_content_files_sorted_by_score() -> dict[str, Any]:
+    """Every content file must be sorted descending by model_score.
+    inject_scores.py is supposed to sort on write; if a file is edited
+    manually and re-validated, this invariant catches the regression."""
+    unsorted: list[str] = []
+    checked = 0
+    for filename in CONTENT_FILES:
+        path = DATA_DIR / filename
+        if not path.exists():
+            continue
+        data = _load_json(path)
+        items = data if isinstance(data, list) else data.get("items", [])
+        scores = [
+            item.get("model_score", 0)
+            for item in items
+            if isinstance(item, dict)
+        ]
+        checked += len(scores)
+        for i in range(len(scores) - 1):
+            if scores[i] < scores[i + 1]:
+                unsorted.append(
+                    f"{filename}: index {i} ({scores[i]:.4f}) < index {i+1} ({scores[i+1]:.4f})"
+                )
+                break  # one report per file is enough
+    if unsorted:
+        raise Failure(
+            "content_files_sorted_by_score",
+            f"{len(unsorted)} files not sorted descending by model_score; "
+            f"fix by running inject_scores.py: {unsorted}",
+        )
+    return {"items_checked": checked}
+
+
 def check_related_items_no_self_reference() -> dict[str, Any]:
     """No item should appear as its own related-item. A self-reference
     is a real-world bug we've shipped before; cheap to assert."""
@@ -267,6 +300,7 @@ def check_related_items_ids_resolve() -> dict[str, Any]:
 # ---------------------------------------------------------------------------
 CHECKS = [
     ("model_scores_in_range", check_model_scores_in_range),
+    ("content_files_sorted_by_score", check_content_files_sorted_by_score),
     ("no_duplicate_ids_in_metadata", check_no_duplicate_ids_in_metadata),
     ("related_items_envelope", check_related_items_envelope),
     ("related_items_no_self_reference", check_related_items_no_self_reference),

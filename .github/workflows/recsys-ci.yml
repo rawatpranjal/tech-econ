@@ -130,3 +130,19 @@ jobs:
           }
           console.log("experiments-config OK: " + parsed.experiments.length + " experiment(s) inlined");
           '
+
+      - name: MMR dual-render sanity (Re1 homepage variant wiring)
+        run: |
+          node -e '
+          const fs = require("fs");
+          const html = fs.readFileSync("public/index.html", "utf8");
+          const wrapCount    = (html.match(/mmr-row-wrap/g) || []).length;
+          const controlCount = (html.match(/data-mmr-variant=control/g) || []).length;
+          const treatCount   = (html.match(/data-mmr-variant=treatment/g) || []).length;
+          const hiddenCount  = (html.match(/data-mmr-variant=treatment hidden/g) || []).length;
+          if (wrapCount < 1) { console.error("No mmr-row-wrap divs found — home.html dual-render broken"); process.exit(1); }
+          if (controlCount !== wrapCount) { console.error("control div count (" + controlCount + ") != wrap count (" + wrapCount + ")"); process.exit(1); }
+          if (treatCount !== wrapCount) { console.error("treatment div count (" + treatCount + ") != wrap count (" + wrapCount + ")"); process.exit(1); }
+          if (hiddenCount !== wrapCount) { console.error("treatment[hidden] count (" + hiddenCount + ") != wrap count (" + wrapCount + ") — default state broken"); process.exit(1); }
+          console.log("MMR dual-render OK: " + wrapCount + " row(s), control/treatment divs correct, treatment hidden by default");
+          '

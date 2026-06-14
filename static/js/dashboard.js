@@ -617,6 +617,25 @@ function escHtml(str) {
 }
 
 /* ============================================================
+   Test surface (pure helpers only — no DOM, no network)
+   ============================================================ */
+
+if (typeof window !== 'undefined') {
+  window.Dashboard = {
+    fmtNum,
+    pct,
+    escHtml,
+    skeletonHTML,
+    renderTraffic,
+    renderTopContent,
+    renderSearch,
+    renderModels,
+    renderExperiments,
+    renderVariantStats,
+  };
+}
+
+/* ============================================================
    Tab switching + init
    ============================================================ */
 

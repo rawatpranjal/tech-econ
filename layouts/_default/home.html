@@ -64,7 +64,16 @@
       {{ else if eq $row.template "compact" }}
         {{ partial "homepage/row-compact.html" $row }}
       {{ else }}
-        {{ partial "homepage/row-standard.html" $row }}
+        {{/* Standard rows: dual-render control + treatment for Re1 MMR experiment.
+             homepage-mmr-experiment.js reads the variant and toggles visibility.
+             Falls back to control (items) if items_mmr is absent or experiment is draft. */}}
+        {{ $mmrItems := $row.items }}
+        {{ with $row.items_mmr }}{{ $mmrItems = . }}{{ end }}
+        {{ $treatRow := merge $row (dict "items" $mmrItems) }}
+        <div class="mmr-row-wrap" data-row-id="{{ $row.id }}">
+          <div data-mmr-variant="control">{{ partial "homepage/row-standard.html" $row }}</div>
+          <div data-mmr-variant="treatment" hidden>{{ partial "homepage/row-standard.html" $treatRow }}</div>
+        </div>
       {{ end }}
 
 

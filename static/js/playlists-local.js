@@ -29,7 +29,7 @@
     function createPlaylist(name) {
         const playlists = getPlaylists();
         const newPlaylist = {
-            id: 'playlist-' + Date.now(),
+            id: 'playlist-' + Date.now() + '-' + Math.random().toString(36).slice(2, 7),
             name: name || 'Untitled Playlist',
             createdAt: Date.now(),
             items: []

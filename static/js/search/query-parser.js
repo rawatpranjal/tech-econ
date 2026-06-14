@@ -59,20 +59,23 @@
     }
 
     // 2. Extract field filters (field:value)
+    // Collect all matches first — modifying `remaining` inside the exec() loop
+    // corrupts lastIndex because the string length changes mid-scan.
     var fieldRegex = /(\w+):(\S+)/g;
+    var fieldMatches = [];
     while ((match = fieldRegex.exec(remaining)) !== null) {
-      var field = match[1].toLowerCase();
-      var value = match[2].trim();
-
-      // Normalize field names
-      var normalizedField = normalizeFieldName(field);
-      if (normalizedField && value) {
+      fieldMatches.push({ raw: match[0], field: match[1], value: match[2] });
+    }
+    for (var fi = 0; fi < fieldMatches.length; fi++) {
+      var fm = fieldMatches[fi];
+      var normalizedField = normalizeFieldName(fm.field.toLowerCase());
+      if (normalizedField && fm.value) {
         if (!result.fields[normalizedField]) {
           result.fields[normalizedField] = [];
         }
-        result.fields[normalizedField].push(value);
+        result.fields[normalizedField].push(fm.value.trim());
       }
-      remaining = remaining.replace(match[0], ' ');
+      remaining = remaining.replace(fm.raw, ' ');
     }
 
     // 3. Extract negated terms (-term)

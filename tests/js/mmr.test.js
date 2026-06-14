@@ -180,6 +180,11 @@ describe('mmrRerank', () => {
     const out = MMR.mmrRerank(items, lookupFromItems(items), { lambda: 0.7 });
     expect(out.length).toBe(2);
   });
+
+  it('topK=0 returns empty array', () => {
+    const items = [makeItem('a', 1.0, vec(1, 0, 0))];
+    expect(MMR.mmrRerank(items, lookupFromItems(items), { topK: 0 })).toEqual([]);
+  });
 });
 
 // -----------------------------------------------------------------

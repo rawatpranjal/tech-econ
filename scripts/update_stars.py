@@ -32,7 +32,7 @@ def extract_repo_info(url):
     match = re.search(r"github\.com/([^/]+)/([^/]+)", url)
     if match:
         owner = match.group(1)
-        repo = match.group(2).rstrip(".git")
+        repo = re.sub(r"\.git$", "", match.group(2))
         return owner, repo
     return None
 

@@ -13,12 +13,19 @@ from typing import Any
 
 import pytest
 
+import io
+import urllib.error
+import urllib.response
+from types import SimpleNamespace
+from unittest.mock import patch
+
 from lib.d1_client import (
     DEFAULT_BASE_URL,
     DEFAULT_TIMEOUT_SEC,
     D1Client,
     D1ClientError,
     D1Response,
+    _default_fetcher,
     _ensure_list,
 )
 
@@ -266,3 +273,70 @@ class TestNetworkError:
         c = D1Client(base_url="https://w.example.com", http=boom)
         with pytest.raises(D1ClientError, match="simulated network"):
             c.stats()
+
+
+# ---------------------------------------------------------------------------
+# _default_fetcher — urllib-backed fetcher (mocked urlopen)
+# ---------------------------------------------------------------------------
+
+class _FakeResponse:
+    """Minimal urllib response stub supporting the context manager protocol."""
+
+    def __init__(self, status: int, body: bytes, headers: dict | None = None):
+        self.status = status
+        self._body = body
+        self._headers = headers or {}
+        # urllib responses expose headers as an http.client.HTTPMessage-like
+        # object; we only need .items() for the dict comprehension.
+        self.headers = SimpleNamespace(items=lambda: list(self._headers.items()))
+
+    def read(self) -> bytes:
+        return self._body
+
+    def __enter__(self):
+        return self
+
+    def __exit__(self, *_):
+        pass
+
+
+class TestDefaultFetcher:
+    """Tests for _default_fetcher mocked at urllib.request.urlopen."""
+
+    def _patch(self, ctx_mgr):
+        return patch("lib.d1_client.urllib.request.urlopen", return_value=ctx_mgr)
+
+    def test_200_returns_status_body_headers(self):
+        resp = _FakeResponse(200, b'{"ok": true}', {"content-type": "application/json"})
+        with self._patch(resp):
+            status, body, hdrs = _default_fetcher("https://example.com/health", 5.0)
+        assert status == 200
+        assert body == b'{"ok": true}'
+        assert hdrs["content-type"] == "application/json"
+
+    def test_headers_lowercased(self):
+        resp = _FakeResponse(200, b"", {"X-Custom-Header": "value"})
+        with self._patch(resp):
+            _, _, hdrs = _default_fetcher("https://example.com/", 5.0)
+        assert "x-custom-header" in hdrs
+        assert "X-Custom-Header" not in hdrs
+
+    def test_http_error_4xx_returned_as_response_not_raised(self):
+        # HTTPError IS a response — 4xx should be returned, not raised.
+        err = urllib.error.HTTPError(
+            url="https://example.com/gone",
+            code=404,
+            msg="Not Found",
+            hdrs=None,
+            fp=io.BytesIO(b"not found"),
+        )
+        with patch("lib.d1_client.urllib.request.urlopen", side_effect=err):
+            status, body, _ = _default_fetcher("https://example.com/gone", 5.0)
+        assert status == 404
+        assert b"not found" in body
+
+    def test_url_error_raises_d1_client_error(self):
+        err = urllib.error.URLError(reason="connection refused")
+        with patch("lib.d1_client.urllib.request.urlopen", side_effect=err):
+            with pytest.raises(D1ClientError, match="Network error"):
+                _default_fetcher("https://example.com/", 5.0)

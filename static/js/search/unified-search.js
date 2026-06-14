@@ -3628,4 +3628,17 @@
   // Export
   global.UnifiedSearch = unifiedSearch;
 
+  // Test surface (pure helpers only — no network, no DOM state)
+  if (typeof window !== 'undefined') {
+    window.UnifiedSearch._helpers = {
+      truncate: truncate,
+      smartTruncate: smartTruncate,
+      escapeRegex: escapeRegex,
+      generateSnippet: generateSnippet,
+      detectIntent: detectIntent,
+      escapeHtml: escapeHtml,
+      highlightText: highlightText,
+    };
+  }
+
 })(typeof window !== 'undefined' ? window : this);

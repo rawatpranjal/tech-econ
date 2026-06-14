@@ -37,7 +37,7 @@ def find_source_md(book_dir: Path) -> Path:
     return candidates[0]
 
 
-CHAPTER_PATTERN = re.compile(r"^#{1,3}\s+Chapter\s+\d+", re.IGNORECASE)
+CHAPTER_PATTERN = re.compile(r"^#{1,3}\s+Chapter\s+\d+", re.IGNORECASE | re.MULTILINE)
 
 
 def pick_split_level(text: str) -> int:
@@ -87,6 +87,8 @@ def split_chapters(text: str, level: int) -> list[tuple[str, str]]:
         if line.startswith(prefix) and not line.startswith(prefix + "#"):
             if current_title is not None:
                 chapters.append((current_title, current_lines))
+            elif current_lines:
+                chapters.append(("Front Matter", current_lines))
             current_title = line[len(prefix):].strip()
             current_lines = [line]
         else:

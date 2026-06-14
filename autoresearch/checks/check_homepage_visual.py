@@ -141,6 +141,7 @@ def main():
             except Exception:
                 pass
 
+        baseline_path.parent.mkdir(parents=True, exist_ok=True)
         baseline_path.write_text(json.dumps(current_metrics, indent=2))
 
     # -- Summary --
