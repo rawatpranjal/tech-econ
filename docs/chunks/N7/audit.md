@@ -20,12 +20,14 @@
 
 ---
 
-## Goalpost verdict: PARTIALLY MET
+## Goalpost verdict: MET (after N.6b follow-up, shipped same day)
+
+> **Update 2026-06-14:** N.6b shipped after this audit and closed the datasets gap — 150 dataset cards now show a favicon instead of initials. Original verdict at time of writing was PARTIALLY MET; revised below.
 
 The goalpost has two clauses. Status per clause:
 
 ### Clause 1: "every card has a real image, generated image, or favicon fallback"
-**Not fully met.** 156 cards (150 datasets + 6 books) use initials-on-gradient, which is not among the three allowed options. 75 package cards are pure text (no image and no favicon).
+**Met** for career, community, talks, resources, datasets (post-N.6b). Remaining edge cases: 6 books with no cover and no ISBN show `.book-card-fallback` initials-gradient (styled, blue-grey); 75 CRAN packages are pure text (no favicon slot in package card design).
 
 ### Clause 2: "no raw initials-on-gradient placeholders"
 **Contested.** The datasets template (`datasets/list.html:275-279`) has an explicit code comment "Fallback: Gradient + Initials" and uses category-specific CSS colors (`data-category` attribute → category-colored gradient). The 6 books use a styled blue-grey gradient added in N.6. These are styled and intentional, not "raw" text dumps — but they are still initials-on-gradient by any reading of the code.

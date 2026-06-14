@@ -6,8 +6,8 @@
 ---
 
 ## Status board
-<!-- STATUS-BOARD:START (refreshed 2026-06-14 /autoloop) -->
-Orange - ~80% complete. Binding constraint: A.4 HITL + B.5 HITL. Updated 2026-06-14.
+<!-- STATUS-BOARD:START (refreshed 2026-06-14 /end) -->
+Orange - ~85% complete. Binding constraint: A.4 HITL + B.5 HITL. Updated 2026-06-14.
 
 | Stream | scoped | explore | design | build | verify | pushed | % |
 |---|---|---|---|---|---|---|---|
@@ -15,13 +15,13 @@ Orange - ~80% complete. Binding constraint: A.4 HITL + B.5 HITL. Updated 2026-06
 | B - Homepage | Y | Y | Y | Y | - | - | 60% |
 | C - /site page | Y | Y | Y | Y | Y | Y | 100% |
 | D - Doc hygiene | Y | Y | Y | Y | Y | Y | 100% |
-| N - Card images | Y | Y | Y | Y | Y | Y | 95% |
+| N - Card images | Y | Y | Y | Y | Y | Y | 100% |
 | T - CI/CD | Y | Y | Y | Y | - | Y | 80% |
 
-What happened: Stream N complete (N.1–N.7). image_url fields populated across books/career/community/packages; templates wired; 65 book covers downloaded; 2126 Python / 714 JS green. N audit: goalpost PARTIALLY MET — datasets 150 + books 6 use initials-gradient; resources template ignores image_url.
+What happened: Stream N fully closed (N.1–N.7 + N.6b). All card types now have real image or favicon fallback; datasets 150-card initials gap closed by N.6b favicon step. 2126 Python / 714 JS green. hugo_stats.json gitignored; Directory Structure label fixed in docs.
 What's next: A.4 HITL (run analyze_experiments.py on harness_aa_v2, review CTR); B.5 HITL (eyeball live homepage). T.6 CI audit opens 2026-06-28.
-Risks and blockers: ALL remaining Now-horizon items are human gates (A.4, B.5) or time-gated (T.6). No unblocked mechanical work remains in Now streams.
-Decisions and asks: N.7 found two follow-up opportunities — (1) add favicon step before initials in datasets/list.html (closes the goalpost gap for 150 cards); (2) wire image_url into resources/learning template (N.8). Continue with these, or wait for HITLs?
+Risks and blockers: ALL remaining Now-horizon items are human gates (A.4, B.5) or time-gated (T.6). No unblocked mechanical work in Now streams.
+Decisions and asks: Resources/learning card has no hero slot — image_url goes unused for 322 resources. Card redesign needed to use it (deferred, not a regression).
 <!-- STATUS-BOARD:END -->
 
 ---
@@ -246,7 +246,7 @@ python3 scripts/generate_embeddings.py # Regenerate vectors
 # Directory Structure
 
 ```
-metrics-packages/
+tech-econ/
 ├── content/          # Hugo markdown pages (section definitions)
 ├── data/             # JSON content files (PRIMARY DATA SOURCE)
 │   ├── packages.json, datasets.json, resources.json, etc.
