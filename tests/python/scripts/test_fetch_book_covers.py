@@ -14,6 +14,9 @@ from unittest.mock import MagicMock, patch, call
 
 import pytest
 
+# Stub requests before the module is loaded so the import doesn't fail in CI.
+sys.modules.setdefault("requests", MagicMock())
+
 # ---------------------------------------------------------------------------
 # Load the module without executing main()
 # ---------------------------------------------------------------------------

@@ -23,8 +23,7 @@ from urllib.parse import urlencode, urlparse, parse_qs, urlunsplit
 try:
     import requests
 except ImportError:
-    print("Error: requests not installed. Run: pip install requests")
-    sys.exit(1)
+    requests = None  # type: ignore[assignment]  # checked in main()
 
 # ---------------------------------------------------------------------------
 # Paths
@@ -169,6 +168,10 @@ def _save_image(data: bytes, path: Path) -> None:
 # ---------------------------------------------------------------------------
 
 def main(argv: list[str] | None = None) -> int:
+    if requests is None:
+        print("Error: requests not installed. Run: pip install requests")
+        sys.exit(1)
+
     parser = argparse.ArgumentParser(description="Fetch book cover images.")
     parser.add_argument("--dry-run", action="store_true",
                         help="Report what would happen; make no writes.")
