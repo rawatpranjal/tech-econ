@@ -131,7 +131,7 @@ Audit (2026-05-27): `books.json` and `career.json` have zero `image_url` field. 
 - **N.4** ✅ shipped 3664fb6 (2026-06-14) — `scripts/fetch_career_community_images.py`: Google favicon CDN URL (`https://www.google.com/s2/favicons?domain={domain}&sz=128`) for career (639/639) and community (452/452 after adding missing key to 131 entries). 307 pre-existing community images preserved. 55 tests. Suite 2126 pass.
 - **N.5** ⏭ skipped 2026-06-14 — deferred by user. Image generation budget (≤$8) not spent now.
 - **N.6** ✅ shipped c27313f (2026-06-14) — Wire `image_url` as primary source in books/packages/career/community templates. books: `image_url` → OpenLibrary ISBN → initials-on-gradient fallback. packages: `image_url` badge (drops `github_url` owner computation). career + community: `image_url` → lazy-favicon fallback chain. `.book-card-fallback` CSS added (72×100px, blue-grey gradient). Hugo build 0 errors. 714/714 JS, 2126/2126 Python.
-- **N.7** End-of-stream audit. Spot-check 50 random cards across all 8 content types.
+- **N.7** ✅ shipped 2026-06-14 — End-of-stream audit (50-card spot-check). Goalpost PARTIALLY MET: career/community/talks/resources all clean. Datasets 150 cards use category initials-gradient (missing favicon step before initials); 6 books hit `.book-card-fallback` gradient. 75 CRAN packages are pure text (no favicon slot in card design). Resources template (learning/list.html) ignores `image_url` — all 518 get favicon, just not the richer cover. Full findings: `docs/chunks/N7/audit.md`.
 
 **Why now:** No-image cards are the single most visible quality gap on the site. The corpus already won the curation game; the staging is what loses it.
 
