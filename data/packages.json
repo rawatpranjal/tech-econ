@@ -84,11 +84,12 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 731
+    "stars": 731,
+    "image_url": "https://github.com/DoubleML.png?size=128"
   },
   {
     "name": "csdid",
-    "description": "Python adaptation of the R `did` package. Implements multi-period DiD with staggered treatment timing (Callaway & Sant\u2019Anna).",
+    "description": "Python adaptation of the R `did` package. Implements multi-period DiD with staggered treatment timing (Callaway & Sant’Anna).",
     "category": "Program Evaluation Methods (DiD, SC, RDD)",
     "docs_url": null,
     "github_url": "https://github.com/d2cml-ai/csdid",
@@ -111,7 +112,7 @@
       "program-evaluation",
       "econometrics"
     ],
-    "summary": "The csdid package is a Python adaptation of the R 'did' package, designed to implement multi-period difference-in-differences (DiD) analysis with staggered treatment timing as proposed by Callaway and Sant\u2019Anna. It is primarily used by researchers and data scientists in the fields of economics and social sciences to evaluate causal effects in observational data.",
+    "summary": "The csdid package is a Python adaptation of the R 'did' package, designed to implement multi-period difference-in-differences (DiD) analysis with staggered treatment timing as proposed by Callaway and Sant’Anna. It is primarily used by researchers and data scientists in the fields of economics and social sciences to evaluate causal effects in observational data.",
     "use_cases": [
       "Evaluating the impact of policy changes over time",
       "Assessing the effects of new programs in social sciences"
@@ -135,7 +136,7 @@
       "staggered treatment effect estimation"
     ],
     "api_complexity": "intermediate",
-    "implements_paper": "Callaway & Sant\u2019Anna (2021)",
+    "implements_paper": "Callaway & Sant’Anna (2021)",
     "related_packages": [
       "statsmodels",
       "causalml"
@@ -151,7 +152,7 @@
       "treatment effects",
       "observational data",
       "multi-period analysis",
-      "Callaway & Sant\u2019Anna",
+      "Callaway & Sant’Anna",
       "Python adaptation",
       "statistical methods"
     ],
@@ -170,7 +171,8 @@
       "experimentation",
       "econometrics"
     ],
-    "stars": 50
+    "stars": 50,
+    "image_url": "https://github.com/d2cml-ai.png?size=128"
   },
   {
     "name": "Ax (Meta Adaptive Experimentation)",
@@ -257,7 +259,8 @@
       "machine-learning",
       "optimization"
     ],
-    "stars": 2744
+    "stars": 2744,
+    "image_url": "https://github.com/facebook.png?size=128"
   },
   {
     "name": "Bambi",
@@ -343,7 +346,8 @@
       "causal-inference",
       "econometrics",
       "machine-learning"
-    ]
+    ],
+    "image_url": "https://github.com/bambinos.png?size=128"
   },
   {
     "name": "EconML",
@@ -429,7 +433,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 4614
+    "stars": 4614,
+    "image_url": "https://github.com/py-why.png?size=128"
   },
   {
     "name": "EconML",
@@ -520,7 +525,8 @@
       "healthcare",
       "policy-evaluation"
     ],
-    "stars": 4614
+    "stars": 4614,
+    "image_url": "https://github.com/py-why.png?size=128"
   },
   {
     "name": "EconML",
@@ -606,7 +612,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 4614
+    "stars": 4614,
+    "image_url": "https://github.com/py-why.png?size=128"
   },
   {
     "name": "EconML",
@@ -699,7 +706,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 4614
+    "stars": 4614,
+    "image_url": "https://github.com/microsoft.png?size=128"
   },
   {
     "name": "bunching",
@@ -778,7 +786,8 @@
       "econometrics",
       "labor-economics",
       "policy-evaluation"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "respy",
@@ -861,7 +870,8 @@
       "statsmodels",
       "PyMC3"
     ],
-    "stars": 82
+    "stars": 82,
+    "image_url": "https://github.com/OpenSourceEconomics.png?size=128"
   },
   {
     "name": "Greeners",
@@ -950,7 +960,8 @@
       "causal-inference",
       "statistics"
     ],
-    "stars": 3
+    "stars": 3,
+    "image_url": "https://github.com/sheep-farm.png?size=128"
   },
   {
     "name": "did",
@@ -1029,7 +1040,8 @@
       "econometrics",
       "statistics"
     ],
-    "stars": 396
+    "stars": 396,
+    "image_url": "https://github.com/bcallaway11.png?size=128"
   },
   {
     "name": "scpi",
@@ -1107,7 +1119,8 @@
       "causal-inference",
       "experimentation",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "CausalImpact",
@@ -1192,7 +1205,8 @@
       "causal-inference",
       "experimentation",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://github.com/tcassou.png?size=128"
   },
   {
     "name": "CausalImpact",
@@ -1273,7 +1287,8 @@
       "causal-inference",
       "experimentation",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://github.com/google.png?size=128"
   },
   {
     "name": "TS-Flint",
@@ -1354,7 +1369,8 @@
       "finance",
       "machine-learning",
       "statistics"
-    ]
+    ],
+    "image_url": "https://github.com/twosigma.png?size=128"
   },
   {
     "name": "ruspy",
@@ -1438,7 +1454,8 @@
       "causal-inference",
       "experimentation"
     ],
-    "stars": 25
+    "stars": 25,
+    "image_url": "https://github.com/OpenSourceEconomics.png?size=128"
   },
   {
     "name": "mlsynth",
@@ -1520,7 +1537,8 @@
       "experimentation",
       "econometrics"
     ],
-    "stars": 59
+    "stars": 59,
+    "image_url": "https://github.com/jgreathouse9.png?size=128"
   },
   {
     "name": "pynare",
@@ -1604,7 +1622,8 @@
     "related_packages": [
       "Dynare"
     ],
-    "stars": 20
+    "stars": 20,
+    "image_url": "https://github.com/gboehl.png?size=128"
   },
   {
     "name": "Biogeme",
@@ -1685,7 +1704,8 @@
       "econometrics",
       "experimentation"
     ],
-    "stars": 133
+    "stars": 133,
+    "image_url": "https://github.com/michelbierlaire.png?size=128"
   },
   {
     "name": "Biogeme",
@@ -1742,7 +1762,7 @@
     ],
     "maintenance_status": "active",
     "model_score": 0.1893,
-    "embedding_text": "Biogeme is the reference Python package for discrete choice model estimation, specifically designed to handle various types of logit models including standard logit, nested logit, and mixed logit. Developed by Michel Bierlaire at the \u00c9cole Polytechnique F\u00e9d\u00e9rale de Lausanne (EPFL), Biogeme has become a staple in transportation research, providing researchers and practitioners with robust tools to analyze and model choices made by individuals in various contexts. The core functionality of Biogeme revolves around its ability to estimate parameters of discrete choice models, allowing users to understand how different factors influence decision-making processes. The package is built with an emphasis on usability and flexibility, making it accessible to both novice and experienced users in the field of transportation economics. The API is designed to be intuitive, allowing users to define their choice models using a straightforward syntax. Key classes and functions within Biogeme facilitate the specification of utility functions, the estimation of model parameters, and the evaluation of model fit. Installation is straightforward via pip, and users can quickly get started by importing the package and defining their models. Biogeme's performance characteristics are commendable, as it efficiently handles large datasets and complex model specifications, making it suitable for real-world applications. However, users should be mindful of common pitfalls such as overfitting and the importance of correctly specifying the utility functions. Best practices include validating models with out-of-sample data and ensuring that the assumptions of the chosen model align with the data at hand. Biogeme is particularly useful when researchers aim to understand mode choice behavior in transportation studies, but it may not be the best fit for all types of choice modeling, particularly those that require more advanced machine learning techniques. Overall, Biogeme stands out as a powerful tool for discrete choice modeling, bridging the gap between theoretical frameworks and practical applications in transportation research.",
+    "embedding_text": "Biogeme is the reference Python package for discrete choice model estimation, specifically designed to handle various types of logit models including standard logit, nested logit, and mixed logit. Developed by Michel Bierlaire at the École Polytechnique Fédérale de Lausanne (EPFL), Biogeme has become a staple in transportation research, providing researchers and practitioners with robust tools to analyze and model choices made by individuals in various contexts. The core functionality of Biogeme revolves around its ability to estimate parameters of discrete choice models, allowing users to understand how different factors influence decision-making processes. The package is built with an emphasis on usability and flexibility, making it accessible to both novice and experienced users in the field of transportation economics. The API is designed to be intuitive, allowing users to define their choice models using a straightforward syntax. Key classes and functions within Biogeme facilitate the specification of utility functions, the estimation of model parameters, and the evaluation of model fit. Installation is straightforward via pip, and users can quickly get started by importing the package and defining their models. Biogeme's performance characteristics are commendable, as it efficiently handles large datasets and complex model specifications, making it suitable for real-world applications. However, users should be mindful of common pitfalls such as overfitting and the importance of correctly specifying the utility functions. Best practices include validating models with out-of-sample data and ensuring that the assumptions of the chosen model align with the data at hand. Biogeme is particularly useful when researchers aim to understand mode choice behavior in transportation studies, but it may not be the best fit for all types of choice modeling, particularly those that require more advanced machine learning techniques. Overall, Biogeme stands out as a powerful tool for discrete choice modeling, bridging the gap between theoretical frameworks and practical applications in transportation research.",
     "tfidf_keywords": [
       "discrete choice",
       "logit model",
@@ -1771,7 +1791,8 @@
       "consumer-behavior",
       "transportation"
     ],
-    "stars": 133
+    "stars": 133,
+    "image_url": "https://github.com/michelbierlaire.png?size=128"
   },
   {
     "name": "econpizza",
@@ -1851,7 +1872,8 @@
       "causal-inference",
       "policy-evaluation"
     ],
-    "stars": 111
+    "stars": 111,
+    "image_url": "https://github.com/gboehl.png?size=128"
   },
   {
     "name": "Argmin",
@@ -1925,7 +1947,8 @@
       "machine-learning",
       "statistics"
     ],
-    "stars": 1252
+    "stars": 1252,
+    "image_url": "https://github.com/argmin-rs.png?size=128"
   },
   {
     "name": "jaxonometrics",
@@ -2012,7 +2035,8 @@
       "optimization",
       "machine-learning"
     ],
-    "stars": 16
+    "stars": 16,
+    "image_url": "https://github.com/py-econometrics.png?size=128"
   },
   {
     "name": "torch-choice",
@@ -2097,7 +2121,8 @@
       "PyMC3",
       "statsmodels"
     ],
-    "stars": 60
+    "stars": 60,
+    "image_url": "https://github.com/gsbDBI.png?size=128"
   },
   {
     "name": "Dolo",
@@ -2175,7 +2200,8 @@
       "causal-inference",
       "machine-learning"
     ],
-    "stars": 106
+    "stars": 106,
+    "image_url": "https://github.com/EconForge.png?size=128"
   },
   {
     "name": "Dolo",
@@ -2257,7 +2283,8 @@
       "forecasting",
       "machine-learning"
     ],
-    "stars": 106
+    "stars": 106,
+    "image_url": "https://github.com/EconForge.png?size=128"
   },
   {
     "name": "gEconpy",
@@ -2338,7 +2365,8 @@
       "structural-econometrics",
       "machine-learning"
     ],
-    "stars": 38
+    "stars": 38,
+    "image_url": "https://github.com/jessegrabowski.png?size=128"
   },
   {
     "name": "QuantEcon.py",
@@ -2424,7 +2452,8 @@
       "statsmodels",
       "scipy"
     ],
-    "stars": 2319
+    "stars": 2319,
+    "image_url": "https://github.com/QuantEcon.png?size=128"
   },
   {
     "name": "pydsge",
@@ -2508,7 +2537,8 @@
       "statsmodels",
       "pymc3"
     ],
-    "stars": 66
+    "stars": 66,
+    "image_url": "https://github.com/gboehl.png?size=128"
   },
   {
     "name": "upper-envelope",
@@ -2580,7 +2610,8 @@
       "optimization",
       "machine-learning"
     ],
-    "stars": 1
+    "stars": 1,
+    "image_url": "https://github.com/OpenSourceEconomics.png?size=128"
   },
   {
     "name": "augsynth",
@@ -2657,7 +2688,8 @@
       "econometrics",
       "experimentation"
     ],
-    "stars": 169
+    "stars": 169,
+    "image_url": "https://github.com/ebenmichael.png?size=128"
   },
   {
     "name": "microsynth",
@@ -2738,7 +2770,8 @@
       "causal-inference",
       "experimentation",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "microsynth",
@@ -2815,7 +2848,8 @@
     "primary_use_cases": [
       "micro-level causal analysis",
       "individual treatment effect estimation"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "randomizr",
@@ -2893,7 +2927,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 37
+    "stars": 37,
+    "image_url": "https://github.com/DeclareDesign.png?size=128"
   },
   {
     "name": "synthdid",
@@ -2973,7 +3008,8 @@
       "econometrics",
       "experimentation"
     ],
-    "stars": 306
+    "stars": 306,
+    "image_url": "https://github.com/synth-inference.png?size=128"
   },
   {
     "name": "actuar",
@@ -3053,7 +3089,8 @@
       "econometrics",
       "finance",
       "policy-evaluation"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "extRemes",
@@ -3129,7 +3166,8 @@
       "statistics",
       "forecasting",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "MABWiser",
@@ -3218,11 +3256,12 @@
       "machine-learning",
       "causal-inference"
     ],
-    "stars": 281
+    "stars": 281,
+    "image_url": "https://github.com/fidelity.png?size=128"
   },
   {
     "name": "pyhtelasso",
-    "description": "Debiased\u2011Lasso detector of heterogeneous treatment effects in randomized experiments.",
+    "description": "Debiased‑Lasso detector of heterogeneous treatment effects in randomized experiments.",
     "category": "Double/Debiased Machine Learning (DML)",
     "docs_url": "https://pypi.org/project/pyhtelasso/",
     "github_url": null,
@@ -3299,7 +3338,8 @@
     "related_packages": [
       "causalml",
       "econml"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "pensynth",
@@ -3375,7 +3415,8 @@
     "canonical_topics": [
       "causal-inference",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "didet",
@@ -3454,7 +3495,8 @@
       "causal-inference",
       "experimentation",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://github.com/tkhdyanagi.png?size=128"
   },
   {
     "name": "Open Bandit Pipeline (OBP)",
@@ -3533,7 +3575,8 @@
       "experimentation",
       "machine-learning"
     ],
-    "stars": 705
+    "stars": 705,
+    "image_url": "https://github.com/st-tech.png?size=128"
   },
   {
     "name": "abracadabra",
@@ -3616,7 +3659,8 @@
     "related_packages": [
       "scipy",
       "statsmodels"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "PyXAB",
@@ -3699,7 +3743,8 @@
       "bandit",
       "scikit-optimize"
     ],
-    "stars": 127
+    "stars": 127,
+    "image_url": "https://github.com/WilliamLwj.png?size=128"
   },
   {
     "name": "SMPyBandits",
@@ -3783,7 +3828,8 @@
       "bandit",
       "scikit-learn"
     ],
-    "stars": 422
+    "stars": 422,
+    "image_url": "https://github.com/SMPyBandits.png?size=128"
   },
   {
     "name": "didimputation",
@@ -3860,7 +3906,8 @@
       "causal-inference",
       "econometrics"
     ],
-    "stars": 58
+    "stars": 58,
+    "image_url": "https://github.com/kylebutts.png?size=128"
   },
   {
     "name": "SynapseML",
@@ -3950,7 +3997,8 @@
       "TensorFlow",
       "PyTorch"
     ],
-    "stars": 5226
+    "stars": 5226,
+    "image_url": "https://github.com/microsoft.png?size=128"
   },
   {
     "name": "gsynth",
@@ -4026,7 +4074,8 @@
       "causal-inference",
       "econometrics"
     ],
-    "stars": 151
+    "stars": 151,
+    "image_url": "https://github.com/xuyiqing.png?size=128"
   },
   {
     "name": "tidysynth",
@@ -4110,7 +4159,8 @@
     "related_packages": [
       "Synth",
       "CausalImpact"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "Doubly-Debiased-Lasso",
@@ -4190,7 +4240,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 6
+    "stars": 6,
+    "image_url": "https://github.com/zijguo.png?size=128"
   },
   {
     "name": "Synth",
@@ -4268,7 +4319,8 @@
       "causal inference",
       "policy evaluation"
     ],
-    "stars": 12
+    "stars": 12,
+    "image_url": "https://github.com/cran.png?size=128"
   },
   {
     "name": "eiapy",
@@ -4345,7 +4397,8 @@
       "econometrics",
       "data-engineering",
       "forecasting"
-    ]
+    ],
+    "image_url": "https://github.com/rneal3.png?size=128"
   },
   {
     "name": "eiapy",
@@ -4428,11 +4481,12 @@
       "data-engineering",
       "statistics",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://github.com/mra1385.png?size=128"
   },
   {
     "name": "pydoublelasso",
-    "description": "Double\u2011post\u00a0Lasso estimator for high\u2011dimensional treatment effects (Belloni\u2011Chernozhukov\u2011Hansen\u202f2014).",
+    "description": "Double‑post Lasso estimator for high‑dimensional treatment effects (Belloni‑Chernozhukov‑Hansen 2014).",
     "category": "Double/Debiased Machine Learning (DML)",
     "docs_url": "https://pypi.org/project/pydoublelasso/",
     "github_url": null,
@@ -4516,7 +4570,8 @@
     "related_packages": [
       "statsmodels",
       "causalml"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "didhetero",
@@ -4604,7 +4659,8 @@
       "experimentation",
       "econometrics"
     ],
-    "stars": 0
+    "stars": 0,
+    "image_url": "https://github.com/tkhdyanagi.png?size=128"
   },
   {
     "name": "Differences",
@@ -4684,7 +4740,8 @@
       "experimentation",
       "econometrics"
     ],
-    "stars": 110
+    "stars": 110,
+    "image_url": "https://github.com/bernardodionisi.png?size=128"
   },
   {
     "name": "urca",
@@ -4766,11 +4823,12 @@
       "time-series",
       "statistics"
     ],
-    "stars": 6
+    "stars": 6,
+    "image_url": "https://github.com/bpfaff.png?size=128"
   },
   {
     "name": "LocalProjections",
-    "description": "Community implementations of Jord\u00e0 (2005) Local Projections for estimating impulse responses without VAR assumptions.",
+    "description": "Community implementations of Jordà (2005) Local Projections for estimating impulse responses without VAR assumptions.",
     "category": "Time Series Econometrics",
     "docs_url": null,
     "github_url": "https://github.com/elenev/localprojections",
@@ -4791,7 +4849,7 @@
       "time-series",
       "econometrics"
     ],
-    "summary": "LocalProjections is a Python package designed for implementing Jord\u00e0 (2005) Local Projections, which allows users to estimate impulse responses without relying on VAR assumptions. It is particularly useful for economists and data scientists interested in time series analysis.",
+    "summary": "LocalProjections is a Python package designed for implementing Jordà (2005) Local Projections, which allows users to estimate impulse responses without relying on VAR assumptions. It is particularly useful for economists and data scientists interested in time series analysis.",
     "use_cases": [
       "Estimating impulse responses from economic shocks",
       "Analyzing the effects of monetary policy changes",
@@ -4807,7 +4865,7 @@
       "how to estimate impulse responses in python",
       "time series econometrics python package",
       "local projections implementation python",
-      "Jord\u00e0 local projections python",
+      "Jordà local projections python",
       "impulse response estimation without VAR"
     ],
     "primary_use_cases": [
@@ -4815,16 +4873,16 @@
       "economic shock analysis"
     ],
     "api_complexity": "intermediate",
-    "implements_paper": "Jord\u00e0 (2005)",
+    "implements_paper": "Jordà (2005)",
     "maintenance_status": "active",
     "model_score": 0.178,
-    "embedding_text": "LocalProjections is a specialized Python package that facilitates the implementation of Local Projections as introduced by Jord\u00e0 in 2005. This methodology provides a robust framework for estimating impulse responses, allowing researchers to bypass the traditional Vector Autoregression (VAR) assumptions that often complicate time series analysis. The core functionality of LocalProjections revolves around its ability to compute impulse responses directly from the data, making it a valuable tool for economists and data scientists who require precise estimations of dynamic relationships over time. The API is designed with an emphasis on clarity and usability, enabling users to easily integrate it into their existing data science workflows. Key functions within the package allow for straightforward specification of model parameters and the handling of time series data, ensuring that users can focus on analysis rather than technical implementation details. Installation is simple via pip, and basic usage typically involves importing the package, preparing the data, and calling the appropriate functions to generate impulse response estimates. Compared to alternative approaches, LocalProjections offers a more flexible and less assumption-driven method for analyzing time series data. This flexibility can lead to better performance in certain scenarios, particularly when the underlying data does not meet the stringent requirements of VAR models. However, users should be aware of common pitfalls, such as overfitting or mis-specifying the model, which can lead to misleading results. Best practices include validating model assumptions and conducting robustness checks to ensure the reliability of the findings. LocalProjections is particularly suited for researchers and practitioners engaged in economic analysis, policy evaluation, and any domain where understanding the temporal effects of interventions is critical. It is advisable to consider this package when traditional VAR models are not applicable or when a more intuitive approach to impulse response estimation is desired.",
+    "embedding_text": "LocalProjections is a specialized Python package that facilitates the implementation of Local Projections as introduced by Jordà in 2005. This methodology provides a robust framework for estimating impulse responses, allowing researchers to bypass the traditional Vector Autoregression (VAR) assumptions that often complicate time series analysis. The core functionality of LocalProjections revolves around its ability to compute impulse responses directly from the data, making it a valuable tool for economists and data scientists who require precise estimations of dynamic relationships over time. The API is designed with an emphasis on clarity and usability, enabling users to easily integrate it into their existing data science workflows. Key functions within the package allow for straightforward specification of model parameters and the handling of time series data, ensuring that users can focus on analysis rather than technical implementation details. Installation is simple via pip, and basic usage typically involves importing the package, preparing the data, and calling the appropriate functions to generate impulse response estimates. Compared to alternative approaches, LocalProjections offers a more flexible and less assumption-driven method for analyzing time series data. This flexibility can lead to better performance in certain scenarios, particularly when the underlying data does not meet the stringent requirements of VAR models. However, users should be aware of common pitfalls, such as overfitting or mis-specifying the model, which can lead to misleading results. Best practices include validating model assumptions and conducting robustness checks to ensure the reliability of the findings. LocalProjections is particularly suited for researchers and practitioners engaged in economic analysis, policy evaluation, and any domain where understanding the temporal effects of interventions is critical. It is advisable to consider this package when traditional VAR models are not applicable or when a more intuitive approach to impulse response estimation is desired.",
     "tfidf_keywords": [
       "local projections",
       "impulse response",
       "time series",
       "econometrics",
-      "Jord\u00e0",
+      "Jordà",
       "VAR assumptions",
       "economic shocks",
       "policy analysis",
@@ -4850,11 +4908,12 @@
       "statsmodels",
       "pandas"
     ],
-    "stars": 8
+    "stars": 8,
+    "image_url": "https://github.com/elenev.png?size=128"
   },
   {
     "name": "pycinc",
-    "description": "Changes\u2011in\u2011Changes (CiC) estimator for distributional treatment effects (Athey\u00a0&\u00a0Imbens\u202f2006).",
+    "description": "Changes‑in‑Changes (CiC) estimator for distributional treatment effects (Athey & Imbens 2006).",
     "category": "Program Evaluation Methods (DiD, SC, RDD)",
     "docs_url": "https://pypi.org/project/pycinc/",
     "github_url": null,
@@ -4937,7 +4996,8 @@
     "related_packages": [
       "statsmodels",
       "causalml"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "DRDID",
@@ -5020,11 +5080,12 @@
       "econometrics",
       "statistics"
     ],
-    "stars": 98
+    "stars": 98,
+    "image_url": "https://github.com/pedrohcgs.png?size=128"
   },
   {
     "name": "bacondecomp",
-    "description": "Performs Goodman-Bacon decomposition showing how two-way fixed effects (TWFE) estimates are weighted averages of all possible 2\u00d72 DiD comparisons. Essential for diagnosing negative weights problems in staggered adoption designs.",
+    "description": "Performs Goodman-Bacon decomposition showing how two-way fixed effects (TWFE) estimates are weighted averages of all possible 2×2 DiD comparisons. Essential for diagnosing negative weights problems in staggered adoption designs.",
     "category": "Causal Inference (DiD)",
     "docs_url": "https://cran.r-project.org/web/packages/bacondecomp/bacondecomp.pdf",
     "github_url": "https://github.com/evanjflack/bacondecomp",
@@ -5066,7 +5127,7 @@
     "api_complexity": "intermediate",
     "maintenance_status": "active",
     "model_score": 0.0595,
-    "embedding_text": "The bacondecomp package is a specialized tool designed for researchers and practitioners in the field of causal inference, particularly those focusing on the analysis of treatment effects in staggered adoption designs. This package implements the Goodman-Bacon decomposition method, which provides a systematic way to understand how two-way fixed effects (TWFE) estimates are computed as weighted averages of all possible 2\u00d72 difference-in-differences (DiD) comparisons. This functionality is crucial for diagnosing potential issues with negative weights that can arise in staggered adoption scenarios, where different groups may adopt a treatment at different times. The API of bacondecomp is designed to be user-friendly yet robust, allowing users to easily input their data and obtain the necessary decomposition results. Key functions within the package enable users to specify their models and extract insights regarding the contribution of various comparisons to the overall TWFE estimate. Installation is straightforward via CRAN, and basic usage typically involves loading the package, preparing the data, and calling the main decomposition function. Compared to alternative approaches, bacondecomp stands out due to its specific focus on the Goodman-Bacon methodology, which is not always available in more general-purpose causal inference packages. Users should be aware of common pitfalls, such as misinterpreting the results or failing to adequately check the assumptions underlying the TWFE model. Best practices include ensuring that the data is properly structured for analysis and being mindful of the implications of staggered treatment adoption. This package is particularly useful when researchers need to clarify the contributions of different comparisons to their estimates, but it may not be necessary for simpler experimental designs where such decomposition is not required.",
+    "embedding_text": "The bacondecomp package is a specialized tool designed for researchers and practitioners in the field of causal inference, particularly those focusing on the analysis of treatment effects in staggered adoption designs. This package implements the Goodman-Bacon decomposition method, which provides a systematic way to understand how two-way fixed effects (TWFE) estimates are computed as weighted averages of all possible 2×2 difference-in-differences (DiD) comparisons. This functionality is crucial for diagnosing potential issues with negative weights that can arise in staggered adoption scenarios, where different groups may adopt a treatment at different times. The API of bacondecomp is designed to be user-friendly yet robust, allowing users to easily input their data and obtain the necessary decomposition results. Key functions within the package enable users to specify their models and extract insights regarding the contribution of various comparisons to the overall TWFE estimate. Installation is straightforward via CRAN, and basic usage typically involves loading the package, preparing the data, and calling the main decomposition function. Compared to alternative approaches, bacondecomp stands out due to its specific focus on the Goodman-Bacon methodology, which is not always available in more general-purpose causal inference packages. Users should be aware of common pitfalls, such as misinterpreting the results or failing to adequately check the assumptions underlying the TWFE model. Best practices include ensuring that the data is properly structured for analysis and being mindful of the implications of staggered treatment adoption. This package is particularly useful when researchers need to clarify the contributions of different comparisons to their estimates, but it may not be necessary for simpler experimental designs where such decomposition is not required.",
     "tfidf_keywords": [
       "Goodman-Bacon",
       "decomposition",
@@ -5093,7 +5154,8 @@
       "causal-inference",
       "econometrics"
     ],
-    "stars": 50
+    "stars": 50,
+    "image_url": "https://github.com/evanjflack.png?size=128"
   },
   {
     "name": "staggered",
@@ -5171,7 +5233,8 @@
       "experimentation",
       "econometrics"
     ],
-    "stars": 85
+    "stars": 85,
+    "image_url": "https://github.com/jonathandroth.png?size=128"
   },
   {
     "name": "matched_markets",
@@ -5251,7 +5314,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 96
+    "stars": 96,
+    "image_url": "https://github.com/google.png?size=128"
   },
   {
     "name": "SCtools",
@@ -5328,7 +5392,8 @@
       "causal-inference",
       "experimentation",
       "statistics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "trimmed_match",
@@ -5409,7 +5474,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 72
+    "stars": 72,
+    "image_url": "https://github.com/google.png?size=128"
   },
   {
     "name": "causal-learn",
@@ -5491,7 +5557,8 @@
       "experimentation",
       "machine-learning"
     ],
-    "stars": 1584
+    "stars": 1584,
+    "image_url": "https://github.com/py-why.png?size=128"
   },
   {
     "name": "anthropic",
@@ -5560,7 +5627,8 @@
       "natural-language-processing",
       "experimentation"
     ],
-    "stars": 3357
+    "stars": 3357,
+    "image_url": "https://github.com/anthropics.png?size=128"
   },
   {
     "name": "spaCy",
@@ -5642,7 +5710,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 33539
+    "stars": 33539,
+    "image_url": "https://github.com/explosion.png?size=128"
   },
   {
     "name": "diff-diff",
@@ -5662,7 +5731,8 @@
     ],
     "best_for": "Full-featured DiD analysis with modern estimators, parallel trends testing, placebo tests, and sensitivity analysis",
     "language": "Python",
-    "model_score": 0.0347
+    "model_score": 0.0347,
+    "image_url": ""
   },
   {
     "name": "Ananke",
@@ -5743,7 +5813,8 @@
       "causal-inference",
       "experimentation",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "meta",
@@ -5762,7 +5833,8 @@
     "install": "install.packages('meta')",
     "best_for": "Accessible meta-analysis with common effect size measures",
     "model_score": 0.0227,
-    "stars": 103
+    "stars": 103,
+    "image_url": "https://github.com/guido-s.png?size=128"
   },
   {
     "name": "ContextualBandits",
@@ -5846,7 +5918,8 @@
       "bandit",
       "scikit-learn"
     ],
-    "stars": 832
+    "stars": 832,
+    "image_url": "https://github.com/david-cortes.png?size=128"
   },
   {
     "name": "openai",
@@ -5920,7 +5993,8 @@
       "text generation",
       "image generation"
     ],
-    "stars": 30664
+    "stars": 30664,
+    "image_url": "https://github.com/openai.png?size=128"
   },
   {
     "name": "CausalMatch",
@@ -6004,7 +6078,8 @@
       "MatchIt",
       "optmatch"
     ],
-    "stars": 107
+    "stars": 107,
+    "image_url": "https://github.com/bytedance.png?size=128"
   },
   {
     "name": "DoWhy",
@@ -6092,7 +6167,8 @@
       "experimentation",
       "econometrics"
     ],
-    "stars": 8097
+    "stars": 8097,
+    "image_url": "https://github.com/py-why.png?size=128"
   },
   {
     "name": "DoWhy",
@@ -6178,7 +6254,8 @@
       "experimentation",
       "econometrics"
     ],
-    "stars": 8097
+    "stars": 8097,
+    "image_url": "https://github.com/py-why.png?size=128"
   },
   {
     "name": "CBPS",
@@ -6255,7 +6332,8 @@
       "econometrics",
       "statistics"
     ],
-    "stars": 29
+    "stars": 29,
+    "image_url": "https://github.com/kosukeimai.png?size=128"
   },
   {
     "name": "rdpower",
@@ -6272,7 +6350,7 @@
       "study-design",
       "ex-ante-analysis"
     ],
-    "best_for": "Planning RDD studies\u2014calculating required sample sizes, statistical power, or minimum detectable effects, implementing Cattaneo, Titiunik & Vazquez-Bare (2019)",
+    "best_for": "Planning RDD studies—calculating required sample sizes, statistical power, or minimum detectable effects, implementing Cattaneo, Titiunik & Vazquez-Bare (2019)",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -6336,7 +6414,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 4
+    "stars": 4,
+    "image_url": "https://github.com/rdpackages.png?size=128"
   },
   {
     "name": "MAPIE",
@@ -6429,7 +6508,8 @@
       "statistics",
       "experimentation"
     ],
-    "stars": 1542
+    "stars": 1542,
+    "image_url": "https://github.com/scikit-learn-contrib.png?size=128"
   },
   {
     "name": "py-econometrics `gmm`",
@@ -6511,7 +6591,8 @@
       "statsmodels",
       "linearmodels"
     ],
-    "stars": 14
+    "stars": 14,
+    "image_url": "https://github.com/py-econometrics.png?size=128"
   },
   {
     "name": "FixedEffectModel",
@@ -6597,7 +6678,8 @@
       "econometrics",
       "statistics"
     ],
-    "stars": 78
+    "stars": 78,
+    "image_url": "https://github.com/ksecology.png?size=128"
   },
   {
     "name": "choice-learn",
@@ -6617,7 +6699,8 @@
     "best_for": "Combining interpretable choice models with neural networks for scalable assortment and pricing optimization",
     "language": "Python",
     "model_score": 0.0108,
-    "stars": 107
+    "stars": 107,
+    "image_url": "https://github.com/artefactory.png?size=128"
   },
   {
     "name": "bsts",
@@ -6634,7 +6717,7 @@
       "state-space",
       "Google"
     ],
-    "best_for": "Bayesian structural time series with spike-and-slab selection\u2014foundation for CausalImpact",
+    "best_for": "Bayesian structural time series with spike-and-slab selection—foundation for CausalImpact",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -6699,7 +6782,8 @@
       "causal-inference",
       "statistics",
       "machine-learning"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "NumPyro",
@@ -6786,7 +6870,8 @@
       "experimentation",
       "econometrics"
     ],
-    "stars": 2668
+    "stars": 2668,
+    "image_url": "https://github.com/pyro-ppl.png?size=128"
   },
   {
     "name": "rstanarm",
@@ -6872,7 +6957,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 401
+    "stars": 401,
+    "image_url": "https://github.com/stan-dev.png?size=128"
   },
   {
     "name": "langchain",
@@ -6888,7 +6974,7 @@
       "tools",
       "RAG"
     ],
-    "best_for": "LLM framework \u2014 chains, tools, memory",
+    "best_for": "LLM framework — chains, tools, memory",
     "language": "Python",
     "difficulty": "intermediate",
     "prerequisites": [
@@ -6961,11 +7047,12 @@
       "spaCy",
       "nltk"
     ],
-    "stars": 135657
+    "stars": 135657,
+    "image_url": "https://github.com/langchain-ai.png?size=128"
   },
   {
     "name": "fwildclusterboot",
-    "description": "Fast wild cluster bootstrap implementation following Roodman et al. (2019)\u2014up to 1000\u00d7 faster than alternatives. Critical for panel data with few clusters. Integrates with fixest and lfe for efficient inference.",
+    "description": "Fast wild cluster bootstrap implementation following Roodman et al. (2019)—up to 1000× faster than alternatives. Critical for panel data with few clusters. Integrates with fixest and lfe for efficient inference.",
     "category": "Bootstrap & Inference",
     "docs_url": "https://s3alfisc.github.io/fwildclusterboot/",
     "github_url": "https://github.com/s3alfisc/fwildclusterboot",
@@ -7047,7 +7134,8 @@
     "related_packages": [
       "fixest",
       "lfe"
-    ]
+    ],
+    "image_url": "https://github.com/s3alfisc.png?size=128"
   },
   {
     "name": "Causal Discovery Toolbox (CDT)",
@@ -7130,7 +7218,8 @@
       "pgmpy",
       "causalnex"
     ],
-    "stars": 1227
+    "stars": 1227,
+    "image_url": "https://github.com/FenTechSolutions.png?size=128"
   },
   {
     "name": "GeoLift",
@@ -7212,7 +7301,8 @@
       "causal-inference",
       "experimentation",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://github.com/facebookincubator.png?size=128"
   },
   {
     "name": "GeoLift",
@@ -7290,7 +7380,8 @@
       "causal-inference",
       "experimentation",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://github.com/facebookincubator.png?size=128"
   },
   {
     "name": "pyregadj",
@@ -7373,7 +7464,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 3
+    "stars": 3,
+    "image_url": "https://github.com/vyasenov.png?size=128"
   },
   {
     "name": "ATbounds",
@@ -7451,7 +7543,8 @@
     "canonical_topics": [
       "causal-inference",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "pydtr",
@@ -7537,7 +7630,8 @@
       "scikit-learn",
       "causalml"
     ],
-    "stars": 10
+    "stars": 10,
+    "image_url": "https://github.com/fullflu.png?size=128"
   },
   {
     "name": "MatchIt",
@@ -7620,7 +7714,8 @@
     "related_packages": [
       "Matching",
       "optmatch"
-    ]
+    ],
+    "image_url": "https://github.com/kosukeimai.png?size=128"
   },
   {
     "name": "tmle",
@@ -7699,7 +7794,8 @@
       "causal-inference",
       "machine-learning",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "tmle3",
@@ -7778,7 +7874,8 @@
       "machine-learning",
       "statistics"
     ],
-    "stars": 43
+    "stars": 43,
+    "image_url": "https://github.com/tlverse.png?size=128"
   },
   {
     "name": "HiGHS",
@@ -7875,7 +7972,8 @@
       "econometrics",
       "machine-learning"
     ],
-    "stars": 1605
+    "stars": 1605,
+    "image_url": "https://github.com/ERGO-Code.png?size=128"
   },
   {
     "name": "HiGHS",
@@ -7962,7 +8060,8 @@
       "machine-learning",
       "statistics"
     ],
-    "stars": 1605
+    "stars": 1605,
+    "image_url": "https://github.com/ERGO-Code.png?size=128"
   },
   {
     "name": "rddensity",
@@ -8040,7 +8139,8 @@
       "experimentation",
       "econometrics"
     ],
-    "stars": 12
+    "stars": 12,
+    "image_url": "https://github.com/rdpackages.png?size=128"
   },
   {
     "name": "appelpy",
@@ -8129,7 +8229,8 @@
       "statistics",
       "machine-learning"
     ],
-    "stars": 180
+    "stars": 180,
+    "image_url": "https://github.com/mfarragher.png?size=128"
   },
   {
     "name": "puncc",
@@ -8211,7 +8312,8 @@
       "statistics",
       "causal-inference"
     ],
-    "stars": 385
+    "stars": 385,
+    "image_url": "https://github.com/deel-ai.png?size=128"
   },
   {
     "name": "OSMnx",
@@ -8304,7 +8406,8 @@
       "consumer-behavior",
       "policy-evaluation"
     ],
-    "stars": 5661
+    "stars": 5661,
+    "image_url": "https://github.com/gboeing.png?size=128"
   },
   {
     "name": "Apollo",
@@ -8385,7 +8488,8 @@
       "econometrics",
       "consumer-behavior",
       "transportation-economics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "mlogit",
@@ -8464,7 +8568,8 @@
       "econometrics",
       "causal-inference",
       "experimentations"
-    ]
+    ],
+    "image_url": "https://github.com/ycroissant.png?size=128"
   },
   {
     "name": "mixl",
@@ -8547,7 +8652,8 @@
       "econometrics",
       "consumer-behavior",
       "transportation-economics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "SUMO",
@@ -8636,7 +8742,8 @@
       "statistics",
       "data-engineering"
     ],
-    "stars": 3986
+    "stars": 3986,
+    "image_url": "https://github.com/eclipse.png?size=128"
   },
   {
     "name": "Polars",
@@ -8717,7 +8824,8 @@
       "data-engineering",
       "statistics"
     ],
-    "stars": 38363
+    "stars": 38363,
+    "image_url": "https://github.com/pola-rs.png?size=128"
   },
   {
     "name": "ABIDES",
@@ -8797,7 +8905,8 @@
       "finance",
       "experimentation"
     ],
-    "stars": 156
+    "stars": 156,
+    "image_url": "https://github.com/jpmorganchase.png?size=128"
   },
   {
     "name": "pylift",
@@ -8878,7 +8987,8 @@
       "experimentation",
       "machine-learning",
       "marketing"
-    ]
+    ],
+    "image_url": "https://github.com/wayfair.png?size=128"
   },
   {
     "name": "recommenderlab",
@@ -8966,7 +9076,8 @@
       "machine-learning",
       "data-engineering"
     ],
-    "stars": 217
+    "stars": 217,
+    "image_url": "https://github.com/mhahsler.png?size=128"
   },
   {
     "name": "PettingZoo",
@@ -9057,7 +9168,8 @@
       "OpenAI Gym",
       "Ray RLLib"
     ],
-    "stars": 3398
+    "stars": 3398,
+    "image_url": "https://github.com/Farama-Foundation.png?size=128"
   },
   {
     "name": "CausalLift",
@@ -9138,7 +9250,8 @@
       "experimentation",
       "machine-learning",
       "statistics"
-    ]
+    ],
+    "image_url": "https://github.com/Minyus.png?size=128"
   },
   {
     "name": "BTYDplus",
@@ -9221,11 +9334,12 @@
       "consumer-behavior",
       "econometrics"
     ],
-    "stars": 188
+    "stars": 188,
+    "image_url": "https://github.com/mplatzer.png?size=128"
   },
   {
     "name": "marginaleffects",
-    "description": "Modern standard for interpreting regression results\u2014up to 1000\u00d7 faster than margins. Computes marginal effects, predictions, contrasts, and slopes for 100+ model classes. Published in JSS 2024.",
+    "description": "Modern standard for interpreting regression results—up to 1000× faster than margins. Computes marginal effects, predictions, contrasts, and slopes for 100+ model classes. Published in JSS 2024.",
     "category": "Marginal Effects",
     "docs_url": "https://marginaleffects.com/",
     "github_url": "https://github.com/vincentarelbundock/marginaleffects",
@@ -9238,7 +9352,7 @@
       "interpretation",
       "slopes"
     ],
-    "best_for": "Modern marginal effects interpretation\u20141000\u00d7 faster than margins with 100+ model support, JSS 2024",
+    "best_for": "Modern marginal effects interpretation—1000× faster than margins with 100+ model support, JSS 2024",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -9305,7 +9419,8 @@
       "econometrics",
       "statistics"
     ],
-    "stars": 605
+    "stars": 605,
+    "image_url": "https://github.com/vincentarelbundock.png?size=128"
   },
   {
     "name": "gmm",
@@ -9384,7 +9499,8 @@
       "econometrics",
       "causal-inference",
       "statistics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "heemod",
@@ -9469,7 +9585,8 @@
       "econometrics",
       "policy-evaluation"
     ],
-    "stars": 42
+    "stars": 42,
+    "image_url": "https://github.com/pierucci.png?size=128"
   },
   {
     "name": "matching",
@@ -9546,7 +9663,8 @@
       "marketplaces",
       "optimization",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://github.com/daffidwilde.png?size=128"
   },
   {
     "name": "systemfit",
@@ -9626,7 +9744,8 @@
       "econometrics",
       "causal-inference",
       "statistics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "UpliftML",
@@ -9718,7 +9837,8 @@
       "marketing",
       "statistics"
     ],
-    "stars": 331
+    "stars": 331,
+    "image_url": "https://github.com/bookingcom.png?size=128"
   },
   {
     "name": "sentence-transformers",
@@ -9806,7 +9926,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 18624
+    "stars": 18624,
+    "image_url": "https://github.com/UKPLab.png?size=128"
   },
   {
     "name": "tea-tasting",
@@ -9891,7 +10012,8 @@
       "causal-inference",
       "experimentation",
       "statistics"
-    ]
+    ],
+    "image_url": "https://github.com/e10v.png?size=128"
   },
   {
     "name": "gegravity",
@@ -9970,7 +10092,8 @@
       "policy-evaluation",
       "trade-policy"
     ],
-    "stars": 14
+    "stars": 14,
+    "image_url": "https://github.com/peter-herman.png?size=128"
   },
   {
     "name": "ADOpy",
@@ -10050,7 +10173,8 @@
       "causal-inference",
       "machine-learning"
     ],
-    "stars": 49
+    "stars": 49,
+    "image_url": "https://github.com/adopy.png?size=128"
   },
   {
     "name": "miceforest",
@@ -10133,7 +10257,8 @@
       "machine-learning",
       "statistics",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://github.com/AnotherSamWilson.png?size=128"
   },
   {
     "name": "patchwork",
@@ -10214,7 +10339,8 @@
       "data-engineering",
       "visualization"
     ],
-    "stars": 2601
+    "stars": 2601,
+    "image_url": "https://github.com/thomasp85.png?size=128"
   },
   {
     "name": "AI Economist",
@@ -10298,7 +10424,8 @@
       "econometrics",
       "policy-evaluation",
       "reinforcement-learning"
-    ]
+    ],
+    "image_url": "https://github.com/salesforce.png?size=128"
   },
   {
     "name": "pysyncon",
@@ -10386,7 +10513,8 @@
       "Synth",
       "augsynth"
     ],
-    "stars": 82
+    "stars": 82,
+    "image_url": "https://github.com/sdfordham.png?size=128"
   },
   {
     "name": "OR-Gym",
@@ -10467,7 +10595,8 @@
       "reinforcement-learning",
       "econometrics"
     ],
-    "stars": 441
+    "stars": 441,
+    "image_url": "https://github.com/hubbs5.png?size=128"
   },
   {
     "name": "FilterPy",
@@ -10554,7 +10683,8 @@
       "pykalman",
       "filterpy"
     ],
-    "stars": 3822
+    "stars": 3822,
+    "image_url": "https://github.com/rlabbe.png?size=128"
   },
   {
     "name": "ABCE",
@@ -10637,7 +10767,8 @@
       "experimentation",
       "machine-learning"
     ],
-    "stars": 218
+    "stars": 218,
+    "image_url": "https://github.com/AB-CE.png?size=128"
   },
   {
     "name": "pyNetLogo",
@@ -10724,7 +10855,8 @@
     "related_packages": [
       "SALib"
     ],
-    "stars": 89
+    "stars": 89,
+    "image_url": "https://github.com/quaquel.png?size=128"
   },
   {
     "name": "mFilter",
@@ -10801,7 +10933,8 @@
       "econometrics",
       "forecasting",
       "statistics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "lmtest",
@@ -10887,7 +11020,8 @@
     "related_packages": [
       "sandwich",
       "lmtest"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "DCA (Deep Count Autoencoder)",
@@ -10906,7 +11040,8 @@
     "install": "pip install dca",
     "best_for": "Denoising sparse single-cell count data",
     "model_score": 0.0001,
-    "stars": 271
+    "stars": 271,
+    "image_url": "https://github.com/theislab.png?size=128"
   },
   {
     "name": "hockeyR",
@@ -10987,7 +11122,8 @@
       "machine-learning",
       "data-engineering"
     ],
-    "stars": 50
+    "stars": 50,
+    "image_url": "https://github.com/danmorse314.png?size=128"
   },
   {
     "name": "car",
@@ -11068,7 +11204,8 @@
     "canonical_topics": [
       "statistics",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "PyFixest",
@@ -11156,7 +11293,8 @@
     "related_packages": [
       "statsmodels",
       "linearmodels"
-    ]
+    ],
+    "image_url": "https://github.com/py-econometrics.png?size=128"
   },
   {
     "name": "glmmTMB",
@@ -11241,7 +11379,8 @@
       "lme4",
       "MASS"
     ],
-    "stars": 362
+    "stars": 362,
+    "image_url": "https://github.com/glmmTMB.png?size=128"
   },
   {
     "name": "FixedEffectModelPyHDFE",
@@ -11321,7 +11460,8 @@
     "related_packages": [
       "statsmodels",
       "linearmodels"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "WebPower",
@@ -11405,7 +11545,8 @@
       "causal-inference",
       "experimentation"
     ],
-    "stars": 7
+    "stars": 7,
+    "image_url": "https://github.com/johnnyzhz.png?size=128"
   },
   {
     "name": "OasisLMF",
@@ -11487,7 +11628,8 @@
       "statistics",
       "econometrics"
     ],
-    "stars": 144
+    "stars": 144,
+    "image_url": "https://github.com/OasisLMF.png?size=128"
   },
   {
     "name": "Linfa",
@@ -11558,7 +11700,8 @@
     "canonical_topics": [
       "machine-learning"
     ],
-    "stars": 4639
+    "stars": 4639,
+    "image_url": "https://github.com/rust-ml.png?size=128"
   },
   {
     "name": "Scikit-learn Ens.",
@@ -11643,7 +11786,8 @@
       "statistics",
       "experimentation"
     ],
-    "stars": 65969
+    "stars": 65969,
+    "image_url": "https://github.com/scikit-learn.png?size=128"
   },
   {
     "name": "SDV (Synthetic Data Vault)",
@@ -11732,7 +11876,8 @@
       "CTGAN",
       "Synthpop"
     ],
-    "stars": 3478
+    "stars": 3478,
+    "image_url": "https://github.com/sdv-dev.png?size=128"
   },
   {
     "name": "vars",
@@ -11817,7 +11962,8 @@
       "forecast",
       "tsDyn"
     ],
-    "stars": 47
+    "stars": 47,
+    "image_url": "https://github.com/bpfaff.png?size=128"
   },
   {
     "name": "habanero",
@@ -11837,7 +11983,8 @@
     "install": "pip install habanero",
     "best_for": "Retrieving DOI metadata and citation data from CrossRef",
     "model_score": 0.0001,
-    "stars": 244
+    "stars": 244,
+    "image_url": "https://github.com/sckott.png?size=128"
   },
   {
     "name": "BayesianBandits",
@@ -11922,7 +12069,8 @@
       "machine-learning",
       "statistics"
     ],
-    "stars": 142
+    "stars": 142,
+    "image_url": "https://github.com/bayesianbandits.png?size=128"
   },
   {
     "name": "LightweightMMM",
@@ -12007,7 +12155,8 @@
       "marketing",
       "data-engineering"
     ],
-    "stars": 1041
+    "stars": 1041,
+    "image_url": "https://github.com/google.png?size=128"
   },
   {
     "name": "PyMC",
@@ -12090,7 +12239,8 @@
       "econometrics",
       "statistics"
     ],
-    "stars": 9605
+    "stars": 9605,
+    "image_url": "https://github.com/pymc-devs.png?size=128"
   },
   {
     "name": "PyMC",
@@ -12176,7 +12326,8 @@
       "statistics",
       "machine-learning"
     ],
-    "stars": 9605
+    "stars": 9605,
+    "image_url": "https://github.com/pymc-devs.png?size=128"
   },
   {
     "name": "brms",
@@ -12193,7 +12344,7 @@
       "regression",
       "distributional-regression"
     ],
-    "best_for": "Complex hierarchical Bayesian regression with familiar R formula syntax, implementing B\u00fcrkner (2017)",
+    "best_for": "Complex hierarchical Bayesian regression with familiar R formula syntax, implementing Bürkner (2017)",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -12261,7 +12412,8 @@
       "statistics",
       "machine-learning"
     ],
-    "stars": 1402
+    "stars": 1402,
+    "image_url": "https://github.com/paul-buerkner.png?size=128"
   },
   {
     "name": "MCD",
@@ -12343,7 +12495,8 @@
       "econometrics"
     ],
     "implements_paper": "ICML (2024)",
-    "stars": 24
+    "stars": 24,
+    "image_url": "https://github.com/Rose-STL-Lab.png?size=128"
   },
   {
     "name": "bnlearn",
@@ -12420,7 +12573,8 @@
       "causal-inference",
       "machine-learning",
       "statistics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "dagitty",
@@ -12499,7 +12653,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 338
+    "stars": 338,
+    "image_url": "https://github.com/jtextor.png?size=128"
   },
   {
     "name": "causal-llm-bfs",
@@ -12578,7 +12733,8 @@
       "machine-learning",
       "statistics"
     ],
-    "stars": 50
+    "stars": 50,
+    "image_url": "https://github.com/superkaiba.png?size=128"
   },
   {
     "name": "bayesplot",
@@ -12663,7 +12819,8 @@
     "related_packages": [
       "ggplot2",
       "bayesm"
-    ]
+    ],
+    "image_url": "https://github.com/stan-dev.png?size=128"
   },
   {
     "name": "rstan",
@@ -12746,7 +12903,8 @@
       "statistics",
       "machine-learning"
     ],
-    "stars": 1077
+    "stars": 1077,
+    "image_url": "https://github.com/stan-dev.png?size=128"
   },
   {
     "name": "boot",
@@ -12829,7 +12987,8 @@
     "related_packages": [
       "boot",
       "car"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "aipyw",
@@ -12915,7 +13074,8 @@
       "experimentation",
       "machine-learning"
     ],
-    "stars": 3
+    "stars": 3,
+    "image_url": "https://github.com/apoorvalal.png?size=128"
   },
   {
     "name": "gCastle",
@@ -12993,7 +13153,8 @@
       "machine-learning",
       "statistics"
     ],
-    "stars": 1116
+    "stars": 1116,
+    "image_url": "https://github.com/huawei-noah.png?size=128"
   },
   {
     "name": "KECENI",
@@ -13074,7 +13235,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 1
+    "stars": 1,
+    "image_url": "https://github.com/HeejongBong.png?size=128"
   },
   {
     "name": "SDCI",
@@ -13156,7 +13318,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 1
+    "stars": 1,
+    "image_url": "https://github.com/charlio23.png?size=128"
   },
   {
     "name": "rsample",
@@ -13245,7 +13408,8 @@
       "machine-learning",
       "experimentation"
     ],
-    "stars": 340
+    "stars": 340,
+    "image_url": "https://github.com/tidymodels.png?size=128"
   },
   {
     "name": "ggdag",
@@ -13328,7 +13492,8 @@
     ],
     "related_packages": [
       "dagitty"
-    ]
+    ],
+    "image_url": "https://github.com/malcolmbarrett.png?size=128"
   },
   {
     "name": "pcalg",
@@ -13408,7 +13573,8 @@
       "causal-inference",
       "machine-learning",
       "statistics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "Benchpress",
@@ -13488,7 +13654,8 @@
       "machine-learning",
       "statistics"
     ],
-    "stars": 82
+    "stars": 82,
+    "image_url": "https://github.com/felixleopoldo.png?size=128"
   },
   {
     "name": "LiNGAM",
@@ -13571,7 +13738,8 @@
       "causalml",
       "DoWhy"
     ],
-    "stars": 482
+    "stars": 482,
+    "image_url": "https://github.com/cdt15.png?size=128"
   },
   {
     "name": "py-tetrad",
@@ -13648,7 +13816,8 @@
       "experimentation",
       "machine-learning"
     ],
-    "stars": 95
+    "stars": 95,
+    "image_url": "https://github.com/cmu-phil.png?size=128"
   },
   {
     "name": "CausalNex",
@@ -13732,7 +13901,8 @@
       "machine-learning",
       "statistics"
     ],
-    "stars": 2461
+    "stars": 2461,
+    "image_url": "https://github.com/mckinsey.png?size=128"
   },
   {
     "name": "CausalGPS",
@@ -13810,7 +13980,8 @@
       "causal-inference",
       "machine-learning",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "recombinator",
@@ -13892,7 +14063,8 @@
       "causal-inference",
       "experimentation"
     ],
-    "stars": 50
+    "stars": 50,
+    "image_url": "https://github.com/InvestmentSystems.png?size=128"
   },
   {
     "name": "bootUR",
@@ -13969,7 +14141,8 @@
       "econometrics",
       "statistics",
       "time-series"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "NetworkCausalTree",
@@ -14050,7 +14223,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 9
+    "stars": 9,
+    "image_url": "https://github.com/fbargaglistoffi.png?size=128"
   },
   {
     "name": "causal-curve",
@@ -14130,7 +14304,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 283
+    "stars": 283,
+    "image_url": "https://github.com/ronikobrosly.png?size=128"
   },
   {
     "name": "PySensemakr",
@@ -14211,7 +14386,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 0
+    "stars": 0,
+    "image_url": "https://github.com/carloscinelli.png?size=128"
   },
   {
     "name": "mcf (Modified Causal Forest)",
@@ -14290,7 +14466,8 @@
       "experimentation",
       "machine-learning"
     ],
-    "stars": 22
+    "stars": 22,
+    "image_url": "https://github.com/MCFpy.png?size=128"
   },
   {
     "name": "scikit-uplift",
@@ -14370,7 +14547,8 @@
       "causal-inference",
       "experimentation",
       "machine-learning"
-    ]
+    ],
+    "image_url": "https://github.com/maks-sh.png?size=128"
   },
   {
     "name": "CausalInference",
@@ -14452,7 +14630,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 577
+    "stars": 577,
+    "image_url": "https://github.com/laurencium.png?size=128"
   },
   {
     "name": "CausalML",
@@ -14534,7 +14713,8 @@
       "experimentation",
       "machine-learning"
     ],
-    "stars": 5826
+    "stars": 5826,
+    "image_url": "https://github.com/uber.png?size=128"
   },
   {
     "name": "CausalML",
@@ -14629,7 +14809,8 @@
       "healthcare",
       "econometrics"
     ],
-    "stars": 5826
+    "stars": 5826,
+    "image_url": "https://github.com/uber.png?size=128"
   },
   {
     "name": "CausalML",
@@ -14720,7 +14901,8 @@
       "experimentation",
       "machine-learning"
     ],
-    "stars": 5826
+    "stars": 5826,
+    "image_url": "https://github.com/uber.png?size=128"
   },
   {
     "name": "CausalML",
@@ -14809,7 +14991,8 @@
       "machine-learning",
       "marketing-analytics"
     ],
-    "stars": 5826
+    "stars": 5826,
+    "image_url": "https://github.com/uber.png?size=128"
   },
   {
     "name": "CausalLib",
@@ -14897,7 +15080,8 @@
       "experimentation",
       "machine-learning"
     ],
-    "stars": 812
+    "stars": 812,
+    "image_url": "https://github.com/IBM.png?size=128"
   },
   {
     "name": "CausalPy",
@@ -14982,7 +15166,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 1139
+    "stars": 1139,
+    "image_url": "https://github.com/pymc-labs.png?size=128"
   },
   {
     "name": "CausalPy",
@@ -15074,7 +15259,8 @@
     "framework_compatibility": [
       "PyMC"
     ],
-    "stars": 1139
+    "stars": 1139,
+    "image_url": "https://github.com/pymc-labs.png?size=128"
   },
   {
     "name": "HonestDiD",
@@ -15152,7 +15338,8 @@
       "econometrics",
       "statistics"
     ],
-    "stars": 235
+    "stars": 235,
+    "image_url": "https://github.com/asheshrambachan.png?size=128"
   },
   {
     "name": "fect",
@@ -15233,7 +15420,8 @@
       "causal-inference",
       "econometrics",
       "statistics"
-    ]
+    ],
+    "image_url": "https://github.com/xuyiqing.png?size=128"
   },
   {
     "name": "fastdid",
@@ -15311,7 +15499,8 @@
       "causal-inference",
       "econometrics"
     ],
-    "stars": 32
+    "stars": 32,
+    "image_url": "https://github.com/TsaiLintung.png?size=128"
   },
   {
     "name": "inferference",
@@ -15391,7 +15580,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 6
+    "stars": 6,
+    "image_url": "https://github.com/bsaul.png?size=128"
   },
   {
     "name": "optmatch",
@@ -15476,7 +15666,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 50
+    "stars": 50,
+    "image_url": "https://github.com/markmfredrickson.png?size=128"
   },
   {
     "name": "DynTxRegime",
@@ -15556,7 +15747,8 @@
       "reinforcement-learning",
       "healthcare",
       "machine-learning"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "ddml",
@@ -15636,7 +15828,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 23
+    "stars": 23,
+    "image_url": "https://github.com/thomaswiemann.png?size=128"
   },
   {
     "name": "hdm",
@@ -15713,7 +15906,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 19
+    "stars": 19,
+    "image_url": "https://github.com/MartinSpindler.png?size=128"
   },
   {
     "name": "eventstudyr",
@@ -15791,7 +15985,8 @@
       "causal-inference",
       "econometrics",
       "experimentation"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "DTRreg",
@@ -15868,7 +16063,8 @@
       "causal-inference",
       "experimentation",
       "statistics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "sensemakr",
@@ -15946,7 +16142,8 @@
       "statistics",
       "econometrics"
     ],
-    "stars": 98
+    "stars": 98,
+    "image_url": "https://github.com/carloscinelli.png?size=128"
   },
   {
     "name": "EValue",
@@ -16023,7 +16220,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 16
+    "stars": 16,
+    "image_url": "https://github.com/mayamathur.png?size=128"
   },
   {
     "name": "ltmle",
@@ -16103,7 +16301,8 @@
       "machine-learning",
       "statistics"
     ],
-    "stars": 28
+    "stars": 28,
+    "image_url": "https://github.com/joshuaschwab.png?size=128"
   },
   {
     "name": "causalweight",
@@ -16120,7 +16319,7 @@
       "LATE",
       "instrumental-variables"
     ],
-    "best_for": "Mediation analysis and LATE estimation using weighting-based approaches with flexible nuisance estimation, implementing Huber (2014) and Fr\u00f6lich & Huber (2017)",
+    "best_for": "Mediation analysis and LATE estimation using weighting-based approaches with flexible nuisance estimation, implementing Huber (2014) and Frölich & Huber (2017)",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -16178,7 +16377,8 @@
       "causal-inference",
       "machine-learning",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://github.com/hbodory.png?size=128"
   },
   {
     "name": "SuperLearner",
@@ -16257,7 +16457,8 @@
       "machine-learning",
       "causal-inference"
     ],
-    "stars": 291
+    "stars": 291,
+    "image_url": "https://github.com/ecpolley.png?size=128"
   },
   {
     "name": "contextual",
@@ -16336,7 +16537,8 @@
       "machine-learning",
       "statistics"
     ],
-    "stars": 81
+    "stars": 81,
+    "image_url": "https://github.com/Nth-iteration-labs.png?size=128"
   },
   {
     "name": "Statsmodels",
@@ -16418,7 +16620,8 @@
       "econometrics",
       "machine-learning"
     ],
-    "stars": 11391
+    "stars": 11391,
+    "image_url": "https://github.com/statsmodels.png?size=128"
   },
   {
     "name": "OpenSpiel",
@@ -16507,7 +16710,8 @@
       "OpenAI Gym",
       "Ray RLLib"
     ],
-    "stars": 5185
+    "stars": 5185,
+    "image_url": "https://github.com/deepmind.png?size=128"
   },
   {
     "name": "ebal",
@@ -16580,7 +16784,8 @@
     "canonical_topics": [
       "causal-inference",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "CMAverse",
@@ -16659,7 +16864,8 @@
       "causal-inference",
       "experimentation",
       "statistics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "mediation",
@@ -16738,7 +16944,8 @@
       "causal-inference",
       "experimentation",
       "statistics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "PStrata",
@@ -16815,7 +17022,8 @@
       "causal-inference",
       "statistics",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "fortuna",
@@ -16905,7 +17113,8 @@
     "framework_compatibility": [
       "AWS"
     ],
-    "stars": 925
+    "stars": 925,
+    "image_url": "https://github.com/awslabs.png?size=128"
   },
   {
     "name": "Pyomo",
@@ -16994,7 +17203,8 @@
     "framework_compatibility": [
       "None"
     ],
-    "stars": 2444
+    "stars": 2444,
+    "image_url": "https://github.com/Pyomo.png?size=128"
   },
   {
     "name": "Pyomo",
@@ -17085,7 +17295,8 @@
       "machine-learning",
       "statistics"
     ],
-    "stars": 2444
+    "stars": 2444,
+    "image_url": "https://github.com/Pyomo.png?size=128"
   },
   {
     "name": "cjoint",
@@ -17163,11 +17374,12 @@
       "causal-inference",
       "experimentation",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "collapse",
-    "description": "High-performance data transformation package designed by an economist. Provides fast grouped operations, time series functions, and panel data tools with 10-100\u00d7 speedups over dplyr on large data.",
+    "description": "High-performance data transformation package designed by an economist. Provides fast grouped operations, time series functions, and panel data tools with 10-100× speedups over dplyr on large data.",
     "category": "Data Workflow",
     "docs_url": "https://sebkrantz.github.io/collapse/",
     "github_url": "https://github.com/SebKrantz/collapse",
@@ -17180,7 +17392,7 @@
       "time-series",
       "grouped-operations"
     ],
-    "best_for": "High-performance data transformation optimized for economists\u201410-100\u00d7 faster than dplyr",
+    "best_for": "High-performance data transformation optimized for economists—10-100× faster than dplyr",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -17210,7 +17422,7 @@
     "api_complexity": "intermediate",
     "maintenance_status": "active",
     "model_score": 0.0001,
-    "embedding_text": "The 'collapse' package is an innovative tool tailored for high-performance data transformation in R, particularly favored by economists. It is designed to enhance the efficiency of data manipulation tasks, providing significant speed improvements\u2014often between 10 to 100 times faster than traditional packages like dplyr\u2014when handling large datasets. The core functionality of 'collapse' includes fast grouped operations, time series functions, and tools for managing panel data. This makes it an invaluable resource for data scientists and economists who require robust performance in their data workflows. The API design of 'collapse' is functional, allowing users to apply transformations in a straightforward manner while maintaining clarity and efficiency. Key functions within the package facilitate operations such as summarizing data by groups, performing calculations on time series, and managing panel data structures. Installation is straightforward via CRAN, and users can quickly begin utilizing the package with simple function calls that integrate seamlessly into their existing R workflows. Compared to alternatives like dplyr, 'collapse' stands out due to its performance characteristics, especially when working with large datasets where speed is critical. However, users should be aware of potential pitfalls, such as the learning curve associated with its unique functions and the need for a solid understanding of R programming to maximize its capabilities. Best practices include leveraging its speed advantages for large data transformations while being mindful of the specific scenarios where 'collapse' excels versus when traditional methods may suffice. Overall, 'collapse' is a powerful addition to the R ecosystem for those focused on data transformation in economic research and analysis.",
+    "embedding_text": "The 'collapse' package is an innovative tool tailored for high-performance data transformation in R, particularly favored by economists. It is designed to enhance the efficiency of data manipulation tasks, providing significant speed improvements—often between 10 to 100 times faster than traditional packages like dplyr—when handling large datasets. The core functionality of 'collapse' includes fast grouped operations, time series functions, and tools for managing panel data. This makes it an invaluable resource for data scientists and economists who require robust performance in their data workflows. The API design of 'collapse' is functional, allowing users to apply transformations in a straightforward manner while maintaining clarity and efficiency. Key functions within the package facilitate operations such as summarizing data by groups, performing calculations on time series, and managing panel data structures. Installation is straightforward via CRAN, and users can quickly begin utilizing the package with simple function calls that integrate seamlessly into their existing R workflows. Compared to alternatives like dplyr, 'collapse' stands out due to its performance characteristics, especially when working with large datasets where speed is critical. However, users should be aware of potential pitfalls, such as the learning curve associated with its unique functions and the need for a solid understanding of R programming to maximize its capabilities. Best practices include leveraging its speed advantages for large data transformations while being mindful of the specific scenarios where 'collapse' excels versus when traditional methods may suffice. Overall, 'collapse' is a powerful addition to the R ecosystem for those focused on data transformation in economic research and analysis.",
     "primary_use_cases": [
       "fast grouped operations",
       "time series analysis",
@@ -17246,7 +17458,8 @@
     "related_packages": [
       "dplyr"
     ],
-    "stars": 696
+    "stars": 696,
+    "image_url": "https://github.com/SebKrantz.png?size=128"
   },
   {
     "name": "rddtools",
@@ -17323,7 +17536,8 @@
       "causal-inference",
       "experimentation",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "AER",
@@ -17399,7 +17613,8 @@
     ],
     "canonical_topics": [
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "Linregress",
@@ -17471,7 +17686,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 24
+    "stars": 24,
+    "image_url": "https://github.com/n1m3.png?size=128"
   },
   {
     "name": "PyBLP",
@@ -17545,7 +17761,8 @@
       "pricing",
       "industrial-organization"
     ],
-    "stars": 285
+    "stars": 285,
+    "image_url": "https://github.com/jeffgortmaker.png?size=128"
   },
   {
     "name": "Nashpy",
@@ -17618,7 +17835,8 @@
       "optimization",
       "statistics"
     ],
-    "stars": 364
+    "stars": 364,
+    "image_url": "https://github.com/drvinceknight.png?size=128"
   },
   {
     "name": "fairpy",
@@ -17700,7 +17918,8 @@
       "cake-cutting",
       "item allocation"
     ],
-    "stars": 38
+    "stars": 38,
+    "image_url": "https://github.com/erelsgl.png?size=128"
   },
   {
     "name": "umap-learn",
@@ -17783,7 +18002,8 @@
       "data visualization",
       "feature extraction"
     ],
-    "stars": 8166
+    "stars": 8166,
+    "image_url": "https://github.com/lmcinnes.png?size=128"
   },
   {
     "name": "TorchCP",
@@ -17872,7 +18092,8 @@
       "scikit-learn",
       "PyTorch"
     ],
-    "stars": 466
+    "stars": 466,
+    "image_url": "https://github.com/ml-stat-Sustech.png?size=128"
   },
   {
     "name": "rdmulti",
@@ -17949,7 +18170,8 @@
       "causal-inference",
       "econometrics",
       "policy-evaluation"
-    ]
+    ],
+    "image_url": "https://github.com/rdpackages.png?size=128"
   },
   {
     "name": "DeclareDesign",
@@ -18027,7 +18249,8 @@
       "causal-inference",
       "statistics"
     ],
-    "stars": 108
+    "stars": 108,
+    "image_url": "https://github.com/DeclareDesign.png?size=128"
   },
   {
     "name": "cregg",
@@ -18101,7 +18324,8 @@
       "causal-inference",
       "experimentation",
       "statistics"
-    ]
+    ],
+    "image_url": "https://github.com/leeper.png?size=128"
   },
   {
     "name": "rdlocrand",
@@ -18181,7 +18405,8 @@
       "experimentation",
       "econometrics"
     ],
-    "stars": 8
+    "stars": 8,
+    "image_url": "https://github.com/rdpackages.png?size=128"
   },
   {
     "name": "OpenDSS",
@@ -18268,7 +18493,8 @@
       "statistics",
       "machine-learning",
       "energy-economics"
-    ]
+    ],
+    "image_url": "https://github.com/dss-extensions.png?size=128"
   },
   {
     "name": "OpenDSS",
@@ -18355,7 +18581,8 @@
       "statistics",
       "forecasting",
       "policy-evaluation"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "openTSNE",
@@ -18437,7 +18664,8 @@
       "statistics",
       "data-engineering"
     ],
-    "stars": 1620
+    "stars": 1620,
+    "image_url": "https://github.com/pavlin-policar.png?size=128"
   },
   {
     "name": "cobalt",
@@ -18519,7 +18747,8 @@
       "causal-inference",
       "experimentation",
       "statistics"
-    ]
+    ],
+    "image_url": "https://github.com/ngreifer.png?size=128"
   },
   {
     "name": "mmm_stan",
@@ -18602,7 +18831,8 @@
       "consumer-behavior",
       "statistics"
     ],
-    "stars": 400
+    "stars": 400,
+    "image_url": "https://github.com/sibylhe.png?size=128"
   },
   {
     "name": "SuperSuit",
@@ -18689,7 +18919,8 @@
       "reinforcement-learning",
       "machine-learning",
       "experimentation"
-    ]
+    ],
+    "image_url": "https://github.com/Farama-Foundation.png?size=128"
   },
   {
     "name": "momentfit",
@@ -18768,7 +18999,8 @@
     "canonical_topics": [
       "econometrics",
       "statistics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "BCEA",
@@ -18851,7 +19083,8 @@
       "econometrics",
       "policy-evaluation"
     ],
-    "stars": 53
+    "stars": 53,
+    "image_url": "https://github.com/giabaio.png?size=128"
   },
   {
     "name": "CausalMotifs",
@@ -18938,7 +19171,8 @@
       "statsmodels",
       "causalml"
     ],
-    "stars": 7
+    "stars": 7,
+    "image_url": "https://github.com/facebookresearch.png?size=128"
   },
   {
     "name": "ortools",
@@ -19025,7 +19259,8 @@
       "statistics",
       "data-engineering"
     ],
-    "stars": 13429
+    "stars": 13429,
+    "image_url": "https://github.com/google.png?size=128"
   },
   {
     "name": "emmeans",
@@ -19103,7 +19338,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 414
+    "stars": 414,
+    "image_url": "https://github.com/rvlenth.png?size=128"
   },
   {
     "name": "pmdarima",
@@ -19186,7 +19422,8 @@
       "statistics",
       "machine-learning"
     ],
-    "stars": 1720
+    "stars": 1720,
+    "image_url": "https://github.com/alkaline-ml.png?size=128"
   },
   {
     "name": "fable",
@@ -19269,7 +19506,8 @@
       "forecasting",
       "statistics"
     ],
-    "stars": 583
+    "stars": 583,
+    "image_url": "https://github.com/tidyverts.png?size=128"
   },
   {
     "name": "Robyn",
@@ -19358,7 +19596,8 @@
     "framework_compatibility": [
       "R"
     ],
-    "stars": 1456
+    "stars": 1456,
+    "image_url": "https://github.com/facebookexperimental.png?size=128"
   },
   {
     "name": "CLVTools",
@@ -19442,11 +19681,12 @@
       "data-engineering",
       "marketing"
     ],
-    "stars": 59
+    "stars": 59,
+    "image_url": "https://github.com/bachmannpatrick.png?size=128"
   },
   {
     "name": "gale-shapley",
-    "description": "Python O(n\u00b2) implementation of Gale-Shapley algorithm for stable matching with simulation capabilities.",
+    "description": "Python O(n²) implementation of Gale-Shapley algorithm for stable matching with simulation capabilities.",
     "category": "Matching & Market Design",
     "docs_url": null,
     "github_url": "https://github.com/oedokumaci/gale-shapley",
@@ -19521,7 +19761,8 @@
       "stable matching",
       "market design"
     ],
-    "stars": 9
+    "stars": 9,
+    "image_url": "https://github.com/oedokumaci.png?size=128"
   },
   {
     "name": "Lifetimes",
@@ -19612,7 +19853,8 @@
     "related_packages": [
       "lifetimes"
     ],
-    "stars": 1475
+    "stars": 1475,
+    "image_url": "https://github.com/CamDavidsonPilon.png?size=128"
   },
   {
     "name": "lifetimes",
@@ -19703,7 +19945,8 @@
       "econometrics",
       "data-engineering"
     ],
-    "stars": 1475
+    "stars": 1475,
+    "image_url": "https://github.com/CamDavidsonPilon.png?size=128"
   },
   {
     "name": "MONAI",
@@ -19792,7 +20035,8 @@
       "computer-vision",
       "healthcare"
     ],
-    "stars": 8130
+    "stars": 8130,
+    "image_url": "https://github.com/Project-MONAI.png?size=128"
   },
   {
     "name": "testinterference",
@@ -19871,7 +20115,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 1
+    "stars": 1,
+    "image_url": "https://github.com/tkhdyanagi.png?size=128"
   },
   {
     "name": "Computational Methods for practitioners",
@@ -19944,7 +20189,8 @@
       "econometrics",
       "data-engineering"
     ],
-    "stars": 115
+    "stars": 115,
+    "image_url": "https://github.com/OpenSourceEcon.png?size=128"
   },
   {
     "name": "spilled_t",
@@ -20022,11 +20268,12 @@
       "causal-inference",
       "experimentation",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://github.com/mpleung.png?size=128"
   },
   {
     "name": "ShiftShareSE",
-    "description": "Implements correct standard errors for Bartik/shift-share instrumental variables designs following Ad\u00e3o, Koles\u00e1r, and Morales (2019 QJE). Standard clustered SEs are typically incorrect for shift-share\u2014this package provides econometrically valid inference.",
+    "description": "Implements correct standard errors for Bartik/shift-share instrumental variables designs following Adão, Kolesár, and Morales (2019 QJE). Standard clustered SEs are typically incorrect for shift-share—this package provides econometrically valid inference.",
     "category": "Instrumental Variables",
     "docs_url": "https://cran.r-project.org/web/packages/ShiftShareSE/ShiftShareSE.pdf",
     "github_url": "https://github.com/kolesarm/ShiftShareSE",
@@ -20039,7 +20286,7 @@
       "standard-errors",
       "regional-economics"
     ],
-    "best_for": "Correct standard errors for Bartik/shift-share IV designs, implementing Ad\u00e3o, Koles\u00e1r & Morales (2019 QJE)",
+    "best_for": "Correct standard errors for Bartik/shift-share IV designs, implementing Adão, Kolesár & Morales (2019 QJE)",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -20069,10 +20316,10 @@
       "R tools for regional economics analysis"
     ],
     "api_complexity": "intermediate",
-    "implements_paper": "Ad\u00e3o, Koles\u00e1r, and Morales (2019)",
+    "implements_paper": "Adão, Kolesár, and Morales (2019)",
     "maintenance_status": "active",
     "model_score": 0.0001,
-    "embedding_text": "ShiftShareSE is a specialized R package designed to enhance the accuracy of standard errors in Bartik and shift-share instrumental variables designs, a common approach in econometric analysis, particularly in regional economics. The package addresses a critical issue in econometric modeling, where standard clustered standard errors are often misapplied in shift-share contexts, leading to invalid inference. By implementing the methodologies proposed by Ad\u00e3o, Koles\u00e1r, and Morales in their 2019 paper, ShiftShareSE provides users with tools to conduct robust statistical analyses that yield valid results in the presence of complex economic relationships. The API of ShiftShareSE is designed with usability in mind, allowing users to easily integrate it into their existing R workflows. The package includes key functions that facilitate the estimation of standard errors tailored for shift-share designs, making it accessible to users who may not have extensive backgrounds in econometrics. Installation is straightforward via CRAN, and basic usage patterns are intuitive, enabling users to quickly apply the package to their datasets. Compared to alternative approaches, ShiftShareSE stands out by focusing specifically on the nuances of shift-share analysis, ensuring that users can achieve econometrically valid results without the pitfalls associated with traditional methods. Performance characteristics are optimized for handling regional economic data, which often involves large datasets with complex structures. However, users should be mindful of common pitfalls, such as misinterpreting the results when applying standard errors without understanding the underlying assumptions of the shift-share design. Best practices include ensuring that the data meets the necessary conditions for shift-share analysis and being cautious when generalizing results beyond the specific contexts of the study. ShiftShareSE is particularly useful when researchers aim to analyze the effects of economic policies or shocks at a regional level, but it may not be suitable for analyses that do not fit the shift-share framework. Overall, ShiftShareSE provides a valuable resource for economists and data scientists working in the field of regional economics, offering a robust solution for valid inference in instrumental variables designs.",
+    "embedding_text": "ShiftShareSE is a specialized R package designed to enhance the accuracy of standard errors in Bartik and shift-share instrumental variables designs, a common approach in econometric analysis, particularly in regional economics. The package addresses a critical issue in econometric modeling, where standard clustered standard errors are often misapplied in shift-share contexts, leading to invalid inference. By implementing the methodologies proposed by Adão, Kolesár, and Morales in their 2019 paper, ShiftShareSE provides users with tools to conduct robust statistical analyses that yield valid results in the presence of complex economic relationships. The API of ShiftShareSE is designed with usability in mind, allowing users to easily integrate it into their existing R workflows. The package includes key functions that facilitate the estimation of standard errors tailored for shift-share designs, making it accessible to users who may not have extensive backgrounds in econometrics. Installation is straightforward via CRAN, and basic usage patterns are intuitive, enabling users to quickly apply the package to their datasets. Compared to alternative approaches, ShiftShareSE stands out by focusing specifically on the nuances of shift-share analysis, ensuring that users can achieve econometrically valid results without the pitfalls associated with traditional methods. Performance characteristics are optimized for handling regional economic data, which often involves large datasets with complex structures. However, users should be mindful of common pitfalls, such as misinterpreting the results when applying standard errors without understanding the underlying assumptions of the shift-share design. Best practices include ensuring that the data meets the necessary conditions for shift-share analysis and being cautious when generalizing results beyond the specific contexts of the study. ShiftShareSE is particularly useful when researchers aim to analyze the effects of economic policies or shocks at a regional level, but it may not be suitable for analyses that do not fit the shift-share framework. Overall, ShiftShareSE provides a valuable resource for economists and data scientists working in the field of regional economics, offering a robust solution for valid inference in instrumental variables designs.",
     "tfidf_keywords": [
       "shift-share",
       "Bartik",
@@ -20104,7 +20351,8 @@
       "shift-share analysis",
       "Bartik instrumental variables estimation"
     ],
-    "stars": 21
+    "stars": 21,
+    "image_url": "https://github.com/kolesarm.png?size=128"
   },
   {
     "name": "scikit-survival",
@@ -20194,7 +20442,8 @@
       "healthcare",
       "econometrics"
     ],
-    "stars": 1294
+    "stars": 1294,
+    "image_url": "https://github.com/sebp.png?size=128"
   },
   {
     "name": "scikit-survival",
@@ -20282,7 +20531,8 @@
       "healthcare",
       "statistics"
     ],
-    "stars": 1294
+    "stars": 1294,
+    "image_url": "https://github.com/sebp.png?size=128"
   },
   {
     "name": "chainladder-python",
@@ -20366,7 +20616,8 @@
       "machine-learning",
       "forecasting"
     ],
-    "stars": 243
+    "stars": 243,
+    "image_url": "https://github.com/casact.png?size=128"
   },
   {
     "name": "survival",
@@ -20448,7 +20699,8 @@
       "econometrics",
       "healthcare"
     ],
-    "stars": 433
+    "stars": 433,
+    "image_url": "https://github.com/therneau.png?size=128"
   },
   {
     "name": "survival",
@@ -20529,7 +20781,8 @@
       "statistics",
       "econometrics"
     ],
-    "stars": 433
+    "stars": 433,
+    "image_url": "https://github.com/therneau.png?size=128"
   },
   {
     "name": "Ambrosia",
@@ -20614,7 +20867,8 @@
       "causal-inference",
       "machine-learning"
     ],
-    "stars": 243
+    "stars": 243,
+    "image_url": "https://github.com/MobileTeleSystems.png?size=128"
   },
   {
     "name": "ziln_cltv",
@@ -20694,7 +20948,8 @@
       "consumer-behavior",
       "econometrics"
     ],
-    "stars": 371
+    "stars": 371,
+    "image_url": "https://github.com/google.png?size=128"
   },
   {
     "name": "MO-Gymnasium",
@@ -20775,7 +21030,8 @@
       "optimization",
       "machine-learning"
     ],
-    "stars": 380
+    "stars": 380,
+    "image_url": "https://github.com/Farama-Foundation.png?size=128"
   },
   {
     "name": "lifelib",
@@ -20856,7 +21112,8 @@
       "statistics",
       "econometrics"
     ],
-    "stars": 201
+    "stars": 201,
+    "image_url": "https://github.com/lifelib-dev.png?size=128"
   },
   {
     "name": "flexsurv",
@@ -20933,7 +21190,8 @@
       "econometrics",
       "healthcare"
     ],
-    "stars": 67
+    "stars": 67,
+    "image_url": "https://github.com/chjackson.png?size=128"
   },
   {
     "name": "xgboost",
@@ -21030,7 +21288,8 @@
       "machine-learning",
       "statistics",
       "forecasting"
-    ]
+    ],
+    "image_url": "https://github.com/dmlc.png?size=128"
   },
   {
     "name": "XGBoost",
@@ -21107,7 +21366,8 @@
     "canonical_topics": [
       "machine-learning",
       "experimentation"
-    ]
+    ],
+    "image_url": "https://github.com/dmlc.png?size=128"
   },
   {
     "name": "xgboost",
@@ -21193,7 +21453,8 @@
       "machine-learning",
       "experimentation",
       "statistics"
-    ]
+    ],
+    "image_url": "https://github.com/dmlc.png?size=128"
   },
   {
     "name": "DataSynthesizer",
@@ -21274,7 +21535,8 @@
       "data-engineering",
       "privacy"
     ],
-    "stars": 274
+    "stars": 274,
+    "image_url": "https://github.com/DataResponsibly.png?size=128"
   },
   {
     "name": "NGBoost",
@@ -21357,7 +21619,8 @@
       "machine-learning",
       "forecasting",
       "statistics"
-    ]
+    ],
+    "image_url": "https://github.com/stanfordmlgroup.png?size=128"
   },
   {
     "name": "mstate",
@@ -21441,7 +21704,8 @@
       "econometrics",
       "statistics"
     ],
-    "stars": 15
+    "stars": 15,
+    "image_url": "https://github.com/hputter.png?size=128"
   },
   {
     "name": "ivreg",
@@ -21522,7 +21786,8 @@
       "causal-inference",
       "econometrics",
       "statistics"
-    ]
+    ],
+    "image_url": "https://github.com/zeileis.png?size=128"
   },
   {
     "name": "hypothetical",
@@ -21608,7 +21873,8 @@
       "experimentation",
       "causal-inference"
     ],
-    "stars": 64
+    "stars": 64,
+    "image_url": "https://github.com/aschleg.png?size=128"
   },
   {
     "name": "survminer",
@@ -21690,7 +21956,8 @@
     "related_packages": [
       "ggplot2"
     ],
-    "stars": 566
+    "stars": 566,
+    "image_url": "https://github.com/kassambara.png?size=128"
   },
   {
     "name": "Superpower",
@@ -21772,11 +22039,12 @@
       "statistics",
       "causal-inference"
     ],
-    "stars": 68
+    "stars": 68,
+    "image_url": "https://github.com/arcaldwell49.png?size=128"
   },
   {
     "name": "pyleebounds",
-    "description": "Lee\u00a0(2009) sample\u2011selection bounds for treatment effects; trims treated distribution to match selection rates.",
+    "description": "Lee (2009) sample‑selection bounds for treatment effects; trims treated distribution to match selection rates.",
     "category": "Program Evaluation Methods (DiD, SC, RDD)",
     "docs_url": "https://pypi.org/project/pyleebounds/",
     "github_url": null,
@@ -21853,7 +22121,8 @@
       "causal-inference",
       "econometrics",
       "experimentation"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "RecBole",
@@ -21941,7 +22210,8 @@
       "machine-learning",
       "data-engineering"
     ],
-    "stars": 4414
+    "stars": 4414,
+    "image_url": "https://github.com/RUCAIBox.png?size=128"
   },
   {
     "name": "ranger",
@@ -21958,7 +22228,7 @@
       "fast",
       "causal-forests"
     ],
-    "best_for": "Fast random forests for high-dimensional data\u2014backend for grf causal forests",
+    "best_for": "Fast random forests for high-dimensional data—backend for grf causal forests",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -22028,7 +22298,8 @@
       "causal-inference",
       "statistics"
     ],
-    "stars": 809
+    "stars": 809,
+    "image_url": "https://github.com/imbs-hl.png?size=128"
   },
   {
     "name": "ivmodel",
@@ -22106,7 +22377,8 @@
       "causal-inference",
       "econometrics"
     ],
-    "stars": 10
+    "stars": 10,
+    "image_url": "https://github.com/hyunseungkang.png?size=128"
   },
   {
     "name": "LightGBM",
@@ -22183,7 +22455,8 @@
       "experimentation",
       "optimization"
     ],
-    "stars": 18315
+    "stars": 18315,
+    "image_url": "https://github.com/microsoft.png?size=128"
   },
   {
     "name": "LightGBM",
@@ -22265,7 +22538,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 18315
+    "stars": 18315,
+    "image_url": "https://github.com/microsoft.png?size=128"
   },
   {
     "name": "gurobipy",
@@ -22281,7 +22555,7 @@
       "MIP",
       "commercial"
     ],
-    "best_for": "Best-in-class solver \u2014 free for academics",
+    "best_for": "Best-in-class solver — free for academics",
     "language": "Python",
     "difficulty": "intermediate",
     "prerequisites": [
@@ -22352,7 +22626,8 @@
       "optimization",
       "machine-learning",
       "statistics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "maketables",
@@ -22433,7 +22708,8 @@
       "econometrics",
       "data-engineering"
     ],
-    "stars": 22
+    "stars": 22,
+    "image_url": "https://github.com/py-econometrics.png?size=128"
   },
   {
     "name": "Linearmodels",
@@ -22516,7 +22792,8 @@
       "causal-inference",
       "statistics"
     ],
-    "stars": 1040
+    "stars": 1040,
+    "image_url": "https://github.com/bashtage.png?size=128"
   },
   {
     "name": "CausalNLP",
@@ -22599,7 +22876,8 @@
       "natural-language-processing",
       "econometrics"
     ],
-    "stars": 157
+    "stars": 157,
+    "image_url": "https://github.com/amaiya.png?size=128"
   },
   {
     "name": "Prophet",
@@ -22681,7 +22959,8 @@
       "forecasting",
       "machine-learning",
       "statistics"
-    ]
+    ],
+    "image_url": "https://github.com/facebook.png?size=128"
   },
   {
     "name": "prophet",
@@ -22768,7 +23047,8 @@
       "forecasting",
       "statistics",
       "machine-learning"
-    ]
+    ],
+    "image_url": "https://github.com/facebook.png?size=128"
   },
   {
     "name": "Prophet",
@@ -22854,7 +23134,8 @@
       "forecasting",
       "machine-learning",
       "statistics"
-    ]
+    ],
+    "image_url": "https://github.com/facebook.png?size=128"
   },
   {
     "name": "wildboottest",
@@ -22931,7 +23212,8 @@
       "causal-inference",
       "statistics",
       "experimentation"
-    ]
+    ],
+    "image_url": "https://github.com/py-econometrics.png?size=128"
   },
   {
     "name": "blavaan",
@@ -23015,7 +23297,8 @@
       "statistics",
       "econometrics"
     ],
-    "stars": 100
+    "stars": 100,
+    "image_url": "https://github.com/ecmerkle.png?size=128"
   },
   {
     "name": "Kats",
@@ -23097,7 +23380,8 @@
       "forecasting",
       "statistics"
     ],
-    "stars": 6299
+    "stars": 6299,
+    "image_url": "https://github.com/facebookresearch.png?size=128"
   },
   {
     "name": "PyKalman",
@@ -23181,7 +23465,8 @@
       "statistics",
       "econometrics"
     ],
-    "stars": 1310
+    "stars": 1310,
+    "image_url": "https://github.com/pykalman.png?size=128"
   },
   {
     "name": "gcimpute",
@@ -23272,7 +23557,8 @@
       "fancyimpute",
       "missforest"
     ],
-    "stars": 35
+    "stars": 35,
+    "image_url": "https://github.com/udellgroup.png?size=128"
   },
   {
     "name": "PyMC Statespace",
@@ -23361,7 +23647,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 36
+    "stars": 36,
+    "image_url": "https://github.com/jessegrabowski.png?size=128"
   },
   {
     "name": "savvi",
@@ -23442,7 +23729,8 @@
       "statistics",
       "experimentation",
       "causal-inference"
-    ]
+    ],
+    "image_url": "https://github.com/assuncaolfi.png?size=128"
   },
   {
     "name": "RLlib",
@@ -23533,7 +23821,8 @@
       "machine-learning",
       "optimization"
     ],
-    "stars": 42407
+    "stars": 42407,
+    "image_url": "https://github.com/ray-project.png?size=128"
   },
   {
     "name": "Gymnasium",
@@ -23617,7 +23906,8 @@
       "machine-learning",
       "experimentation"
     ],
-    "stars": 11815
+    "stars": 11815,
+    "image_url": "https://github.com/Farama-Foundation.png?size=128"
   },
   {
     "name": "mbt_gym",
@@ -23704,7 +23994,8 @@
       "gym",
       "stable-baselines3"
     ],
-    "stars": 171
+    "stars": 171,
+    "image_url": "https://github.com/JJJerome.png?size=128"
   },
   {
     "name": "sktime",
@@ -23791,7 +24082,8 @@
     "framework_compatibility": [
       "scikit-learn"
     ],
-    "stars": 9752
+    "stars": 9752,
+    "image_url": "https://github.com/sktime.png?size=128"
   },
   {
     "name": "MLForecast",
@@ -23875,7 +24167,8 @@
       "forecasting",
       "machine-learning",
       "statistics"
-    ]
+    ],
+    "image_url": "https://github.com/Nixtla.png?size=128"
   },
   {
     "name": "stm",
@@ -23954,7 +24247,8 @@
       "machine-learning",
       "causal-inference"
     ],
-    "stars": 417
+    "stars": 417,
+    "image_url": "https://github.com/bstewart.png?size=128"
   },
   {
     "name": "NeuralForecast",
@@ -24043,7 +24337,8 @@
     "canonical_topics": [
       "machine-learning",
       "forecasting"
-    ]
+    ],
+    "image_url": "https://github.com/Nixtla.png?size=128"
   },
   {
     "name": "AuctionGym",
@@ -24125,7 +24420,8 @@
       "econometrics",
       "marketplaces"
     ],
-    "stars": 189
+    "stars": 189,
+    "image_url": "https://github.com/amzn.png?size=128"
   },
   {
     "name": "nfl-data-py",
@@ -24205,7 +24501,8 @@
       "machine-learning",
       "statistics"
     ],
-    "stars": 432
+    "stars": 432,
+    "image_url": "https://github.com/nflverse.png?size=128"
   },
   {
     "name": "tidymodels",
@@ -24222,7 +24519,7 @@
       "hyperparameter-tuning",
       "preprocessing"
     ],
-    "best_for": "Modern tidyverse-native ML framework with reproducible workflows\u2014successor to caret",
+    "best_for": "Modern tidyverse-native ML framework with reproducible workflows—successor to caret",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -24289,7 +24586,8 @@
       "statistics",
       "data-engineering"
     ],
-    "stars": 814
+    "stars": 814,
+    "image_url": "https://github.com/tidymodels.png?size=128"
   },
   {
     "name": "lmerTest",
@@ -24372,7 +24670,8 @@
       "statistics",
       "econometrics"
     ],
-    "stars": 52
+    "stars": 52,
+    "image_url": "https://github.com/runehaubo.png?size=128"
   },
   {
     "name": "rdrobust",
@@ -24457,7 +24756,8 @@
       "causal-inference",
       "econometrics",
       "program-evaluation"
-    ]
+    ],
+    "image_url": "https://github.com/rdpackages.png?size=128"
   },
   {
     "name": "simChef",
@@ -24541,7 +24841,8 @@
       "statistics",
       "causal-inference"
     ],
-    "stars": 23
+    "stars": 23,
+    "image_url": "https://github.com/Yu-Group.png?size=128"
   },
   {
     "name": "nlrx",
@@ -24617,7 +24918,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 80
+    "stars": 80,
+    "image_url": "https://github.com/ropensci.png?size=128"
   },
   {
     "name": "DeepEcho",
@@ -24702,11 +25004,12 @@
     "related_packages": [
       "SDV"
     ],
-    "stars": 123
+    "stars": 123,
+    "image_url": "https://github.com/sdv-dev.png?size=128"
   },
   {
     "name": "SciPy Bootstrap",
-    "description": "Foundational module within SciPy for a wide range of statistical functions, distributions, and hypothesis tests (t-tests, ANOVA, chi\u00b2, KS, etc.).",
+    "description": "Foundational module within SciPy for a wide range of statistical functions, distributions, and hypothesis tests (t-tests, ANOVA, chi², KS, etc.).",
     "category": "Standard Errors, Bootstrapping & Reporting",
     "docs_url": "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.bootstrap.html",
     "github_url": "https://github.com/scipy/scipy",
@@ -24794,7 +25097,8 @@
       "experimentation",
       "machine-learning"
     ],
-    "stars": 14655
+    "stars": 14655,
+    "image_url": "https://github.com/scipy.png?size=128"
   },
   {
     "name": "PyWhy-Stats",
@@ -24876,7 +25180,8 @@
       "statsmodels",
       "scipy"
     ],
-    "stars": 32
+    "stars": 32,
+    "image_url": "https://github.com/py-why.png?size=128"
   },
   {
     "name": "panelhetero",
@@ -24959,7 +25264,8 @@
       "statsmodels",
       "linearmodels"
     ],
-    "stars": 5
+    "stars": 5,
+    "image_url": "https://github.com/tkhdyanagi.png?size=128"
   },
   {
     "name": "stochvol",
@@ -25042,7 +25348,8 @@
       "pymc3",
       "TensorFlow Probability"
     ],
-    "stars": 17
+    "stars": 17,
+    "image_url": "https://github.com/gregorkastner.png?size=128"
   },
   {
     "name": "lme4",
@@ -25123,7 +25430,8 @@
       "statistics",
       "econometrics"
     ],
-    "stars": 682
+    "stars": 682,
+    "image_url": "https://github.com/lme4.png?size=128"
   },
   {
     "name": "HARK",
@@ -25202,11 +25510,12 @@
       "causal-inference",
       "machine-learning"
     ],
-    "stars": 383
+    "stars": 383,
+    "image_url": "https://github.com/econ-ark.png?size=128"
   },
   {
     "name": "pyrifreg",
-    "description": "Recentered Influence\u2011Function (RIF) regression for unconditional quantile & distributional effects (Firpo\u202fet\u202fal.,\u202f2008).",
+    "description": "Recentered Influence‑Function (RIF) regression for unconditional quantile & distributional effects (Firpo et al., 2008).",
     "category": "Quantile Regression & Distributional Methods",
     "docs_url": "https://github.com/vyasenov/pyrifreg",
     "github_url": null,
@@ -25284,7 +25593,8 @@
     "related_packages": [
       "statsmodels",
       "scikit-learn"
-    ]
+    ],
+    "image_url": "https://github.com/vyasenov.png?size=128"
   },
   {
     "name": "PyTorch",
@@ -25374,7 +25684,8 @@
     "framework_compatibility": [
       "TensorFlow"
     ],
-    "stars": 99593
+    "stars": 99593,
+    "image_url": "https://github.com/pytorch.png?size=128"
   },
   {
     "name": "fixest",
@@ -25457,7 +25768,8 @@
     "related_packages": [
       "lfe",
       "plm"
-    ]
+    ],
+    "image_url": "https://github.com/lrberge.png?size=128"
   },
   {
     "name": "ARCH",
@@ -25540,7 +25852,8 @@
       "forecasting",
       "statistics"
     ],
-    "stars": 1512
+    "stars": 1512,
+    "image_url": "https://github.com/bashtage.png?size=128"
   },
   {
     "name": "Mesa",
@@ -25619,7 +25932,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 3625
+    "stars": 3625,
+    "image_url": "https://github.com/projectmesa.png?size=128"
   },
   {
     "name": "Augurs",
@@ -25697,7 +26011,8 @@
       "statistics",
       "machine-learning"
     ],
-    "stars": 567
+    "stars": 567,
+    "image_url": "https://github.com/grafana.png?size=128"
   },
   {
     "name": "panelr",
@@ -25787,7 +26102,8 @@
       "econometrics",
       "statistics"
     ],
-    "stars": 100
+    "stars": 100,
+    "image_url": "https://github.com/jacob-long.png?size=128"
   },
   {
     "name": "KFAS",
@@ -25869,7 +26185,8 @@
       "forecasting",
       "statistics"
     ],
-    "stars": 73
+    "stars": 73,
+    "image_url": "https://github.com/helske.png?size=128"
   },
   {
     "name": "dlm",
@@ -25948,7 +26265,8 @@
       "econometrics",
       "forecasting",
       "statistics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "forecast",
@@ -26028,7 +26346,8 @@
       "forecasting",
       "statistics",
       "machine-learning"
-    ]
+    ],
+    "image_url": "https://github.com/robjhyndman.png?size=128"
   },
   {
     "name": "Metran",
@@ -26112,7 +26431,8 @@
       "statsmodels",
       "pydlm"
     ],
-    "stars": 24
+    "stars": 24,
+    "image_url": "https://github.com/pastas.png?size=128"
   },
   {
     "name": "StatsForecast",
@@ -26194,7 +26514,8 @@
       "forecasting",
       "statistics",
       "machine-learning"
-    ]
+    ],
+    "image_url": "https://github.com/Nixtla.png?size=128"
   },
   {
     "name": "spdep",
@@ -26282,7 +26603,8 @@
       "spatial",
       "sf"
     ],
-    "stars": 148
+    "stars": 148,
+    "image_url": "https://github.com/r-spatial.png?size=128"
   },
   {
     "name": "tsDyn",
@@ -26365,7 +26687,8 @@
       "forecasting",
       "statistics"
     ],
-    "stars": 36
+    "stars": 36,
+    "image_url": "https://github.com/MatthieuStigler.png?size=128"
   },
   {
     "name": "JAX",
@@ -26451,7 +26774,8 @@
     "framework_compatibility": [
       "TensorFlow"
     ],
-    "stars": 35534
+    "stars": 35534,
+    "image_url": "https://github.com/google.png?size=128"
   },
   {
     "name": "pydynpd",
@@ -26529,7 +26853,8 @@
       "causal-inference",
       "statistics"
     ],
-    "stars": 35
+    "stars": 35,
+    "image_url": "https://github.com/dazhwu.png?size=128"
   },
   {
     "name": "lifelines",
@@ -26617,7 +26942,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 2568
+    "stars": 2568,
+    "image_url": "https://github.com/CamDavidsonPilon.png?size=128"
   },
   {
     "name": "lifelines",
@@ -26702,7 +27028,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 2568
+    "stars": 2568,
+    "image_url": "https://github.com/CamDavidsonPilon.png?size=128"
   },
   {
     "name": "lifelines",
@@ -26786,7 +27113,8 @@
       "statistics",
       "machine-learning"
     ],
-    "stars": 2568
+    "stars": 2568,
+    "image_url": "https://github.com/CamDavidsonPilon.png?size=128"
   },
   {
     "name": "Stable-Baselines3",
@@ -26880,7 +27208,8 @@
       "machine-learning",
       "experimentation"
     ],
-    "stars": 13199
+    "stars": 13199,
+    "image_url": "https://github.com/DLR-RM.png?size=128"
   },
   {
     "name": "mlpwr",
@@ -26952,7 +27281,8 @@
       "experimentation",
       "machine-learning",
       "statistics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "duckreg",
@@ -27035,7 +27365,8 @@
       "causal-inference",
       "econometrics",
       "statistics"
-    ]
+    ],
+    "image_url": "https://github.com/py-econometrics.png?size=128"
   },
   {
     "name": "torchonometrics",
@@ -27122,7 +27453,8 @@
       "machine-learning",
       "optimization"
     ],
-    "stars": 28
+    "stars": 28,
+    "image_url": "https://github.com/apoorvalal.png?size=128"
   },
   {
     "name": "synthlearners",
@@ -27202,7 +27534,8 @@
       "econometrics",
       "experimentation"
     ],
-    "stars": 23
+    "stars": 23,
+    "image_url": "https://github.com/apoorvalal.png?size=128"
   },
   {
     "name": "OpenMx",
@@ -27280,7 +27613,8 @@
       "statistics",
       "econometrics"
     ],
-    "stars": 101
+    "stars": 101,
+    "image_url": "https://github.com/OpenMx.png?size=128"
   },
   {
     "name": "HypoRS",
@@ -27360,7 +27694,8 @@
       "experimentation",
       "machine-learning"
     ],
-    "stars": 21
+    "stars": 21,
+    "image_url": "https://github.com/astronights.png?size=128"
   },
   {
     "name": "SyntheticControlMethods",
@@ -27444,7 +27779,8 @@
       "statsmodels",
       "causalml"
     ],
-    "stars": 193
+    "stars": 193,
+    "image_url": "https://github.com/OscarEngelbrektson.png?size=128"
   },
   {
     "name": "Skyfield",
@@ -27525,7 +27861,8 @@
       "statistics",
       "data-engineering"
     ],
-    "stars": 1714
+    "stars": 1714,
+    "image_url": "https://github.com/skyfielders.png?size=128"
   },
   {
     "name": "VaDE",
@@ -27544,7 +27881,8 @@
     "install": null,
     "best_for": "Deep probabilistic clustering",
     "model_score": 0.0001,
-    "stars": 314
+    "stars": 314,
+    "image_url": "https://github.com/slim1017.png?size=128"
   },
   {
     "name": "sf",
@@ -27636,7 +27974,8 @@
       "statistics",
       "data-engineering"
     ],
-    "stars": 1432
+    "stars": 1432,
+    "image_url": "https://github.com/r-spatial.png?size=128"
   },
   {
     "name": "sf",
@@ -27715,7 +28054,8 @@
       "statistics",
       "data-engineering"
     ],
-    "stars": 1432
+    "stars": 1432,
+    "image_url": "https://github.com/r-spatial.png?size=128"
   },
   {
     "name": "dynlm",
@@ -27792,7 +28132,8 @@
       "econometrics",
       "time-series",
       "statistics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "strucchange",
@@ -27869,11 +28210,12 @@
     "canonical_topics": [
       "econometrics",
       "statistics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "clubSandwich",
-    "description": "Provides cluster-robust variance estimators with small-sample corrections, including bias-reduced linearization (BRL/CR2). Includes functions for hypothesis testing with Satterthwaite degrees of freedom and Hotelling's T\u00b2 approximation\u2014essential when the number of clusters is small.",
+    "description": "Provides cluster-robust variance estimators with small-sample corrections, including bias-reduced linearization (BRL/CR2). Includes functions for hypothesis testing with Satterthwaite degrees of freedom and Hotelling's T² approximation—essential when the number of clusters is small.",
     "category": "Robust Standard Errors",
     "docs_url": "https://jepusto.github.io/clubSandwich/",
     "github_url": "https://github.com/jepusto/clubSandwich",
@@ -27910,7 +28252,7 @@
       "R library for bias-reduced linearization",
       "cluster-robust standard errors in R",
       "Satterthwaite degrees of freedom R package",
-      "Hotelling's T\u00b2 approximation in R"
+      "Hotelling's T² approximation in R"
     ],
     "primary_use_cases": [
       "hypothesis testing with small samples",
@@ -27919,7 +28261,7 @@
     "api_complexity": "intermediate",
     "maintenance_status": "active",
     "model_score": 0.0001,
-    "embedding_text": "The clubSandwich package in R is a powerful tool for statisticians and data scientists who require accurate variance estimation in the presence of clustered data, especially when dealing with small sample sizes. This package offers cluster-robust variance estimators that are essential for reliable statistical inference in such contexts. One of the standout features of clubSandwich is its implementation of bias-reduced linearization (BRL/CR2), which enhances the accuracy of variance estimates by addressing the biases that can arise in small samples. The package also includes functions for hypothesis testing that utilize Satterthwaite degrees of freedom and Hotelling's T\u00b2 approximation, making it particularly valuable for researchers who often find themselves working with limited clusters. The API is designed to be user-friendly, allowing for straightforward integration into existing R workflows. Users can easily install the package from CRAN and begin utilizing its functions to perform robust statistical analyses. The package is well-suited for applications in econometrics and causal inference, where the assumptions of traditional variance estimation methods may not hold. However, users should be cautious when applying these methods to very small datasets, as the performance can vary significantly based on the underlying data structure. Overall, clubSandwich is an essential tool for anyone looking to conduct rigorous statistical analyses in clustered settings, particularly in fields such as economics, social sciences, and public health.",
+    "embedding_text": "The clubSandwich package in R is a powerful tool for statisticians and data scientists who require accurate variance estimation in the presence of clustered data, especially when dealing with small sample sizes. This package offers cluster-robust variance estimators that are essential for reliable statistical inference in such contexts. One of the standout features of clubSandwich is its implementation of bias-reduced linearization (BRL/CR2), which enhances the accuracy of variance estimates by addressing the biases that can arise in small samples. The package also includes functions for hypothesis testing that utilize Satterthwaite degrees of freedom and Hotelling's T² approximation, making it particularly valuable for researchers who often find themselves working with limited clusters. The API is designed to be user-friendly, allowing for straightforward integration into existing R workflows. Users can easily install the package from CRAN and begin utilizing its functions to perform robust statistical analyses. The package is well-suited for applications in econometrics and causal inference, where the assumptions of traditional variance estimation methods may not hold. However, users should be cautious when applying these methods to very small datasets, as the performance can vary significantly based on the underlying data structure. Overall, clubSandwich is an essential tool for anyone looking to conduct rigorous statistical analyses in clustered settings, particularly in fields such as economics, social sciences, and public health.",
     "tfidf_keywords": [
       "cluster-robust",
       "variance estimation",
@@ -27927,7 +28269,7 @@
       "bias-reduced linearization",
       "hypothesis testing",
       "Satterthwaite degrees of freedom",
-      "Hotelling's T\u00b2",
+      "Hotelling's T²",
       "statistical inference",
       "econometrics",
       "causal inference"
@@ -27946,7 +28288,8 @@
       "econometrics",
       "causal-inference"
     ],
-    "stars": 51
+    "stars": 51,
+    "image_url": "https://github.com/jepusto.png?size=128"
   },
   {
     "name": "dcegm",
@@ -28026,7 +28369,8 @@
       "machine-learning",
       "optimization"
     ],
-    "stars": 23
+    "stars": 23,
+    "image_url": "https://github.com/OpenSourceEconomics.png?size=128"
   },
   {
     "name": "revealedPrefs",
@@ -28047,7 +28391,8 @@
     ],
     "install": "install.packages('revealedPrefs')",
     "best_for": "Testing consumer data for consistency with utility maximization",
-    "model_score": 0.0001
+    "model_score": 0.0001,
+    "image_url": ""
   },
   {
     "name": "openalexR",
@@ -28067,7 +28412,8 @@
     "install": "install.packages('openalexR')",
     "best_for": "Free access to scholarly metadata and citation data via OpenAlex",
     "model_score": 0.0001,
-    "stars": 134
+    "stars": 134,
+    "image_url": "https://github.com/ropensci.png?size=128"
   },
   {
     "name": "bibtexparser",
@@ -28086,7 +28432,8 @@
     "install": "pip install bibtexparser",
     "best_for": "Reading, writing, and transforming BibTeX files in Python",
     "model_score": 0.0001,
-    "stars": 564
+    "stars": 564,
+    "image_url": "https://github.com/sciunto-org.png?size=128"
   },
   {
     "name": "pyalex",
@@ -28106,7 +28453,8 @@
     "install": "pip install pyalex",
     "best_for": "Programmatic access to free scholarly metadata via OpenAlex",
     "model_score": 0.0001,
-    "stars": 378
+    "stars": 378,
+    "image_url": "https://github.com/J535D165.png?size=128"
   },
   {
     "name": "arxiv",
@@ -28126,7 +28474,8 @@
     "install": "pip install arxiv",
     "best_for": "Searching and downloading papers from arXiv programmatically",
     "model_score": 0.0001,
-    "stars": 1496
+    "stars": 1496,
+    "image_url": "https://github.com/lukasschwab.png?size=128"
   },
   {
     "name": "PaperQA2",
@@ -28147,7 +28496,8 @@
     "install": "pip install paper-qa",
     "best_for": "AI-powered question answering across scientific literature with citations",
     "model_score": 0.0001,
-    "stars": 8440
+    "stars": 8440,
+    "image_url": "https://github.com/Future-House.png?size=128"
   },
   {
     "name": "y0",
@@ -28227,7 +28577,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 70
+    "stars": 70,
+    "image_url": "https://github.com/y0-causal-inference.png?size=128"
   },
   {
     "name": "choix",
@@ -28247,7 +28598,8 @@
     "best_for": "Pairwise comparison inference, ranking from partial observations, tournament analysis",
     "language": "Python",
     "model_score": 0.0,
-    "stars": 192
+    "stars": 192,
+    "image_url": "https://github.com/lucasmaystre.png?size=128"
   },
   {
     "name": "PowerModels.jl",
@@ -28327,7 +28679,8 @@
       "energy-economics",
       "statistics"
     ],
-    "stars": 462
+    "stars": 462,
+    "image_url": "https://github.com/lanl-ansi.png?size=128"
   },
   {
     "name": "PowerModels.jl",
@@ -28406,7 +28759,8 @@
       "statistics",
       "machine-learning"
     ],
-    "stars": 462
+    "stars": 462,
+    "image_url": "https://github.com/lanl-ansi.png?size=128"
   },
   {
     "name": "TFP CausalImpact",
@@ -28493,7 +28847,8 @@
       "causal-inference",
       "experimentation",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://github.com/google.png?size=128"
   },
   {
     "name": "pyliferisk",
@@ -28573,7 +28928,8 @@
       "finance",
       "statistics"
     ],
-    "stars": 121
+    "stars": 121,
+    "image_url": "https://github.com/franciscogarate.png?size=128"
   },
   {
     "name": "PySAL (spreg)",
@@ -28657,7 +29013,8 @@
       "econometrics",
       "causal-inference",
       "statistics"
-    ]
+    ],
+    "image_url": "https://github.com/pysal.png?size=128"
   },
   {
     "name": "pycox",
@@ -28676,7 +29033,8 @@
     "install": "pip install pycox",
     "best_for": "Deep learning survival models",
     "model_score": 0.0,
-    "stars": 973
+    "stars": 973,
+    "image_url": "https://github.com/havakv.png?size=128"
   },
   {
     "name": "crewai",
@@ -28748,7 +29106,8 @@
       "experimentation",
       "reinforcement-learning"
     ],
-    "stars": 50512
+    "stars": 50512,
+    "image_url": "https://github.com/crewAIInc.png?size=128"
   },
   {
     "name": "openai-agents",
@@ -28764,7 +29123,7 @@
       "tools",
       "lightweight"
     ],
-    "best_for": "OpenAI's lightweight SDK \u2014 fast prototyping",
+    "best_for": "OpenAI's lightweight SDK — fast prototyping",
     "language": "Python",
     "difficulty": "beginner",
     "prerequisites": [],
@@ -28822,7 +29181,8 @@
       "experimentation",
       "reinforcement-learning"
     ],
-    "stars": 25798
+    "stars": 25798,
+    "image_url": "https://github.com/openai.png?size=128"
   },
   {
     "name": "langgraph",
@@ -28895,7 +29255,8 @@
       "natural-language-processing",
       "reinforcement-learning"
     ],
-    "stars": 31078
+    "stars": 31078,
+    "image_url": "https://github.com/langchain-ai.png?size=128"
   },
   {
     "name": "DeepCTR",
@@ -28979,7 +29340,8 @@
       "machine-learning",
       "recommendation-systems"
     ],
-    "stars": 8028
+    "stars": 8028,
+    "image_url": "https://github.com/shenweichen.png?size=128"
   },
   {
     "name": "Tigramite",
@@ -29063,7 +29425,8 @@
       "causalgraph",
       "pgmpy"
     ],
-    "stars": 1650
+    "stars": 1650,
+    "image_url": "https://github.com/jakobrunge.png?size=128"
   },
   {
     "name": "EDSL",
@@ -29141,7 +29504,8 @@
       "machine-learning",
       "natural-language-processing"
     ],
-    "stars": 458
+    "stars": 458,
+    "image_url": "https://github.com/expectedparrot.png?size=128"
   },
   {
     "name": "CATENets",
@@ -29227,7 +29591,8 @@
       "causalml",
       "dowhy"
     ],
-    "stars": 157
+    "stars": 157,
+    "image_url": "https://github.com/AliciaCurth.png?size=128"
   },
   {
     "name": "bartCause",
@@ -29246,7 +29611,8 @@
     "install": "install.packages('bartCause')",
     "best_for": "Bayesian heterogeneous treatment effects with uncertainty",
     "model_score": 0.0,
-    "stars": 87
+    "stars": 87,
+    "image_url": "https://github.com/vdorie.png?size=128"
   },
   {
     "name": "fastmatch",
@@ -29329,7 +29695,8 @@
       "scikit-learn",
       "faiss"
     ],
-    "stars": 8
+    "stars": 8,
+    "image_url": "https://github.com/py-econometrics.png?size=128"
   },
   {
     "name": "Pyro",
@@ -29347,7 +29714,8 @@
     "install": "pip install pyro-ppl",
     "best_for": "Bayesian deep learning and probabilistic modeling",
     "model_score": 0.0,
-    "stars": 8999
+    "stars": 8999,
+    "image_url": "https://github.com/pyro-ppl.png?size=128"
   },
   {
     "name": "CausalPlayground",
@@ -29429,7 +29797,8 @@
       "DoWhy",
       "CausalML"
     ],
-    "stars": 18
+    "stars": 18,
+    "image_url": "https://github.com/sa-and.png?size=128"
   },
   {
     "name": "fixes",
@@ -29504,7 +29873,8 @@
     "canonical_topics": [
       "causal-inference",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "causalToolbox",
@@ -29521,7 +29891,7 @@
       "S-learner",
       "CATE"
     ],
-    "best_for": "Comparing and benchmarking different CATE meta-learner strategies (S/T/X-learner) with BART or RF base learners, implementing K\u00fcnzel et al. (2019)",
+    "best_for": "Comparing and benchmarking different CATE meta-learner strategies (S/T/X-learner) with BART or RF base learners, implementing Künzel et al. (2019)",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -29583,7 +29953,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 48
+    "stars": 48,
+    "image_url": "https://github.com/forestry-labs.png?size=128"
   },
   {
     "name": "latenetwork",
@@ -29661,11 +30032,12 @@
     "canonical_topics": [
       "causal-inference",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "grf",
-    "description": "Forest-based statistical estimation and inference for heterogeneous treatment effects, supporting multiple treatment arms, instrumental variables, survival outcomes, and quantile regression\u2014all with honest estimation and valid confidence intervals. The most widely-used R package for CATE estimation.",
+    "description": "Forest-based statistical estimation and inference for heterogeneous treatment effects, supporting multiple treatment arms, instrumental variables, survival outcomes, and quantile regression—all with honest estimation and valid confidence intervals. The most widely-used R package for CATE estimation.",
     "category": "Causal Inference (ML)",
     "docs_url": "https://grf-labs.github.io/grf/",
     "github_url": "https://github.com/grf-labs/grf",
@@ -29742,7 +30114,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 1085
+    "stars": 1085,
+    "image_url": "https://github.com/grf-labs.png?size=128"
   },
   {
     "name": "mgcv",
@@ -29819,7 +30192,8 @@
       "machine-learning",
       "statistics",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "gamlss",
@@ -29893,11 +30267,12 @@
       "econometrics",
       "machine-learning"
     ],
-    "stars": 20
+    "stars": 20,
+    "image_url": "https://github.com/gamlss-dev.png?size=128"
   },
   {
     "name": "causaldata",
-    "description": "Unified collection of datasets from three major causal inference textbooks: 'The Effect' (Huntington-Klein), 'Causal Inference: The Mixtape' (Cunningham), and 'Causal Inference: What If?' (Hern\u00e1n & Robins).",
+    "description": "Unified collection of datasets from three major causal inference textbooks: 'The Effect' (Huntington-Klein), 'Causal Inference: The Mixtape' (Cunningham), and 'Causal Inference: What If?' (Hernán & Robins).",
     "category": "Datasets",
     "docs_url": "https://cran.r-project.org/web/packages/causaldata/causaldata.pdf",
     "github_url": "https://github.com/NickCH-K/causaldata",
@@ -29939,13 +30314,13 @@
     "api_complexity": "simple",
     "maintenance_status": "active",
     "model_score": 0.0,
-    "embedding_text": "The causaldata package is designed to provide a unified collection of datasets derived from three prominent causal inference textbooks: 'The Effect' by Huntington-Klein, 'Causal Inference: The Mixtape' by Cunningham, and 'Causal Inference: What If?' by Hern\u00e1n & Robins. This package serves as a valuable resource for researchers, educators, and students who are engaged in the study of causal inference and its applications. By offering datasets that are directly linked to established literature, causaldata facilitates a deeper understanding of causal analysis techniques and their practical implications. The core functionality of the package revolves around its comprehensive dataset offerings, which are curated to support various causal inference methodologies. Users can easily access these datasets to practice and apply techniques such as regression discontinuity, propensity score matching, and instrumental variable analysis. The API design philosophy of causaldata is straightforward and user-friendly, allowing users to quickly load and utilize datasets without extensive setup or configuration. This simplicity is particularly beneficial for those who may be new to R or causal inference. The installation process is seamless, typically requiring only a few commands in R to get started. Basic usage patterns involve loading the package and accessing datasets, which can then be used in conjunction with other R packages for analysis and visualization. When comparing causaldata to alternative approaches, it stands out due to its specific focus on datasets that are directly tied to causal inference literature, making it an excellent educational tool. While there are other datasets available in the R ecosystem, few are as well-curated for the purpose of teaching and applying causal inference concepts. Performance characteristics of the package are generally robust, as it is designed to handle datasets that are manageable in size for typical research and educational purposes. Scalability may be limited by the size of the datasets included, but for most users, this is not a significant concern. Integration with data science workflows is straightforward, as the datasets can be easily incorporated into existing R scripts and projects. Common pitfalls include assuming that the datasets will cover every aspect of causal inference; users should be aware that while the datasets are valuable, they may not encompass all scenarios or methodologies. Best practices involve familiarizing oneself with the source textbooks to fully leverage the datasets' potential. Causaldata is best used when there is a need for reliable datasets to support causal inference analysis, particularly in educational settings or preliminary research. However, it may not be the best choice for users seeking highly specialized or niche datasets not covered by the included literature.",
+    "embedding_text": "The causaldata package is designed to provide a unified collection of datasets derived from three prominent causal inference textbooks: 'The Effect' by Huntington-Klein, 'Causal Inference: The Mixtape' by Cunningham, and 'Causal Inference: What If?' by Hernán & Robins. This package serves as a valuable resource for researchers, educators, and students who are engaged in the study of causal inference and its applications. By offering datasets that are directly linked to established literature, causaldata facilitates a deeper understanding of causal analysis techniques and their practical implications. The core functionality of the package revolves around its comprehensive dataset offerings, which are curated to support various causal inference methodologies. Users can easily access these datasets to practice and apply techniques such as regression discontinuity, propensity score matching, and instrumental variable analysis. The API design philosophy of causaldata is straightforward and user-friendly, allowing users to quickly load and utilize datasets without extensive setup or configuration. This simplicity is particularly beneficial for those who may be new to R or causal inference. The installation process is seamless, typically requiring only a few commands in R to get started. Basic usage patterns involve loading the package and accessing datasets, which can then be used in conjunction with other R packages for analysis and visualization. When comparing causaldata to alternative approaches, it stands out due to its specific focus on datasets that are directly tied to causal inference literature, making it an excellent educational tool. While there are other datasets available in the R ecosystem, few are as well-curated for the purpose of teaching and applying causal inference concepts. Performance characteristics of the package are generally robust, as it is designed to handle datasets that are manageable in size for typical research and educational purposes. Scalability may be limited by the size of the datasets included, but for most users, this is not a significant concern. Integration with data science workflows is straightforward, as the datasets can be easily incorporated into existing R scripts and projects. Common pitfalls include assuming that the datasets will cover every aspect of causal inference; users should be aware that while the datasets are valuable, they may not encompass all scenarios or methodologies. Best practices involve familiarizing oneself with the source textbooks to fully leverage the datasets' potential. Causaldata is best used when there is a need for reliable datasets to support causal inference analysis, particularly in educational settings or preliminary research. However, it may not be the best choice for users seeking highly specialized or niche datasets not covered by the included literature.",
     "tfidf_keywords": [
       "causal-inference",
       "datasets",
       "Huntington-Klein",
       "Cunningham",
-      "Hern\u00e1n",
+      "Hernán",
       "Robins",
       "regression-discontinuity",
       "propensity-score-matching",
@@ -29967,7 +30342,8 @@
       "experimentation",
       "statistics"
     ],
-    "stars": 156
+    "stars": 156,
+    "image_url": "https://github.com/NickCH-K.png?size=128"
   },
   {
     "name": "pygambit",
@@ -30044,7 +30420,8 @@
       "game-theory",
       "econometrics",
       "experimentation"
-    ]
+    ],
+    "image_url": "https://github.com/gambitproject.png?size=128"
   },
   {
     "name": "PyLogit",
@@ -30118,7 +30495,8 @@
       "causal-inference",
       "experimentation",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://github.com/timothyb0912.png?size=128"
   },
   {
     "name": "PyLogit",
@@ -30204,7 +30582,8 @@
       "machine-learning",
       "consumer-behavior",
       "transportation-economics"
-    ]
+    ],
+    "image_url": "https://github.com/timothyb0912.png?size=128"
   },
   {
     "name": "WeightIt",
@@ -30279,7 +30658,8 @@
       "causal-inference",
       "econometrics",
       "statistics"
-    ]
+    ],
+    "image_url": "https://github.com/ngreifer.png?size=128"
   },
   {
     "name": "FactorAnalyzer",
@@ -30358,7 +30738,8 @@
       "statistics",
       "econometrics"
     ],
-    "stars": 266
+    "stars": 266,
+    "image_url": "https://github.com/EducationalTestingService.png?size=128"
   },
   {
     "name": "wooldridge",
@@ -30432,7 +30813,8 @@
     "canonical_topics": [
       "econometrics"
     ],
-    "stars": 228
+    "stars": 228,
+    "image_url": "https://github.com/JustinMShea.png?size=128"
   },
   {
     "name": "causal-bert-pytorch",
@@ -30451,7 +30833,8 @@
     "install": "pip install causal-bert",
     "best_for": "Causal inference from text data",
     "model_score": 0.0,
-    "stars": 93
+    "stars": 93,
+    "image_url": "https://github.com/rpryzant.png?size=128"
   },
   {
     "name": "H2O Sparkling Water",
@@ -30533,7 +30916,8 @@
       "H2O.ai",
       "Apache Spark MLlib"
     ],
-    "stars": 977
+    "stars": 977,
+    "image_url": "https://github.com/h2oai.png?size=128"
   },
   {
     "name": "XLogit",
@@ -30606,7 +30990,8 @@
       "econometrics",
       "consumer-behavior",
       "experimentation"
-    ]
+    ],
+    "image_url": "https://github.com/arteagac.png?size=128"
   },
   {
     "name": "Prest",
@@ -30625,7 +31010,8 @@
     ],
     "best_for": "Interactive revealed preference analysis, testing rationality axioms (GARP/SARP/WARP)",
     "language": "Python",
-    "model_score": 0.0
+    "model_score": 0.0,
+    "image_url": "https://github.com/prestsoftware.png?size=128"
   },
   {
     "name": "xlogit",
@@ -30708,7 +31094,8 @@
       "machine-learning",
       "econometrics",
       "experimentation"
-    ]
+    ],
+    "image_url": "https://github.com/arteagac.png?size=128"
   },
   {
     "name": "gtfs-kit",
@@ -30788,7 +31175,8 @@
       "transportation-economics",
       "data-engineering",
       "statistics"
-    ]
+    ],
+    "image_url": "https://github.com/mrcagney.png?size=128"
   },
   {
     "name": "gmnl",
@@ -30866,7 +31254,8 @@
       "econometrics",
       "consumer-behavior",
       "transportation-economics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "tidytransit",
@@ -30951,7 +31340,8 @@
       "statistics",
       "machine-learning",
       "consumer-behavior"
-    ]
+    ],
+    "image_url": "https://github.com/r-transit.png?size=128"
   },
   {
     "name": "OpenTripPlanner",
@@ -31036,7 +31426,8 @@
       "optimization",
       "data-engineering"
     ],
-    "stars": 2623
+    "stars": 2623,
+    "image_url": "https://github.com/opentripplanner.png?size=128"
   },
   {
     "name": "pandapower",
@@ -31117,7 +31508,8 @@
       "energy",
       "econometrics"
     ],
-    "stars": 1163
+    "stars": 1163,
+    "image_url": "https://github.com/e2nIEE.png?size=128"
   },
   {
     "name": "pandapower",
@@ -31199,7 +31591,8 @@
       "statistics",
       "machine-learning"
     ],
-    "stars": 1163
+    "stars": 1163,
+    "image_url": "https://github.com/e2nIEE.png?size=128"
   },
   {
     "name": "nvdlib",
@@ -31276,7 +31669,8 @@
       "statistics",
       "data-engineering"
     ],
-    "stars": 114
+    "stars": 114,
+    "image_url": "https://github.com/vehemont.png?size=128"
   },
   {
     "name": "gridstatus",
@@ -31361,7 +31755,8 @@
       "data-engineering",
       "statistics"
     ],
-    "stars": 409
+    "stars": 409,
+    "image_url": "https://github.com/gridstatus.png?size=128"
   },
   {
     "name": "PyMC Marketing",
@@ -31448,7 +31843,8 @@
       "marketing",
       "statistics",
       "business-analytics"
-    ]
+    ],
+    "image_url": "https://github.com/pymc-labs.png?size=128"
   },
   {
     "name": "conflictcartographer",
@@ -31535,7 +31931,8 @@
       "statistics",
       "machine-learning",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://github.com/conflictcartographer.png?size=128"
   },
   {
     "name": "tidyverse",
@@ -31622,7 +32019,8 @@
       "statistics",
       "machine-learning"
     ],
-    "stars": 1785
+    "stars": 1785,
+    "image_url": "https://github.com/tidyverse.png?size=128"
   },
   {
     "name": "PyMC-Marketing",
@@ -31715,7 +32113,8 @@
       "machine-learning",
       "econometrics",
       "consumer-behavior"
-    ]
+    ],
+    "image_url": "https://github.com/pymc-labs.png?size=128"
   },
   {
     "name": "PyMC-Marketing",
@@ -31803,7 +32202,8 @@
       "machine-learning",
       "econometrics",
       "consumer-behavior"
-    ]
+    ],
+    "image_url": "https://github.com/pymc-labs.png?size=128"
   },
   {
     "name": "rddapp",
@@ -31884,7 +32284,8 @@
     "framework_compatibility": [
       "Shiny"
     ],
-    "stars": 11
+    "stars": 11,
+    "image_url": "https://github.com/felixthoemmes.png?size=128"
   },
   {
     "name": "GenX",
@@ -31964,7 +32365,8 @@
       "forecasting",
       "policy-evaluation"
     ],
-    "stars": 353
+    "stars": 353,
+    "image_url": "https://github.com/GenXProject.png?size=128"
   },
   {
     "name": "GenX",
@@ -32041,7 +32443,8 @@
       "forecasting",
       "machine-learning"
     ],
-    "stars": 353
+    "stars": 353,
+    "image_url": "https://github.com/GenXProject.png?size=128"
   },
   {
     "name": "fabricatr",
@@ -32116,7 +32519,8 @@
       "causal-inference",
       "statistics"
     ],
-    "stars": 91
+    "stars": 91,
+    "image_url": "https://github.com/DeclareDesign.png?size=128"
   },
   {
     "name": "PyPSA",
@@ -32200,7 +32604,8 @@
       "energy-systems",
       "statistics"
     ],
-    "stars": 1970
+    "stars": 1970,
+    "image_url": "https://github.com/PyPSA.png?size=128"
   },
   {
     "name": "PyPSA",
@@ -32281,7 +32686,8 @@
       "machine-learning",
       "statistics"
     ],
-    "stars": 1970
+    "stars": 1970,
+    "image_url": "https://github.com/PyPSA.png?size=128"
   },
   {
     "name": "crepes",
@@ -32350,7 +32756,8 @@
       "statistics",
       "causal-inference"
     ],
-    "stars": 575
+    "stars": 575,
+    "image_url": "https://github.com/henrikbostrom.png?size=128"
   },
   {
     "name": "countrycode",
@@ -32427,7 +32834,8 @@
       "data-engineering",
       "statistics"
     ],
-    "stars": 370
+    "stars": 370,
+    "image_url": "https://github.com/vincentarelbundock.png?size=128"
   },
   {
     "name": "TensorFlow",
@@ -32523,7 +32931,8 @@
       "natural-language-processing",
       "statistics"
     ],
-    "stars": 194978
+    "stars": 194978,
+    "image_url": "https://github.com/tensorflow.png?size=128"
   },
   {
     "name": "fairpyx",
@@ -32595,7 +33004,8 @@
       "optimization",
       "econometrics"
     ],
-    "stars": 4
+    "stars": 4,
+    "image_url": "https://github.com/ariel-research.png?size=128"
   },
   {
     "name": "MaMiMo",
@@ -32675,7 +33085,8 @@
       "econometrics",
       "consumer-behavior"
     ],
-    "stars": 74
+    "stars": 74,
+    "image_url": "https://github.com/Garve.png?size=128"
   },
   {
     "name": "glmnet",
@@ -32692,7 +33103,7 @@
       "regularization",
       "high-dimensional"
     ],
-    "best_for": "LASSO, ridge, and elastic net regularization\u2014foundation for high-dimensional regression and causal ML",
+    "best_for": "LASSO, ridge, and elastic net regularization—foundation for high-dimensional regression and causal ML",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
@@ -32758,7 +33169,8 @@
       "machine-learning",
       "statistics",
       "causal-inference"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "NLTK",
@@ -32844,7 +33256,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 14602
+    "stars": 14602,
+    "image_url": "https://github.com/nltk.png?size=128"
   },
   {
     "name": "haven",
@@ -32915,7 +33328,8 @@
       "data-engineering",
       "statistics"
     ],
-    "stars": 451
+    "stars": 451,
+    "image_url": "https://github.com/tidyverse.png?size=128"
   },
   {
     "name": "catalystcoop-pudl",
@@ -32996,7 +33410,8 @@
       "data-engineering",
       "statistics"
     ],
-    "stars": 583
+    "stars": 583,
+    "image_url": "https://github.com/catalyst-cooperative.png?size=128"
   },
   {
     "name": "catalystcoop-pudl",
@@ -33079,7 +33494,8 @@
       "econometrics",
       "policy-evaluation"
     ],
-    "stars": 583
+    "stars": 583,
+    "image_url": "https://github.com/catalyst-cooperative.png?size=128"
   },
   {
     "name": "SHAP",
@@ -33165,7 +33581,8 @@
       "causal-inference",
       "experimentation"
     ],
-    "stars": 25376
+    "stars": 25376,
+    "image_url": "https://github.com/slundberg.png?size=128"
   },
   {
     "name": "clusterbootstraps",
@@ -33243,7 +33660,8 @@
       "causal-inference",
       "statistics",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "kep_solver",
@@ -33315,7 +33733,8 @@
       "marketplaces",
       "healthcare",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "Fairlearn",
@@ -33393,7 +33812,8 @@
       "pricing",
       "policy-evaluation"
     ],
-    "stars": 2233
+    "stars": 2233,
+    "image_url": "https://github.com/fairlearn.png?size=128"
   },
   {
     "name": "CleanRL",
@@ -33469,7 +33889,8 @@
       "machine-learning",
       "education"
     ],
-    "stars": 9674
+    "stars": 9674,
+    "image_url": "https://github.com/vwxyzjn.png?size=128"
   },
   {
     "name": "peacesciencer",
@@ -33549,7 +33970,8 @@
       "econometrics",
       "policy-evaluation"
     ],
-    "stars": 33
+    "stars": 33,
+    "image_url": "https://github.com/svmiller.png?size=128"
   },
   {
     "name": "tidytext",
@@ -33566,7 +33988,7 @@
       "sentiment-analysis",
       "NLP"
     ],
-    "best_for": "Tidy text mining with dplyr and ggplot2 integration\u2014accompanies 'Text Mining with R'",
+    "best_for": "Tidy text mining with dplyr and ggplot2 integration—accompanies 'Text Mining with R'",
     "language": "R",
     "difficulty": "beginner",
     "prerequisites": [],
@@ -33604,7 +34026,7 @@
     ],
     "maintenance_status": "active",
     "model_score": 0.0,
-    "embedding_text": "The tidytext package is designed to facilitate text mining by adhering to tidy data principles, which emphasize a clean and structured format for data analysis. By converting text into a tidy format\u2014where each token is represented in a separate row\u2014users can leverage the powerful capabilities of the tidyverse ecosystem, including dplyr for data manipulation and ggplot2 for visualization. This package is particularly useful for data scientists and researchers who are looking to perform natural language processing (NLP) tasks, such as sentiment analysis, topic modeling, and text classification. The API of tidytext is designed to be intuitive and user-friendly, making it accessible for beginners while still providing the depth needed for more advanced users. Key functions include the ability to unnest tokens, which breaks down text into individual words or phrases, and sentiment analysis functions that categorize text based on emotional tone. Installation is straightforward via CRAN, and basic usage typically involves loading the package, importing text data, and applying the provided functions to manipulate and analyze the data. Compared to alternative approaches, tidytext stands out for its integration with the tidyverse, allowing for seamless data workflows and visualizations. However, users should be aware of common pitfalls, such as the need to preprocess text data (e.g., removing stop words or punctuation) before analysis. Best practices include familiarizing oneself with the tidyverse principles and ensuring that the text data is in a suitable format for analysis. Tidytext is an excellent choice for those looking to explore text data in a structured manner, but it may not be the best fit for users requiring highly specialized NLP models or deep learning approaches.",
+    "embedding_text": "The tidytext package is designed to facilitate text mining by adhering to tidy data principles, which emphasize a clean and structured format for data analysis. By converting text into a tidy format—where each token is represented in a separate row—users can leverage the powerful capabilities of the tidyverse ecosystem, including dplyr for data manipulation and ggplot2 for visualization. This package is particularly useful for data scientists and researchers who are looking to perform natural language processing (NLP) tasks, such as sentiment analysis, topic modeling, and text classification. The API of tidytext is designed to be intuitive and user-friendly, making it accessible for beginners while still providing the depth needed for more advanced users. Key functions include the ability to unnest tokens, which breaks down text into individual words or phrases, and sentiment analysis functions that categorize text based on emotional tone. Installation is straightforward via CRAN, and basic usage typically involves loading the package, importing text data, and applying the provided functions to manipulate and analyze the data. Compared to alternative approaches, tidytext stands out for its integration with the tidyverse, allowing for seamless data workflows and visualizations. However, users should be aware of common pitfalls, such as the need to preprocess text data (e.g., removing stop words or punctuation) before analysis. Best practices include familiarizing oneself with the tidyverse principles and ensuring that the text data is in a suitable format for analysis. Tidytext is an excellent choice for those looking to explore text data in a structured manner, but it may not be the best fit for users requiring highly specialized NLP models or deep learning approaches.",
     "tfidf_keywords": [
       "tidy data",
       "text mining",
@@ -33635,7 +34057,8 @@
     "primary_use_cases": [
       "text tokenization",
       "sentiment analysis"
-    ]
+    ],
+    "image_url": "https://github.com/juliasilge.png?size=128"
   },
   {
     "name": "cowplot",
@@ -33715,7 +34138,8 @@
       "statistics",
       "data-engineering",
       "visualization"
-    ]
+    ],
+    "image_url": "https://github.com/wilkelab.png?size=128"
   },
   {
     "name": "deep-opt-auctions",
@@ -33793,7 +34217,8 @@
       "pricing",
       "marketplaces"
     ],
-    "stars": 135
+    "stars": 135,
+    "image_url": "https://github.com/saisrivatsan.png?size=128"
   },
   {
     "name": "data.table",
@@ -33871,7 +34296,8 @@
       "data aggregation",
       "ordered joins"
     ],
-    "stars": 3886
+    "stars": 3886,
+    "image_url": "https://github.com/Rdatatable.png?size=128"
   },
   {
     "name": "CatBoost",
@@ -33948,7 +34374,8 @@
       "machine-learning",
       "forecasting",
       "experimentation"
-    ]
+    ],
+    "image_url": "https://github.com/catboost.png?size=128"
   },
   {
     "name": "Gensim",
@@ -34028,7 +34455,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 16403
+    "stars": 16403,
+    "image_url": "https://github.com/RaRe-Technologies.png?size=128"
   },
   {
     "name": "rdd",
@@ -34107,7 +34535,8 @@
       "experimentation",
       "econometrics"
     ],
-    "stars": 70
+    "stars": 70,
+    "image_url": "https://github.com/evan-magnusson.png?size=128"
   },
   {
     "name": "survHE",
@@ -34190,7 +34619,8 @@
       "econometrics",
       "statistics"
     ],
-    "stars": 47
+    "stars": 47,
+    "image_url": "https://github.com/giabaio.png?size=128"
   },
   {
     "name": "scarfmatch",
@@ -34260,7 +34690,8 @@
       "optimization",
       "econometrics"
     ],
-    "stars": 1
+    "stars": 1,
+    "image_url": "https://github.com/dwtang.png?size=128"
   },
   {
     "name": "TorchRL",
@@ -34351,7 +34782,8 @@
       "machine-learning",
       "optimization"
     ],
-    "stars": 3414
+    "stars": 3414,
+    "image_url": "https://github.com/pytorch.png?size=128"
   },
   {
     "name": "fhirclient",
@@ -34426,11 +34858,12 @@
       "healthcare",
       "machine-learning"
     ],
-    "stars": 684
+    "stars": 684,
+    "image_url": "https://github.com/smart-on-fhir.png?size=128"
   },
   {
     "name": "bife",
-    "description": "Estimates fixed effects binary choice models (logit and probit) with potentially many individual fixed effects using a pseudo-demeaning algorithm. Addresses the incidental parameters problem through analytical bias correction based on Fern\u00e1ndez-Val (2009) and computes average partial effects.",
+    "description": "Estimates fixed effects binary choice models (logit and probit) with potentially many individual fixed effects using a pseudo-demeaning algorithm. Addresses the incidental parameters problem through analytical bias correction based on Fernández-Val (2009) and computes average partial effects.",
     "category": "Panel Data & Fixed Effects",
     "docs_url": "https://cran.r-project.org/web/packages/bife/vignettes/howto.html",
     "github_url": "https://github.com/amrei-stammann/bife",
@@ -34471,10 +34904,10 @@
       "incidental parameters problem in econometrics R"
     ],
     "api_complexity": "intermediate",
-    "implements_paper": "Fern\u00e1ndez-Val (2009)",
+    "implements_paper": "Fernández-Val (2009)",
     "maintenance_status": "active",
     "model_score": 0.0,
-    "embedding_text": "The 'bife' package in R is a powerful tool for estimating fixed effects binary choice models, including both logit and probit specifications. It utilizes a pseudo-demeaning algorithm to effectively handle potentially large numbers of individual fixed effects, which is a common challenge in panel data analysis. One of the standout features of 'bife' is its ability to address the incidental parameters problem, a well-known issue in econometrics that can lead to biased estimates when using traditional methods. This package incorporates analytical bias correction techniques based on the work of Fern\u00e1ndez-Val (2009), ensuring that users can obtain more reliable estimates of average partial effects. The API design of 'bife' is functional, allowing users to easily specify their models and obtain results without extensive boilerplate code. Key functions within the package facilitate model fitting and result extraction, making it accessible for users with a moderate level of R programming experience. Installation is straightforward via CRAN, and basic usage typically involves loading the package, preparing the data in a suitable format, and calling the main estimation function with the desired model specifications. Compared to alternative approaches, 'bife' stands out due to its focus on fixed effects in binary choice settings, which are often overlooked in other packages. Performance-wise, 'bife' is optimized for handling large datasets, making it suitable for extensive panel data applications. However, users should be aware of common pitfalls, such as ensuring that their data is appropriately structured and that they understand the assumptions underlying fixed effects models. Best practices include conducting robustness checks and being cautious about the interpretation of average partial effects. Overall, 'bife' is an essential tool for econometricians and data scientists working with binary outcomes in panel data frameworks, providing a robust solution to complex modeling challenges.",
+    "embedding_text": "The 'bife' package in R is a powerful tool for estimating fixed effects binary choice models, including both logit and probit specifications. It utilizes a pseudo-demeaning algorithm to effectively handle potentially large numbers of individual fixed effects, which is a common challenge in panel data analysis. One of the standout features of 'bife' is its ability to address the incidental parameters problem, a well-known issue in econometrics that can lead to biased estimates when using traditional methods. This package incorporates analytical bias correction techniques based on the work of Fernández-Val (2009), ensuring that users can obtain more reliable estimates of average partial effects. The API design of 'bife' is functional, allowing users to easily specify their models and obtain results without extensive boilerplate code. Key functions within the package facilitate model fitting and result extraction, making it accessible for users with a moderate level of R programming experience. Installation is straightforward via CRAN, and basic usage typically involves loading the package, preparing the data in a suitable format, and calling the main estimation function with the desired model specifications. Compared to alternative approaches, 'bife' stands out due to its focus on fixed effects in binary choice settings, which are often overlooked in other packages. Performance-wise, 'bife' is optimized for handling large datasets, making it suitable for extensive panel data applications. However, users should be aware of common pitfalls, such as ensuring that their data is appropriately structured and that they understand the assumptions underlying fixed effects models. Best practices include conducting robustness checks and being cautious about the interpretation of average partial effects. Overall, 'bife' is an essential tool for econometricians and data scientists working with binary outcomes in panel data frameworks, providing a robust solution to complex modeling challenges.",
     "primary_use_cases": [
       "estimating binary choice models",
       "computing average partial effects"
@@ -34507,7 +34940,8 @@
       "econometrics",
       "statistics"
     ],
-    "stars": 11
+    "stars": 11,
+    "image_url": "https://github.com/amrei-stammann.png?size=128"
   },
   {
     "name": "Simio",
@@ -34526,7 +34960,8 @@
     ],
     "best_for": "3D visualization and digital twin simulation",
     "language": "C#",
-    "model_score": 0.0
+    "model_score": 0.0,
+    "image_url": ""
   },
   {
     "name": "hesim",
@@ -34604,7 +35039,8 @@
       "econometrics",
       "policy-evaluation"
     ],
-    "stars": 76
+    "stars": 76,
+    "image_url": "https://github.com/hesim-dev.png?size=128"
   },
   {
     "name": "AgentPy",
@@ -34694,7 +35130,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 378
+    "stars": 378,
+    "image_url": "https://github.com/JoelForamitti.png?size=128"
   },
   {
     "name": "Econ Project Templates",
@@ -34759,7 +35196,8 @@
       "experimentation",
       "econometrics"
     ],
-    "stars": 171
+    "stars": 171,
+    "image_url": "https://github.com/OpenSourceEconomics.png?size=128"
   },
   {
     "name": "spacetrack",
@@ -34834,7 +35272,8 @@
       "machine-learning",
       "data-engineering",
       "statistics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "RNetLogo",
@@ -34903,7 +35342,8 @@
       "causal-inference",
       "experimentation",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "worldfootballR",
@@ -34981,7 +35421,8 @@
       "machine-learning",
       "data-engineering"
     ],
-    "stars": 587
+    "stars": 587,
+    "image_url": "https://github.com/JaseZiv.png?size=128"
   },
   {
     "name": "Lahman",
@@ -35051,7 +35492,8 @@
       "data-engineering",
       "econometrics"
     ],
-    "stars": 84
+    "stars": 84,
+    "image_url": "https://github.com/cdalzell.png?size=128"
   },
   {
     "name": "nflfastR",
@@ -35131,7 +35573,8 @@
       "statistics",
       "machine-learning"
     ],
-    "stars": 519
+    "stars": 519,
+    "image_url": "https://github.com/nflverse.png?size=128"
   },
   {
     "name": "matchingR",
@@ -35205,7 +35648,8 @@
       "optimization",
       "econometrics"
     ],
-    "stars": 51
+    "stars": 51,
+    "image_url": "https://github.com/jtilly.png?size=128"
   },
   {
     "name": "quantile-forest",
@@ -35286,7 +35730,8 @@
       "machine-learning",
       "statistics",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://github.com/zillow.png?size=128"
   },
   {
     "name": "ggraph",
@@ -35369,7 +35814,8 @@
       "network visualization",
       "graph layout design"
     ],
-    "stars": 1112
+    "stars": 1112,
+    "image_url": "https://github.com/thomasp85.png?size=128"
   },
   {
     "name": "cuML (RAPIDS)",
@@ -35451,7 +35897,8 @@
       "Random Forest classification",
       "Random Forest regression"
     ],
-    "stars": 5186
+    "stars": 5186,
+    "image_url": "https://github.com/rapidsai.png?size=128"
   },
   {
     "name": "tidygraph",
@@ -35537,7 +35984,8 @@
       "Network visualization",
       "Graph data manipulation"
     ],
-    "stars": 562
+    "stars": 562,
+    "image_url": "https://github.com/thomasp85.png?size=128"
   },
   {
     "name": "nlme",
@@ -35613,7 +36061,8 @@
       "statistics",
       "econometrics",
       "machine-learning"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "lifecontingencies",
@@ -35687,7 +36136,8 @@
       "econometrics",
       "statistics"
     ],
-    "stars": 71
+    "stars": 71,
+    "image_url": "https://github.com/spedygiorgio.png?size=128"
   },
   {
     "name": "pwr",
@@ -35763,7 +36213,8 @@
       "experimentation",
       "causal-inference"
     ],
-    "stars": 109
+    "stars": 109,
+    "image_url": "https://github.com/heliosdrm.png?size=128"
   },
   {
     "name": "cplm",
@@ -35837,7 +36288,8 @@
       "econometrics",
       "statistics",
       "machine-learning"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "Gretel Synthetics",
@@ -35919,7 +36371,8 @@
       "data-engineering",
       "experimentation"
     ],
-    "stars": 677
+    "stars": 677,
+    "image_url": "https://github.com/gretelai.png?size=128"
   },
   {
     "name": "Consensus",
@@ -35989,7 +36442,8 @@
       "natural-language-processing",
       "statistics",
       "policy-evaluation"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "Apache Sedona",
@@ -36066,11 +36520,12 @@
       "machine-learning",
       "data-engineering"
     ],
-    "stars": 2329
+    "stars": 2329,
+    "image_url": "https://github.com/apache.png?size=128"
   },
   {
     "name": "Pingouin",
-    "description": "User-friendly interface for common statistical tests (ANOVA, ANCOVA, t-tests, correlations, chi\u00b2, reliability) built on pandas & scipy.",
+    "description": "User-friendly interface for common statistical tests (ANOVA, ANCOVA, t-tests, correlations, chi², reliability) built on pandas & scipy.",
     "category": "Statistical Inference & Hypothesis Testing",
     "docs_url": "https://pingouin-stats.org/",
     "github_url": "https://github.com/raphaelvallat/pingouin",
@@ -36148,7 +36603,8 @@
       "experimentation",
       "machine-learning"
     ],
-    "stars": 1909
+    "stars": 1909,
+    "image_url": "https://github.com/raphaelvallat.png?size=128"
   },
   {
     "name": "stargazer",
@@ -36224,7 +36680,8 @@
       "econometrics",
       "statistics",
       "academic-publishing"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "Stargazer",
@@ -36294,7 +36751,8 @@
       "econometrics",
       "statistics"
     ],
-    "stars": 209
+    "stars": 209,
+    "image_url": "https://github.com/StatsReporting.png?size=128"
   },
   {
     "name": "expectation",
@@ -36370,7 +36828,8 @@
       "experimentation",
       "causal-inference"
     ],
-    "stars": 84
+    "stars": 84,
+    "image_url": "https://github.com/jakorostami.png?size=128"
   },
   {
     "name": "Semantic Scholar API",
@@ -36446,7 +36905,8 @@
     "primary_use_cases": [
       "academic paper search",
       "citation analysis"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "Elicit",
@@ -36515,7 +36975,8 @@
       "machine-learning",
       "natural-language-processing",
       "statistics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "Python Packages for Applied Economists",
@@ -36576,7 +37037,8 @@
       "data-engineering",
       "statistics"
     ],
-    "stars": 44
+    "stars": 44,
+    "image_url": "https://github.com/clibassi.png?size=128"
   },
   {
     "name": "alpaca",
@@ -36650,7 +37112,8 @@
       "causal-inference",
       "statistics"
     ],
-    "stars": 47
+    "stars": 47,
+    "image_url": "https://github.com/amrei-stammann.png?size=128"
   },
   {
     "name": "queueing",
@@ -36669,7 +37132,8 @@
     ],
     "best_for": "Analytical solutions to standard queueing models (M/M/1, M/M/c, etc.)",
     "language": "R",
-    "model_score": 0.0
+    "model_score": 0.0,
+    "image_url": ""
   },
   {
     "name": "FinRL",
@@ -36763,7 +37227,8 @@
       "finance",
       "machine-learning"
     ],
-    "stars": 15043
+    "stars": 15043,
+    "image_url": "https://github.com/AI4Finance-Foundation.png?size=128"
   },
   {
     "name": "pybaseball",
@@ -36841,7 +37306,8 @@
       "machine-learning",
       "data-engineering"
     ],
-    "stars": 1654
+    "stars": 1654,
+    "image_url": "https://github.com/jldbc.png?size=128"
   },
   {
     "name": "modelsummary",
@@ -36858,7 +37324,7 @@
       "publication-tables",
       "tidyverse"
     ],
-    "best_for": "Modern, flexible regression tables with extensive customization\u2014the successor to stargazer, implementing Arel-Bundock (2022, JSS)",
+    "best_for": "Modern, flexible regression tables with extensive customization—the successor to stargazer, implementing Arel-Bundock (2022, JSS)",
     "language": "R",
     "difficulty": "beginner",
     "prerequisites": [],
@@ -36914,11 +37380,12 @@
       "econometrics",
       "data-engineering"
     ],
-    "stars": 947
+    "stars": 947,
+    "image_url": "https://github.com/vincentarelbundock.png?size=128"
   },
   {
     "name": "broom",
-    "description": "Converts messy output from 100+ statistical model types into consistent tidy tibbles using three verbs: tidy() for coefficient-level statistics, glance() for model-level summaries (R\u00b2, AIC), and augment() for fitted values and residuals.",
+    "description": "Converts messy output from 100+ statistical model types into consistent tidy tibbles using three verbs: tidy() for coefficient-level statistics, glance() for model-level summaries (R², AIC), and augment() for fitted values and residuals.",
     "category": "Regression Output",
     "docs_url": "https://broom.tidymodels.org/",
     "github_url": "https://github.com/tidymodels/broom",
@@ -36958,7 +37425,7 @@
     "api_complexity": "simple",
     "maintenance_status": "active",
     "model_score": 0.0,
-    "embedding_text": "The 'broom' package in R is a powerful tool for data scientists and statisticians, designed to transform the often messy output of various statistical models into tidy, easy-to-use tibbles. This package supports over 100 different model types, making it highly versatile for users working with diverse statistical analyses. The core functionality of 'broom' revolves around three primary verbs: tidy(), glance(), and augment(). The tidy() function extracts coefficient-level statistics from models, presenting them in a clean, structured format that is ideal for further analysis or visualization. The glance() function provides a quick summary of model-level statistics, such as R\u00b2 and AIC, allowing users to quickly assess the overall performance of their models. Finally, the augment() function adds fitted values and residuals to the original data, enabling users to analyze model predictions alongside their actual data points. The API of 'broom' is designed with simplicity in mind, allowing users to easily integrate it into their data science workflows without extensive learning curves. Installation is straightforward via CRAN, and basic usage typically involves loading the package and applying its functions to model objects created using popular R modeling functions. Compared to alternative approaches, 'broom' stands out for its ability to standardize outputs from various model types into a consistent format, which is crucial for effective data analysis and reporting. However, users should be aware of common pitfalls, such as ensuring that the model objects passed to 'broom' functions are compatible and understanding the specific outputs generated by each function. Best practices include leveraging 'broom' in conjunction with other tidyverse packages like dplyr and ggplot2 for enhanced data manipulation and visualization. Overall, 'broom' is an essential tool for anyone looking to streamline their statistical modeling output in R, providing a clear pathway from complex model results to actionable insights.",
+    "embedding_text": "The 'broom' package in R is a powerful tool for data scientists and statisticians, designed to transform the often messy output of various statistical models into tidy, easy-to-use tibbles. This package supports over 100 different model types, making it highly versatile for users working with diverse statistical analyses. The core functionality of 'broom' revolves around three primary verbs: tidy(), glance(), and augment(). The tidy() function extracts coefficient-level statistics from models, presenting them in a clean, structured format that is ideal for further analysis or visualization. The glance() function provides a quick summary of model-level statistics, such as R² and AIC, allowing users to quickly assess the overall performance of their models. Finally, the augment() function adds fitted values and residuals to the original data, enabling users to analyze model predictions alongside their actual data points. The API of 'broom' is designed with simplicity in mind, allowing users to easily integrate it into their data science workflows without extensive learning curves. Installation is straightforward via CRAN, and basic usage typically involves loading the package and applying its functions to model objects created using popular R modeling functions. Compared to alternative approaches, 'broom' stands out for its ability to standardize outputs from various model types into a consistent format, which is crucial for effective data analysis and reporting. However, users should be aware of common pitfalls, such as ensuring that the model objects passed to 'broom' functions are compatible and understanding the specific outputs generated by each function. Best practices include leveraging 'broom' in conjunction with other tidyverse packages like dplyr and ggplot2 for enhanced data manipulation and visualization. Overall, 'broom' is an essential tool for anyone looking to streamline their statistical modeling output in R, providing a clear pathway from complex model results to actionable insights.",
     "tfidf_keywords": [
       "tidy",
       "statistical models",
@@ -36966,7 +37433,7 @@
       "model summaries",
       "fitted values",
       "residuals",
-      "R\u00b2",
+      "R²",
       "AIC",
       "data science",
       "regression output"
@@ -36994,7 +37461,8 @@
       "dplyr",
       "tidyr"
     ],
-    "stars": 1514
+    "stars": 1514,
+    "image_url": "https://github.com/tidymodels.png?size=128"
   },
   {
     "name": "simmer",
@@ -37014,7 +37482,8 @@
     "best_for": "R-native discrete-event simulation with tidyverse integration",
     "language": "R",
     "model_score": 0.0,
-    "stars": 235
+    "stars": 235,
+    "image_url": "https://github.com/r-simmer.png?size=128"
   },
   {
     "name": "splm",
@@ -37089,7 +37558,8 @@
     "canonical_topics": [
       "econometrics",
       "causal-inference"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "Transformers",
@@ -37175,7 +37645,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 160194
+    "stars": 160194,
+    "image_url": "https://github.com/huggingface.png?size=128"
   },
   {
     "name": "pyDOE2",
@@ -37256,7 +37727,8 @@
       "statistics",
       "machine-learning"
     ],
-    "stars": 165
+    "stars": 165,
+    "image_url": "https://github.com/clicumu.png?size=128"
   },
   {
     "name": "plm",
@@ -37334,11 +37806,12 @@
     "canonical_topics": [
       "econometrics"
     ],
-    "stars": 65
+    "stars": 65,
+    "image_url": "https://github.com/ycroissant.png?size=128"
   },
   {
     "name": "cvxpy",
-    "description": "Domain-specific language for convex optimization problems. Write math as code \u2014 the standard for convex problems.",
+    "description": "Domain-specific language for convex optimization problems. Write math as code — the standard for convex problems.",
     "category": "Optimization",
     "docs_url": "https://www.cvxpy.org/",
     "github_url": "https://github.com/cvxpy/cvxpy",
@@ -37414,7 +37887,8 @@
       "linear programming",
       "quadratic programming"
     ],
-    "stars": 6198
+    "stars": 6198,
+    "image_url": "https://github.com/cvxpy.png?size=128"
   },
   {
     "name": "ChainLadder",
@@ -37488,7 +37962,8 @@
       "statistics",
       "finance"
     ],
-    "stars": 90
+    "stars": 90,
+    "image_url": "https://github.com/mages.png?size=128"
   },
   {
     "name": "see",
@@ -37505,7 +37980,7 @@
       "publication-ready",
       "easystats"
     ],
-    "best_for": "Publication-ready visualizations of model diagnostics with a simple plot() interface, implementing L\u00fcdecke et al. (2021, JOSS)",
+    "best_for": "Publication-ready visualizations of model diagnostics with a simple plot() interface, implementing Lüdecke et al. (2021, JOSS)",
     "language": "R",
     "difficulty": "beginner",
     "prerequisites": [],
@@ -37563,7 +38038,8 @@
     "framework_compatibility": [
       "ggplot2"
     ],
-    "stars": 946
+    "stars": 946,
+    "image_url": "https://github.com/easystats.png?size=128"
   },
   {
     "name": "CTGAN",
@@ -37645,7 +38121,8 @@
       "data-engineering",
       "statistics"
     ],
-    "stars": 1549
+    "stars": 1549,
+    "image_url": "https://github.com/sdv-dev.png?size=128"
   },
   {
     "name": "Adaptive",
@@ -37721,7 +38198,8 @@
       "machine-learning",
       "statistics"
     ],
-    "stars": 1219
+    "stars": 1219,
+    "image_url": "https://github.com/python-adaptive.png?size=128"
   },
   {
     "name": "pyqreg",
@@ -37798,7 +38276,8 @@
     "related_packages": [
       "statsmodels",
       "scikit-learn"
-    ]
+    ],
+    "image_url": "https://github.com/mozjay0619.png?size=128"
   },
   {
     "name": "Faer",
@@ -37872,7 +38351,8 @@
       "optimization",
       "statistics"
     ],
-    "stars": 2508
+    "stars": 2508,
+    "image_url": "https://github.com/sarah-quinones.png?size=128"
   },
   {
     "name": "algmatch",
@@ -37942,7 +38422,8 @@
       "marketplaces",
       "optimization",
       "experimentation"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "evd",
@@ -38018,7 +38499,8 @@
       "econometrics",
       "finance",
       "policy-evaluation"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "LightFM",
@@ -38100,7 +38582,8 @@
       "machine-learning",
       "consumer-behavior"
     ],
-    "stars": 5084
+    "stars": 5084,
+    "image_url": "https://github.com/lyst.png?size=128"
   },
   {
     "name": "DoEgen",
@@ -38171,7 +38654,8 @@
       "statistics",
       "machine-learning"
     ],
-    "stars": 100
+    "stars": 100,
+    "image_url": "https://github.com/sebhaan.png?size=128"
   },
   {
     "name": "igraph",
@@ -38252,7 +38736,8 @@
       "statistics",
       "data-engineering"
     ],
-    "stars": 611
+    "stars": 611,
+    "image_url": "https://github.com/igraph.png?size=128"
   },
   {
     "name": "igraph",
@@ -38330,7 +38815,8 @@
       "data-engineering",
       "machine-learning"
     ],
-    "stars": 611
+    "stars": 611,
+    "image_url": "https://github.com/igraph.png?size=128"
   },
   {
     "name": "targets",
@@ -38408,7 +38894,8 @@
       "statistics",
       "data-engineering"
     ],
-    "stars": 1077
+    "stars": 1077,
+    "image_url": "https://github.com/ropensci.png?size=128"
   },
   {
     "name": "simr",
@@ -38489,7 +38976,8 @@
     "related_packages": [
       "lme4"
     ],
-    "stars": 77
+    "stars": 77,
+    "image_url": "https://github.com/pitakakariki.png?size=128"
   },
   {
     "name": "(PySAL Core)",
@@ -38573,11 +39061,12 @@
       "machine-learning",
       "statistics"
     ],
-    "stars": 1497
+    "stars": 1497,
+    "image_url": "https://github.com/pysal.png?size=128"
   },
   {
     "name": "NetLogoR",
-    "description": "Pure R implementation of NetLogo framework\u2014no NetLogo installation required. Benefits from ggplot2 integration and R spatial objects.",
+    "description": "Pure R implementation of NetLogo framework—no NetLogo installation required. Benefits from ggplot2 integration and R spatial objects.",
     "category": "Simulation & Computational Economics",
     "docs_url": "https://cran.r-project.org/web/packages/NetLogoR/",
     "github_url": "https://github.com/PredictiveEcology/NetLogoR",
@@ -38645,11 +39134,12 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 44
+    "stars": 44,
+    "image_url": "https://github.com/PredictiveEcology.png?size=128"
   },
   {
     "name": "Mimesis",
-    "description": "High-performance fake data generator\u2014faster than Faker. Provides data for multiple domains and 35+ locales.",
+    "description": "High-performance fake data generator—faster than Faker. Provides data for multiple domains and 35+ locales.",
     "category": "Synthetic Data Generation",
     "docs_url": "https://mimesis.readthedocs.io/",
     "github_url": "https://github.com/lk-geimfari/mimesis",
@@ -38717,7 +39207,8 @@
       "data-engineering",
       "statistics"
     ],
-    "stars": 4804
+    "stars": 4804,
+    "image_url": "https://github.com/lk-geimfari.png?size=128"
   },
   {
     "name": "scipy.optimize",
@@ -38732,7 +39223,7 @@
       "minimization",
       "root finding"
     ],
-    "best_for": "General-purpose optimization \u2014 start here for basics",
+    "best_for": "General-purpose optimization — start here for basics",
     "language": "Python",
     "difficulty": "intermediate",
     "prerequisites": [
@@ -38799,7 +39290,8 @@
       "machine-learning",
       "statistics"
     ],
-    "stars": 14655
+    "stars": 14655,
+    "image_url": "https://github.com/scipy.png?size=128"
   },
   {
     "name": "Connected Papers",
@@ -38866,11 +39358,12 @@
     ],
     "canonical_topics": [
       "research-tools"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "Statrs",
-    "description": "Comprehensive statistical distributions for Rust (Normal, T, Gamma, etc.) with PDF, CDF, quantile functions\u2014the scipy.stats equivalent.",
+    "description": "Comprehensive statistical distributions for Rust (Normal, T, Gamma, etc.) with PDF, CDF, quantile functions—the scipy.stats equivalent.",
     "category": "Statistical Inference & Hypothesis Testing",
     "docs_url": "https://docs.rs/statrs",
     "github_url": "https://github.com/statrs-dev/statrs",
@@ -38945,7 +39438,8 @@
     "canonical_topics": [
       "statistics"
     ],
-    "stars": 791
+    "stars": 791,
+    "image_url": "https://github.com/statrs-dev.png?size=128"
   },
   {
     "name": "statsbombpy",
@@ -39027,7 +39521,8 @@
       "machine-learning",
       "data-engineering"
     ],
-    "stars": 708
+    "stars": 708,
+    "image_url": "https://github.com/statsbomb.png?size=128"
   },
   {
     "name": "rmarkdown",
@@ -39111,7 +39606,8 @@
       "knitr",
       "bookdown"
     ],
-    "stars": 3032
+    "stars": 3032,
+    "image_url": "https://github.com/rstudio.png?size=128"
   },
   {
     "name": "mplsoccer",
@@ -39185,7 +39681,8 @@
       "statistics",
       "data-engineering"
     ],
-    "stars": 515
+    "stars": 515,
+    "image_url": "https://github.com/andrewRowlinson.png?size=128"
   },
   {
     "name": "sna",
@@ -39264,7 +39761,8 @@
       "statistics",
       "social-network-analysis",
       "econometrics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "SmartCore",
@@ -39337,7 +39835,8 @@
       "statistics",
       "data-engineering"
     ],
-    "stars": 910
+    "stars": 910,
+    "image_url": "https://github.com/smartcorelib.png?size=128"
   },
   {
     "name": "Nalgebra",
@@ -39408,7 +39907,8 @@
       "machine-learning",
       "statistics"
     ],
-    "stars": 4714
+    "stars": 4714,
+    "image_url": "https://github.com/dimforge.png?size=128"
   },
   {
     "name": "Implicit",
@@ -39490,7 +39990,8 @@
     ],
     "framework_compatibility": [
       "CUDA"
-    ]
+    ],
+    "image_url": "https://github.com/benfred.png?size=128"
   },
   {
     "name": "Research Rabbit",
@@ -39560,7 +40061,8 @@
       "research-tools",
       "literature-review",
       "statistics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "renv",
@@ -39630,7 +40132,8 @@
       "data-engineering",
       "statistics"
     ],
-    "stars": 1150
+    "stars": 1150,
+    "image_url": "https://github.com/rstudio.png?size=128"
   },
   {
     "name": "simPop",
@@ -39701,7 +40204,8 @@
       "causal-inference",
       "econometrics",
       "data-engineering"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "texreg",
@@ -39773,7 +40277,8 @@
       "statistics",
       "econometrics",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://github.com/leifeld.png?size=128"
   },
   {
     "name": "sgp4",
@@ -39850,7 +40355,8 @@
       "statistics",
       "forecasting"
     ],
-    "stars": 456
+    "stars": 456,
+    "image_url": "https://github.com/brandon-rhodes.png?size=128"
   },
   {
     "name": "gt",
@@ -39928,11 +40434,12 @@
       "statistics",
       "data-engineering",
       "machine-learning"
-    ]
+    ],
+    "image_url": "https://github.com/rstudio.png?size=128"
   },
   {
     "name": "performance",
-    "description": "Utilities for computing indices of model quality and goodness of fit, including R\u00b2, RMSE, ICC, AIC/BIC. Provides functions to check models for overdispersion, zero-inflation, multicollinearity (VIF), convergence, and singularity. Supports mixed effects and Bayesian models.",
+    "description": "Utilities for computing indices of model quality and goodness of fit, including R², RMSE, ICC, AIC/BIC. Provides functions to check models for overdispersion, zero-inflation, multicollinearity (VIF), convergence, and singularity. Supports mixed effects and Bayesian models.",
     "category": "Model Diagnostics",
     "docs_url": "https://easystats.github.io/performance/",
     "github_url": "https://github.com/easystats/performance",
@@ -39945,12 +40452,12 @@
       "VIF",
       "goodness-of-fit"
     ],
-    "best_for": "Comprehensive model quality assessment, especially the check_model() visual diagnostic panel, implementing L\u00fcdecke et al. (2021, JOSS)",
+    "best_for": "Comprehensive model quality assessment, especially the check_model() visual diagnostic panel, implementing Lüdecke et al. (2021, JOSS)",
     "language": "R",
     "difficulty": "intermediate",
     "prerequisites": [],
     "topic_tags": [],
-    "summary": "The 'performance' package provides utilities for assessing the quality and fit of statistical models through various indices such as R\u00b2, RMSE, and AIC/BIC. It is particularly useful for statisticians and data scientists working with mixed effects and Bayesian models, allowing them to check for overdispersion, zero-inflation, and multicollinearity.",
+    "summary": "The 'performance' package provides utilities for assessing the quality and fit of statistical models through various indices such as R², RMSE, and AIC/BIC. It is particularly useful for statisticians and data scientists working with mixed effects and Bayesian models, allowing them to check for overdispersion, zero-inflation, and multicollinearity.",
     "use_cases": [
       "Evaluating the goodness of fit for regression models",
       "Checking for multicollinearity in mixed effects models"
@@ -39970,7 +40477,7 @@
     "api_complexity": "intermediate",
     "maintenance_status": "active",
     "model_score": 0.0,
-    "embedding_text": "The 'performance' package in R is designed to provide a comprehensive suite of utilities for evaluating the quality and fit of statistical models. It offers a range of functions that compute various indices, including R\u00b2, RMSE, ICC, and AIC/BIC, which are essential for assessing how well a model explains the data. The package also includes tools for diagnosing common issues in model fitting, such as overdispersion, zero-inflation, and multicollinearity, particularly through the variance inflation factor (VIF). This makes it an invaluable resource for statisticians and data scientists who need to ensure the robustness of their models, especially when dealing with mixed effects and Bayesian frameworks. The API is designed to be user-friendly, allowing for both functional and object-oriented programming styles, which can cater to different user preferences. Key functions within the package facilitate easy computation of model diagnostics, and users can quickly integrate these checks into their data analysis workflows. Installation is straightforward via CRAN, and basic usage patterns involve calling the relevant functions on fitted model objects. Compared to alternative approaches, the 'performance' package stands out for its focus on model diagnostics, providing a more specialized toolset than general-purpose statistical packages. Users should be aware of common pitfalls, such as misinterpreting the results of diagnostic checks or overlooking the assumptions underlying the models being evaluated. Best practices include using the package in conjunction with other modeling tools and ensuring a thorough understanding of the statistical principles involved. Overall, the 'performance' package is a powerful tool for anyone looking to rigorously assess the quality of their statistical models, while also being mindful of the limitations and assumptions inherent in their analyses.",
+    "embedding_text": "The 'performance' package in R is designed to provide a comprehensive suite of utilities for evaluating the quality and fit of statistical models. It offers a range of functions that compute various indices, including R², RMSE, ICC, and AIC/BIC, which are essential for assessing how well a model explains the data. The package also includes tools for diagnosing common issues in model fitting, such as overdispersion, zero-inflation, and multicollinearity, particularly through the variance inflation factor (VIF). This makes it an invaluable resource for statisticians and data scientists who need to ensure the robustness of their models, especially when dealing with mixed effects and Bayesian frameworks. The API is designed to be user-friendly, allowing for both functional and object-oriented programming styles, which can cater to different user preferences. Key functions within the package facilitate easy computation of model diagnostics, and users can quickly integrate these checks into their data analysis workflows. Installation is straightforward via CRAN, and basic usage patterns involve calling the relevant functions on fitted model objects. Compared to alternative approaches, the 'performance' package stands out for its focus on model diagnostics, providing a more specialized toolset than general-purpose statistical packages. Users should be aware of common pitfalls, such as misinterpreting the results of diagnostic checks or overlooking the assumptions underlying the models being evaluated. Best practices include using the package in conjunction with other modeling tools and ensuring a thorough understanding of the statistical principles involved. Overall, the 'performance' package is a powerful tool for anyone looking to rigorously assess the quality of their statistical models, while also being mindful of the limitations and assumptions inherent in their analyses.",
     "primary_use_cases": [
       "model quality assessment",
       "goodness-of-fit evaluation"
@@ -40005,7 +40512,8 @@
       "econometrics",
       "machine-learning"
     ],
-    "stars": 1141
+    "stars": 1141,
+    "image_url": "https://github.com/easystats.png?size=128"
   },
   {
     "name": "lfe",
@@ -40086,7 +40594,8 @@
       "causal-inference",
       "econometrics"
     ],
-    "stars": 0
+    "stars": 0,
+    "image_url": "https://github.com/r-econometrics.png?size=128"
   },
   {
     "name": "sdcMicro",
@@ -40161,7 +40670,8 @@
       "privacy",
       "econometrics"
     ],
-    "stars": 91
+    "stars": 91,
+    "image_url": "https://github.com/sdcTools.png?size=128"
   },
   {
     "name": "python-louvain",
@@ -40237,7 +40747,8 @@
       "statistics",
       "data-engineering"
     ],
-    "stars": 1038
+    "stars": 1038,
+    "image_url": "https://github.com/taynaud.png?size=128"
   },
   {
     "name": "quanteda",
@@ -40308,7 +40819,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "stars": 882
+    "stars": 882,
+    "image_url": "https://github.com/quanteda.png?size=128"
   },
   {
     "name": "lavaan",
@@ -40390,7 +40902,8 @@
       "statistics",
       "econometrics"
     ],
-    "stars": 498
+    "stars": 498,
+    "image_url": "https://github.com/yrosseel.png?size=128"
   },
   {
     "name": "here",
@@ -40462,11 +40975,12 @@
       "reproducibility",
       "machine-learning"
     ],
-    "stars": 433
+    "stars": 433,
+    "image_url": "https://github.com/r-lib.png?size=128"
   },
   {
     "name": "Ndarray",
-    "description": "N-dimensional array library for Rust\u2014the NumPy equivalent with slicing, broadcasting, and BLAS/LAPACK integration.",
+    "description": "N-dimensional array library for Rust—the NumPy equivalent with slicing, broadcasting, and BLAS/LAPACK integration.",
     "category": "Numerical Optimization & Computational Tools",
     "docs_url": "https://docs.rs/ndarray",
     "github_url": "https://github.com/rust-ndarray/ndarray",
@@ -40531,7 +41045,8 @@
       "optimization",
       "statistics"
     ],
-    "stars": 4276
+    "stars": 4276,
+    "image_url": "https://github.com/rust-ndarray.png?size=128"
   },
   {
     "name": "hoopR",
@@ -40600,7 +41115,8 @@
       "data-engineering",
       "consumer-behavior"
     ],
-    "stars": 132
+    "stars": 132,
+    "image_url": "https://github.com/sportsdataverse.png?size=128"
   },
   {
     "name": "spatialreg",
@@ -40683,7 +41199,8 @@
       "econometrics",
       "causal-inference",
       "statistics"
-    ]
+    ],
+    "image_url": "https://github.com/r-spatial.png?size=128"
   },
   {
     "name": "gtsummary",
@@ -40754,7 +41271,8 @@
       "data-engineering",
       "healthcare"
     ],
-    "stars": 1186
+    "stars": 1186,
+    "image_url": "https://github.com/ddsjoberg.png?size=128"
   },
   {
     "name": "SimPy",
@@ -40773,7 +41291,8 @@
     ],
     "best_for": "Discrete-event simulation of queues, resources, and processes",
     "language": "Python",
-    "model_score": 0.0
+    "model_score": 0.0,
+    "image_url": ""
   },
   {
     "name": "Ciw",
@@ -40793,7 +41312,8 @@
     "best_for": "Open queueing network simulation with customer behavior modeling",
     "language": "Python",
     "model_score": 0.0,
-    "stars": 171
+    "stars": 171,
+    "image_url": "https://github.com/CiwPython.png?size=128"
   },
   {
     "name": "Arena Simulation",
@@ -40812,7 +41332,8 @@
     ],
     "best_for": "Enterprise-scale manufacturing and logistics simulation",
     "language": "SIMAN",
-    "model_score": 0.0
+    "model_score": 0.0,
+    "image_url": ""
   },
   {
     "name": "nba_api",
@@ -40887,7 +41408,8 @@
     "primary_use_cases": [
       "Accessing shot charts",
       "Retrieving player tracking data"
-    ]
+    ],
+    "image_url": "https://github.com/swar.png?size=128"
   },
   {
     "name": "Synthpop",
@@ -40954,7 +41476,8 @@
       "statistics",
       "data-engineering"
     ],
-    "stars": 0
+    "stars": 0,
+    "image_url": "https://github.com/alan-turing-institute.png?size=128"
   },
   {
     "name": "text2vec",
@@ -41031,7 +41554,8 @@
       "machine-learning",
       "data-engineering"
     ],
-    "stars": 870
+    "stars": 870,
+    "image_url": "https://github.com/dselivanov.png?size=128"
   },
   {
     "name": "Surprise",
@@ -41112,7 +41636,8 @@
       "machine-learning",
       "statistics"
     ],
-    "stars": 6777
+    "stars": 6777,
+    "image_url": "https://github.com/NicolasHug.png?size=128"
   },
   {
     "name": "Surprise",
@@ -41196,7 +41721,8 @@
     "framework_compatibility": [
       "scikit-learn"
     ],
-    "stars": 6777
+    "stars": 6777,
+    "image_url": "https://github.com/NicolasHug.png?size=128"
   },
   {
     "name": "AnyLogic",
@@ -41215,7 +41741,8 @@
     ],
     "best_for": "Enterprise simulation combining DES, ABM, and system dynamics",
     "language": "Java",
-    "model_score": 0.0
+    "model_score": 0.0,
+    "image_url": ""
   },
   {
     "name": "Faker",
@@ -41287,7 +41814,8 @@
       "data-engineering",
       "statistics"
     ],
-    "stars": 19233
+    "stars": 19233,
+    "image_url": "https://github.com/joke2k.png?size=128"
   },
   {
     "name": "sandwich",
@@ -41361,7 +41889,8 @@
     "canonical_topics": [
       "econometrics",
       "statistics"
-    ]
+    ],
+    "image_url": ""
   },
   {
     "name": "scVI-tools",
@@ -41380,7 +41909,8 @@
     "install": "pip install scvi-tools",
     "best_for": "Deep learning for single-cell genomics",
     "model_score": 0.0,
-    "stars": 1613
+    "stars": 1613,
+    "image_url": "https://github.com/scverse.png?size=128"
   },
   {
     "name": "InvOpt",
@@ -41399,7 +41929,8 @@
     ],
     "install": "pip install invopt",
     "best_for": "Learning economic parameters from observed choices and constraints",
-    "model_score": 0.0
+    "model_score": 0.0,
+    "image_url": "https://github.com/pedroszattoni.png?size=128"
   },
   {
     "name": "PyInvo",
@@ -41417,7 +41948,8 @@
     ],
     "install": "pip install pyinvo",
     "best_for": "Recovering utility weights from linear programming solutions",
-    "model_score": 0.0
+    "model_score": 0.0,
+    "image_url": ""
   },
   {
     "name": "pyStoNED",
@@ -41437,7 +41969,8 @@
     "best_for": "Production frontier estimation, efficiency measurement, convex regression with shape constraints",
     "language": "Python",
     "model_score": 0.0,
-    "stars": 37
+    "stars": 37,
+    "image_url": "https://github.com/ds2010.png?size=128"
   },
   {
     "name": "pdftools",
@@ -41456,7 +41989,8 @@
     "install": "install.packages('pdftools')",
     "best_for": "Fast, reliable PDF text and metadata extraction in R workflows",
     "model_score": 0.0,
-    "stars": 547
+    "stars": 547,
+    "image_url": "https://github.com/ropensci.png?size=128"
   },
   {
     "name": "RefManageR",
@@ -41476,7 +42010,8 @@
     "install": "install.packages('RefManageR')",
     "best_for": "Managing bibliographies in R with CrossRef/Zotero integration",
     "model_score": 0.0,
-    "stars": 120
+    "stars": 120,
+    "image_url": "https://github.com/ropensci.png?size=128"
   },
   {
     "name": "rbibutils",
@@ -41496,7 +42031,8 @@
     "install": "install.packages('rbibutils')",
     "best_for": "Converting between bibliography formats (BibTeX, EndNote, RIS, etc.)",
     "model_score": 0.0,
-    "stars": 18
+    "stars": 18,
+    "image_url": "https://github.com/GeoBosh.png?size=128"
   },
   {
     "name": "bibliometrix",
@@ -41517,7 +42053,8 @@
     "install": "install.packages('bibliometrix')",
     "best_for": "Science mapping, citation network analysis, and bibliometric research",
     "model_score": 0.0,
-    "stars": 627
+    "stars": 627,
+    "image_url": "https://github.com/massimoaria.png?size=128"
   },
   {
     "name": "metafor",
@@ -41537,7 +42074,8 @@
     "install": "install.packages('metafor')",
     "best_for": "Comprehensive meta-analysis with advanced models and visualization",
     "model_score": 0.0,
-    "stars": 292
+    "stars": 292,
+    "image_url": "https://github.com/wviechtb.png?size=128"
   },
   {
     "name": "revtools",
@@ -41557,7 +42095,8 @@
     "install": "install.packages('revtools')",
     "best_for": "Systematic review screening and duplicate detection",
     "model_score": 0.0,
-    "stars": 57
+    "stars": 57,
+    "image_url": "https://github.com/mjwestgate.png?size=128"
   },
   {
     "name": "metagear",
@@ -41577,7 +42116,8 @@
     "install": "install.packages('metagear')",
     "best_for": "End-to-end systematic review workflow with PRISMA diagrams",
     "model_score": 0.0,
-    "stars": 15
+    "stars": 15,
+    "image_url": "https://github.com/mjlajeunesse.png?size=128"
   },
   {
     "name": "litsearchr",
@@ -41596,7 +42136,8 @@
     "install": "install.packages('litsearchr')",
     "best_for": "Building comprehensive search strategies for systematic reviews",
     "model_score": 0.0,
-    "stars": 120
+    "stars": 120,
+    "image_url": "https://github.com/elizagrames.png?size=128"
   },
   {
     "name": "PyMuPDF",
@@ -41616,7 +42157,8 @@
     "install": "pip install PyMuPDF",
     "best_for": "Fast, production-grade PDF text extraction and manipulation",
     "model_score": 0.0,
-    "stars": 9601
+    "stars": 9601,
+    "image_url": "https://github.com/pymupdf.png?size=128"
   },
   {
     "name": "pdfplumber",
@@ -41635,7 +42177,8 @@
     "install": "pip install pdfplumber",
     "best_for": "Extracting tables and structured data from PDFs with visual debugging",
     "model_score": 0.0,
-    "stars": 10207
+    "stars": 10207,
+    "image_url": "https://github.com/jsvine.png?size=128"
   },
   {
     "name": "Marker",
@@ -41655,7 +42198,8 @@
     "install": "pip install marker-pdf",
     "best_for": "Converting academic PDFs to markdown with equation preservation",
     "model_score": 0.0,
-    "stars": 34625
+    "stars": 34625,
+    "image_url": "https://github.com/VikParuchuri.png?size=128"
   },
   {
     "name": "GROBID",
@@ -41675,7 +42219,8 @@
     "install": "docker pull grobid/grobid:0.8.2",
     "best_for": "Production-grade academic paper structure extraction",
     "model_score": 0.0,
-    "stars": 4834
+    "stars": 4834,
+    "image_url": "https://github.com/kermitt2.png?size=128"
   },
   {
     "name": "Papis",
@@ -41696,7 +42241,8 @@
     "install": "pip install papis",
     "best_for": "Terminal-based paper and bibliography management for CLI workflows",
     "model_score": 0.0,
-    "stars": 1698
+    "stars": 1698,
+    "image_url": "https://github.com/papis.png?size=128"
   },
   {
     "name": "grf_python",
@@ -41716,7 +42262,8 @@
     "best_for": "Estimating heterogeneous treatment effects with causal forests in Python without R dependencies",
     "language": "Python",
     "model_score": 0.0,
-    "stars": 4
+    "stars": 4,
+    "image_url": "https://github.com/shoepaladin.png?size=128"
   },
   {
     "name": "causalfe",
@@ -41736,7 +42283,8 @@
     "best_for": "Heterogeneous treatment effects in panel data with unit/time fixed effects",
     "language": "Python",
     "model_score": 0.0,
-    "stars": 3
+    "stars": 3,
+    "image_url": "https://github.com/haytug.png?size=128"
   },
   {
     "name": "etwfe",
@@ -41755,7 +42303,8 @@
     ],
     "best_for": "Heterogeneity-robust DiD estimation with staggered treatment adoption using Wooldridge's ETWFE approach",
     "language": "Python",
-    "model_score": 0.0
+    "model_score": 0.0,
+    "image_url": ""
   },
   {
     "name": "GeoAI",
@@ -41774,7 +42323,8 @@
     ],
     "best_for": "Applying machine learning to geographic data with minimal code for spatial economics research",
     "language": "Python",
-    "model_score": 0.0
+    "model_score": 0.0,
+    "image_url": "https://github.com/opengeos.png?size=128"
   },
   {
     "name": "rdpackages/rdhte: Estimation and Inference for ...",
@@ -41792,6 +42342,7 @@
     "github_url": "https://github.com/rdpackages/rdhte",
     "install": "",
     "model_score": 0.0,
-    "stars": 6
+    "stars": 6,
+    "image_url": "https://github.com/rdpackages.png?size=128"
   }
 ]

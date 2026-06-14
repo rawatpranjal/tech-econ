@@ -23,5 +23,8 @@ hdbscan>=0.8
 # Scripts tested at collection time that import these at module load:
 #   check_links.py → aiohttp
 #   generate-highlight.py → yaml (PyYAML)
+#   validate_data.py → requests (also used by fetch_* scripts; stub is in each test
+#   file but collection-order-dependent without this entry)
 aiohttp>=3.9
 PyYAML>=6.0
+requests>=2.31
