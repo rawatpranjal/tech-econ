@@ -19,3 +19,9 @@ numpy>=1.26
 # Both have pre-built wheels — install is fast in CI.
 scikit-learn>=1.3
 hdbscan>=0.8
+
+# Scripts tested at collection time that import these at module load:
+#   check_links.py → aiohttp
+#   generate-highlight.py → yaml (PyYAML)
+aiohttp>=3.9
+PyYAML>=6.0
