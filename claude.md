@@ -5,6 +5,27 @@
 
 ---
 
+## Status board
+<!-- STATUS-BOARD:START (refreshed 2026-06-14) -->
+Yellow - ~62% complete (Now streams partially shipped, A/B loop open). Binding constraint: A.4 HITL + B.5 HITL.
+
+| Stream | scoped | explore | design | build | verify | pushed | % |
+|---|---|---|---|---|---|---|---|
+| A - Exp loop | Y | Y | Y | Y | - | Y | 75% |
+| B - Homepage | Y | Y | Y | Y | - | - | 60% |
+| C - /site page | Y | Y | Y | Y | Y | Y | 100% |
+| D - Doc hygiene | Y | Y | Y | Y | Y | Y | 100% |
+| N - Card images | Y | - | - | - | - | - | 10% |
+| T - CI/CD | Y | Y | Y | Y | - | Y | 80% |
+
+What happened: T.1-T.5 shipped (fcae03f); A.3 MMR wiring done; C.1-C.11 shipped; /system reconcile pass completed 2026-06-14.
+What's next: A.4 HITL (per-variant CTR review on harness_aa_v2); B.5 HITL (visual sign-off on homepage); Stream N kickoff.
+Risks and blockers: A.4 and B.5 are human gates — nothing unblocks them except Pranjal's eyes on the live site.
+Decisions and asks: (1) Start Stream N while waiting on HITLs? (2) T.6 audit window opens ~2026-06-28.
+<!-- STATUS-BOARD:END -->
+
+---
+
 # Mindset
 
 You are a senior staff Google engineer. Your user respects your judgement. You will think, deliberate, and plan all major decisions. You take time to research and be thorough. Better well-planned than quick-and-dirty — this repo is getting large so we need much more thought than blazing fast execution. Ask, think, search, research, test — but do it the right way.
@@ -151,8 +172,13 @@ fi
 
 **Must pass before pushing:**
 ```bash
-python3 scripts/validate_data.py      # JSON schema validation
-npm run build                          # Hugo + pagefind index
+python3 scripts/validate_data.py --skip-links  # JSON schema validation (fast, skips network)
+npm run build                                   # Hugo + pagefind index
+```
+
+**Full validation with link checks (slow — ~5 min, optional):**
+```bash
+python3 scripts/validate_data.py      # includes network link-check step
 ```
 
 **If you modified rankings/search:**
@@ -170,7 +196,9 @@ python3 scripts/generate_embeddings.py # Regenerate vectors
 - **`papers.json` vs `papers_flat.json`** — Dual system, easy to desync. Use `papers_flat.json` for ranking/search.
 - **D1 analytics schema** — Ranking script depends on exact table structure
 - **Worker schema = code + migration.** When `analytics-worker/index.js` adds or renames a column referenced in an INSERT, the matching ALTER must (a) be added to `handleRunSchema` so it's idempotent and replayable, and (b) be applied to the live D1 by hitting `GET /run-schema?key=$ADMIN_KEY` *immediately after deploy*. Skipping this caused the 2026-03-26 → 2026-05-03 silent analytics blackout — five weeks of `200 ok` on `/events` while every D1 write rejected because `events.user_id` didn't exist.
-- **JS test suite at `tests/js/`** runs via `npm test` (vitest + jsdom). 185 tests as of 2026-05-25. Pure-helper tests for new client modules are required (see `tests/js/personalize.test.js` and `because-you-viewed.test.js` for the pattern).
+- **JS test suite at `tests/js/`** runs via `npm test` (vitest + jsdom). 714 tests as of 2026-05-25. Pure-helper tests for new client modules are required (see `tests/js/personalize.test.js` and `because-you-viewed.test.js` for the pattern).
+- **Python test suite** at `tests/python/`: 1983 tests as of 2026-05-25. Scripts tests in `tests/python/scripts/`, lib tests in `tests/python/lib/`.
+- **`papers.json` / `papers_flat.json` must stay in sync.** After editing `papers.json`, always run `python3 scripts/flatten_papers.py && python3 scripts/inject_scores.py`. `validate_data.py` now enforces this: it fails CI if counts diverge (`check_papers_sync`).
 - **Autoresearch uses git worktrees** — `autoresearch/run.sh` runs in an isolated worktree under `/tmp/` so it never touches the main checkout. Do NOT change it back to `git checkout` — that caused files written by concurrent sessions to be deleted.
 - **No per-item single pages exist.** Cards on every list page link out via `target="_blank"`. Only `papers/single.html` exists, and it's a *topic* page (lists papers in a topic), not a per-paper detail page. Plans assuming per-item detail pages need to pivot to list-page hover, search-result hover, or topic-page footer.
 - **`reading-history-section` and `because-you-viewed-section` placeholders have `display: none` because that's the empty state.** Don't read this as "feature not built" — `static/js/reading-history.js:121` `renderHistorySection()` and `static/js/because-you-viewed.js` flip these to `block` once history exists.
@@ -487,6 +515,10 @@ Reusable modules pulled out of `scripts/rank_all_content.py` so they can be test
 | `lib/d1_sessions.py` | Group D1 events into sessions | `lib/eval_runner.py` |
 | `lib/holdout.py` | Temporal split for offline eval | `lib/eval_runner.py` |
 | `lib/metrics.py` | NDCG / Hit-Rate / MAP / Precision implementations | `lib/eval_runner.py` |
+| `lib/score_combiner.py` | Blend engagement + predictions + freshness + citations → final score | `rank_all_content.py:combine_scores` |
+| `lib/trending.py` | Select trending candidates + MMR rerank + build embedding lookup | `rank_all_content.py:select_trending` |
+| `lib/data_io.py` | Atomic JSON read/write with output metadata stamping | All scripts writing data/*.json |
+| `lib/schemas.py` | TypedDicts for all JSON shapes in the recsys pipeline | Static typing + runtime sanity checks |
 
 ---
 
