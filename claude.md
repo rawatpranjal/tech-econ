@@ -6,8 +6,8 @@
 ---
 
 ## Status board
-<!-- STATUS-BOARD:START (refreshed 2026-06-14) -->
-Yellow - ~62% complete (Now streams partially shipped, A/B loop open). Binding constraint: A.4 HITL + B.5 HITL.
+<!-- STATUS-BOARD:START (refreshed 2026-06-14 /end) -->
+Yellow - ~65% complete. Binding constraint: A.4 HITL + B.5 HITL. Tree is clean; tests green.
 
 | Stream | scoped | explore | design | build | verify | pushed | % |
 |---|---|---|---|---|---|---|---|
@@ -18,10 +18,10 @@ Yellow - ~62% complete (Now streams partially shipped, A/B loop open). Binding c
 | N - Card images | Y | - | - | - | - | - | 10% |
 | T - CI/CD | Y | Y | Y | Y | - | Y | 80% |
 
-What happened: T.1-T.5 shipped (fcae03f); A.3 MMR wiring done; C.1-C.11 shipped; /system reconcile pass completed 2026-06-14.
-What's next: A.4 HITL (per-variant CTR review on harness_aa_v2); B.5 HITL (visual sign-off on homepage); Stream N kickoff.
-Risks and blockers: A.4 and B.5 are human gates — nothing unblocks them except Pranjal's eyes on the live site.
-Decisions and asks: (1) Start Stream N while waiting on HITLs? (2) T.6 audit window opens ~2026-06-28.
+What happened: /system reconcile done — STATUS-BOARD, SYSTEM.md, decisions.md, T.1-T.5 ✅, handoff refreshed, .pyc untracked. JS 714/714, Python 1950/1950 green.
+What's next: A.4 HITL (run analyze_experiments.py on harness_aa_v2, review CTR); B.5 HITL (eyeball live homepage).
+Risks and blockers: A.4 and B.5 are human gates. T.6 CI audit window opens ~2026-06-28. Branch needs PR to merge to main (RecsysGate).
+Decisions and asks: Start Stream N while waiting on HITLs? New learned rule added re scaffold files.
 <!-- STATUS-BOARD:END -->
 
 ---
@@ -547,6 +547,17 @@ Add LLM-generated metadata to new or poor items.
 2. Run `python3 scripts/enrich_metadata.py`
 3. Regenerate embeddings: `python3 scripts/generate_embeddings.py`
 4. Commit and report: items enriched, failures, manual review needed
+
+---
+
+---
+
+# Learned Rules
+
+**Scaffold files are shared — copy, don't invent.**
+Portable skeleton files (`SYSTEM.md`, `decisions.md`, `docs/chunks/`, `plan.md`) exist in sibling projects (`~/Code/delivery/`, `~/Code/econirl/`). Before creating any scaffold file, `cp` the sibling version.
+- Wrong: drafting `SYSTEM.md` from scratch.
+- Right: `cp ~/Code/delivery/SYSTEM.md .`
 
 ---
 
