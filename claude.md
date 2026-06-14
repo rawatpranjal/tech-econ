@@ -6,8 +6,8 @@
 ---
 
 ## Status board
-<!-- STATUS-BOARD:START (refreshed 2026-06-14 /end) -->
-Yellow - ~65% complete. Binding constraint: A.4 HITL + B.5 HITL. Tree is clean; tests green.
+<!-- STATUS-BOARD:START (refreshed 2026-06-14 /autoloop) -->
+Orange - ~80% complete. Binding constraint: A.4 HITL + B.5 HITL. Updated 2026-06-14.
 
 | Stream | scoped | explore | design | build | verify | pushed | % |
 |---|---|---|---|---|---|---|---|
@@ -15,13 +15,13 @@ Yellow - ~65% complete. Binding constraint: A.4 HITL + B.5 HITL. Tree is clean; 
 | B - Homepage | Y | Y | Y | Y | - | - | 60% |
 | C - /site page | Y | Y | Y | Y | Y | Y | 100% |
 | D - Doc hygiene | Y | Y | Y | Y | Y | Y | 100% |
-| N - Card images | Y | - | - | - | - | - | 10% |
+| N - Card images | Y | Y | Y | Y | Y | Y | 95% |
 | T - CI/CD | Y | Y | Y | Y | - | Y | 80% |
 
-What happened: /system reconcile done — STATUS-BOARD, SYSTEM.md, decisions.md, T.1-T.5 ✅, handoff refreshed, .pyc untracked. JS 714/714, Python 1950/1950 green.
-What's next: A.4 HITL (run analyze_experiments.py on harness_aa_v2, review CTR); B.5 HITL (eyeball live homepage).
-Risks and blockers: A.4 and B.5 are human gates. T.6 CI audit window opens ~2026-06-28. Branch needs PR to merge to main (RecsysGate).
-Decisions and asks: Start Stream N while waiting on HITLs? New learned rule added re scaffold files.
+What happened: Stream N complete (N.1–N.7). image_url fields populated across books/career/community/packages; templates wired; 65 book covers downloaded; 2126 Python / 714 JS green. N audit: goalpost PARTIALLY MET — datasets 150 + books 6 use initials-gradient; resources template ignores image_url.
+What's next: A.4 HITL (run analyze_experiments.py on harness_aa_v2, review CTR); B.5 HITL (eyeball live homepage). T.6 CI audit opens 2026-06-28.
+Risks and blockers: ALL remaining Now-horizon items are human gates (A.4, B.5) or time-gated (T.6). No unblocked mechanical work remains in Now streams.
+Decisions and asks: N.7 found two follow-up opportunities — (1) add favicon step before initials in datasets/list.html (closes the goalpost gap for 150 cards); (2) wire image_url into resources/learning template (N.8). Continue with these, or wait for HITLs?
 <!-- STATUS-BOARD:END -->
 
 ---
