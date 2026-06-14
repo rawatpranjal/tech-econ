@@ -43,7 +43,7 @@
     "geographic_focus": "Netflix",
     "frequency": "annual",
     "model_score": 0.1542,
-    "image_url": "",
+    "image_url": "https://www.google.com/s2/favicons?domain=research.netflix.com&sz=128",
     "embedding_text": "The Netflix Causal Inference event is a pivotal gathering that delves into the intricacies of causal inference as it pertains to recommender systems. This annual conference is part of the CompCI project and features the CIDER roundtable, where leading experts, including research advisor Nathan Kallus from Cornell, share their insights and findings. The event attracts a diverse audience, primarily consisting of mid-level and senior data scientists, along with curious browsers eager to expand their understanding of advanced methodologies in recommendation algorithms. Attendees can expect a mix of engaging talks, workshops, and networking opportunities that facilitate collaboration and knowledge exchange. The focus on causal inference positions this event at the intersection of academia and industry, making it a unique venue for discussing cutting-edge research and practical applications. Participants typically gain a deeper understanding of how causal inference can enhance recommendation systems, as well as the chance to connect with peers and leaders in the field. The event's accessibility and relevance to both researchers and practitioners make it a valuable experience for anyone interested in the future of recommendation technology.",
     "tfidf_keywords": [
       "causal-inference",
@@ -497,7 +497,8 @@
       "labor-economics",
       "industrial-organization",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=linkedin.com&sz=128"
   },
   {
     "name": "Sean J. Taylor",
@@ -933,7 +934,8 @@
       "policy-evaluation",
       "labor-economics",
       "finance"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=tandfonline.com&sz=128"
   },
   {
     "name": "Aswath Damodaran",
@@ -1002,7 +1004,8 @@
       "finance",
       "econometrics",
       "consumer-behavior"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=aswathdamodaran.blogspot.com&sz=128"
   },
   {
     "name": "MIT Economics & Data Science",
@@ -1161,7 +1164,8 @@
       "policy-evaluation",
       "consumer-behavior",
       "labor-economics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=itea-org.net&sz=128"
   },
   {
     "name": "Microsoft Research ALICE (EconML/DoWhy)",
@@ -1319,7 +1323,8 @@
       "experimentation",
       "machine-learning",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=cclear.cc&sz=128"
   },
   {
     "name": "CODE@MIT Conference",
@@ -1730,7 +1735,8 @@
       "machine-learning",
       "econometrics"
     ],
-    "frequency": "one-time"
+    "frequency": "one-time",
+    "image_url": "https://www.google.com/s2/favicons?domain=research.atspotify.com&sz=128"
   },
   {
     "name": "AMIA Annual Symposium",
@@ -2234,7 +2240,8 @@
       "finance",
       "industrial-organization",
       "labor-economics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=usaee.org&sz=128"
   },
   {
     "name": "CSIS Defense and Security Events",
@@ -2314,7 +2321,8 @@
       "policy-evaluation",
       "defense-policy",
       "geopolitics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=csis.org&sz=128"
   },
   {
     "name": "MinneAnalytics",
@@ -2469,7 +2477,8 @@
       "machine-learning",
       "data-engineering",
       "policy-evaluation"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "Adam Kelleher",
@@ -2535,7 +2544,8 @@
       "causal-inference",
       "machine-learning",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=medium.com&sz=128"
   },
   {
     "name": "TRB Annual Meeting",
@@ -3293,7 +3303,7 @@
     "geographic_focus": "Minneapolis",
     "frequency": "annual",
     "model_score": 0.0001,
-    "image_url": "",
+    "image_url": "https://www.google.com/s2/favicons?domain=recsys.acm.org&sz=128",
     "embedding_text": "The ACM RecSys conference is a premier event dedicated to the field of recommender systems, bringing together researchers, practitioners, and industry leaders to discuss the latest advancements and challenges in the domain. With a strong emphasis on economics-relevant content, the conference features an industrial track that allows attendees to explore real-world applications and implications of recommender systems in various sectors, including e-commerce and digital platforms. The event also addresses critical issues of fairness and bias, providing a platform for discussions that are increasingly relevant in today's technology landscape. Attendees typically include early-career researchers, data scientists, and tech economists, all eager to engage with cutting-edge research and practical insights. The conference format includes a mix of keynote talks, panel discussions, and networking sessions, fostering collaboration and knowledge exchange among participants. Notable tracks at the conference often highlight the intersection of technology and economics, making it a unique venue for those interested in the economic aspects of recommendation algorithms. With its location in Minneapolis for the 2026 edition, ACM RecSys aims to be accessible to a US-based audience, enhancing participation from local tech communities. Attendees can expect to gain valuable insights into the latest research, practical applications, and the ethical considerations surrounding recommender systems, positioning them at the forefront of this evolving field. Compared to similar events, ACM RecSys stands out for its dedicated focus on the economic implications of technology, making it a must-attend for those in the tech-economics space.",
     "tfidf_keywords": [
       "recommender-systems",
@@ -4186,7 +4196,7 @@
     ],
     "event_format": "online",
     "model_score": 0.0001,
-    "image_url": "",
+    "image_url": "https://www.google.com/s2/favicons?domain=kaggle.com&sz=128",
     "embedding_text": "Kaggle Discussions serves as a vibrant online community for data science enthusiasts, where participants can engage in discussions about competition strategies and machine learning techniques. With over 15 million users, this platform is a hub for learners and practitioners alike, offering a unique opportunity to learn from Grandmasters in the field. The discussions often revolve around practical applications of machine learning, sharing insights on how to tackle various challenges presented in competitions. Attendees typically include early-career data scientists, students, and curious individuals eager to expand their knowledge and skills. The format of the event is primarily a forum, allowing for asynchronous communication and collaboration among users. Participants can access a wealth of public notebooks and solution breakdowns, which serve as valuable resources for understanding different approaches to data science problems. The community aspect of Kaggle Discussions fosters networking opportunities, enabling users to connect with like-minded individuals and share their experiences. Overall, attendees gain practical insights, enhance their technical skills, and build connections that can benefit their careers in data science. Compared to traditional conferences, Kaggle Discussions offers a more accessible and continuous learning environment, making it an ideal platform for those looking to improve their expertise in machine learning and data science.",
     "tfidf_keywords": [
       "Kaggle",
@@ -4283,7 +4293,8 @@
       "machine-learning",
       "computer-vision",
       "natural-language-processing"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=tqchen.com&sz=128"
   },
   {
     "name": "KDD (ACM SIGKDD)",
@@ -4610,7 +4621,8 @@
       "econometrics",
       "statistics",
       "causal-inference"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=reddit.com&sz=128"
   },
   {
     "name": "Data Science DC",
@@ -5012,7 +5024,8 @@
       "data-engineering",
       "consumer-behavior",
       "optimization"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=decisionsciences.org&sz=128"
   },
   {
     "name": "EsportsNext",
@@ -5467,7 +5480,8 @@
       "statistics",
       "machine-learning",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=discord.com&sz=128"
   },
   {
     "name": "ACM SIGKDD",
@@ -5542,7 +5556,8 @@
       "machine-learning",
       "data-engineering",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=kdd.org&sz=128"
   },
   {
     "name": "NYC Data Science",
@@ -5704,7 +5719,8 @@
       "statistics",
       "data-engineering",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=community.amstat.org&sz=128"
   },
   {
     "name": "Austin AI, GenAI and ML",
@@ -5779,7 +5795,8 @@
       "machine-learning",
       "data-engineering",
       "consumer-behavior"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "PGH Data Science",
@@ -5854,7 +5871,8 @@
       "machine-learning",
       "statistics",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "DFW Data Science",
@@ -6003,7 +6021,8 @@
       "operations-research",
       "statistics",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=mat.tepper.cmu.edu&sz=128"
   },
   {
     "name": "ACM Economics and Computation (EC)",
@@ -6081,7 +6100,8 @@
       "experimentation",
       "behavioral-economics",
       "optimization"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=ec24.sigecom.org&sz=128"
   },
   {
     "name": "NBER Economics of AI Conference",
@@ -6236,7 +6256,8 @@
       "econometrics",
       "statistics",
       "marketing-science"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=informs.org&sz=128"
   },
   {
     "name": "ACM Conference on Economics and Computation (EC)",
@@ -6320,7 +6341,8 @@
       "experimentation",
       "behavioral-economics",
       "optimization"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=sigecom.org&sz=128"
   },
   {
     "name": "SoFiE Financial Machine Learning Summer School",
@@ -6771,7 +6793,8 @@
       "data-engineering",
       "consumer-behavior",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "MLESI - Machine Learning in Economics Summer Institute",
@@ -7077,7 +7100,8 @@
       "statistics",
       "data-engineering",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=community.amstat.org&sz=128"
   },
   {
     "name": "ISPOR (International Society for Pharmacoeconomics and Outcomes Research)",
@@ -7158,7 +7182,8 @@
       "healthcare",
       "policy-evaluation",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=ispor.org&sz=128"
   },
   {
     "name": "POWER Conference (Berkeley)",
@@ -7241,7 +7266,8 @@
       "industrial-organization",
       "energy-economics",
       "policy-evaluation"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=haas.berkeley.edu&sz=128"
   },
   {
     "name": "POWER Conference (Berkeley)",
@@ -7325,7 +7351,8 @@
       "industrial-organization",
       "finance",
       "labor-economics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=haas.berkeley.edu&sz=128"
   },
   {
     "name": "Data Science Learning Community",
@@ -7768,7 +7795,8 @@
       "machine-learning",
       "data-engineering",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "Toronto People Analytics",
@@ -7918,7 +7946,8 @@
       "machine-learning",
       "data-engineering",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "DataCon LA Users Group",
@@ -7999,7 +8028,8 @@
       "statistics",
       "consumer-behavior",
       "experimentation"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "Women in Data Science and AI - ATX",
@@ -8227,7 +8257,8 @@
       "machine-learning",
       "data-engineering",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "PyData PDX",
@@ -8541,7 +8572,8 @@
       "statistics",
       "data-engineering",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=ssc.ca&sz=128"
   },
   {
     "name": "RAND Events and Seminars",
@@ -8594,7 +8626,7 @@
     "geographic_focus": "United States",
     "frequency": "weekly",
     "model_score": 0.0,
-    "image_url": "",
+    "image_url": "https://www.google.com/s2/favicons?domain=rand.org&sz=128",
     "embedding_text": "RAND Events and Seminars are a series of research presentations and policy discussions organized by the RAND Corporation, a prominent think tank known for its rigorous analysis and contributions to defense policy. These events focus on a variety of themes related to national security, defense analysis, and public policy, providing a platform for leading experts to share their findings and insights. Attendees typically include researchers, policymakers, and professionals from both academic and industry backgrounds, all of whom are interested in the implications of defense research on policy and practice. The sessions often include a mix of presentations, panel discussions, and opportunities for networking, allowing participants to engage directly with thought leaders and peers. The virtual and hybrid formats of these events make them accessible to a broader audience, transcending geographic limitations. Participants can expect to gain valuable knowledge about current trends and challenges in defense policy, as well as practical insights that can inform their work. Compared to similar events, RAND Events and Seminars stand out for their focus on evidence-based policy analysis and their commitment to fostering informed discussions among diverse stakeholders.",
     "tfidf_keywords": [
       "defense-policy",
@@ -9367,7 +9399,8 @@
       "measurement",
       "ACM"
     ],
-    "model_score": 0.0
+    "model_score": 0.0,
+    "image_url": "https://www.google.com/s2/favicons?domain=sigmetrics.org&sz=128"
   },
   {
     "name": "Analytics for Marketers",
@@ -9827,7 +9860,8 @@
       "operations-research",
       "modeling"
     ],
-    "model_score": 0.0
+    "model_score": 0.0,
+    "image_url": "https://www.google.com/s2/favicons?domain=wintersim.org&sz=128"
   },
   {
     "name": "IIOC (Industrial Organization Conference)",
@@ -10065,7 +10099,8 @@
       "causal-inference",
       "statistics",
       "policy-evaluation"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=econometricsociety.org&sz=128"
   },
   {
     "name": "Global Antitrust Economics Conference",
@@ -10490,7 +10525,8 @@
       "machine-learning",
       "econometrics",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=nabe.com&sz=128"
   },
   {
     "name": "The Web Conference (WWW)",
@@ -10574,7 +10610,8 @@
       "policy-evaluation",
       "consumer-behavior",
       "experimentation"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=thewebconf.org&sz=128"
   },
   {
     "name": "WINE",
@@ -10900,7 +10937,8 @@
       "consumer-behavior",
       "experimentation",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=ana.net&sz=128"
   },
   {
     "name": "MSOM Conference",
@@ -11065,7 +11103,8 @@
       "pricing",
       "consumer-behavior",
       "recommendation-systems"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=platformanalytics.org&sz=128"
   },
   {
     "name": "Product-Led Summit",
@@ -11471,7 +11510,8 @@
       "computer-vision",
       "behavioral-economics",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=facctconference.org&sz=128"
   },
   {
     "name": "Quant UX Con",
@@ -11523,7 +11563,7 @@
     "event_format": "online",
     "frequency": "annual",
     "model_score": 0.0,
-    "image_url": "",
+    "image_url": "https://www.google.com/s2/favicons?domain=quantuxcon.org&sz=128",
     "embedding_text": "Quant UX Con is the only conference specifically tailored for quantitative UX research, providing a platform for professionals in the field to explore and discuss various methodologies and techniques. The conference covers essential topics such as choice modeling, segmentation, logs analysis, A/B testing, and UX metrics, making it a vital event for quant UX researchers in the tech industry. Attendees typically include junior to senior data scientists and UX researchers who are keen to enhance their skills and knowledge in quantitative analysis related to user experience. The event features a mix of talks, workshops, and networking opportunities, allowing participants to engage with experts and peers in the field. With a strong emphasis on both academic and industry perspectives, Quant UX Con fosters an environment where attendees can gain practical insights and theoretical understanding. The virtual format of the conference ensures accessibility for a global audience, enabling professionals from various geographic locations to participate. Notable tracks may include specialized sessions on advanced A/B testing techniques and innovative segmentation strategies. Attendees often leave with actionable insights, new methodologies, and valuable connections that can enhance their work in quantitative UX research. Compared to similar events, Quant UX Con stands out for its focused approach on quantitative methods, making it an essential gathering for those dedicated to advancing the field of UX research through data-driven techniques.",
     "tfidf_keywords": [
       "quantitative-UX",
@@ -12217,7 +12257,8 @@
       "optimization",
       "pricing",
       "behavioral-economics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=wine-conference.org&sz=128"
   },
   {
     "name": "AAMAS (Autonomous Agents and Multi-Agent Systems)",
@@ -12517,7 +12558,8 @@
       "machine-learning",
       "statistics",
       "policy-evaluation"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=gsb.stanford.edu&sz=128"
   },
   {
     "name": "Opportunity Insights",
@@ -13025,7 +13067,8 @@
       "machine-learning",
       "data-engineering",
       "community"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=discord.com&sz=128"
   },
   {
     "name": "Quant Talk Discord",
@@ -13237,7 +13280,8 @@
       "statistics",
       "data-engineering",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=reddit.com&sz=128"
   },
   {
     "name": "r/AskEconomics",
@@ -13302,7 +13346,8 @@
       "econometrics",
       "policy-evaluation",
       "consumer-behavior"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=reddit.com&sz=128"
   },
   {
     "name": "PyMC Discourse",
@@ -13441,7 +13486,8 @@
       "econometrics",
       "labor-economics",
       "policy-evaluation"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=aeaweb.org&sz=128"
   },
   {
     "name": "KDnuggets AI, Big Data, Data Science, ML",
@@ -13665,7 +13711,8 @@
       "biostatistics",
       "healthcare",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=community.amstat.org&sz=128"
   },
   {
     "name": "AI Tinkerers Montreal",
@@ -13881,7 +13928,8 @@
       "marketplaces",
       "consumer-behavior",
       "behavioral-economics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=faculty.haas.berkeley.edu&sz=128"
   },
   {
     "name": "Michael Ostrovsky",
@@ -13951,7 +13999,8 @@
       "consumer-behavior",
       "pricing",
       "experimentation"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=web.stanford.edu&sz=128"
   },
   {
     "name": "Peter Fader",
@@ -14560,7 +14609,8 @@
       "marketing-analytics",
       "experimentation",
       "advertising"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=informs.org&sz=128"
   },
   {
     "name": "Programmatic I/O (AdExchanger)",
@@ -14691,7 +14741,7 @@
     "event_format": "conference",
     "frequency": "annual",
     "model_score": 0.0,
-    "image_url": "",
+    "image_url": "https://www.google.com/s2/favicons?domain=recsys.acm.org&sz=128",
     "embedding_text": "The ACM RecSys Conference stands as the leading event dedicated to the field of recommender systems, attracting a diverse audience from both academia and industry. This conference focuses on a variety of themes including collaborative filtering, content-based methods, and the application of deep learning techniques in the development of recommendation systems. Attendees typically include researchers, data scientists, and industry professionals from major companies such as Netflix, Spotify, and Amazon, all eager to share insights and advancements in the field. The conference features a mix of session formats, including keynote talks from leading experts, workshops that allow for hands-on learning, and ample networking opportunities designed to foster collaboration and innovation. With a strong emphasis on both academic research and practical applications, the ACM RecSys Conference provides a unique platform for participants to engage with cutting-edge methodologies and technologies. Attendees can expect to gain valuable knowledge about the latest trends, evaluation metrics, and best practices in recommender systems, making it an essential event for anyone looking to deepen their understanding of this rapidly evolving field. Compared to similar events, ACM RecSys distinguishes itself through its strong industry participation and focus on real-world applications, ensuring that both theoretical and practical perspectives are well represented. The conference also offers special sessions and tracks that highlight emerging topics and innovations, further enriching the attendee experience.",
     "tfidf_keywords": [
       "collaborative-filtering",
@@ -14840,7 +14890,7 @@
     "geographic_focus": "Europe",
     "frequency": "annual",
     "model_score": 0.0,
-    "image_url": "",
+    "image_url": "https://www.google.com/s2/favicons?domain=eurocim.org&sz=128",
     "embedding_text": "The European Causal Inference Meeting (EuroCIM) serves as a pivotal gathering for researchers dedicated to the field of causal inference, emphasizing its applications in health, economic, and social sciences. This annual conference provides a unique platform for attendees to engage in informal discussions, share insights, and foster collaborations. EuroCIM attracts a diverse audience, including early-career researchers, biostatisticians, and academics, all united by a common interest in advancing the methodologies and applications of causal inference. The event typically features a mix of session formats, including talks, workshops, and ample networking opportunities, allowing participants to connect with peers and leaders in the field. Unlike more formal conferences, EuroCIM encourages a relaxed atmosphere conducive to open dialogue and idea exchange. Attendees can expect to gain valuable insights into the latest developments in causal inference, as well as practical knowledge that can be applied to their own research projects. The conference's strong biostatistics presence further enriches the discussions, making it a significant event for those involved in health-related causal research. EuroCIM stands out as the European counterpart to the American Causal Inference Conference (ACIC), offering a distinct perspective and fostering international collaboration. With its focus on both academic and industry applications, EuroCIM is an essential event for anyone looking to deepen their understanding of causal inference and its implications across various domains.",
     "tfidf_keywords": [
       "causal-inference",
@@ -14953,7 +15003,8 @@
       "machine-learning",
       "data-engineering",
       "consumer-behavior"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=datascience.stanford.edu&sz=128"
   },
   {
     "name": "Wharton Customer Analytics Conference",
@@ -15119,7 +15170,8 @@
       "industrial-organization",
       "supply-chain",
       "service-operations"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=pomsmeetings.org&sz=128"
   },
   {
     "name": "Conference on Mechanism and Institution Design (CMID)",
@@ -15519,7 +15571,8 @@
       "consumer-behavior",
       "decision-making",
       "management-theory"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=bdrm.org&sz=128"
   },
   {
     "name": "Prediction Market Conference",
@@ -15881,7 +15934,7 @@
     ],
     "event_format": "online",
     "model_score": 0.0,
-    "image_url": "",
+    "image_url": "https://www.google.com/s2/favicons?domain=mindtheproduct.com&sz=128",
     "embedding_text": "Mind the Product is a vibrant online community that serves as a hub for product managers and enthusiasts dedicated to the art and science of product management. With a membership base of approximately 60,000 individuals, this community emphasizes the importance of data-driven decision-making in product development. Members engage in discussions that span various aspects of product management, including user experience, market research, and agile methodologies. The community is primarily hosted on Slack, providing a platform for real-time communication and collaboration among its members. Attendees typically include product managers at various stages of their careers, from those just starting out to seasoned professionals looking to share insights and learn from others. The community fosters an environment where members can network, exchange ideas, and gain valuable knowledge through shared experiences. While the focus is on practical application and community support, there is also a strong emphasis on learning from industry leaders and peers. Mind the Product stands out from other events and communities by offering a unique blend of resources, including articles, webinars, and networking opportunities, all aimed at enhancing the skills of product managers. Members often leave with actionable insights that they can apply to their own work, making it a valuable resource for anyone involved in product management.",
     "tfidf_keywords": [
       "product-management",
@@ -16197,7 +16250,8 @@
       "machine-learning",
       "statistics",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=reddit.com&sz=128"
   },
   {
     "name": "r/OperationsResearch",
@@ -16268,7 +16322,8 @@
       "optimization",
       "statistics",
       "machine-learning"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=reddit.com&sz=128"
   },
   {
     "name": "Stan Forums",
@@ -16642,7 +16697,8 @@
       "statistics",
       "data-engineering",
       "machine-learning"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=community.amstat.org&sz=128"
   },
   {
     "name": "Preston McAfee",
@@ -16708,7 +16764,8 @@
       "machine-learning",
       "consumer-behavior",
       "policy-evaluation"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=vita.mcafee.cc&sz=128"
   },
   {
     "name": "Michael Schwarz",
@@ -16914,7 +16971,8 @@
       "econometrics",
       "machine-learning"
     ],
-    "frequency": "one-time"
+    "frequency": "one-time",
+    "image_url": "https://www.google.com/s2/favicons?domain=hiringlab.org&sz=128"
   },
   {
     "name": "Bill Gurley",
@@ -17483,7 +17541,8 @@
       "econometrics",
       "machine-learning",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=aeturrell.github.io&sz=128"
   },
   {
     "name": "Frank Harrell",
@@ -17522,7 +17581,7 @@
     "event_format": "conference",
     "geographic_focus": "Nashville, TN",
     "model_score": 0.0,
-    "image_url": "",
+    "image_url": "https://www.google.com/s2/favicons?domain=fharrell.com&sz=128",
     "embedding_text": "The event featuring Frank Harrell, a distinguished biostatistics professor at Vanderbilt University and advisor to the FDA, focuses on the innovative applications of Bayesian study design and regression modeling strategies in the field of biostatistics. As a pioneer in these methodologies, Harrell has significantly contributed to the understanding and application of statistical techniques that enhance the rigor and reliability of research findings. Attendees of this event typically include academics, researchers, and industry professionals who are keen to deepen their knowledge of advanced statistical methods and their practical implications. The sessions may include talks and discussions that delve into the intricacies of Bayesian approaches and their advantages over traditional methods. Networking opportunities will be abundant, allowing participants to connect with peers and experts in the field, fostering collaborations and discussions that can lead to new research initiatives. Attendees can expect to gain valuable insights into the latest advancements in biostatistics, learn about the practical applications of Harrell's work, and explore how these methodologies can be applied to their own research or professional practices. This event stands out among similar conferences due to its focus on the intersection of academia and industry, providing a platform for knowledge exchange and professional development in biostatistics.",
     "frequency": "one-time",
     "tfidf_keywords": [
@@ -17817,7 +17876,8 @@
       "statistics",
       "econometrics"
     ],
-    "event_format": "online"
+    "event_format": "online",
+    "image_url": "https://www.google.com/s2/favicons?domain=yetanothermathprogrammingconsultant.blogspot.com&sz=128"
   },
   {
     "name": "Geoffrey De Smet",
@@ -18217,7 +18277,8 @@
       "consumer-behavior",
       "behavioral-economics",
       "marketing-strategies"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=evaascarza.com&sz=128"
   },
   {
     "name": "ITC Vegas",
@@ -18287,7 +18348,8 @@
       "finance",
       "consumer-behavior",
       "innovation"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=vegas.insuretechconnect.com&sz=128"
   },
   {
     "name": "UC Berkeley Institute of Transportation Studies",
@@ -18365,7 +18427,8 @@
       "policy-evaluation",
       "transportation-economics",
       "urban-planning"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=its.berkeley.edu&sz=128"
   },
   {
     "name": "CSCW (Computer-Supported Cooperative Work)",
@@ -18450,7 +18513,8 @@
       "social-computing",
       "human-computer-interaction",
       "experimentation"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=cscw.acm.org&sz=128"
   },
   {
     "name": "r/dataengineering",
@@ -18521,7 +18585,8 @@
     ],
     "canonical_topics": [
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=reddit.com&sz=128"
   },
   {
     "name": "Digonex Blog",
@@ -18553,7 +18618,7 @@
     ],
     "event_format": "online",
     "subtopic": "Pricing",
-    "image_url": "",
+    "image_url": "https://www.google.com/s2/favicons?domain=digonex.com&sz=128",
     "synthetic_questions": [
       "What is dynamic pricing for attractions?",
       "How do pricing algorithms work?",
@@ -19008,7 +19073,7 @@
     "event_format": "conference",
     "geographic_focus": "Stanford, CA",
     "model_score": 0.0,
-    "image_url": "",
+    "image_url": "https://www.google.com/s2/favicons?domain=cs.stanford.edu&sz=128",
     "embedding_text": "The event featuring Matei Zaharia is a unique opportunity to engage with one of the leading minds in the field of data engineering and machine learning. As the creator of Apache Spark and MLflow, Zaharia has significantly influenced how data is processed and utilized in various applications. This event will focus on the latest trends and advancements in data technologies, making it particularly relevant for both academic and industry audiences. Attendees can expect a mix of presentations, discussions, and networking opportunities that will foster collaboration and knowledge sharing among participants. The typical attendee profile includes early PhD students, junior data scientists, mid-level data scientists, and senior data scientists, all eager to learn from Zaharia's expertise and insights. The event will also provide a platform for attendees to explore the intersection of academic research and industry practices, highlighting the practical applications of Zaharia's work. Networking opportunities will be abundant, allowing participants to connect with peers and industry leaders. By attending, participants will gain valuable knowledge and insights that they can apply in their own work, making this event a must-attend for anyone interested in the future of data engineering and machine learning.",
     "frequency": "one-time",
     "tfidf_keywords": [
@@ -19425,7 +19490,7 @@
     "geographic_focus": "Atlanta, GA",
     "frequency": "annual",
     "model_score": 0.0,
-    "image_url": "",
+    "image_url": "https://www.google.com/s2/favicons?domain=meetings.informs.org&sz=128",
     "embedding_text": "The INFORMS Annual Meeting represents the pinnacle of gatherings for professionals in operations research and analytics, attracting a diverse audience from academia and industry. This annual conference delves into critical themes such as optimization, decision analysis, and data-driven methodologies, providing a platform for sharing innovative research and practical applications. Attendees can expect a rich program featuring a variety of session formats, including keynote talks, panel discussions, and interactive workshops, all designed to foster collaboration and knowledge exchange. With extensive tracks dedicated to specialized topics such as pricing, revenue management, and marketplace design, the event caters to a wide range of interests and expertise levels. Networking opportunities abound, allowing participants to connect with peers, industry leaders, and potential collaborators, enhancing their professional networks. The INFORMS Annual Meeting not only serves as a venue for learning and discussion but also as a catalyst for advancing the field of operations research. Attendees typically leave with fresh insights, new methodologies, and a deeper understanding of the challenges and opportunities within the analytics landscape. Compared to similar events, the INFORMS Annual Meeting stands out for its comprehensive coverage of both theoretical and applied aspects of operations research, making it a must-attend for anyone serious about the field.",
     "tfidf_keywords": [
       "operations-research",
@@ -19697,7 +19762,8 @@
       "industrial-organization",
       "policy-evaluation",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=law.northwestern.edu&sz=128"
   },
   {
     "name": "Stigler Center Antitrust Conference",
@@ -20695,7 +20761,8 @@
       "statistics",
       "experimentation",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=essa.eu&sz=128"
   },
   {
     "name": "UXPA International Conference",
@@ -20949,7 +21016,8 @@
       "statistics",
       "machine-learning",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=stat.cmu.edu&sz=128"
   },
   {
     "name": "NESSIS (New England Symposium on Statistics in Sports)",
@@ -21029,7 +21097,8 @@
       "statistics",
       "econometrics",
       "machine-learning"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=nessis.org&sz=128"
   },
   {
     "name": "Programmatic I/O",
@@ -24020,7 +24089,8 @@
       "data-engineering",
       "statistics",
       "machine-learning"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=dataquality.camp&sz=128"
   },
   {
     "name": "Data Science Salon Slack",
@@ -24308,7 +24378,8 @@
       "machine-learning",
       "data-engineering",
       "consumer-behavior"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=discord.com&sz=128"
   },
   {
     "name": "Humans of Julia",
@@ -24379,7 +24450,8 @@
       "machine-learning",
       "statistics",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=discord.com&sz=128"
   },
   {
     "name": "r/analytics",
@@ -24450,7 +24522,8 @@
       "data-engineering",
       "product-analytics",
       "consumer-behavior"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=reddit.com&sz=128"
   },
   {
     "name": "r/rstats",
@@ -24519,7 +24592,8 @@
       "statistics",
       "machine-learning",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=reddit.com&sz=128"
   },
   {
     "name": "INFORMS Communities",
@@ -24597,7 +24671,8 @@
       "data-engineering",
       "consumer-behavior",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=informs.org&sz=128"
   },
   {
     "name": "American Marketing Association (AMA)",
@@ -24670,7 +24745,8 @@
       "consumer-behavior",
       "marketing-analytics",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=ama.org&sz=128"
   },
   {
     "name": "Data Science Central",
@@ -25425,7 +25501,8 @@
       "machine-learning",
       "data-engineering",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "PyData Toronto",
@@ -25577,7 +25654,8 @@
       "consumer-behavior",
       "marketing",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "PyData San Francisco",
@@ -25657,7 +25735,8 @@
       "machine-learning",
       "statistics",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "Bay Area useR Group",
@@ -25810,7 +25889,8 @@
       "machine-learning",
       "data-engineering",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "INFORMS San Francisco Chapter",
@@ -26040,7 +26120,8 @@
       "machine-learning",
       "data-engineering",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "PyData Seattle",
@@ -26115,7 +26196,8 @@
       "machine-learning",
       "statistics",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "Analytics.Club Seattle",
@@ -26191,7 +26273,8 @@
       "data-engineering",
       "statistics",
       "consumer-behavior"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "INFORMS PNW Chapter",
@@ -26339,7 +26422,8 @@
       "machine-learning",
       "data-engineering",
       "consumer-behavior"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "Los Angeles AI/LLMs/ML",
@@ -26413,7 +26497,8 @@
       "machine-learning",
       "natural-language-processing",
       "computer-vision"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "SoCal R Users Group",
@@ -26642,7 +26727,8 @@
       "data-engineering",
       "consumer-behavior",
       "networking"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "Denver MLOps Community",
@@ -26717,7 +26803,8 @@
       "machine-learning",
       "data-engineering",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "Denver Data Science and ML",
@@ -26793,7 +26880,8 @@
       "machine-learning",
       "data-engineering",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "R-Ladies Aurora",
@@ -26944,7 +27032,8 @@
       "machine-learning",
       "data-engineering",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "Chicago Data, Analytics & AI",
@@ -27022,7 +27111,8 @@
       "consumer-behavior",
       "policy-evaluation"
     ],
-    "frequency": "monthly"
+    "frequency": "monthly",
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "ODSC Chicago",
@@ -27099,7 +27189,8 @@
       "statistics",
       "econometrics",
       "consumer-behavior"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "UChicago Data Science Institute",
@@ -27255,7 +27346,8 @@
       "statistics",
       "consumer-behavior",
       "business-analytics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "Data Science ATL",
@@ -27491,7 +27583,8 @@
       "computer-vision",
       "natural-language-processing",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "Data Science Study Group: South Florida",
@@ -27566,7 +27659,8 @@
       "machine-learning",
       "statistics",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "PyData Miami",
@@ -27644,7 +27738,8 @@
       "statistics",
       "consumer-behavior",
       "forecasting"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "R-Ladies Miami",
@@ -27795,7 +27890,8 @@
       "data-engineering",
       "machine-learning",
       "consumer-behavior"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "Data Analytics & AI - Tampa Bay",
@@ -27874,7 +27970,8 @@
       "statistics",
       "computer-vision",
       "natural-language-processing"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "Orlando ML and Data Science",
@@ -27948,7 +28045,8 @@
       "machine-learning",
       "data-engineering",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "PyData Pittsburgh",
@@ -28103,7 +28201,8 @@
       "statistics",
       "consumer-behavior",
       "experimental-design"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "Cleveland AI & Data",
@@ -28411,7 +28510,8 @@
       "statistics",
       "data-engineering",
       "machine-learning"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "STL Big Data",
@@ -28489,7 +28589,8 @@
       "statistics",
       "consumer-behavior",
       "experimentation"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "Energy Analytics and Data Science (Houston)",
@@ -28567,7 +28668,8 @@
       "forecasting",
       "consumer-behavior"
     ],
-    "frequency": "monthly"
+    "frequency": "monthly",
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "Houston Energy Data Science",
@@ -28642,7 +28744,8 @@
       "machine-learning",
       "data-engineering",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "San Diego AI Developers Group",
@@ -28718,7 +28821,8 @@
       "machine-learning",
       "data-engineering",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "San Diego Data Science & R Users Group",
@@ -28793,7 +28897,8 @@
       "machine-learning",
       "statistics",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "Big Data Utah",
@@ -28866,7 +28971,8 @@
       "data-engineering",
       "machine-learning",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "Utah Data Engineering Meetup",
@@ -28938,7 +29044,8 @@
     ],
     "canonical_topics": [
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "DATAPHX",
@@ -29171,7 +29278,8 @@
       "machine-learning",
       "data-engineering",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "Analytics Club Vancouver",
@@ -29246,7 +29354,8 @@
       "machine-learning",
       "data-engineering",
       "consumer-behavior"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=meetup.com&sz=128"
   },
   {
     "name": "CalgaryR",
@@ -29512,7 +29621,8 @@
       "industrial-organization",
       "policy-evaluation",
       "labor-economics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=people.ischool.berkeley.edu&sz=128"
   },
   {
     "name": "Pat Bajari (1969-2025)",
@@ -29647,7 +29757,8 @@
       "econometrics",
       "behavioral-economics",
       "policy-evaluation"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=voices.uchicago.edu&sz=128"
   },
   {
     "name": "Michael Luca",
@@ -30326,7 +30437,8 @@
       "economics",
       "consumer-behavior",
       "marketplaces"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=linkedin.com&sz=128"
   },
   {
     "name": "Karin Kimbrough",
@@ -30386,7 +30498,8 @@
     "canonical_topics": [
       "labor-economics",
       "policy-evaluation"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=linkedin.com&sz=128"
   },
   {
     "name": "Skylar Olsen",
@@ -30516,7 +30629,8 @@
       "labor-economics",
       "econometrics",
       "consumer-behavior"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=glassdoor.com&sz=128"
   },
   {
     "name": "Eugene Wei",
@@ -30648,7 +30762,8 @@
       "marketplaces",
       "consumer-behavior",
       "industrial-organization"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=platformed.info&sz=128"
   },
   {
     "name": "Lukas Vermeer",
@@ -30712,7 +30827,8 @@
       "experimentation",
       "product-analytics",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=lukasvermeer.medium.com&sz=128"
   },
   {
     "name": "Benedict Evans",
@@ -31001,7 +31117,7 @@
     "event_format": "meetup",
     "geographic_focus": "Houston, TX",
     "model_score": 0.0,
-    "image_url": "",
+    "image_url": "https://www.google.com/s2/favicons?domain=johndcook.com&sz=128",
     "embedding_text": "John D. Cook is a distinguished consulting statistician whose expertise spans a range of topics including applied statistics, numerical methods, and mathematical computing. With a client roster that includes industry giants such as Amazon, Google, and Microsoft, Cook brings a wealth of knowledge and experience to the table. This event is designed for professionals and enthusiasts alike who are eager to deepen their understanding of statistical applications in technology. Attendees can expect a mix of engaging talks and networking opportunities, allowing them to connect with like-minded individuals and industry experts. The focus will be on practical applications of statistical techniques, providing insights that are directly applicable to real-world challenges. Participants will have the chance to learn from Cook's extensive experience and gain valuable perspectives on the intersection of statistics and technology. The event is particularly suited for those with a background in data science or statistics, although anyone with a curiosity about the field is welcome. Networking opportunities will abound, as attendees will have the chance to engage in discussions and share ideas with peers. Overall, this event promises to be a rich learning experience, offering attendees the chance to enhance their skills and knowledge in applied statistics and its relevance in the tech industry.",
     "frequency": "one-time",
     "tfidf_keywords": [
@@ -31163,7 +31279,8 @@
       "statistics",
       "data-engineering"
     ],
-    "frequency": "one-time"
+    "frequency": "one-time",
+    "image_url": "https://www.google.com/s2/favicons?domain=hastie.su.domains&sz=128"
   },
   {
     "name": "Rob Tibshirani",
@@ -31231,7 +31348,8 @@
       "statistics",
       "machine-learning",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=tibshirani.su.domains&sz=128"
   },
   {
     "name": "Art Owen",
@@ -31297,7 +31415,8 @@
       "statistics",
       "machine-learning",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=artowen.su.domains&sz=128"
   },
   {
     "name": "Ryan Tibshirani",
@@ -31365,7 +31484,8 @@
       "forecasting",
       "econometrics",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=stat.berkeley.edu&sz=128"
   },
   {
     "name": "Anastasios Angelopoulos",
@@ -31429,7 +31549,8 @@
       "statistics",
       "machine-learning",
       "econometrics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=people.eecs.berkeley.edu&sz=128"
   },
   {
     "name": "Bojan Tunguz",
@@ -31630,7 +31751,8 @@
       "machine-learning",
       "recommendation-systems",
       "product-analytics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=amatria.in&sz=128"
   },
   {
     "name": "Jim Dowling",
@@ -31953,7 +32075,8 @@
       "machine-learning",
       "experimentation",
       "statistics"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=mlwave.com&sz=128"
   },
   {
     "name": "Zygmunt Zajac",
@@ -32018,7 +32141,8 @@
       "econometrics",
       "data-engineering"
     ],
-    "event_format": "online"
+    "event_format": "online",
+    "image_url": "https://www.google.com/s2/favicons?domain=fastml.com&sz=128"
   },
   {
     "name": "Scott Lundberg",
@@ -32059,7 +32183,7 @@
     "geographic_focus": "Seattle, WA",
     "frequency": "one-time",
     "model_score": 0.0,
-    "image_url": "",
+    "image_url": "https://www.google.com/s2/favicons?domain=scottlundberg.com&sz=128",
     "embedding_text": "The event featuring Scott Lundberg is centered around his influential work on SHAP (SHapley Additive exPlanations), a method that provides insights into the predictions of machine learning models. As a former researcher at Microsoft and a PhD graduate from the University of Washington, Lundberg's contributions to the field of explainable AI are significant, particularly highlighted during his oral presentation at NeurIPS 2017. Attendees of this event typically include data scientists, machine learning practitioners, and researchers who are keen to understand the intricacies of model interpretability and its practical applications in various industries. The format of the event will include a talk by Lundberg, providing an opportunity for attendees to engage with the material through Q&A sessions. This event is particularly valuable for those looking to deepen their understanding of how SHAP can be applied in real-world scenarios, as well as for those interested in the broader implications of explainable AI. Networking opportunities will be available, allowing attendees to connect with peers and industry leaders, fostering collaboration and knowledge exchange. Overall, this event promises to be a rich learning experience for those interested in the intersection of machine learning and interpretability, setting itself apart from other conferences by focusing on practical applications and expert insights.",
     "tfidf_keywords": [
       "SHAP",
@@ -32277,7 +32401,8 @@
       "machine-learning",
       "industrial-organization"
     ],
-    "event_format": "conference"
+    "event_format": "conference",
+    "image_url": "https://www.google.com/s2/favicons?domain=medium.com&sz=128"
   },
   {
     "name": "Ryan O'Neil",
@@ -32408,7 +32533,8 @@
       "machine-learning",
       "statistics"
     ],
-    "event_format": "conference"
+    "event_format": "conference",
+    "image_url": "https://www.google.com/s2/favicons?domain=d-krupke.github.io&sz=128"
   },
   {
     "name": "Laura Albert",
@@ -32540,7 +32666,8 @@
       "operations-research",
       "econometrics",
       "machine-learning"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=orinanobworld.blogspot.com&sz=128"
   },
   {
     "name": "Tallys Yunes",
@@ -33008,7 +33135,8 @@
       "marketing",
       "data-engineering"
     ],
-    "frequency": "one-time"
+    "frequency": "one-time",
+    "image_url": "https://www.google.com/s2/favicons?domain=blog.minethatdata.com&sz=128"
   },
   {
     "name": "Edward Nevraumont",
@@ -33268,7 +33396,8 @@
       "consumer-behavior",
       "econometrics",
       "marketing"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=anderson.ucla.edu&sz=128"
   },
   {
     "name": "Ron Berman",
@@ -33337,7 +33466,8 @@
       "statistics",
       "causal-inference",
       "data-engineering"
-    ]
+    ],
+    "image_url": "https://www.google.com/s2/favicons?domain=ron-berman.com&sz=128"
   },
   {
     "name": "EcoSta 2026 - CMStatistics",
@@ -33349,6 +33479,7 @@
       "statistics"
     ],
     "type": "Annual Conference",
-    "model_score": 0.0
+    "model_score": 0.0,
+    "image_url": "https://www.google.com/s2/favicons?domain=cmstatistics.org&sz=128"
   }
 ]
