@@ -356,6 +356,31 @@ def check_papers_sync(files: dict) -> list:
     return errors
 
 
+def check_image_url_format(files: dict) -> list:
+    """Validate image_url field format when present and non-empty.
+
+    A non-empty image_url must start with '/' (relative path) or 'http'
+    (absolute URL). Empty string is allowed (means no image).
+
+    Returns a list of error strings.
+    """
+    errors = []
+    for filename, data in files.items():
+        items = data if isinstance(data, list) else []
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            image_url = item.get("image_url")
+            if image_url is None or image_url == "":
+                continue  # absent or empty — allowed
+            name = item.get("name", item.get("title", "unknown"))
+            if not (image_url.startswith("/") or image_url.startswith("http")):
+                errors.append(
+                    f"[{filename}] '{name}': image_url '{image_url}' must start with / or http"
+                )
+    return errors
+
+
 def check_url(url: str, timeout: int = 10) -> tuple:
     """Check if URL is accessible. Returns (url, error_or_none)."""
     # Skip known problematic domains
@@ -491,6 +516,15 @@ def main(argv=None):
         all_errors.extend(exp_errors)
     else:
         print("   experiments.json valid")
+
+    # Check image_url format
+    print("\n5a. Checking image_url format...")
+    img_errors = check_image_url_format(files)
+    if img_errors:
+        print(f"   Found {len(img_errors)} image_url format error(s)")
+        all_errors.extend(img_errors)
+    else:
+        print("   image_url fields valid")
 
     # Check broken links (warnings only - don't fail build)
     link_errors = []

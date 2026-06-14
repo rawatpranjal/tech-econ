@@ -125,7 +125,7 @@ This is criterion (c) of the north star made concrete. It's also the most levera
 
 Audit (2026-05-27): `books.json` and `career.json` have zero `image_url` field. `packages.json` ~minimal coverage. `datasets.json` ~66% coverage. The card templates have inconsistent fallback chains — `datasets/list.html` is the weakest (initials-on-gradient, no favicon fallback like `talks/list.html` already has).
 
-- **N.1** Schema-add `image_url` field to `books.json` and `career.json`. Update validators.
+- **N.1** ✅ shipped e6431cc (2026-06-14) — Schema-add `image_url` field to `books.json` (102 entries) and `career.json` (639 entries). Added `check_image_url_format()` to validator. 11 new tests. Python 2029 pass. Also fixed stale bare-filename `eurocim-icon.gif` in community.json (would have tripped new format check).
 - **N.2** Books → ISBN cover API (Open Library, Google Books) batch-fetcher in `scripts/fetch_book_covers.py`. Cache to `static/images/books/`.
 - **N.3** Packages → GitHub repo OG image / org avatar fallback chain in `scripts/fetch_package_images.py`.
 - **N.4** Career + Community → run existing `scripts/fetch_og_images.py` and `download_*_images.py` against missing items. Backfill `image_url` field.
