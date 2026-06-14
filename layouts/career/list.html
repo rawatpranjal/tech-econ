@@ -87,11 +87,7 @@
                             {{ if .image_url }}
                             <img src="{{ .image_url }}" class="favicon" loading="lazy" onerror="this.style.display='none'">
                             {{ else if .url }}
-                            {{ if .image_url }}
-                        <img src="{{ .image_url }}" class="favicon" loading="lazy" onerror="this.style.display='none'">
-                        {{ else if .url }}
-                        <img class="favicon lazy-favicon" data-domain="{{ .url | replaceRE "^https?://([^/]+).*" "$1" }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%23e5e7eb' width='16' height='16' rx='2'/%3E%3C/svg%3E" alt="" loading="lazy" onerror="this.style.display='none'">
-                        {{ end }}
+                            <img class="favicon lazy-favicon" data-domain="{{ .url | replaceRE "^https?://([^/]+).*" "$1" }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%23e5e7eb' width='16' height='16' rx='2'/%3E%3C/svg%3E" alt="" loading="lazy" onerror="this.style.display='none'">
                             {{ end }}
                             <a href="{{ .url }}" target="_blank" rel="noopener" class="essential-name">{{ .name }}</a>
                             <span class="type-badge">{{ .type }}</span>
@@ -159,11 +155,7 @@
                             {{ if .image_url }}
                             <img src="{{ .image_url }}" class="favicon" loading="lazy" onerror="this.style.display='none'">
                             {{ else if .url }}
-                            {{ if .image_url }}
-                        <img src="{{ .image_url }}" class="favicon" loading="lazy" onerror="this.style.display='none'">
-                        {{ else if .url }}
-                        <img class="favicon lazy-favicon" data-domain="{{ .url | replaceRE "^https?://([^/]+).*" "$1" }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%23e5e7eb' width='16' height='16' rx='2'/%3E%3C/svg%3E" alt="" loading="lazy" onerror="this.style.display='none'">
-                        {{ end }}
+                            <img class="favicon lazy-favicon" data-domain="{{ .url | replaceRE "^https?://([^/]+).*" "$1" }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%23e5e7eb' width='16' height='16' rx='2'/%3E%3C/svg%3E" alt="" loading="lazy" onerror="this.style.display='none'">
                             {{ end }}
                             <span class="work-name">{{ .name }}</span>
                         </div>
