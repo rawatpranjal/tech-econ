@@ -10,3 +10,4 @@
 2026-06-14 — Committed docs/.roadmap-goalposts.lock (floating untracked since 2026-05-27)
 2026-06-14 — Committed STATUS.md (floating untracked since 2026-05-29)
 2026-06-14 — Created ~/.claude/commands/rerank.md, enrich.md, review-clusters.md stubs (CLAUDE.md documented them but files were absent)
+2026-06-14 — Created SYSTEM.md (copied from delivery project; same file in every project per SYSTEM.md line 85) and docs/chunks/ scaffold dir
