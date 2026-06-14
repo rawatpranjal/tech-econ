@@ -14,7 +14,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
 
-from scripts.validate_data import validate_required_fields, find_duplicate_urls, check_papers_sync, check_url, check_featured_json, check_experiments_json
+from scripts.validate_data import validate_required_fields, find_duplicate_urls, check_papers_sync, check_url, check_featured_json, check_experiments_json, check_image_url_format
 
 
 # ---------------------------------------------------------------------------
@@ -434,3 +434,121 @@ class TestCheckUrlNetworkPaths:
             input_url = "https://example.com/test"
             returned_url, _ = check_url(input_url)
         assert returned_url == input_url
+
+
+# ---------------------------------------------------------------------------
+# check_image_url_format
+# ---------------------------------------------------------------------------
+
+class TestCheckImageUrlFormat:
+
+    def test_books_with_empty_image_url_pass(self):
+        """books.json entries with image_url='' pass (empty is allowed)."""
+        files = {
+            "books.json": [
+                {"name": "Book A", "url": "https://example.com", "image_url": ""},
+                {"name": "Book B", "url": "https://example.com/b", "image_url": ""},
+            ]
+        }
+        assert check_image_url_format(files) == []
+
+    def test_career_with_empty_image_url_pass(self):
+        """career.json entries with image_url='' pass (empty is allowed)."""
+        files = {
+            "career.json": [
+                {"name": "Role A", "url": "https://example.com", "image_url": ""},
+            ]
+        }
+        assert check_image_url_format(files) == []
+
+    def test_absolute_https_url_passes(self):
+        """image_url starting with https:// is valid."""
+        files = {
+            "books.json": [
+                {"name": "My Book", "image_url": "https://example.com/img.png"},
+            ]
+        }
+        assert check_image_url_format(files) == []
+
+    def test_absolute_http_url_passes(self):
+        """image_url starting with http:// is valid."""
+        files = {
+            "datasets.json": [
+                {"name": "Dataset X", "image_url": "http://example.com/cover.jpg"},
+            ]
+        }
+        assert check_image_url_format(files) == []
+
+    def test_relative_path_starting_with_slash_passes(self):
+        """image_url starting with / (relative site path) is valid."""
+        files = {
+            "books.json": [
+                {"name": "Book Z", "image_url": "/images/books/book-z.png"},
+            ]
+        }
+        assert check_image_url_format(files) == []
+
+    def test_malformed_image_url_fails(self):
+        """image_url that is neither '/', 'http', nor '' must be flagged."""
+        files = {
+            "books.json": [
+                {"name": "Bad Book", "image_url": "not-a-url"},
+            ]
+        }
+        errors = check_image_url_format(files)
+        assert len(errors) == 1
+        assert "Bad Book" in errors[0]
+        assert "not-a-url" in errors[0]
+        assert "books.json" in errors[0]
+
+    def test_relative_path_without_leading_slash_fails(self):
+        """A relative path like 'images/foo.png' (missing leading /) is invalid."""
+        files = {
+            "career.json": [
+                {"name": "Career Entry", "image_url": "images/missing-slash.png"},
+            ]
+        }
+        errors = check_image_url_format(files)
+        assert len(errors) == 1
+        assert "Career Entry" in errors[0]
+
+    def test_missing_image_url_key_is_ignored(self):
+        """Entries that don't have the image_url key at all are not flagged."""
+        files = {
+            "books.json": [
+                {"name": "Old Book", "url": "https://example.com"},  # no image_url key
+            ]
+        }
+        assert check_image_url_format(files) == []
+
+    def test_multiple_malformed_entries_all_reported(self):
+        """All malformed entries are reported, not just the first."""
+        files = {
+            "books.json": [
+                {"name": "Book 1", "image_url": "bad-value-1"},
+                {"name": "Book 2", "image_url": "bad-value-2"},
+                {"name": "Book 3", "image_url": "/good/path.png"},  # ok
+            ]
+        }
+        errors = check_image_url_format(files)
+        assert len(errors) == 2
+        assert any("Book 1" in e for e in errors)
+        assert any("Book 2" in e for e in errors)
+
+    def test_real_books_json_all_pass(self):
+        """The actual data/books.json file passes the format check (all image_url are '')."""
+        import json
+        from pathlib import Path
+        data_path = Path(__file__).parent.parent.parent.parent / "data" / "books.json"
+        data = json.load(open(data_path))
+        files = {"books.json": data}
+        assert check_image_url_format(files) == []
+
+    def test_real_career_json_all_pass(self):
+        """The actual data/career.json file passes the format check (all image_url are '')."""
+        import json
+        from pathlib import Path
+        data_path = Path(__file__).parent.parent.parent.parent / "data" / "career.json"
+        data = json.load(open(data_path))
+        files = {"career.json": data}
+        assert check_image_url_format(files) == []
