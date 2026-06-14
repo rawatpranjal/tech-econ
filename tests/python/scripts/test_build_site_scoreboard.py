@@ -314,3 +314,116 @@ def test_main_produces_valid_json(tmp_path, capsys):
     assert data["metrics"]["latest"]["ndcg_at_10"] == pytest.approx(0.4191)
     assert data["replays"]["history"] == []
     assert len(data["experiments"]) == 1
+
+
+# ── _try_float / _try_int / _shorten_path ─────────────────────────────────────
+
+
+class TestTryFloat:
+    def test_valid_float(self):
+        assert bss._try_float("3.14") == pytest.approx(3.14)
+
+    def test_int_string_parses_to_float(self):
+        assert bss._try_float("42") == pytest.approx(42.0)
+
+    def test_empty_string_returns_default(self):
+        assert bss._try_float("") is None
+        assert bss._try_float("", 0.0) == 0.0
+
+    def test_whitespace_only_returns_default(self):
+        assert bss._try_float("   ") is None
+
+    def test_none_input_returns_default(self):
+        assert bss._try_float(None) is None
+        assert bss._try_float(None, -1.0) == -1.0
+
+    def test_non_numeric_returns_default(self):
+        assert bss._try_float("abc") is None
+        assert bss._try_float("abc", 0.5) == pytest.approx(0.5)
+
+    def test_strips_whitespace_before_parse(self):
+        assert bss._try_float("  2.718  ") == pytest.approx(2.718)
+
+
+class TestTryInt:
+    def test_valid_int(self):
+        assert bss._try_int("7") == 7
+
+    def test_empty_string_returns_default(self):
+        assert bss._try_int("") is None
+        assert bss._try_int("", 0) == 0
+
+    def test_none_input_returns_default(self):
+        assert bss._try_int(None) is None
+
+    def test_float_string_returns_default(self):
+        # "3.14" is not a valid int
+        assert bss._try_int("3.14") is None
+
+    def test_non_numeric_returns_default(self):
+        assert bss._try_int("foo", 99) == 99
+
+    def test_strips_whitespace(self):
+        assert bss._try_int("  15  ") == 15
+
+
+class TestShortenPath:
+    def test_returns_stem_of_path(self):
+        assert bss._shorten_path("reports/metrics_v2.csv") == "metrics_v2"
+
+    def test_no_directory_just_filename(self):
+        assert bss._shorten_path("model.pkl") == "model"
+
+    def test_empty_string_returns_empty(self):
+        assert bss._shorten_path("") == ""
+
+    def test_no_extension_returns_full_stem(self):
+        assert bss._shorten_path("reports/myfile") == "myfile"
+
+    def test_absolute_path(self):
+        assert bss._shorten_path("/tmp/output/rankings_2026.json") == "rankings_2026"
+
+
+# ── _find_latest_experiment_report ───────────────────────────────────────────
+
+
+class TestFindLatestExperimentReport:
+    def test_returns_none_when_dir_missing(self, tmp_path):
+        result = bss._find_latest_experiment_report(tmp_path / "nonexistent", "exp_aa_v1")
+        assert result is None
+
+    def test_returns_none_when_no_matching_files(self, tmp_path):
+        reports = tmp_path / "reports"
+        reports.mkdir()
+        result = bss._find_latest_experiment_report(reports, "exp_aa_v1")
+        assert result is None
+
+    def test_returns_single_matching_file(self, tmp_path):
+        reports = tmp_path / "reports"
+        reports.mkdir()
+        f = reports / "exp_aa_v1-2026-05-10.md"
+        f.write_text("# report")
+        result = bss._find_latest_experiment_report(reports, "exp_aa_v1")
+        assert result == f
+
+    def test_returns_lexicographically_latest_date(self, tmp_path):
+        reports = tmp_path / "reports"
+        reports.mkdir()
+        for date in ["2026-04-01", "2026-05-10", "2026-05-09"]:
+            (reports / f"exp_aa_v1-{date}.md").write_text("")
+        result = bss._find_latest_experiment_report(reports, "exp_aa_v1")
+        assert result.name == "exp_aa_v1-2026-05-10.md"
+
+    def test_ignores_different_experiment_id(self, tmp_path):
+        reports = tmp_path / "reports"
+        reports.mkdir()
+        (reports / "exp_bb_v1-2026-05-10.md").write_text("")
+        result = bss._find_latest_experiment_report(reports, "exp_aa_v1")
+        assert result is None
+
+    def test_ignores_files_without_date_pattern(self, tmp_path):
+        reports = tmp_path / "reports"
+        reports.mkdir()
+        (reports / "exp_aa_v1-latest.md").write_text("")
+        result = bss._find_latest_experiment_report(reports, "exp_aa_v1")
+        assert result is None

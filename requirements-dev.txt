@@ -13,3 +13,18 @@ mypy>=1.10
 # replacement for requirements.txt — heavy ML deps (sentence-transformers,
 # lightgbm) stay there.
 numpy>=1.26
+
+# Clustering scripts (cluster_resources, cluster_hdbscan, cluster_topics) are
+# tested at the pure-function level and import these at module load time.
+# Both have pre-built wheels — install is fast in CI.
+scikit-learn>=1.3
+hdbscan>=0.8
+
+# Scripts tested at collection time that import these at module load:
+#   check_links.py → aiohttp
+#   generate-highlight.py → yaml (PyYAML)
+#   validate_data.py → requests (also used by fetch_* scripts; stub is in each test
+#   file but collection-order-dependent without this entry)
+aiohttp>=3.9
+PyYAML>=6.0
+requests>=2.31

@@ -267,3 +267,58 @@ class TestCoerceMs:
         from datetime import datetime, timezone
         out = mod._coerce_ms("2026-05-04T10:00:00Z")
         assert datetime.fromtimestamp(out / 1000, tz=timezone.utc).isoformat().startswith("2026-05-04T10:00")
+
+
+# ---------------------------------------------------------------------------
+# _wrangler_query — preamble stripping + error paths (mocked subprocess)
+# ---------------------------------------------------------------------------
+
+import subprocess
+from types import SimpleNamespace
+
+
+def _proc(stdout="", returncode=0, stderr=""):
+    return SimpleNamespace(stdout=stdout, returncode=returncode, stderr=stderr)
+
+
+class TestWranglerQuery:
+    """Tests for _wrangler_query's Wrangler 4.x preamble stripping."""
+
+    def _patch(self, result):
+        return patch("analyze_experiments.subprocess.run", return_value=result)
+
+    def test_clean_json_array_parsed(self):
+        rows = [{"variant": "control", "clicks": 10}]
+        payload = [{"results": rows}]
+        with self._patch(_proc(stdout=json.dumps(payload))):
+            out = mod._wrangler_query("SELECT 1")
+        assert out == rows
+
+    def test_wrangler_4x_preamble_stripped(self):
+        rows = [{"variant": "treatment", "clicks": 5}]
+        payload = [{"results": rows}]
+        preamble = "Cloudflare agent skills are available...\nSome other line\n"
+        with self._patch(_proc(stdout=preamble + json.dumps(payload))):
+            out = mod._wrangler_query("SELECT 1")
+        assert out == rows
+
+    def test_no_json_array_raises_value_error(self):
+        with self._patch(_proc(stdout="no brackets here")):
+            with pytest.raises(ValueError, match="no JSON array"):
+                mod._wrangler_query("SELECT 1")
+
+    def test_invalid_json_raises_value_error(self):
+        with self._patch(_proc(stdout="[not valid json]")):
+            with pytest.raises(ValueError, match="JSON parse failed"):
+                mod._wrangler_query("SELECT 1")
+
+    def test_empty_results_list_returns_empty(self):
+        payload = [{"results": []}]
+        with self._patch(_proc(stdout=json.dumps(payload))):
+            out = mod._wrangler_query("SELECT 1")
+        assert out == []
+
+    def test_empty_payload_list_returns_empty(self):
+        with self._patch(_proc(stdout="[]")):
+            out = mod._wrangler_query("SELECT 1")
+        assert out == []

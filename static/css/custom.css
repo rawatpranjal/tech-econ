@@ -12596,3 +12596,34 @@ mark.partial {
 .site-table-container {
     margin: var(--space-4) 0 var(--space-8);
 }
+
+/* ── Book cover image wrapper (N.6) ─────────────────────────────────────────── */
+.book-card-cover {
+    width: 72px;
+    height: 100px;
+    margin: 0 auto 0.75rem;
+    flex-shrink: 0;
+}
+
+.book-card-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.book-card-fallback {
+    width: 72px;
+    height: 100px;
+    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.15);
+}

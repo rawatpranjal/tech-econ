@@ -7,9 +7,16 @@ from datetime import datetime, timezone
 
 import pytest
 
+import subprocess
+from types import SimpleNamespace
+from unittest.mock import patch
+
 from lib.d1_sessions import (
     Session,
     SessionLoadError,
+    _normalise_name,
+    _parse_event_data,
+    fetch_events_via_wrangler,
     parse_events_to_sessions,
 )
 
@@ -312,3 +319,136 @@ class TestLoadSessionsArgs:
         from lib.d1_sessions import load_sessions
         with pytest.raises(ValueError, match="api_url"):
             load_sessions(holdout_days=14, source="api")
+
+
+# ---------------------------------------------------------------------------
+# _normalise_name
+# ---------------------------------------------------------------------------
+class TestNormaliseName:
+    def test_strips_and_lowercases(self):
+        assert _normalise_name("  DoubleML  ") == "doubleml"
+
+    def test_empty_string_returns_none(self):
+        assert _normalise_name("") is None
+
+    def test_whitespace_only_returns_none(self):
+        assert _normalise_name("   ") is None
+
+    def test_none_returns_none(self):
+        assert _normalise_name(None) is None
+
+    def test_integer_returns_none(self):
+        assert _normalise_name(42) is None
+
+    def test_list_returns_none(self):
+        assert _normalise_name(["a"]) is None
+
+    def test_already_lowercase_passthrough(self):
+        assert _normalise_name("tool") == "tool"
+
+
+# ---------------------------------------------------------------------------
+# _parse_event_data
+# ---------------------------------------------------------------------------
+class TestParseEventData:
+    def test_dict_passthrough(self):
+        d = {"name": "Tool"}
+        assert _parse_event_data(d) is d
+
+    def test_json_string_parsed(self):
+        assert _parse_event_data('{"name": "Tool"}') == {"name": "Tool"}
+
+    def test_invalid_json_returns_none(self):
+        assert _parse_event_data("{bad json") is None
+
+    def test_json_list_returns_none(self):
+        assert _parse_event_data('["a", "b"]') is None
+
+    def test_json_scalar_returns_none(self):
+        assert _parse_event_data("42") is None
+
+    def test_empty_string_returns_none(self):
+        assert _parse_event_data("") is None
+
+    def test_whitespace_string_returns_none(self):
+        assert _parse_event_data("   ") is None
+
+    def test_none_returns_none(self):
+        assert _parse_event_data(None) is None
+
+    def test_integer_returns_none(self):
+        assert _parse_event_data(123) is None
+
+    def test_json_nested_dict_ok(self):
+        raw = '{"section": "packages", "name": "EconML"}'
+        result = _parse_event_data(raw)
+        assert result == {"section": "packages", "name": "EconML"}
+
+
+# ---------------------------------------------------------------------------
+# fetch_events_via_wrangler — subprocess error paths + Wrangler 4.x preamble
+# ---------------------------------------------------------------------------
+
+def _wrangler_result(stdout="", returncode=0, stderr=""):
+    return SimpleNamespace(stdout=stdout, returncode=returncode, stderr=stderr)
+
+
+class TestFetchEventsViaWrangler:
+    """Tests for fetch_events_via_wrangler mocking subprocess.run."""
+
+    def _patch(self, result):
+        return patch("lib.d1_sessions.subprocess.run", return_value=result)
+
+    def test_happy_path_returns_rows(self):
+        rows = [{"id": 1, "type": "click"}]
+        payload = [{"results": rows}]
+        with self._patch(_wrangler_result(stdout=json.dumps(payload))):
+            out = fetch_events_via_wrangler(since_ms=0, until_ms=1000)
+        assert out == rows
+
+    def test_wrangler_4x_preamble_stripped(self):
+        rows = [{"id": 2, "type": "impress"}]
+        payload = [{"results": rows}]
+        preamble = "Wrangler is up to date\nsome warning text\n"
+        with self._patch(_wrangler_result(stdout=preamble + json.dumps(payload))):
+            out = fetch_events_via_wrangler(since_ms=0, until_ms=1000)
+        assert out == rows
+
+    def test_nonzero_exit_raises(self):
+        with self._patch(_wrangler_result(returncode=1, stderr="auth failed")):
+            with pytest.raises(SessionLoadError, match="exit 1"):
+                fetch_events_via_wrangler(since_ms=0, until_ms=1000)
+
+    def test_no_json_array_raises(self):
+        with self._patch(_wrangler_result(stdout="no brackets here")):
+            with pytest.raises(SessionLoadError, match="no JSON array"):
+                fetch_events_via_wrangler(since_ms=0, until_ms=1000)
+
+    def test_invalid_json_raises(self):
+        # Regex finds [...] but the content is invalid JSON
+        with self._patch(_wrangler_result(stdout="[not valid json here]")):
+            with pytest.raises(SessionLoadError, match="JSON parse failed"):
+                fetch_events_via_wrangler(since_ms=0, until_ms=1000)
+
+    def test_file_not_found_raises(self):
+        with patch("lib.d1_sessions.subprocess.run", side_effect=FileNotFoundError("npx not found")):
+            with pytest.raises(SessionLoadError, match="invocation failed"):
+                fetch_events_via_wrangler(since_ms=0, until_ms=1000)
+
+    def test_subprocess_error_raises(self):
+        with patch("lib.d1_sessions.subprocess.run", side_effect=subprocess.SubprocessError("timeout")):
+            with pytest.raises(SessionLoadError, match="invocation failed"):
+                fetch_events_via_wrangler(since_ms=0, until_ms=1000)
+
+    def test_unknown_payload_shape_returns_empty(self):
+        # Payload is a plain list with no "results" key — returns [] gracefully
+        payload = [[{"id": 3}]]  # outer list whose first element isn't a dict
+        with self._patch(_wrangler_result(stdout=json.dumps(payload))):
+            out = fetch_events_via_wrangler(since_ms=0, until_ms=1000)
+        assert out == []
+
+    def test_empty_results_list_returns_empty(self):
+        payload = [{"results": []}]
+        with self._patch(_wrangler_result(stdout=json.dumps(payload))):
+            out = fetch_events_via_wrangler(since_ms=0, until_ms=1000)
+        assert out == []

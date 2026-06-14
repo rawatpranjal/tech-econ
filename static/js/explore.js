@@ -507,7 +507,7 @@
     }
 
     function getClusterItems(clusterId) {
-        // Get all item IDs belonging to this cluster
+        if (!clusterData) return [];
         const items = [];
         for (const [itemId, cid] of Object.entries(clusterData.item_to_cluster)) {
             if (cid === clusterId) {
@@ -666,5 +666,19 @@
         const div = document.createElement('div');
         div.textContent = str;
         return div.innerHTML;
+    }
+
+    // Test surface — pure helpers only (never call from production code paths)
+    if (typeof window !== 'undefined') {
+        window.Explore = window.Explore || {};
+        window.Explore._slugify = slugify;
+        window.Explore._isNewItem = isNewItem;
+        window.Explore._isPopularItem = isPopularItem;
+        window.Explore._getDailyHeroSeed = getDailyHeroSeed;
+        window.Explore._selectDailyHero = selectDailyHero;
+        window.Explore._truncate = truncate;
+        window.Explore._getEngagementBadge = getEngagementBadge;
+        window.Explore._scoreCluster = scoreCluster;
+        window.Explore._curatedSort = curatedSort;
     }
 })();

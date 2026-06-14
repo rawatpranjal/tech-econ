@@ -10,8 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.WORKFLOW_PAT }}
+          persist-credentials: true
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
       - name: Fetch citations

@@ -305,3 +305,235 @@ class TestErrorHandling:
         out = rank_module.calculate_freshness_scores(rows)
         assert "valid" in out
         assert "garbage" not in out
+
+
+# --------------------------------------------------------------------------- #
+# extract_item_name_from_path
+# --------------------------------------------------------------------------- #
+
+class TestExtractItemNameFromPath:
+    _fn = staticmethod(rank_module.extract_item_name_from_path)
+
+    def test_basic_two_segment_path(self):
+        assert self._fn("/packages/doubleml") == "doubleml"
+
+    def test_hyphens_become_spaces(self):
+        assert self._fn("/papers/causal-inference") == "causal inference"
+
+    def test_underscores_become_spaces(self):
+        assert self._fn("/resources/synthetic_control") == "synthetic control"
+
+    def test_lowercases_result(self):
+        assert self._fn("/packages/DoubleML") == "doubleml"
+
+    def test_none_returns_none(self):
+        assert self._fn(None) is None
+
+    def test_empty_string_returns_none(self):
+        assert self._fn("") is None
+
+    def test_single_segment_returns_none(self):
+        # Only one segment → not enough parts
+        assert self._fn("/packages") is None
+
+    def test_three_segments_returns_last(self):
+        assert self._fn("/section/category/item") == "item"
+
+
+# --------------------------------------------------------------------------- #
+# extract_url_domain
+# --------------------------------------------------------------------------- #
+
+class TestExtractUrlDomain:
+    _fn = staticmethod(rank_module.extract_url_domain)
+
+    def test_github_url(self):
+        assert self._fn("https://github.com/org/repo") == "github"
+
+    def test_arxiv_url(self):
+        assert self._fn("https://arxiv.org/abs/1234.5678") == "arxiv"
+
+    def test_youtube_url(self):
+        assert self._fn("https://youtube.com/watch?v=x") == "youtube"
+
+    def test_kaggle_url(self):
+        assert self._fn("https://kaggle.com/datasets/foo") == "kaggle"
+
+    def test_medium_url(self):
+        assert self._fn("https://medium.com/@author/post") == "medium"
+
+    def test_substack_url(self):
+        assert self._fn("https://author.substack.com/p/post") == "substack"
+
+    def test_other_url(self):
+        assert self._fn("https://some-other-site.io/doc") == "other"
+
+    def test_empty_string_returns_none_domain(self):
+        assert self._fn("") == "none"
+
+    def test_none_returns_none_domain(self):
+        assert self._fn(None) == "none"
+
+    def test_malformed_url_returns_none_domain(self):
+        # urlparse is lenient but domain would be empty
+        result = self._fn("not-a-url")
+        assert result in ("none", "other")
+
+
+# --------------------------------------------------------------------------- #
+# normalize_scores
+# --------------------------------------------------------------------------- #
+
+class TestNormalizeScores:
+    _fn = staticmethod(rank_module.normalize_scores)
+
+    def test_empty_dict_returns_empty(self):
+        assert self._fn({}) == {}
+
+    def test_all_equal_returns_half(self):
+        result = self._fn({"a": 5.0, "b": 5.0, "c": 5.0})
+        assert all(v == 0.5 for v in result.values())
+
+    def test_min_zero_max_one(self):
+        result = self._fn({"a": 0.0, "b": 1.0})
+        assert result["a"] == pytest.approx(0.0)
+        assert result["b"] == pytest.approx(1.0)
+
+    def test_result_in_unit_interval(self):
+        scores = {"x": 10, "y": 3, "z": 7, "w": 1}
+        result = self._fn(scores)
+        for v in result.values():
+            assert 0.0 <= v <= 1.0
+
+    def test_preserves_relative_order(self):
+        scores = {"high": 100, "mid": 50, "low": 10}
+        result = self._fn(scores)
+        assert result["high"] > result["mid"] > result["low"]
+
+    def test_keys_preserved(self):
+        scores = {"alpha": 1.0, "beta": 2.0}
+        assert set(self._fn(scores).keys()) == {"alpha", "beta"}
+
+
+# --------------------------------------------------------------------------- #
+# safe_join
+# --------------------------------------------------------------------------- #
+
+class TestSafeJoin:
+    _fn = staticmethod(rank_module.safe_join)
+
+    def test_none_returns_empty(self):
+        assert self._fn(None) == ""
+
+    def test_string_returned_as_is(self):
+        assert self._fn("causal inference") == "causal inference"
+
+    def test_list_joined_with_spaces(self):
+        assert self._fn(["causal", "inference"]) == "causal inference"
+
+    def test_list_with_none_items_filtered(self):
+        assert self._fn(["a", None, "b"]) == "a b"
+
+    def test_empty_list_returns_empty(self):
+        assert self._fn([]) == ""
+
+    def test_non_string_list_items_converted(self):
+        assert self._fn([1, 2, 3]) == "1 2 3"
+
+    def test_integer_converted_to_string(self):
+        assert self._fn(42) == "42"
+
+
+# --------------------------------------------------------------------------- #
+# apply_citations_boost
+# --------------------------------------------------------------------------- #
+
+class TestApplyCitationsBoost:
+    _fn = staticmethod(rank_module.apply_citations_boost)
+
+    def test_paper_with_citations_boosted(self, capsys):
+        items = [{"name": "high_cite", "type": "paper", "citations": 1000}]
+        scores = {"high_cite": 0.3}
+        result = self._fn(items, scores)
+        assert result["high_cite"] > 0.3
+
+    def test_paper_without_citations_unchanged(self, capsys):
+        items = [{"name": "nocite", "type": "paper", "citations": 0}]
+        scores = {"nocite": 0.3}
+        result = self._fn(items, scores)
+        assert result["nocite"] == pytest.approx(0.3)
+
+    def test_non_paper_type_not_boosted(self, capsys):
+        items = [{"name": "pkg", "type": "package", "citations": 999}]
+        scores = {"pkg": 0.3}
+        result = self._fn(items, scores)
+        assert result["pkg"] == pytest.approx(0.3)
+
+    def test_score_capped_at_one(self, capsys):
+        items = [{"name": "viral", "type": "paper", "citations": 1000000}]
+        scores = {"viral": 0.99}
+        result = self._fn(items, scores)
+        assert result["viral"] <= 1.0
+
+    def test_paper_not_in_scores_gets_baseline(self, capsys):
+        items = [{"name": "newpaper", "type": "paper", "citations": 50}]
+        scores = {}
+        result = self._fn(items, scores)
+        assert "newpaper" in result
+        assert result["newpaper"] > 0.0
+
+    def test_empty_items_returns_scores_unchanged(self, capsys):
+        scores = {"a": 0.5}
+        result = self._fn([], scores)
+        assert result == {"a": 0.5}
+
+
+# --------------------------------------------------------------------------- #
+# build_engagement_scores
+# --------------------------------------------------------------------------- #
+
+class TestBuildEngagementScores:
+    _fn = staticmethod(rank_module.build_engagement_scores)
+
+    def test_empty_data_returns_empty_scores(self):
+        scores, signals, _ = self._fn({})
+        assert len(scores) == 0
+
+    def test_click_adds_to_score(self):
+        data = {"clicks": [{"name": "DoubleML", "click_count": 10}]}
+        scores, signals, _ = self._fn(data)
+        assert "doubleml" in scores
+        assert scores["doubleml"] > 0
+
+    def test_click_count_proportional(self):
+        data1 = {"clicks": [{"name": "A", "click_count": 10}]}
+        data2 = {"clicks": [{"name": "A", "click_count": 20}]}
+        s1, _, _ = self._fn(data1)
+        s2, _, _ = self._fn(data2)
+        assert s2["a"] > s1["a"]
+
+    def test_name_lowercased(self):
+        data = {"clicks": [{"name": "MyTool", "click_count": 5}]}
+        scores, _, _ = self._fn(data)
+        assert "mytool" in scores
+        assert "MyTool" not in scores
+
+    def test_search_clicks_contribute_to_score(self):
+        import json
+        scores_imp_only, _, _ = self._fn({"impressions": [{"name": "item", "impression_count": 100}]})
+        # search_clicks rows use a nested clicks JSON array with {id, position} objects
+        scores_search_only, _, _ = self._fn({
+            "search_clicks": [{"clicks": json.dumps([{"id": "item", "position": 1}])}]
+        })
+        assert scores_imp_only.get("item", 0) > 0
+        assert scores_search_only.get("item", 0) > 0
+
+    def test_null_count_treated_as_zero(self):
+        data = {"clicks": [{"name": "A", "click_count": None}]}
+        scores, _, _ = self._fn(data)
+        assert scores.get("a", 0) == 0
+
+    def test_signals_track_raw_counts(self):
+        data = {"clicks": [{"name": "tool", "click_count": 7}]}
+        _, signals, _ = self._fn(data)
+        assert signals["tool"]["clicks"] == 7

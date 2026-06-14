@@ -84,7 +84,11 @@
                     <span class="essential-number">{{ $num }}</span>
                     <div class="essential-content">
                         <div class="essential-header">
+                            {{ if .image_url }}
+                            <img src="{{ .image_url }}" class="favicon" loading="lazy" onerror="this.style.display='none'">
+                            {{ else if .url }}
                             <img class="favicon lazy-favicon" data-domain="{{ .url | replaceRE "^https?://([^/]+).*" "$1" }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%23e5e7eb' width='16' height='16' rx='2'/%3E%3C/svg%3E" alt="" loading="lazy" onerror="this.style.display='none'">
+                            {{ end }}
                             <a href="{{ .url }}" target="_blank" rel="noopener" class="essential-name">{{ .name }}</a>
                             <span class="type-badge">{{ .type }}</span>
                         </div>
@@ -117,7 +121,11 @@
                     {{ range .Site.Data.career }}
                     {{ if and (eq .tab "understand") (eq .subtab "role-types") }}
                     <a href="{{ .url }}" target="_blank" rel="noopener" class="role-card">
+                        {{ if .image_url }}
+                        <img src="{{ .image_url }}" class="favicon" loading="lazy" onerror="this.style.display='none'">
+                        {{ else if .url }}
                         <img class="favicon lazy-favicon" data-domain="{{ .url | replaceRE "^https?://([^/]+).*" "$1" }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%23e5e7eb' width='16' height='16' rx='2'/%3E%3C/svg%3E" alt="" loading="lazy" onerror="this.style.display='none'">
+                        {{ end }}
                         <div class="role-info">
                             <span class="role-name">{{ .name }}</span>
                             <p class="role-desc">{{ .description | truncate 100 }}</p>
@@ -144,7 +152,11 @@
                     <a href="{{ .url }}" target="_blank" rel="noopener" class="work-card">
                         <div class="work-badge">{{ $domain }}</div>
                         <div class="work-content">
+                            {{ if .image_url }}
+                            <img src="{{ .image_url }}" class="favicon" loading="lazy" onerror="this.style.display='none'">
+                            {{ else if .url }}
                             <img class="favicon lazy-favicon" data-domain="{{ .url | replaceRE "^https?://([^/]+).*" "$1" }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%23e5e7eb' width='16' height='16' rx='2'/%3E%3C/svg%3E" alt="" loading="lazy" onerror="this.style.display='none'">
+                            {{ end }}
                             <span class="work-name">{{ .name }}</span>
                         </div>
                         <p class="work-desc">{{ .description }}</p>
@@ -299,7 +311,11 @@
                         {{ if eq . "economist-title" }}{{ $isEconomist = true }}{{ end }}
                     {{ end }}
                     <a href="{{ .url }}" target="_blank" rel="noopener" class="company-card" data-sector="{{ .sector }}" data-vertical="{{ .vertical | default "" }}" data-region="{{ $region }}" data-economist="{{ $isEconomist }}" data-name="{{ .name | lower }}">
+                        {{ if .image_url }}
+                        <img src="{{ .image_url }}" class="favicon" loading="lazy" onerror="this.style.display='none'">
+                        {{ else if .url }}
                         <img class="favicon lazy-favicon" data-domain="{{ .url | replaceRE "^https?://([^/]+).*" "$1" }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%23e5e7eb' width='16' height='16' rx='2'/%3E%3C/svg%3E" alt="" loading="lazy" onerror="this.style.display='none'">
+                        {{ end }}
                         <span class="company-name">{{ .name }}</span>
                         {{ if $isEconomist }}<span class="economist-badge" title="Verified economist job titles">🎓</span>{{ end }}
                     </a>
@@ -320,7 +336,11 @@
                     {{ range .Site.Data.career }}
                     {{ if and (eq .tab "find-jobs") (eq .subtab "job-boards") }}
                     <a href="{{ .url }}" target="_blank" rel="noopener" class="resource-card">
+                        {{ if .image_url }}
+                        <img src="{{ .image_url }}" class="favicon" loading="lazy" onerror="this.style.display='none'">
+                        {{ else if .url }}
                         <img class="favicon lazy-favicon" data-domain="{{ .url | replaceRE "^https?://([^/]+).*" "$1" }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%23e5e7eb' width='16' height='16' rx='2'/%3E%3C/svg%3E" alt="" loading="lazy" onerror="this.style.display='none'">
+                        {{ end }}
                         <div class="resource-content">
                             <span class="resource-name">{{ .name }}</span>
                             <p class="resource-desc">{{ .description }}</p>
@@ -344,7 +364,11 @@
                     {{ range .Site.Data.career }}
                     {{ if and (eq .tab "find-jobs") (eq .subtab "networking") }}
                     <a href="{{ .url }}" target="_blank" rel="noopener" class="resource-card">
+                        {{ if .image_url }}
+                        <img src="{{ .image_url }}" class="favicon" loading="lazy" onerror="this.style.display='none'">
+                        {{ else if .url }}
                         <img class="favicon lazy-favicon" data-domain="{{ .url | replaceRE "^https?://([^/]+).*" "$1" }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%23e5e7eb' width='16' height='16' rx='2'/%3E%3C/svg%3E" alt="" loading="lazy" onerror="this.style.display='none'">
+                        {{ end }}
                         <div class="resource-content">
                             <span class="resource-name">{{ .name }}</span>
                             <p class="resource-desc">{{ .description }}</p>
@@ -368,7 +392,11 @@
                     {{ range .Site.Data.career }}
                     {{ if and (eq .tab "find-jobs") (eq .subtab "materials") }}
                     <a href="{{ .url }}" target="_blank" rel="noopener" class="resource-card">
+                        {{ if .image_url }}
+                        <img src="{{ .image_url }}" class="favicon" loading="lazy" onerror="this.style.display='none'">
+                        {{ else if .url }}
                         <img class="favicon lazy-favicon" data-domain="{{ .url | replaceRE "^https?://([^/]+).*" "$1" }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%23e5e7eb' width='16' height='16' rx='2'/%3E%3C/svg%3E" alt="" loading="lazy" onerror="this.style.display='none'">
+                        {{ end }}
                         <div class="resource-content">
                             <span class="resource-name">{{ .name }}</span>
                             <p class="resource-desc">{{ .description }}</p>
@@ -412,7 +440,11 @@
                     {{ range $.Site.Data.career }}
                     {{ if and (eq .tab "interview") (eq .subtab $subtab) (not .archived) }}
                     <a href="{{ .url }}" target="_blank" rel="noopener" class="interview-card">
+                        {{ if .image_url }}
+                        <img src="{{ .image_url }}" class="favicon" loading="lazy" onerror="this.style.display='none'">
+                        {{ else if .url }}
                         <img class="favicon lazy-favicon" data-domain="{{ .url | replaceRE "^https?://([^/]+).*" "$1" }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%23e5e7eb' width='16' height='16' rx='2'/%3E%3C/svg%3E" alt="" loading="lazy" onerror="this.style.display='none'">
+                        {{ end }}
                         <div class="interview-content">
                             <span class="interview-name">{{ .name }}</span>
                             <p class="interview-desc">{{ .description }}</p>
@@ -447,7 +479,11 @@
                     {{ range .Site.Data.career }}
                     {{ if and (eq .tab "offers") (eq .subtab "negotiation") }}
                     <a href="{{ .url }}" target="_blank" rel="noopener" class="negotiation-card">
+                        {{ if .image_url }}
+                        <img src="{{ .image_url }}" class="favicon" loading="lazy" onerror="this.style.display='none'">
+                        {{ else if .url }}
                         <img class="favicon lazy-favicon" data-domain="{{ .url | replaceRE "^https?://([^/]+).*" "$1" }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%23e5e7eb' width='16' height='16' rx='2'/%3E%3C/svg%3E" alt="" loading="lazy" onerror="this.style.display='none'">
+                        {{ end }}
                         <div class="negotiation-content">
                             <span class="negotiation-name">{{ .name }}</span>
                             <p class="negotiation-desc">{{ .description }}</p>
@@ -470,7 +506,11 @@
                     {{ range .Site.Data.career }}
                     {{ if and (eq .tab "offers") (eq .subtab "visa") }}
                     <a href="{{ .url }}" target="_blank" rel="noopener" class="resource-card">
+                        {{ if .image_url }}
+                        <img src="{{ .image_url }}" class="favicon" loading="lazy" onerror="this.style.display='none'">
+                        {{ else if .url }}
                         <img class="favicon lazy-favicon" data-domain="{{ .url | replaceRE "^https?://([^/]+).*" "$1" }}" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect fill='%23e5e7eb' width='16' height='16' rx='2'/%3E%3C/svg%3E" alt="" loading="lazy" onerror="this.style.display='none'">
+                        {{ end }}
                         <div class="resource-content">
                             <span class="resource-name">{{ .name }}</span>
                             <p class="resource-desc">{{ .description }}</p>

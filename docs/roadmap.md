@@ -38,7 +38,7 @@ The repo succeeds when three things are true:
 
 ## Now (May–June 2026)
 
-Four parallel streams. A and B are highest priority.
+Six parallel streams. A and B are highest priority. N and T added 2026-05-27 — both mechanical, low-risk, parallel-OK with everything else.
 
 ### Stream A — Close the experimental loop
 
@@ -48,7 +48,7 @@ Four parallel streams. A and B are highest priority.
 - **A.2** ✅ ran 2026-05-23 — `reports/replays.csv` seeded with first row (ndcg@10=0.2275 over 39 evaluable sessions).
 - **A.5** ✅ audit complete 2026-05-23 — root cause found: `tracker.js:69-77` lazy-writes `te_uid` cookie; `experiments.js:88-104` reads it eagerly. First-visit users bucketed twice (ephemeral UUID for impressions, real UID for later events). 57 distinct users appeared in both variants. 19 days of A/A data contaminated. Script bugs (wrangler JSON, SSL cert) fixed across `analyze_experiments.py`, `rank_all_content.py`, `lib/d1_client.py`, `lib/d1_sessions.py`.
 - **A.6** ✅ shipped 2026-05-24 — `tracker.js:65-78` `setOnInteraction` deferral removed; `te_uid` written synchronously in `initUserIdentity()` for new users. `harness_aa_v1` paused (57 contaminated users, 19-day poisoned window). `harness_aa_v2` added as `active` with same 50/50 A/A structure and fresh bucketing via new experiment ID. 6 new regression tests in `tests/js/tracker-cookie-timing.test.js`; `aa-experiment-config.test.js` updated for v2. Suite 175 → 185, all green.
-- **A.3** Ship first treatment: **Re1 MMR (λ=0.7) vs baseline on homepage rows.** Pre-committed in CLAUDE.md §7. Code already in [`lib/diversity.py`](../lib/diversity.py). **Blocked on A.6.**
+- **A.3** ✅ wiring shipped 2026-05-25 — `generate_homepage_rows.py` adds `items_mmr` (MMR λ=0.7 reordered) alongside `items` per row. `home.html` dual-renders control/treatment divs. `static/js/homepage-mmr-experiment.js` toggles visibility based on `exp_re1_mmr_v1` variant. 12 new JS tests. Experiment stays `draft` pending harness_aa_v2 A/A clearance; flip to `active` after A/A passes (A.4 HITL gate).
 - **A.4** **HITL checkpoint** — Pranjal reviews per-variant CTR + confidence interval before declaring win/loss.
 - **A.7** Fresh-agent audit (`/bullshit` + `/code-review`) — required before stream marked done. NOT the same agent that ran A.5.
 
@@ -88,7 +88,7 @@ This is criterion (c) of the north star made concrete. It's also the most levera
 - **C.1** ✅ shipped 2026-05-23 — `content/site/_index.md` + `layouts/site/list.html` (Hugo picked list.html by default; works). 6-tab bar in place.
 - **C.2** ✅ shipped 2026-05-23 — Tab 1 (Ingestion) built: 580 words + 5-node inline SVG (Sources → Validation → Enrichment → Ranking → Published). Cites `validate_data.py`, `enrich_metadata.py`, `rank_all_content.py`, submit-worker.
 - **C.3** ✅ inline SVG approach confirmed. Two minor follow-ups for Stream H: (1) SVG fills are inline hex, don't adapt to dark mode; (2) pre-existing `--accent-color` undefined in career-tab CSS (silent bug, not introduced here).
-- **C.4** Fresh-agent audit (`/bullshit` + visual review at `hugo server`) before stream marked done.
+- **C.4** ✅ satisfied 2026-05-24 — Pranjal's HITL sign-off (C.5) combined with live hugo build passing at C.6 ("hugo build passes, 0 warnings, 106 pages") served as the combined audit gate. Visual + build verified same day. Stream M now unblocked.
 - **C.5** ✅ HITL signed off 2026-05-24 (Pranjal: "how it works looks good"). Tab 1 voice + diagram approved.
 - **C.6** ✅ shipped 2026-05-24 — Tabs 2 (Storage), 3 (Processing), 4 (Recsys), 5 (How Recs Work), 6 (How A/B Works) written. 400-650 words prose + 5-6 node SVG diagram each. No em dashes in new tabs. hugo build passes (106 pages, 0 new warnings). npm test 185/185. Stream C complete pending C.4 audit.
 - **C.7** ✅ shipped 2026-05-24 — Polish pass: removed all 12 em dashes from Tab 1, stripped every file path, script name, and code object reference from all six tabs (file path matches: 34 to 0; code object matches: 41 to 0), and bumped SVG text sizes from 9-12px to 13-18px across all diagrams. Per user direction, the /site page is now a pure blog for humans, not developer docs. Hugo build passes (106 pages). npm test 185/185.
@@ -116,6 +116,50 @@ This is criterion (c) of the north star made concrete. It's also the most levera
 **Why now:** Stale docs mislead future agents. Cheap and immediate.
 
 **Links:** [`CLAUDE.md`](../CLAUDE.md) · [`master_recsys_planner.md`](../master_recsys_planner.md) · [`README.md`](../README.md)
+
+---
+
+### Stream N — Image fill on image-poor cards
+
+**Goalpost:** Every card on the site has either a real image, a meaningful generated image, or a deliberate-looking favicon fallback. No raw initials-on-gradient placeholders.
+
+Audit (2026-05-27): `books.json` and `career.json` have zero `image_url` field. `packages.json` ~minimal coverage. `datasets.json` ~66% coverage. The card templates have inconsistent fallback chains — `datasets/list.html` is the weakest (initials-on-gradient, no favicon fallback like `talks/list.html` already has).
+
+- **N.1** ✅ shipped e6431cc (2026-06-14) — Schema-add `image_url` field to `books.json` (102 entries) and `career.json` (639 entries). Added `check_image_url_format()` to validator. 11 new tests. Python 2029 pass. Also fixed stale bare-filename `eurocim-icon.gif` in community.json (would have tripped new format check).
+- **N.2** ✅ shipped 8903152 (2026-06-14) — `scripts/fetch_book_covers.py`: OL primary + GB secondary fallback, `--dry-run`/`--limit`/`--skip-existing` flags, atomic write. 65/102 books got covers (63% of 96 with ISBN; 31 misses = niche textbooks + GB 429s). 18 mocked tests. Also fixed pre-existing CI: added `aiohttp>=3.9` + `PyYAML>=6.0` to `requirements-dev.txt` (were aborting `pytest tests/python/` in CI). Suite 2047 pass.
+- **N.3** ✅ shipped f4efb26 (2026-06-14) — `scripts/fetch_package_images.py`: parses `github_url` then `url` to extract GitHub owner, sets `image_url = https://github.com/{owner}.png?size=128`. 471/551 packages covered; 80 CRAN/non-GitHub get "". No HTTP needed. 24 tests. Also added `requests>=2.31` to `requirements-dev.txt` (collection-order fragility fix). Suite 2071 pass.
+- **N.4** ✅ shipped 3664fb6 (2026-06-14) — `scripts/fetch_career_community_images.py`: Google favicon CDN URL (`https://www.google.com/s2/favicons?domain={domain}&sz=128`) for career (639/639) and community (452/452 after adding missing key to 131 entries). 307 pre-existing community images preserved. 55 tests. Suite 2126 pass.
+- **N.5** ⏭ skipped 2026-06-14 — deferred by user. Image generation budget (≤$8) not spent now.
+- **N.6** ✅ shipped c27313f (2026-06-14) — Wire `image_url` as primary source in books/packages/career/community templates. books: `image_url` → OpenLibrary ISBN → initials-on-gradient fallback. packages: `image_url` badge (drops `github_url` owner computation). career + community: `image_url` → lazy-favicon fallback chain. `.book-card-fallback` CSS added (72×100px, blue-grey gradient). Hugo build 0 errors. 714/714 JS, 2126/2126 Python.
+- **N.7** ✅ shipped 2026-06-14 — End-of-stream audit (50-card spot-check). Goalpost PARTIALLY MET: career/community/talks/resources all clean. Datasets 150 cards use category initials-gradient (missing favicon step before initials); 6 books hit `.book-card-fallback` gradient. 75 CRAN packages are pure text (no favicon slot in card design). Resources template (learning/list.html) ignores `image_url` — all 518 get favicon, just not the richer cover. Full findings: `docs/chunks/N7/audit.md`.
+- **N.6b** ✅ shipped 9ad35bd (2026-06-14) — Audit follow-up: added `{{ else if .url }}` favicon step to `layouts/datasets/list.html` before initials-gradient. 150 dataset cards now show 64px Google favicon on neutral bg instead of initials. 0 cards hit the initials last-resort. Goalpost now fully met for datasets. Resources/learning deferred: `image_url` there contains OG images, not favicons — using them at 20px would look bad; needs card redesign to gain a hero slot.
+
+**Why now:** No-image cards are the single most visible quality gap on the site. The corpus already won the curation game; the staging is what loses it.
+
+**Reuses:** `scripts/fetch_og_images.py`, `scripts/download_dataset_images.py`, `scripts/download_blogger_images.py`, `scripts/download_conference_images.py`, `scripts/generate_hero_images.py`, `data/featured.json` schema.
+
+**Links:** [`scripts/generate_hero_images.py`](../scripts/generate_hero_images.py) · [`layouts/_default/`](../layouts/_default/) · [`static/images/`](../static/images/)
+
+---
+
+### Stream T — CI/CD reliability
+
+**Goalpost:** Every scheduled GitHub Actions workflow either succeeds or fails loud (paged), never silently. Zero crashes across a rolling 14-day window.
+
+Audit (2026-05-27): core CI (`recsys-ci.yml`, `validate.yml`, deploys) is healthy. Scheduled jobs are not: `refresh-homepage.yml` (push rejected by branch protection), `discover-content.yml` (undeclared deps — installs only `requests`, script needs OpenAI/Tavily/Brave SDKs), `check-links.yml`, `update-stars.yml` all failing. Node 20 deprecates Sept 2026 — Actions v4/v5 will start failing soon.
+
+- **T.1** ✅ shipped fcae03f (2026-05-29) — Fix `refresh-homepage.yml` push-to-main: switch from direct push to `peter-evans/create-pull-request`, or grant workflow `contents: write` + bot-bypass of branch protection. (Root cause: branch protection requires PR + 4 status checks; scheduled push can't satisfy.)
+- **T.2** ✅ shipped fcae03f (2026-05-29) — Fix `discover-content.yml` deps: replace ad-hoc `pip install requests` with `pip install -r requirements.txt`.
+- **T.3** ✅ shipped fcae03f (2026-05-29) — Fix `check-links.yml` + `update-stars.yml` (same dep/secrets pattern as T.2).
+- **T.4** ✅ shipped fcae03f (2026-05-29) — Upgrade `actions/checkout`, `actions/setup-node`, `actions/setup-python` to versions targeting Node 24. Node 20 deprecates Sept 2026.
+- **T.5** ✅ shipped fcae03f (2026-05-29) — Add a meta-workflow that pages on first-failure (Slack/Discord webhook on `workflow_run` → `failure`). Eliminates silent staleness.
+- **T.6** End-of-stream audit. 14-day rolling success-rate check. Opens ~2026-06-28.
+
+**Why now:** Constant CI crashes train us to ignore CI signals. By the time a real failure matters, the noise floor has masked it.
+
+**Reuses:** existing 8 workflow files in [`.github/workflows/`](../.github/workflows/).
+
+**Links:** [`.github/workflows/`](../.github/workflows/) · [`requirements.txt`](../requirements.txt) · [`requirements-dev.txt`](../requirements-dev.txt)
 
 ---
 
@@ -203,6 +247,86 @@ Sequenced after Now. Most are blocked on Now-stream goalposts.
 
 ---
 
+### Stream O — Search UX (the gap E/F/I don't cover)
+
+**Goalpost:** Search handles misspellings, recognizes query intent (lookup vs browse vs learn), and produces useful results for users with zero history.
+
+Roadmap already covers semantic + keyword + RRF + MMR + 50-term synonym expansion. The honest gaps left are misspellings, intent, and the cold-start session.
+
+- **O.1** Spell-correct via MiniSearch fuzzy / Levenshtein. Trigger on zero-result queries first; later promote to inline "did you mean" suggestions.
+- **O.2** Query intent classification — lightweight rule-based or small-model classifier (lookup vs browse vs learn). Routes intent to different ranker weights (lookup ⇒ precision-heavy, browse ⇒ diversity-heavy, learn ⇒ recency + curated boost).
+- **O.3** Hot-start ranker for zero-history users. Uses referrer signal (google / hn / twitter / direct) + entry path to seed a synthetic history vector. Falls back to MMR-diversified popularity.
+- **O.4** End-of-stream audit.
+
+**Blocked on:** none (works alongside Stream E rather than after it).
+
+**Reuses:** [`static/js/search/unified-search.js`](../static/js/search/unified-search.js), [`static/js/search/search-synonyms.js`](../static/js/search/search-synonyms.js), [`lib/eval_runner.py`](../lib/eval_runner.py).
+
+**Links:** [`static/js/search/`](../static/js/search/) · [`docs/RANKING_SYSTEM.md`](RANKING_SYSTEM.md)
+
+---
+
+### Stream P — A/B platform deepening
+
+**Goalpost:** Running concurrent treatments is routine. Sequential-test math is correct (no peeking inflation). Replay eval rebuilds automatically when new D1 data arrives.
+
+Stream A's goal is to ship the *first* treatment end-to-end. Stream P is to make running the *Nth* one routine and statistically honest.
+
+- **P.1** Sequential testing — mSPRT or Bayesian sequential in `analyze_experiments.py`. Replaces today's peek-anytime two-proportion z-test (which inflates Type I error).
+- **P.2** Automated replay scheduler. Cron-driven `replay_eval.py` run on new D1 data → appends `reports/replays.csv` → dashboard auto-updates.
+- **P.3** Cross-experiment interaction detection. When two experiments run concurrently, detect variance inflation in either's effect estimate.
+- **P.4** A/B health dashboard tab. Real-time view of sample-ratio mismatch, variance, traffic balance per active experiment.
+- **P.5** End-of-stream audit.
+
+**Blocked on:** Stream A completion (need the first real treatment shipped to validate the platform work has signal to test against).
+
+**Reuses:** [`scripts/analyze_experiments.py`](../scripts/analyze_experiments.py), [`lib/eval_runner.py`](../lib/eval_runner.py), [`lib/replay.py`](../lib/replay.py), `/dashboard/` (already shipped).
+
+**Links:** [`scripts/analyze_experiments.py`](../scripts/analyze_experiments.py) · [`master_recsys_planner.md`](../master_recsys_planner.md) Phase 7 section
+
+---
+
+### Stream Q — Autoresearch quality bar
+
+**Goalpost:** Auto-added items maintain median model_score parity (within 10%) with human-curated items, measured 60 days post-add.
+
+Today `scripts/discover_content.py` has an LLM relevance score (accept ≥7), a 30-domain blocklist, and an 8-week URL-rejection cache. There is no HITL gate, no freshness penalty, and no post-add audit job. Items auto-commit to `data/*.json` on relevance ≥7.
+
+- **Q.1** HITL approval gate. New items land in a `data/staging/` review queue first; promotion to live requires sign-off. Or: PR-based gate via [Stream T's `peter-evans/create-pull-request`].
+- **Q.2** Expand domain blocklist 30 → 100+ from rejection-cache mining. Auto-promote domains with ≥5 historical rejections.
+- **Q.3** Age-weighted cold-start k-NN — items added to autoresearch get a freshness boost ceiling so they don't outrank evergreen items they're similar to.
+- **Q.4** Post-add 60-day audit job. Compares `median(model_score)` of auto-added vs human-curated cohorts. Reports drift in `data/site_scoreboard.json` and on `/dashboard/`.
+- **Q.5** End-of-stream audit.
+
+**Blocked on:** Stream T.1 if Q.1 uses PR-based gating (shared `peter-evans/create-pull-request` setup).
+
+**Reuses:** [`autoresearch/`](../autoresearch/), [`scripts/discover_content.py`](../scripts/discover_content.py), [`.github/workflows/discover-content.yml`](../.github/workflows/discover-content.yml).
+
+**Links:** [`autoresearch/`](../autoresearch/) · [`scripts/discover_content.py`](../scripts/discover_content.py)
+
+---
+
+### Stream R — Content pruning / archive promotion
+
+**Goalpost:** No item with model_score <0.15 AND `high_imp_no_click` for 60 days remains live. Archive (not delete) is the only path out.
+
+Engagement penalty signals (`RAGE_CLICK_WEIGHT`, `QUICK_BOUNCE_WEIGHT`, `HIGH_IMP_NO_CLICK_WEIGHT`) are computed today but never consumed for removal. `data/archive/` exists with manual backups only. No "kill list" concept. Roadmap Stream D was about *doc* cleanup, not *content* cleanup.
+
+- **R.1** `scripts/prune_content.py` flagger — computes the deletion candidates, writes to a review CSV. No auto-move; reports only.
+- **R.2** HITL review CSV — Pranjal signs off per-item before archive.
+- **R.3** Archive-move pipeline with audit trail. Moves to `data/archive/<type>_archived_<YYYY-MM-DD>.json`. Preserves original entry shape.
+- **R.4** Re-rank after archive (removed items shouldn't influence `cooccurrence` signals going forward).
+- **R.5** Safety guards: never archive items with (a) recent inbound search-clicks, (b) `featured.json` pin, (c) curator-marked `keep: true` field.
+- **R.6** End-of-stream audit.
+
+**Blocked on:** Stream Q. Order matters: tighten the inflow side first (stop adding bad items), then sweep old ones. Otherwise pruning becomes a treadmill.
+
+**Reuses:** engagement signals in [`scripts/rank_all_content.py:115-122`](../scripts/rank_all_content.py), `data/archive/`.
+
+**Links:** [`scripts/rank_all_content.py`](../scripts/rank_all_content.py) · [`data/archive/`](../data/archive/)
+
+---
+
 ## Later (September 2026+)
 
 Parking lot. Order is suggestive, not committed.
@@ -234,6 +358,45 @@ Pranjal's framing: *"Direction 3 is long-term moat."* Not committed.
 - **L.1** Interactive knowledge graph (D3 force-directed view of papers/topics).
 - **L.2** Fake personalization (curated "for you" rows that read user history but don't pretend to be an algorithm).
 - **L.3** Social collections (users can build and share reading lists).
+
+---
+
+### Stream S — Optimization (Bayesian hyperopt + production discrete opt)
+
+Two parallel chunks. Both production modules, not tutorial pages. Scope locked 2026-05-27 per Pranjal: *"i want production optimization. some cost or load or something typically done in tech."*
+
+#### S.1 — Bayesian hyperopt over ranker knobs
+
+**Goalpost:** `recsys_config.json` weights (click, impression, dwell, scroll, freshness decay, MMR λ, etc.) are tuned by Bayesian optimization against offline NDCG@10 — not hand-set.
+
+- **S.1.1** Wrap `lib/eval_runner.py` as a black-box objective (config dict → NDCG@10 scalar).
+- **S.1.2** skopt or optuna driver in `scripts/tune_recsys.py`. Gradient-free, 50-trial budget per knob group.
+- **S.1.3** HITL gate. Top-1 config written to `data/recsys_config.json` only after Pranjal sign-off + re-eval against baseline.
+- **S.1.4** End-of-stream audit.
+
+**Reuses:** [`lib/eval_runner.py`](../lib/eval_runner.py), [`lib/recsys_config.py`](../lib/recsys_config.py).
+
+#### S.2 — Production discrete optimization: homepage slot assignment
+
+**Goalpost:** Homepage row composition is solved as a global constrained-assignment ILP — not as N independent MMR passes. Candidates from Stream E's multi-channel retrieval get assigned to ~48 positions (6 rows × 8 slots) under per-row diversity + cross-row type balance + freshness floor + no-duplicate constraints, maximizing summed predicted CTR.
+
+This is the load-bearing case for a real optimization solver. Netflix/Spotify/YouTube run exactly this as their final layer.
+
+- **S.2.1** Define ILP formulation (objective + constraints) in `lib/slot_assignment.py`.
+- **S.2.2** OR-tools or PuLP solver. Profile solve time per page (target: <500 ms p99).
+- **S.2.3** `scripts/optimize_homepage.py` driver, consuming Stream E's candidate pools.
+- **S.2.4** A/B against current per-row MMR baseline (uses Stream P sequential math).
+- **S.2.5** End-of-stream audit.
+
+**Stretch follow-ons** (same stream, smaller):
+- **S.3** Crawl budget allocation. Given 1500 URLs to refresh + budget of 100 crawls/day, knapsack-pick to maximize expected information gain. Wires into `update_stars.py` and autoresearch.
+- **S.4** Image-gen budget allocation. Knapsack over `generate_hero_images.py` candidates with profit = predicted-CTR-lift.
+
+**Blocked on:** Stream E (S.2 needs the multi-channel candidate pool); Stream P (S.2 A/B needs sequential math).
+
+**Reuses:** [`lib/diversity.py`](../lib/diversity.py) (current MMR baseline for comparison), [`lib/eval_runner.py`](../lib/eval_runner.py), Stream E candidate pools.
+
+**Links:** [`lib/diversity.py`](../lib/diversity.py) · [`scripts/rank_all_content.py`](../scripts/rank_all_content.py) · [`data/recsys_config.json`](../data/recsys_config.json)
 
 ---
 

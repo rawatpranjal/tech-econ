@@ -174,6 +174,50 @@ class TestMMR:
         with pytest.raises(TypeError, match="callable"):
             mmr_rerank(items, "not a function")  # type: ignore[arg-type]
 
+    def test_custom_id_field(self):
+        # generate_homepage_rows.py calls mmr_rerank(..., id_field="name")
+        # Items use "name" as the identifier, not the default "id".
+        # The embedding lookup receives item["name"] rather than item["id"].
+        items = [
+            {"name": "DoubleML", "rrfScore": 0.9, "_emb": vec(1, 0, 0)},
+            {"name": "EconML",   "rrfScore": 0.8, "_emb": vec(0, 1, 0)},
+            {"name": "causalml", "rrfScore": 0.7, "_emb": vec(0.95, 0.05, 0)},
+        ]
+
+        def lookup_by_name(name):
+            for it in items:
+                if it["name"] == name:
+                    return np.array(it["_emb"])
+            return None
+
+        out = mmr_rerank(items, lookup_by_name, id_field="name", lambda_=0.5)
+        assert len(out) == 3
+        # With lambda=0.5 and causalml nearly co-linear with DoubleML, EconML
+        # should be selected 2nd (maximally diverse)
+        names = [it["name"] for it in out]
+        assert "DoubleML" in names
+        assert "EconML" in names
+        assert "causalml" in names
+
+    def test_items_missing_custom_id_field_appended_at_end(self):
+        # Items without the custom id_field key have no embedding → appended after
+        items = [
+            {"name": "DoubleML", "rrfScore": 0.9, "_emb": vec(1, 0, 0)},
+            {"name": "EconML",   "rrfScore": 0.8, "_emb": vec(0, 1, 0)},
+            {"title": "No Name Field", "rrfScore": 0.5},  # no "name" key
+        ]
+
+        def lookup_by_name(name):
+            for it in items:
+                if it.get("name") == name:
+                    return np.array(it["_emb"])
+            return None
+
+        out = mmr_rerank(items, lookup_by_name, id_field="name", lambda_=0.7)
+        assert len(out) == 3
+        # The item without "name" has no embedding → appended last
+        assert out[-1].get("title") == "No Name Field"
+
 
 # ---------------------------------------------------------------------------
 # Realistic scenario (mirrors the JS test)

@@ -17,12 +17,18 @@ Usage:
 
 import json
 import argparse
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from collections import defaultdict
 
+# Allow importing lib/ from the repo root
+sys.path.insert(0, str(Path(__file__).parent.parent))
 
 DATA_DIR = Path(__file__).parent.parent / "data"
+EMBEDDINGS_PATH = Path(__file__).parent.parent / "static" / "embeddings" / "search-embeddings.json"
+
+MMR_LAMBDA = 0.7
 
 TEMPLATE_HERO = "hero"
 TEMPLATE_STANDARD = "standard"
@@ -33,6 +39,68 @@ HERO_ITEMS = 10  # target items for hero/trending row
 
 # Types with rich visual assets — exclude papers, career, community from hero
 HERO_ALLOWED_TYPES = {"package", "dataset", "resource", "talk", "book"}
+
+
+def load_embeddings_lookup():
+    """Load search-embeddings.json and return a name→np.ndarray lookup callable.
+
+    Returns None if the file is missing or numpy is unavailable — MMR is
+    skipped gracefully, items_mmr falls back to items ordering.
+    """
+    try:
+        import numpy as np
+    except ImportError:
+        print("  Warning: numpy not available — MMR ordering skipped")
+        return None
+
+    if not EMBEDDINGS_PATH.exists():
+        print(f"  Warning: {EMBEDDINGS_PATH.name} not found — MMR ordering skipped")
+        return None
+
+    print("  Loading embeddings for MMR ordering...")
+    with open(EMBEDDINGS_PATH) as f:
+        data = json.load(f)
+
+    # Build lowercase name → numpy embedding map
+    table: dict[str, "np.ndarray"] = {}
+    for item in data.get("items", []):
+        name = item.get("name", "")
+        emb = item.get("embedding")
+        if name and emb:
+            table[name.lower().strip()] = np.array(emb, dtype=np.float32)
+
+    print(f"  Loaded {len(table):,} embeddings")
+
+    def lookup(name: str):
+        if not name:
+            return None
+        return table.get(name.lower().strip())
+
+    return lookup
+
+
+def apply_mmr_ordering(items: list[dict], emb_lookup) -> list[dict]:
+    """Return MMR-reordered copy of items using lambda=MMR_LAMBDA.
+
+    Falls back to the original ordering if lookup is None or lib.diversity
+    is unavailable. items_mmr is always the same length as items.
+    """
+    if not items or emb_lookup is None:
+        return list(items)
+
+    try:
+        from lib.diversity import mmr_rerank
+    except ImportError:
+        print("  Warning: lib.diversity not importable — MMR ordering skipped")
+        return list(items)
+
+    return mmr_rerank(
+        items,
+        emb_lookup,
+        lambda_=MMR_LAMBDA,
+        score_field="score",
+        id_field="name",
+    )
 
 
 def load_json(path: Path) -> dict | list | None:
@@ -273,6 +341,7 @@ def generate_rows(data_dir: Path) -> dict:
 
     content_lookup = load_content_lookup(data_dir)
     score_lookup = build_score_lookup(rankings)
+    emb_lookup = load_embeddings_lookup()
 
     used: set[str] = set()
     rows = [
@@ -299,6 +368,12 @@ def generate_rows(data_dir: Path) -> dict:
             content_lookup, score_lookup, used,
         ),
     ]
+
+    # Add MMR-reordered items_mmr to every row for the Re1 experiment.
+    # items_mmr has the same items as items but in diversity-aware order.
+    # The Re1 experiment JS reads this when variant == "treatment".
+    for row in rows:
+        row["items_mmr"] = apply_mmr_ordering(row["items"], emb_lookup)
 
     total_items = sum(len(r["items"]) for r in rows)
     unique_types: set[str] = set(

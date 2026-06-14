@@ -245,3 +245,67 @@ class TestMain:
         with metrics_csv.open() as f:
             rows = list(csv.DictReader(f))
         assert len(rows) == 2
+
+
+# ---------------------------------------------------------------------------
+# _scores_from_global_rankings
+# ---------------------------------------------------------------------------
+
+class TestScoresFromGlobalRankings:
+    def _payload(self, *items):
+        return {"rankings": list(items)}
+
+    def _item(self, name, score):
+        return {"name": name, "score": score}
+
+    def test_basic_extraction(self):
+        from scripts.evaluate_recsys import _scores_from_global_rankings
+        payload = self._payload(self._item("DoubleML", 0.85), self._item("CausalML", 0.72))
+        result = _scores_from_global_rankings(payload)
+        assert result["doubleml"] == pytest.approx(0.85)
+        assert result["causalml"] == pytest.approx(0.72)
+
+    def test_names_lowercased(self):
+        from scripts.evaluate_recsys import _scores_from_global_rankings
+        payload = self._payload(self._item("EconML", 0.5))
+        result = _scores_from_global_rankings(payload)
+        assert "econml" in result
+        assert "EconML" not in result
+
+    def test_names_stripped(self):
+        from scripts.evaluate_recsys import _scores_from_global_rankings
+        payload = self._payload(self._item("  Some Tool  ", 0.3))
+        result = _scores_from_global_rankings(payload)
+        assert "some tool" in result
+
+    def test_missing_rankings_key_raises(self):
+        from scripts.evaluate_recsys import _scores_from_global_rankings
+        with pytest.raises(ValueError, match="no 'rankings' list"):
+            _scores_from_global_rankings({})
+
+    def test_non_list_rankings_raises(self):
+        from scripts.evaluate_recsys import _scores_from_global_rankings
+        with pytest.raises(ValueError):
+            _scores_from_global_rankings({"rankings": {"name": "x", "score": 0.5}})
+
+    def test_empty_rankings_raises(self):
+        from scripts.evaluate_recsys import _scores_from_global_rankings
+        with pytest.raises(ValueError, match="no usable"):
+            _scores_from_global_rankings({"rankings": []})
+
+    def test_items_missing_score_skipped(self):
+        from scripts.evaluate_recsys import _scores_from_global_rankings
+        payload = self._payload(
+            {"name": "NoScore"},  # missing score
+            self._item("HasScore", 0.6),
+        )
+        result = _scores_from_global_rankings(payload)
+        assert "nosccore" not in result
+        assert "hasscore" in result
+
+    def test_non_dict_items_skipped(self):
+        from scripts.evaluate_recsys import _scores_from_global_rankings
+        payload = {"rankings": ["not_a_dict", self._item("Valid", 0.4)]}
+        result = _scores_from_global_rankings(payload)
+        assert "valid" in result
+        assert len(result) == 1

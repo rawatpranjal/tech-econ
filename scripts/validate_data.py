@@ -4,8 +4,9 @@ Validate JSON data files for the tech-econ site.
 
 Checks:
 1. Required fields are present
-2. No duplicate URLs within or across files
-3. All URLs are accessible (HEAD request)
+2. papers.json / papers_flat.json count sync
+3. No duplicate URLs within or across files
+4. All URLs are accessible (HEAD request)
 """
 
 import json
@@ -206,12 +207,13 @@ def find_duplicate_urls(files: dict) -> list:
 
             name = item.get("name", item.get("title", "unknown"))
 
-            # Get category/topic for composite key (allows cross-category duplicates)
-            # For papers: use topic field; for others: use category field
-            if filename == "papers_flat.json":
-                category = item.get("topic", "")
-            else:
-                category = item.get("category", "")
+            # Composite key uses the most specific category available.
+            # For papers_flat.json, use category ("Topic > Subtopic") not topic —
+            # the same paper is legitimately cross-listed in multiple subtopics
+            # of the same topic (e.g., a privacy paper under both "Personalized
+            # Pricing" and "Algorithmic Pricing" subtopics). Using the broad
+            # topic field would falsely flag these as duplicates.
+            category = item.get("category", "")
 
             # Composite key: URL + category + name. Same URL + category +
             # different names is legitimate (multi-asset hub pages).
@@ -222,6 +224,160 @@ def find_duplicate_urls(files: dict) -> list:
             else:
                 file_keys[key] = name
 
+    return errors
+
+
+def check_featured_json(data_dir: Path) -> list:
+    """Validate data/featured.json structure.
+
+    Guards against typos in the editorial override file that silently
+    break the homepage hero without any build-time error.
+    """
+    errors = []
+    path = data_dir / "featured.json"
+    if not path.exists():
+        return errors  # optional file — only validate if present
+
+    try:
+        data = json.load(open(path))
+    except json.JSONDecodeError as e:
+        return [f"featured.json: invalid JSON — {e}"]
+
+    if not isinstance(data, dict):
+        return ["featured.json: must be a JSON object"]
+
+    known_keys = {"_doc", "item_name", "image_override", "blurb_override", "cta_text", "label"}
+    unknown = [k for k in data if k not in known_keys]
+    if unknown:
+        errors.append(f"featured.json: unexpected keys {unknown} (typo?)")
+
+    # If item_name is set, it must be a non-empty string
+    item_name = data.get("item_name", "")
+    if item_name and not isinstance(item_name, str):
+        errors.append("featured.json: item_name must be a string")
+
+    # If image_override is a local path (starts with /), check the file exists
+    image_override = data.get("image_override", "")
+    if image_override and isinstance(image_override, str) and image_override.startswith("/"):
+        abs_path = data_dir.parent / image_override.lstrip("/")
+        if not abs_path.exists():
+            errors.append(
+                f"featured.json: image_override '{image_override}' not found at {abs_path}"
+            )
+
+    return errors
+
+
+def check_experiments_json(data_dir: Path) -> list:
+    """Validate data/experiments.json structure.
+
+    Catches missing required fields and invalid status values before
+    they silently break the A/B harness on the client.
+    """
+    errors = []
+    path = data_dir / "experiments.json"
+    if not path.exists():
+        return errors  # optional file
+
+    try:
+        data = json.load(open(path))
+    except json.JSONDecodeError as e:
+        return [f"experiments.json: invalid JSON — {e}"]
+
+    if not isinstance(data, dict):
+        return ["experiments.json: must be a JSON object"]
+
+    experiments = data.get("experiments")
+    if experiments is None:
+        return ["experiments.json: missing 'experiments' array"]
+    if not isinstance(experiments, list):
+        return ["experiments.json: 'experiments' must be an array"]
+
+    valid_statuses = {"active", "paused", "draft", "completed"}
+    for exp in experiments:
+        if not isinstance(exp, dict):
+            errors.append("experiments.json: each experiment must be an object")
+            continue
+        eid = exp.get("id", "<missing id>")
+        for field in ("id", "status", "variants"):
+            if field not in exp:
+                errors.append(f"experiments.json: '{eid}' missing required field '{field}'")
+        status = exp.get("status")
+        if status and status not in valid_statuses:
+            errors.append(
+                f"experiments.json: '{eid}' has invalid status '{status}' "
+                f"(must be one of {sorted(valid_statuses)})"
+            )
+        variants = exp.get("variants")
+        if variants is not None:
+            if not isinstance(variants, list) or len(variants) < 2:
+                errors.append(
+                    f"experiments.json: '{eid}' must have at least 2 variants"
+                )
+            else:
+                for v in variants:
+                    if not isinstance(v, dict) or "id" not in v:
+                        errors.append(
+                            f"experiments.json: '{eid}' has a variant missing 'id'"
+                        )
+
+    return errors
+
+
+def check_papers_sync(files: dict) -> list:
+    """Verify papers.json and papers_flat.json have the same paper count.
+
+    These are a dual system (RULES.md) — easy to desync when editing
+    papers.json without re-running flatten_papers.py.
+    """
+    errors = []
+    papers_nested = files.get("papers.json")
+    papers_flat = files.get("papers_flat.json")
+
+    if papers_nested is None or papers_flat is None:
+        return errors  # One file missing — validate_required_fields will catch it
+
+    if not isinstance(papers_nested, dict) or not isinstance(papers_flat, list):
+        return errors  # Malformed — let field checks report it
+
+    nested_count = sum(
+        len(subtopic.get("papers", []))
+        for topic in papers_nested.get("topics", [])
+        for subtopic in topic.get("subtopics", [])
+    )
+    flat_count = len(papers_flat)
+
+    if nested_count != flat_count:
+        errors.append(
+            f"papers.json/papers_flat.json desync: nested has {nested_count} papers, "
+            f"flat has {flat_count}. Run: python3 scripts/flatten_papers.py"
+        )
+
+    return errors
+
+
+def check_image_url_format(files: dict) -> list:
+    """Validate image_url field format when present and non-empty.
+
+    A non-empty image_url must start with '/' (relative path) or 'http'
+    (absolute URL). Empty string is allowed (means no image).
+
+    Returns a list of error strings.
+    """
+    errors = []
+    for filename, data in files.items():
+        items = data if isinstance(data, list) else []
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            image_url = item.get("image_url")
+            if image_url is None or image_url == "":
+                continue  # absent or empty — allowed
+            name = item.get("name", item.get("title", "unknown"))
+            if not (image_url.startswith("/") or image_url.startswith("http")):
+                errors.append(
+                    f"[{filename}] '{name}': image_url '{image_url}' must start with / or http"
+                )
     return errors
 
 
@@ -297,7 +453,13 @@ def check_broken_links(files: dict, max_workers: int = 10) -> list:
     return errors
 
 
-def main():
+def main(argv=None):
+    import argparse
+    parser = argparse.ArgumentParser(description="Validate JSON data files.")
+    parser.add_argument("--skip-links", action="store_true",
+                        help="Skip the slow network link-check step (steps 1-3 only)")
+    args = parser.parse_args(argv)
+
     data_dir = Path(__file__).parent.parent / "data"
 
     if not data_dir.exists():
@@ -319,8 +481,17 @@ def main():
     else:
         print("   All required fields present")
 
+    # Check papers.json / papers_flat.json sync
+    print("\n2. Checking papers.json / papers_flat.json sync...")
+    sync_errors = check_papers_sync(files)
+    if sync_errors:
+        print(f"   Found {len(sync_errors)} sync error(s)")
+        all_errors.extend(sync_errors)
+    else:
+        print("   papers.json and papers_flat.json are in sync")
+
     # Check duplicate URLs
-    print("\n2. Checking for duplicate URLs...")
+    print("\n3. Checking for duplicate URLs...")
     dup_errors = find_duplicate_urls(files)
     if dup_errors:
         print(f"   Found {len(dup_errors)} duplicate URLs")
@@ -328,13 +499,44 @@ def main():
     else:
         print("   No duplicate URLs found")
 
-    # Check broken links (warnings only - don't fail build)
-    print("\n3. Checking for broken links...")
-    link_errors = check_broken_links(files)
-    if link_errors:
-        print(f"   Found {len(link_errors)} broken links (warnings)")
+    # Check featured.json config
+    print("\n4. Checking featured.json...")
+    featured_errors = check_featured_json(data_dir)
+    if featured_errors:
+        print(f"   Found {len(featured_errors)} error(s)")
+        all_errors.extend(featured_errors)
     else:
-        print("   All links accessible")
+        print("   featured.json valid")
+
+    # Check experiments.json config
+    print("\n5. Checking experiments.json...")
+    exp_errors = check_experiments_json(data_dir)
+    if exp_errors:
+        print(f"   Found {len(exp_errors)} error(s)")
+        all_errors.extend(exp_errors)
+    else:
+        print("   experiments.json valid")
+
+    # Check image_url format
+    print("\n5a. Checking image_url format...")
+    img_errors = check_image_url_format(files)
+    if img_errors:
+        print(f"   Found {len(img_errors)} image_url format error(s)")
+        all_errors.extend(img_errors)
+    else:
+        print("   image_url fields valid")
+
+    # Check broken links (warnings only - don't fail build)
+    link_errors = []
+    if args.skip_links:
+        print("\n6. Skipping link checks (--skip-links)")
+    else:
+        print("\n6. Checking for broken links...")
+        link_errors = check_broken_links(files)
+        if link_errors:
+            print(f"   Found {len(link_errors)} broken links (warnings)")
+        else:
+            print("   All links accessible")
 
     # Summary
     print("\n" + "=" * 60)

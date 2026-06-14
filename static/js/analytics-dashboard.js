@@ -24,7 +24,7 @@
   }
 
   // Stats endpoint URL
-  var STATS_ENDPOINT = 'https://tech-econ-analytics.rawat-pranjal010.workers.dev/stats';
+  var STATS_ENDPOINT = 'https://tech-econ-analytics-v2.pp712.workers.dev/stats';
   var CACHE_KEY = 'tech-econ-analytics-cache';
   var CACHE_MAX_AGE = 15 * 60 * 1000; // 15 minutes
 
@@ -336,6 +336,14 @@
     var div = document.createElement('div');
     div.textContent = str;
     return div.innerHTML;
+  }
+
+  // Test surface — pure formatting helpers
+  if (typeof window !== 'undefined') {
+    window.AnalyticsDashboard = window.AnalyticsDashboard || {};
+    window.AnalyticsDashboard._formatNumber = formatNumber;
+    window.AnalyticsDashboard._formatTime = formatTime;
+    window.AnalyticsDashboard._escapeHtml = escapeHtml;
   }
 
   // Global refresh function

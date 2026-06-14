@@ -209,6 +209,19 @@
 .category-row.hidden {
     display: none;
 }
+
+.dataset-favicon-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dataset-favicon-large {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: 6px;
+}
 </style>
 
 <!-- Hero Section -->
@@ -272,8 +285,12 @@
                         <div class="dataset-card-thumbnail">
                             <img src="{{ .image_url }}" alt="{{ .name }}" loading="lazy">
                         </div>
+                        {{ else if .url }}
+                        <div class="dataset-card-thumbnail dataset-favicon-placeholder">
+                            <img src="https://www.google.com/s2/favicons?domain={{ .url | replaceRE "^https?://([^/]+).*" "$1" }}&sz=128" alt="" class="dataset-favicon-large" loading="lazy" onerror="this.style.display='none'">
+                        </div>
                         {{ else }}
-                        {{/* Fallback: Gradient + Initials */}}
+                        {{/* Last resort: Gradient + Initials */}}
                         <div class="dataset-card-thumbnail dataset-fallback" data-category="{{ .category }}">
                             <span class="dataset-initials">{{ substr .name 0 2 }}</span>
                         </div>
